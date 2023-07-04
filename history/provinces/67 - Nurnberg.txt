@@ -1,30 +1,20 @@
 # 67 - Franken
-
-owner = NUM
-controller = NUM
-add_core = NUM
-culture = franconian
-religion = catholic
-base_tax = 8
-base_production = 8
+base_tax = 1
+base_production = 1
 trade_goods = paper
-base_manpower = 3
+base_manpower = 1
 capital = "Nürnberg"
-is_city = yes
-hre = yes
+is_city = no
 add_claim = ANS
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
 extra_cost = 16
-center_of_trade = 2
-
-
-1533.1.1 = { religion = protestant } # Brandenburg-Nürnbergische Kirchenordnung
-1806.7.12 = {
+1533.1.1 = { religion = Protestant }
+1806.7.12 = { 
 	hre = no
 	owner = BAV
 	controller = BAV
 	add_core = BAV
-} # The Holy Roman Empire is dissolved
+}

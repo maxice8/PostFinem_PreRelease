@@ -1,12 +1,8 @@
 #Country Name: Please see filename.
-
-graphical_culture = easterngfx
-
+graphical_culture = westerngfx
 color = { 15 65 45 }
-
 revolutionary_colors = { 1 0 1 }
-
-historical_idea_groups = {
+historical_idea_groups = { 
 	humanist_ideas
 	offensive_ideas
 	trade_ideas
@@ -16,8 +12,7 @@ historical_idea_groups = {
 	quality_ideas
 	aristocracy_ideas
 }
-
-historical_units = {
+historical_units = { 
 	eastern_medieval_infantry
 	eastern_knights
 	slavic_stradioti
@@ -35,17 +30,15 @@ historical_units = {
 	ottoman_new_model
 	ottoman_lancer
 }
-
-monarch_names = {
-	"Update Me #0" = 40
-	
+monarch_names = { 
 }
-
-leader_names = {
-	"Update Me"
+leader_names = { 
+	"Update Me" 
 }
-
-ship_names = {
-	"Update Me"
+ship_names = { 
+	"Update Me" 
 }
-
+fleet_names = { 
+}
+army_names = { 
+}
