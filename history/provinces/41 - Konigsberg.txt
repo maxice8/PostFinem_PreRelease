@@ -11,38 +11,8 @@ discovered_by = muslim
 discovered_by = ottoman
 extra_cost = 8
 center_of_trade = 1
-1454.3.6 = { controller = REB revolt = { type = revolutionary_rebels size = 2 } }
-1466.10.19 = { controller = TEU revolt = { size = 1 } }
-1525.2.10 = { 
-	owner = PRU
-	controller = PRU
-	trade_goods = Paper
-	religion = Protestant
-}
-1618.8.28 = { 
-	owner = BRA
-	controller = BRA
-	add_core = BRA
-}
-1648.1.1 = { 
-	fort_15th = no
-	fort_17th = yes
-}
-1701.1.18 = { 
-	owner = PRU
-	controller = PRU
-}
-1715.1.1 = { 
-	fort_17th = no
-	fort_18th = yes
-}
-1750.1.1 = { 
-	base_manpower = 4
-	base_tax = 8
-	base_production = 8
-}
-1758.1.22 = { controller = RUS }
-1762.5.5 = { controller = PRU }
 add_core = KSB
 owner = KSB
 controller = KSB
+religion = slavic_relgion
+culture = pomorian

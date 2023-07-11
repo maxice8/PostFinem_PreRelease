@@ -1,15 +1,14 @@
 government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 1
-primary_culture = tuscan
+primary_culture = peloponnesian
 add_accepted_culture = greek
-religion = catholic
-technology_group = western
-capital = 146	#Athens
-fixed_capital = 146 # Cannot move capital away from this province & no power cost to move to it
-
-1402.1.1 = {
-	monarch = {
+religion = hellenic
+technology_group = eastern
+capital = 146#Athens
+fixed_capital = 146# Cannot move capital away from this province & no power cost to move to it
+1402.1.1 = { 
+	monarch = { 
 		name = "Antonio I"
 		dynasty = Acciaioli
 		adm = 0
@@ -17,9 +16,8 @@ fixed_capital = 146 # Cannot move capital away from this province & no power cos
 		mil = 2
 	}
 }
-
-1416.1.1 = {
-	heir = {
+1416.1.1 = { 
+	heir = { 
 		name = "Nerio"
 		monarch_name = "Nerio II"
 		dynasty = "Acciaioli"
@@ -31,33 +29,30 @@ fixed_capital = 146 # Cannot move capital away from this province & no power cos
 		mil = 0
 	}
 }
-
-1435.1.1 = {
-	monarch = {
+1435.1.1 = { 
+	monarch = { 
 		name = "Nerio II"
 		dynasty = Acciaioli
-		birth_date = 1416.1.1		
+		birth_date = 1416.1.1
 		adm = 1
 		dip = 1
 		mil = 0
 	}
 }
-
-1439.1.1 = {
-	monarch = {
+1439.1.1 = { 
+	monarch = { 
 		name = "Antonio II"
-		dynasty = Acciaioli	
+		dynasty = Acciaioli
 		adm = 2
 		dip = 1
 		mil = 2
 	}
 }
-
-1441.1.1 = {
-	monarch = {
+1441.1.1 = { 
+	monarch = { 
 		name = "Nerio II"
 		dynasty = Acciaioli
-		birth_date = 1416.1.1			
+		birth_date = 1416.1.1
 		adm = 2
 		dip = 2
 		mil = 0
@@ -65,9 +60,8 @@ fixed_capital = 146 # Cannot move capital away from this province & no power cos
 	clear_scripted_personalities = yes
 	add_ruler_personality = scholar_personality
 }
-
-1441.1.1 = {
-	heir = {
+1441.1.1 = { 
+	heir = { 
 		name = "Francesco"
 		monarch_name = "Francesco I"
 		dynasty = "Acciaioli"
@@ -79,21 +73,18 @@ fixed_capital = 146 # Cannot move capital away from this province & no power cos
 		mil = 1
 	}
 }
-	
-
-1451.1.1 = {
-	monarch = {
+1451.1.1 = { 
+	monarch = { 
 		name = "Francesco I"
 		dynasty = Acciaioli
-		birth_date = 1440.1.1		
+		birth_date = 1440.1.1
 		adm = 2
 		dip = 3
 		mil = 1
 	}
 }
-
-1455.1.1 = {
-	monarch = {
+1455.1.1 = { 
+	monarch = { 
 		name = "Francesco II"
 		dynasty = Acciaioli
 		adm = 4

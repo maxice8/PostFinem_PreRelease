@@ -9,15 +9,8 @@ discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
-1550.1.1 = { religion = Reformed }
-1569.7.1 = { 
-	owner = PLC
-	controller = PLC
-}
-1589.1.1 = { fort_16th = yes }
-1662.1.1 = { fort_16th = no fort_17th = yes }
-1701.1.1 = { controller = SWE }
-1706.9.24 = { controller = PLC }
-1795.10.24 = { owner = RUS controller = RUS add_core = RUS }
-1812.6.28 = { controller = FRA }
-1812.12.10 = { controller = RUS }
+religion = slavic_relgion
+culture = slavic_galician
+add_core = LIT
+owner = LIT
+controller = LIT

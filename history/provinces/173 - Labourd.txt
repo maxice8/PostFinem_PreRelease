@@ -9,19 +9,9 @@ discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
-1453.7.18 = { owner = FRA controller = FRA }
-1549.12.22 = { 
-	owner = AUV
-	controller = AUV
-}
-1560.1.1 = { religion = Reformed }
-1583.1.1 = { fort_15th = no fort_16th = yes }
-1589.1.5 = { owner = NAV controller = NAV add_core = NAV }
-1589.8.2 = { owner = FRA controller = FRA }
-1648.1.1 = { fort_16th = no fort_17th = yes }
-1686.1.17 = { religion = Catholic }
-1715.1.1 = { fort_17th = no fort_18th = yes }
-add_core = AUV
+
 add_core = TRV
 owner = TRV
 controller = TRV
+culture = pictonian
+religion = druidic

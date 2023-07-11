@@ -2,13 +2,12 @@ government = monarchy
 add_government_reform = nayankara_reform
 government_rank = 1
 technology_group = indian
-religion = hinduism
+religion = sunni
 primary_culture = tamil
-capital = 2100	# Jaffna
-fixed_capital = 2100 # Cannot move capital away from this province & no power cost to move to it
-
-1440.1.1 = {
-	monarch = {
+capital = 2100# Jaffna
+fixed_capital = 2100# Cannot move capital away from this province & no power cost to move to it
+1440.1.1 = { 
+	monarch = { 
 		name = "Kanakasooriya Cinkaiariyan"
 		dynasty = "Aryacakravarti"
 		ADM = 2
@@ -16,19 +15,18 @@ fixed_capital = 2100 # Cannot move capital away from this province & no power co
 		MIL = 3
 	}
 }
-
-1450.1.1 = {
-	monarch = {
-		name = "Sapumal Kumaraya" #Later Bhuvanaikabahu VI of Kotte
+1450.1.1 = { 
+	monarch = { 
+		name = "Sapumal Kumaraya"#Later Bhuvanaikabahu VI of Kotte
 		dynasty = "Savulu"
 		ADM = 1
 		DIP = 1
 		MIL = 4
 	}
 }
+1467.1.1 = {  #Second time
 
-1467.1.1 = {	#Second time
-	monarch = {
+	monarch = { 
 		name = "Kanakasooriya Cinkaiariyan"
 		dynasty = "Aryacakravarti"
 		ADM = 2
@@ -36,9 +34,8 @@ fixed_capital = 2100 # Cannot move capital away from this province & no power co
 		MIL = 3
 	}
 }
-
-1467.1.1 = {
-	heir = {
+1467.1.1 = { 
+	heir = { 
 		name = "Singai Pararasasegaram"
 		monarch_name = "Singai Pararasasegaram"
 		dynasty = "Aryacakravarti"
@@ -50,9 +47,8 @@ fixed_capital = 2100 # Cannot move capital away from this province & no power co
 		mil = 2
 	}
 }
-
-1478.1.1 = {
-	monarch = {
+1478.1.1 = { 
+	monarch = { 
 		name = "Singai Pararasasegaram"
 		dynasty = "Aryacakravarti"
 		adm = 3
@@ -60,9 +56,8 @@ fixed_capital = 2100 # Cannot move capital away from this province & no power co
 		mil = 2
 	}
 }
-
-1478.1.1 = {
-	heir = {
+1478.1.1 = { 
+	heir = { 
 		name = "Cankili"
 		monarch_name = "Cankili"
 		dynasty = "Aryacakravarti"
@@ -74,9 +69,8 @@ fixed_capital = 2100 # Cannot move capital away from this province & no power co
 		mil = 4
 	}
 }
-
-1519.1.1 = {
-	monarch = {
+1519.1.1 = { 
+	monarch = { 
 		name = "Cankili"
 		dynasty = "Aryacakravarti"
 		adm = 2
@@ -84,9 +78,8 @@ fixed_capital = 2100 # Cannot move capital away from this province & no power co
 		mil = 4
 	}
 }
-
-1519.1.1 = {
-	heir = {
+1519.1.1 = { 
+	heir = { 
 		name = "Puviraja Pandaram"
 		monarch_name = "Puviraja Pandaram"
 		dynasty = "Aryacakravarti"
@@ -98,9 +91,8 @@ fixed_capital = 2100 # Cannot move capital away from this province & no power co
 		mil = 2
 	}
 }
-
-1561.1.1 = {
-	monarch = {
+1561.1.1 = { 
+	monarch = { 
 		name = "Puviraja Pandaram"
 		dynasty = "Aryacakravarti"
 		adm = 1
@@ -108,9 +100,8 @@ fixed_capital = 2100 # Cannot move capital away from this province & no power co
 		mil = 2
 	}
 }
-
-1565.1.1 = {
-	monarch = {
+1565.1.1 = { 
+	monarch = { 
 		name = "Kasi Nayinar"
 		dynasty = "Aryacakravarti"
 		adm = 1
@@ -118,9 +109,8 @@ fixed_capital = 2100 # Cannot move capital away from this province & no power co
 		mil = 3
 	}
 }
-
-1570.1.1 = {
-	monarch = {
+1570.1.1 = { 
+	monarch = { 
 		name = "Periyapillai"
 		dynasty = "Aryacakravarti"
 		adm = 0
@@ -128,9 +118,9 @@ fixed_capital = 2100 # Cannot move capital away from this province & no power co
 		mil = 3
 	}
 }
+1582.1.1 = {  #Second time
 
-1582.1.1 = {	#Second time
-	monarch = {
+	monarch = { 
 		name = "Puviraja Pandaram"
 		dynasty = "Aryacakravarti"
 		adm = 1
@@ -138,9 +128,8 @@ fixed_capital = 2100 # Cannot move capital away from this province & no power co
 		mil = 2
 	}
 }
-
-1582.1.1 = {
-	heir = {
+1582.1.1 = { 
+	heir = { 
 		name = "Ethirimana Cinkam"
 		monarch_name = "Ethirimana Cinkam"
 		dynasty = "Aryacakravarti"
@@ -152,9 +141,8 @@ fixed_capital = 2100 # Cannot move capital away from this province & no power co
 		mil = 1
 	}
 }
-
-1591.1.1 = {
-	monarch = {
+1591.1.1 = { 
+	monarch = { 
 		name = "Ethirimana Cinkam"
 		dynasty = "Aryacakravarti"
 		adm = 1
@@ -162,9 +150,8 @@ fixed_capital = 2100 # Cannot move capital away from this province & no power co
 		mil = 1
 	}
 }
-
-1591.1.1 = {
-	heir = {
+1591.1.1 = { 
+	heir = { 
 		name = "Cankili"
 		monarch_name = "Cankili II"
 		dynasty = "Aryacakravarti"
@@ -176,9 +163,8 @@ fixed_capital = 2100 # Cannot move capital away from this province & no power co
 		mil = 1
 	}
 }
-
-1617.1.1 = {
-	monarch = {
+1617.1.1 = { 
+	monarch = { 
 		name = "Cankili II"
 		dynasty = "Aryacakravarti"
 		adm = 1
@@ -186,5 +172,4 @@ fixed_capital = 2100 # Cannot move capital away from this province & no power co
 		mil = 1
 	}
 }
-
 #Annexed in 1619

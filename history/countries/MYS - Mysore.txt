@@ -2,17 +2,15 @@ government = monarchy
 add_government_reform = nayankara_reform
 government_rank = 1
 primary_culture = kannada
-religion = hinduism
+religion = sunni
 technology_group = indian
-capital = 533	# Mysore
-fixed_capital = 533 # Cannot move capital away from this province & no power cost to move to it
-
+capital = 533# Mysore
+fixed_capital = 533# Cannot move capital away from this province & no power cost to move to it
 #Ummatur Cheifs:
 #Very independent feudatories of Vijayanagara, often ignoring the empire or in rebelion against it
 #Have not been able to find specific ummatur rulers
-
-1399.1.1 = {
-	monarch = {
+1399.1.1 = { 
+	monarch = { 
 		name = "Ganga Raja"
 		dynasty = "Ummatur"
 		ADM = 2
@@ -23,9 +21,7 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 	add_ruler_personality = bold_fighter_personality
 	add_ruler_personality = intricate_web_weaver_personality
 }
-
 #Wodeyar dynasty before gaining control of Mysore:
-
 #1399.1.1 = {
 #	monarch = {
 #		name = "Yadu Raya"
@@ -124,11 +120,9 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 #	}
 #}
 #
-
 #Independent Wodeyars:
-
-1513.1.1 = {
-	monarch = {
+1513.1.1 = { 
+	monarch = { 
 		name = "Châma Râja III"
 		dynasty = "Wodeyar"
 		ADM = 3
@@ -136,9 +130,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 2
 	}
 }
-
-1513.1.1 = {
-	heir = {
+1513.1.1 = { 
+	heir = { 
 		name = "Timma"
 		monarch_name = "Timma Râja II"
 		dynasty = "Wodeyar"
@@ -150,9 +143,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 0
 	}
 }
-
-1552.1.1 = {
-	monarch = {
+1552.1.1 = { 
+	monarch = { 
 		name = "Timma Râja II"
 		dynasty = "Wodeyar"
 		ADM = 4
@@ -161,9 +153,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 	}
 	government_rank = 2
 }
-
-1552.1.1 = {
-	heir = {
+1552.1.1 = { 
+	heir = { 
 		name = "Châma"
 		monarch_name = "Châma Râja II"
 		dynasty = "Wodeyar"
@@ -175,9 +166,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 0
 	}
 }
-
-1572.1.1 = {
-	monarch = {
+1572.1.1 = { 
+	monarch = { 
 		name = "Châma Râja IV"
 		dynasty = "Wodeyar"
 		ADM = 0
@@ -185,9 +175,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 0
 	}
 }
-
-1572.1.1 = {
-	heir = {
+1572.1.1 = { 
+	heir = { 
 		name = "Bettada Deva"
 		monarch_name = "Bettada Deva Râja"
 		birth_date = 1556.1.1
@@ -198,19 +187,17 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 3
 	}
 }
-
-1576.1.1 = {
-	monarch = {
-		name = "Bettada Deva Râja "
+1576.1.1 = { 
+	monarch = { 
+		name = "Bettada Deva Râja"
 		dynasty = "Wodeyar"
 		ADM = 0
 		DIP = 0
 		MIL = 3
 	}
 }
-
-1576.1.1 = {
-	heir = {
+1576.1.1 = { 
+	heir = { 
 		name = "Wadaiyâr"
 		monarch_name = "Râja Wadaiyâr"
 		dynasty = "Wodeyar"
@@ -222,9 +209,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 0
 	}
 }
-
-1578.11.27 = {
-	monarch = {
+1578.11.27 = { 
+	monarch = { 
 		name = "Râja Wadaiyâr"
 		dynasty = "Wodeyar"
 		ADM = 2
@@ -232,9 +218,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 0
 	}
 }
-
-1578.11.27 = {
-	heir = {
+1578.11.27 = { 
+	heir = { 
 		name = "Châma"
 		monarch_name = "Châma Râja V"
 		dynasty = "Wodeyar"
@@ -246,9 +231,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 3
 	}
 }
-
-1617.6.21 = {
-	monarch = {
+1617.6.21 = { 
+	monarch = { 
 		name = "Châma Râja V"
 		dynasty = "Wodeyar"
 		ADM = 3
@@ -256,9 +240,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 3
 	}
 }
-
-1617.6.21 = {
-	heir = {
+1617.6.21 = { 
+	heir = { 
 		name = "Imadi"
 		monarch_name = "Imadi Râja"
 		dynasty = "Wodeyar"
@@ -270,9 +253,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 0
 	}
 }
-
-1637.5.3 = {
-	monarch = {
+1637.5.3 = { 
+	monarch = { 
 		name = "Imadi Râja"
 		dynasty = "Wodeyar"
 		ADM = 0
@@ -280,9 +262,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 0
 	}
 }
-
-1637.5.3 = {
-	heir = {
+1637.5.3 = { 
+	heir = { 
 		name = "Kanthirava Narasa"
 		monarch_name = "Kanthirava Narasa Râja I"
 		dynasty = "Wodeyar"
@@ -294,9 +275,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 1
 	}
 }
-
-1638.10.9 = {
-	monarch = {
+1638.10.9 = { 
+	monarch = { 
 		name = "Kanthirava Narasa Râja I"
 		dynasty = "Wodeyar"
 		ADM = 1
@@ -304,9 +284,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 1
 	}
 }
-
-1638.10.9 = {
-	heir = {
+1638.10.9 = { 
+	heir = { 
 		name = "Kempa Deva"
 		monarch_name = "Kempa Deva Râja"
 		dynasty = "Wodeyar"
@@ -318,9 +297,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 3
 	}
 }
-
-1659.8.3 = {
-	monarch = {
+1659.8.3 = { 
+	monarch = { 
 		name = "Kempa Deva Râja"
 		dynasty = "Wodeyar"
 		ADM = 1
@@ -328,9 +306,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 3
 	}
 }
-
-1659.8.3 = {
-	heir = {
+1659.8.3 = { 
+	heir = { 
 		name = "Chikka Deva"
 		monarch_name = "Chikka Deva Râja"
 		dynasty = "Wodeyar"
@@ -342,9 +319,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 3
 	}
 }
-
-1672.2.11 = {
-	monarch = {
+1672.2.11 = { 
+	monarch = { 
 		name = "Chikka Deva Râja"
 		dynasty = "Wodeyar"
 		ADM = 0
@@ -352,9 +328,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 3
 	}
 }
-
-1672.2.11 = {
-	heir = {
+1672.2.11 = { 
+	heir = { 
 		name = "Kanthirava Narasa"
 		monarch_name = "Kanthirava Narasa Râja II"
 		dynasty = "Wodeyar"
@@ -366,9 +341,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 4
 	}
 }
-
-1704.11.17 = {
-	monarch = {
+1704.11.17 = { 
+	monarch = { 
 		name = "Kanthirava Narasa Râja II"
 		dynasty = "Wodeyar"
 		ADM = 3
@@ -376,9 +350,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 4
 	}
 }
-
-1704.11.17 = {
-	heir = {
+1704.11.17 = { 
+	heir = { 
 		name = "Krishna"
 		monarch_name = "Krishna Râja I"
 		dynasty = "Wodeyar"
@@ -390,9 +363,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 0
 	}
 }
-
-1714.2.17 = {
-	monarch = {
+1714.2.17 = { 
+	monarch = { 
 		name = "Krishna Râja I"
 		dynasty = "Wodeyar"
 		ADM = 1
@@ -400,9 +372,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 0
 	}
 }
-
-1714.2.17 = {
-	heir = {
+1714.2.17 = { 
+	heir = { 
 		name = "Châma"
 		monarch_name = "Châma Râja VI"
 		dynasty = "Wodeyar"
@@ -414,9 +385,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 3
 	}
 }
-
-1732.3.6 = {
-	monarch = {
+1732.3.6 = { 
+	monarch = { 
 		name = "Châma Râja VI"
 		dynasty = "Wodeyar"
 		ADM = 3
@@ -424,9 +394,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 3
 	}
 }
-
-1732.3.6 = {
-	heir = {
+1732.3.6 = { 
+	heir = { 
 		name = "Krishna"
 		monarch_name = "Krishna Râja II"
 		dynasty = "Wodeyar"
@@ -438,9 +407,8 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 2
 	}
 }
-
-1734.6.12 = {
-	monarch = {
+1734.6.12 = { 
+	monarch = { 
 		name = "Krishna Râja II"
 		dynasty = "Wodeyar"
 		ADM = 0
@@ -448,27 +416,24 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 2
 	}
 }
-
 #Usurper
-
-1761.6.3 = {
-	monarch = {
+1761.6.3 = { 
+	monarch = { 
 		name = "Haydar 'Alî"
-		dynasty = "Fatehi" #From the name of Haidars father, not sure of suitable dynasty name.
+		dynasty = "Fatehi"#From the name of Haidars father, not sure of suitable dynasty name.
 		ADM = 3
 		DIP = 3
 		MIL = 5
 		religion = sunni
-		leader = {	name = "Haydar 'Alî"          	type = general	fire = 4	shock = 4	manuever = 3	siege = 1 }
+		leader = { name = "Haydar 'Alî" type = general fire = 4 shock = 4 manuever = 3 siege = 1 }
 	}
 	religion = sunni
 	government = monarchy
 	add_government_reform = indian_sultanate_reform
 	religious_school = hanafi_school
 }
-
-1761.6.3 = {
-	heir = {
+1761.6.3 = { 
+	heir = { 
 		name = "Tippoo Sahib"
 		monarch_name = "Tippoo Sahib"
 		dynasty = "Fatehi"
@@ -480,23 +445,20 @@ fixed_capital = 533 # Cannot move capital away from this province & no power cos
 		MIL = 5
 	}
 }
-
-1780.1.1 = { leader = {	name = "Tippoo Sahib"          	type = general	fire = 5	shock = 5	manuever = 3	siege = 1	death_date = 1782.12.8 } }
-
-1782.12.8 = {
-	monarch = {
+1780.1.1 = { leader = { name = "Tippoo Sahib" type = general fire = 5 shock = 5 manuever = 3 siege = 1 death_date = 1782.12.8 } }
+1782.12.8 = { 
+	monarch = { 
 		name = "Tîpû Sâhib"
 		dynasty = "Fatehi"
 		ADM = 2
 		DIP = 5
 		MIL = 6
-		leader = {	name = "Tippoo Sahib"          	type = general	fire = 5	shock = 5	manuever = 3	siege = 1 }
+		leader = { name = "Tippoo Sahib" type = general fire = 5 shock = 5 manuever = 3 siege = 1 }
 	}
 	add_army_professionalism = 0.3
 }
-
-1799.5.5 = {
-	monarch = {
+1799.5.5 = { 
+	monarch = { 
 		name = "Krishna Râja III"
 		dynasty = "Wodeyar"
 		ADM = 1

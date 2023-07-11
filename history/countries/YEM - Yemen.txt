@@ -1,14 +1,13 @@
 government = monarchy
 add_government_reform = iqta
-primary_culture = yemeni_culture
+primary_culture = qataban
 religion = sunni
 technology_group = muslim
-capital = 4280	# Taiz
+capital = 4280# Taiz
 religious_school = shafii_school
-
 #Rasulids
-1377.1.1 = {
-	monarch = {
+1377.1.1 = { 
+	monarch = { 
 		name = "Isma'il I"
 		dynasty = "Rasulid"
 		adm = 1
@@ -16,9 +15,8 @@ religious_school = shafii_school
 		mil = 1
 	}
 }
-
-1377.1.1 = {
-	heir = {
+1377.1.1 = { 
+	heir = { 
 		name = "Saladin Ahmad"
 		monarch_name = "Saladin Ahmad"
 		dynasty = "Rasulid"
@@ -30,9 +28,8 @@ religious_school = shafii_school
 		mil = 0
 	}
 }
-
-1400.1.1 = {
-	monarch = {
+1400.1.1 = { 
+	monarch = { 
 		name = "Saladin Ahmad"
 		dynasty = "Rasulid"
 		adm = 0
@@ -40,9 +37,8 @@ religious_school = shafii_school
 		mil = 0
 	}
 }
-
-1400.1.1 = {
-	heir = {
+1400.1.1 = { 
+	heir = { 
 		name = "'Abdallah"
 		monarch_name = "'Abdallah"
 		dynasty = "Rasulid"
@@ -54,9 +50,8 @@ religious_school = shafii_school
 		mil = 2
 	}
 }
-
-1424.1.1 = {
-	monarch = {
+1424.1.1 = { 
+	monarch = { 
 		name = "'Abdallah"
 		dynasty = "Rasulid"
 		adm = 1
@@ -64,9 +59,8 @@ religious_school = shafii_school
 		mil = 2
 	}
 }
-
-1424.1.1 = {
-	heir = {
+1424.1.1 = { 
+	heir = { 
 		name = "Isma'il"
 		monarch_name = "Isma'il II"
 		dynasty = "Rasulid"
@@ -78,9 +72,8 @@ religious_school = shafii_school
 		mil = 3
 	}
 }
-
-1427.1.1 = {
-	monarch = {
+1427.1.1 = { 
+	monarch = { 
 		name = "Isma'il II"
 		dynasty = "Rasulid"
 		adm = 3
@@ -88,9 +81,8 @@ religious_school = shafii_school
 		mil = 3
 	}
 }
-
-1428.1.1 = {
-	monarch = {
+1428.1.1 = { 
+	monarch = { 
 		name = "Yahya"
 		dynasty = "Rasulid"
 		adm = 1
@@ -98,9 +90,8 @@ religious_school = shafii_school
 		mil = 1
 	}
 }
-
-1439.1.1 = {
-	monarch = {
+1439.1.1 = { 
+	monarch = { 
 		name = "Isma'il III"
 		dynasty = "Rasuild"
 		adm = 2
@@ -108,9 +99,8 @@ religious_school = shafii_school
 		mil = 0
 	}
 }
-
-1439.1.1 = {
-	heir = {
+1439.1.1 = { 
+	heir = { 
 		name = "Yusuf"
 		monarch_name = "Yusuf II"
 		dynasty = "Rasulid"
@@ -122,9 +112,8 @@ religious_school = shafii_school
 		mil = 2
 	}
 }
-
-1442.1.1 = {
-	monarch = {
+1442.1.1 = { 
+	monarch = { 
 		name = "Yusuf II"
 		dynasty = "Rasulid"
 		adm = 1
@@ -132,9 +121,8 @@ religious_school = shafii_school
 		mil = 2
 	}
 }
-
-1442.1.1 = {
-	heir = {
+1442.1.1 = { 
+	heir = { 
 		name = "Salâh ad-Din 'Amir"
 		monarch_name = "Salâh ad-Din 'Amir I"
 		dynasty = "Tahirid"
@@ -146,3 +134,4 @@ religious_school = shafii_school
 		mil = 2
 	}
 }
+government_rank = 1

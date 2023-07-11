@@ -1,25 +1,24 @@
 government = monarchy
 add_government_reform = autocracy_reform
 primary_culture = sidamo
-religion = shamanism
+religion = sunni
 technology_group = east_african
 unit_type = sub_saharan
-capital = 2756		# Welayta
+capital = 2756# Welayta
 unlock_cult = mwari_cult
 unlock_cult = central_african_ancestor_cult
 unlock_cult = cwezi_cult
 unlock_cult = christianity_cult
 unlock_cult = islam_cult
-
-1444.1.1 = {
-	monarch = {
+1444.1.1 = { 
+	monarch = { 
 		name = "Kote"
 		dynasty = "Tegra`i"
 		adm = 3
 		dip = 2
 		mil = 4
 	}
-	heir = {
+	heir = { 
 		name = "Gaga"
 		monarch_name = "Gaga"
 		dynasty = "Tegra`i"
@@ -31,16 +30,15 @@ unlock_cult = islam_cult
 		mil = 3
 	}
 }
-
-1490.1.1 = {
-	monarch = {
+1490.1.1 = { 
+	monarch = { 
 		name = "Gaga"
 		dynasty = "Tegra`i"
 		adm = 3
 		dip = 3
 		mil = 3
 	}
-	heir = {
+	heir = { 
 		name = "Mikael"
 		monarch_name = "Mikael"
 		dynasty = "Tegra`i"
@@ -52,16 +50,15 @@ unlock_cult = islam_cult
 		mil = 4
 	}
 }
-
-1560.1.1 = {
-	monarch = {
+1560.1.1 = { 
+	monarch = { 
 		name = "Mikael"
 		dynasty = "Tegra`i"
 		adm = 2
 		dip = 2
 		mil = 3
 	}
-	heir = {
+	heir = { 
 		name = "Girma"
 		monarch_name = "Girma"
 		dynasty = "Tegra`i"
@@ -73,16 +70,15 @@ unlock_cult = islam_cult
 		mil = 2
 	}
 }
-
-1590.1.1 = {
-	monarch = {
+1590.1.1 = { 
+	monarch = { 
 		name = "Girma"
 		dynasty = "Tegra`i"
 		adm = 2
 		dip = 2
 		mil = 2
 	}
-	heir = {
+	heir = { 
 		name = "Gazenya"
 		monarch_name = "Gazenya"
 		dynasty = "Tegra`i"
@@ -94,16 +90,15 @@ unlock_cult = islam_cult
 		mil = 4
 	}
 }
-
-1640.1.1 = {
-	monarch = {
+1640.1.1 = { 
+	monarch = { 
 		name = "Gazenya"
 		dynasty = "Tegra`i"
 		adm = 1
 		dip = 2
 		mil = 4
 	}
-	heir = {
+	heir = { 
 		name = "Addayo"
 		monarch_name = "Addayo"
 		dynasty = "Tegra`i"
@@ -115,16 +110,15 @@ unlock_cult = islam_cult
 		mil = 3
 	}
 }
-
-1680.1.1 = {
-	monarch = {
+1680.1.1 = { 
+	monarch = { 
 		name = "Addayo"
 		dynasty = "Tegra`i"
 		adm = 1
 		dip = 2
 		mil = 3
 	}
-	heir = {
+	heir = { 
 		name = "Kote"
 		monarch_name = "Kote"
 		dynasty = "Tegra`i"
@@ -136,16 +130,15 @@ unlock_cult = islam_cult
 		mil = 3
 	}
 }
-
-1730.1.1 = {
-	monarch = {
+1730.1.1 = { 
+	monarch = { 
 		name = "Kote"
 		dynasty = "Tegra`i"
 		adm = 3
 		dip = 2
 		mil = 3
 	}
-	heir = {
+	heir = { 
 		name = "Libana"
 		monarch_name = "Libana"
 		dynasty = "Tegra`i"
@@ -157,16 +150,15 @@ unlock_cult = islam_cult
 		mil = 5
 	}
 }
-
-1750.1.1 = {
-	monarch = {
+1750.1.1 = { 
+	monarch = { 
 		name = "Libana"
 		dynasty = "Tegra`i"
 		adm = 2
 		dip = 2
 		mil = 5
 	}
-	heir = {
+	heir = { 
 		name = "Tube"
 		monarch_name = "Tube"
 		dynasty = "Tegra`i"
@@ -178,16 +170,15 @@ unlock_cult = islam_cult
 		mil = 2
 	}
 }
-
-1755.1.1 = {
-	monarch = {
+1755.1.1 = { 
+	monarch = { 
 		name = "Tube"
 		dynasty = "Tegra`i"
 		adm = 2
 		dip = 2
 		mil = 2
 	}
-	heir = {
+	heir = { 
 		name = "Ogatto"
 		monarch_name = "Ogatto"
 		dynasty = "Tegra`i"
@@ -199,16 +190,15 @@ unlock_cult = islam_cult
 		mil = 4
 	}
 }
-
-1761.1.1 = {
-	monarch = {
+1761.1.1 = { 
+	monarch = { 
 		name = "Ogatto"
 		dynasty = "Tegra`i"
 		adm = 2
 		dip = 2
 		mil = 4
 	}
-	heir = {
+	heir = { 
 		name = "Amado"
 		monarch_name = "Amado"
 		dynasty = "Tegra`i"
@@ -220,16 +210,15 @@ unlock_cult = islam_cult
 		mil = 3
 	}
 }
-
-1800.1.1 = {
-	monarch = {
+1800.1.1 = { 
+	monarch = { 
 		name = "Amado"
 		dynasty = "Tegra`i"
 		adm = 2
 		dip = 3
 		mil = 3
 	}
-	heir = {
+	heir = { 
 		name = "Damota"
 		monarch_name = "Damota"
 		dynasty = "Tegra`i"
@@ -241,3 +230,4 @@ unlock_cult = islam_cult
 		MIL = 3
 	}
 }
+government_rank = 1

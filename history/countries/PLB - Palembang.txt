@@ -1,17 +1,15 @@
 government = monarchy
 add_government_reform = autocracy_reform
 primary_culture = sumatran
-religion = hinduism
+religion = sunni
 technology_group = chinese
-capital = 622	# Palembang
+capital = 622# Palembang
 religious_school = shafii_school
-
-1399.1.1 = {
+1399.1.1 = { 
 	add_piety = -0.1
 }
-
-1444.1.1 = {
-	monarch = {
+1444.1.1 = { 
+	monarch = { 
 		name = "Jisun"
 		dynasty = "Shi"
 		adm = 2
@@ -20,71 +18,64 @@ religious_school = shafii_school
 		culture = wu
 	}
 }
-
-1550.1.1 = {
-	monarch = {
-		name = "Tsalenggathu" # Fictional
+1550.1.1 = { 
+	monarch = { 
+		name = "Tsalenggathu"# Fictional
 		dynasty = "Palembang"
 		adm = 2
 		dip = 3
 		mil = 2
 	}
 }
-
-1580.1.1 = {
-	monarch = {
-		name = "Tsau-Lha" # Fictional
+1580.1.1 = { 
+	monarch = { 
+		name = "Tsau-Lha"# Fictional
 		dynasty = "Palembang"
 		adm = 2
 		dip = 2
 		mil = 3
 	}
 }
-
-1610.1.1 = {
-	monarch = {
-		name = "Mengtsekya" # Fictional
+1610.1.1 = { 
+	monarch = { 
+		name = "Mengtsekya"# Fictional
 		dynasty = "Palembang"
 		adm = 3
 		dip = 2
 		mil = 2
 	}
 }
-
-1640.1.1 = {
-	monarch = {
-		name = "Menradza" # Fictional
+1640.1.1 = { 
+	monarch = { 
+		name = "Menradza"# Fictional
 		dynasty = "Palembang"
 		adm = 3
 		dip = 2
 		mil = 2
 	}
 }
-
-1670.1.1 = {
+1670.1.1 = { 
 	religion = sunni
-	monarch = {
-		name = "Inayat" # Fictional
+	monarch = { 
+		name = "Inayat"# Fictional
 		dynasty = "Palembang"
 		adm = 3
 		dip = 2
 		mil = 2
 	}
 }
-
-1700.1.1 = {
-	monarch = {
-		name = "Gadzabadi" # Fictional
+1700.1.1 = { 
+	monarch = { 
+		name = "Gadzabadi"# Fictional
 		dynasty = "Palembang"
 		adm = 2
 		dip = 2
 		mil = 3
 	}
 }
-
-1730.1.1 = {
-	monarch = {
-		name = "Amritpal" # Fictional
+1730.1.1 = { 
+	monarch = { 
+		name = "Amritpal"# Fictional
 		dynasty = "Palembang"
 		adm = 2
 		dip = 3
@@ -92,23 +83,22 @@ religious_school = shafii_school
 		female = yes
 	}
 }
-
-1760.1.1 = {
-	monarch = {
-		name = "Mengtsekya" # Fictional
+1760.1.1 = { 
+	monarch = { 
+		name = "Mengtsekya"# Fictional
 		dynasty = "Palembang"
 		adm = 2
 		dip = 3
 		mil = 2
 	}
 }
-
-1790.1.1 = {
-	monarch = {
-		name = "Husayn" # Fictional
+1790.1.1 = { 
+	monarch = { 
+		name = "Husayn"# Fictional
 		dynasty = "Palembang"
 		adm = 3
 		dip = 2
 		mil = 2
 	}
 }
+government_rank = 1

@@ -10,12 +10,9 @@ discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
 extra_cost = 16
-1477.1.5 = { owner = FRA controller = FRA add_core = FRA }
-1526.1.14 = { add_core = HAB }
-1636.8.30 = { controller = HAB }
-1636.10.1 = { controller = FRA }
-1773.1.1 = { base_tax = 11 base_production = 11 }
 owner = GAU
 controller = GAU
 add_core = GAU
-add_core = FRA
+
+culture = lingonian
+religion = druidic

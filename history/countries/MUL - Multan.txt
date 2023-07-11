@@ -1,16 +1,14 @@
 government = monarchy
 add_government_reform = indian_sultanate_reform
 primary_culture = panjabi
-religion = sunni
+religion = zoroastrian
 technology_group = indian
-capital = 506	# Multan
-fixed_capital = 506 # Cannot move capital away from this province & no power cost to move to it
+capital = 506# Multan
+fixed_capital = 506# Cannot move capital away from this province & no power cost to move to it
 religious_school = hanafi_school
-
 #Langas
-
-1437.1.1 = {
-	monarch = {
+1437.1.1 = { 
+	monarch = { 
 		name = "Qutbudin"
 		dynasty = "Langa"
 		ADM = 0
@@ -18,9 +16,8 @@ religious_school = hanafi_school
 		MIL = 3
 	}
 }
-
-1437.1.1 = {
-	heir = {
+1437.1.1 = { 
+	heir = { 
 		name = "Hussain"
 		monarch_name = "Hussain I"
 		dynasty = "Langa"
@@ -32,9 +29,8 @@ religious_school = hanafi_school
 		MIL = 1
 	}
 }
-
-1460.1.1 = {
-	monarch = {
+1460.1.1 = { 
+	monarch = { 
 		name = "Hussain I"
 		dynasty = "Langa"
 		ADM = 2
@@ -42,9 +38,8 @@ religious_school = hanafi_school
 		MIL = 1
 	}
 }
-
-1460.1.1 = {
-	heir = {
+1460.1.1 = { 
+	heir = { 
 		name = "Firuz"
 		monarch_name = "Firuzshah"
 		dynasty = "Langa"
@@ -56,9 +51,8 @@ religious_school = hanafi_school
 		MIL = 2
 	}
 }
-
-1480.1.1 = {
-	monarch = {
+1480.1.1 = { 
+	monarch = { 
 		name = "Firuzshah"
 		dynasty = "Langa"
 		ADM = 1
@@ -66,9 +60,8 @@ religious_school = hanafi_school
 		MIL = 2
 	}
 }
-
-1480.1.1 = {
-	heir = {
+1480.1.1 = { 
+	heir = { 
 		name = "Mahmud"
 		monarch_name = "Mahmud"
 		dynasty = "Langa"
@@ -80,9 +73,8 @@ religious_school = hanafi_school
 		MIL = 3
 	}
 }
-
-1500.1.1 = {
-	monarch = {
+1500.1.1 = { 
+	monarch = { 
 		name = "Mahmud"
 		dynasty = "Langa"
 		ADM = 0
@@ -90,9 +82,8 @@ religious_school = hanafi_school
 		MIL = 3
 	}
 }
-
-1500.1.1 = {
-	heir = {
+1500.1.1 = { 
+	heir = { 
 		name = "Hussain"
 		monarch_name = "Hussain II"
 		dynasty = "Langa"
@@ -104,9 +95,8 @@ religious_school = hanafi_school
 		MIL = 1
 	}
 }
-
-1518.1.1 = {
-	monarch = {
+1518.1.1 = { 
+	monarch = { 
 		name = "Hussain II"
 		dynasty = "Langa"
 		ADM = 0
@@ -114,15 +104,12 @@ religious_school = hanafi_school
 		MIL = 1
 	}
 }
-
 #Mirranis
-
-1553.1.1 = {
+1553.1.1 = { 
 	government_rank = 1
 }
-
-1555.1.1 = {
-	monarch = {
+1555.1.1 = { 
+	monarch = { 
 		name = "Ghazi Khan Mirrani"
 		dynasty = "Mirrani"
 		ADM = 0
@@ -130,3 +117,4 @@ religious_school = hanafi_school
 		MIL = 3
 	}
 }
+government_rank = 1

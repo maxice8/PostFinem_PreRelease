@@ -7,21 +7,8 @@ capital = "Dorpat"
 is_city = yes
 discovered_by = western
 discovered_by = eastern
-1542.1.1 = { religion = Protestant }
-1558.7.18 = { controller = RUS }
-1561.1.1 = { 
-	owner = LIT
-}
-1569.7.1 = { 
-	owner = PLC
-}
-1582.1.15 = { controller = PLC }
-1600.12.31 = { controller = SWE }
-1603.4.5 = { controller = PLC }
-1625.8.21 = { controller = SWE }
-1629.9.16 = { owner = SWE add_core = SWE }
-1656.11.3 = { controller = RUS }
-1661.6.21 = { controller = SWE }
-1704.7.14 = { controller = RUS }
-1721.8.30 = { owner = RUS add_core = RUS }
-add_core = SWE
+religion = romuva
+culture = sudori
+add_core = VZA
+owner = VZA
+controller = VZA

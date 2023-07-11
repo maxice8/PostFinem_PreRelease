@@ -1,15 +1,14 @@
 government = tribal
 add_government_reform = tribal_despotism
 government_rank = 1
-primary_culture = moroccan
-religion = sunni
-technology_group = muslim
-capital = 346	# Tafilalt
-fixed_capital = 346 # Cannot move capital away from this province & no power cost to move to it
+primary_culture = gaetulian
+religion = animism
+technology_group = western
+capital = 346# Tafilalt
+fixed_capital = 346# Cannot move capital away from this province & no power cost to move to it
 religious_school = maliki_school
-
-1444.1.1 = {
-	monarch = {
+1444.1.1 = { 
+	monarch = { 
 		name = "Abu Walid"
 		dynasty = "Saadi"
 		adm = 2
@@ -18,8 +17,8 @@ religious_school = maliki_school
 	}
 	add_piety = 1.0
 }
-1472.1.1 = {
-	monarch = {
+1472.1.1 = { 
+	monarch = { 
 		name = "Muhammad al-Qaim"
 		dynasty = "Saadi"
 		adm = 4
@@ -28,9 +27,8 @@ religious_school = maliki_school
 	}
 	add_piety = 1.0
 }
-
-1486.1.1 = {
-	heir = {
+1486.1.1 = { 
+	heir = { 
 		name = "Ahmad"
 		monarch_name = "Ahmad al-Araj"
 		dynasty = "Saadi"
@@ -42,9 +40,8 @@ religious_school = maliki_school
 		mil = 5
 	}
 }
-
-1509.1.1 = {
-	monarch = {
+1509.1.1 = { 
+	monarch = { 
 		name = "Ahmad al-Araj"
 		dynasty = "Saadi"
 		adm = 4
@@ -53,9 +50,8 @@ religious_school = maliki_school
 	}
 	add_piety = 1.0
 }
-
-1509.1.1 = {
-	heir = {
+1509.1.1 = { 
+	heir = { 
 		name = "Mohammed"
 		monarch_name = "Mohammed ash-Sheikh"
 		dynasty = "Saadi"
@@ -67,9 +63,8 @@ religious_school = maliki_school
 		mil = 5
 	}
 }
-
-1544.1.1 = {
-	monarch = {
+1544.1.1 = { 
+	monarch = { 
 		name = "Mohammed ash-Sheikh"
 		dynasty = "Saadi"
 		adm = 4
@@ -78,9 +73,8 @@ religious_school = maliki_school
 	}
 	add_piety = 1.0
 }
-
-1544.6.1 = {
-	heir = {
+1544.6.1 = { 
+	heir = { 
 		name = "Abdallah"
 		monarch_name = "Abdallah al-Ghalib"
 		dynasty = "Saadi"
@@ -92,11 +86,9 @@ religious_school = maliki_school
 		mil = 4
 	}
 }
-
 #1549 - Saadians capture Fez, continues as Morocco
-
-1557.10.23 = {
-	monarch = {
+1557.10.23 = { 
+	monarch = { 
 		name = "Abdallah al-Ghalib"
 		dynasty = "Saadi"
 		adm = 6
@@ -104,10 +96,9 @@ religious_school = maliki_school
 		mil = 4
 	}
 }
-
 #Alaouites
-1631.1.1 = {
-	monarch = {
+1631.1.1 = { 
+	monarch = { 
 		name = "Moulay Ali Cherif"
 		dynasty = "Alaouite"
 		adm = 4
@@ -116,9 +107,8 @@ religious_school = maliki_school
 	}
 	add_piety = 1.0
 }
-
-1631.1.1 = {
-	heir = {
+1631.1.1 = { 
+	heir = { 
 		name = "Muhammad"
 		monarch_name = "Muhammad ibn Sharif"
 		dynasty = "Saadi"
@@ -130,9 +120,8 @@ religious_school = maliki_school
 		mil = 5
 	}
 }
-
-1659.6.5 = {
-	monarch = {
+1659.6.5 = { 
+	monarch = { 
 		name = "Muhammad ibn Sharif"
 		dynasty = "Alaouite"
 		adm = 3
@@ -141,17 +130,14 @@ religious_school = maliki_school
 	}
 	add_piety = 1.0
 }
-
-1668.8.2 = {
-	monarch = {
+1668.8.2 = { 
+	monarch = { 
 		name = "ar-Rashid"
 		dynasty = "Alaouite"
 		adm = 4
 		dip = 3
 		mil = 5
-		leader = { name = "ar-Rashid"		type = general	fire = 4	shock = 3	manuever = 4	siege = 1}
+		leader = { name = "ar-Rashid" type = general fire = 4 shock = 3 manuever = 4 siege = 1 }
 	}
 	add_piety = 1.0
 }
-
-#1668.9.7 - Reunification of Morocco under the Alaouites

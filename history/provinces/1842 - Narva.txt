@@ -7,17 +7,8 @@ capital = "Narva"
 is_city = yes
 discovered_by = western
 discovered_by = eastern
-1542.1.1 = { religion = Protestant }
-1558.5.11 = { 
-	owner = RUS
-	controller = RUS
-}
-1581.1.1 = { 
-	owner = SWE
-	controller = SWE
-	add_core = SWE
-}
-1704.8.9 = { controller = RUS }
-1721.8.30 = { 
-	owner = RUS
-}
+religion = romuva
+culture = sudori
+add_core = GDJ
+owner = GDJ
+controller = GDJ

@@ -4,10 +4,13 @@ trade_goods = wool
 base_tax = 1
 base_production = 1
 base_manpower = 1
-is_city = no
+is_city = yes
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
-1523.1.1 = { religion = Reformed }
-1806.7.12 = { hre = no }
+culture = old_lombard
+religion = romana
+add_core = LBD
+owner = LBD
+controller = LBD

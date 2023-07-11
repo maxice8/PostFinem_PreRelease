@@ -4,7 +4,7 @@ trade_goods = wool
 base_tax = 2
 base_production = 2
 base_manpower = 3
-is_city = no
+is_city = yes
 discovered_by = east_african
 discovered_by = western
 discovered_by = muslim
@@ -12,13 +12,8 @@ discovered_by = ottoman
 discovered_by = eastern
 discovered_by = nomad_group
 #fort_15th = yes #The Citadel of Mardin which withstood repeated sieges by Timur and was frequently seiged in Ottoman-Safavid conflicts.
-1507.1.1 = { 
-	owner = PER
-	controller = PER
-	add_core = PER
-}
-1514.8.23 = { 
-	owner = TUR
-	controller = TUR
-	add_core = TUR
-}
+culture = sophi
+religion = hellenic
+add_core = EDS
+owner = EDS
+controller = EDS

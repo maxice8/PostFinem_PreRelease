@@ -11,15 +11,8 @@ discovered_by = eastern
 discovered_by = western
 extra_cost = 8
 center_of_trade = 1
-1501.1.1 = { 
-	owner = TUR
-	controller = TUR
-	add_core = TUR
-}
-1520.1.1 = { religion = Sunni }
-1614.1.1 = { capital = "Tirana" }
-1797.1.1 = { controller = REB revolt = { type = revolutionary_rebels size = 1 } }
-1803.1.1 = { controller = TUR revolt = { size = 1 } }
 owner = NEK
 controller = NEK
 add_core = NEK
+religion = jewish
+culture = hebren

@@ -1,12 +1,11 @@
-government = monarchy
-add_government_reform = feudalism_reform
-technology_group = western
-primary_culture = bavarian
-religion = catholic
-capital = 65	# München!
-
-1503.12.1 = {
-	monarch = {
+government = tribal
+add_government_reform = feudal_tribe
+technology_group = eastern
+primary_culture = marcomanni
+religion = germanic_religion
+capital = 65# München!
+1503.12.1 = { 
+	monarch = { 
 		name = "Albrecht IV der Weise"
 		dynasty = "von Wittelsbach"
 		birth_date = 1447.12.15
@@ -14,7 +13,7 @@ capital = 65	# München!
 		dip = 3
 		mil = 2
 	}
-	queen = {
+	queen = { 
 		country_of_origin = HAB
 		name = "Kunigunde"
 		dynasty = "von Habsburg"
@@ -25,7 +24,7 @@ capital = 65	# München!
 		dip = 3
 		mil = 2
 	}
-	heir = {
+	heir = { 
 		name = "Wilhelm"
 		monarch_name = "Wilhelm IV"
 		dynasty = "von Wittelsbach"
@@ -37,9 +36,8 @@ capital = 65	# München!
 		mil = 2
 	}
 }
-
-1508.3.19  = {
-	monarch = {
+1508.3.19 = { 
+	monarch = { 
 		name = "Wilhelm IV"
 		dynasty = "von Wittelsbach"
 		birth_date = 1493.11.13
@@ -48,9 +46,8 @@ capital = 65	# München!
 		mil = 2
 	}
 }
-
-1522.10.5 = {
-	queen = {
+1522.10.5 = { 
+	queen = { 
 		country_of_origin = BAD
 		name = "Kunigunde"
 		dynasty = "von Zähringen"
@@ -62,10 +59,8 @@ capital = 65	# München!
 		mil = 1
 	}
 }
-
-
-1528.2.28 = {
-	heir = {
+1528.2.28 = { 
+	heir = { 
 		name = "Albrecht"
 		monarch_name = "Albrecht V"
 		dynasty = "von Wittelsbach"
@@ -77,17 +72,16 @@ capital = 65	# München!
 		mil = 0
 	}
 }
-
-1550.3.7   = {
-	monarch = {
+1550.3.7 = { 
+	monarch = { 
 		name = "Albrecht V"
 		dynasty = "von Wittelsbach"
 		birth_date = 1528.2.28
-		adm = 2	
-		dip = 3	
+		adm = 2
+		dip = 3
 		mil = 0
 	}
-	queen = {
+	queen = { 
 		country_of_origin = HAB
 		name = "Anna"
 		dynasty = "von Habsburg"
@@ -99,9 +93,8 @@ capital = 65	# München!
 		mil = 1
 	}
 }
-
-1550.3.7 = {
-	heir = {
+1550.3.7 = { 
+	heir = { 
 		name = "Wilhelm"
 		monarch_name = "Wilhelm V"
 		dynasty = "von Wittelsbach"
@@ -113,18 +106,16 @@ capital = 65	# München!
 		mil = 1
 	}
 }
-
-1579.10.25 = {
-	monarch = {
+1579.10.25 = { 
+	monarch = { 
 		name = "Wilhelm V"
 		dynasty = "von Wittelsbach"
 		birth_date = 1548.9.29
-		adm = 4	
-		dip = 1	
+		adm = 4
+		dip = 1
 		mil = 1
 	}
-
-	queen = {
+	queen = { 
 		country_of_origin = LOR
 		name = "Renata"
 		dynasty = "de Vaudémont"
@@ -136,9 +127,8 @@ capital = 65	# München!
 		mil = 1
 	}
 }
-
-1579.10.25 = {
-	heir = {
+1579.10.25 = { 
+	heir = { 
 		name = "Maximilian"
 		monarch_name = "Maximilian I"
 		dynasty = "von Wittelsbach"
@@ -150,17 +140,16 @@ capital = 65	# München!
 		mil = 0
 	}
 }
-
-1597.10.16 = {
-	monarch = {
+1597.10.16 = { 
+	monarch = { 
 		name = "Maximilian I"
 		dynasty = "von Wittelsbach"
 		birth_date = 1573.4.17
-		adm = 2	
-		dip = 4	
+		adm = 2
+		dip = 4
 		mil = 0
 	}
-	queen = {
+	queen = { 
 		country_of_origin = LOR
 		name = "Elisabeth"
 		dynasty = "de Vaudémont"
@@ -172,21 +161,15 @@ capital = 65	# München!
 		mil = 1
 	}
 }
-
-1609.1.1   = { leader = { name = "Tilly"	type = general	fire = 4	shock = 4	manuever = 3	siege = 1	death_date = 1632.4.30 } }
-
-1609.7.1 = {
+1609.1.1 = { leader = { name = "Tilly" type = general fire = 4 shock = 4 manuever = 3 siege = 1 death_date = 1632.4.30 } }
+1609.7.1 = { 
 	join_league = catholic
 }
-
-1623.1.1   = { elector = yes }	
-
-1630.1.1   = { leader = { name = "Mercy"	type = general	fire = 3	shock = 3	manuever = 1	siege = 0	death_date = 1645.8.3 } }
-
-1635.1.1   = { leader = { name = "von Werth"	type = general	fire = 3	shock = 2	manuever = 4	siege = 0	death_date = 1652.9.16 } }
-
-1635.7.15 = {
-	queen = {
+1623.1.1 = { elector = yes }
+1630.1.1 = { leader = { name = "Mercy" type = general fire = 3 shock = 3 manuever = 1 siege = 0 death_date = 1645.8.3 } }
+1635.1.1 = { leader = { name = "von Werth" type = general fire = 3 shock = 2 manuever = 4 siege = 0 death_date = 1652.9.16 } }
+1635.7.15 = { 
+	queen = { 
 		country_of_origin = HAB
 		name = "Maria Anna"
 		dynasty = "von Habsburg"
@@ -198,9 +181,8 @@ capital = 65	# München!
 		mil = 1
 	}
 }
-
-1636.10.31 = {
-	heir = {
+1636.10.31 = { 
+	heir = { 
 		name = "Ferdinand Maria"
 		monarch_name = "Ferdinand Maria I"
 		dynasty = "von Wittelsbach"
@@ -212,15 +194,12 @@ capital = 65	# München!
 		mil = 3
 	}
 }
-
-1641.1.1   = { leader = { name = "Grönsfeld"	type = general	fire = 2	shock = 2	manuever = 2	siege = 0	death_date = 1660.1.1 } }
-
-1647.3.15 = {
+1641.1.1 = { leader = { name = "Grönsfeld" type = general fire = 2 shock = 2 manuever = 2 siege = 0 death_date = 1660.1.1 } }
+1647.3.15 = { 
 	leave_league = catholic
 }
-
-1651.9.28  = {
-	monarch = {
+1651.9.28 = { 
+	monarch = { 
 		name = "Ferdinand Maria I"
 		dynasty = "von Wittelsbach"
 		birth_date = 1636.10.31
@@ -228,8 +207,7 @@ capital = 65	# München!
 		dip = 2
 		mil = 3
 	}
-
-	queen = {
+	queen = { 
 		country_of_origin = SAV
 		name = "Henrietta Adelaide"
 		dynasty = "di Savoia"
@@ -241,9 +219,8 @@ capital = 65	# München!
 		mil = 1
 	}
 }
-
-1662.7.11 = {
-	heir = {
+1662.7.11 = { 
+	heir = { 
 		name = "Maximilian Emanuel"
 		monarch_name = "Maximilian II Emanuel"
 		dynasty = "von Wittelsbach"
@@ -253,24 +230,22 @@ capital = 65	# München!
 		adm = 6
 		dip = 3
 		mil = 2
-		leader = { name = "Max II Emmanuel"	type = general	fire = 2	shock = 3	manuever = 3	siege = 0 }
+		leader = { name = "Max II Emmanuel" type = general fire = 2 shock = 3 manuever = 3 siege = 0 }
 	}
 }
-
-1679.5.27  = {
-	monarch = {
+1679.5.27 = { 
+	monarch = { 
 		name = "Maximilian II Emanuel"
 		dynasty = "von Wittelsbach"
 		birth_date = 1662.7.11
 		adm = 4
 		dip = 3
 		mil = 2
-		leader = { name = "Max II Emmanuel"	type = general	fire = 2	shock = 3	manuever = 3	siege = 0 }
+		leader = { name = "Max II Emmanuel" type = general fire = 2 shock = 3 manuever = 3 siege = 0 }
 	}
 }
-
-1685.7.15 = {
-	queen = {
+1685.7.15 = { 
+	queen = { 
 		country_of_origin = HAB
 		name = "Maria Antonia"
 		dynasty = "von Habsburg"
@@ -282,9 +257,8 @@ capital = 65	# München!
 		mil = 1
 	}
 }
-
-1695.1.2 = {
-	queen = {
+1695.1.2 = { 
+	queen = { 
 		country_of_origin = PLC
 		name = "Theresa Kunigunde"
 		dynasty = "Sobieski"
@@ -296,10 +270,8 @@ capital = 65	# München!
 		mil = 1
 	}
 }
-
-
-1697.8.6 = {
-	heir = {
+1697.8.6 = { 
+	heir = { 
 		name = "Karl Albrecht"
 		monarch_name = "Karl Albrecht I"
 		dynasty = "von Wittelsbach"
@@ -311,14 +283,10 @@ capital = 65	# München!
 		mil = 1
 	}
 }
-	
-
-1706.1.1   = { elector = no }
-
-1714.1.1   = { elector = yes }
-
-1726.2.25  = {
-	monarch = {
+1706.1.1 = { elector = no }
+1714.1.1 = { elector = yes }
+1726.2.25 = { 
+	monarch = { 
 		name = "Karl Albrecht I"
 		dynasty = "von Wittelsbach"
 		birth_date = 1697.8.6
@@ -326,7 +294,7 @@ capital = 65	# München!
 		dip = 3
 		mil = 1
 	}
-	queen = {
+	queen = { 
 		country_of_origin = HAB
 		name = "Maria Amalia"
 		dynasty = "von Habsburg"
@@ -338,9 +306,8 @@ capital = 65	# München!
 		mil = 1
 	}
 }
-
-1727.3.28 = {
-	heir = {
+1727.3.28 = { 
+	heir = { 
 		name = "Maximilian Joseph"
 		monarch_name = "Maximilian III Joseph"
 		dynasty = "von Wittelsbach"
@@ -352,12 +319,9 @@ capital = 65	# München!
 		mil = 3
 	}
 }
-
-1740.1.1   = { leader = { name = "Seckendorf"	type = general	fire = 3	shock = 3	manuever = 3	siege = 0	death_date = 1763.11.23 } }
-
-
-1745.1.21  = {
-	monarch = {
+1740.1.1 = { leader = { name = "Seckendorf" type = general fire = 3 shock = 3 manuever = 3 siege = 0 death_date = 1763.11.23 } }
+1745.1.21 = { 
+	monarch = { 
 		name = "Maximilian III Joseph"
 		dynasty = "von Wittelsbach"
 		birth_date = 1727.3.28
@@ -366,9 +330,8 @@ capital = 65	# München!
 		mil = 3
 	}
 }
-
-1745.1.21 = {
-	heir = {
+1745.1.21 = { 
+	heir = { 
 		name = "Karl Theodor"
 		monarch_name = "Karl Theodor I"
 		dynasty = "von Wittelsbach"
@@ -380,9 +343,8 @@ capital = 65	# München!
 		mil = 0
 	}
 }
-
-1747.7.9 = {
-	queen = {
+1747.7.9 = { 
+	queen = { 
 		country_of_origin = SAX
 		name = "Maria Anna"
 		dynasty = "von Wettin"
@@ -394,9 +356,8 @@ capital = 65	# München!
 		mil = 1
 	}
 }
-
-1777.12.30 = {
-	monarch = {
+1777.12.30 = { 
+	monarch = { 
 		name = "Karl Theodor I"
 		dynasty = "von Wittelsbach"
 		birth_date = 1724.12.11
@@ -404,7 +365,7 @@ capital = 65	# München!
 		dip = 4
 		mil = 0
 	}
-	queen = {
+	queen = { 
 		country_of_origin = PAL
 		name = "Elisabeth Auguste"
 		dynasty = "von Wittelsbach"
@@ -416,9 +377,8 @@ capital = 65	# München!
 		mil = 1
 	}
 }
-
-1777.12.30 = {
-	heir = {
+1777.12.30 = { 
+	heir = { 
 		name = "Maximilian Joseph"
 		monarch_name = "Maximilian IV Joseph"
 		dynasty = "von Wittelsbach"
@@ -430,9 +390,8 @@ capital = 65	# München!
 		mil = 2
 	}
 }
-
-1795.2.15 = {
-	queen = {
+1795.2.15 = { 
+	queen = { 
 		country_of_origin = HAB
 		name = "Maria Leopoldina"
 		dynasty = "von Habsburg"
@@ -444,9 +403,8 @@ capital = 65	# München!
 		mil = 1
 	}
 }
-
-1799.2.15  = {
-	monarch = {
+1799.2.15 = { 
+	monarch = { 
 		name = "Maximilian IV Joseph"
 		dynasty = "von Wittelsbach"
 		birth_date = 1756.5.27
@@ -454,7 +412,7 @@ capital = 65	# München!
 		dip = 5
 		mil = 2
 	}
-	queen = {
+	queen = { 
 		country_of_origin = BAD
 		name = "Karoline"
 		dynasty = "von Zähringen"
@@ -465,7 +423,7 @@ capital = 65	# München!
 		dip = 2
 		mil = 1
 	}
-	heir = {
+	heir = { 
 		name = "Ludwig"
 		monarch_name = "Ludwig I"
 		dynasty = "von Wittelsbach"
@@ -476,11 +434,9 @@ capital = 65	# München!
 		dip = 3
 		mil = 2
 	}
-
 }
-
 1806.7.12 = { elector = no government_rank = 1 } # The HRE is formally abolished #government_rank = 2
-
-1813.10.20 = {
+1813.10.20 = { 
 	government_rank = 2
 }
+government_rank = 1

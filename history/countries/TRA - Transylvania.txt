@@ -1,15 +1,13 @@
-government = monarchy
-add_government_reform = feudalism_reform
+government = tribal
+add_government_reform = feudal_tribe
 government_rank = 1
 technology_group = eastern
-primary_culture = transylvanian
+primary_culture = drakova
 add_accepted_culture = hungarian
-religion = catholic
-capital = 1951	# Alba Iulia
-
-
-1395.1.1 = {
-	monarch = {
+religion = slavic_relgion
+capital = 157# Alba Iulia
+1395.1.1 = { 
+	monarch = { 
 		name = "Stibor"
 		dynasty = "de Stiboricz"
 		adm = 3
@@ -17,9 +15,8 @@ capital = 1951	# Alba Iulia
 		mil = 0
 	}
 }
-
-1415.1.1 = {
-	monarch = {
+1415.1.1 = { 
+	monarch = { 
 		name = "Miklós"
 		dynasty = "Csáki"
 		adm = 2
@@ -27,20 +24,18 @@ capital = 1951	# Alba Iulia
 		mil = 2
 	}
 }
-
-1445.1.1 = {
-	monarch = {
+1445.1.1 = { 
+	monarch = { 
 		name = "János"
 		dynasty = "Hunyadi"
 		adm = 3
 		dip = 3
 		mil = 5
-		leader = {	name = "János Hunyadi"	type = general	fire = 4	shock = 4	manuever = 4	siege = 1	death_date = 1456.8.11 }
+		leader = { name = "János Hunyadi" type = general fire = 4 shock = 4 manuever = 4 siege = 1 death_date = 1456.8.11 }
 	}
 }
-
-1511.1.1 = {
-	monarch = {
+1511.1.1 = { 
+	monarch = { 
 		name = "János I"
 		dynasty = "Zápolya"
 		adm = 4
@@ -48,9 +43,8 @@ capital = 1951	# Alba Iulia
 		mil = 2
 	}
 }
-
-1540.7.22 = {
-	monarch = {
+1540.7.22 = { 
+	monarch = { 
 		name = "János II"
 		dynasty = "Zápolya"
 		adm = 1
@@ -58,10 +52,9 @@ capital = 1951	# Alba Iulia
 		mil = 2
 	}
 }
-1567.1.1  = { religion = reformed } # Synod of Debrecen
-
-1571.3.14 = {
-	monarch = {
+1567.1.1 = { religion = reformed } # Synod of Debrecen
+1571.3.14 = { 
+	monarch = { 
 		name = "István"
 		dynasty = "Báthory"
 		adm = 5
@@ -69,9 +62,8 @@ capital = 1951	# Alba Iulia
 		mil = 6
 	}
 }
-
-1576.5.3 = {
-	monarch = {
+1576.5.3 = { 
+	monarch = { 
 		name = "Christofer"
 		dynasty = "Báthory"
 		adm = 1
@@ -79,9 +71,8 @@ capital = 1951	# Alba Iulia
 		mil = 2
 	}
 }
-
-1581.1.1 = {
-	monarch = {
+1581.1.1 = { 
+	monarch = { 
 		name = "Sigismund"
 		dynasty = "Báthory"
 		adm = 1
@@ -89,9 +80,8 @@ capital = 1951	# Alba Iulia
 		mil = 2
 	}
 }
-
-1599.1.1 = {
-	monarch = {
+1599.1.1 = { 
+	monarch = { 
 		name = "Mihai"
 		dynasty = "Viteazul"
 		adm = 4
@@ -99,9 +89,8 @@ capital = 1951	# Alba Iulia
 		mil = 6
 	}
 }
-
-1602.1.1 = {
-	monarch = {
+1602.1.1 = { 
+	monarch = { 
 		name = "Interregnum"
 		regent = yes
 		adm = 0
@@ -109,9 +98,8 @@ capital = 1951	# Alba Iulia
 		mil = 0
 	}
 }
-
-1605.1.1 = {
-	monarch = {
+1605.1.1 = { 
+	monarch = { 
 		name = "István"
 		dynasty = "Bocskai"
 		adm = 2
@@ -119,9 +107,8 @@ capital = 1951	# Alba Iulia
 		mil = 3
 	}
 }
-
-1606.12.30 = {
-	monarch = {
+1606.12.30 = { 
+	monarch = { 
 		name = "Gábor"
 		dynasty = "Báthory"
 		adm = 4
@@ -129,9 +116,8 @@ capital = 1951	# Alba Iulia
 		mil = 2
 	}
 }
-
-1613.1.1 = {
-	monarch = {
+1613.1.1 = { 
+	monarch = { 
 		name = "Gábor"
 		dynasty = "Bethlen"
 		adm = 4
@@ -139,9 +125,8 @@ capital = 1951	# Alba Iulia
 		mil = 4
 	}
 }
-
-1629.11.17 = {
-	monarch = {
+1629.11.17 = { 
+	monarch = { 
 		name = "György I"
 		dynasty = "Rákóczy"
 		adm = 2
@@ -149,9 +134,8 @@ capital = 1951	# Alba Iulia
 		mil = 3
 	}
 }
-
-1629.11.17 = {
-	heir = {
+1629.11.17 = { 
+	heir = { 
 		name = "György"
 		monarch_name = "György II"
 		dynasty = "Rákóczy"
@@ -163,9 +147,8 @@ capital = 1951	# Alba Iulia
 		mil = 2
 	}
 }
-
-1648.1.1 = {
-	monarch = {
+1648.1.1 = { 
+	monarch = { 
 		name = "György II"
 		dynasty = "Rákóczy"
 		adm = 3
@@ -173,9 +156,8 @@ capital = 1951	# Alba Iulia
 		mil = 2
 	}
 }
-
-1665.1.1 = {
-	monarch = {
+1665.1.1 = { 
+	monarch = { 
 		name = "Ferenc I"
 		dynasty = "Rákóczy"
 		adm = 3
@@ -183,9 +165,8 @@ capital = 1951	# Alba Iulia
 		mil = 1
 	}
 }
-
-1676.3.27 = {
-	heir = {
+1676.3.27 = { 
+	heir = { 
 		name = "Ferenc"
 		monarch_name = "Ferenc II"
 		dynasty = "Rákóczy"
@@ -197,9 +178,8 @@ capital = 1951	# Alba Iulia
 		mil = 4
 	}
 }
-		
-1691.1.1 = {
-	monarch = {
+1691.1.1 = { 
+	monarch = { 
 		name = "Ferenc II"
 		dynasty = "Rákóczy"
 		adm = 4
@@ -207,7 +187,6 @@ capital = 1951	# Alba Iulia
 		mil = 4
 	}
 }
-
-1699.1.1 = {
-	capital = 157 # Bihar
+1699.1.1 = { 
+	capital = 157# Bihar
 }

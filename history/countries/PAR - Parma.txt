@@ -1,15 +1,13 @@
 government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 1
-primary_culture = romagnan
-religion = catholic
+primary_culture = etrusci
+religion = punic_religion
 technology_group = western
-capital = 105	# Parma
-fixed_capital = 105 # Cannot move capital away from this province & no power cost to move to it
-
-
-1545.10.20 = {
-	monarch = {
+capital = 105# Parma
+fixed_capital = 105# Cannot move capital away from this province & no power cost to move to it
+1545.10.20 = { 
+	monarch = { 
 		name = "Pier Luigi"
 		dynasty = "Farnese"
 		adm = 3
@@ -17,9 +15,8 @@ fixed_capital = 105 # Cannot move capital away from this province & no power cos
 		mil = 2
 	}
 }
-
-1545.10.20 = {
-	heir = {
+1545.10.20 = { 
+	heir = { 
 		name = "Ottavio"
 		monarch_name = "Ottavio"
 		dynasty = "Farnese"
@@ -31,12 +28,12 @@ fixed_capital = 105 # Cannot move capital away from this province & no power cos
 		mil = 4
 	}
 }
-
-1545.10.20 = { government = monarchy
-add_government_reform = autocracy_reform }
-
-1547.9.11 = {
-	monarch = {
+1545.10.20 = { 
+	government = monarchy
+	add_government_reform = autocracy_reform
+}
+1547.9.11 = { 
+	monarch = { 
 		name = "Ottavio"
 		dynasty = "Farnese"
 		adm = 4
@@ -44,9 +41,8 @@ add_government_reform = autocracy_reform }
 		mil = 4
 	}
 }
-
-1547.9.11 = {
-	heir = {
+1547.9.11 = { 
+	heir = { 
 		name = "Alessandro"
 		monarch_name = "Alessandro"
 		dynasty = "Farnese"
@@ -58,9 +54,8 @@ add_government_reform = autocracy_reform }
 		mil = 5
 	}
 }
-
-1586.9.22 = {
-	monarch = {
+1586.9.22 = { 
+	monarch = { 
 		name = "Alessandro"
 		dynasty = "Farnese"
 		adm = 4
@@ -68,9 +63,8 @@ add_government_reform = autocracy_reform }
 		mil = 5
 	}
 }
-
-1586.9.22 = {
-	heir = {
+1586.9.22 = { 
+	heir = { 
 		name = "Ranuccio"
 		monarch_name = "Ranuccio I"
 		dynasty = "Farnese"
@@ -82,9 +76,8 @@ add_government_reform = autocracy_reform }
 		mil = 1
 	}
 }
-
-1592.12.3 = {
-	monarch = {
+1592.12.3 = { 
+	monarch = { 
 		name = "Ranuccio I"
 		dynasty = "Farnese"
 		adm = 2
@@ -92,9 +85,8 @@ add_government_reform = autocracy_reform }
 		mil = 1
 	}
 }
-
-1612.4.28 = {
-	heir = {
+1612.4.28 = { 
+	heir = { 
 		name = "Odoardo"
 		monarch_name = "Odoardo I"
 		dynasty = "Farnese"
@@ -106,9 +98,8 @@ add_government_reform = autocracy_reform }
 		mil = 2
 	}
 }
-
-1622.3.6 = {
-	monarch = {
+1622.3.6 = { 
+	monarch = { 
 		name = "Odoardo I"
 		dynasty = "Farnese"
 		adm = 4
@@ -116,12 +107,12 @@ add_government_reform = autocracy_reform }
 		mil = 2
 	}
 }
-
-1622.3.6 = { government = monarchy
-add_government_reform = autocracy_reform }
-
-1630.9.17 = {
-	heir = {
+1622.3.6 = { 
+	government = monarchy
+	add_government_reform = autocracy_reform
+}
+1630.9.17 = { 
+	heir = { 
 		name = "Ranuccio"
 		monarch_name = "Ranuccio II"
 		dynasty = "Farnese"
@@ -133,9 +124,8 @@ add_government_reform = autocracy_reform }
 		mil = 2
 	}
 }
-
-1646.9.12 = {
-	monarch = {
+1646.9.12 = { 
+	monarch = { 
 		name = "Ranuccio II"
 		dynasty = "Farnese"
 		adm = 3
@@ -143,9 +133,8 @@ add_government_reform = autocracy_reform }
 		mil = 2
 	}
 }
-
-1678.5.19 = {
-	heir = {
+1678.5.19 = { 
+	heir = { 
 		name = "Francesco Maria"
 		monarch_name = "Francesco Maria"
 		dynasty = "Farnese"
@@ -157,9 +146,8 @@ add_government_reform = autocracy_reform }
 		mil = 3
 	}
 }
-
-1694.12.12 = {
-	monarch = {
+1694.12.12 = { 
+	monarch = { 
 		name = "Francesco Maria"
 		dynasty = "Farnese"
 		adm = 2
@@ -167,9 +155,8 @@ add_government_reform = autocracy_reform }
 		mil = 3
 	}
 }
-
-1694.12.12 = {
-	heir = {
+1694.12.12 = { 
+	heir = { 
 		name = "Antonio"
 		monarch_name = "Antonio"
 		dynasty = "Farnese"
@@ -181,9 +168,8 @@ add_government_reform = autocracy_reform }
 		mil = 2
 	}
 }
-
-1727.2.25 = {
-	monarch = {
+1727.2.25 = { 
+	monarch = { 
 		name = "Antonio"
 		dynasty = "Farnese"
 		adm = 1
@@ -191,13 +177,12 @@ add_government_reform = autocracy_reform }
 		mil = 2
 	}
 }
-
-1731.1.21 = { government = monarchy
-# add_government_reform = letat_cest_moi_reform 
+1731.1.21 = { 
+	government = monarchy
+	# add_government_reform = letat_cest_moi_reform 
 }
-
-1731.1.21 = {
-	monarch = {
+1731.1.21 = { 
+	monarch = { 
 		name = "Carlo I"
 		dynasty = "de Bourbon"
 		adm = 5
@@ -205,9 +190,8 @@ add_government_reform = autocracy_reform }
 		mil = 3
 	}
 }
-
-1748.1.1 = {
-	monarch = {
+1748.1.1 = { 
+	monarch = { 
 		name = "Filippo I"
 		dynasty = "de Bourbon"
 		adm = 4
@@ -215,9 +199,8 @@ add_government_reform = autocracy_reform }
 		mil = 4
 	}
 }
-
-1751.1.20 = {
-	heir = {
+1751.1.20 = { 
+	heir = { 
 		name = "Ferdinando"
 		monarch_name = "Ferdinando I"
 		dynasty = "de Bourbon"
@@ -229,9 +212,8 @@ add_government_reform = autocracy_reform }
 		mil = 2
 	}
 }
-
-1765.7.19 = {
-	monarch = {
+1765.7.19 = { 
+	monarch = { 
 		name = "Ferdinando I"
 		dynasty = "de Bourbon"
 		adm = 2
@@ -239,9 +221,8 @@ add_government_reform = autocracy_reform }
 		mil = 2
 	}
 }
-
-1814.5.30 = {
-	monarch = {
+1814.5.30 = { 
+	monarch = { 
 		name = "Maria Luigia"
 		dynasty = "de Bourbon"
 		adm = 4

@@ -15,11 +15,8 @@ add_permanent_province_modifier = {
 	name = don_estuary_modifier
 	duration = -1
 }
-1471.1.1 = { fort_15th = yes owner = TUR controller = TUR capital = "Azaq" }
-1637.6.1 = { owner = ZAZ controller = ZAZ }
-1642.1.1 = { owner = TUR controller = TUR }
-1696.7.19 = { controller = RUS capital = "Azov" }
-1700.6.13 = { owner = RUS }
-1713.6.24 = { owner = TUR controller = TUR }
-1736.6.30 = { controller = RUS }
-1739.9.29 = { owner = RUS }
+religion = tengri_pagan_reformed
+culture = kuban
+add_core = BUL
+owner = BUL
+controller = BUL

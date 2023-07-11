@@ -2,23 +2,21 @@ government = monarchy
 add_government_reform = negusa_nagast
 government_rank = 3
 primary_culture = amhara
-religion = coptic
+religion = sunni
 technology_group = east_african
 unit_type = sub_saharan
-capital = 1224		# Gonder
+capital = 1224# Gonder
 add_historical_rival = ADA
-
-change_estate_land_share = {
+change_estate_land_share = { 
 	estate = estate_nobles
 	share = 12
 }
-change_estate_land_share = {
+change_estate_land_share = { 
 	estate = estate_church
 	share = -12
 }
-
-1382.1.1 = {
-	monarch = {
+1382.1.1 = { 
+	monarch = { 
 		name = "Dawit I"
 		dynasty = "Solomonid"
 		adm = 3
@@ -26,9 +24,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-
-1385.1.1 = {
-	heir = {
+1385.1.1 = { 
+	heir = { 
 		name = "Tewodros"
 		monarch_name = "Tewodros I"
 		dynasty = "Solomonid"
@@ -40,9 +37,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-
-1413.10.6 = {
-	monarch = {
+1413.10.6 = { 
+	monarch = { 
 		name = "Tewodros I"
 		dynasty = "Solomonid"
 		adm = 1
@@ -50,9 +46,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-
-1413.10.6 = {
-	heir = {
+1413.10.6 = { 
+	heir = { 
 		name = "Yeshaq"
 		monarch_name = "Yeshaq I"
 		dynasty = "Solomonid"
@@ -64,9 +59,8 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
-
-1414.1.1 = {
-	monarch = {
+1414.1.1 = { 
+	monarch = { 
 		name = "Yeshaq I"
 		dynasty = "Solomonid"
 		adm = 0
@@ -74,9 +68,8 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
-
-1414.1.1 = {
-	heir = {
+1414.1.1 = { 
+	heir = { 
 		name = "Andreyas"
 		monarch_name = "Andreyas"
 		dynasty = "Solomonid"
@@ -88,9 +81,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-
-1429.1.1 = {
-	monarch = {
+1429.1.1 = { 
+	monarch = { 
 		name = "Andreyas"
 		dynasty = "Solomonid"
 		adm = 2
@@ -98,9 +90,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-
-1429.1.1 = {
-	heir = {
+1429.1.1 = { 
+	heir = { 
 		name = "Takla Maryam"
 		monarch_name = "Takla Maryam"
 		dynasty = "Solomonid"
@@ -112,9 +103,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1430.1.1 = {
-	monarch = {
+1430.1.1 = { 
+	monarch = { 
 		name = "Takla Maryam"
 		dynasty = "Solomonid"
 		adm = 0
@@ -122,9 +112,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1430.1.1 = {
-	heir = {
+1430.1.1 = { 
+	heir = { 
 		name = "Amda Iyasus"
 		monarch_name = "Amda Iyasus"
 		dynasty = "Solomonid"
@@ -136,9 +125,8 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
-
-1433.1.1 = {
-	monarch = {
+1433.1.1 = { 
+	monarch = { 
 		name = "Amda Iyasus"
 		dynasty = "Solomonid"
 		adm = 2
@@ -146,9 +134,8 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
-
-1433.1.1 = {
-	heir = {
+1433.1.1 = { 
+	heir = { 
 		name = "Zar'a Quastantînôs"
 		monarch_name = "Zar'a Quastantînôs III"
 		dynasty = "Solomonid"
@@ -160,23 +147,20 @@ change_estate_land_share = {
 		mil = 5
 	}
 }
-
-1434.6.2 = {
-	monarch = {
+1434.6.2 = { 
+	monarch = { 
 		name = "Zara Yakob"
 		dynasty = "Solomonid"
 		adm = 6
 		dip = 5
 		mil = 5
 	}
-	
 	clear_scripted_personalities = yes
 	add_ruler_personality = just_personality
 	add_ruler_personality = righteous_personality
 }
-
-1434.6.2 = {
-	heir = {
+1434.6.2 = { 
+	heir = { 
 		name = "Ba'eda Mâryâm"
 		monarch_name = "Ba'eda Mâryâm II"
 		dynasty = "Solomonid"
@@ -188,9 +172,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-
-1468.9.7 = {
-	monarch = {
+1468.9.7 = { 
+	monarch = { 
 		name = "Ba'eda Mâryâm II"
 		dynasty = "Solomonid"
 		adm = 1
@@ -198,9 +181,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-
-1468.9.7 = {
-	heir = {
+1468.9.7 = { 
+	heir = { 
 		name = "Quastantînôs"
 		monarch_name = "Quastantînôs IV"
 		dynasty = "Solomonid"
@@ -212,9 +194,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-
-1478.10.17 = {
-	monarch = {
+1478.10.17 = { 
+	monarch = { 
 		name = "Quastantînôs IV"
 		dynasty = "Solomonid"
 		adm = 3
@@ -222,9 +203,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-
-1478.10.17 = {
-	heir = {
+1478.10.17 = { 
+	heir = { 
 		name = "'Amda Seyôn"
 		monarch_name = "'Amda Seyôn II"
 		dynasty = "Solomonid"
@@ -236,9 +216,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1492.1.1 = {
-	monarch = {
+1492.1.1 = { 
+	monarch = { 
 		name = "'Amda Seyôn II"
 		dynasty = "Solomonid"
 		adm = 1
@@ -246,9 +225,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1492.1.1 = {
-	heir = {
+1492.1.1 = { 
+	heir = { 
 		name = "Nâ'ôd"
 		monarch_name = "Nâ'ôd I"
 		dynasty = "Solomonid"
@@ -260,9 +238,8 @@ change_estate_land_share = {
 		mil = 3
 	}
 }
-
-1494.11.2 = {
-	monarch = {
+1494.11.2 = { 
+	monarch = { 
 		name = "Nâ'ôd I"
 		dynasty = "Solomonid"
 		adm = 1
@@ -270,9 +247,8 @@ change_estate_land_share = {
 		mil = 3
 	}
 }
-
-1494.11.2 = {
-	heir = {
+1494.11.2 = { 
+	heir = { 
 		name = "Lebna Dengel Dâwît"
 		monarch_name = "Lebna Dengel Dâwît II"
 		dynasty = "Solomonid"
@@ -284,9 +260,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1508.7.30 = {
-	monarch = {
+1508.7.30 = { 
+	monarch = { 
 		name = "Lebna Dengel Dâwît II"
 		dynasty = "Solomonid"
 		adm = 2
@@ -294,9 +269,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1520.1.1 = {
-	heir = {
+1520.1.1 = { 
+	heir = { 
 		name = "Galâwdêwôs"
 		monarch_name = "Galâwdêwôs"
 		dynasty = "Solomonid"
@@ -308,9 +282,8 @@ change_estate_land_share = {
 		mil = 5
 	}
 }
-
-1540.8.3 = {
-	monarch = {
+1540.8.3 = { 
+	monarch = { 
 		name = "Galâwdêwôs"
 		dynasty = "Solomonid"
 		adm = 3
@@ -318,9 +291,8 @@ change_estate_land_share = {
 		mil = 5
 	}
 }
-
-1559.3.24 = {
-	heir = {
+1559.3.24 = { 
+	heir = { 
 		name = "Mînâs"
 		monarch_name = "Mînâs"
 		dynasty = "Solomonid"
@@ -332,9 +304,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-
-1559.3.25 = {
-	monarch = {
+1559.3.25 = { 
+	monarch = { 
 		name = "Mînâs"
 		dynasty = "Solomonid"
 		adm = 1
@@ -342,9 +313,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-
-1559.3.25 = {
-	heir = {
+1559.3.25 = { 
+	heir = { 
 		name = "Sarsa Dengel"
 		monarch_name = "Sarsa Dengel"
 		dynasty = "Solomonid"
@@ -354,23 +324,21 @@ change_estate_land_share = {
 		adm = 1
 		dip = 3
 		mil = 6
-		leader = {	name = "Sarsa Dengel"          	type = general	fire = 1	shock = 3	manuever = 4	siege = 0}
+		leader = { name = "Sarsa Dengel" type = general fire = 1 shock = 3 manuever = 4 siege = 0 }
 	}
 }
-		
-1568.1.24 = {
-	monarch = {
+1568.1.24 = { 
+	monarch = { 
 		name = "Sarsa Dengel"
 		dynasty = "Solomonid"
 		adm = 1
 		dip = 3
 		mil = 6
-		leader = {	name = "Sarsa Dengel"          	type = general	fire = 1	shock = 3	manuever = 4	siege = 0}
+		leader = { name = "Sarsa Dengel" type = general fire = 1 shock = 3 manuever = 4 siege = 0 }
 	}
 }
-
-1570.1.1 = {
-	heir = {
+1570.1.1 = { 
+	heir = { 
 		name = "Yâ'qob"
 		monarch_name = "Yâ'qob"
 		dynasty = "Solomonid"
@@ -382,9 +350,8 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
-
-1597.7.3 = {
-	monarch = {
+1597.7.3 = { 
+	monarch = { 
 		name = "Yâ'qob"
 		dynasty = "Solomonid"
 		adm = 0
@@ -392,9 +359,8 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
-
-1597.7.3 = {
-	heir = {
+1597.7.3 = { 
+	heir = { 
 		name = "Sûsenyôs"
 		monarch_name = "Sûsenyôs"
 		dynasty = "Solomonid"
@@ -406,9 +372,8 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
-
-1607.3.11 = {
-	monarch = {
+1607.3.11 = { 
+	monarch = { 
 		name = "Sûsenyôs"
 		dynasty = "Solomonid"
 		adm = 0
@@ -416,9 +381,8 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
-
-1607.3.11 = {
-	heir = {
+1607.3.11 = { 
+	heir = { 
 		name = "Fâsîladas"
 		monarch_name = "Fâsîladas"
 		dynasty = "Solomonid"
@@ -430,9 +394,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-		
-1632.9.15 = {
-	monarch = {
+1632.9.15 = { 
+	monarch = { 
 		name = "Fâsîladas"
 		dynasty = "Solomonid"
 		adm = 5
@@ -440,9 +403,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-
-1632.9.15 = {
-	heir = {
+1632.9.15 = { 
+	heir = { 
 		name = "Yôhannes"
 		monarch_name = "Yôhannes I"
 		dynasty = "Solomonid"
@@ -454,9 +416,8 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
-
-1667.10.19 = {
-	monarch = {
+1667.10.19 = { 
+	monarch = { 
 		name = "Yôhannes I"
 		dynasty = "Solomonid"
 		adm = 5
@@ -464,9 +425,8 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
-
-1667.10.19 = {
-	heir = {
+1667.10.19 = { 
+	heir = { 
 		name = "Iyâsû"
 		monarch_name = "Iyâsû I"
 		dynasty = "Solomonid"
@@ -476,23 +436,21 @@ change_estate_land_share = {
 		adm = 4
 		dip = 6
 		mil = 6
-		leader = {	name = "Iyâsû I"               	type = general	fire = 1	shock = 3	manuever = 3	siege = 0}
+		leader = { name = "Iyâsû I" type = general fire = 1 shock = 3 manuever = 3 siege = 0 }
 	}
 }
-
-1682.7.20 = {
-	monarch = {
+1682.7.20 = { 
+	monarch = { 
 		name = "Iyâsû I"
 		dynasty = "Solomonid"
 		adm = 4
 		dip = 6
 		mil = 6
-		leader = {	name = "Iyâsû I"               	type = general	fire = 1	shock = 3	manuever = 3	siege = 0}
+		leader = { name = "Iyâsû I" type = general fire = 1 shock = 3 manuever = 3 siege = 0 }
 	}
 }
-
-1682.7.20 = {
-	heir = {
+1682.7.20 = { 
+	heir = { 
 		name = "Taqla Hâymânôt"
 		monarch_name = "Taqla Hâymânôt I"
 		dynasty = "Solomonid"
@@ -504,9 +462,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1706.3.2 = {
-	monarch = {
+1706.3.2 = { 
+	monarch = { 
 		name = "Taqla Hâymânôt I"
 		dynasty = "Solomonid"
 		adm = 1
@@ -514,9 +471,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1706.3.2 = {
-	heir = {
+1706.3.2 = { 
+	heir = { 
 		name = "Têwôflôs"
 		monarch_name = "Têwôflôs"
 		dynasty = "Solomonid"
@@ -528,9 +484,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1708.6.2 = {
-	monarch = {
+1708.6.2 = { 
+	monarch = { 
 		name = "Têwôflôs"
 		dynasty = "Solomonid"
 		adm = 0
@@ -538,9 +493,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1708.6.2 = {
-	heir = {
+1708.6.2 = { 
+	heir = { 
 		name = "Yôstôs"
 		monarch_name = "Yôstôs"
 		dynasty = "Solomonid"
@@ -552,9 +506,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1711.10.15 = {
-	monarch = {
+1711.10.15 = { 
+	monarch = { 
 		name = "Yôstôs"
 		dynasty = "Solomonid"
 		adm = 0
@@ -562,9 +515,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1711.10.15 = {
-	heir = {
+1711.10.15 = { 
+	heir = { 
 		name = "Dâwît"
 		monarch_name = "Dâwît III"
 		dynasty = "Solomonid"
@@ -576,9 +528,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-
-1716.1.20 = {
-	monarch = {
+1716.1.20 = { 
+	monarch = { 
 		name = "Dâwît III"
 		dynasty = "Solomonid"
 		adm = 1
@@ -586,9 +537,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-
-1716.1.20 = {
-	heir = {
+1716.1.20 = { 
+	heir = { 
 		name = "'Amsa Gîyôrgîs"
 		monarch_name = "'Amsa Gîyôrgîs"
 		dynasty = "Solomonid"
@@ -600,9 +550,8 @@ change_estate_land_share = {
 		mil = 3
 	}
 }
-
-1721.5.19 = {
-	monarch = {
+1721.5.19 = { 
+	monarch = { 
 		name = "'Amsa Gîyôrgîs"
 		dynasty = "Solomonid"
 		adm = 5
@@ -610,9 +559,8 @@ change_estate_land_share = {
 		mil = 3
 	}
 }
-
-1721.5.19 = {
-	heir = {
+1721.5.19 = { 
+	heir = { 
 		name = "Iyâsû"
 		monarch_name = "Iyâsû II"
 		dynasty = "Solomonid"
@@ -624,9 +572,8 @@ change_estate_land_share = {
 		mil = 3
 	}
 }
-
-1730.9.20 = {
-	monarch = {
+1730.9.20 = { 
+	monarch = { 
 		name = "Iyâsû II"
 		dynasty = "Solomonid"
 		adm = 0
@@ -634,9 +581,8 @@ change_estate_land_share = {
 		mil = 3
 	}
 }
-
-1730.9.20 = {
-	heir = {
+1730.9.20 = { 
+	heir = { 
 		name = "'Iyâ'ôs"
 		monarch_name = "'Iyâ'ôs"
 		dynasty = "Solomonid"
@@ -648,9 +594,8 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
-		
-1755.5.27 = {
-	monarch = {
+1755.5.27 = { 
+	monarch = { 
 		name = "'Iyâ'ôs"
 		dynasty = "Solomonid"
 		adm = 3
@@ -658,9 +603,8 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
-
-1755.5.27 = {
-	heir = {
+1755.5.27 = { 
+	heir = { 
 		name = "Yôhannes"
 		monarch_name = "Yôhannes II"
 		dynasty = "Solomonid"
@@ -672,9 +616,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-
-1769.5.8 = {
-	monarch = {
+1769.5.8 = { 
+	monarch = { 
 		name = "Yôhannes II"
 		dynasty = "Solomonid"
 		adm = 1
@@ -682,9 +625,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-
-1769.5.8 = {
-	heir = {
+1769.5.8 = { 
+	heir = { 
 		name = "Tuqla Hâymânôt"
 		monarch_name = "Tuqla Hâymânôt II"
 		dynasty = "Solomonid"
@@ -696,9 +638,8 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
-
-1769.10.18 = {
-	monarch = {
+1769.10.18 = { 
+	monarch = { 
 		name = "Tuqla Hâymânôt II"
 		dynasty = "Solomonid"
 		adm = 2
@@ -706,9 +647,8 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
-
-1769.10.18 = {
-	heir = {
+1769.10.18 = { 
+	heir = { 
 		name = "Salômôn"
 		monarch_name = "Salômôn"
 		dynasty = "Solomonid"
@@ -720,9 +660,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-
-1777.9.16 = {
-	monarch = {
+1777.9.16 = { 
+	monarch = { 
 		name = "Salômôn"
 		dynasty = "Solomonid"
 		adm = 0
@@ -730,9 +669,8 @@ change_estate_land_share = {
 		mil = 1
 	}
 }
-
-1777.9.16 = {
-	heir = {
+1777.9.16 = { 
+	heir = { 
 		name = "Tuqla Gîyôrgîs"
 		monarch_name = "Tuqla Gîyôrgîs"
 		dynasty = "Solomonid"
@@ -744,9 +682,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1779.7.21 = {
-	monarch = {
+1779.7.21 = { 
+	monarch = { 
 		name = "Tuqla Gîyôrgîs"
 		dynasty = "Solomonid"
 		adm = 0
@@ -754,9 +691,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1779.7.21 = {
-	heir = {
+1779.7.21 = { 
+	heir = { 
 		name = "Iyâsû"
 		monarch_name = "Iyâsû III"
 		dynasty = "Solomonid"
@@ -768,9 +704,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1784.1.9 = {
-	monarch = {
+1784.1.9 = { 
+	monarch = { 
 		name = "Iyâsû III"
 		dynasty = "Solomonid"
 		adm = 1
@@ -778,9 +713,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1784.1.9 = {
-	heir = {
+1784.1.9 = { 
+	heir = { 
 		name = "Tuqla Hâymânôt"
 		monarch_name = "Tuqla Hâymânôt III"
 		dynasty = "Solomonid"
@@ -792,9 +726,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1788.4.25 = {
-	monarch = {
+1788.4.25 = { 
+	monarch = { 
 		name = "Tuqla Hâymânôt III"
 		dynasty = "Solomonid"
 		adm = 0
@@ -802,9 +735,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1788.4.25 = {
-	heir = {
+1788.4.25 = { 
+	heir = { 
 		name = "Hezqeyâs"
 		monarch_name = "Hezqeyâs"
 		dynasty = "Solomonid"
@@ -816,9 +748,8 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
-
-1789.6.27 = {
-	monarch = {
+1789.6.27 = { 
+	monarch = { 
 		name = "Hezqeyâs"
 		dynasty = "Solomonid"
 		adm = 1
@@ -826,9 +757,8 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
-
-1789.6.27 = {
-	heir = {
+1789.6.27 = { 
+	heir = { 
 		name = "Gîyôrgîs Yohannes"
 		monarch_name = "Gîyôrgîs I Yohannes"
 		dynasty = "Solomonid"
@@ -840,9 +770,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1794.1.1 = {
-	monarch = {
+1794.1.1 = { 
+	monarch = { 
 		name = "Gîyôrgîs I Yohannes"
 		dynasty = "Solomonid"
 		dip = 0
@@ -850,9 +779,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1794.1.1 = {
-	heir = {
+1794.1.1 = { 
+	heir = { 
 		name = "Mariam Salomon"
 		monarch_name = "Mariam III Salomon"
 		dynasty = "Solomonid"
@@ -864,9 +792,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1795.4.15 = {
-	monarch = {
+1795.4.15 = { 
+	monarch = { 
 		name = "Mariam III Salomon"
 		dynasty = "Solomonid"
 		dip = 0
@@ -874,9 +801,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1795.4.15 = {
-	heir = {
+1795.4.15 = { 
+	heir = { 
 		name = "Gîyôrgîs Yohannes"
 		monarch_name = "Gîyôrgîs I Yohannes"
 		dynasty = "Solomonid"
@@ -888,9 +814,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1795.12.10 = {
-	monarch = {
+1795.12.10 = { 
+	monarch = { 
 		name = "Gîyôrgîs I Yohannes"
 		dynasty = "Solomonid"
 		dip = 0
@@ -898,9 +823,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1795.12.10 = {
-	heir = {
+1795.12.10 = { 
+	heir = { 
 		name = "Salomon"
 		monarch_name = "Salomon III"
 		dynasty = "Solomonid"
@@ -912,9 +836,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1796.5.20 = {
-	monarch = {
+1796.5.20 = { 
+	monarch = { 
 		name = "Salomon III"
 		dynasty = "Solomonid"
 		dip = 0
@@ -922,9 +845,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1797.7.15 = {
-	monarch = {
+1797.7.15 = { 
+	monarch = { 
 		name = "Yonas Letezum"
 		dynasty = "Solomonid"
 		dip = 0
@@ -932,9 +854,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1798.1.4 = {
-	monarch = {
+1798.1.4 = { 
+	monarch = { 
 		name = "Gîyôrgîs I Yohannes"
 		dynasty = "Solomonid"
 		dip = 0
@@ -942,9 +863,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1799.5.22 = {
-	monarch = {
+1799.5.22 = { 
+	monarch = { 
 		name = "Salomon III"
 		dynasty = "Solomonid"
 		dip = 0
@@ -952,9 +872,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1799.9.1 = {
-	monarch = {
+1799.9.1 = { 
+	monarch = { 
 		name = "Demetros Arqedewos"
 		dynasty = "Solomonid"
 		dip = 0
@@ -962,9 +881,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1800.3.24 = {
-	monarch = {
+1800.3.24 = { 
+	monarch = { 
 		name = "Gîyôrgîs I Yohannes"
 		dynasty = "Solomonid"
 		dip = 0
@@ -972,9 +890,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1800.6.5 = {
-	monarch = {
+1800.6.5 = { 
+	monarch = { 
 		name = "Demetros Arqedewos"
 		dynasty = "Solomonid"
 		dip = 0
@@ -982,9 +899,8 @@ change_estate_land_share = {
 		mil = 0
 	}
 }
-
-1801.6.11 = {
-	monarch = {
+1801.6.11 = { 
+	monarch = { 
 		name = "Egwale Seyon Hezqeyas"
 		dynasty = "Solomonid"
 		dip = 2
@@ -992,9 +908,8 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
-
-1818.6.3 = {
-	monarch = {
+1818.6.3 = { 
+	monarch = { 
 		name = "Iyoas II Hezqeyas"
 		dynasty = "Solomonid"
 		dip = 0

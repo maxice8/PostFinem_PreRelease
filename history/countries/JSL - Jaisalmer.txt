@@ -2,31 +2,27 @@ government = monarchy
 add_government_reform = rajput_kingdom
 government_rank = 1
 primary_culture = rajput
-religion = hinduism
+religion = zoroastrian
 technology_group = indian
-capital = 513	# Jaisalmer
-fixed_capital = 513 # Cannot move capital away from this province & no power cost to move to it
-
-1444.1.1 = {
-	if = {
-		limit = {
+capital = 513# Jaisalmer
+fixed_capital = 513# Cannot move capital away from this province & no power cost to move to it
+1444.1.1 = { 
+	if = { 
+		limit = { 
 			NOT = { has_dlc = "Dharma" }
 		}
 		add_government_reform = feudalism_reform
 	}
-	monarch = {
-		name = "Bhanwar"  # "Grandson" Haven't been able to find dynastic info before 1530
+	monarch = { 
+		name = "Bhanwar"# "Grandson" Haven't been able to find dynastic info before 1530
 		dynasty = "Yadava Bhati"
 		DIP = 0
 		MIL = 1
 		ADM = 0
 	}
 }
-
- 
-
-1480.1.1 = {
-	heir = {
+1480.1.1 = { 
+	heir = { 
 		name = "Lunkaran"
 		monarch_name = "Lunkaran"
 		dynasty = "Yadava Bhati"
@@ -38,9 +34,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 0
 	}
 }
-
-1530.1.1 = {
-	monarch = {
+1530.1.1 = { 
+	monarch = { 
 		name = "Lunkaran"
 		dynasty = "Yadava Bhati"
 		DIP = 2
@@ -48,9 +43,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 0
 	}
 }
-
-1530.1.1 = {
-	heir = {
+1530.1.1 = { 
+	heir = { 
 		name = "Maldev"
 		monarch_name = "Maldev"
 		dynasty = "Yadava Bhati"
@@ -62,9 +56,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 4
 	}
 }
-
-1551.1.1 = {
-	monarch = {
+1551.1.1 = { 
+	monarch = { 
 		name = "Maldev"
 		dynasty = "Yadava Bhati"
 		DIP = 2
@@ -72,9 +65,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 4
 	}
 }
-
-1551.1.1 = {
-	heir = {
+1551.1.1 = { 
+	heir = { 
 		name = "Harraj"
 		monarch_name = "Harraj"
 		dynasty = "Yadava Bhati"
@@ -86,9 +78,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 2
 	}
 }
-
-1562.1.1 = {
-	monarch = {
+1562.1.1 = { 
+	monarch = { 
 		name = "Harraj"
 		dynasty = "Yadava Bhati"
 		DIP = 1
@@ -96,9 +87,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 2
 	}
 }
-
-1562.1.1 = {
-	heir = {
+1562.1.1 = { 
+	heir = { 
 		name = "Bhim Singh"
 		monarch_name = "Bhim Singh"
 		dynasty = "Yadava Bhati"
@@ -110,9 +100,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 1
 	}
 }
-
-1578.1.1 = {
-	monarch = {
+1578.1.1 = { 
+	monarch = { 
 		name = "Bhim Singh"
 		dynasty = "Yadava Bhati"
 		DIP = 0
@@ -120,9 +109,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 1
 	}
 }
-
-1578.1.1 = {
-	heir = {
+1578.1.1 = { 
+	heir = { 
 		name = "Kalyan Das"
 		monarch_name = "Kalyan Das"
 		dynasty = "Yadava Bhati"
@@ -134,9 +122,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 1
 	}
 }
-
-1624.1.1 = {
-	monarch = {
+1624.1.1 = { 
+	monarch = { 
 		name = "Kalyan Das"
 		dynasty = "Yadava Bhati"
 		DIP = 1
@@ -144,9 +131,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 1
 	}
 }
-
-1624.1.1 = {
-	heir = {
+1624.1.1 = { 
+	heir = { 
 		name = "Manohar Das"
 		monarch_name = "Manohar Das"
 		dynasty = "Yadava Bhati"
@@ -158,9 +144,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 2
 	}
 }
-
-1634.1.1 = {
-	monarch = {
+1634.1.1 = { 
+	monarch = { 
 		name = "Manohar Das"
 		dynasty = "Yadava Bhati"
 		DIP = 0
@@ -168,9 +153,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 2
 	}
 }
-
-1644.1.1 = {
-	heir = {
+1644.1.1 = { 
+	heir = { 
 		name = "Ramchandar"
 		monarch_name = "Ramchandar"
 		dynasty = "Yadava Bhati"
@@ -182,9 +166,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 0
 	}
 }
-
-1648.1.1 = {
-	monarch = {
+1648.1.1 = { 
+	monarch = { 
 		name = "Ramchandar"
 		dynasty = "Yadava Bhati"
 		DIP = 1
@@ -192,9 +175,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 0
 	}
 }
-
-1648.1.1 = {
-	heir = {
+1648.1.1 = { 
+	heir = { 
 		name = "Sabal Singh"
 		monarch_name = "Sabal Singh"
 		dynasty = "Yadava Bhati"
@@ -206,9 +188,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 2
 	}
 }
-
-1651.1.1 = {
-	monarch = {
+1651.1.1 = { 
+	monarch = { 
 		name = "Sabal Singh"
 		dynasty = "Yadava Bhati"
 		DIP = 3
@@ -216,9 +197,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 2
 	}
 }
-
-1651.1.1 = {
-	heir = {
+1651.1.1 = { 
+	heir = { 
 		name = "Amar Singh"
 		monarch_name = "Amar Singh"
 		dynasty = "Yadava Bhati"
@@ -230,9 +210,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 0
 	}
 }
-
-1661.1.1 = {
-	monarch = {
+1661.1.1 = { 
+	monarch = { 
 		name = "Amar Singh"
 		dynasty = "Yadava Bhati"
 		DIP = 0
@@ -240,9 +219,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 0
 	}
 }
-
-1661.1.1 = {
-	heir = {
+1661.1.1 = { 
+	heir = { 
 		name = "Jaswant Sing"
 		monarch_name = "Jaswant Sing"
 		dynasty = "Yadava Bhati"
@@ -254,9 +232,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 1
 	}
 }
-
-1702.1.1 = {
-	monarch = {
+1702.1.1 = { 
+	monarch = { 
 		name = "Jaswant Sing"
 		dynasty = "Yadava Bhati"
 		DIP = 3
@@ -264,9 +241,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 1
 	}
 }
-
-1702.1.1 = {
-	heir = {
+1702.1.1 = { 
+	heir = { 
 		name = "Budh Singh"
 		monarch_name = "Budh Singh"
 		dynasty = "Yadava Bhati"
@@ -278,13 +254,11 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 3
 	}
 }
-
-1707.3.15 = {
-	government_rank = 2 #really from 1651
+1707.3.15 = { 
+	government_rank = 2#really from 1651
 }
-
-1708.1.1 = {
-	monarch = {
+1708.1.1 = { 
+	monarch = { 
 		name = "Budh Singh"
 		dynasty = "Yadava Bhati"
 		DIP = 1
@@ -292,9 +266,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 3
 	}
 }
-
-1708.1.1 = {
-	heir = {
+1708.1.1 = { 
+	heir = { 
 		name = "Akhai Singh"
 		monarch_name = "Akhai Singh"
 		dynasty = "Yadava Bhati"
@@ -306,9 +279,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 3
 	}
 }
-
-1722.1.1 = {
-	monarch = {
+1722.1.1 = { 
+	monarch = { 
 		name = "Akhai Singh"
 		dynasty = "Yadava Bhati"
 		DIP = 4
@@ -316,9 +288,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 3
 	}
 }
-
-1722.1.1 = {
-	heir = {
+1722.1.1 = { 
+	heir = { 
 		name = "Mulraj Singh"
 		monarch_name = "Mulraj Singh II"
 		dynasty = "Yadava Bhati"
@@ -330,9 +301,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 1
 	}
 }
-
-1762.1.1 = {
-	monarch = {
+1762.1.1 = { 
+	monarch = { 
 		name = "Mulraj Singh II"
 		dynasty = "Yadava Bhati"
 		DIP = 1
@@ -340,9 +310,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 1
 	}
 }
-
-1762.1.1 = {
-	heir = {
+1762.1.1 = { 
+	heir = { 
 		name = "Gaj Singh"
 		monarch_name = "Gaj Singh"
 		dynasty = "Yadava Bhati"
@@ -354,9 +323,8 @@ fixed_capital = 513 # Cannot move capital away from this province & no power cos
 		ADM = 0
 	}
 }
-
-1820.1.1 = {
-	monarch = {
+1820.1.1 = { 
+	monarch = { 
 		name = "Gaj Singh"
 		dynasty = "Yadava Bhati"
 		DIP = 2

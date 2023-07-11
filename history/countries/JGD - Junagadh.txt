@@ -2,14 +2,12 @@ government = tribal
 add_government_reform = tribal_kingdom
 government_rank = 1
 technology_group = indian
-religion = hinduism
+religion = zoroastrian
 primary_culture = saurashtri
-capital = 515	# Girnar
-
+capital = 515# Girnar
 #Yadavas/Chudasamas of Junagarh
-
-1440.1.1 = {
-	monarch = {
+1440.1.1 = { 
+	monarch = { 
 		name = "Mahipala III"
 		dynasty = "Chudasama"
 		ADM = 4
@@ -17,9 +15,8 @@ capital = 515	# Girnar
 		MIL = 2
 	}
 }
-
-1444.1.1 = {
-	heir = {
+1444.1.1 = { 
+	heir = { 
 		name = "Mandalika III"
 		monarch_name = "Mandalika"
 		dynasty = "Chudasama"
@@ -31,9 +28,8 @@ capital = 515	# Girnar
 		MIL = 5
 	}
 }
-
-1451.1.1 = {
-	monarch = {
+1451.1.1 = { 
+	monarch = { 
 		name = "Mandalika III"
 		dynasty = "Chudasama"
 		ADM = 3
@@ -41,16 +37,13 @@ capital = 515	# Girnar
 		MIL = 5
 	}
 }
-
 #Annexation
-
 #Babi Dynasty
-
-1725.1.1 = {
+1725.1.1 = { 
 	religion = sunni
 	government = monarchy
 	add_government_reform = indian_sultanate_reform
-	monarch = {
+	monarch = { 
 		name = "Mohammad Bahadur"
 		dynasty = "Babi"
 		ADM = 3
@@ -58,9 +51,8 @@ capital = 515	# Girnar
 		MIL = 3
 	}
 }
-
-1758.1.1 = {
-	monarch = {
+1758.1.1 = { 
+	monarch = { 
 		name = "Mohammad Mahabat"
 		dynasty = "Babi"
 		ADM = 2
@@ -68,9 +60,8 @@ capital = 515	# Girnar
 		MIL = 1
 	}
 }
-
-1774.1.1 = {
-	monarch = {
+1774.1.1 = { 
+	monarch = { 
 		name = "Mohammad Hamid"
 		dynasty = "Babi"
 		ADM = 2
@@ -78,9 +69,8 @@ capital = 515	# Girnar
 		MIL = 1
 	}
 }
-
-1811.1.1 = {
-	monarch = {
+1811.1.1 = { 
+	monarch = { 
 		name = "Mohammad Bahadur II"
 		dynasty = "Babi"
 		ADM = 2

@@ -1,13 +1,12 @@
 government = tribal
 add_government_reform = steppe_horde
 technology_group = nomad_group
-religion = sunni
-primary_culture = crimean
-capital = 284	# Crimea
+religion = tengri_pagan_reformed
+primary_culture = mongol_crimean
+capital = 284# Crimea
 religious_school = hanafi_school
-
-1441.1.1 = {
-	monarch = {
+1441.1.1 = { 
+	monarch = { 
 		name = "Haji I"
 		dynasty = Giray
 		birth_date = 1397.1.1
@@ -15,7 +14,7 @@ religious_school = hanafi_school
 		dip = 4
 		mil = 4
 	}
-	heir = {
+	heir = { 
 		name = "Nur Devlet"
 		monarch_name = "Nur Devlet I"
 		dynasty = "Giray"
@@ -31,9 +30,8 @@ religious_school = hanafi_school
 	add_ruler_personality = silver_tongue_personality
 	add_heir_personality = naive_personality
 }
-
-1466.8.1 = {
-	monarch = {
+1466.8.1 = { 
+	monarch = { 
 		name = "Nur Devlet I"
 		dynasty = Giray
 		birth_date = 1420.1.1
@@ -41,11 +39,10 @@ religious_school = hanafi_school
 		dip = 0
 		mil = 2
 	}
-	set_global_flag = death_of_haji_giray #Blocks succession event after this point.
+	set_global_flag = death_of_haji_giray#Blocks succession event after this point.
 }
-
-1469.1.1 = {
-	monarch = {
+1469.1.1 = { 
+	monarch = { 
 		name = "Mengli I"
 		dynasty = Giray
 		birth_date = 1445.1.1
@@ -53,11 +50,9 @@ religious_school = hanafi_school
 		dip = 3
 		mil = 3
 	}
-
 }
-
-1475.3.1 = {
-	monarch = {
+1475.3.1 = { 
+	monarch = { 
 		name = "Hayder I"
 		dynasty = Giray
 		birth_date = 1438.1.1
@@ -66,9 +61,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1475.12.1 = {
-	monarch = {
+1475.12.1 = { 
+	monarch = { 
 		name = "Nur Devlet I"
 		dynasty = Giray
 		birth_date = 1420.1.1
@@ -77,9 +71,8 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1478.5.1 = {
-	monarch = {
+1478.5.1 = { 
+	monarch = { 
 		name = "Mengli I"
 		dynasty = Giray
 		birth_date = 1445.1.1
@@ -89,9 +82,8 @@ religious_school = hanafi_school
 	}
 	government_rank = 1
 }
-
-1478.5.1 = {
-	heir = {
+1478.5.1 = { 
+	heir = { 
 		name = "Mehmed"
 		monarch_name = "Mehmed I"
 		dynasty = "Giray"
@@ -103,9 +95,8 @@ religious_school = hanafi_school
 		mil = 4
 	}
 }
-
-1515.4.1 = {
-	monarch = {
+1515.4.1 = { 
+	monarch = { 
 		name = "Mehmed I"
 		dynasty = Giray
 		birth_date = 1465.1.1
@@ -113,11 +104,9 @@ religious_school = hanafi_school
 		dip = 2
 		mil = 4
 	}
-
 }
-
-1515.4.1 = {
-	heir = {
+1515.4.1 = { 
+	heir = { 
 		name = "Ghazi"
 		monarch_name = "Ghazi I"
 		dynasty = "Giray"
@@ -129,9 +118,8 @@ religious_school = hanafi_school
 		mil = 0
 	}
 }
-
-1523.3.1 = {
-	monarch = {
+1523.3.1 = { 
+	monarch = { 
 		name = "Ghazi I"
 		dynasty = Giray
 		birth_date = 1504.1.1
@@ -140,9 +128,8 @@ religious_school = hanafi_school
 		mil = 0
 	}
 }
-
-1524.1.1 = {
-	monarch = {
+1524.1.1 = { 
+	monarch = { 
 		name = "Saadet I"
 		dynasty = Giray
 		birth_date = 1494.1.1
@@ -151,20 +138,17 @@ religious_school = hanafi_school
 		mil = 0
 	}
 }
-
-1532.5.1 = {
-	monarch = {
+1532.5.1 = { 
+	monarch = { 
 		name = "Islam I"
 		dynasty = Giray
 		adm = 1
 		dip = 1
 		mil = 1
 	}
-
 }
-
-1532.10.1 = {
-	monarch = {
+1532.10.1 = { 
+	monarch = { 
 		name = "Sahib I"
 		dynasty = Giray
 		birth_date = 1501.1.1
@@ -172,11 +156,9 @@ religious_school = hanafi_school
 		dip = 4
 		mil = 3
 	}
-
 }
-
-1537.1.1 = {
-	heir = {
+1537.1.1 = { 
+	heir = { 
 		name = "Amin"
 		monarch_name = "Amin I"
 		dynasty = "Giray"
@@ -188,24 +170,20 @@ religious_school = hanafi_school
 		mil = 4
 	}
 }
-
 # Sahib and his children murdered
-
-1551.1.1 = {
-	monarch = {
+1551.1.1 = { 
+	monarch = { 
 		name = "Devlet I"
 		dynasty = Giray
 		birth_date = 1512.1.1
 		adm = 2
 		dip = 2
 		mil = 4
-		leader = {	name = "Dawlat Giray I"        	type = general	fire = 1	shock = 4	manuever = 5	siege = 0}
+		leader = { name = "Dawlat Giray I" type = general fire = 1 shock = 4 manuever = 5 siege = 0 }
 	}
-
 }
-
-1551.1.1 = {
-	heir = {
+1551.1.1 = { 
+	heir = { 
 		name = "Mehmed"
 		monarch_name = "Mehmed II"
 		dynasty = "Giray"
@@ -217,9 +195,8 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1577.6.29 = {
-	monarch = {
+1577.6.29 = { 
+	monarch = { 
 		name = "Mehmed II"
 		dynasty = Giray
 		birth_date = 1532.1.1
@@ -228,9 +205,8 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1577.6.29 = {
-	heir = {
+1577.6.29 = { 
+	heir = { 
 		name = "Saadet"
 		monarch_name = "Saadet II"
 		dynasty = "Giray"
@@ -242,9 +218,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1584.1.1 = {
-	monarch = {
+1584.1.1 = { 
+	monarch = { 
 		name = "Saadet II"
 		dynasty = Giray
 		birth_date = 1555.1.1
@@ -253,9 +228,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1584.6.1 = {
-	monarch = {
+1584.6.1 = { 
+	monarch = { 
 		name = "Islam II"
 		dynasty = Giray
 		adm = 2
@@ -263,9 +237,8 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1588.3.1 = {
-	monarch = {
+1588.3.1 = { 
+	monarch = { 
 		name = "Ghazi II"
 		dynasty = Giray
 		birth_date = 1554.1.1
@@ -274,9 +247,8 @@ religious_school = hanafi_school
 		mil = 3
 	}
 }
-
-1596.5.1 = {
-	monarch = {
+1596.5.1 = { 
+	monarch = { 
 		name = "Fetih I"
 		dynasty = Giray
 		birth_date = 1557.1.1
@@ -285,9 +257,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1596.9.1 = {
-	monarch = {
+1596.9.1 = { 
+	monarch = { 
 		name = "Ghazi II"
 		dynasty = Giray
 		birth_date = 1554.1.1
@@ -296,9 +267,8 @@ religious_school = hanafi_school
 		mil = 3
 	}
 }
-
-1596.9.1 = {
-	heir = {
+1596.9.1 = { 
+	heir = { 
 		name = "Toqtamish"
 		monarch_name = "Toqtamish I"
 		dynasty = "Giray"
@@ -310,9 +280,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1607.12.20 = {
-	monarch = {
+1607.12.20 = { 
+	monarch = { 
 		name = "Toqtamish I"
 		dynasty = Giray
 		birth_date = 1589.1.1
@@ -321,9 +290,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1608.6.1 = {
-	monarch = {
+1608.6.1 = { 
+	monarch = { 
 		name = "Selamet I"
 		dynasty = Giray
 		birth_date = 1558.1.1
@@ -332,9 +300,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1608.6.1 = {
-	heir = {
+1608.6.1 = { 
+	heir = { 
 		name = "Janibek"
 		monarch_name = "Janibek I"
 		dynasty = "Giray"
@@ -346,9 +313,8 @@ religious_school = hanafi_school
 		mil = 0
 	}
 }
-
-1610.6.1 = {
-	monarch = {
+1610.6.1 = { 
+	monarch = { 
 		name = "Janibek I"
 		dynasty = Giray
 		birth_date = 1558.1.1
@@ -357,9 +323,8 @@ religious_school = hanafi_school
 		mil = 0
 	}
 }
-
-1623.1.1 = {
-	monarch = {
+1623.1.1 = { 
+	monarch = { 
 		name = "Mehmed III"
 		dynasty = Giray
 		birth_date = 1584.1.1
@@ -368,9 +333,8 @@ religious_school = hanafi_school
 		mil = 3
 	}
 }
-
-1628.6.1 = {
-	monarch = {
+1628.6.1 = { 
+	monarch = { 
 		name = "Janibek I"
 		dynasty = Giray
 		birth_date = 1558.1.1
@@ -379,9 +343,8 @@ religious_school = hanafi_school
 		mil = 0
 	}
 }
-
-1635.1.1 = {
-	monarch = {
+1635.1.1 = { 
+	monarch = { 
 		name = "Inayet I"
 		dynasty = Giray
 		birth_date = 1597.1.1
@@ -390,9 +353,8 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1637.1.1 = {
-	monarch = {
+1637.1.1 = { 
+	monarch = { 
 		name = "Bahadir I"
 		dynasty = Giray
 		birth_date = 1602.1.1
@@ -401,9 +363,8 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1641.1.1 = {
-	monarch = {
+1641.1.1 = { 
+	monarch = { 
 		name = "Mehmed IV"
 		dynasty = Giray
 		birth_date = 1610.1.1
@@ -412,9 +373,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1644.1.1 = {
-	monarch = {
+1644.1.1 = { 
+	monarch = { 
 		name = "Islam III"
 		dynasty = Giray
 		birth_date = 1604.1.1
@@ -423,9 +383,8 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1654.1.1 = {
-	monarch = {
+1654.1.1 = { 
+	monarch = { 
 		name = "Mehmed IV"
 		dynasty = Giray
 		birth_date = 1610.1.1
@@ -434,9 +393,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1666.3.1 = {
-	monarch = {
+1666.3.1 = { 
+	monarch = { 
 		name = "Adil I"
 		dynasty = Giray
 		birth_date = 1617.1.1
@@ -445,21 +403,19 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1671.1.1 = {
-	monarch = {
+1671.1.1 = { 
+	monarch = { 
 		name = "Selim I"
 		dynasty = Giray
 		birth_date = 1631.1.1
 		adm = 3
 		dip = 5
 		mil = 3
-		leader = {	name = "Selim I"         	type = general	fire = 1	shock = 4	manuever = 4	siege = 0}
+		leader = { name = "Selim I" type = general fire = 1 shock = 4 manuever = 4 siege = 0 }
 	}
 }
-
-1678.1.1 = {
-	monarch = {
+1678.1.1 = { 
+	monarch = { 
 		name = "Murad I"
 		dynasty = Giray
 		birth_date = 1627.1.1
@@ -468,33 +424,30 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1683.1.1 = {
-	monarch = {
+1683.1.1 = { 
+	monarch = { 
 		name = "Haji II"
 		dynasty = Giray
 		birth_date = 1644.1.1
 		adm = 2
 		dip = 2
 		mil = 5
-		leader = {	name = "Haji II"         	type = general	fire = 2	shock = 4	manuever = 3	siege = 0}
+		leader = { name = "Haji II" type = general fire = 2 shock = 4 manuever = 3 siege = 0 }
 	}
 }
-
-1684.1.1 = {
-	monarch = {
+1684.1.1 = { 
+	monarch = { 
 		name = "Selim I"
 		dynasty = Giray
 		birth_date = 1631.1.1
 		adm = 3
 		dip = 5
 		mil = 3
-		leader = {	name = "Selim I"         	type = general	fire = 1	shock = 4	manuever = 4	siege = 0}
+		leader = { name = "Selim I" type = general fire = 1 shock = 4 manuever = 4 siege = 0 }
 	}
 }
-
-1691.1.1 = {
-	monarch = {
+1691.1.1 = { 
+	monarch = { 
 		name = "Saadet III"
 		dynasty = Giray
 		birth_date = 1645.1.1
@@ -503,9 +456,8 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1691.6.1 = {
-	monarch = {
+1691.6.1 = { 
+	monarch = { 
 		name = "Safa I"
 		dynasty = Giray
 		birth_date = 1637.1.1
@@ -514,21 +466,19 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1692.1.1 = {
-	monarch = {
+1692.1.1 = { 
+	monarch = { 
 		name = "Selim I"
 		dynasty = Giray
 		birth_date = 1631.1.1
 		adm = 3
 		dip = 5
 		mil = 3
-		leader = {	name = "Selim I"         	type = general	fire = 1	shock = 4	manuever = 4	siege = 0}
+		leader = { name = "Selim I" type = general fire = 1 shock = 4 manuever = 4 siege = 0 }
 	}
 }
-
-1699.1.1 = {
-	monarch = {
+1699.1.1 = { 
+	monarch = { 
 		name = "Devlet II"
 		dynasty = Giray
 		birth_date = 1648.1.1
@@ -537,21 +487,19 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1702.1.1 = {
-	monarch = {
+1702.1.1 = { 
+	monarch = { 
 		name = "Selim I"
 		dynasty = Giray
 		birth_date = 1631.1.1
 		adm = 3
 		dip = 5
 		mil = 3
-		leader = {	name = "Selim I"         	type = general	fire = 1	shock = 4	manuever = 4	siege = 0}
+		leader = { name = "Selim I" type = general fire = 1 shock = 4 manuever = 4 siege = 0 }
 	}
 }
-
-1704.1.1 = {
-	monarch = {
+1704.1.1 = { 
+	monarch = { 
 		name = "Ghazi III"
 		dynasty = Giray
 		birth_date = 1673.1.1
@@ -560,9 +508,8 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1707.1.1 = {
-	monarch = {
+1707.1.1 = { 
+	monarch = { 
 		name = "Qaplan I"
 		dynasty = Giray
 		birth_date = 1678.1.1
@@ -571,9 +518,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1709.1.1 = {
-	monarch = {
+1709.1.1 = { 
+	monarch = { 
 		name = "Devlet II"
 		dynasty = Giray
 		birth_date = 1648.1.1
@@ -582,9 +528,8 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1713.1.1 = {
-	monarch = {
+1713.1.1 = { 
+	monarch = { 
 		name = "Qaplan I"
 		dynasty = Giray
 		birth_date = 1678.1.1
@@ -593,9 +538,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1715.1.1 = {
-	monarch = {
+1715.1.1 = { 
+	monarch = { 
 		name = "Devlet III"
 		dynasty = Giray
 		birth_date = 1647.1.1
@@ -604,9 +548,8 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1717.1.1 = {
-	monarch = {
+1717.1.1 = { 
+	monarch = { 
 		name = "Saadet IV"
 		dynasty = Giray
 		birth_date = 1662.1.1
@@ -615,9 +558,8 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1724.1.1 = {
-	monarch = {
+1724.1.1 = { 
+	monarch = { 
 		name = "Mengli II"
 		dynasty = Giray
 		birth_date = 1678.1.1
@@ -626,9 +568,8 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1730.1.1 = {
-	monarch = {
+1730.1.1 = { 
+	monarch = { 
 		name = "Qaplan I"
 		dynasty = Giray
 		birth_date = 1678.1.1
@@ -637,9 +578,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1736.1.1 = {
-	monarch = {
+1736.1.1 = { 
+	monarch = { 
 		name = "Fetih II"
 		dynasty = Giray
 		birth_date = 1696.1.1
@@ -648,9 +588,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1737.1.1 = {
-	monarch = {
+1737.1.1 = { 
+	monarch = { 
 		name = "Mengli II"
 		dynasty = Giray
 		birth_date = 1678.1.1
@@ -659,9 +598,8 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1740.1.1 = {
-	monarch = {
+1740.1.1 = { 
+	monarch = { 
 		name = "Selamet II"
 		dynasty = Giray
 		birth_date = 1691.1.1
@@ -670,9 +608,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1743.1.1 = {
-	monarch = {
+1743.1.1 = { 
+	monarch = { 
 		name = "Selim II"
 		dynasty = Giray
 		birth_date = 1708.1.1
@@ -681,9 +618,8 @@ religious_school = hanafi_school
 		mil = 0
 	}
 }
-
-1748.5.19 = {
-	monarch = {
+1748.5.19 = { 
+	monarch = { 
 		name = "Arslan I"
 		dynasty = Giray
 		birth_date = 1692.1.1
@@ -692,9 +628,8 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1756.1.1 = {
-	monarch = {
+1756.1.1 = { 
+	monarch = { 
 		name = "Halim I"
 		dynasty = Giray
 		birth_date = 1689.1.1
@@ -703,9 +638,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1758.1.1 = {
-	monarch = {
+1758.1.1 = { 
+	monarch = { 
 		name = "Qirim I"
 		dynasty = Giray
 		birth_date = 1717.1.1
@@ -714,9 +648,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1764.1.1 = {
-	monarch = {
+1764.1.1 = { 
+	monarch = { 
 		name = "Selim III"
 		dynasty = Giray
 		birth_date = 1713.1.1
@@ -725,9 +658,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1767.1.1 = {
-	monarch = {
+1767.1.1 = { 
+	monarch = { 
 		name = "Arslan I"
 		dynasty = Giray
 		birth_date = 1692.1.1
@@ -736,9 +668,8 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1767.6.2 = {
-	monarch = {
+1767.6.2 = { 
+	monarch = { 
 		name = "Maqsud"
 		dynasty = Giray
 		birth_date = 1720.1.1
@@ -747,9 +678,8 @@ religious_school = hanafi_school
 		mil = 0
 	}
 }
-
-1768.1.1 = {
-	monarch = {
+1768.1.1 = { 
+	monarch = { 
 		name = "Qirim I"
 		dynasty = Giray
 		birth_date = 1717.1.1
@@ -758,9 +688,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1769.1.1 = {
-	monarch = {
+1769.1.1 = { 
+	monarch = { 
 		name = "Devlet IV"
 		dynasty = Giray
 		birth_date = 1730.1.1
@@ -769,9 +698,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1770.1.1 = {
-	monarch = {
+1770.1.1 = { 
+	monarch = { 
 		name = "Qaplan II"
 		dynasty = Giray
 		birth_date = 1739.1.1
@@ -780,9 +708,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1770.6.1 = {
-	monarch = {
+1770.6.1 = { 
+	monarch = { 
 		name = "Selim III"
 		dynasty = Giray
 		birth_date = 1713.1.1
@@ -791,9 +718,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1771.1.1 = {
-	monarch = {
+1771.1.1 = { 
+	monarch = { 
 		name = "Sahib II"
 		dynasty = Giray
 		birth_date = 1726.1.1
@@ -802,9 +728,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1775.1.1 = {
-	monarch = {
+1775.1.1 = { 
+	monarch = { 
 		name = "Devlet IV"
 		dynasty = Giray
 		birth_date = 1730.1.1
@@ -813,9 +738,8 @@ religious_school = hanafi_school
 		mil = 1
 	}
 }
-
-1777.5.5 = {
-	monarch = {
+1777.5.5 = { 
+	monarch = { 
 		name = "Shahin I"
 		dynasty = Giray
 		birth_date = 1745.1.1
@@ -824,9 +748,8 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1782.5.1 = {
-	monarch = {
+1782.5.1 = { 
+	monarch = { 
 		name = "Bahadir II"
 		dynasty = Giray
 		birth_date = 1722.1.1
@@ -835,9 +758,8 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
-1782.11.1 = {
-	monarch = {
+1782.11.1 = { 
+	monarch = { 
 		name = "Shahin I"
 		dynasty = Giray
 		birth_date = 1745.1.1
@@ -846,5 +768,5 @@ religious_school = hanafi_school
 		mil = 2
 	}
 }
-
 # Annexed by Russia
+government_rank = 1

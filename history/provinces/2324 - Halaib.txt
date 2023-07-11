@@ -1,8 +1,8 @@
 #2324 - Halaib
 owner = AEG
 controller = AEG
-culture = beja
-religion = sunni
+culture = kyaneos
+religion = hellenic
 capital = "Halaib"
 is_city = yes
 base_manpower = 1
@@ -16,14 +16,4 @@ discovered_by = eastern
 discovered_by = nomad_group
 discovered_by = indian
 discovered_by = east_african
-1510.1.1 = { 
-	discovered_by = NUB
-	owner = NUB
-	controller = NUB
-}
-1524.1.1 = { 
-	owner = TUR
-	controller = TUR
-	add_core = TUR
-}
 add_core = AEG

@@ -4,12 +4,13 @@ base_production = 1
 trade_goods = wine
 base_manpower = 1
 capital = "Krems"
-is_city = no
+is_city = yes
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
-1545.1.1 = { base_manpower = 3 }
-1650.1.1 = { base_manpower = 4 }
-1700.1.1 = { base_manpower = 6 }
-1806.7.12 = { hre = no }
+culture = quadi
+religion = germanic_religion
+add_core = STY
+owner = STY
+controller = STY

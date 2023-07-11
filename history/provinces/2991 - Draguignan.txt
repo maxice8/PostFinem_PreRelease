@@ -1,6 +1,6 @@
 # Forcalquier
 capital = "Forcalquier"
-is_city = no
+is_city = yes
 base_tax = 2
 base_production = 2
 trade_goods = wool
@@ -9,12 +9,9 @@ discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
-1481.1.1 = { owner = FRA controller = FRA add_core = FRA }
-1526.5.22 = { controller = HAB }
-1529.8.3 = { controller = FRA }
-1536.7.1 = { controller = HAB }
-1536.9.15 = { controller = FRA }
-1590.6.1 = { controller = SAV }
-1591.4.5 = { controller = FRA }
-1806.7.12 = { hre = no }
 hre = yes
+religion = punic_religion
+culture = celtipunian
+add_core = PCM
+owner = PCM
+controller = PCM

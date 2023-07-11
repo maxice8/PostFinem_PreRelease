@@ -4,7 +4,7 @@ trade_goods = silk#And Salt and Petroleum
 base_tax = 3
 base_production = 3
 base_manpower = 2
-is_city = no
+is_city = yes
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern
@@ -14,29 +14,8 @@ add_permanent_province_modifier = {
 	name = kura_estuary_modifier
 	duration = -1
 }
-1499.1.1 = { controller = REB revolt = { type = religious_rebels name = "Qizilbash Tribesmen" size = 0 leader = "Ismail Safavid" } }
-1501.7.1 = { 
-	owner = PER
-	controller = PER
-	add_core = PER
-	revolt = { size = 1 }
-}
-1578.9.9 = { controller = TUR }
-1590.3.21 = { owner = TUR add_core = TUR }
-1607.1.1 = { controller = PER }
-1612.11.20 = { owner = PER }
-1725.1.1 = { 
-	owner = GAZ
-	controller = GAZ
-	add_core = GAZ
-	revolt = { size = 1 }
-}
-1747.1.1 = { 
-	owner = SRV
-	controller = SRV
-}
-1805.12.25 = { 
-	owner = RUS
-	controller = RUS
-	add_core = RUS
-}
+culture = araratian
+religion = hellenic
+add_core = ALR
+owner = ALR
+controller = ALR

@@ -7,24 +7,8 @@ capital = "Arensburg"
 is_city = yes
 discovered_by = western
 discovered_by = eastern
-1542.1.1 = { religion = Protestant }
-1559.1.1 = { 
-	owner = DAN
-	controller = DAN
-	add_core = DAN
-}
-1568.7.25 = { controller = SWE }
-1570.12.13 = { controller = DAN }
-1645.8.13 = { 
-	owner = SWE
-	controller = SWE
-	add_core = SWE
-}
-1710.9.20 = { controller = RUS }
-1721.8.30 = { 
-	owner = RUS
-	add_core = RUS
-}
-add_core = DAN
-add_core = DAN
-add_core = SWE
+religion = romuva
+culture = sudori
+add_core = GDJ
+owner = GDJ
+controller = GDJ

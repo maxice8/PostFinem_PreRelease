@@ -2,14 +2,12 @@ government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = eastern
-primary_culture = greek
-religion = orthodox
-capital = 145	# Nafplio
-fixed_capital = 145 # Cannot move capital away from this province & no power cost to move to it
-
-# Despots of Morea #
-1383.1.1 = {
-	monarch = {
+primary_culture = peloponnesian
+religion = hellenic
+capital = 145# Nafplio
+fixed_capital = 145# Despots of Morea #
+1383.1.1 = { 
+	monarch = { 
 		name = "Theodoros I"
 		dynasty = "Palaiologos"
 		dip = 1
@@ -17,9 +15,8 @@ fixed_capital = 145 # Cannot move capital away from this province & no power cos
 		mil = 1
 	}
 }
-
-1396.1.1 = {
-	heir = {
+1396.1.1 = { 
+	heir = { 
 		name = "Theodoros"
 		monarch_name = "Theodoros II"
 		dynasty = "Palaiologos"
@@ -31,9 +28,8 @@ fixed_capital = 145 # Cannot move capital away from this province & no power cos
 		mil = 3
 	}
 }
-
-1407.1.1 = {
-	monarch = {
+1407.1.1 = { 
+	monarch = { 
 		name = "Theodoros II"
 		dynasty = "Palaiologos"
 		dip = 2
@@ -41,9 +37,8 @@ fixed_capital = 145 # Cannot move capital away from this province & no power cos
 		mil = 3
 	}
 }
-
-1443.1.1 = {
-	monarch = {
+1443.1.1 = { 
+	monarch = { 
 		name = "Demetrios II"
 		dynasty = "Palaiologos"
 		dip = 2
@@ -51,5 +46,4 @@ fixed_capital = 145 # Cannot move capital away from this province & no power cos
 		mil = 1
 	}
 }
-
 # Conquered by the Ottomans 1460

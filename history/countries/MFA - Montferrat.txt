@@ -1,16 +1,15 @@
-government = monarchy
-add_government_reform = margraviate_reform
+government = republic
+add_government_reform = free_city
 government_rank = 1
-primary_culture = piedmontese
-religion = catholic
+primary_culture = ligurii
+religion = punic_religion
 technology_group = western
-capital = 2981	# Montferrat
+capital = 2981# Montferrat
 add_army_professionalism = 0.05
-
 #Palaiologos Dynasty
+1306.1.1 = {  #Invested since 1310
 
-1306.1.1 = { #Invested since 1310
-	monarch = {
+	monarch = { 
 		name = "Teodoro"
 		dynasty = "Palaiologos"
 		adm = 4
@@ -18,9 +17,8 @@ add_army_professionalism = 0.05
 		mil = 3
 	}
 }
-
-1338.4.24 = {
-	monarch = {
+1338.4.24 = { 
+	monarch = { 
 		name = "Giovanni II"
 		dynasty = "Palaiologos"
 		adm = 3
@@ -28,9 +26,8 @@ add_army_professionalism = 0.05
 		mil = 4
 	}
 }
-
-1372.3.19 = {
-	monarch = {
+1372.3.19 = { 
+	monarch = { 
 		name = "Ottone III"
 		dynasty = "Palaiologos"
 		adm = 1
@@ -38,9 +35,8 @@ add_army_professionalism = 0.05
 		mil = 1
 	}
 }
-
-1378.12.16 = {
-	monarch = {
+1378.12.16 = { 
+	monarch = { 
 		name = "Giovanni III"
 		dynasty = "Palaiologos"
 		adm = 2
@@ -48,9 +44,8 @@ add_army_professionalism = 0.05
 		mil = 1
 	}
 }
-
-1381.8.25 = {
-	monarch = {
+1381.8.25 = { 
+	monarch = { 
 		name = "Teodoro II"
 		dynasty = "Palaiologos"
 		adm = 1
@@ -58,9 +53,8 @@ add_army_professionalism = 0.05
 		mil = 1
 	}
 }
-
-1418.4.26 = {
-	monarch = {
+1418.4.26 = { 
+	monarch = { 
 		name = "Gian Giacomo"
 		dynasty = "Palaiologos"
 		adm = 2
@@ -68,9 +62,8 @@ add_army_professionalism = 0.05
 		mil = 3
 	}
 }
-
-1418.4.26 = {
-	heir = {
+1418.4.26 = { 
+	heir = { 
 		name = "Giovanni"
 		monarch_name = "Giovanni IV"
 		dynasty = "Palaiologos"
@@ -82,9 +75,8 @@ add_army_professionalism = 0.05
 		mil = 3
 	}
 }
-
-1445.3.12 = {
-	monarch = {
+1445.3.12 = { 
+	monarch = { 
 		name = "Giovanni IV"
 		dynasty = "Palaiologos"
 		adm = 2
@@ -92,9 +84,8 @@ add_army_professionalism = 0.05
 		mil = 3
 	}
 }
-
-1445.3.12 = {
-	heir = {
+1445.3.12 = { 
+	heir = { 
 		name = "Guglielmo"
 		monarch_name = "Guglielmo VIII"
 		dynasty = "Palaiologos"
@@ -106,9 +97,8 @@ add_army_professionalism = 0.05
 		mil = 3
 	}
 }
-
-1464.1.19 = {
-	monarch = {
+1464.1.19 = { 
+	monarch = { 
 		name = "Guglielmo VIII"
 		dynasty = "Palaiologos"
 		adm = 2
@@ -116,9 +106,8 @@ add_army_professionalism = 0.05
 		mil = 3
 	}
 }
-
-1464.1.19 = {
-	heir = {
+1464.1.19 = { 
+	heir = { 
 		name = "Bonifacio"
 		monarch_name = "Bonifacio III"
 		dynasty = "Palaiologos"
@@ -130,9 +119,8 @@ add_army_professionalism = 0.05
 		mil = 2
 	}
 }
-
-1483.2.27 = {
-	monarch = {
+1483.2.27 = { 
+	monarch = { 
 		name = "Bonifacio III"
 		dynasty = "Palaiologos"
 		adm = 2
@@ -140,9 +128,8 @@ add_army_professionalism = 0.05
 		mil = 2
 	}
 }
-
-1486.8.10 = {
-	heir = {
+1486.8.10 = { 
+	heir = { 
 		name = "Guglielmo"
 		monarch_name = "Guglielmo IX"
 		dynasty = "Palaiologos"
@@ -154,9 +141,8 @@ add_army_professionalism = 0.05
 		mil = 2
 	}
 }
-
-1494.1.1 = {
-	monarch = {
+1494.1.1 = { 
+	monarch = { 
 		name = "Guglielmo IX"
 		dynasty = "Palaiologos"
 		adm = 2
@@ -164,9 +150,8 @@ add_army_professionalism = 0.05
 		mil = 2
 	}
 }
-
-1512.12.21 = {
-	heir = {
+1512.12.21 = { 
+	heir = { 
 		name = "Bonifacio"
 		monarch_name = "Bonifacio IV"
 		dynasty = "Palaiologos"
@@ -178,9 +163,8 @@ add_army_professionalism = 0.05
 		mil = 1
 	}
 }
-
-1518.1.1 = {
-	monarch = {
+1518.1.1 = { 
+	monarch = { 
 		name = "Bonifacio IV"
 		dynasty = "Palaiologos"
 		adm = 2
@@ -188,9 +172,8 @@ add_army_professionalism = 0.05
 		mil = 1
 	}
 }
-
-1518.1.1 = {
-	heir = {
+1518.1.1 = { 
+	heir = { 
 		name = "Giangiorgio"
 		monarch_name = "Giangiorgio"
 		dynasty = "Palaiologos"
@@ -202,9 +185,8 @@ add_army_professionalism = 0.05
 		mil = 1
 	}
 }
-
-1530.6.6 = {
-	monarch = {
+1530.6.6 = { 
+	monarch = { 
 		name = "Giangiorgio"
 		dynasty = "Palaiologos"
 		adm = 3
@@ -212,9 +194,8 @@ add_army_professionalism = 0.05
 		mil = 1
 	}
 }
-
-1530.6.6 = {
-	heir = {
+1530.6.6 = { 
+	heir = { 
 		name = "Margherita"
 		monarch_name = "Margherita"
 		female = yes
@@ -227,11 +208,9 @@ add_army_professionalism = 0.05
 		mil = 1
 	}
 }
-
 #From this point on in union with Mantua
-
-1533.3.10 = {
-	heir = {
+1533.3.10 = { 
+	heir = { 
 		name = "Francesco"
 		monarch_name = "Francesco III"
 		dynasty = "Gonzaga"
@@ -243,9 +222,8 @@ add_army_professionalism = 0.05
 		mil = 1
 	}
 }
-
-1533.4.30 = {
-	monarch = {
+1533.4.30 = { 
+	monarch = { 
 		name = "Margherita"
 		dynasty = "Palaiologos"
 		female = yes
@@ -254,9 +232,8 @@ add_army_professionalism = 0.05
 		mil = 1
 	}
 }
-
-1540.6.29 = {
-	monarch = {
+1540.6.29 = { 
+	monarch = { 
 		name = "Francesco III"
 		dynasty = "Gonzaga"
 		birth_date = 1533.3.10
@@ -265,9 +242,8 @@ add_army_professionalism = 0.05
 		mil = 1
 	}
 }
-
-1540.6.29 = {
-	heir = {
+1540.6.29 = { 
+	heir = { 
 		name = "Guglielmo"
 		monarch_name = "Guglielmo"
 		dynasty = "Gonzaga"
@@ -279,9 +255,8 @@ add_army_professionalism = 0.05
 		mil = 1
 	}
 }
-
-1550.2.21 = {
-	monarch = {
+1550.2.21 = { 
+	monarch = { 
 		name = "Guglielmo"
 		dynasty = "Gonzaga"
 		birth_date = 1538.4.24
@@ -290,9 +265,8 @@ add_army_professionalism = 0.05
 		mil = 1
 	}
 }
-
-1562.9.21 = {
-	heir = {
+1562.9.21 = { 
+	heir = { 
 		name = "Vincenzo"
 		monarch_name = "Vincenzo I"
 		dynasty = "Gonzaga"
@@ -304,9 +278,8 @@ add_army_professionalism = 0.05
 		mil = 1
 	}
 }
-
-1587.8.15 = {
-	monarch = {
+1587.8.15 = { 
+	monarch = { 
 		name = "Vincenzo I"
 		dynasty = "Gonzaga"
 		birth_date = 1562.9.21
@@ -315,9 +288,8 @@ add_army_professionalism = 0.05
 		mil = 1
 	}
 }
-
-1587.8.15 = {
-	heir = {
+1587.8.15 = { 
+	heir = { 
 		name = "Francesco"
 		monarch_name = "Francesco IV"
 		dynasty = "Gonzaga"
@@ -329,9 +301,8 @@ add_army_professionalism = 0.05
 		mil = 2
 	}
 }
-
-1612.2.17 = {
-	monarch = {
+1612.2.17 = { 
+	monarch = { 
 		name = "Francesco IV"
 		dynasty = "Gonzaga"
 		birth_date = 1586.5.7
@@ -340,9 +311,8 @@ add_army_professionalism = 0.05
 		mil = 2
 	}
 }
-
-1612.2.17 = {
-	heir = {
+1612.2.17 = { 
+	heir = { 
 		name = "Ferdinando"
 		monarch_name = "Ferdinando"
 		dynasty = "Gonzaga"
@@ -354,9 +324,8 @@ add_army_professionalism = 0.05
 		mil = 1
 	}
 }
-
-1612.12.23 = {
-	monarch = {
+1612.12.23 = { 
+	monarch = { 
 		name = "Ferdinando"
 		dynasty = "Gonzaga"
 		birth_date = 1587.4.26
@@ -365,9 +334,8 @@ add_army_professionalism = 0.05
 		mil = 1
 	}
 }
-
-1612.12.23 = {
-	heir = {
+1612.12.23 = { 
+	heir = { 
 		name = "Vincenzo"
 		monarch_name = "Vincenzo II"
 		dynasty = "Gonzaga"
@@ -379,9 +347,8 @@ add_army_professionalism = 0.05
 		mil = 2
 	}
 }
-
-1626.10.30 = {
-	monarch = {
+1626.10.30 = { 
+	monarch = { 
 		name = "Vincenzo II"
 		dynasty = "Gonzaga"
 		birth_date = 1594.1.7
@@ -390,9 +357,8 @@ add_army_professionalism = 0.05
 		mil = 2
 	}
 }
-
-1626.10.30 = {
-	heir = {
+1626.10.30 = { 
+	heir = { 
 		name = "Carlo"
 		monarch_name = "Carlo I"
 		dynasty = "Gonzaga"
@@ -404,12 +370,12 @@ add_army_professionalism = 0.05
 		mil = 1
 	}
 }
-
-1627.12.26 = { government = monarchy
-add_government_reform = autocracy_reform }
-
-1627.12.26 = {
-	monarch = {
+1627.12.26 = { 
+	government = monarchy
+	add_government_reform = autocracy_reform
+}
+1627.12.26 = { 
+	monarch = { 
 		name = "Carlo I"
 		dynasty = "Gonzaga"
 		birth_date = 1580.5.6
@@ -418,9 +384,8 @@ add_government_reform = autocracy_reform }
 		mil = 1
 	}
 }
-
-1629.10.3 = {
-	heir = {
+1629.10.3 = { 
+	heir = { 
 		name = "Carlo"
 		monarch_name = "Carlo II"
 		dynasty = "Gonzaga"
@@ -432,10 +397,8 @@ add_government_reform = autocracy_reform }
 		mil = 1
 	}
 }
-		
-
-1637.9.22 = {
-	monarch = {
+1637.9.22 = { 
+	monarch = { 
 		name = "Carlo II"
 		dynasty = "Gonzaga"
 		birth_date = 1629.10.3
@@ -444,9 +407,8 @@ add_government_reform = autocracy_reform }
 		mil = 1
 	}
 }
-
-1652.8.31 = {
-	heir = {
+1652.8.31 = { 
+	heir = { 
 		name = "Ferdinando Carlo"
 		monarch_name = "Ferdinando Carlo"
 		dynasty = "Gonzaga"
@@ -458,10 +420,8 @@ add_government_reform = autocracy_reform }
 		mil = 0
 	}
 }
-
-
-1665.8.15 = {
-	monarch = {
+1665.8.15 = { 
+	monarch = { 
 		name = "Ferdinando Carlo"
 		dynasty = "Gonzaga"
 		birth_date = 1652.8.31

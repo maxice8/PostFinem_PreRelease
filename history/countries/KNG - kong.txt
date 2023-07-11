@@ -1,17 +1,16 @@
 government = tribal
 add_government_reform = tribal_kingdom
 primary_culture = dyola
-religion = sunni
+religion = shamanism
 technology_group = sub_saharan
 unlock_cult = yemoja_cult
 unlock_cult = roog_cult
 unlock_cult = nyame_cult
-capital = 1125	# Niani
+capital = 1125# Niani
 religious_school = shafii_school
-
 #Rulers of Kong (Start of Bokar's reign is unknown, reigned to circa 1500)
-1444.1.1 = {
-	monarch = {
+1444.1.1 = { 
+	monarch = { 
 		name = "Bokar"
 		dynasty = "Gorogo"
 		DIP = 2
@@ -19,9 +18,8 @@ religious_school = shafii_school
 		MIL = 2
 	}
 }
-
-1500.1.1 = {
-	monarch = {
+1500.1.1 = { 
+	monarch = { 
 		name = "Bagi"
 		dynasty = "Gorogo"
 		DIP = 2
@@ -29,9 +27,8 @@ religious_school = shafii_school
 		MIL = 2
 	}
 }
-
-1518.1.1 = {
-	monarch = {
+1518.1.1 = { 
+	monarch = { 
 		name = "Maghan"
 		dynasty = "Gorogo"
 		DIP = 2
@@ -39,9 +36,8 @@ religious_school = shafii_school
 		MIL = 2
 	}
 }
-
-1535.1.1 = {
-	monarch = {
+1535.1.1 = { 
+	monarch = { 
 		name = "Badagba"
 		dynasty = "Gorogo"
 		DIP = 2
@@ -49,9 +45,8 @@ religious_school = shafii_school
 		MIL = 2
 	}
 }
-
-1551.1.1 = {
-	monarch = {
+1551.1.1 = { 
+	monarch = { 
 		name = "Basimba"
 		dynasty = "Gorogo"
 		DIP = 2
@@ -59,9 +54,8 @@ religious_school = shafii_school
 		MIL = 2
 	}
 }
-
-1570.1.1 = {
-	monarch = {
+1570.1.1 = { 
+	monarch = { 
 		name = "Babu"
 		dynasty = "Gorogo"
 		DIP = 2
@@ -69,9 +63,8 @@ religious_school = shafii_school
 		MIL = 2
 	}
 }
-
-1590.1.1 = {
-	monarch = {
+1590.1.1 = { 
+	monarch = { 
 		name = "Borogo"
 		dynasty = "Gorogo"
 		DIP = 2
@@ -79,9 +72,8 @@ religious_school = shafii_school
 		MIL = 4
 	}
 }
-
-1630.1.1 = {
-	monarch = {
+1630.1.1 = { 
+	monarch = { 
 		name = "Boromo"
 		dynasty = "Gorogo"
 		DIP = 3
@@ -89,9 +81,8 @@ religious_school = shafii_school
 		MIL = 3
 	}
 }
-
-1660.1.1 = {
-	monarch = {
+1660.1.1 = { 
+	monarch = { 
 		name = "Lasiri Gombélé"
 		dynasty = "Gorogo"
 		DIP = 2
@@ -99,11 +90,9 @@ religious_school = shafii_school
 		MIL = 2
 	}
 }
-
 #Conquest by the Wattara Empire
-
-1710.1.1 = {
-	monarch = {
+1710.1.1 = { 
+	monarch = { 
 		name = "Seku"
 		dynasty = "Wattara"
 		DIP = 4
@@ -111,9 +100,8 @@ religious_school = shafii_school
 		MIL = 5
 	}
 }
-
-1735.1.1 = {
-	monarch = {
+1735.1.1 = { 
+	monarch = { 
 		name = "Samanogo"
 		dynasty = "Wattara"
 		DIP = 3
@@ -121,9 +109,8 @@ religious_school = shafii_school
 		MIL = 2
 	}
 }
-
-1747.1.1 = {
-	monarch = {
+1747.1.1 = { 
+	monarch = { 
 		name = "Kumbi"
 		dynasty = "Wattara"
 		DIP = 3
@@ -131,9 +118,8 @@ religious_school = shafii_school
 		MIL = 3
 	}
 }
-
-1770.1.1 = {
-	monarch = {
+1770.1.1 = { 
+	monarch = { 
 		name = "Mori Maghari"
 		dynasty = "Wattara"
 		DIP = 2
@@ -141,9 +127,8 @@ religious_school = shafii_school
 		MIL = 2
 	}
 }
-
-1795.1.1 = {
-	monarch = {
+1795.1.1 = { 
+	monarch = { 
 		name = "Somafi"
 		dynasty = "Wattara"
 		DIP = 2
@@ -151,9 +136,8 @@ religious_school = shafii_school
 		MIL = 2
 	}
 }
-
-1805.1.1 = {
-	monarch = {
+1805.1.1 = { 
+	monarch = { 
 		name = "Asoroba"
 		dynasty = "Wattara"
 		DIP = 2
@@ -161,9 +145,8 @@ religious_school = shafii_school
 		MIL = 2
 	}
 }
-
-1810.1.1 = {
-	monarch = {
+1810.1.1 = { 
+	monarch = { 
 		name = "Sori Fagarnan"
 		dynasty = "Wattara"
 		DIP = 2
@@ -171,3 +154,4 @@ religious_school = shafii_school
 		MIL = 2
 	}
 }
+government_rank = 1

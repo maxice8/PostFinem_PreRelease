@@ -9,21 +9,8 @@ discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
-1531.11.5 = { controller = REB revolt = { type = revolutionary_rebels size = 0 } }
-1532.7.15 = { controller = NOR revolt = { size = 1 } }
-1536.1.1 = { 
-	owner = DAN
-	controller = DAN
-	add_core = DAN
-	religion = Protestant
-}
-1630.1.1 = { trade_goods = Copper }
-1814.1.14 = { 
-	owner = SWE
-	controller = REB
-	revolt = { type = nationalist_rebels size = 3 }
-}
-1814.5.17 = { owner = NOR controller = NOR revolt = { size = 1 } }
 add_core = NOR
 owner = NOR
 controller = NOR
+culture = norwegian
+religion = norse_pagan_reformed

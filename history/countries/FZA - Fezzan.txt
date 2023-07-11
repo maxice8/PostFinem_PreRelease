@@ -1,15 +1,14 @@
 government = tribal
-add_government_reform = tribal_kingdom
+add_government_reform = feudal_tribe
 government_rank = 1
-primary_culture = tunisian
-religion = sunni
-technology_group = muslim
-capital = 2448	# Murzuk
-fixed_capital = 2448 # Cannot move capital away from this province & no power cost to move to it
+primary_culture = garamente
+religion = punic_religion
+technology_group = western
+capital = 2448# Murzuk
+fixed_capital = 2448# Cannot move capital away from this province & no power cost to move to it
 religious_school = maliki_school
-
-1440.1.1 = {
-	monarch = {
+1440.1.1 = { 
+	monarch = { 
 		name = "Abdûlazzâ"
 		dynasty = "Banu Sulaym"
 		adm = 0
@@ -17,9 +16,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1480.1.1 = {
-	monarch = {
+1480.1.1 = { 
+	monarch = { 
 		name = "Abdûlazzâ II"
 		dynasty = "Banu Sulaym"
 		adm = 1
@@ -27,9 +25,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1520.1.1 = {
-	monarch = {
+1520.1.1 = { 
+	monarch = { 
 		name = "Abdûlazzâ III"
 		dynasty = "Banu Sulaym"
 		adm = 1
@@ -37,9 +34,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1551.1.1 = {
-	monarch = {
+1551.1.1 = { 
+	monarch = { 
 		name = "Muhammad ibn al-Mustansir"
 		dynasty = "Banu Muhammad"
 		adm = 0
@@ -47,9 +43,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1580.1.1 = {
-	monarch = {
+1580.1.1 = { 
+	monarch = { 
 		name = "Al-Nasir"
 		dynasty = "Banu Muhammad"
 		adm = 0
@@ -57,9 +52,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1599.1.1 = {
-	monarch = {
+1599.1.1 = { 
+	monarch = { 
 		name = "Al-Mansur"
 		dynasty = "Banu Muhammad"
 		adm = 0
@@ -67,9 +61,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1600.1.1 = {
-	heir = {
+1600.1.1 = { 
+	heir = { 
 		name = "Muhammad"
 		monarch_name = "Muhammad I"
 		dynasty = "Banu Muhammad"
@@ -81,9 +74,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1614.1.1 = {
-	monarch = {
+1614.1.1 = { 
+	monarch = { 
 		name = "Tahir"
 		dynasty = "Banu Muhammad"
 		adm = 0
@@ -91,9 +83,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1614.1.1 = {
-	heir = {
+1614.1.1 = { 
+	heir = { 
 		name = "Muhammad"
 		monarch_name = "Muhammad I"
 		dynasty = "Banu Muhammad"
@@ -105,9 +96,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1626.1.1 = {
-	monarch = {
+1626.1.1 = { 
+	monarch = { 
 		name = "Muhammad I"
 		dynasty = "Banu Muhammad"
 		adm = 1
@@ -115,9 +105,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1626.1.1 = {
-	heir = {
+1626.1.1 = { 
+	heir = { 
 		name = "Nagib"
 		monarch_name = "Nagib"
 		dynasty = "Banu Muhammad"
@@ -129,9 +118,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1658.1.1 = {
-	monarch = {
+1658.1.1 = { 
+	monarch = { 
 		name = "Nagib"
 		dynasty = "Banu Muhammad"
 		adm = 3
@@ -139,9 +127,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1658.1.1 = {
-	heir = {
+1658.1.1 = { 
+	heir = { 
 		name = "Muhammad"
 		monarch_name = "Muhammad II al-Nasir"
 		dynasty = "Banu Muhammad"
@@ -153,9 +140,8 @@ religious_school = maliki_school
 		mil = 3
 	}
 }
-
-1682.1.1 = {
-	monarch = {
+1682.1.1 = { 
+	monarch = { 
 		name = "Muhammad II al-Nasir"
 		dynasty = "Banu Muhammad"
 		adm = 3
@@ -163,9 +149,8 @@ religious_school = maliki_school
 		mil = 3
 	}
 }
-
-1689.1.1 = {
-	monarch = {
+1689.1.1 = { 
+	monarch = { 
 		name = "Muhammad III"
 		dynasty = "Banu Muhammad"
 		adm = 1
@@ -173,9 +158,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1690.1.1 = {
-	monarch = {
+1690.1.1 = { 
+	monarch = { 
 		name = "Muhammad II al-Nasir"
 		dynasty = "Banu Muhammad"
 		adm = 3
@@ -183,9 +167,8 @@ religious_school = maliki_school
 		mil = 3
 	}
 }
-
-1690.1.1 = {
-	heir = {
+1690.1.1 = { 
+	heir = { 
 		name = "Ahmad"
 		monarch_name = "Ahmad I"
 		dynasty = "Banu Muhammad"
@@ -197,9 +180,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1709.1.1 = {
-	monarch = {
+1709.1.1 = { 
+	monarch = { 
 		name = "Ahmad I"
 		dynasty = "Banu Muhammad"
 		adm = 1
@@ -207,9 +189,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1709.1.1 = {
-	heir = {
+1709.1.1 = { 
+	heir = { 
 		name = "Tahir"
 		monarch_name = "Tahir II"
 		dynasty = "Banu Muhammad"
@@ -221,9 +202,8 @@ religious_school = maliki_school
 		mil = 2
 	}
 }
-
-1767.1.1 = {
-	monarch = {
+1767.1.1 = { 
+	monarch = { 
 		name = "Tahir II"
 		dynasty = "Banu Muhammad"
 		adm = 2
@@ -231,9 +211,8 @@ religious_school = maliki_school
 		mil = 2
 	}
 }
-
-1767.1.1 = {
-	heir = {
+1767.1.1 = { 
+	heir = { 
 		name = "Ahmad"
 		monarch_name = "Ahmad II"
 		dynasty = "Banu Muhammad"
@@ -245,9 +224,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1776.1.1 = {
-	monarch = {
+1776.1.1 = { 
+	monarch = { 
 		name = "Ahmad II"
 		dynasty = "Banu Muhammad"
 		adm = 1
@@ -255,9 +233,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1776.1.1 = {
-	heir = {
+1776.1.1 = { 
+	heir = { 
 		name = "Muhammad"
 		monarch_name = "Muhammad V"
 		dynasty = "Banu Muhammad"
@@ -269,9 +246,8 @@ religious_school = maliki_school
 		mil = 3
 	}
 }
-
-1780.1.1 = {
-	monarch = {
+1780.1.1 = { 
+	monarch = { 
 		name = "Muhammad IV"
 		dynasty = "Banu Muhammad"
 		adm = 2
@@ -279,9 +255,8 @@ religious_school = maliki_school
 		mil = 3
 	}
 }
-
-1780.1.1 = {
-	heir = {
+1780.1.1 = { 
+	heir = { 
 		name = "Muhammad"
 		monarch_name = "Muhammad V"
 		dynasty = "Banu Muhammad"
@@ -293,9 +268,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1789.1.1 = {
-	monarch = {
+1789.1.1 = { 
+	monarch = { 
 		name = "Muhammad V"
 		dynasty = "Banu Muhammad"
 		adm = 3
@@ -303,9 +277,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1789.1.1 = {
-	heir = {
+1789.1.1 = { 
+	heir = { 
 		name = "Muhammad"
 		monarch_name = "Muhammad VI"
 		dynasty = "Banu Muhammad"
@@ -317,9 +290,8 @@ religious_school = maliki_school
 		mil = 0
 	}
 }
-
-1804.1.1 = {
-	monarch = {
+1804.1.1 = { 
+	monarch = { 
 		name = "Muhammad VI"
 		dynasty = "Banu Muhammad"
 		adm = 3
@@ -327,9 +299,8 @@ religious_school = maliki_school
 		mil = 0
 	}
 }
-
-1811.1.1 = {
-	monarch = {
+1811.1.1 = { 
+	monarch = { 
 		name = "Yusuf al-Mukkani"
 		dynasty = "Banu Muhammad"
 		adm = 3

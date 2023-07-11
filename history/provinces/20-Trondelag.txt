@@ -8,21 +8,10 @@ is_city = yes
 discovered_by = eastern
 discovered_by = western
 extra_cost = 8
-1536.1.1 = { religion = Protestant owner = DAN controller = DAN add_core = DAN }
-1536.1.1 = { religion = Protestant owner = DAN controller = DAN add_core = DAN }
-1564.3.3 = { controller = SWE }
-1564.5.21 = { controller = DAN }
-1658.2.26 = { owner = SWE controller = SWE add_core = SWE }
-1658.12.1 = { controller = DAN }
-1660.5.27 = { owner = DAN }
-1814.1.14 = { 
-	owner = SWE
-	controller = REB
-	revolt = { type = nationalist_rebels size = 2 }
-}
-1814.5.17 = { owner = NOR controller = NOR revolt = { size = 1 } }
 add_core = NOR
 owner = NOR
 controller = NOR
-add_core = DAN
-add_core = DAN
+
+
+culture = norwegian
+religion = norse_pagan_reformed

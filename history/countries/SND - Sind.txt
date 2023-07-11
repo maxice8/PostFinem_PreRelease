@@ -2,24 +2,22 @@ government = monarchy
 add_government_reform = indian_sultanate_reform
 technology_group = indian
 primary_culture = sindhi
-religion = sunni
-capital = 504	# Thatta
+religion = zoroastrian
+capital = 504# Thatta
 religious_school = shafii_school
-
-change_estate_land_share = {
+change_estate_land_share = { 
 	estate = estate_nobles
 	share = -3
 }
-change_rajputs_or_marathas_or_nobles_land_share_effect = {
+change_rajputs_or_marathas_or_nobles_land_share_effect = { 
 	share = 3
 }
-change_jains_or_burghers_land_share_effect = {
+change_jains_or_burghers_land_share_effect = { 
 	share = 5
 }
-
 #Jams of Sindh
-1393.1.1 = {
-	monarch = {
+1393.1.1 = { 
+	monarch = { 
 		name = "'Ali Sher"
 		dynasty = "Samma"
 		ADM = 2
@@ -27,9 +25,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1393.1.1 = {
-	heir = {
+1393.1.1 = { 
+	heir = { 
 		name = "Fath Khan"
 		monarch_name = "Fath Khan"
 		dynasty = "Samma"
@@ -41,9 +38,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 0
 	}
 }
-
-1408.1.1 = {
-	monarch = {
+1408.1.1 = { 
+	monarch = { 
 		name = "Fath Khan"
 		dynasty = "Samma"
 		ADM = 1
@@ -51,9 +47,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 0
 	}
 }
-
-1408.1.1 = {
-	heir = {
+1408.1.1 = { 
+	heir = { 
 		name = "Tughluq"
 		monarch_name = "Tughluq"
 		dynasty = "Samma"
@@ -62,12 +57,11 @@ change_jains_or_burghers_land_share_effect = {
 		claim = 95
 		ADM = 3
 		DIP = 0
-		MIL = 2 
+		MIL = 2
 	}
 }
-
-1423.1.1 = {
-	monarch = {
+1423.1.1 = { 
+	monarch = { 
 		name = "Tughluq"
 		dynasty = "Samma"
 		ADM = 3
@@ -78,9 +72,8 @@ change_jains_or_burghers_land_share_effect = {
 	add_ruler_personality = just_personality
 	add_ruler_personality = naive_personality
 }
-
-1444.1.1 = {
-	heir = {
+1444.1.1 = { 
+	heir = { 
 		name = "Sikander"
 		monarch_name = "Sikander"
 		dynasty = "Samma"
@@ -92,9 +85,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 1
 	}
 }
-
-1449.1.1 = {
-	monarch = {
+1449.1.1 = { 
+	monarch = { 
 		name = "Sikandar"
 		dynasty = "Samma"
 		birth_date = 1444.1.1
@@ -103,23 +95,21 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 1
 	}
 }
-
-1449.1.1 = {
-	heir = {
+1449.1.1 = { 
+	heir = { 
 		name = "Sanjar"
 		monarch_name = "Sanjar"
 		dynasty = "Samma"
 		birth_date = 1429.1.1
 		death_date = 1461.12.28
-		claim =  95
+		claim = 95
 		ADM = 2
 		DIP = 2
 		MIL = 2
 	}
 }
-
-1453.1.1 = {
-	monarch = {
+1453.1.1 = { 
+	monarch = { 
 		name = "Sanjar"
 		dynasty = "Samma"
 		ADM = 2
@@ -127,9 +117,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1453.1.1 = {
-	heir = {
+1453.1.1 = { 
+	heir = { 
 		name = "Nizam ad-Dina Nanada"
 		monarch_name = "Nizam ad-Din II Nanda"
 		dynasty = "Samma"
@@ -141,10 +130,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-		
-
-1461.12.28 = {
-	monarch = {
+1461.12.28 = { 
+	monarch = { 
 		name = "Nizam ad-Din II Nanda"
 		dynasty = "Samma"
 		ADM = 6
@@ -160,9 +147,8 @@ change_jains_or_burghers_land_share_effect = {
 	#add_ruler_personality = well_advised_personality
 	#add_ruler_personality = just_personality
 }
-
-1490.1.1 = {
-	heir = {
+1490.1.1 = { 
+	heir = { 
 		name = "Furuz Salah ad-Din"
 		monarch_name = "Furuz Salah ad-Din"
 		dynasty = "Samma"
@@ -174,9 +160,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1508.1.1 = {
-	monarch = {
+1508.1.1 = { 
+	monarch = { 
 		name = "Furuz Salah ad-Din"
 		dynasty = "Samma"
 		ADM = 2
@@ -184,9 +169,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1508.1.1 = {
-	heir = {
+1508.1.1 = { 
+	heir = { 
 		name = "Shah Shuja' Beg"
 		monarch_name = "Shah Shuja' Beg"
 		dynasty = "Arghun"
@@ -198,8 +182,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-1520.12.1 = {
-	monarch = {
+1520.12.1 = { 
+	monarch = { 
 		name = "Shah Shuja' Beg"
 		dynasty = "Arghun"
 		ADM = 2
@@ -207,9 +191,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1520.12.1 = {
-	heir = {
+1520.12.1 = { 
+	heir = { 
 		name = "Shah Husayn"
 		monarch_name = "Shah Husayn"
 		dynasty = "Arghun"
@@ -221,9 +204,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1522.7.18 = {
-	monarch = {
+1522.7.18 = { 
+	monarch = { 
 		name = "Shah Husayn"
 		dynasty = "Arghun"
 		ADM = 2
@@ -231,9 +213,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1522.7.18 = {
-	heir = {
+1522.7.18 = { 
+	heir = { 
 		name = "Mirza Muhammad 'Isa"
 		monarch_name = "Mirza Muhammad 'Isa"
 		dynasty = "Arghun"
@@ -245,9 +226,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1554.2.14 = {
-	monarch = {
+1554.2.14 = { 
+	monarch = { 
 		name = "Mirza Muhammad 'Isa"
 		dynasty = "Arghun"
 		ADM = 2
@@ -255,9 +235,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1554.2.14 = {
-	heir = {
+1554.2.14 = { 
+	heir = { 
 		name = "Mirza Muhammad Baqi"
 		monarch_name = "Miza Muhammad Baqi"
 		dynasty = "Arghun"
@@ -269,9 +248,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-	
-1567.1.1 = {
-	monarch = {
+1567.1.1 = { 
+	monarch = { 
 		name = "Mirza Muhammad Baqi"
 		dynasty = "Arghun"
 		ADM = 2
@@ -279,9 +257,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1567.1.1 = {
-	heir = {
+1567.1.1 = { 
+	heir = { 
 		name = "Mirza Jani Beg"
 		monarch_name = "Mirza Jani Beg"
 		dynasty = "Arghun"
@@ -293,9 +270,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1585.1.1 = {
-	monarch = {
+1585.1.1 = { 
+	monarch = { 
 		name = "Mirza Jani Beg"
 		dynasty = "Arghun"
 		ADM = 2
@@ -303,9 +279,7 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
 #Mughal Rule
-
 #1592.1.1 = {
 #	monarch = {
 #		name = "Mughal Rule"
@@ -315,11 +289,9 @@ change_jains_or_burghers_land_share_effect = {
 #	}
 #
 #}
-
 #Khans of Sindh
-
-1701.1.1 = {
-	monarch = {
+1701.1.1 = { 
+	monarch = { 
 		name = "Yar Muhammad Khan"
 		dynasty = "Kalhora"
 		ADM = 2
@@ -327,9 +299,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1701.1.1 = {
-	heir = {
+1701.1.1 = { 
+	heir = { 
 		name = "Nur Muhammad"
 		monarch_name = "Nur Muhammad"
 		dynasty = "Kalhora"
@@ -341,9 +312,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1719.1.1 = {
-	monarch = {
+1719.1.1 = { 
+	monarch = { 
 		name = "Nur Muhammad"
 		dynasty = "Kalhora"
 		ADM = 2
@@ -351,9 +321,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1719.1.1 = {
-	heir = {
+1719.1.1 = { 
+	heir = { 
 		name = "Muhammad Murad"
 		monarch_name = "Muhammad Murad"
 		dynasty = "Kalhora"
@@ -365,13 +334,11 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1739.1.1 = {
+1739.1.1 = { 
 	government_rank = 1
 }
-
-1755.1.1 = {
-	monarch = {
+1755.1.1 = { 
+	monarch = { 
 		name = "Muhammad Murad"
 		dynasty = "Kalhora"
 		ADM = 2
@@ -379,9 +346,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1755.1.1 = {
-	heir = {
+1755.1.1 = { 
+	heir = { 
 		name = "Gulam Shah"
 		monarch_name = "Gulam Shah"
 		dynasty = "Kalhora"
@@ -393,9 +359,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1757.1.1 = {
-	monarch = {
+1757.1.1 = { 
+	monarch = { 
 		name = "Gulam Shah"
 		dynasty = "Kalhora"
 		ADM = 2
@@ -403,9 +368,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1757.1.1 = {
-	heir = {
+1757.1.1 = { 
+	heir = { 
 		name = "Sarfaraz Khan"
 		monarch_name = "Sarafaraz Khan"
 		dynasty = "Kalhora"
@@ -417,9 +381,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1772.1.1 = {
-	monarch = {
+1772.1.1 = { 
+	monarch = { 
 		name = "Sarfaraz Khan"
 		dynasty = "Kalhora"
 		ADM = 2
@@ -427,9 +390,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1772.1.1 = {
-	heir = {
+1772.1.1 = { 
+	heir = { 
 		name = "Gulam Nabi Khan"
 		monarch_name = "Gulam Nabi Khan"
 		dynasty = "Kalhora"
@@ -441,9 +403,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1777.1.1 = {
-	monarch = {
+1777.1.1 = { 
+	monarch = { 
 		name = "Gulam Nabi Khan"
 		dynasty = "Kalhora"
 		ADM = 2
@@ -451,9 +412,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1777.1.1 = {
-	heir = {
+1777.1.1 = { 
+	heir = { 
 		name = "'Abd an-Nabi Khan"
 		monarch_name = "'Abd an-Nabi Khan"
 		dynasty = "Kalhora"
@@ -465,9 +425,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1780.1.1 = {
-	monarch = {
+1780.1.1 = { 
+	monarch = { 
 		name = "'Abd an-Nabi Khan"
 		dynasty = "Kalhora"
 		ADM = 2
@@ -475,9 +434,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1782.1.1 = {
-	monarch = {
+1782.1.1 = { 
+	monarch = { 
 		name = "'Abd Allah Khan"
 		dynasty = "Talpur"
 		ADM = 2
@@ -485,9 +443,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1782.1.1 = {
-	heir = {
+1782.1.1 = { 
+	heir = { 
 		name = "Mir Fath Ali"
 		monarch_name = "Mir Fath Ali"
 		dynasty = "Talpur"
@@ -499,9 +456,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1783.1.1 = {
-	monarch = {
+1783.1.1 = { 
+	monarch = { 
 		name = "Mir Fath Ali"
 		dynasty = "Talpur"
 		ADM = 2
@@ -509,9 +465,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 2
 	}
 }
-
-1783.1.1 = {
-	heir = {
+1783.1.1 = { 
+	heir = { 
 		name = "Thara"
 		monarch_name = "Thara"
 		dynasty = "Talpur"
@@ -523,9 +478,8 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 1
 	}
 }
-
-1801.1.1 = {
-	monarch = {
+1801.1.1 = { 
+	monarch = { 
 		name = "Thara"
 		dynasty = "Talpur"
 		ADM = 1
@@ -533,3 +487,4 @@ change_jains_or_burghers_land_share_effect = {
 		MIL = 1
 	}
 }
+government_rank = 1

@@ -11,13 +11,8 @@ add_permanent_province_modifier = {
 	name = icelanding_fisher_sea
 	duration = -1
 }
-1536.1.1 = { 
-	religion = Protestant
-	owner = DAN
-	controller = DAN
-	add_core = DAN
-}
-1752.1.1 = { trade_goods = Wool }
 add_core = ICE
 owner = ICE
 controller = ICE
+culture = icelandic
+religion = norse_pagan_reformed

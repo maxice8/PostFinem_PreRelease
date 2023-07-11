@@ -9,41 +9,9 @@ discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
-1495.1.1 = { hre = no }
-1527.1.1 = { controller = SPA }
-1529.8.3 = { controller = LAN }
-1569.8.1 = { 
-	owner = TUS
-	controller = TUS
-	add_core = TUS
-}
-1750.1.1 = { add_core = ITA }
-1801.2.9 = { 
-	owner = FRA
-	controller = FRA
-	add_core = FRA
-}
-1801.3.21 = { 
-	owner = ETR
-	controller = ETR
-	add_core = ETR
-}
-1806.7.12 = { hre = no }
-1807.12.10 = { 
-	owner = FRA
-	controller = FRA
-}
-1814.4.11 = { 
-	owner = TUS
-	controller = TUS
-}
 owner = RMA
 controller = RMA
 hre = yes
 add_core = RMA
-add_core = TUS
-add_core = TUS
-add_core = ITA
-add_core = TUS
-add_core = ITA
-add_core = FRA
+culture = etrusci
+religion = punic_religion

@@ -1,13 +1,12 @@
 government_rank = 1
-government = monarchy
-add_government_reform = feudalism_reform
-technology_group = western
-religion = catholic
-primary_culture = austrian
-capital = 4710 #Bregenz
-
-1422.1.1 = {
-	monarch = {
+government = tribal
+add_government_reform = feudal_tribe
+technology_group = eastern
+religion = germanic_religion
+primary_culture = alemanni
+capital = 4710#Bregenz
+1422.1.1 = { 
+	monarch = { 
 		name = "Elisabeth II"
 		dynasty = "von Montfort-Bregenz"
 		ADM = 3
@@ -20,10 +19,8 @@ capital = 4710 #Bregenz
 	clear_scripted_personalities = yes
 	add_ruler_personality = infertile_personality
 }
-
-
-1425.1.1 = {
-	queen = {
+1425.1.1 = { 
+	queen = { 
 		name = "Wilhelm"
 		dynasty = "von Hachberg-Sausenberg"
 		country_of_origin = MBZ
@@ -35,9 +32,8 @@ capital = 4710 #Bregenz
 		mil = 3
 	}
 }
-
-1430.1.1 = {
-	heir = {
+1430.1.1 = { 
+	heir = { 
 		name = "Ursula"
 		dynasty = "von Montfort-Bregenz"
 		birth_date = 1430.1.1
@@ -49,13 +45,9 @@ capital = 4710 #Bregenz
 		claim = 20
 	}
 }
-
-
 #Sold to Austria for a while
-
-
-1482.1.1 = {
-	monarch = {
+1482.1.1 = { 
+	monarch = { 
 		name = "Hugo X"
 		dynasty = "von Montfort-Bregenz"
 		ADM = 2
@@ -65,5 +57,3 @@ capital = 4710 #Bregenz
 		death_date = 1523.6.7
 	}
 }
-
-#Sold to Habsburgs again

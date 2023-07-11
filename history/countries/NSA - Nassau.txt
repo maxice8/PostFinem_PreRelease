@@ -1,15 +1,13 @@
-government = monarchy
-add_government_reform = feudalism_reform
+government = tribal
+add_government_reform = feudal_tribe
 government_rank = 1
-primary_culture = hessian
-religion = catholic
-technology_group = western
-capital = 83	# Nassau
-fixed_capital = 83 # Cannot move capital away from this province & no power cost to move to it
-
-
-1429.1.1 = {
-	monarch = {
+primary_culture = bructeri
+religion = germanic_religion
+technology_group = eastern
+capital = 83# Nassau
+fixed_capital = 83# Cannot move capital away from this province & no power cost to move to it
+1429.1.1 = { 
+	monarch = { 
 		name = "Philipp II"
 		dynasty = "von Nassau"
 		birth_date = 1418.3.14
@@ -20,9 +18,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 	clear_scripted_personalities = yes
 	add_ruler_personality = fierce_negotiator_personality
 }
-
-1473.5.28 = {
-	heir = {
+1473.5.28 = { 
+	heir = { 
 		name = "Ludwig"
 		monarch_name = "Ludwig I"
 		dynasty = "von Nassau"
@@ -34,9 +31,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 2
 	}
 }
-
-1492.1.1 = {
-	monarch = {
+1492.1.1 = { 
+	monarch = { 
 		name = "Ludwig I"
 		dynasty = "von Nassau"
 		birth_date = 1473.5.28
@@ -45,9 +41,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 2
 	}
 }
-
-1504.9.20 = {
-	heir = {
+1504.9.20 = { 
+	heir = { 
 		name = "Philipp"
 		monarch_name = "Philipp III"
 		dynasty = "von Nassau"
@@ -59,9 +54,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 3
 	}
 }
-
-1523.5.28 = {
-	monarch = {
+1523.5.28 = { 
+	monarch = { 
 		name = "Philipp III"
 		dynasty = "von Nassau"
 		birth_date = 1504.9.20
@@ -70,9 +64,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 3
 	}
 }
-
-1537.12.26 = {
-	heir = {
+1537.12.26 = { 
+	heir = { 
 		name = "Albert"
 		monarch_name = "Albert"
 		dynasty = "von Nassau"
@@ -84,9 +77,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 2
 	}
 }
-
-1559.10.4 = {
-	monarch = {
+1559.10.4 = { 
+	monarch = { 
 		name = "Albert"
 		dynasty = "von Nassau"
 		birth_date = 1537.12.26
@@ -95,9 +87,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 2
 	}
 }
-
-1559.10.4 = {
-	heir = {
+1559.10.4 = { 
+	heir = { 
 		name = "Philipp"
 		monarch_name = "Philipp IV"
 		dynasty = "von Nassau"
@@ -109,9 +100,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 1
 	}
 }
-
-1593.11.11 = {
-	monarch = {
+1593.11.11 = { 
+	monarch = { 
 		name = "Philipp IV"
 		dynasty = "von Nassau"
 		birth_date = 1542.10.14
@@ -120,9 +110,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 1
 	}
 }
-
-1593.11.11 = {
-	heir = {
+1593.11.11 = { 
+	heir = { 
 		name = "Ludwig"
 		monarch_name = "Ludwig II"
 		dynasty = "von Nassau"
@@ -134,9 +123,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 1
 	}
 }
-
-1602.3.12 = {
-	monarch = {
+1602.3.12 = { 
+	monarch = { 
 		name = "Ludwig II"
 		dynasty = "von Nassau"
 		birth_date = 1565.8.9
@@ -145,9 +133,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 1
 	}
 }
-
-1627.11.8 = {
-	heir = {
+1627.11.8 = { 
+	heir = { 
 		name = "Wilhelm Ludwig"
 		monarch_name = "Wilhelm Ludwig"
 		dynasty = "von Nassau"
@@ -159,9 +146,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 3
 	}
 }
-
-1627.11.8 = {
-	monarch = {
+1627.11.8 = { 
+	monarch = { 
 		name = "Wilhelm Ludwig"
 		dynasty = "von Nassau"
 		birth_date = 1590.12.18
@@ -170,9 +156,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 3
 	}
 }
-
-1629.1.1 = {
-	monarch = {
+1629.1.1 = { 
+	monarch = { 
 		name = "Ernst Casimir"
 		dynasty = "von Nassau"
 		birth_date = 1607.11.15
@@ -181,9 +166,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 1
 	}
 }
-
-1640.4.26 = {
-	heir = {
+1640.4.26 = { 
+	heir = { 
 		name = "Friedrich"
 		monarch_name = "Friedrich"
 		dynasty = "von Nassau"
@@ -195,9 +179,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 2
 	}
 }
-
-1655.4.1 = {
-	monarch = {
+1655.4.1 = { 
+	monarch = { 
 		name = "Friedrich"
 		dynasty = "von Nassau"
 		birth_date = 1607.11.15
@@ -206,9 +189,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 2
 	}
 }
-
-1664.6.13 = {
-	heir = {
+1664.6.13 = { 
+	heir = { 
 		name = "Johann Ernst"
 		monarch_name = "Johann Ernst"
 		dynasty = "von Nassau"
@@ -220,9 +202,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 4
 	}
 }
-
-1675.9.8 = {
-	monarch = {
+1675.9.8 = { 
+	monarch = { 
 		name = "Johann Ernst"
 		dynasty = "von Nassau"
 		birth_date = 1664.6.13
@@ -231,9 +212,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 4
 	}
 }
-
-1685.9.17 = {
-	heir = {
+1685.9.17 = { 
+	heir = { 
 		name = "Karl August"
 		monarch_name = "Karl August"
 		dynasty = "von Nassau"
@@ -245,9 +225,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 4
 	}
 }
-
-1719.2.27 = {
-	monarch = {
+1719.2.27 = { 
+	monarch = { 
 		name = "Karl August"
 		dynasty = "von Nassau"
 		birth_date = 1685.9.17
@@ -256,9 +235,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 4
 	}
 }
-
-1735.1.16 = {
-	heir = {
+1735.1.16 = { 
+	heir = { 
 		name = "Karl Christian"
 		monarch_name = "Karl Christian"
 		dynasty = "von Nassau"
@@ -270,9 +248,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 4
 	}
 }
-
-1753.11.9 = {
-	monarch = {
+1753.11.9 = { 
+	monarch = { 
 		name = "Karl Christian"
 		dynasty = "von Nassau"
 		birth_date = 1735.1.16
@@ -281,9 +258,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 4
 	}
 }
-
-1768.10.25 = {
-	heir = {
+1768.10.25 = { 
+	heir = { 
 		name = "Friedrich Wilhelm"
 		monarch_name = "Friedrich Wilhelm"
 		dynasty = "von Nassau"
@@ -295,9 +271,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 1
 	}
 }
-
-1788.11.28 = {
-	monarch = {
+1788.11.28 = { 
+	monarch = { 
 		name = "Friedrich Wilhelm"
 		dynasty = "von Nassau"
 		birth_date = 1768.10.25
@@ -306,9 +281,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 1
 	}
 }
-
-1792.6.14 = {
-	heir = {
+1792.6.14 = { 
+	heir = { 
 		name = "Wilhelm"
 		monarch_name = "Wilhelm"
 		dynasty = "von Nassau"
@@ -320,9 +294,8 @@ fixed_capital = 83 # Cannot move capital away from this province & no power cost
 		mil = 2
 	}
 }
-
-1816.1.9 = {
-	monarch = {
+1816.1.9 = { 
+	monarch = { 
 		name = "Wilhelm"
 		dynasty = "von Nassau"
 		birth_date = 1792.6.14

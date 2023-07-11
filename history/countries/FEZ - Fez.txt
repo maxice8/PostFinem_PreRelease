@@ -1,14 +1,13 @@
 government = monarchy
 add_government_reform = barbary_sultanate_reform
-primary_culture = moroccan
-religion = sunni
-technology_group = muslim
-capital = 343	# Fez
-fixed_capital = 343 # Cannot move capital away from this province & no power cost to move to it
+primary_culture = maurian
+religion = punic_religion
+technology_group = western
+capital = 343# Fez
+fixed_capital = 343# Cannot move capital away from this province & no power cost to move to it
 religious_school = maliki_school
-
-1472.1.1 = {
-	monarch = {
+1472.1.1 = { 
+	monarch = { 
 		name = "Muhammad I"
 		dynasty = "Wattassid"
 		adm = 2
@@ -16,9 +15,8 @@ religious_school = maliki_school
 		mil = 3
 	}
 }
-
-1472.1.1 = {
-	heir = {
+1472.1.1 = { 
+	heir = { 
 		name = "Muhammad II"
 		monarch_name = "Muhammad II"
 		dynasty = "Marinid"
@@ -30,9 +28,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1504.1.1 = {
-	monarch = {
+1504.1.1 = { 
+	monarch = { 
 		name = "Muhammad II"
 		dynasty = "Wattassid"
 		adm = 0
@@ -40,9 +37,8 @@ religious_school = maliki_school
 		mil = 1
 	}
 }
-
-1504.1.1 = {
-	heir = {
+1504.1.1 = { 
+	heir = { 
 		name = "Ahmad"
 		monarch_name = "Ahmad"
 		dynasty = "Wattassid"
@@ -54,9 +50,8 @@ religious_school = maliki_school
 		mil = 2
 	}
 }
-
-1524.1.1 = {
-	monarch = {
+1524.1.1 = { 
+	monarch = { 
 		name = "Ahmad"
 		dynasty = "Wattassid"
 		adm = 2
@@ -64,9 +59,8 @@ religious_school = maliki_school
 		mil = 2
 	}
 }
-
-1537.1.1 = {
-	heir = {
+1537.1.1 = { 
+	heir = { 
 		name = "Nasir ad-Din al-Qasri"
 		monarch_name = "Nasir ad-Din al-Qasri"
 		dynasty = "Wattassid"
@@ -78,9 +72,8 @@ religious_school = maliki_school
 		mil = 2
 	}
 }
-
-1545.1.1 = {
-	monarch = {
+1545.1.1 = { 
+	monarch = { 
 		name = "Ali Abu Hassun"
 		regent = yes
 		adm = 3
@@ -88,9 +81,8 @@ religious_school = maliki_school
 		mil = 0
 	}
 }
-
-1545.1.1 = {
-	heir = {
+1545.1.1 = { 
+	heir = { 
 		name = "Nasir ad-Din al-Qasri"
 		monarch_name = "Nasir ad-Din al-Qasri"
 		dynasty = "Wattassid"
@@ -102,10 +94,8 @@ religious_school = maliki_school
 		mil = 2
 	}
 }
-
-
-1547.1.1 = {
-	monarch = {
+1547.1.1 = { 
+	monarch = { 
 		name = "Ahmad"
 		dynasty = "Wattassid"
 		adm = 2
@@ -113,9 +103,8 @@ religious_school = maliki_school
 		mil = 2
 	}
 }
-
-1547.1.1 = {
-	heir = {
+1547.1.1 = { 
+	heir = { 
 		name = "Nasir ad-Din al-Qasri"
 		monarch_name = "Nasir ad-Din al-Qasri"
 		dynasty = "Wattassid"
@@ -127,11 +116,10 @@ religious_school = maliki_school
 		mil = 2
 	}
 }
-
 #1549 - Saadians capture Fez and reunite Morocco
+1638.1.1 = {  #Dilawites seize Fez and northern Morocco
 
-1638.1.1 = {	#Dilawites seize Fez and northern Morocco
-	monarch = {
+	monarch = { 
 		name = "Mohammed al-Hajj"
 		dynasty = "al-Dila'i"
 		adm = 2
@@ -139,6 +127,5 @@ religious_school = maliki_school
 		mil = 4
 	}
 }
-
 #1668.7.20 - Alaouites defeat the Dilawites
-#1668.9.7 - Reunification of Morocco
+government_rank = 1

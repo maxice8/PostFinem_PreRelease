@@ -14,15 +14,8 @@ add_permanent_province_modifier = {
 	name = neva_estuary_modifier
 	duration = -1
 }
-1478.1.15 = { owner = MOS controller = MOS }
-1503.4.1 = { owner = RUS controller = RUS }
-1612.4.10 = { controller = SWE }
-1617.2.17 = { owner = SWE add_core = SWE capital = "Nöteborg" }
-1656.8.1 = { controller = RUS }
-1658.8.1 = { controller = SWE }
-1702.10.22 = { controller = RUS }
-1703.5.27 = { owner = RUS capital = "St.Petersburg" culture = russian base_tax = 4 base_production = 4 }
-1708.1.1 = { 
-	fort_15th = no
-	fort_17th = yes
-}
+religion = romuva
+culture = karelian
+add_core = GDJ
+owner = GDJ
+controller = GDJ

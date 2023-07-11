@@ -4,18 +4,13 @@ base_production = 1
 trade_goods = grain
 base_manpower = 1
 capital = "Córdoba"
-is_city = no
+is_city = yes
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern
-1516.1.23 = { 
-	owner = SPA
-	controller = SPA
-	add_core = SPA
-}
-1610.1.12 = { culture = castillian }
-1808.6.6 = { controller = REB revolt = { type = pretender_rebels size = 0 } }
-1811.1.1 = { controller = SPA revolt = { size = 1 } }
-1812.10.1 = { controller = REB revolt = { type = pretender_rebels size = 0 } }
-1813.12.11 = { controller = SPA revolt = { size = 1 } }
+religion = punic_religion
+culture = ilergi
+add_core = OVA
+owner = OVA
+controller = OVA

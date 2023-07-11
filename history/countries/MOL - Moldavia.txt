@@ -1,13 +1,12 @@
-government = monarchy
-add_government_reform = feudalism_reform
+government = tribal
+add_government_reform = feudal_tribe
 government_rank = 1
-primary_culture = romanian
-religion = orthodox
+primary_culture = moldavian
+religion = slavic_relgion
 technology_group = eastern
-capital = 268 # Suceava
-
-1399.1.1 = {
-	monarch = {
+capital = 1756# Suceava
+1399.1.1 = { 
+	monarch = { 
 		name = "Iuga Koriatovici"
 		dynasty = "Musat"
 		adm = 1
@@ -15,9 +14,8 @@ capital = 268 # Suceava
 		mil = 1
 	}
 }
-
-1399.1.1 = {
-	heir = {
+1399.1.1 = { 
+	heir = { 
 		name = "Alexandru"
 		monarch_name = "Alexandru I cel Bun"
 		dynasty = "Musat"
@@ -29,9 +27,8 @@ capital = 268 # Suceava
 		mil = 2
 	}
 }
-
-1400.1.1 = {
-	monarch = {
+1400.1.1 = { 
+	monarch = { 
 		name = "Alexandru I cel Bun"
 		dynasty = "Musat"
 		birth_date = 1380.1.1
@@ -40,9 +37,8 @@ capital = 268 # Suceava
 		mil = 2
 	}
 }
-
-1409.1.1 = {
-	heir = {
+1409.1.1 = { 
+	heir = { 
 		name = "Ilias"
 		monarch_name = "Ilias I"
 		dynasty = "Musat"
@@ -54,9 +50,8 @@ capital = 268 # Suceava
 		mil = 2
 	}
 }
-
-1432.1.1 = {
-	monarch = {
+1432.1.1 = { 
+	monarch = { 
 		name = "Ilias I"
 		dynasty = "Musat"
 		birth_date = 1409.1.1
@@ -65,9 +60,8 @@ capital = 268 # Suceava
 		mil = 0
 	}
 }
-
-1433.1.1 = {
-	monarch = {
+1433.1.1 = { 
+	monarch = { 
 		name = "Stefan II"
 		dynasty = "Musat"
 		adm = 2
@@ -75,7 +69,6 @@ capital = 268 # Suceava
 		mil = 2
 	}
 }
-
 #1433.1.1 = {
 #	heir = {
 #		name = "Petru"
@@ -89,9 +82,8 @@ capital = 268 # Suceava
 #		mil = 1
 #	}
 #}
-
-1447.7.13 = {
-	monarch = {
+1447.7.13 = { 
+	monarch = { 
 		name = "Roman II"
 		dynasty = "Musat"
 		birth_date = 1426.1.1
@@ -100,9 +92,8 @@ capital = 268 # Suceava
 		mil = 1
 	}
 }
-
-1448.1.1 = {
-	monarch = {
+1448.1.1 = { 
+	monarch = { 
 		name = "Petru II"
 		dynasty = "Musat"
 		birth_date = 1400.1.1
@@ -111,9 +102,8 @@ capital = 268 # Suceava
 		mil = 1
 	}
 }
-
-1449.10.12 = {
-	monarch = {
+1449.10.12 = { 
+	monarch = { 
 		name = "Bogdan II"
 		dynasty = "Musat"
 		birth_date = 1409.1.1
@@ -122,9 +112,8 @@ capital = 268 # Suceava
 		mil = 3
 	}
 }
-
-1451.10.18 = {
-	monarch = {
+1451.10.18 = { 
+	monarch = { 
 		name = "Petru III Aron"
 		dynasty = "Musat"
 		adm = 3
@@ -132,18 +121,17 @@ capital = 268 # Suceava
 		mil = 2
 	}
 }
-
-1457.4.15 = {
-	monarch = {
+1457.4.15 = { 
+	monarch = { 
 		name = "Stefan III cel Mare"
 		dynasty = "Musat"
 		birth_date = 1433.1.1
 		adm = 5
 		dip = 4
 		mil = 5
-		leader = {	
-			name = "Stefan III cel Mare"      	
-			type = general	
+		leader = { 
+			name = "Stefan III cel Mare"
+			type = general
 			fire = 1
 			shock = 4
 			manuever = 4
@@ -151,12 +139,11 @@ capital = 268 # Suceava
 		}
 	}
 }
-
-1479.3.9 = {
-	heir = {
+1479.3.9 = { 
+	heir = { 
 		name = "Bogdan"
 		monarch_name = "Bogdan III"
-		dynasty = "Musat"		
+		dynasty = "Musat"
 		birth_date = 1479.3.9
 		death_date = 1517.4.20
 		claim = 95
@@ -165,10 +152,9 @@ capital = 268 # Suceava
 		mil = 1
 	}
 }
-
-1504.7.3 = {
-	monarch = {
-		name = "Bogdan III"	
+1504.7.3 = { 
+	monarch = { 
+		name = "Bogdan III"
 		dynasty = "Musat"
 		birth_date = 1479.3.9
 		adm = 1
@@ -176,9 +162,8 @@ capital = 268 # Suceava
 		mil = 1
 	}
 }
-
-1504.7.3 = {
-	heir = {
+1504.7.3 = { 
+	heir = { 
 		name = "Petru"
 		monarch_name = "Petru IV Rares"
 		dynasty = "Musat"
@@ -190,9 +175,8 @@ capital = 268 # Suceava
 		mil = 1
 	}
 }
-
-1517.4.19 = {
-	monarch = {
+1517.4.19 = { 
+	monarch = { 
 		name = "Petru IV Rares"
 		dynasty = "Musat"
 		birth_date = 1487.1.1
@@ -201,9 +185,8 @@ capital = 268 # Suceava
 		mil = 1
 	}
 }
-
-1531.1.1 = {
-	heir = {
+1531.1.1 = { 
+	heir = { 
 		name = "Ilias"
 		monarch_name = "Ilias II"
 		dynasty = "Musat"
@@ -215,10 +198,8 @@ capital = 268 # Suceava
 		mil = 4
 	}
 }
-
-
-1546.9.4 = {
-	monarch = {
+1546.9.4 = { 
+	monarch = { 
 		name = "Ilias II"
 		dynasty = "Musat"
 		birth_date = 1531.1.1
@@ -227,9 +208,8 @@ capital = 268 # Suceava
 		mil = 4
 	}
 }
-
-1551.6.12 = {
-	monarch = {
+1551.6.12 = { 
+	monarch = { 
 		name = "Alexandru IV"
 		dynasty = "Musat"
 		adm = 1
@@ -237,9 +217,8 @@ capital = 268 # Suceava
 		mil = 4
 	}
 }
-
-1568.5.6 = {
-	monarch = {
+1568.5.6 = { 
+	monarch = { 
 		name = "Ioan III cel Cumplit"
 		dynasty = "Musat"
 		birth_date = 1521.1.1
@@ -248,9 +227,8 @@ capital = 268 # Suceava
 		mil = 4
 	}
 }
-
-1574.6.14 = {
-	monarch = {
+1574.6.14 = { 
+	monarch = { 
 		name = "Petru V Schiopul"
 		dynasty = "Musat"
 		adm = 1
@@ -258,9 +236,8 @@ capital = 268 # Suceava
 		mil = 3
 	}
 }
-
-1591.8.29 = {
-	monarch = {
+1591.8.29 = { 
+	monarch = { 
 		name = "Stefan VIII"
 		dynasty = "Musat"
 		adm = 1
@@ -268,9 +245,8 @@ capital = 268 # Suceava
 		mil = 0
 	}
 }
-
-1595.8.23 = {
-	monarch = {
+1595.8.23 = { 
+	monarch = { 
 		name = "Ieremia Movila"
 		dynasty = "Movilesti"
 		adm = 3
@@ -278,9 +254,8 @@ capital = 268 # Suceava
 		mil = 2
 	}
 }
-
-1606.7.11 = {
-	monarch = {
+1606.7.11 = { 
+	monarch = { 
 		name = "Constantin I Movila"
 		dynasty = "Movilesti"
 		adm = 4
@@ -288,9 +263,8 @@ capital = 268 # Suceava
 		mil = 1
 	}
 }
-
-1611.11.21 = {
-	monarch = {
+1611.11.21 = { 
+	monarch = { 
 		name = "Stefan IX Tomsa"
 		dynasty = "Movilesti"
 		adm = 3
@@ -298,9 +272,8 @@ capital = 268 # Suceava
 		mil = 2
 	}
 }
-
-1623.8.15 = {
-	monarch = {
+1623.8.15 = { 
+	monarch = { 
 		name = "Alexandru VIII Coronul"
 		dynasty = "Draculesti"
 		adm = 1
@@ -308,9 +281,8 @@ capital = 268 # Suceava
 		mil = 1
 	}
 }
-
-1633.4.2 = {
-	monarch = {
+1633.4.2 = { 
+	monarch = { 
 		name = "Vasile"
 		dynasty = "Lupu"
 		birth_date = 1595.1.1
@@ -319,9 +291,8 @@ capital = 268 # Suceava
 		mil = 3
 	}
 }
-
-1653.7.17 = {
-	monarch = {
+1653.7.17 = { 
+	monarch = { 
 		name = "Gheorge I Stefan"
 		dynasty = "Ceaur"
 		adm = 1
@@ -329,9 +300,8 @@ capital = 268 # Suceava
 		mil = 0
 	}
 }
-
-1658.3.14 = {
-	monarch = {
+1658.3.14 = { 
+	monarch = { 
 		name = "Stefan X"
 		dynasty = "Lupu"
 		birth_date = 1641.1.1
@@ -340,9 +310,8 @@ capital = 268 # Suceava
 		mil = 1
 	}
 }
-
-1661.9.30 = {
-	monarch = {
+1661.9.30 = { 
+	monarch = { 
 		name = "Eustratie"
 		dynasty = "Dabija"
 		adm = 2
@@ -350,9 +319,8 @@ capital = 268 # Suceava
 		mil = 3
 	}
 }
-
-1665.9.22 = {
-	monarch = {
+1665.9.22 = { 
+	monarch = { 
 		name = "Gheorge III"
 		dynasty = "Duca"
 		adm = 1
@@ -360,9 +328,8 @@ capital = 268 # Suceava
 		mil = 1
 	}
 }
-
-1684.1.5 = {
-	monarch = {
+1684.1.5 = { 
+	monarch = { 
 		name = "Constantin III Cantemir"
 		dynasty = "Cantemiresti"
 		birth_date = 1622.1.1
@@ -371,9 +338,8 @@ capital = 268 # Suceava
 		mil = 3
 	}
 }
-
-1693.3.30 = {
-	monarch = {
+1693.3.30 = { 
+	monarch = { 
 		name = "Constantin IV"
 		dynasty = "Duca"
 		adm = 0
@@ -381,9 +347,8 @@ capital = 268 # Suceava
 		mil = 2
 	}
 }
-
-1703.6.27 = {
-	monarch = {
+1703.6.27 = { 
+	monarch = { 
 		name = "Mahai III"
 		dynasty = "Racovita"
 		adm = 1
@@ -391,9 +356,8 @@ capital = 268 # Suceava
 		mil = 2
 	}
 }
-
-1709.10.29 = {
-	monarch = {
+1709.10.29 = { 
+	monarch = { 
 		name = "Dimitrie"
 		dynasty = "Cantomiresti"
 		birth_date = 1673.10.26
@@ -402,9 +366,8 @@ capital = 268 # Suceava
 		mil = 2
 	}
 }
-
-1711.6.2 = {
-	monarch = {
+1711.6.2 = { 
+	monarch = { 
 		name = "Nicolae"
 		dynasty = "Mavrogordato"
 		birth_date = 1670.5.3
@@ -413,9 +376,8 @@ capital = 268 # Suceava
 		mil = 2
 	}
 }
-
-1715.1.6 = {
-	monarch = {
+1715.1.6 = { 
+	monarch = { 
 		name = "Mahai III"
 		dynasty = "Racovita"
 		adm = 1
@@ -423,9 +385,8 @@ capital = 268 # Suceava
 		mil = 2
 	}
 }
-
-1726.10.8 = {
-	monarch = {
+1726.10.8 = { 
+	monarch = { 
 		name = "Grigore I"
 		dynasty = "Ghica"
 		adm = 0
@@ -433,9 +394,8 @@ capital = 268 # Suceava
 		mil = 1
 	}
 }
-
-1741.9.2 = {
-	monarch = {
+1741.9.2 = { 
+	monarch = { 
 		name = "Constantin V"
 		dynasty = "Mavrogordato"
 		birth_date = 1711.2.27
@@ -444,9 +404,8 @@ capital = 268 # Suceava
 		mil = 0
 	}
 }
-
-1749.1.2 = {
-	monarch = {
+1749.1.2 = { 
+	monarch = { 
 		name = "Constantin VI"
 		dynasty = "Racovita"
 		birth_date = 1699.1.1
@@ -455,9 +414,8 @@ capital = 268 # Suceava
 		mil = 2
 	}
 }
-
-1757.3.15 = {
-	monarch = {
+1757.3.15 = { 
+	monarch = { 
 		name = "Grigore II"
 		dynasty = "Callamachi"
 		adm = 1
@@ -465,9 +423,8 @@ capital = 268 # Suceava
 		mil = 1
 	}
 }
-
-1769.6.15 = {
-	monarch = {
+1769.6.15 = { 
+	monarch = { 
 		name = "Grigore III"
 		dynasty = "Ghica"
 		adm = 2
@@ -475,9 +432,8 @@ capital = 268 # Suceava
 		mil = 1
 	}
 }
-
-1777.10.12 = {
-	monarch = {
+1777.10.12 = { 
+	monarch = { 
 		name = "Constantin VII"
 		dynasty = "Moruzi"
 		adm = 2
@@ -485,9 +441,8 @@ capital = 268 # Suceava
 		mil = 2
 	}
 }
-
-1782.6.9 = {
-	monarch = {
+1782.6.9 = { 
+	monarch = { 
 		name = "Alexandru IX"
 		dynasty = "Mavrogordato"
 		adm = 2
@@ -495,9 +450,8 @@ capital = 268 # Suceava
 		mil = 3
 	}
 }
-
-1785.1.13 = {
-	monarch = {
+1785.1.13 = { 
+	monarch = { 
 		name = "Alexandru X"
 		dynasty = "Mavrogordato"
 		adm = 2
@@ -505,9 +459,8 @@ capital = 268 # Suceava
 		mil = 0
 	}
 }
-
-1786.12.15 = {
-	monarch = {
+1786.12.15 = { 
+	monarch = { 
 		name = "Alexandru XI"
 		dynasty = "Ypsilanti"
 		birth_date = 1725.1.1
@@ -516,9 +469,8 @@ capital = 268 # Suceava
 		mil = 1
 	}
 }
-
-1792.3.2 = {
-	monarch = {
+1792.3.2 = { 
+	monarch = { 
 		name = "Mahai IV Sutu"
 		dynasty = "Soutzos"
 		birth_date = 1730.1.1
@@ -527,9 +479,8 @@ capital = 268 # Suceava
 		mil = 3
 	}
 }
-
-1795.5.7 = {
-	monarch = {
+1795.5.7 = { 
+	monarch = { 
 		name = "Alexandru XII"
 		dynasty = "Callimachi"
 		birth_date = 1737.1.1
@@ -538,9 +489,8 @@ capital = 268 # Suceava
 		mil = 1
 	}
 }
-
-1799.3.9 = {
-	monarch = {
+1799.3.9 = { 
+	monarch = { 
 		name = "Constantin VIII"
 		dynasty = "Ypsilanti"
 		birth_date = 1760.1.1
@@ -549,9 +499,8 @@ capital = 268 # Suceava
 		mil = 4
 	}
 }
-
-1801.7.11 = {
-	monarch = {
+1801.7.11 = { 
+	monarch = { 
 		name = "Alexandru XIII"
 		dynasty = "Moruzi"
 		birth_date = 1750.1.1
@@ -560,9 +509,8 @@ capital = 268 # Suceava
 		mil = 1
 	}
 }
-
-1806.11.2 = {
-	monarch = {
+1806.11.2 = { 
+	monarch = { 
 		name = "Scarlat II"
 		dynasty = "Callimachi"
 		birth_date = 1773.1.1
@@ -571,9 +519,8 @@ capital = 268 # Suceava
 		mil = 3
 	}
 }
-
-1819.7.2 = {
-	monarch = {
+1819.7.2 = { 
+	monarch = { 
 		name = "Mahai V"
 		dynasty = "Soutzos"
 		birth_date = 1784.1.1

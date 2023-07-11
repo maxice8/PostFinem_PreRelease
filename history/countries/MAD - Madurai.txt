@@ -1,18 +1,14 @@
 government = monarchy
 add_government_reform = nayankara_reform
 technology_group = indian
-religion = hinduism
+religion = sunni
 primary_culture = tamil
-capital = 2101 #Tirunelveli
-#capital = 536 #Madurai
-fixed_capital = 536 # Cannot move capital away from this province & no power cost to move to it
-
+capital = 2101#capital = 536 #Madurai
+fixed_capital = 536# Cannot move capital away from this province & no power cost to move to it
 #Rajas of Madurai 
-
 #Last Pandyas - Unsubdued by the Madurai Sultanate and continues to exist after Madurai is annexed by Vijayanagar
-
-1431.1.1 = {
-	monarch = {
+1431.1.1 = { 
+	monarch = { 
 		name = "Parakrama"
 		dynasty = "Pandya"
 		ADM = 3
@@ -20,9 +16,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 1
 	}
 }
-
-1431.1.1 = {
-	heir = {
+1431.1.1 = { 
+	heir = { 
 		name = "Vira"
 		monarch_name = "Vira"
 		dynasty = "Pandya"
@@ -34,9 +29,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 1
 	}
 }
-
-1437.1.1 = {
-	monarch = {
+1437.1.1 = { 
+	monarch = { 
 		name = "Vira"
 		dynasty = "Pandya"
 		ADM = 3
@@ -44,9 +38,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 1
 	}
 }
-
-1437.1.1 = {
-	heir = {
+1437.1.1 = { 
+	heir = { 
 		name = "Vira"
 		monarch_name = "Vira II"
 		dynasty = "Pandya"
@@ -58,9 +51,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 1
 	}
 }
-
-1475.1.1 = {
-	monarch = {
+1475.1.1 = { 
+	monarch = { 
 		name = "Vira II"
 		dynasty = "Pandya"
 		ADM = 4
@@ -68,9 +60,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 1
 	}
 }
-
-1475.1.1 = {
-	heir = {
+1475.1.1 = { 
+	heir = { 
 		name = "Parakrama"
 		monarch_name = "Parakrama II"
 		dynasty = "Pandya"
@@ -82,9 +73,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 3
 	}
 }
-
-1516.1.1 = {
-	monarch = {
+1516.1.1 = { 
+	monarch = { 
 		name = "Parakrama II"
 		dynasty = "Pandya"
 		ADM = 2
@@ -92,9 +82,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 3
 	}
 }
-
-1516.1.1 = {
-	heir = {
+1516.1.1 = { 
+	heir = { 
 		name = "Vikrama"
 		monarch_name = "Vikrama"
 		dynasty = "Pandya"
@@ -107,12 +96,10 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 	}
 }
 #Annexed
-
 #Independent from Vijayanagar:
 #Madurai Nayaka dynasty, Nayaka = vassal king, but from sources it seems the Madurai Nayakas took it as their dynasty name?
-
-1529.1.1 = {
-	monarch = {
+1529.1.1 = { 
+	monarch = { 
 		name = "Vishvanatha"
 		dynasty = "Nayaka"
 		ADM = 4
@@ -120,9 +107,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 5
 	}
 }
-
-1529.1.1 = {
-	heir = {
+1529.1.1 = { 
+	heir = { 
 		name = "Kumara Periaya Krishnappa"
 		monarch_name = "Kumara Periaya Krishnappa"
 		dynasty = "Nayaka"
@@ -134,9 +120,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 4
 	}
 }
-
-1564.1.1 = {
-	monarch = {
+1564.1.1 = { 
+	monarch = { 
 		name = "Kumara Periaya Krishnappa"
 		dynasty = "Nayaka"
 		ADM = 1
@@ -144,9 +129,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 4
 	}
 }
-
-1564.1.1 = {
-	heir = {
+1564.1.1 = { 
+	heir = { 
 		name = "Krishnappa Periaya"
 		monarch_name = "Krishnappa Periaya"
 		dynasty = "Nayaka"
@@ -158,9 +142,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 2
 	}
 }
-
-1572.1.1 = {
-	monarch = {
+1572.1.1 = { 
+	monarch = { 
 		name = "Krishnappa Periaya"
 		dynasty = "Nayaka"
 		ADM = 2
@@ -168,9 +151,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 2
 	}
 }
-
-1572.1.1 = {
-	heir = {
+1572.1.1 = { 
+	heir = { 
 		name = "Lingayya Kumara"
 		monarch_name = "Lingayya Kumara"
 		dynasty = "Nayaka"
@@ -182,9 +164,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 2
 	}
 }
-
-1595.3.1 = {
-	monarch = {
+1595.3.1 = { 
+	monarch = { 
 		name = "Lingayya Kumara"
 		dynasty = "Nayaka"
 		ADM = 2
@@ -192,9 +173,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 2
 	}
 }
-
-1595.3.1 = {
-	heir = {
+1595.3.1 = { 
+	heir = { 
 		name = "Mutu Krishnappa"
 		monarch_name = "Mutu Krishnappa"
 		dynasty = "Nayaka"
@@ -206,9 +186,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 2
 	}
 }
-
-1601.1.1 = {
-	monarch = {
+1601.1.1 = { 
+	monarch = { 
 		name = "Mutu Krishnappa"
 		dynasty = "Nayaka"
 		ADM = 2
@@ -216,9 +195,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 2
 	}
 }
-
-1601.1.1 = {
-	heir = {
+1601.1.1 = { 
+	heir = { 
 		name = "Muttu Virappa"
 		monarch_name = "Muttu Virappa I"
 		dynasty = "Nayaka"
@@ -230,9 +208,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 2
 	}
 }
-
-1609.1.1 = {
-	monarch = {
+1609.1.1 = { 
+	monarch = { 
 		name = "Muttu Virappa I"
 		dynasty = "Nayaka"
 		ADM = 2
@@ -240,9 +217,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 2
 	}
 }
-
-1623.1.1 = {
-	monarch = {
+1623.1.1 = { 
+	monarch = { 
 		name = "Tirumala"
 		dynasty = "Nayaka"
 		ADM = 2
@@ -250,9 +226,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 2
 	}
 }
-
-1659.1.1 = {
-	monarch = {
+1659.1.1 = { 
+	monarch = { 
 		name = "Muttu Virappa II"
 		dynasty = "Nayaka"
 		ADM = 2
@@ -260,18 +235,16 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 2
 	}
 }
-
-1662.1.1 = {
-	monarch = {
+1662.1.1 = { 
+	monarch = { 
 		name = "Chokkanatha I"
 		ADM = 2
 		DIP = 2
 		MIL = 2
 	}
 }
-
-1678.1.1 = {
-	monarch = {
+1678.1.1 = { 
+	monarch = { 
 		name = "Muttu Linga"
 		dynasty = "Nayaka"
 		ADM = 2
@@ -279,9 +252,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 2
 	}
 }
-
-1680.1.1 = {
-	monarch = {
+1680.1.1 = { 
+	monarch = { 
 		name = "Chokkanatha I"
 		dynasty = "Nayaka"
 		ADM = 2
@@ -289,11 +261,9 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 2
 	}
 }
-
 #Restored
-
-1682.1.1 = {
-	monarch = {
+1682.1.1 = { 
+	monarch = { 
 		name = "Muttu Varappa III"
 		dynasty = "Nayaka"
 		ADM = 2
@@ -301,9 +271,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 2
 	}
 }
-
-1689.1.1 = {
-	monarch = {
+1689.1.1 = { 
+	monarch = { 
 		name = "Chokkanatha II"
 		dynasty = "Nayaka"
 		ADM = 2
@@ -311,9 +280,8 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 2
 	}
 }
-
-1731.1.1 = {
-	monarch = {
+1731.1.1 = { 
+	monarch = { 
 		name = "Minakshi"
 		dynasty = "Nayaka"
 		ADM = 2
@@ -321,5 +289,5 @@ fixed_capital = 536 # Cannot move capital away from this province & no power cos
 		MIL = 2
 	}
 }
-
 #Annexed by the Carnatic in April 1736
+government_rank = 1

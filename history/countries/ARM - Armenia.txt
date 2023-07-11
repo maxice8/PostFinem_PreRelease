@@ -1,12 +1,11 @@
 government = monarchy
-add_government_reform = autocracy_reform 
-primary_culture = armenian
-religion = coptic
+add_government_reform = autocracy_reform
+primary_culture = erythrian
+religion = hellenic
 technology_group = eastern
-capital = 419	# Yerevan
-
-1745.1.1 = {
-	monarch = {
+capital = 419# Yerevan
+1745.1.1 = { 
+	monarch = { 
 		name = "Mehdi"
 		dynasty = "Qasemlu"
 		adm = 3
@@ -16,9 +15,8 @@ capital = 419	# Yerevan
 	religion = sunni
 	religious_school = hanafi_school
 }
-
-1748.1.1 = {
-	monarch = {
+1748.1.1 = { 
+	monarch = { 
 		name = "Hasan"
 		dynasty = "Aliid"
 		adm = 3
@@ -26,9 +24,8 @@ capital = 419	# Yerevan
 		mil = 2
 	}
 }
-
-1750.1.1 = {
-	monarch = {
+1750.1.1 = { 
+	monarch = { 
 		name = "Huseyn"
 		dynasty = "Aliid"
 		adm = 4
@@ -36,9 +33,8 @@ capital = 419	# Yerevan
 		mil = 1
 	}
 }
-
-1755.1.1 = {
-	monarch = {
+1755.1.1 = { 
+	monarch = { 
 		name = "Hasan"
 		dynasty = "Qajar"
 		adm = 1
@@ -46,9 +42,8 @@ capital = 419	# Yerevan
 		mil = 2
 	}
 }
-
-1762.1.1 = {
-	monarch = {
+1762.1.1 = { 
+	monarch = { 
 		name = "Huseyn"
 		dynasty = "Aliid"
 		adm = 2
@@ -56,9 +51,8 @@ capital = 419	# Yerevan
 		mil = 2
 	}
 }
-
-1784.1.1 = {
-	monarch = {
+1784.1.1 = { 
+	monarch = { 
 		name = "Qulam"
 		dynasty = "Aliid"
 		adm = 4
@@ -66,9 +60,8 @@ capital = 419	# Yerevan
 		mil = 2
 	}
 }
-
-1804.1.1 = {
-	monarch = {
+1804.1.1 = { 
+	monarch = { 
 		name = "Mehdi"
 		dynasty = "Qoli"
 		adm = 1
@@ -76,9 +69,8 @@ capital = 419	# Yerevan
 		mil = 2
 	}
 }
-
-1806.1.1 = {
-	monarch = {
+1806.1.1 = { 
+	monarch = { 
 		name = "Muhammed"
 		dynasty = "Maragai"
 		adm = 2
@@ -86,3 +78,4 @@ capital = 419	# Yerevan
 		mil = 2
 	}
 }
+government_rank = 2

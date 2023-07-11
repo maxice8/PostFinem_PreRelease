@@ -2,16 +2,15 @@ government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = western
-primary_culture = umbrian
-religion = catholic
-capital = 2977	# Urbino
-fixed_capital = 2977 # Cannot move capital away from this province & no power cost to move to it
+primary_culture = samnitii
+religion = punic_religion
+capital = 2977# Urbino
+fixed_capital = 2977# Cannot move capital away from this province & no power cost to move to it
 add_army_professionalism = 0.05
 set_estate_privilege = estate_church_papal_emissary
-
 #Dukes of Urbino
-1363.1.1 = {
-	monarch = {
+1363.1.1 = { 
+	monarch = { 
 		name = "Antonio I"
 		dynasty = "da Montefeltro"
 		dip = 3
@@ -19,13 +18,12 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 3
 	}
 }
-
-1377.1.1 = {
-	heir = {
+1377.1.1 = { 
+	heir = { 
 		name = "Guidantonio"
 		monarch_name = "Guidantonio I"
 		dynasty = "da Montefeltro"
-		birth_date = 1377.1.1 
+		birth_date = 1377.1.1
 		death_date = 1443.2.1
 		claim = 95
 		adm = 1
@@ -33,9 +31,8 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 1
 	}
 }
-
-1404.1.1 = {
-	monarch = {
+1404.1.1 = { 
+	monarch = { 
 		name = "Guidantonio I"
 		dynasty = "da Montefeltro"
 		dip = 2
@@ -43,9 +40,8 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 1
 	}
 }
-
-1428.1.1 = {
-	heir = {
+1428.1.1 = { 
+	heir = { 
 		name = "Oddantonio"
 		monarch_name = "Oddantonio I"
 		dynasty = "da Montefeltro"
@@ -57,9 +53,8 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 2
 	}
 }
-
-1443.2.1 = {
-	monarch = {
+1443.2.1 = { 
+	monarch = { 
 		name = "Oddantonio I"
 		dynasty = "da Montefeltro"
 		dip = 3
@@ -67,9 +62,8 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 2
 	}
 }
-
-1443.2.1 = {
-	heir = {
+1443.2.1 = { 
+	heir = { 
 		name = "Federico"
 		monarch_name = "Federico III"
 		dynasty = "da Montefeltro"
@@ -81,9 +75,8 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 5
 	}
 }
-
-1444.7.22 = {
-	monarch = {
+1444.7.22 = { 
+	monarch = { 
 		name = "Federico III"
 		dynasty = "da Montefeltro"
 		birth_date = 1422.6.7
@@ -92,9 +85,8 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 5
 	}
 }
-
-1472.1.17 = {
-	heir =  {
+1472.1.17 = { 
+	heir = { 
 		name = "Guidobaldo"
 		monarch_name = "Guidobaldo I"
 		dynasty = "da Montefeltro"
@@ -106,9 +98,8 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 2
 	}
 }
-
-1482.9.10 = {
-	monarch = {
+1482.9.10 = { 
+	monarch = { 
 		name = "Guidobaldo I"
 		dynasty = "da Montefeltro"
 		birth_date = 1472.1.17
@@ -117,9 +108,8 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 2
 	}
 }
-
-1490.3.22 = {
-	heir = {
+1490.3.22 = { 
+	heir = { 
 		name = "Francesco"
 		monarch_name = "Francesco I"
 		dynasty = "da Montefeltro"
@@ -131,9 +121,8 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 2
 	}
 }
-
-1502.1.1 = {
-	monarch = {
+1502.1.1 = { 
+	monarch = { 
 		name = "Cesare I"
 		dynasty = "Borgia"
 		birth_date = 1475.9.13
@@ -142,9 +131,8 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 5
 	}
 }
-
-1502.4.1 = {
-	monarch = {
+1502.4.1 = { 
+	monarch = { 
 		name = "Guidobaldo I"
 		dynasty = "da Montefeltro"
 		birth_date = 1472.1.17
@@ -153,9 +141,8 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 2
 	}
 }
-
-1502.4.1 = {
-	heir = {
+1502.4.1 = { 
+	heir = { 
 		name = "Francesco"
 		monarch_name = "Francesco I"
 		dynasty = "da Montefeltro"
@@ -167,9 +154,8 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 2
 	}
 }
-
-1508.4.11 = {
-	monarch = {
+1508.4.11 = { 
+	monarch = { 
 		name = "Francesco I"
 		dynasty = "della Rovere"
 		birth_date = 1490.3.22
@@ -178,9 +164,8 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 2
 	}
 }
-
-1516.5.30 = {
-	monarch = {
+1516.5.30 = { 
+	monarch = { 
 		name = "Lorenzo I"
 		dynasty = "de' Medici"
 		birth_date = 1492.9.12
@@ -189,11 +174,9 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 5
 	}
 }
-
 #Same as Lorenzo II di Medici of Florence
-
-1519.5.4 = {
-	monarch = {
+1519.5.4 = { 
+	monarch = { 
 		name = "Caterina I"
 		dynasty = "de' Medici"
 		female = yes
@@ -203,9 +186,8 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 2
 	}
 }
-
-1521.12.22 = {
-	monarch = {
+1521.12.22 = { 
+	monarch = { 
 		name = "Francesco I"
 		dynasty = "della Rovere"
 		birth_date = 1490.3.22
@@ -214,11 +196,9 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 2
 	}
 }
-
 #Same as above, restored
-
-1528.10.20 = {
-	monarch = {
+1528.10.20 = { 
+	monarch = { 
 		name = "Guidobaldo II"
 		dynasty = "della Rovere"
 		birth_date = 1514.4.2
@@ -227,9 +207,8 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 2
 	}
 }
-
-1549.2.20 = {
-	heir = {
+1549.2.20 = { 
+	heir = { 
 		name = "Francesco Maria"
 		monarch_name = "Francesco Maria II"
 		dynasty = "della Rovere"
@@ -241,9 +220,8 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 2
 	}
 }
-
-1574.9.28 = {
-	monarch = {
+1574.9.28 = { 
+	monarch = { 
 		name = "Francesco Maria II"
 		dynasty = "della Rovere"
 		birth_date = 1549.2.20
@@ -252,9 +230,8 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 2
 	}
 }
-
-1621.7.25 = {
-	monarch = {
+1621.7.25 = { 
+	monarch = { 
 		name = "Francesco Ubaldo I"
 		dynasty = "della Rovere"
 		birth_date = 1605.5.16
@@ -263,9 +240,8 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 2
 	}
 }
-
-1623.6.29 = {
-	monarch = {
+1623.6.29 = { 
+	monarch = { 
 		name = "Francesco Maria II"
 		dynasty = "della Rovere"
 		birth_date = 1549.2.20
@@ -274,6 +250,5 @@ set_estate_privilege = estate_church_papal_emissary
 		mil = 2
 	}
 }
-
 #Same as above, restored
 #Annexed by Papal States 1631.4.28

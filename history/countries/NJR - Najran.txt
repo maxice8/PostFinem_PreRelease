@@ -1,26 +1,23 @@
 government = tribal
 add_government_reform = tribal_federation
-primary_culture = yemeni_culture
-religion = shiite
+primary_culture = qataban
+religion = sunni
 technology_group = muslim
-capital = 391	# Najran
+capital = 391# Najran
 government_rank = 1
 religious_school = ismaili_school
-
 #Banu Yam
-
-1430.1.1 = {
-	monarch = {
-		name = "Muhammad" #Fictional
+1430.1.1 = { 
+	monarch = { 
+		name = "Muhammad"#Fictional
 		dynasty = "Banu Yam"
 		adm = 3
 		dip = 2
 		mil = 3
 	}
 }
-
-1470.1.1 = {
-	monarch = {
+1470.1.1 = { 
+	monarch = { 
 		name = "Sulayman"
 		dynasty = "Banu Yam"
 		adm = 2
@@ -28,9 +25,8 @@ religious_school = ismaili_school
 		mil = 3
 	}
 }
-
-1530.1.1 = {
-	monarch = {
+1530.1.1 = { 
+	monarch = { 
 		name = "Ahmad"
 		dynasty = "Banu Yam"
 		adm = 2
@@ -38,10 +34,9 @@ religious_school = ismaili_school
 		mil = 3
 	}
 }
-
 #Makramids
-1640.1.1 = {
-	monarch = {
+1640.1.1 = { 
+	monarch = { 
 		name = "Ibrahim ibn Muhammad"
 		dynasty = "al-Makram"
 		adm = 3
@@ -50,9 +45,8 @@ religious_school = ismaili_school
 	}
 	add_piety = 0.50
 }
-
-1697.1.1 = {
-	monarch = {
+1697.1.1 = { 
+	monarch = { 
 		name = "Hibat Allah ibn Ibrahim"
 		dynasty = "al-Makram"
 		adm = 3
@@ -60,9 +54,8 @@ religious_school = ismaili_school
 		mil = 3
 	}
 }
-
-1747.1.1 = {
-	monarch = {
+1747.1.1 = { 
+	monarch = { 
 		name = "Hibat Allah ibn Ibrahim"
 		dynasty = "al-Makram"
 		adm = 3
@@ -70,9 +63,8 @@ religious_school = ismaili_school
 		mil = 3
 	}
 }
-
-1770.1.1 = {
-	monarch = {
+1770.1.1 = { 
+	monarch = { 
 		name = "Hassan ibn Hibat Allah"
 		dynasty = "al-Makram"
 		adm = 3
@@ -80,9 +72,8 @@ religious_school = ismaili_school
 		mil = 5
 	}
 }
-
-1788.1.1 = {
-	monarch = {
+1788.1.1 = { 
+	monarch = { 
 		name = "Abdallah ibn Ali"
 		dynasty = "al-Makram"
 		adm = 2

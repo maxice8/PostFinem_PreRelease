@@ -1,29 +1,26 @@
-government = monarchy
-add_government_reform = polish_great_sejm
-primary_culture = polish
-religion = catholic
+government = tribal
+add_government_reform = feudal_tribe
+primary_culture = mazovian
+religion = slavic_relgion
 technology_group = eastern
 historical_friend = LIT
 historical_rival = TEU
-capital = 262 # Krakow
+capital = 262# Krakow
 add_accepted_culture = ruthenian
 add_truce_with = HUN
-
-1444.10.1 = {
+1444.10.1 = { 
 	set_estate_privilege = estate_nobles_golden_liberty
 }
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		adm = 0
 		mil = 0
 		dip = 0
 		regent = yes
 	}
 }
-
-1447.6.25 = {
-	monarch = {
+1447.6.25 = { 
+	monarch = { 
 		name = "Kazimierz IV"
 		dynasty = Jagiellon
 		birth_date = 1427.11.30
@@ -35,9 +32,8 @@ add_truce_with = HUN
 	add_ruler_personality = scholar_personality
 	add_ruler_personality = incorruptible_personality
 }
-
-1454.2.10 = {
-	queen = {
+1454.2.10 = { 
+	queen = { 
 		country_of_origin = SAX
 		name = "Elzbieta"
 		dynasty = "von Habsburg"
@@ -49,9 +45,8 @@ add_truce_with = HUN
 		mil = 2
 	}
 }
-
-1459.12.27 = {
-	heir = {
+1459.12.27 = { 
+	heir = { 
 		name = "Jan Olbracht"
 		monarch_name = "Jan I Olbracht"
 		dynasty = "Jagiellon"
@@ -65,12 +60,10 @@ add_truce_with = HUN
 	clear_scripted_personalities = yes
 	add_heir_personality = silver_tongue_personality
 }
-
-1461.1.1 = {
-	leader = {
+1461.1.1 = { 
+	leader = { 
 		name = "Piotr Dunin"
 		type = general
-
 		fire = 2
 		shock = 3
 		manuever = 3
@@ -78,12 +71,10 @@ add_truce_with = HUN
 		death_date = 1484.1.1
 	}
 }
-
-1465.1.1 = {
-	leader = {
+1465.1.1 = { 
+	leader = { 
 		name = "Feliks Paniewski"
 		type = general
-
 		fire = 2
 		shock = 3
 		manuever = 2
@@ -91,13 +82,10 @@ add_truce_with = HUN
 		death_date = 1488.1.1
 	}
 }
-
-
-1475.1.1 = {
-	leader = {
+1475.1.1 = { 
+	leader = { 
 		name = "Dobieslaw Kurozwecki"
 		type = general
-
 		fire = 2
 		shock = 3
 		manuever = 2
@@ -105,9 +93,8 @@ add_truce_with = HUN
 		death_date = 1496.1.1
 	}
 }
-
-1492.6.8 = {
-	monarch = {
+1492.6.8 = { 
+	monarch = { 
 		name = "Jan I Olbracht"
 		dynasty = Jagiellon
 		birth_date = 1459.12.27
@@ -115,7 +102,7 @@ add_truce_with = HUN
 		dip = 0
 		mil = 1
 	}
-	heir = {
+	heir = { 
 		name = "Aleksander"
 		monarch_name = "Aleksander I"
 		dynasty = "Jagiellon"
@@ -130,9 +117,8 @@ add_truce_with = HUN
 	add_ruler_personality = silver_tongue_personality
 	add_heir_personality = naive_personality
 }
-
-1495.2.15 = {
-	queen = {
+1495.2.15 = { 
+	queen = { 
 		country_of_origin = MOS
 		name = "Helena"
 		dynasty = "Rurikovich"
@@ -144,9 +130,8 @@ add_truce_with = HUN
 		mil = 1
 	}
 }
-
-1501.6.18 = {
-	monarch = {
+1501.6.18 = { 
+	monarch = { 
 		name = "Aleksander I"
 		dynasty = Jagiellon
 		birth_date = 1461.8.5
@@ -154,7 +139,7 @@ add_truce_with = HUN
 		dip = 0
 		mil = 0
 	}
-	heir = {
+	heir = { 
 		name = "Zygmunt"
 		monarch_name = "Zygmunt I Stary"
 		dynasty = "Jagiellon"
@@ -170,9 +155,8 @@ add_truce_with = HUN
 	add_heir_personality = scholar_personality
 	add_heir_personality = charismatic_negotiator_personality
 }
-
-1506.8.20 = {
-	monarch = {
+1506.8.20 = { 
+	monarch = { 
 		name = "Zygmunt I Stary"
 		dynasty = Jagiellon
 		birth_date = 1467.1.1
@@ -184,9 +168,8 @@ add_truce_with = HUN
 	add_ruler_personality = scholar_personality
 	add_ruler_personality = charismatic_negotiator_personality
 }
-
-1512.2.8 = {
-	queen = {
+1512.2.8 = { 
+	queen = { 
 		country_of_origin = TRA
 		name = "Barbara"
 		dynasty = "Zápolya"
@@ -198,9 +181,8 @@ add_truce_with = HUN
 		mil = 1
 	}
 }
-
-1518.4.18 = {
-	queen = {
+1518.4.18 = { 
+	queen = { 
 		country_of_origin = MLO
 		name = "Bona"
 		dynasty = "Sforza"
@@ -212,9 +194,8 @@ add_truce_with = HUN
 		mil = 2
 	}
 }
-
-1520.8.1 = {
-	heir = {
+1520.8.1 = { 
+	heir = { 
 		name = "Zygmunt August"
 		monarch_name = "Zygmunt I August"
 		dynasty = "Jagiellon"
@@ -229,12 +210,10 @@ add_truce_with = HUN
 	add_heir_personality = infertile_personality
 	add_heir_personality = industrious_personality
 }
-
-1521.1.1 = {
-	leader = {
+1521.1.1 = { 
+	leader = { 
 		name = "Jan Tarnowski"
 		type = general
-
 		fire = 2
 		shock = 4
 		manuever = 4
@@ -242,9 +221,8 @@ add_truce_with = HUN
 		death_date = 1561.5.16
 	}
 }
-
-1548.4.2 = {
-	monarch = {
+1548.4.2 = { 
+	monarch = { 
 		name = "Zygmunt II August"
 		dynasty = Jagiellon
 		birth_date = 1520.8.1
@@ -256,9 +234,8 @@ add_truce_with = HUN
 	add_ruler_personality = infertile_personality
 	add_ruler_personality = industrious_personality
 }
-
-1543.5.6 = {
-	queen = {
+1543.5.6 = { 
+	queen = { 
 		country_of_origin = HAB
 		name = "Elzbieta"
 		dynasty = "von Habsburg"
@@ -270,9 +247,8 @@ add_truce_with = HUN
 		mil = 0
 	}
 }
-
-1550.12.7 = {
-	queen = {
+1550.12.7 = { 
+	queen = { 
 		country_of_origin = LIT
 		name = "Barbara"
 		dynasty = "Radvilos"
@@ -284,9 +260,8 @@ add_truce_with = HUN
 		mil = 0
 	}
 }
-
-1553.7.30 = {
-	queen = {
+1553.7.30 = { 
+	queen = { 
 		country_of_origin = HAB
 		name = "Katarzyna"
 		dynasty = "von Habsburg"
@@ -298,12 +273,10 @@ add_truce_with = HUN
 		mil = 0
 	}
 }
-
-1560.1.1 = {
-	leader = {
+1560.1.1 = { 
+	leader = { 
 		name = "Sebastian Lubomirski"
 		type = general
-
 		fire = 2
 		shock = 3
 		manuever = 3
@@ -311,12 +284,10 @@ add_truce_with = HUN
 		death_date = 1613.7.20
 	}
 }
-
-1565.1.1 = {
-	leader = {
+1565.1.1 = { 
+	leader = { 
 		name = "Andrzej Kurbski"
 		type = general
-
 		fire = 2
 		shock = 1
 		manuever = 3
@@ -324,3 +295,4 @@ add_truce_with = HUN
 		death_date = 1575.1.1
 	}
 }
+government_rank = 1
