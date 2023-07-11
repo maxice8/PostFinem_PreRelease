@@ -9,26 +9,8 @@ discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
-1550.1.1 = { religion = Reformed }
-1569.7.1 = { 
-	owner = PLC
-	controller = PLC
-}
-1588.1.1 = { controller = REB revolt = { type = revolutionary_rebels size = 0 } }
-1589.1.1 = { controller = PLC revolt = { size = 1 } }
-1606.1.1 = { controller = REB revolt = { type = revolutionary_rebels size = 2 } }
-1608.1.1 = { controller = PLC revolt = { size = 1 } }
-1655.1.1 = { controller = SWE }
-1660.1.1 = { controller = PLC }
-1733.1.1 = { controller = REB revolt = { type = revolutionary_rebels size = 0 } }
-1735.1.1 = { controller = PLC revolt = { size = 1 } }
-1795.10.24 = { owner = HAB controller = HAB }
-1807.7.9 = { 
-	owner = POL
-	controller = POL
-}
-1812.12.12 = { controller = RUS }
-1814.4.11 = { 
-	owner = RUS
-	add_core = RUS
-}
+religion = slavic_relgion
+culture = mazovian
+add_core = KRA
+owner = KRA
+controller = KRA

@@ -1,5 +1,5 @@
 capital = "Coburg"
-is_city = no
+is_city = yes
 base_tax = 1
 base_production = 1
 base_manpower = 1
@@ -8,5 +8,8 @@ discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
-1531.1.1 = { religion = Protestant }
-1806.7.12 = { hre = no }
+culture = chatti
+religion = germanic_religion
+add_core = BAM
+owner = BAM
+controller = BAM

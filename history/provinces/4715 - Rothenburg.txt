@@ -1,5 +1,5 @@
 capital = "Rothenburg ob der Tauber"
-is_city = no
+is_city = yes
 base_tax = 1
 base_production = 1
 base_manpower = 1
@@ -9,9 +9,8 @@ discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
 #Reichsdeputationshauptschluss
-1803.2.25 = { 
-	owner = BAV
-	controller = BAV
-	add_core = BAV
-}
-1806.7.12 = { hre = no }
+culture = chatti
+religion = germanic_religion
+add_core = BAM
+owner = BAM
+controller = BAM

@@ -8,12 +8,8 @@ discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
-1715.6.1 = { 
-	capital = "Karlsruhe"
-	base_tax = 5
-	base_production = 5
-	base_manpower = 4
-}
-1792.10.3 = { controller = FRA }
-1796.8.7 = { controller = BAD }
-1806.7.12 = { hre = no }
+culture = alemanni
+religion = germanic_religion
+add_core = ALM
+owner = ALM
+controller = ALM

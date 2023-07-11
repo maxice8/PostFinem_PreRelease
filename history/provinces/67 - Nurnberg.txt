@@ -4,17 +4,13 @@ base_production = 1
 trade_goods = paper
 base_manpower = 1
 capital = "Nürnberg"
-is_city = no
-add_claim = ANS
+is_city = yes
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
 extra_cost = 16
-1533.1.1 = { religion = Protestant }
-1806.7.12 = { 
-	hre = no
-	owner = BAV
-	controller = BAV
-	add_core = BAV
-}
+culture = chatti
+religion = germanic_religion
+owner = BAM
+controller = BAM

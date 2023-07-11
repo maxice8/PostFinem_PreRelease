@@ -9,19 +9,9 @@ discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
-1533.1.1 = { religion = Reformed }
-1557.1.1 = { religion = Protestant }
-1588.1.1 = { religion = Reformed }
-1680.1.1 = { owner = FRA controller = FRA }
-1697.4.19 = { owner = PAL controller = PAL add_core = SWE }
-1697.12.14 = { owner = SWE controller = SWE }
-1718.12.11 = { owner = PAL controller = PAL }
-1777.12.30 = { 
-	owner = BAV
-	controller = BAV
-	add_core = BAV
-}
-1796.8.7 = { owner = FRA controller = FRA }
-1806.7.12 = { hre = no }
-1814.4.11 = { owner = BAV controller = BAV }
 add_core = SWE
+culture = alemanni
+religion = germanic_religion
+add_core = ALM
+owner = ALM
+controller = ALM

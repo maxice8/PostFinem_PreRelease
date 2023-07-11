@@ -1,10 +1,8 @@
 #622 - Palembang
-
 culture = sumatran
-religion = hinduism
+religion = sunni
 capital = "Palembang"
 trade_goods = unknown
-hre = no
 base_tax = 6
 base_production = 5
 base_manpower = 2
@@ -17,14 +15,13 @@ discovered_by = muslim
 discovered_by = ottoman
 extra_cost = 8
 center_of_trade = 1
-
-1444.1.1 = {
+1444.1.1 = { 
 	owner = PLB
 	controller = PLB
 	add_core = PLB
-	is_city = yes
-	trade_goods = spices
+	city = yes
+	trade_goods = Spices
 }
-
 1405.1.1 = { discovered_by = MNG }
-1509.1.1 = { discovered_by = POR religion = sunni }
+discovered_by = MNG
+is_city = no

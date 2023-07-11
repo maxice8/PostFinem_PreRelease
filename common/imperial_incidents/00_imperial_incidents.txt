@@ -1,0 +1,137 @@
+# default options are 0-based
+# In console, can use imperial_incident [key] to immediately begin an incident
+
+
+incident_eyl_wants_to_join = {
+	event = incidents_bur_join_empire.2
+	default_option = 0
+	
+	can_stop = {
+		OR = {
+			NOT = {
+				exists = EYL
+			}
+			EYL = {
+				is_emperor = yes
+			}
+			EYL = {
+				is_subject = yes
+			}
+		}
+	}
+	
+	0 = { # eyl gives up their piratical ways
+		factor = 1
+		modifier = {
+			factor = 100
+			OR = {
+				ai_attitude = {
+					who = EYL
+					attitude = attitude_friendly
+				}
+				ai_attitude = {
+					who = EYL
+					attitude = attitude_loyal
+				}
+				ai_attitude = {
+					who = EYL
+					attitude = attitude_allied
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			num_of_loans = 5
+		}
+		modifier = {
+			factor = 2
+			num_of_loans = 10
+		}
+		modifier = {
+			factor = 5
+			num_of_loans = 15
+		}
+	}
+	
+	1 = { # eyl declines our offer
+		factor = 1
+		modifier = {
+			factor = 100
+			any_ally = {
+				AND = {
+					any_rival_country = {
+						is_emperor = yes
+					}
+					is_great_power = yes
+			}
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				ai_attitude = {
+					who = EYL
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = EYL
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = EYL
+					attitude = attitude_threatened
+				}
+				ai_attitude = {
+					who = EYL
+					attitude = attitude_outraged
+				}
+				ai_attitude = {
+					who = EYL
+					attitude = attitude_disloyal
+				}
+				ai_attitude = {
+					who = EYL
+					attitude = attitude_rebellious
+				}
+			}
+		}
+	}
+}
+
+
+incident_pu_subject_joins_empire = {
+	event = incident_generic.2
+	default_option = 0
+	
+	can_stop = {
+		OR = {
+			NOT = {
+				any_country = {
+					has_country_flag = current_pu_incident_target_flag
+				}
+			}
+			any_country = {
+				has_country_flag = current_pu_incident_target_flag
+				OR = {
+					is_subject = no
+					overlord = {
+						is_part_of_hre = no
+					}
+				}
+			}
+		}
+	}
+	
+	0 = { # join
+		factor = 1
+		modifier = {
+			factor = 1000
+			any_subject_country = {
+				has_country_flag = current_pu_incident_target_flag
+			}
+		}
+	}
+	
+	1 = { # denied
+		factor = 1
+	}
+}
