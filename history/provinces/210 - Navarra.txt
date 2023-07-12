@@ -1,6 +1,6 @@
 #210 - Navarra
-base_tax = 1
-base_production = 1
+base_tax = 2
+base_production = 2
 trade_goods = iron
 base_manpower = 1
 #fort_15th = yes #Fortifications of Pamplona and Saint-Jean-Pied-de-Port
@@ -10,11 +10,9 @@ discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
-
-
-
 add_core = TRV
 owner = TRV
 controller = TRV
 religion = punic_religion
 culture = ausontes
+fort_15th = yes

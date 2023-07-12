@@ -4,7 +4,7 @@ is_city = yes
 base_tax = 2
 base_production = 2
 trade_goods = cloth
-base_manpower = 2
+base_manpower = 1
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
@@ -15,11 +15,5 @@ latent_trade_goods = {
 owner = GAU
 controller = GAU
 add_core = GAU
-
-
-
-
-
-
 culture = nervian
 religion = druidic

@@ -7,9 +7,9 @@
 is_city = yes
 capital = "Sanremo"
 #Total development: 3
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 4
+base_production = 5
+base_manpower = 3
 trade_goods = wine
 # fort_15th = yes # No fort in this province
 # center_of_trade = 1 # No CoT in province
@@ -23,3 +23,4 @@ culture = ligurii
 religion = punic_religion
 hre = yes
 controller = LGA
+center_of_trade = 1

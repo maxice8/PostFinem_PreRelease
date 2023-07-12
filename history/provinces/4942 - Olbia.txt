@@ -7,9 +7,9 @@
 is_city = yes
 capital = "Olbia"
 #Total development: 3
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 5
+base_production = 4
+base_manpower = 3
 trade_goods = grain
 # fort_15th = yes # No fort in this province
 # center_of_trade = 1 # No CoT in province
@@ -23,3 +23,5 @@ culture = sardii
 religion = punic_religion
 controller = SAR
 hre = yes
+center_of_trade = 1
+fort_15th = yes

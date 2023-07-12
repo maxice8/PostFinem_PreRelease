@@ -1,8 +1,8 @@
 #Lugo
-base_tax = 1
+base_tax = 2
 base_production = 1
 trade_goods = fish
-base_manpower = 1
+base_manpower = 2
 capital = "Lugo"
 is_city = yes
 # Santiago de Compostela pilgrimage
@@ -15,3 +15,4 @@ controller = SUE
 add_core = SUE
 religion = punic_religion
 culture = varangar
+fort_15th = yes

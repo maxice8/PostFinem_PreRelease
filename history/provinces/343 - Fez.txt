@@ -1,9 +1,9 @@
 #343 - Fez
 capital = "Fez"
 trade_goods = cloth
-base_tax = 5
-base_production = 5
-base_manpower = 3
+base_tax = 3
+base_production = 4
+base_manpower = 5
 is_city = yes
 discovered_by = western
 discovered_by = eastern
@@ -12,6 +12,6 @@ discovered_by = ottoman
 religion = punic_religion
 culture = maurian
 add_core = FEZ
-fort_15th = yes
 owner = FEZ
 controller = FEZ
+fort_15th = yes

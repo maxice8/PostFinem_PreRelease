@@ -1,8 +1,8 @@
 #1746 - Burgos
-base_tax = 1
-base_production = 1
+base_tax = 2
+base_production = 2
 trade_goods = cloth
-base_manpower = 1
+base_manpower = 2
 capital = "Burgos"
 is_city = no
 discovered_by = western
@@ -15,3 +15,4 @@ add_core = SUE
 owner = SUE
 culture = varangar
 controller = SUE
+fort_15th = yes

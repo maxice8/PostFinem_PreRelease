@@ -3,12 +3,119 @@ color = {
 	128 128 192 
 }
 monarch_names = { 
+	"Hannibal #0" = 20
+	"Gaius #0" = 20
+	"Hasdrubal #0" = 20
+	"Mago #0" = 10
+	"Lucius #0" = 10
+	"Hamilcar #0" = 10
+	"Marcus #0" = 10
+	"Carus #0" = 10
+	"Quintus #0" = 10
+	"Baal #0" = 10
+	"Flavius #0" = 10
+	"Maximus #0" = 10
+	"Titus #0" = 10
+	"Sextus #0" = 10
+	"Gnaeus #0" = 5
+	"Aulus #0" = 5
+	"Verus #0" = 5
+	"Decimus #0" = 5
+	"Hanno #0" = 5
+	"Publius #0" = 5
+	"Cato #0" = 5
+	"Gellius #0" = 5
+	"Septimus #0" = 5
+	"Varius #0" = 5
+	"Scaevola #0" = 5
+	"Atticus #0" = 5
+	"Caecilius #0" = 5
+	"Junius #0" = 5
+	"Saturninus #0" = 5
+	"Postumus #0" = 5
+	"Laevinus #0" = 5
+	"Gavrus #0" = 5
+	"Vespasian #0" = 5
+	"Virginius #0" = 5
+	"Vulso #0" = 5
+	"Lucan #0" = 5
+	"Nero #0" = 5
+	"Scipio #0" = 5
+	"Paulus #0" = 5
+	"Marcellus #0" = 1
+	"Balbus #0" = 1
+	"Varro #0" = 1
+	"Silvanus #0" = 1
+	"Tertius #0" = 1
+	"Avitus #0" = 1
+	"Babius #0" = 1
+	"Florus #0" = 1
+	"Geminus #0" = 1
+	"Lucullus #0" = 1
+	"Nobilis #0" = 1
+	"Octavius #0" = 1
+	"Plautus #0" = 1
+	"Rutilus #0" = 1
+	"Sertorius #0" = 1
+	"Vibius #0" = 1
+	"Curtius #0" = 1
+	"Dolabella #0" = 1
+	"Favonius #0" = 1
+	"Gavianus #0" = 1
+	"Honoratus #0" = 1
+	"Iunianus #0" = 1
+	"Laetorius #0" = 1
+	"Macer #0" = 1
+	"Nobilis #0" = 1
+	"Opimius #0" = 1
+	"Pacatus #0" = 1
+	"Quintilianus #0" = 1
+	"Rutilianus #0" = 1
+	"Sabinus #0" = 1
+	"Tacitus #0" = 1
+	"Urbanus #0" = 1
+	"Valerianus #0" = 1
+	"Varius #0" = 1
+	"Volusianus #0" = 1
+	"Xenophon #0" = 1
+	"Zeno #0" = 1
+	"Agrippa #0" = 1
+	"Apollonius #0" = 1
+	"Julianus #0" = 1
+	"Maximianus #0" = 1
+
+	"Lucia #0" = -1
+	"Aurelia #0" = -1
+	"Octavia #0" = -1
+	"Livia #0" = -1
+	"Drusilla #0" = -1
+	"Valeria #0" = -1
+	"Claudia #0" = -1
+	"Agrippina #0" = -1
+	"Antonia #0" = -1
+	"Julia #0" = -1
 }
 leader_names = { 
+	Aemilius Antonius Atticus Augustus Caius Cassius Claudius Decimus Drusus
+	Fabius Gaius Horatius Julius Junius Lucius Marcellus Marcus Maximus Octavius
+	Paulus Quintus Rufus Saturninus Severus Tertius Titus Valerius Verus Augustinus
+	Balbus Calvus Cornelius Domitianus Flavius Hadrianus Ignatius Julianus Livius
+	Marcellinus Marius Maximilianus Neronius Octavianus Petronius Regulus Servius
+	Tiberius Valentinianus Vespasianus Vitus
 }
 ship_names = { 
+	Phoenix Hannibal Legacy Salamander Numidian Neptune Tanit Carthage Punic
+	Elysian Baal Mago Leptis Astarte Scipio Utica Hanno Dawn Juno Carthaginian
+	Caesar Venus Jupiter Roma Augustus Lavinia Minerva Apollo Mars Fortuna Vesta
+	Cupid Diana Vulcan Mercurius Neptune Portunus Ceres Bacchus Juno Faustus Pietas
+	Victoria Fides Argonaut Styx Argo Trident Aeneas Aurora Calypso Nemesis Hercules
+	Andromeda Poseidon Perseus Orion Icarus Hydra Pegasus Europa Achilles Nereus Triton
+	Hermes Artemis Selene Gaia Hyperion Titan Prometheus Pandora Proteus Hermes Ithaca
+	Atlantis Olympus Achilles Ajax Persephone Minos Medusa 
 }
-fleet_names = { 
+fleet_names = {
+	"Classis Romana" "Classis $PROVINCE$" 
 }
-army_names = { 
+army_names = {
+	"Exercitus Magnus" "Exercitus of $PROVINCE$" 
 }

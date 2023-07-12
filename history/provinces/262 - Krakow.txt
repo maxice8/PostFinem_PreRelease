@@ -3,10 +3,10 @@ latent_trade_goods = {
 	coal 
 }
 capital = "Kraków"
-base_tax = 1
-base_production = 1
+base_tax = 2
+base_production = 2
 trade_goods = salt
-base_manpower = 1
+base_manpower = 2
 is_city = yes
 discovered_by = eastern
 discovered_by = western
@@ -19,3 +19,4 @@ culture = podlachian
 add_core = KRA
 owner = KRA
 controller = KRA
+fort_15th = yes

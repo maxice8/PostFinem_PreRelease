@@ -1,9 +1,9 @@
 # 4710 - Vorarlberg
 capital = "Bregenz"
 is_city = yes
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 3
+base_production = 2
+base_manpower = 3
 trade_goods = wool
 discovered_by = eastern
 discovered_by = western
@@ -14,3 +14,4 @@ religion = germanic_religion
 add_core = MBZ
 owner = MBZ
 controller = MBZ
+fort_15th = yes

@@ -1,8 +1,8 @@
 # 4741 - Halle
-base_tax = 2
+base_tax = 1
 base_production = 2
 trade_goods = salt#the name "Halle" apparently might even derive from the Indo-Germanic word for salt
-base_manpower = 2
+base_manpower = 1
 capital = "Halle"
 is_city = yes
 discovered_by = eastern
@@ -14,3 +14,4 @@ culture = cherusci
 add_core = ANH
 owner = ANH
 controller = ANH
+fort_15th = yes

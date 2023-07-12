@@ -1,9 +1,9 @@
 #2218 - Shiraz
 capital = "Shiraz"
 trade_goods = wine#and Glass
-base_tax = 5
-base_production = 5
-base_manpower = 4
+base_tax = 2
+base_production = 2
+base_manpower = 2
 is_city = yes
 discovered_by = muslim
 discovered_by = ottoman
@@ -21,3 +21,4 @@ add_core = PER
 owner = PER
 controller = PER
 culture = yazdic
+fort_15th = yes

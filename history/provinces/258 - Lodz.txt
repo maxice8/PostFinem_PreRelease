@@ -1,9 +1,9 @@
 #258 - Lodz
 capital = "Sieradz"
 trade_goods = grain
-base_tax = 1
+base_tax = 2
 base_production = 1
-base_manpower = 1
+base_manpower = 3
 is_city = yes
 discovered_by = western
 discovered_by = eastern
@@ -12,8 +12,5 @@ discovered_by = ottoman
 owner = KSB
 controller = KSB
 add_core = KSB
-
-
-
 religion = slavic_relgion
 culture = mazovian

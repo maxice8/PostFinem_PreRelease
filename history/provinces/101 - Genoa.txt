@@ -1,8 +1,8 @@
 #101 - Liguria
-base_tax = 1
-base_production = 1
+base_tax = 4
+base_production = 5
 trade_goods = paper
-base_manpower = 1
+base_manpower = 3
 capital = "Genova"
 is_city = yes
 discovered_by = western
@@ -16,3 +16,5 @@ owner = GEN
 controller = GEN
 culture = ligurii
 religion = romana
+center_of_trade = 1
+fort_15th = yes

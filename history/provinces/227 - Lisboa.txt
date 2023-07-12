@@ -1,9 +1,9 @@
 #227 - Estremadura
 capital = "Lisboa"
 trade_goods = fish
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 6
+base_production = 5
+base_manpower = 4
 is_city = yes
 discovered_by = western
 discovered_by = muslim
@@ -19,3 +19,4 @@ controller = SUE
 add_core = SUE
 religion = punic_religion
 culture = haldorian
+fort_15th = yes

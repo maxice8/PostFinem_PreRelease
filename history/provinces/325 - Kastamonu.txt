@@ -1,9 +1,9 @@
 #325 - Kastamonu
 capital = "Kastamonu"
 trade_goods = copper
-base_tax = 1
-base_production = 1#Huge copper mine
-base_manpower = 1
+base_tax = 3
+base_production = 3#Huge copper mine
+base_manpower = 2
 is_city = no
 discovered_by = western
 discovered_by = eastern
@@ -15,3 +15,4 @@ add_core = MAC
 owner = MAC
 culture = pontic
 controller = MAC
+fort_15th = yes

@@ -12,33 +12,66 @@ historical_idea_groups = {
 	quality_ideas
 	aristocracy_ideas
 }
-historical_units = { 
-	eastern_medieval_infantry
-	eastern_knights
-	slavic_stradioti
-	eastern_militia
-	ottoman_spahi
-	ottoman_sekban
-	ottoman_reformed_spahi
-	ottoman_reformed_janissary
-	ottoman_toprakli_hit_and_run
-	ottoman_nizami_cedid
-	ottoman_toprakli_dragoon
-	eastern_skirmisher
-	eastern_uhlan
-	eastern_carabinier
-	ottoman_new_model
-	ottoman_lancer
-}
-monarch_names = { 
+monarch_names = { 	
+	"Alexander #0" = 20
+	"Theodoros #0" = 20
+	"Philippos #0" = 20
+	"Antonios #0" = 20
+	"Sebastianos #0" = 20
+	"Nikolaos #0" = 10
+	"Damianos #0" = 10
+	"Stephanos #0" = 10
+	"Gabriel #0" = 10
+	"Achilles #0" = 10
+	"Isidoros #0" = 10
+	"Maximos #0" = 10
+	"Leonidas #0" = 10
+	"Gregorios #0" = 10
+	"Theophilos #0" = 10
+	"Elias #0" = 5
+	"Andreas #0" = 5
+	"Jason #0" = 5
+	"Theon #0" = 5
+	"Nicolas #0" = 5
+	"Demetrios #0" = 5
+	"Simeon #0" = 5
+	"Christophoros #0" = 5
+	"Paulos #0" = 5
+	"Anastasios #0" = 5
+	"Stefanos #0" = 1
+	"Alexander #0" = 1
+	"Eugenios #0" = 1
+	"Julian #0" = 1
+	"Ioannis #0" = 1
+	"Hermes #0" = 1
+	"Matthaios #0" = 1
+	"Dionysios #0" = 1
+	"Timothy #0" = 1
+	"Philip #0" = 1
+	"Kyros #0" = 1
+	"Apollo #0" = 1
+	"Alexios #0" = 1
+	"Lykos #0" = 1
+
+	"Athena #0" = -1
+	"Hermione #0" = -1
+	"Helena #0" = -1
+	"Aphrodite #0" = -1
+	"Artemis #0" = -1
 }
 leader_names = { 
-	"Update Me" 
+	Achilles Adina Alexios Alon Ariadne Artemis Athaliah Avital Calista Cassandra Damaris Daniella Delilah Dorian Eleni Eleazar Eliana Ephraim Evander Galila Galina 
+	Helena Hermione Ioannis Isidore Jocasta Kalliope Leda Lysander Magdalene Marcella Melina Nereus Neomi Ophira Pandora Persephone Phoebe Sapphira 
+	Selene Seraphina Simon Thalia Theodora Xander Yael Zephyr Zina Zosimos
 }
 ship_names = { 
-	"Update Me" 
+	Eshkol Anthos Amnon Achaios Delphine Doron Eran Galatea Hadas Iason Ithamar Jael Kallias Lilah Makeda Maia Mordechai Nike Phoebus Rahel Selene Seraphim Talia Xenia 
+	Yael Zephyr Ayalon Kassandra Darius Ariela Damara Eleazar Helena Hera Eitan Eliora Evander Galia Isadora Levi Maris Mordecai Neria
+	Ophira Penelope Selene Solomona Thalia Tziona Yosef Zara
 }
 fleet_names = { 
+	"Tziya'ah $PROVINCE$"
 }
 army_names = { 
+	"Tzva $PROVINCE$"
 }

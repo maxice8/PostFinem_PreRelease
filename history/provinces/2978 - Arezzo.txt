@@ -1,8 +1,8 @@
 # 2978 - Arezzo
-base_tax = 1
-base_production = 1
+base_tax = 4
+base_production = 2
 trade_goods = livestock
-base_manpower = 1
+base_manpower = 5
 capital = "Arezzo"
 is_city = yes# Estimated 
 discovered_by = western
@@ -15,3 +15,4 @@ hre = yes
 add_core = RMA
 culture = etrusci
 religion = punic_religion
+fort_15th = yes

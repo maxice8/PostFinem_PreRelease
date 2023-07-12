@@ -1,9 +1,9 @@
 #153 - Pest (Pest + Pilis + Esztergom + Kalocsa + most of Kiskunság + Parts of Nógrád )
 capital = "Buda"
 trade_goods = grain
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 4
+base_production = 3
+base_manpower = 3
 is_city = yes
 discovered_by = western
 discovered_by = eastern
@@ -12,7 +12,8 @@ discovered_by = ottoman
 extra_cost = 16
 center_of_trade = 2
 culture = fyrnir
-religion = germanic_religion
+religion = south_germanic_religion
 add_core = VLD
 owner = VLD
 controller = VLD
+fort_15th = yes

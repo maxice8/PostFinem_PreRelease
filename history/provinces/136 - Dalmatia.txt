@@ -1,9 +1,9 @@
 #136 - Split
 capital = "Split"
 trade_goods = wool
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 7
+base_production = 5
+base_manpower = 5
 is_city = yes
 discovered_by = western
 discovered_by = eastern
@@ -15,3 +15,4 @@ hre = yes
 add_core = ILY
 religion = punic_religion
 culture = dalmarian
+fort_15th = yes

@@ -1,9 +1,9 @@
 #327 - Adana
 capital = "Adana"
 trade_goods = cotton
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 4
+base_production = 5
+base_manpower = 5
 is_city = yes
 discovered_by = western
 discovered_by = eastern
@@ -17,3 +17,4 @@ culture = cappadocian
 add_core = CPD
 owner = CPD
 controller = CPD
+fort_15th = yes

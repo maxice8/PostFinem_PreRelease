@@ -13,10 +13,29 @@ country_event = {
 	picture = HRE_eventPicture
 	
 	major = yes
+
+	fire_only_once = yes
 	
 	trigger = {
 		EYL = {
-			
+			has_reform = pirate_republic_reform
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 0.75
+			any_ally = {
+				is_emperor = yes
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_opinion = {
+				who = emperor
+				value = 100
+			}
 		}
 	}
 	
@@ -68,6 +87,7 @@ country_event = {
 			}
 		}
 		set_country_flag = eyl_refused_empire
+		custom_tooltip = "We shall petition to join the federation."
 	}
 }
 
@@ -109,7 +129,9 @@ country_event = {
 			}
 		}
 		EYL = {
-			
+			remove_government_reform = pirate_republic_reform
+			add_government_reform = noble_elite_reform
+			custom_tooltip =  " "
 			set_in_empire = yes
 		}
 	}
@@ -170,7 +192,7 @@ country_event = {
 					}
 					reverse_add_casus_belli = {
 						target = EYL
-						type = cb_restore_personal_union
+						type = cb_trade_conflict
 						months = 480
 					}
 				}
@@ -201,7 +223,7 @@ country_event = {
 			}
 			reverse_add_casus_belli = {
 				target = EYL
-				type = cb_restore_personal_union
+				type = cb_trade_conflict
 				months = 480
 			}
 		}

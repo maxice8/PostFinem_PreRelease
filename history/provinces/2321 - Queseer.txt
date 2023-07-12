@@ -1,10 +1,10 @@
 #2321 - Queseer
 capital = "Al Qusair"
 is_city = yes
-base_manpower = 1
+base_manpower = 2
 trade_goods = livestock
-base_tax = 1
-base_production = 1
+base_tax = 3
+base_production = 3
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
@@ -17,3 +17,4 @@ owner = AEG
 controller = AEG
 religion = hellenic
 culture = kyaneos
+fort_15th = yes

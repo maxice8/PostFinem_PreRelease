@@ -1,9 +1,9 @@
 #163 - Crete
 capital = "Heraklion"
 trade_goods = fish
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 7
+base_production = 5
+base_manpower = 6
 is_city = yes
 discovered_by = western
 discovered_by = eastern
@@ -15,3 +15,4 @@ controller = KTI
 add_core = KTI
 religion = hellenic
 culture = kretan
+center_of_trade = 1

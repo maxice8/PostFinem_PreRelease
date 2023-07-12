@@ -7,9 +7,9 @@
 is_city = yes
 capital = "Catania"
 #Total development: 3
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 6
+base_production = 4
+base_manpower = 6
 # fort_15th = yes # No fort in this province
 # center_of_trade = 1 # No CoT in province
 discovered_by = western
@@ -23,3 +23,4 @@ trade_goods = cloth
 religion = punic_religion
 hre = yes
 controller = RMA
+center_of_trade = 2

@@ -1,10 +1,10 @@
 # 201 Provence - Principal cities: Aix-en-Provence, Marseille
 capital = "Aix-en-Provence"
 is_city = yes
-base_tax = 2
-base_production = 2
+base_tax = 5
+base_production = 4
 trade_goods = wine
-base_manpower = 2
+base_manpower = 4
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
@@ -20,3 +20,4 @@ culture = celtipunian
 add_core = PCM
 owner = PCM
 controller = PCM
+fort_15th = yes

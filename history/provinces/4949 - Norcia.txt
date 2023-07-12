@@ -7,9 +7,9 @@
 is_city = yes
 capital = "Norcia"
 #Total development: 3
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 4
+base_production = 2
+base_manpower = 5
 trade_goods = grain
 # fort_15th = yes # No fort in this province
 # center_of_trade = 1 # No CoT in province
@@ -23,3 +23,4 @@ culture = samnitii
 religion = punic_religion
 controller = ANC
 hre = yes
+fort_15th = yes

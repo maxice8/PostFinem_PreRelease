@@ -32,6 +32,45 @@ historical_units = {
 	ottoman_lancer
 }
 monarch_names = { 
+	"Alexander #0" = 40
+	"Philip #0" = 39
+	"Aristotle #0" = 38
+	"Ptolemy #0" = 37
+	"Cassander #0" = 36
+	"Perdiccas #0" = 35
+	"Lysimachus #0" = 34
+	"Antigonus #0" = 33
+	"Demetrius #0" = 32
+	"Seleucus #0" = 31
+	"Parmenion #0" = 30
+	"Hephaestion #0" = 29
+	"Olympias #0" = 28
+	"Hercules #0" = 27
+	"Leonidas #0" = 26
+	"Craterus #0" = 25
+	"Peithon #0" = 24
+	"Nearchus #0" = 23
+	"Ptolemy Soter #0" = 22
+	"Ptolemy Philadelphus #0" = 21
+	"Cleitus #0" = 20
+	"Demosthenes #0" = 19
+	"Amyntas #0" = 18
+	"Eumenes #0" = 17
+	"Menelaus #0" = 16
+	"Orestes #0" = 15
+	"Craterus #0" = 14
+	"Antipater #0" = 13
+	"Cleon #0" = 12
+	"Peucestas #0" = 11
+	"Meleager #0" = 10
+	"Polyperchon #0" = 9
+	"Cimon #0" = 8
+
+	"Olympias #0" = -1
+	"Roxana #0" = -1
+	"Eurydice #0" = -1
+	"Thessalonike #0" = -1
+	"Antigone #0" = -1
 }
 leader_names = { 
 	Anina Angelopoulos Androutsos Aulakos Botsaris Bouboulis Chatzeris Christianopoulos Chatzimoschos Dalianis
@@ -88,8 +127,8 @@ ship_names = {
 	Korax "Mavros Korax" Phovos Dimos "Theodoros Kolokotronis" "Odysseas Andrutsos" "Georgios Karaiskakis" "Rigas Ferraios" "Dionysios Solomos" Dionysios
 	Dionysos Talos Mpoumpoulina "Manto Mavrogenous" "Konstantinos Kanaris" Nikitaras Tourkofagos Nikitas Vulgaroktonos Messologi
 	Palaiologos Komnenos "Isaakios Komnenos" Thalpori Lazaros "Apostolos Andreas" "Apostolos Varnavas" "Apostolos Loukas" "Apostolos Thomas" "Apostolos Petros"
-	"Apostolos Iakovos" "Apostolos Stephanos" "Apostolos Ioannis" "Apostolos Simonas" "Apostolos Vartholomaios" "Apostolos Thaddeos" "12 Apostoloi" "Agioi Saranta" "Agioi Pantes" "Agios Nikolaos"
-	Naftikos "O Leventis ton Psaron" Leventis Tromos Rigaina Rigas Doukaina Dioskouroi Romos Romylos
+	"Apostolos Iakovos" "Apostolos Stephanos" "Apostolos Ioannis" "Apostolos Simonas" "Apostolos Vartholomaios" "Apostolos Thaddeos" "12 Apostoloi" "Agioi Saranta" "Agioi Pantes" "Agios Nikolaos"Army of
+	Naftikos "O Leventis ton Psaron" Leventis Tromos Rigaina Rigas Doukaina Dioskouroi Romos RomylosArmy of
 	"Romos kai Romylos" Papandreas Papamichalis Papakonstantinos "Agios Demetrios" "Agia Marina" "Agia Evlampia" "Agia Charalambia" "Agios Charalambos" "Agios Charilaos"
 	"Agios Antonios" "Agia Antonia" "Agios Amvrosios" "Panagia Aggelovastachti" "Panagia Filoptochi" "Panagia Thalassofiliti" Thalassomachos Amfitriti "Thalassios Ippos" "Thalassios Leontas"
 	Persoktonos "Autokrator Isavros" "Autokrato Makedon" Thekla "Agia Thekla" Papaflessas "Alexandros Ypsilantis" "Nea Ionia" Alikarnassos Voukefalas
@@ -127,6 +166,8 @@ ship_names = {
 	Zakros Vathypetra Megalopetra 
 }
 fleet_names = { 
+	"Stólos Aigaíou" "Mesogeiakós Stólos" "Stólos ton $PROVINCE$"
 }
 army_names = { 
+	"Megálos Stratós" "Voithitikós Stratós" "Stratós tou $PROVINCE$"
 }

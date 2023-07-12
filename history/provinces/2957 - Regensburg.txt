@@ -1,8 +1,8 @@
 # - Regensburg
 base_tax = 1
-base_production = 1
+base_production = 2
 trade_goods = cloth#Fustians
-base_manpower = 1
+base_manpower = 2
 capital = "Regensburg"
 is_city = yes
 discovered_by = eastern
@@ -15,3 +15,4 @@ religion = germanic_religion
 add_core = BAV
 owner = BAV
 controller = BAV
+fort_15th = yes

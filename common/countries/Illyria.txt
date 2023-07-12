@@ -31,14 +31,43 @@ historical_units = {
 	ottoman_lancer
 }
 monarch_names = { 
+	"Phoebus #0" = 20
+	"Apollo #0" = 20
+	"Alexios #0" = 20
+	"Damian #0" = 10
+	"Leandros #0" = 10
+	"Theodoros #0" = 10
+	"Kleon #0" = 10
+	"Niketas #0" = 10
+	"Xenon #0" = 10
+	"Iason #0" = 10
+	"Orestes #0" = 10
+	"Panos #0" = 5
+	"Agapetos #0" = 5
+	"Philemon #0" = 5
+	"Soterios #0" = 5
+	"Herakles #0" = 5
+	"Stratios #0" = 5
+	"Kassandros #0" = 1
+	"Leonidas #0" = 1
+	"Ariston #0" = 1
+
+	"Alexandra #0" = -1
+	"Kalliope #0" = -1
+	"Thalia #0" = -1
+	"Eleni #0" = -1
+	"Ioanna #0" = -1
 }
 leader_names = { 
-	"Update Me" 
+	Phoebus Apollo Alexios Damian Leandros Theodoros Kleon Niketas Iason Orestes Panos
+	Agapetos Philemon Soterios 	Herakles Stratios Kassandros Leonidas Ariston
 }
 ship_names = { 
-	"Update Me" 
+	
 }
 fleet_names = { 
+	"Stólos ton $PROVINCE$"
 }
-army_names = { 
+army_names = { 	
+	"Stratós tou $PROVINCE$"
 }

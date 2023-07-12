@@ -1,9 +1,9 @@
 #1931 - East Frisia
 capital = "Emden"
 trade_goods = salt
-base_tax = 2
+base_tax = 1
 base_production = 2
-base_manpower = 2
+base_manpower = 1
 is_city = yes
 discovered_by = eastern
 discovered_by = western
@@ -14,3 +14,4 @@ controller = EFR
 religion = norse_pagan_reformed
 culture = old_saxon
 add_core = EFR
+fort_15th = yes

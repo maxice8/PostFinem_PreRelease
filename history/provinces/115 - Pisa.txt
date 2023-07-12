@@ -1,8 +1,8 @@
 #115 - Pisa
-base_tax = 1
-base_production = 1
+base_tax = 6
+base_production = 6
 trade_goods = wine
-base_manpower = 1
+base_manpower = 6
 capital = "Pisa"
 is_city = yes# Estimated
 discovered_by = western
@@ -15,3 +15,4 @@ hre = yes
 culture = etrusci
 religion = punic_religion
 add_core = PIS
+center_of_trade = 2

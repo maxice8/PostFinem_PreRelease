@@ -1,9 +1,9 @@
 #1869 - Zurich
 capital = "Zürich"
 trade_goods = wool
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 3
+base_production = 3
+base_manpower = 2
 is_city = yes
 discovered_by = western
 discovered_by = eastern
@@ -14,3 +14,4 @@ religion = romana
 add_core = LBD
 owner = LBD
 controller = LBD
+fort_15th = yes

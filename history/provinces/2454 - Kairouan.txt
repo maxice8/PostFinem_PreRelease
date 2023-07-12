@@ -1,9 +1,9 @@
 # - El Kef
 capital = "El Kef"
 trade_goods = wool
-base_tax = 3
-base_production = 3
-base_manpower = 3
+base_tax = 5
+base_production = 4
+base_manpower = 5
 is_city = yes
 discovered_by = western
 discovered_by = eastern
@@ -14,3 +14,4 @@ culture = punic_culture
 add_core = CAR
 owner = CAR
 controller = CAR
+fort_15th = yes

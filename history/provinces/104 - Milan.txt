@@ -1,8 +1,8 @@
 #104 - Milano
-base_tax = 1
-base_production = 1
+base_tax = 5
+base_production = 4
 trade_goods = cloth
-base_manpower = 1
+base_manpower = 4
 capital = "Milano"
 is_city = yes# Estimated
 discovered_by = western
@@ -16,3 +16,4 @@ hre = yes
 add_core = ITY
 culture = sabini
 religion = romana
+center_of_trade = 2

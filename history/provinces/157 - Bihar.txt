@@ -1,9 +1,9 @@
 #157 - Bihar
 capital = "Oradea"
 trade_goods = naval_supplies
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 4
+base_production = 3
+base_manpower = 3
 is_city = yes
 discovered_by = western
 discovered_by = eastern
@@ -14,3 +14,4 @@ culture = drakova
 add_core = TRA
 owner = TRA
 controller = TRA
+fort_15th = yes

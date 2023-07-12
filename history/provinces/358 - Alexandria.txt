@@ -1,9 +1,9 @@
 #358 - Alexandria
 capital = "Al Iskandirya"
 trade_goods = spices
-base_tax = 7
-base_production = 7
-base_manpower = 5
+base_tax = 9
+base_production = 8
+base_manpower = 8
 is_city = yes
 discovered_by = western
 discovered_by = muslim
@@ -14,10 +14,11 @@ discovered_by = indian
 discovered_by = east_african
 add_province_triggered_modifier = coptic_alexandria
 extra_cost = 8
-center_of_trade = 1
+center_of_trade = 3
 #1477.1.1 = { } #Citadel of Qaitbay
 add_core = AEG
 owner = AEG
 controller = AEG
 religion = hellenic
 culture = alexandrian
+fort_15th = yes

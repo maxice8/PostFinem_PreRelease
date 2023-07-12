@@ -1,8 +1,8 @@
 capital = "Stuttgart"
 trade_goods = grain
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 3
+base_production = 3
+base_manpower = 2
 is_city = no
 discovered_by = eastern
 discovered_by = western
@@ -13,3 +13,4 @@ religion = germanic_religion
 add_core = ALM
 owner = ALM
 controller = ALM
+fort_15th = yes

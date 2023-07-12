@@ -1,8 +1,8 @@
 # 2985 - Capitanata
-base_tax = 1
-base_production = 1
+base_tax = 4
+base_production = 4
 trade_goods = livestock
-base_manpower = 1
+base_manpower = 3
 capital = "Foggia"
 is_city = yes
 discovered_by = western
@@ -15,3 +15,4 @@ religion = catholic
 add_core = CTA
 owner = CTA
 controller = CTA
+center_of_trade = 2

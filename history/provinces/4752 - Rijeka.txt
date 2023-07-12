@@ -1,9 +1,9 @@
 #4752 - Rijeka
 capital = "Rijeka"
 trade_goods = cloth
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 4
+base_production = 3
+base_manpower = 3
 is_city = yes
 discovered_by = western
 discovered_by = eastern
@@ -17,3 +17,4 @@ hre = yes
 add_core = ILY
 religion = punic_religion
 culture = illyrian
+fort_15th = yes
