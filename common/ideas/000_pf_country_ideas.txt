@@ -1,0 +1,715 @@
+
+
+#MAJORS
+
+AEG_ideas = {
+	start = {
+		tolerance_heathen = 2
+		infantry_power = 0.1
+	}
+	
+	bonus = {
+		diplomats = 1
+	}	
+
+	trigger = {
+		tag = AEG
+	}
+	free = yes
+	
+	#Greek Mercenaries
+	AEG_ideas_1 = {
+		mercenary_cost = -0.25
+		mercenary_discipline = 0.05
+	}
+
+	#Greek Trade Ports
+	AEG_ideas_2 = {
+		global_trade_power = 0.1
+	}
+
+	#Greek Prestige
+	AEG_ideas_3 = {
+		monthly_splendor = 2
+		prestige = 1
+	}
+
+	#Renewed Cavalry
+	AEG_ideas_4 = {
+		cavalry_power = 0.15
+		cavalry_shock = 0.5
+	}
+
+	#Breadbasket
+	AEG_ideas_5 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+
+	#Contacts far and wide
+	AEG_ideas_6 = {
+		diplomatic_upkeep = 1
+		envoy_travel_time = -0.25
+	}
+
+	#Hellenic Renaissance
+	AEG_ideas_7 = {
+		advisor_pool = 1
+		idea_cost = -0.1
+	}
+}
+
+CAR_ideas = {
+	start = {
+		naval_morale = 0.1
+		global_trade_power = 0.1
+	}
+	
+	bonus = {
+		province_warscore_cost = -0.1
+	}	
+
+	trigger = {
+		tag = CAR
+	}
+	free = yes
+	
+	CAR_ideas_1 = {
+		galley_cost = -0.1
+		galley_power = 0.15
+	}
+	CAR_ideas_2 = {
+		trade_efficiency = 0.1
+	}
+	CAR_ideas_3 = {
+		cavalry_power = 0.2
+		cavalry_cost = -0.1
+	}
+	CAR_ideas_4 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	CAR_ideas_5 = {
+		prestige = 1
+	}
+	CAR_ideas_6 = {
+		naval_forcelimit_modifier = 0.25
+		naval_tradition_from_battle = 0.5
+	}
+	CAR_ideas_7 = {
+		technology_cost = -0.1
+	}
+}
+
+MAC_ideas = {
+	start = {
+		ae_impact = -0.15
+		diplomatic_reputation = 1
+	}
+	
+	bonus = {
+		free_mil_policy = 1
+	}	
+
+	trigger = {
+		tag = MAC
+	}
+	free = yes
+	
+	MAC_ideas_1 = {
+		technology_cost = -0.05
+		innovativeness_gain = 0.5
+	}
+	MAC_ideas_2 = {
+		infantry_power = 0.15
+		discipline = 0.05
+	}
+	MAC_ideas_3 = {
+		monarch_lifespan = 0.2
+		same_culture_advisor_cost = -0.2
+	}
+	MAC_ideas_4 = {
+		prestige_decay = -0.02
+	}
+	MAC_ideas_5 = {
+		province_warscore_cost = -0.1
+	}
+	MAC_ideas_6 = {
+		years_of_nationalism = -10
+		min_autonomy_in_territories = -0.1
+	}
+	MAC_ideas_7 = {
+		shock_damage_received = -0.1
+	}
+}
+
+GAU_ideas = {
+	start = {
+		diplomats = 1
+		global_tax_modifier = 0.1
+	}
+	
+	bonus = {
+		global_prosperity_growth = 0.5
+	}	
+
+	trigger = {
+		tag = GAU
+	}
+	free = yes
+	#Gallic Legacy
+	GAU_ideas_1 = {
+		legitimacy = 1
+	}
+	#Loyaly to the Crown
+	GAU_ideas_2 = {
+		all_estate_influence_modifier = 0.1
+	}
+	#A Quiet Realm
+	GAU_ideas_3 = {
+		stability_cost_modifier = -0.2
+	}
+	#Druidism Spreads
+	GAU_ideas_4 = {
+		global_missionary_strength = 0.02
+		can_chain_claim = yes
+	}
+	#The Druids Speak
+	GAU_ideas_5 = {
+		institution_spread_from_true_faith = 0.25
+	}
+	#Tame the Forests
+	GAU_ideas_6 = {
+		development_cost_modifier = -0.1
+	}
+	#Intelligent Investors
+	GAU_ideas_7 = {
+		merchants = 1
+	}
+}
+
+RMA_ideas = {
+	start = {
+		diplomatic_reputation = 1
+		improve_relation_modifier = 0.25
+	}
+	
+	bonus = {
+		diplomatic_upkeep = 1
+	}	
+
+	trigger = {
+		tag = RMA
+	}
+	free = yes
+	#Advancing the Adgenda
+	RMA_ideas_1 = {
+		imperial_authority = 0.1
+	}
+	#Well Advised
+	RMA_ideas_2 = {
+		advisor_cost = -0.1
+		advisor_pool = 1
+	}
+	#Reputable Dynasty
+	RMA_ideas_3 = {
+		prestige = 1
+	}
+	#Healthy Bloodline
+	RMA_ideas_4 = {
+		monarch_lifespan = 0.2 
+	}
+	#Sorted Internal Affairs
+	RMA_ideas_5 = {
+		global_unrest = -2
+	}
+	#Maintaining Order
+	RMA_ideas_6 = {
+		discipline = 0.05
+	}
+	#Roman Coffers
+	RMA_ideas_7 = {
+		global_tax_income = 0.2
+	}
+}
+
+CEL_ideas = {
+	start = {
+		heavy_ship_power = 0.2
+		own_coast_naval_combat_bonus = 1
+	}
+	
+	bonus = {
+		naval_forcelimit_modifier = 0.33
+	}	
+
+	trigger = {
+		tag = CEL
+	}
+	free = yes
+	#Collecting Tribute
+	CEL_ideas_1 = {
+		reduced_liberty_desire = 20
+	}
+	#Celtic Isles
+	CEL_ideas_2 = {
+		has_galleon = yes
+		allowed_galleon_fraction = 0.1
+	}
+	#Celtic New World
+	CEL_ideas_3 = {
+		colonists = 1
+	}
+	#Forward Thinking Society
+	CEL_ideas_4 = {
+		idea_cost = -0.1 
+	}
+	#Expand the Navy
+	CEL_ideas_5 = {
+		global_sailors_modifier = 0.25
+		global_ship_repair = 0.25
+	}
+	#A Warrior's Spirit
+	CEL_ideas_6 = {
+		land_morale = 0.1
+	}
+	#Efficient Trade
+	CEL_ideas_7 = {
+		global_trade_power = 0.2
+	}
+}
+
+SXY_ideas = {
+	start = {
+		infantry_cost = -0.1
+		infantry_power = 0.1
+	}
+	
+	bonus = {
+		spy_offence = 0.25
+	}	
+
+	trigger = {
+		tag = SXY
+	}
+	free = yes
+	#Defence against the Northman
+	SXY_ideas_1 = {
+		garrison_size = 0.33
+	}
+	#Saxon Trade Networks
+	SXY_ideas_2 = {
+		merchants = 1
+		trade_efficiency = 0.1
+	}
+	#Loyal Subjects
+	SXY_ideas_3 = {
+		reduced_liberty_desire = -0.2
+	}
+	#Screaming Hussars
+	SXY_ideas_4 = {
+		can_recruit_hussars = yes
+		amount_of_hussars = 0.1
+	}
+	#Dominance Asserted
+	SXY_ideas_5 = {
+		core_creation = -0.15
+	}
+	#Productive Fields
+	SXY_ideas_6 = {
+		production_efficiency = 0.15
+	}
+	#Conscription
+	SXY_ideas_7 = {
+		regiment_recruit_speed = -0.2
+		land_forcelimit_modifier = 0.15
+	}
+}
+
+#GENERIC REGIONAL
+
+#Old Germanic Minor
+old_germanic_ideas = {
+	start = {
+		infantry_power = 0.1
+		manpower_recovery_speed = 0.2
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}	
+
+	trigger = {
+		OR = {
+			culture_group = old_germanic
+			culture_group = germanic_carpathian
+		}
+	}
+	free = yes
+	
+	#Efficieint Agriculture
+	old_germanic_ideas_1 = {
+		production_efficiency = 0.1
+	}
+
+	#Hired Hands
+	old_germanic_ideas_2 = {
+		merc_maintenance_modifier = -0.25
+	}
+
+	#Cultural Unity
+	old_germanic_ideas_3 = {
+		relation_with_same_culture_group = 20
+		same_culture_advisor_cost = -0.1
+	}
+
+	#Foraging
+	old_germanic_ideas_4 = {
+		land_attrition = -0.2
+	}
+
+	#Militaristic Culture
+	old_germanic_ideas_5 = {
+		mil_tech_cost_modifier = -0.1
+	}
+
+	#Appeased Masses
+	old_germanic_ideas_6 = {
+		stability_cost_modifier = -0.2
+	}
+
+	#Germanic Heritage
+	old_germanic_ideas_7 = {
+		tolerance_own = 2
+	}
+}
+
+#Italian Minors
+italian_minor_ideas = {
+	start = {
+		global_tax_modifier = 0.1
+		improve_relation_modifier = 0.15
+	}
+	
+	bonus = {
+		diplomatic_upkeep = 1
+	}	
+
+	trigger = {
+		culture_group = italo_punic
+	}
+	free = yes
+	
+	#Investing in Infrastructure
+	italian_minor_ideas_1 = {
+		build_cost = -0.1
+	}
+
+	#Italo-Punic Ancestors
+	italian_minor_ideas_2 = {
+		prestige = 1
+	}
+
+	#Espionage Departments
+	italian_minor_ideas_3 = {
+		global_spy_defence = 0.25
+	}
+
+	#Riches of Italia
+	italian_minor_ideas_4 = {
+		trade_efficiency = 0.1
+	}
+
+	#Standing Armies
+	italian_minor_ideas_5 = {
+		drill_gain_modifier = 0.25
+		land_morale = 0.1
+	}
+
+	#Surrounded by Seas
+	italian_minor_ideas_6 = {
+		ship_recruit_speed = -0.1
+		naval_forcelimit = 0.1
+	}
+
+	#Investing in Knowledge
+	italian_minor_ideas_7 = {
+		idea_cost = -0.1
+	}
+}
+
+#Euro-Punic Minors
+old_celtic_ideas = {
+	start = {
+		light_ship_power = 0.1
+		global_ship_repair = 0.1
+	}
+	
+	bonus = {
+		merchants = 1
+	}	
+
+	trigger = {
+		culture_group = old_celtic
+	}
+	free = yes
+	
+	#Maritime Nations
+	old_celtic_ideas_1 = {
+		naval_tradition_from_trade = 1
+		naval_maintenance_modifier = -0.1
+	}
+
+	#Isolation
+	old_celtic_ideas_2 = {
+		global_prosperity_growth = 1
+	}
+
+	#Hardy People
+	old_celtic_ideas_3 = {
+		core_decay_on_your_own = -0.2
+		enemy_core_creation = 0.25
+	}
+
+	#Local Business
+	old_celtic_ideas_4 = {
+		yearly_corruption = -0.1
+	}
+
+	#Celtic Unity
+	old_celtic_ideas_5 = {
+		culture_conversion_cost = -0.2
+		army_tradition = 0.5
+	}
+
+	#Absolute Rule
+	old_celtic_ideas_6 = {
+		autonomy_change_time = -0.1
+		years_of_nationalism = -5
+	}
+
+	#Druidic Heirarchy
+	old_celtic_ideas_7 = {
+		no_stability_loss_on_monarch_death = yes
+	}
+}
+
+#Euro-Punic Minors
+euro_punic_ideas = {
+	start = {
+		galley_power = 0.1
+		trade_efficiency = 0.1
+	}
+	
+	bonus = {
+		development_cost_modifier = -0.1
+	}	
+
+	trigger = {
+		culture_group = euro_punic
+	}
+	free = yes
+	
+	#Punic Bankers
+	euro_punic_ideas_1 = {
+		interest = -1
+		inflation_reduction =  0.1
+	}
+
+	#Efficient Infrastructure
+	euro_punic_ideas_2 = {
+		build_time = -0.2
+	}
+
+	#Diplomatic Edge
+	euro_punic_ideas_3 = {
+		dip_tech_cost_modifier = -0.1
+		embracement_cost = -0.1
+	}
+
+	#Heirs of Carthage
+	euro_punic_ideas_4 = {
+		legitimacy = 1
+	}
+
+	#Punic Mercantilism
+	euro_punic_ideas_5 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+
+	#Trade Dominance
+	euro_punic_ideas_6 = {
+		mercantilism_cost = -0.25
+		merchants = 1
+	}
+
+	#Hannibals Descendents
+	euro_punic_ideas_7 = {
+		cavalry_power = 0.15
+		cavalry_cost = -0.2
+	}
+}
+
+#Slavic Minor
+pagan_slavic_ideas = {
+	start = {
+		shock_damage_received = -0.1
+		relation_with_same_culture_group = 20
+	}
+	
+	bonus = {
+		defensiveness = 0.2
+	}	
+
+	trigger = {
+		culture_group = pagan_slavic
+	}
+	free = yes
+	
+	#Infiltration
+	pagan_slavic_ideas_1 = {
+		spy_offence = 0.25
+	}
+
+	#Slavic Paganism
+	pagan_slavic_ideas_2 = {
+		global_missionary_strength = 0.02
+	}
+
+	#Training from the Hordes
+	pagan_slavic_ideas_3 = {
+		cavalry_power = 0.15
+		cavalry_cost = -0.2
+	}
+
+	#Formidable Generals
+	pagan_slavic_ideas_4 = {
+		free_land_leader_pool = 1
+		leader_land_shock = 1
+	}
+
+	#Convincing Diplomacy
+	pagan_slavic_ideas_5 = {
+		monthly_favor_modifier = 0.25
+	}
+
+	#Scathing Diplomacy
+	pagan_slavic_ideas_6 = {
+		power_projection_from_insults = 1
+	}
+
+	#Hide in the Woods
+	pagan_slavic_ideas_7 = {
+		hostile_attrition = 1
+	}
+}
+
+#North African Minor
+north_african_ideas = {
+	start = {
+		cavalry_power = 0.2
+		cavalry_cost = -0.33
+	}
+	
+	bonus = {
+		caravan_power = 0.5
+	}	
+
+	trigger = {
+		culture_group = north_african
+	}
+	free = yes
+	
+	#Logistics
+	north_african_ideas_1 = {
+		movement_speed = 0.2
+	}
+
+	#Carthaginian Heritage
+	north_african_ideas_2 = {
+		diplomatic_reputation = 1
+	}
+
+	#Arid Climates
+	north_african_ideas_3 = {
+		attrition = -0.2
+	}
+
+	#Hannibal's Legacy
+	north_african_ideas_4 = {
+		free_land_leader_pool = 1
+		leader_land_manuever = 1
+	}
+
+	#Punic Mercinaries
+	north_african_ideas_5 = {
+		merc_maintenance_modifier = -0.25
+		mercenary_discipline = 0.05
+	}
+
+	#Greek Influences
+	north_african_ideas_6 = {
+		trade_efficiency = 0.1
+	}
+
+	#Superior Firepower
+	north_african_ideas_7 = {
+		cavalry_shock = 0.1
+	}
+}
+
+#Greek Minor
+greek_minor_ideas = {
+	start = {
+		infantry_power = 0.15
+		army_tradition = 0.5
+	}
+	
+	bonus = {
+		diplomatic_upkeep = 1
+	}	
+
+	trigger = {
+		OR = {
+			culture_group = macedonian_greek
+			culture_group = levantine_greek
+			culture_group = anatolian_greek
+		}
+	}
+	free = yes
+	
+	#Alexanders Legacy
+	greek_minor_ideas_1 = {
+		prestige = 1
+	}
+
+	#Hellenic Supremecy
+	greek_minor_ideas_2 = {
+		technology_cost = 0.05
+		innovativeness_gain = 0.5
+	}
+
+	#Stabilized Nation
+	greek_minor_ideas_3 = {
+		stability_cost_modifier = -0.2
+	}
+
+	#Swelling Ranks
+	greek_minor_ideas_4 = {
+		global_manpower_modifier = 0.2
+	}
+
+	#Proliferation of the Faith
+	greek_minor_ideas_5 = {
+		global_heathen_missionary_strength = 0.02
+		tolerance_own = 2
+	}
+
+	#Ptolemeic Influences
+	greek_minor_ideas_6 = {
+		production_efficiency = 0.1
+	}
+
+	#Established Trade Routes
+	greek_minor_ideas_7 = {
+		caravan_power = 0.5
+	}
+}

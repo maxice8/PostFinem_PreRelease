@@ -269,7 +269,7 @@ feudalism = {
 #######################################
 # Renaissance
 # 
-# Flows from italy
+# Flows from italy OR MACEDONIA OR EGYPT
 #######################################
 
 renaissance = {
@@ -340,7 +340,29 @@ renaissance = {
 	can_start = {
 		is_year = 1450
 		is_institution_enabled = feudalism
-		region = italy_region
+		OR = {
+			region = italy_region
+			AND = {
+				OR = {
+					region = balkan_region
+					region = egypt_region
+					region = anatolia_region
+					region = maghreb_region
+				}
+				OR = {
+					religion = hellenic
+					religion = punic_religion
+				}
+				owner = {
+					OR = {
+						religion = hellenic
+						religion = punic_religion
+					}
+				}
+				has_port = yes
+				NOT = { devastation = 5 }
+			}
+		}
 		is_state = yes
 		NOT = { province_id = 126 }
 		is_island = no

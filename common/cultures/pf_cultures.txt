@@ -147,17 +147,20 @@ old_celtic	= {
 	graphical_culture = westerngfx
 
 	old_irish = {
-		primary = IRE
+		province = { local_has_galleon = yes }
+		primary = CEL
 		
 	}	
 
 	briton = {
+		province = { local_has_galleon = yes }
 		primary = TRN
 
 	}
 
 	old_welsh = {
-		primary = WLS
+		province = { local_has_galleon = yes }
+		primary = CYM
 		dynasty_names = { 
 			Aberffraw Dinefwr Mathrafal Gwynedd Tudor Kernew "of Cornwall" Glyndwr "Ternyllwg" 
 			#CK2
@@ -224,6 +227,7 @@ old_celtic	= {
 	}
 
 	old_cornish = {
+		province = { local_has_galleon = yes }
 		primary = DUM
 		dynasty_names = { 
 			Aberffraw Dinefwr Mathrafal Gwynedd Tudor Kernew "of Cornwall" Glyndwr "Ternyllwg" 
@@ -250,6 +254,7 @@ old_celtic	= {
 	}
 
 	old_highland_scottish = {
+		province = { local_has_galleon = yes }
 		primary = HSC
 
 		male_names = {
@@ -294,6 +299,7 @@ old_celtic	= {
 	}
 	
 	pictish = {
+		province = { local_has_galleon = yes }
 
 		male_names = {
 			Aonghas Alasdair Ailbeart Adhamh Ailean Anndra Arailt Artair Aaron Amhlaidh Ailpein
