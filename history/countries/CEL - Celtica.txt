@@ -5,3 +5,28 @@ add_government_reform = feudalism_reform
 technology_group = western
 primary_culture = old_irish
 religion = druidic
+
+1444.1.1 = {
+	monarch = {
+		name = "Donal"
+		dynasty = "MacIntyre"
+		ADM = 4
+		claim = 60
+		DIP = 3
+		MIL = 2
+		culture = old_irish
+		birth_date = 1423.9.14
+	}
+	heir = {
+		name = "Muchadh"
+		dynasty = "MacIntyre"
+		monarch_name = "Muchadh II"
+		ADM = 4
+		claim = 30
+		DIP = 5
+		MIL = 4
+		culture = old_irish
+		birth_date = 1442.11.6
+		death_date = 1445.1.1
+	}
+}

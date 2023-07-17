@@ -1,0 +1,167 @@
+liberty_ideas = {
+	category = ADM
+
+	bonus = {
+		possible_policy = 1
+	}
+
+	trigger = {
+		NOT = { tag = KGC }
+	}
+	
+	basic_rights = {
+		global_unrest = -1
+	}
+	national_monuments = {
+		great_project_upgrade_cost = -0.25
+	}
+	efficient_government = {
+		administrative_efficiency = 0.025
+	}
+	cultural_sufferance = {
+		promote_culture_cost = -0.25
+		num_accepted_cultures = 2
+	}
+	expanded_bureaucracy_1 = {
+		global_monthly_devastation = -0.05
+		global_prosperity_growth = 0.5
+	}
+	government_investments = {
+		build_time = -0.1
+		development_cost = -0.05
+	}
+	army_of_free = {
+		land_morale = 0.1
+	}
+	
+
+	ai_will_do = {
+		factor = 0.96
+		
+		modifier = {
+			factor = 0
+			is_subject = yes
+		}	
+		modifier = {
+			factor = 1.25
+			num_of_cities = 20
+		}	
+		modifier = {
+			factor = 1.25
+			government = republic
+		}	
+	}
+}
+
+assimilation_ideas = {
+	category = DIP
+
+	bonus = {
+		warscore_cost_vs_other_religion = -0.1
+	}
+
+	trigger = {
+		
+	}
+	
+	native_conversions = {
+		global_heathen_missionary_strength = 0.03
+	}
+	expanded_frontier = {
+		global_colonial_growth = 20
+		native_assimilation = 0.5
+	}
+	cultural_assimilation_1 = {
+		culture_conversion_cost = -0.25
+		global_trade_goods_size_modifier = 0.05
+	}
+	simple_casus_belli = {
+		ae_impact = -0.1
+	}
+	vassal_inheritence = {
+		diplomatic_annexation_cost = -0.1
+		accept_vassalization_reasons = 10
+	}
+	educated_masses = {
+		embracement_cost = -0.2
+		global_institution_spread = 0.20
+	}
+	integrated_society = {
+		governing_capacity_modifier = 0.1
+		expand_administration_cost = -0.5
+	}
+	
+
+	ai_will_do = {
+		factor = 0.65
+
+		modifier = {
+			factor = 1.5
+			has_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 1.25
+			has_idea_group = expansion_ideas
+		}	
+		modifier = {
+			factor = 0.0
+			NOT = { num_of_cities = 5 }
+		}	
+	}
+}
+
+firepower_ideas = {
+	category = MIL
+
+	bonus = {
+		movement_speed = 0.1
+		drill_gain_modifier = 0.5
+	}
+
+	trigger = {
+		
+	}
+	
+	superior_firepower_1 = {
+		artillery_power = 0.1
+	}
+	quality_munitions = {
+		fire_damage = 0.05
+		fire_damage_received = -0.05
+	}
+	efficient_sieges = {
+		siege_ability = 0.1
+	}
+	field_generals = {
+		leader_land_fire = 1
+	}
+	efficient_spacing = {
+		backrow_artillery_damage = 0.05
+		artillery_cost = -0.1
+	}
+	artillery_corps = {
+		army_tradition_decay = -0.01
+	}
+	mortars_1 = {
+		artillery_levels_available_vs_fort = 1
+		artillery_barrage_cost = -0.5
+	}
+	
+
+	ai_will_do = {
+		factor = 1
+
+		modifier = {
+			factor = 1.25
+			num_of_artillery = 30
+		}	
+		modifier = {
+			factor = 1.25
+			current_age = age_of_absolutism
+		}	
+		modifier = {
+			factor = 1.5
+			current_age = age_of_revolutions
+		}	
+	}
+}

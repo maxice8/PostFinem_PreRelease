@@ -5,3 +5,28 @@ government_rank = 2
 technology_group = western
 primary_culture = haldorian
 religion = punic_religion
+1444.1.1 = {
+	monarch = {
+		name = "Maldras"
+		dynasty = "Carosuvia"
+		ADM = 3
+		claim = 100
+		DIP = 2
+		MIL = 5
+		culture = haldorian
+		birth_date = 1391.4.22
+	}
+	heir = {
+		name = "Bomilcar"
+		monarch_name = "Bomilcar"
+		dynasty = "Carosuvia"
+		ADM = 4
+		claim = 95
+		DIP = 1
+		MIL = 1
+		culture = haldorian
+		birth_date = 1426.4.2
+		death_date = 1445.1.1
+	}
+
+}

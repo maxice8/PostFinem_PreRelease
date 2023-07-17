@@ -10,3 +10,29 @@ add_truce_with = CPD
 add_truce_with = KAR
 add_truce_with = AIA
 add_truce_with = WAL
+1444.1.1 = {
+	monarch = {
+		name = "Kallias"
+		dynasty = "Philoxenos"
+		ADM = 3
+		claim = 95
+		DIP = 3
+		MIL = 2
+		culture = macedonian
+		birth_date = 1425.1.2
+	}
+	add_ruler_personality = craven_personality
+	heir = {
+		name = "Demetrius"
+		monarch_name = "Demetrius III"
+		dynasty = "Philoxenos"
+		ADM = 3
+		claim = 95
+		DIP = 5
+		MIL = 4
+		culture = macedonian
+		birth_date = 1444.4.12
+		death_date = 1445.1.1
+	}
+
+}

@@ -4,7 +4,34 @@ add_government_reform = feudalism_reform
 government_rank = 2
 technology_group = eastern
 add_historical_rival = AEG
-primary_culture = greek
+primary_culture = alexandrian
 religion = hellenic
 add_truce_with = JRD
 add_truce_with = HEL
+1444.1.1 = {
+	monarch = {
+		name = "Isadora"
+		female = yes
+		claim = 30
+		dynasty = "Gidos"
+		ADM = 2
+		DIP = 4
+		MIL = 3
+		culture = alexandrian
+		birth_date = 1416.6.21
+	}
+	add_ruler_personality = cruel_personality
+	heir = {
+		name = "Theodoro"
+		monarch_name = "Theodoro II"
+		dynasty = "Gidos"
+		claim = 95
+		ADM = 5
+		DIP = 5
+		MIL = 4
+		culture = alexandrian
+		birth_date = 1436.11.21
+		death_date = 1445.1.1
+	}
+
+}
