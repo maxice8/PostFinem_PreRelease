@@ -5,3 +5,27 @@ primary_culture = chatti
 religion = germanic_religion
 technology_group = eastern
 capital = 1762# Kassel
+
+1444.11.11 = {
+	monarch = {
+		name = "Beornred"
+		dynasty = "Wyrhtingas"
+		adm = 1
+		dip = 1
+		mil = 3
+		birth_date = 1420.09.13
+		death_date = 1445.01.01
+	}
+}
+
+1444.11.11 = {
+	heir = {
+		name = "Hildebrand"
+		dynasty = "Wyrhtingas"
+		adm = 6
+		dip = 1
+		mil = 0
+		birth_date = 1414.09.08
+		death_date = 1445.01.01
+	}
+}

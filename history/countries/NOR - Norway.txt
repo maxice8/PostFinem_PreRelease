@@ -21,6 +21,38 @@ capital = 20#Akershus
 		death_date = 1440.1.1
 	}
 }
+
+1444.11.11 = {
+	monarch = {
+		name = "Ulrik"
+		dynasty = "Ulriksson"
+		adm = 2
+		dip = 2
+		mil = 4
+		birth_date = 1410.03.26
+		death_date = 1445.01.01
+		leader = {
+			name = "Ulrik Fire-Eyes"
+			type = general
+			fire = 3
+			shock = 5
+			manuever = 3
+			siege = 2
+		}
+	}
+}
+
+1444.11.11 = {
+	heir = {
+		name = "Rolf"
+		dynasty = "Ulriksson"
+		adm = 3
+		dip = 3
+		mil = 3
+		birth_date = 1432.05.22
+		death_date = 1445.01.01
+	}
+}
 1520.1.1 = { 
 	leader = { 
 		name = "Olav Galle"

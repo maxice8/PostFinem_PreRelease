@@ -5,3 +5,27 @@ religion = germanic_religion
 technology_group = eastern
 capital = 85# Köln
 government_rank = 1
+
+1444.11.11 = {
+	monarch = {
+		name = "Swidhelm"
+		dynasty = "Wulfingas"
+		adm = 3
+		dip = 4
+		mil = 3
+		birth_date = 1411.01.02
+		death_date = 1445.01.01
+	}
+}
+
+1444.11.11 = {
+	heir = {
+		name = "Sighere"
+		dynasty = "Wulfingas"
+		adm = 2
+		dip = 3
+		mil = 3
+		birth_date = 1417.03.29
+		death_date = 1445.01.01
+	}
+}

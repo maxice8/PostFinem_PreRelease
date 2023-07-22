@@ -5,3 +5,27 @@ religion = south_germanic_religion
 technology_group = eastern
 capital = 154# Nitra
 government_rank = 1
+
+1444.11.11 = {
+	monarch = {
+		name = "Leodwald"
+		dynasty = "Ynglingas"
+		adm = 4
+		dip = 5
+		mil = 3
+		birth_date = 1403.09.06
+		death_date = 1445.01.01
+	}
+}
+
+1444.11.11 = {
+	heir = {
+		name = "Sweyn"
+		dynasty = "Ynglingas"
+		adm = 6
+		dip = 0
+		mil = 6
+		birth_date = 1434.06.26
+		death_date = 1445.01.01
+	}
+}

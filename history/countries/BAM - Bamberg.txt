@@ -15,6 +15,30 @@ fixed_capital = 66# Cannot move capital away from this province & no power cost 
 		mil = 2
 	}
 }
+
+1444.11.11 = {
+	monarch = {
+		name = "Aelfric"
+		dynasty = "Sweynlingas"
+		adm = 6
+		dip = 5
+		mil = 3
+		birth_date = 1385.02.22
+		death_date = 1445.01.01
+	}
+}
+
+1444.11.11 = {
+	heir = {
+		name = "Cenric"
+		dynasty = "Sweynlingas"
+		adm = 2
+		dip = 5
+		mil = 3
+		birth_date = 1417.09.21
+		death_date = 1445.01.01
+	}
+}
 1455.5.6 = { 
 	monarch = { 
 		name = "Georg I von Schaumberg"

@@ -5,3 +5,27 @@ religion = slavic_relgion
 primary_culture = volhynian
 capital = 2424# Volhynia
 government_rank = 1
+
+1444.11.11 = {
+	monarch = {
+		name = "Aleksandar"
+		dynasty = "Bebek"
+		adm = 2
+		dip = 5
+		mil = 2
+		birth_date = 1418.04.23
+		death_date = 1445.01.01
+	}
+}
+
+1444.11.11 = {
+	heir = {
+		name = "Roman"
+		dynasty = "Bebek"
+		adm = 4
+		dip = 3
+		mil = 2
+		birth_date = 1440.03.01
+		death_date = 1445.01.01
+	}
+}

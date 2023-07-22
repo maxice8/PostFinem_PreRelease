@@ -43,6 +43,30 @@ fixed_capital = 4699# Cannot move capital away from this province & no power cos
 		mil = 3
 	}
 }
+
+1444.11.11 = {
+	monarch = {
+		name = "Nikodemos"
+		dynasty = "Tatikios"
+		adm = 5
+		dip = 6
+		mil = 0
+		birth_date = 1417.05.06
+		death_date = 1445.01.01
+	}
+}
+
+1444.11.11 = {
+	heir = {
+		name = "Andronikos"
+		dynasty = "Tatikios"
+		adm = 1
+		dip = 4
+		mil = 1
+		birth_date = 1418.01.16
+		death_date = 1445.01.01
+	}
+}
 1448.9.30 = { 
 	monarch = { 
 		name = "Leonardo"

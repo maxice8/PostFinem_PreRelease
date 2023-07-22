@@ -43,6 +43,30 @@ fixed_capital = 58# Cannot move capital away from this province & no power cost 
 	add_ruler_personality = benevolent_personality
 	add_ruler_personality = charismatic_negotiator_personality
 }
+
+1444.11.11 = {
+	monarch = {
+		name = "Wulfgar"
+		dynasty = "Wuffingas"
+		adm = 1
+		dip = 1
+		mil = 5
+		birth_date = 1408.05.13
+		death_date = 1445.01.01
+	}
+}
+
+1444.11.11 = {
+	heir = {
+		name = "Wystan"
+		dynasty = "Wuffingas"
+		adm = 4
+		dip = 1
+		mil = 2
+		birth_date = 1419.07.06
+		death_date = 1445.01.01
+	}
+}
 1450.1.1 = { 
 	heir = { 
 		name = "Ernst"

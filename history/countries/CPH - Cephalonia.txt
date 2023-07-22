@@ -4,3 +4,27 @@ government_rank = 1
 technology_group = eastern
 religion = hellenic
 primary_culture = epirote
+
+1444.11.11 = {
+	monarch = {
+		name = "Alexios"
+		dynasty = "Paleologo"
+		adm = 6
+		dip = 4
+		mil = 3
+		birth_date = 1419.07.04
+		death_date = 1445.01.01
+	}
+}
+
+1444.11.11 = {
+	heir = {
+		name = "David"
+		dynasty = "Paleologo"
+		adm = 5
+		dip = 0
+		mil = 3
+		birth_date = 1421.08.10
+		death_date = 1445.01.01
+	}
+}

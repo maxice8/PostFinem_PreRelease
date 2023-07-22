@@ -6,3 +6,27 @@ primary_culture = bructeri
 government = tribal
 add_government_reform = feudal_tribe
 capital = 1878# Aachen
+
+1444.11.11 = {
+	monarch = {
+		name = "Deorlaf"
+		dynasty = "Eormenricingas"
+		adm = 3
+		dip = 6
+		mil = 0
+		birth_date = 1387.08.14
+		death_date = 1445.01.01
+	}
+}
+
+1444.11.11 = {
+	heir = {
+		name = "Athelstan"
+		dynasty = "Eormenricingas"
+		adm = 5
+		dip = 0
+		mil = 6
+		birth_date = 1420.01.19
+		death_date = 1445.01.01
+	}
+}
