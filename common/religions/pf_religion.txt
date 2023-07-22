@@ -189,6 +189,7 @@ pagan = {
 
 
 zoroastrian_group = {
+	defender_of_faith = yes
 	flag_emblem_index_range = { 110 110 }
 	zoroastrian = {
 		icon = 26
@@ -225,6 +226,7 @@ zoroastrian_group = {
 
 
 germanic_group = {
+	defender_of_faith = yes
 	flag_emblem_index_range = { 110 110 }
 
 	norse_pagan_reformed = {
@@ -263,6 +265,7 @@ germanic_group = {
 		}
 		
 		# personal_deity = yes
+		misguided_heretic = yes
 		
 		heretic = { PROMETHEANS }
 	
@@ -284,6 +287,7 @@ germanic_group = {
 		}
 		
 		# personal_deity = yes
+		misguided_heretic = yes
 		
 		heretic = { PROMETHEANS }
 	
@@ -295,6 +299,7 @@ germanic_group = {
 }
 
 punic_group = {
+	defender_of_faith = yes
 	crusade_name = HOLY_WAR
 	punic_religion = {
 		icon = 33
@@ -312,9 +317,19 @@ punic_group = {
 		
 		# personal_deity = yes
 		
+
+		# holy_sites = { 1855 341 1750 201 118 }
+			
+		# blessings = {
+		# 	legitimize_government
+		# 	encourage_warriors_of_the_faith
+		# 	send_monks_to_establish_monasteries
+		# 	promote_territorial_rights
+		# 	will_of_the_martyrs
+		# }
+
 		heretic = { PUNIC_HERETIC }	
 	}
-
 	
 	harmonized_modifier = harmonized_punic_group
 	crusade_name = HOLY_WAR
@@ -322,6 +337,7 @@ punic_group = {
 
 hellenic_group = {
 
+	defender_of_faith = yes
 	hellenic = {
 		icon = 34
 		color = { 160 255 255 }
@@ -389,6 +405,7 @@ hellenic_group = {
 	
 slavic_religion_group = {
 
+	defender_of_faith = yes
 	slavic_relgion = {
 		icon = 36
 		color = { 77 85 180 }
@@ -418,6 +435,7 @@ slavic_religion_group = {
 
 druidic_group = {
 
+	defender_of_faith = yes
 	druidic = {
 		icon = 37
 		color = { 10 120 50 }
@@ -437,7 +455,115 @@ druidic_group = {
 		# personal_deity = yes
 		
 		heretic = { PROMETHEANS }
+		
+		has_patriarchs = yes		# Uses patriarch authority
+		
+		orthodox_icons = {
+			# If no icon has ai_will_do above 1 - <current patriarch authority> , the AI will not enact it. (60% PA = 0.6 -> ai_will_do has to be at least 0.4)
 
+			icon_sacred_earth = {
+				global_trade_goods_size_modifier = 0.1
+				interest = -0.1
+				
+				allow = {
+					always = yes
+				}
+
+				visible = {
+					always = yes
+				}
+
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 2
+						is_at_war = no
+					}
+				}
+			}
+			icon_oracles = {
+				land_morale = 0.1
+				manpower_recovery_speed = 0.1
+				
+				allow = {
+					always = yes
+				}
+
+				visible = {
+					always = yes
+				}
+
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 2
+						is_at_war = no
+					}
+				}
+			}
+			icon_myth_and_stories = {
+				global_unrest = -3
+				prestige = 1
+				
+				allow = {
+					always = yes
+				}
+
+				visible = {
+					always = yes
+				}
+
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 2
+						is_at_war = no
+					}
+				}
+			}
+
+			icon_pilgimage = {
+				diplomatic_reputation = 1
+				diplomats = 1
+				
+				allow = {
+					always = yes
+				}
+
+				visible = {
+					always = yes
+				}
+
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 2
+						is_at_war = no
+					}
+				}
+			}
+
+			icon_meditation = {
+				development_cost_modifier = -0.1
+				production_efficiency = 0.2
+				
+				allow = {
+					always = yes
+				}
+
+				visible = {
+					always = yes
+				}
+
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 2
+						is_at_war = no
+					}
+				}
+			}
+		}
 	
 	}
 

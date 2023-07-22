@@ -77,69 +77,53 @@ scandinavian = { #Nordic
 	}
 	
 	male_names = {
-		Christian Christoph Oskar Adolf August Göran Sigismund Alfred Axel Edvard Gottfrid 
-		Jakob Ludvig Mikael Olof Patrik Rangvald Rettil Sigvard Simon Sture Svante 
-		Tomas Ulrik
-		Albrikt Albert Alf Algot Anders Arne Arnfast Astrad 
-		Bengt Benedict Bertil Birger Björn Bo Borkvard Brage Bror
-		Dag Dan Dyre Egil Einar Erik Eskild Faste Fredrik Frederick Filip 
-		Folke Georg Greger Gregory Gunnar Gustav Halsten Hans Harald Harold
-		Helge Henrik Hjalmar Holmger Håkan Inge Ingemar Ingvar
-		Edward Johan John Karl Klas Knut Lars Magnus
-		Markus Marcus 
-		Mats Matthew Nils Nicholas Niklas Odd Olaf Peter Ragnar Rolf 
-		Ragnvald Sörkver Sigurd Starkad Sten Styrbjörn Sune Sven
-		Sverker Sölve Thomas Tjudmund Toke Torbjörn Tord Torbrand Torkel Torolf 
-		Thorolf Torsten Toste Totil Tyke Ulf Valdemar Åke Östen 
-		Anders Andrew Anund Asger Balder Benedikt Benedict Bjørn Beorn Bo Christopher Edvard Edward 
-		Einar Ernest Fredrik Frederick Frej Glum Gorm Gotfred Godfrey Gregers Gregory Grim Hårik 
-		Halfdan Halvor Harold Helge Hemming Henry Hjalmar Ingolf Jørn Jakob Jacob Jens Joakim Johann
-		John Charles Knut Kristian Leif Lennart Ludvig Louis Malthe Mads Matthew Mikkel Michael 
-		Mogens Nicholas Odd Olav Olaf Peder Pridbjørn Ragnar Ragnvald Rolf Rune Rørik Rurik Severin 
-		Sigfred Sigtryg Sigurd Sivard Steen Svend Sven Sämund Thorolf Thorvald Torben Torbjørn
-		Torbjörn Tord Torfinn Torgils Torkel Ture Ubbe Uffe Ulf Vladimir Valentin Yngvar Ingvar
-		Christian Frederik Erik Christoffer Adolf Niels Karl Magnus Maximilian Ulrik Abel Vilhelm 
-		Knud Valdemar Harald Oluf Alfred Anton Bent Emanuel Esben Fritjof Frode Gunnar Hans Henrik 
-		Holger Jørgen Kasper Peter Poul Rudolf Stefan Tobias Torbald Viktor Vilfred Joachim Ernst
-		Frans Gnupa
+		Åke Björn Carl Dag Einar Fröjde Göran Håkan Ingvar Jörgen
+		Kjell Lennart Mårten Njord Örjan Per Rolf Sven Torgny Ulrik
+		Valdemar Yngve Åsgeir Östen Älrik Börje Danne Evert Fritjof
+		Gustav Halvar Ingemar Joar Krister Leif Magnus Nils Olof
+		Pär Rasmus Sture Tage Ulf Vilhelm Xander Yngvar Ådne Örjan
+		Ärlig Birger Dagfinn Evert Folke Gösta Halvar Inge Jon Kla
+		Leif Mats Nils Olof Pär Rasmus Sture Tage Ulf Vilhelm Xerxes
+		Yngvar Ådne Örjan Ärlig Åke Björn Carl Dag Einar Fröjde
+		Göran Håkan Ingvar Jörgen Kjell Lennart Mårten Njord Örjan
+		Per Rolf Sven Torgny Ulrik Valdemar Yngve Åsgeir Östen Älrik
 	}
 	female_names = {
-		Christina Ulrika Eleonora Hedwig
-		Anna Asta Astrid Beata Birgitta Brigid Bothild Cecilia Elin 
-		Elisabet Gunhild Helena Holmfrid Iliana Inga 
-		Ingeborg Ingegerd Ingfrid Ingrid Karin Katarina Kristina Linda 
-		Margareta Märta Martha Ragnhild Sara Sarah Sigrid Sofia 
-		Sophia Thordis Ulvhilde Åsa
-		Sophie Dorothe Margrete Sigrun
-		Agnethe Anna Asta Benedikte Benedicta Birgitta Brigid Bodil Cecilie Cecilia Christina Dagmar 
-		Dorothea Dorothy Elisabeth Ellinor Eleanor Emilie Emily Erika Ester Estrid Astrid Frederikke 
-		Frederique Freja Grethe Gudrun Gunhild Gyda Gytha Helena Helen Ida Ingeborg Ingegerd Ingrid 
-		Johanne Jutta Karin Karoline Katarina Katrine Catherine Kirsten Klara Lise Luitgard Lykke
-		Magdalene Magdalena Maren Margrethe Margaret Maria Martha Ragnfrid Ragnhild Rikissa Runa 
-		Sanna Signe Sigrid Silje Sofie Sophia Svanhild Thyra Tora Thora Thordis Åse Åsa
+		Åsa Birgitta Carina Dagmar Eira Freja Gunhild Hilda Ingrid
+		Jorun Karin Lisbet Märta Nanna Örlög Pernilla Ragna Sigrid
+		Tove Ulla Vilda Ylva Åsa Birgitta Carina Dagmar Eira Freja
+		Gunhild Hilda Ingrid Jorun Karin Lisbet Märta Nanna Örlög
+		Pernilla Ragna Sigrid Tove Ulla Vilda Ylva Åsa Birgitta Carina
+		Dagmar Eira Freja Gunhild Hilda Ingrid Jorun Karin Lisbet
+		Märta Nanna Örlög Pernilla Ragna Sigrid Tove Ulla Vilda Ylva
+		Åsa Birgitta Carina Dagmar Eira Freja Gunhild Hilda Ingrid
+		Jorun Karin Lisbet Märta Nanna Örlög Pernilla Ragna Sigrid
+		Tove Ulla Vilda Ylva Åsa Birgitta Carina Dagmar Eira Freja
+
 	}
 	dynasty_names = {
-		"Bonde" "Vasa" "Tre Rosor" "Oxenstierna" "Sparre" "Sture" "Tott" "Trolle" "Bielke" "Brahe"
-		"Horn" "Ribbing" "Skytte" "Banér" "Fleming" "Gyllenstierna" "de la Gardie" "Leijonhufvud" 
-		"Natt och Dag" "Grip" "Stenbock" "Bure" "Drake" "Hand" "Burensköld"
-		"Böllja" "Cruus" "Geete" "Grubbenhielm" "Soop" "Ekeblad" "Svinhufvud"
-		"Hård" "Forstena" "Kurck" "Eka" "Hjort" "Jägerhorn" "Lilliehöök"
-		"Porse" "Palme" Gumsehuvud
-		"Bååt" "Ulv" "Sjöblad" "Läma" "Posse" "Rosenstråle" "Thott" "Bagge"
-		"Bese" "Gädda" "Hatt" "Marsvin" "Oxhufvud" "Stake" "Tre Rutor" "Hästesko"
-		"Ulfsax" "Tre Sjöblad" "Bratt" "Munk" "Eketrä" "Gera"
-		"Gylta" "Lillie" "Puke" "Slatte"  "Stiernkors" "Fincke" "Dufva" "Cronstedt"
-		"Hvide" "Galen" "Due" "Saltensee" "Urup" "Neb" "Brahe" "Gøye" "Trolle" "Rantzau"
-		"Friis" "Gyllenstierna" 
-		#Gyldenstierne
-		"Bille" "Adeler" "Arenstorff" "Brockenhuus"
-		"Beck" "Brock" "Grubbe" "Holck" "Huitfeldt" "Juel" "Kaas" "Krabbe"
-		"Lindenov" "Lykke" "Marsvin" "Mule" "Munk" "Oxe" "Reedtz" "Rodsteen"
-		"Rosenkrantz" "Skeel" "Skram" "Urne" "Vind" "Ahlefeldt"
-		"Frille" "Rønnow"
-		# CKII
-		"Porse" "Glysing" "Banner" "Thott" "Ulfstand" "Grøn" "Daa"
-		"Reventlow" "Juul" "Ulfeldt" "Bang"
+		Älvdal Bäckström Cederschiöld Dahlberg Ekdahl Falkenström
+		Gustavsson Hagberg Ivarsson Jansson Källström Lindqvist Månsson
+		Nordström Östberg Persson Qvist Rönnlund Sjöberg Törnqvist
+		Ulvestad Västergård Åberg Öhrn Anderström Blomqvist Dahlqvist
+		Eriksson Falkenberg Göransson Höglund Isaksson Johansson Karlsson
+		Lundqvist Malmgren Nilsson Olofsson Pettersson Qvarnström Rundqvist
+		Sjögren Tuvesson Ulriksson Vinterstrand Wiberg Åkerman Östberg
+		Ängström Börjesson Cedergren Dahlström Ericsson Falkström
+		Gustavsson Hagberg Ivarsson Jansson Källström Lindqvist Månsson
+		Nordström Östberg Persson Qvist Rönnlund Sjöberg Törnqvist
+		Ulvestad Västergård Åberg Öhrn Anderström Blomqvist Dahlqvist
+		Eriksson Falkenberg Göransson Höglund Isaksson Johansson Karlsson
+		Lundqvist Malmgren Nilsson Olofsson Pettersson Qvarnström Rundqvist
+		Sjögren Tuvesson Ulriksson Vinterstrand Wiberg Åkerman Östberg
+		Ängström Börjesson Cedergren Dahlström Ericsson Falkström
+		Gustavsson Hagberg Ivarsson Jansson Källström Lindqvist Månsson
+		Nordström Östberg Persson Qvist Rönnlund Sjöberg Törnqvist
+		Ulvestad Västergård Åberg Öhrn Anderström Blomqvist Dahlqvist
+		Eriksson Falkenberg Göransson Höglund Isaksson Johansson Karlsson
+		Lundqvist Malmgren Nilsson Olofsson Pettersson Qvarnström Rundqvist
+		Sjögren Tuvesson Ulriksson Vinterstrand Wiberg Åkerman Östberg
+		Ängström Börjesson Cedergren Dahlström Ericsson Falkström
 	}
 }
 
@@ -476,8 +460,60 @@ gallic = {
 	arverni = { #arverni
 		
 	}
-
+	dynasty_names = { 
+		"Cloudeon" "Ardosios" "Belunos" "Rigomaros" "Eponia" "Vercinga" 
+		"Talarios" "Druidorix" "Eburona" "Nemartos" "Carnutia" "Adalbrik"
+		"Boduogen" "Cauwaria" "Togudia" "Segomara" "Rigolana" "Belgonia" 
+		"Luguvius" "Eburatus" "Nantavia" "Dumnoval" "Carnutor" "Velloton" 
+		"Segosios" "Taranion" "Rixotuna" "Anderika" "Borovios" "Esuvior" 
+		"Togutora" "Adaloval" "Boduoria" "Talutuna" "Eponiata" "Nemovara" 
+		"Celtoria" "Ambertor" "Vergoria" "Talosara" "Druidava" "Eburidia" 
+		"Nandaria" "Carvates" "Belcauna" "Luguvion" "Esusara" "Togutor" 
+		"Segosara" "Rixovora" "Boromara" "Eburavia" "Nemovara" "Dumnovala" 
+		"Toguvion" "Togutor" "Druidia" "Talanus" "Adaloval" "Belgava" "Vellonara" 
+		"Celtavia" "Esuvora" "Togutor" "Rigomara" "Rixovion" "Eponor" "Nemava" 
+		"Dumnoval" "Celtia" "Ambertos" "Vellotuna" "Togutarix" "Segovion" "Rixocor" 
+		"Boromara" "Eburavia" "Nemotor" "Druidava" "Talanor" "Adalavix" "Belcauna" 
+		"Vellotor" "Esusava" "Togutor" "Segosara" "Rigovara" "Borotor" "Eburavia" 
+		"Nemara" "Toguvion" "Rixovara" "Rigotos" "Nemator" "Celtava" "Amberris" 
+		"Vergavia" "Talonor" "Adalovara" "Belcauna" "Vellotor" "Esusara" "Togutor" 
+		"Segosara" "Rigomara" "Rixotos" "Borara" "Eburor" "Nemator" "Celtava" 
+		"Ambertos" "Vellotuna" "Toguorix" "Segorix" "Rigorix" "Borotuna" "Eborix" 
+		"Nemor" "Druidava" "Talor" "Adalara" "Belcauna" "Vellotor" "Esusara" 
+		"Togutor" "Segovara" "Rixovara" "Borotor" "Eburavia" "Nemara" "Toguvion" 
+		"Rixovara" "Rigotos" "Nemator" "Celtava" "Amberris" "Vergavia" "Talonor" 
+		"Adalovara" "Belcauna" "Vellotor" "Esusara" "Togutor" "Segosara" "Rigomara" 
+		"Rixotos" "Borara" "Eburor" "Nemator" "Celtava" "Ambertos" "Vellotuna" 
+		"Toguorix" "Segorix" "Rigorix" "Borotuna" "Eborix" "Nemor" "Druidava" 
+		"Talor" "Adalara" "Belcauna" "Vellotor" "Esusara" "Togutor" "Segovara" 
+		"Rixovara" "Borotor" "Eburavia" "Nemara" "Toguvion"
+		"Rixovara" "Rigotos" "Nemator" "Celtava" "Amberris" "Vergavia" "Talonor"
+	}
+	male_names = {
+		Aedus Belenus Cunomaglus Dumnorix Esus Gobannitio Hesus Iovis Lugo Maponos
+		Nantosuelta Ogmios Pritanius Riomaros Segomo Teutates Uxellimus Vellaunos 
+		Abarrius Aelios Boduogenos Catumandus Dubnoreix Epos Galateos Heliomagos 
+		Iovinos Korbos Latis Mercureos Novos Orgetorix Petubos Redecos Senovelius 
+		Teutomatos Ussneos Vercingetorix Abnoba Aemenos Bouda Caturix Duratios Esunos 
+		Gobha Herturix Inigos Iubnaes Lito Magos Nantovecos Ogmion Prithu Relos Segon 
+		Taranis Uxcleus Valitoutis Wotan Absorix Aequo Benecos Catus Dusnos Eposi 
+		Gallaorix Hellenos Ira Isu Litos Mabon Natus Oidí Ponos Retalius Ségomo 
+		Teutessos Uxelos Vellon Acius Aengus Boduogeni Cauarix Dumborix Eriyus 
+		Gabros Haermos Irix Lugous Maeli Nebo Olla Peithios Riuros Segonos Taranux 
+		Uxellus Vercassios Wotnos Abstos Aedus Borex Cauca Dunnorix Eros Galorix 
+		Hentia Iraliux Litos Malus Nio Oitán Pomone Riwos Segos Taranx Uxmagos 
+		Verris Ynios
+	}
+	female_names = {
+		Eponia Brigantia Cunovinda Segolene Gwennola Sirona Aedeva Belisama
+		Drusilla Meduna Aventia Camulina Belona Essula Caturixia Segomara 
+		Dubnorexia Nantosuelta Bodicca Belisuna Essuna Boudicea Maelisina 
+		Taranisca Camulonia Gaulena Arianrhod Boudistua Morrigan Catumanda 
+		Adorina Dubnovella Eburina Vellauna Camuline Bregesana Lusoria 
+		Caturinia Eponina Belena
+	}
 }
+
 
 caucasian_armenian = {
 	graphical_culture = westerngfx
@@ -939,6 +975,27 @@ north_african = {
 	punic_culture = {
 		
 	}
+	dynasty_names = {
+		Barca Mahdul Hiramite Saphatidid Adramiti Hadarit Hanno Karthite Daganit 
+		Dugurati Hamilcar Kasbilit Tanite Ishmehir Malchusti Phelgetid Melqartaz 
+		Azizati Adonisak Sapahtait Ammilati Bitdaganir 
+		Shumatah Bayalshi Hanunit Didothi Magulit
+	}
+	male_names = {
+		Amilcar Barca Hanno Hamilcar Adonis Theron Hasdrubal Melqart 
+		Balazan Malchus Shaphat Baal Hamon Iddin-Mer Aziza Hannibal Hiram Eshmun 
+		Kothar Adad Mago Zalmoxis Sapanibal Carmon Magal Shihrur Ishme-Dagan 
+		Hirpal Adirat Ammalt Gargus Ashtoreth Pahurat Dugur Adnatan Bit-Dagan 
+		Gisgo Bod'ashtart Qart-Hadasht Melkarth Bod'astoreth Shumata Batsor 
+		Ba'alah Shuhand Bayalsh Dugur Ba'asha Garsem Magal Dagan Geshem
+	}
+	female_names = {
+		Azizat Amat Amilcarah Bahia Hannibalat Didoth Hasdrubalah Dido
+		Jidet Hamilcarah Amila Carmonah Bitdaganat Hanunah Shaphatah Tanit
+		Zalmoxisa Iddinmerah Sapahtah Tanita Gargusisa Eshmunat Ammilat 
+		Shihrura Carthaginat
+		Idrimihirat Qart-Hadashta Baalahat Melkartat Shuhandah Bod'ashtartat Shihrurat
+	}
 }
 
 old_germanic = {
@@ -979,6 +1036,31 @@ old_germanic = {
 	bructeri = {
 
 	}
+	dynasty_names = {
+		Wuffingas Iclingas Scylfingas Wulfingas Geatingas Beornicingas Scopfingas Hildingas Swertingas Godwulfingas
+		Eormenricingas Aescingas Sigefugolas Herelingas Heardredingas Eadgilsingas Onelaingas Ynglingas Waegmundingas Eadmundingas
+		Helmundlingas Ymiringas Saexneatingas Eomerlingas Sceafingas Scefingas Athelingas Beowulfingas Heremodingas Wiglafingas
+		Eadwulfingas Oslafingas Herericlingas Heardingas Theodeningas Wealhtheowingas Heağobardingas Eadricingas Swertlingas Thorkillingas
+		Uhtredingas Wulfgaringas Wyrhtingas Yngvingas Offingas Oswealdingas Ricberhtingas Sigehereingas Sweynlingas Theoboldingas
+	}
+	male_names = {
+		Aldred Alwin Aeric Athelstan Beowulf Cenric Cynewulf Deorlaf Eadgar Eadric
+		Ecgfrith Edred Edwin Eofor Eomer Eowyn Fastred Godric Grimbold Guthred
+		Harold Hengist Hereric Hildebrand Hrothgar Ingeld Leofric Offa Osric Penda
+		Radulf Saewulf Sigeberht Swidhelm Theodoric Thorkell Unwin Wulfhere Wystan Ywain
+		Aldhelm Anselm Aelfric Beorn Cyneheard Dunstan Ealdred Eadwig Eadwulf Ecgberht
+		Edmund Egbert Eomer Farman Geat Godwin Hama Harold Hereward Hrothulf
+		Ingvar Leofwine Morcar Oswald Osbert Penda Ricberht Sigeberht Swidhelm Theoden
+		Ulf Wulfric Ymir Alhred Aethelred Beornred Cyneric Deormod Eadberht Eadmund
+		Eadweard Ecgwulf Edric Egil Freawine Godhelm Heremod Hrothmund Ingwe Leodwald
+		Oeric Osweald Ricfrith Sighere Sweyn Theobald Uhtred Wulfgar Wyrhta Yngvi
+	}
+	female_names = {
+		Aelfgifu Aethelthryth Boudica Ceolwina Cynewise Dunflaed Eadflaed Eadgyth Ealhswith Freawaru
+		Godgifu Hild Hrothwyn Idonea Leofflaed Mildryth Osburh Ricburg Saewara Wulfrun
+		Aethelflaed Beorhtflaed Cynehild Eadburg Eadswith Ealflaed Freawine Godhild Hilda Hrodwyn
+		Ingifrith Leofgifu Modryth Osgyth Saegyth Thyra Wulfgifu Aelfthryth Beornwyn Cynewaru Eadgifu
+	}
 }
 
 west_mongol = {
@@ -988,7 +1070,7 @@ west_mongol = {
 		dynasty_names = {
 			"Ulagan Temur" "Bora Chinua" "Suren Unegen" "Qara Erdene" 
 			"Delger Cheren" Chaganchar Qorchigene Burilgidai Qadantai 
-			Temurcher Tegus-chi Berkegene Yekechar Batu-tu
+			Temurcher "Tegus-chi" Berkegene Yekechar "Batu-tu"
 		}
 		male_names = {
 			"Abbas" "Agish" "Alchagir" "Arslanay" "Baki" "Baltichak" "Batir" "Din Ahmad" "Din Muhammad" "Din Sufi" 
@@ -1189,8 +1271,8 @@ pagan_slavic = {
 		"Dragutinovic" "Vojislavljevic" "Sokolovic" "Ilic" "Vukanovic" "Mrnjavcevic" "Lazarevic" 
 		"Brakovic" "Balsic" "Vukovic" "Branovic" "Trpimirovic" "Mihaljevic" "Subic" "Hrvatinic" 
 		"Kosaca" "Vukcic" "Vukasin" "Dukasin" "Babonic" "Frankopan" "Kacic" "Draskovic" 
-		"Bebek" "Svetoslavic" "Kreimirovic" "Domagojevic" "Fetetic" "Gorjanski"
-		"Svacic" "Kobilic" "Lackovic" "ubic"
+		"Bebek" "Svetoslavic" "Domagojevic" "Gorjanski"
+		"Svacic" "Kobilic" "Lackovic"
 		"Berislavic" "Nepilic" "Jalacic" "Zrinski" "Garaj" "Eltz" "Kaboga" 
 		"Crnkovic" "Cerva" "Rubido" Bogenski Breski Celjski Crnomaljski Cresnjevec Hadik Izanski Jablaniski Koroski Lenkovic
 		Mocnik Pustalski Ptujski Rusbachi Strmski Savinjski Turjaski Visnjegorski Vovbrzani
@@ -1232,6 +1314,22 @@ suebian = {
 	}
 	thornen = { #southern/mountain
 		
+	}
+	male_names = {
+		Ariovistus Arbogastus Beroaldus Catualda Chariomerus Dagalaiphus Deldo 
+		Desidarius Ebrimundus Faramundus Gaizka Garibaldus Hadubrandus Hilperikus 
+		Ingimundus Irminulfus Jovillus Kailo Lethucius Marcomirus Nibelungus Odoacer 
+		Pharamond Quillum Randulfus Sigibertus Theudebertus Ulmerichus Vandalarius
+		Wigis Walia Xilbicus Yvetta Zuaras
+	}
+	female_names = {
+		Arilda Berta Carvila Desideria Eborila Fara Galia Hovina Idela Jovitta 
+		Kailia Letha Malvina Nada Oda Parca Quenna Rada Selga Thora Uda Valda 
+		Wila Xina Yveza Zuda
+	}
+	dynasty_names = {
+		Aeldeberga Basena Carbatina Drustoberta Egila Fridaris Gambrinna Hovila 
+		Irminsa Lippa Marbodina Nanto Sculda Trebeta Ubo Vachera Wulfila Xilvisa Yurina Zaba
 	}
 
 }
@@ -1313,7 +1411,53 @@ illyrian = {
 	}
 	hebren = { #nekrot
 		primary = NEK
-
+		male_names = {
+			Abner Adriel Baruch Caleb Dan Eli Ephraim Gideon Hiram Isaac 
+			Jair Jonah Judah Levi Malachi Micah Nathan Obed Peleg Qedem 
+			Reuel Simeon Tobiah Uriel Zachary Asher Benjamin Cain Daniel 
+			Ephron Gershon Haggai Ishmael Joel Josiah Kain Lazar Moses 
+			Nehemiah Oren Pinchas Raham Simeon Tobias Uri Yair Zadok
+		}
+		female_names = {
+			Abigail Adina Batya Carmela Dalia Eden Esther Gavriela 
+			Hadassah Ira Jemima Kezia Lilah Magdalene Naomi Orpah 
+			Peninah Rachel Samara Talia
+		}
+		dynasty_names = {
+			Azmon Cohen Dagan Ezra Falk Golan Harel Itamar Jacob Katz 
+			Levi Mordecai Nadav Oren Perez Rabin Shimon Tobiah Uziel 
+			Vaksman Yehoshua Zimri
+		}
+	}
+	male_names = {
+		Andriakos Barcaeus Cepheus Dardanos Epirios Fergon Hadranus 
+		Illyrios Jyrgos Kavdar Lysandros Meon Nikandros Orkon Palaion 
+		Qartos Rysandros Sarpidon Telamon Uldar Vardamon Xandros Ysion 
+		Zetor Akamon Bakaros Charion Delios Eurytos Fyndar Gorgon 
+		Heliodon Ikaros Kyrios Lykaon Mygdar Nyxos Orestes Pheron 
+		Qallion Rendakos Selon Tyndar Uldon Valdor Xenios Yrmon 
+		Zakaron Astrion Bydon Cyron Dyndon Ekion 
+		Fylakos Gylakon Hakor Ilyron Jyrdon Kallon Lykos Myrion
+		Neron Orkos
+		Pharamond Quillum Randulfus Sigibertus 
+		Theudebertus Ulmerichus Vandalarius
+		Wigis Walia Xilbicus Yvetta Zuaras
+	}
+	female_names = {
+		Alektra Belisa Celyna Damaris Eudora Feryna Gavrina Helara
+		Ilyra Jymina Kalyra Lyssia Myrina Nysia Orina Pyrrha
+		Qyrena Rhyssa Syrene Tyrene Ulyssa Valeria Xyra Yalina
+	}
+	dynasty_names = {
+		Andromache Barcidas Cyparissos Dareion Eurydike Fronto Gorgon Hadrianes Ilyrius
+		Jyrmidon Kallipos Lysandrides Mestor Nyxios Orestias Pelagon Qartes Rhexenor Sarpidae
+		Telamonides Uldarion Valdoros Xerxes Ymiden Zoryadis
+		Aleion Belisios Ceryces Dareios Eurytion Fyndarios Gylippos Hyraxes Ilyrianis Jyrmachus
+		Kalonikos Lysandros Meonides Nymidos Orestion Pelagos Qandaros Rhesidion Sarponikos
+		Thalassos Uldiones Valandos Xandrios Ysionis Zarydis
+		Antigonid Belisidon Cypresses Dareius Euryton Froneides Gylaxes Hyrmon Ilyssos
+		Jyrmos Kallirrhoe Lysimachos Mestiones Nyktelios Orestios Pelaisos Qartides Rhexandros
+		Sarpedones Thalassides Uldiones Valeros Xerxidion Ystion Zalaisos
 	}
 }
 
@@ -1563,5 +1707,32 @@ pagan_arabic = {
 	}
 	omani = {
 		#oman
+	}	
+	dynasty_names = {
+		Quraysh Hashim Umayya Makhzum Zuhra Taym Adi
+		Abd-Shams Najjar Abd-Manaf Sa'd Hudhayl
+		Thaqif Kinanah Khuzaimah Mudlij Asad Aws
+		Khazraj Ghatafan Sulaym Hawazin Amir Fazara
+		Dhubyan Azd Ghassan Lakhm Khuza'a Bakr
+		Taghlib Numayr Mustaliq Kilab Jumah Sahm
+		Muharib Mura Thamud Qays Yam Abs Dawsi
+		Hanifa Uqayl Ka'b Nabit Said Harith
+		Haritha Yashkur Quzah Balharith
+	}
+	male_names = {
+		Abd-Allah Abu-Bakr Umar Usama Amr Khalid Uthman Bilal Zayd Thabit
+		Malik Yahya Qasim Zuhair Ilyas Badr Sufyan Harith Dhul-Kifl Samir
+		Rabia Haytham Zubayr Hisham Yasir Abbas Hudhayfah Aws Muadh Ghalib
+		Jabir Mundhir Rayhan Jundub Ikrimah Jafar Rabi Muawiyah Atiq Hudhaifa Sa'd
+		Tulayb Shurayh Qatadah Salman Basim Tamim Al-Harith Zaid Fadl Bashir
+		Farooq Imran Dhiya Munir Suhayl Yazeed Ishaq Aziz Tariq Hamzah Sahl
+		Mus'ab Nizar Khuzaima Sabur Ka'b Rifa'a Shaddad Thawban Mundhir Yusha
+		Nu'man Jarir Qusay Shuaib Tha'laba Sa'eed Humaid Sa'ad Abdur-Rahman
+		Dawud Rashid Mufaddal Nawfal Mujahid Awn Baqi Sadid
+	}
+	female_names = {
+		Fatima Khadija Aisha Hafsah Zainab Umamah Safiyya Umm-Kulthum Ruqayya Suad
+		Barrah Halah Hind Maymunah Umm-Salama Layla Asma Raytah Salma Atika
+		Nusayba Sakinah Saffiyah Habibah Umm-Hani
 	}
 }

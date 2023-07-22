@@ -512,9 +512,11 @@ country_event = {
 				 }
 			}
 		}
-		142 = {
-			cede_province = emperor
-			add_core = emperor
+		142 = { 
+			cede_province = CEP 
+			hidden_effect = {
+				add_core = CEP
+			}
 		}
 		add_opinion = {
 			who = emperor
