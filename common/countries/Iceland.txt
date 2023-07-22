@@ -54,7 +54,6 @@ monarch_names = {
 	"Snorri #0" = 1
 	"Kári #0" = 1
 	"Hjalmar #0" = 1
-
 	"Freya #0" = -1
 	"Ingridr #0" = -1
 	"Rúna #0" = -1
@@ -64,25 +63,27 @@ monarch_names = {
 leader_names = { 
 	Ragnar Thor Odinn Freyr Bjorn Ivar Harald Erik Leif Gunnar
 	Sigurd Haldor Vidar Njord Einar Halfdan Frode Rolf Egil Sven
-	Ingvar Olaf Hjalmar Hakon Ulf Geir Valdemar Knut Asbjorn Torstein Hrafn Oddvar
-	Magnus Kjell Gudmund Eirikur Gorm Bjarte Tryggve Bjarne Erlend Ingolf
+	Ingvar Olaf Hjalmar Hakon Ulf Geir Valdemar Knut Asbjorn Torstein
+	Hrafn Oddvar Magnus Kjell Gudmund Eirikur Gorm Bjarte Tryggve Bjarne
+	Erlend Ingolf 
 }
 ship_names = { 
-	"Bjorn Ironside" "Freydis Eiriksson" "Gunnar Hámundarson" "Helgi Haddingjarl" "Ingvar the Far-Travelled" "Leif the Lucky" "Olaf Tryggvason"
-	"Ragnald the Mighty" "Sigurd the Volsung" "Sweyn Forkbeard" "Thorkell the Tall" "Valhalla" "Vidar the Silent" "Harald Bluetooth" "Gudrid Thorbjarnardóttir"
-	"Lagertha" "Rollo the Walker" "Knut the Great" "Yngvi-Freyr" "Beowulf" "Geirmund Heljarskinn" "Starkad the Old" "Egil Skallagrimsson" "Víga-Hrappr" "Hogni the White"
-	"Hrafnkel Frey's Friend" "Hjalmar the Viking" "Skagul" "Toste the Proud" "Jormungandr" "Njord the Seafarer" "Huginn and Muninn" "Balder the Beautiful" "Freyr the Fair"
-	"Heimdallr the Watcher" "Njord the Wealthy" "Odin the Allfather" "Thor the Thunderer" "Tyr the Brave"
-	"Astrild" "Vindfamne" "Dellingr" "Sjofn" "Dagr" "Skathi" "Sindri" "Sleipnir" "Slepnir" "Sigyn" "Skogul" "Sol" "Sigrun" "Snotra" "Syn" "Sigrid" "Hlin" "Bragi" "Eir"
-	"Eirikr" "Fjorgyn" "Frigg" "Fjolsvinn" "Idunn" "Jotunheim" "Lofn" "Frøya" "Gerd" "Gudrun" "Hlif" "Hnoss" "Gjallarhorn" "Gnipahellir" "Hvergelmir" "Jotunheimr" "Surt"
-	"Urðarbrunnr" "Yggdrasil" "Mjolnir" "Draupnir" "Gungnir" "Gullinbursti" "Skidbladnir"
-	"Hoddmimir's Holt" "Naglfar" "Dromi" "Logi" "Ratatoskr" "Andhrimnir" "Audhumla" "Fenrir" "Geri and Freki" "Hati Hati" "Huginn and Muninn"
-	"Mardoll" "Nidhogg" "Ratatoskr" "Hrimfaxi" "Skinfaxi" "Sleipnir" "Alfheim" "Muspelheim" "Midgard" "Vanaheimr" "Niflheimr" "Helheim" "Jotunheimr"
-	"Álfheimr" "Nidavellir" "Svartalfheim" "Asgard" "Utgard" "Yggdrasil"
+	"Bjorn Ironside" "Freydis Eiriksson" "Gunnar Hámundarson" "Helgi Haddingjarl" "Ingvar the Far-Travelled" "Leif the Lucky" "Olaf Tryggvason" "Ragnald the Mighty" "Sigurd the Volsung" "Sweyn Forkbeard"
+	"Thorkell the Tall" "Valhalla" "Vidar the Silent" "Harald Bluetooth" "Gudrid Thorbjarnardóttir" "Lagertha" "Rollo the Walker" "Knut the Great" "Yngvi-Freyr" "Beowulf"
+	"Geirmund Heljarskinn" "Starkad the Old" "Egil Skallagrimsson" "Víga-Hrappr" "Hogni the White" "Hrafnkel Frey's Friend" "Hjalmar the Viking" "Skagul" "Toste the Proud" "Jormungandr"
+	"Njord the Seafarer" "Huginn and Muninn" "Balder the Beautiful" "Freyr the Fair" "Heimdallr the Watcher" "Njord the Wealthy" "Odin the Allfather" "Thor the Thunderer" "Tyr the Brave" "Astrild"
+	"Vindfamne" "Dellingr" "Sjofn" "Dagr" "Skathi" "Sindri" "Sleipnir" "Slepnir" "Sigyn" "Skogul"
+	"Sol" "Sigrun" "Snotra" "Syn" "Sigrid" "Hlin" "Bragi" "Eir" "Eirikr" "Fjorgyn"
+	"Frigg" "Fjolsvinn" "Idunn" "Jotunheim" "Lofn" "Frøya" "Gerd" "Gudrun" "Hlif" "Hnoss"
+	"Gjallarhorn" "Gnipahellir" "Hvergelmir" "Jotunheimr" "Surt" "Urðarbrunnr" "Yggdrasil" "Mjolnir" "Draupnir" "Gungnir"
+	"Gullinbursti" "Skidbladnir" "Hoddmimir's Holt" "Naglfar" "Dromi" "Logi" "Ratatoskr" "Andhrimnir" "Audhumla" "Fenrir"
+	"Geri and Freki" "Hati Hati" "Huginn and Muninn" "Mardoll" "Nidhogg" "Ratatoskr" "Hrimfaxi" "Skinfaxi" "Sleipnir" "Alfheim"
+	"Muspelheim" "Midgard" "Vanaheimr" "Niflheimr" "Helheim" "Jotunheimr" "Álfheimr" "Nidavellir" "Svartalfheim" "Asgard"
+	"Utgard" "Yggdrasil" 
 }
 army_names = { 
-	"Armé av $PROVINCE$"
+	"Armé av $PROVINCE$" 
 }
 fleet_names = { 
-	"Marin av $PROVINCE$"
+	"Marin av $PROVINCE$" 
 }
