@@ -247,6 +247,7 @@ germanic_group = {
 		personal_deity = yes
 		
 		heretic = { OLD_NORSE }	
+		
 	}
 	
 	germanic_religion = { #tradiskal
@@ -269,6 +270,7 @@ germanic_group = {
 		
 		heretic = { PROMETHEANS }
 	
+		fervor = yes
 	}
 	
 	south_germanic_religion = { #suthron
@@ -291,6 +293,7 @@ germanic_group = {
 		
 		heretic = { PROMETHEANS }
 	
+		fervor = yes
 	}
 
 	harmonized_modifier = harmonized_germanic_group
