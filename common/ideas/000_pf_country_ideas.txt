@@ -291,7 +291,7 @@ SXY_ideas = {
 		tag = SXY
 	}
 	free = yes
-	#Defence against the Northman
+	#Defense against the Northman
 	SXY_ideas_1 = {
 		garrison_size = 0.33
 	}
@@ -321,6 +321,855 @@ SXY_ideas = {
 	SXY_ideas_7 = {
 		regiment_recruit_speed = -0.2
 		land_forcelimit_modifier = 0.15
+	}
+}
+
+KSB_ideas = {
+	start = {
+		defensiveness = 0.20
+		tolerance_own = 1
+	}
+	
+	bonus = {
+		diplomatic_reputation = 2
+	}	
+
+	trigger = {
+		tag = KSB
+	}
+	free = yes
+	
+	#Stronghold Spirit
+	KSB_ideas_1 = {
+		fort_maintenance_modifier = -0.15
+		garrison_size = 0.2
+	}
+
+	#Internal Peace
+	KSB_ideas_2 = {
+		stability_cost_modifier = -0.2
+	}
+
+	#Faithful Diplomacy
+	KSB_ideas_3 = {
+		relation_with_same_religion = 20
+		diplomats = 1
+	}
+
+	#Religious Unity
+	KSB_ideas_4 = {
+		religious_unity = 0.20
+	}
+
+	#Political Stability
+	KSB_ideas_5 = {
+		yearly_corruption = -0.10
+		advisor_cost = -0.10
+	}
+
+	#Advanced Fortifications
+	KSB_ideas_6 = {
+		hostile_attrition = 1
+	}
+
+	#Unified Belief
+	KSB_ideas_7 = {
+		tolerance_heathen = 1
+		global_missionary_strength = 0.02
+	}
+}
+
+NRD_ideas = {
+	start = {
+		naval_morale = 0.10
+		land_forcelimit_modifier = 0.2
+	}
+	
+	bonus = {
+		global_tax_modifier = 0.10
+	}	
+
+	trigger = {
+		tag = NRD
+	}
+	free = yes
+	
+	#Maritime Supremacy
+	NRD_ideas_1 = {
+		ship_durability = 0.10
+		leader_naval_manuever = 1
+	}
+
+	#Shocking Force
+	NRD_ideas_2 = {
+		leader_land_shock = 1
+	}
+
+	#Stable Economy
+	NRD_ideas_3 = {
+		inflation_reduction = 0.10
+	}
+
+	#Professional Army
+	NRD_ideas_4 = {
+		leader_land_manuever = 1
+		discipline = 0.05
+	}
+
+	#Mercantile Strategy
+	NRD_ideas_5 = {
+		global_trade_goods_size_modifier = 0.10
+		merchants = 1
+	}
+
+	#Grand Fleet
+	NRD_ideas_6 = {
+		naval_forcelimit_modifier = 0.20
+	}
+
+	#Superior Drill
+	NRD_ideas_7 = {
+		drill_gain_modifier = 0.25
+	}
+}
+
+LAG_ideas = {
+	start = {
+		global_trade_power = 0.20
+		production_efficiency = 0.10
+	}
+	
+	bonus = {
+		inflation_reduction = 0.10
+	}	
+
+	trigger = {
+		tag = LAG
+	}
+	free = yes
+	
+	#Trade Expansion
+	LAG_ideas_1 = {
+		merchants = 1
+		trade_efficiency = 0.10
+	}
+
+	#Economic Prudence
+	LAG_ideas_2 = {
+		interest = -1
+	}
+
+	#Urban Development
+	LAG_ideas_3 = {
+		build_cost = -0.10
+		development_cost = -0.10
+	}
+
+	#Competent Bureaucracy
+	LAG_ideas_4 = {
+		advisor_cost = -0.2
+	}
+
+	#Sturdy Defenses
+	LAG_ideas_5 = {
+		defensiveness = 0.20
+		land_morale = 0.10
+	}
+
+	#Naval Tradition
+	LAG_ideas_6 = {
+		naval_morale = 0.10
+		naval_maintenance_modifier = -0.10
+	}
+
+	#Skilled Workforce
+	LAG_ideas_7 = {
+		global_trade_goods_size_modifier = 0.10
+	}
+}
+
+SUE_ideas = {
+	start = {
+		naval_morale = 0.20
+		naval_forcelimit_modifier = 0.25
+	}
+	
+	bonus = {
+		global_sailors_modifier = 0.20
+	}	
+
+	trigger = {
+		tag = SUE
+	}
+	free = yes
+	
+	#Maritime Pioneers
+	SUE_ideas_1 = {
+		naval_tradition_from_trade = 0.5
+		trade_efficiency = 0.1
+	}
+
+	#Colonial Ventures
+	SUE_ideas_2 = {
+		global_colonial_growth = 20
+	}
+
+	#Collaborting with our Colonies
+	SUE_ideas_3 = {
+		auto_explore_adjacent_to_colony = yes
+		colonists = 1
+	}
+
+	#Sailor Conservation
+	SUE_ideas_4 = {
+		sailors_recovery_speed = 0.15
+		naval_maintenance_modifier = -0.10
+	}
+
+	#Trade Expansion
+	SUE_ideas_5 = {
+		trade_steering = 0.25
+		light_ship_cost = -0.2
+	}
+
+	#Navigational Innovations
+	SUE_ideas_6 = {
+		leader_naval_manuever = 1
+		free_navy_leader_pool = 2
+	}
+
+	#Overseas Administration
+	SUE_ideas_7 = {
+		trade_company_investment_cost = -0.25
+	}
+}
+
+ASG_ideas = {
+	start = {
+		cavalry_power = 0.20
+		prestige = 1
+	}
+	
+	bonus = {
+		cavalry_shock = 0.5
+	}	
+
+	trigger = {
+		tag = ASG
+	}
+	free = yes
+	
+	#Mongol Legacy
+	ASG_ideas_1 = {
+		leader_land_shock = 1
+	}
+
+	#Pride of the Horde
+	ASG_ideas_2 = {
+		land_morale = 0.10
+		prestige_from_land = 1
+	}
+
+	#Steppe Diplomacy
+	ASG_ideas_3 = {
+		diplomats = 1
+		diplomatic_upkeep = 1
+	}
+
+	#Horde Logistics
+	ASG_ideas_4 = {
+		reinforce_speed = 0.15
+		land_attrition = -0.10
+	}
+
+	#Riders of the Steppe
+	ASG_ideas_5 = {
+		diplomatic_reputation = 2
+	}
+
+	#Khanate Administration
+	ASG_ideas_6 = {
+		core_creation = -0.10
+		autonomy_change_time = -0.10
+	}
+
+	#Nomadic Traditions
+	ASG_ideas_7 = {
+		years_of_nationalism = -10
+	}
+}
+
+ILY_ideas = {
+	start = {
+		galley_power = 0.20
+		global_trade_power = 0.10
+	}
+	
+	bonus = {
+		defensiveness = 0.20
+	}	
+
+	trigger = {
+		tag = ILY
+	}
+	free = yes
+	
+	#Mediterranean Dominance
+	ILY_ideas_1 = {
+		galley_cost = -0.15
+		naval_forcelimit_modifier = 0.20
+	}
+
+	#Trade Expansion
+	ILY_ideas_2 = {
+		trade_efficiency = 0.10
+		merchants = 1
+	}
+
+	#Defensive Preparations
+	ILY_ideas_3 = {
+		land_morale = 0.10
+		recover_army_morale_speed = 0.15
+	}
+
+	#Naval Fortifications
+	ILY_ideas_4 = {
+		build_cost = -0.1
+	}
+
+	#Mercantile Legislation
+	ILY_ideas_5 = {
+		global_trade_goods_size_modifier = 0.10
+	}
+
+	#Naval Innovation
+	ILY_ideas_6 = {
+		leader_naval_fire = 1
+		naval_maintenance_modifier = -0.10
+	}
+
+	#Stalwart Defenders
+	ILY_ideas_7 = {
+		fire_damage_received = -0.1
+	}
+}
+
+KTM_ideas = {
+	start = {
+		defensiveness = 0.33
+	}
+	
+	bonus = {
+		diplomatic_reputation = 1
+	}	
+
+	trigger = {
+		tag = KTM
+	}
+	free = yes
+	
+	#Mountain Strongholds
+	KTM_ideas_1 = {
+		fort_maintenance_modifier = -0.25
+	}
+
+	#Stable Administration
+	KTM_ideas_2 = {
+		yearly_absolutism = 0.50
+		max_absolutism = 10
+	}
+
+	#Diplomatic Corps
+	KTM_ideas_3 = {
+		diplomats = 1
+	}
+
+	#Defensive Innovations
+	KTM_ideas_4 = {
+		recover_army_morale_speed = 0.15
+	}
+
+	#Mountain Men
+	KTM_ideas_5 = {
+		infantry_power = 0.10
+		land_attrition = -0.10
+	}
+
+	#Economic Stability
+	KTM_ideas_6 = {
+		global_tax_modifier = 0.15
+	}
+
+	#Unified Nation
+	KTM_ideas_7 = {
+		global_unrest = -2
+	}
+}
+
+ITY_ideas = {
+	start = {
+		tolerance_own = 2
+		prestige = 1
+	}
+	
+	bonus = {
+		imperial_authority = 0.10
+	}	
+
+	trigger = {
+		tag = ITY
+	}
+	free = yes
+	
+	#Spiritual Guidance
+	ITY_ideas_1 = {
+		global_missionary_strength = 0.02
+	}
+
+	#Imperial Ambitions
+	ITY_ideas_2 = {
+		diplomatic_annexation_cost = -0.10
+		unjustified_demands = -0.20
+	}
+
+	#Prestigious Lineage
+	ITY_ideas_3 = {
+		legitimacy = 1
+		heir_chance = 0.50
+	}
+
+	#Religious Unity
+	ITY_ideas_4 = {
+		religious_unity = 0.20
+	}
+
+	#Enforced Hierarchy
+	ITY_ideas_5 = {
+		global_autonomy = -0.1
+	}
+
+	#Divine Diplomacy
+	ITY_ideas_6 = {
+		diplomatic_reputation = 2
+		diplomats = 1
+	}
+
+	#Imperial Consolidation
+	ITY_ideas_7 = {
+		province_warscore_cost = -0.10
+	}
+}
+
+
+#Europunic Minors
+ORA_ideas = {
+	start = {
+		global_trade_power = 0.10
+		prestige = 1
+	}
+	
+	bonus = {
+		trade_efficiency = 0.10
+	}	
+
+	trigger = {
+		tag = ORA
+	}
+	free = yes
+	
+	#Economic Foundations
+	ORA_ideas_1 = {
+		global_tax_modifier = 0.10
+	}
+
+	#Prestige Seekers
+	ORA_ideas_2 = {
+		prestige_decay = -0.01
+	}
+
+	#Unified Administration
+	ORA_ideas_3 = {
+		global_autonomy = -0.05
+	}
+
+	#Military Traditions
+	ORA_ideas_4 = {
+		mil_tech_cost_modifier = -0.10
+	}
+
+	#Diplomatic Envoys
+	ORA_ideas_5 = {
+		diplomatic_reputation = 1
+	}
+
+	#Trade Networks
+	ORA_ideas_6 = {
+		global_trade_goods_size_modifier = 0.10
+	}
+
+	#National Unity
+	ORA_ideas_7 = {
+		global_unrest = -1
+	}
+}
+
+TRV_ideas = {
+	start = {
+		global_trade_power = 0.10
+		diplomatic_upkeep = 1
+	}
+	
+	bonus = {
+		global_tax_modifier = 0.15
+	}	
+
+	trigger = {
+		tag = TRV
+	}
+	free = yes
+	
+	#River Trade
+	TRV_ideas_1 = {
+		merchants = 1
+	}
+
+	#Prestige of the Tribe
+	TRV_ideas_2 = {
+		prestige = 1
+	}
+
+	#Tribal Unity
+	TRV_ideas_3 = {
+		global_unrest = -1
+	}
+
+	#Warrior Tradition
+	TRV_ideas_4 = {
+		land_morale = 0.10
+	}
+
+	#Forest Scouts
+	TRV_ideas_5 = {
+		cavalry_power = 0.1
+		cavalry_cost = -0.1
+	}
+
+	#River Monopolies
+	TRV_ideas_6 = {
+		trade_efficiency = 0.10
+	}
+
+	#River Defense
+	TRV_ideas_7 = {
+		defensiveness = 0.2
+	}
+}
+
+GDA_ideas = {
+	start = {
+		production_efficiency = 0.10
+		prestige = 1
+	}
+	
+	bonus = {
+		infantry_power = 0.1
+	}	
+
+	trigger = {
+		tag = GDA
+	}
+	free = yes
+	
+	#Mineral Wealth
+	GDA_ideas_1 = {
+		global_tax_modifier = 0.15
+	}
+
+	#Prestigious History
+	GDA_ideas_2 = {
+		prestige_decay = -0.01
+	}
+
+	#Mountain Forts
+	GDA_ideas_3 = {
+		defensiveness = 0.15
+	}
+
+	#Mountain Warriors
+	GDA_ideas_4 = {
+		land_forcelimit_modifier = 0.10
+	}
+
+	#Mountain Guides
+	GDA_ideas_5 = {
+		leader_land_manuever = 1
+	}
+
+	#Stone Quarries
+	GDA_ideas_6 = {
+		build_cost = -0.10
+	}
+
+	#Mountain Unity
+	GDA_ideas_7 = {
+		global_unrest = -1
+	}
+}
+
+VDA_ideas = {
+	start = {
+		production_efficiency = 0.1
+		free_land_leader_pool = 1	
+	}
+	
+	bonus = {
+		land_attrition = -0.10
+	}	
+
+	trigger = {
+		tag = VDA
+	}
+	free = yes
+	
+	#Land of Abundance
+	VDA_ideas_1 = {
+		global_trade_goods_size_modifier = 0.10
+	}
+
+	#Pride in Unity
+	VDA_ideas_2 = {
+		prestige_decay = -0.01
+	}
+
+	#Sturdy Defenses
+	VDA_ideas_3 = {
+		fort_maintenance_modifier = -0.15
+	}
+
+	#Homeland Protectors
+	VDA_ideas_4 = {
+		land_morale = 0.10
+	}
+
+	#Well-Connected Envoys
+	VDA_ideas_5 = {
+		diplomatic_upkeep = 1
+	}
+
+	#Efficient Taxation
+	VDA_ideas_6 = {
+		inflation_reduction = 0.10
+	}
+
+	#Strong Communities
+	VDA_ideas_7 = {
+		tolerance_own = 2
+	}
+}
+
+OVA_ideas = {
+	start = {
+		global_trade_power = 0.10
+		diplomatic_reputation = 1
+	}
+	
+	bonus = {
+		manpower_recovery_speed = 0.20
+	}	
+
+	trigger = {
+		tag = OVA
+	}
+	free = yes
+	
+	#Land-based Trade
+	OVA_ideas_1 = {
+		merchants = 1
+	}
+
+	#Naval Pride
+	OVA_ideas_2 = {
+		prestige_decay = -0.01
+	}
+
+	#Hill Fortifications
+	OVA_ideas_3 = {
+		defensiveness = 0.15
+	}
+
+	#Maritime Tradition
+	OVA_ideas_4 = {
+		naval_morale = 0.10
+	}
+
+	#Overseas Diplomacy
+	OVA_ideas_5 = {
+		diplomatic_upkeep = 1
+	}
+
+	#Sea Bounties
+	OVA_ideas_6 = {
+		global_tax_modifier = 0.10
+	}
+
+	#Harbor Communities
+	OVA_ideas_7 = {
+		build_cost = -0.1
+	}
+}
+
+TTA_ideas = {
+	start = {
+		global_manpower_modifier = 0.10
+		infantry_power = 0.1
+	}
+	
+	bonus = {
+		infantry_cost = -0.15
+	}	
+
+	trigger = {
+		tag = TTA
+	}
+	free = yes
+	
+	#Land's Bounty
+	TTA_ideas_1 = {
+		global_tax_modifier = 0.10
+	}
+
+	#Pride of the Army
+	TTA_ideas_2 = {
+		prestige_decay = -0.01
+	}
+
+	#Stronghold Masters
+	TTA_ideas_3 = {
+		defensiveness = 0.2
+	}
+
+	#Gritty Soldiers
+	TTA_ideas_4 = {
+		mil_tech_cost_modifier = -0.10
+	}
+
+	#Diplomacy of Might
+	TTA_ideas_5 = {
+		diplomatic_reputation = 1
+	}
+
+	#Manpower Reserves
+	TTA_ideas_6 = {
+		land_forcelimit_modifier = 0.10
+	}
+
+	#Internal Stability
+	TTA_ideas_7 = {
+		global_unrest = -1
+	}
+}
+
+CVA_ideas = {
+	start = {
+		naval_maintenance_modifier = -0.10
+		naval_tradition_from_trade = 0.5
+	}
+	
+	bonus = {
+		naval_morale = 0.15
+	}	
+
+	trigger = {
+		tag = CVA
+	}
+	free = yes
+	
+	#Seafaring Tradition
+	CVA_ideas_1 = {
+		navy_tradition = 1
+	}
+
+	#Resilient Economy
+	CVA_ideas_2 = {
+		inflation_reduction = 0.10
+	}
+
+	#Coastal Fortifications
+	CVA_ideas_3 = {
+		build_cost = -0.15
+	}
+
+	#Maritime Commerce
+	CVA_ideas_4 = {
+		global_trade_power = 0.10
+		merchants = 1
+	}
+
+	#Diplomatic Corps
+	CVA_ideas_5 = {
+		diplomatic_upkeep = 1
+	}
+
+	#Internal Unity
+	CVA_ideas_6 = {
+		stability_cost_modifier = -0.15
+	}
+
+	#Professional Administrators
+	CVA_ideas_7 = {
+		advisor_cost = -0.2
+	}
+}
+BCA_ideas = {
+	start = {
+		global_trade_goods_size_modifier = 0.10
+		naval_forcelimit_modifier = 0.2
+	}
+	
+	bonus = {
+		advisor_pool = 1
+	}	
+
+	trigger = {
+		tag = BCA
+	}
+	free = yes
+	
+	#Trade Hubs
+	BCA_ideas_1 = {
+		global_trade_power = 0.15
+		center_of_trade_upgrade_cost = -0.25
+	}
+
+	#Legacy of the Ancients
+	BCA_ideas_2 = {
+		prestige_decay = -0.01
+	}
+
+	#Resilient Infrastructure
+	BCA_ideas_3 = {
+		build_cost = -0.10
+		build_time = -0.1
+	}
+
+	#Garrison Militia
+	BCA_ideas_4 = {
+		land_morale = 0.10
+	}
+
+	#Skilled Negotiators
+	BCA_ideas_5 = {
+		diplomats = 1
+	}
+
+	#Efficient Taxation
+	BCA_ideas_6 = {
+		global_tax_modifier = 0.15
+	}
+
+	#United Provinces
+	BCA_ideas_7 = {
+		global_unrest = -1
 	}
 }
 

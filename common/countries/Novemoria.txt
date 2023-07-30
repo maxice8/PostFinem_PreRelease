@@ -2,7 +2,7 @@ graphical_culture = westerngfx
 color = { 
 	133 205 211 
 }
-monarch_names = { 	
+monarch_names = { 
 	"Alexander #0" = 20
 	"Theodoros #0" = 20
 	"Philippos #0" = 20
@@ -42,7 +42,6 @@ monarch_names = {
 	"Apollo #0" = 1
 	"Alexios #0" = 1
 	"Lykos #0" = 1
-
 	"Athena #0" = -1
 	"Hermione #0" = -1
 	"Helena #0" = -1
@@ -50,18 +49,23 @@ monarch_names = {
 	"Artemis #0" = -1
 }
 leader_names = { 
-	Achilles Adina Alexios Alon Ariadne Artemis Athaliah Avital Calista Cassandra Damaris Daniella Delilah Dorian Eleni Eleazar Eliana Ephraim Evander Galila Galina 
-	Helena Hermione Ioannis Isidore Jocasta Kalliope Leda Lysander Magdalene Marcella Melina Nereus Neomi Ophira Pandora Persephone Phoebe Sapphira 
-	Selene Seraphina Simon Thalia Theodora Xander Yael Zephyr Zina Zosimos
+	Achilles Adina Alexios Alon Ariadne Artemis Athaliah Avital Calista Cassandra
+	Damaris Daniella Delilah Dorian Eleni Eleazar Eliana Ephraim Evander Galila
+	Galina Helena Hermione Ioannis Isidore Jocasta Kalliope Leda Lysander Magdalene
+	Marcella Melina Nereus Neomi Ophira Pandora Persephone Phoebe Sapphira Selene
+	Seraphina Simon Thalia Theodora Xander Yael Zephyr Zina Zosimos 
 }
 ship_names = { 
-	Eshkol Anthos Amnon Achaios Delphine Doron Eran Galatea Hadas Iason Ithamar Jael Kallias Lilah Makeda Maia Mordechai Nike Phoebus Rahel Selene Seraphim Talia Xenia 
-	Yael Zephyr Ayalon Kassandra Darius Ariela Damara Eleazar Helena Hera Eitan Eliora Evander Galia Isadora Levi Maris Mordecai Neria
-	Ophira Penelope Selene Solomona Thalia Tziona Yosef Zara
+	Eshkol Anthos Amnon Achaios Delphine Doron Eran Galatea Hadas Iason
+	Ithamar Jael Kallias Lilah Makeda Maia Mordechai Nike Phoebus Rahel
+	Selene Seraphim Talia Xenia Yael Zephyr Ayalon Kassandra Darius Ariela
+	Damara Eleazar Helena Hera Eitan Eliora Evander Galia Isadora Levi
+	Maris Mordecai Neria Ophira Penelope Selene Solomona Thalia Tziona Yosef
+	Zara 
 }
 fleet_names = { 
-	"Tziya'ah $PROVINCE$"
+	"Tziya'ah $PROVINCE$" 
 }
 army_names = { 
-	"Tzva $PROVINCE$"
+	"Tzva $PROVINCE$" 
 }
