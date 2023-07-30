@@ -5,3 +5,35 @@ technology_group = western
 religion = punic_religion
 capital = 220
 primary_culture = carventian
+
+1444.11.11 = {
+	monarch = {
+		name = "Hannibal"
+		dynasty = "Barcid"
+		adm = 6
+		dip = 6
+		mil = 4
+		birth_date = 1430.11.11
+		death_date = 1445.01.01
+		leader = {
+			name = "Habbibal Barcid"
+			type = admiral
+			fire = 4
+			shock = 4
+			manuever = 4
+			siege = 2
+		}
+	}
+}
+
+1444.11.11 = {
+	heir = {
+		name = "Zepho"
+		dynasty = "Barcid"
+		adm = 4
+		dip = 5
+		mil = 4
+		birth_date = 1430.11.11
+		death_date = 1445.01.01
+	}
+}
