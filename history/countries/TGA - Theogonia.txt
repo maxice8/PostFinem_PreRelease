@@ -6,3 +6,39 @@ religion = punic_religion
 capital = 123
 primary_culture = lucanian
 elector = yes
+
+1444.11.11 = {
+	monarch = {
+		name = "Quintus"
+		dynasty = "Caligulanus"
+		adm = 1
+		dip = 6
+		mil = 0
+		birth_date = 1411.08.24
+		death_date = 1445.01.01
+	}
+}
+
+1444.11.11 = {
+	monarch = {
+		name = "Quintus"
+		dynasty = "Caligulanus"
+		adm = 1
+		dip = 6
+		mil = 0
+		birth_date = 1411.01.05
+		death_date = 1445.01.01
+	}
+}
+
+1444.11.11 = {
+	heir = {
+		name = "Vespasian"
+		dynasty = "Caligulanus"
+		adm = 6
+		dip = 4
+		mil = 4
+		birth_date = 1436.04.03
+		death_date = 1445.01.01
+	}
+}
