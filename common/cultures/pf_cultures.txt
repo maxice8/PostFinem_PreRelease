@@ -532,6 +532,26 @@ caucasian_armenian = {
 	tigran = {
 
 	}
+	dynasty_names = { 
+		Artashesian Vramian Levonian Zaurian Smbatian Arshavirian Spartakian Mihranian Zurabian Artavazdian
+		Mherian Manvelian Rostamian Gevorgian Kvirikeian Mithridatian Varazdatian Zavenian Gagikian Papkenian
+		Roubenian Vazgenian Arsenian Iosebian Hovhannesian Rubikian Mesropian Shotaian Apollonian Bardasian
+		Torosian Zohrabian Shalvaian Grigorian Aramazdian Merabian Ashotian Varlamian Shalikian Bessarionian
+	}
+	male_names = {
+		Ararat Vakhtang Givi Tigran Vahan Zareh Soslan Ghukas Bagrat Taron
+		Tornik Artashes Vram Levon Zaur Smbat Arshavir Spartak Mihran Zurab
+		Artavazd Mher Manvel Rostam Gevorg Kvirike Mithridates Varazdat Zaven Gagik
+		Papken Rouben Vazgen Arsen Ioseb Hovhannes Rubik Mesrop Shota Apollon
+		Bardas Toros Zohrab Shalva Zurab Grigor Aramazd Merab Ashot Varlam
+		Shaliko Spartak Bessarion Teimuraz Tatul Vrej Sargis Paruyr Alik Artaxias
+	}
+	female_names = {
+		Shushan Tamar Siran Anahit Zarina Tinatin Satenik Salome Tamila Armine
+		Araks Ruzanna Zhanna Nino Gohar Sirusho Veriko Narine Arpi Naira
+		Arshaluys Medea Manan Shushanik Tigranuhi Zepur Lusine Nektaria Armenuhi Hasmik
+		Maral Mariam Tsitsino Sveta Ana Tako Salome Siranush Zarui Tsolak
+	}
 
 }
 
@@ -548,7 +568,8 @@ anatolian_greek = {
 	}
 	sophi = {
 
-	}	dynasty_names = {
+	}	
+	dynasty_names = {
 		Kantakouzenos Doukas Komnenos Palaiologos Laskaris Angelos Phokas
 		"Kameniatis" "Chameas" "Demetrianos" "Laloudios" "Stamopatas" "Peloponnesites" "Klados" "Avastaktos" 
 		"Lardotyros" "Kyritzios" "Kolovos" "Podopagouros" "Touvakes" "Peteinakes" "Ooryphas" "Myxares" "Toxias" 
@@ -1201,6 +1222,25 @@ pagan_baltic = {
 	curonian = {
 		
 	}
+	male_names = {
+		Aukstas Kastytis Velnias Perkunas Ausrine Sventovit Vejopatis Gabija Zemyna Patrimpas
+		Mindaugas Gediminas Vytautas Algirdas Kestutis Jogaila Laima Pajauta Ragana Vykintas
+		Milda Saulys Aitis Vytis Egle Zilvinas Zemgus Pikuolis Ugnele Ausra
+		Algimantas Egle Mantas Medeina Vaiva Nerijus Dalia Rasa Vingis Rytis
+		Balys Sruoga Sarunas Jurgis Bronius Skirgaila Tautvilas Gintaras Pranciskus Vytenis
+	}
+	female_names = {
+		Rasa Gabija Ausra Saule Laima Zemyna Dalia Ausrine Medeina Rugile
+		Egle Birute Jurate Ugne Vaida Ruta Grazina Vita Milda Radvile
+		Daina Jurate Lina Austeja Vesta Nemune Ieva Zivile Giedre Lina
+		Ramune Gintare Aiste Egle Neringa Ugn? Veronika Jovita Rasa
+	}
+	dynasty_names = {
+		Perkunasid Ausrineid Velniasid Kastytid Sventovid Zemynid Vejopatid Gabijid Patrimpasid Aukstasid
+		Mindaugid Gediminid Vytautid Algirdid Kestutid Jogailid Laimid Pajautid Raganid Vykintid
+		Mildid Saulid Aitisid Vytid Egleid Zilvinid Zemgusid Pikuolisid Ugneleid Ausraid
+		Algimantid Mantid Medeinid Vaivid Nerijid Daliid Rasid Vingid Rytid Balysid
+	}
 }
 
 germanic_carpathian = {
@@ -1652,7 +1692,7 @@ macedonian_greek = {
 	}
 }
 
-zoroastrian_persiam = {
+zoroastrian_persian = {
 	graphical_culture = muslimgfx
 	parthian = { #EU Rome
 		
@@ -1682,17 +1722,22 @@ zoroastrian_persiam = {
 		
 	}
 	dynasty_names = {
-		Aramid Arid Arkhid Asinid Arsacid Deiocid Menid Pacorid Savacid Vardanid
+		Cyrusian Dariusid Xerxian Artaxerxian Ardashirid Shapuran Kavehid Vishtaspan Bahramian Vistahmian
+		Mithradatid Yazdegardian Ohrmazdian Zalian Rostamian Khusrauid Bardiyan Ardavanian Jamshidian Bagoasian
+		Sogdianusid Spandiyadid Tiridatid Hormizdian Vahramian Vindafarnahan Arjaspian Fariburzian Mihrdatian Datisian
+		Gobryasid Spitamenian Hydarnesian Mardoniusid Tissaphernesid Mazaiosid Megabyzusian Barzanesian Achaemenian Smerdisian
 	}
 	male_names = {
-		Abdagas Ara Aram Aramu Arbaces Ardashir Argishti Ariovast Arkha Armin Arsaces Arsames Artabanus Artabazus Artasyras Artavazd 
-		Artaxias Aryanes Asheri Asina Ashina Astashpa Astyages Atamaita Aturpat Bagayash Bayad Chosroes Cyaxares Cyrus Darius Deioces 
-		Evagoras Fravarti Gaumata Gobryas Gotarzes Haldita Hidarnes Hydarnes Manchihr Mardonius Martiya Mazaces Megabyzus Menua Nambed 
-		Napad Orodes Orxines Osroes Oxydates Pacorus Peucestas Phraates Phraortes Rusa 	Sames Sarduri Sarsamas Savaces Shapur Sinatruces 
-		Tigraios Tigranes Tiridates Umamaita Upadarma Vahbarz Vardanes Vologases Vonones Xerxes
+		Cyrus Darius Xerxes Artaxerxes Ardashir Shapur Kaveh Vishtaspa Bahram Vistahm
+		Mithradates Yazdegard Ohrmazd Zal Rostam Khusrau Bardiya Ardavan Jamshid Bagoas
+		Sogdianus Spandiyad Tiridates Hormizd Vahram Vindafarnah Arjasp Fariburz Mihrdat Datis
+		Gobryas Spitamenes Hydarnes Mardonius Tissaphernes Mazaios Megabyzus Barzanes Achaemenes Smerdis
+		Pantea Pharnabazus Arsames Datames Autophradates Pharnaces Artabanus Masistius Phraates Artaphernes
 	}
 	female_names = {
-		Amestris Amytis Anzaza Artazostre Artystone Atossa Barsine Damaspia Mandane Parmys Parysatis Phaedymia Rinu Stateira Vashti
+		Atossa Artystone Statira Roxana Parysatis Amytis Vashti Artemisia Mandane Azarmidokht
+		Anahita Esther Artembares Arsinoe Zenobia Rhodogune Parinaz Pourandokht Zand Atoosa
+		Hutaosa Shahbanu Banu Anahid Haurvatat Armaiti Goharshad Adeliru Durdana Roxandra
 	}
 }
 
