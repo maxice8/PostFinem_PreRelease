@@ -3,26 +3,26 @@
 #
 # Effects are fully scriptable here.
 
-decentralized_state_triggered_modifier = {
-	potential = {
-		OR = {
-			culture_group = pagan_slavic
-			culture_group = germanic_carpathian
-			culture_group = gallic
-			culture_group = old_celtic
-			culture_group = scandinavian
-			culture_group = old_germanic
-			culture_group = pagan_baltic
-		}
+# decentralized_state_triggered_modifier = {
+# 	potential = {
+# 		OR = {
+# 			culture_group = pagan_slavic
+# 			culture_group = germanic_carpathian
+# 			culture_group = gallic
+# 			culture_group = old_celtic
+# 			culture_group = scandinavian
+# 			culture_group = old_germanic
+# 			culture_group = pagan_baltic
+# 		}
 		
-	}
+# 	}
 
-	trigger = {
-		NOT = {
-			has_country_flag = centralized_state_flag
-		}
-	}
+# 	trigger = {
+# 		NOT = {
+# 			has_country_flag = centralized_state_flag
+# 		}
+# 	}
 
-	administrative_efficiency = -0.25
-	ae_impact = 0.25
-}
+# 	administrative_efficiency = -0.25
+# 	ae_impact = 0.25
+# }

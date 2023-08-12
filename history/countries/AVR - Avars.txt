@@ -3,4 +3,27 @@ add_government_reform = tribal_confederacy
 primary_culture = olymporian
 religion = hellenic
 technology_group = eastern
-capital = 2198#Khunzah
+capital = 2198
+1444.11.11 = {
+	monarch = {
+		name = "Papken"
+		dynasty = "Grigorian"
+		adm = 5
+		dip = 6
+		mil = 3
+		birth_date = 1383.06.07
+		death_date = 1445.01.01
+	}
+}
+
+1444.11.11 = {
+	heir = {
+		name = "Medea"
+		dynasty = "Grigorian"
+		adm = 6
+		dip = 1
+		mil = 5
+		birth_date = 1411.08.25
+		death_date = 1445.01.01
+	}
+}

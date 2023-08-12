@@ -1,5 +1,5 @@
-government = monarchy
-add_government_reform = feudalism_reform
+government = theocracy
+add_government_reform = leading_clergy_reform
 government_rank = 1
 primary_culture = peloponnesian
 add_accepted_culture = greek
@@ -73,9 +73,8 @@ fixed_capital = 146# Cannot move capital away from this province & no power cost
 		mil = 1
 	}
 }
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Cosmas"
 		dynasty = "Lambardas"
 		adm = 0

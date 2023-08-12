@@ -6,4 +6,28 @@ add_accepted_culture = byelorussian
 add_accepted_culture = ruthenian
 religion = romuva
 technology_group = eastern
-capital = 272# Vilnius
+capital = 272
+
+1444.11.11 = {
+	monarch = {
+		name = "Aukstas"
+		dynasty = "Vytid"
+		adm = 3
+		dip = 0
+		mil = 4
+		birth_date = 1399.03.11
+		death_date = 1445.01.01
+	}
+}
+
+1444.11.11 = {
+	heir = {
+		name = "Aukstas"
+		dynasty = "Vytid"
+		adm = 6
+		dip = 3
+		mil = 6
+		birth_date = 1424.05.12
+		death_date = 1445.01.01
+	}
+}

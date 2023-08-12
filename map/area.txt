@@ -200,7 +200,7 @@ normandy_area = {
 	167 168 1879 4385 
 }
 provence_area = { 
-	201 202 2991 4696 
+	201 202 2991 4696 4962 
 }
 poitou_area = { 
 	180 4111 4386 4387 
@@ -317,43 +317,43 @@ lombardy_area = {
 	104 1862 4728 4740 2979 
 }
 po_valley_area = { 
-	109 4739 107 
+	109 107 4954 4739 4952 
 }
 piedmont_area = { 
-	103 1875 2981 4727 
+	1875 2981 4727 103 4953 
 }
 tuscany_area = { 
 	115 116 117 2978 2980 
 }
 liguria_area = { 
-	101 102 2992 4947
+	102 2992 4947 101 105 
 }
 corsica_sardinia_area = { 
-	127 1247 2986 4735 4942 
+	127 4735 4942 2986 4943 
 }
 sicily_area = { 
-	124 126 2982 4944
+	124 126 2982 4944 
 }
 western_sicily_area = { 
 	125 4736 4737 
 }
 naples_area = { 
-	121 2983 4734 4945 4948
+	121 2983 4945 
 }
 lazio_area = { 
-	118 2976 4731 4732 4946
+	118 2976 4731 4732 4946 
 }
 calabria_area = { 
-	123 1934 2984 
+	2984 123 4959 
 }
 apulia_area = { 
-	122 1933 2985 4733 
+	1933 122 4958 1934 
 }
 emilia_romagna_area = { 
-	105 106 113 114 4730 
+	106 114 4730 113 4951 
 }
 central_italy_area = { 
-	119 120 2977 4949
+	119 2977 4949 120 
 }
 munster_area = { 
 	4118 4377 4378 
@@ -779,13 +779,13 @@ bosnia_area = {
 	139 140 1831 3002 4755 
 }
 croatia_area = { 
-	131 1826 1828 4752 
+	131 1828 4752 1826 4955 
 }
 slavonia_area = { 
 	152 4756 1767 4173 
 }
 east_adriatic_coast_area = { 
-	136 137 4753 
+	136 137 4753 4957 4956 
 }
 alfold_area = { 
 	155 1953 1954 4125 
@@ -2675,4 +2675,10 @@ indonesian_islands_area = {
 iceland_area = { 
 }
 south_laos_area = { 
+}
+corsica_area = { 
+	1247 4960 4961 
+}
+adriatic_italy_area = { 
+	4733 4948 4950 2985 4734 
 }

@@ -1,13 +1,12 @@
 government = tribal
 add_government_reform = feudal_tribe
-government_rank = 1
+government_rank = 2
 technology_group = eastern
 religion = south_germanic_religion
-capital = 152
-primary_culture = illyrian
-
-1444.11.11 = {
-	monarch = {
+capital = 1863
+primary_culture = quadi
+1444.11.11 = { 
+	monarch = { 
 		name = "Theodoric"
 		dynasty = "Thorkillingas"
 		adm = 3
@@ -17,9 +16,8 @@ primary_culture = illyrian
 		death_date = 1445.01.01
 	}
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Theobald"
 		dynasty = "Thorkillingas"
 		adm = 4

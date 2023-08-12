@@ -77,6 +77,8 @@ feudalism = {
 					province_id = 2329
 					province_id = 2331
 					province_id = 2999
+					region = british_isles_region
+					area = holland_area
 				}
 			}
 			AND = {
@@ -128,6 +130,41 @@ feudalism = {
 	}
 
 	embracement_speed = {
+		modifier = {
+			factor = 0.6
+			scale = yes
+			AND = {
+				OR = {
+					region = scandinavia_region
+					region = north_german_region
+				}
+				has_port = yes
+			}
+		}
+		modifier = {
+			factor = 0.35
+			scale = yes
+			AND = {
+				OR = {
+					region = scandinavia_region
+					region = north_german_region
+				}
+				development = 10
+			}
+		}
+		modifier = {
+			factor = 0.4
+			scale = yes
+			AND = {
+				OR = {
+					region = scandinavia_region
+					region = north_german_region
+					region = south_german_region
+				}
+				is_capital = yes
+				development = 10
+			}
+		}
 		modifier = {
 			factor = 0.6
 			scale = yes
@@ -398,6 +435,32 @@ renaissance = {
 				any_friendly_coast_border_province = {
 					renaissance = 100
 				}
+			}
+		}	
+		modifier = {
+			factor = 0.2
+			scale = yes
+			AND = {
+				OR = {
+					continent = europe
+					region = maghreb_region
+					region = egypt_region
+					region = mashriq_region
+				}
+				development = 10
+			}
+		}
+		modifier = {
+			factor = 0.25
+			scale = yes
+			AND = {
+				OR = {
+					continent = europe
+					region = maghreb_region
+					region = egypt_region
+					region = mashriq_region
+				}
+				development = 15
 			}
 		}
 		modifier = {

@@ -1,0 +1,22 @@
+#Norse Warlord
+
+norse_warlord = {
+	icon = "castle"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+	potential = {
+		religion = norse_pagan_reformed
+	}
+	modifiers = {
+		army_tradition = 0.5
+		naval_morale = 0.1
+		movement_speed_onto_off_boat_modifier = 1
+	}
+	# custom_attributes = {
+	# 	buffed_strong_duchies = yes #+5% Loyalty
+	# }
+	ai = {
+		factor = 0.5 #generic
+	}
+}

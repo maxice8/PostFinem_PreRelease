@@ -5,3 +5,27 @@ technology_group = western
 capital = 4373
 primary_culture = old_cornish
 religion = druidic
+
+1444.11.11 = {
+	monarch = {
+		name = "Finnacán"
+		dynasty = "Ua Fáeláin"
+		adm = 0
+		dip = 1
+		mil = 0
+		birth_date = 1382.05.10
+		death_date = 1445.01.01
+	}
+}
+
+1444.11.11 = {
+	heir = {
+		name = "Scandlán"
+		dynasty = "Ua Fáeláin"
+		adm = 1
+		dip = 3
+		mil = 6
+		birth_date = 1403.06.01
+		death_date = 1445.01.01
+	}
+}
