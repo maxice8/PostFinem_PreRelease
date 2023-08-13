@@ -90,3 +90,73 @@ auralpina_monarchy = {
 		factor = 0.5 #generic
 	}
 }
+
+
+#Hellepharaohcy
+
+hellepharaohcy = {
+	icon = "castle"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+	potential = {
+		tag = AEG
+	}
+	modifiers = {
+		global_trade_goods_size_modifier = 0.1
+		prestige = 1
+	}
+	# custom_attributes = {
+	# 	buffed_strong_duchies = yes #+5% Loyalty
+	# }
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+
+
+#Diadem of Iberia
+
+diadem_of_iberia = {
+	icon = "castle"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+	potential = {
+		tag = SUE
+	}
+	modifiers = {
+		global_sailors_modifier = 0.2
+		light_ship_power = 0.1
+		ship_trade_power_modifier = 0.2
+	}
+	# custom_attributes = {
+	# 	buffed_strong_duchies = yes #+5% Loyalty
+	# }
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+
+#Alexander's Crown
+
+alexanders_crown = {
+	icon = "castle"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+	potential = {
+		tag = MAC
+	}
+	modifiers = {
+		min_autonomy_in_territories = -0.1
+		land_morale = 0.1
+		land_maintenance_modifier = 0.25
+	}
+	# custom_attributes = {
+	# 	buffed_strong_duchies = yes #+5% Loyalty
+	# }
+	ai = {
+		factor = 0.5 #generic
+	}
+}
