@@ -8,9 +8,8 @@ primary_culture = alexandrian
 religion = hellenic
 add_truce_with = JRD
 add_truce_with = HEL
-
-1444.1.1 = {
-	monarch = {
+1444.1.1 = { 
+	monarch = { 
 		name = "Isadora"
 		female = yes
 		claim = 30
@@ -22,7 +21,7 @@ add_truce_with = HEL
 		birth_date = 1416.6.21
 	}
 	add_ruler_personality = cruel_personality
-	heir = {
+	heir = { 
 		name = "Theodoro"
 		monarch_name = "Theodoro II"
 		dynasty = "Gidos"
@@ -34,5 +33,4 @@ add_truce_with = HEL
 		birth_date = 1436.11.21
 		death_date = 1445.1.1
 	}
-
 }

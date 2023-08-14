@@ -151,7 +151,7 @@ alexanders_crown = {
 	modifiers = {
 		min_autonomy_in_territories = -0.1
 		land_morale = 0.1
-		land_maintenance_modifier = 0.25
+		global_regiment_cost = 0.1
 	}
 	# custom_attributes = {
 	# 	buffed_strong_duchies = yes #+5% Loyalty
