@@ -1173,6 +1173,406 @@ BCA_ideas = {
 	}
 }
 
+
+#North Germanic
+EFR_ideas = {
+	start = {
+		land_maintenance_modifier = -0.10
+		army_tradition_decay = -0.01
+	}
+	bonus = {
+		army_tradition_from_battle = 0.5
+	}
+	trigger = {
+		tag = EFR
+	}
+	free = yes
+	
+	#Warrior Culture
+	EFR_ideas_1 = {
+		land_morale = 0.10
+	}
+
+	#Economic Drafts
+	EFR_ideas_2 = {
+		land_forcelimit_modifier = 0.2
+	}
+
+	#Military Innovations
+	EFR_ideas_3 = {
+		mil_tech_cost_modifier = -0.1
+	}
+
+	#Battlefield Engineers
+	EFR_ideas_4 = {
+		fort_maintenance_modifier = -0.10
+	}
+
+	#Legacy of Heroes
+	EFR_ideas_5 = {
+		free_leader_pool = 1
+	}
+
+	#Prestigious Conquests
+	EFR_ideas_6 = {
+		prestige_from_land = 0.25
+	}
+
+	#Unified Command
+	EFR_ideas_7 = {
+		leader_land_fire = 1
+	}
+}
+
+FRI_ideas = {
+	start = {
+		free_leader_pool = 1
+		reinforce_speed = 0.10
+	}
+	bonus = {
+		leader_land_shock = 1
+	}
+	trigger = {
+		tag = FRI
+	}
+	free = yes
+
+	#Champion Bloodlines
+	FRI_ideas_1 = {
+		army_tradition = 0.5
+	}
+
+	#Agricultural Reforms
+	FRI_ideas_2 = {
+		production_efficiency = 0.10
+	}
+
+	#Marching Discipline
+	FRI_ideas_3 = {
+		infantry_power = 0.10
+	}
+
+	#Stronghold Legacy
+	FRI_ideas_4 = {
+		defensiveness = 0.20
+	}
+
+	#The Heroes' Epics
+	FRI_ideas_5 = {
+		prestige = 1
+	}
+
+	#Efficient Supply Lines
+	FRI_ideas_6 = {
+		land_attrition = -0.10
+	}
+
+	#Veteran Officers
+	FRI_ideas_7 = {
+		land_maintenance_modifier = -0.05
+	}
+}
+
+KOL_ideas = {
+	start = {
+		leader_land_fire = 1
+		global_tax_modifier = 0.10
+	}
+	bonus = {
+		improve_relation_modifier = 0.15
+	}
+	trigger = {
+		tag = KOL
+	}
+	free = yes
+
+	#Adequate Garrisons
+	KOL_ideas_1 = {
+		defensiveness = 0.20
+	}
+
+	#Prestigious Academies
+	KOL_ideas_2 = {
+		technology_cost = -0.05
+	}
+
+	#Economic Militarization
+	KOL_ideas_3 = {
+		land_forcelimit_modifier = 0.10
+	}
+
+	#Legacy Tactics
+	KOL_ideas_4 = {
+		discipline = 0.05
+	}
+
+	#Historic Feats
+	KOL_ideas_5 = {
+		prestige_decay = -0.01
+	}
+
+	#Skilled Recruiters
+	KOL_ideas_6 = {
+		regiment_recruit_speed = -0.10
+	}
+
+	#Tactical Genius
+	KOL_ideas_7 = {
+		leader_land_manuever = 1
+	}
+}
+AAC_ideas = {
+	start = {
+		land_morale = 0.10
+		global_tax_modifier = 0.10
+	}
+	bonus = {
+		army_tradition = 0.5
+	}
+	trigger = {
+		tag = AAC
+	}
+	free = yes
+	
+	#Veteran Warriors
+	AAC_ideas_1 = {
+		infantry_power = 0.10
+	}
+
+	#War Economy
+	AAC_ideas_2 = {
+		war_taxes_cost_modifier = -0.5
+	}
+
+	#Strategic Fortresses
+	AAC_ideas_3 = {
+		fort_maintenance_modifier = -0.2
+	}
+
+	#Prestigious Leaders
+	AAC_ideas_4 = {
+		leader_land_shock = 1
+	}
+
+	#A Tradition of Valor
+	AAC_ideas_5 = {
+		prestige = 1
+	}
+
+	#Cavalry Elites
+	AAC_ideas_6 = {
+		cavalry_power = 0.10
+		cavalry_flanking = 0.5
+	}
+
+	#Grand Armory
+	AAC_ideas_7 = {
+		artillery_power = 0.10
+		artillery_barrage_cost = -0.5
+	}
+}
+
+TRI_ideas = {
+	start = {
+		land_forcelimit_modifier = 0.10
+		production_efficiency = 0.1
+	}
+	bonus = {
+		free_leader_pool = 1
+	}
+	trigger = {
+		tag = TRI
+	}
+	free = yes
+	
+	#Battlefield Legends
+	TRI_ideas_1 = {
+		army_tradition_from_battle = 0.5
+	}
+
+	#Economic War Machine
+	TRI_ideas_2 = {
+		global_trade_goods_size_modifier = 0.10
+	}
+
+	#Strategic Depth
+	TRI_ideas_3 = {
+		defensiveness = 0.2
+	}
+
+	#Art of Siege
+	TRI_ideas_4 = {
+		leader_siege = 1
+		artillery_levels_available_vs_fort = 1
+	}
+
+	#Dynastic Honor
+	TRI_ideas_5 = {
+		prestige_decay = -0.01
+		nobles_loyalty_modifier = 0.1
+	}
+
+	#Marching Drills
+	TRI_ideas_6 = {
+		drill_gain_modifier = 0.5
+	}
+
+	#Famed Artillery
+	TRI_ideas_7 = {
+		artillery_cost = -0.10
+		artillery_power = 0.1
+	}
+}
+
+NSA_ideas = {
+	start = {
+		reinforce_speed = 0.15
+		merc_maintenance_modifier = -0.15
+	}
+	bonus = {
+		leader_land_manuever = 1
+	}
+	trigger = {
+		tag = NSA
+	}
+	free = yes
+	
+	#Pride of the Army
+	NSA_ideas_1 = {
+		discipline = 0.05
+	}
+
+	#Mercantile Militarism
+	NSA_ideas_2 = {
+		global_trade_power = 0.10
+	}
+
+	#Legacy Forts
+	NSA_ideas_3 = {
+		garrison_size = 0.25
+	}
+
+	#Defensive Doctrine
+	NSA_ideas_4 = {
+		shock_damage_received = -0.10
+	}
+
+	#Glorious Campaigns
+	NSA_ideas_5 = {
+		prestige = 1
+	}
+
+	#Rapid Mobilization
+	NSA_ideas_6 = {
+		regiment_recruit_speed = -0.15
+	}
+
+	#Wartime Taxes
+	NSA_ideas_7 = {
+		war_taxes_cost_modifier = -0.5
+	}
+}
+
+PAD_ideas = {
+	start = {
+		land_morale = 0.10
+		global_manpower_modifier = 0.15
+	}
+	bonus = {
+		prestige_from_land = 0.5
+	}
+	trigger = {
+		tag = PAD
+	}
+	free = yes
+	
+	#Faithful Among Us
+	PAD_ideas_1 = {
+		global_missionary_strength = 0.02
+	}
+
+	#War Chest
+	PAD_ideas_2 = {
+		global_tax_modifier = 0.15
+	}
+
+	#Battlefield Intelligence
+	PAD_ideas_3 = {
+		spy_offence = 0.20
+	}
+
+	#Imperial Ambition
+	PAD_ideas_4 = {
+		prestige_decay = -0.01
+	}
+
+	#Manpower Reserves
+	PAD_ideas_5 = {
+		recover_army_morale_speed = 0.10
+	}
+
+	#Emphasis on Education
+	PAD_ideas_6 = {
+		idea_cost = -0.1
+	}
+
+	#Decisive Battles
+	PAD_ideas_7 = {
+		leader_land_fire = 1
+	}
+}
+
+HES_ideas = {
+	start = {
+		land_maintenance_modifier = -0.10
+		infantry_power = 0.15
+	}
+	bonus = {
+		diplomatic_upkeep = 1
+	}
+	trigger = {
+		tag = HES
+	}
+	free = yes
+	
+	#Nestled Strongholds
+	HES_ideas_1 = {
+		defensiveness = 0.20
+	}
+
+	#Rural Traditions
+	HES_ideas_2 = {
+		production_efficiency = 0.15
+	}
+
+	#Local Fiefdoms
+	HES_ideas_3 = {
+		global_autonomy = -0.05
+	}
+
+	#Reputable Nobility
+	HES_ideas_4 = {
+		legitimacy = 1
+		nobles_loyalty_modifier = 0.1
+	}
+
+	#Crossroads of Commerce
+	HES_ideas_5 = {
+		merchants = 1
+	}
+
+	#Militia Drills
+	HES_ideas_6 = {
+		drill_gain_modifier = 0.5
+	}
+
+	#Proud Independence
+	HES_ideas_7 = {
+		hostile_attrition = 1
+	}
+}
+
+
 #GENERIC REGIONAL
 
 #Old Germanic Minor
