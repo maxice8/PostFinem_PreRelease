@@ -5,7 +5,6 @@ religion = punic_religion
 technology_group = western
 capital = 344
 fixed_capital = 343# Cannot move capital away from this province & no power cost to move to it
-religious_school = maliki_school
 # Hintata Emirs
 1444.1.1 = { 
 	monarch = { 
@@ -29,9 +28,8 @@ religious_school = maliki_school
 		mil = 4
 	}
 }
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Mago"
 		dynasty = "Kasbilit"
 		adm = 5
@@ -41,9 +39,8 @@ religious_school = maliki_school
 		death_date = 1445.01.01
 	}
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Dagan"
 		dynasty = "Kasbilit"
 		adm = 0

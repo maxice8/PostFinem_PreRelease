@@ -5,11 +5,9 @@ technology_group = western
 religion = punic_religion
 primary_culture = gaetulian
 capital = 338# Al-Djazair
-fixed_capital = 338
-religious_school = maliki_school
-
-1444.11.11 = {
-	monarch = {
+add_accepted_culture = punic_culture
+1444.11.11 = { 
+	monarch = { 
 		name = "Carmon"
 		dynasty = "Hanno"
 		adm = 5
@@ -19,9 +17,8 @@ religious_school = maliki_school
 		death_date = 1445.01.01
 	}
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Hirpal"
 		dynasty = "Hanno"
 		adm = 4
