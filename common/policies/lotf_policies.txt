@@ -422,11 +422,11 @@ zealous_court = {
 		factor = 1
 		modifier = {
 			factor = 2
-			NOT = { religious_unity = 50 }
+			NOT = { religious_unity = 0.5 }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { religious_unity = 75 }
+			NOT = { religious_unity = 0.75 }
 		}
 	}
 }
