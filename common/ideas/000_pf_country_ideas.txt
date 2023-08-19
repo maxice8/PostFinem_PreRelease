@@ -1572,6 +1572,157 @@ HES_ideas = {
 	}
 }
 
+FKN_ideas = {
+	start = {
+		development_cost = -0.10
+		infantry_power = 0.10
+	}
+	bonus = {
+		global_manpower_modifier = 0.15
+	}
+	trigger = {
+		tag = FKN
+	}
+	free = yes
+	
+	#Ancestral Traditions
+	FKN_ideas_1 = {
+		global_unrest = -1
+	}
+
+	#Germanic Craftsmanship
+	FKN_ideas_2 = {
+		production_efficiency = 0.10
+	}
+
+	#Sacred Groves
+	FKN_ideas_3 = {
+		land_attrition = -0.15
+	}
+
+	#Pagan Masons
+	FKN_ideas_4 = {
+		build_cost = -0.10
+		build_time = -0.10
+	}
+
+	#Ritualistic Warfare
+	FKN_ideas_5 = {
+		army_tradition = 0.5
+	}
+
+	#Runestones and Monuments
+	FKN_ideas_6 = {
+		missionaries = 1
+	}
+
+	#Germanic Unity
+	FKN_ideas_7 = {
+		legitimacy = 1
+	}
+}
+
+ALM_ideas = {
+	start = {
+		merchants = 1
+		global_trade_power = 0.10
+	}
+	bonus = {
+		development_cost = -0.10
+	}
+	trigger = {
+		tag = ALM
+	}
+	free = yes
+	
+	#Merchant Guilds
+	ALM_ideas_1 = {
+		trade_efficiency = 0.10
+	}
+
+	#Land of Plenty
+	ALM_ideas_2 = {
+		global_trade_goods_size_modifier = 0.10
+	}
+
+	#Innovative Infrastructure
+	ALM_ideas_3 = {
+		build_cost = -0.10
+		global_prosperity_growth = 0.5
+	}
+
+	#Trade Embassies
+	ALM_ideas_4 = {
+		diplomatic_upkeep = 1
+	}
+
+	#Strategic Forts
+	ALM_ideas_5 = {
+		defensiveness = -0.10
+		garrison_size = 0.2
+	}
+
+	#Mountain Passes
+	ALM_ideas_6 = {
+		caravan_power = 0.25
+	}
+
+	#Land Reclamation
+	ALM_ideas_7 = {
+		land_attrition = -0.10
+	}
+}
+
+BAM_ideas = {
+	start = {
+		infantry_power = 0.2
+		innovativeness_gain = 0.5
+	}
+	bonus = {
+		diplomatic_upkeep = 1
+	}
+	trigger = {
+		tag = BAM
+	}
+	free = yes
+	
+	#Warrior Code
+	BAM_ideas_1 = {
+		land_morale = 0.10
+	}
+
+	#Legacy of Conquest
+	BAM_ideas_2 = {
+		prestige_from_land = 0.50
+	}
+
+	#Royal Patrons
+	BAM_ideas_3 = {
+		prestige = 1
+	}
+
+	#Efficient Tax Collection
+	BAM_ideas_4 = {
+		global_tax_modifier = 0.10
+	}
+
+	#Civil Service Reforms
+	BAM_ideas_5 = {
+		monthly_reform_progress_modifier = -0.1
+	}
+
+	#Training Grounds
+	BAM_ideas_6 = {
+		war_taxes_cost_modifier = -0.5
+		regiment_recruit_speed = -0.1
+	}
+
+	#Peaceful Expansion
+	BAM_ideas_7 = {
+		improve_relation_modifier = 0.25
+	}
+}
+
 
 #GENERIC REGIONAL
 
