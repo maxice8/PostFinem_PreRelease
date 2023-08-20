@@ -10,5 +10,5 @@ tags={
 	"Loading Screen"
 	"Expansion"
 }
-name="Post Finem"
+name="Post Finem (PRE RELASE)"
 supported_version="1.35.*"
