@@ -65,10 +65,9 @@ country_event = {
 			limit = {
 				tag = KHU
 			}
-			# TODO: find a nice color for this new tag
-			#change_country_color = {
-			#	color = { }
-			#}
+			change_country_color = {
+				color = { 255 56 152 }
+			}
 		}
 		
 		ai_chance = {
