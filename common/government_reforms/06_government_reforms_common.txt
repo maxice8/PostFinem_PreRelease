@@ -3258,7 +3258,9 @@ allotment_system = {
 		OR = {
 			primary_culture = swedish
 			primary_culture = finnish
-			primary_culture = norse
+			# pf
+			#primary_culture = norse
+			culture_group = scandinavian
 		}
 	}
 	trigger = {
