@@ -419,20 +419,6 @@ on_separate_war_lost = {
 on_battle_won_country = {
 	on_battle_ended_effect = yes
 	on_battle_won_country_effect = yes
-	count_won_battles_and_reward_at_end = {
-		counting_flag = teu_crusader_battle_counter
-		max_value = 20
-		effect = "
-			country_event = {
-				id = flavor_teu.12
-			}
-		"
-	}
-	count_won_battles_and_reward_at_end = {
-		counting_flag = has_rus_kill_counter
-		max_value = 40
-		effect = "set_country_flag = rus_finished_kill_mission"
-	}
 }
 
 # country
