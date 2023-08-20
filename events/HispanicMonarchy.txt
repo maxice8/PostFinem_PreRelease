@@ -1,0 +1,40 @@
+namespace = flavor_gbr
+
+country_event = {
+	id = hispanic_monarchy_events.1
+	title = hispanic_monarchy_events.1.t
+	desc = hispanic_monarchy_events.1.d
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = hispanic_monarchy_events.1.a
+	}
+}
+
+country_event = {
+	id = hispanic_monarchy_events.2
+	title = hispanic_monarchy_events.2.t
+	desc = hispanic_monarchy_events.2.d
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = hispanic_monarchy_events.2.a
+	}
+}
+
+country_event = {
+	id = hispanic_monarchy_events.3
+	title = hispanic_monarchy_events.3.t
+	desc = hispanic_monarchy_events.3.d
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = hispanic_monarchy_events.3.a
+	}
+}
