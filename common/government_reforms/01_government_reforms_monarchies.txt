@@ -376,7 +376,7 @@ absolutist_france_reform = {
 				is_playing_custom_nation = yes
 				have_had_reform = absolutist_france_reform
 			}
-			mission_completed = fra_movement_centralization
+			#mission_completed = fra_movement_centralization
 		}
 	}
 	trigger = {
@@ -1662,9 +1662,9 @@ stadthalter_monarchy_reform = {
 		no_stability_loss_on_monarch_death = yes
 	}
 
-	removed_effect = {
-		country_event = { id = dutch_republic.33 }
-	}
+	#removed_effect = {
+	#	country_event = { id = dutch_republic.33 }
+	#}
 
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
@@ -2159,10 +2159,10 @@ prussian_monarchy = {
 		OR = {
 			AND = {
 				tag = PRU
-				OR = {
-					has_mission = emp_brapru_army_reforms_2
-					has_mission = emp_brapru_army_reforms_3
-				}
+				#OR = {
+				#	has_mission = emp_brapru_army_reforms_2
+				#	has_mission = emp_brapru_army_reforms_3
+				#}
 				NOT = { map_setup = map_setup_random }
 			}
 			has_unlocked_government_reform = {
@@ -2223,8 +2223,8 @@ prussian_monarchy_base = {
 		NOT = { have_had_reform = prussian_monarchy }
 		OR = {
 			NOT = { has_dlc = "Domination" }
-			NOT = { has_mission = emp_brapru_army_reforms_2 }
-			NOT = { has_mission = emp_brapru_army_reforms_3 }
+			#NOT = { has_mission = emp_brapru_army_reforms_2 }
+			#NOT = { has_mission = emp_brapru_army_reforms_3 }
 		}
 		OR = {
 			AND = {
@@ -3506,7 +3506,7 @@ lithuanian_grand_empire = {
 			}
 			has_reform = lithuanian_grand_empire
 			AND = {
-				mission_completed = sca_mission_lit_polish_union
+				#mission_completed = sca_mission_lit_polish_union
 				total_development = 1000 
 			}
 		}
@@ -3610,9 +3610,9 @@ livonian_naval_monarchy = {
 		burghers_loyalty_modifier = 0.1		
 	}
 	
-	removed_effect = {
-		country_event = { id = dutch_republic.33 }
-	}
+	#removed_effect = {
+	#	country_event = { id = dutch_republic.33 }
+	#}
 
 	conditional = {
 		allow = { has_dlc = "Res Publica" }
@@ -5676,9 +5676,9 @@ states_general_reform = {
 		factor = 0 # AI should never pick this
 	}
 
-	removed_effect = {
-		country_event = { id = dutch_republic.33 }
-	}
+	#removed_effect = {
+	#	country_event = { id = dutch_republic.33 }
+	#}
 
 	conditional = {
 		allow = { has_dlc = "Res Publica" }
@@ -6185,16 +6185,16 @@ become_a_republic_reform = {
 		set_country_flag = populists_in_government
 		add_stability = -3
 		change_government = republic
-		if = {
-			limit = {
-				tag = AVE
-			}
-			hidden_effect = {
-				country_event = {
-					id = flavor_gbr.20
-				}
-			}
-		}
+		#if = {
+		#	limit = {
+		#		tag = AVE
+		#	}
+		#	hidden_effect = {
+		#		country_event = {
+		#			id = flavor_gbr.20
+		#		}
+		#	}
+		#}
 	}
 	ai = {
 		factor = 0
@@ -6223,16 +6223,16 @@ install_theocratic_government_reform = {
 			add_stability = -3
 		}
 		change_government = theocracy
-		if = {
-			limit = {
-				tag = AVE
-			}
-			hidden_effect = {
-				country_event = {
-					id = flavor_gbr.20
-				}
-			}
-		}
+		#if = {
+		#	limit = {
+		#		tag = AVE
+		#	}
+		#	hidden_effect = {
+		#		country_event = {
+		#			id = flavor_gbr.20
+		#		}
+		#	}
+		#}
 	}
 	ai = {
 		factor = 0
@@ -6318,7 +6318,7 @@ become_rev_republic_reform = {
 		add_government_reform = revolutionary_republic_reform
 		if = {
 			limit = { has_country_flag = had_states_general_mechanic }
-			country_event = { id = dutch_republic.33 }
+			#country_event = { id = dutch_republic.33 }
 			clr_country_flag = had_states_general_mechanic
 		}
 	}
@@ -6549,7 +6549,7 @@ system_of_councils_reform = {
 	potential = {
 		OR = { 
 			has_reform = system_of_councils_reform
-			mission_completed = spa_system_councils
+			#mission_completed = spa_system_councils
 			AND = { 
 				religion_group = christian 
 				culture_group = iberian 
@@ -6559,7 +6559,7 @@ system_of_councils_reform = {
 	trigger = {
 		OR = { 
 			has_reform = system_of_councils_reform
-			mission_completed = spa_system_councils
+			#mission_completed = spa_system_councils
 		}
 	}
 	government_abilities = {

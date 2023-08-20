@@ -670,9 +670,9 @@ dutch_theocracy_reform = {
 		allowed_voc_indiamen_fraction = 0.2
 	}
 
-	removed_effect = {
-		country_event = { id = dutch_republic.33 }
-	}
+	#removed_effect = {
+	#	country_event = { id = dutch_republic.33 }
+	#}
 	royal_marriage = yes
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
