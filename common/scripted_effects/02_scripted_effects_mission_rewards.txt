@@ -675,27 +675,6 @@ tur_address_firman_effect_a = {
 }
 
 tur_address_firman_effect_b = {
-	country_event_with_insight = {
-		id = flavor_tur.219
-		insight_tooltip = INSIGHT_JUST_TOOLTIP
-		effect_tooltip = "
-		thrace_area = {
-			limit = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			add_province_modifier = {
-				name = tur_morisco_refugees_modifier
-				duration = 7300
-			}
-		}
-		define_advisor = { 
-			type = artist 
-			cost_multiplier = 0.5
-			culture = andalucian 
-			religion = sunni 
-		}
-		"
-	}
 }
 
 tur_al_andalus_eyalet_effect_a = {

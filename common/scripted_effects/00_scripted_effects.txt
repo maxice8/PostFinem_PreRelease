@@ -337,27 +337,6 @@ enact_revolution_effect = {
 				remove_country_modifier = colony_inspired_by_revolution
 			}
 		}
-		if = {
-			limit = {
-				OR = {
-					has_disaster = french_revolution
-					has_country_flag = use_french_disaster_exile_effect
-				}
-				has_regency = no
-			}
-			set_country_flag = ruler_of_france_exiled
-		}
-		if = {
-			limit = {
-				OR = {
-					has_disaster = french_revolution
-					has_country_flag = use_french_disaster_exile_effect
-				}
-				has_heir = yes
-			}
-			exile_heir_as = heir_of_france
-			set_country_flag = heir_of_france_exiled
-		}
 	}
 	if = {
 		limit = { is_emperor_of_china = yes }
@@ -386,20 +365,7 @@ enact_revolution_effect = {
 		limit = { has_reform = states_general_reform }
 		remove_government_reform = states_general_reform
 	}
-	if = {
-		limit = {
-			OR = {
-				has_disaster = french_revolution
-				has_country_flag = use_french_disaster_exile_effect
-			}
-		}
-		hidden_effect = {
-			exile_ruler_as = { name = ruler_of_france }
-		}
-	}
-	else = {
-		kill_ruler = yes
-	}
+	kill_ruler = yes
 
 	add_yearly_manpower = 5
 
