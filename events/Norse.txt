@@ -6,67 +6,67 @@
 
 namespace = norse_events
 
-#country_event = {
-#	id = norse_events.1
-#	title = norse_events.1.t
-#	desc = norse_events.1.desc
-#	picture = NORSE_TEMPLE_eventPicture
-#	is_triggered_only = yes
-#
-#	# Odin
-#	option = {
-#		name = norse_events.1.a
-#		trigger = {
-#			NOT = { has_personal_deity = odin }
-#		}
-#		change_personal_deity = odin
-#	}
-#
-#	# Freya
-#	option = {
-#		name = norse_events.1.b
-#		trigger = {
-#			NOT = { has_personal_deity = freya }
-#		}
-#		change_personal_deity = freya
-#	}
-#
-#	# Tor
-#	option = {
-#		name = norse_events.1.c
-#		trigger = {
-#			NOT = { has_personal_deity = tor }
-#		}
-#		change_personal_deity = tor
-#	}
-#
-#	# Tyr
-#	option = {
-#		name = norse_events.1.d
-#		trigger = {
-#			NOT = { has_personal_deity = tyr }
-#		}
-#		change_personal_deity = tyr
-#	}
-#
-#	# Njord
-#	option = {
-#		name = norse_events.1.e
-#		trigger = {
-#			NOT = { has_personal_deity = njord }
-#		}
-#		change_personal_deity = njord
-#	}
-#
-#	# Snotra
-#	option = {
-#		name = norse_events.1.f
-#		trigger = {
-#			NOT = { has_personal_deity = snotra }
-#		}
-#		change_personal_deity = snotra
-#	}
-#}
+country_event = {
+	id = norse_events.1
+	title = norse_events.1.t
+	desc = norse_events.1.desc
+	picture = NORSE_TEMPLE_eventPicture
+	is_triggered_only = yes
+
+	# Odin
+	option = {
+		name = norse_events.1.a
+		trigger = {
+			NOT = { has_personal_deity = odin }
+		}
+		change_personal_deity = odin
+	}
+
+	# Freya
+	option = {
+		name = norse_events.1.b
+		trigger = {
+			NOT = { has_personal_deity = freya }
+		}
+		change_personal_deity = freya
+	}
+
+	# Tor
+	option = {
+		name = norse_events.1.c
+		trigger = {
+			NOT = { has_personal_deity = tor }
+		}
+		change_personal_deity = tor
+	}
+
+	# Tyr
+	option = {
+		name = norse_events.1.d
+		trigger = {
+			NOT = { has_personal_deity = tyr }
+		}
+		change_personal_deity = tyr
+	}
+
+	# Njord
+	option = {
+		name = norse_events.1.e
+		trigger = {
+			NOT = { has_personal_deity = njord }
+		}
+		change_personal_deity = njord
+	}
+
+	# Snotra
+	option = {
+		name = norse_events.1.f
+		trigger = {
+			NOT = { has_personal_deity = snotra }
+		}
+		change_personal_deity = snotra
+	}
+}
 
 #A wave of Norse nostalgia
 #country_event = {
