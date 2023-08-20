@@ -2549,7 +2549,7 @@ on_mercenary_recruited_effect = {
 		if = {
 			limit = {
 				FROM = { 
-					OR = {parliament_vs_monarchy_mechanic
+					OR = {
 						has_country_flag = fifty_percent_merc_army_professionalism_cost 
 						has_country_modifier = pol_cheap_ap_mercs_modifier
 					}
