@@ -2476,8 +2476,6 @@ spawn_country_religious_rebels = {
 			nahuatl =               { PREV = { spawn_rebels = { type = nahuatl_rebels size = $size$ } } }
 			norse_pagan_reformed =  { PREV = { spawn_rebels = { type = norse_pagan_reformed_rebels size = $size$ } } }
 			orthodox =              { PREV = { spawn_rebels = { type = orthodox_rebels size = $size$ } } }
-			protestant =            { PREV = { spawn_rebels = { type = protestant_rebels size = $size$ } } }
-			reformed =              { PREV = { spawn_rebels = { type = reformed_rebels size = $size$ } } }
 			shamanism =             { PREV = { spawn_rebels = { type = shamanism_rebels size = $size$ } } }
 			shiite =                { PREV = { spawn_rebels = { type = shiite_rebels size = $size$ } } }
 			shinto =                { PREV = { spawn_rebels = { type = shinto_rebels size = $size$ } } }
@@ -2512,8 +2510,6 @@ spawn_province_religious_rebels = {
 		nahuatl =               { spawn_rebels = { type = nahuatl_rebels size = $size$ } }
 		norse_pagan_reformed =  { spawn_rebels = { type = norse_pagan_reformed_rebels size = $size$ } }
 		orthodox =              { spawn_rebels = { type = orthodox_rebels size = $size$ } }
-		protestant =            { spawn_rebels = { type = protestant_rebels size = $size$ } }
-		reformed =              { spawn_rebels = { type = reformed_rebels size = $size$ } }
 		shamanism =             { spawn_rebels = { type = shamanism_rebels size = $size$ } }
 		shiite =                { spawn_rebels = { type = shiite_rebels size = $size$ } }
 		shinto =                { spawn_rebels = { type = shinto_rebels size = $size$ } }
@@ -4776,10 +4772,7 @@ spawn_likely_rebels = {
 		likely_spawns_orthodox_rebels = {				spawn_rebels = { type = orthodox_rebels size = $size$ } }
 		likely_spawns_particularist_rebels = {			spawn_rebels = { type = particularist_rebels size = $size$ } }
 		likely_spawns_leadered_peasant_rebels = {		spawn_rebels = { type = leadered_peasant_rebels size = $size$ } }
-		likely_spawns_polish_noble_rebels = {			spawn_rebels = { type = polish_noble_rebels size = $size$ } }
 		likely_spawns_pretender_rebels = {				spawn_rebels = { type = pretender_rebels size = $size$ } }
-		likely_spawns_protestant_rebels = {				spawn_rebels = { type = protestant_rebels size = $size$ } }
-		likely_spawns_reformed_rebels = {				spawn_rebels = { type = reformed_rebels size = $size$ } }
 		likely_spawns_revolutionary_rebels = {			spawn_rebels = { type = revolutionary_rebels size = $size$ } }
 		likely_spawns_ronin_rebels = {					spawn_rebels = { type = ronin_rebels size = $size$ } }
 		likely_spawns_shamanism_rebels = {				spawn_rebels = { type = shamanism_rebels size = $size$ } }
