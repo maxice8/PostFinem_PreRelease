@@ -12,6 +12,8 @@ satrapy = {
 	transfer_trade_power = yes
 	joins_overlords_wars = no
 	can_be_annexed = no
+	# Can be integrated just like Personal Unions1
+	can_be_integrated = yes
 	has_power_projection = no
 	gets_help_with_rebels = yes
 	forms_trade_companies = no
@@ -34,6 +36,7 @@ satrapy = {
 	naval_forcelimit_to_overlord = 0.2					# Percent of subject FL to use as base for modifiers
 	manpower_to_overlord = 0.2							# Percent of subject FL to use as base for modifiers
 	sailors_to_overlord = 0.2							# Percent of subject FL to use as base for modifiers
+	annex_cost_per_development = 10.0 # Costs more to integrate
 
 	relative_power_class = 1
 	should_quit_wars_on_activation = yes
