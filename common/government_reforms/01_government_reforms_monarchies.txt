@@ -2014,19 +2014,19 @@ eyalet_government = {
 		no_religion_penalty = yes
 		governing_capacity = 100
 	}
-	removed_effect = {
-		hidden_effect = {
-			if = {
-				limit = {
-					NOT = { is_subject_of_type = eyalet }
-					NOT = { is_subject_of_type = core_eyalet }
-				}
-				country_event = {
-					id = flavor_tur.1000
-				}
-			}
-		}
-	}
+	#removed_effect = {
+	#	hidden_effect = {
+	#		if = {
+	#			limit = {
+	#				NOT = { is_subject_of_type = eyalet }
+	#				NOT = { is_subject_of_type = core_eyalet }
+	#			}
+	#			country_event = {
+	#				id = flavor_tur.1000
+	#			}
+	#		}
+	#	}
+	#}
 
 	custom_attributes = {
 		locked_government_type = yes
@@ -2066,19 +2066,19 @@ barbary_eyalet_government = {
 		naval_forcelimit_modifier = 0.1
 		governing_capacity = 100
 	}
-	removed_effect = {
-		hidden_effect = {
-			if = {
-				limit = {
-					NOT = { is_subject_of_type = eyalet }
-					NOT = { is_subject_of_type = core_eyalet }
-				}
-				country_event = {
-					id = flavor_tur.1000
-				}
-			}
-		}
-	}
+	#removed_effect = {
+	#	hidden_effect = {
+	#		if = {
+	#			limit = {
+	#				NOT = { is_subject_of_type = eyalet }
+	#				NOT = { is_subject_of_type = core_eyalet }
+	#			}
+	#			country_event = {
+	#				id = flavor_tur.1000
+	#			}
+	#		}
+	#	}
+	#}
 
 	custom_attributes = {
 		locked_government_type = yes
@@ -6304,16 +6304,16 @@ become_rev_republic_reform = {
 		set_country_flag = populists_in_government
 		hidden_effect = {
 			change_government = republic
-			if = {
-				limit = {
-					tag = AVE
-				}
-				hidden_effect = {
-					country_event = {
-						id = flavor_gbr.20
-					}
-				}
-			}
+			#if = {
+			#	limit = {
+			#		tag = AVE
+			#	}
+			#	hidden_effect = {
+			#		country_event = {
+			#			id = flavor_gbr.20
+			#		}
+			#	}
+			#}
 		}
 		add_government_reform = revolutionary_republic_reform
 		if = {

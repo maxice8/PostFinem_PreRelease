@@ -3755,16 +3755,16 @@ seize_executive_power_reform = {
 		set_country_flag = populists_in_government
 		add_stability = -3
 		change_government = monarchy
-		if = {
-			limit = {
-				tag = AVE
-			}
-			hidden_effect = {
-				country_event = {
-					id = flavor_gbr.20
-				}
-			}
-		}
+		#if = {
+		#	limit = {
+		#		tag = AVE
+		#	}
+		#	hidden_effect = {
+		#		country_event = {
+		#			id = flavor_gbr.20
+		#		}
+		#	}
+		#}
 		if = {
 			limit = { has_country_flag = had_states_general_mechanic }
 			#country_event = { id = dutch_republic.33 }
@@ -3789,16 +3789,16 @@ proclaim_divine_guidance_reform = {
 		set_country_flag = populists_in_government
 		add_stability = -3
 		change_government = theocracy
-		if = {
-			limit = {
-				tag = AVE
-			}
-			hidden_effect = {
-				country_event = {
-					id = flavor_gbr.20
-				}
-			}
-		}
+		#if = {
+		#	limit = {
+		#		tag = AVE
+		#	}
+		#	hidden_effect = {
+		#		country_event = {
+		#			id = flavor_gbr.20
+		#		}
+		#	}
+		#}
 	}
 	ai = {
 		factor = 0
@@ -3958,16 +3958,16 @@ become_rev_empire_reform = {
 		set_country_flag = populists_in_government
 		hidden_effect = {
 			change_government = monarchy
-			if = {
-				limit = {
-					tag = AVE
-				}
-				hidden_effect = {
-					country_event = {
-						id = flavor_gbr.20
-					}
-				}
-			}
+			#if = {
+			#	limit = {
+			#		tag = AVE
+			#	}
+			#	hidden_effect = {
+			#		country_event = {
+			#			id = flavor_gbr.20
+			#		}
+			#	}
+			#}
 		}
 		add_government_reform = revolutionary_empire_reform
 		if = {
