@@ -32,64 +32,6 @@ test_modifier = {
 }
 
 
-# catholic_rome = {
-# 	potential = {
-# 		normal_or_historical_nations = yes
-# 		owner = {
-# 			religion = catholic
-# 			NOT = { tag = PAP }
-# 		}
-# 	}
-
-# 	trigger = {	
-# 		owner = {
-# 			NOT = { overlord_of = PAP }
-# 			NOT = { tag = ITA }
-# 			NOT = { tag = HLR }
-# 			NOT = { tag = ROM }
-# 			custom_trigger_tooltip = {
-# 				tooltip = no_dip_malus_reward_tt
-# 				NOT = { has_country_flag = general_flag_for_FU_Rome_flag }			
-# 			}
-# 		}
-# 	}
-
-# 	papal_influence = -10
-# 	diplomatic_reputation = -1
-# 	#icon = 9
-# }
-
-# non_catholic_rome = {
-# 	potential = {
-# 		normal_or_historical_nations = yes
-# 	}
-	
-# 	#viewer = {
-# 	#}
-	
-# 	trigger = {
-# 		owner = {
-# 			NOT = { religion = catholic }
-# 			OR = {
-# 				religion_group = christian
-# 				religion_group = muslim
-# 			}
-# 		}
-# 	}
-
-# 	prestige = 0.5
-# 	missionaries = 1
-	
-# 	#Province scope
-# 	on_activation = {
-	
-# 	}
-	
-# 	on_deactivation = {
-	
-# 	}
-	
-# }
 
 religious_center = {
 	potential = {
