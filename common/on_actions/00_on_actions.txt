@@ -769,7 +769,7 @@ on_new_monarch = {
 		flavor_daimyo.4			#Shiba Yoshikado
 		flavor_sca.2			# Education Focus of the new Ruler
 		# hm i wonder hehe
-		trn.1				# Election for Brittonic Confederation
+		pf_trn.1				# Election for Brittonic Confederation
 	}
 	random_events = {
 		1000 = 0
@@ -916,7 +916,7 @@ on_death_foreign_slave_ruler = {
 on_replace_governor = {
 	events = {
 		# hm i wonder hehe
-		trn.1				# Election for Brittonic Confederationctions.707
+		pf_trn.1				# Election for Brittonic Confederationctions.707
 	}
 }
 
