@@ -60,23 +60,31 @@ country_event = {
 			}
 		}
 	}
+
+	immediate = {
+		142 = {
+			owner = {
+				save_global_event_target_as = CorfuOwnerAtEventTime
+			}
+		}
+	}
 	
 	#The emperor shall demand Corfu from it's current owner, which may lead to war
 	option = {
 		name = "incidents_emperor_demands_corfu.1.a"
 		ai_chance = { factor = 10 }
-		custom_tooltip = "We shall demand Corfu be returned to the empire, even if it may lead to war."
-		emperor = {
+		custom_tooltip = emperor_demands_corfu_tt
+		hidden_effect = {
 			set_imperial_incident = incident_emperor_demands_corfu
 		}
 	}
+
 	#The emperor decides it's not worth the hassle
 	option = {
 		name = "incidents_emperor_demands_corfu.1.b"
 		ai_chance = { factor = 0 }
 		set_global_flag = corfu_refused_by_empire
-		custom_tooltip = "Corfu shall be left to their own fate."
-		custom_tooltip = " "
+		custom_tooltip = emperor_demand_corfu_no_more_chance_tt
 		142 = { set_in_empire = no }
 		add_imperial_influence = -15
 	}
@@ -97,58 +105,37 @@ country_event = {
 		ai_chance = {
 			factor = 10
 			modifier = {
-				factor = 10
+				factor = 2
 				142 = {
 					owner = {
-						OR = {
-							ai_attitude = {
-								who = emperor
-								attitude = attitude_rivalry
-							}
-							ai_attitude = {
-								who = emperor
-								attitude = attitude_hostile
-							}
-							ai_attitude = {
-								who = emperor
-								attitude = attitude_threatened
-							}
-							ai_attitude = {
-								who = emperor
-								attitude = attitude_outraged
-							}
-							ai_attitude = {
-								who = emperor
-								attitude = attitude_disloyal
-							}
-							ai_attitude = {
-								who = emperor
-								attitude = attitude_rebellious
+						emperor = {
+							OR = {
+								army_size = PREV
+								total_development = PREV
 							}
 						}
-					}
-				}
-			}
-			modifier = {
-				factor = 10
-				142 = {
-					owner = {
-						any_country = {
-							has_guaranteed = PREV
-							OR = {
-								is_rival = emperor
-								is_great_power = yes
+						any_ally = {
+							NOT = { army_size = emperor }
+						}
+						NOT = {
+							any_great_power = {
+								PREV = {
+									guaranteed_by = PREV
+								}
+								army_size = emperor
 							}
 						}
 					}
 				}
 			}
 		}
-		142 = {
-			owner = {
-				country_event = {
-					id = incidents_emperor_demands_corfu.3
-					days = 3
+		custom_tooltip = adirim_demand_corfu_war_tt
+		hidden_effect = {
+			142 = {
+				owner = {
+					country_event = {
+						id = incidents_emperor_demands_corfu.3
+					}
 				}
 			}
 		}
@@ -160,34 +147,47 @@ country_event = {
 		ai_chance = {
 			factor = 10
 			modifier = {
-				factor = 10
+				factor = 2
+				142 = {
+					owner = {
+						emperor = {
+							OR = {
+								army_size = PREV
+								total_development = PREV
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
 				142 = {
 					owner = {
 						OR = {
-							ai_attitude = {
-								who = emperor
-								attitude = attitude_loyal
-							}
-							ai_attitude = {
-								who = emperor
-								attitude = attitude_friendly
-							}
-							ai_attitude = {
-								who = emperor
-								attitude = attitude_allied
+							government_rank = 2
+							total_development = 100
+							AND = {
+								is_subject = yes
+								overlord = {
+									is_part_of_hre = no
+								}
 							}
 						}
 					}
 				}
 			}
 		}
-		142 = {
-			owner = {
-				country_event = {
-					id = incidents_emperor_demands_corfu.4
-					days = 3
+		custom_tooltip = adirim_refuse_membership_war_tt
+		custom_tooltip = empty_line_tt
+		custom_tooltip = always_refuse_membership_tt
+		hidden_effect = {
+			142 = {
+				owner = {
+					country_event = {
+						id = incidents_emperor_demands_corfu.4
+					}
 				}
-			}
+			}	
 		}
 	}	
 
@@ -197,21 +197,25 @@ country_event = {
 		ai_chance = {
 			factor = 10
 			modifier = {
-				factor = 10
+				factor = 2
 				142 = {
 					owner = {
 						OR = {
-							ai_attitude = {
-								who = emperor
-								attitude = attitude_loyal
+							army_size = emperor
+							AND = {
+								is_subject = yes
+								overlord = {
+									army_size = emperor
+								}
 							}
-							ai_attitude = {
-								who = emperor
-								attitude = attitude_friendly
+							any_ally = {
+								army_size = emperor
 							}
-							ai_attitude = {
-								who = emperor
-								attitude = attitude_allied
+							any_great_power = {
+								PREV = {
+									guaranteed_by = PREV
+								}
+								army_size = emperor
 							}
 						}
 					}
@@ -257,13 +261,23 @@ country_event = {
 				 }
 			}
 		}
-		142 = { 
-			cede_province = CEP 
-			hidden_effect = {
+
+		custom_tooltip = return_corfu_tt
+		hidden_effect = {
+			142 = { 
+				cede_province = CEP
 				add_core = CEP
-			}
+				set_in_empire = yes
+				CEP = {
+					set_in_empire = yes
+				}
+				emperor = {
+					create_guarantee = CEP
+					add_truce_with = CEP
+				}
+			}	
 		}
-		add_opinion = {
+		reverse_add_opinion = {
 			who = emperor
 			modifier = corfu_given_to_empire_opinion
 		}
@@ -293,7 +307,7 @@ country_event = {
 				name = fighting_for_corfu_modifier
 				duration = 1825
 			}
-			custom_tooltip = " "
+			custom_tooltip = empty_line_tt
 			declare_war_with_cb = {
 				casus_belli = cb_imperial_ban
 				who = ROOT
@@ -335,8 +349,17 @@ country_event = {
 				}
 			}
 			modifier = {
-				factor = 10
-				NOT = { num_of_cities = 10 }
+				factor = 0
+				OR = {
+					government_rank = 2
+					AND = {
+						is_subject = yes
+						overlord = {
+							is_part_of_hre = no
+						}
+					}
+					total_development = 100
+				}
 			}
 		}
 		set_in_empire = yes
@@ -347,19 +370,16 @@ country_event = {
 		name = "incidents_emperor_demands_corfu.4.b"
 		ai_chance = {
 			factor = 1
-			modifier = {
-				factor = 100
-				num_of_cities = 10
-			}
+		}
+		reverse_add_opinion = {
+			who = emperor
+			modifier = refused_to_join_empire_opinion
 		}
 		emperor = {
-			add_opinion = {
-				who = root
-				modifier = refused_to_join_empire_opinion
-			}
-			add_casus_belli = {
-				type = cb_imperial_ban
-				target = ROOT
+			declare_war_with_cb = {
+				casus_belli = cb_imperial_ban
+				who = ROOT
+				war_goal_province = 142
 			}
 		}
 	}

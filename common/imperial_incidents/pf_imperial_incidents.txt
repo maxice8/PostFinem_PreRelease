@@ -106,35 +106,40 @@ incident_emperor_demands_corfu = {
 	0 = { # Corfu must be demanded directly
 		factor = 1
 		modifier = {
-			factor = 100
-			emperor = { army_size_percentage = 0.5 }
-			OR = {
-				ai_attitude = {
-					who = emperor
-					attitude = attitude_friendly
-				}
-				ai_attitude = {
-					who = emperor
-					attitude = attitude_loyal
-				}
-				ai_attitude = {
-					who = emperor
-					attitude = attitude_allied
+			factor = 6
+			142 = {
+				owner = {
+					emperor = {
+						OR = {
+							total_development = PREV
+							army_size = PREV
+						}
+					}
+					NOT = {
+						any_ally = {
+							army_size = emperor
+						}
+					}
+					NOT = {
+						any_great_power = {
+							army_size = emperor
+							PREV = {
+								guaranteed_by = PREV
+							}
+						}
+					}
 				}
 			}
 		}
+		# Southern Princes Faction Interest
 		modifier = {
-			factor = 100
-			emperor = { army_size_percentage = 0.5 }
-			142 = {
-				owner = {
-					any_country = {
-						has_guaranteed = PREV
-						OR = {
-							is_rival = emperor
-							is_great_power = yes
-						}
-					}
+			factor = 2
+			capital_scope = {
+				OR = {
+					area = apulia_area
+					area = sicily_area
+					area = western_sicily_area
+					area = calabria_area
 				}
 			}
 		}
@@ -143,33 +148,49 @@ incident_emperor_demands_corfu = {
 	1 = { # Corfu's controller should be extended membership
 		factor = 1
 		modifier = {
-			factor = 100
-			emperor = { army_size_percentage = 0.7 }
-			OR = {
-				ai_attitude = {
-					who = emperor
-					attitude = attitude_friendly
-				}
-				ai_attitude = {
-					who = emperor
-					attitude = attitude_loyal
-				}
-				ai_attitude = {
-					who = emperor
-					attitude = attitude_allied
+			factor = 5
+			142 = {
+				owner = {
+					emperor = {
+						OR = {
+							total_development = PREV
+							army_size = PREV
+						}
+					}
 				}
 			}
 		}
+		# Trading League interest in a new Member
 		modifier = {
-			factor = 100
-			emperor = { army_size_percentage = 0.7 }
+			factor = 2
+			OR = {
+				has_reform = free_city
+				has_reform = merchant_republic
+				has_reform = merchants_reform
+			}
+		}
+		# They will refuse but some hold hopeful delusions
+		modifier = {
+			factor = 0.5
 			142 = {
 				owner = {
-					any_country = {
-						has_guaranteed = PREV
-						OR = {
-							is_rival = emperor
-							is_great_power = yes
+					OR = {
+						government_rank = 2
+						total_development = 100
+						AND = {
+							is_subject = yes
+							overlord = {
+								is_part_of_hre = no
+							}
+						}
+						any_ally = {
+							army_size = emperor
+						}
+						any_great_power = {
+							PREV = {
+								guaranteed_by = PREV
+							}
+							army_size = emperor
 						}
 					}
 				}
@@ -180,58 +201,43 @@ incident_emperor_demands_corfu = {
 	2 = { # Abandon Corfu, it's not worth the hassle
 		factor = 1
 		modifier = {
-			factor = 100
-			any_ally = {
-				AND = {
-					any_rival_country = {
-						is_emperor = yes
-					}
-					is_great_power = yes
-				}
-			}
-		}
-		modifier = {
-			factor = 100
-			emperor = { NOT = { army_size_percentage = 0.5 } }
+			factor = 3
 			142 = {
-				owner = {
-					any_country = {
-						has_guaranteed = PREV
-						OR = {
-							is_rival = emperor
-							is_great_power = yes
+				OR = {
+					owner = {
+						is_subject = yes
+						overlord = {
+							army_size = emperor
+						}
+					}
+					owner = {
+						army_size = emperor
+					}
+					owner = {
+						any_ally = {
+							army_size = emperor
+						}
+					}
+					# This means 
+					# owner->any_great_power->owner->guaranteed_by->any_great_power
+					owner = {
+						any_great_power = {
+							PREV = {
+								guaranteed_by = PREV
+							}
+							army_size = emperor
 						}
 					}
 				}
 			}
 		}
+		# The Northen Faction has better things to worry about
 		modifier = {
-			factor = 100
+			factor = 2
 			OR = {
-				ai_attitude = {
-					who = emperor
-					attitude = attitude_rivalry
-				}
-				ai_attitude = {
-					who = emperor
-					attitude = attitude_hostile
-				}
-				ai_attitude = {
-					who = emperor
-					attitude = attitude_threatened
-				}
-				ai_attitude = {
-					who = emperor
-					attitude = attitude_outraged
-				}
-				ai_attitude = {
-					who = emperor
-					attitude = attitude_disloyal
-				}
-				ai_attitude = {
-					who = emperor
-					attitude = attitude_rebellious
-				}
+				primary_culture = sabini
+				primary_culture = ligurii
+				primary_culture = venetii
 			}
 		}
 	}
