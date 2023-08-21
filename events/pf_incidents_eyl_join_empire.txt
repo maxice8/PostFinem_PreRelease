@@ -13,7 +13,6 @@ country_event = {
 	picture = HRE_eventPicture
 	
 	major = yes
-
 	fire_only_once = yes
 	
 	trigger = {
@@ -27,9 +26,7 @@ country_event = {
 		months = 240
 		modifier = {
 			factor = 0.75
-			any_ally = {
-				is_emperor = yes
-			}
+			alliance_with = emperor
 		}
 		modifier = {
 			factor = 0.75
@@ -60,8 +57,8 @@ country_event = {
 				NOT = { emperor = { is_rival = ROOT } }
 			}
 		}
-		custom_tooltip = eyl_asks_to_join_empire_tt
-		emperor = {
+		custom_tooltip = eyl_start_incident_tt
+		hidden_effect = {
 			set_imperial_incident = incident_eyl_wants_to_join
 		}
 	}
@@ -88,7 +85,7 @@ country_event = {
 			}
 		}
 		set_country_flag = eyl_refused_empire
-		custom_tooltip = "We shall petition to join the federation."
+		custom_tooltip = eyl_refuse_to_join_empire_tt
 	}
 }
 
@@ -130,10 +127,9 @@ country_event = {
 			}
 		}
 		EYL = {
-			remove_government_reform = pirate_republic_reform
-			add_government_reform = noble_elite_reform
-			custom_tooltip =  " "
 			set_in_empire = yes
+			custom_tooltip = empty_line_tt
+			custom_tooltip = eyl_become_merchants_reform_tt
 		}
 	}
 	
