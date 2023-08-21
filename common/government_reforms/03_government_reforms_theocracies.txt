@@ -327,24 +327,24 @@ merchant_theocracy_reform = {
 			is_playing_custom_nation = yes
 		}
 	}
-	#removed_effect = {
-	#	if = {
-	#		limit = {
-	#			is_playing_custom_nation = no
-	#			NOT = { religion = catholic }
-	#			NOT = {
-	#				has_unlocked_government_reform = {
-	#					government_reform = reformer_state_reform
-	#				}
-	#			}
-	#		}
-	#		hidden_effect = {
-	#			country_event = {
-	#				id = flavor_rig.11
-	#			}
-	#		}
-	#	}
-	#}
+	removed_effect = {
+		if = {
+			limit = {
+				is_playing_custom_nation = no
+				NOT = { religion = catholic }
+				NOT = {
+					has_unlocked_government_reform = {
+						government_reform = reformer_state_reform
+					}
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavor_rig.11
+				}
+			}
+		}
+	}
 	boost_income = yes
 	factions = {
 		mr_aristocrats
@@ -670,9 +670,9 @@ dutch_theocracy_reform = {
 		allowed_voc_indiamen_fraction = 0.2
 	}
 
-	#removed_effect = {
-	#	country_event = { id = dutch_republic.33 }
-	#}
+	removed_effect = {
+		country_event = { id = dutch_republic.33 }
+	}
 	royal_marriage = yes
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
@@ -771,11 +771,11 @@ fifth_monarchists_reform = {
 			end_time_mechanic
 		}
 	}
-	#removed_effect = {
-	#	country_event = {
-	#		id = flavor_gbr.120
-	#	}
-	#}
+	removed_effect = {
+		country_event = {
+			id = flavor_gbr.120
+		}
+	}
 }
 
 millennialistic_theocracy_reform = {
@@ -1320,16 +1320,16 @@ hereditary_religious_leadership_reform = {
 	effect = {
 		set_country_flag = populists_in_government
 		change_government = monarchy
-		#if = {
-		#	limit = {
-		#		tag = AVE
-		#	}
-		#	hidden_effect = {
-		#		country_event = {
-		#			id = flavor_gbr.20
-		#		}
-		#	}
-		#}
+		if = {
+			limit = {
+				tag = AVE
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavor_gbr.20
+				}
+			}
+		}
 		add_government_reform = feudal_theocracy
 	}
 	ai = {
@@ -1354,16 +1354,16 @@ crown_leader_reform = {
 			add_stability = -3
 		}
 		change_government = monarchy
-		#if = {
-		#	limit = {
-		#		tag = AVE
-		#	}
-		#	hidden_effect = {
-		#		country_event = {
-		#			id = flavor_gbr.20
-		#		}
-		#	}
-		#}
+		if = {
+			limit = {
+				tag = AVE
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavor_gbr.20
+				}
+			}
+		}
 	}
 	ai = {
 		factor = 0
@@ -1381,16 +1381,16 @@ proclaim_republic_reform = {
 		set_country_flag = populists_in_government
 		add_stability = -3
 		change_government = republic
-		#if = {
-		#	limit = {
-		#		tag = AVE
-		#	}
-		#	hidden_effect = {
-		#		country_event = {
-		#			id = flavor_gbr.20
-		#		}
-		#	}
-		#}
+		if = {
+			limit = {
+				tag = AVE
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavor_gbr.20
+				}
+			}
+		}
 	}
 	ai = {
 		factor = 0

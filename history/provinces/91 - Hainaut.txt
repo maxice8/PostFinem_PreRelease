@@ -9,21 +9,12 @@ discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
-add_local_autonomy = 30
 latent_trade_goods = { 
 	coal 
 }
-owner = BRG
-controller = BRG
-add_core = BRG
+owner = GAU
+controller = GAU
+add_core = GAU
 culture = nervian
 religion = druidic
-
-1442.11.10 = {
-	owner = GAU
-	controller = GAU
-}
-
-1444.6.23 = {
-	add_core = GAU
-}
+add_core = BRG

@@ -1,6 +1,95 @@
 # default options are 0-based
 # In console, can use imperial_incident [key] to immediately begin an incident
 
+
+incident_eyl_wants_to_join = {
+	event = incidents_eyl_join_empire.2
+	default_option = 0
+	
+	can_stop = {
+		OR = {
+			NOT = {
+				exists = EYL
+			}
+			EYL = {
+				is_emperor = yes
+			}
+			EYL = {
+				is_subject = yes
+			}
+			EYL = {
+				exists = no
+			}
+		}
+	}
+	
+	0 = { # eyl must give up piratical ways
+		factor = 1
+		modifier = {
+			factor = 100
+			OR = {
+				ai_attitude = {
+					who = EYL
+					attitude = attitude_friendly
+				}
+				ai_attitude = {
+					who = EYL
+					attitude = attitude_loyal
+				}
+				ai_attitude = {
+					who = EYL
+					attitude = attitude_allied
+				}
+			}
+		}
+	}
+	
+	1 = { # eyl is denied
+		factor = 1
+		modifier = {
+			factor = 100
+			any_ally = {
+				AND = {
+					any_rival_country = {
+						is_emperor = yes
+					}
+					is_great_power = yes
+				}
+			}
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				ai_attitude = {
+					who = EYL
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = EYL
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = EYL
+					attitude = attitude_threatened
+				}
+				ai_attitude = {
+					who = EYL
+					attitude = attitude_outraged
+				}
+				ai_attitude = {
+					who = EYL
+					attitude = attitude_disloyal
+				}
+				ai_attitude = {
+					who = EYL
+					attitude = attitude_rebellious
+				}
+			}
+		}
+	}
+}
+
+
 incident_pu_subject_joins_empire = {
 	event = incident_generic.2
 	default_option = 0
@@ -36,5 +125,158 @@ incident_pu_subject_joins_empire = {
 	
 	1 = { # denied
 		factor = 1
+	}
+}
+
+
+incident_emperor_demands_corfu = {
+	event = incidents_emperor_demands_corfu.2
+	default_option = 0
+	
+	can_stop = {
+		OR = {
+			has_global_flag = corfu_refused_by_empire
+			has_global_flag = corfu_refused_by_owner
+			has_global_flag = corfu_given_to_empire
+			142 = {
+				OR = {
+					owner = { is_part_of_hre = yes }
+					owner = { is_subject_of = emperor }
+				}
+			}
+		}
+	}
+	
+	0 = { # Corfu must be demanded directly
+		factor = 1
+		modifier = {
+			factor = 100
+			emperor = { army_size_percentage = 0.5 }
+			OR = {
+				ai_attitude = {
+					who = emperor
+					attitude = attitude_friendly
+				}
+				ai_attitude = {
+					who = emperor
+					attitude = attitude_loyal
+				}
+				ai_attitude = {
+					who = emperor
+					attitude = attitude_allied
+				}
+			}
+		}
+		modifier = {
+			factor = 100
+			emperor = { army_size_percentage = 0.5 }
+			142 = {
+				owner = {
+					any_country = {
+						has_guaranteed = PREV
+						OR = {
+							is_rival = emperor
+							is_great_power = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	1 = { # Corfu's controller should be extended membership
+		factor = 1
+		modifier = {
+			factor = 100
+			emperor = { army_size_percentage = 0.7 }
+			OR = {
+				ai_attitude = {
+					who = emperor
+					attitude = attitude_friendly
+				}
+				ai_attitude = {
+					who = emperor
+					attitude = attitude_loyal
+				}
+				ai_attitude = {
+					who = emperor
+					attitude = attitude_allied
+				}
+			}
+		}
+		modifier = {
+			factor = 100
+			emperor = { army_size_percentage = 0.7 }
+			142 = {
+				owner = {
+					any_country = {
+						has_guaranteed = PREV
+						OR = {
+							is_rival = emperor
+							is_great_power = yes
+						}
+					}
+				}
+			}
+		}
+	}
+
+	2 = { # Abandon Corfu, it's not worth the hassle
+		factor = 1
+		modifier = {
+			factor = 100
+			any_ally = {
+				AND = {
+					any_rival_country = {
+						is_emperor = yes
+					}
+					is_great_power = yes
+				}
+			}
+		}
+		modifier = {
+			factor = 100
+			emperor = { NOT = { army_size_percentage = 0.5 } }
+			142 = {
+				owner = {
+					any_country = {
+						has_guaranteed = PREV
+						OR = {
+							is_rival = emperor
+							is_great_power = yes
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				ai_attitude = {
+					who = emperor
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = emperor
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = emperor
+					attitude = attitude_threatened
+				}
+				ai_attitude = {
+					who = emperor
+					attitude = attitude_outraged
+				}
+				ai_attitude = {
+					who = emperor
+					attitude = attitude_disloyal
+				}
+				ai_attitude = {
+					who = emperor
+					attitude = attitude_rebellious
+				}
+			}
+		}
 	}
 }

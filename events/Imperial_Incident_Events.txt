@@ -1,0 +1,621 @@
+#### Eyl joins the Empire ###
+### By dat boi Chewy ###
+
+
+namespace = incidents_eyl_join_empire
+normal_or_historical_nations = yes
+
+# Eyl considers entry
+country_event = {
+	id = incidents_eyl_join_empire.1
+	title = "incidents_eyl_join_empire.1.t"
+	desc = "incidents_eyl_join_empire.1.desc"
+	picture = HRE_eventPicture
+	
+	major = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1446
+		EYL = {
+			has_reform = pirate_republic_reform
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 0.75
+			any_ally = {
+				is_emperor = yes
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_opinion = {
+				who = emperor
+				value = 100
+			}
+		}
+	}
+	
+	option = {
+		name = "incidents_eyl_join_empire.1.a"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 1.5
+				has_opinion = {
+					who = emperor
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { is_rival = emperor }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { emperor = { is_rival = ROOT } }
+			}
+		}
+		custom_tooltip = eyl_asks_to_join_empire_tt
+		emperor = {
+			set_imperial_incident = incident_eyl_wants_to_join
+		}
+	}
+	option = {
+		name = "incidents_eyl_join_empire.1.b"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 1.5
+				NOT = {
+					has_opinion = {
+						who = emperor
+						value = 0
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				is_rival = emperor
+			}
+			modifier = {
+				factor = 1.25
+				emperor = { is_rival = ROOT }
+			}
+		}
+		set_country_flag = eyl_refused_empire
+		custom_tooltip = "We shall petition to join the federation."
+	}
+}
+
+# Emperor considers Eyl's offer
+country_event = {
+	id = incidents_eyl_join_empire.2
+	title = "incidents_eyl_join_empire.2.t"
+	desc = "incidents_eyl_join_empire.2.desc"
+	picture = HRE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "incidents_eyl_join_empire.2.a"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_opinion = {
+					who = EYL
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 0.5
+				emperor = { is_rival = EYL }
+			}
+			modifier = {
+				factor = 0.5
+				EYL = { is_rival = emperor }
+			}
+			modifier = {
+				factor = 2
+				NOT = { emperor = { is_rival = EYL } }
+			}
+			modifier = {
+				factor = 2
+				NOT = { EYL = { is_rival = emperor } }
+			}
+		}
+		EYL = {
+			remove_government_reform = pirate_republic_reform
+			add_government_reform = noble_elite_reform
+			custom_tooltip =  " "
+			set_in_empire = yes
+		}
+	}
+	
+	option = {
+		name = "incidents_eyl_join_empire.2.c"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 1.5
+				NOT = {
+					has_opinion = {
+						who = emperor
+						value = 0
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				is_rival = EYL
+			}
+			modifier = {
+				factor = 2
+				EYL = { is_rival = emperor }
+			}
+			modifier = {
+				factor = 0
+				alliance_with = EYL
+			}
+		}
+		hidden_effect = {
+			EYL = {
+				country_event = {
+					id = incidents_eyl_join_empire.4
+					days = 5
+				}
+			}
+		}
+		tooltip = {
+			EYL = {
+				every_known_country = {
+					limit = {
+						is_elector = yes
+						is_emperor = no
+						NOT = { government = monarchy }
+					}
+					reverse_add_casus_belli = {
+						target = EYL
+						type = cb_vassalize_mission
+						months = 480
+					}
+				}
+				every_known_country = {
+					limit = {
+						is_elector = yes
+						is_emperor = no
+						government = monarchy
+					}
+					reverse_add_casus_belli = {
+						target = EYL
+						type = cb_trade_conflict
+						months = 480
+					}
+				}
+			}
+		}
+	}
+}
+
+# Eyl is refused Imperial membership
+country_event = {
+	id = incidents_eyl_join_empire.4
+	title = "incidents_eyl_join_empire.4.t"
+	desc = "incidents_eyl_join_empire.4.desc"
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "incidents_eyl_join_empire.4.a"
+		ai_chance = {
+			factor = 1
+		}
+		every_known_country = {
+			limit = {
+				is_elector = yes
+				is_emperor = no
+				government = monarchy
+			}
+			reverse_add_casus_belli = {
+				target = EYL
+				type = cb_trade_conflict
+				months = 480
+			}
+		}
+		every_known_country = {
+			limit = {
+				is_elector = yes
+				is_emperor = no
+				NOT = { government = monarchy }
+			}
+			reverse_add_casus_belli = {
+				target = EYL
+				type = cb_vassalize_mission
+				months = 480
+			}
+		}
+		add_opinion = {
+			who = emperor
+			modifier = eyl_refused_membership_opinion
+		}
+		reverse_add_opinion = {
+			who = emperor
+			modifier = eyl_refused_membership_opinion
+		}
+		set_country_flag = eyl_refused_empire
+	}
+}
+
+
+namespace = incidents_emperor_demands_corfu
+
+# The people of Corfu demand to return to the Italian Federation
+country_event = {
+	id = incidents_emperor_demands_corfu.1
+	title = "incidents_emperor_demands_corfu.1.t"
+	desc = "incidents_emperor_demands_corfu.1.desc"
+	picture = HRE_eventPicture
+	
+	major = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1460
+		is_imperial_ban_allowed = yes
+		142 = {
+			is_part_of_hre = yes
+			owner = { 	is_part_of_hre = no }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 0.75
+			142 = {
+				owner = {
+					any_ally = {
+						is_rival = emperor
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			142 = {
+				owner = {
+					any_country = {
+						has_guaranteed = PREV
+						OR = {
+							is_rival = emperor
+							is_great_power = yes
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			142 = {
+				owner = {
+					NOT = {
+						has_opinion = {
+							who = emperor
+							value = 0
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	#The emperor shall demand Corfu from it's current owner, which may lead to war
+	option = {
+		name = "incidents_emperor_demands_corfu.1.a"
+		ai_chance = { factor = 10 }
+		custom_tooltip = "We shall demand Corfu be returned to the empire, even if it may lead to war."
+		emperor = {
+			set_imperial_incident = incident_emperor_demands_corfu
+		}
+	}
+	#The emperor decides it's not worth the hassle
+	option = {
+		name = "incidents_emperor_demands_corfu.1.b"
+		ai_chance = { factor = 0 }
+		set_global_flag = corfu_refused_by_empire
+		custom_tooltip = "Corfu shall be left to their own fate."
+		custom_tooltip = " "
+		142 = { set_in_empire = no }
+		add_imperial_influence = -15
+	}
+}
+
+# Corfu's current owner receives the Emperor's demand
+country_event = {
+	id = incidents_emperor_demands_corfu.2
+	title = "incidents_emperor_demands_corfu.2.t"
+	desc = "incidents_emperor_demands_corfu.2.desc"
+	picture = HRE_eventPicture
+	
+	is_triggered_only = yes
+	
+	#The emperor demands Corfu directly
+	option = {
+		name = "incidents_emperor_demands_corfu.2.a"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				142 = {
+					owner = {
+						OR = {
+							ai_attitude = {
+								who = emperor
+								attitude = attitude_rivalry
+							}
+							ai_attitude = {
+								who = emperor
+								attitude = attitude_hostile
+							}
+							ai_attitude = {
+								who = emperor
+								attitude = attitude_threatened
+							}
+							ai_attitude = {
+								who = emperor
+								attitude = attitude_outraged
+							}
+							ai_attitude = {
+								who = emperor
+								attitude = attitude_disloyal
+							}
+							ai_attitude = {
+								who = emperor
+								attitude = attitude_rebellious
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				142 = {
+					owner = {
+						any_country = {
+							has_guaranteed = PREV
+							OR = {
+								is_rival = emperor
+								is_great_power = yes
+							}
+						}
+					}
+				}
+			}
+		}
+		142 = {
+			owner = {
+				country_event = {
+					id = incidents_emperor_demands_corfu.3
+					days = 3
+				}
+			}
+		}
+	}
+	
+	#The emperor offers membership to Corfu's owner
+	option = {
+		name = "incidents_emperor_demands_corfu.2.b"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				142 = {
+					owner = {
+						OR = {
+							ai_attitude = {
+								who = emperor
+								attitude = attitude_loyal
+							}
+							ai_attitude = {
+								who = emperor
+								attitude = attitude_friendly
+							}
+							ai_attitude = {
+								who = emperor
+								attitude = attitude_allied
+							}
+						}
+					}
+				}
+			}
+		}
+		142 = {
+			owner = {
+				country_event = {
+					id = incidents_emperor_demands_corfu.4
+					days = 3
+				}
+			}
+		}
+	}	
+
+	#Corfu is not worth the hassle
+	option = {
+		name = "incidents_emperor_demands_corfu.2.c"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				142 = {
+					owner = {
+						OR = {
+							ai_attitude = {
+								who = emperor
+								attitude = attitude_loyal
+							}
+							ai_attitude = {
+								who = emperor
+								attitude = attitude_friendly
+							}
+							ai_attitude = {
+								who = emperor
+								attitude = attitude_allied
+							}
+						}
+					}
+				}
+			}
+		}
+		142 = { set_in_empire = no }
+		add_imperial_influence = -10
+	}
+}
+
+# Corfu is demanded directly by the emperor
+country_event = {
+	id = incidents_emperor_demands_corfu.3
+	title = "incidents_emperor_demands_corfu.3.t"
+	desc = "incidents_emperor_demands_corfu.3.desc"
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	#They give it up due to lack of support
+	option = {
+		name = "incidents_emperor_demands_corfu.3.a"
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				NOT = { army_size = emperor }
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					NOT = { 
+						any_great_power = {
+							has_guaranteed = ROOT
+						}
+					}
+					NOT = {
+						any_ally = {
+							is_great_power = yes
+						}
+					}
+				 }
+			}
+		}
+		142 = { 
+			cede_province = CEP 
+			hidden_effect = {
+				add_core = CEP
+			}
+		}
+		add_opinion = {
+			who = emperor
+			modifier = corfu_given_to_empire_opinion
+		}
+		set_global_flag = corfu_given_to_empire
+	}
+	
+	#Refuse!
+	option = {
+		name = "incidents_emperor_demands_corfu.3.b"
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				OR = {
+					any_great_power = { has_guaranteed = ROOT }
+					any_ally = { is_great_power = yes }
+				}
+			}
+			modifier = {
+				factor = 100
+				army_size = emperor
+			}
+		}
+		set_global_flag = corfu_refused_by_owner
+		emperor = {
+			add_country_modifier = {
+				name = fighting_for_corfu_modifier
+				duration = 1825
+			}
+			custom_tooltip = " "
+			declare_war_with_cb = {
+				casus_belli = cb_imperial_ban
+				who = ROOT
+				war_goal_province = 142
+			}
+		}
+	}
+}
+
+# The owner of Corfu is offered entry into the empire
+country_event = {
+	id = incidents_emperor_demands_corfu.4
+	title = "incidents_emperor_demands_corfu.4.t"
+	desc = "incidents_emperor_demands_corfu.4.desc"
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	#They join the empire
+	option = {
+		name = "incidents_emperor_demands_corfu.4.a"
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				OR = {
+					ai_attitude = {
+						who = emperor
+						attitude = attitude_loyal
+					}
+					ai_attitude = {
+						who = emperor
+						attitude = attitude_friendly
+					}
+					ai_attitude = {
+						who = emperor
+						attitude = attitude_allied
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				NOT = { num_of_cities = 10 }
+			}
+		}
+		set_in_empire = yes
+	}
+	
+	#The refuse entry into the empire
+	option = {
+		name = "incidents_emperor_demands_corfu.4.b"
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				num_of_cities = 10
+			}
+		}
+		emperor = {
+			add_opinion = {
+				who = root
+				modifier = refused_to_join_empire_opinion
+			}
+			add_casus_belli = {
+				type = cb_imperial_ban
+				target = ROOT
+			}
+		}
+	}
+}

@@ -38,12 +38,9 @@ celtic_lordship = {
 		defensiveness = 0.1
 		improve_relation_modifier = 0.1
 	}
-	#allow = { 
-	#	has_dlc = "Mandate of Heaven"
-	#}
-	custom_attributes = {
-		has_tributaries = yes
-	}
+	# custom_attributes = {
+	# 	buffed_strong_duchies = yes #+5% Loyalty
+	# }
 	ai = {
 		factor = 0.5 #generic
 	}

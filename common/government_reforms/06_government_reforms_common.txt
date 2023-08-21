@@ -2884,10 +2884,10 @@ compagnie_dordonnance_reform = {
 	
 	ai = {
 		factor = 500
-		#modifier = {
-		#	factor = -1000
-		#	mission_completed = fra_musketeers
-		#}
+		modifier = {
+			factor = -1000
+			mission_completed = fra_musketeers
+		}
 	}
 }
 
@@ -2901,8 +2901,7 @@ musketeers_reform = {
 	trigger = {
 		NOT = { current_age = age_of_discovery }
 		NOT = { current_age = age_of_reformation }
-		#mission_completed = fra_musketeers
-		always = no #pf
+		mission_completed = fra_musketeers
 		if = {
 			limit = { has_modifier_locking_military_tier = yes }
 			OR = {
@@ -3258,9 +3257,7 @@ allotment_system = {
 		OR = {
 			primary_culture = swedish
 			primary_culture = finnish
-			# pf
-			#primary_culture = norse
-			culture_group = scandinavian
+			primary_culture = norse
 		}
 	}
 	trigger = {
@@ -3942,7 +3939,7 @@ tercios_reform = {
 					is_great_power = yes 
 				}
 			}
-			#mission_completed = spa_tercios_system
+			mission_completed = spa_tercios_system
 			custom_trigger_tooltip = {
 				tooltip = has_unlocked_this_reform_tt
 				has_country_flag = enable_tercios_reform_flag
@@ -3976,7 +3973,7 @@ consulate_of_the_sea = {
 	}
 	trigger = {
 		OR = {
-			#mission_completed = gc_ara_consultate_of_the_sea2
+			mission_completed = gc_ara_consultate_of_the_sea2
 			has_reform = consulate_of_the_sea 
 		}
 	}
