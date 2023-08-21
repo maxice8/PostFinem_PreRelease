@@ -1,73 +1,78 @@
-namespace = trn
+namespace = pf_trn
 
 # Tribal Election
 country_event = {
-	id = trn.1
-	title = trn.1.t
-	desc = trn.1.d
+	id = pf_trn.1
+	title = pf_trn.1.t
+	desc = pf_trn.1.desc
 	picture = COURT_INTRIGUE_eventPicture
 	
 	is_triggered_only = yes
 
 	trigger = {
 		has_government_attribute = confederation_elections
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {		
+		NOT = { is_subject_of_type = personal_union }
 	}
 
-	option = {		# Let heir keep power
-		name = "trn.1.aa"
-		# add -40 cohesion
-	}
 	option = {		# Trinovantes
-		name = "trn.1.a"
+		name = "pf_trn.1.a"
 		define_ruler = {
 			dynasty = "ap Trinowanti"
 			adm = 2
 		}
+		ai_chance = {
+			factor = 1
+		}
 		# add -20 cohesion
 	}
 	option = {		# Iceni
-		name = "trn.1.b"
+		name = "pf_trn.1.b"
 		define_ruler = {
 			dynasty = "ap Iceni"
 			mil = 2
 		}
+		ai_chance = {
+			factor = 1
+		}
 		# add -20 cohesion
 	}
 	option = {		# Cantiaci
-		name = "trn.1.c"
+		name = "pf_trn.1.c"
 		define_ruler = {
 			dynasty = "ap Cantiaci"
 			dip = 2
 		}
+		ai_chance = {
+			factor = 1
+		}
 		# add -20 cohesion
 	}
 	option = {		# Catuvellauni
-		name = "trn.1.e"
+		name = "pf_trn.1.d"
 		define_ruler = {
 			dynasty = "ap Catuevellauni"
 			adm = 1
 			mil = 1
 		}
+		ai_chance = {
+			factor = 1
+		}
 		# add -20 cohesion
 	}
 	option = {		# Regni
-		name = "trn.1.f"
+		name = "pf_trn.1.e"
 		define_ruler = {
 			dynasty = "ap Regni"
 			dip = 1
 			adm = 1
 		}
+		ai_chance = {
+			factor = 1
+		}
 		# add -20 cohesion
 	}
 	option = {		# Let the strongest win
-		name = "trn.1.g"
+		name = "pf_trn.1.f"
 		random_list = {
 			1 = {
 				define_ruler = {
@@ -101,6 +106,9 @@ country_event = {
 					adm = 1
 				}
 			}
+		}
+		ai_chance = {
+			factor = 0
 		}
 	}
 }
