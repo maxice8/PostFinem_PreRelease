@@ -768,8 +768,6 @@ on_new_monarch = {
 		muslim_school_events.20 #No Religious School
 		flavor_daimyo.4			#Shiba Yoshikado
 		flavor_sca.2			# Education Focus of the new Ruler
-		# hm i wonder hehe
-		pf_trn.1				# Election for Brittonic Confederation
 	}
 	random_events = {
 		1000 = 0
@@ -835,6 +833,9 @@ on_monarch_death = {
 		flavor_mal.11 # Mali pretenders
 		flavor_mal.47 # Pilgrimage ends prematurely
 		government_events.3	# Election of a new Ruler
+		# pf
+		# hm i wonder hehe
+		pf_trn.1				# Election for Brittonic Confederation
 	}
 }
 
