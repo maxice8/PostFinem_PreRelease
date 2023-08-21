@@ -1,0 +1,114 @@
+namespace = pf_trn
+
+# Tribal Election
+country_event = {
+	id = pf_trn.1
+	title = pf_trn.1.t
+	desc = pf_trn.1.desc
+	picture = COURT_INTRIGUE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_government_attribute = confederation_elections
+		NOT = { is_subject_of_type = personal_union }
+	}
+
+	option = {		# Trinovantes
+		name = "pf_trn.1.a"
+		define_ruler = {
+			dynasty = "ap Trinowanti"
+			adm = 2
+		}
+		ai_chance = {
+			factor = 1
+		}
+		# add -20 cohesion
+	}
+	option = {		# Iceni
+		name = "pf_trn.1.b"
+		define_ruler = {
+			dynasty = "ap Iceni"
+			mil = 2
+		}
+		ai_chance = {
+			factor = 1
+		}
+		# add -20 cohesion
+	}
+	option = {		# Cantiaci
+		name = "pf_trn.1.c"
+		define_ruler = {
+			dynasty = "ap Cantiaci"
+			dip = 2
+		}
+		ai_chance = {
+			factor = 1
+		}
+		# add -20 cohesion
+	}
+	option = {		# Catuvellauni
+		name = "pf_trn.1.d"
+		define_ruler = {
+			dynasty = "ap Catuevellauni"
+			adm = 1
+			mil = 1
+		}
+		ai_chance = {
+			factor = 1
+		}
+		# add -20 cohesion
+	}
+	option = {		# Regni
+		name = "pf_trn.1.e"
+		define_ruler = {
+			dynasty = "ap Regni"
+			dip = 1
+			adm = 1
+		}
+		ai_chance = {
+			factor = 1
+		}
+		# add -20 cohesion
+	}
+	option = {		# Let the strongest win
+		name = "pf_trn.1.f"
+		random_list = {
+			1 = {
+				define_ruler = {
+					dynasty = "ap Trinowanti"
+					adm = 2
+				}
+			}
+			1 = {
+				define_ruler = {
+					dynasty = "ap Iceni"
+					mil = 2
+				}
+			}
+			1 = {
+				define_ruler = {
+					dynasty = "ap Cantiaci"
+					dip = 2
+				}
+			}
+			1 = {
+				define_ruler = {
+					dynasty = "ap Catuevellauni"
+					adm = 1
+					mil = 1
+				}
+			}
+			1 = {
+				define_ruler = {
+					dynasty = "ap Regni"
+					dip = 1
+					adm = 1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

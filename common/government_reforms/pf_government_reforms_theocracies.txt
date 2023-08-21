@@ -1,24 +1,44 @@
 #Persian Satrapie
 
-persian_satrapie = {
+# Based of Eyalets from Vanilla,
+# Some modifications from Ante Bellum Persian Satrapies
+pf_persian_satrapy = {
+	lock_level_when_selected = yes
+	allow_normal_conversion = yes
+
 	icon = "castle"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = no
+
 	potential = {
-		is_subject_of_type_with_overlord = {
-			who = PER
-			type = satrapy
-		}
+		is_subject_of_type = satrapy
 	}
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+
 	modifiers = {
 		global_autonomy = -0.05
 		manpower_in_true_faith_provinces = 0.25
 	}
-	# custom_attributes = {
-	# 	buffed_strong_duchies = yes #+5% Loyalty
-	# }
+
+	# This restores the colors of countries that broke free
+	removed_effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { is_subject_of_type = satrapy }
+				}
+				country_event = {
+					id = pf_satrapy_events.1
+				}
+			}
+		}
+	}
+
 	ai = {
-		factor = 0.5 #generic
+		factor = 100
 	}
 }

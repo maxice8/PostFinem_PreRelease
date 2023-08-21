@@ -12,3 +12,4 @@ tags={
 }
 name="Post Finem"
 supported_version="1.35.*"
+replace_path="common/bookmarks"

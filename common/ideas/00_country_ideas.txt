@@ -10104,47 +10104,6 @@ NUM_ideas = {
 	}
 }
 
-BAM_ideas = {
-	start = {
-		missionaries = 1
-		legitimacy = 0.5
-		devotion = 0.5
-		republican_tradition = 0.15
-		meritocracy = 0.5
-		horde_unity = 0.5
-	}
-	bonus = {
-		discipline = 0.05
-	}
-	trigger = {
-		tag = BAM
-	}
-	free = yes
-	
-	bam_bishop_of_bamberg = {
-		religious_unity = 0.2
-	}
-	bam_cathedral = {
-		prestige_decay = -0.01
-	}
-	bam_city_of_beer = {
-		production_efficiency = 0.1
-	}
-	bam_little_venice = {
-		development_cost = -0.05
-		trade_efficiency = 0.05
-	}
-	bam_witch_burner = {
-		global_heretic_missionary_strength = 0.02
-	}
-	bam_vierzehnheiligen = {
-		tolerance_own = 2
-	}
-	bam_university = {
-		technology_cost = -0.05
-	}
-}
-
 OKA_ideas = {
 	start = {
 		defensiveness = 0.2
@@ -15684,50 +15643,6 @@ LOT_ideas = {
 		core_creation = -0.2
 	}
 }
-
-FKN_ideas = {
-	start = {
-		ae_impact = -0.1
-		global_manpower_modifier = 0.2
-	}
-	
-	bonus = {
-		discipline = 0.05
-	}
-	
-	trigger = {
-		tag = FKN
-	}
-	free = yes		#will be added at load.
-	
-	fkn_duchy_restored = {
-		legitimacy = 1
-		devotion = 1
-		republican_tradition = 0.3
-		meritocracy = 1
-		horde_unity = 1
-	}
-	fkn_main_trading = {
-		trade_efficiency = 0.1
-	}
-	fkn_rugged_land_of_fortresses = {
-		defensiveness = 0.2
-	}
-	fkn_free_knights_of_franconia = {
-		cavalry_power = 0.10
-	}
-	franconian_wine = { #in WBG_ideas
-		#production_efficiency = 0.1
-	}
-	fkn_baroque = {
-		prestige = 1
-	}
-	fkn_franconian_bourgeoisie = {
-		development_cost = -0.05
-		advisor_cost = -0.1
-	}
-}
-
 SOR_ideas = {
 	start = {
 		vassal_income = 0.2
