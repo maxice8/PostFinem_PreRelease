@@ -654,58 +654,6 @@ ILY_ideas = {
 	}
 }
 
-KTM_ideas = {
-	start = {
-		defensiveness = 0.33
-	}
-	
-	bonus = {
-		diplomatic_reputation = 1
-	}	
-
-	trigger = {
-		tag = KTM
-	}
-	free = yes
-	
-	#Mountain Strongholds
-	KTM_ideas_1 = {
-		fort_maintenance_modifier = -0.25
-	}
-
-	#Stable Administration
-	KTM_ideas_2 = {
-		yearly_absolutism = 0.50
-		max_absolutism = 10
-	}
-
-	#Diplomatic Corps
-	KTM_ideas_3 = {
-		diplomats = 1
-	}
-
-	#Defensive Innovations
-	KTM_ideas_4 = {
-		recover_army_morale_speed = 0.15
-	}
-
-	#Mountain Men
-	KTM_ideas_5 = {
-		infantry_power = 0.10
-		land_attrition = -0.10
-	}
-
-	#Economic Stability
-	KTM_ideas_6 = {
-		global_tax_modifier = 0.15
-	}
-
-	#Unified Nation
-	KTM_ideas_7 = {
-		global_unrest = -2
-	}
-}
-
 ITY_ideas = {
 	start = {
 		tolerance_own = 2
@@ -1569,6 +1517,509 @@ HES_ideas = {
 	#Proud Independence
 	HES_ideas_7 = {
 		hostile_attrition = 1
+	}
+}
+
+FKN_ideas = {
+	start = {
+		development_cost = -0.10
+		infantry_power = 0.10
+	}
+	bonus = {
+		global_manpower_modifier = 0.15
+	}
+	trigger = {
+		tag = FKN
+	}
+	free = yes
+	
+	#Ancestral Traditions
+	FKN_ideas_1 = {
+		global_unrest = -1
+	}
+
+	#Germanic Craftsmanship
+	FKN_ideas_2 = {
+		production_efficiency = 0.10
+	}
+
+	#Sacred Groves
+	FKN_ideas_3 = {
+		land_attrition = -0.15
+	}
+
+	#Pagan Masons
+	FKN_ideas_4 = {
+		build_cost = -0.10
+		build_time = -0.10
+	}
+
+	#Ritualistic Warfare
+	FKN_ideas_5 = {
+		army_tradition = 0.5
+	}
+
+	#Runestones and Monuments
+	FKN_ideas_6 = {
+		missionaries = 1
+	}
+
+	#Germanic Unity
+	FKN_ideas_7 = {
+		legitimacy = 1
+	}
+}
+
+ALM_ideas = {
+	start = {
+		merchants = 1
+		global_trade_power = 0.10
+	}
+	bonus = {
+		development_cost = -0.10
+	}
+	trigger = {
+		tag = ALM
+	}
+	free = yes
+	
+	#Merchant Guilds
+	ALM_ideas_1 = {
+		trade_efficiency = 0.10
+	}
+
+	#Land of Plenty
+	ALM_ideas_2 = {
+		global_trade_goods_size_modifier = 0.10
+	}
+
+	#Innovative Infrastructure
+	ALM_ideas_3 = {
+		build_cost = -0.10
+		global_prosperity_growth = 0.5
+	}
+
+	#Trade Embassies
+	ALM_ideas_4 = {
+		diplomatic_upkeep = 1
+	}
+
+	#Strategic Forts
+	ALM_ideas_5 = {
+		defensiveness = -0.10
+		garrison_size = 0.2
+	}
+
+	#Mountain Passes
+	ALM_ideas_6 = {
+		caravan_power = 0.25
+	}
+
+	#Land Reclamation
+	ALM_ideas_7 = {
+		land_attrition = -0.10
+	}
+}
+
+BAM_ideas = {
+	start = {
+		infantry_power = 0.2
+		innovativeness_gain = 0.5
+	}
+	bonus = {
+		diplomatic_upkeep = 1
+	}
+	trigger = {
+		tag = BAM
+	}
+	free = yes
+	
+	#Warrior Code
+	BAM_ideas_1 = {
+		land_morale = 0.10
+	}
+
+	#Legacy of Conquest
+	BAM_ideas_2 = {
+		prestige_from_land = 0.50
+	}
+
+	#Royal Patrons
+	BAM_ideas_3 = {
+		prestige = 1
+	}
+
+	#Efficient Tax Collection
+	BAM_ideas_4 = {
+		global_tax_modifier = 0.10
+	}
+
+	#Civil Service Reforms
+	BAM_ideas_5 = {
+		monthly_reform_progress_modifier = -0.1
+	}
+
+	#Training Grounds
+	BAM_ideas_6 = {
+		war_taxes_cost_modifier = -0.5
+		regiment_recruit_speed = -0.1
+	}
+
+	#Peaceful Expansion
+	BAM_ideas_7 = {
+		improve_relation_modifier = 0.25
+	}
+}
+
+THU_ideas = {
+	start = {
+		army_tradition_decay = -0.01
+		improve_relation_modifier = 0.15
+	}
+	bonus = {
+		prestige = 1
+	}
+	trigger = {
+		tag = THU
+	}
+	free = yes
+	
+	#Mounted Tactics
+	THU_ideas_1 = {
+		cavalry_power = 0.10
+	}
+
+	#Grand Embassies
+	THU_ideas_2 = {
+		diplomatic_upkeep = 1
+	}
+
+	#State Bureaucracy
+	THU_ideas_3 = {
+		governing_capacity_modifier = 0.1
+	}
+
+	#Guild Privileges
+	THU_ideas_4 = {
+		production_efficiency = 0.10
+	}
+
+	#Border Fortifications
+	THU_ideas_5 = {
+		fort_maintenance_modifier = -0.10
+	}
+
+	#Dynastic Ties
+	THU_ideas_6 = {
+		legitimacy = 1
+	}
+
+	#National Bank Reform
+	THU_ideas_7 = {
+		interest = -1
+	}
+}
+
+ANH_ideas = {
+	start = {
+		advisor_cost = -0.10
+		development_cost_modifier = -0.05
+	}
+	bonus = {
+		legitimacy = 1
+	}
+	trigger = {
+		tag = ANH
+	}
+	free = yes
+	
+	#Defensive Pacts
+	ANH_ideas_1 = {
+		diplomatic_upkeep = 1
+	}
+
+	#Historical Chronicles
+	ANH_ideas_2 = {
+		prestige = 0.5
+		improve_relation_modifier = 0.1
+	}
+
+	#Trade Delegations
+	ANH_ideas_3 = {
+		trade_efficiency = 0.10
+	}
+
+	#Rigorous Training
+	ANH_ideas_4 = {
+		discipline = 0.05
+	}
+
+	#Reformed Taxation
+	ANH_ideas_5 = {
+		global_tax_modifier = 0.15
+	}
+
+	#Diplomatic Envoys
+	ANH_ideas_6 = {
+		diplomatic_reputation = 1
+	}
+
+	#Centralized Bureaucracy
+	ANH_ideas_7 = {
+		core_creation = -0.10
+	}
+}
+
+SMN_ideas = {
+	start = {
+		diplomatic_upkeep = 1
+		land_maintenance_modifier = -0.10
+	}
+	bonus = {
+		prestige_from_land = 0.5
+	}
+	trigger = {
+		tag = SMN
+	}
+	free = yes
+	
+	#Incorporated Cavalry
+	SMN_ideas_1 = {
+		cavalry_power = 0.10
+	}
+
+	#Artisan Workshops
+	SMN_ideas_2 = {
+		production_efficiency = 0.15
+	}
+
+	#Royal Diplomats
+	SMN_ideas_3 = {
+		diplomatic_reputation = 1
+	}
+
+	#National Bank
+	SMN_ideas_4 = {
+		inflation_reduction = 0.15
+	}
+
+	#Fortified Bastions
+	SMN_ideas_5 = {
+		defensiveness = 0.1
+		garrison_size = 0.2
+	}
+
+	#Cultural Patronage
+	SMN_ideas_6 = {
+		idea_cost = -0.1
+	}
+
+	#Trade Missions
+	SMN_ideas_7 = {
+		global_trade_power = 0.10
+	}
+}
+
+SOR_ideas = {
+	start = {
+		leader_land_fire = 1
+		diplomats = 1
+	}
+	bonus = {
+		prestige = 1
+	}
+	trigger = {
+		tag = SOR
+	}
+	free = yes
+	
+	#War Councils
+	SOR_ideas_1 = {
+		land_morale = 0.2
+	}
+
+	#Royal Mint
+	SOR_ideas_2 = {
+		inflation_reduction = 1
+	}
+
+	#Ambassadors of the Court
+	SOR_ideas_3 = {
+		improve_relation_modifier = 0.20
+	}
+
+	#Germanic Dominance
+	SOR_ideas_4 = {
+		global_missionary_strength = 0.02
+	}
+
+	#Merchant Guilds
+	SOR_ideas_5 = {
+		trade_efficiency = 0.15
+		placed_merchant_power = 10
+	}
+
+	#Ancestral Celebrations
+	SOR_ideas_6 = {
+		missionaries = 1
+	}
+
+	#Fiscal Policies
+	SOR_ideas_7 = {
+		global_tax_modifier = 0.15
+	}
+}
+
+MBZ_ideas = {
+	start = {
+		infantry_power = 0.10
+		leader_land_shock = 1
+
+	}
+	bonus = {
+		army_tradition = 0.5
+	}
+	trigger = {
+		tag = MBZ
+	}
+	free = yes
+	
+	#Legacy of the Warlords
+	MBZ_ideas_1 = {
+		discipline = 0.05
+	}
+
+	#Architectural Innovations
+	MBZ_ideas_2 = {
+		development_cost = -0.10
+	}
+
+	#Zealots
+	MBZ_ideas_3 = {
+		global_missionary_strength = 0.02
+		tolerance_own = 2
+	}
+
+	#Masterful Drills
+	MBZ_ideas_4 = {
+		drill_gain_modifier = 0.5
+	}
+
+	#Prosperous Centers
+	MBZ_ideas_5 = {
+		global_prosperity_growth = 0.5
+	}
+
+	#Courtly Splendor
+	MBZ_ideas_6 = {
+		monarch_lifespan = 0.1
+		prestige_decay = -0.01
+	}
+
+	#Economic Stabilization
+	MBZ_ideas_7 = {
+		inflation_reduction = 0.10
+	}
+}
+
+LBD_ideas = {
+	start = {
+		missionary_maintenance_cost = -0.25
+		missionaries = 1
+	}
+	bonus = {
+		prestige = 1
+	}
+	trigger = {
+		tag = LBD
+	}
+	free = yes
+	
+	#Divine Mission
+	LBD_ideas_1 = {
+		global_missionary_strength = 0.03
+	}
+
+	#Diplomatic Training
+	LBD_ideas_2 = {
+		diplomatic_reputation = 1
+	}
+
+	#Relious Unity
+	LBD_ideas_3 = {
+		tolerance_own = 2
+		stability_cost_modifier = -0.2
+	}
+
+	#Foreign Envoys
+	LBD_ideas_4 = {
+		improve_relation_modifier = 0.20
+	}
+
+	#Defense of the Faith
+	LBD_ideas_5 = {
+		land_morale = 0.2
+	}
+
+	#Religious Edicts
+	LBD_ideas_6 = {
+		state_maintenance_modifier = -0.2
+	}
+
+	#Alliance Networks
+	LBD_ideas_7 = {
+		improve_relation_modifier = 0.1
+		diplomatic_upkeep = 1
+	}
+}
+
+KTM_ideas = {
+	start = {
+		fort_maintenance_modifier = -0.15
+		possible_condottieri = 1
+	}
+	bonus = {
+		mercenary_manpower = 0.25
+	}
+	trigger = {
+		tag = KTM
+	}
+	free = yes
+	
+	#Mountain Fortresses
+	KTM_ideas_1 = {
+		defensiveness = 0.25
+	}
+
+	#Hired Strategy
+	KTM_ideas_2 = {
+		advisor_cost = -0.15
+	}
+
+	#Defensive Preparations
+	KTM_ideas_3 = {
+		global_regiment_cost = -0.1
+	}
+
+	#Mercenary Contracts
+	KTM_ideas_4 = {
+		mercenary_cost = -0.25
+	}
+
+	#Battlefield Supplies
+	KTM_ideas_5 = {
+		land_attrition = -0.2
+		supply_limit = 0.2
+	}
+
+	#Defensive Diplomacy
+	KTM_ideas_6 = {
+		diplomatic_upkeep = 1
+	}
+
+	#Legacy of Defenders
+	KTM_ideas_7 = {
+		shock_damage_received = -0.1
 	}
 }
 

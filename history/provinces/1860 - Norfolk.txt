@@ -1,10 +1,10 @@
 #1860 - Norfolk
 #Includes Suffolk
-base_tax = 2
-base_production = 3
-trade_goods = iron
-base_manpower = 1
-capital = "Norwich"
+base_tax = 3
+base_production = 5
+trade_goods = grain
+base_manpower = 4
+capital = "Icenorum"
 is_city = yes
 discovered_by = western
 discovered_by = muslim
@@ -15,3 +15,6 @@ owner = TRN
 controller = TRN
 culture = briton
 religion = druidic
+
+# center_of_trade = 1
+# always a strong center of trade, but might be too op to include from the start

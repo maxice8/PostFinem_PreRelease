@@ -2,6 +2,8 @@
 # OPINION MODIFIERS
 ##########################################################################
 
+# Imperial Incidents
+
 eyl_refused_membership_opinion = {
 	opinion = -100
 	yearly_decay = 2.5
@@ -14,4 +16,11 @@ corfu_given_to_empire_opinion = {
 refused_to_join_empire_opinion = {
 	opinion = -100
 	yearly_decay = 2.5
+}
+
+# 1444 setup
+
+trinovantes_rejects_celtica = {
+	opinion = -100
+	yearly_decay = 1
 }

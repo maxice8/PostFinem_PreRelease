@@ -1,0 +1,59 @@
+
+hellenic_athens = {
+	potential = {
+		normal_or_historical_nations = yes
+		owner = {
+			religion = hellenic
+			NOT = { tag = ATH }
+		}
+	}
+
+	trigger = {	
+		owner = {
+			NOT = { overlord_of = ATH }
+			# NOT = { tag = ITA } Exceptions? Consider it later
+			# NOT = { tag = HLR }
+			# NOT = { tag = ROM }
+			# custom_trigger_tooltip = {
+			# 	tooltip = no_dip_malus_reward_tt
+			# 	NOT = { has_country_flag = general_flag_for_FU_Rome_flag }			
+			# }
+		}
+	}
+
+	papal_influence = -10
+	diplomatic_reputation = -1
+	#icon = 9
+}
+
+non_hellenic_athens = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	
+	#viewer = {
+	#}
+	
+	trigger = {
+		owner = {
+			NOT = { religion = hellenic }
+			OR = {
+				religion_group = christian
+				religion_group = punic_group
+			}
+		}
+	}
+
+	prestige = 0.5
+	missionaries = 1
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+	
+}
