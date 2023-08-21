@@ -13,9 +13,17 @@ add_local_autonomy = 30
 latent_trade_goods = { 
 	coal 
 }
-owner = GAU
-controller = GAU
-add_core = GAU
+owner = BRG
+controller = BRG
+add_core = BRG
 culture = nervian
 religion = druidic
-add_core = BRG
+
+1442.11.10 = {
+	owner = GAU
+	controller = GAU
+}
+
+1444.6.23 = {
+	add_core = GAU
+}
