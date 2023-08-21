@@ -3,8 +3,12 @@ brittonic_confederation_reform = {
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = no
+
 	potential = {
-		tag = TRN	# Trinovantes
+		OR = {
+			tag = TRN
+			has_reform = brittonic_confederation_reform
+		}
 	}
 	trigger = {
 		tag = TRN
@@ -18,7 +22,8 @@ brittonic_confederation_reform = {
 	custom_attributes = {
 		confederation_elections = yes
 	}
+	heir = no
 	ai = {
-		factor = 0.5 #generic
+		factor = 1
 	}
 }
