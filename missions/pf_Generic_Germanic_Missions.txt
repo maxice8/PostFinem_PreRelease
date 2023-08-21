@@ -27,7 +27,10 @@ germanic_missions_1 = {
 		icon = mission_modern_knight_army
 		position = 3
 		required_missions = { pf_generic_german_expand_power_base } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			region = north_german_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
 		trigger = {  
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -56,7 +59,34 @@ germanic_missions_1 = {
 		icon = army_reforms
 		position = 5
 		required_missions = { pf_generic_german_unite_north_germania } 
-		provinces_to_highlight = { } 
+		provinces_to_highlight = { 
+			OR = {
+				AND = {
+					region = north_german_region
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					ROOT = {
+						NOT = {
+							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+								value = 30
+								region = north_german_region
+							}
+						}
+					}
+				}
+				AND = {
+					region = south_german_region
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					ROOT = {
+						NOT = {
+							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+								value = 20
+								region = south_german_region
+							}
+						}
+					}
+				}
+			}
+		} 
 
 		trigger = {  
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
