@@ -1,0 +1,24 @@
+brittonic_confederation_reform = {
+	icon = "legislative_assembly_reform"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+	potential = {
+		tag = TRN	# Trinovantes
+	}
+	trigger = {
+		tag = TRN
+	}
+	modifiers = {
+		morale_damage = 0.05
+		global_unrest = -1
+		min_autonomy = 10
+		nobles_influence_modifier = 0.10
+	}
+	custom_attributes = {
+		confederation_elections = yes
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}

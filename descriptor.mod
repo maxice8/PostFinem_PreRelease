@@ -11,4 +11,4 @@ tags={
 	"Expansion"
 }
 name="Post Finem"
-supported_version="1.35.6"
+supported_version="1.35.*"
