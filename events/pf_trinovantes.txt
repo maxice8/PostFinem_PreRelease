@@ -14,15 +14,8 @@ country_event = {
 		NOT = { is_subject_of_type = personal_union }
 	}
 
-	option = {		# Let heir keep power
-		name = "pf_trn.1.a"
-		# add -40 cohesion
-		ai_chance = {
-			factor = 1
-		}
-	}
 	option = {		# Trinovantes
-		name = "pf_trn.1.b"
+		name = "pf_trn.1.a"
 		define_ruler = {
 			dynasty = "ap Trinowanti"
 			adm = 2
@@ -33,7 +26,7 @@ country_event = {
 		# add -20 cohesion
 	}
 	option = {		# Iceni
-		name = "pf_trn.1.c"
+		name = "pf_trn.1.b"
 		define_ruler = {
 			dynasty = "ap Iceni"
 			mil = 2
@@ -44,7 +37,7 @@ country_event = {
 		# add -20 cohesion
 	}
 	option = {		# Cantiaci
-		name = "pf_trn.1.d"
+		name = "pf_trn.1.c"
 		define_ruler = {
 			dynasty = "ap Cantiaci"
 			dip = 2
@@ -55,7 +48,7 @@ country_event = {
 		# add -20 cohesion
 	}
 	option = {		# Catuvellauni
-		name = "pf_trn.1.e"
+		name = "pf_trn.1.d"
 		define_ruler = {
 			dynasty = "ap Catuevellauni"
 			adm = 1
@@ -67,7 +60,7 @@ country_event = {
 		# add -20 cohesion
 	}
 	option = {		# Regni
-		name = "pf_trn.1.f"
+		name = "pf_trn.1.e"
 		define_ruler = {
 			dynasty = "ap Regni"
 			dip = 1
@@ -79,7 +72,7 @@ country_event = {
 		# add -20 cohesion
 	}
 	option = {		# Let the strongest win
-		name = "pf_trn.1.g"
+		name = "pf_trn.1.f"
 		random_list = {
 			1 = {
 				define_ruler = {
