@@ -6,6 +6,10 @@ capital = 238
 primary_culture = briton
 religion = druidic
 1444.11.11 = { 
+	add_opinion = {
+		who = CEL
+		modifier = trinovantes_rejects_celtica
+	}
 	monarch = { 
 		name = "Ricatus"
 		dynasty = "ap Trinowanti"

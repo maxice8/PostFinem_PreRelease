@@ -14,7 +14,7 @@ gallic_hierarchy = {
 	modifiers = {
 		min_autonomy = 35
 		global_tax_modifier = 0.15
-		monarch_military_power = 1
+		num_accepted_cultures = 2
 	}
 	# custom_attributes = {
 	# 	buffed_strong_duchies = yes #+5% Loyalty
@@ -38,9 +38,12 @@ celtic_lordship = {
 		defensiveness = 0.1
 		improve_relation_modifier = 0.1
 	}
-	# custom_attributes = {
-	# 	buffed_strong_duchies = yes #+5% Loyalty
-	# }
+	#allow = { 
+	#	has_dlc = "Mandate of Heaven"
+	#}
+	custom_attributes = {
+		has_tributaries = yes
+	}
 	ai = {
 		factor = 0.5 #generic
 	}
@@ -151,7 +154,7 @@ alexanders_crown = {
 	modifiers = {
 		min_autonomy_in_territories = -0.1
 		land_morale = 0.1
-		global_regiment_cost = 0.1
+		global_regiment_cost = 0.25
 	}
 	# custom_attributes = {
 	# 	buffed_strong_duchies = yes #+5% Loyalty

@@ -368,7 +368,7 @@ even_more_firepower = {
 		full_idea_group = liberty_ideas
 	}	
 
-	artillery_bonus_vs_fort = 1
+	artillery_levels_available_vs_fort = 1
 	movement_speed = 0.1
 
 	ai_will_do = {
@@ -422,11 +422,11 @@ zealous_court = {
 		factor = 1
 		modifier = {
 			factor = 2
-			NOT = { religious_unity = 50 }
+			NOT = { religious_unity = 0.5 }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { religious_unity = 75 }
+			NOT = { religious_unity = 0.75 }
 		}
 	}
 }
@@ -446,7 +446,7 @@ productive_natives = {
 	}	
 
 	development_cost = -0.1
-	state_maintenance_modifier -0.1
+	state_maintenance_modifier = -0.1
 
 	ai_will_do = {
 		factor = 1
