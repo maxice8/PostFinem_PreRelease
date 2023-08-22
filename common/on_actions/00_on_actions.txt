@@ -4257,7 +4257,7 @@ on_create_vassal = {
 		}
 		change_government = theocracy
 		change_religion = hellenic
-		add_government_reform = pf_athens_theocracy
+		add_government_reform = pf_athens_archon
 		adopt_reform_progress = FROM
 	}
 }
@@ -4367,7 +4367,7 @@ on_country_released = {
 		}
 		change_government = theocracy
 		change_religion = hellenic
-		add_government_reform = pf_athens_theocracy
+		add_government_reform = pf_athens_archon
 		adopt_reform_progress = FROM
 	}
 }
@@ -4522,7 +4522,7 @@ on_country_creation = {
 		}
 		change_government = theocracy
 		change_religion = hellenic
-		add_government_reform = pf_athens_theocracy
+		add_government_reform = pf_athens_archon
 	}
 }
 
