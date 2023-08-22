@@ -130,9 +130,7 @@ incident_emperor_demands_corfu = {
 					NOT = {
 						any_great_power = {
 							army_size = emperor
-							PREV = {
-								guaranteed_by = PREV
-							}
+							has_guaranteed = PREV
 						}
 					}
 				}	
@@ -194,9 +192,7 @@ incident_emperor_demands_corfu = {
 							army_size = emperor
 						}
 						any_great_power = {
-							PREV = {
-								guaranteed_by = PREV
-							}
+							has_guaranteed = PREV
 							army_size = emperor
 						}
 					}
@@ -229,9 +225,7 @@ incident_emperor_demands_corfu = {
 					# owner->any_great_power->owner->guaranteed_by->any_great_power
 					owner = {
 						any_great_power = {
-							PREV = {
-								guaranteed_by = PREV
-							}
+							has_guaranteed = PREV
 							army_size = emperor
 						}
 					}
