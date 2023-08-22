@@ -7864,47 +7864,6 @@ MUN_ideas = {
 	}
 }
 
-THU_ideas = {
-	start = {
-		province_warscore_cost = -0.1
-		diplomats = 1
-	}
-	bonus = {
-		improve_relation_modifier = 0.2
-	}
-	trigger = {
-		tag = THU
-	}
-	
-	free = yes
-	
-	thu_partition_of_leipizg = {
-		legitimacy = 1
-		devotion = 1
-		republican_tradition = 0.3
-		meritocracy = 1
-		horde_unity = 1
-	}
-	thu_erfurt_fortifications = {
-		defensiveness = 0.2
-	}
-	thu_protector_of_reformers = {
-		tolerance_heretic = 2
-	}
-	thu_university_of_jena = {
-		adm_tech_cost_modifier = -0.1
-	}
-	thu_saxon_duchies = {
-		heir_chance = 0.5
-	}
-	thu_weimar_clacissicism = {
-		idea_cost = -0.1
-	}
-	thu_expansive_marriage_policies = {
-		diplomatic_upkeep = 1
-	}
-}
-
 BTI_ideas = {
 	start = {
 		tolerance_heathen = 3
@@ -11778,44 +11737,6 @@ RVA_ideas = {
 	}
 }
 
-MBZ_ideas = {
-	start = {
-		global_manpower_modifier = 0.2
-		idea_cost = -0.1
-	}
-	bonus = {
-		fire_damage = 0.1
-	}
-	trigger = {
-		tag = MBZ
-	}
-	free = yes
-	
-	MBZ_lady_of_bregenz = {
-		may_recruit_female_generals = yes	
-		discipline = 0.05
-	}
-	MBZ_securing_countess_rule = {
-		female_advisor_chance = 0.5
-		global_tax_modifier = 0.1
-	}
-	MBZ_saint_gebhard = {
-		production_efficiency = 0.1
-	}
-	MBZ_resisting_habsburgs = {
-		power_projection_from_insults = 1
-	}
-	MBZ_sale_of_titles = {
-		inflation_reduction = 0.1
-	}
-	MBZ_shadow_of_pfander = {
-		defensiveness = 0.25
-	}
-	MBZ_lake_constance_navy = {
-		naval_morale = 0.15
-	}
-}
-
 GOS_ideas = {
 	start = {
 		diplomatic_reputation = 1
@@ -11895,49 +11816,6 @@ ROT_ideas = {
 	ROT_klingentorturm = {
 		garrison_size = 0.2
 		global_manpower_modifier = 0.1
-	}
-}
-
-ANH_ideas = {
-	start = {
-		land_morale = 0.1
-		technology_cost = -0.05
-	}
-	bonus = {
-		legitimacy = 1
-		devotion = 1
-		republican_tradition = 0.3
-		meritocracy = 1
-		horde_unity = 1
-	}
-	trigger = {
-		tag = ANH
-	}
-	free = yes
-	
-	ANH_mittelgebirge = {
-		global_trade_power = 0.1
-	}
-	ANH_branches = {
-		global_autonomy = -0.075
-	}
-	ANH_incorporating_the_bishopric = {
-		tolerance_own = 2
-	}
-	ANH_castle = {
-		build_cost = -0.1
-		build_time = -0.1
-	}
-	ANH_garden_kingdom = {
-		prestige = 1
-	}
-	ANH_schultheiss = {
-		yearly_corruption = -0.1
-	}
-	ANH_confessor = {
-		global_heretic_missionary_strength = 0.02
-		monthly_fervor_increase = 0.25
-		church_power_modifier = 0.1
 	}
 }
 
@@ -15643,44 +15521,6 @@ LOT_ideas = {
 		core_creation = -0.2
 	}
 }
-SOR_ideas = {
-	start = {
-		vassal_income = 0.2
-		tolerance_own = 2
-	}
-	
-	bonus = {
-		global_autonomy = -0.05
-	}
-	
-	trigger = {
-		tag = SOR
-	}
-	free = yes		#will be added at load.
-	
-	sor_zittau_mountains = {
-		hostile_attrition = 1
-	}
-	sor_sale_of_land = {
-		global_tax_modifier = 0.1
-	}
-	sor_lusatian_landtag = {
-		stability_cost_modifier = -0.15
-	}
-	sor_wittelsbach_history = {
-		ae_impact = -0.1
-	}
-	sor_lusatian_league = {
-		state_maintenance_modifier = -0.15
-	}
-	sor_rights_of_all_religions = {
-		tolerance_heretic = 3
-	}
-	sor_political_influences = {
-		num_accepted_cultures = 2
-	}
-}
-
 CLI_ideas = {
 	start = {
 		diplomatic_reputation = 1
