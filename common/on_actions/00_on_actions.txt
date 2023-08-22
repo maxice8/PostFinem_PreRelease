@@ -4250,6 +4250,16 @@ on_create_vassal = {
 		limit = { NOT = { is_year = 1445 } }
 		set_country_flag = released_in_1444
 	}
+	# pf
+	if = {
+		limit = {
+			tag = ATH
+		}
+		change_government = theocracy
+		change_religion = hellenic
+		add_government_reform = pf_athens_theocracy
+		adopt_reform_progress = FROM
+	}
 }
 
 # ROOT = Country establishing it
@@ -4349,6 +4359,16 @@ on_country_released = {
 	if = {
 		limit = { NOT = { is_year = 1445 } }
 		set_country_flag = released_in_1444
+	}
+	# pf
+	if = {
+		limit = {
+			tag = ATH
+		}
+		change_government = theocracy
+		change_religion = hellenic
+		add_government_reform = pf_athens_theocracy
+		adopt_reform_progress = FROM
 	}
 }
 
@@ -4494,6 +4514,15 @@ on_country_creation = {
 		change_religion = catholic
 		change_government = theocracy
 		add_government_reform = papacy_reform
+	}
+	# pf
+	if = {
+		limit = {
+			tag = ATH
+		}
+		change_government = theocracy
+		change_religion = hellenic
+		add_government_reform = pf_athens_theocracy
 	}
 }
 
