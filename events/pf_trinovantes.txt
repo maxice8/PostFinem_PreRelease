@@ -23,7 +23,11 @@ country_event = {
 		ai_chance = {
 			factor = 1
 		}
-		# add -20 cohesion
+		add_government_power = {
+        	mechanic_type = trinovantes_cohesion_mechanic
+        	power_type = trn_cohseion
+        	value = -30
+		}
 	}
 	option = {		# Iceni
 		name = "pf_trn.1.b"
@@ -34,7 +38,11 @@ country_event = {
 		ai_chance = {
 			factor = 1
 		}
-		# add -20 cohesion
+		add_government_power = {
+        	mechanic_type = trinovantes_cohesion_mechanic
+        	power_type = trn_cohseion
+        	value = -30
+		}
 	}
 	option = {		# Cantiaci
 		name = "pf_trn.1.c"
@@ -45,7 +53,11 @@ country_event = {
 		ai_chance = {
 			factor = 1
 		}
-		# add -20 cohesion
+		add_government_power = {
+        	mechanic_type = trinovantes_cohesion_mechanic
+        	power_type = trn_cohseion
+        	value = -30
+		}
 	}
 	option = {		# Catuvellauni
 		name = "pf_trn.1.d"
@@ -57,7 +69,11 @@ country_event = {
 		ai_chance = {
 			factor = 1
 		}
-		# add -20 cohesion
+		add_government_power = {
+        	mechanic_type = trinovantes_cohesion_mechanic
+        	power_type = trn_cohseion
+        	value = -30
+		}
 	}
 	option = {		# Regni
 		name = "pf_trn.1.e"
@@ -69,7 +85,11 @@ country_event = {
 		ai_chance = {
 			factor = 1
 		}
-		# add -20 cohesion
+		add_government_power = {
+        	mechanic_type = trinovantes_cohesion_mechanic
+        	power_type = trn_cohseion
+        	value = -30
+		}
 	}
 	option = {		# Let the strongest win
 		name = "pf_trn.1.f"
