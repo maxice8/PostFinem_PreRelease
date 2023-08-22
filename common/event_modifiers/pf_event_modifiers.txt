@@ -5,3 +5,23 @@ fighting_for_corfu_modifier = {
 dominate_germania_modifier = {
 	administrative_efficiency = 0.05
 }
+respectable_growth_modifier = {
+	global_prosperity_growth = 1
+	global_autonomy = -0.1
+}
+professional_army_modifier = {
+	drill_gain_modifier = 0.5
+	global_regiment_cost = -0.1
+}
+success_within_empire_modifier = {
+	diplomats = 1
+	diplomatic_upkeep = 1
+}
+expanded_federation_modifier = {
+	province_warscore_cost = -0.1
+	land_morale = 0.1
+}
+regional_superpower_modifier = {
+	improve_relation_modifier = 0.25
+	ae_impact = -0.1
+}
