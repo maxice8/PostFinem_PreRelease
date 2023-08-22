@@ -51,7 +51,12 @@ pf_generic_italian_1 = {
 		icon = mission_among_the_great_powers
 		position = 3
 		required_missions = { pf_generic_italian_field_respectable_army } 
-		provinces_to_highlight = {  }
+		provinces_to_highlight = { 
+			is_capital = yes
+			owner = {
+				is_emperor = yes
+			}
+		}
 
 		trigger = {
 			OR = {
@@ -80,7 +85,10 @@ pf_generic_italian_1 = {
 		icon = mission_rule_italy
 		position = 4
 		required_missions = { pf_generic_italian_regarding_the_emperor } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			region = italy_region
+			NOT = { owned_by = ROOT }
+		} 
 
 		trigger = {
 			num_of_owned_provinces_with = {
