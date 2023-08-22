@@ -12,6 +12,7 @@ country_event = {
 	trigger = {
 		has_government_attribute = confederation_elections
 		NOT = { is_subject_of_type = personal_union }
+		NOT = { has_government_attribute = disables_confederation_elections }
 	}
 
 	option = {		# Trinovantes
