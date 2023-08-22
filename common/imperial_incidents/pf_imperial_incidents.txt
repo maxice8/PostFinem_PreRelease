@@ -106,7 +106,7 @@ incident_emperor_demands_corfu = {
 	0 = { # Corfu must be demanded directly
 		factor = 1
 		modifier = {
-			factor = 6
+			factor = 5
 			142 = {
 				owner = {
 					emperor = {
@@ -115,6 +115,13 @@ incident_emperor_demands_corfu = {
 							army_size = PREV
 						}
 					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			142 = {
+				owner = {			
 					NOT = {
 						any_ally = {
 							army_size = emperor
@@ -128,7 +135,7 @@ incident_emperor_demands_corfu = {
 							}
 						}
 					}
-				}
+				}	
 			}
 		}
 		# Southern Princes Faction Interest
