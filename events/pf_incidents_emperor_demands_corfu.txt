@@ -129,9 +129,7 @@ country_event = {
 						NOT = {
 							any_great_power = {
 								army_size = emperor
-								PREV = {
-									guaranteed_by = PREV
-								}
+								has_guaranteed = PREV
 							}
 						}
 					}	
@@ -309,7 +307,7 @@ country_event = {
 					}
 					any_great_power = {
 						army_size = emperor
-						has_guaranteed = PREV
+						has_guaranteed = ROOT
 					}
 				}
 			}
