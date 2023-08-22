@@ -134,6 +134,13 @@ religious_center = {
 			}
 			religion = norse_pagan_reformed
 		}
+		# pf
+		else_if = {
+			limit = {
+				province_id = 146 # Athens
+			}
+			religion = hellenic
+		}
 	}
 
 	local_missionary_strength = -0.05
