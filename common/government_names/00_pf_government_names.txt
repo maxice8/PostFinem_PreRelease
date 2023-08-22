@@ -51,20 +51,23 @@ brittonic_confederation_names = {
 	}
 }
 
-pf_archon_hierophant = {
+pf_hierophant = {
 	rank = {
-		1 = HIEROPHANTIC_REALM
-		2 = HIEROPHANTIC_REALM
-		3 = HIEROPHANTIC_REALM
+		1 = HIEROPHANTATE
+		2 = ARCHONTIC_HIEROPHANTATE
+		3 = ARCHONTIC_HIEROPHANTATE
 	}
 
 	ruler_male = {
-		1 = ARCHON_HIEROPHANT
+		1 = HIEROPHANT
 		2 = ARCHON_HIEROPHANT
 		3 = ARCHON_HIEROPHANT
 	}
 
 	trigger = {
-		has_reform = pf_athens_archon
+		OR = {
+			has_reform = pf_athens_archon
+			# Hypothetical hierophantocracy goes here
+		}
 	}
 }
