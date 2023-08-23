@@ -29,9 +29,9 @@ country_event = {
 			}
 		}
 		add_government_power = {
-        	mechanic_type = trinovantes_cohesion_mechanic
-        	power_type = trn_cohseion
-        	value = -30
+        		mechanic_type = trinovantes_cohesion_mechanic
+        		power_type = trn_cohesion
+        		value = -30
 		}
 	}
 	option = {		# Iceni
@@ -48,9 +48,9 @@ country_event = {
 			}
 		}
 		add_government_power = {
-        	mechanic_type = trinovantes_cohesion_mechanic
-        	power_type = trn_cohseion
-        	value = -30
+        		mechanic_type = trinovantes_cohesion_mechanic
+        		power_type = trn_cohesion
+        		value = -30
 		}
 	}
 	option = {		# Cantiaci
@@ -67,9 +67,9 @@ country_event = {
 			}
 		}
 		add_government_power = {
-        	mechanic_type = trinovantes_cohesion_mechanic
-        	power_type = trn_cohseion
-        	value = -30
+        		mechanic_type = trinovantes_cohesion_mechanic
+        		power_type = trn_cohesion
+        		value = -30
 		}
 	}
 	option = {		# Catuvellauni
@@ -91,9 +91,9 @@ country_event = {
 			}
 		}
 		add_government_power = {
-        	mechanic_type = trinovantes_cohesion_mechanic
-        	power_type = trn_cohseion
-        	value = -30
+        		mechanic_type = trinovantes_cohesion_mechanic
+        		power_type = trn_cohesion
+        		value = -30
 		}
 	}
 	option = {		# Regni
@@ -115,9 +115,9 @@ country_event = {
 			}
 		}
 		add_government_power = {
-        	mechanic_type = trinovantes_cohesion_mechanic
-        	power_type = trn_cohseion
-        	value = -30
+        		mechanic_type = trinovantes_cohesion_mechanic
+        		power_type = trn_cohesion
+        		value = -30
 		}
 	}
 	option = {		# Let the strongest win
@@ -160,7 +160,15 @@ country_event = {
 		# and add a modifier to highly require it
 		# if cohesion is low
 		ai_chance = {
-			factor = 0
+			factor = 5
+			modifier = {
+				factor = 0
+				has_government_power = {
+        				mechanic_type = trinovantes_cohesion_mechanic
+        				power_type = trn_cohesion
+        				value = 0
+				}
+			}
 		}
 	}
 }
