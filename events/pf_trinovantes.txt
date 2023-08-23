@@ -12,6 +12,7 @@ country_event = {
 	trigger = {
 		has_government_attribute = confederation_elections
 		NOT = { is_subject_of_type = personal_union }
+		NOT = { has_government_attribute = disables_confederation_elections }
 	}
 
 	option = {		# Trinovantes
@@ -22,6 +23,10 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = 2
+				personality = ai_balanced
+			}
 		}
 		add_government_power = {
         	mechanic_type = trinovantes_cohesion_mechanic
@@ -37,6 +42,10 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
 		}
 		add_government_power = {
         	mechanic_type = trinovantes_cohesion_mechanic
@@ -52,6 +61,10 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = 2
+				personality = ai_diplomat
+			}
 		}
 		add_government_power = {
         	mechanic_type = trinovantes_cohesion_mechanic
@@ -68,6 +81,14 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = 1.5
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 1.5
+				personality = ai_balanced
+			}
 		}
 		add_government_power = {
         	mechanic_type = trinovantes_cohesion_mechanic
@@ -84,6 +105,14 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = 1.5
+				personality = ai_diplomat
+			}
+			modifier = {
+				factor = 1.5
+				personality = ai_balanced
+			}
 		}
 		add_government_power = {
         	mechanic_type = trinovantes_cohesion_mechanic
@@ -127,6 +156,9 @@ country_event = {
 				}
 			}
 		}
+		# Change it to factor = 1
+		# and add a modifier to highly require it
+		# if cohesion is low
 		ai_chance = {
 			factor = 0
 		}

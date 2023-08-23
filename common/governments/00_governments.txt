@@ -352,6 +352,7 @@ monarchy = {
 		}
 		absolute_rule_vs_constitutional = {
 			reforms = {
+				pf_clan_supremacy_reform # pf
 				letat_cest_moi_reform
 				regional_representation_reform
 				peoples_kingdom_reform
@@ -427,6 +428,7 @@ monarchy = {
 		courts_of_navarra
 		elective_monarchy_reform
 		elective_monarchy
+		brittonic_confederation_reform # pf
 	}
 
 	# Parliamentary reforms cannot stack
@@ -1095,7 +1097,10 @@ theocracy = {
 	reform_levels = {
 		theocratic_leadership = {
 			reforms = {
-				pf_persian_satrapy #PF
+				# pf
+				pf_persian_satrapy
+				pf_athens_archon
+				# Vanilla
 				leading_clergy_reform
 				monastic_order_reform
 				crusading_kingdom_reform

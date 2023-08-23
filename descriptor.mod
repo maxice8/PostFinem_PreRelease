@@ -10,5 +10,6 @@ tags={
 	"Loading Screen"
 	"Expansion"
 }
+replace_path="gfx/loadingscreens"
 name="Post Finem"
 supported_version="1.35.*"

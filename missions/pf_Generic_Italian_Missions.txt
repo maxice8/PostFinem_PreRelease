@@ -1,0 +1,119 @@
+pf_generic_italian_1 = {
+	slot = 1
+	generic = yes
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		is_part_of_hre = yes
+	} 
+
+	pf_generic_italian_develop_nation = {
+		icon = develop_the_po_valley
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			total_development = 50
+		} 
+
+		effect = { 
+			add_adm_power = 100
+			add_country_modifier = {
+				name = respectable_growth_modifier
+				duration = 7300
+			}
+		} 
+	}
+
+	pf_generic_italian_field_respectable_army = {
+		icon = mission_modern_knight_army
+		position = 2
+		required_missions = { pf_generic_italian_develop_nation } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			land_forcelimit = 25
+			army_size_percentage = 1
+			num_of_generals = 2
+		} 
+
+		effect = { 
+			add_mil_power = 100
+			add_army_professionalism = 0.1
+			add_country_modifier = {
+				name = professional_army_modifier
+				duration = 3650
+			}
+		} 
+	}
+
+	pf_generic_italian_regarding_the_emperor = {
+		icon = mission_among_the_great_powers
+		position = 3
+		required_missions = { pf_generic_italian_field_respectable_army } 
+		provinces_to_highlight = {  }
+
+		trigger = {
+			OR = {
+				AND = {
+					alliance_with = emperor
+					reverse_has_opinion = {
+						who = emperor
+						value = 150
+					}
+				}
+				army_size = emperor
+
+			}
+		} 
+
+		effect = { 
+			add_stability_or_adm_power = yes
+			add_country_modifier = {
+				name = success_within_empire_modifier
+				duration = 7300
+			}
+		} 
+	}
+
+	pf_generic_italian_expand_the_federation = {
+		icon = mission_rule_italy
+		position = 4
+		required_missions = { pf_generic_italian_regarding_the_emperor } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 20
+				NOT = { region = italy_region }
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = expanded_federation_modifier
+				duration = 7300
+			}
+		} 
+	}
+
+	pf_generic_italian_dominate_politics = {
+		icon = mission_book_of_royal_degrees
+		position = 5
+		required_missions = { pf_generic_italian_expand_the_federation } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			government_rank = 3
+			is_great_power = yes
+		} 
+
+		effect = {
+			add_years_of_income = 10
+			add_country_modifier = {
+				name = regional_superpower_modifier
+				duration = -1
+			}
+		} 
+	}
+}

@@ -30,3 +30,30 @@ brittonic_confederation_reform = {
 		factor = 1
 	}
 }
+
+pf_clan_supremacy_reform = {
+	icon = "man_and_children"
+	allow_normal_conversion = yes
+
+	potential = {
+		has_reform = brittonic_confederation_reform
+	}
+
+	modifiers = {
+		nobles_influence_modifier = -0.15
+		monarch_admin_power = 1
+		monarch_diplomatic_power = 1
+		monarch_military_power = 1
+		# Give it cohesion gain when that mechanic is implemented
+	}
+
+	custom_attributes = {
+		disables_confederation_elections = yes
+	}
+	heir = yes
+	maintain_dynasty = yes
+
+	ai = {
+		factor = 1
+	}
+}
