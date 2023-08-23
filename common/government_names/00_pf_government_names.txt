@@ -50,3 +50,24 @@ brittonic_confederation_names = {
 		has_reform = brittonic_confederation_reform
 	}
 }
+
+pf_hierophant = {
+	rank = {
+		1 = HIEROPHANTATE
+		2 = ARCHONTIC_HIEROPHANTATE
+		3 = ARCHONTIC_HIEROPHANTATE
+	}
+
+	ruler_male = {
+		1 = HIEROPHANT
+		2 = ARCHON_HIEROPHANT
+		3 = ARCHON_HIEROPHANT
+	}
+
+	trigger = {
+		OR = {
+			has_reform = pf_athens_archon
+			# Hypothetical hierophantocracy goes here
+		}
+	}
+}
