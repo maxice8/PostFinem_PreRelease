@@ -2515,7 +2515,7 @@ sacred_kingdom_legacy = {
 	nation_designer_trigger = {
 		NOT = { religion_group = christian }
 		NOT = { religion_group = muslim }
-		NOT = { religion_group = jewish_group }
+		NOT = { religion = jewish } # pf
 	}
 
 
