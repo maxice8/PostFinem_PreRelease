@@ -17,17 +17,7 @@
  CAR_ideas_7_desc: "It's clear that our scholars have an edge when it comes to research and development, and we shall hold them close to maintain our forward projection into the world."
  CAR_ideas_start: "Punic Traditions"
  CAR_ideas_bonus: "Punic Ambitions"
- adirim: "Adirim"
- adirim_MECHANIC_TOOLTIP: "Adirim"
- sufetes: "Sufetes"
- sufetes_MECHANIC_TOOLTIP: "Sufetes"
- punic_monarchy: "Punic Government"
- SUFETE: "Sufete"
- GREAT_SUFETE: "Great Sufete"
- SUPREME_SUFETE: "Supreme Sufete"
- HEAD_ADIRIM: "Adirim"
- GREAT_ADIRIM: "Great Adirim"
- SUPREME_ADIRIM: "Supreme Adirim"
+
  MAC: "Macedonia"
  MAC_ADJ: "Macedonian"
  MAC_ideas: "Macedonian Ideas"
@@ -47,6 +37,7 @@
  MAC_ideas_6_desc: "Strategos, or the Commander of Armies is the highest officer rank in our military. These men are battle hardened veterans capable of turning the tide even in the battles that would seem to be lost."
  MAC_ideas_7: "Control the Supply Lines"
  MAC_ideas_7_desc: "The key to the establishment of a huge Empire by force is the ability to feed your armies. Our ancestors have paid the price for underestimating this factor when they invaded India. We will not repeat this mistake."
+
  AEG: "Aegyptos"
  AEG_ADJ: "Egyptian"
  AEG_ideas: "Greco-Egyptian Ideas"
@@ -406,431 +397,139 @@
  ORA_ideas_start: "Oravian Traditions"
  ORA_ideas_bonus: "Oravian Ambition"
  ORA_ideas: "Oravian Ideas"
-
-EFR_ideas_start: "East Frisian Traditions"
-EFR_ideas_bonus: "East Frisian Ambitions"
-EFR_ideas: "East Frisian Ideas"
-
-EFR_ideas_1: "Warrior Heritage"
-EFR_ideas_1_desc: "We honor our fierce heritage with unwavering courage, bolstering land morale against all odds."
-
-EFR_ideas_2: "Economic Conscription"
-EFR_ideas_2_desc: "By conscripting resources, we fuel our armies. Enlistments surge, expanding our land force limits."
-
-EFR_ideas_3: "Martial Innovations"
-EFR_ideas_3_desc: "Innovative strategies cut the costs of military technology advancement, propelling us to the forefront."
-
-EFR_ideas_4: "Siege Engineering Corps"
-EFR_ideas_4_desc: "A corps of skilled engineers eases fortress maintenance burdens, channeling resources for campaigns."
-
-EFR_ideas_5: "Legacy of Heroes"
-EFR_ideas_5_desc: "Ancestral heroes bless us with wisdom. Our leader pool flourishes, offering tactical brilliance."
-
-EFR_ideas_6: "Prestigious Conquests"
-EFR_ideas_6_desc: "Triumphs on the battlefield elevate our standing. Conquered lands bring prestige and admiration."
-
-EFR_ideas_7: "Unified Command"
-EFR_ideas_7_desc: "United command ensures victory. Leaders master both strategy and firepower, igniting the land with fire."
-
-FRI_ideas_starts: "Frisian Traditions"
-FRI_ideas_bonuses: "Frisian Ambitions"
-FRI_ideass: "Frisian Ideas"
-
-FRI_ideas_1: "Champion Bloodlines"
-FRI_ideas_1_desc: "Noble bloodlines breed champions. Army tradition flourishes, inspiring our forces with glory."
-
-FRI_ideas_2: "Agricultural Reforms"
-FRI_ideas_2_desc: "Revolutionizing agriculture enriches the land. Production efficiency surges, fueling prosperity."
-
-FRI_ideas_3: "Marching Discipline"
-FRI_ideas_3_desc: "Discipline in marching brings order to our ranks. Infantry power is heightened, ensuring dominance."
-
-FRI_ideas_4: "Stronghold Legacy"
-FRI_ideas_4_desc: "A legacy of strongholds shields our realm. Defensiveness reigns, repelling all who threaten us."
-
-FRI_ideas_5: "The Heroes' Epics"
-FRI_ideas_5_desc: "Epic tales immortalize our heroes. Prestige surges, drawing admiration from far and wide."
-
-FRI_ideas_6: "Efficient Supply Lines"
-FRI_ideas_6_desc: "Efficient supply lines reduce attrition woes. Land attrition is minimized, sustaining our forces."
-
-FRI_ideas_7: "Veteran Officers"
-FRI_ideas_7_desc: "Seasoned officers manage costs wisely. Land maintenance is reduced, optimizing our budget."
-
-KOL_ideas_start: "Huldheimer Traditions"
-KOL_ideas_bonuse: "Huldheimer Ambitions"
-KOL_ideass: "Huldheimer Ideas"
-
-KOL_ideas_1: "Adequate Garrisons"
-KOL_ideas_1_desc: "Strong garrisons ensure our realm's defense. Defensiveness thrives, protecting our lands."
-
-KOL_ideas_2: "Prestigious Academies"
-KOL_ideas_2_desc: "Renowned academies drive innovation. Technology costs diminish, propelling us forward."
-
-KOL_ideas_3: "Economic Militarization"
-KOL_ideas_3_desc: "Economic prowess funds our military might. Land force limits expand, solidifying our strength."
-
-KOL_ideas_4: "Legacy Tactics"
-KOL_ideas_4_desc: "Tactical wisdom shapes our legacy. Discipline is instilled, enhancing our battlefield prowess."
-
-KOL_ideas_5: "Historic Feats"
-KOL_ideas_5_desc: "Past glories shape our destiny. Prestige decay slows, preserving our storied reputation."
-
-KOL_ideas_6: "Skilled Recruiters"
-KOL_ideas_6_desc: "Masterful recruiters ensure quality forces. Regiment recruitment speeds improve, bolstering our ranks."
-
-KOL_ideas_7: "Tactical Genius"
-KOL_ideas_7_desc: "Genius strategies guide us to victory. Leaders maneuver with precision, ensuring triumph."
-
-AAC_ideas_start: "Aachener Traditions"
-AAC_ideas_bonus: "Aachener Ambition"
-AAC_ideas: "Aachener Ideas"
-
-AAC_ideas_1: "Veteran Warriors"
-AAC_ideas_1_desc: "Seasoned warriors bolster our ranks. Infantry power rises, solidifying our martial might."
-
-AAC_ideas_2: "War Economy"
-AAC_ideas_2_desc: "Efficient war taxes fund our campaigns. Costs diminish, allowing us to wage war relentlessly."
-
-AAC_ideas_3: "Strategic Fortresses"
-AAC_ideas_3_desc: "Strategic forts shield our realm. Fort maintenance burdens lessen, preserving our resources."
-
-AAC_ideas_4: "Prestigious Leaders"
-AAC_ideas_4_desc: "Our leaders command with prestige. Shock tactics dominate the battlefield, securing our triumphs."
-
-AAC_ideas_5: "A Tradition of Valor"
-AAC_ideas_5_desc: "Valor flows through our veins. Prestige rises as we continue our storied tradition of heroism."
-
-AAC_ideas_6: "Cavalry Elites"
-AAC_ideas_6_desc: "Elite cavalry rides forth. Their power and flanking expertise guarantee victory on all fronts."
-
-AAC_ideas_7: "Grand Armory"
-AAC_ideas_7_desc: "Our armory stands supreme. Artillery power increases, while costs of barrage operations diminish."
-
-TRI_ideas_start: "Treuwalder Traditions"
-TRI_ideas_bonus: "Treuwalder Ambition"
-TRI_ideas: "Treuwalder Ideas"
-
-TRI_ideas_1: "Battlefield Legends"
-TRI_ideas_1_desc: "Legends born on the battlefield. Our army tradition flourishes with every battle, inspiring greatness."
-
-TRI_ideas_2: "Economic War Machine"
-TRI_ideas_2_desc: "War fuels our economy. Global trade goods expand, powering our war machine's momentum."
-
-TRI_ideas_3: "Strategic Depth"
-TRI_ideas_3_desc: "Depth in strategy fortifies our realm. Defensiveness rises, safeguarding our lands."
-
-TRI_ideas_4: "Art of Siege"
-TRI_ideas_4_desc: "Siege mastery defines us. Leaders excel in siegecraft, and our artillery levels outmatch fortifications."
-
-TRI_ideas_5: "Dynastic Honor"
-TRI_ideas_5_desc: "Honoring our dynasty preserves our legacy. Prestige decay slows, and nobles' loyalty strengthens."
-
-TRI_ideas_6: "Marching Drills"
-TRI_ideas_6_desc: "Precision in drills hones our forces. Drill gain surges, ensuring excellence on the battlefield."
-
-TRI_ideas_7: "Famed Artillery"
-TRI_ideas_7_desc: "Artillery mastery defines us. Artillery costs decrease, while power ascends to legendary heights."
-
-NSA_ideas_start: "Nasburgan Traditions"
-NSA_ideas_bonus: "Nasburgan Ambition"
-NSA_ideas: "Nasburgan Ideas"
-
-NSA_ideas_1: "Pride of the Army"
-NSA_ideas_1_desc: "Our army's pride drives us forward. Discipline is instilled, forging a force to be reckoned with."
-
-NSA_ideas_2: "Mercantile Militarism"
-NSA_ideas_2_desc: "Militarism drives commerce. Global trade power rises, strengthening our position on the world stage."
-
-NSA_ideas_3: "Legacy Forts"
-NSA_ideas_3_desc: "Historic forts stand tall. Garrison size grows, ensuring strongholds protect our realm."
-
-NSA_ideas_4: "Defensive Doctrine"
-NSA_ideas_4_desc: "Defensive mastery guides us. Damage received in shock combat diminishes, securing our lines."
-
-NSA_ideas_5: "Glorious Campaigns"
-NSA_ideas_5_desc: "Campaigns define our glory. Prestige flourishes as our storied triumphs echo across the land."
-
-NSA_ideas_6: "Rapid Mobilization"
-NSA_ideas_6_desc: "Swift mobilization marks our strength. Regiment recruitment speeds surge, ensuring swift response."
-
-NSA_ideas_7: "Wartime Taxes"
-NSA_ideas_7_desc: "War fuels our treasury. Costs diminish as wartime taxes sustain our military endeavors."
-
-PAD_ideas_start: "Paderbornian Traditions"
-PAD_ideas_bonus: "Paderbornian Ambition"
-PAD_ideas: "Paderbornian Ideas"
-
-PAD_ideas_1: "Faithful Among Us"
-PAD_ideas_1_desc: "Faith guides our mission. Global missionary strength strengthens our spiritual influence."
-
-PAD_ideas_2: "War Chest"
-PAD_ideas_2_desc: "A formidable war chest fuels our endeavors. Global tax power rises, ensuring resources flow."
-
-PAD_ideas_3: "Battlefield Intelligence"
-PAD_ideas_3_desc: "Intelligence grants the upper hand. Spy offense excels, securing advantages on the battlefield."
-
-PAD_ideas_4: "Imperial Ambition"
-PAD_ideas_4_desc: "Ambitions reach the highest echelons. Prestige decay slows, preserving our imperial reputation."
-
-PAD_ideas_5: "Manpower Reserves"
-PAD_ideas_5_desc: "Reserves bolster our strength. Army morale recovers swiftly, ensuring unyielding determination."
-
-PAD_ideas_6: "Emphasis on Education"
-PAD_ideas_6_desc: "Education shapes our future. Idea costs decrease, fostering innovation and growth."
-
-PAD_ideas_7: "Decisive Battles"
-PAD_ideas_7_desc: "Battles hinge on leadership. Land firepower under skilled leaders ensures decisive victories."
-
-HES_ideas_start: "Hessen Traditions"
-HES_ideas_bonus: "Hessen Ambition"
-HES_ideas: "Hessen Ideas"
-
-HES_ideas_1: "Nestled Strongholds"
-HES_ideas_1_desc: "Strongholds shield our realm. Defensiveness rises, securing our lands from threats."
-
-HES_ideas_2: "Rural Traditions"
-HES_ideas_2_desc: "Traditions enrich the rural heartland. Production efficiency surges, bolstering prosperity."
-
-HES_ideas_3: "Local Fiefdoms"
-HES_ideas_3_desc: "Fiefdoms thrive under local governance. Global autonomy decreases, ensuring regional control."
-
-HES_ideas_4: "Reputable Nobility"
-HES_ideas_4_desc: "Reputation drives our nobility. Legitimacy rises, and nobles' loyalty strengthens our realm."
-
-HES_ideas_5: "Crossroads of Commerce"
-HES_ideas_5_desc: "Commerce converges on our crossroads. Merchants flock to our markets, fueling our wealth."
-
-HES_ideas_6: "Militia Drills"
-HES_ideas_6_desc: "Drills sharpen our forces. Drill gain surges, ensuring our militias excel in combat."
-
-HES_ideas_7: "Proud Independence"
-HES_ideas_7_desc: "Independence breeds strength. Hostile attrition strikes our enemies, defending our sovereignty."
-
-FKN_ideas_1: "Ancestral Traditions"
-FKN_ideas_1_desc: "Ancient traditions guide us. Global unrest subsides as our ancestral wisdom prevails."
-
-FKN_ideas_2: "Germanic Craftsmanship"
-FKN_ideas_2_desc: "Craftsmanship defines us. Production efficiency surges, as our Germanic mastery fuels prosperity."
-
-FKN_ideas_3: "Sacred Groves"
-FKN_ideas_3_desc: "Sacred groves shield our realm. Land attrition fades, ensuring our lands remain untouched."
-
-FKN_ideas_4: "Pagan Masons"
-FKN_ideas_4_desc: "Pagan masons build our legacy. Construction costs and time diminish, crafting our fate."
-
-FKN_ideas_5: "Ritualistic Warfare"
-FKN_ideas_5_desc: "Rituals fortify our warriors. Army tradition flourishes, strengthening our martial prowess."
-
-FKN_ideas_6: "Runestones and Monuments"
-FKN_ideas_6_desc: "Runestones and monuments honor our past. Missionaries spread our legacy, inspiring devotion."
-
-FKN_ideas_7: "Germanic Unity"
-FKN_ideas_7_desc: "Unity drives us forward. Legitimacy rises as Germanic cohesion unites our realm."
-
-ALM_ideas_start: "Alemmanian Traditions"
-ALM_ideas_bonus: "Alemmanian Ambition"
-ALM_ideas: "Alemmanian Ideas"
-
-ALM_ideas_1: "Merchant Guilds"
-ALM_ideas_1_desc: "Guilds shape our trade networks. Trade efficiency thrives, enriching our economic endeavors."
-
-ALM_ideas_2: "Land of Plenty"
-ALM_ideas_2_desc: "Abundance blesses our land. Trade goods expand, fostering prosperity throughout our realm."
-
-ALM_ideas_3: "Innovative Infrastructure"
-ALM_ideas_3_desc: "Innovation drives our progress. Construction costs decrease, while prosperity flourishes."
-
-ALM_ideas_4: "Trade Embassies"
-ALM_ideas_4_desc: "Embassies strengthen our ties. Diplomatic upkeep rises, ensuring our trade relationships thrive."
-
-ALM_ideas_5: "Strategic Forts"
-ALM_ideas_5_desc: "Strategic forts fortify our lands. Defensiveness wanes, but garrison size grows, preserving our realm."
-
-ALM_ideas_6: "Mountain Passes"
-ALM_ideas_6_desc: "Mountain passes fuel trade. Caravan power surges, allowing us to dominate trade routes."
-
-ALM_ideas_7: "Land Reclamation"
-ALM_ideas_7_desc: "Reclaiming our land reduces attrition. Land attrition decreases, ensuring our forces remain robust."
-
-
-
-BAM_ideas_1: "Warrior Code"
-BAM_ideas_1_desc: "A strong warrior code empowers us. Our land morale rises, preparing us for formidable battles."
-
-BAM_ideas_2: "Legacy of Conquest"
-BAM_ideas_2_desc: "Conquests forge our legacy. Land prestige flourishes, reflecting our victorious expansion."
-
-BAM_ideas_3: "Royal Patrons"
-BAM_ideas_3_desc: "Royal patrons elevate our prestige. Their support ensures a grand reputation."
-
-BAM_ideas_4: "Efficient Tax Collection"
-BAM_ideas_4_desc: "Efficient tax collection bolsters our coffers. Global tax power surges, fueling our endeavors."
-
-BAM_ideas_5: "Civil Service Reforms"
-BAM_ideas_5_desc: "Reforms streamline civil service. Monthly reform progress slows, ensuring thorough deliberation."
-
-BAM_ideas_6: "Training Grounds"
-BAM_ideas_6_desc: "Training grounds perfect our forces. War tax costs diminish, and recruitment speeds optimize."
-
-BAM_ideas_7: "Peaceful Expansion"
-BAM_ideas_7_desc: "Expansion thrives through diplomacy. Improved relations foster peaceful and amicable growth."
-
-THU_ideas_1: "Mounted Mastery"
-THU_ideas_1_desc: "Cavalry gains dominance through mounted mastery, ensuring battlefield advantage and swift victories."
-
-THU_ideas_2: "Embassy Diplomacy"
-THU_ideas_2_desc: "Embassy diplomacy strengthens bonds, increasing diplomatic capacity and enhancing foreign relations."
-
-THU_ideas_3: "Efficient Bureaucracy"
-THU_ideas_3_desc: "An efficient bureaucracy enhances governing, enabling more effective rule and resource allocation."
-
-THU_ideas_4: "Guild Prosperity"
-THU_ideas_4_desc: "Guild privileges flourish, driving production efficiency and economic growth across our realm."
-
-THU_ideas_5: "Fortified Borders"
-THU_ideas_5_desc: "Border fortifications deter threats, reducing maintenance costs while safeguarding our sovereign lands."
-
-THU_ideas_6: "Dynastic Unity"
-THU_ideas_6_desc: "Dynastic ties foster unity, increasing legitimacy and ensuring strong support for our rule."
-
-THU_ideas_7: "Banking Reform"
-THU_ideas_7_desc: "Banking reform lowers interest rates, stabilizing economy and promoting prosperous growth."
-
-ANH_ideas_1: "Collective Security"
-ANH_ideas_1_desc: "Through alliances, mutual defense strengthens diplomatic bonds and enhances regional stability."
-
-ANH_ideas_2: "Historical Legacy"
-ANH_ideas_2_desc: "Chronicles of our past amplify prestige and bolster relations with other powers."
-
-ANH_ideas_3: "Commercial Missions"
-ANH_ideas_3_desc: "Trade delegations stimulate commerce, improving trade efficiency and economic prosperity."
-
-ANH_ideas_4: "Disciplined Training"
-ANH_ideas_4_desc: "Disciplined training hones combat readiness, yielding a formidable and effective military."
-
-ANH_ideas_5: "Economic Restructuring"
-ANH_ideas_5_desc: "Revamping taxation strategies increases revenue, bolstering financial stability and growth."
-
-ANH_ideas_6: "Envoy Diplomacy"
-ANH_ideas_6_desc: "Envoy diplomacy enhances our reputation, making us more respected in the international arena."
-
-ANH_ideas_7: "Administrative Streamlining"
-ANH_ideas_7_desc: "Centralized bureaucracy eases administrative tasks, optimizing core creation and resource allocation."
-
-SMN_ideas_start: "Semnite Traditions"
-SMN_ideas_bonus: "Semnite Ambition"
-SMN_ideas: "Semnite Ideas"
-
-SMN_ideas_1: "Incorporated Cavalry"
-SMN_ideas_1_desc: "Incorporated cavalry tactics empower our mounted forces, securing battlefield dominance."
-
-SMN_ideas_2: "Artisan Workshops"
-SMN_ideas_2_desc: "Artisan workshops drive production efficiency, fostering economic prosperity."
-
-SMN_ideas_3: "Royal Diplomats"
-SMN_ideas_3_desc: "Royal diplomats strengthen our reputation, boosting diplomatic influence."
-
-SMN_ideas_4: "Monetary Stabilization"
-SMN_ideas_4_desc: "A national bank reduces inflation, ensuring economic stability and growth."
-
-SMN_ideas_5: "Fortified Bastions"
-SMN_ideas_5_desc: "Fortified bastions bolster defense, enhancing garrison size and fortifications."
-
-SMN_ideas_6: "Cultural Patronage"
-SMN_ideas_6_desc: "Cultural patronage fosters innovation, reducing idea costs and promoting development."
-
-SMN_ideas_7: "Trade Missions"
-SMN_ideas_7_desc: "Trade missions amplify global trade power, expanding economic influence and wealth."
-
-SOR_ideas_1: "Strategic War Councils"
-SOR_ideas_1_desc: "Inclusive war councils bolster land morale, crafting formidable and determined fighting forces."
-
-SOR_ideas_2: "Regal Minting Legacy"
-SOR_ideas_2_desc: "A regal minting legacy subdues inflation's grasp, nurturing an economy of steady growth."
-
-SOR_ideas_3: "Diplomatic Envoys"
-SOR_ideas_3_desc: "Diplomatic envoys navigate complex networks, forging strong relations and alliances."
-
-SOR_ideas_4: "Cultural Authority"
-SOR_ideas_4_desc: "Cultural authority drives conversions, empowering missionaries and fostering religious unity."
-
-SOR_ideas_5: "Guilded Commerce"
-SOR_ideas_5_desc: "Guilded commerce boosts trade efficiency and merchant prowess, expanding economic reach."
-
-SOR_ideas_6: "Heritage Celebrations"
-SOR_ideas_6_desc: "Heritage celebrations invigorate missionary spirit, spreading faith and inspiring conversion."
-
-SOR_ideas_7: "Economic Strategies"
-SOR_ideas_7_desc: "Innovative fiscal strategies amplify tax potential, solidifying economic foundations and prosperity."
-
-MBZ_ideas_1: "Warlord Heritage"
-MBZ_ideas_1_desc: "Warlord heritage instills discipline, infusing troops with valor and battle prowess."
-
-MBZ_ideas_2: "Architectural Ingenuity"
-MBZ_ideas_2_desc: "Architectural ingenuity drives development cost reductions, crafting efficient urban landscapes."
-
-MBZ_ideas_3: "Zealous Zealots"
-MBZ_ideas_3_desc: "Zealous zealots amplify missionary strength, instigating fervor and reinforcing faith."
-
-MBZ_ideas_4: "Masterful Drills"
-MBZ_ideas_4_desc: "Masterful drills enhance drill gains, honing military efficiency and battlefield readiness."
-
-MBZ_ideas_5: "Prosperous Hubs"
-MBZ_ideas_5_desc: "Prosperous hubs stimulate global prosperity growth, fostering thriving economic centers."
-
-MBZ_ideas_6: "Courtly Grandeur"
-MBZ_ideas_6_desc: "Courtly grandeur extends monarch lifespan and deters prestige decay, solidifying dynastic legacy."
-
-MBZ_ideas_7: "Economic Stability"
-MBZ_ideas_7_desc: "Economic stability initiatives curtail inflation, safeguarding fiscal health and growth."
-
-LBD_ideas_start: "Lombard Traditions"
-LBD_ideas_bonus: "Lombard Ambition"
-LBD_ideas: "Lombard Ideas"
-
-LBD_ideas_1: "Divine Mission"
-LBD_ideas_1_desc: "Upholding a divine mission, Lombard zealots spread faith with exceptional missionary strength."
-
-LBD_ideas_2: "Diplomatic Training"
-LBD_ideas_2_desc: "Diplomatic training elevates reputation, promoting cordial relations and forging alliances."
-
-LBD_ideas_3: "Religious Unity"
-LBD_ideas_3_desc: "Religious unity enforces internal tolerance and cohesion, fostering spiritual harmony and stability."
-
-LBD_ideas_4: "Foreign Envoys"
-LBD_ideas_4_desc: "Foreign envoys enhance relations, weaving diplomatic webs and cultivating international friendships."
-
-LBD_ideas_5: "Defense of the Faith"
-LBD_ideas_5_desc: "Defense of the faith emboldens land morale, fortifying troops with unshakable conviction."
-
-LBD_ideas_6: "Religious Edicts"
-LBD_ideas_6_desc: "Religious edicts reduce state maintenance, channelling resources into devout pursuits and welfare."
-
-LBD_ideas_7: "Alliance Networks"
-LBD_ideas_7_desc: "Alliance networks amplify diplomacy, enabling improved relations and streamlined diplomatic upkeep."
-
-KTM_ideas_start: "Kartamite Traditions"
-KTM_ideas_bonus: "Kartamite Ambition"
-KTM_ideas: "Kartamite Ideas"
-
-KTM_ideas_1: "Mountain Fortresses"
-KTM_ideas_1_desc: "Mountain fortresses bolster defensiveness, fortifying Kartamite lands against intruders."
-
-KTM_ideas_2: "Hired Strategy"
-KTM_ideas_2_desc: "Hired strategy reduces advisor cost, securing skilled minds for tactical advantage."
-
-KTM_ideas_3: "Defensive Preparations"
-KTM_ideas_3_desc: "Defensive preparations lower regiment cost, facilitating cost-effective troop maintenance."
-
-KTM_ideas_4: "Mercenary Contracts"
-KTM_ideas_4_desc: "Mercenary contracts cut mercenary cost, enabling strategic use of formidable mercenaries."
-
-KTM_ideas_5: "Battlefield Supplies"
-KTM_ideas_5_desc: "Battlefield supplies mitigate attrition and augment supply limits, ensuring sustained military campaigns."
-
-KTM_ideas_6: "Defensive Diplomacy"
-KTM_ideas_6_desc: "Defensive diplomacy streamlines relations, conserving diplomatic resources for fortified defenses."
-
-KTM_ideas_7: "Legacy of Defenders"
-KTM_ideas_7_desc: "Legacy of defenders lessens shock damage, honoring the resilient Kartamite warriors who shield their realm."
+ EFR_ideas_start: "East Frisian Traditions"
+ EFR_ideas_bonus: "East Frisian Ambitions"
+ EFR_ideas: "East Frisian Ideas"
+ EFR_ideas_1: "Warrior Heritage"
+ EFR_ideas_1_desc: "We honor our fierce heritage with unwavering courage, bolstering land morale against all odds."
+ EFR_ideas_2: "Economic Conscription"
+ EFR_ideas_2_desc: "By conscripting resources, we fuel our armies. Enlistments surge, expanding our land force limits."
+ EFR_ideas_3: "Martial Innovations"
+ EFR_ideas_3_desc: "Innovative strategies cut the costs of military technology advancement, propelling us to the forefront."
+ EFR_ideas_4: "Siege Engineering Corps"
+ EFR_ideas_4_desc: "A corps of skilled engineers eases fortress maintenance burdens, channeling resources for campaigns."
+ EFR_ideas_5: "Legacy of Heroes"
+ EFR_ideas_5_desc: "Ancestral heroes bless us with wisdom. Our leader pool flourishes, offering tactical brilliance."
+ EFR_ideas_6: "Prestigious Conquests"
+ EFR_ideas_6_desc: "Triumphs on the battlefield elevate our standing. Conquered lands bring prestige and admiration."
+ EFR_ideas_7: "Unified Command"
+ EFR_ideas_7_desc: "United command ensures victory. Leaders master both strategy and firepower, igniting the land with fire."
+ FRI_ideas_starts: "Frisian Traditions"
+ FRI_ideas_bonuses: "Frisian Ambitions"
+ FRI_ideass: "Frisian Ideas"
+ FRI_ideas_1: "Champion Bloodlines"
+ FRI_ideas_1_desc: "Noble bloodlines breed champions. Army tradition flourishes, inspiring our forces with glory."
+ FRI_ideas_2: "Agricultural Reforms"
+ FRI_ideas_2_desc: "Revolutionizing agriculture enriches the land. Production efficiency surges, fueling prosperity."
+ FRI_ideas_3: "Marching Discipline"
+ FRI_ideas_3_desc: "Discipline in marching brings order to our ranks. Infantry power is heightened, ensuring dominance."
+ FRI_ideas_4: "Stronghold Legacy"
+ FRI_ideas_4_desc: "A legacy of strongholds shields our realm. Defensiveness reigns, repelling all who threaten us."
+ FRI_ideas_5: "The Heroes' Epics"
+ FRI_ideas_5_desc: "Epic tales immortalize our heroes. Prestige surges, drawing admiration from far and wide."
+ FRI_ideas_6: "Efficient Supply Lines"
+ FRI_ideas_6_desc: "Efficient supply lines reduce attrition woes. Land attrition is minimized, sustaining our forces."
+ FRI_ideas_7: "Veteran Officers"
+ FRI_ideas_7_desc: "Seasoned officers manage costs wisely. Land maintenance is reduced, optimizing our budget."
+ KOL_ideas_start: "Huldheimer Traditions"
+ KOL_ideas_bonuse: "Huldheimer Ambitions"
+ KOL_ideass: "Huldheimer Ideas"
+ KOL_ideas_1: "Adequate Garrisons"
+ KOL_ideas_1_desc: "Strong garrisons ensure our realm's defense. Defensiveness thrives, protecting our lands."
+ KOL_ideas_2: "Prestigious Academies"
+ KOL_ideas_2_desc: "Renowned academies drive innovation. Technology costs diminish, propelling us forward."
+ KOL_ideas_3: "Economic Militarization"
+ KOL_ideas_3_desc: "Economic prowess funds our military might. Land force limits expand, solidifying our strength."
+ KOL_ideas_4: "Legacy Tactics"
+ KOL_ideas_4_desc: "Tactical wisdom shapes our legacy. Discipline is instilled, enhancing our battlefield prowess."
+ KOL_ideas_5: "Historic Feats"
+ KOL_ideas_5_desc: "Past glories shape our destiny. Prestige decay slows, preserving our storied reputation."
+ KOL_ideas_6: "Skilled Recruiters"
+ KOL_ideas_6_desc: "Masterful recruiters ensure quality forces. Regiment recruitment speeds improve, bolstering our ranks."
+ KOL_ideas_7: "Tactical Genius"
+ KOL_ideas_7_desc: "Genius strategies guide us to victory. Leaders maneuver with precision, ensuring triumph."
+ AAC_ideas_start: "Aachener Traditions"
+ AAC_ideas_bonus: "Aachener Ambition"
+ AAC_ideas: "Aachener Ideas"
+ AAC_ideas_1: "Veteran Warriors"
+ AAC_ideas_1_desc: "Seasoned warriors bolster our ranks. Infantry power rises, solidifying our martial might."
+ AAC_ideas_2: "War Economy"
+ AAC_ideas_2_desc: "Efficient war taxes fund our campaigns. Costs diminish, allowing us to wage war relentlessly."
+ AAC_ideas_3: "Strategic Fortresses"
+ AAC_ideas_3_desc: "Strategic forts shield our realm. Fort maintenance burdens lessen, preserving our resources."
+ AAC_ideas_4: "Prestigious Leaders"
+ AAC_ideas_4_desc: "Our leaders command with prestige. Shock tactics dominate the battlefield, securing our triumphs."
+ AAC_ideas_5: "A Tradition of Valor"
+ AAC_ideas_5_desc: "Valor flows through our veins. Prestige rises as we continue our storied tradition of heroism."
+ AAC_ideas_6: "Cavalry Elites"
+ AAC_ideas_6_desc: "Elite cavalry rides forth. Their power and flanking expertise guarantee victory on all fronts."
+ AAC_ideas_7: "Grand Armory"
+ AAC_ideas_7_desc: "Our armory stands supreme. Artillery power increases, while costs of barrage operations diminish."
+ TRI_ideas_start: "Treuwalder Traditions"
+ TRI_ideas_bonus: "Treuwalder Ambition"
+ TRI_ideas: "Treuwalder Ideas"
+ TRI_ideas_1: "Battlefield Legends"
+ TRI_ideas_1_desc: "Legends born on the battlefield. Our army tradition flourishes with every battle, inspiring greatness."
+ TRI_ideas_2: "Economic War Machine"
+ TRI_ideas_2_desc: "War fuels our economy. Global trade goods expand, powering our war machine's momentum."
+ TRI_ideas_3: "Strategic Depth"
+ TRI_ideas_3_desc: "Depth in strategy fortifies our realm. Defensiveness rises, safeguarding our lands."
+ TRI_ideas_4: "Art of Siege"
+ TRI_ideas_4_desc: "Siege mastery defines us. Leaders excel in siegecraft, and our artillery levels outmatch fortifications."
+ TRI_ideas_5: "Dynastic Honor"
+ TRI_ideas_5_desc: "Honoring our dynasty preserves our legacy. Prestige decay slows, and nobles' loyalty strengthens."
+ TRI_ideas_6: "Marching Drills"
+ TRI_ideas_6_desc: "Precision in drills hones our forces. Drill gain surges, ensuring excellence on the battlefield."
+ TRI_ideas_7: "Famed Artillery"
+ TRI_ideas_7_desc: "Artillery mastery defines us. Artillery costs decrease, while power ascends to legendary heights."
+ NSA_ideas_start: "Nasburgan Traditions"
+ NSA_ideas_bonus: "Nasburgan Ambition"
+ NSA_ideas: "Nasburgan Ideas"
+ NSA_ideas_1: "Pride of the Army"
+ NSA_ideas_1_desc: "Our army's pride drives us forward. Discipline is instilled, forging a force to be reckoned with."
+ NSA_ideas_2: "Mercantile Militarism"
+ NSA_ideas_2_desc: "Militarism drives commerce. Global trade power rises, strengthening our position on the world stage."
+ NSA_ideas_3: "Legacy Forts"
+ NSA_ideas_3_desc: "Historic forts stand tall. Garrison size grows, ensuring strongholds protect our realm."
+ NSA_ideas_4: "Defensive Doctrine"
+ NSA_ideas_4_desc: "Defensive mastery guides us. Damage received in shock combat diminishes, securing our lines."
+ NSA_ideas_5: "Glorious Campaigns"
+ NSA_ideas_5_desc: "Campaigns define our glory. Prestige flourishes as our storied triumphs echo across the land."
+ NSA_ideas_6: "Rapid Mobilization"
+ NSA_ideas_6_desc: "Swift mobilization marks our strength. Regiment recruitment speeds surge, ensuring swift response."
+ NSA_ideas_7: "Wartime Taxes"
+ NSA_ideas_7_desc: "War fuels our treasury. Costs diminish as wartime taxes sustain our military endeavors."
+ PAD_ideas_start: "Paderbornian Traditions"
+ PAD_ideas_bonus: "Paderbornian Ambition"
+ PAD_ideas: "Paderbornian Ideas"
+ PAD_ideas_1: "Faithful Among Us"
+ PAD_ideas_1_desc: "Faith guides our mission. Global missionary strength strengthens our spiritual influence."
+ PAD_ideas_2: "War Chest"
+ PAD_ideas_2_desc: "A formidable war chest fuels our endeavors. Global tax power rises, ensuring resources flow."
+ PAD_ideas_3: "Battlefield Intelligence"
+ PAD_ideas_3_desc: "Intelligence grants the upper hand. Spy offense excels, securing advantages on the battlefield."
+ PAD_ideas_4: "Imperial Ambition"
+ PAD_ideas_4_desc: "Ambitions reach the highest echelons. Prestige decay slows, preserving our imperial reputation."
+ PAD_ideas_5: "Manpower Reserves"
+ PAD_ideas_5_desc: "Reserves bolster our strength. Army morale recovers swiftly, ensuring unyielding determination."
+ PAD_ideas_6: "Emphasis on Education"
+ PAD_ideas_6_desc: "Education shapes our future. Idea costs decrease, fostering innovation and growth."
+ PAD_ideas_7: "Decisive Battles"
+ PAD_ideas_7_desc: "Battles hinge on leadership. Land firepower under skilled leaders ensures decisive victories."
+ HES_ideas_start: "Hessen Traditions"
+ HES_ideas_bonus: "Hessen Ambition"
+ HES_ideas: "Hessen Ideas"
+ HES_ideas_1: "Nestled Strongholds"
+ HES_ideas_1_desc: "Strongholds shield our realm. Defensiveness rises, securing our lands from threats."
+ HES_ideas_2: "Rural Traditions"
+ HES_ideas_2_desc: "Traditions enrich the rural heartland. Production efficiency surges, bolstering prosperity."
+ HES_ideas_3: "Local Fiefdoms"
+ HES_ideas_3_desc: "Fiefdoms thrive under local governance. Global autonomy decreases, ensuring regional control."
+ HES_ideas_4: "Reputable Nobility"
+ HES_ideas_4_desc: "Reputation drives our nobility. Legitimacy rises, and nobles' loyalty strengthens our realm."
+ HES_ideas_5: "Crossroads of Commerce"
+ HES_ideas_5_desc: "Commerce converges on our crossroads. Merchants flock to our markets, fueling our wealth."
+ HES_ideas_6: "Militia Drills"
+ HES_ideas_6_desc: "Drills sharpen our forces. Drill gain surges, ensuring our militias excel in combat."
+ HES_ideas_7: "Proud Independence"
+ HES_ideas_7_desc: "Independence breeds strength. Hostile attrition strikes our enemies, defending our sovereignty."

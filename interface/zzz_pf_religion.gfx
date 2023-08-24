@@ -28,5 +28,9 @@ spriteTypes = {
         noOfFrames = 38
         loadType = "INGAME"
     }
-	
+    spriteType = {
+		name = "GFX_alert_pick_church_aspect_slavic"
+		texturefile = "gfx/interface/alert_pick_church_aspect_protestant.dds"
+		alwaystransparent = yes
+	}
 }
