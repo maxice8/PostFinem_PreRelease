@@ -10,6 +10,7 @@ add_accepted_culture = cairenes
 religion = hellenic
 add_truce_with = JRD
 add_truce_with = HEL
+add_legitimacy = -75
 1444.1.1 = { 
 	monarch = { 
 		name = "Isadora"
@@ -34,5 +35,12 @@ add_truce_with = HEL
 		culture = alexandrian
 		birth_date = 1436.11.21
 		death_date = 1445.1.1
+		
 	}
+	add_ruler_modifier = {
+		name = aeg_userper_regent_modifier
+		duration = -1
+	}
+	set_ruler_flag = isadora_gidos_flag
+	set_heir_flag = theodoro_gidos_flag
 }
