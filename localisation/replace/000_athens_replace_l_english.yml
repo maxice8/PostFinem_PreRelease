@@ -14,7 +14,7 @@
  CURIACONTROLLER_7:0 "$EFFECT$"
  CURIACONTROLLER_LOG:0 "We are the new Athenaean Controller."
 
- PAPACY_CONTROLLER:0 "§YAthenaeum controller§!\n$NAME$ is currently in control of the athenaeum."
+ PAPACY_CONTROLLER:0 "§YAthenaeum controller§!\n$NAME$ is currently in control of the Athenaeum."
  CARDINAL_NAME:0 "Demiarchon of $LOC|Y$"
  PAPACY_THE_HOLY_SEE:0 "Sacred Athenaeum"
  PAPACY_CARDINALS:0 "Demiarchons:"
@@ -65,11 +65,12 @@
  CURIA_APPOINT_CARDINAL:2 "Spend $COST|Y$¤ of your own money to appoint one of your loyalists as Demiarchon. This will give us $CORRUPTION|R$ Corruption and increase our Invested influence towards becoming the next Athenaean Controller by $INFLUENCE|Y$ every year."
  CURIA_APPOINT_CARDINAL_SELF_TITLE:0 "Appoint loyalist Demiarchon"
 
-
-##### NOT WORKING NOT SURE WHY? #####
+ # Tooltip (for Pope)
+ CURIA_APPOINT_CARDINAL_POPE:0 "Do you want to spend $COST|Y$¤ to appoint one of your loyalists as Demiarchon. This will give us $CORRUPTION|R$ Corruption."
+ # Confirmation button (for Pope)
  CURIA_APPOINT_CARDINAL_SELF_DESC:1 "Do you want to spend $COST|Y$¤ to appoint one of your loyalists as Demiarchon? This will give us $CORRUPTION|R$ Corruption and increase our invested influence towards becoming the next Athenaean Controller by $INFLUENCE|Y$ every year."
-#####################################
-
+ # Tooltip (for other countries)
+ PAPAL_INVEST:0 "Spend §Y$MOD_COST$§W Athenaean Influence to gain §Y$COST$§W Invested influence towards becoming the next Athenaean Controller."
 
  # Golden Bulls
  POINT_CARDINAL_SELF_DESC:1 "Do you want to spend $COST|Y$¤ to Appoint one of your loyalists as Demiarchon? This will give us $CORRUPTION|R$ Corruption and increase our Invested influence towards becoming the next Athenaean Controller by $INFLUENCE|Y$ every year."
@@ -99,9 +100,7 @@
 
  PAPAL_INFLUENCE_NO_CARDINAL:0 "§R- It is not possible to invest athenaean influence if you have no active Demiarchons.§!"
 
-##### NOT WORKING NOT SURE WHY? #####
- CARDINALLIST:0 "$PROVINCE$, $COUNTRY$ with a chance of $SCORE$%.\n"
-#####################################
+ CARDINALLIST:0 "$PROVINCE$, $COUNTRY$ with a chance of $SCORE$.\n"
 
  papal_influence:0 "Athenaean Influence"
  YEARLY_PAPAL_INFLUENCE:0 "Yearly Athenaean Influence"
@@ -140,3 +139,5 @@
  HINT_REFORMDESIRE_TEXT:0 "Reform Fervor represents how much pressure there is within Hellenism to reform the faith. High Reform Fervor will eventually unlock the Reformation, allowing Hellenic countries and provinces to convert into competing heretic faiths. Reform Fervor is usually increased by random events and is global for the whole Hellenic religion, not just your country."
  HINT_PAPALINFLUENCE_TITLE:0 "Athenaean Influence"
  HINT_PAPALINFLUENCE_TEXT:1 "Athenaean Influence is a resource you use to gain bonuses from the Sacred Aethenaeum and try to become Athenaean Controller. Athenaean Influence is gained yearly from Religious Unity and having good relations with Athens. Certain Ideas can also increase Athenaean Influence."
+
+ CARDINAL_NEW:0 "§YActive Demiarchon§!\nWe control this active demiarchon from $HOME|Y$. Each active demiarchon gives us $BENEFIT$ Athenaean Influence per year."

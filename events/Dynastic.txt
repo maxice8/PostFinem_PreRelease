@@ -762,7 +762,7 @@ country_event = {
 			NOT = { religion_group = eastern }
 			NOT = { religion_group = dharmic }
 			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
+			NOT = { religion = jewish } # pf
 			NOT = { religion_group = zoroastrian_group }
 		}
 		define_heir = {
@@ -780,7 +780,7 @@ country_event = {
 			NOT = { religion_group = eastern }
 			NOT = { religion_group = dharmic }
 			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
+			NOT = { religion = jewish } # pf
 			NOT = { religion_group = zoroastrian_group }
 		}
 		define_heir = {
@@ -798,7 +798,7 @@ country_event = {
 			NOT = { religion_group = eastern }
 			NOT = { religion_group = muslim }
 			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
+			NOT = { religion = jewish } # pf
 			NOT = { religion_group = zoroastrian_group }
 		}
 		define_heir = {
@@ -910,7 +910,7 @@ country_event = {
 			NOT = { religion_group = dharmic }
 			NOT = { religion_group = muslim }
 			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
+			NOT = { religion = jewish } # pf
 			NOT = { religion_group = zoroastrian_group }
 		}
 		define_heir = {
@@ -928,7 +928,7 @@ country_event = {
 			NOT = { religion_group = dharmic }
 			NOT = { religion_group = muslim }
 			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
+			NOT = { religion = jewish } # pf
 			NOT = { religion_group = eastern }
 		}
 		define_heir = {
@@ -965,7 +965,7 @@ country_event = {
 			NOT = { religion_group = eastern }
 			NOT = { religion_group = dharmic }
 			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
+			NOT = { religion = jewish } # pf
 			NOT = { religion_group = zoroastrian_group }
 		}
 		define_heir = {
@@ -983,7 +983,7 @@ country_event = {
 			NOT = { religion_group = eastern }
 			NOT = { religion_group = dharmic }
 			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
+			NOT = { religion = jewish } # pf
 			NOT = { religion_group = zoroastrian_group }
 		}
 		define_heir = {
@@ -1001,7 +1001,7 @@ country_event = {
 			NOT = { religion_group = eastern }
 			NOT = { religion_group = muslim }
 			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
+			NOT = { religion = jewish } # pf
 			NOT = { religion_group = zoroastrian_group }
 		}
 		define_heir = {
@@ -1113,7 +1113,7 @@ country_event = {
 			NOT = { religion_group = dharmic }
 			NOT = { religion_group = muslim }
 			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
+			NOT = { religion = jewish } # pf
 			NOT = { religion_group = zoroastrian_group }
 		}
 		define_heir = {
@@ -1131,7 +1131,7 @@ country_event = {
 			NOT = { religion_group = dharmic }
 			NOT = { religion_group = muslim }
 			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
+			NOT = { religion = jewish } # pf
 			NOT = { religion_group = eastern }
 		}
 		define_heir = {

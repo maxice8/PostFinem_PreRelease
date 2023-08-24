@@ -703,7 +703,7 @@ power_to_the_synagogoues_reform = {
 			is_revolutionary = no
 			NOT = { has_dlc = "Emperor" }
 		}
-		religion_group = jewish_group
+		religion = jewish #pf
 	}
 	modifiers = {
 		church_influence_modifier = 0.1
