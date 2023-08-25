@@ -164,10 +164,12 @@
 
  ARE_NOT_PAPAL_CONTROLLER:0 "Are NOT the Athenaean controller"
  ARE_PAPAL_CONTROLLER:0 "Are the Athenaean controller"
+ PAPAL_COST:1 "Costs $COST|Y0$ Athenaean Influence.\n"
 
  CURIA_PICK_GOLDEN_BULL_NOT_ENOUGH_CASH:0 "§RYou need $REQUIRED|Y$¤ in the Athenaean Treasury to pick a Hieratic Decree but you only have $AVAILABLE|Y$¤.§!"
  CURIA_PICK_GOLDEN_BULL_ALREADY_PICKED:0 "§RThere can only be one Hieratic Decree enacted at a time.§!"
  CURIA_CURRENT_GOLDEN_BULL_PICKED:0 "§YThis Hieratic Decree has been enacted by the Athenaean Controller and will remain active for the rest of his life.§!"
+ DIPLOMACYACTION_CATEGORY_papacy:0 "Athenaean actions"
 
  GOLDEN_BULL_INSTANT:0 "$NAME|Y$\n$EFFECT$\nInvest $COST|Y$¤ from the §YAthenaean Treasury§! and pick this Hieratic Decree"
  GOLDEN_BULL_PICKED_TITLE:0 "Hieratic Decree Picked"
