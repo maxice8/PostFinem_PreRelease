@@ -2,7 +2,7 @@
 #Gallic Hierarchy
 
 gallic_hierarchy = {
-	icon = "royal_favoritism"
+	icon = "gallic_king"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	potential = {
@@ -27,7 +27,7 @@ gallic_hierarchy = {
 #Celtic Lordship
 
 celtic_lordship = {
-	icon = "tribal_centralize_power"
+	icon = "celtic_king"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = no
@@ -75,7 +75,7 @@ crown_of_roma = {
 #Auralpina Monarchy
 
 auralpina_monarchy = {
-	icon = "sisterhood"
+	icon = "king_mountains"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = no
@@ -98,7 +98,7 @@ auralpina_monarchy = {
 #Hellepharaohcy
 
 hellepharaohcy = {
-	icon = "british_monarchy"
+	icon = "cleopatra"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = no
@@ -121,7 +121,7 @@ hellepharaohcy = {
 #Diadem of Iberia
 
 diadem_of_iberia = {
-	icon = "castle"
+	icon = "explorer_landing"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = no
@@ -144,7 +144,7 @@ diadem_of_iberia = {
 #Alexander's Crown
 
 alexanders_crown = {
-	icon = "sailors"
+	icon = "alexander_crown"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = no

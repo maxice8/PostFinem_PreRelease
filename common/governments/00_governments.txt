@@ -949,12 +949,16 @@ tribal = {
 			reforms = {
 				martial_society_reform
 				civil_society_reform
+				#PF
+				naval_society_reform
 			}
 		}
 		tribal_religion = {
 			reforms = {
 				religious_societies_reform
 				lip_service_reform
+				#PF
+				berzerker_zeal_reform
 			}
 		}
 		tribal_military_doctrines = {
@@ -1021,6 +1025,8 @@ tribal = {
 			reforms = {
 				centralize_tribal_power_reform
 				retain_tribal_hierarchy_reform
+				#PF
+				norse_nationstates_reform
 			}
 		}
 		tribal_reformation = {
@@ -1033,6 +1039,8 @@ tribal = {
 				tribe_becomes_horde_reform
 				tribe_remain_tribal_reform
 				tribe_tribal_unity
+				#PF
+				establish_permanent_settlements_reform
 			}
 		}
 	}
