@@ -163,3 +163,32 @@ alexanders_crown = {
 		factor = 0.5 #generic
 	}
 }
+
+
+#Selucid Monarchy
+selucid_monarchy = {
+	icon = "selucid"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+	potential = {
+		tag = SLC
+	}
+	modifiers = {
+		hostile_attrition = 1	
+		has_streltsy = yes
+		yearly_absolutism = 0.5
+		max_absolutism = 20
+
+	}
+	# custom_attributes = {
+	# 	buffed_strong_duchies = yes #+5% Loyalty
+	# }
+	ai = {
+		factor = 0.5 #generic
+	}
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		claim_states = yes
+	}
+}
