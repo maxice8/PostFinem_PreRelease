@@ -10,7 +10,10 @@
 
 scandinavian = { #Nordic
 	graphical_culture = westerngfx
-
+	country = {
+		has_galleass = yes
+		allowed_galleass_fraction = 0.2
+	}
 	#country = { land_forcelimit_modifier = 0.25}
 	#province = { local_build_cost = -0.10 }
 
@@ -562,6 +565,10 @@ caucasian_armenian = {
 }
 
 anatolian_greek = {
+	country = {
+		has_streltsy = yes
+		allowed_streltsy_fraction = 0.25
+	}
 	graphical_culture = westerngfx
 	delphian = { #Central
 		primary = KAR
@@ -701,6 +708,10 @@ anatolian_greek = {
 }
 
 levantine_greek = {
+	country = {
+		has_streltsy = yes
+		allowed_streltsy_fraction = 0.25
+	}
 	graphical_culture = westerngfx
 	selucian = { #Central
 		primary = SLC
@@ -1113,6 +1124,7 @@ old_germanic = {
 
 west_mongol = {
 	graphical_culture = westerngfx
+	# country = { has_cossacks = yes }
 	nogaybak = {
 		primary = NOG
 		dynasty_names = {

@@ -19,6 +19,9 @@ norse_warlord = {
 	ai = {
 		factor = 0.5 #generic
 	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
 }
 
 naval_society_reform = {

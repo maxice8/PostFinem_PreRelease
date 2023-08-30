@@ -302,7 +302,7 @@ SXY_ideas = {
 	}
 	#Loyal Subjects
 	SXY_ideas_3 = {
-		reduced_liberty_desire = -0.2
+		reduced_liberty_desire = 20
 	}
 	#Screaming Hussars
 	SXY_ideas_4 = {
@@ -3293,6 +3293,58 @@ SLC_ideas = {
 	# Conqueror's Ambition
 	SLC_ideas_7 = {
 		 province_warscore_cost = -0.15
+	}
+}
+
+NEK_ideas = {
+	start = {
+		 tolerance_own = 1
+		 missionaries = 1
+	}
+
+	bonus = {
+		 core_creation = -0.1
+	}
+
+	trigger = {
+		 tag = NEK
+	}
+	free = yes
+
+	# Path of Righteousness
+	NEK_ideas_1 = {
+		 global_missionary_strength = 0.02
+	}
+
+	# Learned Scholars
+	NEK_ideas_2 = {
+		 technology_cost = -0.1
+	}
+
+	# Financial Prudence
+	NEK_ideas_3 = {
+		 interest = -1
+	}
+
+	# Promotion of the Clergy
+	NEK_ideas_4 = {
+		 stability_cost_modifier = -0.2
+	}
+
+	# Intellectual Patronage
+	NEK_ideas_5 = {
+		 free_policy = 1
+	}
+
+	# Pilgrimage Centers
+	NEK_ideas_6 = {
+		 tolerance_own = 1
+		 manpower_in_true_faith_provinces = 0.1
+	}
+
+	# Development of Sciences
+	NEK_ideas_7 = {
+		 development_cost = -0.10
 	}
 }
 

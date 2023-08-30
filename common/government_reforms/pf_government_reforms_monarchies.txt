@@ -22,6 +22,9 @@ gallic_hierarchy = {
 	ai = {
 		factor = 0.5 #generic
 	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
 }
 
 #Celtic Lordship
@@ -47,6 +50,9 @@ celtic_lordship = {
 	ai = {
 		factor = 0.5 #generic
 	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
 }
 
 #Crown of Roma
@@ -70,6 +76,9 @@ crown_of_roma = {
 	ai = {
 		factor = 0.5 #generic
 	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
 }
 
 #Auralpina Monarchy
@@ -91,6 +100,9 @@ auralpina_monarchy = {
 	# }
 	ai = {
 		factor = 0.5 #generic
+	}
+	custom_attributes = {
+		locked_government_type = yes
 	}
 }
 
@@ -114,6 +126,9 @@ hellepharaohcy = {
 	# }
 	ai = {
 		factor = 0.5 #generic
+	}
+	custom_attributes = {
+		locked_government_type = yes
 	}
 }
 
@@ -139,6 +154,9 @@ diadem_of_iberia = {
 	ai = {
 		factor = 0.5 #generic
 	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
 }
 
 #Alexander's Crown
@@ -161,6 +179,9 @@ alexanders_crown = {
 	# }
 	ai = {
 		factor = 0.5 #generic
+	}
+	custom_attributes = {
+		locked_government_type = yes
 	}
 }
 
@@ -186,6 +207,9 @@ selucid_monarchy = {
 	# }
 	ai = {
 		factor = 0.5 #generic
+	}
+	custom_attributes = {
+		locked_government_type = yes
 	}
 	conditional = {
 		allow = { has_dlc = "Third Rome" }
