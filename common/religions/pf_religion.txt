@@ -176,7 +176,7 @@ pagan = {
 		
 		# personal_deity = yes
 		
-		heretic = { PROMETHEANS }
+		heretic = { SHABIANIST HANIFIST }
 
 	
 	}
@@ -268,7 +268,7 @@ germanic_group = {
 		# personal_deity = yes
 		misguided_heretic = yes
 		
-		heretic = { PROMETHEANS }
+		heretic = { OLD_NORSE }
 	
 		fervor = yes
 	}
@@ -291,7 +291,7 @@ germanic_group = {
 		# personal_deity = yes
 		misguided_heretic = yes
 		
-		heretic = { PROMETHEANS }
+		heretic = { OLD_NORSE }
 	
 		fervor = yes
 	}
@@ -303,7 +303,7 @@ germanic_group = {
 
 punic_group = {
 	defender_of_faith = yes
-	crusade_name = HOLY_WAR
+	can_form_personal_unions = yes
 	punic_religion = {
 		icon = 33
 		color = { 185 55 225 }
@@ -321,7 +321,7 @@ punic_group = {
 		personal_deity = yes
 
 
-		heretic = { PUNIC_HERETIC }	
+		heretic = { NUMIDIANS EGYPTIANS }	
 	}
 	
 	romana = {
@@ -362,6 +362,7 @@ punic_group = {
 hellenic_group = {
 
 	defender_of_faith = yes
+	can_form_personal_unions = yes
 	hellenic = {
 		icon = 34
 		color = { 160 255 255 }
@@ -659,7 +660,7 @@ hellenic_group = {
 slavic_religion_group = {
 
 	defender_of_faith = yes
-	slavic_relgion = {
+	slavic_religion = {
 		icon = 36
 		color = { 77 85 180 }
 		country = {
@@ -681,22 +682,6 @@ slavic_religion_group = {
 		uses_church_power = yes				# Uses church power/aspect mechanics
 		aspects = {
 			mother_tongue_aspect
-			# organised_through_bishops_aspect
-			# priests_may_marry_aspect
-			# adult_baptism_aspect
-			# holy_sacraments_aspect
-			# saints_accept_prayers_aspect
-			# icons_images_aspect
-			# legalised_divorces_aspect
-			# heretics_deported_aspect
-			# parish_registers_aspect
-			# individual_creeds_aspect
-			# allow_usury_aspect
-			# translated_bibles_aspect
-			# justified_religious_war_aspect
-			# war_preaches_aspect
-			# head_of_the_church_aspect
-			# anglican_aspect
 		}
 		aspects_name = SLAVIC_ASPECTS
 	

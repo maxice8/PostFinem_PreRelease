@@ -10,7 +10,10 @@
 
 scandinavian = { #Nordic
 	graphical_culture = westerngfx
-
+	country = {
+		has_galleass = yes
+		allowed_galleass_fraction = 0.2
+	}
 	#country = { land_forcelimit_modifier = 0.25}
 	#province = { local_build_cost = -0.10 }
 
@@ -239,7 +242,6 @@ old_celtic	= {
 
 	old_highland_scottish = {
 		province = { local_has_galleon = yes }
-		primary = HSC
 
 		male_names = {
 			Aonghas Alasdair Ailbeart Adhamh Ailean Anndra Arailt Artair Aaron Amhlaidh Ailpein
@@ -438,18 +440,21 @@ gallic = {
 	}
 	#paris and surrounding area
 	parisian = { #parisii
+		primary = GAU
 		
 	}
 	#western and northern
 	carnute = { #carnutes
-		
+		primary = CNT
 	}
 	#coastal
 	pictonian = { #pictones
+		primary = PCT
 		
 	}
 	#belgian
 	nervian = { #nervii
+		primary = BRG
 		
 	}
 	#eastern, rhine area
@@ -518,18 +523,22 @@ gallic = {
 caucasian_armenian = {
 	graphical_culture = westerngfx
 	olymporian = {
+		primary = AVR
 
 	}
 	erythrian = {
+		primary = ARM
 
 	}
 	araratian = {
+		primary = ALR
 
 	}
 	vanite = {
 
 	}
 	tigran = {
+		primary = TBZ
 
 	}
 	dynasty_names = { 
@@ -556,17 +565,24 @@ caucasian_armenian = {
 }
 
 anatolian_greek = {
+	country = {
+		has_streltsy = yes
+		allowed_streltsy_fraction = 0.25
+	}
 	graphical_culture = westerngfx
 	delphian = { #Central
+		primary = KAR
 
 	}
 	lycian = { #SW
 
 	}
 	cappadocian = {
+		primary = CPD
 
 	}
 	sophi = {
+		primary = EDS
 
 	}	
 	dynasty_names = {
@@ -692,22 +708,30 @@ anatolian_greek = {
 }
 
 levantine_greek = {
+	country = {
+		has_streltsy = yes
+		allowed_streltsy_fraction = 0.25
+	}
 	graphical_culture = westerngfx
 	selucian = { #Central
+		primary = SLC
 
 	}
 	judaean = { #SW
 
 	}
 	heliodori = {
+		primary = SYR
 
 	}
 	# arkadianoi = {
 
 	# }
 	orichalcos = {
+		primary = JRD
 		
-	}	dynasty_names = {
+	}
+	dynasty_names = {
 		Kantakouzenos Doukas Komnenos Palaiologos Laskaris Angelos Phokas
 		"Kameniatis" "Chameas" "Demetrianos" "Laloudios" "Stamopatas" "Peloponnesites" "Klados" "Avastaktos" 
 		"Lardotyros" "Kyritzios" "Kolovos" "Podopagouros" "Touvakes" "Peteinakes" "Ooryphas" "Myxares" "Toxias" 
@@ -832,6 +856,7 @@ levantine_greek = {
 egyptian_greek = {
 	graphical_culture = westerngfx
 	alexandrian = {
+		primary = AEG
 
 	}
 	delta = {
@@ -973,18 +998,23 @@ egyptian_greek = {
 north_african = {
 	graphical_culture = westerngfx
 	numidian = {
+		primary = NMD
 
 	}
 	gaetulian = {
+		primary = TFL
 
 	}
 	maurian = {
+		primary = SOS
 
 	}
 	garamente = {
+		primary = FZA
 
 	}
 	leptisian = {
+		primary = TRP
 		
 	}
 	mazice = {
@@ -994,6 +1024,7 @@ north_african = {
 		
 	}
 	punic_culture = {
+		primary = CAR
 		
 	}
 	dynasty_names = {
@@ -1031,30 +1062,37 @@ old_germanic = {
 	}
 	#Hesse and thuringia
 	chatti = { #
+		primary = BAM
 		
 	}
 	#Lower Saxony
 	cherusci = {
+		primary = ANH
 		
 	}
 	#North
 	old_saxon = {
+		primary = SXY
 		
 	}
 	#Czech and Bavarian
 	marcomanni = {
+		primary = BAV
 
 	}
 	#self explanatory
 	old_frisian = {
+		primary = FRI
 
 	}
 	#north of the alps
 	old_lombard = {
+		primary = LBD
 
 	}
 	#north rhine-westphalia
 	bructeri = {
+		primary = KOL
 
 	}
 	dynasty_names = {
@@ -1086,6 +1124,7 @@ old_germanic = {
 
 west_mongol = {
 	graphical_culture = westerngfx
+	# country = { has_cossacks = yes }
 	nogaybak = {
 		primary = NOG
 		dynasty_names = {
@@ -1109,6 +1148,7 @@ west_mongol = {
 		
 	}
 	mongol_crimean = {
+		primary = CRI
 		
 	}
 	don = {
@@ -1118,12 +1158,14 @@ west_mongol = {
 		
 	}
 	volga = {
+		primary = BUL
 		
 	}
 	zephyr = {
 		
 	}
 	rusnok = {
+		primary = ASG
 		
 	}
 	male_names = {
@@ -1214,12 +1256,15 @@ west_mongol = {
 pagan_baltic = {
 	graphical_culture = westerngfx
 	sudori = {
+		primary = GDJ
 		
 	}
 	amberi = {
+		primary = LIT
 		
 	}
 	curonian = {
+		primary = RYT
 		
 	}
 	male_names = {
@@ -1247,15 +1292,18 @@ germanic_carpathian = {
 	graphical_culture = westerngfx
 	#Slovakia and western hungary
 	quadi = { 
+		primary = OST
 	
 	}
 	eldrun = { 
+		primary = SLO
 	
 	}
 	haldyr = { 
 	
 	}
 	fyrnir = { 
+		primary = VLD
 	
 	}
 
@@ -1319,27 +1367,35 @@ pagan_slavic = {
 		Zovneski Zois Zagar Zelko
 	}
 	pomorian = { #coastal
+		primary = KSB
 		
 	}
 	mazovian = {
+		primary = POL
 		
 	}
 	volhynian = {
+		primary = VOL
 		
 	}
 	podlachian = {
+		primary = SIL
 		
 	}
 	moldavian = {
+		primary = MOL
 		
 	}
 	bukovinian = {
+		primary = CHR
 		
 	}
 	slavic_galician = {
+		primary = PNS
 		
 	}
 	drakova = {
+		primary = TRA
 		
 	}
 }
@@ -1350,6 +1406,7 @@ suebian = {
 		
 	}
 	haldorian = { #Heartlands
+		primary = SUE
 		
 	}
 	thornen = { #southern/mountain
@@ -1377,24 +1434,29 @@ suebian = {
 euro_punic = {
 	graphical_culture = westerngfx
 	carventian = { #Coastal iberia
+		primary = CVA
 
 	}
 	celtipunian = { #southern gaul
-
+		primary = PCM
 	}
 	ilergi = { #agrarian, inland iberia
-
+		primary = GDA
 	}
 	ausontes = { #mountanous iberia
+		primary = VDA
 
 	}
 	bellican = { #southern east coast
+		primary = BCA
 
 	}
 	tartessian = { #river valley and coastal plaines
+		primary = TTA
 
 	}
 	volcaran = { #pyranees
+		primary = ORA
 
 	}
 	male_names = {
@@ -1423,36 +1485,47 @@ euro_punic = {
 italo_punic = {
 	graphical_culture = westerngfx
 	umbrii = { #latium
+		primary = RMA
 
 	}
 	venetii = { #venetia
+		primary = SZA
 
 	}
 	corsi = {
+		primary = EYL
 
 	}
 	sardii = { #
+		primary = SAR
 
 	}
 	siculi = { #sicilian
+		primary = CLN
 
 	}
 	samnitii = { #east and south of rome
+		primary = ANC
 
 	}
 	sabini = { #rural north italy
+		primary = ITY
 
 	}
 	etrusci = { #tuscany
+		primary = LAN
 
 	}
 	ligurii = { #genoa region
+		primary = LGA
 
 	}
 	osci = {
+		primary = NVM
 
 	}
 	lucanian = {
+		primary = SNO
 
 	}
 	male_names = {
@@ -1487,6 +1560,7 @@ illyrian = {
 		primary = SER
 	}
 	dalmarian = { #coastal
+		primary = DDA
 
 	}
 	hebren = { #nekrot
@@ -1548,26 +1622,32 @@ macedonian_greek = {
 		primary = MAC
 	}
 	danubian = {
+		primary = WAL
 
 	}
 	kretan = {
 		primary = KTI
 	}
 	thracian = {
+		primary = TCE
 	}
 
 	anatolian = {
 	}
 	epirote = {
+		primary = EPI
 	
 	}
 	peloponnesian = {
+		primary = ATH
 		
 	}
 	dardanian = {
+		primary = ATD
 		
 	}
-	pontic = {
+	pontic = {		
+		primary = FEO
 		
 	}
 	dynasty_names = {
@@ -1695,6 +1775,7 @@ macedonian_greek = {
 zoroastrian_persian = {
 	graphical_culture = muslimgfx
 	parthian = { #EU Rome
+		primary = KHU	
 		
 	}
 	sogdian = {
@@ -1702,12 +1783,15 @@ zoroastrian_persian = {
 	}
 	medinah ={
 		#azerbyjan
+		primary = TAB
 	}
 	bactiran = {
 		#afganistan
+		primary = AFG
 	}
 	khurisani = {
 		#northeast iran
+		primary = KHO
 	}
 	parsic = {
 		#fars
@@ -1719,6 +1803,7 @@ zoroastrian_persian = {
 		#north central
 	}
 	baluchi = {
+		primary = BAL
 		
 	}
 	dynasty_names = {
@@ -1777,21 +1862,26 @@ pagan_arabic = {
 	graphical_culture = muslimgfx
 	lihyan = {
 		#NW arabia
+		primary = MDA
 	}
 	ghassanid = {
 		#christian northern arabia
 	}
 	kindah = {
 		#central arabia
+		primary = ARB
 	}
 	qataban = {
 		#yemen
+		primary = YEM
 	}
 	dilmun = {
 		#bahrain region
+		primary = ALH
 	}
 	omani = {
 		#oman
+		primary = OMA
 	}	
 	dynasty_names = {
 		Quraysh Hashim Umayya Makhzum Zuhra Taym Adi

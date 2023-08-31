@@ -26,3 +26,23 @@
 # 	administrative_efficiency = -0.25
 # 	ae_impact = 0.25
 # }
+
+athenian_subjugation = {
+	potential = {
+		normal_or_historical_nations = yes
+		has_discovered = 146 # Athens
+		religion = hellenic
+		NOT = { tag = ATH }
+	}
+
+	trigger = {
+		overlord_of = ATH
+		# We can use the following to add special exceptions
+		# custom_trigger_tooltip = {
+		# 	tooltip = has_completed_mission_x_that_prevents_this_malus
+		#   has_country_flag = completed_mission_x
+		# }
+	}
+
+	diplomatic_reputation = -2
+}

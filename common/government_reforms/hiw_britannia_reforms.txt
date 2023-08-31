@@ -1,0 +1,56 @@
+brittonic_confederation_reform = {
+	icon = "legislative_assembly_reform"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+
+	potential = {
+		OR = {
+			tag = TRN
+			has_reform = brittonic_confederation_reform
+		}
+	}
+	trigger = {
+		tag = TRN
+	}
+	modifiers = {
+		morale_damage = 0.05
+		global_unrest = -1
+		min_autonomy = 10
+		nobles_influence_modifier = 0.10
+	}
+	custom_attributes = {
+		confederation_elections = yes
+	}
+	heir = no
+	ai = {
+		factor = 1
+	}
+}
+
+pf_clan_supremacy_reform = {
+	icon = "man_and_children"
+	allow_normal_conversion = yes
+
+	potential = {
+		has_reform = brittonic_confederation_reform
+	}
+
+	modifiers = {
+		nobles_influence_modifier = -0.15
+		monarch_admin_power = 1
+		monarch_diplomatic_power = 1
+		monarch_military_power = 1
+		# Give it cohesion gain when that mechanic is implemented
+	}
+
+	custom_attributes = {
+		disables_confederation_elections = yes
+	}
+	heir = yes
+	maintain_dynasty = yes
+
+	ai = {
+		factor = 1
+	}
+}

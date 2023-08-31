@@ -1,0 +1,77 @@
+namespace = pf_satrapy_events
+
+# Liberated Satrapy
+# Copy of ab_persia.27, 
+# which is a copy of flavor_tur.1000,
+# made it hidden.
+country_event = {
+	id = pf_satrapy_events.1
+	title = pf_satrapy_events.1.t
+	desc = pf_satrapy_events.1.d
+	picture = EYALET_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = {	# We are free from the Persians!
+		name = pf_satrapy_events.1.a
+		clr_country_flag = has_eyalet_country_name
+		clr_country_flag = has_eyalet_color
+		restore_country_name = yes
+		restore_country_color = yes
+		add_prestige = 20
+
+		# This is Post-Finem specific, some countries start as
+		# satrapies, and to represent them with the same color
+		# as persia we need to set their country color to the same
+		# as persia.
+		#
+		# Using change_country_color = {} in history changes
+		# the initial position but not the map preview. 
+		# 
+		# So instead we check the tag and change to the expected colour
+		if = {
+			limit = {
+				tag = AFG
+			}
+			change_country_color = {
+				color = { 102 128 52 }
+			}
+		}
+		else_if = {
+			limit = {
+				tag = BAL
+			} 
+			change_country_color = {
+				color = { 175 82 16 }
+			}
+		}
+		else_if = {
+			limit = {
+				tag = KHO
+			}
+			change_country_color = {
+				color = { 130 168 224 }
+			}
+		}
+		else_if = {
+			limit = { 
+				tag = TAB
+			}
+			change_country_color = {
+				color = { 217 144 88 }
+			}
+		}
+		else_if = {
+			limit = {
+				tag = KHU
+			}
+			change_country_color = {
+				color = { 255 56 152 }
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

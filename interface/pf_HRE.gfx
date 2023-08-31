@@ -1,0 +1,27 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_incidents_eyl_join_empire.2.a"
+		texturefile = "gfx/interface/imperial_incident_hre.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_incidents_eyl_join_empire.2.b"
+		texturefile = "gfx/interface/imperial_incident_denial_of_request.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_incidents_emperor_demands_corfu.2.a"
+		texturefile = "gfx/interface/imperial_incident_sword.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_incidents_emperor_demands_corfu.2.b"
+		texturefile = "gfx/interface/imperial_incident_diplomat.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_incidents_emperor_demands_corfu.2.c"
+		texturefile = "gfx/interface/imperial_incident_denial_of_request.dds"
+		loadType = "INGAME"
+	}
+}
