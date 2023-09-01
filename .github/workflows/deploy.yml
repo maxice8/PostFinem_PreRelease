@@ -1,0 +1,87 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Tagged Mod Build
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on any tags, we usually do not have any tags as we do not
+  # provide .zip files
+  push:
+    tags: '*'
+    branches: main
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+env:
+  mod: post-finem
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Build
+        run: |
+          mkdir -p ${{ runner.temp }}/mod
+          # Create archive
+          git archive -o ${{ runner.temp }}/mod/$mod.zip --prefix=$mod/ HEAD
+          # Create descriptor
+          cat descriptor.mod > ${{ runner.temp }}/mod/$mod.mod
+          # Add PATH
+          echo -e "\npath=\"mod/$mod\"" >> ${{ runner.temp }}/mod/$mod.mod
+          # Add it to the zip, use -j to junk the paths
+          zip -u ${{ runner.temp }}/mod/$mod.zip -j ${{ runner.temp }}/mod/$mod.mod
+
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.mod }}
+          path: ${{ runner.temp }}/mod/${{ env.mod }}.zip
+
+  release:
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Download
+        id: download
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ env.mod }}
+      
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ env.mod }}.zip
+          token: ${{ secrets.GITHUB_TOKEN }}
+    
+  # Remove old releases
+  remove:
+    needs: release
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Delete Older Releases
+        uses: dev-drprasad/delete-older-releases@v0.2.1
+
+        with:
+          keep_latest: 3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
