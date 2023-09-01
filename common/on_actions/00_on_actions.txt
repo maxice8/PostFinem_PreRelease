@@ -1565,8 +1565,8 @@ on_colonial_pulse = {
 		100 = colonial.11
 		100 = colonial.12
 		100 = colonial.13
-		100 = colonial.14
-		100 = colonial.15
+		100 = colonial.14 #pf-loc Jesuit, rename to some equivalent order from Suebi
+		100 = colonial.15 #pf-loc refers to Roman Fever, possibly punic fever rename?
 		100 = colonial.16
 		100 = colonial.17
 		100 = colonial.18
@@ -1663,7 +1663,7 @@ on_bi_yearly_pulse = {
 		100 = 6428
 		100 = 6429
 		100 = 6431
-		100 = 6432
+		100 = 6432 #pf-loc American Tea Party reference
 		100 = 6433
 		100 = 6434
 
@@ -1811,6 +1811,8 @@ on_bi_yearly_pulse = {
 		75 = confucian_events.20
 
 		# Orthodox Icon Events
+		# pf-loc probably all of them since those figures never existed
+		# does Orthodox even exist actually? (howard)
 		75 = orthodox_icon_events.1
 		75 = orthodox_icon_events.3
 		75 = orthodox_icon_events.4
@@ -1870,12 +1872,12 @@ on_bi_yearly_pulse_4 = {
 		100 = 736
 		100 = 737
 		100 = 738
-		100 = 739
+		100 = 739 #pf-loc A Saint Proclaimed!
 		100 = 740
 		100 = 741
 		100 = 742
 
-		100 = 850
+		100 = 850 #pf-loc reference to Julius Caesar
 		100 = 851
 		100 = 852
 		100 = 853
@@ -1889,7 +1891,7 @@ on_bi_yearly_pulse_4 = {
 		100 = 862
 		100 = 863
 		100 = 864
-		100 = 865
+		100 = 865 #pf-loc reference to Pope
 		100 = 866
 		100 = 867
 		100 = 868
@@ -1898,15 +1900,15 @@ on_bi_yearly_pulse_4 = {
 		100 = 871
 		100 = 872
 		100 = 873
-		100 = 874
-		100 = 875
-		100 = 876
+		100 = 874 #pf-loc Reference to Papacy
+		100 = 875 #pf-loc Jeanne d'Arc event
+		100 = 876 #pf-loc Bible printed
 		100 = 877
 		100 = 878
 		100 = 879
 		100 = 880
 		100 = 881
-		100 = 882
+		100 = 882 #pf-loc East India trading company
 		100 = 883
 		100 = 884
 		100 = 885
@@ -1941,6 +1943,8 @@ on_bi_yearly_pulse_4 = {
 		100 = innovativeness_events.15
 
 		# Trade Company Investments
+		#pf-loc they refer to Indian specific stuff which might become
+		# important if we ever update India (unlike Ante Bellum)
 		100 = investment_events.1
 		100 = investment_events.2
 		100 = investment_events.3
@@ -1960,6 +1964,7 @@ on_bi_yearly_pulse_4 = {
 		100 = expel_minority_events.5
 		
 		# Papal Tithe Events
+		#pf-loc need to be adapted to Hellenic
 		100 = curia.1
 		100 = curia.2
 		100 = curia.4
@@ -1970,9 +1975,9 @@ on_bi_yearly_pulse_4 = {
 		
 		# Defender of the Faith
 		100 = dotf.1
-		100 = dotf.4
+		100 = dotf.4 #pf-loc refers to Catholic Church
 		100 = dotf.6
-		100 = dotf.7
+		100 = dotf.7 #pf-loc refers to Christianity
 		
 		# Mercenaries
 		100 = mercs.1
@@ -2018,6 +2023,7 @@ on_bi_yearly_pulse_5 = {
 	random_events = { #all these were shifted from on_bi_yearly_pulse_1
 
 		#Orthodox Metropolitans
+		# pf-loc same as Orthodox icons
 		125 = patriarch_events.1
 		125 = patriarch_events.2
 		125 = patriarch_events.3
@@ -2025,6 +2031,7 @@ on_bi_yearly_pulse_5 = {
 		75 = patriarch_events.5
 
 		# Catholic  Events
+		# pf-loc catholic events
 		100 = catholic_flavor.4
 		100 = catholic_flavor.5
 		100 = catholic_flavor.6
@@ -2081,7 +2088,7 @@ on_thri_yearly_pulse = {
 		100 = republics.10
 		100 = republics.11
 		100 = republics.12
-		100 = republics.13
+		100 = republics.13 #pf-loc patricians
 		100 = republics.14
 		100 = republics.15
 		100 = republics.16
@@ -2137,14 +2144,17 @@ on_thri_yearly_pulse = {
 		100 = devotion_events.24
 		100 = devotion_events.26
 		100 = devotion_events.100
-		100 = devotion_events.101
+		100 = devotion_events.101 #pf-loc Christian
 		100 = devotion_events.102
 		100 = devotion_events.104
-		100 = devotion_events.107
-		100 = devotion_events.110
-		100 = devotion_events.117
+		100 = devotion_events.107 #pf-loc Pope
+		100 = devotion_events.110 #pf-loc pope
+		100 = devotion_events.117 #pf-loc Reformed
 		100 = devotion_events.118
-		100 = devotion_events.119
+		100 = devotion_events.119 #pf-loc Bible
+		# #pf-loc 200-219 series are all muslim related
+		# will need to go over them when we change Islam
+		# lore
 		100 = devotion_events.200
 		100 = devotion_events.201
 		100 = devotion_events.202
@@ -2188,6 +2198,7 @@ on_thri_yearly_pulse = {
 on_thri_yearly_pulse_2 = {
 	random_events = {
 		# Random to increase or decrease patriarch authority.
+		#pf-loc Orthodox events
 		25 = orthodox_flavor.1
 		20 = orthodox_flavor.2
 		25 = orthodox_flavor.3
@@ -2195,6 +2206,7 @@ on_thri_yearly_pulse_2 = {
 		25 = orthodox_flavor.5
 
 		# Muslim Piety Events
+		#pf-loc Muslim events
 		40 = muslim_piety.1
 		40 = muslim_piety.2
 		40 = muslim_piety.3
