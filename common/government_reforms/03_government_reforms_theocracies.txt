@@ -809,11 +809,10 @@ millennialistic_theocracy_reform = {
 }
 
 zoroastrian_theocracy_reform = {
-	icon = "zoroastiran_theocracy"
+	icon = "zoroastrian_theocracy"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { tag = PAP }
-		religion_group = zoroastrian_group
+		tag = PER
 	}
 	valid_for_nation_designer = yes
 	nation_designer_trigger = {
