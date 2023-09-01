@@ -197,7 +197,7 @@ selucid_monarchy = {
 	}
 	modifiers = {
 		hostile_attrition = 1	
-		has_streltsy = yes
+		allowed_streltsy_fraction = 0.2
 		yearly_absolutism = 0.5
 		max_absolutism = 20
 
