@@ -2423,9 +2423,9 @@ on_four_year_pulse = {
 
 		# Elective Monarchy
 		150 = elective_monarchy.1
-		150 = elective_monarchy.2
+		150 = elective_monarchy.2 #pf-loc refers to Sejm
 		25 = elective_monarchy.3
-		25 = elective_monarchy.4
+		25 = elective_monarchy.4 #pf-loc Sejm
 		150 = elective_monarchy.6
 		150 = elective_monarchy.8
 		150 = elective_monarchy.9
@@ -2433,22 +2433,22 @@ on_four_year_pulse = {
 		150 = elective_monarchy.11
 		150 = elective_monarchy.12
 		150 = elective_monarchy.14
-		150 = elective_monarchy.17
+		150 = elective_monarchy.17 #pf-loc Sejm
 		25 = elective_monarchy.18
 
 		# Free Cities
 		25 = free_cities.3
 		25 = free_cities.8
 		25 = free_cities.10
-		25 = free_cities.13
-		25 = free_cities.17
+		25 = free_cities.13 #pf-loc Hanseatic and Lombard Leagues
+		25 = free_cities.17 #pf-loc Hanseatic and Lombard Leagues
 		25 = free_cities.19
 
 		#Tribal Federations
 		50 = tribal_federation_events.1
 		50 = tribal_federation_events.2
 		50 = tribal_federation_events.3
-		50 = tribal_federation_events.4
+		50 = tribal_federation_events.4 #pf-loc Sufi
 		50 = tribal_federation_events.5
 		50 = tribal_federation_events.6
 		50 = tribal_federation_events.7
