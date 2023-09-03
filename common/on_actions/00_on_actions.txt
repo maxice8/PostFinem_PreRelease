@@ -3264,14 +3264,14 @@ on_explore_coast = {
 }
 on_conquistador_empty = {
 	random_events = {
-		10 = seven_cities_events.1
+		10 = seven_cities_events.1 #pf-loc El Dorado
 		10 = seven_cities_events.2
 		10 = seven_cities_events.3
-		10 = seven_cities_events.4
-		10 = seven_cities_events.5
-		10 = seven_cities_events.6
-		10 = seven_cities_events.7
-		10 = seven_cities_events.8
+		10 = seven_cities_events.4 #pf-loc City of Caesars
+		10 = seven_cities_events.5 #pf-loc Sierra de La Plata
+		10 = seven_cities_events.6 #pf-loc French Navigator found latin speaking people
+		10 = seven_cities_events.7 
+		10 = seven_cities_events.8 #pf-loc 'The Turk'
 
 		10 = seven_cities_events.100
 		10 = seven_cities_events.101
@@ -3280,24 +3280,24 @@ on_conquistador_empty = {
 		10 = seven_cities_events.104
 		10 = seven_cities_events.105
 
-		50 = seven_cities_events.200
-		50 = seven_cities_events.201
-		50 = seven_cities_events.202
+		50 = seven_cities_events.200 #pf-loc El Dorado
+		50 = seven_cities_events.201 #pf-loc El dorado
+		50 = seven_cities_events.202 #pf-loc El dorado
 		50 = seven_cities_events.203
 		50 = seven_cities_events.204
 		50 = seven_cities_events.205
 		50 = seven_cities_events.206
 		50 = seven_cities_events.207
 		50 = seven_cities_events.208
-		50 = seven_cities_events.209
-		50 = seven_cities_events.210
-		50 = seven_cities_events.211
-		50 = seven_cities_events.212
-		50 = seven_cities_events.213
-		50 = seven_cities_events.214
-		50 = seven_cities_events.215
-		50 = seven_cities_events.216
-		50 = seven_cities_events.217
+		50 = seven_cities_events.209 #pf-loc City of Caesars
+		50 = seven_cities_events.210 #pf-loc City of Caesars
+		50 = seven_cities_events.211 #pf-loc City of Caesars
+		50 = seven_cities_events.212 #pf-loc Sierra de La Plata 
+		50 = seven_cities_events.213 #pf-loc Sierra de La Plata
+		50 = seven_cities_events.214 #pf-loc Sierra de La Plata
+		50 = seven_cities_events.215 #pf-loc French Navigator found latin speaking people
+		50 = seven_cities_events.216 #pf-loc French Navigator found latin speaking people
+		50 = seven_cities_events.217 #pf-loc French Navigator found latin speaking people
 		50 = seven_cities_events.218
 		50 = seven_cities_events.219
 		50 = seven_cities_events.220
@@ -3308,7 +3308,7 @@ on_conquistador_empty = {
 		10 = seven_cities_events.302
 		10 = seven_cities_events.303
 		10 = seven_cities_events.308
-		10 = seven_cities_events.309
+		10 = seven_citi.400es_events.309
 
 		10 = seven_cities_events.400
 		10 = seven_cities_events.401
@@ -3354,19 +3354,20 @@ on_buy_religious_reform = {
 on_circumnavigation = {
 	events = {
 		exploration_events.17
+		#pf-loc Cape of Good Hope
 		exploration_events.16 #First Circumnavigation Europe
 	}
 }
 
 on_become_free_city = {
 	events = {
-		free_cities.1
+		free_cities.1 # pf-loc refers to HRE by name
 	}
 }
 
 on_remove_free_city = {
 	events = {
-		free_cities.2
+		free_cities.2 # pf-loc refers to HRE by name and Machiaveli
 	}
 }
 
