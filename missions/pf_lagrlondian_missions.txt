@@ -251,7 +251,11 @@ second_3_locked = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = LAG } 
+	potential = {
+		tag = LAG
+		NOT = { has_country_flag = lag_humanist_path }
+		NOT = { has_country_flag = lag_religious_path }
+	} 
 
 	pf_lag_religion_locked_1 = {
 		icon = mission_locked_mission
@@ -280,7 +284,11 @@ second_3_humanist = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = LAG } 
+	potential = {
+		tag = LAG
+		has_country_flag = lag_humanist_path
+		NOT = { has_country_flag = lag_religious_path }
+	} 
 
 	pf_lag_edict = {
 		icon = edict_of_potsdam
@@ -309,7 +317,11 @@ second_3_religious = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = LAG } 
+	potential = { 
+		tag = LAG
+		NOT = { has_country_flag = lag_humanist_path }
+		has_country_flag = lag_religious_path
+	} 
 
 	pf_lag_land_churches = {
 		icon = mission_catholic_heddal_church
