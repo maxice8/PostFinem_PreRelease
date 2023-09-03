@@ -246,6 +246,93 @@ second_2 = {
 		effect = {  } 
 	}
 }
+second_3_locked = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
+	pf_lag_religion_locked_1 = {
+		icon = mission_locked_mission
+		position = 8
+		required_missions = { pf_lag_sway } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_religion_locked_2 = {
+		icon = mission_locked_mission
+		position = 9
+		required_missions = { pf_lag_religion_locked_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+second_3_humanist = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
+	pf_lag_edict = {
+		icon = edict_of_potsdam
+		position = 8
+		required_missions = { pf_lag_sway } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_peace_of_utrech = {
+		icon = mission_interfaith_relations
+		position = 9
+		required_missions = { pf_lag_edict } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+second_3_religious = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
+	pf_lag_land_churches = {
+		icon = mission_catholic_heddal_church
+		position = 9
+		required_missions = { pf_lag_heretics } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_heretics = {
+		icon = defenestrate_the_heretics
+		position = 8
+		required_missions = { pf_lag_sway } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
 third_2 = {
 	slot = 3
 	generic = no
