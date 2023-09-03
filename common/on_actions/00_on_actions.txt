@@ -2423,9 +2423,9 @@ on_four_year_pulse = {
 
 		# Elective Monarchy
 		150 = elective_monarchy.1
-		150 = elective_monarchy.2
+		150 = elective_monarchy.2 #pf-loc refers to Sejm
 		25 = elective_monarchy.3
-		25 = elective_monarchy.4
+		25 = elective_monarchy.4 #pf-loc Sejm
 		150 = elective_monarchy.6
 		150 = elective_monarchy.8
 		150 = elective_monarchy.9
@@ -2433,22 +2433,22 @@ on_four_year_pulse = {
 		150 = elective_monarchy.11
 		150 = elective_monarchy.12
 		150 = elective_monarchy.14
-		150 = elective_monarchy.17
+		150 = elective_monarchy.17 #pf-loc Sejm
 		25 = elective_monarchy.18
 
 		# Free Cities
 		25 = free_cities.3
 		25 = free_cities.8
 		25 = free_cities.10
-		25 = free_cities.13
-		25 = free_cities.17
+		25 = free_cities.13 #pf-loc Hanseatic and Lombard Leagues
+		25 = free_cities.17 #pf-loc Hanseatic and Lombard Leagues
 		25 = free_cities.19
 
 		#Tribal Federations
 		50 = tribal_federation_events.1
 		50 = tribal_federation_events.2
 		50 = tribal_federation_events.3
-		50 = tribal_federation_events.4
+		50 = tribal_federation_events.4 #pf-loc Sufi
 		50 = tribal_federation_events.5
 		50 = tribal_federation_events.6
 		50 = tribal_federation_events.7
@@ -2952,7 +2952,7 @@ on_five_year_pulse = {
 		100 = ideagroups.1918
 		100 = ideagroups.1919
 		100 = ideagroups.1920
-		100 = ideagroups.1921
+		100 = ideagroups.1921 # pf-loc Mûnster
 
 		# Indigenous		10 (6g 4b)
 		100 = ideagroups.1932
@@ -3042,6 +3042,8 @@ on_five_year_pulse_2 = {
 		# Clergy
 		100 = church_estate_events.1
 			#Regional Variations:
+			# pf-loc these need to be reworked as there are
+			# different religion groups
 			100 = church_estate_events.101
 			100 = church_estate_events.102
 			100 = church_estate_events.103
@@ -3066,6 +3068,7 @@ on_five_year_pulse_2 = {
 		400 = dhimmi_estate_events.7 #Disloyal
 		100 = dhimmi_estate_events.8
 		# Cossacks
+		# pf-loc cossack events need references to Tartars checked
 		100 = cossack_estate_events.1
 		#100 = cossack_estate_events.2 (triggers in neighbor country)
 		100 = cossack_estate_events.6
@@ -3147,6 +3150,7 @@ on_five_year_pulse_2 = {
 		100 = rajputs_estate_events.10
 		100 = rajputs_estate_events.11
 		# Janissaries
+		#pf-loc ottoman specific
 		100 = janissaries_estate_events.1
 		100 = janissaries_estate_events.2
 		100 = janissaries_estate_events.3
@@ -3175,14 +3179,14 @@ on_five_year_pulse_3 = {
 		100 = estate_regency_events.7
 		100 = estate_regency_events.9
 		100 = propagate_religion_events.1
-		100 = propagate_religion_events.2
-		100 = propagate_religion_events.3
+		100 = propagate_religion_events.2 #pf-loc muslim-specific event
+		100 = propagate_religion_events.3 #pf-loc muslim-specific event
 		100 = propagate_religion_events.4
-		100 = propagate_religion_events.5
-		100 = propagate_religion_events.6
-		100 = propagate_religion_events.8
-		100 = propagate_religion_events.9
-		100 = propagate_religion_events.10
+		100 = propagate_religion_events.5 #pf-loc muslim-specific event
+		100 = propagate_religion_events.6 #pf-loc muslim-specific event
+		100 = propagate_religion_events.8 #pf-loc muslim-specific event
+		100 = propagate_religion_events.9 #pf-loc muslim-specific event
+		100 = propagate_religion_events.10 #pf-loc muslim-specific event
 		#100 = propagate_religion_events.11 #Province event
 		1000 = 0
 	}
@@ -3260,14 +3264,14 @@ on_explore_coast = {
 }
 on_conquistador_empty = {
 	random_events = {
-		10 = seven_cities_events.1
+		10 = seven_cities_events.1 #pf-loc El Dorado
 		10 = seven_cities_events.2
 		10 = seven_cities_events.3
-		10 = seven_cities_events.4
-		10 = seven_cities_events.5
-		10 = seven_cities_events.6
-		10 = seven_cities_events.7
-		10 = seven_cities_events.8
+		10 = seven_cities_events.4 #pf-loc City of Caesars
+		10 = seven_cities_events.5 #pf-loc Sierra de La Plata
+		10 = seven_cities_events.6 #pf-loc French Navigator found latin speaking people
+		10 = seven_cities_events.7 
+		10 = seven_cities_events.8 #pf-loc 'The Turk'
 
 		10 = seven_cities_events.100
 		10 = seven_cities_events.101
@@ -3276,24 +3280,24 @@ on_conquistador_empty = {
 		10 = seven_cities_events.104
 		10 = seven_cities_events.105
 
-		50 = seven_cities_events.200
-		50 = seven_cities_events.201
-		50 = seven_cities_events.202
+		50 = seven_cities_events.200 #pf-loc El Dorado
+		50 = seven_cities_events.201 #pf-loc El dorado
+		50 = seven_cities_events.202 #pf-loc El dorado
 		50 = seven_cities_events.203
 		50 = seven_cities_events.204
 		50 = seven_cities_events.205
 		50 = seven_cities_events.206
 		50 = seven_cities_events.207
 		50 = seven_cities_events.208
-		50 = seven_cities_events.209
-		50 = seven_cities_events.210
-		50 = seven_cities_events.211
-		50 = seven_cities_events.212
-		50 = seven_cities_events.213
-		50 = seven_cities_events.214
-		50 = seven_cities_events.215
-		50 = seven_cities_events.216
-		50 = seven_cities_events.217
+		50 = seven_cities_events.209 #pf-loc City of Caesars
+		50 = seven_cities_events.210 #pf-loc City of Caesars
+		50 = seven_cities_events.211 #pf-loc City of Caesars
+		50 = seven_cities_events.212 #pf-loc Sierra de La Plata 
+		50 = seven_cities_events.213 #pf-loc Sierra de La Plata
+		50 = seven_cities_events.214 #pf-loc Sierra de La Plata
+		50 = seven_cities_events.215 #pf-loc French Navigator found latin speaking people
+		50 = seven_cities_events.216 #pf-loc French Navigator found latin speaking people
+		50 = seven_cities_events.217 #pf-loc French Navigator found latin speaking people
 		50 = seven_cities_events.218
 		50 = seven_cities_events.219
 		50 = seven_cities_events.220
@@ -3304,7 +3308,7 @@ on_conquistador_empty = {
 		10 = seven_cities_events.302
 		10 = seven_cities_events.303
 		10 = seven_cities_events.308
-		10 = seven_cities_events.309
+		10 = seven_citi.400es_events.309
 
 		10 = seven_cities_events.400
 		10 = seven_cities_events.401
@@ -3350,19 +3354,20 @@ on_buy_religious_reform = {
 on_circumnavigation = {
 	events = {
 		exploration_events.17
+		#pf-loc Cape of Good Hope
 		exploration_events.16 #First Circumnavigation Europe
 	}
 }
 
 on_become_free_city = {
 	events = {
-		free_cities.1
+		free_cities.1 # pf-loc refers to HRE by name
 	}
 }
 
 on_remove_free_city = {
 	events = {
-		free_cities.2
+		free_cities.2 # pf-loc refers to HRE by name and Machiaveli
 	}
 }
 
