@@ -1,0 +1,376 @@
+first = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
+	pf_lag_permanent = {
+		icon = mission_modernized_vikings
+		position = 2
+		required_missions = { pf_lag_raise } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_gunpowder = {
+		icon = mission_cannons_firing
+		position = 4
+		required_missions = { pf_lag_permanent } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_doctrine = {
+		icon = issue_general_reglement
+		position = 5
+		required_missions = { pf_lag_gunpowder } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+second = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
+	pf_lag_raise = {
+		icon = mission_native_build_army_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_secure = {
+		icon = mission_spanish_netherlands
+		position = 2
+		required_missions = { pf_lag_raise } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_break = {
+		icon = mission_hundred_years_war
+		position = 3
+		required_missions = { pf_lag_secure } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_push = {
+		icon = mission_rb_conquer_brittany
+		position = 5
+		required_missions = { pf_lag_break } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+third = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
+	pf_lag_rheinland = {
+		icon = rhineland_conquest
+		position = 4
+		required_missions = {
+			pf_lag_break
+			pf_lag_encroach
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+fourth = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
+	pf_lag_longboats = {
+		icon = mission_longships
+		position = 1
+		required_missions = { pf_lag_deal } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_encroach = {
+		icon = encroach_on_the_germans
+		position = 3
+		required_missions = { pf_lag_longboats } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+fifth = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
+	pf_lag_modernise = {
+		icon = mission_develop_nevas_port
+		position = 2
+		required_missions = { pf_lag_longboats } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_glorious = {
+		icon = the_glorious_revolution
+		position = 3
+		required_missions = { pf_lag_modernise } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_push_celts = {
+		icon = mission_rb_rule_britannia_irish_version
+		position = 4
+		required_missions = { pf_lag_glorious } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_fortify = {
+		icon = mission_rb_into_england
+		position = 5
+		required_missions = { pf_lag_push_celts } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+first_2 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
+	pf_lag_expand_markets = {
+		icon = mission_great_trading_houses
+		position = 7
+		required_missions = { pf_lag_secure_trade } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_port_desire = {
+		icon = mission_unknown_mission
+		position = 8
+		required_missions = { pf_lag_expand_markets } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_embrace_global = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { pf_lag_port_desire } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+second_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
+	pf_lag_secure_trade = {
+		icon = mission_dominate_home_trade_node
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+third_2 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
+	pf_lag_sway = {
+		icon = friends_in_high_places
+		position = 7
+		required_missions = {
+			pf_lag_secure_trade
+			pf_lag_frisians
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_renaissance = {
+		icon = florentine_renaissance
+		position = 8
+		required_missions = { pf_lag_sway } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_absolutism = {
+		icon = mission_english_absolutism
+		position = 10
+		required_missions = {
+			pf_lag_renaissance
+			pf_lag_universities
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+fourth_2 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
+	pf_lag_frisians = {
+		icon = the_true_freedom
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_reform_administration = {
+		icon = a_strong_government
+		position = 7
+		required_missions = { pf_lag_frisians } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_universities = {
+		icon = mission_early_modern_university
+		position = 9
+		required_missions = {
+			pf_lag_reform_administration
+			pf_lag_renaissance
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+fifth_2 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
+	pf_lag_develop = {
+		icon = bavarian_netherlands
+		position = 7
+		required_missions = { pf_lag_frisians } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_develop_interior = {
+		icon = mission_have_manufactories
+		position = 8
+		required_missions = { pf_lag_develop } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_industrial = {
+		icon = industrialized_rhineland
+		position = 10
+		required_missions = { pf_lag_develop_interior } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
