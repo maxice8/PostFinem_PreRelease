@@ -82,9 +82,38 @@ pf_nrd_2 = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			if = {
+				limit = { has_leader = "Knut Stormbringer" }
+				has_leader = "Knut Stormbringer"
+			}
+			else = { num_of_generals = 1 }
+			if = {
+				limit = { ai = no }
+				army_size_percentage = 1
+			}
+			else = {
+				army_size_percentage = 0.75
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_mil_power = 50
+			custom_tooltip = " "
+			add_country_modifier = {
+				name = nrd_prepare_for_war_modifier
+				duration = 3650
+			}
+			kingdom_of_the_isles_area = {
+				add_permanent_claim = ROOT
+			}
+			highlands_area = {
+				add_permanent_claim = ROOT
+			}
+			lowlands_area = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_nrd_welsh_domain = {
