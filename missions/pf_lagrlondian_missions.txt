@@ -580,8 +580,8 @@ fifth_2 = {
 		effect = {  } 
 	}
 
-	pf_lag_industrial = {
-		icon = industrialized_rhineland
+	pf_lag_promote_urbanisation = {
+		icon = mission_eastern_european_city
 		position = 13
 		required_missions = { pf_lag_develop_interior } 
 		provinces_to_highlight = {  } 
@@ -590,8 +590,35 @@ fifth_2 = {
 
 		effect = {  } 
 	}
+
+	pf_lag_industrial = {
+		icon = industrialized_rhineland
+		position = 14
+		required_missions = { pf_lag_promote_urbanisation } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
-third_3 = {
+first_3 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
+}
+second_3 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
+}
+third_4 = {
 	slot = 3
 	generic = no
 	ai = yes
@@ -607,4 +634,20 @@ third_3 = {
 
 		effect = {  } 
 	}
+}
+fourth_3 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
+}
+fifth_3 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
 }
