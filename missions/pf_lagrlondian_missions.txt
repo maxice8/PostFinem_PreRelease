@@ -315,6 +315,17 @@ first_2 = {
 
 		effect = {  } 
 	}
+
+	pf_lag_warehouse = {
+		icon = mission_unknown_mission
+		position = 14
+		required_missions = { pf_lag_embrace_global } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 second_2 = {
 	slot = 2
@@ -582,7 +593,7 @@ fifth_2 = {
 
 	pf_lag_promote_urbanisation = {
 		icon = mission_eastern_european_city
-		position = 13
+		position = 12
 		required_missions = { pf_lag_develop_interior } 
 		provinces_to_highlight = {  } 
 
@@ -593,8 +604,19 @@ fifth_2 = {
 
 	pf_lag_industrial = {
 		icon = industrialized_rhineland
-		position = 14
+		position = 13
 		required_missions = { pf_lag_promote_urbanisation } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_made_in = {
+		icon = saxon_manufacturing
+		position = 14
+		required_missions = { pf_lag_industrial } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -609,6 +631,38 @@ first_3 = {
 	has_country_shield = yes
 	potential = { tag = LAG } 
 
+	pf_lag_east_coast = {
+		icon = mission_rb_the_thirteen_colonies
+		position = 17
+		required_missions = { pf_lag_vinland } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_louisiana = {
+		icon = mission_colonize_louisiana
+		position = 19
+		required_missions = { pf_lag_east_coast } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_california = {
+		icon = mission_colonize_california
+		position = 21
+		required_missions = { pf_lag_louisiana } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 second_3 = {
 	slot = 2
@@ -617,6 +671,38 @@ second_3 = {
 	has_country_shield = yes
 	potential = { tag = LAG } 
 
+	pf_lag_vinland = {
+		icon = mission_rb_colonise_canada
+		position = 16
+		required_missions = { pf_lag_new_world } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_cascadia = {
+		icon = mission_colonize_alaska
+		position = 18
+		required_missions = { pf_lag_vinland } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_fur_trade = {
+		icon = mission_protect_white_sea_trade
+		position = 20
+		required_missions = { pf_lag_cascadia } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 third_4 = {
 	slot = 3
@@ -634,6 +720,28 @@ third_4 = {
 
 		effect = {  } 
 	}
+
+	pf_lag_carib = {
+		icon = mission_caribbean_cn
+		position = 17
+		required_missions = { pf_lag_new_world } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_austrlia = {
+		icon = settle_austrialasia
+		position = 19
+		required_missions = { pf_lag_reach_india } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 fourth_3 = {
 	slot = 4
@@ -642,6 +750,52 @@ fourth_3 = {
 	has_country_shield = yes
 	potential = { tag = LAG } 
 
+	pf_lag_west_africa = {
+		icon = mission_west_african_ports
+		position = 16
+		required_missions = { pf_lag_new_world } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_triangle_trade = {
+		icon = mission_the_triangle_trade
+		position = 18
+		required_missions = {
+			pf_lag_west_africa
+			pf_lag_carib
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_indonesia = {
+		icon = dutch_east_indies
+		position = 19
+		required_missions = { pf_lag_reach_india } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_spice_trade = {
+		icon = mission_rb_colonise_spice_islands
+		position = 21
+		required_missions = { pf_lag_indonesia } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 fifth_3 = {
 	slot = 5
@@ -650,4 +804,47 @@ fifth_3 = {
 	has_country_shield = yes
 	potential = { tag = LAG } 
 
+	pf_lag_cape_good_hope = {
+		icon = colonize_the_cape
+		position = 17
+		required_missions = { pf_lag_west_africa } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_reach_india = {
+		icon = mission_indian_trade_company
+		position = 18
+		required_missions = { pf_lag_cape_good_hope } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_formosa = {
+		icon = dutch_formosa
+		position = 20
+		required_missions = { pf_lag_reach_india } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_far_east = {
+		icon = mission_to_china
+		position = 21
+		required_missions = { pf_lag_formosa } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
