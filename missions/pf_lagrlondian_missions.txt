@@ -157,27 +157,22 @@ second = {
 		icon = mission_hundred_years_war
 		position = 4
 		required_missions = { pf_lag_secure } 
-		provinces_to_highlight = { 
+		provinces_to_highlight = {
 			OR = {
-				owned_by = GAU
-				AND = {
-					OR = {
-						area = picardy_area
-						area = champagne_area
-						area = lorraine_area
-						area = ile_de_france_area
-						area = normandy_area
-						area = loire_area
-						area = orleans_area
-						area = west_burgundy_area
-					}
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
+				area = picardy_area
+				area = champagne_area
+				area = lorraine_area
+				area = ile_de_france_area
+				area = normandy_area
+				area = loire_area
+				area = orleans_area
+				area = west_burgundy_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
-		trigger = { 
-			NOT = { exists = GAU }
+		trigger = {
+			total_development = GAU
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = picardy_area
