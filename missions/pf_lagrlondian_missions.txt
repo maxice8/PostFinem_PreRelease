@@ -12,8 +12,11 @@ first = {
 		provinces_to_highlight = {  } 
 
 		trigger = { 
-			army_tradition = 25
-			land_forcelimit = 50
+			OR = {
+				army_tradition = 25
+				army_professionalism = 0.01
+			}
+			land_forcelimit = 25
 		} 
 
 		effect = {  } 
@@ -27,9 +30,9 @@ first = {
 
 		trigger = { 
 			num_of_artillery = 10
-			has_global_modifier_value = {
-				which = artillery_power
-				value = 0.5
+			OR = {
+				has_idea_group = firepower_ideas
+				has_idea_group = offensive_ideas
 			}
 		} 
 
@@ -43,7 +46,15 @@ first = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			has_reform_on_level = 4 # Military Specialization Tier
+			if = {
+				limit = {
+					government = tribal
+				}
+				has_reform_on_level = 4
+			}
+			else = {
+				has_reform_on_level = 5
+			}
 		} 
 
 		effect = {  } 
@@ -62,6 +73,7 @@ first = {
 				full_idea_group = mercenary_ideas
 				full_idea_group = offensive_ideas
 				full_idea_group = defensive_ideas
+				full_idea_group = firepower_ideas
 			}
 		} 
 
@@ -81,11 +93,26 @@ second = {
 		provinces_to_highlight = {  } 
 
 		trigger = { 
-			num_of_generals = 1
-			army_size_percentage = 0.90
+			if = {
+				limit = {
+					ai = yes
+				}
+				OR = {
+					AND = {
+						num_of_generals = 1
+						army_size_percentage = 0.75
+					}
+					is_year = 1450
+				}
+			}
+			else = {
+				num_of_generals = 1
+				army_size_percentage = 1
+			}
 		} 
 
 		effect = { 
+			# TODO: add modifier
 			north_brabant_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -150,7 +177,64 @@ second = {
 			}
 		} 
 
-		effect = {  } 
+		effect = { 
+			picardy_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			champagne_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lorraine_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			ile_de_france_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			normandy_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			loire_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			orleans_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_burgundy_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_lag_break = {
@@ -196,6 +280,7 @@ second = {
 				}
 				add_permanent_claim = ROOT
 			}
+			# TODO: optional reward if GAU not exists
 		} 
 	}
 
@@ -255,9 +340,48 @@ third = {
 		icon = mission_raid_christian_trade
 		position = 2
 		required_missions = { pf_lag_longboats } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			has_port = yes
+			owner = {
+				capital_scope = {
+					OR = {
+						region = scandinavia_region
+						region = north_german_region
+						region = british_isles_region
+						region = france_region
+						region = low_countries_region
+					}
+				}
+				NOT = { 
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = slaves_raided
+					}
+				}
+			}
+		} 
 
-		trigger = { } 
+		trigger = {
+			calc_true_if = {
+				tooltip = PF_LAG_HAS_RAIDED_10_COASTS
+				amount = 10
+				all_country = {
+					capital_scope = {
+						OR = {
+							region = scandinavia_region
+							region = north_german_region
+							region = british_isles_region
+							region = france_region
+							region = low_countries_region
+						}
+					}
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = slaves_raided
+					}
+				}
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -303,7 +427,7 @@ third = {
 			pf_lag_encroach
 			pf_lag_break
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { } 
 
 		trigger = {  } 
 
@@ -333,9 +457,29 @@ fourth = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			if = {
+				limit = {
+					ai = yes
+				}
+				OR = {
+					AND = {
+						num_of_admirals = 1
+						navy_size_percentage = 0.75
+					}
+					is_year = 1450
+				}
+			}
+			else = {
+				num_of_admirals = 1
+				navy_size_percentage = 1
+				num_of_heavy_ship = 3
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			# Give modifier that allows same-religion raiding
+		} 
 	}
 
 	pf_lag_encroach = {
@@ -353,22 +497,47 @@ fourth = {
 		icon = mission_rb_scottish_conquer_london
 		position = 5
 		required_missions = { pf_lag_break_clans } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { province_id = 236 } 
 
-		trigger = {  } 
+		trigger = { 
+			236 = {
+				development = 30
+			}
+			236 = {
+				num_of_buildings_in_province = 3
+			}
+		} 
 
-		effect = {  } 
+		effect = { } 
 	}
 
 	pf_lag_silk = {
 		icon = mission_son_own_develop_clothes_and_salt
 		position = 6
 		required_missions = { pf_lag_london } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			OR = {
+				trade_goods = wool
+				trade_goods = silk
+			}
+			NOT = { base_production = 8 }
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 5
+				base_production = 8
+				OR = {
+					trade_goods = wool
+					trade_goods = silk
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			# Make all provinces that meet the requirement change into silk
+		} 
 	}
 }
 fifth = {
@@ -386,7 +555,10 @@ fifth = {
 
 		trigger = {  } 
 
-		effect = {  } 
+		effect = {
+			# :yes:/:no: reward, restoration of Union if TRN exists
+			# otherwise claims on the areas that they start with
+		} 
 	}
 
 	pf_lag_glorious = {
@@ -395,7 +567,19 @@ fifth = {
 		required_missions = { pf_lag_modernise } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			OR = {
+				TRN = {
+					is_subject_of_type_with_overlord = {
+						who = ROOT
+						type = personal_union
+					}
+				}
+				AND = {
+					# TRN starting areas here
+				}
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -426,9 +610,18 @@ fifth = {
 		icon = mission_rb_into_england
 		position = 7
 		required_missions = { pf_lag_push_celts } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			has_fort_building_trigger = no
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 10
+				has_fort_building_trigger = yes
+				region = british_isles_region
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -444,20 +637,44 @@ first_2 = {
 		icon = mission_great_trading_houses
 		position = 9
 		required_missions = { pf_lag_secure_trade } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			has_trade_building_trigger = no
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 10
+				has_trade_building_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+		} 
 	}
 
 	pf_lag_port_desire = {
 		icon = mission_unknown_mission
 		position = 11
 		required_missions = { pf_lag_expand_markets } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			province_id = 90
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			90 = {
+				has_trade_building_trigger = yes
+			}
+			90 = {
+				development = 30
+			}
+			90 = {
+				num_of_buildings_in_province = 5
+			}
+			90 = {
+				province_has_center_of_trade_of_level = 3
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -494,9 +711,19 @@ second_2 = {
 	pf_lag_secure_trade = {
 		icon = mission_dominate_home_trade_node
 		position = 8
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			# Hardcode to Frankfurt for now as it is LAG's starting node
+			trade_node = 1876
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			home_trade_node = {
+				trade_share = {
+					country = ROOT
+					share = 51
+				}
+			}
+		 } 
 
 		effect = {  } 
 	}
@@ -506,9 +733,27 @@ second_2 = {
 		position = 10
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				NOT = { has_estate = estate_church }
+				AND = {
+					NOT = {
+						estate_influence = {
+							estate = estate_church
+							influence = 50
+						}
+					}
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 60
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			# Trigger event to enable branching missions
+		} 
 	}
 }
 second_3_locked = {
@@ -528,9 +773,16 @@ second_3_locked = {
 		required_missions = { pf_lag_theology } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = PF_LAG_COMPLETE_THEOLOGIAN_DISCUSSION
+				always = no
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = PF_LAG_COMPLETE_THEOLOGIAN_DISCUSSION
+		 } 
 	}
 
 	pf_lag_religion_locked_2 = {
@@ -539,9 +791,26 @@ second_3_locked = {
 		required_missions = { pf_lag_religion_locked_1 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = PF_LAG_COMPLETE_THEOLOGIAN_DISCUSSION
+				always = no
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = PF_LAG_COMPLETE_THEOLOGIAN_DISCUSSION
+		 } 
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = PF_LAG_COMPLETE_THEOLOGIAN_DISCUSSION
+				always = no
+			}
+		} 
+
+		effect = { 
+			custom_tooltip = PF_LAG_COMPLETE_THEOLOGIAN_DISCUSSION
+		 } 
 	}
 }
 second_3_humanist = {
@@ -730,9 +999,19 @@ fifth_2 = {
 		icon = bavarian_netherlands
 		position = 9
 		required_missions = { pf_lag_frisians } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			region = low_countries_region
+			NOT = { development = 15 }
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 8
+				development = 15
+				region = low_countries_region
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -741,9 +1020,21 @@ fifth_2 = {
 		icon = mission_have_manufactories
 		position = 11
 		required_missions = { pf_lag_develop } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			NOT = {
+				region = capital
+			}
+			NOT = { development = 10 }
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 12
+				NOT = { region = capital }
+				development = 10
+			}
+		 } 
 
 		effect = {  } 
 	}
@@ -792,9 +1083,23 @@ first_3 = {
 		icon = mission_rb_the_thirteen_colonies
 		position = 17
 		required_missions = { pf_lag_vinland } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			colonial_region = colonial_eastern_america
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			# Probably make it a custom_trigger_tooltip
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				owner = {
+					OR = {
+						tag = ROOT
+						is_colonial_nation_of = ROOT
+					}
+				}
+				colonial_region = colonial_eastern_america
+			}
+		} 
 
 		effect = {  } 
 	}
