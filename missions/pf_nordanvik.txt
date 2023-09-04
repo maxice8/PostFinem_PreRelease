@@ -138,27 +138,6 @@ pf_nrd_2 = {
 
 		effect = {  } 
 	}
-
-	pf_nrd_over_the_horizon = {
-		icon = mission_north_sea_empire
-		position = 9
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	pf_nrd_a_whole_new_world = {
-		icon = mission_settlers_north_america
-		position = 10
-		required_missions = { pf_nrd_over_the_horizon } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
 }
 pf_nrd_3 = {
 	slot = 3
@@ -321,6 +300,17 @@ pf_nrd_5 = {
 		effect = {  } 
 	}
 
+	pf_nrd_glorious_ports = {
+		icon = mission_control_venice
+		position = 4
+		required_missions = { pf_nrd_galleys_with_good_oars } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
 	pf_nrd_proclaim_odins_name = {
 		icon = mission_norse_faith
 		position = 6
@@ -342,14 +332,162 @@ pf_nrd_5 = {
 		effect = {  } 
 	}
 
-	pf_nrd_glorious_ports = {
-		icon = mission_control_venice
-		position = 4
-		required_missions = { pf_nrd_galleys_with_good_oars } 
+	pf_nrd_the_allfathers_blessing = {
+		icon = mission_crown_of_sweden
+		position = 10
+		required_missions = { pf_nrd_share_the_sagas } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
 
 		effect = {  } 
 	}
+}
+pf_nrd_col_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NRD } 
+
+	pf_nrd_pushing_inward = {
+		icon = mission_colonize_louisiana
+		position = 11
+		required_missions = { pf_nrd_a_whole_new_world } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nrd_uncontested_in_new_world = {
+		icon = mission_ruler_of_north_america
+		position = 12
+		required_missions = {
+			pf_nrd_pushing_inward
+			pf_nrd_fruitful_colonies
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nrd_col_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NRD } 
+
+	pf_nrd_over_the_horizon = {
+		icon = mission_north_sea_empire
+		position = 9
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nrd_a_whole_new_world = {
+		icon = mission_settlers_north_america
+		position = 10
+		required_missions = { pf_nrd_over_the_horizon } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nrd_fruitful_colonies = {
+		icon = mission_rb_the_thirteen_colonies
+		position = 11
+		required_missions = { pf_nrd_a_whole_new_world } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nrd_col_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NRD } 
+
+	pf_nrd_colonial_ambitions = {
+		icon = mission_colonial
+		position = 10
+		required_missions = { pf_nrd_over_the_horizon } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nrd_the_land_of_cocoa = {
+		icon = mission_brazilian_bandeirantes
+		position = 11
+		required_missions = { pf_nrd_a_whole_new_world } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nrd_invest_in_plantations = {
+		icon = mission_expand_into_the_forest
+		position = 1
+		required_missions = { pf_nrd_the_land_of_cocoa } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nrd_col_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NRD } 
+
+	pf_nrd_the_land_of_guinea = {
+		icon = mission_colonise_brazil
+		position = 11
+		required_missions = { pf_nrd_a_whole_new_world } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nrd_approach_the_interior = {
+		icon = mission_west_african_ports
+		position = 12
+		required_missions = { pf_nrd_the_land_of_guinea } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nrd_col_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NRD } 
+
 }
