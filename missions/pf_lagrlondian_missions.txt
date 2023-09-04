@@ -334,6 +334,7 @@ third = {
 		provinces_to_highlight = {
 			has_port = yes
 			owner = {
+				NOT = { tag = ROOT }
 				capital_scope = {
 					OR = {
 						region = scandinavia_region
@@ -354,7 +355,8 @@ third = {
 
 		trigger = {
 			calc_true_if = {
-				amount = 10
+				desc = PF_LAG_RAIDED_COUNTRIES
+				amount = 8
 				all_country = {
 					capital_scope = {
 						OR = {
@@ -611,7 +613,7 @@ fourth = {
 			owned_by = ROOT
 			OR = {
 				trade_goods = wool
-				trade_goods = silk
+				trade_goods = cloth
 			}
 			NOT = { base_production = 8 } 
 		}
@@ -622,13 +624,13 @@ fourth = {
 				base_production = 8
 				OR = {
 					trade_goods = wool
-					trade_goods = silk
+					trade_goods = cloth
 				}
 			}
 		} 
 
 		effect = { 
-			# Make all provinces that meet the requirement change into silk
+			# Make all provinces that meet the requirement change into cloth
 		} 
 	}
 }
@@ -645,7 +647,9 @@ fifth = {
 		required_missions = { pf_lag_longboats } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			heavy_ship_fraction = 0.3
+		} 
 
 		effect = {  } 
 	}
@@ -677,7 +681,6 @@ fifth = {
 					}
 				}
 				AND = {
-					# TRN starting areas here
 					home_counties_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
@@ -705,21 +708,82 @@ fifth = {
 			region = british_isles_region
 			culture_group = old_celtic
 			nationalism = 1
-			unrest = 0.1
+			unrest = 1
 		} 
 
 		trigger = {
-			NOT = {
-				any_owned_province = {
-					region = british_isles_region
-					culture_group = old_celtic
-					nationalism = 1
-					unrest = 0.1
+			if = {
+				limit = {
+					exists = TRN
+				}
+				TRN = {
+					is_subject_of = ROOT
+					is_subject_of_type = personal_union
+					NOT = { liberty_desire = 20 }
+				}
+			}
+			home_counties_area = {
+				type = all
+				OR = {
+					owned_by = TRN
+					AND = {
+						NOT = { nationalism = 1 }
+						NOT = { unrest = 1 }
+					}
+				}
+			}
+			east_anglia_area = {
+				type = all
+				OR = {
+					owned_by = TRN
+					AND = {
+						NOT = { nationalism = 1 }
+						NOT = { unrest = 1 }
+					}
+				}
+			}
+			east_midlands_area = {
+				type = all
+				OR = {
+					owned_by = TRN
+					AND = {
+						NOT = { nationalism = 1 }
+						NOT = { unrest = 1 }
+					}
 				}
 			}
 		} 
 
-		effect = {  } 
+		effect = { 
+			wessex_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			wales_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_midlands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			scottish_marches_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_lag_push_celts = {
@@ -728,7 +792,24 @@ fifth = {
 		required_missions = { pf_lag_break_clans } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			wessex_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			wales_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			west_midlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			scottish_marches_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -783,7 +864,7 @@ first_2 = {
 
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 12
 				has_trade_building_trigger = yes
 			}
 		}
@@ -801,7 +882,7 @@ first_2 = {
 			90 = { has_trade_building_trigger = yes } 
 			90 = { development = 30 } 
 			90 = { num_of_buildings_in_province = 5 } 
-			90 = { province_has_center_of_trade_of_level = 3 } 
+			90 = { province_has_center_of_trade_of_level = 2 } 
 		}
 
 		effect = {  } 
@@ -863,11 +944,9 @@ second_2 = {
 			OR = {
 				NOT = { has_estate = estate_church } 
 				AND = {
-					NOT = {
-						estate_influence = {
-							estate = estate_church
-							influence = 50
-						}
+					estate_influence = {
+						estate = estate_church
+						influence = 50
 					}
 					estate_loyalty = {
 						estate = estate_church
@@ -1005,7 +1084,20 @@ third_2 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 70
+			}
+			num_of_estate_agendas_completed = {
+				estate = estate_burghers
+				value = 3
+			}
+			num_of_estate_privileges = {
+				estate = estate_burghers
+				value = 4
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -1014,7 +1106,9 @@ third_2 = {
 		icon = florentine_renaissance
 		position = 11
 		required_missions = { pf_lag_sway } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			NOT = { renaissance = 100 } 
+		} 
 
 		trigger = { has_institution = renaissance } 
 
@@ -1076,7 +1170,21 @@ fourth_2 = {
 		position = 10
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				NOT = { has_estate = estate_nobles }
+				NOT = {
+					estate_influence = {
+						estate = estate_nobles
+						influence = 70
+					}
+				}
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 60
+				}
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -1121,29 +1229,6 @@ fourth_2 = {
 
 		trigger = {
 			university = 5
-			OR = {
-				if = {
-					limit = { has_estate = estate_church } 
-					num_of_estate_agendas_completed = {
-						estate = estate_church
-						value = 2
-					}
-				}
-				if = {
-					limit = { has_estate = estate_nobles } 
-					num_of_estate_agendas_completed = {
-						estate = estate_nobles
-						value = 2
-					}
-				}
-				if = {
-					limit = { has_estate = estate_burghers } 
-					num_of_estate_agendas_completed = {
-						estate = estate_burghers
-						value = 2
-					}
-				}
-			}
 		}
 
 		effect = {  } 
@@ -1202,9 +1287,25 @@ fifth_2 = {
 		icon = mission_eastern_european_city
 		position = 12
 		required_missions = { pf_lag_develop_interior } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				has_production_building_trigger = no
+				NOT = { development = 15 }
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 10
+				has_production_building_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 12
+				development = 15
+			}
+			total_development = 300
+		} 
 
 		effect = {  } 
 	}
@@ -1213,9 +1314,24 @@ fifth_2 = {
 		icon = industrialized_rhineland
 		position = 13
 		required_missions = { pf_lag_promote_urbanisation } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				has_manufactory_trigger = no
+				NOT = { base_production = 6 }
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 20
+				has_manufactory_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 12
+				base_production = 6
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -1433,9 +1549,29 @@ third_4 = {
 		icon = mission_caribbean_cn
 		position = 17
 		required_missions = { pf_lag_new_world } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			colonial_region = colonial_the_carribean
+			has_discovered = ROOT
+			NOT = {
+				OR = {
+					owned_by = ROOT
+					owner = { is_colonial_nation_of = ROOT } 
+				}
+			}
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				owner = {
+					OR = {
+						tag = ROOT
+						is_colonial_nation_of = ROOT
+					}
+				}
+				colonial_region = colonial_the_carribean
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -1444,9 +1580,29 @@ third_4 = {
 		icon = settle_austrialasia
 		position = 19
 		required_missions = { pf_lag_reach_india } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			colonial_region = colonial_australia
+			has_discovered = ROOT
+			NOT = {
+				OR = {
+					owned_by = ROOT
+					owner = { is_colonial_nation_of = ROOT } 
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				owner = {
+					OR = {
+						tag = ROOT
+						is_colonial_nation_of = ROOT
+					}
+				}
+				colonial_region = colonial_australia
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -1464,7 +1620,12 @@ fourth_3 = {
 		required_missions = { pf_lag_new_world } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 6
+				region = guinea_region
+			}
+		 } 
 
 		effect = {  } 
 	}
@@ -1475,6 +1636,7 @@ fourth_3 = {
 		required_missions = {
 			pf_lag_west_africa
 			pf_lag_carib
+			pf_lag_east_coast
 		}
 		provinces_to_highlight = {  } 
 
