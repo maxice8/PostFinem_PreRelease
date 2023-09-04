@@ -1085,6 +1085,15 @@ first_3 = {
 		required_missions = { pf_lag_vinland } 
 		provinces_to_highlight = { 
 			colonial_region = colonial_eastern_america
+			has_discovered = ROOT
+			NOT = {
+				OR = {
+					owned_by = ROOT
+					owner = {
+						is_colonial_nation_of = ROOT
+					}
+				}
+			}
 		} 
 
 		trigger = { 
@@ -1108,9 +1117,31 @@ first_3 = {
 		icon = mission_colonize_louisiana
 		position = 19
 		required_missions = { pf_lag_east_coast } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			colonial_region = colonial_louisiana
+			has_discovered = ROOT
+			NOT = {
+				OR = {
+					owned_by = ROOT
+					owner = {
+						is_colonial_nation_of = ROOT
+					}
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				owner = {
+					OR = {
+						tag = ROOT
+						is_colonial_nation_of = ROOT
+					}
+				}
+				colonial_region = colonial_louisiana
+			}
+		} 
 
 		effect = {  } 
 	}
