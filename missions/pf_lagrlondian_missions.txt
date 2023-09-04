@@ -27,10 +27,21 @@ first = {
 		effect = {  } 
 	}
 
+	pf_lag_tier = {
+		icon = fra_military_reform
+		position = 6
+		required_missions = { pf_lag_gunpowder } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
 	pf_lag_doctrine = {
 		icon = issue_general_reglement
-		position = 5
-		required_missions = { pf_lag_gunpowder } 
+		position = 7
+		required_missions = { pf_lag_tier } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -68,7 +79,7 @@ second = {
 
 	pf_lag_break = {
 		icon = mission_hundred_years_war
-		position = 3
+		position = 4
 		required_missions = { pf_lag_secure } 
 		provinces_to_highlight = {  } 
 
@@ -87,6 +98,17 @@ second = {
 
 		effect = {  } 
 	}
+
+	pf_lag_brest = {
+		icon = brest_dockyards
+		position = 6
+		required_missions = { pf_lag_push } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 third = {
 	slot = 3
@@ -95,13 +117,46 @@ third = {
 	has_country_shield = yes
 	potential = { tag = LAG } 
 
+	pf_lag_raid = {
+		icon = mission_raid_christian_trade
+		position = 2
+		required_missions = { pf_lag_longboats } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_develop_belgica = {
+		icon = mission_hanseatic_city
+		position = 3
+		required_missions = { pf_lag_secure } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
 	pf_lag_rheinland = {
 		icon = rhineland_conquest
-		position = 4
+		position = 5
 		required_missions = {
-			pf_lag_break
 			pf_lag_encroach
+			pf_lag_break
 		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_coal = {
+		icon = mission_rb_central_belt_coal_mining
+		position = 7
+		required_missions = { pf_lag_rheinland } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -119,7 +174,6 @@ fourth = {
 	pf_lag_longboats = {
 		icon = mission_longships
 		position = 1
-		required_missions = { } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -129,8 +183,30 @@ fourth = {
 
 	pf_lag_encroach = {
 		icon = encroach_on_the_germans
-		position = 3
+		position = 4
 		required_missions = { pf_lag_longboats } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_london = {
+		icon = mission_rb_scottish_conquer_london
+		position = 5
+		required_missions = { pf_lag_break_clans } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_silk = {
+		icon = mission_son_own_develop_clothes_and_salt
+		position = 6
+		required_missions = { pf_lag_london } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -167,8 +243,8 @@ fifth = {
 		effect = {  } 
 	}
 
-	pf_lag_push_celts = {
-		icon = mission_rb_rule_britannia_irish_version
+	pf_lag_break_clans = {
+		icon = mission_rb_unite_the_clans
 		position = 4
 		required_missions = { pf_lag_glorious } 
 		provinces_to_highlight = {  } 
@@ -178,9 +254,20 @@ fifth = {
 		effect = {  } 
 	}
 
+	pf_lag_push_celts = {
+		icon = mission_rb_rule_britannia_irish_version
+		position = 6
+		required_missions = { pf_lag_break_clans } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
 	pf_lag_fortify = {
 		icon = mission_rb_into_england
-		position = 5
+		position = 7
 		required_missions = { pf_lag_push_celts } 
 		provinces_to_highlight = {  } 
 
@@ -198,7 +285,7 @@ first_2 = {
 
 	pf_lag_expand_markets = {
 		icon = mission_great_trading_houses
-		position = 7
+		position = 9
 		required_missions = { pf_lag_secure_trade } 
 		provinces_to_highlight = {  } 
 
@@ -209,7 +296,7 @@ first_2 = {
 
 	pf_lag_port_desire = {
 		icon = mission_unknown_mission
-		position = 8
+		position = 11
 		required_missions = { pf_lag_expand_markets } 
 		provinces_to_highlight = {  } 
 
@@ -220,7 +307,7 @@ first_2 = {
 
 	pf_lag_embrace_global = {
 		icon = mission_unknown_mission
-		position = 9
+		position = 13
 		required_missions = { pf_lag_port_desire } 
 		provinces_to_highlight = {  } 
 
@@ -238,7 +325,17 @@ second_2 = {
 
 	pf_lag_secure_trade = {
 		icon = mission_dominate_home_trade_node
-		position = 6
+		position = 8
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_theology = {
+		icon = mission_spread_the_reformation
+		position = 10
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -253,14 +350,14 @@ second_3_locked = {
 	has_country_shield = yes
 	potential = {
 		tag = LAG
-		NOT = { has_country_flag = lag_humanist_path }
-		NOT = { has_country_flag = lag_religious_path }
-	} 
+		NOT = { has_country_flag = lag_humanist_path } 
+		NOT = { has_country_flag = lag_religious_path } 
+	}
 
 	pf_lag_religion_locked_1 = {
 		icon = mission_locked_mission
-		position = 8
-		required_missions = { pf_lag_sway } 
+		position = 12
+		required_missions = { pf_lag_theology } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -270,7 +367,7 @@ second_3_locked = {
 
 	pf_lag_religion_locked_2 = {
 		icon = mission_locked_mission
-		position = 9
+		position = 13
 		required_missions = { pf_lag_religion_locked_1 } 
 		provinces_to_highlight = {  } 
 
@@ -287,13 +384,13 @@ second_3_humanist = {
 	potential = {
 		tag = LAG
 		has_country_flag = lag_humanist_path
-		NOT = { has_country_flag = lag_religious_path }
-	} 
+		NOT = { has_country_flag = lag_religious_path } 
+	}
 
 	pf_lag_edict = {
 		icon = edict_of_potsdam
-		position = 8
-		required_missions = { pf_lag_sway } 
+		position = 12
+		required_missions = { pf_lag_theology } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -303,7 +400,7 @@ second_3_humanist = {
 
 	pf_lag_peace_of_utrech = {
 		icon = mission_interfaith_relations
-		position = 9
+		position = 13
 		required_missions = { pf_lag_edict } 
 		provinces_to_highlight = {  } 
 
@@ -317,16 +414,16 @@ second_3_religious = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { 
+	potential = {
 		tag = LAG
-		NOT = { has_country_flag = lag_humanist_path }
+		NOT = { has_country_flag = lag_humanist_path } 
 		has_country_flag = lag_religious_path
-	} 
+	}
 
-	pf_lag_land_churches = {
-		icon = mission_catholic_heddal_church
-		position = 9
-		required_missions = { pf_lag_heretics } 
+	pf_lag_heretics = {
+		icon = defenestrate_the_heretics
+		position = 12
+		required_missions = { pf_lag_theology } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -334,10 +431,10 @@ second_3_religious = {
 		effect = {  } 
 	}
 
-	pf_lag_heretics = {
-		icon = defenestrate_the_heretics
-		position = 8
-		required_missions = { pf_lag_sway } 
+	pf_lag_land_churches = {
+		icon = mission_catholic_heddal_church
+		position = 13
+		required_missions = { pf_lag_heretics } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -354,7 +451,7 @@ third_2 = {
 
 	pf_lag_sway = {
 		icon = friends_in_high_places
-		position = 7
+		position = 9
 		required_missions = {
 			pf_lag_secure_trade
 			pf_lag_frisians
@@ -368,7 +465,7 @@ third_2 = {
 
 	pf_lag_renaissance = {
 		icon = florentine_renaissance
-		position = 8
+		position = 11
 		required_missions = { pf_lag_sway } 
 		provinces_to_highlight = {  } 
 
@@ -379,7 +476,7 @@ third_2 = {
 
 	pf_lag_absolutism = {
 		icon = mission_english_absolutism
-		position = 10
+		position = 14
 		required_missions = {
 			pf_lag_renaissance
 			pf_lag_universities
@@ -400,7 +497,7 @@ fourth_2 = {
 
 	pf_lag_frisians = {
 		icon = the_true_freedom
-		position = 6
+		position = 8
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -408,10 +505,34 @@ fourth_2 = {
 		effect = {  } 
 	}
 
-	pf_lag_reform_administration = {
-		icon = a_strong_government
-		position = 7
-		required_missions = { pf_lag_frisians } 
+	pf_lag_rein_nobles = {
+		icon = rein_in_the_nobles
+		position = 10
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_capital = {
+		icon = fra_crown_seat_capital
+		position = 11
+		required_missions = { pf_lag_rein_nobles } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_lag_centralize = {
+		icon = mission_rb_college_of_justice
+		position = 12
+		required_missions = {
+			pf_lag_capital
+			pf_lag_renaissance
+		}
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -421,11 +542,8 @@ fourth_2 = {
 
 	pf_lag_universities = {
 		icon = mission_early_modern_university
-		position = 9
-		required_missions = {
-			pf_lag_reform_administration
-			pf_lag_renaissance
-		}
+		position = 13
+		required_missions = { pf_lag_centralize } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -442,7 +560,7 @@ fifth_2 = {
 
 	pf_lag_develop = {
 		icon = bavarian_netherlands
-		position = 7
+		position = 9
 		required_missions = { pf_lag_frisians } 
 		provinces_to_highlight = {  } 
 
@@ -453,7 +571,7 @@ fifth_2 = {
 
 	pf_lag_develop_interior = {
 		icon = mission_have_manufactories
-		position = 8
+		position = 11
 		required_missions = { pf_lag_develop } 
 		provinces_to_highlight = {  } 
 
@@ -464,8 +582,25 @@ fifth_2 = {
 
 	pf_lag_industrial = {
 		icon = industrialized_rhineland
-		position = 10
+		position = 13
 		required_missions = { pf_lag_develop_interior } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+third_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
+	pf_lag_new_world = {
+		icon = mission_look_west
+		position = 15
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
