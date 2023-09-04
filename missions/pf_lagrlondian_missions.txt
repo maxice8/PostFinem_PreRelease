@@ -354,7 +354,6 @@ third = {
 
 		trigger = {
 			calc_true_if = {
-				tooltip = PF_LAG_HAS_RAIDED_10_COASTS
 				amount = 10
 				all_country = {
 					capital_scope = {
@@ -616,10 +615,10 @@ fifth = {
 
 		trigger = {
 			OR = {
-				TRN = {
-					is_subject_of_type_with_overlord = {
-						who = ROOT
-						type = personal_union
+				AND = {
+					overlord_of = TRN
+					TRN = {
+						is_subject_of_type = personal_union
 					}
 				}
 				AND = {
@@ -771,8 +770,6 @@ second_2 = {
 		icon = mission_dominate_home_trade_node
 		position = 8
 		provinces_to_highlight = {
-			# Hardcode to Frankfurt for now as it is LAG's starting node
-			trade_node = 1876
 		} 
 
 		trigger = {
