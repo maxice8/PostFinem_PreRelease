@@ -188,16 +188,32 @@ second = {
 			}
 		} 
 
-		effect = {  } 
+		effect = { 
+			brittany_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_lag_push = {
 		icon = mission_rb_conquer_brittany
 		position = 5
 		required_missions = { pf_lag_break } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			area = brittany_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			brittany_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -206,9 +222,24 @@ second = {
 		icon = brest_dockyards
 		position = 6
 		required_missions = { pf_lag_push } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			area = brittany_area
+			OR = {
+				has_dock_building_trigger = no
+				has_shipyard_building_trigger = no
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				area = brittany_area
+				OR = {
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+				}
+				value = 3
+			}
+		} 
 
 		effect = {  } 
 	}
