@@ -257,7 +257,7 @@ third = {
 		required_missions = { pf_lag_longboats } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { } 
 
 		effect = {  } 
 	}
@@ -266,9 +266,32 @@ third = {
 		icon = mission_hanseatic_city
 		position = 3
 		required_missions = { pf_lag_secure } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = north_brabant_area
+				area = brabant_area
+				area = wallonia_area
+				area = flanders_area
+			}
+			OR = {
+				NOT = { development = 12 }
+				NOT = { num_of_times_improved_by_owner = 3 }
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				development = 12
+				num_of_times_improved_by_owner = 3
+				OR = {
+					area = north_brabant_area
+					area = brabant_area
+					area = wallonia_area
+					area = flanders_area
+				}
+			}
+		} 
 
 		effect = {  } 
 	}
