@@ -1004,7 +1004,9 @@ fourth_2 = {
 		trigger = {
 			capital_scope = { development = 30 } 
 			capital_scope = { num_of_buildings_in_province = 5 } 
-			capital_scope = { NOT = { devastation = 0 }  } 
+			capital_scope = { 
+				NOT = { devastation = 0 }
+			} 
 			capital_scope = { prosperity = 100 } 
 		}
 
