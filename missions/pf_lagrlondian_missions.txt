@@ -387,6 +387,7 @@ third = {
 				area = wallonia_area
 				area = flanders_area
 			}
+			country_or_non_sovereign_subject_holds = ROOT
 			OR = {
 				NOT = { development = 12 } 
 				NOT = { num_of_times_improved_by_owner = 3 } 
@@ -417,9 +418,34 @@ third = {
 			pf_lag_encroach
 			pf_lag_break
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				area = franconia_area
+				area = hesse_area
+				area = upper_franconia_area
+				area = palatinate_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			franconia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hesse_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_franconia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			palatinate_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -467,6 +493,35 @@ fourth = {
 
 		effect = { 
 			# Give modifier that allows same-religion raiding
+
+			north_westphalia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			westphalia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			north_rhine_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_rhineland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
 		} 
 	}
 
@@ -616,8 +671,8 @@ fifth = {
 		trigger = {
 			OR = {
 				AND = {
-					overlord_of = TRN
 					TRN = {
+						is_subject_of = ROOT
 						is_subject_of_type = personal_union
 					}
 				}
@@ -646,9 +701,23 @@ fifth = {
 		icon = mission_rb_unite_the_clans
 		position = 4
 		required_missions = { pf_lag_glorious } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			region = british_isles_region
+			culture_group = old_celtic
+			nationalism = 1
+			unrest = 0.1
+		} 
 
-		trigger = {  } 
+		trigger = {
+			NOT = {
+				any_owned_province = {
+					region = british_isles_region
+					culture_group = old_celtic
+					nationalism = 1
+					unrest = 0.1
+				}
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -670,6 +739,7 @@ fifth = {
 		required_missions = { pf_lag_push_celts } 
 		provinces_to_highlight = {
 			owned_by = ROOT
+			region = british_isles_region
 			OR = {
 				has_fort_building_trigger = no
 				AND = {
@@ -975,11 +1045,29 @@ fourth_2 = {
 	pf_lag_frisians = {
 		icon = the_true_freedom
 		position = 8
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			culture = old_frisian
+			OR = {
+				devastation = 1
+				local_autonomy_above_min = 0
+			}
+		 } 
 
-		trigger = {  } 
+		trigger = {
+			NOT = {
+				any_owned_province = {
+					culture = old_frisian
+					NOT = { devastation = 1 }
+					NOT = { local_autonomy_above_min = 1 }
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_accepted_culture_or_dip_power = { culture = old_frisian }
+
+			# Some modifier about Frisians being nicely integrated.
+		} 
 	}
 
 	pf_lag_rein_nobles = {
