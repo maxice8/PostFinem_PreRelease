@@ -201,7 +201,7 @@ second = {
 
 	pf_lag_break = {
 		icon = mission_hundred_years_war
-		position = 3
+		position = 4
 		required_missions = { pf_lag_secure } 
 		provinces_to_highlight = {
 			OR = {
@@ -255,7 +255,6 @@ second = {
 				}
 				add_permanent_claim = ROOT
 			}
-
 		}
 	}
 
@@ -417,7 +416,7 @@ third = {
 		position = 5
 		required_missions = {
 			pf_lag_encroach
-			pf_lag_secure_central
+			pf_lag_break
 		}
 		provinces_to_highlight = {  } 
 
@@ -430,17 +429,6 @@ third = {
 		icon = mission_rb_central_belt_coal_mining
 		position = 7
 		required_missions = { pf_lag_rheinland } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	pf_lag_secure_central = {
-		icon = mission_unknown_mission
-		position = 4
-		required_missions = { pf_lag_break } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -476,7 +464,7 @@ fourth = {
 				navy_size_percentage = 1
 				num_of_heavy_ship = 3
 			}
-		} 
+		}
 
 		effect = { 
 			# Give modifier that allows same-religion raiding
@@ -487,16 +475,16 @@ fourth = {
 		icon = encroach_on_the_germans
 		position = 4
 		required_missions = { pf_lag_longboats } 
-		provinces_to_highlight = { 
+		provinces_to_highlight = {
 			OR = {
 				area = north_westphalia_area
 				area = westphalia_area
 				area = north_rhine_area
 				area = lower_rhineland_area
 			}
-		} 
+		}
 
-		trigger = { 
+		trigger = {
 			north_westphalia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -513,9 +501,9 @@ fourth = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-		} 
+		}
 
-		effect = { 
+		effect = {
 			hesse_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT } 
@@ -544,7 +532,7 @@ fourth = {
 				}
 				add_permanent_claim = ROOT
 			}
-		} 
+		}
 	}
 
 	pf_lag_london = {
@@ -605,17 +593,14 @@ fifth = {
 
 		trigger = {  } 
 
-		effect = {
-			# :yes:/:no: reward, restoration of Union if TRN exists
-			# otherwise claims on the areas that they start with
-		} 
+		effect = {  } 
 	}
 
 	pf_lag_glorious = {
 		icon = the_glorious_revolution
 		position = 3
 		required_missions = { pf_lag_modernise } 
-		provinces_to_highlight = { 
+		provinces_to_highlight = {
 			OR = {
 				owned_by = TRN
 				AND = {
@@ -624,10 +609,10 @@ fifth = {
 						area = east_anglia_area
 						area = east_midlands_area
 					}
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 				}
 			}
-		} 
+		}
 
 		trigger = {
 			OR = {
@@ -653,9 +638,9 @@ fifth = {
 					}
 				}
 			}
-		} 
+		}
 
-		effect = { } 
+		effect = {  } 
 	}
 
 	pf_lag_break_clans = {
@@ -664,8 +649,7 @@ fifth = {
 		required_missions = { pf_lag_glorious } 
 		provinces_to_highlight = {  } 
 
-		trigger = {
-		} 
+		trigger = {  } 
 
 		effect = {  } 
 	}
@@ -760,9 +744,7 @@ first_2 = {
 		required_missions = { pf_lag_port_desire } 
 		provinces_to_highlight = {  } 
 
-		trigger = { 
-			has_institution = global_trade
-		} 
+		trigger = { has_institution = global_trade } 
 
 		effect = {  } 
 	}
@@ -773,8 +755,7 @@ first_2 = {
 		required_missions = { pf_lag_embrace_global } 
 		provinces_to_highlight = {  } 
 
-		trigger = { 
-		} 
+		trigger = {  } 
 
 		effect = {  } 
 	}
@@ -794,14 +775,14 @@ second_2 = {
 			trade_node = 1876
 		} 
 
-		trigger = { 
+		trigger = {
 			home_trade_node = {
 				trade_share = {
 					country = ROOT
 					share = 51
 				}
 			}
-		 } 
+		}
 
 		effect = {  } 
 	}
@@ -968,9 +949,7 @@ third_2 = {
 		required_missions = { pf_lag_sway } 
 		provinces_to_highlight = {  } 
 
-		trigger = { 
-			has_institution = renaissance
-		} 
+		trigger = { has_institution = renaissance } 
 
 		effect = {  } 
 	}
@@ -1022,20 +1001,12 @@ fourth_2 = {
 		required_missions = { pf_lag_rein_nobles } 
 		provinces_to_highlight = {  } 
 
-		trigger = { 
-			capital_scope = {
-				development = 30
-			}
-			capital_scope = {
-				num_of_buildings_in_province = 5
-			}
-			capital_scope = {
-				NOT = { devastation = 0 }
-			}
-			capital_scope = {
-				prosperity = 100
-			}
-		} 
+		trigger = {
+			capital_scope = { development = 30 } 
+			capital_scope = { num_of_buildings_in_province = 5 } 
+			capital_scope = { NOT = { devastation = 0 }  } 
+			capital_scope = { prosperity = 100 } 
+		}
 
 		effect = {  } 
 	}
@@ -1060,38 +1031,32 @@ fourth_2 = {
 		required_missions = { pf_lag_centralize } 
 		provinces_to_highlight = {  } 
 
-		trigger = { 
+		trigger = {
 			university = 5
 			OR = {
 				if = {
-					limit = {
-						has_estate = estate_church
-					}
+					limit = { has_estate = estate_church } 
 					num_of_estate_agendas_completed = {
 						estate = estate_church
 						value = 2
 					}
 				}
 				if = {
-					limit = {
-						has_estate = estate_nobles
-					}
+					limit = { has_estate = estate_nobles } 
 					num_of_estate_agendas_completed = {
 						estate = estate_nobles
 						value = 2
 					}
 				}
 				if = {
-					limit = {
-						has_estate = estate_burghers
-					}
+					limit = { has_estate = estate_burghers } 
 					num_of_estate_agendas_completed = {
 						estate = estate_burghers
 						value = 2
 					}
 				}
 			}
-		} 
+		}
 
 		effect = {  } 
 	}
@@ -1252,7 +1217,7 @@ first_3 = {
 		icon = mission_colonize_california
 		position = 21
 		required_missions = { pf_lag_louisiana } 
-		provinces_to_highlight = { 
+		provinces_to_highlight = {
 			colonial_region = colonial_california
 			has_discovered = ROOT
 			NOT = {
@@ -1261,9 +1226,9 @@ first_3 = {
 					owner = { is_colonial_nation_of = ROOT } 
 				}
 			}
-		} 
+		}
 
-		trigger = { 
+		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
 				owner = {
@@ -1274,7 +1239,7 @@ first_3 = {
 				}
 				colonial_region = colonial_california
 			}
-		} 
+		}
 
 		effect = {  } 
 	}
@@ -1290,7 +1255,7 @@ second_3 = {
 		icon = mission_rb_colonise_canada
 		position = 16
 		required_missions = { pf_lag_new_world } 
-		provinces_to_highlight = { 
+		provinces_to_highlight = {
 			colonial_region = colonial_canada
 			has_discovered = ROOT
 			NOT = {
@@ -1299,9 +1264,9 @@ second_3 = {
 					owner = { is_colonial_nation_of = ROOT } 
 				}
 			}
-		} 
+		}
 
-		trigger = { 
+		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
 				owner = {
@@ -1312,7 +1277,7 @@ second_3 = {
 				}
 				colonial_region = colonial_canada
 			}
-		} 
+		}
 
 		effect = {  } 
 	}
@@ -1321,7 +1286,7 @@ second_3 = {
 		icon = mission_colonize_alaska
 		position = 18
 		required_missions = { pf_lag_vinland } 
-		provinces_to_highlight = { 
+		provinces_to_highlight = {
 			colonial_region = colonial_alaska
 			has_discovered = ROOT
 			NOT = {
@@ -1330,9 +1295,9 @@ second_3 = {
 					owner = { is_colonial_nation_of = ROOT } 
 				}
 			}
-		} 
+		}
 
-		trigger = { 
+		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
 				owner = {
@@ -1343,7 +1308,7 @@ second_3 = {
 				}
 				colonial_region = colonial_alaska
 			}
-		} 
+		}
 
 		effect = {  } 
 	}
@@ -1371,9 +1336,7 @@ third_4 = {
 		position = 15
 		provinces_to_highlight = {  } 
 
-		trigger = { 
-			num_of_colonists = 1
-		} 
+		trigger = { num_of_colonists = 1 } 
 
 		effect = {  } 
 	}
