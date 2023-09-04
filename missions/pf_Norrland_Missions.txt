@@ -1,0 +1,198 @@
+pf_nld_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NLD } 
+
+	pf_nld_assimilate_the_finns = {
+		icon = mission_conquer_finland
+		position = 2
+		required_missions = { pf_nld_coexistence_with_the_sami } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_subjugate_karelia = {
+		icon = mission_expand_into_the_forest
+		position = 3
+		required_missions = { pf_nld_assimilate_the_finns } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_a_tolerant_society = {
+		icon = mission_expand_into_the_forest
+		position = 5
+		required_missions = { pf_nld_integrate_the_romuvans } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nld_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NLD } 
+
+	pf_nld_coexistence_with_the_sami = {
+		icon = mission_the_sami
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_integrate_the_romuvans = {
+		icon = mission_the_livonians
+		position = 4
+		required_missions = {
+			pf_nld_subjugate_karelia
+			pf_nld_seize_gotland
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nld_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NLD } 
+
+	pf_nld_a_baltic_fleet = {
+		icon = mission_longships
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_seize_gotland = {
+		icon = mission_develop_visby
+		position = 3
+		required_missions = { pf_nld_a_baltic_fleet } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_eitt_baltsjoriki = {
+		icon = mission_baltic_empire
+		position = 5
+		required_missions = {
+			pf_nld_integrate_the_romuvans
+			pf_nld_unite_the_peninsula
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_civilise_the_hordes = {
+		icon = mission_marwari_horses
+		position = 6
+		required_missions = { pf_nld_eitt_baltsjoriki } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nld_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NLD } 
+
+	pf_nld_secure_the_straits = {
+		icon = mission_invade_island
+		position = 2
+		required_missions = {
+			pf_nld_retake_our_lands
+			pf_nld_a_baltic_fleet
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_unite_the_peninsula = {
+		icon = mission_unite_scandinavia
+		position = 4
+		required_missions = {
+			pf_nld_strike_into_norway
+			pf_nld_secure_the_straits
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nld_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NLD } 
+
+	pf_nld_retake_our_lands = {
+		icon = mission_conquer_sweden
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_strike_into_norway = {
+		icon = mission_conquer_norway
+		position = 3
+		required_missions = { pf_nld_retake_our_lands } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_the_second_brother = {
+		icon = mission_rb_conquer_the_highlands
+		position = 5
+		required_missions = { pf_nld_strike_into_norway } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
