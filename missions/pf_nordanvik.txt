@@ -139,20 +139,10 @@ pf_nrd_2 = {
 		effect = {  } 
 	}
 
-	pf_nrd_over_the_horizon = {
-		icon = mission_north_sea_empire
+	pf_nrd_capital_university = {
+		icon = mission_early_modern_university
 		position = 9
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	pf_nrd_a_whole_new_world = {
-		icon = mission_settlers_north_america
-		position = 10
-		required_missions = { pf_nrd_over_the_horizon } 
+		required_missions = { pf_nrd_infrastructure_investment } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -352,4 +342,64 @@ pf_nrd_5 = {
 
 		effect = {  } 
 	}
+}
+pf_nrd_col_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NRD } 
+
+}
+pf_nrd_col_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NRD } 
+
+	pf_nrd_over_the_horizon = {
+		icon = mission_north_sea_empire
+		position = 10
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nrd_a_whole_new_world = {
+		icon = mission_settlers_north_america
+		position = 11
+		required_missions = { pf_nrd_over_the_horizon } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nrd_col_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NRD } 
+
+}
+pf_nrd_col_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NRD } 
+
+}
+pf_nrd_col_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NRD } 
+
 }
