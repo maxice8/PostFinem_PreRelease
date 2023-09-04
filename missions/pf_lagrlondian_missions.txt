@@ -85,16 +85,70 @@ second = {
 			army_size_percentage = 0.90
 		} 
 
-		effect = {  } 
+		effect = { 
+			north_brabant_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			brabant_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			wallonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			flanders_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_lag_secure = {
 		icon = mission_spanish_netherlands
 		position = 2
 		required_missions = { pf_lag_raise } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				area = north_brabant_area
+				area = brabant_area
+				area = wallonia_area
+				area = flanders_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = { } 
+		trigger = { 
+			north_brabant_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			brabant_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			wallonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			flanders_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -103,9 +157,41 @@ second = {
 		icon = mission_hundred_years_war
 		position = 4
 		required_missions = { pf_lag_secure } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				owned_by = GAU
+				AND = {
+					OR = {
+						area = picardy_area
+						area = champagne_area
+						area = lorraine_area
+						area = ile_de_france_area
+						area = normandy_area
+						area = loire_area
+						area = orleans_area
+						area = west_burgundy_area
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			NOT = { exists = GAU }
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					area = picardy_area
+					area = champagne_area
+					area = lorraine_area
+					area = ile_de_france_area
+					area = normandy_area
+					area = loire_area
+					area = orleans_area
+					area = west_burgundy_area
+				}
+				value = 20
+			}
+		} 
 
 		effect = {  } 
 	}
