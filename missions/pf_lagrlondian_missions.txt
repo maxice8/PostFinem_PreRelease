@@ -11,7 +11,10 @@ first = {
 		required_missions = { pf_lag_raise } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			army_tradition = 25
+			land_forcelimit = 50
+		} 
 
 		effect = {  } 
 	}
@@ -22,7 +25,13 @@ first = {
 		required_missions = { pf_lag_permanent } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_artillery = 10
+			has_global_modifier_value = {
+				which = artillery_power
+				value = 0.5
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -33,7 +42,9 @@ first = {
 		required_missions = { pf_lag_gunpowder } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			has_reform_on_level = 4 # Military Specialization Tier
+		} 
 
 		effect = {  } 
 	}
@@ -44,7 +55,15 @@ first = {
 		required_missions = { pf_lag_tier } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			OR = {
+				full_idea_group = quality_ideas
+				full_idea_group = quantity_ideas
+				full_idea_group = mercenary_ideas
+				full_idea_group = offensive_ideas
+				full_idea_group = defensive_ideas
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -61,7 +80,10 @@ second = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_generals = 1
+			army_size_percentage = 0.90
+		} 
 
 		effect = {  } 
 	}
@@ -72,7 +94,7 @@ second = {
 		required_missions = { pf_lag_raise } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { } 
 
 		effect = {  } 
 	}
