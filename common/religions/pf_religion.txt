@@ -185,9 +185,6 @@ pagan = {
 	harmonized_modifier = harmonized_pagan
 }
 
-
-
-
 zoroastrian_group = {
 	defender_of_faith = yes
 	flag_emblem_index_range = { 110 110 }
@@ -223,7 +220,6 @@ zoroastrian_group = {
 	crusade_name = HOLY_WAR
 	
 }
-
 
 germanic_group = {
 	defender_of_faith = yes
@@ -656,7 +652,6 @@ hellenic_group = {
 
 }
 
-	
 slavic_religion_group = {
 
 	defender_of_faith = yes
@@ -838,7 +833,7 @@ baltic_pagan_group = {
 		color = { 120 250 170 }
 		country = {
 			defensiveness = 0.2
-			years_of_nationalism = -10
+			years_of_nationalism = -5
 		}
 		country_as_secondary = {
 			global_institution_spread = 0.1
@@ -849,7 +844,8 @@ baltic_pagan_group = {
 			local_hostile_attrition = 0.5
 		}
 		
-		uses_anglican_power = yes
+		uses_church_power = yes
+		
 		aspects = {
 			perkunas_aspect
 			bangputys_aspect

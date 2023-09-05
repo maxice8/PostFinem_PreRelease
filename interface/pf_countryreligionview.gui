@@ -67,16 +67,16 @@ guiTypes = {
 		{
 			name ="aspect_icon"
 			spriteType = "GFX_hindu_deities_strip"
-			position = { x= 45 y = -14 }
+			position = { x= 12 y = -14 }	#anbennar, x was 43
 		}
 		
 		instantTextBoxType = {
 			name = "aspect_name"
-			position = { x= -42 y = 6 }
+			position = { x= -42 y = 6 }		#anbennar, x was -42
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
 			text = "AspectName"	
-			maxWidth = 102
+			maxWidth = 98					#anbennar, x was 102
 			maxHeight = 24
 			Orientation = "UPPER_LEFT"
 			format = left
@@ -84,11 +84,11 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "aspect_effect"
-			position = { x = 98 y = -2 }
+			position = { x = 71 y = -2 }	#anbennar, x was 98
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
 			text = "AspectEffect"	
-			maxWidth = 206
+			maxWidth = 280					#anbennar, x was 206
 			maxHeight = 24
 			Orientation = "UPPER_LEFT"
 			format = left
@@ -96,7 +96,7 @@ guiTypes = {
 		
 		guiButtonType = {
 			name = "pick_aspect"
-			position = { x=301 y = 1}
+			position = { x=301 y = 1}		#anbennar, x was 301
 			quadTextureSprite ="GFX_standard_button_71"
 			buttonText = "SELECT"
 			buttonFont = "vic_18"

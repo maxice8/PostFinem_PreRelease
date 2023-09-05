@@ -68,12 +68,12 @@ country_event = {
 
 	option = {
 		name = romuva_events.2.a
-		add_church_aspect = perkunas_lightning_aspect
+		add_church_aspect = perkunas_thunder_aspect
 		country_event = { id = romuva_events.3 }
 	}
 	option = {
 		name = romuva_events.2.b
-		add_church_aspect = perkunas_thunder_aspect
+		add_church_aspect = perkunas_lightning_aspect
 		country_event = { id = romuva_events.3 }
 	}
 }
