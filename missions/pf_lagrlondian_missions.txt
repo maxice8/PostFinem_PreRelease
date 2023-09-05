@@ -114,7 +114,122 @@ first = {
 			}
 		}
 
-		effect = {  } 
+		effect = { 
+			if = {
+				limit = {
+					full_idea_group = quality_ideas
+				}
+				custom_tooltip = YES_PF_LAG_FULL_QUALITY
+				hidden_effect = {
+					add_country_modifier = {
+						name = pf_lag_full_quality
+						duration = -1
+					}
+				}
+			}
+			else = { custom_tooltip = NO_PF_LAG_FULL_QUALITY }
+			tooltip = {
+				add_country_modifier = {
+					name = pf_lag_full_quality
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					full_idea_group = quantity_ideas
+				}
+				custom_tooltip = YES_PF_LAG_FULL_QUANTITY
+				hidden_effect = {
+					add_country_modifier = {
+						name = pf_lag_full_quantity
+						duration = -1
+					}
+				}
+			}
+			else = { custom_tooltip = NO_PF_LAG_FULL_QUANTITY }
+			tooltip = {
+				add_country_modifier = {
+					name = pf_lag_full_quantity
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					full_idea_group = mercenary_ideas
+				}
+				custom_tooltip = YES_PF_LAG_FULL_MERCENARY
+				hidden_effect = {
+					add_country_modifier = {
+						name = pf_lag_full_mercenary
+						duration = -1
+					}
+				}
+			}
+			else = { custom_tooltip = NO_PF_LAG_FULL_MERCENARY }
+			tooltip = {
+				add_country_modifier = {
+					name = pf_lag_full_mercenary
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					full_idea_group = offensive_ideas
+				}
+				custom_tooltip = YES_PF_LAG_FULL_OFFENSIVE
+				hidden_effect = {
+					add_country_modifier = {
+						name = pf_lag_full_offensive
+						duration = -1
+					}
+				}
+			}
+			else = { custom_tooltip = NO_PF_LAG_FULL_OFFENSIVE }
+			tooltip = {
+				add_country_modifier = {
+					name = pf_lag_full_offensive
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					full_idea_group = defensive_ideas
+				}
+				custom_tooltip = YES_PF_LAG_FULL_DEFENSIVE
+				hidden_effect = {
+					add_country_modifier = {
+						name = pf_lag_full_defensive
+						duration = -1
+					}
+				}
+			}
+			else = { custom_tooltip = NO_PF_LAG_FULL_DEFENSIVE }
+			tooltip = {
+				add_country_modifier = {
+					name = pf_lag_full_defensive
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					full_idea_group = firepower_ideas
+				}
+				custom_tooltip = YES_PF_LAG_FULL_FIREPOWER
+				hidden_effect = {
+					add_country_modifier = {
+						name = pf_lag_full_firepower
+						duration = -1
+					}
+				}
+			}
+			else = { custom_tooltip = NO_PF_LAG_FULL_FIREPOWER }
+			tooltip = {
+				add_country_modifier = {
+					name = pf_lag_full_firepower
+					duration = -1
+				}
+			}
+		}
 	}
 }
 second = {

@@ -12,6 +12,18 @@
 
  pf_lag_doctrine_title:0 "Adopt Moden Doctrine"
  pf_lag_doctrine_desc:0 ""
+ YES_PF_LAG_FULL_QUALITY:0 "£yes£ If we have fully embraced §YQuality Ideas§!, we will gain:"
+ NO_PF_LAG_FULL_QUALITY:0 "£no£ If we have fully embraced §YQuality Ideas§!, we will gain:"
+ YES_PF_LAG_FULL_QUANTITY:0 "£yes£ If we have fully embraced §YQuantity Ideas§!, we will gain:"
+ NO_PF_LAG_FULL_QUANTITY:0 "£no£ If we have fully embraced §YQuantity Ideas§!, we will gain:"
+ YES_PF_LAG_FULL_MERCENARY:0 "£yes£ If we have fully embraced §YMercenary Ideas§!, we will gain:"
+ NO_PF_LAG_FULL_MERCENARY:0 "£no£ If we have fully embraced §YMercenary Ideas§!, we will gain:"
+ YES_PF_LAG_FULL_OFFENSIVE:0 "£yes£ If we have fully embraced §YOffensive Ideas§!, we will gain:"
+ NO_PF_LAG_FULL_OFFENSIVE:0 "£no£ If we have fully embraced §YOffensive Ideas§!, we will gain:"
+ YES_PF_LAG_FULL_DEFENSIVE:0 "£yes£ If we have fully embraced §YDefensive Ideas§!, we will gain:"
+ NO_PF_LAG_FULL_DEFENSIVE:0 "£no£ If we have fully embraced §YDefensive Ideas§!, we will gain:"
+ YES_PF_LAG_FULL_FIREPOWER:0 "£yes£ If we have fully embraced §YFirepower Ideas§!, we will gain:"
+ NO_PF_LAG_FULL_FIREPOWER:0 "£no£ If we have fully embraced §YFirepower Ideas§!, we will gain:"
 
  pf_lag_raise_title:0 "Raise The Lagr Host"
  pf_lag_raise_desc:0 ""
@@ -252,15 +264,32 @@
  desc_pf_lag_carthage_north: "REPLACE_ME"
  pf_lag_trinovantes_crown:0 "Crown of Trinovantes"
  desc_pf_lag_trinovantes_crown:0 "REPLACE_ME"
+ # Reference to the Domesday Book, a written record
+ # that contains 'The Great Survey', a census done
+ # by William The Conqueror
  pf_lag_domesday_book:0 "The Albionic Survey"
  desc_pf_lag_domesday_book:0 "REPLACE_ME"
+ # Refernce to Magna Carta
  pf_lag_magna_carta:0 "Cearta Trinovantes"
  desc_pf_lag_magna_carta:0 "REPLACE_ME"
  # Fictional figure called Gunnarr Eiríksson, descedant of Eirik Havendalsson (founder of Lagrlond)
  # loosely based on Baldwin I, Magrave of Flanders and Dirk III, Count of Holland.
  # mostly known for reforming the Lagrlonder army
- pf_lag_general_staff:0 "The Reforms of Gunnarr Eiríksson II af Lagrlondi"
+ pf_lag_general_staff:0 "The General Staff of Gunnarr Eiríksson II af Lagrlondi"
  desc_pf_lag_general_staff:0 "REPLACE_ME"
+
+ pf_lag_full_quality:0 "Professional Corps"
+ desc_pf_lag_full_quality:0 "REPLACE_ME"
+ pf_lag_full_quantity:0 "Grand Army"
+ desc_pf_lag_full_quantity:0 "REPLACE_ME"
+ pf_lag_full_mercenary:0 "Foreign Legion"
+ desc_pf_lag_full_mercenary:0 "REPLACE_ME"
+ pf_lag_full_offensive:0 "Always Forward, Never Backwards"
+ desc_pf_lag_full_offensive:0 "REPLACE_ME"
+ pf_lag_full_defensive:0 "Fortress Lagrlond"
+ desc_pf_lag_full_defensive:0 "REPLACE_ME"
+ pf_lag_full_firepower:0 "Overwhelming Firepower"
+ desc_pf_lag_full_firepower:0 "REPLACE_ME"
 
  # events
  PF_LAG_SPAWN_BRITON_NOBLE_REBELS:0 "A random province owned by you or a non-sovereign subject in the §YBritish Isles§!, with §YBriton§! culture, will spawn §YNoble Rebels§!"
@@ -285,3 +314,4 @@
  pf_lag_trinovantian_rebels.7.t:0 "The Cearta Trinovantes"
  pf_lag_trinovantian_rebels.7.desc:0 "REPLACE_ME"
  pf_lag_trinovantian_rebels.7.a:0 "REPLACE_ME"
+ 
