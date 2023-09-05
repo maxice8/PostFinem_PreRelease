@@ -56,6 +56,8 @@
 
  pf_lag_silk_title:0 "The Wool Industry"
  pf_lag_silk_desc:0 ""
+ PF_LAG_SILK_MODIFIER:0 "Every province that meets the mission requirements will gain §G1§! base §Yproduction§! development, and:"
+ PF_LAG_SILK_CHANGE_TRADE_GOOD:0 "Additionally, all provinces with at least §Y9§! base §Yproduction§! development, and the §YWool§! trade good will have its trade good changed to §YCloth§!"
 
  pf_lag_modernise_title:0 "Modernise The Navy"
  pf_lag_modernise_desc:0 ""
@@ -199,6 +201,26 @@
  pf_lag_far_east_title:0 "The Unequal Treaties"
  pf_lag_far_east_desc:0 ""
 
-
- pf_lag_consolidate_title:0 "A permanent army"
- pf_lag_consolidate_desc:0 ""
+ # Modifiers
+ pf_lag_permanent_army:0 "REPLACE_ME"
+ desc_pf_lag_permanent_army:0 "REPLACE_ME"
+ pf_lag_artillery:0 "REPLACE_ME"
+ desc_pf_lag_artillery:0 "REPLACE_ME"
+ pf_lag_second_heathen_army:0 "REPLACE_ME"
+ desc_pf_lag_second_heathen_army:0 "REPLACE_ME"
+ pf_lag_conquest_belgica:0 "REPLACE_ME"
+ desc_pf_lag_conquest_belgica:0 "REPLACE_ME"
+ pf_lag_gaul_broken:0 "REPLACE_ME"
+ desc_pf_lag_gaul_broken:0 "REPLACE_ME"
+ pf_lag_push_consolidate:0 "REPLACE_ME"
+ desc_pf_lag_push_consolidate:0 "REPLACE_ME"
+ pf_lag_brest_dockyards:0 "REPLACE_ME"
+ desc_pf_lag_brest_dockyards:0 "REPLACE_ME"
+ pf_lag_raiders_storm:0 "Raiders on the Storm"
+ desc_pf_lag_raiders_storm:0 "REPLACE_ME"
+ pf_lag_encroach_on_germans:0 "REPLACE_ME"
+ desc_pf_lag_encroach_on_germans:0 "REPLACE_ME"
+ pf_lag_thames:0 "REPLACE_ME"
+ desc_pf_lag_thames:0 "REPLACE_ME"
+ pf_lag_cloth_industry:0 "Wool Industry"
+ desc_pf_lag_cloth_industry:0 "REPLACE_ME"
