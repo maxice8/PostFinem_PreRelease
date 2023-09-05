@@ -525,7 +525,9 @@ second = {
 			}
 		}
 
-		effect = { 
+		effect = {
+			add_navy_tradition = 20
+
 			custom_tooltip = PF_LAG_BREST_MEET_REQUIREMENT
 			tooltip = {
 				add_province_modifier = {
@@ -613,6 +615,10 @@ third = {
 		effect = { 
 			create_admiral = {
 				tradition = 75
+			}
+			add_country_modifier = {
+				name = pf_lag_experienced_raiders
+				duration = -1
 			}
 		 } 
 	}
@@ -725,7 +731,23 @@ third = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = pf_lag_consolidate_rheinland
+				duration = -1
+			}
+
+			custom_tooltip = PF_LAG_MERCANTILISM_FOR_COT
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						province_has_center_of_trade_of_level = 1
+						trade_node = 1876
+					}
+					owner = { add_mercantilism = 1 }
+				}
+			}
+		} 
 	}
 
 	pf_lag_coal = {
@@ -1301,7 +1323,82 @@ fifth = {
 			}
 		} 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = pf_lag_danelaw
+				duration = 7300
+			}
+
+			if = {
+				limit = {
+					wessex_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+						religion = ROOT
+						is_state = yes
+					}
+					home_counties_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+						religion = ROOT
+						is_state = yes
+					}
+					east_anglia_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+						religion = ROOT
+						is_state = yes
+					}
+					east_midlands_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+						religion = ROOT
+						is_state = yes
+					}
+					wales_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+						religion = ROOT
+						is_state = yes
+					}
+					west_midlands_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+						religion = ROOT
+						is_state = yes
+					}
+					scottish_marches_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+						religion = ROOT
+						is_state = yes
+					}
+					yorkshire_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+						religion = ROOT
+						is_state = yes
+					}
+				}
+				custom_tooltip = YES_PF_LAG_DANELAW_PERMANENT
+				hidden_effect = {
+					remove_country_modifier = pf_lag_danelaw
+					add_country_modifier = {
+						name = pf_lag_danelaw
+						duration = -1
+					}
+				}
+			}
+			else = { custom_tooltip = NO_PF_LAG_DANELAW_PERMANENT }
+		} 
 	}
 
 	pf_lag_fortify = {
