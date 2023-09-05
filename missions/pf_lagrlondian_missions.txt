@@ -489,7 +489,11 @@ third = {
 			}
 		}
 
-		effect = {  } 
+		effect = { 
+			create_admiral = {
+				tradition = 75
+			}
+		 } 
 	}
 
 	pf_lag_develop_belgica = {
