@@ -1010,7 +1010,16 @@ fifth = {
 			}
 		}
 
-		effect = {  } 
+		effect = {
+			add_ruler_modifier = {
+				name = pf_lag_trinovantes_crown
+			}
+
+			change_ruler_stat = {
+				stat = mil
+				amount = 1
+			}
+		 } 
 	}
 
 	pf_lag_break_clans = {
@@ -1238,7 +1247,7 @@ first_2 = {
 				limit = {
 					NOT = {
 						any_province = {
-							development = 90
+							higher_development_than = 90
 						}
 					}
 				}

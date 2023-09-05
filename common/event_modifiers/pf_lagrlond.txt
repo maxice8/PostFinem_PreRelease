@@ -48,6 +48,7 @@ pf_lag_raiders_storm = {
 
 # pf_lag_encroach
 pf_lag_encroach_on_germans = {
+	shock_damage_received = -0.05
 	warscore_cost_vs_other_religion = -0.05
 }
 
@@ -81,4 +82,10 @@ pf_lag_carthage_north = {
 	province_trade_power_modifier = 0.2
 	local_prosperity_growth = 0.25
 	local_development_cost = -0.1
+}
+
+# pf_lag_glorious
+pf_lag_trinovantes_crown = {
+	diplomatic_reputation = 1
+	unjustified_demands = -0.15
 }
