@@ -868,7 +868,9 @@ fifth = {
 
 		trigger = {
 			heavy_ship_fraction = 0.2
+			num_of_heavy_ship = 5
 			navy_tradition = 30
+			num_of_admirals = 3
 			OR = {
 				naval_reformer = 2
 				has_dip_advisor_3 = yes
