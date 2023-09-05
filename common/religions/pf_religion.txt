@@ -849,7 +849,50 @@ baltic_pagan_group = {
 			local_hostile_attrition = 0.5
 		}
 		
-		# personal_deity = yes
+		uses_anglican_power = yes
+		aspects = {
+			perkunas_aspect
+			bangputys_aspect
+			auslavis_aspect
+			saule_aspect
+			dalia_aspect
+			ausrine_aspect
+			perkunas_lightning_aspect
+			perkunas_thunder_aspect
+			perkunas_order_aspect
+			perkunas_rain_aspect
+			bangputys_winds_aspect
+			bangputys_storms_aspect
+			bangputys_ships_aspect
+			bangputys_merchants_aspect
+			auslavis_healing_aspect
+			auslavis_renewal_aspect
+			auslavis_rejuvenation_aspect
+			auslavis_recovery_aspect
+			saule_fire_aspect
+			saule_luck_aspect
+			saule_life_aspect
+			saule_horses_aspect
+			dalia_fortune_aspect
+			dalia_fate_aspect
+			dalia_prosperity_aspect
+			dalia_wealth_aspect
+			ausrine_rebirth_aspect
+			ausrine_youth_aspect
+			ausrine_beginnings_aspect
+			ausrine_beauty_aspect
+		}
+		aspects_name = ROMUVA_ASPECTS
+
+		on_convert = {
+			change_religion = romuva
+			add_prestige = -100
+
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+		}
 		
 		heretic = { PROMETHEANS }
 

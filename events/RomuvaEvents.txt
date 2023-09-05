@@ -1,0 +1,333 @@
+# Romuva events
+
+namespace = romuva_events
+
+country_event = {
+	id = romuva_events.1
+	title = romuva_events.1.t
+	desc = romuva_events.1.d
+	picture = ""
+
+	trigger = {
+		religion = romuva
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_church_power = -200
+			romuva_clear_aspects_scripted_effect = yes
+		}
+	}
+
+	option = {
+		name = romuva_events.1.a
+		hidden_effect = {	
+			add_church_aspect = perkunas_aspect
+			country_event = { id = romuva_events.2 }
+		}
+	}
+	option = {
+		name = romuva_events.1.b
+		add_church_aspect = bangputys_aspect
+		country_event = { id = romuva_events.4 }
+	}
+	option = {
+		name = romuva_events.1.c
+		add_church_aspect = auslavis_aspect
+		country_event = { id = romuva_events.6 }
+
+	}
+	option = {
+		name = romuva_events.1.e
+		add_church_aspect = saule_aspect
+		country_event = { id = romuva_events.8 }
+	}
+	option = {
+		name = romuva_events.1.f
+		add_church_aspect = dalia_aspect
+		country_event = { id = romuva_events.10 }
+	}
+	option = {
+		name = romuva_events.1.g
+		add_church_aspect = ausrine_aspect
+		country_event = { id = romuva_events.12 }
+	}
+}
+
+country_event = {
+	id = romuva_events.2
+	title = romuva_events.2.t
+	desc = romuva_events.2.d
+	picture = ""
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion = romuva
+	}
+
+	option = {
+		name = romuva_events.2.a
+		add_church_aspect = perkunas_lightning_aspect
+		country_event = { id = romuva_events.3 }
+	}
+	option = {
+		name = romuva_events.2.b
+		add_church_aspect = perkunas_thunder_aspect
+		country_event = { id = romuva_events.3 }
+	}
+}
+
+country_event = {
+	id = romuva_events.3
+	title = romuva_events.3.t
+	desc = romuva_events.3.d
+	picture = ""
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion = romuva
+	}
+
+	option = {
+		name = romuva_events.3.a
+		add_church_aspect = perkunas_order_aspect
+	}
+	option = {
+		name = romuva_events.2.b
+		add_church_aspect = perkunas_rain_aspect
+	}
+}
+
+country_event = {
+	id = romuva_events.4
+	title = romuva_events.4.t
+	desc = romuva_events.4.d
+	picture = ""
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion = romuva
+	}
+
+	option = {
+		name = romuva_events.4.a
+		add_church_aspect = bangputys_winds_aspect
+		country_event = { id = romuva_events.5 }
+	}
+	option = {
+		name = romuva_events.4.b
+		add_church_aspect = bangputys_storms_aspect
+		country_event = { id = romuva_events.5 }
+	}
+}
+
+country_event = {
+	id = romuva_events.5
+	title = romuva_events.5.t
+	desc = romuva_events.5.d
+	picture = ""
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion = romuva
+	}
+
+	option = {
+		name = romuva_events.5.a
+		add_church_aspect = bangputys_ships_aspect
+	}
+	option = {
+		name = romuva_events.5.b
+		add_church_aspect = bangputys_merchants_aspect
+	}
+}
+
+country_event = {
+	id = romuva_events.6
+	title = romuva_events.6.t
+	desc = romuva_events.6.d
+	picture = ""
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion = romuva
+	}
+
+	option = {
+		name = romuva_events.6.a
+		add_church_aspect = auslavis_healing_aspect
+		country_event = { id = romuva_events.7 }
+	}
+	option = {
+		name = romuva_events.6.b
+		add_church_aspect = auslavis_renewal_aspect
+		country_event = { id = romuva_events.7 }
+	}
+}
+
+country_event = {
+	id = romuva_events.7
+	title = romuva_events.7.t
+	desc = romuva_events.7.d
+	picture = ""
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion = romuva
+	}
+
+	option = {
+		name = romuva_events.7.a
+		add_church_aspect = auslavis_rejuvenation_aspect
+	}
+	option = {
+		name = romuva_events.7.b
+		add_church_aspect = auslavis_recovery_aspect
+	}
+}
+
+country_event = {
+	id = romuva_events.8
+	title = romuva_events.8.t
+	desc = romuva_events.8.d
+	picture = ""
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion = romuva
+	}
+
+	option = {
+		name = romuva_events.8.a
+		add_church_aspect = saule_fire_aspect
+		country_event = { id = romuva_events.9 }
+	}
+	option = {
+		name = romuva_events.8.b
+		add_church_aspect = saule_luck_aspect
+		country_event = { id = romuva_events.9 }
+	}
+}
+
+country_event = {
+	id = romuva_events.9
+	title = romuva_events.9.t
+	desc = romuva_events.9.d
+	picture = ""
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion = romuva
+	}
+
+	option = {
+		name = romuva_events.9.a
+		add_church_aspect = saule_life_aspect
+	}
+	option = {
+		name = romuva_events.9.b
+		add_church_aspect = saule_horses_aspect
+	}
+}
+
+country_event = {
+	id = romuva_events.10
+	title = romuva_events.10.t
+	desc = romuva_events.10.d
+	picture = ""
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion = romuva
+	}
+
+	option = {
+		name = romuva_events.10.a
+		add_church_aspect = dalia_fortune_aspect
+		country_event = { id = romuva_events.11 }
+	}
+	option = {
+		name = romuva_events.10.b
+		add_church_aspect = dalia_fate_aspect
+		country_event = { id = romuva_events.11 }
+	}
+}
+
+country_event = {
+	id = romuva_events.11
+	title = romuva_events.11.t
+	desc = romuva_events.11.d
+	picture = ""
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion = romuva
+	}
+
+	option = {
+		name = romuva_events.11.a
+		add_church_aspect = dalia_prosperity_aspect
+	}
+	option = {
+		name = romuva_events.11.b
+		add_church_aspect = dalia_wealth_aspect
+	}
+}
+
+country_event = {
+	id = romuva_events.12
+	title = romuva_events.12.t
+	desc = romuva_events.12.d
+	picture = ""
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion = romuva
+	}
+
+	option = {
+		name = romuva_events.12.a
+		add_church_aspect = ausrine_rebirth_aspect
+		country_event = { id = romuva_events.13 }
+	}
+	option = {
+		name = romuva_events.12.b
+		add_church_aspect = ausrine_youth_aspect
+		country_event = { id = romuva_events.13 }
+	}
+}
+
+country_event = {
+	id = romuva_events.13
+	title = romuva_events.13.t
+	desc = romuva_events.13.d
+	picture = ""
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion = romuva
+	}
+
+	option = {
+		name = romuva_events.13.a
+		add_church_aspect = ausrine_beginnings_aspect
+	}
+	option = {
+		name = romuva_events.13.b
+		add_church_aspect = ausrine_beauty_aspect
+	}
+}

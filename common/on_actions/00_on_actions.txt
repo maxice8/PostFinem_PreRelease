@@ -45,6 +45,12 @@ on_startup = {
 			set_country_flag = ayu_monarch_flag
 		}
 	}
+	if = {
+		limit = {
+			religion = romuva
+		}
+		country_event = { id = romuva_events.1 }
+	}
 	#if = {
 	#	limit = {
 	#		OR = {
@@ -823,6 +829,12 @@ on_monarch_death = {
 	if = {
 		limit = { has_government_attribute = no_stability_loss_on_monarch_death }
 		add_stability = 1
+	}
+	if = {
+		limit = {
+			religion = romuva
+		}
+		country_event = { id = romuva_events.1 }
 	}
 	burgundian_inheritance_start_effect = yes
 	ladislaus_postumus_king_died_effect = yes

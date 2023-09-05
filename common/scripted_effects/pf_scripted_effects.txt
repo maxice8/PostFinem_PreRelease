@@ -1,0 +1,182 @@
+romuva_clear_aspects_scripted_effect = {
+	if = {
+		limit = {
+			has_church_aspect = perkunas_aspect
+		}
+		remove_church_aspect = perkunas_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = bangputys_aspect
+		}
+		remove_church_aspect = bangputys_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = auslavis_aspect
+		}
+		remove_church_aspect = auslavis_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = saule_aspect
+		}
+		remove_church_aspect = saule_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = dalia_aspect
+		}
+		remove_church_aspect = dalia_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = ausrine_aspect
+		}
+		remove_church_aspect = ausrine_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = perkunas_lightning_aspect
+		}
+		remove_church_aspect = perkunas_lightning_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = perkunas_thunder_aspect
+		}
+		remove_church_aspect = perkunas_thunder_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = perkunas_order_aspect
+		}
+		remove_church_aspect = perkunas_order_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = perkunas_rain_aspect
+		}
+		remove_church_aspect = perkunas_rain_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = bangputys_winds_aspect
+		}
+		remove_church_aspect = bangputys_winds_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = bangputys_storms_aspect
+		}
+		remove_church_aspect = bangputys_storms_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = bangputys_ships_aspect
+		}
+		remove_church_aspect = bangputys_ships_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = bangputys_merchants_aspect
+		}
+		remove_church_aspect = bangputys_merchants_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = auslavis_healing_aspect
+		}
+		remove_church_aspect = auslavis_healing_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = auslavis_renewal_aspect
+		}
+		remove_church_aspect = bangputys_renewal_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = auslavis_rejuvenation_aspect
+		}
+		remove_church_aspect = bangputys_rejuvenation_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = auslavis_recovery_aspect
+		}
+		remove_church_aspect = bangputys_recovery_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = saule_fire_aspect
+		}
+		remove_church_aspect = saule_fire_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = saule_luck_aspect
+		}
+		remove_church_aspect = saule_luck_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = saule_life_aspect
+		}
+		remove_church_aspect = saule_life_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = saule_horses_aspect
+		}
+		remove_church_aspect = saule_horses_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = dalia_fortune_aspect
+		}
+		remove_church_aspect = dalia_fortune_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = dalia_fate_aspect
+		}
+		remove_church_aspect = dalia_fate_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = dalia_prosperity_aspect
+		}
+		remove_church_aspect = dalia_prosperity_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = dalia_wealth_aspect
+		}
+		remove_church_aspect = dalia_wealth_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = ausrine_rebirth_aspect
+		}
+		remove_church_aspect = dalia_rebirth_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = ausrine_youth_aspect
+		}
+		remove_church_aspect = dalia_youth_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = ausrine_beginnings_aspect
+		}
+		remove_church_aspect = dalia_beginnings_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = ausrine_beauty_aspect
+		}
+		remove_church_aspect = dalia_beauty_aspect
+	}
+}
