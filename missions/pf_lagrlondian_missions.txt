@@ -432,7 +432,6 @@ second = {
 						OR = {
 							area = brittany_area
 							area = normandy_area
-							area = loire_area
 						}
 						OR = {
 							has_dock_building_trigger = yes
@@ -525,7 +524,7 @@ third = {
 		}
 
 		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			num_of_owned_provinces_with = {
 				value = 8
 				development = 12
 				num_of_times_improved_by_owner = 3
@@ -539,11 +538,42 @@ third = {
 		}
 
 		effect = {
+			custom_tooltip = PF_LAG_DEVELOP_BELGICA_REWARD
+			tooltip = {
+				add_province_modifier = {
+					name = pf_lag_belgica_proper
+					duration = -1
+				}
+			}
+
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						development = 12
+						num_of_times_improved_by_owner = 3
+						OR = {
+							area = north_brabant_area
+							area = brabant_area
+							area = wallonia_area
+							area = flanders_area
+						}
+					}
+					add_province_modifier = {
+						name = pf_lag_belgica_proper
+						duration = -1
+					}
+				}
+			}
+
 			add_accepted_culture_or_dip_power = {
 				culture = nervian
 			}
 
-			# TODO: cool modifier related to Belgium
+			custom_tooltip = empty_line_tt
+
+			90 = {
+				center_of_trade = 1
+			}
 		} 
 	}
 
@@ -762,7 +792,7 @@ fourth = {
 		 } 
 	}
 
-	pf_lag_silk = {
+	pf_lag_wool_industry = {
 		icon = mission_son_own_develop_clothes_and_salt
 		position = 6
 		required_missions = { pf_lag_london } 
@@ -823,9 +853,6 @@ fourth = {
 					add_base_production = 1
 				}
 			}
-
-			
-			# Make all provinces that meet the requirement change into cloth
 		} 
 	}
 }
@@ -843,10 +870,110 @@ fifth = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			heavy_ship_fraction = 0.3
-		} 
+			heavy_ship_fraction = 0.2
+			navy_tradition = 30
+			OR = {
+				naval_reformer = 2
+				has_dip_advisor_3 = yes
+			}
+		}
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = pf_lag_modern_navy
+				duration = 10950
+			}
+
+			if = {
+				limit = {
+					exists = TRN
+				}
+				custom_tooltip = YES_PF_TRN_PU
+			}
+			else = {
+				custom_tooltip = NO_PF_TRN_PU
+			}
+			tooltip = {
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					target = TRN
+					months = 240
+				}
+			}
+
+			custom_tooltip = empty_line_tt
+
+			if = {
+				limit = {
+					NOT = {
+						exists = TRN
+					}
+				}
+				custom_tooltip = YES_PF_TRN_CLAIMS
+			}
+			else = {
+				custom_tooltip = NO_PF_TRN_CLAIMS
+			}
+			tooltip = {
+				home_counties_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				east_anglia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				east_midlands_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+
+			hidden_effect = {
+				if = {
+					limit = {
+						exists = TRN
+					}
+					add_casus_belli = {
+						type = cb_restore_personal_union
+						target = TRN
+						months = 240
+					}
+				}
+				else = {
+					home_counties_area = {
+						limit = {
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+					east_anglia_area = {
+						limit = {
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+					east_midlands_area = {
+						limit = {
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		} 
 	}
 
 	pf_lag_glorious = {
@@ -978,6 +1105,13 @@ fifth = {
 				}
 				add_permanent_claim = ROOT
 			}
+			yorkshire_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		} 
 	}
 
@@ -985,7 +1119,16 @@ fifth = {
 		icon = mission_rb_rule_britannia_irish_version
 		position = 6
 		required_missions = { pf_lag_break_clans } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				area = wessex_area
+				area = wales_area
+				area = west_midlands_area
+				area = scottish_marches_area
+				area = yorkshire_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
 		trigger = {
 			wessex_area = {
@@ -1001,6 +1144,10 @@ fifth = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			scottish_marches_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			yorkshire_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

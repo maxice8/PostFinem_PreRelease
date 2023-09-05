@@ -19,6 +19,7 @@ pf_lag_second_heathen_army = {
 # pf_lag_secure
 pf_lag_conquest_belgica = {
 	core_creation = -0.05
+	promote_culture_cost = -0.1
 }
 
 # pf_lag_break
@@ -57,7 +58,20 @@ pf_lag_thames = {
 	province_trade_power_modifier = 0.15
 }
 
-# pf_lag_silk
+# pf_lag_wool_industry
 pf_lag_cloth_industry = {
 	local_production_efficiency = 0.2
+}
+
+# pf_lag_modernise
+pf_lag_modern_navy = {
+	naval_morale = 0.05
+	naval_forcelimit_modifier = 0.15
+}
+
+# pf_lag_develop_belgica
+pf_lag_belgica_proper = {
+	local_institution_spread = 0.1
+	trade_goods_size_modifier = 0.025
+	build_cost = -0.05
 }
