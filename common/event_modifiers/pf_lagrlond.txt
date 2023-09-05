@@ -1,0 +1,40 @@
+# pf_lag_permanent
+pf_lag_permanent_army = {
+	drill_gain_modifier = 0.25
+	land_morale = 0.025
+}
+
+# pf_lag_gunpower
+pf_lag_artillery = {
+	artillery_cost = -0.1
+	artillery_levels_available_vs_fort = 1
+}
+
+# pf_lag_raise
+pf_lag_second_heathen_army = {
+	morale_damage_received = -0.05
+	manpower_recovery_speed = 0.1
+}
+
+# pf_lag_secure
+pf_lag_conquest_belgica = {
+	core_creation = -0.05
+}
+
+# pf_lag_break
+pf_lag_gaul_broken = {
+	prestige_decay = -0.01
+	ae_impact = -0.15
+}
+
+# pf_lag_push
+pf_lag_push_consolidate = {
+	local_core_creation = -0.1
+	harsh_treatment_cost = -0.15
+}
+
+# pf_lag_brest
+pf_lag_brest_dockyards = {
+	local_ship_cost = -0.15
+	local_sailors_modifier = 0.1
+}

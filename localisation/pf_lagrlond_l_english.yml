@@ -4,6 +4,8 @@
 
  pf_lag_gunpowder_title:0 "Introduce Gunpowder"
  pf_lag_gunpowder_desc:0 ""
+ YES_PF_LAG_ARTILLERY_DURATION_DOUBLED:0 "£yes£ If we have completed §YOffensive§! or §YFirepower§! ideas, the duration of the modifier will be §Gdoubled§!."
+ NO_PF_LAG_ARTILLERY_DURATION_DOUBLED:0 "£no£ If we have completed §YOffensive§! or §YFirepower§! ideas, the duration of the modifier will be §Gdoubled§!."
 
  pf_lag_tier_title:0 "Military Specialization"
  pf_lag_tier_desc:0 ""
@@ -19,12 +21,16 @@
 
  pf_lag_break_title:0 "Break The Gauls"
  pf_lag_break_desc:0 ""
+ YES_PF_LAG_GAUL_BROKEN_PERMANENT:0 "£yes£ If we complete this mission while §Y[GAU.GetName]§! does not exist, the modifier will be §Gpermanent§!."
+ NO_PF_LAG_GAUL_BROKEN_PERMANENT:0 "£no£ If we complete this mission while §Y[GAU.GetName]§! does not exist, the modifier will be §Gpermanent§!."
 
  pf_lag_push_title:0 "Push Towards Britanny"
  pf_lag_push_desc:0 ""
+ PF_LAG_PUSH_MODIFIER_AREAS:0 "All provinces owned by us in the §YBrittany§!, §YNormandy§!, §YLoire Valley§!, and §YOrléanais§! areas will receive:"
 
  pf_lag_brest_title:0 "Dockyards of Brestarborg"
  pf_lag_brest_desc:0 ""
+ PF_LAG_BREST_MEET_REQUIREMENT:0 "All provinces in the §YBrittany§!, §YNormandy§!, and §YLoire Valley§! that meet the mission requirements will receive:"
 
  pf_lag_raid_title:0 "Raid The North Sea"
  pf_lag_raid_desc:0 ""

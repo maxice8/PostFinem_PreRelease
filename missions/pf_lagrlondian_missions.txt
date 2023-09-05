@@ -19,7 +19,12 @@ first = {
 			land_forcelimit = 25
 		}
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = pf_lag_permanent_army
+				duration = 7300
+			}
+		} 
 	}
 
 	pf_lag_gunpowder = {
@@ -40,7 +45,41 @@ first = {
 			}
 		}
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = pf_lag_artillery
+				duration = 3650
+			}
+
+			if = {
+				limit = {
+					OR = {
+						full_idea_group = firepower_ideas
+						full_idea_group = offensive_ideas
+					}
+				}
+				custom_tooltip = YES_PF_LAG_ARTILLERY_DURATION_DOUBLED
+			}
+			else = {
+				custom_tooltip = NO_PF_LAG_ARTILLERY_DURATION_DOUBLED
+			}
+
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							full_idea_group = firepower_ideas
+							full_idea_group = offensive_ideas
+						}
+					}
+					remove_country_modifier = pf_lag_artillery
+					add_country_modifier = {
+						name = pf_lag_artillery
+						duration = 7300
+					}
+				}
+			}
+		} 
 	}
 
 	pf_lag_tier = {
@@ -110,6 +149,10 @@ second = {
 		}
 
 		effect = {
+			add_country_modifier = {
+				name = pf_lag_second_heathen_army
+				duration = 9125
+			}
 			north_brabant_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT } 
@@ -175,6 +218,10 @@ second = {
 		}
 
 		effect = {
+			add_country_modifier = {
+				name = pf_lag_conquest_belgica
+				duration = 5475
+			}
 			picardy_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT } 
@@ -227,6 +274,31 @@ second = {
 		}
 
 		effect = {
+			add_country_modifier = {
+				name = pf_lag_gaul_broken
+				duration = 3650
+			}
+			
+			if = {
+				limit = {
+					NOT = { exists = GAU }
+				}
+				custom_tooltip = YES_PF_LAG_GAUL_BROKEN_PERMANENT
+			}
+			else = { custom_tooltip = NO_PF_LAG_GAUL_BROKEN_PERMANENT }
+
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { exists = GAU }
+					}
+					remove_country_modifier = pf_lag_gaul_broken
+					add_country_modifier = {
+						name = pf_lag_gaul_broken
+						duration = -1
+					}
+				}
+			}
 			normandy_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT } 
@@ -291,7 +363,32 @@ second = {
 			}
 		}
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = PF_LAG_PUSH_MODIFIER_AREAS
+			tooltip = {
+				add_province_modifier = {
+					name = pf_lag_push_consolidate
+					duration = 3650
+				}
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						owned_by = ROOT
+						OR = {
+							area = brittany_area
+							area = loire_area
+							area = normandy_area
+							area = orleans_area
+						}
+					}
+					add_province_modifier = {
+						name = pf_lag_push_consolidate
+						duration = 3650
+					}
+				}
+			}
+		} 
 	}
 
 	pf_lag_brest = {
@@ -319,7 +416,36 @@ second = {
 			}
 		}
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = PF_LAG_BREST_MEET_REQUIREMENT
+			tooltip = {
+				add_province_modifier = {
+					name = pf_lag_brest_dockyards
+					duration = -1
+				}
+			}
+
+			hidden_effect = {
+				every_province = {
+					limit = {
+						owned_by = ROOT
+						OR = {
+							area = brittany_area
+							area = normandy_area
+							area = loire_area
+						}
+						OR = {
+							has_dock_building_trigger = yes
+							has_shipyard_building_trigger = yes
+						}
+					}
+					add_province_modifier = {
+						name = pf_lag_brest_dockyards
+						duration = -1
+					}
+				}
+			}
+		} 
 	}
 }
 third = {
