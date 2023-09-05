@@ -234,25 +234,29 @@
  pf_lag_far_east_desc:0 ""
 
  # Modifiers
- pf_lag_permanent_army:0 "REPLACE_ME"
+ # Reference to the Black Army of Hungary, created
+ # by Matthias Corvinus
+ pf_lag_permanent_army:0 "The Grey Army of Lagrlond"
  desc_pf_lag_permanent_army:0 "REPLACE_ME"
- pf_lag_artillery:0 "REPLACE_ME"
+ # Reference to Menno van Coehoorn, the namesake of the
+ # Coehorn Mortar present in the game.
+ pf_lag_artillery:0 "Guns of Menni van Kohern"
  desc_pf_lag_artillery:0 "REPLACE_ME"
  pf_lag_second_heathen_army:0 "The Host of Eirik Havendalsson"
  desc_pf_lag_second_heathen_army:0 "REPLACE_ME"
- pf_lag_conquest_belgica:0 "REPLACE_ME"
+ pf_lag_conquest_belgica:0 "Conquest of Belgica"
  desc_pf_lag_conquest_belgica:0 "REPLACE_ME"
  pf_lag_gaul_broken:0 "Broken the Gauls"
  desc_pf_lag_gaul_broken:0 "REPLACE_ME"
- pf_lag_push_consolidate:0 "REPLACE_ME"
+ pf_lag_push_consolidate:0 "Administrative Consolidation"
  desc_pf_lag_push_consolidate:0 "REPLACE_ME"
  pf_lag_brest_dockyards:0 "Dockyards of Brestarborg"
  desc_pf_lag_brest_dockyards:0 "REPLACE_ME"
  pf_lag_raiders_storm:0 "Raiders on the Storm"
  desc_pf_lag_raiders_storm:0 "REPLACE_ME"
- pf_lag_encroach_on_germans:0 "REPLACE_ME"
+ pf_lag_encroach_on_germans:0 "Move down the Rhine"
  desc_pf_lag_encroach_on_germans:0 "REPLACE_ME"
- pf_lag_thames:0 "REPLACE_ME"
+ pf_lag_thames:0 "The Mouth of the Tálmr"
  desc_pf_lag_thames:0 "REPLACE_ME"
  # Reference to Harleem, an important Dutch Weaver City
  # Reference to Norwich, an important English Weaver City
@@ -300,6 +304,8 @@
  desc_pf_lag_danelaw:0 "REPLACE_ME"
  pf_lag_fortress_albion:0 "Fortress Albion"
  desc_pf_lag_fortress_albion:0 "REPLACE_ME"
+ pf_lag_consolidate_rheinland:0 "Trade from the Rhine"
+ desc_pf_lag_consolidate_rheinland:0 "REPLACE_ME"
 
  # events
  PF_LAG_SPAWN_BRITON_NOBLE_REBELS:0 "A random province owned by you or a non-sovereign subject in the §YBritish Isles§!, with §YBriton§! culture, will spawn §YNoble Rebels§!"
