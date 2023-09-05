@@ -59,25 +59,17 @@ first = {
 					}
 				}
 				custom_tooltip = YES_PF_LAG_ARTILLERY_DURATION_DOUBLED
-			}
-			else = {
-				custom_tooltip = NO_PF_LAG_ARTILLERY_DURATION_DOUBLED
-			}
 
-			hidden_effect = {
-				if = {
-					limit = {
-						OR = {
-							full_idea_group = firepower_ideas
-							full_idea_group = offensive_ideas
-						}
-					}
+				hidden_effect = {
 					remove_country_modifier = pf_lag_artillery
 					add_country_modifier = {
 						name = pf_lag_artillery
 						duration = 7300
 					}
 				}
+			}
+			else = {
+				custom_tooltip = NO_PF_LAG_ARTILLERY_DURATION_DOUBLED
 			}
 		} 
 	}
@@ -284,14 +276,8 @@ second = {
 					NOT = { exists = GAU }
 				}
 				custom_tooltip = YES_PF_LAG_GAUL_BROKEN_PERMANENT
-			}
-			else = { custom_tooltip = NO_PF_LAG_GAUL_BROKEN_PERMANENT }
 
-			hidden_effect = {
-				if = {
-					limit = {
-						NOT = { exists = GAU }
-					}
+				hidden_effect = {
 					remove_country_modifier = pf_lag_gaul_broken
 					add_country_modifier = {
 						name = pf_lag_gaul_broken
@@ -299,6 +285,8 @@ second = {
 					}
 				}
 			}
+			else = { custom_tooltip = NO_PF_LAG_GAUL_BROKEN_PERMANENT }
+
 			normandy_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT } 
@@ -426,9 +414,8 @@ second = {
 			}
 
 			hidden_effect = {
-				every_province = {
+				every_owned_province = {
 					limit = {
-						owned_by = ROOT
 						OR = {
 							area = brittany_area
 							area = normandy_area
@@ -1211,7 +1198,15 @@ first_2 = {
 			}
 		}
 
-		effect = {  } 
+		effect = { 
+			add_years_of_trade_income = {
+				years = 1
+			}
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 10
+			}
+		} 
 	}
 
 	pf_lag_port_desire = {
@@ -1227,7 +1222,34 @@ first_2 = {
 			90 = { province_has_center_of_trade_of_level = 2 } 
 		}
 
-		effect = {  } 
+		effect = {
+			90 = {
+				add_province_modifier = {
+					name = pf_lag_carthage_north
+					duration = -1
+				}
+			}
+
+			if = {
+				limit = {
+					NOT = {
+						any_province = {
+							development = 90
+						}
+					}
+				}
+				custom_tooltip = YES_PF_LAG_PORT_DEVELOPED
+				hidden_effect = {
+					add_splendor = 100
+				}
+			}
+			else = {
+				custom_tooltip = NO_PF_LAG_PORT_DEVELOPED
+			}
+			tooltip = {
+				add_splendor = 100
+			}
+		} 
 	}
 
 	pf_lag_embrace_global = {

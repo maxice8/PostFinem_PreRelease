@@ -75,3 +75,10 @@ pf_lag_belgica_proper = {
 	trade_goods_size_modifier = 0.025
 	build_cost = -0.05
 }
+
+# pf_lag_port_desire
+pf_lag_carthage_north = {
+	province_trade_power_modifier = 0.2
+	local_prosperity_growth = 0.25
+	local_development_cost = -0.1
+}
