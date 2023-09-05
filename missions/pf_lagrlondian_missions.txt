@@ -1034,6 +1034,13 @@ fifth = {
 		} 
 
 		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = PF_LAG_COMPLETED_CLAN_REVOLTS
+				OR = {
+					has_country_flag = pf_lag_domesday_book
+					has_country_flag = pf_lag_magna_carta
+				}
+			}
 			if = {
 				limit = {
 					exists = TRN
@@ -1076,7 +1083,25 @@ fifth = {
 			}
 		} 
 
-		effect = { 
+		effect = {
+			if = {
+				limit = {
+					exists = TRN
+					TRN = {
+						is_subject_of = ROOT
+						NOT = { liberty_desire = 1 }
+					}
+				}
+				custom_tooltip = YES_PF_LAG_TRINOVANTES_ANNEX
+
+				hidden_effect = {
+					inherit = TRN
+				}
+			}
+			else = {
+				custom_tooltip = NO_PF_LAG_TRINOVANTES_ANNEX
+			}
+
 			wessex_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -1536,6 +1561,7 @@ fourth_2 = {
 		} 
 
 		effect = {
+			add_stability_or_adm_power = yes
 			add_accepted_culture_or_dip_power = { culture = old_frisian }
 
 			# Some modifier about Frisians being nicely integrated.

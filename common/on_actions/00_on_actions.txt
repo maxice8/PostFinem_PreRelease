@@ -670,6 +670,16 @@ on_siege_lost_country = {
 		}
 		FROM = { remove_province_modifier = fin_viipurin_linna_modifier } 
 	}
+	# pf
+	# If we are Lagrlond, check if we failed the rebellion
+	if = {
+		limit = {
+			tag = LAG
+		}
+		country_event = {
+			id = pf_lag_trinovantian_rebels.6
+		}
+	}
 }
 
 # province

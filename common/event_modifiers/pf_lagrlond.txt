@@ -89,3 +89,18 @@ pf_lag_trinovantes_crown = {
 	diplomatic_reputation = 1
 	unjustified_demands = -0.15
 }
+
+# pf_lag_break_clans
+pf_lag_domesday_book = {
+	global_tax_modifier = 0.1
+	land_forcelimit_modifier = 0.05
+	manpower_recovery_speed = 0.1
+}
+
+# pf_lag_break_clans
+pf_lag_magna_carta = {
+	nobles_influence_modifier = 0.1
+	church_influence_modifier = -0.1
+	tolerance_heathen = 2
+	tolerance_of_heathens_capacity = 1
+}
