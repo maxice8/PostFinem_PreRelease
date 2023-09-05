@@ -88,7 +88,13 @@ first = {
 			else = { has_reform_on_level = 5 } 
 		}
 
-		effect = {  } 
+		effect = {
+			add_mil_power = 50
+			add_country_modifier = {
+				name = pf_lag_general_staff
+				duration = 18250
+			}
+		} 
 	}
 
 	pf_lag_doctrine = {
