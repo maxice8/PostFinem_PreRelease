@@ -175,3 +175,11 @@ pf_lag_danelaw = {
 	years_of_nationalism = -5
 	legitimacy = 1
 }
+
+# pf_lag_fortify
+pf_lag_fortress_albion = {
+	local_defensiveness = 0.1
+	local_garrison_size = 0.20
+	hostile_attrition = 1
+	max_attrition = 1
+}

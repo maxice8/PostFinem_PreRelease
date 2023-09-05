@@ -1430,7 +1430,31 @@ fifth = {
 			}
 		}
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = PF_LAG_FORTRESS_ALBION
+			tooltip = {
+				add_province_modifier = {
+					name = pf_lag_fortress_albion
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = british_isles_region
+						OR = {
+							has_fort_building_trigger = yes
+							has_coast_defense_building_trigger = yes
+						}
+					}
+					add_base_manpower = 2
+					add_province_modifier = {
+						name = pf_lag_fortress_albion
+						duration = -1
+					}
+				}
+			}
+		}
 	}
 }
 first_2 = {
