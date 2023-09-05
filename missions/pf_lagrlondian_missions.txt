@@ -1303,7 +1303,7 @@ first_2 = {
 
 	pf_lag_warehouse = {
 		icon = mission_unknown_mission
-		position = 14
+		position = 15
 		required_missions = { pf_lag_embrace_global } 
 		provinces_to_highlight = {  } 
 
@@ -1463,6 +1463,24 @@ second_3_religious = {
 		icon = mission_catholic_heddal_church
 		position = 13
 		required_missions = { pf_lag_heretics } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+second_3 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LAG } 
+
+	pf_lag_polaris_observatory = {
+		icon = mission_unknown_mission
+		position = 14
+		required_missions = { pf_lag_universities } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -1630,9 +1648,18 @@ fourth_2 = {
 		required_missions = { pf_lag_centralize } 
 		provinces_to_highlight = {  } 
 
-		trigger = {
-			university = 5
-		}
+		trigger = { university = 5 } 
+
+		effect = {  } 
+	}
+
+	pf_lag_medical_school = {
+		icon = mission_book_of_royal_degrees
+		position = 14
+		required_missions = { pf_lag_universities } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
 
 		effect = {  } 
 	}
@@ -1851,7 +1878,7 @@ first_3 = {
 		effect = {  } 
 	}
 }
-second_3 = {
+second_4 = {
 	slot = 2
 	generic = no
 	ai = yes
