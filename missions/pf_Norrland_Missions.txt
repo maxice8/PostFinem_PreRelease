@@ -17,7 +17,7 @@ pf_nld_1 = {
 	}
 
 	pf_nld_subjugate_karelia = {
-		icon = mission_expand_into_the_forest
+		icon = mission_early_russian_army
 		position = 3
 		required_missions = { pf_nld_assimilate_the_finns } 
 		provinces_to_highlight = {  } 
@@ -28,7 +28,7 @@ pf_nld_1 = {
 	}
 
 	pf_a_tolerant_society = {
-		icon = mission_expand_into_the_forest
+		icon = mission_diplomatic_relation
 		position = 5
 		required_missions = { pf_nld_integrate_the_romuvans } 
 		provinces_to_highlight = {  } 
@@ -60,7 +60,21 @@ pf_nld_2 = {
 		position = 4
 		required_missions = {
 			pf_nld_subjugate_karelia
-			pf_nld_seize_gotland
+			pf_nld_seize_visby
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_civilise_the_hordes = {
+		icon = mission_marwari_horses
+		position = 6
+		required_missions = {
+			pf_nld_northrlandsrikja
+			pf_a_tolerant_society
 		}
 		provinces_to_highlight = {  } 
 
@@ -86,7 +100,7 @@ pf_nld_3 = {
 		effect = {  } 
 	}
 
-	pf_nld_seize_gotland = {
+	pf_nld_seize_visby = {
 		icon = mission_develop_visby
 		position = 3
 		required_missions = { pf_nld_a_baltic_fleet } 
@@ -97,24 +111,13 @@ pf_nld_3 = {
 		effect = {  } 
 	}
 
-	pf_nld_eitt_baltsjoriki = {
+	pf_nld_northrlandsrikja = {
 		icon = mission_baltic_empire
 		position = 5
 		required_missions = {
 			pf_nld_integrate_the_romuvans
 			pf_nld_unite_the_peninsula
 		}
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	pf_nld_civilise_the_hordes = {
-		icon = mission_marwari_horses
-		position = 6
-		required_missions = { pf_nld_eitt_baltsjoriki } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -156,6 +159,16 @@ pf_nld_4 = {
 
 		effect = {  } 
 	}
+
+	pf_nld_modern_longships = {
+		icon = mission_longships
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 pf_nld_5 = {
 	slot = 5
@@ -185,10 +198,369 @@ pf_nld_5 = {
 		effect = {  } 
 	}
 
-	pf_nld_the_second_brother = {
+	pf_nld_the_other_brother = {
 		icon = mission_rb_conquer_the_highlands
-		position = 5
-		required_missions = { pf_nld_strike_into_norway } 
+		position = 7
+		required_missions = {
+			pf_nld_strike_into_norway
+			pf_nld_modern_longships
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nld_eco_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NLD } 
+
+	pf_nld_swedish_metallurgy = {
+		icon = mission_iron_and_copper
+		position = 7
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_falu_koppargruva = {
+		icon = mission_dalaskogen
+		position = 9
+		required_missions = { pf_nld_swedish_metallurgy } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_nordic_renaissance = {
+		icon = mission_court_education
+		position = 10
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_northern_universities = {
+		icon = misison_uppsala_university
+		position = 12
+		required_missions = { pf_nld_nordic_renaissance } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nld_eco_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NLD } 
+
+	pf_nld_control_inland_trade_routes = {
+		icon = mission_expand_into_the_forest
+		position = 8
+		required_missions = {
+			pf_nld_swedish_metallurgy
+			pf_nld_utilize_sami_herding
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_restrict_the_nobles = {
+		icon = rein_in_the_nobles
+		position = 10
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_develop_lulea = {
+		icon = mission_seize_north_sea_trade
+		position = 11
+		required_missions = {
+			pf_nld_restrict_the_nobles
+			pf_nld_nordic_renaissance
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nld_eco_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NLD } 
+
+	pf_nld_utilize_sami_herding = {
+		icon = mission_control_fur_trade
+		position = 7
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_appease_the_burghers = {
+		icon = hand-picked_bureaucrats
+		position = 9
+		required_missions = {
+			pf_nld_seafaring_traders
+			pf_nld_control_inland_trade_routes
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_increase_production = {
+		icon = mission_industrial_forging
+		position = 11
+		required_missions = { pf_nld_appease_the_burghers } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_industrialise_the_cities = {
+		icon = industrialized_rhineland
+		position = 12
+		required_missions = {
+			pf_nld_develop_lulea
+			pf_nld_increase_production
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nld_eco_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NLD } 
+
+	pf_nld_seafaring_traders = {
+		icon = mission_establish_high_seas_navy
+		position = 8
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_control_the_fur_trade = {
+		icon = mission_sio_european_trade
+		position = 10
+		required_missions = { pf_nld_seafaring_traders } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nld_eco_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NLD } 
+
+	pf_nld_temples_of_the_north = {
+		icon = mission_protestant_heddal_church
+		position = 10
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_support_the_gothi = {
+		icon = mission_swedish_peasantry
+		position = 11
+		required_missions = { pf_nld_temples_of_the_north } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_spread_the_true_faith = {
+		icon = mission_hands_praying
+		position = 12
+		required_missions = { pf_nld_support_the_gothi } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nld_colonisation_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NLD } 
+
+	pf_nld_northern_colonies = {
+		icon = mission_colonize_alaska
+		position = 16
+		required_missions = { pf_nld_a_bit_of_truth_in_legends } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nld_colonisation_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NLD } 
+
+	pf_nld_reexplore_the_sagas = {
+		icon = mission_rb_settle_the_north
+		position = 14
+		required_missions = { pf_nld_set_sail } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_a_bit_of_truth_in_legends = {
+		icon = mission_rb_colonise_canada
+		position = 15
+		required_missions = { pf_nld_reexplore_the_sagas } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_spread_westwards = {
+		icon = mission_colonize_louisiana
+		position = 17
+		required_missions = {
+			pf_nld_northern_colonies
+			pf_nld_new_sweden
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nld_colonisation_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NLD } 
+
+	pf_nld_set_sail = {
+		icon = mission_explore_the_world
+		position = 13
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_new_sweden = {
+		icon = mission_rb_the_thirteen_colonies
+		position = 16
+		required_missions = { pf_nld_a_bit_of_truth_in_legends } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nld_colonisation_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NLD } 
+
+	pf_nld_extend_our_reach = {
+		icon = mission_west_african_ports
+		position = 14
+		required_missions = { pf_nld_set_sail } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_nld_tropical_isles = {
+		icon = mission_colonize_the_caribbean
+		position = 17
+		required_missions = {
+			pf_nld_extend_our_reach
+			pf_nld_new_sweden
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_nld_colonisation_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NLD } 
+
+	pf_nld_from_north_to_south = {
+		icon = colonize_the_cape
+		position = 15
+		required_missions = { pf_nld_extend_our_reach } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
