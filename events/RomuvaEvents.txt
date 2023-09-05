@@ -23,10 +23,8 @@ country_event = {
 
 	option = {
 		name = romuva_events.1.a
-		hidden_effect = {	
-			add_church_aspect = perkunas_aspect
-			country_event = { id = romuva_events.2 }
-		}
+		add_church_aspect = perkunas_aspect
+		country_event = { id = romuva_events.2 }
 	}
 	option = {
 		name = romuva_events.1.b
