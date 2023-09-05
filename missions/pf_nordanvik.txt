@@ -247,11 +247,65 @@ pf_nrd_4 = {
 	pf_nrd_brothers = {
 		icon = mission_conquer_norway
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = NOR
+			AND = {
+				NOT = {
+					NOR = {
+						has_opinion = {
+							who = ROOT 
+							value = 150
+						}
+					}
+				}
+				NOT = {
+					NOR = {
+						owes_favors = {
+							who = ROOT 
+							value = 10
+						}
+					}
+				}
+			}
 
-		trigger = {  } 
+		} 
 
-		effect = {  } 
+		trigger = {  
+			NOR = {
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+			NOR = {
+				owes_favors = {
+					who = ROOT
+					value = 10
+				}
+			}
+		} 
+
+		effect = { 
+			if = {
+				limit = {
+					capital_scope = { has_port = yes }
+				}
+				capital_scope = {
+					galleass_galley = ROOT galleass_galley = ROOT galleass_galley = ROOT
+				}
+				custom_tooltip = " "
+			}
+			NOR = {
+				add_trust = {
+					who = ROOT
+					value = 10
+				}
+			}
+			custom_tooltip = " "
+			scottish_marches_area = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_nrd_sail_to_distant_shores = {
