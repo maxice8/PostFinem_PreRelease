@@ -91,8 +91,8 @@
 
  pf_lag_push_celts_title:0 "Push The Celts Out"
  pf_lag_push_celts_desc:0 ""
- YES_PF_LAG_DANELAW_PERMANENT:0 "£yes£ If all the areas required to complete the mission, and the areas required to complete the mission §YGlorious Revolution§! are owned by us, are a §Ycore§!, are in a §Ystate§!, and follow the §Y[Root.Religion.GetName]§! religion, the modifier will be §Gpermanent§!."
- NO_PF_LAG_DANELAW_PERMANENT:0 "£no£ If all the areas required to complete the mission, and the areas required to complete the mission §YGlorious Revolution§! are owned by us, are a §Ycore§!, are in a §Ystate§!, and follow the §Y[Root.Religion.GetName]§! religion, the modifier will be §Gpermanent§!."
+ YES_PF_LAG_DANELAW_PERMANENT:0 "£yes£ If @CEL §Y[CEL.GetName]§! does not exist, the modifier length will be §Gtripled§!."
+ NO_PF_LAG_DANELAW_PERMANENT:0 "£no£ If @CEL §Y[CEL.GetName]§! does not exist, the modifier length will be §Gtripled§!."
 
  pf_lag_fortify_title:0 "Fortify Albion"
  pf_lag_fortify_desc:0 ""

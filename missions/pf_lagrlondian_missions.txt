@@ -1333,69 +1333,14 @@ fifth = {
 
 			if = {
 				limit = {
-					wessex_area = {
-						type = all
-						owned_by = ROOT
-						is_core = ROOT
-						religion = ROOT
-						is_state = yes
-					}
-					home_counties_area = {
-						type = all
-						owned_by = ROOT
-						is_core = ROOT
-						religion = ROOT
-						is_state = yes
-					}
-					east_anglia_area = {
-						type = all
-						owned_by = ROOT
-						is_core = ROOT
-						religion = ROOT
-						is_state = yes
-					}
-					east_midlands_area = {
-						type = all
-						owned_by = ROOT
-						is_core = ROOT
-						religion = ROOT
-						is_state = yes
-					}
-					wales_area = {
-						type = all
-						owned_by = ROOT
-						is_core = ROOT
-						religion = ROOT
-						is_state = yes
-					}
-					west_midlands_area = {
-						type = all
-						owned_by = ROOT
-						is_core = ROOT
-						religion = ROOT
-						is_state = yes
-					}
-					scottish_marches_area = {
-						type = all
-						owned_by = ROOT
-						is_core = ROOT
-						religion = ROOT
-						is_state = yes
-					}
-					yorkshire_area = {
-						type = all
-						owned_by = ROOT
-						is_core = ROOT
-						religion = ROOT
-						is_state = yes
-					}
+					NOT = { exists = CEL }
 				}
 				custom_tooltip = YES_PF_LAG_DANELAW_PERMANENT
 				hidden_effect = {
 					remove_country_modifier = pf_lag_danelaw
 					add_country_modifier = {
 						name = pf_lag_danelaw
-						duration = -1
+						duration = 21900
 					}
 				}
 			}
