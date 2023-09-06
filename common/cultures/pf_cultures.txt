@@ -10,7 +10,10 @@
 
 scandinavian = { #Nordic
 	graphical_culture = westerngfx
-
+	country = {
+		has_galleass = yes
+		allowed_galleass_fraction = 0.2
+	}
 	#country = { land_forcelimit_modifier = 0.25}
 	#province = { local_build_cost = -0.10 }
 
@@ -562,10 +565,16 @@ caucasian_armenian = {
 }
 
 anatolian_greek = {
+	country = {
+		has_streltsy = yes
+		allowed_streltsy_fraction = 0.25
+	}
 	graphical_culture = westerngfx
 	delphian = { #Central
 		primary = KAR
 
+	}
+	anatolian = {
 	}
 	lycian = { #SW
 
@@ -578,6 +587,11 @@ anatolian_greek = {
 		primary = EDS
 
 	}	
+	
+	pontic = {		
+		primary = FEO
+		
+	}
 	dynasty_names = {
 		Kantakouzenos Doukas Komnenos Palaiologos Laskaris Angelos Phokas
 		"Kameniatis" "Chameas" "Demetrianos" "Laloudios" "Stamopatas" "Peloponnesites" "Klados" "Avastaktos" 
@@ -701,6 +715,10 @@ anatolian_greek = {
 }
 
 levantine_greek = {
+	country = {
+		has_streltsy = yes
+		allowed_streltsy_fraction = 0.25
+	}
 	graphical_culture = westerngfx
 	selucian = { #Central
 		primary = SLC
@@ -1113,6 +1131,7 @@ old_germanic = {
 
 west_mongol = {
 	graphical_culture = westerngfx
+	# country = { has_cossacks = yes }
 	nogaybak = {
 		primary = NOG
 		dynasty_names = {
@@ -1609,6 +1628,11 @@ macedonian_greek = {
 	macedonian = {
 		primary = MAC
 	}
+	dardanian = {
+		
+		primary = ATD
+		
+	}
 	danubian = {
 		primary = WAL
 
@@ -1620,22 +1644,12 @@ macedonian_greek = {
 		primary = TCE
 	}
 
-	anatolian = {
-	}
 	epirote = {
 		primary = EPI
 	
 	}
 	peloponnesian = {
 		primary = ATH
-		
-	}
-	dardanian = {
-		primary = ATD
-		
-	}
-	pontic = {		
-		primary = FEO
 		
 	}
 	dynasty_names = {
@@ -1858,10 +1872,6 @@ pagan_arabic = {
 	kindah = {
 		#central arabia
 		primary = ARB
-	}
-	qataban = {
-		#yemen
-		primary = YEM
 	}
 	dilmun = {
 		#bahrain region

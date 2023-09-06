@@ -227,7 +227,7 @@ RMA_ideas = {
 	}
 	#Roman Coffers
 	RMA_ideas_7 = {
-		global_tax_income = 0.2
+		global_tax_modifier = 0.2
 	}
 }
 
@@ -302,7 +302,7 @@ SXY_ideas = {
 	}
 	#Loyal Subjects
 	SXY_ideas_3 = {
-		reduced_liberty_desire = -0.2
+		reduced_liberty_desire = 20
 	}
 	#Screaming Hussars
 	SXY_ideas_4 = {
@@ -2435,6 +2435,916 @@ TRA_ideas = {
 	# Expeditionary Brigades
 	TRA_ideas_7 = {
 		 recover_army_morale_speed = 0.1
+	}
+}
+
+
+WAL_ideas = {
+	start = {
+		stability_cost_modifier = -0.2
+		global_manpower_modifier = 0.2
+	}
+	
+	bonus = {
+		technology_cost = -0.1
+	}	
+
+	trigger = {
+		tag = WAL
+	}
+	free = yes
+	
+	WAL_ideas_1 = {
+		prestige = 1
+	}
+
+	WAL_ideas_2 = {
+		innovativeness_gain = 0.5
+	}
+
+	WAL_ideas_3 = {
+		global_heathen_missionary_strength = 0.02
+		tolerance_own = 2
+	}
+
+	WAL_ideas_4 = {
+		diplomatic_upkeep = 1
+	}
+
+	WAL_ideas_5 = {
+		caravan_power = 0.5
+	}
+
+	WAL_ideas_6 = {
+		diplomatic_reputation = 1
+	}
+
+	WAL_ideas_7 = {
+		production_efficiency = 0.1
+	}
+}
+
+ATH_ideas = {
+	start = {
+		tolerance_own = 2
+		religious_unity = 0.25
+	}
+	
+	bonus = {
+		diplomatic_upkeep = 2
+	}	
+
+	trigger = {
+		tag = ATH
+	}
+	free = yes
+	
+	ATH_ideas_1 = {
+		technology_cost = -0.1
+	}
+
+	ATH_ideas_2 = {
+		missionaries = 1
+	}
+
+	ATH_ideas_3 = {
+		great_project_upgrade_cost = -0.25
+		build_cost = -0.1
+	}
+
+	ATH_ideas_4 = {
+		naval_forcelimit_modifier = 0.25
+		galley_power = 0.15
+	}
+
+	ATH_ideas_5 = {
+		global_tax_modifier = 0.2
+	}
+
+	ATH_ideas_6 = {
+		diplomatic_reputation = 1
+	}
+
+	ATH_ideas_7 = {
+		discipline = 0.05
+	}
+}
+CTH_ideas = {
+	start = {
+		naval_forcelimit_modifier = 0.2
+		diplomatic_reputation = 1
+	}
+	
+	bonus = {
+		ae_impact = -0.1
+	}	
+
+	trigger = {
+		tag = CTH
+	}
+	free = yes
+	
+	CTH_ideas_1 = {
+		province_warscore_cost = -0.1
+	}
+
+	CTH_ideas_2 = {
+		land_morale = 0.1
+		reinforce_speed = 0.2
+	}
+
+	CTH_ideas_3 = {
+		mercenary_cost = -0.25
+	}
+
+	CTH_ideas_4 = {
+		galley_power = 0.15
+		galley_cost = -0.25
+	}
+
+	CTH_ideas_5 = {
+		trade_efficiency = 0.1
+	}
+
+	CTH_ideas_6 = {
+		mercenary_discipline = 0.05
+	}
+
+	CTH_ideas_7 = {
+		movement_speed_onto_off_boat_modifier = 1
+		allowed_marine_fraction = 0.1
+	}
+}
+
+MOE_ideas = {
+	start = {
+		global_tax_modifier = 0.1
+		land_morale = 0.1
+	}
+	
+	bonus = {
+		fire_damage = 0.1
+	}	
+
+	trigger = {
+		tag = MOE
+	}
+	free = yes
+	
+	MOE_ideas_1 = {
+		galley_power = 0.2
+	}
+
+	MOE_ideas_2 = {
+		defensiveness = 0.25
+	}
+
+	MOE_ideas_3 = {
+		ae_impact = -0.1
+	}
+
+	MOE_ideas_4 = {
+		global_regiment_cost = -0.1
+		mil_advisor_cost = -0.2
+	}
+
+	MOE_ideas_5 = {
+		fabricate_claims_cost = -0.25
+	}
+
+	MOE_ideas_6 = {
+		spy_offence = 0.25
+		spy_action_cost_modifier = -0.2
+	}
+
+	MOE_ideas_7 = {
+		max_absolutism = 10
+	}
+}
+
+ACH_ideas = {
+	start = {
+		 diplomatic_reputation = 1
+		 trade_steering = 0.25
+	}
+
+	bonus = {
+		 ship_durability = 0.10
+	}
+
+	trigger = {
+		 tag = ACH
+	}
+	free = yes
+
+	# ACH Maritime Tradition
+	ACH_ideas_1 = {
+		 naval_tradition_from_trade = 1
+	}
+
+	# Thriving Ports
+	ACH_ideas_2 = {
+		 global_trade_goods_size_modifier = 0.10
+	}
+
+	# Skilled Diplomats
+	ACH_ideas_3 = {
+		 diplomats = 1
+	}
+
+	# Agile Fleets
+	ACH_ideas_4 = {
+		galley_cost = -0.25
+		galley_power = 0.15
+	}
+
+	# Extensive Trade Networks
+	ACH_ideas_5 = {
+		trade_efficiency = 0.2
+	}
+
+	# Renowned Shipbuilders
+	ACH_ideas_6 = {
+		 global_ship_cost = -0.2
+	}
+
+	# Diplomatic Alliances
+	ACH_ideas_7 = {
+		 diplomatic_upkeep = 1
+	}
+}
+
+CPH_ideas = {
+	start = {
+		naval_maintenance_modifier = -0.1
+		naval_forcelimit_modifier = 0.25
+	}
+
+	bonus = {
+		 global_trade_goods_size_modifier = 0.10
+	}
+
+	trigger = {
+		 tag = CPH
+	}
+	free = yes
+
+	# CPH Naval Heritage
+	CPH_ideas_1 = {
+		 ship_durability = 0.10
+	}
+
+	# Prosperous Trade Cities
+	CPH_ideas_2 = {
+		 trade_steering = 0.15
+		 center_of_trade_upgrade_cost = -0.25
+	}
+
+	# Expert Negotiators
+	CPH_ideas_3 = {
+		 diplomatic_reputation = 1
+	}
+
+	# Savvy Diplomats
+	CPH_ideas_4 = {
+		global_spy_defence = 0.25
+		envoy_travel_time = -0.25
+	}
+
+	# Cephalonian Homeland
+	CPH_ideas_5 = {
+		development_cost_modifier = -0.1
+	}
+
+	# Master Shipwrights
+	CPH_ideas_6 = {
+		 global_ship_cost = -0.2
+	}
+
+	# Strong Diplomatic Corps
+	CPH_ideas_7 = {
+		diplomats = 1
+	}
+}
+
+
+EPI_ideas = {
+	start = {
+		merchants = 1
+		tolerance_heretic = 4
+	}
+	
+	bonus = {
+		diplomatic_reputation = 1
+	}
+	
+	trigger = {
+		tag = EPI
+	}
+	free = yes		#will be added at load.
+	
+	EPI_ideas_1 = {
+		leader_land_shock = 1
+	}
+	EPI_ideas_2 = {
+		prestige = 1
+	}
+	EPI_ideas_3 = {
+		merc_maintenance_modifier = -0.25
+	}
+	EPI_ideas_4 = {
+		idea_cost = -0.1
+	}
+	EPI_ideas_5 = {
+		cavalry_power = 0.2
+		cav_to_inf_ratio = 0.25
+	}
+	EPI_ideas_6 = {
+		global_trade_power = 0.1
+	}
+	EPI_ideas_7 = {
+		discipline = 0.05
+	}
+}
+
+KTI_ideas = {
+	start = {
+		 ship_durability = 0.1
+		 light_ship_power = 0.2
+	}
+
+	bonus = {
+		naval_forcelimit_modifier = 0.25
+	}
+
+	trigger = {
+		 tag = KTI
+	}
+	free = yes
+
+	# KTI Naval Tradition
+	KTI_ideas_1 = {
+		naval_morale = 0.1
+	}
+
+	# Prosperous Ports
+	KTI_ideas_2 = {
+		 trade_efficiency = 0.15
+	}
+
+	# Superior Shipbuilding
+	KTI_ideas_3 = {
+		global_ship_cost = -0.1
+		naval_tradition_from_battle = 0.5
+	}
+
+	# Skilled Navigators
+	KTI_ideas_4 = {
+		leader_naval_manuever = 1
+	}
+
+	# Extensive Trade Networks
+	KTI_ideas_5 = {
+		diplomatic_reputation = 1
+	}
+
+	# Expert Cannoneers
+	KTI_ideas_6 = {
+		global_naval_engagement_modifier = 0.10
+	}
+
+	# Secure Sea Routes
+	KTI_ideas_7 = {
+		 privateer_efficiency = 0.25
+		 trade_steering = 0.25
+	}
+}
+
+CPD_ideas = {
+	start = {
+		 global_trade_goods_size_modifier = 0.10
+		 production_efficiency = 0.10
+	}
+
+	bonus = {
+		 trade_efficiency = 0.10
+	}
+
+	trigger = {
+		 tag = CPD
+	}
+	free = yes
+
+	# Expanding Merchant Fleet
+	CPD_ideas_1 = {
+		 light_ship_cost = -0.10
+		 light_ship_power = 0.10
+	}
+
+	# Established Trading Posts
+	CPD_ideas_2 = {
+		merchants = 1
+	}
+
+	# Administrative Efficiency
+	CPD_ideas_3 = {
+		core_creation = -0.1
+	}
+
+	# Defensive Fortifications
+	CPD_ideas_4 = {
+		fort_maintenance_modifier = -0.10
+		garrison_size = 0.10
+	}
+
+	# Encourage Immigration
+	CPD_ideas_5 = {
+		global_manpower_modifier = 0.10
+	}
+
+	# Quality Bureaucracy
+	CPD_ideas_6 = {
+		 advisor_cost = -0.10
+	}
+
+	# Effective Diplomacy
+	CPD_ideas_7 = {
+		 diplomatic_reputation = 1
+	}
+}
+
+KAR_ideas = {
+	start = {
+		 global_missionary_strength = 0.02
+		 tolerance_own = 1
+	}
+
+	bonus = {
+		 prestige = 1
+	}
+
+	trigger = {
+		 tag = KAR
+	}
+	free = yes
+
+	# Pious Rulers
+	KAR_ideas_1 = {
+		 devotion = 1
+		 legitimacy = 1
+		 republican_tradition = 0.3
+		 horde_unity = 1
+	}
+
+	# Religious Tolerance
+	KAR_ideas_2 = {
+		 tolerance_heretic = 2
+	}
+
+	# Effective Clergy
+	KAR_ideas_3 = {
+		 church_loyalty_modifier = 0.10
+		 global_tax_modifier = 0.1
+	}
+
+	# Strong Economy
+	KAR_ideas_4 = {
+		 inflation_reduction = 0.1
+	}
+
+	# Military Tradition
+	KAR_ideas_5 = {
+		 army_tradition_decay = -0.01
+	}
+
+	# Encourage Trade
+	KAR_ideas_6 = {
+		 global_trade_power = 0.10
+	}
+
+	# Diplomatic Alliances
+	KAR_ideas_7 = {
+		 diplomatic_upkeep = 1
+	}
+}
+
+CMG_ideas = {
+	start = {
+		trade_efficiency = 0.10
+		 prestige = 1
+	}
+
+	bonus = {
+		 global_trade_power = 0.10
+	}
+
+	trigger = {
+		 tag = CMG
+	}
+	free = yes
+
+	# Skilled Diplomats
+	CMG_ideas_1 = {
+		 improve_relation_modifier = 0.20
+	}
+
+	# Prosperous Trade
+	CMG_ideas_2 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+
+	# Fortified Cities
+	CMG_ideas_3 = {
+		 fort_maintenance_modifier = -0.2
+	}
+
+	# Religious Tolerance
+	CMG_ideas_4 = {
+		religious_unity = 0.1
+	}
+
+	# Efficient Bureaucracy
+	CMG_ideas_5 = {
+		 global_autonomy = -0.05
+		 global_monthly_devastation = -0.05
+	}
+
+	# Military Reforms
+	CMG_ideas_6 = {
+		land_morale = 0.15
+	}
+
+	# Capital University
+	CMG_ideas_7 = {
+		dip_tech_cost_modifier = -0.1
+	}
+}
+
+AIA_ideas = {
+	start = {
+		 land_morale = 0.10
+		 land_forcelimit_modifier = 0.2
+	}
+
+	bonus = {
+		 discipline = 0.05
+	}
+
+	trigger = {
+		 tag = AIA
+	}
+	free = yes
+
+	# Unfettered Expansion
+	AIA_ideas_1 = {
+		 ae_impact = -0.10
+	}
+
+	# Military Tradition
+	AIA_ideas_2 = {
+		 army_tradition_decay = -0.01
+	}
+
+	# Skilled Generals
+	AIA_ideas_3 = {
+		 leader_land_shock = 1
+	}
+
+	# Reinforced Regiments
+	AIA_ideas_4 = {
+		 reinforce_speed = 0.2
+	}
+
+	# Strong Fortifications
+	AIA_ideas_5 = {
+		 defensiveness = 0.25
+	}
+
+	# Logistics Reforms
+	AIA_ideas_6 = {
+		global_supply_limit_modifier = 0.2
+	}
+
+	# Offensive Strategies
+	AIA_ideas_7 = {
+		movement_speed = 0.1
+		artillery_power = 0.1
+	}
+}
+
+FEO_ideas = {
+	start = {
+		 infantry_power = 0.10
+		 global_manpower_modifier = 0.25
+	}
+
+	bonus = {
+		 land_forcelimit_modifier = 0.25
+	}
+
+	trigger = {
+		 tag = FEO
+	}
+	free = yes
+
+	# Strategical Planning
+	FEO_ideas_1 = {
+		shock_damage_received = -0.1
+	}
+
+	# War Councils
+	FEO_ideas_2 = {
+		army_tradition = 1
+		free_land_leader_pool = 1
+	}
+
+	# Rapid Recruitment
+	FEO_ideas_3 = {
+		global_regiment_recruit_speed = -0.2
+	}
+
+	# Fortified Bastions
+	FEO_ideas_4 = {
+		 defensiveness = 0.20
+	}
+
+	# Superior Tactics
+	FEO_ideas_5 = {
+		leader_land_fire = 1
+		artillery_fire = 0.5
+	}
+
+	# Efficient Siegecraft
+	FEO_ideas_6 = {
+		siege_ability = 0.15
+	}
+
+	# Conquest Strategies
+	FEO_ideas_7 = {
+		province_warscore_cost = -0.1
+	}
+}
+
+SYR_ideas = {
+	start = {
+		 global_trade_power = 0.10
+		 caravan_power = 0.25
+	}
+
+	bonus = {
+		merchants = 1
+	}
+
+	trigger = {
+		 tag = SYR
+	}
+	free = yes
+
+	# Merchant Guilds
+	SYR_ideas_1 = {
+		mercantilism_cost = -0.25
+		burghers_loyalty_modifier = 0.1
+	}
+
+	# Strategic Trade Routes
+	SYR_ideas_2 = {
+		center_of_trade_upgrade_cost = -0.2
+		placed_merchant_power = 10
+	}
+
+	# Well Maintained Roads
+	SYR_ideas_3 = {
+		global_prosperity_growth = 1
+	}
+
+	# Diplomatic Ties
+	SYR_ideas_4 = {
+		diplomatic_upkeep = 1
+	}
+
+	# Efficient Taxation
+	SYR_ideas_5 = {
+		global_tax_modifier = 0.10
+	}
+
+	# Well-Trained Troops
+	SYR_ideas_6 = {
+		discipline = 0.05
+	}
+
+	# Expanded Trade Ports
+	SYR_ideas_7 = {
+		global_trade_goods_size_modifier = 0.10
+	}
+}
+
+EDS_ideas = {
+	start = {
+		manpower_recovery_speed = 0.10
+		 infantry_power = 0.10
+	}
+
+	bonus = {
+		 land_forcelimit_modifier = 0.2
+	}
+
+	trigger = {
+		 tag = EDS
+	}
+	free = yes
+
+	# Distinguished Generals
+	EDS_ideas_1 = {
+		leader_land_fire = 1
+	}
+
+	# Disciplined Troops
+	EDS_ideas_2 = {
+		discipline = 0.05
+	}
+
+	# Fortified Borders
+	EDS_ideas_3 = {
+		fort_maintenance_modifier = -0.2
+	}
+
+	# Efficient Recruitment
+	EDS_ideas_4 = {
+		global_regiment_recruit_speed = -0.2
+		manpower_in_true_faith_provinces = 0.1
+	}
+
+	# Advanced Artillery
+	EDS_ideas_5 = {
+		artillery_power = 0.15
+	}
+
+	# Militarized Society
+	EDS_ideas_6 = {
+		mil_tech_cost_modifier = -0.1
+	}
+
+	# Strong Economy
+	EDS_ideas_7 = {
+		 production_efficiency = 0.10
+	}
+}
+
+JRD_ideas = {
+	start = {
+		 religious_unity = 0.2
+		 technology_cost = -0.05
+	}
+
+	bonus = {
+		 core_creation = -0.10
+	}
+
+	trigger = {
+		 tag = JRD
+	}
+	free = yes
+
+	# Missionary Zeal
+	JRD_ideas_1 = {
+		 global_missionary_strength = 0.02
+	}
+
+	# Religious Harmony
+	JRD_ideas_2 = {
+		 tolerance_heathen = 2
+		 tolerance_of_heathens_capacity = 2
+	}
+
+	# Conqueror's Spirit
+	JRD_ideas_3 = {
+		global_manpower_modifier = 0.2
+	}
+
+	# Dedicated Clergy
+	JRD_ideas_4 = {
+		 stability_cost_modifier = -0.2
+		 church_loyalty_modifier = 0.1
+	}
+
+	# Pious Soldiers
+	JRD_ideas_5 = {
+		army_tradition_from_battle = 0.5
+		drill_gain_modifier = 0.25
+	}
+
+	# Prosperous Trade
+	JRD_ideas_6 = {
+		 global_trade_goods_size_modifier = 0.10
+	}
+
+	# Expansionist Policy
+	JRD_ideas_7 = {
+		 ae_impact = -0.10
+	}
+}
+
+SLC_ideas = {
+	start = {
+		 land_morale = 0.10
+		 infantry_power = 0.10
+	}
+
+	bonus = {
+		 discipline = 0.05
+	}
+
+	trigger = {
+		 tag = SLC
+	}
+	free = yes
+
+	# Alexander's Legacy
+	SLC_ideas_1 = {
+		 army_tradition = 1
+	}
+
+	# Siege Mentality
+	SLC_ideas_2 = {
+		 siege_ability = 0.2
+	}
+
+	# Swift Marches
+	SLC_ideas_3 = {
+		movement_speed = 0.15
+	}
+
+	# Regimental System
+	SLC_ideas_4 = {
+		land_forcelimit_modifier = 0.33
+	}
+
+	# Innovative Tactics
+	SLC_ideas_5 = {
+		technology_cost = -0.1
+	}
+
+	# Selucid Generals
+	SLC_ideas_6 = {
+		leader_land_shock = 1
+		shock_damage = 0.1
+	}
+
+	# Conqueror's Ambition
+	SLC_ideas_7 = {
+		 province_warscore_cost = -0.15
+	}
+}
+
+NEK_ideas = {
+	start = {
+		 tolerance_own = 1
+		 missionaries = 1
+	}
+
+	bonus = {
+		 core_creation = -0.1
+	}
+
+	trigger = {
+		 tag = NEK
+	}
+	free = yes
+
+	# Path of Righteousness
+	NEK_ideas_1 = {
+		 global_missionary_strength = 0.02
+	}
+
+	# Learned Scholars
+	NEK_ideas_2 = {
+		 technology_cost = -0.1
+	}
+
+	# Financial Prudence
+	NEK_ideas_3 = {
+		 interest = -1
+	}
+
+	# Promotion of the Clergy
+	NEK_ideas_4 = {
+		 stability_cost_modifier = -0.2
+	}
+
+	# Intellectual Patronage
+	NEK_ideas_5 = {
+		 free_policy = 1
+	}
+
+	# Pilgrimage Centers
+	NEK_ideas_6 = {
+		 tolerance_own = 1
+		 manpower_in_true_faith_provinces = 0.1
+	}
+
+	# Development of Sciences
+	NEK_ideas_7 = {
+		 development_cost = -0.10
 	}
 }
 

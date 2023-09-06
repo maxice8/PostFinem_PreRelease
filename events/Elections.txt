@@ -512,6 +512,9 @@ country_event = {
 			}
 			republican_tradition = 50
 		}
+		# pf [[[
+		NOT = { has_government_attribute = confederation_elections }
+		# ]]]
 	}
 
 	immediate = {

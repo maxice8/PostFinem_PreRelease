@@ -2,7 +2,7 @@
 #Gallic Hierarchy
 
 gallic_hierarchy = {
-	icon = "castle"
+	icon = "gallic_king"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	potential = {
@@ -22,12 +22,15 @@ gallic_hierarchy = {
 	ai = {
 		factor = 0.5 #generic
 	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
 }
 
 #Celtic Lordship
 
 celtic_lordship = {
-	icon = "castle"
+	icon = "celtic_king"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = no
@@ -47,12 +50,15 @@ celtic_lordship = {
 	ai = {
 		factor = 0.5 #generic
 	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
 }
 
 #Crown of Roma
 
 crown_of_roma = {
-	icon = "castle"
+	icon = "roman_empire"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = no
@@ -70,12 +76,15 @@ crown_of_roma = {
 	ai = {
 		factor = 0.5 #generic
 	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
 }
 
 #Auralpina Monarchy
 
 auralpina_monarchy = {
-	icon = "castle"
+	icon = "king_mountains"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = no
@@ -92,13 +101,16 @@ auralpina_monarchy = {
 	ai = {
 		factor = 0.5 #generic
 	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
 }
 
 
 #Hellepharaohcy
 
 hellepharaohcy = {
-	icon = "castle"
+	icon = "cleopatra"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = no
@@ -115,13 +127,16 @@ hellepharaohcy = {
 	ai = {
 		factor = 0.5 #generic
 	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
 }
 
 
 #Diadem of Iberia
 
 diadem_of_iberia = {
-	icon = "castle"
+	icon = "explorer_landing"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = no
@@ -139,12 +154,15 @@ diadem_of_iberia = {
 	ai = {
 		factor = 0.5 #generic
 	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
 }
 
 #Alexander's Crown
 
 alexanders_crown = {
-	icon = "castle"
+	icon = "alexander_crown"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = no
@@ -161,5 +179,40 @@ alexanders_crown = {
 	# }
 	ai = {
 		factor = 0.5 #generic
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+
+#Selucid Monarchy
+selucid_monarchy = {
+	icon = "selucid"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+	potential = {
+		tag = SLC
+	}
+	modifiers = {
+		hostile_attrition = 1	
+		allowed_streltsy_fraction = 0.2
+		yearly_absolutism = 0.5
+		max_absolutism = 20
+
+	}
+	# custom_attributes = {
+	# 	buffed_strong_duchies = yes #+5% Loyalty
+	# }
+	ai = {
+		factor = 0.5 #generic
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		claim_states = yes
 	}
 }

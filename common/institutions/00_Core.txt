@@ -107,6 +107,7 @@ feudalism = {
 					technology_group = south_american
 					technology_group = sub_saharan
 					technology_group = aboriginal_tech
+					is_colonial_nation_of = ICE
 				}
 			}
 			AND = {
@@ -1016,8 +1017,6 @@ printing_press = {
 			trade_goods = paper
 		}
 		OR = {
-			religion = protestant
-			religion = reformed
 			region = north_german_region
 			region = south_german_region
 		}

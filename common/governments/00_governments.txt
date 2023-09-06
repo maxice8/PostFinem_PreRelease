@@ -3,14 +3,17 @@ monarchy = {
 	reform_levels = {
 		feudalism_vs_autocracy = {
 			reforms = {
-				gallic_hierarchy #PF
-				celtic_lordship #PF
-				crown_of_roma #PF
-				auralpina_monarchy #PF
-				hellepharaohcy #PF
-				diadem_of_iberia #PF
-				alexanders_crown #PF
+				#PF
+				gallic_hierarchy
+				celtic_lordship
+				crown_of_roma
+				auralpina_monarchy
+				hellepharaohcy
+				diadem_of_iberia
+				alexanders_crown
+				selucid_monarchy
 				brittonic_confederation_reform	#hiw
+				#Vanilla
 				feudalism_reform
 				autocracy_reform
 				elective_monarchy_reform
@@ -410,6 +413,14 @@ monarchy = {
 
 	# Each group of exclusive reforms are mutually exclusive to each other
 
+	#PF Norse
+	exclusive_reforms = {
+		norse_warlord
+		tribe_becomes_monarchy_reform
+		tribe_becomes_republic_reform
+		tribe_becomes_theocracy_reform
+		tribe_becomes_horde_reform
+	}
 	#Flavor
 	exclusive_reforms = {
 		iqta
@@ -941,12 +952,16 @@ tribal = {
 			reforms = {
 				martial_society_reform
 				civil_society_reform
+				#PF
+				naval_society_reform
 			}
 		}
 		tribal_religion = {
 			reforms = {
 				religious_societies_reform
 				lip_service_reform
+				#PF
+				berzerker_zeal_reform
 			}
 		}
 		tribal_military_doctrines = {
@@ -1013,6 +1028,8 @@ tribal = {
 			reforms = {
 				centralize_tribal_power_reform
 				retain_tribal_hierarchy_reform
+				#PF
+				norse_nationstates_reform
 			}
 		}
 		tribal_reformation = {
@@ -1025,6 +1042,8 @@ tribal = {
 				tribe_becomes_horde_reform
 				tribe_remain_tribal_reform
 				tribe_tribal_unity
+				#PF
+				establish_permanent_settlements_reform
 			}
 		}
 	}

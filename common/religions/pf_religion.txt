@@ -303,7 +303,7 @@ germanic_group = {
 
 punic_group = {
 	defender_of_faith = yes
-	crusade_name = HOLY_WAR
+	can_form_personal_unions = yes
 	punic_religion = {
 		icon = 33
 		color = { 185 55 225 }
@@ -362,6 +362,7 @@ punic_group = {
 hellenic_group = {
 
 	defender_of_faith = yes
+	can_form_personal_unions = yes
 	hellenic = {
 		icon = 34
 		color = { 160 255 255 }
