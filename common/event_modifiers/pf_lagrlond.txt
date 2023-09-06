@@ -1,7 +1,7 @@
 # pf_lag_permanent
 pf_lag_permanent_army = {
-	drill_gain_modifier = 0.25
-	land_morale = 0.025
+	drill_gain_modifier = 0.1
+	land_morale = 0.1
 }
 
 # pf_lag_gunpower
@@ -18,7 +18,7 @@ pf_lag_second_heathen_army = {
 
 # pf_lag_secure
 pf_lag_conquest_belgica = {
-	core_creation = -0.05
+	core_creation = -0.1
 	promote_culture_cost = -0.1
 }
 
@@ -36,8 +36,8 @@ pf_lag_push_consolidate = {
 
 # pf_lag_brest
 pf_lag_brest_dockyards = {
-	local_ship_cost = -0.15
-	local_sailors_modifier = 0.1
+	local_ship_cost = -0.25
+	local_ship_repair = -0.25
 }
 
 # pf_lag_longboats
@@ -50,14 +50,15 @@ pf_lag_raiders_storm = {
 pf_lag_encroach_on_germans = {
 	warscore_cost_vs_other_religion = -0.05
 	war_exhaustion_cost = -0.2
-	warscore_from_battles_modifier = 0.15
+	warscore_from_battles_modifier = 0.1
 }
 
 # pf_lag_london
 pf_lag_thames = {
 	local_development_cost = -0.1
+	trade_value_modifier = 0.25
 	local_great_project_upgrade_cost = -0.1
-	province_trade_power_modifier = 0.15
+	province_trade_power_modifier = 0.25
 }
 
 # pf_lag_wool_industry
@@ -74,7 +75,7 @@ pf_lag_modern_navy = {
 # pf_lag_develop_belgica
 pf_lag_belgica_proper = {
 	local_institution_spread = 0.1
-	trade_goods_size_modifier = 0.025
+	trade_goods_size_modifier = 0.1
 	build_cost = -0.05
 }
 
@@ -88,7 +89,7 @@ pf_lag_carthage_north = {
 # pf_lag_glorious
 pf_lag_trinovantes_crown = {
 	diplomatic_reputation = 1
-	unjustified_demands = -0.15
+	unjustified_demands = -0.25
 }
 
 # pf_lag_break_clans
@@ -108,7 +109,7 @@ pf_lag_magna_carta = {
 
 # pf_lag_tier
 pf_lag_general_staff = {
-	army_tradition_from_battle = 0.2
+	army_tradition_from_battle = 0.25
 	free_leader_pool = 1
 	land_maintenance_modifier = -0.1
 }
@@ -116,14 +117,14 @@ pf_lag_general_staff = {
 # pf_lag_doctrine
 pf_lag_full_quality = {
 	infantry_power = 0.1
-	army_tradition_decay = -0.1
-	drill_gain_modifier = 0.1
-	drill_decay_modifier = -0.2
+	army_tradition_decay = -0.005
+	drill_gain_modifier = 0.25
+	drill_decay_modifier = -0.25
 }
 
 # pf_lag_doctrine
 pf_lag_full_quantity = {
-	land_maintenance_modifier = -0.025
+	land_maintenance_modifier = -0.05
 	manpower_recovery_speed = 0.1
 	global_manpower_modifier = 0.2
 }
@@ -159,8 +160,7 @@ pf_lag_full_firepower = {
 
 # pf_lag_raid
 pf_lag_experienced_raiders = {
-	naval_tradition_from_battle = 0.2
-	movement_speed_onto_off_boat_modifier = 0.5
+	naval_tradition_from_battle = 0.1
 }
 
 # pf_lag_rheinland
@@ -171,17 +171,17 @@ pf_lag_consolidate_rheinland = {
 
 # pf_lag_push_celts
 pf_lag_danelaw = {
-	autonomy_change_time = -0.25
+	global_autonomy = -0.05
 	years_of_nationalism = -5
 	legitimacy = 1
 }
 
 # pf_lag_fortify
 pf_lag_fortress_albion = {
-	local_defensiveness = 0.1
+	local_defender_dice_roll_bonus = 1
 	local_garrison_size = 0.20
 	hostile_attrition = 1
-	max_attrition = 1
+	max_hostile_attrition = 1
 }
 
 # pf_lag_pax

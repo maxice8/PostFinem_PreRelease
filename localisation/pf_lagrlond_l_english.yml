@@ -33,8 +33,8 @@
 
  pf_lag_break_title:0 "Break The Gauls"
  pf_lag_break_desc:0 ""
- YES_PF_LAG_GAUL_BROKEN_PERMANENT:0 "£yes£ If we complete this mission while §Y[GAU.GetName]§! does not exist, the modifier will be §Gpermanent§!."
- NO_PF_LAG_GAUL_BROKEN_PERMANENT:0 "£no£ If we complete this mission while §Y[GAU.GetName]§! does not exist, the modifier will be §Gpermanent§!."
+ YES_PF_LAG_GAUL_BROKEN_PERMANENT:0 "£yes£ If we complete this mission while §Y[GAU.GetName]§! does not exist, the modifier duration will be §Gtripled§!"
+ NO_PF_LAG_GAUL_BROKEN_PERMANENT:0 "£no£ If we complete this mission while §Y[GAU.GetName]§! does not exist, the modifier duration will be §Gtripled§!"
 
  pf_lag_push_title:0 "Push Towards Britanny"
  pf_lag_push_desc:0 ""
@@ -58,8 +58,8 @@
 
  pf_lag_pax_title:0 "Lagrlonder Century"
  pf_lag_pax_desc:0 ""
- YES_PF_LAG_EXTEND_RESET_GOLDEN_AGE:0 "£yes£ If we are in a §YGolden Age§!, it will be extended by 30 years, if we had a §YGolden Age§! we will be able to start another one."
- NO_PF_LAG_EXTEND_RESET_GOLDEN_AGE:0 "£no£ If we are in a §YGolden Age§!, it will be extended by 30 years, if we had a §YGolden Age§! we will be able to start another one."
+ YES_PF_LAG_EXTEND_RESET_GOLDEN_AGE:0 "£yes£ If we are in a §YGolden Age§!, it will be extended by 30 years, if we had a §YGolden Age§! we will be able to start another one"
+ NO_PF_LAG_EXTEND_RESET_GOLDEN_AGE:0 "£no£ If we are in a §YGolden Age§!, it will be extended by 30 years, if we had a §YGolden Age§! we will be able to start another one"
 
  pf_lag_longboats_title:0 "Lagrlonder Longboats"
  pf_lag_longboats_desc:0 ""
@@ -87,18 +87,18 @@
 
  pf_lag_break_clans_title:0 "Break The Clans"
  pf_lag_break_clans_desc:0 ""
- PF_LAG_COMPLETED_CLAN_REVOLTS:0 "Completed the §YNative Opposition§! event chain."
+ PF_LAG_COMPLETED_CLAN_REVOLTS:0 "Completed the §YNative Opposition§! event chain"
  YES_PF_LAG_TRINOVANTES_ANNEX:0 "£yes£ If @TRN §Y[TRN.GetName]§! is our §Ysubject§! and has 0 §YLiberty Desire§!, they will be instantly §Gannexed§!"
  NO_PF_LAG_TRINOVANTES_ANNEX:0 "£no£ If @TRN §Y[TRN.GetName]§! is our §Ysubject§! and has 0 §YLiberty Desire§!, they will be instantly §Gannexed§!"
 
  pf_lag_push_celts_title:0 "Push The Celts Out"
  pf_lag_push_celts_desc:0 ""
- YES_PF_LAG_DANELAW_PERMANENT:0 "£yes£ If @CEL §Y[CEL.GetName]§! does not exist, the modifier length will be §Gtripled§!."
- NO_PF_LAG_DANELAW_PERMANENT:0 "£no£ If @CEL §Y[CEL.GetName]§! does not exist, the modifier length will be §Gtripled§!."
+ YES_PF_LAG_DANELAW_PERMANENT:0 "£yes£ If @CEL §Y[CEL.GetName]§! does not exist, the modifier length will be §Gtripled§!"
+ NO_PF_LAG_DANELAW_PERMANENT:0 "£no£ If @CEL §Y[CEL.GetName]§! does not exist, the modifier length will be §Gtripled§!"
 
  pf_lag_fortify_title:0 "Fortify Albion"
  pf_lag_fortify_desc:0 ""
- PF_LAG_FORTRESS_ALBION:0 "Every owned province that meets the mission requirements will gain §G2§! Base Manpower £text_icon_manpower_in_text£, and the following modifier:"
+ PF_LAG_FORTRESS_ALBION:0 "Every owned province in §YCeltica§! that meets the mission requirements will gain §G2§! Base Manpower £text_icon_manpower_in_text£, and the following modifier:"
 
  pf_lag_expand_markets_title:0 "Expand The Marketpalces"
  pf_lag_expand_markets_desc:0 ""
@@ -256,7 +256,7 @@
  desc_pf_lag_brest_dockyards:0 "REPLACE_ME"
  pf_lag_raiders_storm:0 "Raiders on the Storm"
  desc_pf_lag_raiders_storm:0 "REPLACE_ME"
- pf_lag_encroach_on_germans:0 "Move down the Rhine"
+ pf_lag_encroach_on_germans:0 "Move Down the Rhine"
  desc_pf_lag_encroach_on_germans:0 "REPLACE_ME"
  pf_lag_thames:0 "The Mouth of the Tálmr"
  desc_pf_lag_thames:0 "REPLACE_ME"

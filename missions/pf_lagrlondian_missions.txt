@@ -14,7 +14,7 @@ first = {
 		trigger = {
 			OR = {
 				army_tradition = 25
-				army_professionalism = 0.01
+				army_professionalism = 0.1
 			}
 			land_forcelimit = 25
 		}
@@ -34,15 +34,8 @@ first = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			num_of_artillery = 10
-			OR = {
-				has_idea_group = firepower_ideas
-				has_idea_group = offensive_ideas
-				has_global_modifier_value = {
-					which = artillery_power
-					value = 0.01
-				}
-			}
+			num_of_artillery = 20
+			has_mil_advisor_2 = yes
 		}
 
 		effect = { 
@@ -264,7 +257,7 @@ second = {
 		effect = {
 			add_country_modifier = {
 				name = pf_lag_second_heathen_army
-				duration = 9125
+				duration = 3650
 			}
 			north_brabant_area = {
 				limit = {
@@ -407,6 +400,8 @@ second = {
 				}
 			}
 			else = { custom_tooltip = NO_PF_LAG_GAUL_BROKEN_PERMANENT }
+
+			custom_tooltip = empty_line_tt
 
 			normandy_area = {
 				limit = {
@@ -616,6 +611,9 @@ third = {
 			create_admiral = {
 				tradition = 75
 			}
+
+			custom_tooltip = empty_line_tt
+
 			add_country_modifier = {
 				name = pf_lag_experienced_raiders
 				duration = -1
@@ -952,7 +950,7 @@ fourth = {
 		trigger = {
 			owns_core_province = 236
 			236 = { development = 30 } 
-			236 = { num_of_buildings_in_province = 3 } 
+			236 = { num_of_buildings_in_province = 4 } 
 		}
 
 		effect = { 
@@ -1045,10 +1043,8 @@ fifth = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			heavy_ship_fraction = 0.2
 			num_of_heavy_ship = 5
-			navy_tradition = 30
-			num_of_admirals = 3
+			navy_tradition = 20
 			OR = {
 				naval_reformer = 2
 				has_dip_advisor_3 = yes
@@ -1215,7 +1211,7 @@ fifth = {
 		provinces_to_highlight = { 
 			region = british_isles_region
 			culture_group = old_celtic
-			nationalism = 1
+			nationalism = 5
 			unrest = 1
 		} 
 
@@ -1242,7 +1238,7 @@ fifth = {
 				OR = {
 					owned_by = TRN
 					AND = {
-						NOT = { nationalism = 1 }
+						NOT = { nationalism = 5 }
 						NOT = { unrest = 1 }
 					}
 				}
@@ -1252,7 +1248,7 @@ fifth = {
 				OR = {
 					owned_by = TRN
 					AND = {
-						NOT = { nationalism = 1 }
+						NOT = { nationalism = 5 }
 						NOT = { unrest = 1 }
 					}
 				}
@@ -1262,7 +1258,7 @@ fifth = {
 				OR = {
 					owned_by = TRN
 					AND = {
-						NOT = { nationalism = 1 }
+						NOT = { nationalism = 5 }
 						NOT = { unrest = 1 }
 					}
 				}
@@ -1287,6 +1283,8 @@ fifth = {
 			else = {
 				custom_tooltip = NO_PF_LAG_TRINOVANTES_ANNEX
 			}
+
+			custom_tooltip = empty_line_tt
 
 			wessex_area = {
 				limit = {
@@ -1405,7 +1403,7 @@ fifth = {
 
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 6
 				has_fort_building_trigger = yes
 				region = british_isles_region
 			}
@@ -1485,7 +1483,7 @@ first_2 = {
 
 		trigger = {
 			90 = { has_trade_building_trigger = yes } 
-			90 = { development = 30 } 
+			90 = { development = 35 } 
 			90 = { num_of_buildings_in_province = 5 } 
 			90 = { province_has_center_of_trade_of_level = 2 } 
 		}
