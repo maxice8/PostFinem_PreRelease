@@ -1,0 +1,117 @@
+country_decisions = {
+
+	reform_celtica = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = reformed_celtica_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = BRN }
+			NOT = { tag = CEL }
+			NOT = { tag = TRN }
+			NOT = { tag = ATH }
+			religion = druidic
+			culture_group = old_celtic
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					region = british_isles_region
+					root = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 10
+								region = british_isles_region
+								is_core = root
+							}
+						}
+						owns_core_province = 373
+						owns_core_province = 375
+						owns_core_province = 4121
+					}
+				}
+				province_id = 373
+				province_id = 375
+				province_id = 4121
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no			
+			NOT = { exists = CEL }
+			owns_core_province = 373
+			owns_core_province = 375
+			owns_core_province = 4121
+			373 = { 					#  Dublin
+				is_state = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				region = british_isles_region
+				is_core = root
+			}
+		}
+		effect = {
+			373 = { #Dublin
+				move_capital_effect = yes
+			}
+			change_tag = CEL
+			custom_tooltip = " "
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			custom_tooltip = " "
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+				custom_tooltip = " "
+			}
+			british_isles_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CEL
+			}
+			custom_tooltip = " "
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = reformed_celtica_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}
