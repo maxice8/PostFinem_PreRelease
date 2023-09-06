@@ -3,6 +3,23 @@
 
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
 
+# Adirim
+adirim_of_confederation_names = {
+	rank = {
+		3 = FEDERAL_SEAT
+	}
+	ruler_male = {
+		3 = GRAND_ADIRIM
+	}
+	ruler_female = {
+		3 = GRAND_ADIRIM
+	}
+
+	trigger = {
+		is_emperor = yes
+	}
+}
+
 brittonic_confederation_names = {
 	rank = {
 		1 = CONFEDERATION
