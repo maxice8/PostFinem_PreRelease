@@ -25,7 +25,7 @@ italy_region = {
 }
 north_german_region = { 
 	areas = { 
-		 south_saxony_area northern_saxony_area thuringia_area neumark_area mittelmark_area vorpommern_area 
+		 south_saxony_area northern_saxony_area thuringia_area mittelmark_area vorpommern_area 
 		north_rhine_area lower_rhineland_area westphalia_area north_westphalia_area hesse_area lower_saxony_area weser_area holstein_area mecklenburg_area braunschweig_area
 		lusatia_area
 	}
@@ -64,18 +64,26 @@ british_isles_region = {
 }
 baltic_region = { 
 	areas = { 
-		lithuania_area livonia_area estonia_ingria_area curonia_area west_prussia_area east_prussia_area samogitia_area 
+		lithuania_area livonia_area estonia_ingria_area curonia_area samogitia_area 
 	}
 }
 poland_region = { 
 	areas = { 
-		transylvania_area moldavia_area wielkopolska_area malopolska_area red_ruthenia_area mazovia_area silesia_area
-		central_poland_area sandomierz_area kuyavia_area neumark_area hinter_pommern_area
+		wielkopolska_area mazovia_area silesia_area podlasie_area
+		central_poland_area kuyavia_area neumark_area
+		hinter_pommern_area west_prussia_area east_prussia_area
+	}
+}
+south_slavia_region = {
+	areas = {
+		transylvania_area red_ruthenia_area moldavia_area
+		volhynia_area podolia_volhynia_area malopolska_area
+		sandomierz_area
 	}
 }
 ruthenia_region = { 
 	areas = { 
-		west_dniepr_area east_dniepr_area sloboda_ukraine_area white_ruthenia_area podolia_volhynia_area pripyat_area smolensk_area minsk_area podlasie_area volhynia_area
+		west_dniepr_area east_dniepr_area sloboda_ukraine_area white_ruthenia_area pripyat_area smolensk_area minsk_area 
 		chernigov_area 
 	}
 }
@@ -87,16 +95,18 @@ crimea_region = {
 balkan_region = { 
 	areas = { 
 		bulgaria_area macedonia_area northern_greece_area morea_area thrace_area
-		albania_area silistria_area  wallachia_area
+		albania_area silistria_area  wallachia_area aegean_archipelago_area
 	}
 }
 illyria_region = {
-	carinthia_area east_adriatic_coast_area bosnia_area serbia_area rascia_area
-	croatia_area slavonia_area
+	areas = { 
+		carinthia_area east_adriatic_coast_area bosnia_area serbia_area rascia_area
+		croatia_area slavonia_area
+	}
 }
 carpathia_region = { 
 	areas = { 
-		transdanubia_area alfold_area slovakia_area southern_transylvania_area austria_proper_area inner_austria_area 
+		transdanubia_area alfold_area slovakia_area austria_proper_area inner_austria_area 
 		bohemia_area moravia_area lower_bavaria_area east_bavaria_area erzgebirge_area
 	}
 }
@@ -113,24 +123,30 @@ maghreb_region = {
 }
 mashriq_region = { 
 	areas = { 
-		syria_area palestine_area al_jazira_area iraq_arabi_area basra_area trans_jordan_area syrian_desert_area aleppo_area 
+		syria_area palestine_area trans_jordan_area syrian_desert_area aleppo_area 
+	}
+}
+mesopotamia_region = {
+	areas = {
+		shahrizor_area khuzestan_area luristan_area 
+		al_jazira_area iraq_arabi_area basra_area
 	}
 }
 anatolia_region = { 
 	areas = { 
 		hudavendigar_area aydin_area karaman_area rum_area kastamonu_area erzurum_area north_kurdistan_area dulkadir_area cukurova_area ankara_area
-		aegean_archipelago_area germiyan_area 
+		germiyan_area 
 	}
 }
 persia_region = { 
 	areas = { 
-		luristan_area farsistan_area iraq_e_ajam_area tabarestan_area azerbaijan_area isfahan_area kerman_area persian_gulf_coast tabriz_area khuzestan_area
-		shahrizor_area mogostan_area 
+		 farsistan_area iraq_e_ajam_area tabarestan_area azerbaijan_area isfahan_area kerman_area persian_gulf_coast tabriz_area 
+		 mogostan_area mashhad_area birjand_area
 	}
 }
 khorasan_region = { 
 	areas = { 
-		merv_area balkh_area kabulistan_area ghor_area sistan_area makran_area kalat_area birjand_area herat_area mashhad_area
+		merv_area balkh_area kabulistan_area ghor_area sistan_area makran_area kalat_area herat_area 
 	}
 }
 caucasia_region = { 
