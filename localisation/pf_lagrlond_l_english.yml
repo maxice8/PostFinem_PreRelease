@@ -56,8 +56,10 @@
  pf_lag_rheinland_desc:0 ""
  PF_LAG_MERCANTILISM_FOR_COT:0 "Gain §G1§! Mercantilism for every owned §YCenter of Trade§! in the §YRheinland§! Trade Node."
 
- pf_lag_coal_title:0 "Rhenish Coal"
- pf_lag_coal_desc:0 ""
+ pf_lag_pax_title:0 "The Lagrlonder Century"
+ pf_lag_pax_desc:0 ""
+ YES_PF_LAG_EXTEND_RESET_GOLDEN_AGE:0 "£yes£ If we are in a §YGolden Age§!, it will be extended by 30 years, if we had a §YGolden Age§! we will be able to start another one."
+ NO_PF_LAG_EXTEND_RESET_GOLDEN_AGE:0 "£no£ If we are in a §YGolden Age§!, it will be extended by 30 years, if we had a §YGolden Age§! we will be able to start another one."
 
  pf_lag_longboats_title:0 "Lagrlonder Longboats"
  pf_lag_longboats_desc:0 ""
@@ -306,6 +308,8 @@
  desc_pf_lag_fortress_albion:0 "REPLACE_ME"
  pf_lag_consolidate_rheinland:0 "Trade from the Rhine"
  desc_pf_lag_consolidate_rheinland:0 "REPLACE_ME"
+ pf_lag_pax_lagrlonder:0 "Pax Lagrlonder"
+ desc_pf_lag_pax_lagrlonder:0 "REPLACE_ME"
 
  # events
  PF_LAG_SPAWN_BRITON_NOBLE_REBELS:0 "A random province owned by you or a non-sovereign subject in the §YBritish Isles§!, with §YBriton§! culture, will spawn §YNoble Rebels§!"
