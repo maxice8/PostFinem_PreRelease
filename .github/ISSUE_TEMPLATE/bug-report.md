@@ -7,24 +7,15 @@ assignees: ''
 
 ---
 
+<!-- These are comments, you can leave them and they won't appear -->
+
 **Context**
-<!-- Fill these
-
-Example:
-
-Europa Universalis IV version: 1.35.6.0
-Post Finem version: Alpha1
-Missing DLC: Domination, LotN
- -->
+<!-- Fill these to the best of your ability -->
 
 - Europa Universalis IV version: 
 - Post Finem version:
 - Missing DLC:
-
-**Mods**
-<!-- Most bugs come from incompatible mods, please confirm that you have no other mods enabled -->
-
-- [ ] I have no other mods enabled
+- Other enabled mods:
 
 **Describe the bug**
 <!-- A clear and concise description of what the bug is. -->
@@ -34,6 +25,9 @@ Missing DLC: Domination, LotN
 
 **Screenshots**
 <!-- If the bug is graphical then send some screenshots if they are applicable -->
+
+**Proposed fix**
+<!-- If you have any idea of how to fix the bug let us known here -->
 
 **Additional context**
 <!-- Any other information -->

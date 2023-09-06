@@ -3,7 +3,7 @@ name: Country Content Development
 about: Use to create Issues related to developing content for a tag
 title: ''
 labels: ''
-assignees: maxice8
+assignees: ''
 
 ---
 
