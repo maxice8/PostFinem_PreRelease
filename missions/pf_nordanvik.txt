@@ -679,11 +679,29 @@ pf_nrd_4 = {
 		icon = mission_rb_into_ireland
 		position = 4
 		required_missions = { pf_nrd_sail_to_distant_shores } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = CEL
+			NOT = {
+				CEL = {
+					is_subject_of = ROOT
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			OR = {
+				NOT = {
+					british_isles_region = { 
+						country_or_subject_holds = CEL
+					}
+				}
+				CEL = { is_subject_of = ROOT }
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_treasury = 1
+		} 
 	}
 
 	pf_nrd_expansion_and_prosperity = {
