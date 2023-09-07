@@ -6,6 +6,7 @@ estate_burghers_pf_peace_of_utrech = {
 	influence = 0.05
 	is_valid = {
 		OR = {
+			tag = LAG
 			has_mission = pf_lag_peace_of_utrech
 			has_unlocked_estate_privilege = {
 				estate_privilege = estate_burghers_pf_peace_of_utrech
@@ -65,5 +66,8 @@ estate_burghers_pf_peace_of_utrech = {
 	}
 	on_invalid = {
 		custom_tooltip = estate_burghers_pf_peace_of_utrech_rt
+	}x
+	ai_will_do = {
+		factor = 100
 	}
 }
