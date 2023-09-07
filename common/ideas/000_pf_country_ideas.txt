@@ -381,12 +381,12 @@ KSB_ideas = {
 
 NRD_ideas = {
 	start = {
-		naval_morale = 0.10
+		naval_maintenance_modifier = -0.1
 		land_forcelimit_modifier = 0.2
 	}
 	
 	bonus = {
-		global_tax_modifier = 0.10
+		global_tax_modifier = 0.20
 	}	
 
 	trigger = {
@@ -397,22 +397,20 @@ NRD_ideas = {
 	#Maritime Supremacy
 	NRD_ideas_1 = {
 		ship_durability = 0.10
-		leader_naval_manuever = 1
 	}
 
 	#Shocking Force
 	NRD_ideas_2 = {
-		leader_land_shock = 1
+		shock_damage = 0.1
 	}
 
 	#Stable Economy
 	NRD_ideas_3 = {
-		inflation_reduction = 0.10
+		production_efficiency = 0.15
 	}
 
 	#Professional Army
 	NRD_ideas_4 = {
-		leader_land_manuever = 1
 		discipline = 0.05
 	}
 
@@ -424,12 +422,12 @@ NRD_ideas = {
 
 	#Grand Fleet
 	NRD_ideas_6 = {
-		naval_forcelimit_modifier = 0.20
+		naval_forcelimit_modifier = 0.25
 	}
 
 	#Superior Drill
 	NRD_ideas_7 = {
-		drill_gain_modifier = 0.25
+		drill_decay_modifier = -0.5
 	}
 }
 

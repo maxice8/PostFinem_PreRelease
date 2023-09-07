@@ -845,9 +845,6 @@ on_monarch_death = {
 		flavor_mal.11 # Mali pretenders
 		flavor_mal.47 # Pilgrimage ends prematurely
 		government_events.3	# Election of a new Ruler
-		# pf
-		# hm i wonder hehe
-		pf_trn.1				# Election for Brittonic Confederation
 	}
 }
 
@@ -918,6 +915,9 @@ on_death_election = {
 		701		# Election event
 		elections.721		# Dutch Republic
 		elections.800	# Lottery election
+		# pf
+		# hm i wonder hehe
+		pf_trn.1				# Election for Brittonic Confederation
 	}
 }
 
