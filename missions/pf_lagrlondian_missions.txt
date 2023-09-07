@@ -1902,6 +1902,8 @@ third_2 = {
 				}
 			}
 
+			custom_tooltip = empty_line_tt
+
 			custom_tooltip = PF_LAG_COMPLETING_BURGHER_AGENDA
 			hidden_effect = {
 				set_country_flag = pf_lag_burgher_agenda_bonus
@@ -1936,6 +1938,8 @@ third_2 = {
 				culture = ROOT
 				cost_multiplier = 0.5
 			}
+
+			custom_tooltip = empty_line_tt
 
 			add_country_modifier = {
 				name = pf_lag_scholars
