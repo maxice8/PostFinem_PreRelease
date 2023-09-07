@@ -1,9 +1,9 @@
 estate_burghers_pf_peace_of_utrech = {
 	icon = privilege_religious_diplomats
-	land_share = 0
+	land_share = 5
 	max_absolutism = -5
 	loyalty = 0.1
-	influence = 0.05
+	influence = 0.1
 	is_valid = {
 		OR = {
 			tag = LAG
