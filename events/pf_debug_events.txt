@@ -1,0 +1,29 @@
+namespace = pf_debug
+
+
+country_event = {
+	id = pf_debug.1
+	title = pf_debug.1.t
+	desc = pf_debug.1.d
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	
+	trigger = {
+		
+	}
+
+	# fire_only_once = yes
+	
+	is_triggered_only = yes
+	# mean_time_to_happen = {}
+
+	option = {
+		name = pf_debug.1.a
+		ai_chance = { factor = 1 }
+		swap_trade_good_for_max_provinces = {
+			max = 3
+			original = wool
+			new = cloth
+			tooltip = wool_to_cloth_tt
+		}
+	}
+}

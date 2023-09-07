@@ -1,0 +1,29 @@
+#Change trade goods for a max number of provinces
+swap_trade_good_for_max_provinces = {
+	hidden_effect = {
+		set_variable = {
+			which = max
+			value = $max$
+		}
+		while = {
+			limit = { 
+				check_variable = {
+					which = max
+					value = 1
+				}
+			}
+			random_owned_province = {
+				limit = {
+					trade_goods = $original$
+				}
+				change_trade_goods = $new$
+			}
+			change_variable = {
+				which = max
+				value = -1
+			}
+		}
+	}
+	custom_tooltip = $tooltip$
+	#ex: "Up to §G MAX §! provinces producing §Y ORIGINAL §! will now produce §Y NEW §!."
+}
