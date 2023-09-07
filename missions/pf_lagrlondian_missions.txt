@@ -1818,13 +1818,14 @@ second_3_humanist = {
 		trigger = { 
 			OR = {
 				full_idea_group = humanist_ideas
+				# TODO: replace with tooltips
 				has_global_modifier_value = {
 					which = tolerance_heathen
-					value = 4
+					value = 0.04
 				}
 				has_global_modifier_value = {
 					which = tolerance_heretic
-					value = 3
+					value = 0.03
 				}
 			}
 		} 
