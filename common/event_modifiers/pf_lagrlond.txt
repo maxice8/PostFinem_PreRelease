@@ -225,7 +225,7 @@ pf_lag_educated_elite = {
 
 # pf_lag_theology
 pf_lag_controlled_clergy = {
-	idea_cost = -0.05
+	adm_tech_cost_modifier = -0.025
 	global_missionary_strength = 0.01
 	relation_with_same_religion = 15
 }

@@ -1665,7 +1665,7 @@ second_2 = {
 			}
 		}
 
-		effect = { 
+		effect = {
 			define_advisor = {
 				type = trader
 				religion = ROOT
@@ -2209,7 +2209,13 @@ fifth_2 = {
 			}
 		}
 
-		effect = {  } 
+		effect = { 
+			# ADM Advisors now give 0.05 governing capacity per level
+			custom_tooltip = PF_LAG_ADVISOR_GOVERNING_CAPACITY
+			hidden_effect = {
+				set_country_flag = 5_gov_cap_bonus_flag
+			}
+		} 
 	}
 
 	pf_lag_promote_urbanisation = {
@@ -2231,17 +2237,14 @@ fifth_2 = {
 			}
 			num_of_owned_provinces_with = {
 				value = 12
-				development = 15
+				OR = {
+					base_tax = 6
+					base_manpower = 7
+				}
 			}
 		} 
 
-		effect = { 
-			# ADM Advisors now give 0.05 governing capacity per level
-			custom_tooltip = PF_LAG_ADVISOR_GOVERNING_CAPACITY
-			hidden_effect = {
-				set_country_flag = 5_gov_cap_bonus_flag
-			}
-		 } 
+		effect = { } 
 	}
 
 	pf_lag_industrial = {
@@ -2263,7 +2266,7 @@ fifth_2 = {
 			}
 			num_of_owned_provinces_with = {
 				value = 12
-				base_production = 6
+				base_production = 8
 			}
 			num_of_owned_provinces_with = {
 				value = 4
