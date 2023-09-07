@@ -1,0 +1,132 @@
+#Bellica Stratocratic Admirals vs Generals 
+
+stratocratic_republic_mechanic = {
+    # alert_icon_gfx = 
+    # alert_icon_index = 
+    available = {
+		has_reform = stratocratic_republic
+	}
+  
+  powers= {
+      stratocratic_republic_slider = {
+          # gui = 
+          min = -100
+          max = 100
+          default = 0
+          reset_on_new_ruler = no
+          base_monthly_growth = 0
+          development_scaled_monthly_growth = 0
+          scaled_modifier = { #military
+              trigger = {
+                has_government_power = {
+                  mechanic_type = stratocratic_republic_mechanic
+                  power_type = stratocratic_republic_slider
+                  value = 21
+                     }
+              }
+              modifier = {
+                land_morale = 0.2
+                discipline = 0.1
+                army_tradition = 1
+                drill_gain_modifier = 1
+                general_cost = -0.25
+                land_forcelimit_modifier = 0.20
+                land_maintenance_modifier = 0.50
+              }
+              start_value = 21
+              end_value = 100
+          }
+          reverse_scaled_modifier = { #Admirial
+              trigger = {
+                NOT = {
+                  has_government_power = {
+                    mechanic_type = stratocratic_republic_mechanic
+                    power_type = stratocratic_republic_slider
+                    value = -20
+                      }
+                  }
+                } 
+              modifier = {
+                naval_morale = 0.2
+                sunk_ship_morale_hit_recieved = -0.1 
+                navy_tradition = 1
+                global_naval_engagement_modifier = 0.1
+                ship_durability = 0.1
+                admiral_cost = -0.25
+                naval_forcelimit_modifier = 0.20
+                naval_maintenance_modifier = 0.50 
+              }
+              start_value = -21
+              end_value = -100
+          }
+          range_modifier = { #perfectly balanced, as all things should be
+              #trigger
+              modifier = {
+                land_morale = 0.05
+                naval_morale = 0.05
+                naval_maintenance_modifier = -0.1
+                land_maintenance_modifier = -0.1
+              }
+              start_value = -20
+              end_value = 20
+          }
+          # on_max_reached = 
+          # on_min_reached =
+      }
+  }
+  
+  interactions = {
+    stratocratic_republic_military_button = {
+      #gui =
+      #icon =
+      trigger = {
+        has_government_power = {
+          mechanic_type = stratocratic_republic_mechanic
+          power_type = stratocratic_republic_slider
+          value = 100
+             }
+        }
+      effect = {
+        add_yearly_manpower = 1
+        create_general = {tradition = 80}
+        hidden_effect = {
+          add_government_power ={
+            mechanic_type = stratocratic_republic_mechanic
+            power_type = stratocratic_republic_slider
+            value = -20
+          }
+        }
+      }
+      cooldown_years = 0
+    }
+
+    stratocratic_republic_admiral_button = {
+      #gui =
+      #icon =
+      trigger = {
+        NOT = {
+        has_government_power = {
+          mechanic_type = stratocratic_republic_mechanic
+          power_type = stratocratic_republic_slider
+          value = -99
+             }
+          }
+        }
+      effect = {
+        add_country_modifier = {
+          name = stratocratic_republic_admiral_modifier
+          duration = 1095
+        }
+        create_admiral = {tradition = 80}
+        hidden_effect = {
+          add_government_power ={
+            mechanic_type = stratocratic_republic_mechanic
+            power_type = stratocratic_republic_slider
+            value = 20
+          }
+        }
+      }
+      cooldown_years = 0
+    }
+  }
+}
