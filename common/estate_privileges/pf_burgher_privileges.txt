@@ -69,7 +69,19 @@ estate_burghers_pf_peace_of_utrech = {
 	}
 	on_invalid = {
 		custom_tooltip = estate_burghers_pf_peace_of_utrech_rt
-	}x
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				OR = {
+					has_province_modifier = pf_lag_peace_of_utrech_different_group
+					has_province_modifier = pf_lag_peace_of_utrech_same_group
+				}
+			}
+			remove_province_modifier = pf_lag_peace_of_utrech_different_group
+			remove_province_modifier = pf_lag_peace_of_utrech_same_group
+		}
+	}
 	ai_will_do = {
 		factor = 100
 	}
