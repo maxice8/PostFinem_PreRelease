@@ -1,0 +1,217 @@
+new_branch1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BUL } 
+
+	pf_bul_control_the_azov_see = {
+		icon = mission_dominate_home_trade_node
+		position = 2
+		required_missions = { pf_bul_estabilishing_an_army } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			
+
+		} 
+
+		effect = {  } 
+	}
+
+	pf_bul_push_out_the_hellenics = {
+		icon = mission_unite_home_region
+		position = 3
+		required_missions = { pf_bul_control_the_azov_see } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_bul_control_the_crimean_trade = {
+		icon = mission_arabian_sea_trade
+		position = 8
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+new_branch2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BUL } 
+
+	pf_bul_estabilishing_an_army = {
+		icon = mission_assemble_an_army
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+		army_size_percentage = 0.8
+		manpower_percentage = 0.8
+		num_of_generals = 1 
+	} 
+
+		effect = {  } 
+	}
+
+	pf_bul_push_into_kiev = {
+		icon = mission_conquer_50_development
+		position = 2
+		required_missions = { pf_bul_estabilishing_an_army } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_bul_bullying_the_slavs = {
+		icon = mission_conquer_kannauj
+		position = 3
+		required_missions = { pf_bul_push_into_kiev } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_bul_a_new_homeland = {
+		icon = push_on_to_bulgaria
+		position = 4
+		required_missions = { pf_bul_bullying_the_slavs } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_bul_razing_macedonia = {
+		icon = mission_fall_of_constantinople
+		position = 5
+		required_missions = { pf_bul_a_new_homeland } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+new_branch4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BUL } 
+
+	pf_bul_push_farther_east = {
+		icon = mission_lit_harness_steppes
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_bul_taking_the_urals = {
+		icon = mission_beyond_the_urals
+		position = 2
+		required_missions = { pf_bul_push_farther_east } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_bul_preparing_for_the_invasion = {
+		icon = mission_new_army
+		position = 3
+		required_missions = { pf_bul_taking_the_urals } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_bul_the_ashig_invasion = {
+		icon = mjz_for_the_horde
+		position = 4
+		required_missions = { pf_bul_preparing_for_the_invasion } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_bul_one_true_khan = {
+		icon = mission_conquer_tver
+		position = 5
+		required_missions = { pf_bul_the_ashig_invasion } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+new_branch3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BUL } 
+
+
+	pf_bul_the_bulgarian_empire = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = {
+			pf_bul_one_true_khan
+			pf_bul_razing_macedonia
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_bul_strengthening_the_faith = {
+		icon = mission_european_church
+		position = 8
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+new_branch5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BUL } 
+
+	pf_bul_develop_azov = {
+		icon = develop_our_capital
+		position = 8
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
