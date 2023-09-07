@@ -9,11 +9,39 @@ pf_nrd_1 = {
 		icon = mission_rb_rein_in_the_highland_clans
 		position = 2
 		required_missions = { pf_nrd_raise_host } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = lowlands_area
+				area = highlands_area
+				area = kingdom_of_the_isles_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
 
-		trigger = {  } 
+		trigger = {
+			lowlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			highlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kingdom_of_the_isles_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
 
-		effect = {  } 
+		effect = {
+			country_event = { id = nrd_flavor_events.1 } 
+			custom_tooltip =  
+			add_country_modifier = {
+				name = "nrd_highland_domination_modifier"
+				duration = 7300
+			}
+			wales_area = { add_permanent_claim = ROOT } 
+		}
 	}
 
 	pf_nrd_cornish_domination = {
@@ -32,20 +60,90 @@ pf_nrd_1 = {
 		position = 5
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 2
+				province_has_center_of_trade_of_level = 2
+			}
+			OR = {
+				1266 = {
+					trade_share = {
+						country = NRD
+						share = 30
+					}
+				}
+				1285 = {
+					trade_share = {
+						country = NRD
+						share = 20
+					}
+				}
+			}
+		}
 
-		effect = {  } 
+		effect = {
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			custom_tooltip =  
+			define_advisor = {
+				type = trader
+				discount = yes
+				skill = 1
+				name = "Vilhelm Forsberg"
+			}
+			custom_tooltip =  
+			add_country_modifier = {
+				name = "nrd_economic_opportunities_modifier"
+				duration = 7300
+			}
+		}
 	}
 
 	pf_nrd_feed_the_people = {
 		icon = mission_scandinavian_port_authority
 		position = 6
 		required_missions = { pf_nrd_establish_trade } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			trade_goods = fish
+			NOT = { base_production = 5 } 
+		}
 
-		trigger = {  } 
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 3
+				trade_goods = fish
+				base_production = 5
+			}
+		}
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = nrd_feed_the_people_tt
+			tooltip = {
+				add_province_modifier = {
+					name = "nrd_productive_fisheries_modifier"
+					duration = -1
+				}
+				custom_tooltip =  
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = { trade_goods = fish } 
+					add_province_modifier = {
+						name = "nrd_productive_fisheries_modifier"
+						duration = -1
+					}
+				}
+			}
+			add_years_of_owned_provinces_production_income = {
+				years = 8
+				trigger = { trade_goods = fish } 
+				custom_tooltip = nrd_fish_income_desc
+			}
+		}
 	}
 
 	pf_nrd_secure_iron = {
@@ -84,36 +182,28 @@ pf_nrd_2 = {
 
 		trigger = {
 			if = {
-				limit = { has_leader = "Knut Stormbringer" }
-				has_leader = "Knut Stormbringer"
+				limit = { has_leader = Knut Stormbringer } 
+				has_leader = Knut Stormbringer
 			}
-			else = { num_of_generals = 1 }
+			else = { num_of_generals = 1 } 
 			if = {
-				limit = { ai = no }
+				limit = { ai = no } 
 				army_size_percentage = 1
 			}
-			else = {
-				army_size_percentage = 0.75
-			}
-		} 
+			else = { army_size_percentage = 0.75 } 
+		}
 
-		effect = {  
+		effect = {
 			add_mil_power = 50
-			custom_tooltip = " "
+			custom_tooltip =  
 			add_country_modifier = {
-				name = nrd_prepare_for_war_modifier
+				name = "nrd_prepare_for_war_modifier"
 				duration = 3650
 			}
-			kingdom_of_the_isles_area = {
-				add_permanent_claim = ROOT
-			}
-			highlands_area = {
-				add_permanent_claim = ROOT
-			}
-			lowlands_area = {
-				add_permanent_claim = ROOT
-			}
-		} 
+			kingdom_of_the_isles_area = { add_permanent_claim = ROOT } 
+			highlands_area = { add_permanent_claim = ROOT } 
+			lowlands_area = { add_permanent_claim = ROOT } 
+		}
 	}
 
 	pf_nrd_welsh_domain = {
@@ -123,21 +213,50 @@ pf_nrd_2 = {
 			pf_nrd_subjucate_picts
 			pf_nrd_expand_southward
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			area = wales_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
 
-		trigger = {  } 
+		trigger = {
+			wales_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			owns_core_province = 242
+		}
 
-		effect = {  } 
+		effect = {
+			242 = { add_or_upgrade_shipyard_building = yes } 
+			custom_tooltip =  
+			242 = {
+				add_province_modifier = {
+					name = "nrd_celtic_sea_base_modifier"
+					duration = -1
+				}
+			}
+			wessex_area = { add_permanent_claim = ROOT } 
+		}
 	}
 
 	pf_nrd_a_worthy_capital = {
 		icon = renaissance_city
 		position = 5
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+			NOT = { development = 20 } 
+		}
 
-		trigger = {  } 
+		trigger = {
+			capital_scope = { development = 20 } 
+			capital_scope = { num_of_buildings_in_province = 2 } 
+		}
 
-		effect = {  } 
+		effect = {
+			add_stability_or_adm_power = yes
+			custom_tooltip =  
+			add_years_of_income = 2
+		}
 	}
 
 	pf_nrd_economic_boom = {
@@ -182,22 +301,120 @@ pf_nrd_3 = {
 			pf_nrd_raise_host
 			pf_nrd_brothers
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			area = scottish_marches_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
 
-		trigger = {  } 
+		trigger = {
+			scottish_marches_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
 
-		effect = {  } 
+		effect = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 25
+			}
+			custom_tooltip =  
+			east_midlands_area = { add_permanent_claim = ROOT } 
+			west_midlands_area = { add_permanent_claim = ROOT } 
+			yorkshire_area = { add_permanent_claim = ROOT } 
+		}
 	}
 
 	pf_nrd_king_of_the_who = {
 		icon = mission_rb_into_england
 		position = 3
 		required_missions = { pf_nrd_expand_southward } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = yorkshire_area
+				area = east_midlands_area
+				area = west_midlands_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				OR = {
+					area = yorkshire_area
+					area = east_midlands_area
+					area = west_midlands_area
+				}
+			}
+		}
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = nrd_king_of_the_who_tt
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						OR = {
+							area = yorkshire_area
+							area = west_midlands_area
+							area = east_midlands_area
+						}
+					}
+					add_base_tax = 1
+				}
+			}
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						OR = {
+							area = yorkshire_area
+							area = west_midlands_area
+							area = east_midlands_area
+						}
+					}
+					add_base_tax = 1
+				}
+			}
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						OR = {
+							area = yorkshire_area
+							area = west_midlands_area
+							area = east_midlands_area
+						}
+					}
+					add_base_tax = 1
+				}
+			}
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						OR = {
+							area = yorkshire_area
+							area = west_midlands_area
+							area = east_midlands_area
+						}
+					}
+					add_base_tax = 1
+				}
+			}
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						OR = {
+							area = yorkshire_area
+							area = west_midlands_area
+							area = east_midlands_area
+						}
+					}
+					add_base_tax = 1
+				}
+			}
+			east_anglia_area = { add_permanent_claim = ROOT } 
+			home_counties_area = { add_permanent_claim = ROOT } 
+			wessex_area = { add_permanent_claim = ROOT } 
+		}
 	}
 
 	pf_nrd_celtic_isles = {
@@ -208,11 +425,55 @@ pf_nrd_3 = {
 			pf_nrd_king_of_the_who
 			pf_nrd_sail_to_distant_shores
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			region = british_isles_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
 
-		trigger = {  } 
+		trigger = {
+			british_isles_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = nrd_celtic_isles_tt
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						capital_scope = { region = british_isles_region } 
+						NOT = { total_development = 100 } 
+					}
+					every_owned_province = {
+						cede_province = ROOT
+						add_core = ROOT
+					}
+				}
+			}
+			custom_tooltip =  
+			change_tag = SKL
+			custom_tooltip =  
+			on_change_tag_effect = yes
+			restore_country_name = "yes"
+			custom_tooltip =  
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 }  } 
+				set_government_rank = 2
+				custom_tooltip =  
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 50
+			if = {
+				limit = { has_custom_ideas = no } 
+				country_event = { id = ideagroups.1 } 
+			}
+			set_country_flag = formed_skaldasker_flag
+		}
 	}
 
 	pf_nrd_stretch_our_legs = {
@@ -247,13 +508,13 @@ pf_nrd_4 = {
 	pf_nrd_brothers = {
 		icon = mission_conquer_norway
 		position = 1
-		provinces_to_highlight = { 
+		provinces_to_highlight = {
 			owned_by = NOR
 			AND = {
 				NOT = {
 					NOR = {
 						has_opinion = {
-							who = ROOT 
+							who = ROOT
 							value = 150
 						}
 					}
@@ -261,16 +522,15 @@ pf_nrd_4 = {
 				NOT = {
 					NOR = {
 						owes_favors = {
-							who = ROOT 
+							who = ROOT
 							value = 10
 						}
 					}
 				}
 			}
+		}
 
-		} 
-
-		trigger = {  
+		trigger = {
 			NOR = {
 				has_opinion = {
 					who = ROOT
@@ -283,17 +543,17 @@ pf_nrd_4 = {
 					value = 10
 				}
 			}
-		} 
+		}
 
-		effect = { 
+		effect = {
 			if = {
-				limit = {
-					capital_scope = { has_port = yes }
-				}
+				limit = { capital_scope = { has_port = yes }  } 
 				capital_scope = {
-					galleass_galley = ROOT galleass_galley = ROOT galleass_galley = ROOT
+					galleass_galley = ROOT
+					galleass_galley = ROOT
+					galleass_galley = ROOT
 				}
-				custom_tooltip = " "
+				custom_tooltip =  
 			}
 			NOR = {
 				add_trust = {
@@ -301,11 +561,9 @@ pf_nrd_4 = {
 					value = 10
 				}
 			}
-			custom_tooltip = " "
-			scottish_marches_area = {
-				add_permanent_claim = ROOT
-			}
-		} 
+			custom_tooltip =  
+			scottish_marches_area = { add_permanent_claim = ROOT } 
+		}
 	}
 
 	pf_nrd_sail_to_distant_shores = {
@@ -315,11 +573,44 @@ pf_nrd_4 = {
 			pf_nrd_galleys_with_good_oars
 			pf_nrd_expand_southward
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = leinster_area
+				area = ulster_area
+				area = munster_area
+				area = connacht_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
 
-		trigger = {  } 
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				OR = {
+					area = leinster_area
+					area = ulster_area
+					area = munster_area
+					area = connacht_area
+				}
+			}
+		}
 
-		effect = {  } 
+		effect = {
+			add_stability_or_adm_power = yes
+			custom_tooltip =  
+			if = {
+				limit = { CEL = { exists = yes }  } 
+				add_casus_belli = {
+					type = cb_claim_throne
+					target = CEL
+				}
+				custom_tooltip =  
+			}
+			add_country_modifier = {
+				name = "nrd_looking_overseas_modifier"
+				duration = 3650
+			}
+		}
 	}
 
 	pf_nrd_dominate_celtica = {
@@ -356,7 +647,7 @@ pf_nrd_4 = {
 
 	pf_nrd_prosperous_norse_lands = {
 		icon = develop_the_po_valley
-		position = 9
+		position = 8
 		required_missions = { pf_nrd_share_the_sagas } 
 		provinces_to_highlight = {  } 
 
@@ -378,9 +669,22 @@ pf_nrd_5 = {
 		required_missions = { pf_nrd_brothers } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			navy_size_percentage = 1
+			num_of_galley = 10
+			galley_fraction = 0.5
+		}
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = "nrd_galley_with_good_oar_modifier"
+				duration = 3650
+			}
+			ulster_area = { add_permanent_claim = ROOT } 
+			leinster_area = { add_permanent_claim = ROOT } 
+			connacht_area = { add_permanent_claim = ROOT } 
+			munster_area = { add_permanent_claim = ROOT } 
+		}
 	}
 
 	pf_nrd_glorious_ports = {
@@ -406,7 +710,7 @@ pf_nrd_5 = {
 
 	pf_nrd_share_the_sagas = {
 		icon = mission_book_of_royal_degrees
-		position = 8
+		position = 7
 		required_missions = { pf_nrd_proclaim_odins_name } 
 		provinces_to_highlight = {  } 
 
@@ -418,7 +722,6 @@ pf_nrd_5 = {
 	pf_nrd_the_allfathers_blessing = {
 		icon = mission_crown_of_sweden
 		position = 10
-		required_missions = { pf_nrd_share_the_sagas } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 

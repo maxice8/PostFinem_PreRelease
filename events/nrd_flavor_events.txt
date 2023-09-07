@@ -1,0 +1,52 @@
+namespace = nrd_flavor_events
+
+
+#Settling Norse Communities
+country_event = {
+	id = nrd_flavor_events.1
+	title = nrd_flavor_events.1.t
+	desc = nrd_flavor_events.1.d
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	
+	trigger = {
+		
+	}
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	# mean_time_to_happen = {}
+
+	option = {
+		name = nrd_flavor_events.1.a
+		ai_chance = { factor = 1 }
+		
+		random_owned_province = {
+			limit = {
+				OR = {
+					area = lowlands_area
+					area = highlands_area
+					area = kingdom_of_the_isles_area
+				}
+				is_capital = no
+			}
+			add_base_tax = 2
+			add_base_production = 3
+			add_base_production = 2
+			if = {
+				limit = {
+					NOT = { religion = owner }
+				}				
+				custom_tooltip = " "
+				change_religion = owner
+				custom_tooltip = " "
+			}
+			if = {
+				limit = {
+					NOT = { culture = owner }
+				}
+				change_culture = owner
+			}
+		}
+	}
+}
