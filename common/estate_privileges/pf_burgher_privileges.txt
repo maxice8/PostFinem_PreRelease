@@ -14,8 +14,11 @@ estate_burghers_pf_peace_of_utrech = {
 		}
 	}
 	can_select = {
-		has_unlocked_estate_privilege = {
-			estate_privilege = estate_burghers_pf_peace_of_utrech
+		custom_trigger_tooltip = {
+			tooltip = has_unlocked_estate_burghers_pf_peace_of_utrech
+			has_unlocked_estate_privilege = {
+				estate_privilege = estate_burghers_pf_peace_of_utrech
+			}
 		}
 		custom_trigger_tooltip = {
 			tooltip = estate_burghers_pf_peace_of_utrech_has_eligible_province_tt

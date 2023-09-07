@@ -250,9 +250,6 @@ estate_burghers = {
 	color = { 35 35 150 }
 
 	privileges = {
-		# pf [[[
-		estate_burghers_pf_peace_of_utrech
-		# ]]]
 		estate_burghers_land_rights
 		estate_burghers_land_of_commerce
 		estate_burghers_admirals
@@ -294,6 +291,9 @@ estate_burghers = {
 		estate_burghers_financial_demand
 		estate_burghers_sindicat_remensa_privilege
 		estate_burghers_promote_burgher_bookkeeping
+		# pf [[[
+		estate_burghers_pf_peace_of_utrech
+		# ]]]
 	}
 
 	agendas = {
