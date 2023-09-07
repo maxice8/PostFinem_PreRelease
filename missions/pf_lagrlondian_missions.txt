@@ -1843,8 +1843,8 @@ second_3 = {
 				has_building = university
 			}
 			OR = {
-				adm = 5
-				national_focus = ADM
+				dip = 4
+				national_focus = DIP
 			}
 		 } 
 
@@ -2149,7 +2149,10 @@ fourth_2 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			has_adm_advisor_3 = yes
+			OR = {
+				has_adm_advisor_3 = yes
+				adm = 5
+			}
 			OR = {
 				innovativeness = 20
 				has_idea_group = innovativeness_ideas
