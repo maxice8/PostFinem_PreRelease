@@ -1459,15 +1459,57 @@ first_2 = {
 
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 12
+				value = 8
 				has_trade_building_trigger = yes
 			}
 		}
 
-		effect = { 
-			add_years_of_trade_income = {
-				years = 1
+		effect = {
+			custom_tooltip = PF_LAG_UPGRADE_MARKETPLACES
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_building = marketplace
+							has_building = trade_depot
+							NOT = { has_province_flag = pf_lag_expanded_markets_upgrade }
+						}
+					}
+					upgrade_building = { trade = yes }
+					set_province_flag = pf_lag_expanded_markets_upgrade
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_building = marketplace
+							has_building = trade_depot
+							NOT = { has_province_flag = pf_lag_expanded_markets_upgrade }
+						}
+					}
+					upgrade_building = { trade = yes }
+					set_province_flag = pf_lag_expanded_markets_upgrade
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_building = marketplace
+							has_building = trade_depot
+							NOT = { has_province_flag = pf_lag_expanded_markets_upgrade }
+						}
+					}
+					upgrade_building = { trade = yes }
+					set_province_flag = pf_lag_expanded_markets_upgrade
+				}
+				every_owned_province = {
+					limit = {
+						has_province_flag = pf_lag_expanded_markets_upgrade
+					}
+					clr_province_flag = pf_lag_expanded_markets_upgrade
+				}
+				
 			}
+
+			custom_tooltip = empty_line_tt
 			add_estate_loyalty = {
 				estate = estate_burghers
 				loyalty = 10
@@ -1535,14 +1577,12 @@ first_2 = {
 					value = 6
 					province_has_center_of_trade_of_level = 3
 				}
-				AND = {
-					home_trade_node = {
-						highest_value_trade_node = yes
-					}
-					has_atleast_x_trading_bonuses = {
-						amount = 3
-					}
-				}
+			}
+			home_trade_node = {
+				highest_value_trade_node = yes
+			}
+			has_atleast_x_trading_bonuses = {
+				amount = 2
 			}
 		} 
 
@@ -1625,7 +1665,14 @@ second_2 = {
 			}
 		}
 
-		effect = {  } 
+		effect = { 
+			define_advisor = {
+				type = trader
+				religion = ROOT
+				culture = ROOT
+				cost_multiplier = 0.75
+			}
+		 } 
 	}
 
 	pf_lag_theology = {
@@ -1649,7 +1696,24 @@ second_2 = {
 			}
 		}
 
-		effect = {  } 
+		effect = {
+			define_advisor = {
+				type = theologian
+				culture = ROOT
+				religion = ROOT
+				cost_multiplier = 0.75
+				skill = 2
+			}
+
+			custom_tooltip = empty_line_tt
+
+			add_country_modifier = {
+				name = pf_lag_controlled_clergy
+				duration = 3650
+			}
+			# Add event to allow you to pick the path
+			# for Humanist or Religious
+		 } 
 	}
 }
 second_3_locked = {
@@ -1772,11 +1836,24 @@ second_3 = {
 		icon = mission_unknown_mission
 		position = 14
 		required_missions = { pf_lag_universities } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { province_id = 97 } 
 
-		trigger = {  } 
+		trigger = { 
+			97 = {
+				has_building = university
+			}
+			OR = {
+				adm = 5
+				national_focus = ADM
+			}
+		 } 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = pf_lag_no_more_comet_sighted_event
+			hidden_effect = {
+				set_country_flag = no_more_comet_sighted_event
+			}
+		 } 
 	}
 }
 third_2 = {
@@ -1806,11 +1883,25 @@ third_2 = {
 			}
 			num_of_estate_privileges = {
 				estate = estate_burghers
-				value = 4
+				value = 3
 			}
 		} 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = pf_lag_burgher_support
+				duration = 7300
+			}
+
+			capital_scope = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 3650
+					power = 30
+					key = pf_lag_burgher_support_trade_node
+				}
+			}
+		 } 
 	}
 
 	pf_lag_renaissance = {
@@ -1818,12 +1909,34 @@ third_2 = {
 		position = 11
 		required_missions = { pf_lag_sway } 
 		provinces_to_highlight = { 
+			owned_by = ROOT
 			NOT = { renaissance = 100 } 
 		} 
 
-		trigger = { has_institution = renaissance } 
+		trigger = {
+			has_institution = renaissance
+			stability = 1
+			OR = {
+				artist = 3
+				has_adm_advisor_2 = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			# TODO: replace with a random ADM advisor
+			define_advisor = {
+				type = statesman
+				skill = 3
+				religion = ROOT
+				culture = ROOT
+				cost_multiplier = 0.5
+			}
+
+			add_country_modifier = {
+				name = pf_lag_scholars
+				duration = 7300
+			}
+		} 
 	}
 
 	pf_lag_absolutism = {
@@ -1894,7 +2007,7 @@ fourth_2 = {
 					NOT = { 
 						num_of_estate_privileges = {
 							estate = estate_nobles
-							value = 4
+							value = 3
 						}
 					}
 					NOT = {
@@ -1905,14 +2018,14 @@ fourth_2 = {
 					}
 					estate_loyalty = {
 						estate = estate_nobles
-						loyalty = 50
+						loyalty = 60
 					}
 				}
 			}
 		} 
 
 		effect = { 
-			add_adm_power = 100
+			add_adm_power = 50
 			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = pf_lag_nobles_curtailed
@@ -1938,22 +2051,32 @@ fourth_2 = {
 		icon = fra_crown_seat_capital
 		position = 11
 		required_missions = { pf_lag_rein_nobles } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+		 } 
 
 		trigger = {
 			capital_scope = { development = 30 } 
 			capital_scope = { num_of_buildings_in_province = 5 } 
 			capital_scope = { 
-				NOT = { devastation = 0 }
+				NOT = { devastation = 1 }
 			} 
 			capital_scope = { prosperity = 100 }
 		}
 
-		effect = { 
-			capital_scope = {
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
+		effect = {
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = pf_lag_glorious_court
+				duration = 3650
+			}
+
+			custom_tooltip = PF_LAG_EVOLVED_IDEAS
+			hidden_effect = {
+				# We would normally fire ideagroups.1
+				# but we have no formables so lets just
+				# switch instantly
+				swap_free_idea_group = yes
 			}
 		} 
 	}
@@ -1965,22 +2088,58 @@ fourth_2 = {
 			pf_lag_capital
 			pf_lag_renaissance
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			OR = {
+				NOT = { culture = ROOT }
+				NOT = { religion = ROOT }
+				has_courthouse_building_trigger = no
+			}
+		 }
 
-		trigger = {  } 
+		trigger = {
+			development_in_provinces = {
+				value = 150
+				culture = ROOT
+				religion = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 8
+				has_courthouse_building_trigger = yes
+				culture = ROOT
+				religion = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			# Give the Dutch Republic reform here
+		 } 
 	}
 
 	pf_lag_universities = {
 		icon = mission_early_modern_university
 		position = 13
 		required_missions = { pf_lag_centralize } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			NOT = { has_building = university }
+		 } 
 
-		trigger = { university = 5 } 
+		trigger = { 
+			OR = {
+				innovativeness = 50
+				full_idea_group = innovativeness_ideas
+				university = 5
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_innovativeness_small_effect = yes
+			add_country_modifier = {
+				name = pf_lag_educated_elite
+				duration = 3650
+			}
+		} 
 	}
 
 	pf_lag_medical_school = {
@@ -1989,9 +2148,19 @@ fourth_2 = {
 		required_missions = { pf_lag_universities } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			adm_power = 50
+			OR = {
+				innovativeness = 20
+				has_idea_group = innovativeness_ideas
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_adm_power = -50
+			custom_tooltip = emp_ven_plague_doctor_training_tt
+			set_country_flag = has_competent_doctors
+		 } 
 	}
 }
 fifth_2 = {
@@ -2022,20 +2191,20 @@ fifth_2 = {
 		effect = {  } 
 	}
 
-	pf_lag_develop_interior = {
+	pf_lag_develop_outer_rim = {
 		icon = mission_have_manufactories
 		position = 11
 		required_missions = { pf_lag_develop } 
 		provinces_to_highlight = {
 			owned_by = ROOT
-			NOT = { region = capital } 
+			NOT = { region = low_countries_region } 
 			NOT = { development = 10 } 
 		}
 
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 12
-				NOT = { region = capital } 
+				NOT = { region = low_countries_region }
 				development = 10
 			}
 		}
@@ -2046,7 +2215,7 @@ fifth_2 = {
 	pf_lag_promote_urbanisation = {
 		icon = mission_eastern_european_city
 		position = 12
-		required_missions = { pf_lag_develop_interior } 
+		required_missions = { pf_lag_develop_outer_rim } 
 		provinces_to_highlight = {
 			owned_by = ROOT
 			OR = {
@@ -2064,10 +2233,15 @@ fifth_2 = {
 				value = 12
 				development = 15
 			}
-			total_development = 300
 		} 
 
-		effect = {  } 
+		effect = { 
+			# ADM Advisors now give 0.05 governing capacity per level
+			custom_tooltip = PF_LAG_ADVISOR_GOVERNING_CAPACITY
+			hidden_effect = {
+				set_country_flag = 5_gov_cap_bonus_flag
+			}
+		 } 
 	}
 
 	pf_lag_industrial = {
@@ -2090,6 +2264,13 @@ fifth_2 = {
 			num_of_owned_provinces_with = {
 				value = 12
 				base_production = 6
+			}
+			num_of_owned_provinces_with = {
+				value = 4
+				OR = {
+					trade_goods = coal
+					has_latent_trade_goods = coal
+				}
 			}
 		} 
 

@@ -203,18 +203,42 @@ pf_lag_forunner_globalization = {
 # pf_lag_frisians
 pf_lag_frisian_support = {
 	global_unrest = -1
-	global_rebel_suppression_efficiency = 0.25
+	stability_cost_modifier = -0.15 
 }
 
 # pf_lag_rein_nobles
 pf_lag_nobles_curtailed = {
 	global_tax_modifier = 0.2
-	idea_cost = -0.1
+	reform_progress_growth = 0.05
 }
 
 # pf_lag_capital
-pf_lag_glorious_capital = {
-	local_development_cost = -0.1
-	local_build_cost = -0.1
-	local_build_time = -0.1
+pf_lag_glorious_court = {
+	same_culture_advisor_cost = -0.25
+}
+
+# pf_lag_universities
+pf_lag_educated_elite = {
+	technology_cost = -0.025
+	innovativeness_gain = 0.05
+}
+
+# pf_lag_theology
+pf_lag_controlled_clergy = {
+	idea_cost = -0.05
+	global_missionary_strength = 0.01
+	relation_with_same_religion = 15
+}
+
+# pf_lag_sway
+pf_lag_burgher_support = {
+	mercantilism_cost = -0.15
+	ship_trade_power_modifier = 0.33
+	naval_tradition_from_trade = 0.15
+}
+
+# pf_lag_renaissance
+pf_lag_scholars = {
+	prestige = 1
+	# TODO: add more cool modifiers
 }

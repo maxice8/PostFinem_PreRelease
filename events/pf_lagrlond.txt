@@ -13,8 +13,6 @@ country_event = {
 
 	option = {
 		name = pf_lagrlond_events.1.a
-		disable_rebels_from_seize_land_for_estate = {
-			estate = estate_nobles
-		}
+		clr_country_flag = disabled_rebels_from_seized_land_for_estate_nobles
 	}
 }
