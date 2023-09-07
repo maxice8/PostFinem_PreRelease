@@ -259,7 +259,7 @@
  # Coehorn Mortar present in the game.
  pf_lag_artillery:0 "Guns of Menni van Kohern"
  desc_pf_lag_artillery:0 "REPLACE_ME"
- pf_lag_second_heathen_army:0 "The Host of Eirik Havendalsson"
+ pf_lag_second_heathen_army:0 "The Host of Eirik I Havendalsson"
  desc_pf_lag_second_heathen_army:0 "REPLACE_ME"
  pf_lag_conquest_belgica:0 "Conquest of Belgica"
  desc_pf_lag_conquest_belgica:0 "REPLACE_ME"
@@ -297,10 +297,11 @@
  # Refernce to Magna Carta
  pf_lag_magna_carta:0 "Cearta Trinovantes"
  desc_pf_lag_magna_carta:0 "REPLACE_ME"
- # Fictional figure called Gunnarr Eiríksson, descedant of Eirik Havendalsson (founder of Lagrlond)
+ # Fictional figure called Gunnarr Eiríksson, descedant of Eirik Havendalsson
+ # named Eirik I af Lágrlondi (founder of Lagrlond)
  # loosely based on Baldwin I, Magrave of Flanders and Dirk III, Count of Holland.
  # mostly known for reforming the Lagrlonder army
- pf_lag_general_staff:0 "The General Staff of Gunnarr Eiríksson II af Lagrlondi"
+ pf_lag_general_staff:0 "The General Staff of Gunnarr II af Lágrlondi"
  desc_pf_lag_general_staff:0 "REPLACE_ME"
 
  pf_lag_full_quality:0 "Professional Corps"
@@ -407,3 +408,17 @@
  desc_pf_lag_peace_of_utrech_same_group:0 "REPLACE_ME"
  pf_lag_peace_of_utrech_different_group:0 "Peace of Útaríki"
  desc_pf_lag_peace_of_utrech_different_group:0 "REPLACE_ME"
+
+ # Lagr Repubilc reform
+ # Means Lagr (Low) Landa (Provinces, Lands) Thing (Assembly)
+ pf_lagr_republic:0 "Láglandathing"
+ pf_lagr_republic_desc:0 "The Láglandathing, or the Low Provinces Assembly, was established after Sveinn I af Lágrlondi's failure to quell a revolt by the Frisians, the assembly is headed by the Thinghâlder and is the political battleground between the Havendalssites, with their name harkening back to Eirik Havendalsson the conqueror of the Low Countries and last Absolute Ruler, which has most of its support among Norvegr [Root.GetNobilityOrFallbackName] and the [Root.GetChurchOrFallbackName], they wish for a hereditary Thinghâlder based on the Lágrlondi dynasty, and the Frisianites, named after the Frisians but with supporters among non-Norvegr [Root.GetNobilityOrFallbackName] and the [GetBurghersOrFallbackName], who wish for an Elected Thinghâlder and greater autonomy for provinces."
+ havendalssites:0 "Havendalssites"
+ havendalssites_MECHANIC_TOOLTIP:0 "Havendalssites"
+ frisianites:0 "Frisianites"
+ frisianites_MECHANIC_TOOLTIP:0 "Frisianites"
+
+ # Support in the Dutch Election
+ elections.720.dlag:0 "The strengthening of the Frisianites has forced $MONARCH$ to accept the election of a new [Root.Monarch.GetTitle]. Both the Frisianites and the Havenldassites have put forward a new candidate."
+ elections.720.pfa:0 "The Havendalssite candidate"
+ elections.720.pfb:0 "The Frisianite candidate"

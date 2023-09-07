@@ -2208,7 +2208,10 @@ fourth_2 = {
 		} 
 
 		effect = { 
-			# Give the Dutch Republic reform here
+			hidden_effect = {
+				change_government = republic
+			}
+			add_government_reform = pf_lagr_republic
 		 } 
 	}
 

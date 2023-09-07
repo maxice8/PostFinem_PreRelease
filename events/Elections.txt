@@ -840,6 +840,12 @@ country_event = {
 		trigger = { has_reform = feuillant_reform }
 		desc = elections.720.de
 	}
+
+	#pf
+	desc = {
+		trigger = { has_reform = pf_lagr_republic }
+		desc = elections.720.dlag
+	}
 	
 	desc = {
 		trigger = { 
@@ -866,6 +872,8 @@ country_event = {
 		trigger = { 
 			NOT = { has_reform = monastic_elections_reform }
 			NOT = { has_reform = feuillant_reform }
+			# pf
+			NOT = { has_reform = pf_lagr_republic }
 		}
 		define_ruler = {
 		}
@@ -966,6 +974,23 @@ country_event = {
 		define_ruler = {
 		}
 		change_statists_vs_orangists = 0.33
+	}
+
+	# pf
+	option = {
+		name = elections.720.pfa
+		trigger = { has_reform = pf_lagr_republic }
+		define_ruler = {
+			dynasty = "af Lágrlondi"
+		}
+		change_statists_vs_orangists = 0.33
+	}
+	option = {
+		name = elections.720.pfb
+		trigger = { has_reform = pf_lagr_republic }
+		define_ruler = {
+		}
+		change_statists_vs_orangists = -0.33
 	}
 }
 

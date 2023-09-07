@@ -468,6 +468,9 @@ monarchy = {
 	
 	# Dictatorships etc
 	exclusive_reforms = {
+		# pf [[[
+		pf_lagr_republic
+		# ]]]
 		military_dictatorship_reform
 		protectorate_parliament_reform
 		prussian_republic_reform
@@ -562,6 +565,9 @@ republic = {
 	reform_levels = {
 		oligarchy_merchant_class_noble_elite = {
 			reforms = {
+				# pf = [[[
+				pf_lagr_republic
+				# ]]]
 				oligarchy_reform
 				signoria_reform
 				merchants_reform
@@ -875,6 +881,9 @@ republic = {
 		prussian_republic_reform
 	}
 	exclusive_reforms = {
+		# pf = [[[
+		pf_lagr_republic
+		# ]]]
 		lottery_reform
 		venice_merchants_reform
 		dutch_republic
@@ -897,6 +906,9 @@ republic = {
 		military_electorate_reform
 	}
 	exclusive_reforms = {
+		# pf = [[[
+		pf_lagr_republic
+		# ]]]
 		consolidate_power_to_the_ruler_reform
 		lottery_reform
 		venice_merchants_reform
@@ -907,6 +919,9 @@ republic = {
 		military_dictatorship_reform
 	}
 	exclusive_reforms = { 
+		# pf = [[[
+		pf_lagr_republic
+		# ]]]
 		dutch_republic
 		force_reelection_reform
 	}
