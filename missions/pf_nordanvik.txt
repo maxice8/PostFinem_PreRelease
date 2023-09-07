@@ -695,12 +695,39 @@ pf_nrd_4 = {
 						country_or_subject_holds = CEL
 					}
 				}
-				CEL = { is_subject_of = ROOT }
+				CEL = { 
+					is_subject_of = ROOT 
+					NOT = { liberty_desire = 50 }
+				}
 			}
 		} 
 
 		effect = {  
-			add_treasury = 1
+			if = {
+				limit = {
+					NOT = {
+						british_isles_region = { 
+							country_or_subject_holds = CEL
+						}
+					}
+				}
+				custom_tooltip = nrd_dominate_celtica_owns_yes
+			}
+			else = {
+				custom_tooltip = nrd_dominate_celtica_owns_no
+			}
+			if = {
+				limit = {					
+					CEL = { 
+						is_subject_of = ROOT 
+						NOT = { liberty_desire = 50 }
+					}
+				}
+				custom_tooltip = nrd_dominate_celtica_subject_yes
+			}
+			else = {
+				custom_tooltip = nrd_dominate_celtica_subject_yes
+			}
 		} 
 	}
 
