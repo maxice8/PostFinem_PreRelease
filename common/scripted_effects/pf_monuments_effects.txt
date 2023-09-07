@@ -1,0 +1,14 @@
+destiny_thing = {
+	custom_tooltip = destiny_thing_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				dip_power = 600
+			}
+			add_adm_power = 100
+		}
+		else = {
+			add_mil_power = 100
+		}
+	}
+}
