@@ -1697,12 +1697,19 @@ second_2 = {
 		}
 
 		effect = {
-			define_advisor = {
-				type = theologian
-				culture = ROOT
-				religion = ROOT
-				cost_multiplier = 0.75
-				skill = 2
+			custom_tooltip = PF_LAG_BASE_TAX_GAIN_8
+			hidden_effect = {
+				for = {
+					amount = 8
+					effect = "
+					random_owned_province = {
+						limit = {
+							religion = ROOT
+						}
+						add_base_tax = 1
+					}
+					"
+				}
 			}
 
 			custom_tooltip = empty_line_tt
@@ -1711,8 +1718,9 @@ second_2 = {
 				name = pf_lag_controlled_clergy
 				duration = 3650
 			}
-			# Add event to allow you to pick the path
-			# for Humanist or Religious
+			country_event = {
+				id = pf_lagrlond_events.2
+			}
 		 } 
 	}
 }
@@ -1723,8 +1731,8 @@ second_3_locked = {
 	has_country_shield = yes
 	potential = {
 		tag = LAG
-		NOT = { has_country_flag = lag_humanist_path } 
-		NOT = { has_country_flag = lag_religious_path } 
+		NOT = { has_country_flag = pf_lag_humanist_path } 
+		NOT = { has_country_flag = pf_lag_religious_path } 
 	}
 
 	pf_lag_religion_locked_1 = {
@@ -1766,19 +1774,39 @@ second_3_humanist = {
 	has_country_shield = yes
 	potential = {
 		tag = LAG
-		has_country_flag = lag_humanist_path
-		NOT = { has_country_flag = lag_religious_path } 
+		has_country_flag = pf_lag_humanist_path
+		NOT = { has_country_flag = pf_lag_religious_path } 
 	}
 
 	pf_lag_edict = {
 		icon = edict_of_potsdam
 		position = 12
 		required_missions = { pf_lag_theology } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			NOT = { religion = ROOT }
+		 } 
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				adm = 5
+				national_focus = ADM
+			}
+			OR = {
+				religious_unity = 0.8
+				has_idea_group = humanist_ideas
+				AND = {
+					has_adm_advisor_3 = yes
+					NOT = { advisor = inquisitor }
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = pf_lag_lagr_tolerance
+				duration = -1
+			}
+		} 
 	}
 
 	pf_lag_peace_of_utrech = {
@@ -1787,9 +1815,27 @@ second_3_humanist = {
 		required_missions = { pf_lag_edict } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			OR = {
+				full_idea_group = humanist_ideas
+				has_global_modifier_value = {
+					which = tolerance_heathen
+					value = 4
+				}
+				has_global_modifier_value = {
+					which = tolerance_heretic
+					value = 3
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			remove_country_modifier = pf_lag_lagr_tolerance
+			add_country_modifier = {
+				name = pf_lag_religious_peace
+				duration = -1
+			}
+		 } 
 	}
 }
 second_3_religious = {
@@ -1799,30 +1845,61 @@ second_3_religious = {
 	has_country_shield = yes
 	potential = {
 		tag = LAG
-		NOT = { has_country_flag = lag_humanist_path } 
-		has_country_flag = lag_religious_path
+		NOT = { has_country_flag = pf_lag_humanist_path } 
+		has_country_flag = pf_lag_religious_path
 	}
 
 	pf_lag_heretics = {
 		icon = defenestrate_the_heretics
 		position = 12
 		required_missions = { pf_lag_theology } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			NOT = { religion = ROOT }
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			OR = {
+				religious_unity = 1
+				full_idea_group = religious_ideas
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = pf_lag_religious_unity
+				duration = -1
+			}
+
+			custom_tooltip = PF_LAG_STRONGER_DETITIES
+			# TODO: implement alternative deities
+		 } 
 	}
 
 	pf_lag_land_churches = {
 		icon = mission_catholic_heddal_church
 		position = 13
 		required_missions = { pf_lag_heretics } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			has_tax_building_trigger = no
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			OR = {
+				theologian = 3
+				inquisitor = 3
+			}
+			num_of_owned_provinces_with = {
+				value = 16
+				has_tax_building_trigger = yes
+			}
+		 } 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = PF_LAG_CHANGE_PERSONAL_DEITY
+			# TODO: implement decision
+		} 
 	}
 }
 second_3 = {
@@ -1930,12 +2007,15 @@ third_2 = {
 		} 
 
 		effect = {
-			# TODO: replace with a random ADM advisor
 			define_advisor = {
-				type = statesman
+				# Reference to Dutch Diplomat in the Court of Burgundy
+				# taken name Viglius, but called Wigle van Aytta van Zwichem
+				# this is an Old Frisian transliteration
+				name = "Wigle fan Aytta fan Swithem"
+				type = diplomat
 				skill = 3
-				religion = ROOT
-				culture = ROOT
+				religion = germanic_religion
+				culture = old_frisian
 				cost_multiplier = 0.5
 			}
 
@@ -2169,6 +2249,8 @@ fourth_2 = {
 		} 
 
 		effect = {
+			add_yearly_manpower = 1
+
 			custom_tooltip = emp_ven_plague_doctor_training_tt
 			set_country_flag = has_competent_doctors
 		 } 
@@ -2226,10 +2308,15 @@ fifth_2 = {
 		}
 
 		effect = { 
+			add_country_modifier = {
+				name = pf_lag_developed_outer_rim
+				duration = -1
+			}
+
 			# ADM Advisors now give 0.05 governing capacity per level
-			custom_tooltip = PF_LAG_ADVISOR_GOVERNING_CAPACITY
+			custom_tooltip = PF_LAG_ADVISOR_BUILD_TIME
 			hidden_effect = {
-				set_country_flag = 5_gov_cap_bonus_flag
+				set_country_flag = pf_lag_adm_build_time
 			}
 		} 
 	}
@@ -2271,7 +2358,7 @@ fifth_2 = {
 			owned_by = ROOT
 			OR = {
 				has_manufactory_trigger = no
-				NOT = { base_production = 6 }
+				NOT = { base_production = 8 }
 			}
 		} 
 
@@ -2293,7 +2380,10 @@ fifth_2 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = { 
+			# Give bonus to coal provinces with build time and build cost,
+			# maybe even an early manufactory
+		 } 
 	}
 
 	pf_lag_made_in = {
