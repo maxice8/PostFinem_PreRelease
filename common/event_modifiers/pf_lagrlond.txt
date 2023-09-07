@@ -242,3 +242,9 @@ pf_lag_scholars = {
 	prestige = 1
 	# TODO: add more cool modifiers
 }
+
+# pf_lag_develop
+pf_lag_burgeoning_lowlands = {
+	development_cost_modifier = -0.1
+	global_sailors_modifier = 0.33
+}

@@ -1901,6 +1901,11 @@ third_2 = {
 					key = pf_lag_burgher_support_trade_node
 				}
 			}
+
+			custom_tooltip = PF_LAG_COMPLETING_BURGHER_AGENDA
+			hidden_effect = {
+				set_country_flag = pf_lag_burgher_agenda_bonus
+			}
 		 } 
 	}
 
@@ -2190,7 +2195,12 @@ fifth_2 = {
 			}
 		}
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = pf_lag_burgeoning_lowlands
+				duration = 5475
+			}	
+		} 
 	}
 
 	pf_lag_develop_outer_rim = {

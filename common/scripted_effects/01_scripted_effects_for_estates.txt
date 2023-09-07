@@ -4259,7 +4259,28 @@ on_completed_agenda_effect_estate_brahmins = {
 		change_statists_vs_orangists = -0.05
 	}
 }
-on_completed_agenda_effect_estate_burghers = {}
+on_completed_agenda_effect_estate_burghers = {
+	#pf
+	if = {
+		limit = {
+			has_country_flag = pf_lag_burgher_agenda_bonus
+		}
+		random_active_trade_node = {
+			limit = {
+				has_trade_modifier = {
+					who = ROOT
+					key = pf_lag_burgher_support_trade_node
+				}
+			}
+			add_trade_modifier = {
+				who = ROOT
+				duration = 3650
+				power = 30
+				key = pf_lag_burgher_support_trade_node
+			}
+		}
+	}
+}
 on_completed_agenda_effect_estate_church = {
 	if = {
 		limit = { has_government_attribute = clergy_estate_agendas_gives_karma }
