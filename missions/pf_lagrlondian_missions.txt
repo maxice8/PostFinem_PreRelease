@@ -2072,7 +2072,7 @@ fourth_2 = {
 			NOT = {
 				any_owned_province = {
 					culture = old_frisian
-					NOT = { devastation = 1 }
+					devastation = 0
 					NOT = { local_autonomy_above_min = 1 }
 				}
 			}
@@ -2202,8 +2202,6 @@ fourth_2 = {
 			num_of_owned_provinces_with = {
 				value = 8
 				has_courthouse_building_trigger = yes
-				culture = ROOT
-				religion = ROOT
 			}
 		} 
 
