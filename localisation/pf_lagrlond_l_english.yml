@@ -392,3 +392,18 @@
  
  # Scripted Triggers
  PF_HAS_ATLEAST_X_TRADING_BONUSES:0 " different Trading Bonuses"
+
+ # Privileges
+ estate_burghers_pf_peace_of_utrech:0 "Peace of Útaríki"
+ estate_burghers_pf_peace_of_utrech_desc:0 "REPLACE_ME"
+ estate_burghers_pf_peace_of_utrech_gt:0 "Provinces with §Runaccepted§! culture will have it's negative modifiers §Ghalved§!"
+ estate_burghers_pf_peace_of_utrech_has_eligible_province_tt:0 "Any owned province with an §Runaccepted§! culture"
+ has_unlocked_estate_burghers_pf_peace_of_utrech:0 "Completed Mission §YPeace of Útaríki§!"
+ estate_burghers_pf_peace_of_utrech_rt:0 "§YPeace of Útaríki§! will be removed from every owned province"
+ unlock_privilege_estate_burghers_pf_peace_of_utrech_tt:0 "§GUnlocks§! the §YPeace of Útaríki§! estate privilege, giving the following modifiers:\nProvinces in §Runaccepted§! culture groups will have their modifiers §Ghalved§!"
+
+ # Use very similar descriptions for them
+ pf_lag_peace_of_utrech_same_group:0 "Peace of Útaríki"
+ desc_pf_lag_peace_of_utrech_same_group:0 "REPLACE_ME"
+ pf_lag_peace_of_utrech_different_group:0 "Peace of Útaríki"
+ desc_pf_lag_peace_of_utrech_different_group:0 "REPLACE_ME"

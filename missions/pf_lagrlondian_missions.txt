@@ -1829,7 +1829,13 @@ second_3_humanist = {
 			}
 		} 
 
-		effect = { 
+		effect = {
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_pf_peace_of_utrech
+			}
+
+			custom_tooltip = empty_line_tt
+
 			remove_country_modifier = pf_lag_lagr_tolerance
 			add_country_modifier = {
 				name = pf_lag_religious_peace

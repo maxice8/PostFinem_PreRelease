@@ -276,3 +276,19 @@ pf_lag_lagr_tolerance = {
 pf_lag_religious_peace = {
 	no_religion_penalty = yes
 }
+
+# estate_burghers_pf_peace_of_utrech
+pf_lag_peace_of_utrech_same_group = {
+	local_tax_modifier = 0.075
+	local_manpower_modifier = 0.075
+	local_sailors = 0.05
+}
+
+# estate_burghers_pf_peace_of_utrech
+pf_lag_peace_of_utrech_different_group = {
+	local_tax_modifier = 0.165
+	local_missionary_strength = 0.01
+	local_manpower_modifier = 0.165
+	local_sailors_modifier = 0.1
+	local_unrest = -1
+}
