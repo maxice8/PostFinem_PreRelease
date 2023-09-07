@@ -110,6 +110,11 @@
 
  pf_lag_embrace_global_title:0 "Embrace Global Trade"
  pf_lag_embrace_global_desc:0 ""
+ YES_PF_LAG_GAIN_GLOBAL_TRADE:0 "£yes£ If §YGlobal Trade§! is enabled, we will gain §G100§! embracement in our capital and 3 random provinces"
+ NO_PF_LAG_GAIN_GLOBAL_TRADE:0 "£no£ If §YGlobal Trade§! is enabled, we will gain §G100§! embracement in our capital and 3 random provinces"
+ YES_PF_LAG_EXCLUSIVE_GLOBAL_TRADE:0 "£yes£ Otherwise we will be guaranteed to be the origin of §YGlobal Trade§! as long as we meet the other requirements until 1605"
+ NO_PF_LAG_EXCLUSIVE_GLOBAL_TRADE:0 "£no£ Otherwise we will be guaranteed to be the origin of §YGlobal Trade§! as long as we meet the other requirements until 1605"
+ PF_LAG_GLOBAL_TRADE_LOCK_UNTIL_1605:0 "If @LAG §Y[LAG.GetName]§! has completed the mission §YEmbrace Global Trade§!, one of the following must be true:\n  The province owner is §Y[LAG.GetName]§!\n  The year is at least §Y1605§!"
 
  pf_lag_warehouse_title:0 "Warehouse of The World"
  pf_lag_warehouse_desc:0 ""
@@ -156,6 +161,7 @@
 
  pf_lag_rein_nobles_title:0 "Rein The Nobles"
  pf_lag_rein_nobles_desc:0 ""
+ PF_LAG_SEIZE_LAND_NOBLES:0 "While this modifier is active the §Y[Root.GetNobilityOrFallbackName]§! will no longer raise any rebels when their land gets seized if their loyalty drops below §Y30§!."
 
  pf_lag_capital_title:0 "Develop The Capital"
  pf_lag_capital_desc:0 ""
@@ -310,6 +316,14 @@
  desc_pf_lag_consolidate_rheinland:0 "REPLACE_ME"
  pf_lag_pax_lagrlonder:0 "Pax Lagrlonder"
  desc_pf_lag_pax_lagrlonder:0 "REPLACE_ME"
+ pf_lag_forunner_globalization:0 "Forerunner of World Trade"
+ desc_pf_lag_forunner_globalization:0 "REPLACE_ME"
+ pf_lag_frisian_support:0 "Support of the Frisians"
+ desc_pf_lag_frisian_support:0 "REPLACE_ME"
+ pf_lag_nobles_curtailed:0 "Nobles Curtailed"
+ desc_pf_lag_nobles_curtailed:0 "REPLACE_ME"
+ pf_lag_glorious_capital:0 "Capital Renovations"
+ desc_pf_lag_glorious_capital:0 "REPLACE_ME"
 
  # events
  PF_LAG_SPAWN_BRITON_NOBLE_REBELS:0 "A random province owned by you or a non-sovereign subject in the §YBritish Isles§!, with §YBriton§! culture, will spawn §YNoble Rebels§!"
@@ -335,3 +349,5 @@
  pf_lag_trinovantian_rebels.7.desc:0 "REPLACE_ME"
  pf_lag_trinovantian_rebels.7.a:0 "REPLACE_ME"
  
+ # Scripted Triggers
+ PF_HAS_ATLEAST_X_TRADING_BONUSES:0 " different Trading Bonuses"

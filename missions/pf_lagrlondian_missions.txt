@@ -1522,11 +1522,74 @@ first_2 = {
 		icon = mission_unknown_mission
 		position = 13
 		required_missions = { pf_lag_port_desire } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			province_has_center_of_trade_of_level = 1
+			NOT = { province_has_center_of_trade_of_level = 3 }
+		} 
 
-		trigger = { has_institution = global_trade } 
+		trigger = { 
+			OR = {
+				full_idea_group = trade_ideas
+				num_of_owned_provinces_with = {
+					value = 6
+					province_has_center_of_trade_of_level = 3
+				}
+				AND = {
+					home_trade_node = {
+						highest_value_trade_node = yes
+					}
+					has_atleast_x_trading_bonuses = {
+						amount = 3
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_dip_power = 150
+			add_country_modifier = {
+				name = pf_lag_forunner_globalization
+				duration = 7300
+			}
+
+			if = {
+				limit = {
+					is_institution_enabled = global_trade
+				}
+				custom_tooltip = YES_PF_LAG_GAIN_GLOBAL_TRADE
+				custom_tooltip = empty_line_tt
+				custom_tooltip = NO_PF_LAG_EXCLUSIVE_GLOBAL_TRADE
+
+				hidden_effect = {
+					capital_scope = {
+						add_institution_embracement = {
+							which = global_trade
+							value = 100
+						}
+					}
+					for = {
+						amount = 3
+						effect = "
+							random_owned_province = {
+								limit = {
+									NOT = { global_trade = 100 }
+								}
+								add_institution_embracement = {
+									which = global_trade
+									value = 100
+								}
+							}
+						"
+					}
+				}
+			}
+			else = {
+				custom_tooltip = NO_PF_LAG_GAIN_GLOBAL_TRADE
+				custom_tooltip = empty_line_tt
+				custom_tooltip = YES_PF_LAG_EXCLUSIVE_GLOBAL_TRADE
+			}
+		}
 	}
 
 	pf_lag_warehouse = {
@@ -1810,7 +1873,12 @@ fourth_2 = {
 			add_stability_or_adm_power = yes
 			add_accepted_culture_or_dip_power = { culture = old_frisian }
 
-			# Some modifier about Frisians being nicely integrated.
+			custom_tooltip = empty_line_tt
+
+			add_country_modifier = {
+				name = pf_lag_frisian_support
+				duration = 5475
+			}
 		} 
 	}
 
@@ -1822,20 +1890,48 @@ fourth_2 = {
 		trigger = {
 			OR = {
 				NOT = { has_estate = estate_nobles }
-				NOT = {
-					estate_influence = {
-						estate = estate_nobles
-						influence = 70
+				AND = {
+					NOT = { 
+						num_of_estate_privileges = {
+							estate = estate_nobles
+							value = 4
+						}
 					}
-				}
-				estate_loyalty = {
-					estate = estate_nobles
-					loyalty = 60
+					NOT = {
+						estate_influence = {
+							estate = estate_nobles
+							influence = 70
+						}
+					}
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 50
+					}
 				}
 			}
 		} 
 
-		effect = {  } 
+		effect = { 
+			add_adm_power = 100
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = pf_lag_nobles_curtailed
+				duration = 7300
+			}
+			custom_tooltip = PF_LAG_SEIZE_LAND_NOBLES
+			
+			hidden_effect = {
+				disable_rebels_from_seize_land_for_estate = {
+					estate = estate_nobles
+				}
+				# Remove the disable_rebels_from_seize_land_for_estate
+				# when the modifier runs out
+				country_event = {
+					id = pf_lagrlond_events.1
+					days = 7300
+				}
+			}
+		 } 
 	}
 
 	pf_lag_capital = {
@@ -1850,10 +1946,16 @@ fourth_2 = {
 			capital_scope = { 
 				NOT = { devastation = 0 }
 			} 
-			capital_scope = { prosperity = 100 } 
+			capital_scope = { prosperity = 100 }
 		}
 
-		effect = {  } 
+		effect = { 
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		} 
 	}
 
 	pf_lag_centralize = {

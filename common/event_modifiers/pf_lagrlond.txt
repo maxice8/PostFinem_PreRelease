@@ -81,9 +81,10 @@ pf_lag_belgica_proper = {
 
 # pf_lag_port_desire
 pf_lag_carthage_north = {
-	province_trade_power_modifier = 0.2
+	province_trade_power_modifier = 0.3
+	trade_goods_size_modifier = 0.3
 	local_prosperity_growth = 0.25
-	local_development_cost = -0.1
+	local_development_cost = -0.2
 }
 
 # pf_lag_glorious
@@ -189,4 +190,31 @@ pf_lag_pax_lagrlonder = {
 	monthly_splendor = 3
 	all_estate_loyalty_equilibrium = 0.15
 	diplomatic_reputation = 2
+}
+
+# pf_lag_embrace_global
+pf_lag_forunner_globalization = {
+	merchants = 1
+	global_trade_power = 0.2
+	local_center_of_trade_upgrade_cost = -0.15
+	trade_steering = 0.2
+}
+
+# pf_lag_frisians
+pf_lag_frisian_support = {
+	global_unrest = -1
+	global_rebel_suppression_efficiency = 0.25
+}
+
+# pf_lag_rein_nobles
+pf_lag_nobles_curtailed = {
+	global_tax_modifier = 0.2
+	idea_cost = -0.1
+}
+
+# pf_lag_capital
+pf_lag_glorious_capital = {
+	local_development_cost = -0.1
+	local_build_cost = -0.1
+	local_build_time = -0.1
 }
