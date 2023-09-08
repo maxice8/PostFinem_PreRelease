@@ -1,0 +1,26 @@
+nrd_prepare_for_war_modifier = {
+	manpower_recovery_speed = 0.1
+	infantry_shock = 0.1
+}
+nrd_economic_opportunities_modifier = {
+	merchants = 1
+	trade_efficiency = 0.1
+}
+nrd_productive_fisheries_modifier = {
+	trade_goods_size_modifier = 0.2
+}
+nrd_highland_domination_modifier = {
+	global_autonomy = -0.1
+	global_tax_modifier = 0.1
+}
+nrd_celtic_sea_base_modifier = {
+	local_ship_repair = 0.25
+	local_sailors_modifier = 0.5
+}
+nrd_galley_with_good_oar_modifier = {
+	own_coast_naval_combat_bonus = 1
+}
+nrd_looking_overseas_modifier = {
+	colonists = 1
+	may_explore = yes
+}
