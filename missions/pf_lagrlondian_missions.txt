@@ -1574,15 +1574,12 @@ first_2 = {
 			OR = {
 				full_idea_group = trade_ideas
 				num_of_owned_provinces_with = {
-					value = 6
+					value = 3
 					province_has_center_of_trade_of_level = 3
 				}
 			}
 			home_trade_node = {
-				highest_value_trade_node = yes
-			}
-			has_atleast_x_trading_bonuses = {
-				amount = 2
+				trade_node_value = 2	
 			}
 		} 
 
@@ -1668,9 +1665,10 @@ second_2 = {
 		effect = {
 			define_advisor = {
 				type = trader
+				skill = 3
 				religion = ROOT
 				culture = ROOT
-				cost_multiplier = 0.75
+				cost_multiplier = 0.5
 			}
 		 } 
 	}
@@ -1959,7 +1957,7 @@ third_2 = {
 		trigger = { 
 			estate_loyalty = {
 				estate = estate_burghers
-				loyalty = 70
+				loyalty = 60
 			}
 			num_of_estate_agendas_completed = {
 				estate = estate_burghers
@@ -2023,7 +2021,7 @@ third_2 = {
 				skill = 3
 				religion = germanic_religion
 				culture = old_frisian
-				cost_multiplier = 0.5
+				cost_multiplier = 0.25
 			}
 
 			custom_tooltip = empty_line_tt
@@ -2231,7 +2229,10 @@ fourth_2 = {
 		} 
 
 		effect = { 
-			add_innovativeness_small_effect = yes
+			change_innovativeness = 4
+
+			custom_tooltip = empty_line_tt
+			
 			add_country_modifier = {
 				name = pf_lag_educated_elite
 				duration = 3650

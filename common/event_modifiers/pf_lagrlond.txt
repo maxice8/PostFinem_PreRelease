@@ -81,9 +81,9 @@ pf_lag_belgica_proper = {
 
 # pf_lag_port_desire
 pf_lag_carthage_north = {
-	province_trade_power_modifier = 0.3
-	trade_goods_size_modifier = 0.3
-	local_prosperity_growth = 0.25
+	province_trade_power_modifier = 0.5
+	trade_value_modifier = 0.25
+	local_prosperity_growth = 1
 	local_development_cost = -0.2
 }
 
@@ -154,7 +154,7 @@ pf_lag_full_defensive = {
 
 # pf_lag_doctrine
 pf_lag_full_firepower = {
-	backrow_artillery_damage = 0.05
+	backrow_artillery_damage = 0.1
 	fire_damage = 0.05
 	fire_damage_received = -0.05
 }
@@ -188,7 +188,7 @@ pf_lag_fortress_albion = {
 # pf_lag_pax
 pf_lag_pax_lagrlonder = {
 	monthly_splendor = 3
-	all_estate_loyalty_equilibrium = 0.15
+	administrative_efficiency = 0.05
 	diplomatic_reputation = 2
 }
 
@@ -196,8 +196,6 @@ pf_lag_pax_lagrlonder = {
 pf_lag_forunner_globalization = {
 	merchants = 1
 	global_trade_power = 0.2
-	local_center_of_trade_upgrade_cost = -0.15
-	trade_steering = 0.2
 }
 
 # pf_lag_frisians
@@ -208,8 +206,8 @@ pf_lag_frisian_support = {
 
 # pf_lag_rein_nobles
 pf_lag_nobles_curtailed = {
-	global_tax_modifier = 0.2
-	reform_progress_growth = 0.05
+	global_tax_modifier = 0.1
+	reform_progress_growth = 0.1
 }
 
 # pf_lag_capital
@@ -219,22 +217,22 @@ pf_lag_glorious_court = {
 
 # pf_lag_universities
 pf_lag_educated_elite = {
-	idea_cost = -0.05
-	global_institution_spread = 0.05
+	idea_cost = -0.1
+	global_institution_spread = 0.25
 }
 
 # pf_lag_theology
 pf_lag_controlled_clergy = {
-	adm_tech_cost_modifier = -0.025
+	adm_tech_cost_modifier = -0.1
 	global_missionary_strength = 0.01
 	relation_with_same_religion = 15
 }
 
 # pf_lag_sway
 pf_lag_burgher_support = {
-	mercantilism_cost = -0.15
-	ship_trade_power_modifier = 0.33
-	naval_tradition_from_trade = 0.15
+	mercantilism_cost = -0.25
+	ship_trade_power_modifier = 0.25
+	naval_tradition_from_trade = 0.50
 }
 
 # pf_lag_renaissance
@@ -246,7 +244,7 @@ pf_lag_scholars = {
 # pf_lag_develop
 pf_lag_burgeoning_lowlands = {
 	development_cost_modifier = -0.1
-	global_sailors_modifier = 0.33
+	production_efficiency = 0.1
 }
 
 # pf_lag_develop_outer_rim
