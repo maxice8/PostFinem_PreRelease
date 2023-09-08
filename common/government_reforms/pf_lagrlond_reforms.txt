@@ -45,15 +45,15 @@ pf_lagr_republic = {
 		}
 
 		states_general_mechanic = {
-			havendalssites = {
-				diplomatic_reputation = 1
-				stability_cost_modifier = -0.25
-				land_forcelimit_modifier = 0.25
-			}
 			frisianites = {
 				global_unrest = -1
 				naval_forcelimit_modifier = 0.2
 				province_trade_power_modifier = 0.2
+			}
+			havendalssites = {
+				diplomatic_reputation = 1
+				stability_cost_modifier = -0.25
+				land_forcelimit_modifier = 0.25
 			}
 		}
 	}
