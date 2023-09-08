@@ -29,3 +29,86 @@ stratocratic_republic = {
 	}
 
 }
+
+# Republican Virtues
+
+citizen_soldier_initiative = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = BCA
+			has_reform = stratocratic_republic
+		}
+	}
+	modifiers = {
+		manpower_recovery_speed = 0.05
+		global_manpower_modifier = 0.05
+		monthly_stratocratic_republic_slider = 0.08
+	}
+}
+
+republican_fleets = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = BCA
+			has_reform = stratocratic_republic
+		}
+	}
+	modifiers = {
+		ship_trade_power_modifier = 0.05
+		local_ship_repair = 0.15
+		monthly_stratocratic_republic_slider = -0.08
+	}
+}
+
+#religion within the republic
+divine_army_doctrine = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = BCA
+			has_reform = stratocratic_republic
+		}
+	}
+	modifiers = {
+		manpower_in_true_faith_provinces = 0.1
+		siege_ability = 0.05
+		monthly_stratocratic_republic_slider = 0.08
+	}
+}
+
+council_of_theologies = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = BCA
+			has_reform = stratocratic_republic
+		}
+	}
+	modifiers = {
+		republican_tradition = 1
+		tolerance_heathen = 1
+		tolerance_heretic = 1
+	}
+}
+
+blessed_fleets = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = BCA
+			has_reform = stratocratic_republic
+		}
+	}
+	modifiers = {
+		trade_steering = 0.1
+		global_heretic_missionary_strength = 0.01
+		monthly_stratocratic_republic_slider = -0.08
+	}
+}
