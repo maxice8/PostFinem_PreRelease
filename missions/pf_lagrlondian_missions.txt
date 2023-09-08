@@ -1865,9 +1865,14 @@ second_3_religious = {
 		 } 
 
 		trigger = { 
+			has_global_modifier_value = {
+				which = global_missionary_strength
+				value = 0.045
+			}
 			OR = {
-				religious_unity = 1
-				full_idea_group = religious_ideas
+				theologian = 3
+				inquisitor = 3
+				monthly_adm = 6
 			}
 		 } 
 
@@ -1888,14 +1893,14 @@ second_3_religious = {
 		required_missions = { pf_lag_heretics } 
 		provinces_to_highlight = { 
 			owned_by = ROOT
-			has_tax_building_trigger = no
+			OR = {
+				has_tax_building_trigger = no
+				NOT = { religion = ROOT }
+			}
 		} 
 
-		trigger = { 
-			OR = {
-				theologian = 3
-				inquisitor = 3
-			}
+		trigger = {
+			religious_unity = 1
 			num_of_owned_provinces_with = {
 				value = 16
 				has_tax_building_trigger = yes

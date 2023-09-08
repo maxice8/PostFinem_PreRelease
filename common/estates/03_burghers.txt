@@ -246,6 +246,12 @@ estate_burghers = {
 			}
 		}
 	}
+	custom_name = {
+		desc = estate_borgarmenn
+		trigger = {
+			religion = norse_pagan_reformed
+		}
+	}
 
 	color = { 35 35 150 }
 
