@@ -1658,7 +1658,19 @@ first_2 = {
 		 } 
 
 		effect = { 
-			
+			every_active_trade_node = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 9125
+					power = 100
+					key = pf_lag_warehouse_modifier
+				}
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = pf_lag_worlds_warehouse
+				duration = 9125
+			}
 		} 
 	}
 }
@@ -2085,14 +2097,17 @@ third_2 = {
 			add_prestige_or_monarch_power = {
 				amount = 50
 			}
+			custom_tooltip = empty_line_tt
 			change_ruler_stat = {
 				stat = adm
 				amount = 1
 			}
+			custom_tooltip = empty_line_tt
 			change_ruler_stat = {
 				stat = dip
 				amount = 1
 			}
+			custom_tooltip = empty_line_tt
 			change_ruler_stat = {
 				stat = mil
 				amount = 1
@@ -2415,9 +2430,9 @@ fifth_2 = {
 		effect = {
 			add_country_modifier = {
 				name = pf_lag_urbanisation
-				duration = 7300
+				duration = -1
 			}
-			custom_tooltip = pf_lag_increased_development
+			custom_tooltip = PF_LAG_DOUBLE_DEV_CHANCE
 		} 
 	}
 

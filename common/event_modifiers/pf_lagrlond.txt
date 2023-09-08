@@ -293,11 +293,17 @@ pf_lag_peace_of_utrech_different_group = {
 
 # pf_lag_promote_urbanisation
 pf_lag_urbanisation = {
-	global_prosperity_growth = 0.1
-	global_manpower_modifier = 0.15
+	global_allowed_num_of_buildings = 1
+	build_cost = -0.05
 }
 
 # pf_lag_made_in
 pf_lag_workshop_world = {
 	global_trade_goods_size_modifier = 0.1
+}
+
+# pf_lag_warehouse
+pf_lag_worlds_warehouse = {
+	global_prosperity_growth = 0.1
+	caravan_power = 0.2
 }

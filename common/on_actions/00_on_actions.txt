@@ -1540,8 +1540,8 @@ on_adm_development = {
 			has_country_modifier = pf_lag_urbanisation
 		}
 		random_list = {
-			10 = { add_base_tax = 1 }
-			90 = { }
+			5 = { add_base_tax = 1 }
+			95 = { }
 		}
 	}
 }
@@ -1555,8 +1555,8 @@ on_dip_development = {
 			has_country_modifier = pf_lag_urbanisation
 		}
 		random_list = {
-			10 = { add_base_production = 1 }
-			90 = { }
+			5 = { add_base_production = 1 }
+			95 = { }
 		}
 	}
 }
@@ -1570,8 +1570,8 @@ on_mil_development = {
 			has_country_modifier = pf_lag_urbanisation
 		}
 		random_list = {
-			10 = { add_base_manpower = 1 }
-			90 = { }
+			5 = { add_base_manpower = 1 }
+			95 = { }
 		}
 	}
 }
