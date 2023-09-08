@@ -53,9 +53,11 @@
 
  pf_nrd_stretch_our_legs_title:0 "Stretch our Legs"
  pf_nrd_stretch_our_legs_desc:0 "grow by like 10 provinces and have at least 30k forcelimit"
+ stretch_our_legs_tt: "§YArmy Reformer§! military advisors will now grant an additional §G1%§! Fire Damage per level."
 
  pf_nrd_norse_hegemony_title:0 "Norse Hegemony"
  pf_nrd_norse_hegemony_desc:0 "have most dev on british isles and have largest army"
+ pf_nrd_norse_hegemony_trigger_tt: "No other nation with their capital in §YEurope§! has an army larger than §Y[Root.GetName]§!"
 
  pf_nrd_brothers_title:0 "Norwegian Brothers"
  pf_nrd_brothers_desc:0 "solidify relations with norway"
@@ -74,9 +76,11 @@
 
  pf_nrd_prosperous_norse_lands_title:0 "Prosperous Norse Lands"
  pf_nrd_prosperous_norse_lands_desc:0 "have at least 3 provices at 20 dev be norse"
+ nrd_prosperous_norse_lands_tt: "Every province in the §YCeltic Isles§! that fulfills the trigger will receive:"
 
  pf_nrd_golden_era_title:0 "[Root.GetAdjective] Golden Era"
  pf_nrd_golden_era_desc:0 "have your golden era/end it and have a force limit of at least 100k, "
+ nrd_golden_age_effect_tt: "If your §YGolden Age§! has come to pass:"
 
  pf_nrd_galleys_with_good_oars_title:0 "Galleys With Good Oars"
  pf_nrd_galleys_with_good_oars_desc:0 "at least 10 galleys, build to naval fl"
@@ -92,6 +96,7 @@
 
  pf_nrd_the_allfathers_blessing_title:0 "The Allfather's Blessing"
  pf_nrd_the_allfathers_blessing_desc:0 "be norse, defender of faith, all of celtic isles norse"
+ nrd_allfathers_blessing_tt: "Allows you to freely change your §YNorse Diety§! with decisions."
 
  pf_nrd_reforming_government_title:0 "Reform the Government"
  pf_nrd_reforming_government_desc:0 "finish all reforms, have at least 200 adm power"

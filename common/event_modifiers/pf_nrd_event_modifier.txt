@@ -36,3 +36,39 @@ nrd_glorious_ports_modifier = {
 	navy_tradition = 1
 	naval_tradition_from_trade = 0.5
 }
+nrd_expansion_and_prosperity_modifier = {
+	development_cost_modifier = -0.1
+	build_cost = -0.1
+}
+nrd_infrastructure_investment_modifier = {
+	build_time = -0.25
+	movement_speed = 0.1
+}
+nrd_gunpowder_modifier = {
+	artillery_cost = -0.2
+	artillery_levels_available_vs_fort = 1
+}
+nrd_secure_iron_modifier = {
+	trade_goods_size = 2
+	trade_value_modifier = 0.25
+}
+pf_nrd_norse_hegemony_modifier = {
+	diplomatic_reputation = 1
+	warscore_cost_vs_other_religion = -0.1
+}
+nrd_proclaim_odins_name_modifier = {
+	cb_on_religious_enemies = yes
+	global_missionary_strength = 0.02
+}
+nrd_share_the_sagas_modifier = {
+	tolerance_own = 1
+	manpower_in_true_faith_provinces = 0.2
+}
+nrd_prosperous_norse_lands_modifier = {
+	local_prosperity_growth = 1
+	local_production_efficiency = 0.2
+}
+nrd_over_the_horizon_modifier = {
+	auto_explore_adjacent_to_colony = yes
+	global_colonial_growth = 20
+}

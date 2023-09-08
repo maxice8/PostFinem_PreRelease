@@ -14,6 +14,7 @@ swap_trade_good_for_max_provinces = {
 			}
 			random_owned_province = {
 				limit = {
+					$trigger$ #not required if you want it to be random in all owned provinces
 					trade_goods = $original$
 				}
 				change_trade_goods = $new$
@@ -28,7 +29,7 @@ swap_trade_good_for_max_provinces = {
 	#ex: "Up to §G MAX §! provinces producing §Y ORIGINAL §! will now produce §Y NEW §!."
 }
 
-#Distribute Base Tax to X provinces
+#Distribute X Base Tax to X provinces
 #PARAMERETS ARE num \ trigger (inside " " instead of brackets) \ type (tax production manpower)
 distribute_base_dev_to_provinces = {
 	hidden_effect = {
@@ -45,7 +46,7 @@ distribute_base_dev_to_provinces = {
 			}
 			random_owned_province = {
 				limit = { 
-					$trigger$ 
+					$trigger$ #not required if you want it to be random in all owned provinces
 					NOT = { has_province_flag = received_base_dev_flag }
 				}
 				add_base_$type$ = $amount$
@@ -64,6 +65,5 @@ distribute_base_dev_to_provinces = {
 		}
 	}
 	custom_tooltip = $tooltip$
-	#You will need to make a tooltip
 	#ex: §G NUM §! random provinces in §Y TRIGGER §! will receive §G AMOUNT §! base §Y TYPE §! development.
 }
