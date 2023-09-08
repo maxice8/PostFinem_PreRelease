@@ -19,11 +19,14 @@ country_event = {
 	option = {
 		name = pf_debug.1.a
 		ai_chance = { factor = 1 }
-		swap_trade_good_for_max_provinces = {
-			max = 3
-			original = wool
-			new = cloth
-			tooltip = wool_to_cloth_tt
+		distribute_base_dev_to_provinces = {
+			num = 10
+			amount = 2
+			trigger = "
+				region = british_isles_region
+			"
+			type = manpower
+			tooltip = debug_tt_1
 		}
 	}
 }

@@ -411,6 +411,7 @@ pf_nrd_3 = {
 
 		effect = {
 			custom_tooltip = nrd_king_of_the_who_tt
+			custom_tooltip = empty_line_tt
 			hidden_effect = {
 				random_owned_province = {
 					limit = {
@@ -712,9 +713,37 @@ pf_nrd_4 = {
 					}
 				}
 				custom_tooltip = nrd_dominate_celtica_owns_yes
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							OR = {
+								area = ulster_area
+								area = leinster_area
+								area = connacht_area
+								area = munster_area
+							}
+						}
+						add_province_modifier = {
+							name = nrd_dominate_celtica_owns_modifier
+							duration = -1
+						}
+					}
+				}
+				tooltip = {
+					add_province_modifier = {
+						name = nrd_dominate_celtica_owns_modifier
+						duration = -1
+					}
+				}
 			}
 			else = {
 				custom_tooltip = nrd_dominate_celtica_owns_no
+				tooltip = {
+					add_province_modifier = {
+						name = nrd_dominate_celtica_owns_modifier
+						duration = -1
+					}
+				}
 			}
 			if = {
 				limit = {					
@@ -724,9 +753,23 @@ pf_nrd_4 = {
 					}
 				}
 				custom_tooltip = nrd_dominate_celtica_subject_yes
+				CEL = {
+					add_country_modifier = {
+						name = nrd_dominate_celtica_subject_modifier
+						duration = -1
+					}
+				}
 			}
 			else = {
-				custom_tooltip = nrd_dominate_celtica_subject_yes
+				custom_tooltip = nrd_dominate_celtica_subject_no
+				tooltip = {
+					CEL = {
+						add_country_modifier = {
+							name = nrd_dominate_celtica_subject_modifier
+							duration = -1
+						}
+					}
+				}
 			}
 		} 
 	}
@@ -811,9 +854,23 @@ pf_nrd_5 = {
 		required_missions = { pf_nrd_galleys_with_good_oars } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_ports = 20
+			num_of_owned_provinces_with = {
+				value = 10
+				has_shipyard_building_trigger = yes
+				has_dock_building_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_dip_power = 100
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = nrd_glorious_ports_modifier
+				duration = -1
+			}
+		} 
 	}
 
 	pf_nrd_proclaim_odins_name = {

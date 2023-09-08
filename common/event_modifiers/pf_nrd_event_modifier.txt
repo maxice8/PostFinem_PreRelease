@@ -24,3 +24,15 @@ nrd_looking_overseas_modifier = {
 	colonists = 1
 	may_explore = yes
 }
+nrd_dominate_celtica_owns_modifier = {
+	local_development_cost_modifier = -0.1
+	local_production_efficiency = 0.1
+}
+nrd_dominate_celtica_subject_modifier = {
+	naval_forcelimit_modifier = 0.25
+	naval_maintenance_modifier = -0.25
+}
+nrd_glorious_ports_modifier = {
+	navy_tradition = 1
+	naval_tradition_from_trade = 0.5
+}
