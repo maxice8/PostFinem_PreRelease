@@ -1,0 +1,19 @@
+pf_has_any_norse_deity_active = {
+	custom_trigger_tooltip = {
+		tooltip = PF_HAS_ANY_NORSE_DEITY
+		OR = {
+			has_personal_deity = odin
+			has_personal_deity = freya
+			has_personal_deity = tor
+			has_personal_deity = tyr
+			has_personal_deity = njord
+			has_personal_deity = snotra
+			has_personal_deity = odin_lag_upgraded
+			has_personal_deity = freya_lag_upgraded
+			has_personal_deity = tor_lag_upgraded
+			has_personal_deity = tyr_lag_upgraded
+			has_personal_deity = njord_lag_upgraded
+			has_personal_deity = snotra_lag_upgraded
+		}
+	}
+}
