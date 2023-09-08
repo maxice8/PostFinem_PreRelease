@@ -1,0 +1,1147 @@
+celtica_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = CEL } 
+
+	cel_rally_the_clans = {
+		icon = mission_rb_conquer_the_highlands
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_celtic_longbows = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { cel_rally_the_clans } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_oaks_of_albion = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = {
+			cel_celtic_longbows
+			cel_crush_the_confederacy
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_governance_of_the_isles = {
+		icon = mission_rb_conquer_the_isles
+		position = 5
+		required_missions = { cel_unite_the_isles } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_celtic_union = {
+		icon = mission_rb_trinity_college_dublin
+		position = 7
+		required_missions = { cel_governance_of_the_isles } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_brenonian_identity = {
+		icon = mission_rb_rein_in_the_highland_clans
+		position = 9
+		required_missions = { cel_celtic_union } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_gallic_ties = {
+		icon = centralize_france
+		position = 10
+		required_missions = {
+			cel_brenonian_identity
+			cel_lords_of_gaul
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_revive_celtic_warrior_spirit = {
+		icon = mission_rb_unite_the_clans
+		position = 11
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_relentless_drilling = {
+		icon = mission_unknown_mission
+		position = 13
+		required_missions = { cel_revive_celtic_warrior_spirit } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_emerald_isle = {
+		icon = mission_unknown_mission
+		position = 15
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_urbanise_eire = {
+		icon = promote_urbanization
+		position = 17
+		required_missions = {
+			cel_emerald_isle
+			cel_growth_of_dublin
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_feed_the_isles = {
+		icon = mission_dominate_persian_gulf
+		position = 18
+		required_missions = {
+			cel_invest_in_fishing
+			cel_urbanise_eire
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_import_potatoes = {
+		icon = mission_rb_import_potatoes
+		position = 20
+		required_missions = { cel_feed_the_isles } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_population_boom = {
+		icon = the_london_steelyard
+		position = 23
+		required_missions = {
+			cel_demographic_shift
+			cel_import_potatoes
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_pride_of_the_fleet = {
+		icon = mission_launch_a_flagship
+		position = 24
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_combat_piracy = {
+		icon = mission_pirate_flag
+		position = 26
+		required_missions = { cel_pride_of_the_fleet } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_invade_the_sahel = {
+		icon = mission_son_invade_mali
+		position = 27
+		required_missions = { cel_establish_factories } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_scramble_for_africa = {
+		icon = mission_mal_riches_of_trade
+		position = 30
+		required_missions = {
+			cel_invade_the_sahel
+			cel_secure_zanzibar
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_invade_burma = {
+		icon = mission_invade_burma
+		position = 32
+		required_missions = { cel_claim_bengal } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_african_riches = {
+		icon = mission_zambezi_gold
+		position = 34
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+celtica_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = CEL } 
+
+	cel_spy_on_the_trinovantes = {
+		icon = mission_rb_control_electors
+		position = 2
+		required_missions = { cel_stabilise_the_lordship } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_crush_the_confederacy = {
+		icon = mission_rb_into_england
+		position = 3
+		required_missions = { cel_spy_on_the_trinovantes } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_unite_the_isles = {
+		icon = mission_rb_rule_britannia_irish_version
+		position = 4
+		required_missions = {
+			cel_crush_the_confederacy
+			cel_drive_out_the_invaders
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_staple_port = {
+		icon = mission_european_politics
+		position = 6
+		required_missions = { cel_unite_the_isles } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_gallic_invasion = {
+		icon = mission_hundred_years_war
+		position = 8
+		required_missions = { cel_staple_port } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_lords_of_gaul = {
+		icon = the_seven_provinces
+		position = 9
+		required_missions = { cel_gallic_invasion } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_military_meritocracy = {
+		icon = mission_unknown_mission
+		position = 12
+		required_missions = {
+			cel_revive_celtic_warrior_spirit
+			cel_new_age_of_warfare
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_professional_army = {
+		icon = mission_modern_knight_army
+		position = 14
+		required_missions = {
+			cel_military_meritocracy
+			cel_relentless_drilling
+			cel_shock_and_awe
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_invest_in_fishing = {
+		icon = mission_fish_markets
+		position = 17
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_cod_wars = {
+		icon = mission_rb_cod_wars
+		position = 19
+		required_missions = { cel_invest_in_fishing } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_demographic_shift = {
+		icon = mission_unknown_mission
+		position = 22
+		required_missions = { cel_industrial_revolution } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_scout_africa = {
+		icon = mission_exploration
+		position = 25
+		required_missions = { cel_eyes_to_the_west } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_establish_factories = {
+		icon = mission_west_african_ports
+		position = 26
+		required_missions = { cel_scout_africa } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_continue_to_the_cape = {
+		icon = mission_kon_greatest_power_kongo
+		position = 28
+		required_missions = { cel_establish_factories } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_secure_zanzibar = {
+		icon = mission_zanzibari_trade
+		position = 29
+		required_missions = { cel_continue_to_the_cape } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_seize_aden = {
+		icon = mission_dominate_trade_in_aden
+		position = 30
+		required_missions = { cel_secure_zanzibar } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_claim_bengal = {
+		icon = mission_unite_bengal
+		position = 31
+		required_missions = { cel_brenonian_east_india_company } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_gangeatic_conquest = {
+		icon = mission_the_grand_trunk_road_dlh
+		position = 33
+		required_missions = { cel_claim_bengal } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_open_up_china = {
+		icon = mission_trade_with_cathay
+		position = 34
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+celtica_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = CEL } 
+
+	cel_stabilise_the_lordship = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_drive_out_the_invaders = {
+		icon = mission_fire_of_london
+		position = 3
+		required_missions = { cel_burn_longships } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_agronas_blessing = {
+		icon = mission_se_along_the_river
+		position = 5
+		required_missions = { cel_drive_out_the_invaders } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_european_commerce = {
+		icon = mission_rb_control_the_hansa
+		position = 7
+		required_missions = {
+			cel_staple_port
+			cel_dismantle_lagrlond
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_thalassocracy = {
+		icon = mission_entrepot_of_india
+		position = 9
+		required_missions = {
+			cel_european_commerce
+			cel_consolidate_the_lowlands
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_new_age_of_warfare = {
+		icon = mission_guns_of_urban
+		position = 11
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_shock_and_awe = {
+		icon = army_reforms
+		position = 13
+		required_missions = { cel_new_age_of_warfare } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_growth_of_dublin = {
+		icon = mission_dominate_home_trade_node
+		position = 16
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_celtic_castles = {
+		icon = mission_castle_construction
+		position = 18
+		required_missions = {
+			cel_growth_of_dublin
+			cel_fortify_glasgow
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_north_sea_monopoly = {
+		icon = mission_rb_hanseatic_east
+		position = 20
+		required_missions = {
+			cel_orkney_naval_base
+			cel_cod_wars
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_industrial_revolution = {
+		icon = mission_rb_build_furnaces
+		position = 21
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_defend_nature = {
+		icon = mission_expand_into_the_forest
+		position = 23
+		required_missions = { cel_industrial_revolution } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_eyes_to_the_west = {
+		icon = mission_look_west
+		position = 24
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_new_celtica = {
+		icon = mission_rb_irish_america
+		position = 27
+		required_missions = { cel_first_settlements } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_rein_in_the_colonies = {
+		icon = mission_rb_the_thirteen_colonies
+		position = 28
+		required_missions = { cel_new_celtica } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_new_route_to_asia = {
+		icon = mission_raid_christian_trade
+		position = 29
+		required_missions = { cel_continue_to_the_cape } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_brenonian_east_india_company = {
+		icon = mission_indian_empire
+		position = 30
+		required_missions = { cel_new_route_to_asia } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_west_indian_interests = {
+		icon = mission_unite_west_india
+		position = 32
+		required_missions = { cel_brenonian_east_india_company } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_jewel_of_the_crown = {
+		icon = mission_riches_of_golconda
+		position = 34
+		required_missions = {
+			cel_west_indian_interests
+			cel_gangeatic_conquest
+			cel_cormandel_ambitions
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_sun_never_sets = {
+		icon = mission_unknown_mission
+		position = 35
+		required_missions = {
+			cel_african_riches
+			cel_open_up_china
+			cel_lord_of_the_new_world
+			cel_new_penal_colony
+			cel_jewel_of_the_crown
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+celtica_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = CEL } 
+
+	cel_burn_longships = {
+		icon = mission_longships
+		position = 2
+		required_missions = {
+			cel_stabilise_the_lordship
+			cel_contest_the_seas
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_fate_of_the_vikings = {
+		icon = mission_native_build_army_mission
+		position = 4
+		required_missions = {
+			cel_drive_out_the_invaders
+			cel_sacrafices_to_neit
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_dismantle_lagrlond = {
+		icon = mission_sea_battles
+		position = 6
+		required_missions = { cel_fate_of_the_vikings } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_consolidate_the_lowlands = {
+		icon = bavarian_netherlands
+		position = 8
+		required_missions = { cel_dismantle_lagrlond } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_strike_at_the_source = {
+		icon = mission_unite_scandinavia
+		position = 10
+		required_missions = { cel_consolidate_the_lowlands } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_worthy_of_the_high_seas = {
+		icon = mission_establish_high_seas_navy
+		position = 12
+		required_missions = {
+			cel_new_age_of_warfare
+			cel_seafaring_ambitions
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_greencoats = {
+		icon = mission_unknown_mission
+		position = 13
+		required_missions = { cel_board_of_admirals } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_celtica_ascendant = {
+		icon = peace_in_europe
+		position = 15
+		required_missions = {
+			cel_professional_army
+			cel_greencoats
+			cel_seize_naval_supremacy
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_fortify_glasgow = {
+		icon = fortress_of_belgrade
+		position = 17
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_orkney_naval_base = {
+		icon = mission_invade_island
+		position = 19
+		required_missions = { cel_rebuild_pictland } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_black_gold = {
+		icon = mission_rb_prospect_for_coal
+		position = 22
+		required_missions = { cel_industrial_revolution } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_new_land = {
+		icon = mission_explore_the_world
+		position = 25
+		required_missions = { cel_eyes_to_the_west } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_first_settlements = {
+		icon = mission_settlers_north_america
+		position = 26
+		required_missions = { cel_new_land } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_canadian_colony = {
+		icon = mission_rb_colonise_canada
+		position = 27
+		required_missions = { cel_first_settlements } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_north_american_hegemony = {
+		icon = mission_the_triangle_trade
+		position = 28
+		required_missions = {
+			cel_new_celtica
+			cel_canadian_colony
+			cel_caribean_colony
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_dominate_malacca = {
+		icon = mission_rb_colonise_spice_islands
+		position = 30
+		required_missions = { cel_new_route_to_asia } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_occupy_ceylon = {
+		icon = seize_ceylon
+		position = 31
+		required_missions = { cel_brenonian_east_india_company } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_cormandel_ambitions = {
+		icon = mission_unite_coromandel
+		position = 33
+		required_missions = { cel_occupy_ceylon } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_new_penal_colony = {
+		icon = colonize_australia
+		position = 34
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+celtica_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = CEL } 
+
+	cel_contest_the_seas = {
+		icon = mission_rb_into_ireland
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_sacrafices_to_neit = {
+		icon = mission_unknown_mission
+		position = 3
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_support_of_the_druid_class = {
+		icon = the_fountain_of_youth
+		position = 5
+		required_missions = { cel_sacrafices_to_neit } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_the_isles_prosper = {
+		icon = prosperity_for_all
+		position = 7
+		required_missions = { cel_support_of_the_druid_class } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_integrate_the_lowands = {
+		icon = mission_diplomatic_relation
+		position = 9
+		required_missions = { cel_consolidate_the_lowlands } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_seafaring_ambitions = {
+		icon = mission_grand_bengali_shipyards
+		position = 11
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_board_of_admirals = {
+		icon = mission_danish_navy
+		position = 12
+		required_missions = { cel_seafaring_ambitions } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_seize_naval_supremacy = {
+		icon = mission_unknown_mission
+		position = 14
+		required_missions = { cel_board_of_admirals } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_ulster_breweries = {
+		icon = mission_pol_breadbasket_europe
+		position = 16
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_rebuild_pictland = {
+		icon = mission_pol_develop_countryside
+		position = 18
+		required_missions = {
+			cel_ulster_breweries
+			cel_fortify_glasgow
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_invest_in_albion = {
+		icon = mission_northumberland_coast
+		position = 20
+		required_missions = { cel_rebuild_pictland } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_northumbrian_mines = {
+		icon = mission_rb_central_belt_coal_mining
+		position = 23
+		required_missions = {
+			cel_invest_in_albion
+			cel_black_gold
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_port_on_the_atlantic = {
+		icon = mission_rb_monopolize_the_channel
+		position = 24
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_council_of_colonial_affairs = {
+		icon = mission_establish_the_prikazy
+		position = 26
+		required_missions = {
+			cel_port_on_the_atlantic
+			cel_new_land
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_caribean_colony = {
+		icon = mission_colonize_the_caribbean
+		position = 27
+		required_missions = { cel_first_settlements } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_guyana_prospects = {
+		icon = mission_caribbean_cn
+		position = 30
+		required_missions = { cel_caribean_colony } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_darien_scheme = {
+		icon = mission_rb_scottish_the_darien_scheme
+		position = 32
+		required_missions = { cel_guyana_prospects } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	cel_lord_of_the_new_world = {
+		icon = mission_ruler_of_north_america
+		position = 34
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
