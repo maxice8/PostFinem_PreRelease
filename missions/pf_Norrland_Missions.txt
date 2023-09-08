@@ -9,20 +9,49 @@ pf_nld_1 = {
 		icon = mission_conquer_finland
 		position = 2
 		required_missions = { pf_nld_coexistence_with_the_sami } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = finland_area
+				province_id = 19
+				province_id = 30
+				province_id = 4152
+				province_id = 1930
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				owns_or_non_sovereign_subject_of = 19
+				owns_or_non_sovereign_subject_of = 30
+				owns_or_non_sovereign_subject_of = 1930
+				owns_or_non_sovereign_subject_of = 4152
+				finland_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
 
-		effect = {  } 
+		effect = {  
+			
+		} 
 	}
 
-	pf_nld_subjugate_karelia = {
+	pf_nld_protect_the_karelians = {
 		icon = mission_early_russian_army
 		position = 3
 		required_missions = { pf_nld_assimilate_the_finns } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			culture = karelian
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				culture = karelian
+			}
+		}
 
 		effect = {  } 
 	}
@@ -33,7 +62,18 @@ pf_nld_1 = {
 		required_missions = { pf_nld_integrate_the_romuvans } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_subjects = 4
+			NOT = {
+				all_subject_country = {
+					liberty_desire = 20
+				}
+			}
+			num_accepted_cultures = 4
+			NOT = {
+				dominant_culture = ROOT
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -48,23 +88,98 @@ pf_nld_2 = {
 	pf_nld_coexistence_with_the_sami = {
 		icon = mission_the_sami
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = laponia_area
+				province_id = 4113
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				reverse_has_opinion = {
+					who = SMI
+					value = 100
+				}
+				AND = {
+					laponia_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					owns_or_non_sovereign_subject_of = 4113
+				}
+			}
+			
+		}
 
-		effect = {  } 
-	}
+		effect = {
+			if= {
+				limit = {
+					exists = FIN
+				}
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					target = FIN
+				}
+			}
+			else = {
+				finland_area = {
+					limit = {
+						NOT = {is_core = ROOT}
+						NOT = {is_permanent_claim = ROOT}
+					}
+					add_permanent_claim = ROOT
+				}
+				add_permanent_claim = 19
+				add_permanent_claim = 30
+				add_permanent_claim = 4152	
+			}
+			
+			vassalize = SMI
+			add_accepted_culture = sapmi
+			unlock_estate_privilege = { estate_privilege = estate_burghers_forest_expansion } 			
+		}
+ 	}
 
 	pf_nld_integrate_the_romuvans = {
 		icon = mission_the_livonians
 		position = 4
 		required_missions = {
-			pf_nld_subjugate_karelia
+			pf_nld_protect_the_karelians
 			pf_nld_seize_visby
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				area = estonia_ingria_area
+				area = livonia_area
+				area = curonia_area
+				province_id = 33
+				province_id = 34
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			owns_or_non_sovereign_subject_of = 33
+			owns_or_non_sovereign_subject_of = 34
+			estonia_ingria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			livonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			curonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -76,9 +191,29 @@ pf_nld_2 = {
 			pf_nld_northrlandsrikja
 			pf_a_tolerant_society
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				region = russia_region
+				region = baltic_region
+				region = ruthenia_region
+			}
+			culture_group = west_mongol
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				OR = {
+					region = russia_region
+					region = ruthenia_region
+					region = baltic_region
+				}
+				culture_group = west_mongol
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -95,7 +230,10 @@ pf_nld_3 = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			navy_size_percentage = 1
+			galley_fraction = 0.5
+		} 
 
 		effect = {  } 
 	}
@@ -104,9 +242,13 @@ pf_nld_3 = {
 		icon = mission_develop_visby
 		position = 3
 		required_missions = { pf_nld_a_baltic_fleet } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_id = 25
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			owns_or_non_sovereign_subject_of = 25
+		} 
 
 		effect = {  } 
 	}
@@ -118,9 +260,52 @@ pf_nld_3 = {
 			pf_nld_integrate_the_romuvans
 			pf_nld_unite_the_peninsula
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				region = baltic_region
+				area = karelia_area
+				area = finland_area
+				area = ostra_svealand_area
+				area = norrland_area
+				area = bothnia_area
+				area = gotaland_area
+				area = skaneland_area
+				area = denmark_area
+				area = jutland_area
+				area = holstein_area
+				area = mecklenburg_area
+				area = vorpommern_area
+				area = hinter_pommern_area
+				area = eastern_norway
+			}
+			has_port = yes
+			owner = {
+				NOT = { tag = ROOT }
+				NOT = { is_subject_of = ROOT }
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = pf_nld_baltic_empire_tt
+				baltic_region = { OR = { owner = { OR = { tag = ROOT is_subject_of = ROOT } } has_port = no } type = all }
+				karelia_area = { OR = { owner = { OR = { tag = ROOT is_subject_of = ROOT } } has_port = no } type = all }
+				finland_area = { OR = { owner = { OR = { tag = ROOT is_subject_of = ROOT } } has_port = no } type = all }
+				ostra_svealand_area = { OR = { owner = { OR = { tag = ROOT is_subject_of = ROOT } } has_port = no } type = all }
+				norrland_area = { OR = { owner = { OR = { tag = ROOT is_subject_of = ROOT } } has_port = no } type = all }
+				bothnia_area = { OR = { owner = { OR = { tag = ROOT is_subject_of = ROOT } } has_port = no } type = all }
+				gotaland_area = { OR = { owner = { OR = { tag = ROOT is_subject_of = ROOT } } has_port = no } type = all }
+				skaneland_area = { OR = { owner = { OR = { tag = ROOT is_subject_of = ROOT } } has_port = no } type = all }
+				denmark_area = { OR = { owner = { OR = { tag = ROOT is_subject_of = ROOT } } has_port = no } type = all }
+				jutland_area = { OR = { owner = { OR = { tag = ROOT is_subject_of = ROOT } } has_port = no } type = all }
+				holstein_area = { OR = { owner = { OR = { tag = ROOT is_subject_of = ROOT } } has_port = no } type = all }
+				mecklenburg_area = { OR = { owner = { OR = { tag = ROOT is_subject_of = ROOT } } has_port = no } type = all }
+				vorpommern_area = { OR = { owner = { OR = { tag = ROOT is_subject_of = ROOT } } has_port = no } type = all }
+				hinter_pommern_area = { OR = { owner = { OR = { tag = ROOT is_subject_of = ROOT } } has_port = no } type = all }
+				eastern_norway = { OR = { owner = { OR = { tag = ROOT is_subject_of = ROOT } } has_port = no } type = all }
+			}
+		}
 
 		effect = {  } 
 	}
@@ -139,9 +324,23 @@ pf_nld_4 = {
 			pf_nld_retake_our_lands
 			pf_nld_a_baltic_fleet
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				area = denmark_area
+				province_id = 4745
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			denmark_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			owns_or_non_sovereign_subject_of = 4745
+		} 
 
 		effect = {  } 
 	}
@@ -153,9 +352,19 @@ pf_nld_4 = {
 			pf_nld_strike_into_norway
 			pf_nld_secure_the_straits
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			region = scandinavia_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			scandinavia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -165,7 +374,11 @@ pf_nld_4 = {
 		position = 6
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			navy_size = 50
+			navy_size_percentage = 1
+			heavy_ship_fraction = 0.2
+		} 
 
 		effect = {  } 
 	}
@@ -180,9 +393,27 @@ pf_nld_5 = {
 	pf_nld_retake_our_lands = {
 		icon = mission_conquer_sweden
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			region = scandinavia_region
+			owner = {
+				tag = SWE
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			scandinavia_region = {
+				type = all
+				culture = swedish
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			skaneland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -419,7 +650,7 @@ pf_nld_eco_5 = {
 	}
 
 	pf_nld_spread_the_true_faith = {
-		icon = mission_hands_praying
+		icon = mission_norse_faith
 		position = 12
 		required_missions = { pf_nld_support_the_gothi } 
 		provinces_to_highlight = {  } 
