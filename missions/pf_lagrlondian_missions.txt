@@ -2069,6 +2069,7 @@ third_2 = {
 			pf_lag_universities
 		}
 		provinces_to_highlight = { 
+			owned_by = ROOT
 			NOT = { enlightenment = 100 }
 		 } 
 
