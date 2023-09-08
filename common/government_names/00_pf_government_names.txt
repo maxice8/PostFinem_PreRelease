@@ -132,3 +132,27 @@ pf_norse_rulers = {
 	}
 
 }
+
+pf_lagr_republic_names = {
+	rank = {
+		1 = THING
+		2 = ALTHINGI
+		3 = STORRAD
+	}
+
+	ruler_male = {
+		1 = FELAGSHALDARI
+		2 = THINGHALDER
+		3 = GREAT_THINGHALDER
+	}
+
+	ruler_female = {
+		1 = FELAGSHALDARKONA
+		2 = THINGHALDERINA
+		3 = GREAT_THINGHALDERINA
+	}
+
+	trigger = {
+		has_reform = pf_lagr_republic
+	}
+}

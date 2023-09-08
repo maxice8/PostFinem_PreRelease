@@ -1651,7 +1651,7 @@ second_2 = {
 		icon = mission_dominate_home_trade_node
 		position = 8
 		provinces_to_highlight = {
-		} 
+		}
 
 		trigger = {
 			home_trade_node = {
@@ -1695,10 +1695,10 @@ second_2 = {
 		}
 
 		effect = {
-			custom_tooltip = PF_LAG_BASE_TAX_GAIN_8
+			custom_tooltip = PF_LAG_BASE_TAX_GAIN_3
 			hidden_effect = {
 				for = {
-					amount = 8
+					amount = 3
 					effect = "
 					random_owned_province = {
 						limit = {
@@ -1781,6 +1781,7 @@ second_3_humanist = {
 		position = 12
 		required_missions = { pf_lag_theology } 
 		provinces_to_highlight = { 
+			owned_by = ROOT
 			NOT = { religion = ROOT }
 		 } 
 

@@ -125,7 +125,7 @@
 
  pf_lag_theology_title:0 "Control The Clergy"
  pf_lag_theology_desc:0 "REPLACE_ME"
- PF_LAG_BASE_TAX_GAIN_8:0 "3 random owned provinces with the §Y[Root.Religion.GetName]§! faith will gain §G1§! Base Tax "
+ PF_LAG_BASE_TAX_GAIN_3:0 "3 random owned provinces with the §Y[Root.Religion.GetName]§! faith will gain §G1§! Base Tax ¤"
 
  pf_lag_religion_locked_1_title:0 "Locked Mission"
  pf_lag_religion_locked_1_desc:0 "REPLACE_ME"
@@ -417,6 +417,15 @@
  havendalssites_MECHANIC_TOOLTIP:0 "Havendalssites"
  frisianites:0 "Frisianites"
  frisianites_MECHANIC_TOOLTIP:0 "Frisianites"
+ 
+ # Government Names
+ FELAGSHALDARI:0 "Félagshaldari"
+ THINGHALDER:0 "Thinghâlder"
+ GREAT_THINGHALDER:0 "Great Thinghâlder"
+ FELAGSHALDARKONA:0 "Félagshaldarkona"
+ THINGHALDERINA:0 "Thinghâlderina"
+ GREAT_THINGHALDERINA:0 "Great Thinghâlderina"
+
 
  # Specific to customizable localisation
  # Those are adjectives that refer to a faction
