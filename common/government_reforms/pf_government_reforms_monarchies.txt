@@ -216,3 +216,41 @@ selucid_monarchy = {
 		claim_states = yes
 	}
 }
+
+#Kingdom of Northern Unity
+enlightened_norse_kingdom = {
+	icon = "viking"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+	potential = {
+		OR = {
+			tag = NLD
+			was_tag = NLD
+		}
+	}
+	modifiers = {
+		tolerance_heathen = 2
+		tolerance_heretic = 2
+	}
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				add_province_modifier = {
+					name = sami_herding
+					duration = -1
+				}
+			}
+		}
+	}
+	post_removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = sami_herding
+				}
+				remove_province_modifier = sami_herding
+			}
+		}
+	}
+}
