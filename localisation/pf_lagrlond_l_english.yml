@@ -188,16 +188,19 @@
 
  pf_lag_develop_outer_rim_title:0 "Develop The Outer Rim"
  pf_lag_develop_outer_rim_desc:0 "REPLACE_ME"
+ PF_LAG_ADVISOR_BUILD_TIME:0 "Every §YAdministrative Advisor§! now grants §G-2.0%§! Build Cost per level"
 
  pf_lag_promote_urbanisation_title:0 "Promote Urbanisation"
  pf_lag_promote_urbanisation_desc:0 "Yeah OK I know it is with a Z"
- PF_LAG_ADVISOR_BUILD_TIME:0 "Every §YAdministrative Advisor§! now grants §G-2.0%§! Build Cost per level"
+ pf_lag_increased_development:0 "While this modifier is active §Ydeveloping§! a province has a §G10.0%§! chance of §Gdoubling§! it"
 
  pf_lag_industrial_title:0 "The Industrial Revolution"
  pf_lag_industrial_desc:0 "REPLACE_ME"
+ PF_LAG_GIVE_FURNACE_TO_COAL_PROVINCE:0 "Build 1 §YFurnace§! on a random owned province that produces or has latent §YCoal§!"
 
  pf_lag_made_in_title:0 "Made In Lagrlond"
  pf_lag_made_in_desc:0 "REPLACE_ME"
+ PF_LAG_HIGHEST_INCOME:0 "Has the §YHighest Monthly Income§! of all countries"
 
  pf_lag_east_coast_title:0 "Settle New Lagrlond"
  pf_lag_east_coast_desc:0 "REPLACE_ME"
@@ -359,6 +362,10 @@
  # means Placard of Absolute Tolerance
  pf_lag_religious_peace:0 "Skjal um Fullkominn Umbot"
  desc_pf_lag_religious_peace:0 "REPLACE_ME"
+ pf_lag_urbanisation:0 "The Cities of Lagrlond"
+ desc_pf_lag_urbanisation:0 "REPLACE_ME"
+ pf_lag_workshop_world:0 "Workshop of the World"
+ desc_pf_lag_workshop_world:0 "REPLACE_ME"
 
  # events
  PF_LAG_SPAWN_BRITON_NOBLE_REBELS:0 "A random province owned by you or a non-sovereign subject in the §YBritish Isles§!, with §YBriton§! culture, will spawn §YNoble Rebels§!"

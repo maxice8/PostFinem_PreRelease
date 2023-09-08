@@ -1579,7 +1579,7 @@ first_2 = {
 				}
 			}
 			home_trade_node = {
-				trade_node_value = 2	
+				trade_node_value = 15	
 			}
 		} 
 
@@ -1633,11 +1633,33 @@ first_2 = {
 		icon = mission_unknown_mission
 		position = 15
 		required_missions = { pf_lag_embrace_global } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			OR = {
+				has_trade_building_trigger = no
+				AND = {
+					is_institution_enabled = global_trade
+					NOT = { global_trade = 100 }
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			has_institution = global_trade
+			OR = {
+				home_trade_node = {
+					trade_node_value = 30
+				}
+				num_of_owned_provinces_with = {
+					value = 30
+					has_trade_building_trigger = yes
+				}
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			
+		} 
 	}
 }
 second_2 = {
@@ -1909,7 +1931,7 @@ second_3_religious = {
 
 		effect = {
 			custom_tooltip = PF_LAG_CHANGE_PERSONAL_DEITY
-			# TODO: implement decision
+			set_country_flag = pf_lagr_can_switch_deities
 		} 
 	}
 }
@@ -2046,11 +2068,35 @@ third_2 = {
 			pf_lag_renaissance
 			pf_lag_universities
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			NOT = { enlightenment = 100 }
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			has_institution = enlightenment
+			absolutism = 60
+			has_adm_advisor_3 = yes
+			has_dip_advisor_3 = yes
+			has_mil_advisor_3 = yes
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_prestige_or_monarch_power = {
+				amount = 50
+			}
+			change_ruler_stat = {
+				stat = adm
+				amount = 1
+			}
+			change_ruler_stat = {
+				stat = dip
+				amount = 1
+			}
+			change_ruler_stat = {
+				stat = mil
+				amount = 1
+			}
+		} 
 	}
 }
 fourth_2 = {
@@ -2161,7 +2207,7 @@ fourth_2 = {
 			capital_scope = { 
 				NOT = { devastation = 1 }
 			} 
-			capital_scope = { prosperity = 100 }
+			capital_scope = { is_prosperous = yes }
 		}
 
 		effect = {
@@ -2351,7 +2397,10 @@ fifth_2 = {
 		trigger = { 
 			num_of_owned_provinces_with = {
 				value = 10
-				has_production_building_trigger = yes
+				OR = {
+					has_forcelimit_building_trigger = yes
+					has_production_building_trigger = yes
+				}
 			}
 			num_of_owned_provinces_with = {
 				value = 12
@@ -2362,7 +2411,13 @@ fifth_2 = {
 			}
 		} 
 
-		effect = { } 
+		effect = {
+			add_country_modifier = {
+				name = pf_lag_urbanisation
+				duration = 7300
+			}
+			custom_tooltip = pf_lag_increased_development
+		} 
 	}
 
 	pf_lag_industrial = {
@@ -2395,9 +2450,19 @@ fifth_2 = {
 			}
 		} 
 
-		effect = { 
-			# Give bonus to coal provinces with build time and build cost,
-			# maybe even an early manufactory
+		effect = {
+			custom_tooltip = PF_LAG_GIVE_FURNACE_TO_COAL_PROVINCE
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						OR = {
+							trade_goods = coal
+							has_latent_trade_goods = coal	
+						}
+					}
+					add_building = furnace
+				}
+			}
 		 } 
 	}
 
@@ -2405,11 +2470,36 @@ fifth_2 = {
 		icon = saxon_manufacturing
 		position = 14
 		required_missions = { pf_lag_industrial } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owner = {
+				monthly_income = ROOT
+			}
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = PF_LAG_HIGHEST_INCOME
+				NOT = {
+					any_country = {
+						monthly_income = ROOT
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_years_of_owned_provinces_production_income = {
+				years = 1.5
+				trigger = {
+					has_production_building_trigger = yes
+				}
+				custom_tooltip = INCOME_FROM_WORKSHOPS_DESC
+			}
+			add_country_modifier = {
+				name = pf_lag_workshop_world
+				duration = -1
+			}
+		} 
 	}
 }
 first_3 = {
