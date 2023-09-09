@@ -1,3 +1,20 @@
+has_colonial_nation_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = $tooltip$
+		#you have to type a tooltip because PDX scripted effects sucks
+		#ex: "Own or have a colonial subject own at least §Y PROVINCES §! provinces in §Y COLONIAL_REGION §!"
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = $provinces$
+			owner = {
+				OR = {
+					tag = ROOT
+					is_colonial_nation_of = ROOT
+				}
+			}
+			colonial_region = $colonial_region$
+		}
+	}
+}
 pf_has_any_norse_deity_active = {
 	custom_trigger_tooltip = {
 		tooltip = PF_HAS_ANY_NORSE_DEITY

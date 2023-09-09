@@ -1030,6 +1030,16 @@ army_reformer = {
 		}
 	}
 	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_country_flag = nrd_buffed_moral_advisor 
+			}
+		}
+		modifier = { 
+			fire_damage = 0.01
+		}
+	}
+	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
 				is_emperor_of_china = yes 

@@ -50,3 +50,33 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = nrd_flavor_events.2 
+	title = nrd_flavor_events.2.t 
+	desc = nrd_flavor_events.2.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = nrd_flavor_events.2.a
+		change_price = {
+			trade_goods = cocoa
+			key = nrd_cocoa_boom
+			value = 0.25
+			duration = 7300
+	  }
+	  custom_tooltip = empty_line_tt
+		change_price = {
+			trade_goods = coffee
+			key = nrd_coffee_boom
+			value = 0.25
+			duration = 7300
+	  }
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
