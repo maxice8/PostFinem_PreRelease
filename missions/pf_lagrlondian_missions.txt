@@ -2169,6 +2169,8 @@ fourth_2 = {
 				}
 			}
 
+			custom_tooltip = empty_line_tt
+
 			if = {
 				limit = {
 					NOT = { exists = EFR }
