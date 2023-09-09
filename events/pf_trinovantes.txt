@@ -186,7 +186,7 @@ country_event = {
 country_event = {
 	id = pf_trn.2
 	title = pf_trn.2.t
-	desc = pf_trn.2.desc
+	desc = pf_trn.2.d
 	picture = GOOD_WITH_MONARCH_eventPicture
 	
 	is_triggered_only = yes
@@ -220,5 +220,76 @@ country_event = {
 		highlight = yes
 		name = "pf_trn.2.c"
 		add_stability_or_adm_power = yes
+	}
+}
+country_event = {		# Inter-tribal unrest
+	id = pf_trn.3
+	title = pf_trn.3.t
+	desc = pf_trn.3.d
+	picture = REVOLUTION_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = brittonic_confederation_reform
+		num_of_cities = 5	# approx the five tribes kinda
+	}
+
+	immediate = {
+		hidden_effect = {
+			pf_save_random_tribe = {
+				function = primary
+			}
+			pf_save_random_tribe = {
+				function = secondary
+			}
+		}
+	}
+
+	option = {		# Favour tribe 1
+		name = "pf_trn.3.a"
+		random_owned_province = {
+			add_base_tax = 1
+		}
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = -25
+		}
+	}
+	option = {		# favour tribe 2
+		name = "pf_trn.3.b"
+		random_owned_province = {
+			add_base_manpower = 1
+		}
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = -25
+		}
+	}
+	option = {		# favour neither
+		name = "pf_trn.3.c"
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = -10
+		}
+	}
+	option = {		# resolve it in a court of law
+		name = "pf_trn.3.dd"
+		trigger = {
+			ruler_has_personality = lawgiver_personality
+		}
+		highlight = yes
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = 5
+		}
+	}
+
+	after = {
+		pf_clear_trn_tribe_flags = yes
 	}
 }
