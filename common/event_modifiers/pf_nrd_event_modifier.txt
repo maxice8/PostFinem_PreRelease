@@ -72,3 +72,19 @@ nrd_over_the_horizon_modifier = {
 	auto_explore_adjacent_to_colony = yes
 	global_colonial_growth = 20
 }
+nrd_colonial_ambitions_modifier = {
+	colonist_placement_chance = 0.1
+	global_colonial_growth = 20
+}
+nrd_a_whole_new_world_modifier = {
+	trade_steering = 0.25
+	merchants = 1
+}
+nrd_fruitful_colonies_modifier = {
+	global_trade_goods_size_modifier = 0.20
+	global_colonial_growth = 25
+}
+nrd_fruitful_colonies_modifier2 = {
+	vassal_forcelimit_bonus = 0.25
+	trade_steering = 0.25
+}

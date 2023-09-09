@@ -1279,11 +1279,32 @@ pf_nrd_col_1 = {
 		icon = mission_colonize_louisiana
 		position = 11
 		required_missions = { pf_nrd_a_whole_new_world } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_id = 893
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			893 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			has_colonial_nation_trigger = {
+				provinces = 10
+				colonial_region = colonial_louisiana
+				tooltip = nrd_pushing_inward_tt
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			893 = {
+				set_center_level_3_center_of_trade = yes
+			}
+			custom_tooltip = empty_line_tt
+			east_yucatan_area = { add_permanent_claim = ROOT }
+			yucatan_area = { add_permanent_claim = ROOT }
+			guatemala_lowlands_area = { add_permanent_claim = ROOT }
+			campeche_area = { add_permanent_claim = ROOT }
+		} 
 	}
 
 	pf_nrd_uncontested_in_new_world = {
@@ -1361,7 +1382,12 @@ pf_nrd_col_2 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nrd_a_whole_new_world_modifier
+				duration = 7300
+			}
+		} 
 	}
 
 	pf_nrd_fruitful_colonies = {
@@ -1370,9 +1396,53 @@ pf_nrd_col_2 = {
 		required_missions = { pf_nrd_a_whole_new_world } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  		
+			has_colonial_nation_trigger = {
+				provinces = 20
+				colonial_region = colonial_canada
+				tooltip = nrd_fruitful_colonies_ca_tt
+			}
+			has_colonial_nation_trigger = {
+				provinces = 20
+				colonial_region = colonial_eastern_america
+				tooltip = nrd_fruitful_colonies_ea_tt
+			}
+			has_colonial_nation_trigger = {
+				provinces = 20
+				colonial_region = colonial_louisiana
+				tooltip = nrd_fruitful_colonies_louisiana_tt
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = nrd_fruitful_colonies_tt
+			tooltip = {
+				add_country_modifier = {
+					name = nrd_fruitful_colonies_modifier
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						is_colonial_nation_of = ROOT
+						OR = {
+							capital_scope = { colonial_region = colonial_canada }
+							capital_scope = { colonial_region = colonial_eastern_america }
+							capital_scope = { colonial_region = colonial_louisiana }
+						}
+					}
+					add_country_modifier = {
+						name = nrd_fruitful_colonies_modifier
+						duration = 7300
+					}
+				}
+			}
+			add_country_modifier = {
+				name = nrd_fruitful_colonies_modifier2
+				duration = 7300
+			}
+		} 
 	}
 }
 pf_nrd_col_3 = {
@@ -1391,22 +1461,63 @@ pf_nrd_col_3 = {
 		icon = mission_colonial
 		position = 10
 		required_missions = { pf_nrd_over_the_horizon } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			NOT = {
+				new_world_i = 100
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			all_owned_province = {
+				new_world_i = 100
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nrd_colonial_ambitions_modifier
+				duration = 7300
+			}
+		} 
 	}
 
 	pf_nrd_the_land_of_cocoa = {
 		icon = mission_brazilian_bandeirantes
 		position = 11
 		required_missions = { pf_nrd_a_whole_new_world } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				trade_goods = cocoa
+				trade_goods = coffee
+			}
+			owner = {
+				OR = {
+					is_colonial_nation_of = ROOT
+					tag = ROOT
+				}
+			}
+			has_production_building_trigger = no
 
-		trigger = {  } 
+		} 
 
-		effect = {  } 
+		trigger = {  	
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					trade_goods = coffee
+					trade_goods = cocoa
+				}
+				has_production_building_trigger = yes
+			}
+
+		} 
+
+		effect = {  
+			country_event = {
+				id = nrd_flavor_events.2
+			}
+		} 
 	}
 
 	pf_nrd_invest_in_plantations = {
