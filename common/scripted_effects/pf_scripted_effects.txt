@@ -1,0 +1,75 @@
+#Change trade goods for a max number of provinces
+swap_trade_good_for_max_provinces = {
+	hidden_effect = {
+		set_variable = {
+			which = max
+			value = $max$
+		}
+		while = {
+			limit = { 
+				check_variable = {
+					which = max
+					value = 1
+				}
+			}
+			random_owned_province = {
+				limit = {
+					$trigger$ #not required if you want it to be random in all owned provinces
+					trade_goods = $original$
+				}
+				change_trade_goods = $new$
+			}
+			change_variable = {
+				which = max
+				value = -1
+			}
+		}
+	}
+	custom_tooltip = $tooltip$
+	#ex: "Up to §G MAX §! provinces producing §Y ORIGINAL §! will now produce §Y NEW §!."
+}
+
+#Distribute X Base Tax to X provinces
+#PARAMERETS ARE num \ trigger (inside " " instead of brackets) \ type (tax production manpower)
+distribute_base_dev_to_provinces = {
+	hidden_effect = {
+		set_variable = {
+			which = num
+			value = $num$
+		}
+		while = {
+			limit = { 
+				check_variable = {
+					which = num
+					value = 1
+				}
+			}
+			random_owned_province = {
+				limit = { 
+					$trigger$ #not required if you want it to be random in all owned provinces
+					NOT = { has_province_flag = received_base_dev_flag }
+				}
+				add_base_$type$ = $amount$
+				set_province_flag = received_base_dev_flag
+			}
+			change_variable = {
+				which = num
+				value = -1
+			}
+		}
+		every_owned_province = {
+			limit = {
+				has_province_flag = received_base_dev_flag
+			}
+			clr_province_flag = received_base_dev_flag
+		}
+	}
+	custom_tooltip = $tooltip$
+	#ex: §G NUM §! random provinces in §Y TRIGGER §! will receive §G AMOUNT §! base §Y TYPE §! development.
+}
+pf_reset_deity = {
+	custom_tooltip = PF_RESET_PERSONAL_DEITY
+	hidden_effect = {
+		change_personal_deity = null
+	}
+}

@@ -1,10 +1,10 @@
 #Norse Warlord
 
 norse_warlord = {
-	icon = "castle"
+	icon = "viking"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
-	allow_force_tributary = no
+	allow_force_tributary = yes
 	potential = {
 		religion = norse_pagan_reformed
 	}
@@ -18,5 +18,84 @@ norse_warlord = {
 	# }
 	ai = {
 		factor = 0.5 #generic
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+naval_society_reform = {
+	icon = "sailors"
+	allow_normal_conversion = no
+	# lock_level_when_selected = yes
+	potential = {
+		religion = norse_pagan_reformed
+	}
+	modifiers = {
+		galley_power = 0.15
+		sailors_recovery_speed = 0.25
+	}
+	# custom_attributes = {
+	# 	buffed_strong_duchies = yes #+5% Loyalty
+	# }
+	ai = {
+		factor = 2 #generic
+	}
+}
+
+berzerker_zeal_reform = {
+	icon = "berzerker"
+	allow_normal_conversion = no
+	# lock_level_when_selected = yes
+	potential = {
+		religion = norse_pagan_reformed
+	}
+	modifiers = {
+		manpower_in_true_faith_provinces = 0.2
+		global_missionary_strength = 0.01
+	}
+	# custom_attributes = {
+	# 	buffed_strong_duchies = yes #+5% Loyalty
+	# }
+	ai = {
+		factor = 2 #generic
+	}
+}
+
+norse_nationstates_reform = {
+	icon = "nationstates"
+	allow_normal_conversion = no
+	# lock_level_when_selected = yes
+	potential = {
+		religion = norse_pagan_reformed
+	}
+	modifiers = {
+		war_exhaustion = -0.05
+		max_absolutism_effect = 0.1
+	}
+	# custom_attributes = {
+	# 	buffed_strong_duchies = yes #+5% Loyalty
+	# }
+	ai = {
+		factor = 2 #generic
+	}
+}
+
+establish_permanent_settlements_reform = {
+	icon = "free_city"
+	allow_normal_conversion = no
+	# lock_level_when_selected = yes
+	potential = {
+		religion = norse_pagan_reformed
+	}
+	modifiers = {
+		development_cost = -0.1
+		min_autonomy_in_territories = -0.1
+	}
+	# custom_attributes = {
+	# 	buffed_strong_duchies = yes #+5% Loyalty
+	# }
+	ai = {
+		factor = 2 #generic
 	}
 }

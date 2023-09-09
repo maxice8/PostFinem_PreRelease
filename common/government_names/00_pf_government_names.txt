@@ -3,6 +3,23 @@
 
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
 
+# Adirim
+adirim_of_confederation_names = {
+	rank = {
+		3 = FEDERAL_SEAT
+	}
+	ruler_male = {
+		3 = GRAND_ADIRIM
+	}
+	ruler_female = {
+		3 = GRAND_ADIRIM
+	}
+
+	trigger = {
+		is_emperor = yes
+	}
+}
+
 brittonic_confederation_names = {
 	rank = {
 		1 = CONFEDERATION
@@ -70,4 +87,48 @@ pf_hierophant = {
 			# Hypothetical hierophantocracy goes here
 		}
 	}
+}
+
+pf_norse_rulers = {
+	rank = {
+		1 = THING
+		2 = ALTHINGI
+		3 = STORRAD
+	}
+
+	ruler_male = {
+		1 = JARL
+		2 = KONUNGR
+		3 = HIGH_KONUNGR
+	}
+
+	consort_female = {
+		1 = JARLKONA
+		2 = DROTTNING
+		3 = HIGH_DROTTNING
+	}
+	ruler_female = {
+		1 = JARLKONA
+		2 = DROTTNING
+		3 = HIGH_DROTTNING
+	}
+
+	heir_male = {
+		1 = JARLSSON
+		2 = KONUNGSSON
+		3 = HIGH_KONUNGSSON 
+	}
+	heir_female = {
+		1 = JARLSDOTTIR
+		2 = KONUNGSDOTTIR
+		3 = HIGH_KONUNGSDOTTIR
+	}
+
+	trigger = {
+		AND = {
+			religion = norse_pagan_reformed
+			government = tribal
+		}
+	}
+
 }

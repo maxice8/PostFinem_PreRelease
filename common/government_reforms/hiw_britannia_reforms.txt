@@ -22,9 +22,7 @@ brittonic_confederation_reform = {
 	custom_attributes = {
 		confederation_elections = yes
 	}
-	government_abilities = {
-		trinovantes_cohesion_mechanic
-	}
+	election_on_death = yes
 	heir = no
 	ai = {
 		factor = 1

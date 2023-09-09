@@ -3,7 +3,7 @@ is_city = yes
 capital = "Lille"
 base_tax = 2
 base_production = 2
-trade_goods = cloth
+trade_goods = wool
 base_manpower = 1
 discovered_by = eastern
 discovered_by = western
@@ -15,12 +15,10 @@ controller = BRG
 add_core = BRG
 culture = nervian
 religion = druidic
-
-1442.11.10 = {
+1442.11.10 = { 
 	owner = GAU
 	controller = GAU
 }
-
-1444.6.23 = {
+1444.6.23 = { 
 	add_core = GAU
 }
