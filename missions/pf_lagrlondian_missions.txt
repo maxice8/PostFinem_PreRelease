@@ -2629,7 +2629,7 @@ second_4 = {
 	pf_lag_vinland = {
 		icon = mission_rb_colonise_canada
 		position = 16
-		required_missions = { pf_lag_new_world } 
+		required_missions = { pf_lag_into_beyond } 
 		provinces_to_highlight = {
 			colonial_region = colonial_canada
 			has_discovered = ROOT
@@ -2706,7 +2706,7 @@ third_4 = {
 	has_country_shield = yes
 	potential = { tag = LAG } 
 
-	pf_lag_new_world = {
+	pf_lag_into_beyond = {
 		icon = mission_look_west
 		position = 15
 		provinces_to_highlight = {  } 
@@ -2719,7 +2719,7 @@ third_4 = {
 	pf_lag_carib = {
 		icon = mission_caribbean_cn
 		position = 17
-		required_missions = { pf_lag_new_world } 
+		required_missions = { pf_lag_into_beyond } 
 		provinces_to_highlight = { 
 			colonial_region = colonial_the_carribean
 			has_discovered = ROOT
@@ -2788,7 +2788,7 @@ fourth_3 = {
 	pf_lag_west_africa = {
 		icon = mission_west_african_ports
 		position = 16
-		required_missions = { pf_lag_new_world } 
+		required_missions = { pf_lag_into_beyond } 
 		provinces_to_highlight = {  } 
 
 		trigger = { 
