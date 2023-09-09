@@ -1465,41 +1465,24 @@ first_2 = {
 		}
 
 		effect = {
-			custom_tooltip = PF_LAG_UPGRADE_MARKETPLACES
+			for = {
+				custom_tooltip = PF_LAG_UPGRADE_MARKETPLACES
+				amount = 3
+				effect = "
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_building = marketplace
+							has_building = trade_depot
+							NOT = { has_province_flag = pf_lag_expanded_markets_upgrade }
+						}
+					}
+					upgrade_building = { trade = yes }
+					set_province_flag = pf_lag_expanded_markets_upgrade
+				}
+				"
+			}
 			hidden_effect = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							has_building = marketplace
-							has_building = trade_depot
-							NOT = { has_province_flag = pf_lag_expanded_markets_upgrade }
-						}
-					}
-					upgrade_building = { trade = yes }
-					set_province_flag = pf_lag_expanded_markets_upgrade
-				}
-				random_owned_province = {
-					limit = {
-						OR = {
-							has_building = marketplace
-							has_building = trade_depot
-							NOT = { has_province_flag = pf_lag_expanded_markets_upgrade }
-						}
-					}
-					upgrade_building = { trade = yes }
-					set_province_flag = pf_lag_expanded_markets_upgrade
-				}
-				random_owned_province = {
-					limit = {
-						OR = {
-							has_building = marketplace
-							has_building = trade_depot
-							NOT = { has_province_flag = pf_lag_expanded_markets_upgrade }
-						}
-					}
-					upgrade_building = { trade = yes }
-					set_province_flag = pf_lag_expanded_markets_upgrade
-				}
 				every_owned_province = {
 					limit = {
 						has_province_flag = pf_lag_expanded_markets_upgrade
@@ -2228,7 +2211,7 @@ fourth_2 = {
 		}
 
 		effect = {
-			capital = { change_trade_goods = glass }
+			capital_scope = { change_trade_goods = glass }
 			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = pf_lag_glorious_court
