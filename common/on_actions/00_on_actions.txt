@@ -3700,22 +3700,73 @@ on_province_culture_converted = {
 
 	if = {
 		limit = {
-			owned_by = NLD
-			trade_goods = fur
-			culture = sapmi
+			owner = {
+				has_reform = enlightened_norse_kingdom
+			}
+			has_owner_accepted_culture = no
+			has_owner_culture = no
+			culture_group = owner
 		}
-		if ={
-			limit = {
+		add_province_modifier = {
+			name = nld_tolerant_culture_group
+			duration = -1
+		}
+	}
+	 else_if = {
+		limit = {
+			owner = {
+				has_reform = enlightened_norse_kingdom
+			}
+			has_owner_accepted_culture = no
+			has_owner_culture = no
+			NOT = {
+				culture_group = owner
+			}
+		}
+		add_province_modifier = {
+			name = nld_tolerant_culture
+			duration = -1
+		}
+	}
+
+	if = {
+		limit = {
+			has_province_modifier = nld_tolerant_culture_group
+			NOT = {
+				OR = {
+				AND = {
+					has_owner_accepted_culture = no
+					has_owner_culture = no
+					culture_group = owner
+				}
 				owner = {
 					has_reform = enlightened_norse_kingdom
-					accepted_culture = sapmi
 				}
 			}
-			add_province_modifier = {
-				name = sami_herding
-				duration = -1
+			}
+			
+		}
+		remove_province_modifier = nld_tolerant_culture_group
+	}
+	else_if = {
+		limit = { 
+			has_province_modifier = nld_tolerant_culture
+			NOT = {
+				OR = {
+				AND = {
+					has_owner_accepted_culture = no
+					has_owner_culture = no
+					NOT = {
+						culture_group = owner
+					}
+				}
+				owner = {
+					has_reform = enlightened_norse_kingdom
+				}
+				}
 			}
 		}
+		remove_province_modifier = nld_tolerant_culture
 	}
 }
 
@@ -3728,22 +3779,73 @@ on_province_culture_changed = {
 
 	if = {
 		limit = {
-			owned_by = NLD
-			trade_goods = fur
-			culture = sapmi
+			owner = {
+				has_reform = enlightened_norse_kingdom
+			}
+			has_owner_accepted_culture = no
+			has_owner_culture = no
+			culture_group = owner
 		}
-		if ={
-			limit = {
+		add_province_modifier = {
+			name = nld_tolerant_culture_group
+			duration = -1
+		}
+	}
+	 else_if = {
+		limit = {
+			owner = {
+				has_reform = enlightened_norse_kingdom
+			}
+			has_owner_accepted_culture = no
+			has_owner_culture = no
+			NOT = {
+				culture_group = owner
+			}
+		}
+		add_province_modifier = {
+			name = nld_tolerant_culture
+			duration = -1
+		}
+	}
+
+	if = {
+		limit = {
+			has_province_modifier = nld_tolerant_culture_group
+			NOT = {
+				OR = {
+				AND = {
+					has_owner_accepted_culture = no
+					has_owner_culture = no
+					culture_group = owner
+				}
 				owner = {
 					has_reform = enlightened_norse_kingdom
-					accepted_culture = sapmi
 				}
 			}
-			add_province_modifier = {
-				name = sami_herding
-				duration = -1
+			}
+			
+		}
+		remove_province_modifier = nld_tolerant_culture_group
+	}
+	else_if = {
+		limit = { 
+			has_province_modifier = nld_tolerant_culture
+			NOT = {
+				OR = {
+				AND = {
+					has_owner_accepted_culture = no
+					has_owner_culture = no
+					NOT = {
+						culture_group = owner
+					}
+				}
+				owner = {
+					has_reform = enlightened_norse_kingdom
+				}
+				}
 			}
 		}
+		remove_province_modifier = nld_tolerant_culture
 	}
 }
 
@@ -3788,23 +3890,33 @@ on_province_owner_change = {
 
 	if = {
 		limit = {
-			owned_by = NLD
-			trade_goods = fur
-			culture = sapmi
-		}
-		if ={
-			limit = {
-				owner = {
-					has_reform = enlightened_norse_kingdom
-					accepted_culture = sapmi
-				}
+			owner = {
+				has_reform = enlightened_norse_kingdom
 			}
-			add_province_modifier = {
-				name = sami_herding
-				duration = -1
+			has_owner_accepted_culture = no
+			has_owner_culture = no
+			culture_group = owner
+		}
+		add_province_modifier = {
+			name = nld_tolerant_culture_group
+			duration = -1
+		}
+	}
+	 if = {
+		limit = {
+			owner = {
+				has_reform = enlightened_norse_kingdom
+			}
+			has_owner_accepted_culture = no
+			has_owner_culture = no
+			NOT = {
+				culture_group = owner
 			}
 		}
-		
+		add_province_modifier = {
+			name = nld_tolerant_culture
+			duration = -1
+		}
 	}
 
 	if = {
@@ -4258,20 +4370,33 @@ on_culture_promoted = {
 
 	if = {
 		limit = {
-			has_reform = enlightened_norse_kingdom
-			accepted_culture = sapmi
-		}
-		every_owned_province = {
-			limit = {
-				trade_goods = fur
-				culture = sapmi
+			owner = {
+				has_reform = enlightened_norse_kingdom
 			}
-			add_province_modifier = {
-				name = sami_herding
-				duration = -1
+			has_owner_accepted_culture = no
+			has_owner_culture = no
+			culture_group = owner
+		}
+		add_province_modifier = {
+			name = nld_tolerant_culture_group
+			duration = -1
+		}
+	}
+	 else_if = {
+		limit = {
+			owner = {
+				has_reform = enlightened_norse_kingdom
+			}
+			has_owner_accepted_culture = no
+			has_owner_culture = no
+			NOT = {
+				culture_group = owner
 			}
 		}
-		
+		add_province_modifier = {
+			name = nld_tolerant_culture
+			duration = -1
+		}
 	}
 }
 
