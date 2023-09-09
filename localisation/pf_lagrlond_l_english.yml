@@ -166,8 +166,10 @@
 
  pf_lag_frisians_title:0 "Integrate The Frisians"
  pf_lag_frisians_desc:0 "REPLACE_ME"
- YES_PF_LAG_PU_EFR:0 "£yes£ If §Y[EFR.GetName]§! exists we will gain a §YRestoration of Union§! casus belli against them for §G20§! years, otherwise we will gain permanent claims on §Y[1931.GetName]§! and §Y[55.GetName]§!"
- NO_PF_LAG_PU_EFR:0 "£no£ If §Y[EFR.GetName]§! exists we will gain a §YRestoration of Union§! casus belli against them for §G20§! years, otherwise we will gain permanent claims on §Y[1931.GetName]§! and §Y[55.GetName]§!"
+ YES_PF_LAG_PU_EFR:0 "£yes£ If §Y[EFR.GetName]§! exists:"
+ NO_PF_LAG_PU_EFR:0 "£no£ If §Y[EFR.GetName]§! exists:"
+ YES_PF_LAG_PU_EFR_OTHERWISE:0 "£yes£ Otherwise:"
+ NO_PF_LAG_PU_EFR_OTHERWISE:0 "£no£ Otherwise:"
 
  pf_lag_rein_nobles_title:0 "Rein The Nobles"
  pf_lag_rein_nobles_desc:0 "REPLACE_ME"

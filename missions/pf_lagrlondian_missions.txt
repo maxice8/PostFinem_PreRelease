@@ -2162,6 +2162,36 @@ fourth_2 = {
 					}
 				}
 			}
+			tooltip = {
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					target = EFR
+				}
+			}
+
+			if = {
+				limit = {
+					NOT = { exists = EFR }
+				}
+				custom_tooltip = YES_PF_LAG_PU_EFR_OTHERWISE
+				hidden_effect = {
+					add_permanent_claim_province = {
+						province = 1931
+					}
+					add_permanent_claim_province = {
+						province = 55
+					}
+				}
+			}
+			else = { custom_tooltip = NO_PF_LAG_PU_EFR_OTHERWISE }
+			tooltip = {
+				add_permanent_claim_province = {
+					province = 1931
+				}
+				add_permanent_claim_province = {
+					province = 55
+				}
+			}
 		} 
 	}
 
