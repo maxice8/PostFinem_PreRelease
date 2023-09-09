@@ -160,7 +160,7 @@ country_event = {
 		# and add a modifier to highly require it
 		# if cohesion is low
 		ai_chance = {
-			factor = 5
+			factor = 1
 			modifier = {
 				factor = 0
 				has_government_power = {
@@ -169,6 +169,56 @@ country_event = {
         				value = 0
 				}
 			}
+			modifier = {
+				factor = 5
+				NOT = {
+					has_government_power = {
+        				mechanic_type = trinovantes_cohesion_mechanic
+        				power_type = trn_cohesion
+        				value = -30
+					}
+				}
+			}
 		}
+	}
+}
+# Peace and Cooperation
+country_event = {
+	id = pf_trn.2
+	title = pf_trn.2.t
+	desc = pf_trn.2.desc
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = brittonic_confederation_reform
+		is_at_war = no
+		stability = 1
+		OR = {
+			NOT = { average_unrest = -2 }
+			legitimacy = 95
+		}
+	}
+
+	option = {		# Life is bliss
+		name = "pf_trn.2.a"
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = 25
+		}
+	}
+	option = {		# The tribes must be willing to give more tribute then
+		name = "pf_trn.2.b"
+		add_years_of_income = 0.15
+	}
+	option = {		# This is testament to our benevolent policies
+		trigger = {
+			ruler_has_personality = just_personality
+		}
+		highlight = yes
+		name = "pf_trn.2.c"
+		add_stability_or_adm_power = yes
 	}
 }
