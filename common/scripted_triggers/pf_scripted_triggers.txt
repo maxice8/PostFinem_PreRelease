@@ -1,0 +1,36 @@
+has_colonial_nation_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = $tooltip$
+		#you have to type a tooltip because PDX scripted effects sucks
+		#ex: "Own or have a colonial subject own at least §Y PROVINCES §! provinces in §Y COLONIAL_REGION §!"
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = $provinces$
+			owner = {
+				OR = {
+					tag = ROOT
+					is_colonial_nation_of = ROOT
+				}
+			}
+			colonial_region = $colonial_region$
+		}
+	}
+}
+pf_has_any_norse_deity_active = {
+	custom_trigger_tooltip = {
+		tooltip = PF_HAS_ANY_NORSE_DEITY
+		OR = {
+			has_personal_deity = odin
+			has_personal_deity = freya
+			has_personal_deity = tor
+			has_personal_deity = tyr
+			has_personal_deity = njord
+			has_personal_deity = snotra
+			has_personal_deity = odin_lag_upgraded
+			has_personal_deity = freya_lag_upgraded
+			has_personal_deity = tor_lag_upgraded
+			has_personal_deity = tyr_lag_upgraded
+			has_personal_deity = njord_lag_upgraded
+			has_personal_deity = snotra_lag_upgraded
+		}
+	}
+}

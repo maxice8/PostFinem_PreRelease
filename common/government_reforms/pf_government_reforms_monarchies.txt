@@ -282,3 +282,19 @@ enlightened_norse_kingdom = {
 		}
 	}
 }
+nordhafnadr_kingdom = {
+	icon = "norse_kingdom"
+	allow_normal_conversion = yes
+	raze_province = yes
+	potential = {
+		has_country_flag = nrd_reformed_government_flag
+	}
+	modifiers = {
+		army_tradition = 1
+		monarch_military_power = 2
+		movement_speed_onto_off_boat_modifier = 1
+	}
+	ai = {
+		factor = 1
+	}
+}

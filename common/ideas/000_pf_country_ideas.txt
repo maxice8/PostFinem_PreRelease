@@ -431,6 +431,63 @@ NRD_ideas = {
 	}
 }
 
+SKL_ideas = {
+	start = {
+		naval_maintenance_modifier = -0.1
+		land_forcelimit_modifier = 0.25
+	}
+	
+	bonus = {
+		global_tax_modifier = 0.20
+	}	
+
+	trigger = {
+		tag = SKL
+	}
+	free = yes
+	
+	#Shocking Force
+	SKL_ideas_1 = {
+		shock_damage = 0.1
+		leader_land_shock = 1
+	}
+
+	#Maritime Supremacy
+	SKL_ideas_2 = {
+		global_naval_engagement_modifier = 0.1
+		heavy_ship_power = 0.1
+	}
+
+	#Stable Economy
+	SKL_ideas_3 = {
+		global_trade_goods_size_modifier = 0.10
+	}
+
+	#Professional Army
+	SKL_ideas_4 = {
+		discipline = 0.05
+		drill_decay_modifier = -0.5
+	}
+
+	#Mercantile Strategy
+	SKL_ideas_5 = {
+		merchants = 1
+		placed_merchant_power = 20
+
+	}
+
+	#Grand Fleet
+	SKL_ideas_6 = {
+		naval_forcelimit_modifier = 0.33
+	}
+
+	#Prepared Landings
+	SKL_ideas_7 = {
+		allowed_marine_fraction = 0.1
+		landing_penalty = -1
+	}
+}
+
 LAG_ideas = {
 	start = {
 		global_trade_power = 0.20
