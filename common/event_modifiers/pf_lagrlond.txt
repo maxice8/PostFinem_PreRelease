@@ -307,3 +307,70 @@ pf_lag_from_tokyo_to_paris = {
 	global_prosperity_growth = 0.1
 	caravan_power = 0.2
 }
+
+# pf_lag_into_beyond
+pf_lag_into_beyond_modifier = {
+	range = 0.5
+	colonist_placement_chance = 0.05
+}
+
+# pf_lag_carib
+pf_lag_sugar_trade = {
+	global_tariffs = 0.1
+}
+
+# pf_lag_australia
+pf_lag_penal_colonies = {
+	culture_conversion_cost = -0.1
+	culture_conversion_time = -0.1
+}
+
+# pf_lag_spices
+pf_lag_spices_flow = {
+	trade_company_investment_cost = -0.25
+}
+
+# pf_lag_cape_good_hope
+pf_lag_cape_good_hope_station = {
+	province_trade_power_modifier = 0.15
+	min_local_autonomy = -25
+}
+
+# pf_lag_reach_india
+pf_lag_foothold_india = {
+	province_trade_power_modifier = 0.1
+	min_local_autonomy = -10
+}
+
+# pf_lag_formosa
+pf_lag_fortress_formosa = {
+	province_trade_power_modifier = 0.1
+	min_local_autonomy = -15
+	block_slave_raid = yes
+}
+
+# pf_lag_far_east
+pf_lag_ports_in_the_far_east = {
+	prestige = 0.25
+	republican_tradition = 0.12
+	legitimacy = 0.25
+	devotion = 0.25
+	horde_unity = 0.25
+	meritocracy = 0.1
+}
+
+# pf_lag_louisiana
+pf_lag_up_the_river = {
+	trade_company_investment_cost = -0.1
+}
+
+# pf_lag_california
+pf_lag_gold_rush = {
+	gold_depletion_chance_modifier = -0.25
+	treasure_fleet_income = 0.25
+}
+
+# pf_lag_fur_trade
+pf_lag_lagrlondian_fur = {
+	prestige = 0.5
+}

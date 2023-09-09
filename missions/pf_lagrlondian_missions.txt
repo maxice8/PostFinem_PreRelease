@@ -1698,6 +1698,7 @@ second_2 = {
 
 		effect = {
 			define_advisor = {
+				name = "Ján Péterszón Kóen"
 				type = trader
 				skill = 3
 				religion = ROOT
@@ -1729,9 +1730,9 @@ second_2 = {
 		}
 
 		effect = {
-			custom_tooltip = PF_LAG_BASE_TAX_GAIN_3
 			hidden_effect = {
 				for = {
+					custom_tooltip = PF_LAG_BASE_TAX_GAIN_3
 					amount = 3
 					effect = "
 					random_owned_province = {
@@ -2227,6 +2228,7 @@ fourth_2 = {
 		}
 
 		effect = {
+			capital = { change_trade_goods = glass }
 			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = pf_lag_glorious_court
@@ -2554,7 +2556,29 @@ first_3 = {
 			}
 		}
 
-		effect = {  } 
+		effect = {
+			define_advisor = {
+				name = "Péter Stúvesant"
+				type = navigator
+				skill = 3
+				culture = old_frisian
+				religion = ROOT
+				cost_multiplier = 0.25
+			}
+			custom_tooltip = empty_line_tt
+			for = {
+				custom_tooltip = PF_LAG_INCREASE_COLONISTS
+				amount = 3
+				effect = "
+				random_owned_province = {
+					limit = {
+						owned_by = ROOT
+						is_city = no
+					}
+				}
+				"
+			}
+		 } 
 	}
 
 	pf_lag_louisiana = {
@@ -2585,7 +2609,12 @@ first_3 = {
 			}
 		}
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = pf_lag_up_the_river
+				duration = 3650
+			}
+		} 
 	}
 
 	pf_lag_california = {
@@ -2616,7 +2645,12 @@ first_3 = {
 			}
 		}
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = pf_lag_gold_rush
+				duration = 12775
+			}
+		} 
 	}
 }
 second_4 = {
@@ -2654,7 +2688,12 @@ second_4 = {
 			}
 		}
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = PF_LAG_COLONIAL_GOVERNORS
+			hidden_effect = {
+				set_country_flag = pf_lag_extra_settlers
+			}
+		} 
 	}
 
 	pf_lag_cascadia = {
@@ -2685,18 +2724,41 @@ second_4 = {
 			}
 		}
 
-		effect = {  } 
+		effect = {
+			create_explorer = {
+				tradition = 100
+			}
+		} 
 	}
 
 	pf_lag_fur_trade = {
 		icon = mission_protect_white_sea_trade
 		position = 20
 		required_missions = { pf_lag_cascadia } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			NOT = { owned_by = ROOT }
+			has_discovered = ROOT
+			trade_goods = fur
+			continent = north_america
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 18
+				trade_goods = fur
+				continent = north_america
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_years_of_trade_income = {
+				years = 3
+			}
+			add_country_modifier = {
+				name = pf_lag_lagrlondian_fur
+				duration = -1
+			}
+		} 
 	}
 }
 third_4 = {
@@ -2713,7 +2775,12 @@ third_4 = {
 
 		trigger = { num_of_colonists = 1 } 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = pf_lag_into_beyond_modifier
+				duration = 7300
+			}
+		} 
 	}
 
 	pf_lag_carib = {
@@ -2744,7 +2811,24 @@ third_4 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = pf_lag_sugar_trade
+				duration = 9125
+			}
+
+			custom_tooltip = PF_LAG_CLAIMS_COTS
+			hidden_effect = {
+				colonial_the_carribean = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+						province_has_center_of_trade_of_level = 1
+					}
+					add_permanent_claim_province = ROOT
+				}
+			}
+		} 
 	}
 
 	pf_lag_austrlia = {
@@ -2775,7 +2859,12 @@ third_4 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = pf_lag_penal_colonies
+				duration = 3650
+			}
+		} 
 	}
 }
 fourth_3 = {
@@ -2789,7 +2878,11 @@ fourth_3 = {
 		icon = mission_west_african_ports
 		position = 16
 		required_missions = { pf_lag_into_beyond } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			NOT = { owned_by = ROOT }
+			has_discovered = ROOT
+			region = guinea_region
+		 } 
 
 		trigger = { 
 			num_of_owned_provinces_with = {
@@ -2798,7 +2891,19 @@ fourth_3 = {
 			}
 		 } 
 
-		effect = {  } 
+		effect = {
+			1466 = {
+				add_trade_node_income = 5
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = PF_LAG_COASTAL_GUINEA
+			guinea_region = {
+				limit = {
+					has_port = yes
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_lag_triangle_trade = {
@@ -2809,33 +2914,145 @@ fourth_3 = {
 			pf_lag_carib
 			pf_lag_east_coast
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				AND = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					colonial_region = colonial_the_carribean
+					province_has_center_of_trade_of_level = 1
+				}
+				AND = {
+					NOT = { owned_by = ROOT }
+					province_has_center_of_trade_of_level = 1
+					OR = {
+						superregion = europe_superregion
+						region = guinea_region
+					}
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1
+				owner = {
+					OR = {
+						tag = ROOT
+						is_colonial_nation_of = ROOT
+					}
+				}
+				colonial_region = colonial_the_carribean
+				province_has_center_of_trade_of_level = 1
+			}
+			num_of_owned_provinces_with = {
+				value = 1
+				superregion = europe_superregion
+				province_has_center_of_trade_of_level = 1
+			}
+			num_of_owned_provinces_with = {
+				value = 1
+				region = guinea_region
+				province_has_center_of_trade_of_level = 1
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_years_of_trade_income = {
+				years = 2
+			}
+			custom_tooltip = empty_line_tt
+			change_price = {
+				trade_goods = slaves
+				key = pf_lag_triangle_trade_price
+				value = 0.5
+				duration = 18250
+			}
+		} 
 	}
 
 	pf_lag_indonesia = {
 		icon = dutch_east_indies
 		position = 19
 		required_missions = { pf_lag_reach_india } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			region = indonesia_region
+			has_discovered = ROOT
+			OR = {
+				NOT = { owned_by = ROOT }
+				province_has_center_of_trade_of_level = 1
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 10
+				region = indonesia_region
+			}
+			num_of_owned_provinces_with = {
+				value = 2
+				region = indonesia_region
+				province_has_center_of_trade_of_level = 1
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = PF_LAG_PERMACLAIMS_SPICE_PROVINCES
+			hidden_effect = {
+				indonesia_region = {
+					limit = {
+						trade_goods = spices
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		} 
 	}
 
 	pf_lag_spice_trade = {
 		icon = mission_rb_colonise_spice_islands
 		position = 21
 		required_missions = { pf_lag_indonesia } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			region = indonesia_region
+			has_discovered = ROOT
+			NOT = { owned_by = ROOT }
+			trade_goods = spices
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 10
+				region = indonesia_region
+				trade_goods = spices
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = pf_lag_spices_flow
+				duration = 7300
+			}
+
+			if = {
+				limit = {
+					trading_bonus = {
+						trade_goods = spices
+						value = yes
+					}
+				}
+				custom_tooltip = YES_PF_LAG_SPICES_PERMANENT
+				hidden_effect = {
+					remove_country_modifier = pf_lag_spices_flow
+					add_country_modifier = {
+						name = pf_lag_spices_flow
+						duration = -1
+					}
+				}
+			}
+			else = { custom_tooltip = NO_PF_LAG_SPICES_PERMANENT }
+		} 
 	}
 }
 fifth_3 = {
@@ -2849,43 +3066,178 @@ fifth_3 = {
 		icon = colonize_the_cape
 		position = 17
 		required_missions = { pf_lag_west_africa } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			NOT = { owned_by = ROOT }
+			has_discovered = ROOT
+			area = cape_of_good_hope_area
+		} 
 
-		trigger = {  } 
+		trigger = {
+			cape_of_good_hope_area = {
+				type = all
+				owned_by = ROOT
+			}
+			1460 = {
+				is_city = yes
+				OR = {
+					has_shipyard_building_trigger = yes
+					has_dock_building_trigger = yes
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			1460 = {
+				add_province_modifier = {
+					name = pf_lag_cape_good_hope_station
+					duration = -1
+				}
+				upgrade_building = {
+					sailors = yes
+					navy_forcelimit = yes 
+				}
+			}
+			custom_tooltip = empty_line_tt
+			lanka_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_lanka_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_lag_reach_india = {
 		icon = mission_indian_trade_company
 		position = 18
 		required_missions = { pf_lag_cape_good_hope } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			NOT = { owned_by = ROOT }
+			has_discovered = ROOT
+			OR = {
+				area = lanka_area
+				area = south_lanka_area
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 4
+				OR = {
+					area = lanka_area
+					area = south_lanka_area
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = PF_LAG_FOOTHOLD_IN_INDIA
+			tooltip = {
+				add_province_modifier = {
+					name = pf_lag_foothold_india
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				lanka_area = {
+					limit = {
+						owned_by = ROOT
+					}
+					add_province_modifier = {
+						name = pf_lag_foothold_india
+						duration = -1
+					}
+				}
+				south_lanka_area = {
+					limit = {
+						owned_by = ROOT
+					}
+					add_province_modifier = {
+						name = pf_lag_foothold_india
+						duration = -1
+					}
+				}
+			}
+		} 
 	}
 
 	pf_lag_formosa = {
 		icon = dutch_formosa
 		position = 20
 		required_missions = { pf_lag_reach_india } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			NOT = { owned_by = ROOT }
+			has_discovered = ROOT
+			area = taiwan_area
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			taiwan_area = {
+				type = all
+				owned_by = ROOT
+				is_city = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = PF_LAG_FORMOSA_FORTRESS
+			tooltip = {
+				add_province_modifier = {
+					name = pf_lag_fortress_formosa
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				taiwan_area = {
+					add_province_modifier = {
+						name = pf_lag_fortress_formosa
+						duration = -1
+					}
+				}
+			}
+			add_permanent_claim_province = {
+				province = 667
+			}
+			add_permanent_claim_province = {
+				province = 1012
+			}
+		} 
 	}
 
 	pf_lag_far_east = {
 		icon = mission_to_china
 		position = 21
 		required_missions = { pf_lag_formosa } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				province_id = 667
+				province_id = 1012	
+			}
+			NOT = { owned_by = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			owns_core_province = 667
+			owns_core_province = 1012
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_prestige_or_monarch_power = {
+				amount = 75
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = pf_lag_ports_in_the_far_east
+				duration = -1
+			}
+		} 
 	}
 }

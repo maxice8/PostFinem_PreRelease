@@ -205,6 +205,7 @@
 
  pf_lag_east_coast_title:0 "Settle New Lagrlond"
  pf_lag_east_coast_desc:0 "REPLACE_ME"
+ PF_LAG_INCREASE_COLONISTS:0 "3 random owned colonies will receive §G200§! colonists"
 
  pf_lag_louisiana_title:0 "Expand Westward"
  pf_lag_louisiana_desc:0 "REPLACE_ME"
@@ -214,6 +215,7 @@
 
  pf_lag_vinland_title:0 "Myths of Vinland"
  pf_lag_vinland_desc:0 "REPLACE_ME"
+ PF_LAG_COLONIAL_GOVERNORS:0 "The §YColonial Governor§! and §YNavigator§! advisors now grant §G+5§! Global Settler Increase per level"
 
  pf_lag_cascadia_title:0 "The Northern Wilderness"
  pf_lag_cascadia_desc:0 "REPLACE_ME"
@@ -226,30 +228,38 @@
 
  pf_lag_carib_title:0 "Control The Caribbean"
  pf_lag_carib_desc:0 "REPLACE_ME"
+ PF_LAG_CLAIMS_COTS:0 "§Y[LAG.GetName]§! gets a permanent claim on all §YCenters of Trade§! in §YThe Caribbean§! region."
 
  pf_lag_austrlia_title:0 "Colonize New Frisia"
  pf_lag_austrlia_desc:0 "REPLACE_ME"
 
  pf_lag_west_africa_title:0 "Bases in West Africa"
  pf_lag_west_africa_desc:0 "REPLACE_ME"
+ PF_LAG_COASTAL_GUINEA:0 "§Y[LAG.GetName]§! gets a permanent claim on all §Ycoastal§! provinces of the §YGuinea§! region."
 
  pf_lag_triangle_trade_title:0 "The Triangle Trade"
  pf_lag_triangle_trade_desc:0 "REPLACE_ME"
+ pf_lag_triangle_trade_price:0 "Lagrlonder Slave Trade"
 
  pf_lag_indonesia_title:0 "Lagrlonder East Indies"
  pf_lag_indonesia_desc:0 "REPLACE_ME"
+ PF_LAG_PERMACLAIMS_SPICE_PROVINCES:0 "§Y[LAG.GetName]§! gets a permanent claim on all provinces in §YIndonesia§! that produce §YSpices§!"
 
  pf_lag_spice_trade_title:0 "Control The Spice Flow"
  pf_lag_spice_trade_desc:0 "REPLACE_ME"
+ YES_PF_LAG_SPICES_PERMANENT:0 "£yes£ If we have the §YSpices§! trading bonus, the modifier will be §Gpermanent§!"
+ NO_PF_LAG_SPICES_PERMANENT:0 "£no£ If we have the §YSpices§! trading bonus, the modifier will be §Gpermanent§!"
 
  pf_lag_cape_good_hope_title:0 "Cross The Cape"
  pf_lag_cape_good_hope_desc:0 "REPLACE_ME"
 
  pf_lag_reach_india_title:0 "Reach India"
  pf_lag_reach_india_desc:0 "REPLACE_ME"
+ PF_LAG_FOOTHOLD_IN_INDIA:0 "Every owned province in the §YLanka§! and §YSouth Lanka§! areas will receive:"
 
  pf_lag_formosa_title:0 "Secure Formosa"
  pf_lag_formosa_desc:0 "REPLACE_ME"
+ PF_LAG_FORMOSA_FORTRESS:0 "All provinces in the §YTaiwan§! area will receive:"
 
  pf_lag_far_east_title:0 "The Unequal Treaties"
  pf_lag_far_east_desc:0 "REPLACE_ME"
@@ -371,6 +381,27 @@
  # reference to song Euronight by Eurogroove, symbolizes Lagrlond
  # being the warehouse of the world.
  pf_lag_from_tokyo_to_paris:0 "From Osturhavn to Ljósastadr"
+ # Ante Bellum
+ pf_lag_into_beyond_modifier:0 "Into the Beyond"
+ desc_pf_lag_into_beyond_modifier:0 "REPLACE_ME"
+ pf_lag_sugar_trade:0 "Sugar Plantations"
+ desc_pf_lag_sugar_trade:0 "REPLACE_ME"
+ pf_lag_penal_colonies:0 "Penal Colonies"
+ desc_pf_lag_penal_colonies:0 "REPLACE_ME"
+ pf_lag_spices_flow:0 "The Spice Must Flow"
+ desc_pf_lag_spices_flow:0 "REPLACE_ME"
+ pf_lag_cape_good_hope_station:0 "Cape of Good Hope"
+ desc_pf_lag_cape_good_hope_station:0 "REPLACE_ME"
+ pf_lag_foothold_india:0 "Ceylon Bases"
+ desc_pf_lag_foothold_india:0 "REPLACE_ME"
+ pf_lag_fortress_formosa:0 "Fortress Formosa"
+ desc_pf_lag_fortress_formosa:0 "REPLACE_ME"
+ pf_lag_ports_in_the_far_east:0 "Jewels of the Far East"
+ desc_pf_lag_ports_in_the_far_east:0 "REPLACE_ME"
+ pf_lag_up_the_river:0 "Up the Mississippi"
+ desc_pf_lag_up_the_river:0 "REPLACE_ME"
+ pf_lag_gold_rush:0 "Gold Rush"
+ desc_pf_lag_gold_rush:0 "REPLACE_ME"
 
  # events
  PF_LAG_SPAWN_BRITON_NOBLE_REBELS:0 "A random province owned by you or a non-sovereign subject in the §YBritish Isles§!, with §YBriton§! culture, will spawn §YNoble Rebels§!"

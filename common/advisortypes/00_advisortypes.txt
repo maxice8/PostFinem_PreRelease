@@ -930,6 +930,14 @@ colonial_governor = {
 			trade_efficiency = 0.02
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_extra_settlers }
+		}
+		modifier = { 
+			global_colonial_growth = 5
+		}
+	}
 	
 	chance = {
 		factor = 1
@@ -1046,6 +1054,14 @@ navigator = {
 		modifier = { 
 			meritocracy = 0.25 
 			trade_efficiency = 0.02
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_extra_settlers }
+		}
+		modifier = { 
+			global_colonial_growth = 5
 		}
 	}
 
