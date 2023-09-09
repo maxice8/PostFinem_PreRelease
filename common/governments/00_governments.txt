@@ -613,6 +613,9 @@ republic = {
 		}
 		republican_virtues = {
 			reforms = {
+				# pf [[[
+				pf_lag_merchant_virtues
+				# ]]]
 				republican_authoritarianism_reform
 				nepotism_reform
 				republicanism_reform
@@ -651,6 +654,9 @@ republic = {
 		}
 		republic_and_religion = {
 			reforms = {
+				# pf [[[
+				pf_lag_placcards_of_tolerance
+				# ]]]
 				papal_embassy_reform
 				lands_for_the_monasteries_reform
 				focus_of_the_patriarchy_reform
@@ -691,6 +697,9 @@ republic = {
 		}
 		military_doctrines = {
 			reforms = {
+				# pf [[[
+				pf_lag_lowlander_naval_tradition_reform
+				# ]]]
 				organized_military_staff_reform
 				military_engineering_reform
 				defensive_stance_reform
@@ -751,6 +760,9 @@ republic = {
 		}
 		parliamentary_vs_presidential = {
 			reforms = {
+				# pf [[[
+				pf_lag_ceremonial_thinghalder
+				# ]]]
 				parliamentary_reform
 				presidential_reform
 				estate_council_reform
@@ -772,6 +784,9 @@ republic = {
 		}
 		federalism_vs_unitarism_vs_confederacy = {
 			reforms = {
+				# pf [[[
+				pf_lag_provincial_things
+				# ]]]
 				provincial_governments_reform
 				administrative_divisions_reform
 				union_of_states_reform

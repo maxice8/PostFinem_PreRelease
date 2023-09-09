@@ -982,15 +982,54 @@ country_event = {
 	option = {
 		name = elections.720.pfa
 		trigger = { has_reform = pf_lagr_republic }
-		define_ruler = {
-			dynasty = "af Lagrlondi"
+		if = {
+			limit = {
+				has_government_attribute = pf_lag_candidate_dip_bonus
+			}
+			define_ruler = {
+				dynasty = "af Lagrlondi"
+				change_dip = 1
+			}
+		}
+		else = {
+			define_ruler = {
+				dynasty = "af Lagrlondi"
+			}
 		}
 		change_statists_vs_orangists = 0.33
 	}
 	option = {
 		name = elections.720.pfb
 		trigger = { has_reform = pf_lagr_republic }
-		define_ruler = {
+		if = {
+			limit = {
+				has_government_attribute = pf_lag_candidate_dip_bonus
+				has_government_attribute = pf_lag_candidates_are_lagrlondi
+			}
+			define_ruler = {
+				change_dip = 1
+				dynasty = "af Lagrlondi"
+			}
+		}
+		else_if = {
+			limit = {
+				has_government_attribute = pf_lag_candidates_are_lagrlondi
+			}
+			define_ruler = {
+				dynasty = "af Lagrlondi"
+			}
+		}
+		else_if = {
+			limit = {
+				has_government_attribute = pf_lag_candidate_dip_bonus
+			}
+			define_ruler = {
+				change_dip = 1
+			}
+		}
+		else = {
+			define_ruler = {
+			}
 		}
 		change_statists_vs_orangists = -0.33
 	}
@@ -1157,15 +1196,36 @@ country_event = {
 	option = {
 		name = elections.720.pfa
 		trigger = { has_reform = pf_lagr_republic }
-		define_ruler = {
-			dynasty = "af Lagrlondi"
+		if = {
+			limit = {
+				has_government_attribute = pf_lag_candidate_dip_bonus
+			}
+			define_ruler = {
+				dynasty = "af Lagrlondi"
+				change_dip = 1
+			}
+		}
+		else = {
+			define_ruler = {
+				dynasty = "af Lagrlondi"
+			}
 		}
 		change_statists_vs_orangists = 0.33
 	}
 	option = {
 		name = elections.720.pfb
 		trigger = { has_reform = pf_lagr_republic }
-		define_ruler = {
+		if = {
+			limit = {
+				has_government_attribute = pf_lag_candidate_dip_bonus
+			}
+			define_ruler = {
+				change_dip = 1
+			}
+		}
+		else = {
+			define_ruler = {
+			}
 		}
 		change_statists_vs_orangists = -0.33
 	}

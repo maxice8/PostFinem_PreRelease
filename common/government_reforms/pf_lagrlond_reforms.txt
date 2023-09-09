@@ -71,3 +71,96 @@ pf_lagr_republic = {
 	}
 	duration = 4
 }
+
+# Military Tier Generic
+pf_lag_lowlander_naval_tradition_reform = {
+	icon = "merchant_ship"
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = norvegr
+	}
+	trigger = {
+		num_of_ports = 1
+	}
+	modifiers = {
+		naval_morale = 0.15
+		navy_tradition_decay = -0.1
+		global_ship_cost = -0.1
+		allowed_voc_indiamen_fraction = 0.1
+	}
+}
+
+# Regionalism Tier of Republic
+pf_lag_provincial_things = {
+	icon = "parliament_hall"
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = norvegr
+	}
+	trigger = {
+		has_parliament = yes
+	}
+	modifiers = {
+		parliament_backing_chance = 0.25
+		state_governing_cost = -0.1
+		state_maintenance_modifier = -0.25
+	}
+	custom_attributes = {
+		halved_parliament_bribes = yes
+	}
+}
+
+# Virtues tier of the republic
+pf_lag_merchant_virtues = {
+	icon = "dutch_republic"
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = norvegr
+	}
+	trigger = {
+		has_estate = estate_burghers
+	}
+	modifiers = {
+		burghers_privilege_slots = 1
+		global_prov_trade_power_modifier = 0.05
+	}
+	custom_attributes = {
+		pf_lag_candidate_dip_bonus = yes
+	}
+}
+
+# Religion tier, stronger version because it does
+# not disable the religious estates and grants
+# actual tolerance 
+pf_lag_placcards_of_tolerance = {
+	icon = "fiqh_laws" # Ideally a Town Crier
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = norvegr
+	}
+	modifiers = {
+		innovativeness_gain = 0.25
+		tolerance_heathen = 1
+		tolerance_heretic = 1
+		tolerance_of_heathens_capacity = 1
+		tolerance_of_heretics_capacity = 1
+	}
+}
+
+# Separation of Power Tier
+pf_lag_ceremonial_thinghalder = {
+	icon = "council"
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = norvegr
+		has_states_general_mechanic = yes
+	}
+	modifiers = {
+		republican_tradition = 0.5
+		all_estate_loyalty_equilibrium = 0.1
+		advisor_pool = 1
+	}
+	custom_attributes = {
+		pf_lag_candidates_are_lagrlondi = yes
+	}
+}
