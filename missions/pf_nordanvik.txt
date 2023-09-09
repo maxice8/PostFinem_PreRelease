@@ -1556,8 +1556,9 @@ pf_nrd_col_3 = {
 
 		effect = {  
 			add_prestige_or_monarch_power = {
-				num = 50
+				amount = 50
 			}
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = nrd_invest_in_plantation_modifier
 				duration = -1
