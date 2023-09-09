@@ -2138,6 +2138,30 @@ fourth_2 = {
 				name = pf_lag_frisian_support
 				duration = 5475
 			}
+
+			if = {
+				limit = {
+					exists = EFR
+				}
+				custom_tooltip = YES_PF_LAG_PU_EFR
+				hidden_effect = {
+					add_casus_belli = {
+						type = cb_restore_personal_union
+						target = EFR
+					}
+				}
+			}
+			else = { 
+				custom_tooltip = NO_PF_LAG_PU_EFR
+				hidden_effect = {
+					add_permanent_claim_province = {
+						province = 1931
+					}
+					add_permanent_claim_province = {
+						province = 55
+					}
+				}
+			}
 		} 
 	}
 
