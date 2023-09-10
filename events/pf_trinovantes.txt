@@ -293,3 +293,121 @@ country_event = {		# Inter-tribal unrest
 		pf_clear_trn_tribe_flags = yes
 	}
 }
+country_event = {		# Tribes disagree over war plans
+	id = pf_trn.4
+	title = pf_trn.4.t
+	desc = pf_trn.4.d
+	picture = BATTLE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = brittonic_confederation_reform
+		is_at_war = yes
+	}
+
+	immediate = {
+		hidden_effect = {
+			pf_save_random_tribe = {
+				function = primary
+			}
+			pf_save_random_tribe = {
+				function = secondary
+			}
+		}
+	}
+
+	option = {		# Favour tribe 1
+		name = "pf_trn.4.a"
+		add_army_tradition = 10
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = -25
+		}
+	}
+	option = {		# favour tribe 2
+		name = "pf_trn.4.b"
+		add_mil_power = 50
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = -25
+		}
+	}
+	option = {		# favour neither
+		name = "pf_trn.4.c"
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = -10
+		}
+	}
+	option = {		# beat them into shape
+		name = "pf_trn.4.dd"
+		trigger = {
+			ruler_has_personality = strict_personality
+		}
+		highlight = yes
+		add_army_professionalism = 0.01
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = 10
+		}
+	}
+
+	after = {
+		pf_clear_trn_tribe_flags = yes
+	}
+}
+country_event = {		# The Disgraced Chief
+	id = pf_trn.5
+	title = pf_trn.5.t
+	desc = pf_trn.5.d
+	picture = BATTLE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = brittonic_confederation_reform
+		NOT = { stability = 3 }
+	}
+
+	option = {		# Respect the decision of the council
+		name = "pf_trn.5.a"
+		random = {
+			chance = 33
+			add_stability_or_adm_power = yes
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+	}
+	option = {		# Support the wronged man
+		name = "pf_trn.5.b"
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = 25
+		}
+	}
+	option = {		# ensure him a plentiful retirement
+		name = "pf_trn.5.c"
+		trigger = {
+			OR = {
+				ruler_has_personality = silver_tongue_personality
+				ruler_has_personality = kind_hearted_personality
+				ruler_has_personality = benevolent_personality
+			}
+		}
+		highlight = yes
+		add_adm_power = 100
+		add_years_of_income = -0.10
+	}
+}
