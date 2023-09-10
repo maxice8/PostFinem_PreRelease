@@ -240,12 +240,17 @@ pf_romuva_kingdom = {
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+
+	potential = {
+		religion = romuva
+	}
+
 	modifiers = {
 		tolerance_own = 1
 		global_missionary_strength = 0.01
 		church_power_modifier = -1
 	}
 	ai = {
-		factor = 0.5 #generic
+		factor = 1
 	}
 }
