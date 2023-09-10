@@ -188,7 +188,7 @@ pf_nrd_1 = {
 				}
 			}
 			add_years_of_owned_provinces_production_income = {
-				years = 8
+				years = 15
 				trigger = { trade_goods = fish } 
 				custom_tooltip = nrd_fish_income_desc
 			}
@@ -224,7 +224,7 @@ pf_nrd_1 = {
 				}
 			}
 			add_years_of_owned_provinces_production_income = {
-				years = 6
+				years = 10
 				trigger = { trade_goods = iron }				
 				custom_tooltip = nrd_iron_income_desc
 			}
@@ -269,7 +269,7 @@ pf_nrd_1 = {
 			}
 			custom_tooltip = empty_line_tt
 			add_years_of_owned_provinces_production_income = {
-				years = 5			
+				years = 8			
 				custom_tooltip = nrd_from_production_tt
 			}
 		} 
@@ -542,69 +542,21 @@ pf_nrd_3 = {
 			}
 		}
 
-		effect = {
-			custom_tooltip = nrd_king_of_the_who_tt
+		effect = {			
+			distribute_base_dev_to_provinces = {
+				num = 5
+				amount = 1
+				trigger = "
+					OR = {
+						area = yorkshire_area
+						area = west_midlands_area
+						area = east_midlands_area
+					}
+				"
+				type = tax
+				tooltip = pf_nrd_king_of_the_who_tt
+			}
 			custom_tooltip = empty_line_tt
-			hidden_effect = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							area = yorkshire_area
-							area = west_midlands_area
-							area = east_midlands_area
-						}
-					}
-					add_base_tax = 1
-				}
-			}
-			hidden_effect = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							area = yorkshire_area
-							area = west_midlands_area
-							area = east_midlands_area
-						}
-					}
-					add_base_tax = 1
-				}
-			}
-			hidden_effect = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							area = yorkshire_area
-							area = west_midlands_area
-							area = east_midlands_area
-						}
-					}
-					add_base_tax = 1
-				}
-			}
-			hidden_effect = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							area = yorkshire_area
-							area = west_midlands_area
-							area = east_midlands_area
-						}
-					}
-					add_base_tax = 1
-				}
-			}
-			hidden_effect = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							area = yorkshire_area
-							area = west_midlands_area
-							area = east_midlands_area
-						}
-					}
-					add_base_tax = 1
-				}
-			}
 			east_anglia_area = { add_permanent_claim = ROOT } 
 			home_counties_area = { add_permanent_claim = ROOT } 
 			wessex_area = { add_permanent_claim = ROOT } 
@@ -718,6 +670,11 @@ pf_nrd_3 = {
 		} 
 
 		effect = {  
+			change_ruler_stat = {
+				stat = dip
+				amount = 1
+			}
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = pf_nrd_norse_hegemony_modifier
 				duration = -1
@@ -763,16 +720,23 @@ pf_nrd_4 = {
 		}
 
 		trigger = {
-			NOR = {
-				has_opinion = {
-					who = ROOT
-					value = 150
+			OR = {
+				AND = {
+					NOR = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					NOR = {
+						owes_favors = {
+							who = ROOT
+							value = 10
+						}
+					}
 				}
-			}
-			NOR = {
-				owes_favors = {
-					who = ROOT
-					value = 10
+				NOR = {
+					exists = no
 				}
 			}
 		}
@@ -1314,11 +1278,61 @@ pf_nrd_col_1 = {
 			pf_nrd_pushing_inward
 			pf_nrd_fruitful_colonies
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			colonial_region = colonial_eastern_america
+			colonial_region = colonial_canada
+			colonial_region = colonial_louisiana
+			owner = {
+				is_subject = yes
+				NOT = {
+					is_colonial_nation_of = ROOT
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 100
+				OR = {
+					colonial_region = colonial_eastern_america
+					colonial_region = colonial_canada
+					colonial_region = colonial_louisiana
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = nrd_uncontested_in_new_world_tt
+				NOT = {
+					any_province = {			
+						OR = {
+							colonial_region = colonial_eastern_america
+							colonial_region = colonial_canada
+							colonial_region = colonial_louisiana
+						}			
+						owner = {
+							is_subject = yes
+							NOT = {
+								is_colonial_nation_of = ROOT
+							}
+						}
+					}
+				}
+			}
 
-		effect = {  } 
+		} 
+
+		effect = {  
+			define_advisor = {
+				type = trader
+				name = "Vilhjalmr Petrsson"
+				skill = 3
+				cost_multiplier = 0.25
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = nrd_uncontested_in_new_world_modifier
+				duration = -1
+			}
+		} 
 	}
 }
 pf_nrd_col_2 = {
@@ -1524,11 +1538,41 @@ pf_nrd_col_3 = {
 		icon = mission_expand_into_the_forest
 		position = 1
 		required_missions = { pf_nrd_the_land_of_cocoa } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				trade_goods = cocoa
+				trade_goods = coffee
+			}
+			owner = {
+				OR = {
+					is_colonial_nation_of = ROOT
+					tag = ROOT
+				}
+			}
+			has_manufactory_trigger = no
+		}
 
-		trigger = {  } 
+		trigger = {  		
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				OR = {
+					trade_goods = coffee
+					trade_goods = cocoa
+				}
+				has_manufactory_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_prestige_or_monarch_power = {
+				amount = 50
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = nrd_invest_in_plantation_modifier
+				duration = -1
+			}
+		} 
 	}
 }
 pf_nrd_col_4 = {
@@ -1547,21 +1591,70 @@ pf_nrd_col_4 = {
 		icon = mission_colonise_brazil
 		position = 11
 		required_missions = { pf_nrd_a_whole_new_world } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			region = guinea_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 10
+				region = guinea_region
+				is_owned_by_trade_company = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			custom_tooltip = empty_line_tt
+			create_conquistador = { tradition = 75 }
+			custom_tooltip = empty_line_tt
+			guinea_region = {
+				add_permanent_claim = ROOT
+			}
+			niger_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_nrd_approach_the_interior = {
 		icon = mission_west_african_ports
 		position = 12
 		required_missions = { pf_nrd_the_land_of_guinea } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			region = niger_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 20
+				region = niger_region
+				is_owned_by_trade_company = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			distribute_base_dev_to_provinces = {
+				num = 20
+				amount = 1
+				trigger = "
+					region = niger_region
+					is_owned_by_trade_company = yes
+				"
+				type = production
+				tooltip = nrd_approach_the_interior_tt
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = nrd_approach_the_interior_modifier
+				duration = -1
+			}
+		} 
 	}
 }

@@ -171,5 +171,10 @@
 		"body": ["£${1:mil}£$0"],
 		"description": "Adds the Pound symbols for an icon"
 	},
+	"Empty Line": {
+		"prefix": ["empty"],
+		"body": ["custom_tooltip = empty_line_tt"],
+		"description": "Places and empty line in effect tooltips"
+	},
 		
 }
