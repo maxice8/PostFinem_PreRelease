@@ -1,0 +1,290 @@
+pf_trn_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = TRN
+	}
+
+	pf_trn_astrology = {
+		icon = mission_mosque
+		position = 1
+		required_missions = { } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			has_advisor = yes
+		}
+		effect = {
+			country_event = { id = pf_trn.6 } 
+		}
+	}
+	pf_trn_appease_the_druids = {
+		icon = mission_swedish_peasantry
+		position = 3
+		required_missions = { pf_trn_astrology } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 60
+			}
+			prestige = 40
+			OR = {
+				theologian = 1
+				inquisitor = 1
+				at_war_with_religious_enemy = yes
+			}
+		}
+		effect = {
+			country_event = { id = pf_trn.10 }
+		}
+	}
+}
+pf_trn_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = TRN
+	}
+
+	pf_trn_build_army = {
+		icon = mission_modernized_vikings
+		position = 2
+		required_missions = { pf_trn_astrology pf_trn_ricatus_legacy } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			army_size_percentage = 1
+			num_of_generals = 1
+			OR = {
+				army_tradition = 25
+				monthly_mil = 6
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = pf_trn_tribal_levy
+				duration = 7300
+			}
+			define_advisor = {
+				type = army_reformer
+				skill = 1
+				cost_multiplier = 0.75
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_trn_build_army_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 60
+						}
+					}
+					add_manpower = 5
+				}
+			}
+			tooltip = {
+				add_manpower = 5
+			}
+		}
+	}
+	pf_trn_awaken_the_britons = {
+		icon = mission_plc_prevent_deluge
+		position = 3
+		required_missions = { pf_trn_build_army } 
+		provinces_to_highlight = {
+			culture = briton
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			OR = {
+				calc_true_if = {
+					all_country = {
+						any_owned_province = {
+							culture = briton
+						}
+						has_spy_network_from = {
+							who = ROOT
+							value = 30
+						}
+					}
+					amount = 2
+				}
+				NOT = {
+					any_province = {
+						culture = briton
+						NOT = { owned_by = ROOT }
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = pf_trn_awaken_the_britons_tt
+			custom_tooltip = empty_line_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						any_province = {
+							culture = briton
+							NOT = { owned_by = ROOT }
+						}
+					}
+					every_province = {
+						limit = {
+							culture = briton
+							NOT = { owned_by = ROOT }
+						}
+						add_territorial_core = ROOT
+						add_province_modifier = {
+							name = "pf_trn_brittonic_nationalism_local"
+							duration = 1825
+						}
+					}
+				}
+			}
+			tooltip = {
+				add_territorial_core = ROOT
+				add_province_modifier = {
+					name = "pf_trn_brittonic_nationalism_local"
+					duration = 1825
+				}
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_trn_awaken_the_britons_1_tt
+			custom_tooltip = empty_line_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							any_province = {
+								culture = briton
+								NOT = { owned_by = ROOT }
+							}
+						}
+					}
+					every_province = {
+						limit = {
+							culture = briton
+						}
+						add_unrest = -2
+						add_nationalism = -5
+					}
+				}
+			}
+			tooltip = {
+				add_unrest = -2
+				add_nationalism = -5
+			}
+		}
+	}
+}
+pf_trn_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = TRN
+	}
+
+	pf_trn_ricatus_legacy = {
+		icon = mission_pol_delegate_emperor
+		position = 1
+		required_missions = { } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			NOT = { has_ruler = "Ricatus" }
+		}
+		effect = {
+			country_event = { id = pf_trn.8 } 	# Funeral for Ricatus
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_trn_ricatus_legacy_tt
+		}
+	}
+	pf_trn_a_new_outlook = {
+		icon = mission_castle_construction
+		position = 3
+		required_missions = { pf_trn_build_army } 
+		provinces_to_highlight = {
+			province_id = 4370	# Cair Grauth
+			OR = {
+				NOT = { has_fort_building_trigger = yes }
+				NOT = { owned_by = ROOT }
+				owner = { NOT = { treasury = 100 } }
+			}
+		}
+		trigger = {
+			calc_true_if = {
+				all_country = {
+					is_enemy = ROOT
+				}
+				amount = 3
+			}
+			owns = 4370
+			OR = {
+				treasury = 100
+				4370 = {
+					has_fort_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = pf_trn_a_new_outlook_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						4370 = { has_fort_building_trigger = yes }
+					}
+					4370 = {
+						add_base_manpower = 3
+						add_province_modifier = {
+							name = "pf_trn_brittonic_bastion"
+							duration = 9125
+						}
+					}
+				}
+			}
+			tooltip = {
+				4370 = {
+					add_base_manpower = 3
+					add_province_modifier = {
+						name = "pf_trn_brittonic_bastion"
+						duration = 9125
+					}
+				}
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_trn_a_new_outlook_1_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						treasury = 100
+					}
+					4370 = {
+						add_building = fort_15th
+						add_province_modifier = {
+							name = "pf_trn_brittonic_bastion"
+							duration = 9125
+						}
+					}
+				}
+			}
+			tooltip = {
+				4370 = {
+					add_building = fort_15th
+					add_province_modifier = {
+						name = "pf_trn_brittonic_bastion"
+						duration = 9125
+					}
+				}
+			}
+		}
+	}
+}

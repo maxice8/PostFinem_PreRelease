@@ -100,6 +100,36 @@ pf_trn.5.a: "Respect the decision of the Council."
 pf_trn.5.b: "This man was wrongfully convicted!"
 pf_trn.5.c: "We will make sure he has a plentiful retirement."
 
+pf_trn.6.t: "Searching the Stars"
+pf_trn.6.d: "The court of the Confederacy beckoned the skilled astrologer to its grand observatory, seeking his wisdom and foresight among the celestial tapestry. With eyes fixed upon the heavens, the astrologer meticulously charted the movements of stars and planets. He delved into the ancient scrolls, seeking patterns and deciphering cryptic alignments that might unveil the kingdom's destiny. The weight of high expectations hung heavy as he scanned the cosmos for portents, searching for answers in the distant constellations, hoping to reveal prophecies hidden among the celestial wonders above."
+pf_trn.6.a: "What secrets do the heavens hold?"
+pf_trn_searching_the_stars_tt: "The astrologer will search the skies for omens for the next year."
+
+pf_trn.7.t: "Good Omens"
+pf_trn.7.d: "After a year of studying the stars for omens about the future of the Confederation, our astrologer has reported back to the Council with his findings. He says he observed various remarkable celestial events, including astounding planetary alignments and stars that grow and shrink in brightness. From this evidence has come up with a conclusion - there are good omens from above. The heavens predict power will come to the Confederation to the detriment of our enemies, bringing about a new era of hope and glory for all Britons."
+pf_trn.7.a: "What marvellous news!"
+
+pf_trn.8.t: "A Man of Other Worlds"
+pf_trn.8.d: "TBD"
+pf_trn.8.a: "Invite the nations that most benefited from his truce."
+pf_trn.8.b: "Give him a warrior's funeral in Brittonic style."
+
+pf_trn.9.t: "The Death of Ricatus 'the Shield'"
+pf_trn.9.d: "TBD"
+pf_trn.9.a: "Attend the funeral."
+pf_trn.9.b: "We are glad he is dead!"
+
+pf_trn.10.t: "Assistance from the Druids"
+pf_trn.10.d: "With our willingness to give them what they want proven, the Druids of the realm have come together and elected representatives to meet with the Council. Anxious to keep their new privileges and lands, they may be willing to offer their support in the upcoming war with the down-trodden subject Britons. In what area do we require the most assistance?"
+pf_trn.10.a: "Request their assistance in rallying the people for war."
+pf_trn.10.b: "Let them serve in the administration to ease the burden of war."
+pf_trn.10.c: "They should focus on the spiritual conflict fought simultaneously."
+pf_trn.10.dd: "I do not need their help."
+pf_trn_no_druid_support_reward_tt: "If we successfully defeat the §YCeltic Tyranny§! without the help of the Druids, we will gain extra bonuses from the associated mission."
+pf_trn_druid_help_1: "Druid War Support"
+pf_trn_druid_help_2: "Druid War Support"
+pf_trn_druid_help_3: "Druid War Support"
+
 ###########
 # Custom loc
 ###########
@@ -114,3 +144,45 @@ trn_trinovantes_secondary_tt: "Trinovantes"
 trn_cantiaci_secondary_tt: "Cantiaci"
 trn_regni_secondary_tt: "Regni"
 trn_catuvellauni_secondary_tt: "Catuvellauni"
+
+###########
+# Missions
+###########
+
+#
+
+pf_trn_astrology_title: "Signs in the Stars"
+pf_trn_astrology_desc: "The future of the Confederation is uncertain, with many fearing the ever-growing cancers of the Celtic Lordship or the vile Northmen will overcome our walls and destroy us. In these times, the people need strong leadership, guidance, and most importantly, hope. Let us turn to the stars, to see if any omens or prophecies can be decoded from them that might light the fires of national spirit."
+pf_trn_destiny_awaits: "Destiny Awaits!"
+
+pf_trn_appease_the_druids_title: "Appease the Druids"
+pf_trn_appease_the_druids_desc: "The Druids are essential to everyday life in Albion. Their ceremonies dictate the passing of the year, their prophecies decide the extent of the harvest and our military victories, and their members are key advisors to the Council of Elders. They could always be more help to us, however, if we can convince them."
+
+#
+
+pf_trn_build_army_title: "Take Up Arms"
+pf_trn_build_army_desc: "With a revolution ongoing within the Council, it is more important than ever that we act quickly to secure our nation's interests. While Ricatus' shrewd diplomacy may have kept us safe, with his passing we have no choice but to rally together our strongest warriors in a show of martial might."
+pf_trn_tribal_levy: "Raising the Tribal Levy"
+pf_trn_build_army_tt: "If the §YElders estate§! has at least §l60 loyalty§!, the follow effect will occur:"
+
+pf_trn_awaken_the_britons_title: "Awaken the Britons"
+pf_trn_awaken_the_britons_desc: "For too long our brethen have lived under the feet of tyrants. Our Confederation is strong and united - there is no reason why we cannot muster our forces together and liberate our lost brothers and sisters. Let us send a message to them, promising freedom - we will come, and we will save you."
+pf_trn_awaken_the_britons_tt: "If we complete this mission by §Yspying§!, the follow effect will occur to all §Ynon-owned Brittonic§! provinces:"
+pf_trn_awaken_the_britons_1_tt: "Otherwise, the follow effect will occur to §Yowned Brittonic provinces§!:"
+pf_trn_brittonic_nationalism_local: "Brittonic Nationalism"
+
+#
+
+pf_trn_ricatus_legacy_title: "Ricatus' Legacy"
+pf_trn_ricatus_legacy_desc: "Ricatus was a great leader of the Confederation. He led our country on the path of peace and diplomacy, securing relations with our neighbours and organising effective truces. Many just a few decades prior had feared we would be overrun by now, but thanks to the hard work and dedication of Ricatus, those worries proved unfounded. With his passing however, a shadow has fallen over the Confederation. The peace he built may prove to be a glass cannon, and upon the moment of his death we can already feel the hounds sniffing for blood. Ricatus only dreamed of a strong and independent Confederation - his successors dream of Empire."
+opinion_attended_ricatus_funeral: "Attended Ricatus' Funeral"
+opinion_attended_ricatus_funeral_no: "Refused to Attend Ricatus' Funeral"
+pf_trn_diplomatic_legacy: "Diplomatic Legacy"
+pf_trn_aggressive_legacy: "Aggressive Legacy"
+pf_trn_ricatus_legacy_tt: "A funeral will be held for §YRicatus§!, where we will be able to chose to invite the enemies of our realm."
+
+pf_trn_a_new_outlook_title: "A New Outlook"
+pf_trn_a_new_outlook_desc: "The age of diplomacy is over. With Ricatus gone, there is no one left to limit our military potential. The time has come to prepare for war - war with the barbaric Gaels, who have for too long slept peacefully in their ivory towers while Albion pays liberal tribute. In order to prepare for this conflict, we must ensure our own flank is secure - the site of the old hill fort of Cair Grauth has been chosen to be strengthened, preventing an enemy from marching across the flanks of the great marshes to strike at our heartland."
+pf_trn_a_new_outlook_tt: "If we complete this mission by §Yconstructing a fort§! in [4370.GetName], the follow effect will occur:"
+pf_trn_a_new_outlook_1_tt: "Otherwise, the follow effect will occur:"
+pf_trn_brittonic_bastion: "Brittonic Bastion"

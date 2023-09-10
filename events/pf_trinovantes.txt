@@ -411,3 +411,152 @@ country_event = {		# The Disgraced Chief
 		add_years_of_income = -0.10
 	}
 }
+country_event = {		# Searching the Stars
+	id = pf_trn.6
+	title = pf_trn.6.t
+	desc = pf_trn.6.d
+	picture = RUNESTONE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {		# Get looking
+		name = "pf_trn.6.a"
+		custom_tooltip = pf_trn_searching_the_stars_tt
+		hidden_effect = {
+			country_event = { id = pf_trn.7 days = 365 random = 60 }
+		}
+	}
+}
+country_event = {		# Searching the Stars (result)
+	id = pf_trn.7
+	title = pf_trn.7.t
+	desc = pf_trn.7.d
+	picture = RUNESTONE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {		# Get looking
+		name = "pf_trn.7.a"
+		add_prestige = 10
+		add_country_modifier = {
+			name = "pf_trn_destiny_awaits"
+			duration = 3650
+		}
+		define_advisor = {
+			type = natural_scientist
+			skill = 2
+			discount = yes
+		}
+	}
+}
+country_event = {		# Ricatus funeral
+	id = pf_trn.8
+	title = pf_trn.8.t
+	desc = pf_trn.8.d
+	picture = northamericagfx_DEATH_OF_HEIR_eventPicture
+	
+	is_triggered_only = yes
+
+	major = yes
+	major_trigger = {
+		capital_scope = {
+			region = british_isles_region
+		}
+	}
+
+	option = {		# Invite our neighbours
+		name = "pf_trn.8.a"
+		add_dip_power = 50
+		add_country_modifier = {
+			name = "pf_trn_diplomatic_legacy"
+			duration = 7300
+		}
+		custom_tooltip = pf_trn_ricatus_legacy_tt
+		CEL = {		# Celtica
+			country_event = { id = pf_trn.9 }
+		}
+		NRD = {		# Nordanvik
+			country_event = { id = pf_trn.9 }
+		}
+	}
+	option = {		# Give him a warriors funeral
+		name = "pf_trn.8.b"
+		add_mil_power = 50
+		add_country_modifier = {
+			name = "pf_trn_aggressive_legacy"
+			duration = 7300
+		}
+	}
+}
+country_event = {		# Foreign invited to ricatus funeral
+	id = pf_trn.9
+	title = pf_trn.9.t
+	desc = pf_trn.9.d
+	picture = northamericagfx_DEATH_OF_HEIR_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {		# Attend
+		name = "pf_trn.9.a"
+		TRN = {
+			add_opinion = {
+				modifier = opinion_attended_ricatus_funeral
+				who = ROOT
+			}
+			reverse_add_opinion = {
+				modifier = opinion_attended_ricatus_funeral
+				who = ROOT
+			}
+		}
+	}
+	option = {		# Do not attend
+		name = "pf_trn.9.b"
+		TRN = {
+			add_opinion = {
+				modifier = opinion_attended_ricatus_funeral_no
+				who = ROOT
+			}
+			reverse_add_opinion = {
+				modifier = opinion_attended_ricatus_funeral_no
+				who = ROOT
+			}
+		}
+	}
+}
+
+country_event = {		# Help from the Druids
+	id = pf_trn.10
+	title = pf_trn.10.t
+	desc = pf_trn.10.d
+	picture = northamericagfx_CULTURE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {	
+		name = "pf_trn.10.a"
+		add_country_modifier = {
+			name = "pf_trn_druid_help_1"
+			duration = 9125
+		}
+	}
+	option = {	
+		name = "pf_trn.10.b"
+		add_country_modifier = {
+			name = "pf_trn_druid_help_2"
+			duration = 9125
+		}
+	}
+	option = {	
+		name = "pf_trn.10.c"
+		add_country_modifier = {
+			name = "pf_trn_druid_help_3"
+			duration = 9125
+		}
+	}
+	option = {	
+		name = "pf_trn.10.dd"
+		add_legitimacy = 25
+		set_country_flag = trn_no_druid_support
+		custom_tooltip = pf_trn_no_druid_support_reward_tt
+	}
+}
