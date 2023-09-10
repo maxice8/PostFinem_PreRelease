@@ -92,3 +92,11 @@ nrd_invest_in_plantation_modifier = {
 	trade_steering = 0.5
 	trade_efficiency = 0.1
 }
+nrd_uncontested_in_new_world_modifier = {
+	liberty_desire_from_subject_development = -0.1
+	colonists = 1
+}
+nrd_approach_the_interior_modifier = {
+	trade_company_investment_cost = -0.1
+	caravan_power = 0.25
+}
