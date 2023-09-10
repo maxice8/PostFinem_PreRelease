@@ -1501,7 +1501,7 @@ first_2 = {
 	}
 
 	pf_lag_port_desire = {
-		icon = mission_unknown_mission
+		icon = mission_pf_brugges
 		position = 11
 		required_missions = { pf_lag_expand_markets } 
 		provinces_to_highlight = { province_id = 90 } 
@@ -1544,7 +1544,7 @@ first_2 = {
 	}
 
 	pf_lag_embrace_global = {
-		icon = mission_unknown_mission
+		icon = mission_pf_stock_exchange
 		position = 13
 		required_missions = { pf_lag_port_desire } 
 		provinces_to_highlight = { 
@@ -1613,7 +1613,7 @@ first_2 = {
 	}
 
 	pf_lag_warehouse = {
-		icon = mission_unknown_mission
+		icon = mission_pf_dockyard_warehouse
 		position = 15
 		required_missions = { pf_lag_embrace_global } 
 		provinces_to_highlight = { 
@@ -1939,7 +1939,7 @@ second_3 = {
 	potential = { tag = LAG } 
 
 	pf_lag_polaris_observatory = {
-		icon = mission_unknown_mission
+		icon = mission_pf_astronomer
 		position = 14
 		required_missions = { pf_lag_universities } 
 		provinces_to_highlight = { province_id = 97 } 
