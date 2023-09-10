@@ -16,11 +16,14 @@ brittonic_confederation_reform = {
 	modifiers = {
 		morale_damage = 0.05
 		global_unrest = -1
-		min_autonomy = 10
-		nobles_influence_modifier = 0.10
+		min_autonomy = 25
+		all_estate_influence_modifier = 0.10
 	}
 	custom_attributes = {
 		confederation_elections = yes
+	}
+	government_abilities = {
+		trinovantes_cohesion_mechanic
 	}
 	election_on_death = yes
 	heir = no
@@ -42,7 +45,7 @@ pf_clan_supremacy_reform = {
 		monarch_admin_power = 1
 		monarch_diplomatic_power = 1
 		monarch_military_power = 1
-		# Give it cohesion gain when that mechanic is implemented
+		monthly_trn_cohesion = 0.2
 	}
 
 	custom_attributes = {
