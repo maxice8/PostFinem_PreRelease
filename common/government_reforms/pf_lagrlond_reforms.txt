@@ -74,7 +74,7 @@ pf_lagr_republic = {
 
 # Military Tier Generic
 pf_lag_lowlander_naval_tradition_reform = {
-	icon = "merchant_ship"
+	icon = "pf_lowlander_naval_tradition"
 	allow_normal_conversion = yes
 	potential = {
 		primary_culture = norvegr
@@ -92,7 +92,7 @@ pf_lag_lowlander_naval_tradition_reform = {
 
 # Regionalism Tier of Republic
 pf_lag_provincial_things = {
-	icon = "parliament_hall"
+	icon = "pf_provincial_things"
 	allow_normal_conversion = yes
 	potential = {
 		primary_culture = norvegr
@@ -112,7 +112,7 @@ pf_lag_provincial_things = {
 
 # Virtues tier of the republic
 pf_lag_merchant_virtues = {
-	icon = "dutch_republic"
+	icon = "pf_merchant_virtues"
 	allow_normal_conversion = yes
 	potential = {
 		primary_culture = norvegr
@@ -132,8 +132,8 @@ pf_lag_merchant_virtues = {
 # Religion tier, stronger version because it does
 # not disable the religious estates and grants
 # actual tolerance 
-pf_lag_placcards_of_tolerance = {
-	icon = "placcard_of_tolerance"
+pf_lag_acts_of_toleration = {
+	icon = "pf_acts_of_toleration"
 	allow_normal_conversion = yes
 	potential = {
 		primary_culture = norvegr
@@ -142,14 +142,12 @@ pf_lag_placcards_of_tolerance = {
 		innovativeness_gain = 0.25
 		tolerance_heathen = 1
 		tolerance_heretic = 1
-		tolerance_of_heathens_capacity = 1
-		tolerance_of_heretics_capacity = 1
 	}
 }
 
 # Separation of Power Tier
 pf_lag_ceremonial_thinghalder = {
-	icon = "council"
+	icon = "pf_ceremonial_thinghalder"
 	allow_normal_conversion = yes
 	potential = {
 		primary_culture = norvegr
