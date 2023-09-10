@@ -1,0 +1,192 @@
+pf_skl_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SKL } 
+
+	pf_skl_widespread_assimiliation = {
+		icon = mission_deccanis
+		position = 13
+		required_missions = { pf_skl_a_new_identity } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_skl_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SKL } 
+
+	pf_skl_a_new_identity = {
+		icon = mission_modern_ottoman_soldiers
+		position = 12
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_skl_continue_the_trend = {
+		icon = mission_noble_council
+		position = 13
+		required_missions = { pf_skl_a_new_identity } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_skl_inferior_northmen = {
+		icon = mission_crown_of_denmark
+		position = 14
+		required_missions = { pf_skl_the_old_fatherland } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_skl_leader_of_the_norse_world = {
+		icon = mission_develop_the_scandes
+		position = 1
+		required_missions = {
+			pf_skl_revive_old_rivalries
+			pf_skl_inferior_northmen
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_skl_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SKL } 
+
+	pf_skl_the_old_fatherland = {
+		icon = mission_norwegian_independence
+		position = 13
+		required_missions = { pf_skl_a_new_identity } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_skl_revive_old_rivalries = {
+		icon = mission_conquer_sweden
+		position = 1
+		required_missions = { pf_skl_the_old_fatherland } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_skl_ruler_of_the_north = {
+		icon = mission_crown_of_norway
+		position = 1
+		required_missions = {
+			pf_skl_leader_of_the_norse_world
+			pf_skl_gallic_dominion
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_skl_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SKL } 
+
+	pf_skl_a_new_target = {
+		icon = mission_control_the_channel
+		position = 12
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_skl_northern_tribes = {
+		icon = mission_control_the_barbary_coast
+		position = 13
+		required_missions = { pf_skl_a_new_target } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_skl_gallic_dominion = {
+		icon = centralize_france
+		position = 15
+		required_missions = { pf_skl_northern_tribes } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_skl_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SKL } 
+
+	pf_skl_clear_the_forests = {
+		icon = mission_clear_the_delta
+		position = 13
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_skl_secure_supply_lines = {
+		icon = mission_divert_trade_from_bengal
+		position = 14
+		required_missions = { pf_skl_clear_the_forests } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_skl_into_warmer_waters = {
+		icon = mission_rb_mediterranean_authority
+		position = 1
+		required_missions = { pf_skl_secure_supply_lines } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
