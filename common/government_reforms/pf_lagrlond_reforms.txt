@@ -133,7 +133,7 @@ pf_lag_merchant_virtues = {
 # not disable the religious estates and grants
 # actual tolerance 
 pf_lag_placcards_of_tolerance = {
-	icon = "fiqh_laws" # Ideally a Town Crier
+	icon = "placcard_of_tolerance"
 	allow_normal_conversion = yes
 	potential = {
 		primary_culture = norvegr
