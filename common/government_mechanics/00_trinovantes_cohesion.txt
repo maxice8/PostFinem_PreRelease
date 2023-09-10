@@ -1,0 +1,36 @@
+trinovantes_cohesion_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 12
+	available = {
+		always = yes
+	}
+
+	powers = {
+		trn_cohesion = {
+			gui = trinovantes_cohesion_gov_mech
+			max = 100
+			min = -100
+			reset_on_new_ruler = no
+			base_monthly_growth = 0
+			is_good = yes
+			scaled_modifier = {
+				start_value = 0
+				end_value = 100
+				modifier = {
+					global_unrest = -2
+					max_absolutism = 5
+					years_of_nationalism = -5
+				}
+			}
+			reverse_scaled_modifier = {
+				start_value = -100
+				end_value = 0
+				modifier = {
+					global_unrest = 2
+					stability_cost_modifier = 0.50
+					land_morale = -0.10
+				}
+			}
+		}
+	}
+}

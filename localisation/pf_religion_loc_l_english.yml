@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
  CRO_CAR: "Car"
  ancient_cultures: "Ancient Cultures"
 
@@ -85,3 +85,34 @@
  desc_ausrine_beginnings_aspect: "TODO"
  ausrine_beauty_aspect: "Aušrinƒ: Beauty"
  desc_ausrine_beauty_aspect: "TODO"
+ romana: "Romana"
+ province_is_or_accepts_punic_religion_tt:0 "The Religion of §Y[Root.GetName]§! is §YPunic§! and is either the State or the Syncretic Religion of the owner."
+ province_is_or_accepts_hellenic_tt:0 "The Religion of §Y[Root.GetName]§! is §YHellenic§! and is either the State or the Syncretic Religion of the owner."
+ province_is_or_accepts_germanic_religion_tt:0 "The Religion of §Y[Root.GetName]§! is §YGermanic§! and is either the State or the Syncretic Religion of the owner."
+ province_is_or_accepts_south_germanic_religion_tt:0 "The Religion of §Y[Root.GetName]§! is §YOstgermanic§! and is either the State or the Syncretic Religion of the owner."
+ province_is_or_accepts_slavic_religion_tt:0 "The Religion of §Y[Root.GetName]§! is §YSlavic§! and is either the State or the Syncretic Religion of the owner."
+ province_is_or_accepts_arabic_religion_tt:0 "The Religion of §Y[Root.GetName]§! is §YArabic§! and is either the State or the Syncretic Religion of the owner."
+ province_is_or_accepts_druidic_tt:0 "The Religion of §Y[Root.GetName]§! is §YDruidic§! and is either the State or the Syncretic Religion of the owner."
+ province_is_or_accepts_romuva_tt:0 "The Religion of §Y[Root.GetName]§! is §YRomuva§! and is either the State or the Syncretic Religion of the owner."
+
+ # Decision
+ pf_lag_reset_deity_title:0 "Reset your Personal Deity"
+ pf_lag_reset_deity_desc:0 "This decision allows you to reset your personal deity for the cost of §Y20§! of each §YPower Category§!"
+
+ # Scripted Effect
+ PF_RESET_PERSONAL_DEITY:0 "Your §YPersonal Deity§! will be reset"
+ PF_HAS_ANY_NORSE_DEITY:0 "Has any §YPersonal Deity§! enabled"
+
+ # For Lagrlond
+ odin_lag_upgraded:0 "Odin"
+ odin_lag_upgraded_desc:0 "Odin is the major god of the Norse pantheon, commonly associated with war, victory and death."
+ freya_lag_upgraded:0 "Freya"
+ freya_lag_upgraded_desc:0 "Freyja is the goddess commonly worshipped for her love, beauty, fertility and her promises of wealth."
+ tor_lag_upgraded:0 "Tor"
+ tor_lag_upgraded_desc:0 "Tor is the son of Odin and is the god protecting humankind against the terrors trying to enter Midgard."
+ tyr_lag_upgraded:0 "Tyr"
+ tyr_lag_upgraded_desc:0 "Tyr is the one-handed god of justice and one of the most courageous gods."
+ njord_lag_upgraded:0 "Njord"
+ njord_lag_upgraded_desc:0 "The father of Freya, god of the sea and wealth will bring food to the table for his worshippers."
+ snotra_lag_upgraded:0 "Snotra"
+ snotra_lag_upgraded_desc:0 "Snotra is the clever goddess. A wise man or woman can be called snotr in her honor."

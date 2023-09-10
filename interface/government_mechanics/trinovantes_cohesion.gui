@@ -1,0 +1,25 @@
+guiTypes = {
+	windowType = {
+		name = "trinovantes_cohesion_gov_mech"
+		backGround = ""
+		position = { x = 0 y = 0 }
+		size = { x = 300 y = 82 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		#bar and frame
+		iconType = {
+			name = "government_power_bar"
+			spriteType = "GFX_trinovantes_cohesion_power_bar"
+			position = { x = 26 y = 49 }
+		}
+
+		iconType = {
+			name = "trinovantes_cohesion_frame"
+			spriteType = "GFX_trinovantes_cohesion_frame"
+			position = { x = 10 y = 0 }
+			alwaystransparent = yes
+		}
+	}
+}
