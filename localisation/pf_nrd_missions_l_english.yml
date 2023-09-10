@@ -17,12 +17,17 @@
 
  pf_nrd_feed_the_people_title:0 "Feed the People"
  pf_nrd_feed_the_people_desc:0 "The seas offer more than just routes for trade; they promise sustenance. By securing productive fisheries for [Root.GetName], we ensure that both our people and our soldiers are well-fed. A nation with a full belly is a nation ready to thrive and defend its [Root.GetAdjective] legacy."
+ nrd_feed_the_people_tt: "Any owned province that fulfulls the trigger will receive:"
+ nrd_fish_income_desc: "based on production of fish"
 
  pf_nrd_secure_iron_title:0 "Secure Iron"
  pf_nrd_secure_iron_desc:0 "The strength of a nation is often forged in fire and metal. Recognizing the impending need for military expansion, [Root.GetName] has strategically procured vast reserves of iron and other metals. With these resources in hand, our [Root.GetAdjective] war machine stands ready to be built and unleashed."
+ nrd_secure_iron_tt: "One random owned province that fulfills the trigger will receive:"
+ nrd_iron_income_desc: "based on production of iron"
 
  pf_nrd_productive_peoples_title:0 "A Productive People"
  pf_nrd_productive_peoples_desc:0 "The future prosperity of [Root.GetName] hinges on the industriousness of its people. By investing in technology, training, and infrastructure, we'll boost production across our lands. A thriving [Root.GetAdjective] economy, built on the sweat and skill of our citizens, will secure our place on the world stage."
+ nrd_from_production_tt: "from national production"
 
  pf_nrd_raise_host_title:0 "Raise a Host"
  pf_nrd_raise_host_desc:0 "In a world where might often makes right, [Root.GetName] must bolster its forces. Let the drums of war sound, and our banners rise high, as we muster a grand [Root.GetAdjective] army to defend our interests and assert our will, primarilly against the Celts!"
@@ -50,6 +55,7 @@
 
  pf_nrd_celtic_isles_title:0 "Unite the Celtic Isles"
  pf_nrd_celtic_isles_desc:0 "The fragmented Celtic Isles have long awaited a single, unifying force. By bringing them entirely under [Root.GetName]'s banner, we not only forge a powerful realm but also birth a new identity: a Norse Celtic Isles, unmatched in strength and unity."
+ nrd_celtic_isles_tt: "Any subject with their capital on the §YCeltic Isles§! with less than §G100§! development will be annexed."
 
  pf_nrd_stretch_our_legs_title:0 "Stretch our Legs"
  pf_nrd_stretch_our_legs_desc:0 "The world is vast, and [Root.GetName] must not remain confined. By bolstering our armies and setting our sights on new territories, we'll stretch our influence and might. Every step taken by [Root.GetAdjective] boots shall echo our dominance and ambition."

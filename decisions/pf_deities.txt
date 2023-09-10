@@ -3,7 +3,7 @@ country_decisions = {
 		potential = {
 			OR = {
 				has_country_flag = pf_lag_can_reset_deities
-				has_country_flag = pf_nrd_can_reset_deities
+				has_country_flag = allfathers_blessing_flag
 			}
 		}
 		allow = {
@@ -18,7 +18,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					has_country_flag = pf_nrd_can_reset_deities
+					has_country_flag = allfathers_blessing_flag
 				}
 				adm_power = 50
 			}
@@ -38,7 +38,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					has_country_flag = pf_nrd_can_reset_deities
+					has_country_flag = allfathers_blessing_flag
 				}
 				add_adm_power = -50
 			}

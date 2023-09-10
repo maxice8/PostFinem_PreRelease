@@ -188,7 +188,7 @@ pf_nrd_1 = {
 				}
 			}
 			add_years_of_owned_provinces_production_income = {
-				years = 8
+				years = 15
 				trigger = { trade_goods = fish } 
 				custom_tooltip = nrd_fish_income_desc
 			}
@@ -224,7 +224,7 @@ pf_nrd_1 = {
 				}
 			}
 			add_years_of_owned_provinces_production_income = {
-				years = 6
+				years = 10
 				trigger = { trade_goods = iron }				
 				custom_tooltip = nrd_iron_income_desc
 			}
@@ -269,7 +269,7 @@ pf_nrd_1 = {
 			}
 			custom_tooltip = empty_line_tt
 			add_years_of_owned_provinces_production_income = {
-				years = 5			
+				years = 8			
 				custom_tooltip = nrd_from_production_tt
 			}
 		} 
@@ -542,69 +542,21 @@ pf_nrd_3 = {
 			}
 		}
 
-		effect = {
-			custom_tooltip = nrd_king_of_the_who_tt
+		effect = {			
+			distribute_base_dev_to_provinces = {
+				num = 5
+				amount = 1
+				trigger = "
+					OR = {
+						area = yorkshire_area
+						area = west_midlands_area
+						area = east_midlands_area
+					}
+				"
+				type = tax
+				tooltip = pf_nrd_king_of_the_who_tt
+			}
 			custom_tooltip = empty_line_tt
-			hidden_effect = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							area = yorkshire_area
-							area = west_midlands_area
-							area = east_midlands_area
-						}
-					}
-					add_base_tax = 1
-				}
-			}
-			hidden_effect = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							area = yorkshire_area
-							area = west_midlands_area
-							area = east_midlands_area
-						}
-					}
-					add_base_tax = 1
-				}
-			}
-			hidden_effect = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							area = yorkshire_area
-							area = west_midlands_area
-							area = east_midlands_area
-						}
-					}
-					add_base_tax = 1
-				}
-			}
-			hidden_effect = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							area = yorkshire_area
-							area = west_midlands_area
-							area = east_midlands_area
-						}
-					}
-					add_base_tax = 1
-				}
-			}
-			hidden_effect = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							area = yorkshire_area
-							area = west_midlands_area
-							area = east_midlands_area
-						}
-					}
-					add_base_tax = 1
-				}
-			}
 			east_anglia_area = { add_permanent_claim = ROOT } 
 			home_counties_area = { add_permanent_claim = ROOT } 
 			wessex_area = { add_permanent_claim = ROOT } 
@@ -1271,7 +1223,7 @@ pf_nrd_5 = {
 			change_government_to_monarchy = yes
 			custom_tooltip = empty_line_tt
 			set_country_flag = nrd_reformed_government_flag
-			add_government_reform = nordhafnadr_kingdom
+			add_government_reform = pf_nordhafnadr_kingdom
 		} 
 	}
 }
