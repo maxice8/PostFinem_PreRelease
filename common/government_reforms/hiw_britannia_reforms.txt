@@ -58,3 +58,24 @@ pf_clan_supremacy_reform = {
 		factor = 1
 	}
 }
+pf_guidance_of_the_elders_reform = {
+	icon = "organising_our_religion_reform"
+	allow_normal_conversion = yes
+
+	potential = {
+		has_reform = brittonic_confederation_reform
+	}
+
+	modifiers = {
+		innovativeness_gain = 0.25
+		embracement_cost = -0.15
+		nobles_influence_modifier = 0.10
+	}
+	custom_attributes = {
+		techs_give_estate_loyalty = yes
+	}
+
+	ai = {
+		factor = 1
+	}
+}
