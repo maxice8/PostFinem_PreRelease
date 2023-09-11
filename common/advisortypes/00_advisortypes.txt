@@ -77,6 +77,14 @@ philosopher = {
 		}
 		modifier = { tolerance_heretic = 1 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_adm_build_time }
+		}
+		modifier = {
+			build_time = -0.02
+		 }
+	}
 
 	chance = {
 		factor = 1
@@ -152,6 +160,14 @@ natural_scientist = {
 		}
 		modifier = { tolerance_heretic = 1 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_adm_build_time }
+		}
+		modifier = {
+			build_time = -0.02
+		 }
+	}
 
 	chance = {
 		factor = 1
@@ -226,6 +242,14 @@ artist = {
 			owner = { has_country_modifier = eng_foreign_religious_control }
 		}
 		modifier = { tolerance_own = 1 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_adm_build_time }
+		}
+		modifier = {
+			build_time = -0.02
+		 }
 	}
 
 	chance = {
@@ -310,6 +334,14 @@ treasurer = {
 		}
 		modifier = { religious_unity = 0.15 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_adm_build_time }
+		}
+		modifier = {
+			build_time = -0.02
+		 }
+	}
 	
 	chance = {
 		factor = 1
@@ -384,6 +416,14 @@ theologian = {
 			owner = { has_country_modifier = eng_foreign_religious_control }
 		}
 		modifier = { global_heretic_missionary_strength = 0.01 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_adm_build_time }
+		}
+		modifier = {
+			build_time = -0.02
+		 }
 	}
 	
 	chance = {
@@ -468,6 +508,14 @@ master_of_mint = {
 			owner = { has_country_modifier = eng_foreign_religious_control }
 		}
 		modifier = { religious_unity = 0.15 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_adm_build_time }
+		}
+		modifier = {
+			build_time = -0.02
+		 }
 	}
 	
 	chance = {
@@ -559,6 +607,14 @@ inquisitor = {
 		modifier = {
 			establish_order_cost = -0.05
 		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_adm_build_time }
+		}
+		modifier = {
+			build_time = -0.02
+		 }
 	}
 	
 	chance = {
@@ -874,6 +930,14 @@ colonial_governor = {
 			trade_efficiency = 0.02
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_extra_settlers }
+		}
+		modifier = { 
+			global_colonial_growth = 5
+		}
+	}
 	
 	chance = {
 		factor = 1
@@ -992,6 +1056,14 @@ navigator = {
 			trade_efficiency = 0.02
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_extra_settlers }
+		}
+		modifier = { 
+			global_colonial_growth = 5
+		}
+	}
 
 	chance = {
 		factor = 1
@@ -1027,6 +1099,16 @@ army_reformer = {
 		modifier = { 
 			meritocracy = 0.25
 			republican_tradition = 0.02 
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_country_flag = nrd_buffed_moral_advisor 
+			}
+		}
+		modifier = { 
+			fire_damage = 0.01
 		}
 	}
 	skill_scaled_modifier = {

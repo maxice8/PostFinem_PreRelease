@@ -3,7 +3,12 @@ pf_nrd_1 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = NRD } 
+	potential = { 
+		OR = {
+			tag = NRD 
+			tag = SKL
+		} 
+	}
 
 	pf_nrd_subjucate_picts = {
 		icon = mission_rb_rein_in_the_highland_clans
@@ -35,7 +40,7 @@ pf_nrd_1 = {
 
 		effect = {
 			country_event = { id = nrd_flavor_events.1 } 
-			custom_tooltip =  
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = "nrd_highland_domination_modifier"
 				duration = 7300
@@ -48,11 +53,34 @@ pf_nrd_1 = {
 		icon = mission_che_the_cave_country
 		position = 4
 		required_missions = { pf_nrd_welsh_domain } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			area = wessex_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			owns_core_province = 234
+			234 = {				
+				province_has_center_of_trade_of_level = 2
+			}
+			wessex_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			234 = { set_center_level_3_center_of_trade = yes }
+			custom_tooltip = empty_line_tt
+			swap_trade_good_for_max_provinces = {
+				max = 3
+				original = wool
+				new = cloth
+				tooltip = wool_to_cloth_tt
+			}
+		} 
 	}
 
 	pf_nrd_establish_trade = {
@@ -65,20 +93,42 @@ pf_nrd_1 = {
 				value = 2
 				province_has_center_of_trade_of_level = 2
 			}
-			OR = {
-				1266 = {
-					trade_share = {
-						country = NRD
-						share = 30
-					}
+			if = {
+				limit = {
+					ai = no
 				}
-				1285 = {
-					trade_share = {
-						country = NRD
-						share = 20
+				OR = {
+					1266 = {
+						trade_share = {
+							country = NRD
+							share = 30
+						}
+					}
+					1285 = {
+						trade_share = {
+							country = NRD
+							share = 20
+						}
 					}
 				}
 			}
+			else = {				
+				OR = {
+					1266 = {
+						trade_share = {
+							country = NRD
+							share = 20
+						}
+					}
+					1285 = {
+						trade_share = {
+							country = NRD
+							share = 10
+						}
+					}
+				}
+			}
+			
 		}
 
 		effect = {
@@ -87,14 +137,14 @@ pf_nrd_1 = {
 				add_base_production = 1
 				add_base_manpower = 1
 			}
-			custom_tooltip =  
+			custom_tooltip = empty_line_tt
 			define_advisor = {
 				type = trader
 				discount = yes
 				skill = 1
 				name = "Vilhelm Forsberg"
 			}
-			custom_tooltip =  
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = "nrd_economic_opportunities_modifier"
 				duration = 7300
@@ -104,7 +154,7 @@ pf_nrd_1 = {
 
 	pf_nrd_feed_the_people = {
 		icon = mission_scandinavian_port_authority
-		position = 6
+		position = 7
 		required_missions = { pf_nrd_establish_trade } 
 		provinces_to_highlight = {
 			owned_by = ROOT
@@ -127,7 +177,6 @@ pf_nrd_1 = {
 					name = "nrd_productive_fisheries_modifier"
 					duration = -1
 				}
-				custom_tooltip =  
 			}
 			hidden_effect = {
 				every_owned_province = {
@@ -139,7 +188,7 @@ pf_nrd_1 = {
 				}
 			}
 			add_years_of_owned_provinces_production_income = {
-				years = 8
+				years = 15
 				trigger = { trade_goods = fish } 
 				custom_tooltip = nrd_fish_income_desc
 			}
@@ -150,22 +199,80 @@ pf_nrd_1 = {
 		icon = mission_iron_and_copper
 		position = 8
 		required_missions = { pf_nrd_feed_the_people } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			trade_goods = iron
+			NOT = { base_production = 6 }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			dip_power = 100
+			num_of_owned_provinces_with = {
+				value = 4
+				trade_goods = iron
+				base_production = 6
+				has_manufactory_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = nrd_secure_iron_tt
+			tooltip = {				
+				add_province_modifier = {
+					name = nrd_secure_iron_modifier
+					duration = -1
+				}
+			}
+			add_years_of_owned_provinces_production_income = {
+				years = 10
+				trigger = { trade_goods = iron }				
+				custom_tooltip = nrd_iron_income_desc
+			}
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						trade_goods = iron
+						base_production = 6
+						has_manufactory_trigger = yes
+					}
+					add_province_modifier = {
+						name = nrd_secure_iron_modifier
+						duration = -1
+					}
+				}
+			}
+		} 
 	}
 
 	pf_nrd_productive_peoples = {
 		icon = mission_state_manufactories
 		position = 9
-		required_missions = { pf_nrd_secure_iron } 
+		required_missions = {
+			pf_nrd_secure_iron
+			pf_nrd_industrialize_the_cloths
+		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 20
+				has_manufactory_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			define_advisor = {
+				type = natural_scientist
+				discount = yes
+				skill = 3
+				name = "Hogni Valdr"
+			}
+			custom_tooltip = empty_line_tt
+			add_years_of_owned_provinces_production_income = {
+				years = 8			
+				custom_tooltip = nrd_from_production_tt
+			}
+		} 
 	}
 }
 pf_nrd_2 = {
@@ -173,7 +280,12 @@ pf_nrd_2 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = NRD } 
+	potential = { 
+		OR = {
+			tag = NRD 
+			tag = SKL
+		} 
+	}
 
 	pf_nrd_raise_host = {
 		icon = mission_native_build_army_mission
@@ -182,20 +294,20 @@ pf_nrd_2 = {
 
 		trigger = {
 			if = {
-				limit = { has_leader = Knut Stormbringer } 
-				has_leader = Knut Stormbringer
+				limit = { has_leader = "Knut Stormbringer" } 
+				has_leader = "Knut Stormbringer"
 			}
 			else = { num_of_generals = 1 } 
 			if = {
 				limit = { ai = no } 
 				army_size_percentage = 1
 			}
-			else = { army_size_percentage = 0.75 } 
+			else = { army_size_percentage = 0.50 } 
 		}
 
 		effect = {
 			add_mil_power = 50
-			custom_tooltip =  
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = "nrd_prepare_for_war_modifier"
 				duration = 3650
@@ -228,7 +340,7 @@ pf_nrd_2 = {
 
 		effect = {
 			242 = { add_or_upgrade_shipyard_building = yes } 
-			custom_tooltip =  
+			custom_tooltip = empty_line_tt
 			242 = {
 				add_province_modifier = {
 					name = "nrd_celtic_sea_base_modifier"
@@ -248,13 +360,21 @@ pf_nrd_2 = {
 		}
 
 		trigger = {
-			capital_scope = { development = 20 } 
+			if = {
+				limit = {
+					ai = no
+				}	
+				capital_scope = { development = 20 } 		
+			}
+			else = {				
+				capital_scope = { development = 15 } 
+			}
 			capital_scope = { num_of_buildings_in_province = 2 } 
 		}
 
 		effect = {
 			add_stability_or_adm_power = yes
-			custom_tooltip =  
+			custom_tooltip = empty_line_tt
 			add_years_of_income = 2
 		}
 	}
@@ -268,9 +388,18 @@ pf_nrd_2 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			share_of_starting_income = 2
+		} 
 
-		effect = {  } 
+		effect = {  	
+			distribute_base_dev_to_provinces = {
+				num = 5
+				amount = 2
+				type = tax
+				tooltip = economic_boom_tt
+			}
+		} 
 	}
 
 	pf_nrd_infrastructure_investment = {
@@ -280,11 +409,70 @@ pf_nrd_2 = {
 			pf_nrd_economic_boom
 			pf_nrd_stretch_our_legs
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			has_production_building_trigger = no
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			capital_scope = {
+				development = 30
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				has_production_building_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {  			
+			distribute_base_dev_to_provinces = {
+				num = 10
+				amount = 1
+				trigger = "
+					has_production_building_trigger = yes
+				"
+				type = production
+				tooltip = nrd_infrastructure_investment_dev_tt
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = nrd_infrastructure_investment_modifier
+				duration = 7300
+			}
+		} 
+	}
+
+	pf_nrd_industrialize_the_cloths = {
+		icon = mission_son_own_develop_clothes_and_salt
+		position = 1
+		required_missions = { pf_nrd_infrastructure_investment } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			trade_goods = wool
+			NOT = { base_production = 6 }
+			has_production_building_trigger = no
+		} 
+
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 5
+				trade_goods = wool
+				base_production = 6
+				has_production_building_trigger = yes
+			}
+		} 
+
+		effect = {  	
+			swap_trade_good_for_max_provinces = {
+				max = 5
+				original = wool
+				new = cloth
+				tooltip = industrialize_the_cloths_tt
+				trigger = "
+					base_production = 6
+				"
+			}
+		} 
 	}
 }
 pf_nrd_3 = {
@@ -292,7 +480,12 @@ pf_nrd_3 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = NRD } 
+	potential = { 
+		OR = {
+			tag = NRD 
+			tag = SKL
+		} 
+	}
 
 	pf_nrd_expand_southward = {
 		icon = mission_northumberland_coast
@@ -318,7 +511,7 @@ pf_nrd_3 = {
 				type = mission_rewards_power_projection
 				amount = 25
 			}
-			custom_tooltip =  
+			custom_tooltip = empty_line_tt
 			east_midlands_area = { add_permanent_claim = ROOT } 
 			west_midlands_area = { add_permanent_claim = ROOT } 
 			yorkshire_area = { add_permanent_claim = ROOT } 
@@ -349,68 +542,21 @@ pf_nrd_3 = {
 			}
 		}
 
-		effect = {
-			custom_tooltip = nrd_king_of_the_who_tt
-			hidden_effect = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							area = yorkshire_area
-							area = west_midlands_area
-							area = east_midlands_area
-						}
+		effect = {			
+			distribute_base_dev_to_provinces = {
+				num = 5
+				amount = 1
+				trigger = "
+					OR = {
+						area = yorkshire_area
+						area = west_midlands_area
+						area = east_midlands_area
 					}
-					add_base_tax = 1
-				}
+				"
+				type = tax
+				tooltip = pf_nrd_king_of_the_who_tt
 			}
-			hidden_effect = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							area = yorkshire_area
-							area = west_midlands_area
-							area = east_midlands_area
-						}
-					}
-					add_base_tax = 1
-				}
-			}
-			hidden_effect = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							area = yorkshire_area
-							area = west_midlands_area
-							area = east_midlands_area
-						}
-					}
-					add_base_tax = 1
-				}
-			}
-			hidden_effect = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							area = yorkshire_area
-							area = west_midlands_area
-							area = east_midlands_area
-						}
-					}
-					add_base_tax = 1
-				}
-			}
-			hidden_effect = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							area = yorkshire_area
-							area = west_midlands_area
-							area = east_midlands_area
-						}
-					}
-					add_base_tax = 1
-				}
-			}
+			custom_tooltip = empty_line_tt
 			east_anglia_area = { add_permanent_claim = ROOT } 
 			home_counties_area = { add_permanent_claim = ROOT } 
 			wessex_area = { add_permanent_claim = ROOT } 
@@ -451,17 +597,16 @@ pf_nrd_3 = {
 					}
 				}
 			}
-			custom_tooltip =  
+			custom_tooltip = empty_line_tt
 			change_tag = SKL
-			custom_tooltip =  
 			on_change_tag_effect = yes
 			restore_country_name = "yes"
-			custom_tooltip =  
+			custom_tooltip = empty_line_tt
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = { NOT = { government_rank = 2 }  } 
-				set_government_rank = 2
-				custom_tooltip =  
+				limit = { NOT = { government_rank = 3 }  } 
+				set_government_rank = 3
+				custom_tooltip = empty_line_tt
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -473,6 +618,9 @@ pf_nrd_3 = {
 				country_event = { id = ideagroups.1 } 
 			}
 			set_country_flag = formed_skaldasker_flag
+			hidden_effect = {
+				complete_mission = pf_nrd_celtic_isles
+			}
 		}
 	}
 
@@ -482,20 +630,56 @@ pf_nrd_3 = {
 		required_missions = { pf_nrd_expansion_and_prosperity } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_provinces_in_states = 20
+			land_forcelimit = 30
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_yearly_manpower = 3
+			custom_tooltip = empty_line_tt
+			custom_tooltip = stretch_our_legs_tt
+			set_country_flag = nrd_buffed_moral_advisor
+		} 
 	}
 
 	pf_nrd_norse_hegemony = {
 		icon = establish_a_standing_army
 		position = 8
 		required_missions = { pf_nrd_stretch_our_legs } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			NOT = { owned_by = ROOT }
+			is_capital = yes
+			continent = europe
+			owner = {
+				army_size = ROOT
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			is_great_power = yes
+			custom_trigger_tooltip = {
+				tooltip = pf_nrd_norse_hegemony_trigger_tt
+				all_country = {
+					capital_scope = {
+					continent = europe
+					}				
+					NOT = { army_size = ROOT }
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			change_ruler_stat = {
+				stat = dip
+				amount = 1
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = pf_nrd_norse_hegemony_modifier
+				duration = -1
+			}
+		} 
 	}
 }
 pf_nrd_4 = {
@@ -503,7 +687,12 @@ pf_nrd_4 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = NRD } 
+	potential = { 
+		OR = {
+			tag = NRD 
+			tag = SKL
+		} 
+	}
 
 	pf_nrd_brothers = {
 		icon = mission_conquer_norway
@@ -531,16 +720,23 @@ pf_nrd_4 = {
 		}
 
 		trigger = {
-			NOR = {
-				has_opinion = {
-					who = ROOT
-					value = 150
+			OR = {
+				AND = {
+					NOR = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					NOR = {
+						owes_favors = {
+							who = ROOT
+							value = 10
+						}
+					}
 				}
-			}
-			NOR = {
-				owes_favors = {
-					who = ROOT
-					value = 10
+				NOR = {
+					exists = no
 				}
 			}
 		}
@@ -553,7 +749,7 @@ pf_nrd_4 = {
 					galleass_galley = ROOT
 					galleass_galley = ROOT
 				}
-				custom_tooltip =  
+				custom_tooltip = empty_line_tt
 			}
 			NOR = {
 				add_trust = {
@@ -561,7 +757,7 @@ pf_nrd_4 = {
 					value = 10
 				}
 			}
-			custom_tooltip =  
+			custom_tooltip = empty_line_tt
 			scottish_marches_area = { add_permanent_claim = ROOT } 
 		}
 	}
@@ -597,18 +793,19 @@ pf_nrd_4 = {
 
 		effect = {
 			add_stability_or_adm_power = yes
-			custom_tooltip =  
+			custom_tooltip = empty_line_tt
 			if = {
 				limit = { CEL = { exists = yes }  } 
 				add_casus_belli = {
 					type = cb_claim_throne
 					target = CEL
+					months = 60
 				}
-				custom_tooltip =  
+				custom_tooltip = empty_line_tt
 			}
 			add_country_modifier = {
 				name = "nrd_looking_overseas_modifier"
-				duration = 3650
+				duration = 10950
 			}
 		}
 	}
@@ -617,21 +814,126 @@ pf_nrd_4 = {
 		icon = mission_rb_into_ireland
 		position = 4
 		required_missions = { pf_nrd_sail_to_distant_shores } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = CEL
+			NOT = {
+				CEL = {
+					is_subject_of = ROOT
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			OR = {
+				NOT = {
+					british_isles_region = { 
+						country_or_subject_holds = CEL
+					}
+				}
+				CEL = { 
+					is_subject_of = ROOT 
+					NOT = { liberty_desire = 50 }
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			if = {
+				limit = {
+					NOT = {
+						british_isles_region = { 
+							country_or_subject_holds = CEL
+						}
+					}
+				}
+				custom_tooltip = nrd_dominate_celtica_owns_yes
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							OR = {
+								area = ulster_area
+								area = leinster_area
+								area = connacht_area
+								area = munster_area
+							}
+						}
+						add_province_modifier = {
+							name = nrd_dominate_celtica_owns_modifier
+							duration = -1
+						}
+					}
+				}
+				tooltip = {
+					add_province_modifier = {
+						name = nrd_dominate_celtica_owns_modifier
+						duration = -1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = nrd_dominate_celtica_owns_no
+				tooltip = {
+					add_province_modifier = {
+						name = nrd_dominate_celtica_owns_modifier
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = {					
+					CEL = { 
+						is_subject_of = ROOT 
+						NOT = { liberty_desire = 50 }
+					}
+				}
+				custom_tooltip = nrd_dominate_celtica_subject_yes
+				CEL = {
+					add_country_modifier = {
+						name = nrd_dominate_celtica_subject_modifier
+						duration = -1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = nrd_dominate_celtica_subject_no
+				tooltip = {
+					CEL = {
+						add_country_modifier = {
+							name = nrd_dominate_celtica_subject_modifier
+							duration = -1
+						}
+					}
+				}
+			}
+		} 
 	}
 
 	pf_nrd_expansion_and_prosperity = {
 		icon = mission_pol_develop_countryside
 		position = 5
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			area = capital
+			is_prosperous = no 
+		} 
 
-		trigger = {  } 
+		trigger = {  		
+			capital_scope = {
+				is_prosperous = yes
+				is_capital_of = ROOT
+			}
+			grown_by_development = 50
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_adm_power = 50
+			add_splendor = 100
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = nrd_expansion_and_prosperity_modifier
+				duration = 3650
+			}
+		} 
 	}
 
 	pf_nrd_gunpowder = {
@@ -640,20 +942,99 @@ pf_nrd_4 = {
 		required_missions = { pf_nrd_stretch_our_legs } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			if = {
+				limit = {
+					ai = no
+				}				
+				num_of_artillery = 30
+			}
+			else = {
+				num_of_artillery = 15
+			}
+			
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nrd_gunpowder_modifier
+				duration = 7300
+			}
+		} 
 	}
 
 	pf_nrd_prosperous_norse_lands = {
 		icon = develop_the_po_valley
 		position = 8
 		required_missions = { pf_nrd_share_the_sagas } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
 
-		trigger = {  } 
+		} 
 
-		effect = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 5
+				development = 20
+				religion = norse_pagan_reformed
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = nrd_prosperous_norse_lands_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = british_isles_region
+						religion = norse_pagan_reformed
+						development = 20
+					}
+					add_province_modifier = {
+						name = nrd_prosperous_norse_lands_modifier
+						duration = 7300
+					}
+				}
+			}
+			tooltip = {			
+				add_province_modifier = {
+					name = nrd_prosperous_norse_lands_modifier
+					duration = 7300
+				}
+			}
+		} 
+	}
+
+	pf_nrd_golden_era = {
+		icon = mission_golden_century
+		position = 9
+		required_missions = { pf_nrd_prosperous_norse_lands } 
+		provinces_to_highlight = {  
+
+		} 
+
+		trigger = {  
+			num_of_cities = 50
+			land_forcelimit = 100
+			OR = {
+				in_golden_age = yes
+				has_had_golden_age = yes
+			}
+		} 
+
+		effect = {  
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
+			simple_dynamic_effect = {
+				first_custom_tooltip = nrd_golden_age_effect_tt
+				first_limit = "in_golden_age = no"
+				first_effect = "
+					reset_golden_age = yes
+				"
+				second_limit = "in_golden_age = yes"
+				second_effect = "
+					extend_golden_age = 600
+				"
+			}
+		} 
 	}
 }
 pf_nrd_5 = {
@@ -661,7 +1042,12 @@ pf_nrd_5 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = NRD } 
+	potential = { 
+		OR = {
+			tag = NRD 
+			tag = SKL
+		} 
+	}
 
 	pf_nrd_galleys_with_good_oars = {
 		icon = mission_longships
@@ -670,9 +1056,18 @@ pf_nrd_5 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			navy_size_percentage = 1
-			num_of_galley = 10
-			galley_fraction = 0.5
+			if = {
+				limit = {
+					ai = no
+				}		
+				navy_size_percentage = 1
+				num_of_galley = 10
+				galley_fraction = 0.5
+			}
+			else = {
+				navy_size_percentage = 0.75
+				num_of_galley = 7
+			}
 		}
 
 		effect = {
@@ -693,40 +1088,143 @@ pf_nrd_5 = {
 		required_missions = { pf_nrd_galleys_with_good_oars } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			if = {
+				limit = {
+					ai = no
+				}
+				num_of_ports = 20
+				num_of_owned_provinces_with = {
+					value = 10
+					has_shipyard_building_trigger = yes
+					has_dock_building_trigger = yes
+				}
+			}
+			else = {				
+				num_of_ports = 15
+				num_of_owned_provinces_with = {
+					value = 5
+					has_shipyard_building_trigger = yes
+					has_dock_building_trigger = yes
+				}
+			}
+			
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_dip_power = 100
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = nrd_glorious_ports_modifier
+				duration = -1
+			}
+		} 
 	}
 
 	pf_nrd_proclaim_odins_name = {
 		icon = mission_norse_faith
 		position = 6
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			NOT = {
+				religion = norse_pagan_reformed
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			religion = norse_pagan_reformed
+			if = {
+				limit = { ai = no }
+				religious_unity = 1
+			}
+			else = {
+				religious_unity = 0.75
+			}
+			
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nrd_proclaim_odins_name_modifier
+				duration = 3650
+			}
+		} 
 	}
 
 	pf_nrd_share_the_sagas = {
 		icon = mission_book_of_royal_degrees
 		position = 7
 		required_missions = { pf_nrd_proclaim_odins_name } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			NOT = {
+				religion = norse_pagan_reformed
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			check_variable = { which = num_converted_religion value = 8 }
+		}
 
-		effect = {  } 
+		effect = {  
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = nrd_share_the_sagas_modifier
+				duration = 3650
+			}
+		} 
 	}
 
 	pf_nrd_the_allfathers_blessing = {
 		icon = mission_crown_of_sweden
+		position = 8
+		required_missions = { pf_nrd_share_the_sagas } 
+		provinces_to_highlight = {
+			region = british_isles_region
+			NOT = { religion = norse_pagan_reformed } 
+		} 
+
+		trigger = {  
+			religion = norse_pagan_reformed
+			is_defender_of_faith = yes
+			british_isles_region = {
+				type = all
+				religion = norse_pagan_reformed
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = nrd_allfathers_blessing_tt
+			set_country_flag = allfathers_blessing_flag
+			custom_tooltip = empty_line_tt
+			define_advisor = {
+				type = artist
+				cost_multiplier = 0.25
+				skill = 3
+				name = "Ulf Hrafn"
+			}
+		} 
+	}
+
+	pf_nrd_reforming_government = {
+		icon = counter_reformation
 		position = 10
+		required_missions = { pf_nrd_the_allfathers_blessing } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			adm_power = 200
+			has_reform_on_level =  6
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_adm_power = -200
+			change_government_to_monarchy = yes
+			custom_tooltip = empty_line_tt
+			set_country_flag = nrd_reformed_government_flag
+			add_government_reform = pf_nordhafnadr_kingdom
+		} 
 	}
 }
 pf_nrd_col_1 = {
@@ -734,17 +1232,43 @@ pf_nrd_col_1 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = NRD } 
+	potential = { 
+		OR = {
+			tag = NRD 
+			tag = SKL
+		} 
+	}
 
 	pf_nrd_pushing_inward = {
 		icon = mission_colonize_louisiana
 		position = 11
 		required_missions = { pf_nrd_a_whole_new_world } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_id = 893
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			893 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			has_colonial_nation_trigger = {
+				provinces = 10
+				colonial_region = colonial_louisiana
+				tooltip = nrd_pushing_inward_tt
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			893 = {
+				set_center_level_3_center_of_trade = yes
+			}
+			custom_tooltip = empty_line_tt
+			east_yucatan_area = { add_permanent_claim = ROOT }
+			yucatan_area = { add_permanent_claim = ROOT }
+			guatemala_lowlands_area = { add_permanent_claim = ROOT }
+			campeche_area = { add_permanent_claim = ROOT }
+		} 
 	}
 
 	pf_nrd_uncontested_in_new_world = {
@@ -754,11 +1278,61 @@ pf_nrd_col_1 = {
 			pf_nrd_pushing_inward
 			pf_nrd_fruitful_colonies
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			colonial_region = colonial_eastern_america
+			colonial_region = colonial_canada
+			colonial_region = colonial_louisiana
+			owner = {
+				is_subject = yes
+				NOT = {
+					is_colonial_nation_of = ROOT
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 100
+				OR = {
+					colonial_region = colonial_eastern_america
+					colonial_region = colonial_canada
+					colonial_region = colonial_louisiana
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = nrd_uncontested_in_new_world_tt
+				NOT = {
+					any_province = {			
+						OR = {
+							colonial_region = colonial_eastern_america
+							colonial_region = colonial_canada
+							colonial_region = colonial_louisiana
+						}			
+						owner = {
+							is_subject = yes
+							NOT = {
+								is_colonial_nation_of = ROOT
+							}
+						}
+					}
+				}
+			}
 
-		effect = {  } 
+		} 
+
+		effect = {  
+			define_advisor = {
+				type = trader
+				name = "Vilhjalmr Petrsson"
+				skill = 3
+				cost_multiplier = 0.25
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = nrd_uncontested_in_new_world_modifier
+				duration = -1
+			}
+		} 
 	}
 }
 pf_nrd_col_2 = {
@@ -766,16 +1340,46 @@ pf_nrd_col_2 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = NRD } 
+	potential = { 
+		OR = {
+			tag = NRD 
+			tag = SKL
+		} 
+	}
 
 	pf_nrd_over_the_horizon = {
 		icon = mission_north_sea_empire
 		position = 9
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			any_province = {
+				OR = {
+					 continent = south_america
+					 continent = north_america
+				}
+				has_discovered = ROOT
+			}
+			OR = {
+				has_idea = quest_for_the_new_world
+				num_of_colonists = 1
+				any_country = { is_colonial_nation_of = ROOT }
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			define_explorer = {
+				shock = 3
+				fire = 3
+				manuever = 5
+				name = "Bjorn Ketilsson"
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = nrd_over_the_horizon_modifier
+				duration = 7300
+			}
+		} 
 	}
 
 	pf_nrd_a_whole_new_world = {
@@ -784,9 +1388,20 @@ pf_nrd_col_2 = {
 		required_missions = { pf_nrd_over_the_horizon } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			has_colonial_nation_trigger = {
+				provinces = 10
+				colonial_region = colonial_eastern_america
+				tooltip = a_whole_new_world_tt
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nrd_a_whole_new_world_modifier
+				duration = 7300
+			}
+		} 
 	}
 
 	pf_nrd_fruitful_colonies = {
@@ -795,9 +1410,53 @@ pf_nrd_col_2 = {
 		required_missions = { pf_nrd_a_whole_new_world } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  		
+			has_colonial_nation_trigger = {
+				provinces = 20
+				colonial_region = colonial_canada
+				tooltip = nrd_fruitful_colonies_ca_tt
+			}
+			has_colonial_nation_trigger = {
+				provinces = 20
+				colonial_region = colonial_eastern_america
+				tooltip = nrd_fruitful_colonies_ea_tt
+			}
+			has_colonial_nation_trigger = {
+				provinces = 20
+				colonial_region = colonial_louisiana
+				tooltip = nrd_fruitful_colonies_louisiana_tt
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = nrd_fruitful_colonies_tt
+			tooltip = {
+				add_country_modifier = {
+					name = nrd_fruitful_colonies_modifier
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						is_colonial_nation_of = ROOT
+						OR = {
+							capital_scope = { colonial_region = colonial_canada }
+							capital_scope = { colonial_region = colonial_eastern_america }
+							capital_scope = { colonial_region = colonial_louisiana }
+						}
+					}
+					add_country_modifier = {
+						name = nrd_fruitful_colonies_modifier
+						duration = 7300
+					}
+				}
+			}
+			add_country_modifier = {
+				name = nrd_fruitful_colonies_modifier2
+				duration = 7300
+			}
+		} 
 	}
 }
 pf_nrd_col_3 = {
@@ -805,39 +1464,115 @@ pf_nrd_col_3 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = NRD } 
+	potential = { 
+		OR = {
+			tag = NRD 
+			tag = SKL
+		} 
+	}
 
 	pf_nrd_colonial_ambitions = {
 		icon = mission_colonial
 		position = 10
 		required_missions = { pf_nrd_over_the_horizon } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			NOT = {
+				new_world_i = 100
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			all_owned_province = {
+				new_world_i = 100
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nrd_colonial_ambitions_modifier
+				duration = 7300
+			}
+		} 
 	}
 
 	pf_nrd_the_land_of_cocoa = {
 		icon = mission_brazilian_bandeirantes
 		position = 11
 		required_missions = { pf_nrd_a_whole_new_world } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				trade_goods = cocoa
+				trade_goods = coffee
+			}
+			owner = {
+				OR = {
+					is_colonial_nation_of = ROOT
+					tag = ROOT
+				}
+			}
+			has_production_building_trigger = no
 
-		trigger = {  } 
+		} 
 
-		effect = {  } 
+		trigger = {  	
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					trade_goods = coffee
+					trade_goods = cocoa
+				}
+				has_production_building_trigger = yes
+			}
+
+		} 
+
+		effect = {  
+			country_event = {
+				id = nrd_flavor_events.2
+			}
+		} 
 	}
 
 	pf_nrd_invest_in_plantations = {
 		icon = mission_expand_into_the_forest
 		position = 1
 		required_missions = { pf_nrd_the_land_of_cocoa } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				trade_goods = cocoa
+				trade_goods = coffee
+			}
+			owner = {
+				OR = {
+					is_colonial_nation_of = ROOT
+					tag = ROOT
+				}
+			}
+			has_manufactory_trigger = no
+		}
 
-		trigger = {  } 
+		trigger = {  		
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				OR = {
+					trade_goods = coffee
+					trade_goods = cocoa
+				}
+				has_manufactory_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_prestige_or_monarch_power = {
+				amount = 50
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = nrd_invest_in_plantation_modifier
+				duration = -1
+			}
+		} 
 	}
 }
 pf_nrd_col_4 = {
@@ -845,27 +1580,81 @@ pf_nrd_col_4 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = NRD } 
+	potential = { 
+		OR = {
+			tag = NRD 
+			tag = SKL
+		} 
+	}
 
 	pf_nrd_the_land_of_guinea = {
 		icon = mission_colonise_brazil
 		position = 11
 		required_missions = { pf_nrd_a_whole_new_world } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			region = guinea_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 10
+				region = guinea_region
+				is_owned_by_trade_company = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			custom_tooltip = empty_line_tt
+			create_conquistador = { tradition = 75 }
+			custom_tooltip = empty_line_tt
+			guinea_region = {
+				add_permanent_claim = ROOT
+			}
+			niger_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_nrd_approach_the_interior = {
 		icon = mission_west_african_ports
 		position = 12
 		required_missions = { pf_nrd_the_land_of_guinea } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			region = niger_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 20
+				region = niger_region
+				is_owned_by_trade_company = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			distribute_base_dev_to_provinces = {
+				num = 20
+				amount = 1
+				trigger = "
+					region = niger_region
+					is_owned_by_trade_company = yes
+				"
+				type = production
+				tooltip = nrd_approach_the_interior_tt
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = nrd_approach_the_interior_modifier
+				duration = -1
+			}
+		} 
 	}
 }

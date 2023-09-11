@@ -620,6 +620,7 @@ war_taxes = {
 stability = {
 	global_trade_power = 0.01			#1% chance each step.
 	global_spy_defence = 0.05				#-15 to +15% modifier
+	monthly_trn_cohesion = 0.5
 }
 
 positive_stability = {
@@ -777,6 +778,7 @@ war_exhaustion = {
 	siege_ability = -0.01
 	global_trade_goods_size_modifier = -0.02
 	monthly_militarized_society = -0.05
+	monthly_trn_cohesion = -0.05
 }
 
 doom = {
@@ -976,6 +978,7 @@ legitimacy = {
 	monthly_militarized_society = 0.05
 	max_absolutism = 20
 	nobles_loyalty_modifier = 0.1
+	monthly_trn_cohesion = 1
 }
 
 #Multiplied by current Horde Unity - 50
@@ -1039,6 +1042,7 @@ corruption = {
 	janissaries_loyalty_modifier = 0.1
 	eunuchs_loyalty_modifier = 0.1
 	monthly_heir_claim_increase = 0.025
+	monthly_trn_cohesion = -50
 }
 
 root_out_corruption = {
@@ -1341,6 +1345,7 @@ power_projection = {
 	devotion = 0.5
 	horde_unity = 0.5
 	republican_tradition = 0.2
+	monthly_trn_cohesion = 1
 }
 
 power_projection_25 = {
@@ -2094,6 +2099,7 @@ over_governing_capacity_modifier = {
 	monthly_prussian_militarized_society_2 = -1
 	monthly_prussian_militarized_society_3 = -1
 	administrative_efficiency = -0.5
+	monthly_trn_cohesion = -5
 }
 
 # At 1000% below capacity, this modifier will be fully used
@@ -2160,12 +2166,15 @@ num_accepted_cultures = {
 }
 
 ruler_adm = {
+		monthly_trn_cohesion = 0.10
 }
 
 ruler_dip = {
+		monthly_trn_cohesion = 0.10
 }
 
 ruler_mil = {
+		monthly_trn_cohesion = 0.10
 }
 
 heir_adm = {
@@ -2246,6 +2255,7 @@ reverse_average_subject_liberty_desire = { #100% LD => 0% modifier
 }
 
 average_global_autonomy = { #100% autonomy => 100% modifier
+	monthly_trn_cohesion = -5
 }
 
 reverse_average_global_autonomy = { #100% autonomy => 0% modifier

@@ -145,7 +145,7 @@ seat_of_the_archon = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			estate_church_privilege_slots = 1
+			church_privilege_slots = 1
 		}
 	}
 }
@@ -677,11 +677,15 @@ great_cothon = {
 	type = monument
 	build_trigger = {
 		owner = {
-		    OR = {
-		        tag = CAR
-		        primary_culture = punic_culture
+		    OR = {
+
+		        tag = CAR
+
+		        primary_culture = punic_culture
+
 		        accepted_culture = punic_culture
-		        has_country_flag = car_build_great_cothon_flag
+		        has_country_flag = car_build_great_cothon_flag
+
 		    }
 		}
 	}
@@ -689,21 +693,29 @@ great_cothon = {
 	on_destroyed = {}
 	can_use_modifiers_trigger = {
 		owner = {
-		    OR = {
-		        tag = CAR
-		        primary_culture = punic_culture
+		    OR = {
+
+		        tag = CAR
+
+		        primary_culture = punic_culture
+
 		        accepted_culture = punic_culture
-		        has_country_flag = car_build_great_cothon_flag
+		        has_country_flag = car_build_great_cothon_flag
+
 		    }
 		}
 	}
 	can_upgrade_trigger = {
 		owner = {
-		    OR = {
-		        tag = CAR
-		        primary_culture = punic_culture
+		    OR = {
+
+		        tag = CAR
+
+		        primary_culture = punic_culture
+
 		        accepted_culture = punic_culture
-		        has_country_flag = car_build_great_cothon_flag
+		        has_country_flag = car_build_great_cothon_flag
+
 		    }
 		}
 	}
