@@ -28,22 +28,19 @@ country_decisions = {
 		allow = {
 			religion = druidic
 			NOT = {
-				any_owned_province = {
-					has_province_modifier = local_wicker_man
-				}
+				has_country_modifier = local_wicker_man
 			}
-			mil_power = 50
+			mil_power = 100
 			rebel_progress_at_least = { value = 10 }
 		}
 		effect = {
+			add_mil_power = -100
 			add_rebel_progress = {
 				value = -30
 			}
-			random_owned_province = {
-				add_province_modifier = {
-					name = "local_wicker_man"
-					duration = 1825
-				}
+			add_country_modifier = {
+				name = "local_wicker_man"
+				duration = 1825
 			}
 			set_country_flag = done_druidic_wicker_man
 		}

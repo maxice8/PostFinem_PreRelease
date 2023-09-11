@@ -538,6 +538,11 @@ country_event = {		# Help from the Druids
 			name = "pf_trn_druid_help_1"
 			duration = 9125
 		}
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = 20
+		}
 	}
 	option = {	
 		name = "pf_trn.10.b"
@@ -545,12 +550,22 @@ country_event = {		# Help from the Druids
 			name = "pf_trn_druid_help_2"
 			duration = 9125
 		}
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = 20
+		}
 	}
 	option = {	
 		name = "pf_trn.10.c"
 		add_country_modifier = {
 			name = "pf_trn_druid_help_3"
 			duration = 9125
+		}
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = 20
 		}
 	}
 	option = {	
@@ -605,5 +620,37 @@ country_event = {		# The Future of the Daughters
 		set_country_flag = allow_upgraded_daughters_of_boudicca
 		custom_tooltip = pf_trn_future_of_the_daughters_2_tt
 		add_army_professionalism = 0.05
+	}
+}
+
+country_event = {		# The Magic of the Druids
+	id = pf_trn.13
+	title = pf_trn.13.t
+	desc = pf_trn.13.d
+	picture = FORESTS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {	
+		name = "pf_trn.13.a"
+		custom_tooltip = pf_trn_will_influence_future_missions_tt
+		custom_tooltip = pf_trn_looking_to_the_future_tt
+		set_country_flag = pf_trn_anti_druid
+		add_country_modifier = {
+			name = "pf_trn_looking_to_the_future"
+			duration = 9125
+		}
+		swap_non_generic_missions = yes
+	}
+	option = {	
+		name = "pf_trn.13.b"
+		custom_tooltip = pf_trn_will_influence_future_missions_tt
+		custom_tooltip = pf_trn_looking_to_the_past_tt
+		set_country_flag = pf_trn_pro_druid
+		add_country_modifier = {
+			name = "pf_trn_looking_to_the_past"
+			duration = 9125
+		}
+		swap_non_generic_missions = yes
 	}
 }

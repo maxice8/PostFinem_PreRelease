@@ -27,9 +27,15 @@ pf_trn_1 = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-			estate_loyalty = {
-				estate = estate_church
-				loyalty = 60
+			OR = {
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
+				num_of_estate_privileges = {
+					estate = estate_church
+					value = 4
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = pf_trn_done_ritual_or_wicker_man_tt
@@ -46,6 +52,143 @@ pf_trn_1 = {
 		}
 		effect = {
 			country_event = { id = pf_trn.10 }
+			custom_tooltip = empty_line_tt
+			add_patriarch_authority = 0.05
+		}
+	}
+	pf_trn_magi_and_mystics = {
+		icon = mission_norse_faith
+		position = 4
+		required_missions = { pf_trn_appease_the_druids } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 6
+				has_tax_building_trigger = yes
+			}
+			has_adm_advisor = yes
+			has_dip_advisor = yes
+			has_mil_advisor = yes
+			prestige = 60
+		}
+		effect = {
+			country_event = { id = pf_trn.13 }
+		}
+	}
+}
+pf_trn_1_locked_druid_path = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = TRN
+		NOT = { has_country_flag = pf_trn_anti_druid }
+		NOT = { has_country_flag = pf_trn_pro_druid }
+	}
+
+	pf_trn_locked_druid_path_1 = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = { pf_trn_magi_and_mystics } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mission_not_unlocked_tt
+		}
+	}
+}
+pf_trn_1_anti_druid_path = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = TRN
+		has_country_flag = pf_trn_anti_druid
+	}
+
+	pf_trn_reach_out = {
+		icon = mission_develop_kiev
+		position = 6
+		required_missions = { pf_trn_magi_and_mystics } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			NOT = {
+				any_neighbor_country = {
+					tech_difference = 1
+				}
+			}
+			OR = {
+				full_idea_group = humanist_ideas
+				calc_true_if = {
+					all_country = {
+						has_opinion = {
+							who = ROOT
+							value = 80
+						}
+						NOT = { religion = druidic }
+					}
+					amount = 3
+				}
+			}
+			diplomatic_reputation = 3
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_trn_knowledge_of_the_world"
+				duration = 9125
+			}
+			define_advisor = {
+				type = theologian
+				skill = 3
+				cost_multiplier = 0.25
+			}
+		}
+	}
+}
+pf_trn_1_pro_druid_path = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = TRN
+		has_country_flag = pf_trn_pro_druid
+	}
+
+	pf_trn_religious_revolution = {
+		icon = mission_devastate_christianity
+		position = 6
+		required_missions = { pf_trn_magi_and_mystics } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			stability = 3
+			inquistor = 2
+			OR = {
+				tolerance_to_this = 7
+				patriarch_authority = 0.25
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_trn_rush_of_new_druids"
+				duration = 9125
+			}
+			define_advisor = {
+				type = inquisitor
+				skill = 3
+				cost_multiplier = 0.25
+			}
 		}
 	}
 }
@@ -189,6 +332,54 @@ pf_trn_2 = {
 			}
 		}
 	}
+
+	pf_trn_merchant_adventurers = {
+		icon = mission_modernized_vikings
+		position = 5
+		required_missions = { pf_trn_magi_and_mystics } 
+		provinces_to_highlight = {
+			province_id = 1266	# North Sea
+		}
+		trigger = {
+			1266 = {
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 3
+				has_trade_building_trigger = yes
+			}
+			owns = 1860
+		}
+		effect = {
+			1860 = {
+				center_of_trade = 1
+			}
+			custom_tooltip = empty_line_tt
+			add_dip_power = 50
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_trn_merchant_adventurers_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_trade_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = "pf_trn_booming_trade_town"
+						duration = 9125
+					}
+				}
+			}
+			tooltip = {
+				add_province_modifier = {
+					name = "pf_trn_booming_trade_town"
+					duration = 9125
+				}
+			}
+		}
+	}
 }
 pf_trn_3 = {
 	slot = 3
@@ -293,6 +484,135 @@ pf_trn_3 = {
 			}
 		}
 	}
+	pf_trn_gaelic_war = {
+		icon = mission_plc_lifetime_of_war
+		position = 4
+		required_missions = { pf_trn_awaken_the_britons pf_trn_a_new_outlook pf_trn_stormlander_fleet } 
+		provinces_to_highlight = {
+			owner = { tag = CEL }
+			is_capital = yes
+		}
+		trigger = {
+			OR = {
+				war_with = CEL
+				has_won_war_against = {
+					who = CEL
+					max_years_since = 100
+				}
+			}
+		}
+		effect = {
+			home_counties_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			wessex_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_midlands_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_midlands_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			yorkshire_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			scottish_marches_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			wales_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	pf_trn_defeat_celtica = {
+		icon = mission_war_for_the_crown
+		position = 5
+		required_missions = { pf_trn_gaelic_war } 
+		provinces_to_highlight = {
+			owner = { tag = CEL }
+			is_capital = yes
+		}
+		trigger = {
+			OR = {
+				NOT = { exists = CEL }
+				has_won_war_against = {
+					who = CEL
+					max_years_since = 100
+				}
+			}
+			grown_by_development = 15
+			calc_true_if = {
+				all_province = {
+					culture = briton
+					owned_by = ROOT
+				}
+				amount = 12
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_trn_defeated_celtica"
+				duration = 9125
+			}
+			add_prestige = 25
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_trn_defeat_celtic_extra_reward_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = trn_no_druid_support
+					}
+					change_adm = 1
+					change_dip = 1
+					change_mil = 1
+					add_government_power = {
+						mechanic_type = trinovantes_cohesion_mechanic
+						power_type = trn_cohesion
+						value = 50
+					}
+				}
+			}
+			tooltip = {
+				change_adm = 1
+				change_dip = 1
+				change_mil = 1
+				add_government_power = {
+					mechanic_type = trinovantes_cohesion_mechanic
+					power_type = trn_cohesion
+					value = 50
+				}
+			}
+		}
+	}
 }
 pf_trn_4 = {
 	slot = 4
@@ -361,6 +681,85 @@ pf_trn_4 = {
 			tooltip = {
 				add_mil_power = 75
 			}
+		}
+	}
+	pf_trn_stormlander_fleet = {
+		icon = mission_sailor_boat
+		position = 3
+		required_missions = { pf_trn_the_gaelic_menace } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			navy_size_percentage = 1
+			OR = {
+				num_of_heavy_ship = 1
+				num_of_galley = 4
+			}
+			num_of_ports = 3
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_trn_launch_the_stormlander_fleet"
+				duration = 7300
+			}
+			add_navy_tradition = 20
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_trn_stormlander_fleet_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						naval_reformer = 1
+					}
+					create_admiral = {
+						tradition = 75
+					}
+				}
+			}
+			tooltip = {
+				create_admiral = {
+					tradition = 75
+				}
+			}
+		}
+	}
+	pf_trn_the_folk_council = {
+		icon = mission_livonian_intervention
+		position = 5
+		required_missions = { pf_trn_reform_the_confederation } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 40
+				}
+			}
+			OR = {
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 60
+				}
+				NOT = {
+					num_of_estate_privileges = {
+						estate = estate_nobles
+						value = 2
+					}
+				}
+			}
+			OR = {
+				ruler_total_stats = {
+					stats = 12
+				}
+				innovativeness = 30
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_trn_folk_council"
+				duration = -1
+			}
+			change_innovativeness = 5
 		}
 	}
 }
@@ -453,6 +852,59 @@ pf_trn_5 = {
 						duration = 10950
 					}
 				}
+			}
+		}
+	}
+
+	pf_trn_ouroboros_oath = {
+		icon = mission_pol_polish_renaissance
+		position = 3
+		required_missions = { pf_trn_the_oaken_five } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				has_reform = pf_guidance_of_the_elders_reform
+				has_reform_on_level = 2
+			}
+			has_government_power = {
+				mechanic_type = trinovantes_cohesion_mechanic
+				power_type = trn_cohesion
+				value = 50
+			}
+			legitimacy = 100
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_trn_ouroboros_oath_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	pf_trn_reform_the_confederation = {
+		icon = mission_the_polish_throne
+		position = 4
+		required_missions = { pf_trn_ouroboros_oath } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			monthly_adm = 10
+			NOT = { corruption = 0.1 }
+			total_development = 120
+			OR = {
+				has_reform_on_level = 4
+				has_adm_advisor_3 = yes
+			}
+		}
+		effect = {
+			change_government_reform_progress = 25
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_trn_reformed_confederation"
+				duration = 9125
 			}
 		}
 	}

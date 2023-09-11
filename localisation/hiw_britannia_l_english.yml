@@ -143,6 +143,16 @@ pf_trn_future_of_the_daughters_1_tt: "§RWe will no longer be able to hire the �
 pf_trn_future_of_the_daughters_2_tt: "We will unlock an upgraded version of the §YDaughters of Boudicca§! that will be available to hire."
 pf_trn_integrate_daughters_of_boudicca: "The Daughters of Boudicca Regiment"
 
+pf_trn.13.t: "The Magic of the Druids"
+pf_trn.13.d: "The druids have always been associated with magic and mystic actions. From their earliest days, they were said to be able to cast spells that would create a 'fence of protection' around armies, raise ferocious storms to hinder invading armies, and predict the future with remarkable accuracy. Most of these powers are now thought to be little more than myths created by our excited ancestors. While the druids certainly have profound influence with the gods and nature, they are no more wizards than the rest of us. A few old folk hang on to these beliefs however, and swear they saw their long dead relatives practices benign magic. This is clearly nothing but baseless superstition, but there is a certain part of the mind of every one of us that wants it to be true..."
+pf_trn.13.a: "We must look to the future, not to the past."
+pf_trn.13.b: "Our traditions mean more than anything to us."
+pf_trn_will_influence_future_missions_tt: "§OChoosing this option will influence our future missions.§!"
+pf_trn_looking_to_the_future_tt: "This will lead us down a path of modernisation and secularism."
+pf_trn_looking_to_the_past_tt: "This will lead us down a path of authority and magic."
+pf_trn_looking_to_the_future: "Looking to the Future"
+pf_trn_looking_to_the_past: "Looking to the Past"
+
 ###########
 # Decision
 ###########
@@ -184,6 +194,24 @@ pf_trn_appease_the_druids_title: "Appease the Druids"
 pf_trn_appease_the_druids_desc: "The Druids are essential to everyday life in Albion. Their ceremonies dictate the passing of the year, their prophecies decide the extent of the harvest and our military victories, and their members are key advisors to the Council of Elders. They could always be more help to us, however, if we can convince them."
 pf_trn_done_ritual_or_wicker_man_tt: "Performed either a §YDruidic Ritual§! or burned a §YWicker Man§!."
 
+pf_trn_magi_and_mystics_title: "Magi and Mystics"
+pf_trn_magi_and_mystics_desc: "The world is changing, and with it so to is the role of the druids. Once, they were revered as mighty wielders of magical powers, our only connection between the Earth and the gods. Now, they are more a body of clergy than wizards. What will the future bring for these declining druids?"
+mission_not_unlocked_tt: "This mission has not been unlocked yet so you cannot see its effects."
+pf_trn_locked_druid_path_1_title: "Locked Mission"
+pf_trn_locked_druid_path_1_desc: "This mission requires a previous mission to be complete to unlock."
+
+######
+
+pf_trn_reach_out_title: "Open to the World"
+pf_trn_reach_out_desc: "As we move past our old restrictive traditions, it is becoming more advantageous to us to open ourselves to the outside world for guidance. There are many nations that are remarkably technologically advanced compared to us. Though we may be vulerable to their whims, if we can establish good relations with them, there may be a chance of gaining some useful knowledge."
+pf_trn_knowledge_of_the_world: "Knowledge of the World"
+
+######
+
+pf_trn_religious_revolution_title: "Druidic Revolution"
+pf_trn_religious_revolution_desc: "As our country readily embraces the druids and their religious orders, it is becoming clear that our current system is not well equiped to cope with close cooperation with the clergy. The old institution that kept our noble druid brothers and sisters out for so long must be torn up and rewritten."
+pf_trn_rush_of_new_druids: "Rush of New Druids"
+
 #
 
 pf_trn_build_army_title: "Take Up Arms"
@@ -196,6 +224,11 @@ pf_trn_awaken_the_britons_desc: "For too long our brethen have lived under the f
 pf_trn_awaken_the_britons_tt: "If we complete this mission by §Yspying§!, the follow effect will occur to all §Ynon-owned Brittonic§! provinces:"
 pf_trn_awaken_the_britons_1_tt: "Otherwise, the follow effect will occur to §Yowned Brittonic provinces§!:"
 pf_trn_brittonic_nationalism_local: "Brittonic Nationalism"
+
+pf_trn_merchant_adventurers_title: "Merchant Adventurers"
+pf_trn_merchant_adventurers_desc: "The North Sea has been a hub of trade for centuries, and was once one of the richest regions in the world as a result. The recent surge in nefarious activities by the Northmen has severely hampered this wealth however, and left control over the local trades to whomever is strongest. Our merchants push towards Scandinavia in search of good deals, and with them, they will carry the banner of the Confederation, so that the foreigners may know who we are and that we mean business."
+pf_trn_booming_trade_town: "Booming Trade Town"
+pf_trn_merchant_adventurers_tt: "Every owned province with a §Ytrade building§! will get the following effect:"
 
 #
 
@@ -213,6 +246,14 @@ pf_trn_a_new_outlook_tt: "If we complete this mission by §Yconstructing a fort�
 pf_trn_a_new_outlook_1_tt: "Otherwise, the follow effect will occur:"
 pf_trn_brittonic_bastion: "Brittonic Bastion"
 
+pf_trn_gaelic_war_title: "The Gaelic War"
+pf_trn_gaelic_war_desc: "The time has come to launch our attack against the Celtic Tyranny. In this righteous war, the Britons of the land are sure to join us in open rebellion, so that we can throw out the disgusting Gaels at last! Forward, march!"
+
+pf_trn_defeat_celtica_title: "Triumph Over Celtica"
+pf_trn_defeat_celtica_desc: "Our campaigns have proven victories, and our armies triumphant. The Celtic Tyranny is defeated! Hail the Confederation!"
+pf_trn_defeated_celtica: "Defeated Celtica"
+pf_trn_defeat_celtic_extra_reward_tt: "If we complete this mission while having decided §Ynot to accept help from the Druids§! in the §YAppease the Druids§! Mission, the following effect will occur:"
+
 #
 
 pf_trn_the_gaelic_menace_title: "The Gaelic Menace"
@@ -220,12 +261,29 @@ pf_trn_the_gaelic_menace_desc: "The Gaels of Celtica have been a thorn in the si
 pf_trn_great_gaelic_war: "The Great Gaelic War"
 pf_trn_great_gaelic_war_tt: "If we complete this mission while having at least §Y25 Power Projection§!, the following effect will occur:"
 
+pf_trn_stormlander_fleet_title: "Stormlander Fleet"
+pf_trn_stormlander_fleet_desc: "Even if defeated in Albion, the vile Celts would simply cross back over the Irish Sea to their wallows where they think we cannot get them. Behind their mud houses and wooden walls, they believe themselves safe. We must construct a new fleet, one brave enough to weather the stormiest seas, to land our brave men and women on the shores of Gaelland and bring down their empire once and for all."
+pf_trn_stormlander_fleet_tt: "If we complete this misison while having a §YNaval Reformer§! advisor employed, the following effect will occur:"
+pf_trn_launch_the_stormlander_fleet: "Launching the Stormlander Fleet"
+
+pf_trn_the_folk_council_title: "The Folk Council"
+pf_trn_the_folk_council_desc: "The Council of Elders has held supreme power over the Confederation for too long. It was their indecisive and passive nature that led to Celtica taking over as much land as it did, a situation that was only rectified when the common people of the realm stepped forward for service. Like the winds, the times are changing. Let us reduce the Council of Elders to a more ceremonial position, and create a new 'Folk Council' made up of free commonfolk to debate and introduce laws and policies."
+pf_trn_folk_council: "The Folk Council"
+
 #
 
 pf_trn_the_oaken_five_title: "The Oaken Five"
 pf_trn_the_oaken_five_desc: "Long ago, the five most powerful tribes of the east, the Trinovantes, the Iceni, the Regni, the Cantiaci, and the Catuvellauni, came together and signed a treaty of eternal cooperation. Their leaders met underneath a great oak tree on the outskirts of Uenta Icenorum, giving the alliance its informal name - the Oaken Five. Will the alliance stand together in this moment of flux, or will the petty disputes between the tribes finally break that oath?"
 pf_trn_oaken_five_alliance: "Alliance of the Oaken Five"
 pf_trn_the_oaken_five_tt: "If we complete this mission while having at least §Y25 Cohesion§!, the duration of the modifier will be §Gdoubled§!."
+
+pf_trn_ouroboros_oath_title: "Ouroboros Oath"
+pf_trn_ouroboros_oath_desc: "The Ouroboros is the symbol of our Confederation. The snake eating its own tail represents the cycladic nature of life, showing birth and death as but inevitable parts of the world. Inspired by this image, let us introduce a new oath for chiefs of the tribes to take upon ascension. They will swear loyalty to the Confederation for eternity, and even death will not nullify their promise."
+pf_trn_ouroboros_oath_modifier: "The Ouroboros Oath"
+
+pf_trn_reform_the_confederation_title: "Reform the Confederation"
+pf_trn_reform_the_confederation_desc: "Recent victories and successfull economic policies have greatly increased the amount of people and settlements the Confederate government has to manage, and it is clear that this burden is growing too much too quickly. We must enact sweeping reforms to clean up any corruption in the Council, streamline our administration, and introduce more meritocratic recruitment for minor governmental roles."
+pf_trn_reformed_confederation: "Reformed the Confederation"
 
 pf_trn_daughters_of_boudicca_title: "Daughters of Boudicca"
 pf_trn_daughters_of_boudicca_desc: "Boudicca is a legendary heroine of the Iceni tribe, who led her people to regional domination many years ago. Spurred on by the mistreatment of her and her daughters by the invasive Trinovantes after the death of her husband, Boudicca led a campaign of conquest and revenge that took her across Albion, establishing Iceni dominion where ever she went. While her empire collapsed quickly after her death, the tales of her deeds are yet to die - many generations of Iceni warriors have looked to her as the guiding hand behind their victories, with some even offering sacrifices to appease her still-living spirit. A group of women, who would traditionally have been reserved for domestic life, known as the 'Daughters of Boudicca', claim to be her descendants, and continue to practice her battle techniques and preach of her righteous conquest. The Daughters are some of the most well trained and skilled fighters in all the land - let us offer them some money for their service."

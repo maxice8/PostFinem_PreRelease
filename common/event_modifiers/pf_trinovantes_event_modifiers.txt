@@ -52,7 +52,51 @@ performed_druidic_ritual = {
 	missionary_maintenance_cost = 0.33
 }
 local_wicker_man = {
-	local_unrest = -2
-	local_autonomy = -0.05
-	local_production_efficiency = -0.10
+	global_unrest = -1
+	global_autonomy = -0.05
+	production_efficiency = -0.10
+}
+pf_trn_launch_the_stormlander_fleet = {
+	regiment_disembark_speed = 0.50
+	landing_penalty = -1
+	movement_speed_in_fleet_modifier = 0.50
+}
+pf_trn_ouroboros_oath_modifier = {
+	max_absolutism = 5
+	autonomy_change_time = -0.20
+}
+pf_trn_defeated_celtica = {
+	land_morale = 0.10
+	prestige = 1
+}
+pf_trn_reformed_confederation = {
+	advisor_cost = -0.15
+	core_creation = -0.05
+}
+pf_trn_folk_council = {
+	unjustified_demands = -0.15
+	diplomatic_reputation = 1
+	nobles_influence_modifier = -0.10
+}
+pf_trn_looking_to_the_future = {
+	global_institution_spread = 0.20
+	idea_cost = -0.10
+}
+pf_trn_looking_to_the_past = {
+	global_missionary_strength = 0.02
+	legitimacy = 1
+}
+pf_trn_booming_trade_town = {
+	province_trade_power_modifier = 0.25
+	local_production_efficiency = 0.15
+	local_development_cost = -0.05
+}
+pf_trn_knowledge_of_the_world = {
+	dip_tech_cost_modifier = -0.10
+	reform_progress_growth = 0.25
+}
+pf_trn_rush_of_new_druids = {
+	missionaries = 1
+	church_loyalty_modifier = 0.10
+	monthly_splendor = 2
 }
