@@ -91,6 +91,7 @@ country_event = {
 	trigger = {
 		tag = NRD
 		has_ruler = "Knut Ulriksson"
+		has_heir = no
 	}
 
 	fire_only_once = yes
@@ -101,8 +102,19 @@ country_event = {
 	option = {
 		name = nrd_flavor_events.2.a
 		ai_chance = { factor = 1 }
-		
 		set_country_flag = knut_ulriksson_maidenless_flag
+		custom_tooltip = knut_ulriksson_maidenless_tt
+		custom_tooltip = empty_line_tt
+		add_opinion = {
+			who = NOR
+			modifier = ulriksson_brothers_opinion
+		}
+		hidden_effect = {
+			reverse_add_opinion = {
+				who = NOR
+				modifier = ulriksson_brothers_opinion
+			}
+		}
 	}
 }
 
