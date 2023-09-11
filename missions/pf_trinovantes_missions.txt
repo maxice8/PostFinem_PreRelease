@@ -211,7 +211,7 @@ pf_trn_3 = {
 	pf_trn_a_new_outlook = {
 		icon = mission_castle_construction
 		position = 3
-		required_missions = { pf_trn_build_army } 
+		required_missions = { pf_trn_build_army pf_trn_the_gaelic_menace } 
 		provinces_to_highlight = {
 			province_id = 4370	# Cair Grauth
 			OR = {
@@ -285,6 +285,136 @@ pf_trn_3 = {
 					}
 				}
 			}
+		}
+	}
+}
+pf_trn_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = TRN
+	}
+
+	pf_trn_the_gaelic_menace = {
+		icon = mission_rb_conquer_the_highlands
+		position = 2
+		required_missions = { pf_trn_ricatus_legacy } 
+		provinces_to_highlight = {
+			owner = { tag = CEL }
+			is_capital = yes
+		}
+		trigger = {
+			if = {
+				limit = {
+					exists = CEL
+				}
+				AND = {
+					OR = {
+						is_rival = CEL
+						CEL = {
+							NOT = { total_development = 80 }
+						}
+					}
+					CEL = {
+						custom_trigger_tooltip = {
+							tooltip = has_been_insulted_by_root
+							OR = {
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = insulted
+								}
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = scornfully_insulted
+								}
+							}
+						}
+					}
+				}
+			}
+			else = {
+				power_projection = 25
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_trn_great_gaelic_war"
+				duration = 7300
+			}
+			custom_tooltip = pf_trn_great_gaelic_war_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						power_projection = 25
+					}
+					add_mil_power = 75
+				}
+			}
+			tooltip = {
+				add_mil_power = 75
+			}
+		}
+	}
+}
+pf_trn_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = TRN
+	}
+
+	pf_trn_daughters_of_boudicca = {
+		icon = mission_che_the_beloved_woman
+		position = 1
+		required_missions = { } 
+		provinces_to_highlight = {
+			province_id = 1860
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { num_of_times_improved_by_owner = 5 }
+			}
+		}
+		trigger = {
+			owns = 1860
+			1860 = {
+				num_of_times_improved_by_owner = 5
+			}
+			army_tradition = 40
+			OR = {
+				army_reformer = 1
+				army_organiser = 1
+			}
+		}
+		effect = {
+			add_army_professionalism = 0.02
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_trn_daughters_of_boudicca_mercs_tt
+			set_country_flag = allow_daughters_of_boudicca
+		}
+	}
+	pf_trn_the_blood_between_us = {
+		icon = mission_united_knight_order
+		position = 2
+		required_missions = { pf_trn_daughters_of_boudicca } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = pf_trn_the_blood_between_us_trigger_tt
+				check_variable = {
+					which = BoudiccaBattlesWon
+					value = 25
+				}
+			}
+		}
+		effect = {
+			country_event = { id = pf_trn.12 }
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_trn_the_blood_between_us_tt
 		}
 	}
 }

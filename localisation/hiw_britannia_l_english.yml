@@ -130,6 +130,19 @@ pf_trn_druid_help_1: "Druid War Support"
 pf_trn_druid_help_2: "Druid War Support"
 pf_trn_druid_help_3: "Druid War Support"
 
+pf_trn.11.t: "The Celtic Tyranny"
+pf_trn.11.d: "Long ago, the peoples of Albion lived in harmony. Wars and petty tribal conflicts had plagued the island for centuries, but peace had at last arrived on its sightly golden chariot. Old grudges were set aside, and agreement of mutual defence were made. Peoples who had for centuries lived in competition with one another now lived in bliss.\n\nEverything changed when the Gaels attacked. They entered these isles just like their ancestors did - accompanied by hoards of bowmen and savage thugs. This time, however, they had not come just to raid - they had come to conquer. The tribes of Celtica had been united by force only a few years prior, creating a new power in the region with resources and warriors in amounts no other tribe had seen before. They turned this new war machine against our fair island, and laid siege to its extremeties.\n\nThe peoples of the north stood no chance - too busy with their own squabbling, the Pictish tribes fell one by one. The people of north and south Cymry too, divided they fell. In the east, where the most ancient of the tribes of the Celtic Isles dwelt, that peaceful orchard among a flaming forest, they felt the harded resistance. Despite the best efforts of the alliances of bold and mighty kings and their druids, much of Albion was placed under the boot of Celtica and set ablaze. Facing certain doom otherwise, the tribes of the far east, known to history as the Oaken Five, formed a confederation between their leaderships, and placed their combined armies at the whim of a joint Council of Elders. They successfully mounted a defence of the frontiers along the Thames river, and scored a decisive victory at the battle of Camulodunon, forcing the Gaelic dragon out of Confederate lands.\n\nIn the years since this victory, the Confederation has prospered through mutual cooperation and the sharing of resources, maintaining its independence even as the new threat of Nordic invaders loomed on the horizon. In contrast, the subjugated Britons, now forced to pay yearly tribute to the Lord of Celtica, wallowed in their misery with each passing season. Their wifes were taken, their leaders executed, and now even their harvests were not fully theirs. While at night they dreamed of independence, by day the served like a faithful hound before its master. The Confederation is the last hope for these down-trodden people. By force of might, we must overthrow this Celtic Tyranny and liberate our brothers and sisters!"
+pf_trn.11.a: "Now we just need a plan!"
+pf_trn_celtic_tyranny_tt: "The ambitions of the younger chiefs grow, while the elders still play their games of truces and diplomacy..."
+
+pf_trn.12.t: "Like Mother, Like Daughter"
+pf_trn.12.d: "The Daughters of Boudicca have performed well for us on the battlefield, scoring many key victories and greatly assisting our efforts to put down rebellions. For their service, they have been rewarded handsomely with shares of the war booty and extra payment upon their return to their villages. Such is the extent of their success, however, that many in our military establishment long for them to be a formal part of the growing Confederate Army. We could then use their skills whenever we need, and at potentially much lower prices. On the other hand, there are many, particularly amongst the Daughters themselves, that they should retain their independence, running through the wilds with sword in hand beholden to know government without a contract. What will be their future?"
+pf_trn.12.a: "Integrate them into our standing army."
+pf_trn.12.b: "Let the Daughters retain their freedom."
+pf_trn_future_of_the_daughters_1_tt: "§RWe will no longer be able to hire the §YDaughters of Boudicca§!.§!"
+pf_trn_future_of_the_daughters_2_tt: "We will unlock an upgraded version of the §YDaughters of Boudicca§! that will be available to hire."
+pf_trn_integrate_daughters_of_boudicca: "The Daughters of Boudicca Regiment"
+
 ###########
 # Custom loc
 ###########
@@ -186,3 +199,23 @@ pf_trn_a_new_outlook_desc: "The age of diplomacy is over. With Ricatus gone, the
 pf_trn_a_new_outlook_tt: "If we complete this mission by §Yconstructing a fort§! in [4370.GetName], the follow effect will occur:"
 pf_trn_a_new_outlook_1_tt: "Otherwise, the follow effect will occur:"
 pf_trn_brittonic_bastion: "Brittonic Bastion"
+
+#
+
+pf_trn_the_gaelic_menace_title: "The Gaelic Menace"
+pf_trn_the_gaelic_menace_desc: "The Gaels of Celtica have been a thorn in the side of peace in Albion for many years. While we may have succeeded in stopping them from conquering us in the short term, our long term survival looks ever more shaky. We must decide on a path to confront them, and aim to drive them out of Albion once and for all!"
+pf_trn_great_gaelic_war: "The Great Gaelic War"
+pf_trn_great_gaelic_war_tt: "If we complete this mission while having at least §Y25 Power Projection§!, the following effect will occur:"
+
+#
+
+pf_trn_daughters_of_boudicca_title: "Daughters of Boudicca"
+pf_trn_daughters_of_boudicca_desc: "Boudicca is a legendary heroine of the Iceni tribe, who led her people to regional domination many years ago. Spurred on by the mistreatment of her and her daughters by the invasive Trinovantes after the death of her husband, Boudicca led a campaign of conquest and revenge that took her across Albion, establishing Iceni dominion where ever she went. While her empire collapsed quickly after her death, the tales of her deeds are yet to die - many generations of Iceni warriors have looked to her as the guiding hand behind their victories, with some even offering sacrifices to appease her still-living spirit. A group of women, who would traditionally have been reserved for domestic life, known as the 'Daughters of Boudicca', claim to be her descendants, and continue to practice her battle techniques and preach of her righteous conquest. The Daughters are some of the most well trained and skilled fighters in all the land - let us offer them some money for their service."
+pf_trn_daughters_of_boudicca_mercs_tt: "Allows the §MDaughters of Boudicca§! Mercenary Company to be employed."
+merc_daughters_of_boudicca: "§MDaughters of Boudicca§!"
+
+pf_trn_the_blood_between_us_title: "The Blood Between Us"
+pf_trn_the_blood_between_us_desc: "Families stick together, no matter what. In that aspect, sisters in combat are alike a family - they never lose sight of each other and will always be there by each others' sides when needed. The Daughters of Boudicca have proven themselves better than we could have imagined, carrying us to many victories. The time has come to question their place in our military, and how we will use their skills."
+pf_trn_the_blood_between_us_trigger_tt: "Won at least §Y25 battles§! while the §MDaughters of Boudicca§! Mercenary Company is employed."
+pf_trn_the_blood_between_us_tt: "This event will allow us to choose whether to integrate the §YDaughters§! into our own military or strengthen their existing company."
+merc_upgraded_daughters_of_boudicca: "§MDaughters of Boudicca§!"
