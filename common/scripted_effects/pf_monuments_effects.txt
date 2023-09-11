@@ -13,3 +13,113 @@ stab_for_tributaries = {
 		}
 	}
 }
+
+grand_temple_to_tanit_1 = {
+	custom_tooltip = grand_temple_to_tanit_1_tt
+	hidden_effect = {
+		every_capital_province = {
+			if = {
+				limit = {
+					region = france_region
+					owner = {
+						NOT = {
+							religion = punic_religion
+						}
+					}
+				}
+				owner = {
+					add_opinion  = {
+						who = ROOT
+						modifier = opinion_grand_temple_to_tanit
+					}
+					reverse_add_opinion  = {
+						who = ROOT
+						modifier = opinion_grand_temple_to_tanit
+					}
+				}
+			}
+		}
+	}
+}
+grand_temple_to_tanit_2 = {
+	custom_tooltip = grand_temple_to_tanit_2_tt
+	hidden_effect = {
+		every_capital_province = {
+			if = {
+				limit = {
+					region = france_region
+					NOT = {
+						religion = punic_religion
+					}
+				}
+				owner = {
+					add_opinion  = {
+						who = ROOT
+						modifier = opinion_grand_temple_to_tanit
+					}
+					add_opinion  = {
+						who = ROOT
+						modifier = opinion_grand_temple_to_tanit
+					}
+					reverse_add_opinion  = {
+						who = ROOT
+						modifier = opinion_grand_temple_to_tanit
+					}
+					reverse_add_opinion  = {
+						who = ROOT
+						modifier = opinion_grand_temple_to_tanit
+					}
+				}
+			}
+		}
+	}
+}
+grand_temple_to_tanit_3 = {
+	custom_tooltip = grand_temple_to_tanit_3_tt
+	hidden_effect = {
+		every_capital_province = {
+			if = {
+				limit = {
+					region = france_region
+					NOT = {
+						religion = punic_religion
+					}
+				}
+				owner = {
+					add_opinion  = {
+						who = ROOT
+						modifier = opinion_grand_temple_to_tanit
+					}
+					add_opinion  = {
+						who = ROOT
+						modifier = opinion_grand_temple_to_tanit
+					}
+					add_opinion  = {
+						who = ROOT
+						modifier = opinion_grand_temple_to_tanit
+					}
+					add_opinion  = {
+						who = ROOT
+						modifier = opinion_grand_temple_to_tanit
+					}
+					reverse_add_opinion  = {
+						who = ROOT
+						modifier = opinion_grand_temple_to_tanit
+					}
+					reverse_add_opinion  = {
+						who = ROOT
+						modifier = opinion_grand_temple_to_tanit
+					}
+					reverse_add_opinion  = {
+						who = ROOT
+						modifier = opinion_grand_temple_to_tanit
+					}
+					reverse_add_opinion  = {
+						who = ROOT
+						modifier = opinion_grand_temple_to_tanit
+					}
+				}
+			}
+		}
+	}
+}
