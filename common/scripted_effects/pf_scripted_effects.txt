@@ -73,3 +73,40 @@ pf_reset_deity = {
 		change_personal_deity = null
 	}
 }
+# pf_save_random_tribe = {
+#	function = [primary/secondary]
+# }
+pf_save_random_tribe = {
+	hidden_effect = {
+		random_list = {
+			1 = {
+				set_country_flag = chose_iceni_$function$
+			}
+			1 = {
+				set_country_flag = chose_trinovantes_$function$
+			}
+			1 = {
+				set_country_flag = chose_cantiaci_$function$
+			}
+			1 = {
+				set_country_flag = chose_regni_$function$
+			}
+			1 = {
+				set_country_flag = chose_catuvellauni_$function$
+			}
+		}
+	}
+}
+# pf_clear_trn_tribe_flags = yes
+pf_clear_trn_tribe_flags = {
+	clr_country_flag = chose_iceni_primary
+	clr_country_flag = chose_trinovantes_primary
+	clr_country_flag = chose_cantiaci_primary
+	clr_country_flag = chose_regni_primary
+	clr_country_flag = chose_catuvellauni_primary
+	clr_country_flag = chose_iceni_secondary
+	clr_country_flag = chose_trinovantes_secondary
+	clr_country_flag = chose_cantiaci_secondary
+	clr_country_flag = chose_regni_secondary
+	clr_country_flag = chose_catuvellauni_secondary
+}

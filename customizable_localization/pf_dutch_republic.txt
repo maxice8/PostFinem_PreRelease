@@ -1,0 +1,73 @@
+defined_text = {
+	name = GetStatistsOrFallbackName
+	text = {
+		localisation_key = frisianites
+		trigger = {
+			has_reform = pf_lagr_republic
+		}
+	}
+	text = {
+		localisation_key = statists
+	}
+}
+
+defined_text = {
+	name = GetStatistOrFallbackAdjective
+	text = {
+		localisation_key = frisianite
+		trigger = {
+			has_reform = pf_lagr_republic
+		}
+	}
+	text = {
+		localisation_key = statist
+	}
+}
+
+defined_text = {
+	name = GetMonarchistsOrFallbackName
+	text = { 
+		localisation_key = havendalssites
+		trigger = {
+			has_reform = pf_lagr_republic
+		}
+	}
+	text = {
+		localisation_key = orangists
+		trigger = {
+			OR = {
+				has_reform = dutch_republic
+				has_reform = dutch_theocracy_reform
+				has_reform = stadthalter_monarchy_reform
+				has_reform = dutch_republic_legacy
+			}
+		}
+	}
+	text = {
+		localisation_key = monarchists
+	}
+}
+
+defined_text = {
+	name = GetMonarchistOrFallbackAdjective
+	text = { 
+		localisation_key = havendalssite
+		trigger = {
+			has_reform = pf_lagr_republic
+		}
+	}
+	text = {
+		localisation_key = orangist
+		trigger = {
+			OR = {
+				has_reform = dutch_republic
+				has_reform = dutch_theocracy_reform
+				has_reform = stadthalter_monarchy_reform
+				has_reform = dutch_republic_legacy
+			}
+		}
+	}
+	text = {
+		localisation_key = monarchist
+	}
+}

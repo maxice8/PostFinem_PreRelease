@@ -233,8 +233,8 @@ germanic_group = {
 		icon = 21
 		color = { 191 191 191 }
 		country = {
-			naval_forcelimit_modifier = 0.2
-			may_perform_slave_raid = yes
+			naval_forcelimit_modifier = 0.25
+			land_maintenance_modifier = -0.1
 		}
 		country_as_secondary = {
 			merc_maintenance_modifier = -0.1

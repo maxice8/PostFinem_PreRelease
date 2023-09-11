@@ -8,6 +8,9 @@
  brittonic_confederation_reform: "Brittonic Confederation"
  brittonic_confederation_reform_desc: "Long ago, our way of life came under threat. The Gaels of Ireland encroached ever deeper into deer Prydain from the west, while the vile Norse marauders harass us from the north and east. The tribes of the east were forced to come together, to put aside their differences, and unite their forces into one Confederation. Aimed at mutual self-defence and eventually dismantling their enemies, the Confederation relies on its internal cohesion to maintain proper operations."
  mechanic_confederation_elections_yes: "Rulers are elected from within the Tribes."
+ability_trinovantes_cohesion_mechanic: "Cohesion"
+trn_cohesion: "Cohesion"
+monthly_trn_cohesion: "Monthly Cohesion"
 
  pf_clan_supremacy_reform:0 "Supremacy of the Clan"
  pf_clan_supremacy_reform_desc:0 ""
@@ -19,6 +22,15 @@
  GREAT_CHIEFTESS: "Great Chieftess"
  HEIRESS: "Heiress"
  CONFEDERATION: "Confederation"
+
+ICENI: "Iceni"
+ICENI_ADJ: "Iceni"
+REGNI: "Regni"
+REGNI_ADJ: "Regni"
+CANTIACI: "Cantiaci"
+CANTIACI_ADJ: "Cantiaci"
+CATUVELLAUNI: "Catuvellauni"
+CATUVELLAUNI_ADJ: "Catuvellauni"
 
 ###########
 # Ideas
@@ -33,7 +45,7 @@
  trn_tribes_together_strong: "Strength in Numbers"
  trn_tribes_together_strong_desc: ""
  trn_collectivist_food: "Farms and Fields"
- trn_collectivist_food_desc: ""
+ trn_collectivist_food_desc: "The east of Albion is famed for its fertile lands and vast open fields. This land of plenty brings great riches to each of the tribes that inhabit it, and ensures steady amounts of tribute can be spared to the Council of Elders."
  trn_heirs_of_arthur: "Heirs of Arthur"
  trn_heirs_of_arthur_desc: ""
  trn_unified_identity: "Uniting the Sheepfold"
@@ -55,3 +67,31 @@
  pf_trn.1.d: "The Catuvellauni may yet unite the realm."
  pf_trn.1.e: "The knowledge of the Regni candidate is desirable."
  pf_trn.1.f: "Let the strongest win!"
+
+pf_trn.2.t: "Peace and Cooperation"
+pf_trn.2.d: "Recent times have been kind to our Confederation, and bestowed upon us the most bountiful harvests and forgiving climate. Even the internal competitions between the tribes seem to have subsided, leaving our alliance stronger than ever both inside and out. Tribal leaders are quick to come to the negotiating oak rather than to clench their swords at the first sign of trouble; the humble farmer does not complain for lack of grain, but rather smiles as he looks over his plentiful herds; the sky itself grins as it looks upon the beauty of our nation."
+pf_trn.2.a: "Life is bliss!"
+pf_trn.2.b: "There must be more tribute to be taken then!"
+pf_trn.2.c: "This is testament to our benevolent policies."
+
+pf_trn.3.t: "A Trial of Swords and Clubs"
+pf_trn.3.d: "Tensions ran high as a fierce competition unfolded between the [Root.GetPrimaryTribe] and [Root.GetSecondaryTribe] tribes, threatening to escalate into violence. What began as a spirited contest to assert dominance over a fertile border region had spiraled into a dangerous rivalry. Both tribes, fiercely proud of their heritage, vied for control of valuable farmland and trade routes, their chieftains stoking the flames of competition. Verbal disputes turned into skirmishes, and there were whispers of alliances being forged with neighboring tribes. The fragile peace of the Confederation hung in the balance, awaiting a resolution that might either solidify their enmity or offer a path towards reconciliation and cooperation."
+pf_trn.3.a: "Favour the [Root.GetPrimaryTribe]"
+pf_trn.3.b: "Favour the [Root.GetSecondaryTribe]"
+pf_trn.3.c: "Let them sort it out amongst themselves."
+pf_trn.3.dd: "Resolve the dispute in a court of law."
+
+###########
+# Custom loc
+###########
+
+trn_iceni_primary_tt: "Iceni"
+trn_trinovantes_primary_tt: "Trinovantes"
+trn_cantiaci_primary_tt: "Cantiaci"
+trn_regni_primary_tt: "Regni"
+trn_catuvellauni_primary_tt: "Catuvellauni"
+trn_iceni_secondary_tt: "Iceni"
+trn_trinovantes_secondary_tt: "Trinovantes"
+trn_cantiaci_secondary_tt: "Cantiaci"
+trn_regni_secondary_tt: "Regni"
+trn_catuvellauni_secondary_tt: "Catuvellauni"
