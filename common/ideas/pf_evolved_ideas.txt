@@ -1,0 +1,57 @@
+LAG2_ideas = {
+	start = {
+		global_trade_power = 0.20
+		production_efficiency = 0.10
+	}
+	
+	bonus = {
+		inflation_reduction = 0.10
+	}	
+
+	trigger = {
+		tag = LAG
+		has_country_flag = pf_lag_evolved_ideas
+	}
+	free = yes
+	
+	#Trade Expansion
+	LAG_ideas_1 = {
+		merchants = 1
+		trade_efficiency = 0.10
+	}
+
+	#Economic Prudence
+	LAG_ideas_2_evolved = {
+		interest = -1
+		# evolved
+		yearly_corruption = -0.1
+	}
+
+	#Urban Development
+	LAG_ideas_3 = {
+		build_cost = -0.10
+		development_cost = -0.10
+	}
+
+	#Competent Bureaucracy
+	LAG_ideas_4 = {
+		advisor_cost = -0.2
+	}
+
+	#Sturdy Defenses
+	LAG_ideas_5 = {
+		defensiveness = 0.20
+		land_morale = 0.10
+	}
+
+	#Naval Tradition
+	LAG_ideas_6 = {
+		naval_morale = 0.10
+		naval_maintenance_modifier = -0.10
+	}
+
+	#Skilled Workforce
+	LAG_ideas_7 = {
+		global_trade_goods_size_modifier = 0.10
+	}
+}
