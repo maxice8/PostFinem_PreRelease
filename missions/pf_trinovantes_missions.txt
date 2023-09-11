@@ -31,7 +31,13 @@ pf_trn_1 = {
 				estate = estate_church
 				loyalty = 60
 			}
-			prestige = 40
+			custom_trigger_tooltip = {
+				tooltip = pf_trn_done_ritual_or_wicker_man_tt
+				OR = {
+					has_country_flag = done_druidic_ritual
+					has_country_flag = done_druidic_wicker_man
+				}
+			}
 			OR = {
 				theologian = 1
 				inquisitor = 1
@@ -300,7 +306,7 @@ pf_trn_4 = {
 	pf_trn_the_gaelic_menace = {
 		icon = mission_rb_conquer_the_highlands
 		position = 2
-		required_missions = { pf_trn_ricatus_legacy } 
+		required_missions = { pf_trn_ricatus_legacy pf_trn_the_oaken_five } 
 		provinces_to_highlight = {
 			owner = { tag = CEL }
 			is_capital = yes
@@ -367,9 +373,93 @@ pf_trn_5 = {
 		tag = TRN
 	}
 
+	pf_trn_the_oaken_five = {
+		icon = mission_rb_rein_in_the_highland_clans
+		position = 1
+		required_missions = { } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1860	# Iceni
+				province_id = 238	# Trinovantes
+				province_id = 4370	# Catuvellauni
+				province_id = 235	# Cantiaci
+				province_id = 4371	# Regni
+			}
+			OR = {
+				unrest = 1
+				NOT = { owned_by = ROOT }
+				NOT = { controlled_by = ROOT }
+			}
+		}
+		trigger = {
+			OR = {
+				has_government_power = {
+					mechanic_type = trinovantes_cohesion_mechanic
+					power_type = trn_cohesion
+					value = 10
+				}
+				stability = 1
+			}
+			1860 = {
+				owned_by = ROOT
+				NOT = { unrest = 1 }
+				controlled_by = ROOT
+			}
+			238 = {
+				owned_by = ROOT
+				NOT = { unrest = 1 }
+				controlled_by = ROOT
+			}
+			4370 = {
+				owned_by = ROOT
+				NOT = { unrest = 1 }
+				controlled_by = ROOT
+			}
+			235 = {
+				owned_by = ROOT
+				NOT = { unrest = 1 }
+				controlled_by = ROOT
+			}
+			4371 = {
+				owned_by = ROOT
+				NOT = { unrest = 1 }
+				controlled_by = ROOT
+			}
+		}
+		effect = {
+			define_advisor = {
+				type = statesman
+				skill = 2
+				discount = yes
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_trn_oaken_five_alliance"
+				duration = 5475
+			}
+			custom_tooltip = pf_trn_the_oaken_five_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_government_power = {
+							mechanic_type = trinovantes_cohesion_mechanic
+							power_type = trn_cohesion
+							value = 25
+						}
+					}
+					remove_country_modifier = pf_trn_oaken_five_alliance
+					add_country_modifier = {
+						name = "pf_trn_oaken_five_alliance"
+						duration = 10950
+					}
+				}
+			}
+		}
+	}
+
 	pf_trn_daughters_of_boudicca = {
 		icon = mission_che_the_beloved_woman
-		position = 1
+		position = 6
 		required_missions = { } 
 		provinces_to_highlight = {
 			province_id = 1860
@@ -398,7 +488,7 @@ pf_trn_5 = {
 	}
 	pf_trn_the_blood_between_us = {
 		icon = mission_united_knight_order
-		position = 2
+		position = 7
 		required_missions = { pf_trn_daughters_of_boudicca } 
 		provinces_to_highlight = {
 		}

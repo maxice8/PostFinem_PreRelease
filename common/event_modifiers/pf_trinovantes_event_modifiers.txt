@@ -41,3 +41,18 @@ pf_trn_great_gaelic_war = {
 	prestige_from_land = 0.50
 	army_tradition_from_battle = 0.50
 }
+pf_trn_oaken_five_alliance = {
+	global_unrest = -1
+	recover_army_morale_speed = 0.10
+	state_maintenance_modifier = -0.15
+}
+performed_druidic_ritual = {
+	stability_cost_modifier = -0.05
+	prestige_decay = -0.01
+	missionary_maintenance_cost = 0.33
+}
+local_wicker_man = {
+	local_unrest = -2
+	local_autonomy = -0.05
+	local_production_efficiency = -0.10
+}
