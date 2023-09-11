@@ -20,34 +20,156 @@ pf_nld_1 = {
 		}
 
 		trigger = {
-			OR = {
-				owns_or_non_sovereign_subject_of = 19
-				owns_or_non_sovereign_subject_of = 30
-				owns_or_non_sovereign_subject_of = 4152
-				finland_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-				}
+			owns_or_non_sovereign_subject_of = 19
+			owns_or_non_sovereign_subject_of = 30
+			owns_or_non_sovereign_subject_of = 4152
+			finland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
-		effect = {  } 
+		effect = { 
+			
+			custom_tooltip = nld_assimilate_the_finns_vassal_tt
+			custom_tooltip = unlock_merc_pohjantahden_hevosvaki_tt
+			custom_tooltip = FREE_OF_ARMY_PROFESSIONALISM_COST
+			custom_tooltip = empty_line_tt
+			custom_tooltip = alternatively_tt
+			custom_tooltip = nld_finnish_cavalry_tt
+			custom_tooltip = nld_finnish_cavalry_effects1_tt
+			custom_tooltip = nld_finnish_cavalry_effects2_tt
+			custom_tooltip = empty_line_tt
+
+			if = {
+				limit = {
+					FIN = {
+						is_subject_of = NLD
+					}
+				}
+				hidden_effect = {
+					unlock_merc_company = {
+						merc_company = merc_pohjantahden_hevosvaki
+						free_merc = yes
+					}
+				}
+			} 
+
+			else = {
+				hidden_effect = {
+					add_country_modifier = {
+						name = nld_finnish_cavalry
+						duration = 5475
+					}
+				}
+			}
+
+			if = {
+				limit = { exists = KRL }
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					target = KRL
+				}
+			}
+			
+			north_karelia = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			pomor_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_permanent_claim = 33
+			add_permanent_claim = 1961
+		} 
 	}
 
 	pf_nld_protect_the_karelians = {
 		icon = mission_early_russian_army
 		position = 3
 		required_missions = { pf_nld_assimilate_the_finns } 
-		provinces_to_highlight = { culture = karelian } 
+		provinces_to_highlight = { 
+			region = russia_region
+			culture = karelian 
+		} 
 
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
 				culture = karelian
+				region = russia_region
 			}
 		}
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = nld_protect_the_karelians_tt
+			custom_tooltip = nld_protect_the_karelians_modifier
+			custom_tooltip = empty_line_tt
+			custom_tooltip = alternatively_tt
+			custom_tooltip = nld_karelian_forts
+			custom_tooltip = empty_line_tt
+
+			estonia_ingria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			livonia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			curonia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_permanent_claim = 33
+			add_permanent_claim = 34
+
+			hidden_effect = {
+				if = {
+					limit = {
+						KRL = {
+							vassal_of = NLD
+							num_of_owned_provinces_with = {
+								value = 5
+								culture = karelian
+								region = russia_region
+							}
+						}
+					}
+					country_event = {
+						id = nld_karelia_fortifications.1
+					}
+				}
+				else = {
+					every_owned_province = {
+						limit = {
+							culture = karelian
+							region = russia_region
+						}
+						add_province_modifier = {
+							name = nld_karelian_forts
+							duration = -1
+						}
+					}
+				}
+			}
+		} 
 	}
 
 	pf_a_tolerant_society = {
@@ -57,14 +179,22 @@ pf_nld_1 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
+			adm_power = 100
+			dip_power = 100
 			government_reform_progress = 100
-			num_of_subjects = 4
+			num_of_subjects = 3
 			NOT = { all_subject_country = { liberty_desire = 20 }  } 
 			num_accepted_cultures = 4
 			NOT = { dominant_culture = ROOT } 
 		}
 
-		effect = {  } 
+		effect = {  
+			add_adm_power = -100
+			add_dip_power = -100
+			change_government_reform_progress = -100
+			change_government = monarchy
+			add_government_reform = enlightened_norse_kingdom
+		} 
 	}
 }
 pf_nld_2 = {
@@ -109,18 +239,18 @@ pf_nld_2 = {
 					target = FIN
 				}
 			}
-			else = {
-				finland_area = {
-					limit = {
-						NOT = { is_core = ROOT } 
-						NOT = { is_permanent_claim = ROOT } 
-					}
-					add_permanent_claim = ROOT
+			
+			finland_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
 				}
-				add_permanent_claim = 19
-				add_permanent_claim = 30
-				add_permanent_claim = 4152
+				add_permanent_claim = ROOT
 			}
+			add_permanent_claim = 19
+			add_permanent_claim = 30
+			add_permanent_claim = 4152
+			
 			if = {
 				limit = {
 					reverse_has_opinion = {
@@ -171,7 +301,21 @@ pf_nld_2 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			hidden_effect = {
+				set_country_flag = pf_arctic_expansion_flag
+				every_owned_province = {
+					limit = {
+						has_climate = arctic
+					}
+					add_province_modifier = {
+						name = swe_arctic_expansion
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = pf_nld_arctic_expansion_tt
+		} 
 	}
 
 	pf_nld_integrate_the_romuvans = {
@@ -209,7 +353,62 @@ pf_nld_2 = {
 			}
 		}
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_tolerance_heathens
+				duration = 3650
+			}
+
+			east_prussia_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			west_prussia_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			hinter_pommern_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			neumark_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			wielkopolska_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			kuyavia_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			mazovia_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_nld_civilise_the_hordes = {
@@ -241,7 +440,27 @@ pf_nld_2 = {
 			}
 		}
 
-		effect = {  } 
+		effect = {  
+			south_slavia_region = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			ural_region = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+
+			add_country_modifier = {
+				name = nld_civilised_the_hordes
+				duration = -1
+			}
+		} 
 	}
 }
 pf_nld_3 = {
@@ -261,7 +480,14 @@ pf_nld_3 = {
 			galley_fraction = 0.5
 		}
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_baltic_fleet
+				duration = 7300
+			}
+
+			add_permanent_claim = 25
+		} 
 	}
 
 	pf_nld_seize_visby = {
@@ -272,7 +498,12 @@ pf_nld_3 = {
 
 		trigger = { owns_or_non_sovereign_subject_of = 25 } 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_gutish_sailors
+				duration = 5475
+			}
+		} 
 	}
 
 	pf_nld_northrlandsrikja = {
@@ -533,7 +764,27 @@ pf_nld_3 = {
 			}
 		}
 
-		effect = {  } 
+		effect = {  
+			north_german_region = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			low_countries_region = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+
+			add_country_modifier = {
+				name = nld_northrlandsrikja
+				duration = -1
+			}
+		} 
 	}
 }
 pf_nld_4 = {
@@ -566,7 +817,33 @@ pf_nld_4 = {
 			owns_or_non_sovereign_subject_of = 4745
 		}
 
-		effect = {  } 
+		effect = {  
+			12 = {
+				hidden_effect = {
+					if = {
+						limit = { NOT = { province_has_center_of_trade_of_level = 2 } }
+						add_center_of_trade_level = 1
+					}
+				}
+				custom_tooltip = will_upgrade_center_of_trade_to_level_2_tt
+			}
+			12 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+				add_latest_building = {
+					trade = yes
+					builder = ROOT
+				}
+			}
+			jutland_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_nld_unite_the_peninsula = {
@@ -588,7 +865,68 @@ pf_nld_4 = {
 			}
 		}
 
-		effect = {  } 
+		effect = {  
+			holstein_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			weser_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_saxony_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			mecklenburg_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			vorpommern_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			mittelmark_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_saxony_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			braunschweig_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = nld_united_scandinavia
+				duration = 9125
+			}
+		} 
 	}
 
 
@@ -603,7 +941,12 @@ pf_nld_4 = {
 			heavy_ship_fraction = 0.2
 		}
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_modern_longships
+				duration = 3650
+			}
+		} 
 	
 	}
 }
@@ -654,7 +997,42 @@ pf_nld_5 = {
 			owns_or_non_sovereign_subject_of = 4166
 		}
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_swedish_steel
+				duration = 3650
+			}
+
+			eastern_norway = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			western_norway = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_norway = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			denmark_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			add_permanent_claim = 16
+		} 
 	}
 
 	pf_nld_strike_into_norway = {
@@ -687,7 +1065,19 @@ pf_nld_5 = {
 			owns_or_non_sovereign_subject_of = 16
 		}
 
-		effect = {  } 
+		effect = {  
+			add_permanent_claim = 4110
+			add_permanent_claim = 252
+			add_permanent_claim = 251
+			add_permanent_claim = 250
+			add_permanent_claim = 248
+			add_permanent_claim = 4361
+			add_permanent_claim = 246
+			add_permanent_claim = 369
+			add_permanent_claim = 1978
+			add_permanent_claim = 1979
+			unlock_estate_privilege = { estate_privilege = estate_burghers_mountain_expansion }
+		} 
 	}
 
 	pf_nld_the_other_brother = {
@@ -726,7 +1116,19 @@ pf_nld_5 = {
 			owns_or_non_sovereign_subject_of = 1979
 		}
 
-		effect = {  } 
+		effect = {  
+			british_isles_region = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = nld_legacy_of_knut
+				duration = 18250
+			}
+		} 
 	}
 }
 pf_nld_eco_1 = {
@@ -779,7 +1181,36 @@ pf_nld_eco_1 = {
 			NOT = { has_estate_privilege = estate_nobles_monopoly_of_metals } 
 		}
 
-		effect = {  } 
+		effect = {  
+			add_years_of_owned_provinces_production_income = {
+				years = 4
+				trigger = {
+					OR = {
+						province_id = 8
+						province_id = 4
+						province_id = 5
+						province_id = 1985
+					}
+				}
+				custom_tooltip = swe_industrialize_sweden_tt
+			}
+
+			every_owned_province = {
+				limit = {
+					OR = {
+						trade_goods = iron
+						trade_goods = copper
+					}
+				}
+				custom_tooltip = nld_swedish_metallurgy_tt
+				hidden_effect = {
+					add_province_modifier = {
+						name = nld_swedish_metallurgy
+						duration = 7300
+					}
+				}
+			}
+		} 
 	}
 
 	pf_nld_falu_koppargruva = {
@@ -799,7 +1230,27 @@ pf_nld_eco_1 = {
 			}
 		}
 
-		effect = {  } 
+		effect = {  
+			add_treasury = -1500
+			if = {
+				limit = {
+					NOT = {
+						8 = {
+							has_great_project = {
+								type = falun_copper_mine
+								tier = 3
+							}
+						}
+					}
+				}
+				8 = {
+					add_great_project_tier = {
+						type = falun_copper_mine
+						tier = 1
+					}
+				}
+			}
+		} 
 	}
 
 	pf_nld_nordic_renaissance = {
@@ -809,7 +1260,15 @@ pf_nld_eco_1 = {
 
 		trigger = { has_institution = renaissance } 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_nordic_renaissance
+				duration = 7300
+			}
+			capital_scope = {
+				add_prosperity = 100
+			}
+		} 
 	}
 
 	pf_nld_northern_universities = {
@@ -833,7 +1292,13 @@ pf_nld_eco_1 = {
 			}
 		}
 
-		effect = {  } 
+		effect = {  
+			change_innovativeness = 20
+			add_country_modifier = {
+				name = nld_northern_universities
+				duration = 18250
+			}
+		} 
 	}
 }
 pf_nld_eco_2 = {
@@ -980,7 +1445,7 @@ pf_nld_eco_3 = {
 
 		trigger = {  
 			num_of_owned_provinces_with = {
-				value = 5
+				value = 10
 				OR = {
 					region = scandinavia_region
 					region = north_german_region

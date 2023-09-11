@@ -3891,6 +3891,19 @@ on_province_owner_change = {
 	if = {
 		limit = {
 			owner = {
+				has_country_flag = pf_arctic_expansion_flag
+			}
+			has_climate = arctic
+		}
+		add_province_modifier = {
+			name = swe_arctic_expansion
+			duration = -1
+		}
+	}
+
+	if = {
+		limit = {
+			owner = {
 				has_reform = enlightened_norse_kingdom
 			}
 			has_owner_accepted_culture = no

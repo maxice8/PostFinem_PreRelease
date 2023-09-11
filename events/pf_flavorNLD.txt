@@ -1,0 +1,19 @@
+country_event = {
+	id = nld_karelia_fortifications.1
+	title = nld_karelia_fortifications.1.t
+	desc = nld_karelia_fortifications.1.d
+	picture = TRADEGOODS_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nld_karelia_fortifications.1.a
+		KRL = {
+			add_country_modifier = {
+				name = krl_karelian_fortifications
+				duration = -1
+			}
+		}
+	}
+}

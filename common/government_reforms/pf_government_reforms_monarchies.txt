@@ -230,8 +230,7 @@ enlightened_norse_kingdom = {
 		}
 	}
 	modifiers = {
-		tolerance_heathen = 2
-		tolerance_heretic = 2
+		no_religion_penalty = yes
 	}
 	effect = {
 		hidden_effect = {
@@ -280,6 +279,9 @@ enlightened_norse_kingdom = {
 				}
 			}
 		}
+	}
+	custom_attributes = {
+		enlightened_norse_kingdom_tolerance = yes
 	}
 }
 nordhafnadr_kingdom = {
