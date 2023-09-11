@@ -500,6 +500,7 @@ LAG_ideas = {
 
 	trigger = {
 		tag = LAG
+		NOT = { has_country_flag = pf_lag_evolved_ideas }
 	}
 	free = yes
 	

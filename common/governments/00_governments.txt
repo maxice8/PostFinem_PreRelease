@@ -471,6 +471,9 @@ monarchy = {
 	
 	# Dictatorships etc
 	exclusive_reforms = {
+		# pf [[[
+		pf_lagr_republic
+		# ]]]
 		military_dictatorship_reform
 		protectorate_parliament_reform
 		prussian_republic_reform
@@ -565,6 +568,9 @@ republic = {
 	reform_levels = {
 		oligarchy_merchant_class_noble_elite = {
 			reforms = {
+				# pf = [[[
+				pf_lagr_republic
+				# ]]]
 				oligarchy_reform
 				signoria_reform
 				merchants_reform
@@ -610,6 +616,9 @@ republic = {
 		}
 		republican_virtues = {
 			reforms = {
+				# pf [[[
+				pf_lag_merchant_virtues
+				# ]]]
 				republican_authoritarianism_reform
 				nepotism_reform
 				republicanism_reform
@@ -648,6 +657,9 @@ republic = {
 		}
 		republic_and_religion = {
 			reforms = {
+				# pf [[[
+				pf_lag_acts_of_toleration
+				# ]]]
 				papal_embassy_reform
 				lands_for_the_monasteries_reform
 				focus_of_the_patriarchy_reform
@@ -688,6 +700,9 @@ republic = {
 		}
 		military_doctrines = {
 			reforms = {
+				# pf [[[
+				pf_lag_lowlander_naval_tradition_reform
+				# ]]]
 				organized_military_staff_reform
 				military_engineering_reform
 				defensive_stance_reform
@@ -748,6 +763,9 @@ republic = {
 		}
 		parliamentary_vs_presidential = {
 			reforms = {
+				# pf [[[
+				pf_lag_ceremonial_thinghalder
+				# ]]]
 				parliamentary_reform
 				presidential_reform
 				estate_council_reform
@@ -769,6 +787,9 @@ republic = {
 		}
 		federalism_vs_unitarism_vs_confederacy = {
 			reforms = {
+				# pf [[[
+				pf_lag_provincial_things
+				# ]]]
 				provincial_governments_reform
 				administrative_divisions_reform
 				union_of_states_reform
@@ -778,6 +799,9 @@ republic = {
 		}
 		economical_matters_republic = {
 			reforms = {
+				# pf [[[
+				pf_lag_marginalism
+				# ]]]
 				empower_the_burghers_reform
 				curtail_the_burghers_reform
 				mercantilistic_approach_reform
@@ -878,6 +902,9 @@ republic = {
 		prussian_republic_reform
 	}
 	exclusive_reforms = {
+		# pf = [[[
+		pf_lagr_republic
+		# ]]]
 		lottery_reform
 		venice_merchants_reform
 		dutch_republic
@@ -900,6 +927,9 @@ republic = {
 		military_electorate_reform
 	}
 	exclusive_reforms = {
+		# pf = [[[
+		pf_lagr_republic
+		# ]]]
 		consolidate_power_to_the_ruler_reform
 		lottery_reform
 		venice_merchants_reform
@@ -910,6 +940,9 @@ republic = {
 		military_dictatorship_reform
 	}
 	exclusive_reforms = { 
+		# pf = [[[
+		pf_lagr_republic
+		# ]]]
 		dutch_republic
 		force_reelection_reform
 	}

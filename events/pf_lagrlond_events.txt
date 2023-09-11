@@ -1,0 +1,56 @@
+namespace = pf_lagrlond_events
+
+# Remove country flag that prevents nobles from starting rebels
+# on seize land action
+country_event = {
+	id = pf_lagrlond_events.1
+	title = pf_lagrlond_events.1.t
+	desc = pf_lagrlond_events.1.desc
+	picture = NOBLE_ESTATE_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = pf_lagrlond_events.1.a
+		clr_country_flag = disabled_rebels_from_seized_land_for_estate_nobles
+	}
+}
+
+# Allow picking Religious or Humanist path
+country_event = {
+	id = pf_lagrlond_events.2
+	title = pf_lagrlond_events.2.t
+	desc = pf_lagrlond_events.2.desc
+	picture = CHURCH_ESTATE_UPSET_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = pf_lagrlond_events.2.a
+
+		custom_tooltip = PF_LAG_RELIGIOUS_PATH_TT
+		hidden_effect = {
+			set_country_flag = pf_lag_religious_path
+			swap_non_generic_missions = yes
+		}
+
+		ai_chance = {
+			factor = 50
+		}
+	}
+
+	option = {
+		name = pf_lagrlond_events.2.b
+
+		custom_tooltip = PF_LAG_HUMANIST_PATH_TT
+		hidden_effect = {
+			set_country_flag = pf_lag_humanist_path
+			swap_non_generic_missions = yes	
+		}
+
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
