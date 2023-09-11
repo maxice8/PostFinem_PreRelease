@@ -231,7 +231,7 @@ RMA_ideas = {
 	}
 }
 
-CEL_ideas = {
+BRN_ideas = {
 	start = {
 		heavy_ship_power = 0.2
 		own_coast_naval_combat_bonus = 1
@@ -242,38 +242,85 @@ CEL_ideas = {
 	}	
 
 	trigger = {
-		tag = CEL
+		tag = BRN
 	}
 	free = yes
 	#Collecting Tribute
-	CEL_ideas_1 = {
+	BRN_ideas_1 = {
 		reduced_liberty_desire = 20
 	}
 	#Celtic Isles
-	CEL_ideas_2 = {
+	BRN_ideas_2 = {
 		has_galleon = yes
 		allowed_galleon_fraction = 0.1
 	}
 	#Celtic New World
-	CEL_ideas_3 = {
+	BRN_ideas_3 = {
 		colonists = 1
 	}
 	#Forward Thinking Society
-	CEL_ideas_4 = {
+	BRN_ideas_4 = {
 		idea_cost = -0.1 
 	}
 	#Expand the Navy
-	CEL_ideas_5 = {
+	BRN_ideas_5 = {
 		global_sailors_modifier = 0.25
 		global_ship_repair = 0.25
 	}
 	#A Warrior's Spirit
-	CEL_ideas_6 = {
+	BRN_ideas_6 = {
 		land_morale = 0.1
 	}
 	#Efficient Trade
-	CEL_ideas_7 = {
+	BRN_ideas_7 = {
 		global_trade_power = 0.2
+	}
+}
+
+CEL_ideas = {
+	start = {
+		land_morale = 0.1
+		global_trade_power = 0.1
+	}
+	
+	bonus = {
+		free_leader_pool = 1
+	}	
+
+	trigger = {
+		tag = CEL
+	}
+	free = yes
+	#The Celtic Navy
+	CEL_ideas_1 = {
+		naval_forcelimit_modifier = 0.25
+	}
+	#Forward Thinking Society
+	CEL_ideas_2 = {
+		idea_cost = -0.05
+		innovativeness_gain = 0.25
+	}
+	#Reputable Dynasties
+	CEL_ideas_3 = {
+		legitimacy = 1
+	}
+	#Celtica Rules the Waves
+	CEL_ideas_4 = {
+		has_galleon = yes
+		allowed_galleon_fraction = 0.05
+	}
+	#The Druidic Councel
+	CEL_ideas_5 = {
+		advisor_cost = -0.1
+	}
+	#Settling Overseas
+	CEL_ideas_6 = {
+		colonists = 1
+	}
+	#Maintaining the Navy
+	CEL_ideas_7 = {
+		global_sailors_modifier = 0.20
+		global_ship_repair = 0.20
 	}
 }
 
