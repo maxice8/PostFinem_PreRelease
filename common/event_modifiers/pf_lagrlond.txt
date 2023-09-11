@@ -318,6 +318,7 @@ pf_lag_into_beyond_modifier = {
 # pf_lag_carib
 pf_lag_sugar_trade = {
 	global_tariffs = 0.1
+	trade_steering = 0.25
 }
 
 # pf_lag_australia
@@ -358,11 +359,12 @@ pf_lag_ports_in_the_far_east = {
 	devotion = 0.25
 	horde_unity = 0.25
 	meritocracy = 0.1
+	trade_efficiency = 0.5
 }
 
 # pf_lag_louisiana
 pf_lag_up_the_river = {
-	trade_company_investment_cost = -0.1
+	trade_company_investment_cost = -0.25
 }
 
 # pf_lag_california
