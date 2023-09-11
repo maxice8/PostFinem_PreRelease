@@ -7,7 +7,7 @@ pf_skl_1 = {
 
 	pf_skl_widespread_assimiliation = {
 		icon = mission_deccanis
-		position = 13
+		position = 14
 		required_missions = { pf_skl_a_new_identity } 
 		provinces_to_highlight = {  } 
 
@@ -25,7 +25,7 @@ pf_skl_2 = {
 
 	pf_skl_a_new_identity = {
 		icon = mission_modern_ottoman_soldiers
-		position = 12
+		position = 13
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -35,7 +35,7 @@ pf_skl_2 = {
 
 	pf_skl_continue_the_trend = {
 		icon = mission_noble_council
-		position = 13
+		position = 14
 		required_missions = { pf_skl_a_new_identity } 
 		provinces_to_highlight = {  } 
 
@@ -46,7 +46,7 @@ pf_skl_2 = {
 
 	pf_skl_inferior_northmen = {
 		icon = mission_crown_of_denmark
-		position = 14
+		position = 15
 		required_missions = { pf_skl_the_old_fatherland } 
 		provinces_to_highlight = {  } 
 
@@ -57,7 +57,7 @@ pf_skl_2 = {
 
 	pf_skl_leader_of_the_norse_world = {
 		icon = mission_develop_the_scandes
-		position = 1
+		position = 16
 		required_missions = {
 			pf_skl_revive_old_rivalries
 			pf_skl_inferior_northmen
@@ -78,7 +78,7 @@ pf_skl_3 = {
 
 	pf_skl_the_old_fatherland = {
 		icon = mission_norwegian_independence
-		position = 13
+		position = 14
 		required_missions = { pf_skl_a_new_identity } 
 		provinces_to_highlight = {  } 
 
@@ -89,7 +89,7 @@ pf_skl_3 = {
 
 	pf_skl_revive_old_rivalries = {
 		icon = mission_conquer_sweden
-		position = 1
+		position = 15
 		required_missions = { pf_skl_the_old_fatherland } 
 		provinces_to_highlight = {  } 
 
@@ -100,7 +100,7 @@ pf_skl_3 = {
 
 	pf_skl_ruler_of_the_north = {
 		icon = mission_crown_of_norway
-		position = 1
+		position = 17
 		required_missions = {
 			pf_skl_leader_of_the_norse_world
 			pf_skl_gallic_dominion
@@ -121,7 +121,7 @@ pf_skl_4 = {
 
 	pf_skl_a_new_target = {
 		icon = mission_control_the_channel
-		position = 12
+		position = 13
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -131,7 +131,7 @@ pf_skl_4 = {
 
 	pf_skl_northern_tribes = {
 		icon = mission_control_the_barbary_coast
-		position = 13
+		position = 14
 		required_missions = { pf_skl_a_new_target } 
 		provinces_to_highlight = {  } 
 
@@ -142,7 +142,7 @@ pf_skl_4 = {
 
 	pf_skl_gallic_dominion = {
 		icon = centralize_france
-		position = 15
+		position = 16
 		required_missions = { pf_skl_northern_tribes } 
 		provinces_to_highlight = {  } 
 
@@ -160,7 +160,7 @@ pf_skl_5 = {
 
 	pf_skl_clear_the_forests = {
 		icon = mission_clear_the_delta
-		position = 13
+		position = 14
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -170,7 +170,7 @@ pf_skl_5 = {
 
 	pf_skl_secure_supply_lines = {
 		icon = mission_divert_trade_from_bengal
-		position = 14
+		position = 15
 		required_missions = { pf_skl_clear_the_forests } 
 		provinces_to_highlight = {  } 
 
@@ -181,7 +181,7 @@ pf_skl_5 = {
 
 	pf_skl_into_warmer_waters = {
 		icon = mission_rb_mediterranean_authority
-		position = 1
+		position = 16
 		required_missions = { pf_skl_secure_supply_lines } 
 		provinces_to_highlight = {  } 
 
