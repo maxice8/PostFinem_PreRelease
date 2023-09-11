@@ -162,3 +162,22 @@ pf_lag_ceremonial_thinghalder = {
 		pf_lag_candidates_are_lagrlondi = yes
 	}
 }
+
+# Economic Tier
+pf_lag_marginalism = {
+	icon = "pf_marginalism"
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = norvegr
+	}
+	trigger = {
+		OR = {
+			full_idea_group = trade_ideas
+			full_idea_group = infrastructure_ideas
+		}
+	}
+	modifiers = {
+		trade_efficiency = 0.1
+		production_efficiency = 0.05
+	}
+}
