@@ -523,3 +523,18 @@
  # Marginalism
  pf_lag_marginalism:0 "Marginalism"
  pf_lag_marginalism_desc:0 "REPLACE_ME"
+
+ # Events for the Odinstur
+ pf_lagrlond_events.3.t:0 "The Odinstur"
+ pf_lagrlond_events.3.desc:0 "REPLACE_ME"
+ pf_lagrlond_events.3.a:0 "Build the Tower, for the glory of Odin!"
+ pf_lagrlond_events.3.b:0 "Our ducats can be better used elsewhere"
+ pf_lagrlond_events.4.t:0 "The Odinstur is struck by lightning!"
+ pf_lagrlond_events.4.desc:0 "REPLACE_ME"
+ pf_lagrlond_events.4.a:0 "Repair the Tower to Odin as quickly as possible"
+ pf_lagrlond_events.4.b:0 "The repairs are not worth our ducats"
+ # Estate Loyalty
+ PF_EST_VAL_BUILT_ODINSTUR:0 "Built the Odinstur: §G$VAL$§!"
+ PF_EST_VAL_SNUBBED_ODINSTUR:0 "Refused to build the Odinstur: §R$VAL$§!"
+ PF_EST_VAL_FIXED_ODINSTUR:0 "Fixed the Odinstur: §G$VAL$§!"
+ PF_EST_VAL_REFUSED_REPAIR_ODINSTUR:0 "Let the Odinstur in disrepair: §R$VAL$§!"
