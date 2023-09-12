@@ -676,6 +676,33 @@ pf_trn_3 = {
 			}
 		}
 	}
+	pf_trn_dreams_of_albion = {
+		icon = mission_rb_rule_britannia_scottish_version
+		position = 6
+		required_missions = { pf_trn_merchant_adventurers pf_trn_defeat_celtica pf_trn_the_folk_council } 
+		provinces_to_highlight = {
+			region = british_isles_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					region = british_isles_region
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				amount = 26
+			}
+		}
+		effect = {
+			set_country_flag = may_form_albion
+			custom_tooltip = pf_trn_dreams_of_albion_tt
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_trn_united_the_british_tribes"
+				duration = 7300
+			}
+		}
+	}
 }
 pf_trn_4 = {
 	slot = 4
