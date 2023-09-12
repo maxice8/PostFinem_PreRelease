@@ -599,8 +599,11 @@ pf_nrd_3 = {
 			}
 			custom_tooltip = empty_line_tt
 			change_tag = SKL
-			on_change_tag_effect = yes
-			restore_country_name = "yes"
+			hidden_effect = { 
+				on_change_tag_effect = yes
+				restore_country_name = yes 
+				complete_mission = pf_nrd_celtic_isles
+			}
 			custom_tooltip = empty_line_tt
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
@@ -612,15 +615,14 @@ pf_nrd_3 = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			add_prestige = 50
+			add_prestige_or_monarch_power = {
+				amount = 50
+			}
 			if = {
 				limit = { has_custom_ideas = no } 
 				country_event = { id = ideagroups.1 } 
 			}
 			set_country_flag = formed_skaldasker_flag
-			hidden_effect = {
-				complete_mission = pf_nrd_celtic_isles
-			}
 		}
 	}
 
@@ -1215,7 +1217,7 @@ pf_nrd_5 = {
 
 		trigger = {  
 			adm_power = 200
-			has_reform_on_level =  6
+			reform_level = 6
 		} 
 
 		effect = {  

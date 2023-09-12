@@ -100,3 +100,11 @@ nrd_approach_the_interior_modifier = {
 	trade_company_investment_cost = -0.1
 	caravan_power = 0.25
 }
+nrd_scandi_refugee_modifier = {
+	local_tax_modifier = 0.1
+	local_culture_conversion_cost = -0.25
+}
+nrd_convert_culture_modifier = {
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+}

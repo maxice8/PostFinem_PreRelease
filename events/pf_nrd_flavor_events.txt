@@ -1,0 +1,364 @@
+namespace = nrd_flavor_events
+
+
+#Settling Norse Communities
+country_event = {
+	id = nrd_flavor_events.1
+	title = nrd_flavor_events.1.t
+	desc = nrd_flavor_events.1.d
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	
+	trigger = {
+		
+	}
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	# mean_time_to_happen = {}
+
+	option = {
+		name = nrd_flavor_events.1.a
+		ai_chance = { factor = 1 }
+		
+		random_owned_province = {
+			limit = {
+				OR = {
+					area = lowlands_area
+					area = highlands_area
+					area = kingdom_of_the_isles_area
+				}
+				is_capital = no
+			}
+			add_base_tax = 2
+			add_base_production = 3
+			add_base_production = 2
+			if = {
+				limit = {
+					NOT = { religion = owner }
+				}				
+				custom_tooltip = empty_line_tt
+				change_religion = owner
+				custom_tooltip = empty_line_tt
+			}
+			if = {
+				limit = {
+					NOT = { culture = owner }
+				}
+				change_culture = owner
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nrd_flavor_events.2 
+	title = nrd_flavor_events.2.t 
+	desc = nrd_flavor_events.2.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = nrd_flavor_events.2.a
+		change_price = {
+			trade_goods = cocoa
+			key = nrd_cocoa_boom
+			value = 0.25
+			duration = 18250
+	   }
+	   custom_tooltip = empty_line_tt
+		change_price = {
+			trade_goods = coffee
+			key = nrd_coffee_boom
+			value = 0.25
+			duration = 18250
+	   }
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = nrd_flavor_events.2 
+	title = nrd_flavor_events.2.t 
+	desc = nrd_flavor_events.2.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = nrd_flavor_events.2.a
+		change_price = {
+			trade_goods = cocoa
+			key = nrd_cocoa_boom
+			value = 0.25
+			duration = 18250
+	   }
+	   custom_tooltip = empty_line_tt
+		change_price = {
+			trade_goods = coffee
+			key = nrd_coffee_boom
+			value = 0.25
+			duration = 18250
+	   }
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+#The Sons Ulrik Alfsson
+country_event = {
+	id = nrd_flavor_events.3
+	title = nrd_flavor_events.3.t
+	desc = nrd_flavor_events.3.d
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	
+	trigger = {
+		tag = NRD
+		has_ruler_flag = knut_stormbringer_flag
+		has_heir = no
+	}
+
+	fire_only_once = yes
+	
+	# is_triggered_only = yes
+	mean_time_to_happen = { months = 12 }
+
+	option = {
+		name = nrd_flavor_events.3.a
+		ai_chance = { factor = 1 }
+		set_country_flag = knut_ulriksson_maidenless_flag
+		custom_tooltip = knut_ulriksson_maidenless_tt
+		custom_tooltip = empty_line_tt
+		add_opinion = {
+			who = NOR
+			modifier = ulriksson_brothers_opinion
+		}
+		hidden_effect = {
+			reverse_add_opinion = {
+				who = NOR
+				modifier = ulriksson_brothers_opinion
+			}
+		}
+	}
+}
+
+#Norway Claims leadership over Nordanvik
+country_event = {
+	id = nrd_flavor_events.4
+	title = nrd_flavor_events.4.t
+	desc = nrd_flavor_events.4.d
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	major_trigger = { 
+		capital_scope = {
+			OR = {
+				region = british_isles_region
+				region = scandinavia_region
+				region = france_region
+			}
+		} 
+	}
+	# trigger = {
+	# }
+	# mean_time_to_happen = { months = 12 }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nrd_flavor_events.4.a
+		ai_chance = { factor = 1 }
+		add_stability_or_adm_power = yes
+		custom_tooltip = empty_line_tt
+		NOR = { create_union = ROOT }
+	}
+	option = {
+		name = nrd_flavor_events.4.b
+		ai_chance = { factor = 2 }
+		add_mil_power = 100
+		custom_tooltip = empty_line_tt	
+		NOR = {
+			add_casus_belli = {
+				type = cb_restore_personal_union
+				target = ROOT
+				months = 60
+			}
+		}
+		custom_tooltip = empty_line_tt
+		reverse_add_opinion = {
+			who = NOR
+			modifier = denied_viking_pu_opinion
+		}
+	}
+}
+
+#Norse Refugees from Scandinavia
+country_event = {
+	id = nrd_flavor_events.5
+	title = nrd_flavor_events.5.t
+	desc = nrd_flavor_events.5.d
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	
+	trigger = {
+		tag = NRD
+		any_owned_province = {
+			NOT = {
+				religion = norse_pagan_reformed
+			}
+		}
+		any_province = {
+			region = scandinavia_region
+			devastation = 30
+			owner = {
+				is_at_war = yes
+			}
+		}
+	}
+	mean_time_to_happen = { months = 12 }
+
+	fire_only_once = yes
+	# is_triggered_only = yes
+	immediate = {	
+		random_province = {
+			limit = {
+				region = scandinavia_region
+				devastation = 25
+				religion = norse_pagan_reformed
+				owner = {
+					is_at_war = yes
+				}
+			}
+			save_event_target_as = scandi_refugee_province #for loc
+		}
+		random_owned_province = {
+			limit = { 
+				NOT = { religion = norse_pagan_reformed }
+			}
+			save_event_target_as = nrd_scandi_refugee_province
+		}
+	}
+	option = {
+		name = nrd_flavor_events.5.a
+		goto = nrd_scandi_refugee_province
+		ai_chance = { factor = 1 }
+		
+		add_prestige_or_monarch_power = {
+			amount = 50
+		}
+		custom_tooltip = empty_line_tt
+		event_target:nrd_scandi_refugee_province = {
+			change_religion = norse_pagan_reformed
+			add_base_tax = 1
+			if = {
+				limit = {
+					NOT = { culture = ROOT }
+				}
+				custom_tooltip = empty_line_tt
+				add_province_modifier = {
+					name = nrd_scandi_refugee_modifier
+					duration = 7300
+				}
+			}			
+		}
+	}
+
+	option = {
+		goto = nrd_scandi_refugee_province
+		name = nrd_flavor_events.5.b
+		ai_chance = { factor = 1 }
+
+		add_years_of_income = 1
+		define_advisor = {
+			type = treasurer
+			skill = 1
+			discount = yes
+		}
+	}
+}
+
+#Rebels in Northern England
+country_event = {
+	id = nrd_flavor_events.6
+	title = nrd_flavor_events.6.t
+	desc = nrd_flavor_events.6.d
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	
+	trigger = {
+		tag = NRD
+		scottish_marches_area = {
+			type = all
+			owned_by = ROOT
+			NOT = {
+				religion = ROOT
+			}
+		}
+	}
+
+	mean_time_to_happen = { months = 12 }
+	fire_only_once = yes
+	# is_triggered_only = yes
+
+	immediate = {	
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					area = scottish_marches_area
+					NOT = {
+						religion = ROOT
+					}
+				}
+				spawn_rebels = {
+					size = 2
+					type = nationalist_rebels
+				}
+				save_event_target_as = nrd_rebel_province
+			}
+		}
+		tooltip = {
+			event_target:nrd_rebel_province = {			
+				spawn_rebels = {
+					size = 2
+					type = nationalist_rebels
+				}
+			}
+		}
+	}
+
+	option = { #Crush them
+		name = nrd_flavor_events.6.a
+		goto = nrd_rebel_province
+		ai_chance = { factor = 1 }
+
+		add_stability = -1
+		custom_tooltip = empty_line_tt
+		every_owned_province = {
+			limit = { area = scottish_marches_area }
+			change_religion = ROOT
+			custom_tooltip = empty_line_tt
+			add_province_modifier = {
+				name = nrd_convert_culture_modifier
+				duration = -1
+			}
+		}
+	}
+
+	option = { #Tolerate them
+		name = nrd_flavor_events.6.b
+		goto = nrd_rebel_province
+		ai_chance = { factor = 1 }
+
+		add_dip_power = 100
+		custom_tooltip = empty_line_tt
+		every_owned_province = {
+			limit = { area = scottish_marches_area }
+			add_nationalism = 10
+		}
+	}
+}

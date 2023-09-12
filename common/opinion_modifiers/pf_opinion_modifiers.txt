@@ -27,7 +27,12 @@ trinovantes_rejects_celtica = {
 
 # Event Opionions
 
+#Nordanvik
 ulriksson_brothers_opinion = {
 	opinion = 50
-	yearly_decay = -0.5
+	yearly_decay = 0.5
+}
+denied_viking_pu_opinion = {
+	opinion = -150
+	yearly_decay = 1
 }
