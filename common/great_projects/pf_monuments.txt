@@ -145,7 +145,7 @@ seat_of_the_archon = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			church_privilege_slots = 1
+			estate_church_privilege_slots = 1
 		}
 	}
 }
@@ -332,23 +332,23 @@ grand_temple_to_tanit = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
-		AND = {
+		province_is_or_accepts_religion = {
+
 		    religion = punic_religion
-		    has_owner_religion = yes
 		}
 	}
 	on_built = {}
 	on_destroyed = {}
 	can_use_modifiers_trigger = {
-		AND = {
+		province_is_or_accepts_religion = {
+
 		    religion = punic_religion
-		    has_owner_religion = yes
 		}
 	}
 	can_upgrade_trigger = {
-		AND = {
+		province_is_or_accepts_religion = {
+
 		    religion = punic_religion
-		    has_owner_religion = yes
 		}
 	}
 	keep_trigger = {}
