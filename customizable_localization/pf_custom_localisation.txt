@@ -1,0 +1,68 @@
+defined_text = {
+	name = GetPrimaryTribe
+
+	text = {
+		localisation_key = trn_iceni_primary_tt
+		trigger = {
+			has_country_flag = chose_iceni_primary
+		}
+	}
+	text = {
+		localisation_key = trn_trinovantes_primary_tt
+		trigger = {
+			has_country_flag = chose_trinovantes_primary
+		}
+	}
+	text = {
+		localisation_key = trn_cantiaci_primary_tt
+		trigger = {
+			has_country_flag = chose_cantiaci_primary
+		}
+	}
+	text = {
+		localisation_key = trn_regni_primary_tt
+		trigger = {
+			has_country_flag = chose_regni_primary
+		}
+	}
+	text = {
+		localisation_key = trn_catuvellauni_primary_tt
+		trigger = {
+			has_country_flag = chose_catuvellauni_primary
+		}
+	}
+}
+defined_text = {
+	name = GetSecondaryTribe
+
+	text = {
+		localisation_key = trn_iceni_secondary_tt
+		trigger = {
+			has_country_flag = chose_iceni_secondary
+		}
+	}
+	text = {
+		localisation_key = trn_trinovantes_secondary_tt
+		trigger = {
+			has_country_flag = chose_trinovantes_secondary
+		}
+	}
+	text = {
+		localisation_key = trn_cantiaci_secondary_tt
+		trigger = {
+			has_country_flag = chose_cantiaci_secondary
+		}
+	}
+	text = {
+		localisation_key = trn_regni_secondary_tt
+		trigger = {
+			has_country_flag = chose_regni_secondary
+		}
+	}
+	text = {
+		localisation_key = trn_catuvellauni_secondary_tt
+		trigger = {
+			has_country_flag = chose_catuvellauni_secondary
+		}
+	}
+}

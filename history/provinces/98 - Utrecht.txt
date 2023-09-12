@@ -1,9 +1,9 @@
 # 98 Utrecht - Principal cities: Utrecht
 capital = "Utrecht"
 is_city = yes
-base_tax = 1
+base_tax = 2
 base_production = 2
-trade_goods = cloth
+trade_goods = salt
 base_manpower = 2
 discovered_by = eastern
 discovered_by = western
@@ -14,3 +14,8 @@ owner = LAG
 controller = LAG
 culture = old_frisian
 religion = germanic_religion
+
+1421.1.1 = {
+	add_devastation = 9
+	add_local_autonomy = 2.1
+}

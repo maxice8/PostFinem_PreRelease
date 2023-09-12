@@ -1,7 +1,7 @@
 
 #Gallic Hierarchy
 
-gallic_hierarchy = {
+pf_gallic_hierarchy = {
 	icon = "gallic_king"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -29,7 +29,7 @@ gallic_hierarchy = {
 
 #Celtic Lordship
 
-celtic_lordship = {
+pf_celtic_lordship = {
 	icon = "celtic_king"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -57,7 +57,7 @@ celtic_lordship = {
 
 #Crown of Roma
 
-crown_of_roma = {
+pf_crown_of_roma = {
 	icon = "roman_empire"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -83,7 +83,7 @@ crown_of_roma = {
 
 #Auralpina Monarchy
 
-auralpina_monarchy = {
+pf_auralpina_monarchy = {
 	icon = "king_mountains"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -109,7 +109,7 @@ auralpina_monarchy = {
 
 #Hellepharaohcy
 
-hellepharaohcy = {
+pf_hellepharaohcy = {
 	icon = "cleopatra"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -135,7 +135,7 @@ hellepharaohcy = {
 
 #Diadem of Iberia
 
-diadem_of_iberia = {
+pf_diadem_of_iberia = {
 	icon = "explorer_landing"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -161,7 +161,7 @@ diadem_of_iberia = {
 
 #Alexander's Crown
 
-alexanders_crown = {
+pf_alexanders_crown = {
 	icon = "alexander_crown"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -186,9 +186,9 @@ alexanders_crown = {
 }
 
 
-#Selucid Monarchy
-selucid_monarchy = {
-	icon = "selucid"
+#Seleucid  Monarchy
+pf_seleucid _monarchy = {
+	icon = "seleucid "
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = no
@@ -214,5 +214,22 @@ selucid_monarchy = {
 	conditional = {
 		allow = { has_dlc = "Third Rome" }
 		claim_states = yes
+	}
+}
+
+pf_nordhafnadr_kingdom = {
+	icon = "norse_kingdom"
+	allow_normal_conversion = yes
+	raze_province = yes
+	potential = {
+		has_country_flag = nrd_reformed_government_flag
+	}
+	modifiers = {
+		army_tradition = 1
+		monarch_military_power = 2
+		movement_speed_onto_off_boat_modifier = 1
+	}
+	ai = {
+		factor = 1
 	}
 }

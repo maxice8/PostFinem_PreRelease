@@ -37,9 +37,9 @@ country_event = {
 				limit = {
 					NOT = { religion = owner }
 				}				
-				custom_tooltip = " "
+				custom_tooltip = empty_line_tt
 				change_religion = owner
-				custom_tooltip = " "
+				custom_tooltip = empty_line_tt
 			}
 			if = {
 				limit = {
@@ -47,6 +47,103 @@ country_event = {
 				}
 				change_culture = owner
 			}
+		}
+	}
+}
+
+country_event = {
+	id = nrd_flavor_events.2 
+	title = nrd_flavor_events.2.t 
+	desc = nrd_flavor_events.2.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = nrd_flavor_events.2.a
+		change_price = {
+			trade_goods = cocoa
+			key = nrd_cocoa_boom
+			value = 0.25
+			duration = 18250
+	   }
+	   custom_tooltip = empty_line_tt
+		change_price = {
+			trade_goods = coffee
+			key = nrd_coffee_boom
+			value = 0.25
+			duration = 18250
+	   }
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#The Sons Ulrik Alfsson
+country_event = {
+	id = nrd_flavor_events.2
+	title = nrd_flavor_events.2.t
+	desc = nrd_flavor_events.2.d
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	
+	trigger = {
+		tag = NRD
+		has_ruler = "Knut Ulriksson"
+		has_heir = no
+	}
+
+	fire_only_once = yes
+	
+	# is_triggered_only = yes
+	mean_time_to_happen = { months = 12 }
+
+	option = {
+		name = nrd_flavor_events.2.a
+		ai_chance = { factor = 1 }
+		set_country_flag = knut_ulriksson_maidenless_flag
+		custom_tooltip = knut_ulriksson_maidenless_tt
+		custom_tooltip = empty_line_tt
+		add_opinion = {
+			who = NOR
+			modifier = ulriksson_brothers_opinion
+		}
+		hidden_effect = {
+			reverse_add_opinion = {
+				who = NOR
+				modifier = ulriksson_brothers_opinion
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nrd_flavor_events.2 
+	title = nrd_flavor_events.2.t 
+	desc = nrd_flavor_events.2.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = nrd_flavor_events.2.a
+		change_price = {
+			trade_goods = cocoa
+			key = nrd_cocoa_boom
+			value = 0.25
+			duration = 18250
+	   }
+	   custom_tooltip = empty_line_tt
+		change_price = {
+			trade_goods = coffee
+			key = nrd_coffee_boom
+			value = 0.25
+			duration = 18250
+	   }
+
+		ai_chance = {
+			factor = 1
 		}
 	}
 }

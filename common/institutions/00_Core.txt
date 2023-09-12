@@ -1366,7 +1366,22 @@ global_trade = {
 				highest_value_trade_node = yes
 			}
 		}
-
+		# pf
+		custom_trigger_tooltip = {
+			tooltip = PF_LAG_GLOBAL_TRADE_LOCK_UNTIL_1605
+			if = {
+				limit = {
+					LAG = { has_country_flag = pf_global_trade_lock }
+				}
+				OR = {
+					owner = { has_country_flag = pf_global_trade_lock }
+					is_year = 1605
+				}
+			}
+			else = {
+				is_year = 1605
+			}
+		}
 	}
 	start_chance = 25		#in 100 for when a province can_start
 	

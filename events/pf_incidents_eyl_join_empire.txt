@@ -130,6 +130,9 @@ country_event = {
 			custom_tooltip = empty_line_tt
 			set_in_empire = yes
 			custom_tooltip = eyl_become_merchants_reform_tt
+			hidden_effect = {
+				add_government_reform = merchants_reform
+			}
 		}
 	}
 	
