@@ -2957,20 +2957,17 @@ fourth_3 = {
 			pf_lag_carib
 			pf_lag_east_coast
 		}
-		provinces_to_highlight = { 
+		provinces_to_highlight = {
+			province_has_center_of_trade_of_level = 1
+			has_discovered = ROOT
 			OR = {
 				AND = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					colonial_region = colonial_the_carribean
-					province_has_center_of_trade_of_level = 1
 				}
 				AND = {
 					NOT = { owned_by = ROOT }
-					province_has_center_of_trade_of_level = 1
-					OR = {
-						superregion = europe_superregion
-						region = guinea_region
-					}
+					region = guinea_region
 				}
 			}
 		} 
@@ -2985,11 +2982,6 @@ fourth_3 = {
 					}
 				}
 				colonial_region = colonial_the_carribean
-				province_has_center_of_trade_of_level = 1
-			}
-			num_of_owned_provinces_with = {
-				value = 1
-				superregion = europe_superregion
 				province_has_center_of_trade_of_level = 1
 			}
 			num_of_owned_provinces_with = {
@@ -3210,6 +3202,14 @@ fifth_3 = {
 					}
 				}
 			}
+			custom_tooltip = empty_line_tt
+			taiwan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		} 
 	}
 
@@ -3265,6 +3265,7 @@ fifth_3 = {
 				province_id = 667
 				province_id = 1012	
 			}
+			has_discovered = ROOT
 			NOT = { owned_by = ROOT }
 		} 
 
