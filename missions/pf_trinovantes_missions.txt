@@ -104,6 +104,22 @@ pf_trn_1_locked_druid_path = {
 			custom_tooltip = mission_not_unlocked_tt
 		}
 	}
+	pf_trn_locked_druid_path_2 = {
+		icon = mission_locked_mission
+		position = 7
+		required_missions = { pf_trn_locked_druid_path_1 } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mission_not_unlocked_tt
+		}
+	}
 }
 pf_trn_1_anti_druid_path = {
 	slot = 1
@@ -150,7 +166,34 @@ pf_trn_1_anti_druid_path = {
 			define_advisor = {
 				type = theologian
 				skill = 3
+				cost_multiplier = 0.5
+			}
+		}
+	}
+	pf_trn_natural_society = {
+		icon = mission_educated_people
+		position = 7
+		required_missions = { pf_trn_reach_out } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			innovativeness = 50
+			monthly_adm = 12
+			has_institution = new_world_i
+		}
+		effect = {
+			change_dip = 1
+			change_mil = 1
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_trn_the_natural_society"
+				duration = -1
+			}
+			define_advisor = {
+				type = natural_scientist
+				skill = 3
 				cost_multiplier = 0.25
+				name = "Oston Bartef"
 			}
 		}
 	}
@@ -188,6 +231,26 @@ pf_trn_1_pro_druid_path = {
 				type = inquisitor
 				skill = 3
 				cost_multiplier = 0.25
+			}
+		}
+	}
+
+	pf_trn_druid_strength = {
+		icon = mission_engelbrekt
+		position = 7
+		required_missions = { pf_trn_religious_revolution } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			patriarch_authority = 0.75
+		}
+		effect = {
+			change_adm = 1
+			change_mil = 1
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = pf_trn_strongest_druids
+				duration = -1
 			}
 		}
 	}
