@@ -2,6 +2,13 @@
 # OPINION MODIFIERS
 ##########################################################################
 
+# Monuments
+
+opinion_grand_temple_to_tanit = {
+	opinion = -25
+	yearly_decay = 1
+}
+
 # Imperial Incidents
 
 eyl_refused_membership_opinion = {
@@ -32,4 +39,11 @@ opinion_attended_ricatus_funeral = {
 opinion_attended_ricatus_funeral_no = {
 	opinion = -50
 	yearly_decay = 2
+}
+
+# Event Opionions
+
+ulriksson_brothers_opinion = {
+	opinion = 50
+	yearly_decay = -0.5
 }
