@@ -790,6 +790,38 @@ pf_trn_3 = {
 			}
 		}
 	}
+	pf_trn_conquer_wales = {
+		icon = mission_rb_conquer_wales
+		position = 8
+		required_missions = { pf_trn_the_new_north } 
+		provinces_to_highlight = {
+			area = wales_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			wales_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			4366 = {
+				add_province_modifier = {
+					name = "pf_trn_mathrafal_castle"
+					duration = -1
+				}
+			}
+			4369 = {
+				change_trade_goods = wool
+				add_base_production = 1
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_trn_sheepfuckers"
+				duration = 7300
+			}
+		}
+	}
 }
 pf_trn_4 = {
 	slot = 4

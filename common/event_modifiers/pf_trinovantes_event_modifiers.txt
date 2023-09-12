@@ -117,3 +117,12 @@ pf_trn_triumph_over_the_northmen = {
 	shock_damage = 0.10
 	morale_damage = 0.10
 }
+pf_trn_mathrafal_castle = {
+	local_defensiveness = 0.20
+	local_hostile_attrition = 1.0
+	local_hostile_movement_speed = -0.25
+}
+pf_trn_sheepfuckers = {
+	production_efficiency = 0.10
+	heir_chance = 0.50
+}
