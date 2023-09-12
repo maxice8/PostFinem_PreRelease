@@ -109,7 +109,6 @@ country_event = {
 			duration = 3650
 		}
 		hidden_effect = {
-			set_country_flag = pf_built_martinitoren
 			country_event = {
 				id = pf_lagrlond_events.4
 				days = 3650
@@ -145,7 +144,6 @@ country_event = {
 
 	trigger = {
 		owns_core_province = 4382
-		has_country_flag = pf_built_martinitoren
 		NOT = { has_country_flag = pf_refused_odinstur_repair }
 	}
 
