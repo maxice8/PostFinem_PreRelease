@@ -1,0 +1,75 @@
+country_decisions = {
+	grand_temple_to_tanit_convert_decision = {
+		color = {
+			153
+			102
+			0
+		}
+		potential = {
+			religion = punic_religion
+			any_owned_province = {
+				has_great_project = {
+					type = grand_temple_to_tanit
+					tier = 0
+				}
+			}
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = grand_temple_to_tanit_convert_decision_cooldown
+			}
+			prestige = 10
+			religion = punic_religion
+			any_owned_province = {
+				has_great_project = {
+					type = grand_temple_to_tanit
+					tier = 2
+				}
+			}
+			any_neighbor_province = {
+				NOT = {
+					religion = punic_religion
+				}
+			}
+		}
+		effect = {
+			add_prestige = -10
+			custom_tooltip = grand_temple_to_tanit_convert_decision_explaination
+			hidden_effect = {
+				#random_neighbor_province = { # random_neighbor_province doesn't work in country scope fsr
+				#	limit = {
+				#		NOT = {
+				#			religion = punic_religion
+				#		}
+				#	}
+				#	change_religion = punic_religion
+				#}
+				random_owned_province = { # Selects a random punic province that you own with a neighbouring non-punic province
+					limit = {
+						religion = punic_religion
+						any_neighbor_province = {
+							NOT = {
+								religion = punic_religion
+							}
+						}
+					}
+					random_neighbor_province = { # Converts a random non-punic neighbour of that province to punic
+						limit = {
+							NOT = {
+								religion = punic_religion
+							}
+						}
+						change_religion = punic_religion
+					}
+				}
+			}
+			add_country_modifier = { 
+				name = grand_temple_to_tanit_convert_decision_cooldown
+				duration = 500
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
