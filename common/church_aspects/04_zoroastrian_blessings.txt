@@ -54,10 +54,13 @@ pf_zoroastrian_inward_focus_aspect = {
 	}
 
 	effect = {
-		add_country_modifier = {
-			name = pf_zoroastrian_inward_focus
-			duration = 3650
-			hidden = no
+		custom_tooltip = pf_zoroastrian_inward_focus_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = pf_zoroastrian_inward_focus
+				duration = 3650
+				hidden = no
+			}
 		}
 	}
 
@@ -74,30 +77,33 @@ pf_zoroastrian_harvest_rituals_aspect = {
 	}
 
 	effect = {
-		add_country_modifier = {
+		custom_tooltip = pf_zoroastrian_harvest_rituals_tt
+		hidden_effect = {
+			add_country_modifier = {
 			name = pf_zoroastrian_harvest_rituals_flag
 			duration = 3650
 			hidden = yes
-		}
-		every_owned_province = {
-			limit = {
-				OR = {
-					trade_goods = grain
-					trade_goods = livestock
-					trade_goods = fish
-					trade_goods = wine
-				}
 			}
-			add_province_modifier = {
-				name = pf_zoroastrian_harvest_rituals
-				duration = 3650
-				hidden = no
+			every_owned_province = {
+				limit = {
+					OR = {
+						trade_goods = grain
+						trade_goods = livestock
+						trade_goods = fish
+						trade_goods = wine
+					}
+				}
+				add_province_modifier = {
+					name = pf_zoroastrian_harvest_rituals
+					duration = 3650
+					hidden = no
+				}
 			}
 		}
 	}
 
 	ai_will_do = {
-		factor = 1.2
+		factor = 0
 	}
 }
 
@@ -109,10 +115,13 @@ pf_zoroastrian_inspire_zealotry_aspect = {
 	}
 
 	effect = {
-		add_country_modifier = {
-			name = pf_zoroastrian_inspire_zealotry
-			duration = 3650
-			hidden = no
+		custom_tooltip = pf_zoroastrian_inspire_zealotry_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = pf_zoroastrian_inspire_zealotry
+				duration = 3650
+				hidden = no
+			}
 		}
 	}
 
@@ -133,10 +142,13 @@ pf_zoroastrian_fire_worship_aspect = {
 	}
 
 	effect = {
-		add_country_modifier = {
-			name = pf_zoroastrian_fire_worship
-			duration = 3650
-			hidden = no
+		custom_tooltip = pf_zoroastrian_fire_worship_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = pf_zoroastrian_fire_worship
+				duration = 3650
+				hidden = no
+			}
 		}
 	}
 
@@ -157,19 +169,26 @@ pf_zoroastrian_promote_mobads_aspect = {
 	}
 
 	effect = {
-		add_estate_loyalty = {
-			estate = estate_church
-			loyalty = 10
-		}
-		add_country_modifier = {
-			name = pf_zoroastrian_promote_mobads
-			duration = 3650
-			hidden = no
+		custom_tooltip = pf_zoroastrian_promote_mobads_tt
+		hidden_effect = {
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			add_country_modifier = {
+				name = pf_zoroastrian_promote_mobads
+				duration = 3650
+				hidden = no
+			}
 		}
 	}
 
 	ai_will_do = {
-		factor = 0
+		factor = 0.5
+		modifier = {
+			factor = 3
+			tax_income_percentage = 0.3
+		}
 	}
 }
 
@@ -181,10 +200,13 @@ pf_zoroastrian_conversion_efforts_aspect = {
 	}
 
 	effect = {
-		add_country_modifier = {
-			name = pf_zoroastrian_conversion_efforts
-			duration = 3650
-			hidden = no
+		custom_tooltip = pf_zoroastrian_conversion_efforts_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = pf_zoroastrian_conversion_efforts
+				duration = 3650
+				hidden = no
+			}
 		}
 	}
 
