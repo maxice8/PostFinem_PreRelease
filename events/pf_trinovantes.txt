@@ -654,3 +654,19 @@ country_event = {		# The Magic of the Druids
 		swap_non_generic_missions = yes
 	}
 }
+country_event = {		# The Thirteen Treasures of Albion
+	id = pf_trn.14
+	title = pf_trn.14.t
+	desc = pf_trn.14.d
+	picture = FORESTS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {	
+		name = "pf_trn.14.a"
+		add_splendor = 100
+		add_treasury = 250
+		set_country_flag = pf_trn_splendor_art
+		custom_tooltip = pf_trn_thirteen_treasures_tt
+	}
+}

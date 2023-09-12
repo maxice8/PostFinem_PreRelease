@@ -443,6 +443,91 @@ pf_trn_2 = {
 			}
 		}
 	}
+	pf_trn_the_new_north = {
+		icon = mission_rb_into_england
+		position = 7
+		required_missions = { } 
+		provinces_to_highlight = {
+			OR = {
+				area = scottish_marches_area
+				area = yorkshire_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			scottish_marches_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			yorkshire_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			define_advisor = {
+				type = artist
+				skill = 2
+				discount = yes
+				name = "Cian Aneurin"
+			}
+			custom_tooltip = empty_line_tt
+			add_adm_power = 50
+			custom_tooltip = empty_line_tt
+			country_event = { id = pf_trn.14 }
+		}
+	}
+	pf_trn_free_the_picts = {
+		icon = mission_rb_conquer_the_isles
+		position = 8
+		required_missions = { pf_trn_the_new_north } 
+		provinces_to_highlight = {
+			OR = {
+				area = lowlands_area
+				area = highlands_area
+				area = kingdom_of_the_isles_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				OR = {
+					area = lowlands_area
+					area = highlands_area
+					area = kingdom_of_the_isles_area
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_trn_triumph_over_the_northmen"
+				duration = 7300
+			}
+			custom_tooltip = pf_trn_free_the_picts_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						OR = {
+							owned_by = ROOT
+							owner = { is_subject_of = ROOT }
+						}
+						OR = {
+							area = lowlands_area
+							area = highlands_area
+							area = kingdom_of_the_isles_area
+						}
+					}
+					add_nationalism = -5
+					add_devastation = -20
+				}
+			}
+			tooltip = {
+				add_nationalism = -5
+				add_devastation = -20
+			}
+		}
+	}
 }
 pf_trn_3 = {
 	slot = 3
@@ -527,6 +612,7 @@ pf_trn_3 = {
 					limit = {
 						treasury = 100
 					}
+					add_treasury = -100
 					4370 = {
 						add_building = fort_15th
 						add_province_modifier = {
@@ -537,6 +623,7 @@ pf_trn_3 = {
 				}
 			}
 			tooltip = {
+				add_treasury = -100
 				4370 = {
 					add_building = fort_15th
 					add_province_modifier = {
@@ -850,6 +937,120 @@ pf_trn_4 = {
 				duration = -1
 			}
 			change_innovativeness = 5
+		}
+	}
+
+	pf_trn_professional_army = {
+		icon = mission_knight
+		position = 7
+		required_missions = { pf_trn_daughters_of_boudicca } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			army_professionalism = 0.50
+			army_size_percentage = 0.85
+			army_size = 30
+		}
+		effect = {
+			custom_tooltip = pf_trn_professional_army_reward_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						mil = 1
+						NOT = { mil = 2 }
+					}
+					add_army_tradition = 5
+				}
+				if = {
+					limit = {
+						mil = 2
+						NOT = { mil = 3 }
+					}
+					add_army_tradition = 10
+				}
+				if = {
+					limit = {
+						mil = 3
+						NOT = { mil = 4 }
+					}
+					add_army_tradition = 15
+				}
+				if = {
+					limit = {
+						mil = 4
+						NOT = { mil = 5 }
+					}
+					add_army_tradition = 20
+				}
+				if = {
+					limit = {
+						mil = 5
+						NOT = { mil = 6 }
+					}
+					add_army_tradition = 25
+				}
+				if = {
+					limit = {
+						mil = 6
+					}
+					add_army_tradition = 30
+				}
+			}
+			if = {
+				limit = {
+					mil = 1
+					NOT = { mil = 2 }
+				}
+				tooltip = {
+					add_army_tradition = 5
+				}
+			}
+			else_if = {
+				limit = {
+					mil = 2
+					NOT = { mil = 3 }
+				}
+				tooltip = {
+					add_army_tradition = 10
+				}
+			}
+			else_if = {
+				limit = {
+					mil = 3
+					NOT = { mil = 4 }
+				}
+				tooltip = {
+					add_army_tradition = 15
+				}
+			}
+			else_if = {
+				limit = {
+					mil = 4
+					NOT = { mil = 5 }
+				}
+				tooltip = {
+					add_army_tradition = 20
+				}
+			}
+			else_if = {
+				limit = {
+					mil = 5
+					NOT = { mil = 6 }
+				}
+				tooltip = {
+					add_army_tradition = 25
+				}
+			}
+			else_if = {
+				limit = {
+					mil = 6
+				}
+				tooltip = {
+					add_army_tradition = 30
+				}
+			}
+			custom_tooltip = empty_line_tt
+			add_mil_power = 100
 		}
 	}
 }
