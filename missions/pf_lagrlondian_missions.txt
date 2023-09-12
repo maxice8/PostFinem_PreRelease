@@ -67,7 +67,7 @@ first = {
 		} 
 	}
 
-	pf_lag_tier = {
+	pf_lag_quarters = {
 		icon = fra_military_reform
 		position = 6
 		required_missions = { pf_lag_gunpowder } 
@@ -93,7 +93,7 @@ first = {
 	pf_lag_doctrine = {
 		icon = issue_general_reglement
 		position = 7
-		required_missions = { pf_lag_tier } 
+		required_missions = { pf_lag_quarters } 
 		provinces_to_highlight = {  } 
 
 		trigger = {
@@ -758,7 +758,7 @@ third = {
 			pf_lag_push_celts
 			pf_lag_wool_industry
 			pf_lag_brest
-			pf_lag_tier
+			pf_lag_quarters
 		} 
 		provinces_to_highlight = {
 			is_capital = yes
