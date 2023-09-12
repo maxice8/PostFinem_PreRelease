@@ -74,6 +74,14 @@ first = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
+			num_of_owned_provinces_with = {
+				value = 12
+				OR = {
+					has_forcelimit_building_trigger = yes
+					has_manpower_building_trigger = yes
+				}
+				base_manpower = 6
+			}
 			if = {
 				limit = { government = tribal } 
 				has_reform_on_level = 4
@@ -82,7 +90,7 @@ first = {
 		}
 
 		effect = {
-			add_mil_power = 50
+			add_mil_power = 100
 			add_country_modifier = {
 				name = pf_lag_general_staff
 				duration = 18250
@@ -1382,6 +1390,16 @@ fifth = {
 				}
 			}
 			else = { custom_tooltip = NO_PF_LAG_DANELAW_PERMANENT }
+
+			custom_tooltip = empty_line_tt
+
+			british_isles_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		} 
 	}
 
