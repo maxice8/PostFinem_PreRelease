@@ -158,38 +158,38 @@
  pf_lag_burgher_support_trade_node:0 "Support of the Borgarmenn"
  PF_LAG_COMPLETING_BURGHER_AGENDA:0 "Completing an §YEstate Agenda§! from the §Y[Root.GetBurghersOrFallbackName]§! now grants §G30.0§! Trade Power in a random active trade node for §Y10§! Years."
 
- pf_lag_renaissance_title:0 "Artists of the Renaissance"
+ pf_lag_renaissance_title:0 "Renaissance Men"
  pf_lag_renaissance_desc:0 "The Renaissance, which originated in the coastal cities of the Mediterranean, embarked on a journey that followed trade routes up the Rínar and through Gaul. Its radiant wave of art, culture, and innovation finally graced the court of the present Thinghalder, enriching our realm with the treasures of this cultural rebirth."
 
  pf_lag_absolutism_title:0 "Lagrlonder Absolutism"
  pf_lag_absolutism_desc:0 "REPLACE_ME"
 
  pf_lag_frisians_title:0 "Integrate The Frisians"
- pf_lag_frisians_desc:0 "REPLACE_ME"
+ pf_lag_frisians_desc:0 "Within the Lagrlond kingdom, the Frisian minority stands as an integral part of our tapestry. Their recent revolt calls for a renewed effort to mend ties and reintegrate them as loyal subjects."
  YES_PF_LAG_PU_EFR:0 "£yes£ If §Y[EFR.GetName]§! exists:"
  NO_PF_LAG_PU_EFR:0 "£no£ If §Y[EFR.GetName]§! exists:"
  YES_PF_LAG_PU_EFR_OTHERWISE:0 "£yes£ Otherwise:"
  NO_PF_LAG_PU_EFR_OTHERWISE:0 "£no£ Otherwise:"
 
- pf_lag_rein_nobles_title:0 "Rein The Nobles"
- pf_lag_rein_nobles_desc:0 "REPLACE_ME"
+ pf_lag_rein_nobles_title:0 "Rein The [Root.GetNobilityOrFallbackName]"
+ pf_lag_rein_nobles_desc:0 "While the [Root.GetNobilityOrFallbackName] play a role in our kingdom, it's crucial to note that their importance pales in comparison to the indispensable [Root.GetBurghersOrFallbackName]. To maintain a well-balanced governance, it's imperative to rein in noble influence, ensuring that they do not interefere with the agenda of the [Root.Monarch.GetTitle]."
  PF_LAG_SEIZE_LAND_NOBLES:0 "While this modifier is active the §Y[Root.GetNobilityOrFallbackName]§! will no longer raise any rebels when their land gets seized if their loyalty drops below §Y30§!."
 
  pf_lag_capital_title:0 "Develop The Capital"
- pf_lag_capital_desc:0 "REPLACE_ME"
+ pf_lag_capital_desc:0 "[Root.Capital.GetCapitalName], while historic, lags behind Europe's grand cities like Roma, Cartago, and Thessaloniki. To rejuvenate our cultural vibrancy and attract new intellects to the royal court, we must embark on a renovation journey. Drawing inspiration from these great cities, we'll revitalize our capital, establishing it as a beacon of art, culture, and innovation."
  PF_LAG_EVOLVED_IDEAS:0 "£icon_ideas£Empowers our §TCompetent Bureaucrats§! national idea by an additional §G-0.10§! Yearly Corruption"
 
  pf_lag_centralize_title:0 "Centralise The State"
- pf_lag_centralize_desc:0 "REPLACE_ME"
+ pf_lag_centralize_desc:0 "As Europe's modern states, such as Roma, Gaul, Celtica, and Macedon, embrace centralization, Lagrlond must similarly advance. By consolidating power and resources, we can bring progress and development to our Norvegr lands. Following the path of these centralized states ensures a stronger and more prosperous future for Lagrlond."
 
- pf_lag_universities_title:0 "Lagrlonder Universities"
- pf_lag_universities_desc:0 "REPLACE_ME"
+ pf_lag_universities_title:0 "Skaldic Halls"
+ pf_lag_universities_desc:0 "To stand at the forefront of European technologies, we recognize the imperative to establish and generously fund Skaldic Halls. These halls of learning will be crucibles of innovation, nurturing the intellects and talents that will propel our nation into the future, ensuring we remain leaders in the ever-evolving landscape of European advancements."
 
  pf_lag_medical_school_title:0 "The Guild of Eir"
- pf_lag_medical_school_desc:0 "REPLACE_ME"
+ pf_lag_medical_school_desc:0 "The Guild of Eir, comprised of doctors, surgeons, apothecaries, and other medical practitioners, pays homage to the Norse Goddess Eir, associated with medical skills. Recognizing the pivotal role of these dedicated healers in safeguarding public health, the state should invest in and generously fund these guilds. Such support ensures our people receive the best medical care, strengthening our resilience against plagues and diseases, safeguarding our nation's well-being."
 
  pf_lag_develop_title:0 "Develop The Lowlands"
- pf_lag_develop_desc:0 "REPLACE_ME"
+ pf_lag_develop_desc:0 "The Lowlands, the very heart of Lagrlond, bear the name of our native tongue. As such, their development is paramount. Expanding the prosperity of this core region ensures the continued growth and vitality of our nation, strengthening the bonds that tie Lagrlond together and fostering a brighter future for all who call these lands home."
 
  pf_lag_develop_outer_rim_title:0 "Develop The Outer Rim"
  pf_lag_develop_outer_rim_desc:0 "REPLACE_ME"
