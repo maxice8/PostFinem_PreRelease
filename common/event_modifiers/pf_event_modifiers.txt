@@ -76,4 +76,39 @@ pf_zoroastrian_conversion_efforts = {
 	global_missionary_strength = 0.02
 }
 
+pf_per_satrapies_granted_concessions = {
+	reduced_liberty_desire = 10
+}
 
+pf_per_satrapies_seized_privileges = {
+	reduced_liberty_desire = -20
+}
+
+pf_per_satrapy_compromised = {
+	liberty_desire = -10
+}
+
+pf_per_satrapy_refused = {
+	liberty_desire = 20
+}
+
+pf_per_satrapy_collaborated = {
+	liberty_desire = 10
+	global_tax_income = 24
+}
+
+pf_per_won_satrapy_revolt = {
+	reduced_liberty_desire = 10
+	prestige = 2
+	devotion = 1
+}
+
+pf_per_drew_satrapy_revolt = {
+	reduced_liberty_desire = 10
+}
+
+pf_per_lost_satrapy_revolt = {
+	prestige = -5
+	devotion = -5
+	land_morale = -0.2
+}

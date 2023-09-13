@@ -28,6 +28,7 @@ satrapy = {
 	opinion_cost_to_join_offensive_wars = 20   #Defines how much opinion the subject loses of the overlord to call the subject into an offensive war. Applied if you do not have Leviathan
 	opinion_cost_to_join_defensive_wars = 10   #Defines how much opinion the subject loses of the overlord to call the subject into a defensive war. Applied if you do not have Leviathan
 	opinion_on_subject_integration = 0
+	trust_on_start = -20
 
 	liberty_desire_development_ratio = 0.2
 	liberty_desire_same_dynasty = -5.0
@@ -49,7 +50,6 @@ satrapy = {
 	sacrifice_ruler = yes
 	sacrifice_heir = yes
 	divert_trade = yes
-	seize_territory = yes
 	siphon_income = yes
 
 	# Modifiers:
