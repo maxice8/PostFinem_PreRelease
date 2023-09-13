@@ -19,14 +19,17 @@ province_event = { # Blessing of Zeus
             religion = hellenic
         }
         OR = {
+            NOT = {
+				has_province_flag = hall_of_pantheons_blessing_flag
+			}
             had_province_flag = {
                 flag = hall_of_pantheons_blessing_flag
-                days = 350
+                days = 1825
             }
             AND = { # Reduced cooldown if you have <0 stability
                 had_province_flag = {
                     flag = hall_of_pantheons_blessing_flag
-                    days = 350
+                    days = 1460
                 }
                 NOT = {
                     owner = {
@@ -73,14 +76,17 @@ province_event = { # Blessing of Baal Hammon
             religion = punic_religion
         }
         OR = {
+            NOT = {
+				has_province_flag = hall_of_pantheons_blessing_flag
+			}
             had_province_flag = {
                 flag = hall_of_pantheons_blessing_flag
-                days = 350
+                days = 1825
             }
             AND = { # Reduced cooldown if you have <0 stability
                 had_province_flag = {
                     flag = hall_of_pantheons_blessing_flag
-                    days = 350
+                    days = 1460
                 }
                 NOT = {
                     owner = {
