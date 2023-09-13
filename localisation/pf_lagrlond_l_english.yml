@@ -8,10 +8,10 @@
  NO_PF_LAG_ARTILLERY_DURATION_DOUBLED:0 "£no£ If we have completed §YOffensive§! or §YFirepower§! ideas, the duration of the modifier will be §Gdoubled§!."
 
  pf_lag_quarters_title:0 "Build Soldier Quarters"
- pf_lag_quarters_desc:0 "We have our Grey Army but the soldiers need more than just weapons, they need recruitment centres to replenish their numbers, quarters to rest and provide supplies while on campaign."
+ pf_lag_quarters_desc:0 "We have our Grey Army but the soldiers need more than just weapons, they need recruitment centres to replenish their numbers, quarters to rest and provide supplies while on a campaign."
 
  pf_lag_doctrine_title:0 "Adopt Moden Doctrine"
- pf_lag_doctrine_desc:0 "In the evolving landscape of 18th-century warfare, modern armies are becoming increasingly specialized. To remain at the forefront of military doctrine, the Lagrlonder army must adapt to the changing times. Our forces will embrace new strategies, tactics, and technologies, ensuring our readiness and relevance in this era of specialization and innovation."
+ pf_lag_doctrine_desc:0 "In the evolving landscape of 18th-century warfare, modern armies are becoming increasingly specialised. To remain at the forefront of military doctrine, the Lagrlonder army must adapt to the changing times. Our forces will embrace new strategies, tactics, and technologies, ensuring our readiness and relevance in this era of specialisation and innovation."
  YES_PF_LAG_FULL_QUALITY:0 "£yes£ If we have fully embraced §YQuality Ideas§!, we will gain:"
  NO_PF_LAG_FULL_QUALITY:0 "£no£ If we have fully embraced §YQuality Ideas§!, we will gain:"
  YES_PF_LAG_FULL_QUANTITY:0 "£yes£ If we have fully embraced §YQuantity Ideas§!, we will gain:"
@@ -29,7 +29,7 @@
  pf_lag_raise_desc:0 "We again called to fulfil the call of our Forefathers, to raid and conquer, we are to raise a new Host and push outward, we cannot stand idle while our enemies grow stronger by the day among the Gauls and Germanics and our Norse Brethren are farther than they are closer."
 
  pf_lag_secure_title:0 "Secure Belgica"
- pf_lag_secure_desc:0 "Belgica is a shadow of its former self, losing most of its land to Gaulish invaders left it a fraction of its former size, we should conquer them than the Gauls eventually do so."
+ pf_lag_secure_desc:0 "Belgica is a shadow of its former self, losing most of its land to Gaulish invaders left it a fraction of its former size, we should conquer them before the Gauls eventually do so."
 
  pf_lag_break_title:0 "Break The Gauls"
  pf_lag_break_desc:0 "The Gauls are the most immediate danger to us, a large group of loosely united tribes, disorganised and frequently infighting, but enough in numbers to overwhelm any smaller foe. To survive we must end any hopes of unity they have, crush their armies, and split their lands among loyal [Root.GetNobilityOrFallbackName]. There is no other path, Gaul must be broken or we will be."
@@ -62,7 +62,7 @@
  NO_PF_LAG_EXTEND_RESET_GOLDEN_AGE:0 "£no£ If we are in a §YGolden Age§!, it will be extended by 30 years, if we had a §YGolden Age§! we will be able to start another one"
 
  pf_lag_longboats_title:0 "Revive The Longboats"
- pf_lag_longboats_desc:0 "When our Host came to the Lowlands the Longboat was the design of choice. It was nimble, versatile, and stronger, but these longboats now lay in disrepair as we have focused on managing our newly conquered lands, they must be brought back to their lost glory and used again."
+ pf_lag_longboats_desc:0 "When our Host came to the Lowlands the Longboat was the design of choice. It was nimble, versatile, and stronger, but these longboats now lay in disrepair as we have focused on managing our newly conquered lands; they must be brought back to their lost glory and used again."
 
  pf_lag_encroach_title:0 "Encroach Into Germania"
  pf_lag_encroach_desc:0 "The Germans to our east are an uneasy neighbour, led by the Saxons we stand weary of each other, it is time to break this implied truce and expand our domain into the important areas that control the Rínar's trade into our realm"
@@ -83,10 +83,10 @@
  NO_PF_TRN_CLAIMS:0 "£no£ Otherwise:"
 
  pf_lag_glorious_title:0 "Glorious Revolution"
- pf_lag_glorious_desc:0 "Across the Channel lies the Trinovantes, a loose confederation of britonic tribes that have long resisted the regional power of Celtica, while commendable they are not in a position to resist them for much longer, so we must bring them into our sphere of influence and use them as a bulkwark against further Celtic incursions."
+ pf_lag_glorious_desc:0 "Across the Channel lies the Trinovantes, a loose confederation of Britonic tribes that have long resisted the regional power of Celtica, commendable they are not in a position to resist them for much longer, so we must bring them into our sphere of influence and use them as a bulwark against further Celtic incursions."
 
  pf_lag_break_clans_title:0 "Break The Clans"
- pf_lag_break_clans_desc:0 "Despite our benevolent designs Trinovantian tribes in their quest against our shared enemy, they seem to be a rowdy buch that hold misguided designs of self-determination and independence, they must be broken and remolded into loyal subjects."
+ pf_lag_break_clans_desc:0 "Despite our benevolent designs Trinovantian tribes in their quest against our shared enemy, seem to be a rowdy bunch that hold misguided designs of self-determination and independence, they must be broken and remoulded into loyal subjects."
  PF_LAG_COMPLETED_CLAN_REVOLTS:0 "Completed the §YNative Opposition§! event chain"
  YES_PF_LAG_TRINOVANTES_ANNEX:0 "£yes£ If @TRN §Y[TRN.GetName]§! is our §Ysubject§! and has §Y0§! Liberty Desire, they will be instantly §Gannexed§!"
  NO_PF_LAG_TRINOVANTES_ANNEX:0 "£no£ If @TRN §Y[TRN.GetName]§! is our §Ysubject§! and has §Y0§! Liberty Desire, they will be instantly §Gannexed§!"
@@ -101,16 +101,16 @@
  PF_LAG_FORTRESS_ALBION:0 "Every owned province in §YCeltica§! that meets the mission requirements will gain §G2§! Base Manpower £text_icon_manpower_in_text£, and the following modifier:"
 
  pf_lag_expand_markets_title:0 "Expand The Marketplaces"
- pf_lag_expand_markets_desc:0 "Lagrlond is a nation of trade, strategically placed at the end of the traderoutes of Northen Europe, most of its income come from the thrift of our [Root.GetBurghersOrFallbackName], we must support them and expand our marketplaces across the country. "
+ pf_lag_expand_markets_desc:0 "Lagrlond is a nation of trade, strategically placed at the end of the trade routes of Northern Europe, most of its income comes from the thrift of our [Root.GetBurghersOrFallbackName], we must support them and expand our marketplaces across the country. "
  PF_LAG_UPGRADE_MARKETPLACES:0 "3 random provinces with a §YMarketplace§! or §YTrade Depot§! will have its trade building upgraded"
 
  pf_lag_port_desire_title:0 "Port Of World's Desire"
- pf_lag_port_desire_desc:0 "Nestled amid canals and linked to the North Sea, Brugges harnesses its waterways as a vibrant port. Market fairs and the wool trade draw merchants from across Europe. Infrastructure investments, like docks and warehouses, facilitate commerce. Wealthy patrons, enamored with the city's charm, foster culture and finance."
+ pf_lag_port_desire_desc:0 "Nestled amid canals and linked to the North Sea, Brugges harnesses its waterways as a vibrant port. Market fairs and the wool trade draw merchants from across Europe. Infrastructure investments, like docks and warehouses, facilitate commerce. Wealthy patrons, enamoured with the city's charm, foster culture and finance."
  YES_PF_LAG_PORT_DEVELOPED:0 "£yes£ If §Y[90.GetName]§! has the most development in the world, we will gain:"
  NO_PF_LAG_PORT_DEVELOPED:0 "£no£ If §Y[90.GetName]§! has the most development in the world, we will gain:"
 
  pf_lag_embrace_global_title:0 "Embrace Global Trade"
- pf_lag_embrace_global_desc:0 "As the owners of Brugges among other important trade ports, we are in the best position to expand our trade across the globe. Recent technological developments lead to an increase in the range of ships combined with the expansion of empires our Trade Fleets can transport goods from our home ports to colonies in the New World, and as far as China and Japan, making short stops in harbours dotting Africa and India, from where they can also pick up and drop off goods as required."
+ pf_lag_embrace_global_desc:0 "As the owners of Brugges among other important trade ports, we are in the best position to expand our trade across the globe. Recent technological developments led to an increase in the range of ships combined with the expansion of empires our Trade Fleets can transport goods from our home ports to colonies in the New World, and as far as China and Japan, making short stops in harbours dotting Africa and India, from where they can also pick up and drop off goods as required."
  YES_PF_LAG_GAIN_GLOBAL_TRADE:0 "£yes£ If §YGlobal Trade§! is enabled, we will gain §G100§! embracement in our capital and 3 random provinces"
  NO_PF_LAG_GAIN_GLOBAL_TRADE:0 "£no£ If §YGlobal Trade§! is enabled, we will gain §G100§! embracement in our capital and 3 random provinces"
  YES_PF_LAG_EXCLUSIVE_GLOBAL_TRADE:0 "£yes£ Otherwise we will be guaranteed to be the origin of §YGlobal Trade§! as long as we meet the other requirements until 1605"
@@ -118,14 +118,14 @@
  PF_LAG_GLOBAL_TRADE_LOCK_UNTIL_1605:0 "If @LAG §Y[LAG.GetName]§! has completed the mission §YEmbrace Global Trade§!, one of the following must be true:\n  The province owner is §Y[LAG.GetName]§!\n  The year is at least §Y1605§!"
 
  pf_lag_warehouse_title:0 "Warehouse of The World"
- pf_lag_warehouse_desc:0 "In this age of globalization, we have a unique opportunity to position Lagrlond as the "Warehouse of the World." Recent trade trends emphasize centralized hubs. By becoming the global epicenter for storage and distribution, we gain economic prominence, connectivity, and a coveted role in the international marketplace."
+ pf_lag_warehouse_desc:0 "In this age of globalisation, we have a unique opportunity to position Lagrlond as the "Warehouse of the World." Recent trade trends emphasise centralised hubs. By becoming the global epicentre for storage and distribution, we gain economic prominence, connectivity, and a coveted role in the international marketplace."
  pf_lag_warehouse_modifier:0 "Warehouse of the World"
 
  pf_lag_secure_trade_title:0 "Secure Home Trade"
- pf_lag_secure_trade_desc:0 "In the bustling trade of the Rínar region, securing the trade node is paramount. Historically, this vital waterways have been a lifeline of commerce, connecting distant regions. By controlling this trade artery, we ensure not only our economic prosperity but also our central role in facilitating the exchange of goods and ideas throughout the land."
+ pf_lag_secure_trade_desc:0 "In the bustling trade of the Rínar region, securing the trade node is paramount. Historically, these vital waterways have been a lifeline of commerce, connecting distant regions. By controlling this trade artery, we ensure not only our economic prosperity but also our central role in facilitating the exchange of goods and ideas throughout the land."
 
  pf_lag_theology_title:0 "Control The Clergy"
- pf_lag_theology_desc:0 "In Lagrlond, a delicate balance exists between our ruling dynasty, the Lagrlondi, and the Norse pagan clergy, the Godár. While the Godár wield some influence, it's essential to keep them in check, especially concerning our relations with the Frisians, who practice Germanic paganism. Maintaining this balance is crucial to ensure the Frisians are not threatened with forced conversion, preserving both our nation's stability and the loyalty of our Frisian neighbors."
+ pf_lag_theology_desc:0 "In Lagrlond, a delicate balance exists between our ruling dynasty, the Lagrlondi, and the Norse pagan clergy, the Godár. While the Godár wields some influence, it's essential to keep them in check, especially concerning our relations with the Frisians, who practise Germanic paganism. Maintaining this balance is crucial to ensure the Frisians are not threatened with forced conversion, preserving both our nation's stability and the loyalty of our Frisian neighbours."
  PF_LAG_BASE_TAX_GAIN_3:0 "3 random owned provinces with the §Y[Root.Religion.GetName]§! faith will gain §G1§! Base Tax ¤"
 
  pf_lag_religion_locked_1_title:0 "Locked Mission"
@@ -139,14 +139,14 @@
  pf_lag_edict_desc:0 "Under the leadership of the [Root.Monarch.GetTitle] [Root.Monarch.GetName], concerns regarding the absence of religious unity have become evident. To guarantee the safety of the country and loyalty of our religiously diverse subjects we must push for significant religious reforms aimed at tolerating the practice of Germanic Paganism and Druidism within our realm."
 
  pf_lag_peace_of_utrech_title:0 "Peace of Útaríki"
- pf_lag_peace_of_utrech_desc:0 "Building upon the success of the Edict of Herlinga, which granted religious toleration to Germanic Pagans and Druidism practitioners, the [Root.Monarch.GetTitle] is contemplating an expansion of religious tolerance to encompass additional faiths within the realm. This visionary step forward aims to further strengthen unity, diversity, and mutual respect among all religious communities in the helm."
+ pf_lag_peace_of_utrech_desc:0 "Building upon the success of the Edict of Herlinga, which granted religious toleration to Germanic Pagans and Druidism practitioners, the [Root.Monarch.GetTitle] is contemplating an expansion of religious tolerance to encompass additional faiths within the realm. This visionary step forward aims to further strengthen unity, diversity, and mutual respect among all religious communities in the realm."
 
  pf_lag_heretics_title:0 "Crush The Heretics"
  pf_lag_heretics_desc:0 "Religious cohesion and unity are paramount. With the guidance of the Godár, the Thinghalder recognizes the necessity of fostering a shared spiritual identity that reflects our country's values and heritage. To achieve this, we must bring the Germanic Pagan and Druidic religious groups in line with the true faith"
  PF_LAG_STRONGER_DETITIES:0 "Our §YPersonal Deities§! will have stronger bonuses"
 
  pf_lag_land_churches_title:0 "Land of Temples"
- pf_lag_land_churches_desc:0 "The Godár beckons us to prioritize the proper worship of our country's Norse deities. Recognizing the significance of spiritual devotion, we understand the need to establish numerous new temples throughout Lagrlond dedicated to our revered pantheon. These sacred edifices will serve as beacons of faith, fostering a deeper connection with our ancient traditions and ensuring the continued blessings and protection of our deities upon our beloved land."
+ pf_lag_land_churches_desc:0 "The Godár beckons us to prioritise the proper worship of our country's Norse deities. Recognizing the significance of spiritual devotion, we understand the need to establish numerous new temples throughout Lagrlond dedicated to our revered pantheon. These sacred edifices will serve as beacons of faith, fostering a deeper connection with our ancient traditions and ensuring the continued blessings and protection of our deities upon our beloved land."
  PF_LAG_CHANGE_PERSONAL_DEITY:0 "We will be able to reset our deity for a small cost at any time"
 
  pf_lag_polaris_observatory_title:0 "Polaris Observatory"
@@ -172,21 +172,21 @@
  NO_PF_LAG_PU_EFR_OTHERWISE:0 "£no£ Otherwise:"
 
  pf_lag_rein_nobles_title:0 "Rein The [Root.GetNobilityOrFallbackName]"
- pf_lag_rein_nobles_desc:0 "While the [Root.GetNobilityOrFallbackName] play a role in our kingdom, it's crucial to note that their importance pales in comparison to the indispensable [Root.GetBurghersOrFallbackName]. To maintain a well-balanced governance, it's imperative to rein in noble influence, ensuring that they do not interefere with the agenda of the [Root.Monarch.GetTitle]."
+ pf_lag_rein_nobles_desc:0 "While the [Root.GetNobilityOrFallbackName] play a role in our kingdom, it's crucial to note that their importance pales in comparison to the indispensable [Root.GetBurghersOrFallbackName]. To maintain well-balanced governance, it's imperative to rein in noble influence, ensuring that they do not interfere with the agenda of the [Root.Monarch.GetTitle]."
  PF_LAG_SEIZE_LAND_NOBLES:0 "While this modifier is active the §Y[Root.GetNobilityOrFallbackName]§! will no longer raise any rebels when their land gets seized if their loyalty drops below §Y30§!."
 
  pf_lag_capital_title:0 "Develop The Capital"
- pf_lag_capital_desc:0 "[Root.Capital.GetCapitalName], while historic, lags behind the Mediterranean's grand cities like Roma, Cartago, and Thessaloniki. To rejuvenate our cultural vibrancy and attract new intellects to the royal court, we must embark on a renovation journey. Drawing inspiration from these great cities, we'll revitalize our capital, establishing it as a beacon of art, culture, and innovation."
+ pf_lag_capital_desc:0 "[Root.Capital.GetCapitalName], while historic, lags behind the Mediterranean's grand cities like Roma, Cartago, and Thessaloniki. To rejuvenate our cultural vibrancy and attract new intellects to the royal court, we must embark on a renovation journey. Drawing inspiration from these great cities, we'll revitalise our capital, establishing it as a beacon of art, culture, and innovation."
  PF_LAG_EVOLVED_IDEAS:0 "£icon_ideas£Empowers our §TCompetent Bureaucrats§! national idea by an additional §G-0.10§! Yearly Corruption"
 
  pf_lag_centralize_title:0 "Centralise The State"
- pf_lag_centralize_desc:0 "As Europe's modern states, such as Roma, Gaul, Celtica, and Macedon, embrace centralization, Lagrlond must similarly advance. By consolidating power and resources, we can bring progress and development to our Norvegr lands. Following the path of these centralized states ensures a stronger and more prosperous future for Lagrlond."
+ pf_lag_centralize_desc:0 "As Europe's modern states, such as Roma, Gaul, Celtica, and Macedon, embrace centralization, Lagrlond must similarly advance. By consolidating power and resources, we can bring progress and development to our Norvegr lands. Following the path of these centralised states ensures a stronger and more prosperous future for Lagrlond."
 
  pf_lag_universities_title:0 "Skaldic Halls"
  pf_lag_universities_desc:0 "To stand at the forefront of European technologies, we recognize the imperative to establish and generously fund Skaldic Halls. These halls of learning will be crucibles of innovation, nurturing the intellects and talents that will propel our nation into the future, ensuring we remain leaders in the ever-evolving landscape of European advancements."
 
  pf_lag_medical_school_title:0 "The Guild of Eir"
- pf_lag_medical_school_desc:0 "The Guild of Eir, comprised of doctors, surgeons, apothecaries, and other medical practitioners, pays homage to the Norse Goddess Eir, associated with medical skills. Recognizing the pivotal role of these dedicated healers in safeguarding public health, the state should invest in and generously fund these guilds. Such support ensures our people receive the best medical care, strengthening our resilience against plagues and diseases, safeguarding our nation's well-being."
+ pf_lag_medical_school_desc:0 "The Guild of Eir, composed of doctors, surgeons, apothecaries, and other medical practitioners, pays homage to the Norse Goddess Eir, associated with medical skills. Recognizing the pivotal role of these dedicated healers in safeguarding public health, the state should invest in and generously fund these guilds. Such support ensures our people receive the best medical care, strengthening our resilience against plagues and diseases, safeguarding our nation's well-being."
 
  pf_lag_develop_title:0 "Develop The Lowlands"
  pf_lag_develop_desc:0 "The Lowlands, the very heart of Lagrlond, bear the name of our native tongue. As such, their development is paramount. Expanding the prosperity of this core region ensures the continued growth and vitality of our nation, strengthening the bonds that tie Lagrlond together and fostering a brighter future for all who call these lands home."
@@ -196,7 +196,7 @@
  PF_LAG_ADVISOR_BUILD_TIME:0 "Every §YAdministrative Advisor§! now grants §G-2.0%§! Build Cost per level"
 
  pf_lag_promote_urbanisation_title:0 "Promote Urbanisation"
- pf_lag_promote_urbanisation_desc:0 "In the 1700s, Europe witnessed a remarkable trend of urbanization. Recognizing the transformative power of this movement, Lagrlond must follow suit. The growing concentration of people in cities and the surge of industrialization call for strategic urban development. By embracing this trend, Lagrlond can harness the benefits of modernity, fostering progress, prosperity, and a higher quality of life for its citizens."
+ pf_lag_promote_urbanisation_desc:0 "In the 1700s, Europe witnessed a remarkable trend of urbanisation. Recognizing the transformative power of this movement, Lagrlond must follow suit. The growing concentration of people in cities and the surge of industrialization call for strategic urban development. By embracing this trend, Lagrlond can harness the benefits of modernity, fostering progress, prosperity, and a higher quality of life for its citizens."
  PF_LAG_DOUBLE_DEV_CHANCE:0 "From now on §Ydeveloping§! a province has a §G5.0%§! chance of §Gdoubling§! the received development"
 
  pf_lag_industrial_title:0 "The Roar of Industry"
@@ -204,7 +204,7 @@
  PF_LAG_GIVE_FURNACE_TO_COAL_PROVINCE:0 "Build 1 §YFurnace§! on a random owned province that produces or has latent §YCoal§!"
 
  pf_lag_made_in_title:0 "Made In Lagrlond"
- pf_lag_made_in_desc:0 "REPLACE_ME"
+ pf_lag_made_in_desc:0 "Lagrlond is rapidly transforming into the Workshop of the World, spearheading an era of industrialization that reverberates across the globe. Our factories hum with innovation and productivity, churning out products of unparalleled quality and craftsmanship with its distinctive "Made in Lagrlond" mark adorning goods far and wide. As Lagrlond's industrial might continues to grow, our influence on the global stage extends, leaving an indelible imprint on the world economy."
  PF_LAG_HIGHEST_INCOME:0 "Has the §YHighest Monthly Income§! of all countries"
 
  pf_lag_east_coast_title:0 "Settle New Lagrlond"
@@ -215,35 +215,35 @@
  pf_lag_louisiana_desc:0 "The westward expansion into uncharted territories represents a strategic move for our nation's prosperity. Lagrlonders venture westward, driven not only by the promise of new horizons but also the prospect of untapped natural resources and fertile lands."
 
  pf_lag_california_title:0 "Coast to Coast Push"
- pf_lag_california_desc:0 "As Lagrlonders venture westward to the Golden Coast, they pioneer new Caravan trails, purposefully constructed for this grand undertaking. These innovative routes wind through uncharted territories, driven by the allure of rumors of gold riches."
+ pf_lag_california_desc:0 "As Lagrlonders venture westward to the Golden Coast, they pioneer new Caravan trails, purposefully constructed for this grand undertaking. These innovative routes wind through uncharted territories, driven by the allure of rumours of gold riches."
 
  pf_lag_vinland_title:0 "Myths of Vinland"
- pf_lag_vinland_desc:0 "In the annals of history, the sagas of Leif Erikson have etched tales of exploration and discovery, notably Vinland. Now, Lagrlond settlers, inspired by these ancient voyages, harbor a desire to establish their presence in this distant land. As they set forth across the treacherous Sea of Worms, they rely on newfound technologies that offer more reliable navigation, a stark contrast to the challenges faced in times of old."
+ pf_lag_vinland_desc:0 "In the annals of history, the sagas of Leif Erikson have etched tales of exploration and discovery, notably Vinland. Now, Lagrlond settlers, inspired by these ancient voyages, harbour a desire to establish their presence in this distant land. As they set forth across the treacherous Sea of Worms, they rely on newfound technologies that offer more reliable navigation, a stark contrast to the challenges faced in times of old."
  PF_LAG_COLONIAL_GOVERNORS:0 "The §YColonial Governor§! and §YNavigator§! advisors now grant §G+5§! Global Settler Increase per level"
 
  pf_lag_cascadia_title:0 "The Northern Wilderness"
  pf_lag_cascadia_desc:0 "Exploration of the Northern Wilderness unveils a vast, untamed expanse, rich with potential for fur trapping. Lagrlond's adventurous explorers, drawn by the lure of untapped resources, dare to venture into this cold and rugged terrain."
 
  pf_lag_fur_trade_title:0 "Secure The Fur Trade"
- pf_lag_fur_trade_desc:0 "The fur trade in Vinland and Northern territories is of paramount importance to Lagrlond due to historical reasons deeply rooted in European culture. Fur, coveted for its warmth and luxury, played a critical role in Europe during harsh winters. It adorned the robes of royalty, providing insulation against the bitter cold, and symbolized wealth and status. For us, tapping into this historical demand offers a golden opportunity to become a dominant player in the fur trade."
+ pf_lag_fur_trade_desc:0 "The fur trade in Vinland and Northern territories is of paramount importance to Lagrlond due to historical reasons deeply rooted in European culture. Fur, coveted for its warmth and luxury, played a critical role in Europe during harsh winters. It adorned the robes of royalty, providing insulation against the bitter cold, and symbolised wealth and status. For us, tapping into this historical demand offers a golden opportunity to become a dominant player in the fur trade."
  PF_LAG_3_YEARS_OF_INCOME:0 "Gain §G3§! Years worth of Trade Income"
 
  pf_lag_into_beyond_title:0 "Inn í útan"
- pf_lag_into_beyond_desc:0 "REPLACE_ME"
+ pf_lag_into_beyond_desc:0 "The sagas of Leif Erikson and Vinland have long captivated the imagination, recounting tales of Norse exploration and the mysterious lands they purportedly discovered. However, as these sagas endure, doubt begins to cast shadows on the veracity of the Vinland saga. Questions arise about the mysterious silence that shrouds the communication between the Norse of Europe and the settlers who ventured to Vinland. What happened to these settlers, and does the Vinland Saga depict a true account or a concoction of myths?\n\nWhether legend or fact, the saga is more than just an account or legend, it is a shared memory across the Norse that makes men dream of what is behind the Great Blue, and and it inspires the daring, the adventurous, and the desperate to follow in the path of Leif Erikson and step Into the Beyond."
 
  pf_lag_carib_title:0 "Control The Caribbean"
- pf_lag_carib_desc:0 "The discovery of new lands in India has unveiled a promising horizon for Lagrlond. The favorable climate in these distant territories offers ideal conditions for the cultivation of crops not commonly found in Europe, sugar being a prime example. This allure of fertile lands and the potential for sugar plantations have already drawn Lagrlond settlers."
+ pf_lag_carib_desc:0 "The discovery of new lands in India has unveiled a promising horizon for Lagrlond. The favourable climate in these distant territories offers ideal conditions for the cultivation of crops not commonly found in Europe, sugar being a prime example. This allure of fertile lands and the potential for sugar plantations have already drawn Lagrlond settlers."
  PF_LAG_CLAIMS_COTS:0 "§Y[LAG.GetName]§! gets a permanent claim on all §YCenters of Trade§! in §YThe Caribbean§! region."
 
  pf_lag_austrlia_title:0 "Colonize New Frisia"
- pf_lag_austrlia_desc:0 "The discovery of New Frisia by Frisian explorers under the crown marks new a new opportunity. Getting rid of our most unsavory elements in our metropolis is now feasaible by sending them to this new remote domain in penal colonies."
+ pf_lag_austrlia_desc:0 "The discovery of New Frisia by Frisian explorers under the crown marks a new opportunity. Getting rid of the most unsavoury elements in our metropolis is now feasible by sending them to this new remote domain in penal colonies."
 
  pf_lag_west_africa_title:0 "Bases in West Africa"
- pf_lag_west_africa_desc:0 "The allure of spices from India and the Far East has captivated Europe for centuries, not only for their culinary richness but also for their immense economic value. By securing a presence along the West African coast, we not only positions ourselves at the crossroads of global trade but also ensures a steady supply of precious spices and other goods from the East."
+ pf_lag_west_africa_desc:0 "The allure of spices from India and the Far East has captivated Europe for centuries, not only for their culinary richness but also for their immense economic value. By securing a presence along the West African coast, we not only position ourselves at the crossroads of global trade but also ensure a steady supply of precious spices and other goods from the East."
  PF_LAG_COASTAL_GUINEA:0 "§Y[LAG.GetName]§! gets a permanent claim on all §Ycoastal§! provinces of the §YGuinea§! region."
 
  pf_lag_triangle_trade_title:0 "The Triangle Trade"
- pf_lag_triangle_trade_desc:0 "In the intricate Triangle Trade, European ships are laden with manufactured goods, destined to buy slaves from West Africa to fulfill the demand in Caribbean colonies. Once procured, these slaves are transported to the Caribbean, where they labor in the sugar and tobacco plantations. The sugar and tobacco are then shipped to Europe, where they are highly sought after.."
+ pf_lag_triangle_trade_desc:0 "In the intricate Triangle Trade, European ships are laden with manufactured goods, destined to buy slaves from West Africa to fulfil the demand in Caribbean colonies. Once procured, these slaves are transported to the Caribbean, where they labour in the sugar and tobacco plantations. The sugar and tobacco are then shipped to Europe, where they are highly sought after.."
  PF_LAG_2_YEARS_OF_INCOME:0 "Gain §G2§! Years worth of Trade Income"
  pf_lag_triangle_trade_price:0 "Lagrlonder Slave Trade"
 
@@ -257,18 +257,18 @@
  NO_PF_LAG_SPICES_PERMANENT:0 "£no£ If we have the §YSpices§! trading bonus, the modifier will be §Gpermanent§!"
 
  pf_lag_cape_good_hope_title:0 "Cross The Cape"
- pf_lag_cape_good_hope_desc:0 "The Cape of Good Hope is crucial for securing the spice trade from India, as it stands on the tip of the African Continent, a colonial outpost will allow Lagrlonder merchants to safely pass onto and from India."
+ pf_lag_cape_good_hope_desc:0 "The Cape of Good Hope is crucial for securing the spice trade from India, as it stands on the tip of the African Continent, a colonial outpost will allow Lagrlonder merchants to safely pass into and from India."
 
  pf_lag_reach_india_title:0 "Reach India"
  pf_lag_reach_india_desc:0 "India is the source of the spices that flow into Europe, from myths of it is a land of untold riches just at the point were Alexander the Great stopped his conquests, now the Lagrlondi Austurríki Félagslag has the opportunity to corner the trade from these rich lands by first establishing a base in Ceylon."
  PF_LAG_FOOTHOLD_IN_INDIA:0 "Every owned province in the §YLanka§! and §YSouth Lanka§! areas will receive:"
 
  pf_lag_formosa_title:0 "Secure Formosa"
- pf_lag_formosa_desc:0 "The prospect of conquering Formosa holds immense importance for the Lagrlondi Austurríki Félagslag. Formosa, strategically nestled in the South China Sea, presents a tantalizing base of operations in the Far East. Its acquisition would open doors to project influence into the Far East."
+ pf_lag_formosa_desc:0 "The prospect of conquering Formosa holds immense importance for the Lagrlondi Austurríki Félagslag. Formosa, strategically nestled in the South China Sea, presents a tantalising base of operations in the Far East. Its acquisition would open doors to project influence into the Far East."
  PF_LAG_FORMOSA_FORTRESS:0 "All provinces in the §YTaiwan§! area will receive:"
 
  pf_lag_far_east_title:0 "The Unequal Treaties"
- pf_lag_far_east_desc:0 "REPLACE_ME"
+ pf_lag_far_east_desc:0 "In the Far East rest 2 ancient Great Powers, the Chinese that operate the Mandate of Heaven and their little brother the Japanese, with our position in Formosa secured the Lagrlondi Austurríki Félagslag is now in a position to secure lucrative trading ports in their countries and extensive trading rights, under the astute leadership of the company the markets of the Far East open to us."
 
  # Modifiers
  # Reference to the Black Army of Hungary, created
@@ -276,7 +276,7 @@
  pf_lag_permanent_army:0 "The Grey Army of Lagrlond"
  desc_pf_lag_permanent_army:0 "REPLACE_ME"
  # Reference to Menno van Coehoorn, the namesake of the
- # Coehorn Mortar present in the game.
+ # Coehorn Mortar is present in the game.
  pf_lag_artillery:0 "Guns of Menni van Kohern"
  desc_pf_lag_artillery:0 "REPLACE_ME"
  pf_lag_second_heathen_army:0 "The Host of Eirik I Havendalsson"
@@ -317,7 +317,7 @@
  # Reference to Magna Carta
  pf_lag_magna_carta:0 "Cearta Trinovantes"
  desc_pf_lag_magna_carta:0 "REPLACE_ME"
- # Fictional figure called Gunnarr Eiríksson, the descendant of Eirik Havendalsson
+ # A fictional figure called Gunnarr Eiríksson, the descendant of Eirik Havendalsson
  # named Eirik I af Lagrlondi (founder of Lagrlond)
  # loosely based on Baldwin I, Margrave of Flanders and Dirk III, Count of Holland.
  # mostly known for reforming the Lagrlonder army
