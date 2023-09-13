@@ -1220,7 +1220,7 @@ pf_trn_4 = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-			army_professionalism = 0.50
+			army_professionalism = 0.20
 			army_size_percentage = 0.85
 			army_size = 30
 		}
@@ -1658,7 +1658,7 @@ pf_trn_5 = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-			army_professionalism = 0.90
+			army_professionalism = 0.5
 			OR = {
 				has_global_modifier_value = {
 					which = land_morale
