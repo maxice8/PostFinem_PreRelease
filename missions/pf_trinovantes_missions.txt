@@ -822,6 +822,74 @@ pf_trn_3 = {
 			}
 		}
 	}
+	pf_trn_song_of_amergin = {
+		icon = mission_eric_the_pirate
+		position = 9
+		required_missions = { pf_trn_free_the_picts pf_trn_conquer_wales } 
+		provinces_to_highlight = {
+			province_id = 4369		# Cair Marffen
+			OR = {
+				NOT = { development = 14 }
+				NOT = {
+					OR = {
+						has_dock_building_trigger = yes
+						has_shipyard_building_trigger = yes
+					}
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				artist = 3
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 70
+				}
+			}
+			owns = 4369
+			4369 = {
+				OR = {
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+				}
+				development = 14
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_trn_the_song_of_amergin"
+				duration = 7300
+			}
+			ulster_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			leinster_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			connacht_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			munster_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
 }
 pf_trn_4 = {
 	slot = 4

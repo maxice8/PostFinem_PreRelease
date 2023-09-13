@@ -86,3 +86,36 @@ estate_burghers_pf_peace_of_utrech = {
 		factor = 100
 	}
 }
+estate_burghers_pf_court_bards = {
+	icon = privilege_coup_detat
+	land_share = 0
+	max_absolutism = 0
+	loyalty = 0.1
+	influence = 0.1
+	is_valid = {
+		OR = {
+			tag = ABN
+			has_unlocked_estate_privilege = {
+				estate_privilege = estate_burghers_pf_court_bards
+			}
+			has_country_flag = pf_trn_unlocked_court_bards
+		}
+	}
+	can_select = {
+	}
+	on_granted = {
+	}
+	on_revoked = {
+	}
+	benefits = {
+		monthly_splendor = 1
+		army_tradition_from_battle = 0.25
+	}
+	conditional_modifier = {
+		trigger = { has_country_flag = upgraded_court_bards }
+		modifier = { monthly_trn_cohesion = 0.25 }
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}

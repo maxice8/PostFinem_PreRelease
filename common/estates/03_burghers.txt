@@ -209,6 +209,12 @@ estate_burghers = {
 	}
 	#Custom Names
 	custom_name = {
+		desc = estate_bards
+		trigger = {
+			culture_group = old_celtic
+		}
+	}
+	custom_name = {
 		desc = estate_quartersmasters
 		trigger = {
 			has_government_attribute = is_pirate_republic_reform
@@ -299,6 +305,7 @@ estate_burghers = {
 		estate_burghers_promote_burgher_bookkeeping
 		# pf [[[
 		estate_burghers_pf_peace_of_utrech
+		estate_burghers_pf_court_bards
 		# ]]]
 	}
 
