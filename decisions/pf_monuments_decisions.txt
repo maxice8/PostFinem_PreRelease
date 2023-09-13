@@ -1,5 +1,5 @@
 country_decisions = {
-	grand_temple_to_tanit_convert_decision = {
+	pf_gtt_convert_decision = {
 		color = {
 			153
 			102
@@ -34,7 +34,7 @@ country_decisions = {
 		}
 		effect = {
 			add_prestige = -10
-			custom_tooltip = grand_temple_to_tanit_convert_decision_explaination
+			custom_tooltip = pf_gtt_convert_decision_tt
 			hidden_effect = {
 				#random_neighbor_province = { # random_neighbor_province doesn't work in country scope fsr
 				#	limit = {
