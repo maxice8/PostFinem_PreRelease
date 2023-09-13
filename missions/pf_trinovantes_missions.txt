@@ -4,7 +4,10 @@ pf_trn_1 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { 
-		tag = TRN
+		OR = {
+			tag = TRN
+			tag = ABN
+		}
 	}
 
 	pf_trn_astrology = {
@@ -83,7 +86,10 @@ pf_trn_1_locked_druid_path = {
 	ai = yes
 	has_country_shield = yes
 	potential = { 
-		tag = TRN
+		OR = {
+			tag = TRN
+			tag = ABN
+		}
 		NOT = { has_country_flag = pf_trn_anti_druid }
 		NOT = { has_country_flag = pf_trn_pro_druid }
 	}
@@ -127,7 +133,10 @@ pf_trn_1_anti_druid_path = {
 	ai = yes
 	has_country_shield = yes
 	potential = { 
-		tag = TRN
+		OR = {
+			tag = TRN
+			tag = ABN
+		}
 		has_country_flag = pf_trn_anti_druid
 	}
 
@@ -204,7 +213,10 @@ pf_trn_1_pro_druid_path = {
 	ai = yes
 	has_country_shield = yes
 	potential = { 
-		tag = TRN
+		OR = {
+			tag = TRN
+			tag = ABN
+		}
 		has_country_flag = pf_trn_pro_druid
 	}
 
@@ -255,13 +267,67 @@ pf_trn_1_pro_druid_path = {
 		}
 	}
 }
+pf_trn_1_second_path = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = TRN
+			tag = ABN
+		}
+	}
+
+	pf_trn_cleanse_the_north = {
+		icon = mission_humiliate_lubeck
+		position = 9
+		required_missions = { pf_trn_free_the_picts } 
+		provinces_to_highlight = {
+			area = subarctic_islands_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			subarctic_islands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 100
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_trn_norse_explusion_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						religion = norse_pagan_reformed
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					add_province_modifier = {
+						name = "pf_trn_norse_expulsion"
+						duration = 9125
+					}
+				}
+			}
+			tooltip = {
+				add_province_modifier = {
+					name = "pf_trn_norse_expulsion"
+					duration = 9125
+				}
+			}
+		}
+	}
+}
 pf_trn_2 = {
 	slot = 2
 	generic = no
 	ai = yes
 	has_country_shield = yes
 	potential = { 
-		tag = TRN
+		OR = {
+			tag = TRN
+			tag = ABN
+		}
 	}
 
 	pf_trn_build_army = {
@@ -475,6 +541,28 @@ pf_trn_2 = {
 			add_adm_power = 50
 			custom_tooltip = empty_line_tt
 			country_event = { id = pf_trn.14 }
+			custom_tooltip = empty_line_tt
+			lowlands_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			highlands_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kingdom_of_the_isles_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	pf_trn_free_the_picts = {
@@ -526,6 +614,53 @@ pf_trn_2 = {
 				add_nationalism = -5
 				add_devastation = -20
 			}
+			custom_tooltip = empty_line_tt
+			subarctic_islands_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	pf_trn_conquer_eriu = {
+		icon = mission_rb_conquer_ireland
+		position = 10
+		required_missions = { pf_trn_cleanse_the_north pf_trn_song_of_amergin } 
+		provinces_to_highlight = {
+			OR = {
+				area = ulster_area
+				area = leinster_area
+				area = connacht_area
+				area = munster_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			ulster_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			leinster_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			connacht_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			munster_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_trn_new_irish_conquerors"
+				duration = 7300
+			}
+			add_legitimacy = 50
 		}
 	}
 }
@@ -535,7 +670,10 @@ pf_trn_3 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { 
-		tag = TRN
+		OR = {
+			tag = TRN
+			tag = ABN
+		}
 	}
 
 	pf_trn_ricatus_legacy = {
@@ -890,6 +1028,38 @@ pf_trn_3 = {
 			}
 		}
 	}
+	pf_trn_gaullish_alliance = {
+		icon = mission_harem
+		position = 9
+		required_missions = { } 
+		provinces_to_highlight = {
+			owner = { tag = GAU }
+			is_capital = yes
+		}
+		trigger = {
+			OR = {
+				GAU = {
+					has_opinion = {
+						who = ROOT
+						value = 180
+					}
+				}
+				alliance_with = GAU
+				total_development = GAU
+			}
+		}
+		effect = {
+			custom_tooltip = pf_trn_gaullish_alliance_tt
+			236 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_province_modifier = {
+					name = "pf_trn_a_strangers_city"
+					duration = -1
+				}
+			}
+		}
+	}
 }
 pf_trn_4 = {
 	slot = 4
@@ -897,7 +1067,10 @@ pf_trn_4 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { 
-		tag = TRN
+		OR = {
+			tag = TRN
+			tag = ABN
+		}
 	}
 
 	pf_trn_the_gaelic_menace = {
@@ -1153,6 +1326,131 @@ pf_trn_4 = {
 			add_mil_power = 100
 		}
 	}
+	pf_trn_oak_in_blossom = {
+		icon = spa_new_capital
+		position = 9
+		required_missions = { } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1860	# Iceni
+				province_id = 238	# Trinovantes
+				province_id = 4370	# Catuvellauni
+				province_id = 235	# Cantiaci
+				province_id = 4371	# Regni
+			}
+		}
+		trigger = {
+			development_in_provinces = {
+				OR = {
+					province_id = 1860	# Iceni
+					province_id = 238	# Trinovantes
+					province_id = 4370	# Catuvellauni
+					province_id = 235	# Cantiaci
+					province_id = 4371	# Regni
+				}
+				value = 100
+			}
+		}
+		effect = {
+			1860 = {
+				add_province_modifier = {
+					name = "pf_trn_springtime"
+					duration = -1
+				}
+			}
+			238 = {
+				add_province_modifier = {
+					name = "pf_trn_springtime"
+					duration = -1
+				}
+			}
+			4370 = {
+				add_province_modifier = {
+					name = "pf_trn_springtime"
+					duration = -1
+				}
+			}
+			235 = {
+				add_province_modifier = {
+					name = "pf_trn_springtime"
+					duration = -1
+				}
+			}
+			4371 = {
+				add_province_modifier = {
+					name = "pf_trn_springtime"
+					duration = -1
+				}
+			}
+		}
+	}
+	pf_trn_develop_the_nation = {
+		icon = mng_expand_bogue
+		position = 10
+		required_missions = { pf_trn_oak_in_blossom } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				NOT = { development = 12 }
+				has_tax_building_trigger = no
+				has_production_building_trigger = no
+				has_trade_building_trigger = no
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+				development = 12
+				value = 8
+			}
+		}
+		effect = {
+			custom_tooltip = pf_trn_develop_the_nation_tt
+			hidden_effect = {
+				every_owned_province = {
+					add_prosperity = 50
+				}
+			}
+			custom_tooltip = empty_line_tt
+			add_years_of_income = 1.5
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_trn_bountiful_tribute"
+				duration = 7300
+			}
+		}
+	}
+	pf_trn_the_garden_of_albion = {
+		icon = mission_expand_great_wall
+		position = 11
+		required_missions = { pf_trn_gaullish_alliance pf_trn_develop_the_nation } 
+		provinces_to_highlight = {
+			province_id = 236	# Londinion
+			OR = {
+				NOT = { development = 40 }
+			}
+		}
+		trigger = {
+			total_development = 300
+			236 = {
+				owned_by = ROOT
+				development = 40
+			}
+		}
+		effect = {
+			add_prestige = 25
+			custom_tooltip = empty_line_tt
+			236 = {
+				remove_province_modifier = pf_trn_a_strangers_city
+				add_province_modifier = {
+					name = "pf_trn_the_garden_of_albion_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
 }
 pf_trn_5 = {
 	slot = 5
@@ -1160,7 +1458,10 @@ pf_trn_5 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { 
-		tag = TRN
+		OR = {
+			tag = TRN
+			tag = ABN
+		}
 	}
 
 	pf_trn_the_oaken_five = {
@@ -1350,4 +1651,93 @@ pf_trn_5 = {
 			custom_tooltip = pf_trn_the_blood_between_us_tt
 		}
 	}
+	pf_trn_the_blackcoats = {
+		icon = mission_modern_ottoman_soldiers
+		position = 7
+		required_missions = { pf_trn_professional_army pf_trn_the_blood_between_us } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			army_professionalism = 0.90
+			OR = {
+				has_global_modifier_value = {
+					which = land_morale
+					value = 0.5
+				}
+				has_global_modifier_value = {
+					which = discipline
+					value = 0.15
+				}
+			}
+			OR = {
+				monthly_mil = 12
+				mil = 6
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_trn_the_blackcoats_modifier"
+				duration = -1
+			}
+		}
+	}
+	pf_trn_blackcoat_revolution = {
+		icon = fra_military_reform
+		position = 8
+		required_missions = { pf_trn_the_blackcoats } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = pf_trn_blackcoat_rebellion_trigger_tt
+				OR = {
+					has_country_flag = pf_trn_ended_blackcoat_revolution
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = pf_trn_blackcoat_revolution_1_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = is_blackcoats
+					}
+					add_country_modifier = {
+						name = "pf_trn_blackcoat_rule"
+						duration = -1
+					}
+				}
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = "pf_trn_blackcoat_rule"
+					duration = -1
+				}
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_trn_blackcoat_revolution_2_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = defeated_blackcoats
+					}
+					add_country_modifier = {
+						name = "pf_trn_blackcoat_defeat"
+						duration = -1
+					}
+				}
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = "pf_trn_blackcoat_defeat"
+					duration = -1
+				}
+			}
+			custom_tooltip = empty_line_tt
+		}
+	}
+
+	############
+	# Leadership of the Trinovantes
+	############
 }

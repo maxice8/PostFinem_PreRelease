@@ -232,6 +232,11 @@ pf_trn_locked_druid_path_1_desc: "This mission requires a previous mission to be
 pf_trn_locked_druid_path_2_title: "Locked Mission"
 pf_trn_locked_druid_path_2_desc: "This mission requires a previous mission to be complete to unlock."
 
+pf_trn_cleanse_the_north_title: "Cleanse the North"
+pf_trn_cleanse_the_north_desc: "The Northmen arrived on our shores long ago, but they came as raiders and pirates. While annoying for governments to deal with and devastating to local communities, that rabble was certainly not an existential threat to our Confederation. As time went on however, they became more and more daring, and at last made landfall and settled there. This situation is simply unacceptable - we must drive the Northmen back to their desolate wastes and away from our shores!"
+pf_trn_norse_explusion_tt: "Every §YNorse§! province owned by either us or our subjects gets the following effects:"
+pf_trn_norse_expulsion: "Explusion of the Northmen"
+
 ######
 
 pf_trn_reach_out_title: "Open to the World"
@@ -278,6 +283,10 @@ pf_trn_free_the_picts_desc: "The Picts were once a wild people of the northern h
 pf_trn_triumph_over_the_northmen: "Triumph over the Northmen"
 pf_trn_free_the_picts_tt: "Every province in the §YLowlands§!, §YHighlands§!, or §YIsles§! areas will get the following effect:"
 
+pf_trn_conquer_eriu_title: "Spirit of Ériu"
+pf_trn_conquer_eriu_desc: "Many groups of people have conquered Ériu before us. They have arrived on their ships and ploughed through the storms, each successive group defeating gods, demons and warriors. We face a new kind of evil in our conquest of fair Ériu's island - the people of Celtica. Taking the ancient Song of Amergin to heart, we will set forth and claim the island for ourselves!"
+pf_trn_new_irish_conquerors: "New Conquerors in Ériu"
+
 #
 
 pf_trn_ricatus_legacy_title: "Ricatus' Legacy"
@@ -317,6 +326,11 @@ pf_trn_song_of_amergin_title: "The Song of Amergin"
 pf_trn_song_of_amergin_desc: "I am the wind on the sea;\nI am the wave of the sea;\nI am the bull of seven battles;\nI am the eagle on the rock\nI am a flash from the sun;\nI am the most beautiful of plants;\nI am a strong wild boar;\nI am a salmon in the water;\nI am a lake in the plain;\nI am the word of knowledge;\nI am the head of the spear in battle;\nI am the god that puts fire in the head;\nWho spreads light in the gathering on the hills?\nWho can tell the ages of the moon?\nWho can tell the place where the sun rests?"
 pf_trn_the_song_of_amergin: "The Song of Amergin"
 
+pf_trn_gaullish_alliance_title: "Oak and Boar"
+pf_trn_gaullish_alliance_desc: "The mighty Gaulish state to our south is a confederation of tribes much like our own, and shares the same hatred of the Celtic nation. Perhaps we can come to come kind of agreement with them, whereby assist each other in our respective goals, united by our faith."
+pf_trn_a_strangers_city: "A Stranger's City"
+pf_trn_gaullish_alliance_tt: "The settlement of §Y[236.GetName]§! will become the nexus of foreign activity in the country, attracting business interests and settlement from across Europe."
+
 #
 
 pf_trn_the_gaelic_menace_title: "The Gaelic Menace"
@@ -336,6 +350,19 @@ pf_trn_folk_council: "The Folk Council"
 pf_trn_professional_army_title: "By Sword and Spear"
 pf_trn_professional_army_desc: "The army of the Confederation has for a long time been made up of irregular troops, random folk drawn from the villages to come and protect our borders. With military technology advancing by the year and conflicts becoming ever more crucial and costly, it is important that we move towards creating a permanent and professional standing army, just as many countries on the continent have done."
 pf_trn_professional_army_reward_tt: "Gain §Y5 Army Tradition§! for each §YMilitary Skill§! of our ruler, in total:"
+
+pf_trn_oak_in_blossom_title: "The Oak in Blossom"
+pf_trn_oak_in_blossom_desc: "The lands of the Oaken Five are still tribal in many ways, much like the rest of the Brittonic territories. In comparison to the dazzling kingdoms and cities of the Mediterranean however, ours feel like little more than collections of tents. Let us invest in the core provinces and enrich each member of the Confederation equally."
+pf_trn_springtime: "Springtime in the Confederation"
+
+pf_trn_develop_the_nation_title: "Patronise the Cities"
+pf_trn_develop_the_nation_desc: "Population growth in the isles has begun a movement away from the countryside and towards urbanisation, and our biggest towns are struggling to cope with this new influx of people. Expanding the infrastructure of our provinces will go a long way towards accomodating for the future."
+pf_trn_develop_the_nation_tt: "Every owned province gains §G+50§! prosperity progress."
+pf_trn_bountiful_tribute: "Bountiful Tribute"
+
+pf_trn_the_garden_of_albion_title: "The Garden of Albion"
+pf_trn_the_garden_of_albion_desc: "The status of Londinion as a center of foreign trade and settlement in our country has only grown over the years, and it is turning into a rapidly expanding metropolis. A new local government will have to be created for this autonomous city, and new wide-reaching infrastructure projects initiated, turning this once barren marshland into the garden of all of Albion."
+pf_trn_the_garden_of_albion_modifier: "The Garden of Albion"
 
 #
 
@@ -362,3 +389,15 @@ pf_trn_the_blood_between_us_desc: "Families stick together, no matter what. In t
 pf_trn_the_blood_between_us_trigger_tt: "Won at least §Y25 battles§! while the §MDaughters of Boudicca§! Mercenary Company is employed."
 pf_trn_the_blood_between_us_tt: "This event will allow us to choose whether to integrate the §YDaughters§! into our own military or strengthen their existing company."
 merc_upgraded_daughters_of_boudicca: "§MDaughters of Boudicca§!"
+
+pf_trn_the_blackcoats_title: "The Blackcoats"
+pf_trn_the_blackcoats_desc: "The way that war is waged is changing all across Europe. If we wish to stay competitive, we must reform our military also. It is not enough to have elite regiments, or even simple conscription tests. We must uproot our army and regrow it from the ground up. Our new forces will be based around a core of Blackcoats, professionally trained and dangerous troops who will serve the commands of the Council no matter what. Through rain, sleet and snow, they will march undetered. No army will be able to face them. To glance at a Blackcoat is to stare into the face of Death itself."
+pf_trn_the_blackcoats_modifier: "The Blackcoats"
+
+pf_trn_blackcoat_revolution_title: "Blackcoat Revolution"
+pf_trn_blackcoat_revolution_desc: "The Blackcoats were our fiercest asset in war time, and like the Daughters of Boudicca before them, they carried us to a great many impressive victories. Their ambition outgrew their place in society, and as a result, a ferocious conflict over leadership of the country emerged. Which side will come out triumphant?"
+pf_trn_blackcoat_rebellion_trigger_tt: "Had the §YBlackcoat Revolution§!."
+pf_trn_blackcoat_revolution_1_tt: "If we complete this mission by §lembracing§! the §YBlackcoat Revolution§!, we gain the following effect:"
+pf_trn_blackcoat_revolution_2_tt: "If we complete this mission by §Odefeating§! the §YBlackcoat Revolution§!, we gain the following effect:"
+pf_trn_blackcoat_rule: "Rule of the Blackcoats"
+pf_trn_blackcoat_defeat: "Defeated the Blackcoats"
