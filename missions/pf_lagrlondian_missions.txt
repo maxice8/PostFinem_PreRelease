@@ -2973,7 +2973,6 @@ fourth_3 = {
 		required_missions = {
 			pf_lag_west_africa
 			pf_lag_carib
-			pf_lag_east_coast
 		}
 		provinces_to_highlight = {
 			province_has_center_of_trade_of_level = 1
@@ -3221,6 +3220,19 @@ fifth_3 = {
 				}
 			}
 			custom_tooltip = empty_line_tt
+			custom_tooltip = PF_LAG_ALL_COTS_IN_INDIA
+			hidden_effect = {
+				india_superregion = {
+					limit = {
+						province_has_center_of_trade_of_level = 1
+						has_port = yes
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			
 			taiwan_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
