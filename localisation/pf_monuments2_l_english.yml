@@ -1,12 +1,22 @@
-﻿l_english:
+﻿ # Second file needed to avoid overwriting by my code - OK_Diamond
+l_english:
+  # Stone of Power: on_upgraded
  stab_for_tributaries_tt:0 "Gain §G1§! stability for each tributary you have."
+  # Grand Temple to Tanit: on_upgraded
  grand_temple_to_tanit_1_tt:0 "You lose §R25§! opinion with each non-punic country with their capital in the Gaul region."
  grand_temple_to_tanit_2_tt:0 "You lose §R50§! opinion with each non-punic country with their capital in the Gaul region.\nAllows you to use the §YSpread Punic Religion§! decision."
  grand_temple_to_tanit_3_tt:0 "You lose §R100§! opinion with each non-punic country with their capital in the Gaul region."
+  # Grand Temple to Tanit: on_upgraded: Opinion loss
  opinion_grand_temple_to_tanit:0 "Invested in the Grand Temple to Tanit"
-
+  # Grand Temple to Tanit: decision: Spread Punic Religion
  grand_temple_to_tanit_convert_decision_title:0 "Spread Punic Religion"
  grand_temple_to_tanit_convert_decision_desc:0 "Use the Grand Temple to Tanit's spendor to spread the teachings of the Punic faith, converting nearby provinces to Punic."
  grand_temple_to_tanit_convert_decision_cooldown:0 "Spread Punic Religion decision cooldown"
  grand_temple_to_tanit_convert_decision_explaination:0 "A random non-Punic province that borders a Punic province that you own will be converted."
- desc_grand_temple_to_tanit_convert_decision_cooldown:0 "The Spread Punic Religion decision is on cooldown."
+ desc_grand_temple_to_tanit_convert_decision_cooldown:0 "The Spread Punic Religion decision is on cooldown"
+  # Hall of Pantheons: events
+ we_are_truly_blessed:0 "We are truly blessed!"
+ pf_monuments.1.title:0 "Blessing of Zeus"
+ pf_monuments.1.desc:0 "The Hall of Pantheons has attracted the favour of Zeus, god of thunder and the sky."
+ pf_monuments.2.title:0 "Blessing of Baal Hammon"
+ pf_monuments.2.desc:0 "The Hall of Pantheons has attracted the favour of Baal Hammon, king of the gods."

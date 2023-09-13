@@ -160,19 +160,19 @@ grand_temple_to_tanit = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
-		province_is_or_accepts_religion = {
+		province_is_or_accepts_religion = {
 		    religion = punic_religion
 		}
 	}
 	on_built = {}
 	on_destroyed = {}
 	can_use_modifiers_trigger = {
-		province_is_or_accepts_religion = {
+		province_is_or_accepts_religion = {
 		    religion = punic_religion
 		}
 	}
 	can_upgrade_trigger = {
-		province_is_or_accepts_religion = {
+		province_is_or_accepts_religion = {
 		    religion = punic_religion
 		}
 	}
@@ -277,11 +277,11 @@ great_cothon = {
 	type = monument
 	build_trigger = {
 		owner = {
-		    OR = {
-		        tag = CAR
-		        primary_culture = punic_culture
+		    OR = {
+		        tag = CAR
+		        primary_culture = punic_culture
 		        accepted_culture = punic_culture
-		        has_country_flag = car_build_great_cothon_flag
+		        has_country_flag = car_build_great_cothon_flag
 		    }
 		}
 	}
@@ -289,21 +289,21 @@ great_cothon = {
 	on_destroyed = {}
 	can_use_modifiers_trigger = {
 		owner = {
-		    OR = {
-		        tag = CAR
-		        primary_culture = punic_culture
+		    OR = {
+		        tag = CAR
+		        primary_culture = punic_culture
 		        accepted_culture = punic_culture
-		        has_country_flag = car_build_great_cothon_flag
+		        has_country_flag = car_build_great_cothon_flag
 		    }
 		}
 	}
 	can_upgrade_trigger = {
 		owner = {
-		    OR = {
-		        tag = CAR
-		        primary_culture = punic_culture
+		    OR = {
+		        tag = CAR
+		        primary_culture = punic_culture
 		        accepted_culture = punic_culture
-		        has_country_flag = car_build_great_cothon_flag
+		        has_country_flag = car_build_great_cothon_flag
 		    }
 		}
 	}
@@ -409,7 +409,7 @@ great_cothon = {
 	}
 }
 hall_of_pantheons = {
-	start = 121
+	start = 136
 	date = 1.01.01
 	time = {
 		months = 0
@@ -427,6 +427,9 @@ hall_of_pantheons = {
 		    province_is_or_accepts_religion = {
 		        religion = hellenic
 		    }
+		    province_is_or_accepts_religion = {
+		        religion = romana
+		    }
 		}
 	}
 	on_built = {}
@@ -439,6 +442,9 @@ hall_of_pantheons = {
 		    province_is_or_accepts_religion = {
 		        religion = hellenic
 		    }
+		    province_is_or_accepts_religion = {
+		        religion = romana
+		    }
 		}
 	}
 	can_upgrade_trigger = {
@@ -448,6 +454,9 @@ hall_of_pantheons = {
 		    }
 		    province_is_or_accepts_religion = {
 		        religion = hellenic
+		    }
+		    province_is_or_accepts_religion = {
+		        religion = romana
 		    }
 		}
 	}
@@ -476,6 +485,26 @@ hall_of_pantheons = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			prestige_from_land = 0.01
+		}
+		conditional_modifier = {
+			trigger = {
+			    religion = hellenic
+			}
+			modifier = {
+			    army_tradition_from_battle = 0.01
+				local_unrest = 1
+			}
+		}
+		conditional_modifier = {
+			trigger = {
+			    religion = punic_religion
+			}
+			modifier = {
+			    army_tradition_from_battle = 0.02
+				mercantilism_cost = -0.25
+				local_unrest = 1
+			}
 		}
 	}
 	tier_2 = {
