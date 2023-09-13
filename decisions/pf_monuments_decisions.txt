@@ -16,7 +16,7 @@ country_decisions = {
 		}
 		allow = {
 			NOT = {
-				has_country_modifier = grand_temple_to_tanit_convert_decision_cooldown
+				has_country_modifier = pf_gtt_convert_decision_cooldown
 			}
 			prestige = 10
 			religion = punic_religion
@@ -64,7 +64,7 @@ country_decisions = {
 				}
 			}
 			add_country_modifier = { 
-				name = grand_temple_to_tanit_convert_decision_cooldown
+				name = pf_gtt_convert_decision_cooldown
 				duration = 1460
 			}
 		}
