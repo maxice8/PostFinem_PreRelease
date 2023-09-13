@@ -409,7 +409,7 @@ great_cothon = {
 	}
 }
 hall_of_pantheons = {
-	start = 136
+	start = 4957
 	date = 1.01.01
 	time = {
 		months = 0
@@ -493,17 +493,6 @@ hall_of_pantheons = {
 			}
 			modifier = {
 			    army_tradition_from_battle = 0.01
-				local_unrest = 1
-			}
-		}
-		conditional_modifier = {
-			trigger = {
-			    religion = punic_religion
-			}
-			modifier = {
-			    army_tradition_from_battle = 0.02
-				mercantilism_cost = -0.25
-				local_unrest = 1
 			}
 		}
 	}
