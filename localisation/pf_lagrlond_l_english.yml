@@ -115,7 +115,7 @@
  NO_PF_LAG_GAIN_GLOBAL_TRADE:0 "£no£ If §YGlobal Trade§! is enabled, we will gain §G100§! embracement in our capital and 3 random provinces"
  YES_PF_LAG_EXCLUSIVE_GLOBAL_TRADE:0 "£yes£ Otherwise we will be guaranteed to be the origin of §YGlobal Trade§! as long as we meet the other requirements until 1605"
  NO_PF_LAG_EXCLUSIVE_GLOBAL_TRADE:0 "£no£ Otherwise we will be guaranteed to be the origin of §YGlobal Trade§! as long as we meet the other requirements until 1605"
- PF_LAG_GLOBAL_TRADE_LOCK_UNTIL_1605:0 "If @LAG §Y[LAG.GetName]§! has completed the mission §YEmbrace Global Trade§!, one of the following must be true:\n  The province owner is §Y[LAG.GetName]§!\n  The year is at least §Y1605§!"
+ PF_LAG_GLOBAL_TRADE_LOCK_UNTIL_1605:0 "If @LAG §Y[Root.GetName]§! has completed the mission §YEmbrace Global Trade§!, one of the following must be true:\n  The province owner is §Y[Root.GetName]§!\n  The year is at least §Y1605§!"
 
  pf_lag_warehouse_title:0 "Warehouse of The World"
  pf_lag_warehouse_desc:0 "In this age of globalisation, we have a unique opportunity to position Lagrlond as the "Warehouse of the World." Recent trade trends emphasise centralised hubs. By becoming the global epicentre for storage and distribution, we gain economic prominence, connectivity, and a coveted role in the international marketplace."
@@ -233,14 +233,14 @@
 
  pf_lag_carib_title:0 "Control The Caribbean"
  pf_lag_carib_desc:0 "The discovery of new lands in India has unveiled a promising horizon for Lagrlond. The favourable climate in these distant territories offers ideal conditions for the cultivation of crops not commonly found in Europe, sugar being a prime example. This allure of fertile lands and the potential for sugar plantations have already drawn Lagrlond settlers."
- PF_LAG_CLAIMS_COTS:0 "§Y[LAG.GetName]§! gets a permanent claim on all §YCenters of Trade§! in §YThe Caribbean§! region."
+ PF_LAG_CLAIMS_COTS:0 "§Y[Root.GetName]§! gets a permanent claim on all §YCenters of Trade§! in §YThe Caribbean§! region."
 
  pf_lag_austrlia_title:0 "Colonize New Frisia"
  pf_lag_austrlia_desc:0 "The discovery of New Frisia by Frisian explorers under the crown marks a new opportunity. Getting rid of the most unsavoury elements in our metropolis is now feasible by sending them to this new remote domain in penal colonies."
 
  pf_lag_west_africa_title:0 "Bases in West Africa"
  pf_lag_west_africa_desc:0 "The allure of spices from India and the Far East has captivated Europe for centuries, not only for their culinary richness but also for their immense economic value. By securing a presence along the West African coast, we not only position ourselves at the crossroads of global trade but also ensure a steady supply of precious spices and other goods from the East."
- PF_LAG_COASTAL_GUINEA:0 "§Y[LAG.GetName]§! gets a permanent claim on all §Ycoastal§! provinces of the §YGuinea§! region."
+ PF_LAG_COASTAL_GUINEA:0 "§Y[Root.GetName]§! gets a permanent claim on all §Ycoastal§! provinces of the §YGuinea§! region."
 
  pf_lag_triangle_trade_title:0 "The Triangle Trade"
  pf_lag_triangle_trade_desc:0 "In the intricate Triangle Trade, European ships are laden with manufactured goods, destined to buy slaves from West Africa to fulfil the demand in Caribbean colonies. Once procured, these slaves are transported to the Caribbean, where they labour in the sugar and tobacco plantations. The sugar and tobacco are then shipped to Europe, where they are highly sought after.."
@@ -249,7 +249,7 @@
 
  pf_lag_indonesia_title:0 "Lagrlonder East Indies"
  pf_lag_indonesia_desc:0 "The Lagrlondi Austurríki Félagslag, is a formidable trading and colonial enterprise. Founded under the auspices of the Lagrlonder Crown, this company is dedicated to harnessing the wealth and resources of the distant East Indies. With fleets and outposts stretching across the oceans, the Lagrlonder East Indies Company is poised to shape the future of Lagrlond's imperial ambitions."
- PF_LAG_PERMACLAIMS_SPICE_PROVINCES:0 "§Y[LAG.GetName]§! gets a permanent claim on all provinces in §YIndonesia§! that produce §YSpices§!"
+ PF_LAG_PERMACLAIMS_SPICE_PROVINCES:0 "§Y[Root.GetName]§! gets a permanent claim on all provinces in §YIndonesia§! that produce §YSpices§!"
 
  pf_lag_spice_trade_title:0 "Control The Spice Flow"
  pf_lag_spice_trade_desc:0 "The Lagrlondi Austurríki Félagslag stands at the forefront of the spice trade in the West Indies, a pivotal element in Lagrlonder colonial ambitions. Recognizing the immense value of spices, the Crown has entrusted the Lagrlondi Austurríki Félagslag with securing a monopoly over the flow of spices."
@@ -262,6 +262,7 @@
  pf_lag_reach_india_title:0 "Reach India"
  pf_lag_reach_india_desc:0 "India is the source of the spices that flow into Europe, from myths of it is a land of untold riches just at the point were Alexander the Great stopped his conquests, now the Lagrlondi Austurríki Félagslag has the opportunity to corner the trade from these rich lands by first establishing a base in Ceylon."
  PF_LAG_FOOTHOLD_IN_INDIA:0 "Every owned province in the §YLanka§! and §YSouth Lanka§! areas will receive:"
+ PF_LAG_ALL_COTS_IN_INDIA:0 "§Y[Root.GetName]§! gets a permanent claim on all §YCenters of Trade§! with a §Yport§! in the §YIndian§! subcontinent."
 
  pf_lag_formosa_title:0 "Secure Formosa"
  pf_lag_formosa_desc:0 "The prospect of conquering Formosa holds immense importance for the Lagrlondi Austurríki Félagslag. Formosa, strategically nestled in the South China Sea, presents a tantalising base of operations in the Far East. Its acquisition would open doors to project influence into the Far East."
