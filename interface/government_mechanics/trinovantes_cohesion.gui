@@ -10,16 +10,22 @@ guiTypes = {
 
 		#bar and frame
 		iconType = {
+			name = "cohesion_bg"
+			spriteType = "GFX_cohesion_bg"
+			position = { x = 10 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
 			name = "government_power_bar"
 			spriteType = "GFX_trinovantes_cohesion_power_bar"
 			position = { x = 26 y = 49 }
 		}
-
 		iconType = {
 			name = "trinovantes_cohesion_frame"
 			spriteType = "GFX_trinovantes_cohesion_frame"
 			position = { x = 10 y = 0 }
 			alwaystransparent = yes
 		}
+		
 	}
 }
