@@ -1,5 +1,5 @@
-stab_for_tributaries = {
-	custom_tooltip = stab_for_tributaries_tt
+pf_mon_sod_stab_for_tributaries = {
+	custom_tooltip = pf_mon_sod_stab_for_tributaries_tt
 	hidden_effect = {
 		every_subject_country = {
 			if = {
@@ -14,8 +14,8 @@ stab_for_tributaries = {
 	}
 }
 
-pf_gtt_effect_1 = {
-	custom_tooltip = pf_gtt_effect_1_tt
+pf_mon_gtt_effect_1 = {
+	custom_tooltip = pf_mon_gtt_effect_1_tt
 	hidden_effect = {
 		every_capital_province = {
 			if = {
@@ -30,19 +30,19 @@ pf_gtt_effect_1 = {
 				owner = {
 					add_opinion  = {
 						who = ROOT
-						modifier = opinion_grand_temple_to_tanit
+						modifier = pf_mon_gtt_opinion_from_upgrade
 					}
 					reverse_add_opinion  = {
 						who = ROOT
-						modifier = opinion_grand_temple_to_tanit
+						modifier = pf_mon_gtt_opinion_from_upgrade
 					}
 				}
 			}
 		}
 	}
 }
-pf_gtt_effect_2 = {
-	custom_tooltip = pf_gtt_effect_2_tt
+pf_mon_gtt_effect_2 = {
+	custom_tooltip = pf_mon_gtt_effect_2_tt
 	hidden_effect = {
 		every_capital_province = {
 			if = {
@@ -55,27 +55,27 @@ pf_gtt_effect_2 = {
 				owner = {
 					add_opinion  = {
 						who = ROOT
-						modifier = opinion_grand_temple_to_tanit
+						modifier = pf_mon_gtt_opinion_from_upgrade
 					}
 					add_opinion  = {
 						who = ROOT
-						modifier = opinion_grand_temple_to_tanit
+						modifier = pf_mon_gtt_opinion_from_upgrade
 					}
 					reverse_add_opinion  = {
 						who = ROOT
-						modifier = opinion_grand_temple_to_tanit
+						modifier = pf_mon_gtt_opinion_from_upgrade
 					}
 					reverse_add_opinion  = {
 						who = ROOT
-						modifier = opinion_grand_temple_to_tanit
+						modifier = pf_mon_gtt_opinion_from_upgrade
 					}
 				}
 			}
 		}
 	}
 }
-pf_gtt_effect_3 = {
-	custom_tooltip = pf_gtt_effect_3_tt
+pf_mon_gtt_effect_3 = {
+	custom_tooltip = pf_mon_gtt_effect_3_tt
 	hidden_effect = {
 		every_capital_province = {
 			if = {
@@ -88,35 +88,35 @@ pf_gtt_effect_3 = {
 				owner = {
 					add_opinion  = {
 						who = ROOT
-						modifier = opinion_grand_temple_to_tanit
+						modifier = pf_mon_gtt_opinion_from_upgrade
 					}
 					add_opinion  = {
 						who = ROOT
-						modifier = opinion_grand_temple_to_tanit
+						modifier = pf_mon_gtt_opinion_from_upgrade
 					}
 					add_opinion  = {
 						who = ROOT
-						modifier = opinion_grand_temple_to_tanit
+						modifier = pf_mon_gtt_opinion_from_upgrade
 					}
 					add_opinion  = {
 						who = ROOT
-						modifier = opinion_grand_temple_to_tanit
+						modifier = pf_mon_gtt_opinion_from_upgrade
 					}
 					reverse_add_opinion  = {
 						who = ROOT
-						modifier = opinion_grand_temple_to_tanit
+						modifier = pf_mon_gtt_opinion_from_upgrade
 					}
 					reverse_add_opinion  = {
 						who = ROOT
-						modifier = opinion_grand_temple_to_tanit
+						modifier = pf_mon_gtt_opinion_from_upgrade
 					}
 					reverse_add_opinion  = {
 						who = ROOT
-						modifier = opinion_grand_temple_to_tanit
+						modifier = pf_mon_gtt_opinion_from_upgrade
 					}
 					reverse_add_opinion  = {
 						who = ROOT
-						modifier = opinion_grand_temple_to_tanit
+						modifier = pf_mon_gtt_opinion_from_upgrade
 					}
 				}
 			}

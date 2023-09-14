@@ -1,5 +1,5 @@
 country_decisions = {
-	pf_gtt_convert_decision = {
+	pf_mon_gtt_convert_decision = {
 		color = {
 			153
 			102
@@ -16,7 +16,7 @@ country_decisions = {
 		}
 		allow = {
 			NOT = {
-				has_country_modifier = pf_gtt_convert_decision_cooldown
+				has_country_modifier = pf_mon_gtt_convert_decision_cooldown
 			}
 			prestige = 10
 			religion = punic_religion
@@ -34,16 +34,8 @@ country_decisions = {
 		}
 		effect = {
 			add_prestige = -10
-			custom_tooltip = pf_gtt_convert_decision_tt
+			custom_tooltip = pf_mon_gtt_convert_decision_tt
 			hidden_effect = {
-				#random_neighbor_province = { # random_neighbor_province doesn't work in country scope fsr
-				#	limit = {
-				#		NOT = {
-				#			religion = punic_religion
-				#		}
-				#	}
-				#	change_religion = punic_religion
-				#}
 				random_owned_province = { # Selects a random punic province that you own with a neighbouring non-punic province
 					limit = {
 						religion = punic_religion
@@ -64,7 +56,7 @@ country_decisions = {
 				}
 			}
 			add_country_modifier = { 
-				name = pf_gtt_convert_decision_cooldown
+				name = pf_mon_gtt_convert_decision_cooldown
 				duration = 1460
 			}
 		}

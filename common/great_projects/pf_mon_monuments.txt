@@ -209,7 +209,7 @@ grand_temple_to_tanit = {
 		}
 		on_upgraded = {
 			owner = {
-			    pf_gtt_effect_1 = yes
+			    pf_mon_gtt_effect_1 = yes
 			}
 		}
 	}
@@ -234,7 +234,7 @@ grand_temple_to_tanit = {
 		}
 		on_upgraded = {
 			owner = {
-			    pf_gtt_effect_2 = yes
+			    pf_mon_gtt_effect_2 = yes
 			}
 		}
 	}
@@ -259,7 +259,7 @@ grand_temple_to_tanit = {
 		}
 		on_upgraded = {
 			owner = {
-			    pf_gtt_effect_3 = yes
+			    pf_mon_gtt_effect_3 = yes
 			}
 		}
 	}
@@ -943,7 +943,7 @@ stone_of_destiny = {
 		}
 		on_upgraded = {
 			owner = {
-			    stab_for_tributaries = yes
+			    pf_mon_sod_stab_for_tributaries = yes
 			}
 		}
 	}
