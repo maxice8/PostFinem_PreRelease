@@ -124,5 +124,70 @@ country_decisions = {
 			factor = 1
 		}
 	}
-	
+	realm_of_coel_hen = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = realm_of_coel_hen_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = BRN }
+			NOT = { tag = CEL }
+			NOT = { tag = ATH }
+			NOT = { tag = ABN }
+			NOT = { has_reform = brittonic_confederation_reform }
+			culture_group = old_celtic
+			NOT = { primary_culture = old_irish }
+			NOT = { primary_culture = pictish }
+			NOT = { primary_culture = old_highland_scottish }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = scottish_marches_area
+				area = yorkshire_area
+			}
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no			
+			scottish_marches_area = {
+				 type = all
+				 country_or_non_sovereign_subject_holds = ROOT
+			}
+			yorkshire_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+		   	}
+			245 = {
+				is_core = ROOT
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			country_event = { id = pf_trn.17 }
+			set_country_flag = realm_of_coel_hen_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

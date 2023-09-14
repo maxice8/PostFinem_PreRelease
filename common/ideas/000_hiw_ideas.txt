@@ -76,3 +76,45 @@ ABN_ideas = {		# Albion
 		diplomats = 1
 	}
 }
+brittonic_ideas = {		# Brittonic minors
+	start = {	
+		land_maintenance_modifier = -0.10
+		army_tradition = 0.50
+	}
+	bonus = {
+		land_forcelimit_modifier = 0.20
+	}	
+	trigger = {
+		OR = {
+			primary_culture = briton
+			primary_culture = old_welsh
+			primary_culture = old_cornish
+		}
+	}
+	free = yes
+	
+	brt_hillforts = {
+		defensiveness = 0.20
+		fort_maintenance_modifier = -0.10
+	}
+	brt_painted_people = {
+		shock_damage_received = -0.10
+	}
+	brt_ancient_kingdoms = {
+		legitimacy = 1
+	}
+	brt_poetry = {
+		idea_cost = -0.10
+		global_institution_spread = 0.15
+	}
+	brt_celtic_gods = {
+		tolerance_own = 2
+	}
+	brt_heroes_and_kings = {
+		army_tradition_decay = -0.01
+	}
+	brt_albion_identity = {
+		land_morale = 0.10
+		recover_army_morale_speed = 0.05
+	}
+}

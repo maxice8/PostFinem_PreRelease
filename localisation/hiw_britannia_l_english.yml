@@ -41,6 +41,16 @@ CANTIACI_ADJ: "Cantiaci"
 CATUVELLAUNI: "Catuvellauni"
 CATUVELLAUNI_ADJ: "Catuvellauni"
 
+GDD: "Gododdin"
+GDD_ADJ: "Gododdin"
+ELM: "Elmet"
+ELM_ADJ: "Elmeter"
+RHG: "Rheged"
+RHG_ADJ: "Rheged"
+
+HEN_OGLEDD: "Hen Ogledd"
+HEN_OGLEDD_ADJ: "Hen Ogledd"
+
 ###########
 # Ideas
 ###########
@@ -82,6 +92,25 @@ abn_caledfwlch_order: "Order of Caledfwlch"
 abn_caledfwlch_order_desc: ""
 abn_looking_to_the_stars: "Answers in the Heavens"
 abn_looking_to_the_stars_desc: ""
+
+brittonic_ideas: "Brittonic Ideas"
+brittonic_ideas_start: "Brittonic Traditions"
+brittonic_ideas_bonus: "Brittonic Ambition"
+
+brt_hillforts: "Hillfort Settlements"
+brt_hillforts_desc: ""
+brt_painted_people: "The Painted People"
+brt_painted_people_desc: ""
+brt_ancient_kingdoms: "Ancient Kingdoms"
+brt_ancient_kingdoms_desc: ""
+brt_poetry: "Epic Stories and Poems"
+brt_poetry_desc: ""
+brt_celtic_gods: "Gods of Celtica"
+brt_celtic_gods_desc: ""
+brt_heroes_and_kings: "Heroes and Warrior Kings"
+brt_heroes_and_kings_desc: ""
+brt_albion_identity: "One People, One Nation"
+brt_albion_identity_desc: ""
 
 ###########
 # Events
@@ -190,6 +219,12 @@ pf_trn.16.d: "The Blackcoats have grown used to their success and fame. When the
 pf_trn.16.a: "We cannot hope to control them."
 pf_trn.16.b: "Punish the perpetrators."
 
+pf_trn.17.t: "The Legacy of Old King Coel"
+pf_trn.17.d: "King Coel was a legendary Brittonic figure who ruled much of the north of Albion from his stronghold in Eburacum. His empire was the greatest yet seen from the northern reaches, only succeeded by the Iceni Empire of Boudicca. We now control much the same borders as the great king, and also his capital fortress. In order to legitimise our claim to the region, we have taken on the mantle of 'Successors to King Coel', 'Meibion y Coel Hen'."
+pf_trn.17.a: "His was truly a realm of the Old North."
+pf_trn.17.b: "No one shall question our conquests now."
+pf_trn_kingdom_of_coel_hen: "Claimed the Kingdom of Coel Hen"
+
 ###########
 # Decision
 ###########
@@ -204,6 +239,9 @@ local_wicker_man: "Local Wicker Man Burning"
 
 form_albion_title: "Proclaim the Union of Albion"
 form_albion_desc: "At last, the Brittonic tribes of Albion have been united under one banner. Let us now formalise our rule by taking up the mantle of Albion, the White Sun. May Albion prosper!"
+
+realm_of_coel_hen_title: "Realm of Coel Hen"
+realm_of_coel_hen_desc: "Long ago a great military leader known simply as 'Old Cole' ruled the lands to the north of Albion. His domain shattered upon his death, but it was briefly one of the greatest empires the islands have ever known. The many local dynasties that succeeded him claimed to be his successors, collectively known as the Coelings, for centuries afterwards. By our times his name is little more than a legend, but a powerful one at that. We are now in control of much the same territory Coel managed in his heyday. Perhaps it would be appropriate to crown ourselves his true successors?"
 
 ###########
 # Custom loc
