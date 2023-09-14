@@ -50,11 +50,11 @@ province_event = { # Blessing of Zeus
         }
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
-            add_legitimacy = 25
-            add_republican_tradition = 8
-            add_devotion = 25
-            add_horde_unity = 25
-            add_meritocracy = 25
+            add_legitimacy = 15
+            add_republican_tradition = 5
+            add_devotion = 15
+            add_horde_unity = 15
+            add_meritocracy = 15
         }
     }
 }
@@ -108,11 +108,11 @@ province_event = { # Blessing of Baal Hammon
         }
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
-            add_legitimacy = 25
-            add_republican_tradition = 8
-            add_devotion = 25
-            add_horde_unity = 25
-            add_meritocracy = 25
+            add_legitimacy = 15
+            add_republican_tradition = 5
+            add_devotion = 15
+            add_horde_unity = 15
+            add_meritocracy = 15
         }
     }
 }
@@ -166,11 +166,11 @@ province_event = { # Blessing of Jupiter
         }
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
-            add_legitimacy = 25
-            add_republican_tradition = 8
-            add_devotion = 25
-            add_horde_unity = 25
-            add_meritocracy = 25
+            add_legitimacy = 15
+            add_republican_tradition = 5
+            add_devotion = 15
+            add_horde_unity = 15
+            add_meritocracy = 15
         }
     }
 }
@@ -224,15 +224,15 @@ province_event = { # Blessing of Odin
         }
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
-            add_legitimacy = 25
-            add_republican_tradition = 8
-            add_devotion = 25
-            add_horde_unity = 25
-            add_meritocracy = 25
+            add_legitimacy = 15
+            add_republican_tradition = 5
+            add_devotion = 15
+            add_horde_unity = 15
+            add_meritocracy = 15
         }
     }
 }
-province_event = { # Blessing of Ares
+province_event = { # Blessing of Hera
     id = pf_mon_events.5
     title = pf_mon_events.5.title
     desc = pf_mon_events.5.desc
@@ -281,16 +281,45 @@ province_event = { # Blessing of Ares
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        #land_maintenance_modifier = -0.10
+        custom_tooltip = pf_monuments.5.tt1
         owner = {
-            add_country_modifier = { 
-                name = pf_mon_hop_war_blessing
-                duration = 365
+            if = {
+                limit = {has_heir = yes}
+                add_heir_claim = 10
+                add_heir_support = 10
+                random_list = {
+                    1 = {
+                        if = {
+                            limit = {heir_adm = 6}
+                            add_adm_power = 100
+                        }
+                        else = {change_heir_adm = 1}
+                    }
+                    1 = {
+                        if = {
+                            limit = {heir_dip = 6}
+                            add_dip_power = 100
+                        }
+                        else = {change_heir_dip = 1}
+                    }
+                    1 = {
+                        if = {
+                            limit = {heir_mil = 6}
+                            add_mil_power = 100
+                        }
+                        else = {change_heir_mil = 1}
+                    }
+                }
+            }
+            else = {
+                add_adm_power = 25
+                add_dip_power = 25
+                add_mil_power = 25
             }
         }
     }
 }
-province_event = { # Blessing of Reshef
+province_event = { # Blessing of Tanit
     id = pf_mon_events.6
     title = pf_mon_events.6.title
     desc = pf_mon_events.6.desc
@@ -339,16 +368,45 @@ province_event = { # Blessing of Reshef
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        #land_maintenance_modifier = -0.10
+        custom_tooltip = pf_monuments.6.tt1
         owner = {
-            add_country_modifier = { 
-                name = pf_mon_hop_war_blessing
-                duration = 365
+            if = {
+                limit = {has_heir = yes}
+                add_heir_claim = 10
+                add_heir_support = 10
+                random_list = {
+                    1 = {
+                        if = {
+                            limit = {heir_adm = 6}
+                            add_adm_power = 100
+                        }
+                        else = {change_heir_adm = 1}
+                    }
+                    1 = {
+                        if = {
+                            limit = {heir_dip = 6}
+                            add_dip_power = 100
+                        }
+                        else = {change_heir_dip = 1}
+                    }
+                    1 = {
+                        if = {
+                            limit = {heir_mil = 6}
+                            add_mil_power = 100
+                        }
+                        else = {change_heir_mil = 1}
+                    }
+                }
+            }
+            else = {
+                add_adm_power = 25
+                add_dip_power = 25
+                add_mil_power = 25
             }
         }
     }
 }
-province_event = { # Blessing of Mars
+province_event = { # Blessing of Juno
     id = pf_mon_events.7
     title = pf_mon_events.7.title
     desc = pf_mon_events.7.desc
@@ -397,16 +455,45 @@ province_event = { # Blessing of Mars
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        #land_maintenance_modifier = -0.10
+        custom_tooltip = pf_monuments.7.tt1
         owner = {
-            add_country_modifier = { 
-                name = pf_mon_hop_war_blessing
-                duration = 365
+            if = {
+                limit = {has_heir = yes}
+                add_heir_claim = 10
+                add_heir_support = 10
+                random_list = {
+                    1 = {
+                        if = {
+                            limit = {heir_adm = 6}
+                            add_adm_power = 100
+                        }
+                        else = {change_heir_adm = 1}
+                    }
+                    1 = {
+                        if = {
+                            limit = {heir_dip = 6}
+                            add_dip_power = 100
+                        }
+                        else = {change_heir_dip = 1}
+                    }
+                    1 = {
+                        if = {
+                            limit = {heir_mil = 6}
+                            add_mil_power = 100
+                        }
+                        else = {change_heir_mil = 1}
+                    }
+                }
+            }
+            else = {
+                add_adm_power = 25
+                add_dip_power = 25
+                add_mil_power = 25
             }
         }
     }
 }
-province_event = { # Blessing of Tyr
+province_event = { # Blessing of Frigg
     id = pf_mon_events.8
     title = pf_mon_events.8.title
     desc = pf_mon_events.8.desc
@@ -455,16 +542,45 @@ province_event = { # Blessing of Tyr
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        #land_maintenance_modifier = -0.10
+        custom_tooltip = pf_monuments.8.tt1
         owner = {
-            add_country_modifier = { 
-                name = pf_mon_hop_war_blessing
-                duration = 365
+            if = {
+                limit = {has_heir = yes}
+                add_heir_claim = 10
+                add_heir_support = 10
+                random_list = {
+                    1 = {
+                        if = {
+                            limit = {heir_adm = 6}
+                            add_adm_power = 100
+                        }
+                        else = {change_heir_adm = 1}
+                    }
+                    1 = {
+                        if = {
+                            limit = {heir_dip = 6}
+                            add_dip_power = 100
+                        }
+                        else = {change_heir_dip = 1}
+                    }
+                    1 = {
+                        if = {
+                            limit = {heir_mil = 6}
+                            add_mil_power = 100
+                        }
+                        else = {change_heir_mil = 1}
+                    }
+                }
+            }
+            else = {
+                add_adm_power = 25
+                add_dip_power = 25
+                add_mil_power = 25
             }
         }
     }
 }
-province_event = { # Blessing of Tyche
+province_event = { # Blessing of Ares
     id = pf_mon_events.9
     title = pf_mon_events.9.title
     desc = pf_mon_events.9.desc
@@ -513,30 +629,15 @@ province_event = { # Blessing of Tyche
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        random_list = {
-            70 = {
-                add_base_tax = 2
-                add_base_production = 2
-                add_base_manpower = 2
+        owner = {
+            add_country_modifier = { 
+                name = pf_mon_hop_war_blessing
+                duration = 365
             }
-            30 = {
-                custom_tooltip = pf_monuments.9.tt1
-                hidden_effect = {
-                    owner = {
-                        every_known_country = {
-                            add_aggressive_expansion = {
-                                who = PREV
-                                value = 5
-                                apply_calc = no
-                            }
-                        }
-                    }
-                }
-            } 
         }
     }
 }
-province_event = { # Blessing of Ashtarte
+province_event = { # Blessing of Reshef
     id = pf_mon_events.10
     title = pf_mon_events.10.title
     desc = pf_mon_events.10.desc
@@ -585,30 +686,15 @@ province_event = { # Blessing of Ashtarte
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        random_list = {
-            70 = {
-                add_base_tax = 2
-                add_base_production = 2
-                add_base_manpower = 2
+        owner = {
+            add_country_modifier = { 
+                name = pf_mon_hop_war_blessing
+                duration = 365
             }
-            30 = {
-                custom_tooltip = pf_monuments.10.tt1
-                hidden_effect = {
-                    owner = {
-                        every_known_country = {
-                            add_aggressive_expansion = {
-                                who = PREV
-                                value = 5
-                                apply_calc = no
-                            }
-                        }
-                    }
-                }
-            } 
         }
     }
 }
-province_event = { # Blessing of Fortuna
+province_event = { # Blessing of Mars
     id = pf_mon_events.11
     title = pf_mon_events.11.title
     desc = pf_mon_events.11.desc
@@ -657,30 +743,15 @@ province_event = { # Blessing of Fortuna
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        random_list = {
-            70 = {
-                add_base_tax = 2
-                add_base_production = 2
-                add_base_manpower = 2
+        owner = {
+            add_country_modifier = { 
+                name = pf_mon_hop_war_blessing
+                duration = 365
             }
-            30 = {
-                custom_tooltip = pf_monuments.11.tt1
-                hidden_effect = {
-                    owner = {
-                        every_known_country = {
-                            add_aggressive_expansion = {
-                                who = PREV
-                                value = 5
-                                apply_calc = no
-                            }
-                        }
-                    }
-                }
-            } 
         }
     }
 }
-province_event = { # Blessing of Loki
+province_event = { # Blessing of Tyr
     id = pf_mon_events.12
     title = pf_mon_events.12.title
     desc = pf_mon_events.12.desc
@@ -729,30 +800,15 @@ province_event = { # Blessing of Loki
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        random_list = {
-            70 = {
-                add_base_tax = 2
-                add_base_production = 2
-                add_base_manpower = 2
+        owner = {
+            add_country_modifier = { 
+                name = pf_mon_hop_war_blessing
+                duration = 365
             }
-            30 = {
-                custom_tooltip = pf_monuments.12.tt1
-                hidden_effect = {
-                    owner = {
-                        every_known_country = {
-                            add_aggressive_expansion = {
-                                who = PREV
-                                value = 5
-                                apply_calc = no
-                            }
-                        }
-                    }
-                }
-            } 
         }
     }
 }
-province_event = { # Blessing of Asclepius
+province_event = { # Blessing of Tyche
     id = pf_mon_events.13
     title = pf_mon_events.13.title
     desc = pf_mon_events.13.desc
@@ -801,17 +857,30 @@ province_event = { # Blessing of Asclepius
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        custom_tooltip = pf_monuments.13.tt1
-        hidden_effect = {
-            owner = {
-                every_owned_province = {
-                    add_devastation = -10
-                }
+        random_list = {
+            70 = {
+                add_base_tax = 2
+                add_base_production = 2
+                add_base_manpower = 2
             }
+            30 = {
+                custom_tooltip = pf_monuments.13.tt1
+                hidden_effect = {
+                    owner = {
+                        every_known_country = {
+                            add_aggressive_expansion = {
+                                who = PREV
+                                value = 5
+                                apply_calc = no
+                            }
+                        }
+                    }
+                }
+            } 
         }
     }
 }
-province_event = { # Blessing of Eshmun
+province_event = { # Blessing of Ashtarte
     id = pf_mon_events.14
     title = pf_mon_events.14.title
     desc = pf_mon_events.14.desc
@@ -860,17 +929,30 @@ province_event = { # Blessing of Eshmun
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        custom_tooltip = pf_monuments.14.tt1
-        hidden_effect = {
-            owner = {
-                every_owned_province = {
-                    add_devastation = -10
-                }
+        random_list = {
+            70 = {
+                add_base_tax = 2
+                add_base_production = 2
+                add_base_manpower = 2
             }
+            30 = {
+                custom_tooltip = pf_monuments.14.tt1
+                hidden_effect = {
+                    owner = {
+                        every_known_country = {
+                            add_aggressive_expansion = {
+                                who = PREV
+                                value = 5
+                                apply_calc = no
+                            }
+                        }
+                    }
+                }
+            } 
         }
     }
 }
-province_event = { # Blessing of Asclepius
+province_event = { # Blessing of Fortuna
     id = pf_mon_events.15
     title = pf_mon_events.15.title
     desc = pf_mon_events.15.desc
@@ -919,17 +1001,30 @@ province_event = { # Blessing of Asclepius
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        custom_tooltip = pf_monuments.15.tt1
-        hidden_effect = {
-            owner = {
-                every_owned_province = {
-                    add_devastation = -10
-                }
+        random_list = {
+            70 = {
+                add_base_tax = 2
+                add_base_production = 2
+                add_base_manpower = 2
             }
+            30 = {
+                custom_tooltip = pf_monuments.15.tt1
+                hidden_effect = {
+                    owner = {
+                        every_known_country = {
+                            add_aggressive_expansion = {
+                                who = PREV
+                                value = 5
+                                apply_calc = no
+                            }
+                        }
+                    }
+                }
+            } 
         }
     }
 }
-province_event = { # Blessing of Eir
+province_event = { # Blessing of Loki
     id = pf_mon_events.16
     title = pf_mon_events.16.title
     desc = pf_mon_events.16.desc
@@ -978,7 +1073,260 @@ province_event = { # Blessing of Eir
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        custom_tooltip = pf_monuments.16.tt1
+        random_list = {
+            70 = {
+                add_base_tax = 2
+                add_base_production = 2
+                add_base_manpower = 2
+            }
+            30 = {
+                custom_tooltip = pf_monuments.16.tt1
+                hidden_effect = {
+                    owner = {
+                        every_known_country = {
+                            add_aggressive_expansion = {
+                                who = PREV
+                                value = 5
+                                apply_calc = no
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+province_event = { # Blessing of Asclepius
+    id = pf_mon_events.17
+    title = pf_mon_events.17.title
+    desc = pf_mon_events.17.desc
+    picture = NORSE_TEMPLE_eventPicture
+    goto = ROOT
+
+    mean_time_to_happen = { # This is in concurrence with the flag cooldown
+        months = 6
+    }
+
+    trigger = {
+        has_great_project = {
+            type = hall_of_pantheons
+            tier = 1
+        }
+        province_is_or_accepts_religion = {
+            religion = hellenic
+        }
+        OR = {
+            NOT = {
+                has_province_flag = pf_mon_hop_blessing_flag
+            }
+            had_province_flag = {
+                flag = pf_mon_hop_blessing_flag
+                days = 1460
+            }
+            AND = { # Reduced cooldown if you have <0 stability
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 1095
+                }
+                NOT = {
+                    owner = {
+                        stability = 0
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        add_yearly_manpower = 0.1
+        custom_tooltip = pf_monuments.17.tt1
+        hidden_effect = {
+            owner = {
+                every_owned_province = {
+                    add_devastation = -10
+                }
+            }
+        }
+    }
+}
+province_event = { # Blessing of Eshmun
+    id = pf_mon_events.18
+    title = pf_mon_events.18.title
+    desc = pf_mon_events.18.desc
+    picture = NORSE_TEMPLE_eventPicture
+    goto = ROOT
+
+    mean_time_to_happen = { # This is in concurrence with the flag cooldown
+        months = 6
+    }
+
+    trigger = {
+        has_great_project = {
+            type = hall_of_pantheons
+            tier = 1
+        }
+        province_is_or_accepts_religion = {
+            religion = punic_religion
+        }
+        OR = {
+            NOT = {
+                has_province_flag = pf_mon_hop_blessing_flag
+            }
+            had_province_flag = {
+                flag = pf_mon_hop_blessing_flag
+                days = 1460
+            }
+            AND = { # Reduced cooldown if you have <0 stability
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 1095
+                }
+                NOT = {
+                    owner = {
+                        stability = 0
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        add_yearly_manpower = 0.1
+        custom_tooltip = pf_monuments.18.tt1
+        hidden_effect = {
+            owner = {
+                every_owned_province = {
+                    add_devastation = -10
+                }
+            }
+        }
+    }
+}
+province_event = { # Blessing of Asclepius
+    id = pf_mon_events.19
+    title = pf_mon_events.19.title
+    desc = pf_mon_events.19.desc
+    picture = NORSE_TEMPLE_eventPicture
+    goto = ROOT
+
+    mean_time_to_happen = { # This is in concurrence with the flag cooldown
+        months = 6
+    }
+
+    trigger = {
+        has_great_project = {
+            type = hall_of_pantheons
+            tier = 1
+        }
+        province_is_or_accepts_religion = {
+            religion = romana
+        }
+        OR = {
+            NOT = {
+                has_province_flag = pf_mon_hop_blessing_flag
+            }
+            had_province_flag = {
+                flag = pf_mon_hop_blessing_flag
+                days = 1460
+            }
+            AND = { # Reduced cooldown if you have <0 stability
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 1095
+                }
+                NOT = {
+                    owner = {
+                        stability = 0
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        add_yearly_manpower = 0.1
+        custom_tooltip = pf_monuments.19.tt1
+        hidden_effect = {
+            owner = {
+                every_owned_province = {
+                    add_devastation = -10
+                }
+            }
+        }
+    }
+}
+province_event = { # Blessing of Eir
+    id = pf_mon_events.20
+    title = pf_mon_events.20.title
+    desc = pf_mon_events.20.desc
+    picture = NORSE_TEMPLE_eventPicture
+    goto = ROOT
+
+    mean_time_to_happen = { # This is in concurrence with the flag cooldown
+        months = 6
+    }
+
+    trigger = {
+        has_great_project = {
+            type = hall_of_pantheons
+            tier = 1
+        }
+        province_is_or_accepts_religion = {
+            religion = norse_pagan_reformed
+        }
+        OR = {
+            NOT = {
+                has_province_flag = pf_mon_hop_blessing_flag
+            }
+            had_province_flag = {
+                flag = pf_mon_hop_blessing_flag
+                days = 1460
+            }
+            AND = { # Reduced cooldown if you have <0 stability
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 1095
+                }
+                NOT = {
+                    owner = {
+                        stability = 0
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        add_yearly_manpower = 0.1
+        custom_tooltip = pf_monuments.20.tt1
         hidden_effect = {
             owner = {
                 every_owned_province = {
