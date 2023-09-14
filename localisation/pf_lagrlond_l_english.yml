@@ -437,7 +437,7 @@
  pf_lag_trinovantian_rebels.7.a:0 "REPLACE_ME"
 
  pf_lagrlond_events.2.t:0 "The Religious Reforms of [Root.Monarch.GetName]"
- pf_lagrlond_events.2.desc:0 "With the [Root.GetChurchOrFallbackName] under control, [Root.Monarch.GetTitle] [Root.Monarch.GetName] can finally push through reforms to the Church of [Root.GetName], on his desk, there are 2 proposals, the Norvegr [Root.GetNobilityOrFallbackName] wishes to strengthen the Norse rites and expand the power of the [Root.GetChurchOrFallbackName] to help counterbalance the overwhelming strength of the [Root.GetBurghersOrFallbackName], while the [Root.GetBurghersOrFallbackName] wishes to expand religious toleration to our Druidic and Germanic subjects to smooth relations with our neighbours."
+ pf_lagrlond_events.2.desc:0 "With the [Root.GetChurchOrFallbackName] under control, [Root.Monarch.GetTitle] [Root.Monarch.GetName] can finally push through reforms to the Church of [Root.GetName], on his desk, there are two proposals, the Norvegr [Root.GetNobilityOrFallbackName] wishes to strengthen the Norse rites and expand the power of the [Root.GetChurchOrFallbackName] to help counterbalance the overwhelming strength of the [Root.GetBurghersOrFallbackName], while the [Root.GetBurghersOrFallbackName] wishes to expand religious toleration to our Druidic and Germanic subjects to smooth relations with our neighbours."
  pf_lagrlond_events.2.a:0 "The [Root.GetNobilityOrFallbackName] Proposal"
  PF_LAG_RELIGIOUS_PATH_TT:0 "We will unlock the §YReligious Path§! with the following missions:\n§YCrush The Heretics§!\n§YLand of Churches§!"
  pf_lagrlond_events.2.b:0 "The [Root.GetBurghersOrFallbackName] Proposal"
@@ -448,7 +448,7 @@
 
  # Privileges
  estate_burghers_pf_peace_of_utrech:0 "Peace of Útaríki"
- estate_burghers_pf_peace_of_utrech_desc:0 "Named after the city it was first decreed on the Peace of Útaríki guarantees full religious freedom to all our subjects."
+ estate_burghers_pf_peace_of_utrech_desc:0 "Named after the city where it was first decreed, the Peace of Útaríki guarantees full religious freedom to all our subjects."
  estate_burghers_pf_peace_of_utrech_gt:0 "Provinces with §Runaccepted§! culture will have its negative modifiers §Ghalved§!"
  estate_burghers_pf_peace_of_utrech_has_eligible_province_tt:0 "Any owned province with an §Runaccepted§! culture"
  has_unlocked_estate_burghers_pf_peace_of_utrech:0 "Completed Mission §YPeace of Útaríki§!"
@@ -503,7 +503,7 @@
 
  # Empower Provincial Things
  pf_lag_provincial_things:0 "Empower the Provincial Things"
- pf_lag_provincial_things_desc:0 "Every Province of the Republic has its own Thing, or assembly, usually called Provincial Thing to distinguish with the Láglandathing in [Root.Capital.GetCapitalName], these Provincial Assemblies play a pivotal role in the local organisation and the election of a new Thinghâlder, by giving them even more responsibilities we can guarantee a better local administration and more loyalty from subjects not within our core regions."
+ pf_lag_provincial_things_desc:0 "Every Province of the Republic has its own Thing, or assembly, usually called Provincial Thing to distinguish itself against the Láglandathing in [Root.Capital.GetCapitalName], these Provincial Assemblies play a pivotal role in the local organisation and the election of a new Thinghâlder, by giving them even more responsibilities we can guarantee a better local administration and more loyalty from subjects not within our core regions."
 
  # Virtues of the Merchant Princes
  pf_lag_merchant_virtues:0 "Dominance of the Merchant Princes"
@@ -525,11 +525,11 @@
 
  # Events for the Odinstur
  pf_lagrlond_events.3.t:0 "The Odinstur"
- pf_lagrlond_events.3.desc:0 "REPLACE_ME"
+ pf_lagrlond_events.3.desc:0 "Our [Root.GetChurchOrFallbackName] have arrived with a proposal to build a new tower to the already existing temple to Odin in [4382.GetName], this tower would be the tallest in the region after the Dom Tower in Utrecht."
  pf_lagrlond_events.3.a:0 "Build the Tower, for the glory of Odin!"
  pf_lagrlond_events.3.b:0 "Our ducats can be better used elsewhere"
  pf_lagrlond_events.4.t:0 "The Odinstur is struck by lightning!"
- pf_lagrlond_events.4.desc:0 "REPLACE_ME"
+ pf_lagrlond_events.4.desc:0 "Disaster has struck the temple of Odin in [4382.GetName], a bolt of lightning has hit the tower, causing substantial damage, the [Root.GetChurchOrFallbackName] have asked for decisive action from the Thinghalder to rectify the situation"
  pf_lagrlond_events.4.a:0 "Repair the Tower to Odin as quickly as possible"
  pf_lagrlond_events.4.b:0 "The repairs are not worth our ducats"
  # Estate Loyalty
