@@ -415,26 +415,26 @@
  # events
  PF_LAG_SPAWN_BRITON_NOBLE_REBELS:0 "A random province owned by you or a non-sovereign subject in the §YBritish Isles§!, with §YBriton§! culture, will spawn §YNoble Rebels§!"
  pf_lag_trinovantian_rebels.1.t:0 "The Iceni Revolt"
- pf_lag_trinovantian_rebels.1.desc:0 "REPLACE_ME"
- pf_lag_trinovantian_rebels.1.a:0 "REPLACE_ME"
+ pf_lag_trinovantian_rebels.1.desc:0 "Mostly based [1860.GetName] the Iceni tribes have decided to take up banners against us, across the Island Iceni tribesmen have started striking against Lagrlonder officials, and in some regions, sympathetic tribesmen from other tribes have taken up arms in solidarity"
+ pf_lag_trinovantian_rebels.1.a:0 "Damn them!"
  pf_lag_trinovantian_rebels.2.t:0 "The Cantiaci Resistance"
- pf_lag_trinovantian_rebels.2.desc:0 "REPLACE_ME"
- pf_lag_trinovantian_rebels.2.a:0 "REPLACE_ME"
+ pf_lag_trinovantian_rebels.2.desc:0 "Mostly based [235.GetName] the Cantiaci tribes have decided to take up banners against us, across the Island Cantiaci tribesmen have started striking against Lagrlonder officials, and in some regions, sympathetic tribesmen from other tribes have taken up arms in solidarity"
+ pf_lag_trinovantian_rebels.2.a:0 "Unleash the Lagrlonder Fury"
  pf_lag_trinovantian_rebels.3.t:0 "The Catuvellauni Dissent"
- pf_lag_trinovantian_rebels.3.desc:0 "REPLACE_ME"
- pf_lag_trinovantian_rebels.3.a:0 "REPLACE_ME"
+ pf_lag_trinovantian_rebels.3.desc:0 "Mostly based [4370.GetName] the Catuvellauni tribes have decided to take up banners against us, across the Island Catuvellauni tribesmen have started striking against Lagrlonder officials, and in some regions, sympathetic tribesmen from other tribes have taken up arms in solidarity"
+ pf_lag_trinovantian_rebels.3.a:0 "Leave none alive but the sheep"
  pf_lag_trinovantian_rebels.4.t:0 "The Regni Insurgency"
- pf_lag_trinovantian_rebels.4.desc:0 "REPLACE_ME"
- pf_lag_trinovantian_rebels.4.a:0 "REPLACE_ME"
+ pf_lag_trinovantian_rebels.4.desc:0 "Mostly based [4371.GetName] the Regni tribes have decided to take up banners against us, across the Island Regni tribesmen have started striking against Lagrlonder officials, and in some regions, sympathetic tribesmen from other tribes have taken up arms in solidarity"
+ pf_lag_trinovantian_rebels.4.a:0 "Kill everything in [4371.GetName]"
  pf_lag_trinovantian_rebels.5.t:0 "The Trinovante Rebellion"
- pf_lag_trinovantian_rebels.5.desc:0 "REPLACE_ME"
- pf_lag_trinovantian_rebels.5.a:0 "REPLACE_ME"
+ pf_lag_trinovantian_rebels.5.desc:0 "Mostly based [238.GetName] and [236.GetName] the Trinovante tribes have decided to take up banners against us, across the Island Trinovante tribesmen have started striking against Lagrlonder officials, and in some regions, sympathetic tribesmen from other tribes have taken up arms in solidarity"
+ pf_lag_trinovantian_rebels.5.a:0 "Stamp out the biggest traitors!"
  pf_lag_trinovantian_rebels.6.t:0 "The Albionic Survey"
- pf_lag_trinovantian_rebels.6.desc:0 "REPLACE_ME"
- pf_lag_trinovantian_rebels.6.a:0 "REPLACE_ME"
+ pf_lag_trinovantian_rebels.6.desc:0 "With the Trinovantian rebellions crushed we finally have enough of a solid grasp in the region. The first order is to do a survey of the land, so we can understand what we have to work with on the Island."
+ pf_lag_trinovantian_rebels.6.a:0 "Send the Royal Surveyors"
  pf_lag_trinovantian_rebels.7.t:0 "The Cearta Trinovantes"
- pf_lag_trinovantian_rebels.7.desc:0 "REPLACE_ME"
- pf_lag_trinovantian_rebels.7.a:0 "REPLACE_ME"
+ pf_lag_trinovantian_rebels.7.desc:0 "The war against the Trinovantian tribes has taken a turn for the worse, thankfully the rebels still have some sense to negotiate, by handing large amounts of autonomous decision making to the tribes they will become our enforcers in the Island."
+ pf_lag_trinovantian_rebels.7.a:0 "Better than losing our foothold"
 
  pf_lagrlond_events.2.t:0 "The Religious Reforms of [Root.Monarch.GetName]"
  pf_lagrlond_events.2.desc:0 "With the [Root.GetChurchOrFallbackName] under control, [Root.Monarch.GetTitle] [Root.Monarch.GetName] can finally push through reforms to the Church of [Root.GetName], on his desk, there are two proposals, the Norvegr [Root.GetNobilityOrFallbackName] wishes to strengthen the Norse rites and expand the power of the [Root.GetChurchOrFallbackName] to help counterbalance the overwhelming strength of the [Root.GetBurghersOrFallbackName], while the [Root.GetBurghersOrFallbackName] wishes to expand religious toleration to our Druidic and Germanic subjects to smooth relations with our neighbours."
@@ -456,9 +456,9 @@
  unlock_privilege_estate_burghers_pf_peace_of_utrech_tt:0 "§GUnlocks§! the §YPeace of Útaríki§! estate privilege, giving the following modifiers:\nProvinces in §Runaccepted§! culture groups will have their modifiers §Ghalved§!"
 
  pf_lag_peace_of_utrech_same_group:0 "Peace of Útaríki"
- desc_pf_lag_peace_of_utrech_same_group:0 "Named after the city it was first decreed on the Peace of Útaríki guarantees full religious freedom to all our subjects."
+ desc_pf_lag_peace_of_utrech_same_group:0 "Named after the city it was first decreed on, the Peace of Útaríki guarantees full religious freedom to all our subjects."
  pf_lag_peace_of_utrech_different_group:0 "Peace of Útaríki"
- desc_pf_lag_peace_of_utrech_different_group:0 "Named after the city it was first decreed on the Peace of Útaríki guarantees full religious freedom to all our subjects."
+ desc_pf_lag_peace_of_utrech_different_group:0 "Named after the city it was first decreed on, the Peace of Útaríki guarantees full religious freedom to all our subjects."
 
  # Lagr Republic reform
  # Means Lagr (Low) Landa (Provinces, Lands) Thing (Assembly)
@@ -512,7 +512,7 @@
 
  # Placcards of Tolerance
  pf_lag_acts_of_toleration:0 "Acts of Toleration"
- pf_lag_acts_of_toleration_desc:0 "[Root.GetName] is a religiously diverse country, with Germanics and Druids making up sizeable minorities, by guaranteeing free practice of their religions we can dissuade them from wishing to join with their fellow major Germanic and Druidic countries."
+ pf_lag_acts_of_toleration_desc:0 "[Root.GetName] is a religiously diverse country, with Germanics and Druids making up sizeable minorities. By guaranteeing free practice of their religions we can dissuade them from wishing to join with their fellow major Germanic and Druidic countries."
 
  # Ceremonial Thinghâlder
  pf_lag_ceremonial_thinghalder:0 "Ceremonial Thinghâlder"
@@ -521,7 +521,7 @@
 
  # Marginalism
  pf_lag_marginalism:0 "Marginalism"
- pf_lag_marginalism_desc:0 "REPLACE_ME"
+ pf_lag_marginalism_desc:0 "Marginalism is an economic theory that focuses on the importance of incremental changes, or "marginal" units, in decision-making. It examines how individuals and firms make choices based on the added benefit or cost of one more unit of a good or service, guiding resource allocation and pricing decisions."
 
  # Events for the Odinstur
  pf_lagrlond_events.3.t:0 "The Odinstur"
