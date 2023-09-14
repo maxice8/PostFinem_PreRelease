@@ -6,7 +6,7 @@ country_event = {
 	id = nrd_flavor_events.1
 	title = nrd_flavor_events.1.t
 	desc = nrd_flavor_events.1.d
-	picture = wihgfx_FEMALE_RULER_eventPicture
+	picture = VIKINGS_eventPicture
 	
 	trigger = {
 		
@@ -16,11 +16,7 @@ country_event = {
 	
 	is_triggered_only = yes
 	# mean_time_to_happen = {}
-
-	option = {
-		name = nrd_flavor_events.1.a
-		ai_chance = { factor = 1 }
-		
+	immediate = {
 		random_owned_province = {
 			limit = {
 				OR = {
@@ -30,6 +26,15 @@ country_event = {
 				}
 				is_capital = no
 			}
+			save_event_target_as = norse_settlers_coming
+		}
+	}
+	option = {
+		name = nrd_flavor_events.1.a
+		goto = norse_settlers_coming
+		ai_chance = { factor = 1 }
+		
+		event_target:norse_settlers_coming = {
 			add_base_tax = 2
 			add_base_production = 3
 			add_base_production = 2
@@ -51,6 +56,7 @@ country_event = {
 	}
 }
 
+#COFFEE!
 country_event = {
 	id = nrd_flavor_events.2 
 	title = nrd_flavor_events.2.t 
@@ -118,7 +124,16 @@ country_event = {
 	id = nrd_flavor_events.3
 	title = nrd_flavor_events.3.t
 	desc = nrd_flavor_events.3.d
-	picture = wihgfx_FEMALE_RULER_eventPicture
+	picture = DIPLOMACY_eventPicture
+	major_trigger = { 
+		capital_scope = {
+			OR = {
+				region = british_isles_region
+				region = scandinavia_region
+				region = france_region
+			}
+		} 
+	}
 	
 	trigger = {
 		tag = NRD
@@ -129,7 +144,7 @@ country_event = {
 	fire_only_once = yes
 	
 	# is_triggered_only = yes
-	mean_time_to_happen = { months = 12 }
+	mean_time_to_happen = { months = 1 }
 
 	option = {
 		name = nrd_flavor_events.3.a
@@ -155,7 +170,7 @@ country_event = {
 	id = nrd_flavor_events.4
 	title = nrd_flavor_events.4.t
 	desc = nrd_flavor_events.4.d
-	picture = wihgfx_FEMALE_RULER_eventPicture
+	picture = VIKING_KING_eventPicture
 	major_trigger = { 
 		capital_scope = {
 			OR = {
@@ -204,7 +219,7 @@ country_event = {
 	id = nrd_flavor_events.5
 	title = nrd_flavor_events.5.t
 	desc = nrd_flavor_events.5.d
-	picture = wihgfx_FEMALE_RULER_eventPicture
+	picture = WOUNDED_SOLDIERS_eventPicture
 	
 	trigger = {
 		tag = NRD
@@ -250,12 +265,14 @@ country_event = {
 		ai_chance = { factor = 1 }
 		
 		add_prestige_or_monarch_power = {
-			amount = 50
+			amount = 25
 		}
 		custom_tooltip = empty_line_tt
 		event_target:nrd_scandi_refugee_province = {
 			change_religion = norse_pagan_reformed
-			add_base_tax = 1
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 1
 			if = {
 				limit = {
 					NOT = { culture = ROOT }
@@ -274,11 +291,11 @@ country_event = {
 		name = nrd_flavor_events.5.b
 		ai_chance = { factor = 1 }
 
-		add_years_of_income = 1
+		add_years_of_income = 4
 		define_advisor = {
 			type = treasurer
 			skill = 1
-			discount = yes
+			cost_multiplier = 0.25
 		}
 	}
 }
@@ -407,7 +424,15 @@ country_event = {
 	id = nrd_flavor_events.8
 	title = nrd_flavor_events.8.t
 	desc = nrd_flavor_events.8.d
-	picture = wihgfx_FEMALE_RULER_eventPicture
+	picture = DIPLOMACY_eventPicture
+	major_trigger = {
+		capital_scope = {
+			OR = {
+				region = british_isles_region
+				region = france_region
+			}
+		}
+	}
 	
 	trigger = {
 		tag = NRD
@@ -465,11 +490,11 @@ country_event = {
 	}
 
 	option = { #Do not help them
-		name = nrd_flavor_events.8.b
+		name = nrd_flavor_events.8.c
 		# goto = nrd_rebel_province
 		ai_chance = { factor = 5 }
 
-		custom_tooltip = "Trinovantes is left to their own fate"
+		custom_tooltip = "Trinovantes will be left to their own fate"
 	}
 	# after = {
 	# }
@@ -480,7 +505,7 @@ country_event = {
 	id = nrd_flavor_events.9
 	title = nrd_flavor_events.9.t
 	desc = nrd_flavor_events.9.d
-	picture = wihgfx_FEMALE_RULER_eventPicture
+	picture = DIPLOMACY_eventPicture
 	
 	# trigger = {
 	# }
@@ -551,6 +576,13 @@ province_event = {
 	
 	trigger = {
 		owner = { tag = NRD }
+		scandinavia_region = {
+			any_province = {
+				owner = {
+					religion = norse_pagan_reformed
+				}
+			}
+		}
 		has_port = yes
 		NOT = { development = 10 }
 	}
@@ -558,15 +590,15 @@ province_event = {
 	mean_time_to_happen = { 
 		months = 600 
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			development = 5
 		} 
 		modifier = {
-			factor = 1.25
+			factor = 1.5
 			development = 6
 		} 
 		modifier = {
-			factor = 1.25
+			factor = 1.5
 			development = 7
 		} 
 		modifier = {
