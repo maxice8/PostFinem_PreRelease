@@ -815,6 +815,14 @@ on_new_consort = {
 # country
 on_monarch_death = {
 	if = {
+		limit = {
+			tag = NRD
+			has_country_flag = knut_ulriksson_maidenless_flag
+		}
+		clr_country_flag = knut_ulriksson_maidenless_flag
+		country_event = { id = nrd_flavor_events.4 }
+	}
+	if = {
 		limit = { has_country_modifier = sought_after_bachelor }
 		remove_country_modifier = sought_after_bachelor
 	}
