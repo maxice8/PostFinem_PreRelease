@@ -50,6 +50,8 @@ RHG_ADJ: "Rheged"
 
 HEN_OGLEDD: "Hen Ogledd"
 HEN_OGLEDD_ADJ: "Hen Ogledd"
+BRITTONIC_CONFEDERATION: "Brittonic Confederation"
+BRITTONIC_CONFEDERATION_ADJ: "Brittonic"
 
 ###########
 # Ideas
@@ -224,6 +226,21 @@ pf_trn.17.d: "King Coel was a legendary Brittonic figure who ruled much of the n
 pf_trn.17.a: "His was truly a realm of the Old North."
 pf_trn.17.b: "No one shall question our conquests now."
 pf_trn_kingdom_of_coel_hen: "Claimed the Kingdom of Coel Hen"
+
+pf_trn.18.t: "Supremacy of the Trinovantes"
+pf_trn.18.d: "The Trinovantes tribe were the most powerful of the Oaken Five when the Confederation was first formed. It was their chief Bronwen that proposed the alliance against Celtic incursion in the first place. As a result, the Trinovantes have always held a privileged position compared to the other tribes, with even their capital of Camulodonon serving as the seat of the Council of Elders. Times have changed since the foundation of the Confederation however, and some of the other tribes have grown more powerful at the expense of the Trinovantes, leaving many of them to question why their tribe is not elevated to the same extent. How shall we address this situation?"
+pf_trn.18.a: "Every tribe in the Confederation is equal."
+pf_trn.18.b: "The Trinovantes' leadership brings stability to the country."
+pf_trn_sup_tri_1: "Equal Confederation"
+pf_trn_sup_tri_2: "Exclusive Confederation"
+
+pf_trn.19.t: "Wrath of the Blackcoats"
+pf_trn.19.d: "The Blackcoats began as simply a program to ensure our army was tough enough to survive the sometimes brutal weather of Albion, but they have rapidly evolved into a self-sufficient and extremely arrogant military unit. Acting practically as mercenaries and vigilantes, they are using the skills they homed in our army against every day people and causing chaos across the country. Many disaffected Blackcoats essentially rule desolate areas of the countryside as warlords, reigning over their unwilling subjects with terror and torture.\n\nThe problem of the Blackcoats has been at the front of the mind of politicians for a long time, but no one has the gaul to do anything to seriously weaken their power, lest their provoke their wrath. One group stood defiant however - the Daughters of Boudicca. Themselves a mercenary group, the Daughters have done nothing but actively voice their concerns about the Blackcoats in the years since their founding, much to the distaste of the latter. Before now, their competition had been lobbying within the government and particularly stressful card games, but now things have stepped up into a national crisis.\n\nA rogue band of Blackcoats, apparently acting on the orders of the officer of the whole regiment, broke into the barracks of the Daughters of Boudicca and committed a massacre. By the time local police forces arrived, it was too late. Every single one of the Daughters had been slaughted, most of them while they slept. Some three hundred bodies had to be cleared from the building before a proper investigation could begin, some of them slain in the most savage manners imaginable. The Blackcoats have openly claimed responsibility and now gloat of their supremacy within the army, their only real opposition now removed. The world leans in to listen to the chaos unfolding. Many in the government believe we are but months away from a full on military coup, and demand that action be taken against the Blackcoats now before it is too late."
+pf_trn.19.a: "The Blackcoats are fugitives from justice! Hunt them down and let them hang!"
+pf_trn.19.b: "They have done the world a favour by killing the Daughters."
+begins_blackcoat_revolution_tt: "Begins the §OBlackcoat Revolution§! disaster."
+pf_trn_blackcoat_fugitives: "Hunting Down the Blackcoats"
+pf_trn_supported_the_blackcoats: "Supporting the Blackcoats"
 
 ###########
 # Decision
@@ -434,7 +451,7 @@ merc_daughters_of_boudicca: "§MDaughters of Boudicca§!"
 
 pf_trn_the_blood_between_us_title: "The Blood Between Us"
 pf_trn_the_blood_between_us_desc: "Families stick together, no matter what. In that aspect, sisters in combat are alike a family - they never lose sight of each other and will always be there by each others' sides when needed. The Daughters of Boudicca have proven themselves better than we could have imagined, carrying us to many victories. The time has come to question their place in our military, and how we will use their skills."
-pf_trn_the_blood_between_us_trigger_tt: "Won at least §Y25 battles§! while the §MDaughters of Boudicca§! Mercenary Company is employed."
+pf_trn_the_blood_between_us_trigger_tt: "Won at least §Y25 battles§! while the §MDaughters of Boudicca§! Mercenary Company is employed (currently §Y[Root.BoudiccaBattlesWon.GetValue]§!)."
 pf_trn_the_blood_between_us_tt: "This event will allow us to choose whether to integrate the §YDaughters§! into our own military or strengthen their existing company."
 merc_upgraded_daughters_of_boudicca: "§MDaughters of Boudicca§!"
 
@@ -449,3 +466,7 @@ pf_trn_blackcoat_revolution_1_tt: "If we complete this mission by §lembracing§
 pf_trn_blackcoat_revolution_2_tt: "If we complete this mission by §Odefeating§! the §YBlackcoat Revolution§!, we gain the following effect:"
 pf_trn_blackcoat_rule: "Rule of the Blackcoats"
 pf_trn_blackcoat_defeat: "Defeated the Blackcoats"
+
+pf_trn_leadership_of_the_trinovantes_title: "The Tribal Pyramid"
+pf_trn_leadership_of_the_trinovantes_desc: "The Trinovantes tribe were the most powerful of the Oaken Five when the Confederation was first formed. It was their chief Bronwen that proposed the alliance against Celtic incursion in the first place. As a result, the Trinovantes have always held a privileged position compared to the other tribes, with even their capital of Camulodonon serving as the seat of the Council of Elders. Times have changed since the foundation of the Confederation however, and some of the other tribes have grown more powerful at the expense of the Trinovantes, leaving many of them to question why their tribe is not elevated to the same extent."
+pf_trn_leadership_of_the_trinovantes_tt: "This event will decide between maintaining the supremacy of the Trinovantes or reshaping into a more equal Confederation."

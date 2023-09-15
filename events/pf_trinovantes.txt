@@ -775,3 +775,64 @@ country_event = {		# The Kingdom of Coel Hen
 		}
 	}
 }
+
+country_event = {		# Supremacy of the Trinovantes
+	id = pf_trn.18
+	title = pf_trn.18.t
+	desc = pf_trn.18.d
+	picture = CONQUEROR_eventPicture
+
+	is_triggered_only = yes
+
+	option = {	
+		name = "pf_trn.18.a"
+		restore_country_name = yes
+		custom_tooltip = empty_line_tt
+		override_country_name = BRITTONIC_CONFEDERATION
+		custom_tooltip = empty_line_tt
+		add_dip_power = 50
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = "pf_trn_sup_tri_1"
+			duration = -1
+		}
+	}
+	option = {
+		name = "pf_trn.18.b"
+		add_stability_or_adm_power = yes
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = "pf_trn_sup_tri_2"
+			duration = -1
+		}
+	}
+}
+country_event = {		# The Blackcoats Slay the Daughters
+	id = pf_trn.19
+	title = pf_trn.19.t
+	desc = pf_trn.19.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_trn.19.a"
+		custom_tooltip = begins_blackcoat_revolution_tt
+		add_stability = -2
+		add_country_modifier = {
+			name = "pf_trn_blackcoat_fugitives"
+			duration = -1
+			desc = "until the end of the disaster"
+		}
+	}
+	option = {	
+		name = "pf_trn.19.b"
+		custom_tooltip = begins_blackcoat_revolution_tt
+		add_stability = -2
+		add_country_modifier = {
+			name = "pf_trn_supported_the_blackcoats"
+			duration = -1
+			desc = "until the end of the disaster"
+		}
+	}
+}

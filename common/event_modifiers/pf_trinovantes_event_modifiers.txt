@@ -178,3 +178,22 @@ pf_trn_kingdom_of_coel_hen = {
 	army_tradition = 0.25
 	legitimacy = 0.25
 }
+pf_trn_sup_tri_1 = {
+	years_of_nationalism = -5
+	min_autonomy = -10
+	max_absolutism = -5
+}
+pf_trn_sup_tri_2 = {
+	min_autonomy = -10
+	max_absolutism = 5
+}
+pf_trn_supported_the_blackcoats = {
+	discipline = 0.05
+	fire_damage = 0.10
+	global_unrest = 5
+}
+pf_trn_blackcoat_fugitives = {
+	global_manpower_modifier = -0.20
+	land_forcelimit_modifier = -0.20
+	global_unrest = 2
+}

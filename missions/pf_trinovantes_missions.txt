@@ -863,7 +863,7 @@ pf_trn_3 = {
 					culture = briton
 					owned_by = ROOT
 				}
-				amount = 12
+				amount = 10
 			}
 		}
 		effect = {
@@ -1425,7 +1425,7 @@ pf_trn_4 = {
 	pf_trn_the_garden_of_albion = {
 		icon = mission_expand_great_wall
 		position = 11
-		required_missions = { pf_trn_gaullish_alliance pf_trn_develop_the_nation } 
+		required_missions = { pf_trn_gaullish_alliance pf_trn_develop_the_nation pf_trn_leadership_of_the_trinovantes } 
 		provinces_to_highlight = {
 			province_id = 236	# Londinion
 			OR = {
@@ -1737,7 +1737,32 @@ pf_trn_5 = {
 		}
 	}
 
-	############
-	# Leadership of the Trinovantes
-	############
+	pf_trn_leadership_of_the_trinovantes = {
+		icon = fra_dominate_europe
+		position = 10
+		required_missions = { } 
+		provinces_to_highlight = {
+			province_id = 238
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { development = 18 }
+			}
+		}
+		trigger = {
+			238 = {
+				owned_by = ROOT
+				development = 18
+			}
+			total_development = 90
+			OR = {
+				adm_tech = 8
+				has_idea_group = administrative_ideas
+			}
+		}
+		effect = {
+			country_event = { id = pf_trn.18 }
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_trn_leadership_of_the_trinovantes_tt
+		}
+	}
 }
