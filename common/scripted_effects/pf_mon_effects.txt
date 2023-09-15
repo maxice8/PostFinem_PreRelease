@@ -144,7 +144,7 @@ pf_random_neighbour_province = {
                 NOT = {owned_by = $target_country$}
 				$limit2$ # Limit for neighbour province
             }
-            $a_effect$
+            $effect$
         }
     }
 }
@@ -165,4 +165,37 @@ pf_build_in_random_owned_province_without_flag = {
 		}
 		add_building = $building$
 	}
+}
+
+pf_upgrade_heir = {
+	if = {
+		limit = {heir_$type$ = 6}
+		add_$type$_power = 100
+	}
+	else = {change_heir_$type$ = 1}
+}
+
+pf_random_upgrade_heir = {
+	random_list = {
+		1 = {pf_upgrade_heir = {type = adm}}
+		1 = {pf_upgrade_heir = {type = dip}}
+		1 = {pf_upgrade_heir = {type = mil}}
+	}
+}
+
+pf_add_loyalty_to_estates = {
+	add_estate_loyalty = {estate = estate_brahmins loyalty = $value$}
+	add_estate_loyalty = {estate = estate_burghers loyalty = $value$}
+	add_estate_loyalty = {estate = estate_church loyalty = $value$}
+	add_estate_loyalty = {estate = estate_cossacks loyalty = $value$}
+	add_estate_loyalty = {estate = estate_dhimmi loyalty = $value$}
+	add_estate_loyalty = {estate = estate_eunuchs loyalty = $value$}
+	add_estate_loyalty = {estate = estate_jains loyalty = $value$}
+	add_estate_loyalty = {estate = estate_janissaries loyalty = $value$}
+	add_estate_loyalty = {estate = estate_maratha loyalty = $value$}
+	add_estate_loyalty = {estate = estate_nobles loyalty = $value$}
+	add_estate_loyalty = {estate = estate_nomadic_tribes loyalty = $value$}
+	add_estate_loyalty = {estate = estate_rajput loyalty = $value$}
+	add_estate_loyalty = {estate = estate_special loyalty = $value$}
+	add_estate_loyalty = {estate = estate_vaisyas loyalty = $value$}
 }

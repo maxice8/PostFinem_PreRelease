@@ -388,7 +388,7 @@ province_event = { # Blessing of Odin
         }
     }
 }
-province_event = { # Blessing of Hera
+province_event = { # Blessing of Poseidon
     id = pf_mon_events.5
     title = pf_mon_events.5.title
     desc = pf_mon_events.5.desc
@@ -457,39 +457,379 @@ province_event = { # Blessing of Hera
         }
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
+            add_yearly_sailors = 1.5
+            create_explorer = {tradition = 60}
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            add_yearly_sailors = 3
+            create_explorer = {tradition = 100}
+        }
+    }
+}
+province_event = { # Blessing of Saphon
+    id = pf_mon_events.6
+    title = pf_mon_events.6.title
+    desc = pf_mon_events.6.desc
+    picture = NORSE_TEMPLE_eventPicture
+    goto = ROOT
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
+    trigger = {
+        has_great_project = {
+            type = hall_of_pantheons
+            tier = 1
+        }
+        province_is_or_accepts_religion = {religion = punic_religion}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
+            }
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 2555
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+    }
+
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            add_yearly_sailors = 1.5
+            create_explorer = {tradition = 60}
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            add_yearly_sailors = 3
+            create_explorer = {tradition = 100}
+        }
+    }
+}
+province_event = { # Blessing of Saturn
+    id = pf_mon_events.7
+    title = pf_mon_events.7.title
+    desc = pf_mon_events.7.desc
+    picture = NORSE_TEMPLE_eventPicture
+    goto = ROOT
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
+    trigger = {
+        has_great_project = {
+            type = hall_of_pantheons
+            tier = 1
+        }
+        province_is_or_accepts_religion = {religion = romana}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
+            }
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 2555
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+    }
+
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            add_yearly_sailors = 1.5
+            create_explorer = {tradition = 60}
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            add_yearly_sailors = 3
+            create_explorer = {tradition = 100}
+        }
+    }
+}
+province_event = { # Blessing of Njord
+    id = pf_mon_events.8
+    title = pf_mon_events.8.title
+    desc = pf_mon_events.8.desc
+    picture = NORSE_TEMPLE_eventPicture
+    goto = ROOT
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
+    trigger = {
+        has_great_project = {
+            type = hall_of_pantheons
+            tier = 1
+        }
+        province_is_or_accepts_religion = {religion = norse_pagan_reformed}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
+            }
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 2555
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+    }
+
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            add_yearly_sailors = 1.5
+            create_explorer = {tradition = 60}
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            add_yearly_sailors = 3
+            create_explorer = {tradition = 100}
+        }
+    }
+}
+province_event = { # Blessing of Hera
+    id = pf_mon_events.9
+    title = pf_mon_events.9.title
+    desc = pf_mon_events.9.desc
+    picture = NORSE_TEMPLE_eventPicture
+    goto = ROOT
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
+    trigger = {
+        has_great_project = {
+            type = hall_of_pantheons
+            tier = 1
+        }
+        province_is_or_accepts_religion = {religion = hellenic}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
+            }
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 2555
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+    }
+
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
             if = {
                 limit = {has_heir = yes}
                 add_heir_claim = 10
                 add_heir_support = 10
-                random_list = {
-                    1 = {
-                        if = {
-                            limit = {heir_adm = 6}
-                            add_adm_power = 100
-                        }
-                        else = {change_heir_adm = 1}
-                    }
-                    1 = {
-                        if = {
-                            limit = {heir_dip = 6}
-                            add_dip_power = 100
-                        }
-                        else = {change_heir_dip = 1}
-                    }
-                    1 = {
-                        if = {
-                            limit = {heir_mil = 6}
-                            add_mil_power = 100
-                        }
-                        else = {change_heir_mil = 1}
-                    }
-                }
+                pf_random_upgrade_heir = yes
             }
             else = {
-                custom_tooltip = pf_mon_events.5.tt1_1
-                add_adm_power = 25
-                add_dip_power = 25
-                add_mil_power = 25
+                custom_tooltip = pf_mon_events.9.tt1_1
+                pf_add_monarch_power = {value = 25}
             }
         }
     }
@@ -510,58 +850,23 @@ province_event = { # Blessing of Hera
                 limit = {has_heir = yes}
                 add_heir_claim = 25
                 add_heir_support = 25
-                random_list = {
-                    1 = {
-                        if = {
-                            limit = {heir_adm = 6}
-                            add_adm_power = 200
-                        }
-                        else_if = {
-                            limit = {heir_adm = 5}
-                            add_adm_power = 100
-                            change_heir_adm = 1
-                        }
-                        else = {change_heir_adm = 2}
-                    }
-                    1 = {
-                        if = {
-                            limit = {heir_dip = 6}
-                            add_dip_power = 200
-                        }
-                        else_if = {
-                            limit = {heir_dip = 5}
-                            add_dip_power = 100
-                            change_heir_dip = 1
-                        }
-                        else = {change_heir_dip = 2}
-                    }
-                    1 = {
-                        if = {
-                            limit = {heir_mil = 6}
-                            add_mil_power = 200
-                        }
-                        else_if = {
-                            limit = {heir_mil = 5}
-                            add_mil_power = 100
-                            change_heir_mil = 1
-                        }
-                        else = {change_heir_mil = 2}
-                    }
+                custom_tooltip = pf_mon_events.9.tt1_2
+                pf_random_upgrade_heir = yes
+                hidden_effect = {
+                    pf_random_upgrade_heir = yes
                 }
             }
             else = {
-                custom_tooltip = pf_mon_events.5.tt1_2
-                add_adm_power = 50
-                add_dip_power = 50
-                add_mil_power = 50
+                custom_tooltip = pf_mon_events.9.tt2_2
+                pf_add_monarch_power = {value = 50}
             }
         }
     }
 }
 province_event = { # Blessing of Tanit
-    id = pf_mon_events.6
-    title = pf_mon_events.6.title
-    desc = pf_mon_events.6.desc
+    id = pf_mon_events.10
+    title = pf_mon_events.10.title
+    desc = pf_mon_events.10.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -631,35 +936,11 @@ province_event = { # Blessing of Tanit
                 limit = {has_heir = yes}
                 add_heir_claim = 10
                 add_heir_support = 10
-                random_list = {
-                    1 = {
-                        if = {
-                            limit = {heir_adm = 6}
-                            add_adm_power = 100
-                        }
-                        else = {change_heir_adm = 1}
-                    }
-                    1 = {
-                        if = {
-                            limit = {heir_dip = 6}
-                            add_dip_power = 100
-                        }
-                        else = {change_heir_dip = 1}
-                    }
-                    1 = {
-                        if = {
-                            limit = {heir_mil = 6}
-                            add_mil_power = 100
-                        }
-                        else = {change_heir_mil = 1}
-                    }
-                }
+                pf_random_upgrade_heir = yes
             }
             else = {
-                custom_tooltip = pf_mon_events.6.tt1_1
-                add_adm_power = 25
-                add_dip_power = 25
-                add_mil_power = 25
+                custom_tooltip = pf_mon_events.10.tt1_1
+                pf_add_monarch_power = {value = 25}
             }
         }
     }
@@ -680,58 +961,23 @@ province_event = { # Blessing of Tanit
                 limit = {has_heir = yes}
                 add_heir_claim = 25
                 add_heir_support = 25
-                random_list = {
-                    1 = {
-                        if = {
-                            limit = {heir_adm = 6}
-                            add_adm_power = 200
-                        }
-                        else_if = {
-                            limit = {heir_adm = 5}
-                            add_adm_power = 100
-                            change_heir_adm = 1
-                        }
-                        else = {change_heir_adm = 2}
-                    }
-                    1 = {
-                        if = {
-                            limit = {heir_dip = 6}
-                            add_dip_power = 200
-                        }
-                        else_if = {
-                            limit = {heir_dip = 5}
-                            add_dip_power = 100
-                            change_heir_dip = 1
-                        }
-                        else = {change_heir_dip = 2}
-                    }
-                    1 = {
-                        if = {
-                            limit = {heir_mil = 6}
-                            add_mil_power = 200
-                        }
-                        else_if = {
-                            limit = {heir_mil = 5}
-                            add_mil_power = 100
-                            change_heir_mil = 1
-                        }
-                        else = {change_heir_mil = 2}
-                    }
+                custom_tooltip = pf_mon_events.10.tt1_2
+                pf_random_upgrade_heir = yes
+                hidden_effect = {
+                    pf_random_upgrade_heir = yes
                 }
             }
             else = {
-                custom_tooltip = pf_mon_events.6.tt1_2
-                add_adm_power = 50
-                add_dip_power = 50
-                add_mil_power = 50
+                custom_tooltip = pf_mon_events.10.tt2_2
+                pf_add_monarch_power = {value = 50}
             }
         }
     }
 }
 province_event = { # Blessing of Juno
-    id = pf_mon_events.7
-    title = pf_mon_events.7.title
-    desc = pf_mon_events.7.desc
+    id = pf_mon_events.11
+    title = pf_mon_events.11.title
+    desc = pf_mon_events.11.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -801,35 +1047,11 @@ province_event = { # Blessing of Juno
                 limit = {has_heir = yes}
                 add_heir_claim = 10
                 add_heir_support = 10
-                random_list = {
-                    1 = {
-                        if = {
-                            limit = {heir_adm = 6}
-                            add_adm_power = 100
-                        }
-                        else = {change_heir_adm = 1}
-                    }
-                    1 = {
-                        if = {
-                            limit = {heir_dip = 6}
-                            add_dip_power = 100
-                        }
-                        else = {change_heir_dip = 1}
-                    }
-                    1 = {
-                        if = {
-                            limit = {heir_mil = 6}
-                            add_mil_power = 100
-                        }
-                        else = {change_heir_mil = 1}
-                    }
-                }
+                pf_random_upgrade_heir = yes
             }
             else = {
-                custom_tooltip = pf_mon_events.7.tt1_1
-                add_adm_power = 25
-                add_dip_power = 25
-                add_mil_power = 25
+                custom_tooltip = pf_mon_events.11.tt1_1
+                pf_add_monarch_power = {value = 25}
             }
         }
     }
@@ -850,58 +1072,23 @@ province_event = { # Blessing of Juno
                 limit = {has_heir = yes}
                 add_heir_claim = 25
                 add_heir_support = 25
-                random_list = {
-                    1 = {
-                        if = {
-                            limit = {heir_adm = 6}
-                            add_adm_power = 200
-                        }
-                        else_if = {
-                            limit = {heir_adm = 5}
-                            add_adm_power = 100
-                            change_heir_adm = 1
-                        }
-                        else = {change_heir_adm = 2}
-                    }
-                    1 = {
-                        if = {
-                            limit = {heir_dip = 6}
-                            add_dip_power = 200
-                        }
-                        else_if = {
-                            limit = {heir_dip = 5}
-                            add_dip_power = 100
-                            change_heir_dip = 1
-                        }
-                        else = {change_heir_dip = 2}
-                    }
-                    1 = {
-                        if = {
-                            limit = {heir_mil = 6}
-                            add_mil_power = 200
-                        }
-                        else_if = {
-                            limit = {heir_mil = 5}
-                            add_mil_power = 100
-                            change_heir_mil = 1
-                        }
-                        else = {change_heir_mil = 2}
-                    }
+                custom_tooltip = pf_mon_events.11.tt1_2
+                pf_random_upgrade_heir = yes
+                hidden_effect = {
+                    pf_random_upgrade_heir = yes
                 }
             }
             else = {
-                custom_tooltip = pf_mon_events.7.tt1_2
-                add_adm_power = 50
-                add_dip_power = 50
-                add_mil_power = 50
+                custom_tooltip = pf_mon_events.11.tt2_2
+                pf_add_monarch_power = {value = 50}
             }
         }
     }
 }
 province_event = { # Blessing of Frigg
-    id = pf_mon_events.8
-    title = pf_mon_events.8.title
-    desc = pf_mon_events.8.desc
+    id = pf_mon_events.12
+    title = pf_mon_events.12.title
+    desc = pf_mon_events.12.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -971,35 +1158,11 @@ province_event = { # Blessing of Frigg
                 limit = {has_heir = yes}
                 add_heir_claim = 10
                 add_heir_support = 10
-                random_list = {
-                    1 = {
-                        if = {
-                            limit = {heir_adm = 6}
-                            add_adm_power = 100
-                        }
-                        else = {change_heir_adm = 1}
-                    }
-                    1 = {
-                        if = {
-                            limit = {heir_dip = 6}
-                            add_dip_power = 100
-                        }
-                        else = {change_heir_dip = 1}
-                    }
-                    1 = {
-                        if = {
-                            limit = {heir_mil = 6}
-                            add_mil_power = 100
-                        }
-                        else = {change_heir_mil = 1}
-                    }
-                }
+                pf_random_upgrade_heir = yes
             }
             else = {
-                custom_tooltip = pf_mon_events.8.tt1_1
-                add_adm_power = 25
-                add_dip_power = 25
-                add_mil_power = 25
+                custom_tooltip = pf_mon_events.12.tt1_1
+                pf_add_monarch_power = {value = 25}
             }
         }
     }
@@ -1020,58 +1183,363 @@ province_event = { # Blessing of Frigg
                 limit = {has_heir = yes}
                 add_heir_claim = 25
                 add_heir_support = 25
-                random_list = {
-                    1 = {
-                        if = {
-                            limit = {heir_adm = 6}
-                            add_adm_power = 200
-                        }
-                        else_if = {
-                            limit = {heir_adm = 5}
-                            add_adm_power = 100
-                            change_heir_adm = 1
-                        }
-                        else = {change_heir_adm = 2}
-                    }
-                    1 = {
-                        if = {
-                            limit = {heir_dip = 6}
-                            add_dip_power = 200
-                        }
-                        else_if = {
-                            limit = {heir_dip = 5}
-                            add_dip_power = 100
-                            change_heir_dip = 1
-                        }
-                        else = {change_heir_dip = 2}
-                    }
-                    1 = {
-                        if = {
-                            limit = {heir_mil = 6}
-                            add_mil_power = 200
-                        }
-                        else_if = {
-                            limit = {heir_mil = 5}
-                            add_mil_power = 100
-                            change_heir_mil = 1
-                        }
-                        else = {change_heir_mil = 2}
-                    }
+                custom_tooltip = pf_mon_events.12.tt1_2
+                pf_random_upgrade_heir = yes
+                hidden_effect = {
+                    pf_random_upgrade_heir = yes
                 }
             }
             else = {
-                custom_tooltip = pf_mon_events.8.tt1_2
-                add_adm_power = 50
-                add_dip_power = 50
-                add_mil_power = 50
+                custom_tooltip = pf_mon_events.12.tt2_2
+                pf_add_monarch_power = {value = 50}
             }
         }
     }
 }
+province_event = { # Blessing of Apollo
+    id = pf_mon_events.13
+    title = pf_mon_events.13.title
+    desc = pf_mon_events.13.desc
+    picture = NORSE_TEMPLE_eventPicture
+    goto = ROOT
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
+    trigger = {
+        has_great_project = {
+            type = hall_of_pantheons
+            tier = 1
+        }
+        province_is_or_accepts_religion = {religion = hellenic}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
+            }
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 2555
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+    }
+
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        pf_add_loyalty_to_estates = {value = 10}
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        pf_add_loyalty_to_estates = {value = 20}
+    }
+}
+province_event = { # Blessing of Shamem
+    id = pf_mon_events.14
+    title = pf_mon_events.14.title
+    desc = pf_mon_events.14.desc
+    picture = NORSE_TEMPLE_eventPicture
+    goto = ROOT
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
+    trigger = {
+        has_great_project = {
+            type = hall_of_pantheons
+            tier = 1
+        }
+        province_is_or_accepts_religion = {religion = punic_religion}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
+            }
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 2555
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+    }
+
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        pf_add_loyalty_to_estates = {value = 10}
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        pf_add_loyalty_to_estates = {value = 20}
+    }
+}
+province_event = { # Blessing of Apollo
+    id = pf_mon_events.15
+    title = pf_mon_events.15.title
+    desc = pf_mon_events.15.desc
+    picture = NORSE_TEMPLE_eventPicture
+    goto = ROOT
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
+    trigger = {
+        has_great_project = {
+            type = hall_of_pantheons
+            tier = 1
+        }
+        province_is_or_accepts_religion = {religion = romana}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
+            }
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 2555
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+    }
+
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        pf_add_loyalty_to_estates = {value = 10}
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        pf_add_loyalty_to_estates = {value = 20}
+    }
+}
+province_event = { # Blessing of Balder
+    id = pf_mon_events.16
+    title = pf_mon_events.16.title
+    desc = pf_mon_events.16.desc
+    picture = NORSE_TEMPLE_eventPicture
+    goto = ROOT
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
+    trigger = {
+        has_great_project = {
+            type = hall_of_pantheons
+            tier = 1
+        }
+        province_is_or_accepts_religion = {religion = norse_pagan_reformed}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
+            }
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 2555
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+    }
+
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        pf_add_loyalty_to_estates = {value = 10}
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        pf_add_loyalty_to_estates = {value = 20}
+    }
+}
 province_event = { # Blessing of Ares
-    id = pf_mon_events.9
-    title = pf_mon_events.9.title
-    desc = pf_mon_events.9.desc
+    id = pf_mon_events.17
+    title = pf_mon_events.17.title
+    desc = pf_mon_events.17.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -1142,7 +1610,7 @@ province_event = { # Blessing of Ares
                 name = pf_mon_hop_ares_blessing
                 duration = 365
             }
-            custom_tooltip = pf_mon_events.9.tt1_1
+            custom_tooltip = pf_mon_events.17.tt1_1
             pf_random_neighbour_province = {
                 target_country = event_target:blessed_country
                 limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
@@ -1170,7 +1638,7 @@ province_event = { # Blessing of Ares
                 name = pf_mon_hop_ares_blessing
                 duration = 730
             }
-            custom_tooltip = pf_mon_events.9.tt1_1
+            custom_tooltip = pf_mon_events.17.tt1_1
             pf_random_neighbour_province = {
                 target_country = event_target:blessed_country
                 limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
@@ -1183,15 +1651,15 @@ province_event = { # Blessing of Ares
                 limit1 = "is_city = yes"
                 limit2 = "is_city = yes
                 NOT = {is_claim = event_target:blessed_country}"
-                a_effect = "add_claim = event_target:blessed_country"
+                effect = "add_claim = event_target:blessed_country"
             }
         }
     }
 }
 province_event = { # Blessing of Reshef
-    id = pf_mon_events.10
-    title = pf_mon_events.10.title
-    desc = pf_mon_events.10.desc
+    id = pf_mon_events.18
+    title = pf_mon_events.18.title
+    desc = pf_mon_events.18.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -1262,7 +1730,7 @@ province_event = { # Blessing of Reshef
                 name = pf_mon_hop_reshef_blessing
                 duration = 365
             }
-            custom_tooltip = pf_mon_events.10.tt1_1
+            custom_tooltip = pf_mon_events.18.tt1_1
             pf_random_neighbour_province = {
                 target_country = event_target:blessed_country
                 limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
@@ -1290,7 +1758,7 @@ province_event = { # Blessing of Reshef
                 name = pf_mon_hop_reshef_blessing
                 duration = 730
             }
-            custom_tooltip = pf_mon_events.10.tt1_1
+            custom_tooltip = pf_mon_events.18.tt1_1
             pf_random_neighbour_province = {
                 target_country = event_target:blessed_country
                 limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
@@ -1303,15 +1771,15 @@ province_event = { # Blessing of Reshef
                 limit1 = "is_city = yes"
                 limit2 = "is_city = yes
                 NOT = {is_claim = event_target:blessed_country}"
-                a_effect = "add_claim = event_target:blessed_country"
+                effect = "add_claim = event_target:blessed_country"
             }
         }
     }
 }
 province_event = { # Blessing of Mars
-    id = pf_mon_events.11
-    title = pf_mon_events.11.title
-    desc = pf_mon_events.11.desc
+    id = pf_mon_events.19
+    title = pf_mon_events.19.title
+    desc = pf_mon_events.19.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -1382,7 +1850,7 @@ province_event = { # Blessing of Mars
                 name = pf_mon_hop_mars_blessing
                 duration = 365
             }
-            custom_tooltip = pf_mon_events.11.tt1_1
+            custom_tooltip = pf_mon_events.19.tt1_1
             pf_random_neighbour_province = {
                 target_country = event_target:blessed_country
                 limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
@@ -1410,7 +1878,7 @@ province_event = { # Blessing of Mars
                 name = pf_mon_hop_mars_blessing
                 duration = 730
             }
-            custom_tooltip = pf_mon_events.11.tt1_1
+            custom_tooltip = pf_mon_events.19.tt1_1
             pf_random_neighbour_province = {
                 target_country = event_target:blessed_country
                 limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
@@ -1423,15 +1891,15 @@ province_event = { # Blessing of Mars
                 limit1 = "is_city = yes"
                 limit2 = "is_city = yes
                 NOT = {is_claim = event_target:blessed_country}"
-                a_effect = "add_claim = event_target:blessed_country"
+                effect = "add_claim = event_target:blessed_country"
             }
         }
     }
 }
 province_event = { # Blessing of Tyr
-    id = pf_mon_events.12
-    title = pf_mon_events.12.title
-    desc = pf_mon_events.12.desc
+    id = pf_mon_events.20
+    title = pf_mon_events.20.title
+    desc = pf_mon_events.20.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -1502,7 +1970,7 @@ province_event = { # Blessing of Tyr
                 name = pf_mon_hop_tyr_blessing
                 duration = 365
             }
-            custom_tooltip = pf_mon_events.12.tt1_1
+            custom_tooltip = pf_mon_events.20.tt1_1
             pf_random_neighbour_province = {
                 target_country = event_target:blessed_country
                 limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
@@ -1530,7 +1998,7 @@ province_event = { # Blessing of Tyr
                 name = pf_mon_hop_tyr_blessing
                 duration = 730
             }
-            custom_tooltip = pf_mon_events.12.tt1_1
+            custom_tooltip = pf_mon_events.20.tt1_1
             pf_random_neighbour_province = {
                 target_country = event_target:blessed_country
                 limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
@@ -1543,15 +2011,15 @@ province_event = { # Blessing of Tyr
                 limit1 = "is_city = yes"
                 limit2 = "is_city = yes
                 NOT = {is_claim = event_target:blessed_country}"
-                a_effect = "add_claim = event_target:blessed_country"
+                effect = "add_claim = event_target:blessed_country"
             }
         }
     }
 }
 province_event = { # Blessing of Heracles
-    id = pf_mon_events.13
-    title = pf_mon_events.13.title
-    desc = pf_mon_events.13.desc
+    id = pf_mon_events.21
+    title = pf_mon_events.21.title
+    desc = pf_mon_events.21.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -1644,9 +2112,9 @@ province_event = { # Blessing of Heracles
     }
 }
 province_event = { # Blessing of Melqart
-    id = pf_mon_events.14
-    title = pf_mon_events.14.title
-    desc = pf_mon_events.14.desc
+    id = pf_mon_events.22
+    title = pf_mon_events.22.title
+    desc = pf_mon_events.22.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -1739,9 +2207,9 @@ province_event = { # Blessing of Melqart
     }
 }
 province_event = { # Blessing of Hercules
-    id = pf_mon_events.15
-    title = pf_mon_events.15.title
-    desc = pf_mon_events.15.desc
+    id = pf_mon_events.23
+    title = pf_mon_events.23.title
+    desc = pf_mon_events.23.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -1834,9 +2302,9 @@ province_event = { # Blessing of Hercules
     }
 }
 province_event = { # Blessing of Tyche
-    id = pf_mon_events.16
-    title = pf_mon_events.16.title
-    desc = pf_mon_events.16.desc
+    id = pf_mon_events.24
+    title = pf_mon_events.24.title
+    desc = pf_mon_events.24.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -1908,7 +2376,7 @@ province_event = { # Blessing of Tyche
                 add_base_manpower = 2
             }
             40 = {
-                custom_tooltip = pf_mon_events.16.tt1_1
+                custom_tooltip = pf_mon_events.24.tt1_1
                 hidden_effect = {
                     owner = {
                         every_known_country = {
@@ -1942,7 +2410,7 @@ province_event = { # Blessing of Tyche
                 add_base_manpower = 2
             }
             20 = {
-                custom_tooltip = pf_mon_events.16.tt1_1
+                custom_tooltip = pf_mon_events.24.tt1_1
                 hidden_effect = {
                     owner = {
                         every_known_country = {
@@ -1959,9 +2427,9 @@ province_event = { # Blessing of Tyche
     }
 }
 province_event = { # Blessing of Ashtarte
-    id = pf_mon_events.17
-    title = pf_mon_events.17.title
-    desc = pf_mon_events.17.desc
+    id = pf_mon_events.25
+    title = pf_mon_events.25.title
+    desc = pf_mon_events.25.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -2033,7 +2501,7 @@ province_event = { # Blessing of Ashtarte
                 add_base_manpower = 2
             }
             40 = {
-                custom_tooltip = pf_mon_events.17.tt1_1
+                custom_tooltip = pf_mon_events.25.tt1_1
                 hidden_effect = {
                     owner = {
                         every_known_country = {
@@ -2067,7 +2535,7 @@ province_event = { # Blessing of Ashtarte
                 add_base_manpower = 2
             }
             20 = {
-                custom_tooltip = pf_mon_events.17.tt1_1
+                custom_tooltip = pf_mon_events.25.tt1_1
                 hidden_effect = {
                     owner = {
                         every_known_country = {
@@ -2084,9 +2552,9 @@ province_event = { # Blessing of Ashtarte
     }
 }
 province_event = { # Blessing of Fortuna
-    id = pf_mon_events.18
-    title = pf_mon_events.18.title
-    desc = pf_mon_events.18.desc
+    id = pf_mon_events.26
+    title = pf_mon_events.26.title
+    desc = pf_mon_events.26.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -2158,7 +2626,7 @@ province_event = { # Blessing of Fortuna
                 add_base_manpower = 2
             }
             40 = {
-                custom_tooltip = pf_mon_events.18.tt1_1
+                custom_tooltip = pf_mon_events.26.tt1_1
                 hidden_effect = {
                     owner = {
                         every_known_country = {
@@ -2192,7 +2660,7 @@ province_event = { # Blessing of Fortuna
                 add_base_manpower = 2
             }
             20 = {
-                custom_tooltip = pf_mon_events.18.tt1_1
+                custom_tooltip = pf_mon_events.26.tt1_1
                 hidden_effect = {
                     owner = {
                         every_known_country = {
@@ -2209,9 +2677,9 @@ province_event = { # Blessing of Fortuna
     }
 }
 province_event = { # Blessing of Loki
-    id = pf_mon_events.19
-    title = pf_mon_events.19.title
-    desc = pf_mon_events.19.desc
+    id = pf_mon_events.27
+    title = pf_mon_events.27.title
+    desc = pf_mon_events.27.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -2283,7 +2751,7 @@ province_event = { # Blessing of Loki
                 add_base_manpower = 2
             }
             40 = {
-                custom_tooltip = pf_mon_events.19.tt1_1
+                custom_tooltip = pf_mon_events.27.tt1_1
                 hidden_effect = {
                     owner = {
                         every_known_country = {
@@ -2317,7 +2785,7 @@ province_event = { # Blessing of Loki
                 add_base_manpower = 2
             }
             20 = {
-                custom_tooltip = pf_mon_events.19.tt1_1
+                custom_tooltip = pf_mon_events.27.tt1_1
                 hidden_effect = {
                     owner = {
                         every_known_country = {
@@ -2334,9 +2802,9 @@ province_event = { # Blessing of Loki
     }
 }
 province_event = { # Blessing of Asclepius
-    id = pf_mon_events.20
-    title = pf_mon_events.20.title
-    desc = pf_mon_events.20.desc
+    id = pf_mon_events.28
+    title = pf_mon_events.28.title
+    desc = pf_mon_events.28.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -2403,7 +2871,7 @@ province_event = { # Blessing of Asclepius
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             add_yearly_manpower = 0.1
-            custom_tooltip = pf_mon_events.20.tt1_1
+            custom_tooltip = pf_mon_events.28.tt1_1
             hidden_effect = {
                 every_owned_province = {
                     add_devastation = -10
@@ -2425,7 +2893,7 @@ province_event = { # Blessing of Asclepius
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             add_yearly_manpower = 0.2
-            custom_tooltip = pf_mon_events.20.tt1_1
+            custom_tooltip = pf_mon_events.28.tt1_1
             hidden_effect = {
                 every_owned_province = {
                     add_devastation = -20
@@ -2435,9 +2903,9 @@ province_event = { # Blessing of Asclepius
     }
 }
 province_event = { # Blessing of Eshmun
-    id = pf_mon_events.21
-    title = pf_mon_events.21.title
-    desc = pf_mon_events.21.desc
+    id = pf_mon_events.29
+    title = pf_mon_events.29.title
+    desc = pf_mon_events.29.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -2504,7 +2972,7 @@ province_event = { # Blessing of Eshmun
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             add_yearly_manpower = 0.1
-            custom_tooltip = pf_mon_events.21.tt1_1
+            custom_tooltip = pf_mon_events.29.tt1_1
             hidden_effect = {
                 every_owned_province = {
                     add_devastation = -10
@@ -2526,7 +2994,7 @@ province_event = { # Blessing of Eshmun
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             add_yearly_manpower = 0.2
-            custom_tooltip = pf_mon_events.21.tt1_1
+            custom_tooltip = pf_mon_events.29.tt1_1
             hidden_effect = {
                 every_owned_province = {
                     add_devastation = -20
@@ -2536,9 +3004,9 @@ province_event = { # Blessing of Eshmun
     }
 }
 province_event = { # Blessing of Asclepius
-    id = pf_mon_events.22
-    title = pf_mon_events.22.title
-    desc = pf_mon_events.22.desc
+    id = pf_mon_events.30
+    title = pf_mon_events.30.title
+    desc = pf_mon_events.30.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -2605,7 +3073,7 @@ province_event = { # Blessing of Asclepius
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             add_yearly_manpower = 0.1
-            custom_tooltip = pf_mon_events.22.tt1_1
+            custom_tooltip = pf_mon_events.30.tt1_1
             hidden_effect = {
                 every_owned_province = {
                     add_devastation = -10
@@ -2627,7 +3095,7 @@ province_event = { # Blessing of Asclepius
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             add_yearly_manpower = 0.2
-            custom_tooltip = pf_mon_events.22.tt1_1
+            custom_tooltip = pf_mon_events.30.tt1_1
             hidden_effect = {
                 every_owned_province = {
                     add_devastation = -20
@@ -2637,9 +3105,9 @@ province_event = { # Blessing of Asclepius
     }
 }
 province_event = { # Blessing of Eir
-    id = pf_mon_events.23
-    title = pf_mon_events.23.title
-    desc = pf_mon_events.23.desc
+    id = pf_mon_events.31
+    title = pf_mon_events.31.title
+    desc = pf_mon_events.31.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -2706,7 +3174,7 @@ province_event = { # Blessing of Eir
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             add_yearly_manpower = 0.1
-            custom_tooltip = pf_mon_events.23.tt1_1
+            custom_tooltip = pf_mon_events.31.tt1_1
             hidden_effect = {
                 every_owned_province = {
                     add_devastation = -10
@@ -2728,7 +3196,7 @@ province_event = { # Blessing of Eir
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             add_yearly_manpower = 0.2
-            custom_tooltip = pf_mon_events.23.tt1_1
+            custom_tooltip = pf_mon_events.31.tt1_1
             hidden_effect = {
                 every_owned_province = {
                     add_devastation = -20
@@ -2738,9 +3206,9 @@ province_event = { # Blessing of Eir
     }
 }
 province_event = { # Blessing of Hephaestus 
-    id = pf_mon_events.24
-    title = pf_mon_events.24.title
-    desc = pf_mon_events.24.desc
+    id = pf_mon_events.32
+    title = pf_mon_events.32.title
+    desc = pf_mon_events.32.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -2897,9 +3365,9 @@ province_event = { # Blessing of Hephaestus
     }
 }
 province_event = { # Blessing of Kushor
-    id = pf_mon_events.25
-    title = pf_mon_events.25.title
-    desc = pf_mon_events.25.desc
+    id = pf_mon_events.33
+    title = pf_mon_events.33.title
+    desc = pf_mon_events.33.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
@@ -3056,9 +3524,9 @@ province_event = { # Blessing of Kushor
     }
 }
 province_event = { # Blessing of Vulcan
-    id = pf_mon_events.26
-    title = pf_mon_events.26.title
-    desc = pf_mon_events.26.desc
+    id = pf_mon_events.34
+    title = pf_mon_events.34.title
+    desc = pf_mon_events.34.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
     mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
