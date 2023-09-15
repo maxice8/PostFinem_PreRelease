@@ -44,6 +44,12 @@ province_event = { # Blessing of Zeus
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
@@ -55,6 +61,26 @@ province_event = { # Blessing of Zeus
             add_devotion = 15
             add_horde_unity = 15
             add_meritocracy = 15
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            add_legitimacy = 30
+            add_republican_tradition = 10
+            add_devotion = 30
+            add_horde_unity = 30
+            add_meritocracy = 30
         }
     }
 }
@@ -102,6 +128,12 @@ province_event = { # Blessing of Baal Hammon
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
@@ -113,6 +145,26 @@ province_event = { # Blessing of Baal Hammon
             add_devotion = 15
             add_horde_unity = 15
             add_meritocracy = 15
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            add_legitimacy = 30
+            add_republican_tradition = 10
+            add_devotion = 30
+            add_horde_unity = 30
+            add_meritocracy = 30
         }
     }
 }
@@ -160,6 +212,12 @@ province_event = { # Blessing of Jupiter
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
@@ -171,6 +229,26 @@ province_event = { # Blessing of Jupiter
             add_devotion = 15
             add_horde_unity = 15
             add_meritocracy = 15
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            add_legitimacy = 30
+            add_republican_tradition = 10
+            add_devotion = 30
+            add_horde_unity = 30
+            add_meritocracy = 30
         }
     }
 }
@@ -218,6 +296,12 @@ province_event = { # Blessing of Odin
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
@@ -229,6 +313,26 @@ province_event = { # Blessing of Odin
             add_devotion = 15
             add_horde_unity = 15
             add_meritocracy = 15
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            add_legitimacy = 30
+            add_republican_tradition = 10
+            add_devotion = 30
+            add_horde_unity = 30
+            add_meritocracy = 30
         }
     }
 }
@@ -276,6 +380,12 @@ province_event = { # Blessing of Hera
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
@@ -311,10 +421,74 @@ province_event = { # Blessing of Hera
                 }
             }
             else = {
-                custom_tooltip = pf_mon_events.5.tt1
+                custom_tooltip = pf_mon_events.5.tt1_1
                 add_adm_power = 25
                 add_dip_power = 25
                 add_mil_power = 25
+            }
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            if = {
+                limit = {has_heir = yes}
+                add_heir_claim = 25
+                add_heir_support = 25
+                random_list = {
+                    1 = {
+                        if = {
+                            limit = {heir_adm = 6}
+                            add_adm_power = 200
+                        }
+                        else_if = {
+                            limit = {heir_adm = 5}
+                            add_adm_power = 100
+                            change_heir_adm = 1
+                        }
+                        else = {change_heir_adm = 2}
+                    }
+                    1 = {
+                        if = {
+                            limit = {heir_dip = 6}
+                            add_dip_power = 200
+                        }
+                        else_if = {
+                            limit = {heir_dip = 5}
+                            add_dip_power = 100
+                            change_heir_dip = 1
+                        }
+                        else = {change_heir_dip = 2}
+                    }
+                    1 = {
+                        if = {
+                            limit = {heir_mil = 6}
+                            add_mil_power = 200
+                        }
+                        else_if = {
+                            limit = {heir_mil = 5}
+                            add_mil_power = 100
+                            change_heir_mil = 1
+                        }
+                        else = {change_heir_mil = 2}
+                    }
+                }
+            }
+            else = {
+                custom_tooltip = pf_mon_events.5.tt1_2
+                add_adm_power = 50
+                add_dip_power = 50
+                add_mil_power = 50
             }
         }
     }
@@ -363,6 +537,12 @@ province_event = { # Blessing of Tanit
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
@@ -398,10 +578,74 @@ province_event = { # Blessing of Tanit
                 }
             }
             else = {
-                custom_tooltip = pf_mon_events.6.tt1
+                custom_tooltip = pf_mon_events.6.tt1_1
                 add_adm_power = 25
                 add_dip_power = 25
                 add_mil_power = 25
+            }
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            if = {
+                limit = {has_heir = yes}
+                add_heir_claim = 25
+                add_heir_support = 25
+                random_list = {
+                    1 = {
+                        if = {
+                            limit = {heir_adm = 6}
+                            add_adm_power = 200
+                        }
+                        else_if = {
+                            limit = {heir_adm = 5}
+                            add_adm_power = 100
+                            change_heir_adm = 1
+                        }
+                        else = {change_heir_adm = 2}
+                    }
+                    1 = {
+                        if = {
+                            limit = {heir_dip = 6}
+                            add_dip_power = 200
+                        }
+                        else_if = {
+                            limit = {heir_dip = 5}
+                            add_dip_power = 100
+                            change_heir_dip = 1
+                        }
+                        else = {change_heir_dip = 2}
+                    }
+                    1 = {
+                        if = {
+                            limit = {heir_mil = 6}
+                            add_mil_power = 200
+                        }
+                        else_if = {
+                            limit = {heir_mil = 5}
+                            add_mil_power = 100
+                            change_heir_mil = 1
+                        }
+                        else = {change_heir_mil = 2}
+                    }
+                }
+            }
+            else = {
+                custom_tooltip = pf_mon_events.6.tt1_2
+                add_adm_power = 50
+                add_dip_power = 50
+                add_mil_power = 50
             }
         }
     }
@@ -450,6 +694,12 @@ province_event = { # Blessing of Juno
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
@@ -485,10 +735,74 @@ province_event = { # Blessing of Juno
                 }
             }
             else = {
-                custom_tooltip = pf_mon_events.7.tt1
+                custom_tooltip = pf_mon_events.7.tt1_1
                 add_adm_power = 25
                 add_dip_power = 25
                 add_mil_power = 25
+            }
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            if = {
+                limit = {has_heir = yes}
+                add_heir_claim = 25
+                add_heir_support = 25
+                random_list = {
+                    1 = {
+                        if = {
+                            limit = {heir_adm = 6}
+                            add_adm_power = 200
+                        }
+                        else_if = {
+                            limit = {heir_adm = 5}
+                            add_adm_power = 100
+                            change_heir_adm = 1
+                        }
+                        else = {change_heir_adm = 2}
+                    }
+                    1 = {
+                        if = {
+                            limit = {heir_dip = 6}
+                            add_dip_power = 200
+                        }
+                        else_if = {
+                            limit = {heir_dip = 5}
+                            add_dip_power = 100
+                            change_heir_dip = 1
+                        }
+                        else = {change_heir_dip = 2}
+                    }
+                    1 = {
+                        if = {
+                            limit = {heir_mil = 6}
+                            add_mil_power = 200
+                        }
+                        else_if = {
+                            limit = {heir_mil = 5}
+                            add_mil_power = 100
+                            change_heir_mil = 1
+                        }
+                        else = {change_heir_mil = 2}
+                    }
+                }
+            }
+            else = {
+                custom_tooltip = pf_mon_events.7.tt1_2
+                add_adm_power = 50
+                add_dip_power = 50
+                add_mil_power = 50
             }
         }
     }
@@ -537,6 +851,12 @@ province_event = { # Blessing of Frigg
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
@@ -572,10 +892,74 @@ province_event = { # Blessing of Frigg
                 }
             }
             else = {
-                custom_tooltip = pf_mon_events.8.tt1
+                custom_tooltip = pf_mon_events.8.tt1_1
                 add_adm_power = 25
                 add_dip_power = 25
                 add_mil_power = 25
+            }
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            if = {
+                limit = {has_heir = yes}
+                add_heir_claim = 25
+                add_heir_support = 25
+                random_list = {
+                    1 = {
+                        if = {
+                            limit = {heir_adm = 6}
+                            add_adm_power = 200
+                        }
+                        else_if = {
+                            limit = {heir_adm = 5}
+                            add_adm_power = 100
+                            change_heir_adm = 1
+                        }
+                        else = {change_heir_adm = 2}
+                    }
+                    1 = {
+                        if = {
+                            limit = {heir_dip = 6}
+                            add_dip_power = 200
+                        }
+                        else_if = {
+                            limit = {heir_dip = 5}
+                            add_dip_power = 100
+                            change_heir_dip = 1
+                        }
+                        else = {change_heir_dip = 2}
+                    }
+                    1 = {
+                        if = {
+                            limit = {heir_mil = 6}
+                            add_mil_power = 200
+                        }
+                        else_if = {
+                            limit = {heir_mil = 5}
+                            add_mil_power = 100
+                            change_heir_mil = 1
+                        }
+                        else = {change_heir_mil = 2}
+                    }
+                }
+            }
+            else = {
+                custom_tooltip = pf_mon_events.8.tt1_2
+                add_adm_power = 50
+                add_dip_power = 50
+                add_mil_power = 50
             }
         }
     }
@@ -624,6 +1008,12 @@ province_event = { # Blessing of Ares
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
@@ -635,10 +1025,45 @@ province_event = { # Blessing of Ares
                 name = pf_mon_hop_ares_blessing
                 duration = 365
             }
-            custom_tooltip = pf_mon_events.9.tt1
+            custom_tooltip = pf_mon_events.9.tt1_1
             pf_random_neighbour_province = {
                 target_country = event_target:blessed_country
-                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works
+                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                a_effect = "add_claim = event_target:blessed_country"
+            }
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            save_event_target_as = blessed_country
+            add_country_modifier = { 
+                name = pf_mon_hop_ares_blessing
+                duration = 730
+            }
+            custom_tooltip = pf_mon_events.9.tt1_1
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                a_effect = "add_claim = event_target:blessed_country"
+            }
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes"
                 limit2 = "is_city = yes
                 NOT = {is_claim = event_target:blessed_country}"
                 a_effect = "add_claim = event_target:blessed_country"
@@ -690,6 +1115,12 @@ province_event = { # Blessing of Reshef
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
@@ -701,10 +1132,45 @@ province_event = { # Blessing of Reshef
                 name = pf_mon_hop_reshef_blessing
                 duration = 365
             }
-            custom_tooltip = pf_mon_events.10.tt1
+            custom_tooltip = pf_mon_events.10.tt1_1
             pf_random_neighbour_province = {
                 target_country = event_target:blessed_country
-                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works
+                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                a_effect = "add_claim = event_target:blessed_country"
+            }
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            save_event_target_as = blessed_country
+            add_country_modifier = { 
+                name = pf_mon_hop_reshef_blessing
+                duration = 730
+            }
+            custom_tooltip = pf_mon_events.10.tt1_1
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                a_effect = "add_claim = event_target:blessed_country"
+            }
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes"
                 limit2 = "is_city = yes
                 NOT = {is_claim = event_target:blessed_country}"
                 a_effect = "add_claim = event_target:blessed_country"
@@ -756,6 +1222,12 @@ province_event = { # Blessing of Mars
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
@@ -767,10 +1239,45 @@ province_event = { # Blessing of Mars
                 name = pf_mon_hop_mars_blessing
                 duration = 365
             }
-            custom_tooltip = pf_mon_events.11.tt1
+            custom_tooltip = pf_mon_events.11.tt1_1
             pf_random_neighbour_province = {
                 target_country = event_target:blessed_country
-                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works
+                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                a_effect = "add_claim = event_target:blessed_country"
+            }
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            save_event_target_as = blessed_country
+            add_country_modifier = { 
+                name = pf_mon_hop_mars_blessing
+                duration = 730
+            }
+            custom_tooltip = pf_mon_events.11.tt1_1
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                a_effect = "add_claim = event_target:blessed_country"
+            }
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes"
                 limit2 = "is_city = yes
                 NOT = {is_claim = event_target:blessed_country}"
                 a_effect = "add_claim = event_target:blessed_country"
@@ -822,6 +1329,12 @@ province_event = { # Blessing of Tyr
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
@@ -833,10 +1346,45 @@ province_event = { # Blessing of Tyr
                 name = pf_mon_hop_tyr_blessing
                 duration = 365
             }
-            custom_tooltip = pf_mon_events.12.tt1
+            custom_tooltip = pf_mon_events.12.tt1_1
             pf_random_neighbour_province = {
                 target_country = event_target:blessed_country
-                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works
+                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                a_effect = "add_claim = event_target:blessed_country"
+            }
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            save_event_target_as = blessed_country
+            add_country_modifier = { 
+                name = pf_mon_hop_tyr_blessing
+                duration = 730
+            }
+            custom_tooltip = pf_mon_events.12.tt1_1
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                a_effect = "add_claim = event_target:blessed_country"
+            }
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes"
                 limit2 = "is_city = yes
                 NOT = {is_claim = event_target:blessed_country}"
                 a_effect = "add_claim = event_target:blessed_country"
@@ -888,6 +1436,12 @@ province_event = { # Blessing of Heracles
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
@@ -897,6 +1451,25 @@ province_event = { # Blessing of Heracles
             add_country_modifier = { 
                 name = pf_mon_hop_heracles_blessing
                 duration = 365
+            }
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            add_country_modifier = { 
+                name = pf_mon_hop_heracles_blessing
+                duration = 730
             }
         }
     }
@@ -945,6 +1518,12 @@ province_event = { # Blessing of Melqart
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
@@ -954,6 +1533,25 @@ province_event = { # Blessing of Melqart
             add_country_modifier = { 
                 name = pf_mon_hop_melqart_blessing
                 duration = 365
+            }
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            add_country_modifier = { 
+                name = pf_mon_hop_melqart_blessing
+                duration = 730
             }
         }
     }
@@ -1002,6 +1600,12 @@ province_event = { # Blessing of Hercules
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
@@ -1011,6 +1615,25 @@ province_event = { # Blessing of Hercules
             add_country_modifier = { 
                 name = pf_mon_hop_hercules_blessing
                 duration = 365
+            }
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            add_country_modifier = { 
+                name = pf_mon_hop_hercules_blessing
+                duration = 730
             }
         }
     }
@@ -1059,19 +1682,59 @@ province_event = { # Blessing of Tyche
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
         random_list = {
-            70 = {
+            60 = {
                 add_base_tax = 2
                 add_base_production = 2
                 add_base_manpower = 2
             }
-            30 = {
-                custom_tooltip = pf_mon_events.16.tt1
+            40 = {
+                custom_tooltip = pf_mon_events.16.tt1_1
+                hidden_effect = {
+                    owner = {
+                        every_known_country = {
+                            add_aggressive_expansion = {
+                                who = PREV
+                                value = 5
+                                apply_calc = no
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        random_list = {
+            80 = {
+                add_base_tax = 2
+                add_base_production = 2
+                add_base_manpower = 2
+            }
+            20 = {
+                custom_tooltip = pf_mon_events.16.tt1_1
                 hidden_effect = {
                     owner = {
                         every_known_country = {
@@ -1131,19 +1794,59 @@ province_event = { # Blessing of Ashtarte
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
         random_list = {
-            70 = {
+            60 = {
                 add_base_tax = 2
                 add_base_production = 2
                 add_base_manpower = 2
             }
-            30 = {
-                custom_tooltip = pf_mon_events.17.tt1
+            40 = {
+                custom_tooltip = pf_mon_events.17.tt1_1
+                hidden_effect = {
+                    owner = {
+                        every_known_country = {
+                            add_aggressive_expansion = {
+                                who = PREV
+                                value = 5
+                                apply_calc = no
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        random_list = {
+            80 = {
+                add_base_tax = 2
+                add_base_production = 2
+                add_base_manpower = 2
+            }
+            20 = {
+                custom_tooltip = pf_mon_events.17.tt1_1
                 hidden_effect = {
                     owner = {
                         every_known_country = {
@@ -1203,19 +1906,59 @@ province_event = { # Blessing of Fortuna
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
         random_list = {
-            70 = {
+            60 = {
                 add_base_tax = 2
                 add_base_production = 2
                 add_base_manpower = 2
             }
-            30 = {
-                custom_tooltip = pf_mon_events.18.tt1
+            40 = {
+                custom_tooltip = pf_mon_events.18.tt1_1
+                hidden_effect = {
+                    owner = {
+                        every_known_country = {
+                            add_aggressive_expansion = {
+                                who = PREV
+                                value = 5
+                                apply_calc = no
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        random_list = {
+            80 = {
+                add_base_tax = 2
+                add_base_production = 2
+                add_base_manpower = 2
+            }
+            20 = {
+                custom_tooltip = pf_mon_events.18.tt1_1
                 hidden_effect = {
                     owner = {
                         every_known_country = {
@@ -1275,19 +2018,59 @@ province_event = { # Blessing of Loki
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
         random_list = {
-            70 = {
+            60 = {
                 add_base_tax = 2
                 add_base_production = 2
                 add_base_manpower = 2
             }
-            30 = {
-                custom_tooltip = pf_mon_events.19.tt1
+            40 = {
+                custom_tooltip = pf_mon_events.19.tt1_1
+                hidden_effect = {
+                    owner = {
+                        every_known_country = {
+                            add_aggressive_expansion = {
+                                who = PREV
+                                value = 5
+                                apply_calc = no
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        random_list = {
+            80 = {
+                add_base_tax = 2
+                add_base_production = 2
+                add_base_manpower = 2
+            }
+            20 = {
+                custom_tooltip = pf_mon_events.19.tt1_1
                 hidden_effect = {
                     owner = {
                         every_known_country = {
@@ -1347,17 +2130,45 @@ province_event = { # Blessing of Asclepius
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        add_yearly_manpower = 0.1
-        custom_tooltip = pf_mon_events.20.tt1
-        hidden_effect = {
-            owner = {
+        owner = {
+            add_yearly_manpower = 0.1
+            custom_tooltip = pf_mon_events.20.tt1_1
+            hidden_effect = {
                 every_owned_province = {
                     add_devastation = -10
+                }
+            }
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            add_yearly_manpower = 0.2
+            custom_tooltip = pf_mon_events.20.tt1_1
+            hidden_effect = {
+                every_owned_province = {
+                    add_devastation = -20
                 }
             }
         }
@@ -1407,17 +2218,45 @@ province_event = { # Blessing of Eshmun
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        add_yearly_manpower = 0.1
-        custom_tooltip = pf_mon_events.21.tt1
-        hidden_effect = {
-            owner = {
+        owner = {
+            add_yearly_manpower = 0.1
+            custom_tooltip = pf_mon_events.21.tt1_1
+            hidden_effect = {
                 every_owned_province = {
                     add_devastation = -10
+                }
+            }
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            add_yearly_manpower = 0.2
+            custom_tooltip = pf_mon_events.21.tt1_1
+            hidden_effect = {
+                every_owned_province = {
+                    add_devastation = -20
                 }
             }
         }
@@ -1467,17 +2306,45 @@ province_event = { # Blessing of Asclepius
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        add_yearly_manpower = 0.1
-        custom_tooltip = pf_mon_events.22.tt1
-        hidden_effect = {
-            owner = {
+        owner = {
+            add_yearly_manpower = 0.1
+            custom_tooltip = pf_mon_events.22.tt1_1
+            hidden_effect = {
                 every_owned_province = {
                     add_devastation = -10
+                }
+            }
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            add_yearly_manpower = 0.2
+            custom_tooltip = pf_mon_events.22.tt1_1
+            hidden_effect = {
+                every_owned_province = {
+                    add_devastation = -20
                 }
             }
         }
@@ -1527,17 +2394,45 @@ province_event = { # Blessing of Eir
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        add_yearly_manpower = 0.1
-        custom_tooltip = pf_mon_events.23.tt1
-        hidden_effect = {
-            owner = {
+        owner = {
+            add_yearly_manpower = 0.1
+            custom_tooltip = pf_mon_events.23.tt1_1
+            hidden_effect = {
                 every_owned_province = {
                     add_devastation = -10
+                }
+            }
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            add_yearly_manpower = 0.2
+            custom_tooltip = pf_mon_events.23.tt1_1
+            hidden_effect = {
+                every_owned_province = {
+                    add_devastation = -20
                 }
             }
         }
@@ -1587,6 +2482,12 @@ province_event = { # Blessing of Hephaestus
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
@@ -1655,6 +2556,12 @@ province_event = { # Blessing of Kushor
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
@@ -1723,6 +2630,12 @@ province_event = { # Blessing of Vulcan
     option = {
         name = pf_mon_events_we_are_truly_blessed
         trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
         }
         ai_chance = {
             factor = 1
