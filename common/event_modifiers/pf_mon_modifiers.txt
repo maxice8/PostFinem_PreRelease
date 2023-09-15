@@ -1,6 +1,35 @@
 pf_mon_gtt_convert_decision_cooldown = {
-	picture = "time"
+ picture = "time"
 }
-pf_mon_hop_war_blessing = {
-	picture = "time"
+pf_mon_hop_ares_blessing = {
+ picture = "yearly_army_professionalism"
+ land_maintenance_modifier = -0.10
+ yearly_army_professionalism = 0.05
+}
+pf_mon_hop_reshef_blessing = {
+ picture = "yearly_army_professionalism"
+ land_maintenance_modifier = -0.10
+ yearly_army_professionalism = 0.05
+}
+pf_mon_hop_mars_blessing = {
+ picture = "yearly_army_professionalism"
+ land_maintenance_modifier = -0.10
+ yearly_army_professionalism = 0.05
+}
+pf_mon_hop_tyr_blessing = {
+ picture = "yearly_army_professionalism"
+ land_maintenance_modifier = -0.10
+ yearly_army_professionalism = 0.05
+}
+pf_mon_hop_heracles_blessing = {
+ picture = "force_march_free"
+ enable_forced_march = yes
+}
+pf_mon_hop_melqart_blessing = {
+ picture = "force_march_free"
+ enable_forced_march = yes
+}
+pf_mon_hop_hercules_blessing = {
+ picture = "force_march_free"
+ enable_forced_march = yes
 }

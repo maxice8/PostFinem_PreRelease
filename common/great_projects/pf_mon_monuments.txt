@@ -281,7 +281,6 @@ great_cothon = { # gcn
 		        tag = CAR
 		        primary_culture = punic_culture
 		        accepted_culture = punic_culture
-		        has_country_flag = car_build_great_cothon_flag
 		    }
 		}
 	}
@@ -293,7 +292,6 @@ great_cothon = { # gcn
 		        tag = CAR
 		        primary_culture = punic_culture
 		        accepted_culture = punic_culture
-		        has_country_flag = car_build_great_cothon_flag
 		    }
 		}
 	}
@@ -303,7 +301,6 @@ great_cothon = { # gcn
 		        tag = CAR
 		        primary_culture = punic_culture
 		        accepted_culture = punic_culture
-		        has_country_flag = car_build_great_cothon_flag
 		    }
 		}
 	}
@@ -430,6 +427,9 @@ hall_of_pantheons = { # hop
 		    province_is_or_accepts_religion = {
 		        religion = romana
 		    }
+		    province_is_or_accepts_religion = {
+		        religion = norse_pagan_reformed
+		    }
 		}
 	}
 	on_built = {}
@@ -445,6 +445,9 @@ hall_of_pantheons = { # hop
 		    province_is_or_accepts_religion = {
 		        religion = romana
 		    }
+		    province_is_or_accepts_religion = {
+		        religion = norse_pagan_reformed
+		    }
 		}
 	}
 	can_upgrade_trigger = {
@@ -457,6 +460,9 @@ hall_of_pantheons = { # hop
 		    }
 		    province_is_or_accepts_religion = {
 		        religion = romana
+		    }
+		    province_is_or_accepts_religion = {
+		        religion = norse_pagan_reformed
 		    }
 		}
 	}
@@ -486,6 +492,9 @@ hall_of_pantheons = { # hop
 		}
 		country_modifiers = {
 			prestige_from_land = 0.01
+		}
+		on_upgraded = {
+			pf_mon_hop_unlock_blessings = yes
 		}
 		conditional_modifier = {
 			trigger = {

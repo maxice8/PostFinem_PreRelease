@@ -123,3 +123,27 @@ pf_mon_gtt_effect_3 = {
 		}
 	}
 }
+
+pf_random_neighbour_province = {
+	random_owned_province = { # Selects a random province that you own with a neighbouring province you don't own.
+        limit = {
+            owned_by = $target_country$
+            $limit1$ # Limit for your provinces
+            any_neighbor_province = {
+                NOT = {owned_by = $target_country$}
+				$limit2$ # Limit for neighbour province
+            }
+        }
+        random_neighbor_province = { # Selects a neighbour of that province province.
+            limit = {
+                NOT = {owned_by = $target_country$}
+				$limit2$ # Limit for neighbour province
+            }
+            $a_effect$
+        }
+    }
+}
+
+pf_mon_hop_unlock_blessings = {
+	custom_tooltip = pf_mon_hop_unlock_blessings_tt
+}
