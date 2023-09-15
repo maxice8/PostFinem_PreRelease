@@ -11,8 +11,10 @@ pf_gallic_hierarchy = {
 			tag = GAU
 		}
 	}
+	government_abilities = {
+		gaul_confederation_mechanic
+	}
 	modifiers = {
-		min_autonomy = 35
 		global_tax_modifier = 0.15
 		num_accepted_cultures = 2
 	}
@@ -22,8 +24,13 @@ pf_gallic_hierarchy = {
 	ai = {
 		factor = 0.5 #generic
 	}
-	custom_attributes = {
-		locked_government_type = yes
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		is_elective = yes
+		custom_attributes = {
+			has_polish_election = yes
+			locked_government_type = yes
+		}
 	}
 }
 

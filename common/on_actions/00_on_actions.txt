@@ -680,6 +680,20 @@ on_siege_lost_country = {
 			id = pf_lag_trinovantian_rebels.6
 		}
 	}
+	if = {
+		limit = {
+			owner = { has_government_mechanic = gaul_confederation_mechanic }
+			controller = REB
+		}
+		owner = {
+			add_government_power = {
+				mechanic_type = gaul_confederation_mechanic
+				power_type = gaul_confederation
+				value = -2
+			}
+		}
+	}	
+	
 }
 
 # province
@@ -1544,6 +1558,20 @@ on_adm_development = {
 			95 = { }
 		}
 	}
+	if = {
+		limit = {
+			owner = { has_government_mechanic = gaul_confederation_mechanic }
+			accepted_culture = ROOT 
+			culture = root
+		}
+		owner = {
+			add_government_power = {
+				mechanic_type = gaul_confederation_mechanic
+				power_type = gaul_confederation
+				value = 0.25
+			}
+		}
+	}	
 }
 
 # province
@@ -1559,6 +1587,20 @@ on_dip_development = {
 			95 = { }
 		}
 	}
+	if = {
+		limit = {
+			owner = { has_government_mechanic = gaul_confederation_mechanic }
+			accepted_culture = ROOT 
+			culture = root
+		}
+		owner = {
+			add_government_power = {
+				mechanic_type = gaul_confederation_mechanic
+				power_type = gaul_confederation
+				value = 0.25
+			}
+		}
+	}
 }
 
 # province
@@ -1572,6 +1614,20 @@ on_mil_development = {
 		random_list = {
 			5 = { add_base_manpower = 1 }
 			95 = { }
+		}
+	}
+	if = {
+		limit = {
+			owner = { has_government_mechanic = gaul_confederation_mechanic }
+			accepted_culture = ROOT 
+			culture = root
+		}
+		owner = {
+			add_government_power = {
+				mechanic_type = gaul_confederation_mechanic
+				power_type = gaul_confederation
+				value = 0.25
+			}
 		}
 	}
 }

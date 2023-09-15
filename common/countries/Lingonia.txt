@@ -1,0 +1,88 @@
+#Country Name: Please see filename.
+graphical_culture = westerngfx
+color = { 226 188 60 }
+revolutionary_colors = { 1 0 1 }
+historical_idea_groups = { 
+	humanist_ideas
+	offensive_ideas
+	trade_ideas
+	administrative_ideas
+	maritime_ideas
+	diplomatic_ideas
+	quality_ideas
+	aristocracy_ideas
+}
+historical_units = { 
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	ottoman_spahi
+	ottoman_sekban
+	ottoman_reformed_spahi
+	ottoman_reformed_janissary
+	ottoman_toprakli_hit_and_run
+	ottoman_nizami_cedid
+	ottoman_toprakli_dragoon
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	ottoman_new_model
+	ottoman_lancer
+}
+monarch_names = { 
+	"Dago #2" = 10
+	"Garos #1" = 10
+	"Samorix #3" = 10
+	"Corius #1" = 10
+	"Dubnorix #1" = 10
+	"Maguno #1" = 10
+	"Magurix #0" = 10
+	"Caturix #3" = 10
+	"Dagomarus #3" = 10
+	"Ariogaisos #1" = 5
+	"Arleno #2" = 5
+	"Abbo #2" = 5
+	"Tinus #0" = 5
+	"Adietumarus #1" = 5
+	"Carantus #2" = 5
+	"Carmo #5" = 5
+	"Carmanos #4" = 5
+	"Katumaros #2" = 5
+	"Leno #1" = 5
+	"Leucus #3" = 5
+	"Manus #2" = 5
+	"Scottus #1" = 5
+	"Toccus #3" = 5
+	"Urus #1" = 1
+	"Wirogalos #2" = 1
+	"Abbula #0" = -1
+	"Abrexta #1" = -1
+	"Bauila #1" = -1
+	"Cantismerta #1" = -1
+	"Catta #1" = -1
+	"Dousonna #1" = -1
+	"Litogena #1" = -1
+	"Peccia #1" = -1
+	"Uesuca #1" = -1
+}
+leader_names = { 
+	Abbo Acco Argiotalus Ariogaisos Arleno Atebodwos Attalus Axrotalus Bannus Bilius
+	Brennos Brogimaros Camulus Carantus Carmanos Carmo Caturix Cerdo Cilurnos Contessilo
+	Corius Cudius Dagolitus Dagodurnus Damos Dosso Dubnorix Dunnius Katumaros Iestinus
+	Iantumaros Lascius Leno Lutumaros Manus Oclinos Samo Samorix Scottus Talos
+	Tanisius Tasco Tinus Toccus Urus Wirogalos 
+}
+ship_names = { 
+	Abbix Accix Argiotalix Ariogaisix Arlenix Atebodwix Attalix Axrotalix Bannix Biliix
+	Brennix Brogimarix Camulix Carantix Carmanix Carmo Caturix Cerdo Cilurnix Contessilo
+	Coriix Cudiix Dagolitix Dagodurnix Damix Dosso Dubnorix Dunniix Katumarix Iestinix
+	Iantumarix Lasciix Leno Lutumarix Manix Oclinix Samo Samorix Scottix Talix
+	Tanisiix Tasco Tinix Toccix Urus Wirogalix 
+}
+fleet_names = { 
+	"Brigos de $PROVINCE$" 
+}
+army_names = { 
+	"Exercitus de $PROVINCE$" 
+}
