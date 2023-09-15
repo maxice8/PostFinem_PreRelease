@@ -116,3 +116,22 @@ nrd_norse_settlers_event_modifier = {
 	local_production_efficiency = 0.1
 	trade_value_modifier = 0.25
 }
+
+skl_a_new_target_modifier = {
+	warscore_cost_vs_other_religion = -0.1
+	warscore_from_battles_modifier = 0.25
+}
+skl_a_new_identity_modifier = {
+	culture_conversion_cost = -0.25
+}
+control_the_skagerak_modifier = {
+	hostile_attrition = 5
+	province_trade_power_value = 10
+}
+skl_northern_tribes_modifier = {
+	global_monthly_devastation = -0.05
+	ae_impact = -0.1
+}
+skl_clear_the_forests_modifier = {
+	development_cost = -0.1
+}

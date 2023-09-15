@@ -633,3 +633,87 @@ province_event = {
 		}
 	}
 }
+
+#The Gallic Menace
+country_event = {
+	id = nrd_flavor_events.11
+	title = nrd_flavor_events.11.t
+	desc = nrd_flavor_events.11.d
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	
+	trigger = {
+		tag = SKL
+		NOT = {			
+			AND = {
+				normandy_area = { 
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				brittany_area = { 
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 12 
+	}
+	fire_only_once = yes
+	# is_triggered_only = yes
+
+	# immediate = {	
+	# }
+
+	option = { 
+		name = nrd_flavor_events.11.a
+		# goto = nrd_rebel_province
+		ai_chance = { factor = 1 }
+
+		normandy_area = { add_permanent_claim = ROOT }
+		brittany_area = { add_permanent_claim = ROOT }
+		set_country_flag = skl_a_new_target_flag
+	}
+}
+
+#A New Identity
+country_event = {
+	id = nrd_flavor_events.12
+	title = nrd_flavor_events.12.t
+	desc = nrd_flavor_events.12.d
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	
+	# trigger = {
+	# }
+
+	# mean_time_to_happen = { 
+	# 	months = 12 
+	# }
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	# immediate = {	
+	# }
+
+	option = { 
+		name = nrd_flavor_events.12.a
+		# goto = nrd_rebel_province
+		ai_chance = { factor = 1 }
+
+		custom_tooltip = skl_a_new_identity_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = norwegian
+				}
+				change_culture = skalder
+			}
+		}
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = skl_a_new_identity_modifier
+			duration = 12775
+		}
+	}
+}
