@@ -112,3 +112,28 @@ pf_per_lost_satrapy_revolt = {
 	devotion = -5
 	land_morale = -0.2
 }
+
+pf_per_satrapy_appealed_to_religion = {
+	reduced_liberty_desire = 10
+}
+
+pf_per_ready_for_war = {
+	manpower_recovery_speed = 0.2
+	merc_maintenance_modifier = -0.2
+}
+
+pf_per_asked_for_help = {
+	diplomatic_reputation = 1
+}
+
+pf_per_ally_talked = {
+	diplomatic_reputation = 1
+}
+
+pf_per_satrapy_intimidated = {
+	reduced_liberty_desire = 10
+}
+
+pf_per_satrapy_divided = {
+	reduced_liberty_desire = 10
+}

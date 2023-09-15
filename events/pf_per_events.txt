@@ -331,6 +331,7 @@ country_event = {
 		KHO = { pf_per_clear_satrapy_revolt_modifiers = yes }
 		BAL = { pf_per_clear_satrapy_revolt_modifiers = yes }
 		every_subject_nation = { pf_per_clear_satrapy_revolt_modifiers = yes }
+		pf_per_clear_satrapy_revolt_modifiers_persia = yes
 	}
 
 	option = {
@@ -339,6 +340,7 @@ country_event = {
 			all_subject_country = { NOT = { liberty_desire = 50 } }
 		}
 		add_stability = 2
+		add_prestige = 50
 		add_country_modifier = {
 			name = pf_per_won_satrapy_revolt
 			duration = 3650
@@ -363,11 +365,48 @@ country_event = {
 		name = "pf_per_events_9_option_3"
 		trigger = { NOT = { satrapy = 1 } }
 		add_stability = -3
+		add_prestige = -100
+		add_devotion = -50
 		add_country_modifier = {
 			name = pf_per_lost_satrapy_revolt
 			duration = 3650
 		}
 	}
-	
-	
 }
+
+country_event = {
+	id = pf_per_events.10
+	title = "pf_per_events_10_title"
+	desc = "pf_per_events_10_desc"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		random_ally = {
+			limit = { religion = zoroastrian }
+			save_event_target_as = zoroastrian_ally
+		}
+	}
+
+	option = {
+		name = "pf_per_events_10_option_1"
+		ai_chance = { factor = 0 }
+		add_treasury = 100
+	}
+	
+	option = {
+		name = "pf_per_events_10_option_2"
+		ai_chance = { factor = 0 }
+		add_manpower = 2.5
+	}
+	
+	option = {
+		name = "pf_per_events_10_option_3"
+		ai_chance = { factor = 100 }
+		add_country_modifier = {
+			name = pf_per_ally_talked
+			duration = -1
+			desc = pf_per_satrapy_revolt_until_end_tt
+		}
+	}
+}		
