@@ -682,18 +682,19 @@ on_siege_lost_country = {
 	}
 	if = {
 		limit = {
-			owner = { has_government_mechanic = gaul_confederation_mechanic }
-			controller = REB
-		}
-		owner = {
-			add_government_power = {
-				mechanic_type = gaul_confederation_mechanic
-				power_type = gaul_confederation
-				value = -2
+			has_government_mechanic = gaul_confederation_mechanic
+			FROM = {
+				controller = {
+					tag = REB
+				}
 			}
 		}
-	}	
-	
+		add_government_power = {
+			mechanic_type = gaul_confederation_mechanic
+			power_type = gaul_confederation
+			value = -2
+		}
+	}
 }
 
 # province
