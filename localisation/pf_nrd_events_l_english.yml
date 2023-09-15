@@ -1,6 +1,55 @@
 ﻿l_english:
  
  ulriksson_brothers_opinion: "Brothers Ulriksson"
- knut_ulriksson_maidenless_tt: "If §Y[Root.Monarch.GetName]§! dies without an heir, [Root.GetName] will fall under a Personal Union of §YNorway§!!"
+ knut_ulriksson_maidenless_tt: "When §Y[Root.Monarch.GetName]§! dies, [Root.GetName] may fall under a Personal Union of §YNorway§!!"
+
+ nrd_flavor_events.1.t: "Settling Norse Communities"
+ nrd_flavor_events.1.d: "Longships have been spotted near [Root.Capital.GetName], and Norse settlers are pouring in, attracted by opportunities in [norse_settlers_coming.GetName]. These new settlers bring with them farming techniques and various trades like blacksmithing and weaving. Local populations have been less hostile than expected, seeing the newcomers not just as settlers, but as possible partners in progress. The future looks promising with this blend of skills and cultures."
+ nrd_flavor_events.1.a: "Let them come!"
+
+ nrd_flavor_events.2.t: "Cocoa and Coffee Prices Soar"
+ nrd_flavor_events.2.d: "Coffee and cocoa beans, exotic treasures from the New World, have made their debut in our markets. Their rich flavors, once unknown, have now captivated the palates of our nobility. As demand soars, prices have skyrocketed, turning these beans into gold. The air is thick with anticipation as traders and merchants see a clear path to immense wealth. The race to capitalize on this lucrative trade has begun, and many are poised to make fortunes."
+ nrd_flavor_events.2.a: "These brown goods are gold!"
+
+ nrd_flavor_events.3.t: "The Sons Ulrik Alfsson"
+ nrd_flavor_events.3.d: "Knut Stormbringer, the indomitable leader of Nordanvik, is a force that both allies and adversaries reckon with. His name, whispered in awe and trepidation, has become synonymous with unyielding ambition and a ruthlessness that has carved out a new realm from the wilds. His conquests are vast, particularly in the lands of the Picts. There, he overcame fortified strongholds, assimilated tribes, and introduced Norse customs, leaving an indelible mark on the landscape and its people.\n\nYet, for all his might in Nordanvik, a shadow from his homeland of Norway looms large. His brother, Ulrik, holds dominion there, ever-watchful of Knut's movements. While Knut's legacy in the Pictish lands grows, a pressing concern remains: without an heir, Nordanvik's fate hangs in the balance. Should Knut meet his end childless, all he fought for would be absorbed into Norway, consolidating Ulrik's power over both realms. The future is uncertain, and the stakes have never been higher."
+ nrd_flavor_events.3.a: "May Freyr bless young Knut with a son!"
+
+ nrd_flavor_events.4.t: "Norway Claims Leadership Over Nordanvik"
+ nrd_flavor_events.4.d: "The sun has set on the era of Knut Stormbringer. His passing marks the end of a legendary reign that saw vast territories subdued and the lands of the Picts forever changed. From rugged coastlines to dense forests, tales of his conquests echo, painting a picture of a leader both fierce and visionary.\n\nYet, with his death, the winds of uncertainty blow over Nordanvik. The crown of Norway, seeing an opportunity, casts a covetous eye on the realm Knut once ruled. With no heir to challenge them, the Norwegians see a chance to fold Nordanvik into their ever-expanding domain.\n\nFor the people of Nordanvik, a choice looms large: submit to the will of Norway, embracing the promise of stability and unity, or resist, honoring Knut's legacy and defending the independence he so fiercely fought for. The decision is monumental, and the consequences, whether they choose submission or defiance, will shape the course of history."
+ nrd_flavor_events.4.a: "Submit, it is [NOR.Monarch.GetName]'s birthright."
+ nrd_flavor_events.4.b: "Nay! We refuse to be slaves!"
+
+ nrd_flavor_events.5.t: "Refugees from [scandi_refugee_province.GetName]"
+ nrd_flavor_events.5.d: "The war-torn region of [scandi_refugee_province.GetName] has been rendered unlivable for many of it's inhabitants. Many have fled their homelands, seeking opportunity elsewhere, and many come to [Root.GetName], seeking opportunities that have been rumored throughout the Norse world. The [Root.Monarch.GetTitle]'s circle has recommended [nrd_scandi_refugee_province.GetName] as the ideal location to establish these refugees. The main question is what to do with the elites among them?"
+ nrd_flavor_events.5.a: "Incorporate them into [nrd_scandi_refugee_province.GetName]"
+ nrd_flavor_events.5.b: "Claim their skills for the [Root.Monarch.GetTitle]"
+
+ nrd_flavor_events.6.t: "Rebels in [nrd_rebel_province.GetName]"
+ nrd_flavor_events.6.d: "Unrest stirs in [nrd_rebel_province.GetName]. The local Druidic populace now rise in defiance, demanding religious freedoms. Their ancient rites and traditions, practiced in secret within our borders until recently, are now openly championed. As the drums of rebellion beat louder, the region stands at a precipice: will the call for spiritual liberty be heeded, or will it be silenced once more?"
+ nrd_flavor_events.6.a: "Crush them, we have no time for this rabble"
+ nrd_flavor_events.6.b: "Perhaps we can hear them out.."
+
+ nrd_flavor_events.7.t: "[Root.GetName] Rules the Waves!"
+ nrd_flavor_events.7.d: "The vast expanse of the seas is dominated by the formidable navy of [Root.GetName]. Craftsmen from our lands, using age-old techniques passed down through generations, have birthed longboats of unparalleled design and quality. These vessels, swift and sturdy, are not just tools of war but symbols of [Root.GetName]'s maritime prowess. Each ship, with its intricately carved prow and masterfully woven sails, tells a tale of our nation's rich naval heritage.\n\nCoastal nations, upon hearing tales of our longboats, feel a mix of awe and dread. Their silhouettes on the horizon are a testament to [Root.GetName]'s dominance over the waves. Ports bristle with anxiety at their approach, and fishermen share whispered stories of their encounters with these sea giants. In naval circles, [Root.GetName]'s fleet is both a marvel to study and a force to be reckoned with, making them the uncontested rulers of the waters."
+ nrd_flavor_events.7.a: "This is only a fraction of our true power!"
+
+ nrd_flavor_events.8.t: "Nordanvik Reaches out to Trinovantes"
+ nrd_flavor_events.8.d: "In the heartlands of the Britons, a fierce determination burns. For generations, they've resisted the encroaching influence of the Celts that threaten Britonnic sovereignty. The rolling hills and dense forests have borne witness to many skirmishes and battles, as the Britons wage war to defend their lands and legacy.\n\nIn this struggle, we see a reflection of our own opposition to Celtica. Their expansionist tendencies have not only been the bane of the Britons but have also cast a shadow over our own borders. As the old adage goes, the enemy of our enemy might well be our friend. While our histories and cultures may differ, our shared resistance against Celtica's dominance presents an opportunity. Perhaps, even if for a fleeting moment, our paths can converge in mutual interest.."
+ nrd_flavor_events.8.a: "Offer them funds for their war chest"
+ nrd_flavor_events.8.b: "Send them some able-bodied men to fight"
+ nrd_flavor_events.8.c: "The Britons are none of our concern.. yet"
+
+ nrd_flavor_events.9.t: "Nordanvik Sends Aid"
+ nrd_flavor_events.9.d: "The winds of change blow from the north.. As we stand resolute against the relentless pressure of the Celts, unexpected sails appear on the horizon: longboats of Nordanvik. Tales of their maritime prowess have traveled far, and their arrival at our shores brings a mix of hope and curiosity.\n\nNordanvik, too, has felt the sting of Celtica's ambitions, and in our shared struggle, they see a potential ally. Their warriors, fierce and battle-hardened, bring not just strength but also tales of resistance from their own lands. As campfires light up the night, stories are exchanged, strategies discussed, and bonds forged.\n\nIn this dire hour, the aid from Nordanvik is a beacon. Their support reinvigorates our spirit and determination. Together, united by a common foe, we stand a chance to repel the Celtic tide and safeguard our cherished sovereignty"
+ nrd_flavor_events.9.a: "Perhaps the enemy of my enemy IS my friend.."
+ nrd_flavor_events.9.b: "Perhaps the enemy of my enemy IS my friend.."
+
+ nrd_flavor_events.10.t: "Norse Settlers Arrive"
+ nrd_flavor_events.10.d: "From distant shores, Norse settlers have arrived in [Root.GetName]. Driven by tales of prosperity and the promise of a fresh start, they come seeking economic opportunity. Their arrival, marked by longships and rich traditions, brings a blend of cultures and skills. As they integrate, [Root.GetName] buzzes with potential, anticipating growth and a shared future built on mutual aspirations."
+ nrd_flavor_events.10.a: "Gods be praised!"
+
+ skl_a_new_target: "The event §YThe Gallic Menace§! has happened"
 
 
+ skl_a_new_identity_tt: "Every owned province of §YNorwegian§! culture will now be considered §YSkalder§! culture"

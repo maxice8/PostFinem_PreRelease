@@ -687,6 +687,21 @@ on_siege_lost_country = {
 			id = pf_lag_trinovantian_rebels.6
 		}
 	}
+	if = {
+		limit = {
+			has_government_mechanic = gaul_confederation_mechanic
+			FROM = {
+				controller = {
+					tag = REB
+				}
+			}
+		}
+		add_government_power = {
+			mechanic_type = gaul_confederation_mechanic
+			power_type = gaul_confederation
+			value = -2
+		}
+	}
 }
 
 # province
@@ -821,6 +836,14 @@ on_new_consort = {
 
 # country
 on_monarch_death = {
+	if = {
+		limit = {
+			tag = NRD
+			has_country_flag = knut_ulriksson_maidenless_flag
+		}
+		clr_country_flag = knut_ulriksson_maidenless_flag
+		country_event = { id = nrd_flavor_events.4 }
+	}
 	if = {
 		limit = { has_country_modifier = sought_after_bachelor }
 		remove_country_modifier = sought_after_bachelor
@@ -1544,13 +1567,27 @@ on_adm_development = {
 	# pf
 	if = {
 		limit = {
-			has_country_modifier = pf_lag_urbanisation
+			owner = { has_country_modifier = pf_lag_urbanisation }
 		}
 		random_list = {
 			5 = { add_base_tax = 1 }
 			95 = { }
 		}
 	}
+	if = {
+		limit = {
+			owner = { has_government_mechanic = gaul_confederation_mechanic }
+			accepted_culture = ROOT 
+			culture = root
+		}
+		owner = {
+			add_government_power = {
+				mechanic_type = gaul_confederation_mechanic
+				power_type = gaul_confederation
+				value = 0.25
+			}
+		}
+	}	
 }
 
 # province
@@ -1566,6 +1603,20 @@ on_dip_development = {
 			95 = { }
 		}
 	}
+	if = {
+		limit = {
+			owner = { has_government_mechanic = gaul_confederation_mechanic }
+			accepted_culture = ROOT 
+			culture = root
+		}
+		owner = {
+			add_government_power = {
+				mechanic_type = gaul_confederation_mechanic
+				power_type = gaul_confederation
+				value = 0.25
+			}
+		}
+	}
 }
 
 # province
@@ -1579,6 +1630,20 @@ on_mil_development = {
 		random_list = {
 			5 = { add_base_manpower = 1 }
 			95 = { }
+		}
+	}
+	if = {
+		limit = {
+			owner = { has_government_mechanic = gaul_confederation_mechanic }
+			accepted_culture = ROOT 
+			culture = root
+		}
+		owner = {
+			add_government_power = {
+				mechanic_type = gaul_confederation_mechanic
+				power_type = gaul_confederation
+				value = 0.25
+			}
 		}
 	}
 }

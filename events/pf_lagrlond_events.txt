@@ -54,3 +54,119 @@ country_event = {
 		}
 	}
 }
+
+# Odinstur (reference to Martinitoren, Martin's Tower),
+# which is a Tower of a Church in Groningen that was
+# destroyed multiple times due to natural causes (lightning)
+country_event = {
+	id = pf_lagrlond_events.3
+	title = pf_lagrlond_events.3.t
+	desc = pf_lagrlond_events.3.desc
+	picture = NORSE_TEMPLE_eventPicture
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 64
+	}
+
+	trigger = {
+		is_year = 1485
+		owns_core_province = 4382
+		religion = norse_pagan_reformed
+		OR = {
+			primary_culture = norvegr
+			primary_culture = old_frisian
+		}
+	}
+
+	# Build the Temple
+	option = {
+		name = pf_lagrlond_events.3.a
+		if = {
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			limit = {
+				4382 = { has_building = temple }
+			}
+			add_treasury = -100
+			4382 = {
+				remove_building = temple
+				add_building = cathedral
+			}
+		}
+		else = {
+			add_treasury = -200
+			4382 = {
+				add_building = cathedral
+			}
+		} 
+		add_estate_loyalty_modifier = {
+			estate = estate_church
+			desc = PF_EST_VAL_BUILT_ODINSTUR
+			loyalty = 10
+			duration = 3650
+		}
+		hidden_effect = {
+			country_event = {
+				id = pf_lagrlond_events.4
+				days = 3650
+				random = 3650
+			}
+			country_event = {
+				id = pf_lagrlond_events.4
+				days = 10950
+				random = 7300
+			}
+		}
+	}
+
+	option = {
+		name = pf_lagrlond_events.3.b
+		add_prestige = -5
+		add_estate_loyalty_modifier = {
+			desc = PF_EST_VAL_SNUBBED_ODINSTUR
+			estate = estate_church
+			loyalty = -5
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = pf_lagrlond_events.4
+	title = pf_lagrlond_events.4.t
+	desc = pf_lagrlond_events.4.desc
+	picture = NORSE_TEMPLE_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		owns_core_province = 4382
+		NOT = { has_country_flag = pf_refused_odinstur_repair }
+	}
+
+	option = {
+		name = pf_lagrlond_events.4.a
+		add_treasury = -50
+		add_estate_loyalty_modifier = {
+			desc = PF_EST_VAL_FIXED_ODINSTUR 
+			estate = estate_church
+			loyalty = 10
+			duration = 1825
+		}
+	}
+	option = {
+		name = pf_lagrlond_events.4.b
+		hidden_effect = {
+			set_country_flag = pf_refused_odinstur_repair
+		}
+		add_estate_loyalty_modifier = {
+			desc = PF_EST_VAL_REFUSED_REPAIR_ODINSTUR
+			estate = estate_church
+			loyalty = -5
+			duration = 1825
+		}
+	}
+}
