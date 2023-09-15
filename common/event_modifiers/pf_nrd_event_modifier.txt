@@ -135,3 +135,26 @@ skl_northern_tribes_modifier = {
 skl_clear_the_forests_modifier = {
 	development_cost = -0.1
 }
+skl_inferior_northmen_modifier = {
+	galley_power = 0.1
+	is_galleass_modifier = yes
+}
+skl_secure_supply_lines_modifier = {
+	global_supply_limit_modifier = 0.2
+}
+skl_warmer_waters_modifier = {
+	local_ship_repair = 0.25
+	local_sailors_modifier = 0.5
+}
+skl_gallic_dominion_modifier = {
+	prestige = 1
+	global_missionary_strength = 0.02
+}
+skl_leader_of_the_norse_world_modifier = {
+	legitimacy = 1
+	trade_efficiency = 0.1
+}
+skl_ruler_of_the_north = {
+	administrative_efficiency = 0.05
+	global_trade_goods_size_modifier = 0.1
+}

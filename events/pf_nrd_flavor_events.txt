@@ -701,6 +701,7 @@ country_event = {
 		# goto = nrd_rebel_province
 		ai_chance = { factor = 1 }
 
+		change_primary_culture = skalder
 		custom_tooltip = skl_a_new_identity_tt
 		hidden_effect = {
 			every_owned_province = {
