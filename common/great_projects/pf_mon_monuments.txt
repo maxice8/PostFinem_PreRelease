@@ -518,6 +518,9 @@ hall_of_pantheons = { # hop
 		}
 		country_modifiers = {
 		}
+		on_upgraded = {
+			pf_mon_hop_frequent_blessings = yes
+		}
 	}
 	tier_3 = {
 		upgrade_time = {
@@ -531,6 +534,9 @@ hall_of_pantheons = { # hop
 		area_modifier = {
 		}
 		country_modifiers = {
+		}
+		on_upgraded = {
+			pf_mon_hop_upgrade_blessings = yes
 		}
 	}
 }

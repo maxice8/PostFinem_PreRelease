@@ -6,36 +6,49 @@ province_event = { # Blessing of Zeus
     desc = pf_mon_events.1.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = hellenic
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = hellenic}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -90,36 +103,49 @@ province_event = { # Blessing of Baal Hammon
     desc = pf_mon_events.2.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = punic_religion
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = punic_religion}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -174,36 +200,49 @@ province_event = { # Blessing of Jupiter
     desc = pf_mon_events.3.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = romana
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = romana}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -258,36 +297,49 @@ province_event = { # Blessing of Odin
     desc = pf_mon_events.4.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = norse_pagan_reformed
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = norse_pagan_reformed}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -342,36 +394,49 @@ province_event = { # Blessing of Hera
     desc = pf_mon_events.5.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = hellenic
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = hellenic}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -499,36 +564,49 @@ province_event = { # Blessing of Tanit
     desc = pf_mon_events.6.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = punic_religion
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = punic_religion}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -656,36 +734,49 @@ province_event = { # Blessing of Juno
     desc = pf_mon_events.7.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = romana
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = romana}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -813,36 +904,49 @@ province_event = { # Blessing of Frigg
     desc = pf_mon_events.8.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = norse_pagan_reformed
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = norse_pagan_reformed}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -970,36 +1074,49 @@ province_event = { # Blessing of Ares
     desc = pf_mon_events.9.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = hellenic
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = hellenic}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -1077,36 +1194,49 @@ province_event = { # Blessing of Reshef
     desc = pf_mon_events.10.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = punic_religion
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = punic_religion}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -1184,36 +1314,49 @@ province_event = { # Blessing of Mars
     desc = pf_mon_events.11.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = romana
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = romana}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -1291,36 +1434,49 @@ province_event = { # Blessing of Tyr
     desc = pf_mon_events.12.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = norse_pagan_reformed
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = norse_pagan_reformed}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -1398,36 +1554,49 @@ province_event = { # Blessing of Heracles
     desc = pf_mon_events.13.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = hellenic
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = hellenic}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -1480,36 +1649,49 @@ province_event = { # Blessing of Melqart
     desc = pf_mon_events.14.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = punic_religion
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = punic_religion}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -1562,36 +1744,49 @@ province_event = { # Blessing of Hercules
     desc = pf_mon_events.15.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = romana
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = romana}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -1644,36 +1839,49 @@ province_event = { # Blessing of Tyche
     desc = pf_mon_events.16.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = hellenic
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = hellenic}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -1756,36 +1964,49 @@ province_event = { # Blessing of Ashtarte
     desc = pf_mon_events.17.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = punic_religion
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = punic_religion}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -1868,36 +2089,49 @@ province_event = { # Blessing of Fortuna
     desc = pf_mon_events.18.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = romana
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = romana}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -1980,36 +2214,49 @@ province_event = { # Blessing of Loki
     desc = pf_mon_events.19.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = norse_pagan_reformed
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = norse_pagan_reformed}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -2092,36 +2339,49 @@ province_event = { # Blessing of Asclepius
     desc = pf_mon_events.20.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = hellenic
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = hellenic}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -2180,36 +2440,49 @@ province_event = { # Blessing of Eshmun
     desc = pf_mon_events.21.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = punic_religion
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = punic_religion}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -2268,36 +2541,49 @@ province_event = { # Blessing of Asclepius
     desc = pf_mon_events.22.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = romana
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = romana}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -2356,36 +2642,49 @@ province_event = { # Blessing of Eir
     desc = pf_mon_events.23.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = norse_pagan_reformed
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = norse_pagan_reformed}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -2444,36 +2743,49 @@ province_event = { # Blessing of Hephaestus
     desc = pf_mon_events.24.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = hellenic
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = hellenic}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -2518,36 +2830,49 @@ province_event = { # Blessing of Kushor
     desc = pf_mon_events.25.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = punic_religion
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = punic_religion}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
@@ -2592,36 +2917,49 @@ province_event = { # Blessing of Vulcan
     desc = pf_mon_events.26.desc
     picture = NORSE_TEMPLE_eventPicture
     goto = ROOT
-
-    mean_time_to_happen = { # This is in concurrence with the flag cooldown
-        months = 6
-    }
-
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
     trigger = {
         has_great_project = {
             type = hall_of_pantheons
             tier = 1
         }
-        province_is_or_accepts_religion = {
-            religion = romana
-        }
-        OR = {
-            NOT = {
-                has_province_flag = pf_mon_hop_blessing_flag
+        province_is_or_accepts_religion = {religion = romana}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
             }
-            had_province_flag = {
-                flag = pf_mon_hop_blessing_flag
-                days = 1460
-            }
-            AND = { # Reduced cooldown if you have <0 stability
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
                 had_province_flag = {
                     flag = pf_mon_hop_blessing_flag
-                    days = 1095
+                    days = 2555
                 }
-                NOT = {
-                    owner = {
-                        stability = 0
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
                     }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
                 }
             }
         }
