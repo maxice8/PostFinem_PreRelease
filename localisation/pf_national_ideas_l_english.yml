@@ -63,9 +63,9 @@
  RMA_ideas_start: "Roman Traditions"
  RMA_ideas_bonus: "Roman Ambition"
  RMA_ideas: "Roman Ideas"
- CEL_ideas_start: "Celtic Traditions"
- CEL_ideas_bonus: "Celtic Ambition"
- CEL_ideas: "Celtic Ideas"
+ BRN_ideas_start: "Brennonic Traditions"
+ BRN_ideas_bonus: "Brennonic Ambition"
+ BRN_ideas: "Brennonic Ideas"
  SXY_ideas_start: "Saxon Traditions"
  SXY_ideas_bonus: "Saxon Ambition"
  SXY_ideas: "Saxon Ideas"
@@ -124,20 +124,54 @@
  RMA_ideas_6_desc: "A disciplined and well-maintained military ensures order and grants a bonus to land discipline."
  RMA_ideas_7: "Roman Coffers"
  RMA_ideas_7_desc: "Our efficient tax collection and fiscal policies increase our tax income, filling our coffers."
- CEL_ideas_1: "Collecting Tribute"
- CEL_ideas_1_desc: "We collect tribute from subject nations, reducing their liberty desire and ensuring their loyalty."
- CEL_ideas_2: "Celtic Isles"
- CEL_ideas_2_desc: "Expanding our naval capabilities, we gain access to galleons and increase the allowed fraction of galleons in our navy."
- CEL_ideas_3: "Celtic New World"
- CEL_ideas_3_desc: "Our colonists venture into the new world, promoting exploration and enhancing our colonization efforts."
- CEL_ideas_4: "Forward Thinking Society"
- CEL_ideas_4_desc: "Fostering a society of forward-thinking individuals reduces the cost of new ideas, aiding our nation's development."
- CEL_ideas_5: "Expand the Navy"
- CEL_ideas_5_desc: "Investing in our navy improves the size and repair capabilities of our naval forces, making them more efficient."
- CEL_ideas_6: "A Warrior's Spirit"
- CEL_ideas_6_desc: "Instilling a warrior's spirit among our troops, we enhance land morale, making our armies more resilient."
- CEL_ideas_7: "Efficient Trade"
- CEL_ideas_7_desc: "Promoting efficient trade practices increases our global trade power and strengthens our economic position."
+
+CEL_ideas_start: "Celtic Traditions"
+CEL_ideas_bonus: "Celtic Ambition"
+CEL_ideas: "Celtic Ideas"
+
+# The Celtic Navy
+CEL_ideas_1: "Mastery of the Waves"
+CEL_ideas_1_desc: "From ancient tales to modern practices, our seafaring traditions have always been a source of pride and strength."
+
+# Forward Thinking Society
+CEL_ideas_2: "Embrace of Innovation"
+CEL_ideas_2_desc: "Our society thrives on the pursuit of knowledge, always looking forward and embracing the new."
+
+# Reputable Dynasties
+CEL_ideas_3: "Bloodlines of Old"
+CEL_ideas_3_desc: "The ancient families that rule our lands command respect, ensuring stability and loyalty among our people."
+
+# Celtica Rules the Waves
+CEL_ideas_4: "Legendary Vessels"
+CEL_ideas_4_desc: "Inspired by tales of old, our shipbuilders craft vessels that are the envy of the world."
+
+# The Druidic Council
+CEL_ideas_5: "Wisdom of the Ancients"
+CEL_ideas_5_desc: "Guided by the druids, our decisions are imbued with the wisdom of ages past."
+
+# Settling Overseas
+CEL_ideas_6: "New Horizons"
+CEL_ideas_6_desc: "Our adventurous spirit drives us to explore and settle distant lands, expanding our influence."
+
+# Maintaining the Navy
+CEL_ideas_7: "Guardians of the Sea"
+CEL_ideas_7_desc: "Our commitment to naval excellence ensures that our sailors are always ready, and our ships are in prime condition."
+
+
+ BRN_ideas_1: "Collecting Tribute"
+ BRN_ideas_1_desc: "We collect tribute from subject nations, reducing their liberty desire and ensuring their loyalty."
+ BRN_ideas_2: "Celtic Isles"
+ BRN_ideas_2_desc: "Expanding our naval capabilities, we gain access to galleons and increase the allowed fraction of galleons in our navy."
+ BRN_ideas_3: "Celtic New World"
+ BRN_ideas_3_desc: "Our colonists venture into the new world, promoting exploration and enhancing our colonization efforts."
+ BRN_ideas_4: "Forward Thinking Society"
+ BRN_ideas_4_desc: "Fostering a society of forward-thinking individuals reduces the cost of new ideas, aiding our nation's development."
+ BRN_ideas_5: "Expand the Navy"
+ BRN_ideas_5_desc: "Investing in our navy improves the size and repair capabilities of our naval forces, making them more efficient."
+ BRN_ideas_6: "A Warrior's Spirit"
+ BRN_ideas_6_desc: "Instilling a warrior's spirit among our troops, we enhance land morale, making our armies more resilient."
+ BRN_ideas_7: "Efficient Trade"
+ BRN_ideas_7_desc: "Promoting efficient trade practices increases our global trade power and strengthens our economic position."
  SXY_ideas_1: "Defense against the Northman"
  SXY_ideas_1_desc: "In preparation against the Northmen's raids, we reinforce our garrisons to better defend our borders."
  SXY_ideas_2: "Saxon Trade Networks"

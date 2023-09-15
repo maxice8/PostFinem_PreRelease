@@ -227,8 +227,9 @@ zoroastrian_group = {
 
 germanic_group = {
 	defender_of_faith = yes
-	flag_emblem_index_range = { 110 110 }
-
+	flag_emblem_index_range = { 110 110 }	
+	can_form_personal_unions = yes
+	
 	norse_pagan_reformed = {
 		icon = 21
 		color = { 191 191 191 }
@@ -237,7 +238,7 @@ germanic_group = {
 			land_maintenance_modifier = -0.1
 		}
 		country_as_secondary = {
-			merc_maintenance_modifier = -0.1
+			merc_maintenance_modifier = -0.2
 			galley_power = 0.2
 		}
 		province = {
@@ -258,7 +259,7 @@ germanic_group = {
 			free_land_leader_pool = 1
 		}
 		country_as_secondary = {
-			land_forcelimit_modifier = 0.1
+			land_forcelimit_modifier = 0.2
 		}
 
 		province = {
@@ -277,15 +278,15 @@ germanic_group = {
 		icon = 32
 		color = { 160 20 110 }
 		country = {
-			max_hostile_attrition = 1
-			free_land_leader_pool = 1
+			tolerance_own = 2
+			adm_tech_cost_modifier = -0.05
 		}
 		country_as_secondary = {
-			land_forcelimit_modifier = 0.1
+			reinforce_cost_modifier = -0.2
 		}
 
 		province = {
-			local_friendly_movement_speed = 0.1
+			
 		}
 		
 		# personal_deity = yes
@@ -333,11 +334,11 @@ punic_group = {
 		}
 		country_as_secondary = {
 			global_institution_spread = 0.1
-			idea_cost = -0.05
+			idea_cost = -0.1
 		}
 
 		province = {
-			local_build_cost = -0.1
+			local_missionary_strength = -0.02
 		}
 		
 		holy_sites = { 104 118 124 341 146 }
@@ -371,8 +372,7 @@ hellenic_group = {
 			idea_cost = -0.1
 		}
 		country_as_secondary = {
-			global_institution_spread = 0.1
-			idea_cost = -0.05
+			warscore_cost_vs_other_religion = -0.1
 		}
 
 		# allowed_center_conversion = {
@@ -400,7 +400,7 @@ hellenic_group = {
 		papacy = {
 			papal_tag = ATH
 			election_cost = 5
-			seat_of_papacy = 146 # rome
+			seat_of_papacy = 146 # Athens
 			
 			
 			#Council of Trent Positions
@@ -699,16 +699,15 @@ druidic_group = {
 		icon = 37
 		color = { 10 120 50 }
 		country = {
-			tolerance_own = 1
+			tolerance_own = 2
 			same_religion_advisor_cost = -0.2
 		}
 		country_as_secondary = {
-			global_institution_spread = 0.1
-			idea_cost = -0.05
+			development_cost_modifier = -0.1
 		}
 
 		province = {
-			province_trade_power_modifier = 0.1
+			
 		}
 		
 		# personal_deity = yes
@@ -838,7 +837,7 @@ baltic_pagan_group = {
 		color = { 120 250 170 }
 		country = {
 			defensiveness = 0.2
-			years_of_nationalism = -10
+			years_of_nationalism = -5
 		}
 		country_as_secondary = {
 			global_institution_spread = 0.1
@@ -851,7 +850,7 @@ baltic_pagan_group = {
 		
 		# personal_deity = yes
 		
-		heretic = { PROMETHEANS }
+		heretic = { ROMUVA_HERETIC }
 
 	}
 
