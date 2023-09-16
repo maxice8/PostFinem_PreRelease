@@ -123,8 +123,8 @@ country_event = {
 		name = "pf_per_events_4_option_1"
 		ai_chance = { factor = 100 }
 		add_government_power = {
-			mechanic_type = pf_per_centralisation_mechanic
-			power_type = pf_per_centralisation
+			mechanic_type = pf_per_centralization_mechanic
+			power_type = pf_per_centralization
 			value = -5
 		}
 		event_target:disobedient_satrap = {
@@ -302,8 +302,8 @@ country_event = {
 	desc = {
 		trigger = { 
 			NOT = { has_government_power = {
-				mechanic_type = pf_per_centralisation_mechanic
-				power_type = pf_per_centralisation
+				mechanic_type = pf_per_centralization_mechanic
+				power_type = pf_per_centralization
 				value = 20
 			}}
 		}
@@ -350,8 +350,8 @@ country_event = {
 		name = "pf_per_events_9_option_2"
 		trigger = { 
 			NOT = { has_government_power = {
-				mechanic_type = pf_per_centralisation_mechanic
-				power_type = pf_per_centralisation
+				mechanic_type = pf_per_centralization_mechanic
+				power_type = pf_per_centralization
 				value = 20
 			}}
 		}

@@ -28,11 +28,13 @@ pf_per_satrapy_revolt = {
 				NOT = { num_of_rebel_controlled_provinces = 1 }
 				OR = {
 					all_subject_country = { NOT = { liberty_desire = 50 } }
-					NOT = { has_government_power = {
-						mechanic_type = pf_per_centralisation_mechanic
-						power_type = pf_per_centralisation
-						value = 20
-					}}
+					NOT = { 
+						has_government_power = {
+							mechanic_type = pf_per_centralization_mechanic
+							power_type = pf_per_centralization
+							value = 20
+						}
+					}
 				}
 			}
 		}
@@ -41,7 +43,7 @@ pf_per_satrapy_revolt = {
 	ended_by_country_breaking_to_rebels = no
 
 	modifier = {
-		reduced_liberty_desire = -50
+		reduced_liberty_desire = -20
 		global_unrest = 5
 	}
 

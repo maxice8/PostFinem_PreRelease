@@ -1,41 +1,44 @@
-pf_per_centralisation_mechanic = {
+pf_per_centralization_mechanic = {
 	alert_icon_gfx = GFX_alerticons_government_mechanics
 	alert_icon_index = 12
 	available = {
-		tag = PER
+		always = yes
 	}
 
 	powers = {
-		pf_per_centralisation = {
+		pf_per_centralization = {
 			min = 0
 			max = 100
 			default = 40
-			
+			gui = per_centralization_gov_mech
+
 			scaled_modifier = {
 				modifier = {
-					reduced_liberty_desire = -100
+					reduced_liberty_desire = -50
 					global_tax_modifier = 0.2
 				}
 			}
-			
+
 			reverse_scaled_modifier = {
 				modifier = {
 					vassal_forcelimit_bonus = -1.0
 					vassal_manpower_bonus = -1.0
-					global_tax_modifier = -0.8
+					global_tax_modifier = -0.5
 				}
 			}
 		}
 	}
 	interactions = {
-		pf_per_centralisation_decrease = {
-			cost_type = pf_per_centralisation
+		pf_per_centralization_decrease = {
+			cost_type = pf_per_centralization
+			gui = per_centralization_interaction_1
+			center = no
 			cost = 10
 
 			trigger = {
 				has_government_power = {
-					mechanic_type = pf_per_centralisation_mechanic
-					power_type = pf_per_centralisation
+					mechanic_type = pf_per_centralization_mechanic
+					power_type = pf_per_centralization
 					value = 10
 				}
 			}
@@ -44,7 +47,6 @@ pf_per_centralisation_mechanic = {
 				add_country_modifier = {
 					name = pf_per_satrapies_granted_concessions
 					duration = 1825
-					hidden = no
 				}
 			}
 
@@ -60,12 +62,10 @@ pf_per_centralisation_mechanic = {
 			}
 		}
 
-		pf_per_centralisation_dummy = {
-			potential = { always = no }
-		}
-
-		pf_per_centralisation_increase = {
-			cost_type = pf_per_centralisation
+		pf_per_centralization_increase = {
+			cost_type = pf_per_centralization
+			gui = per_centralization_interaction_2
+			center = no
 			cost = -10
 
 			trigger = { }
@@ -75,7 +75,6 @@ pf_per_centralisation_mechanic = {
 				add_country_modifier = {
 					name = pf_per_satrapies_seized_privileges
 					duration = 1825
-					hidden = no
 				}
 			}
 			cooldown_years = 10
