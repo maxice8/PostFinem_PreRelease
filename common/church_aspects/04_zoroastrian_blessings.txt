@@ -1,81 +1,228 @@
-blessing_yasna = {
-	is_blessing = yes
-
-	modifier = {
-		yearly_corruption = -0.05
+pf_zoroastrian_execute_heretics_aspect = {
+	sprite = "GFX_progress_of_the_supreme_governor_icon"
+	cost = 200
+	trigger = {
+		NOT = { stability = 3 }
 	}
-	ai_will_do = {
-		factor = 10
-	}
-}
 
-blessing_haoma = {
-	is_blessing = yes
-
-	modifier = {
-		global_trade_goods_size_modifier = 0.1
+	effect = {
+		add_stability = 1
 	}
 
 	ai_will_do = {
-		factor = 15
-	}
-}
-
-blessing_navjote = {
-	is_blessing = yes
-
-	modifier = {
-		global_missionary_strength = 0.02
-	}
-	ai_will_do = {
-		factor = 10
+		factor = 3
 		modifier = {
-			factor = 2
-			NOT = {
-				religious_unity = 0.9
-			}
+			factor = 0.5
+			stability = 0
 		}
 		modifier = {
-			factor = 2
-			NOT = {
-				religious_unity = 0.7
-			}
+			factor = 0.5
+			stability = 1
 		}
 		modifier = {
-			factor = 2
-			NOT = {
-				religious_unity = 0.5
-			}
+			factor = 0.5
+			stability = 2
+		}
+		modifier = {
+			factor = 0
+			stability = 3
 		}
 	}
 }
 
-blessing_manthras = {
-	is_blessing = yes
-
-	modifier = {
-		governing_capacity_modifier = 0.1
+pf_zoroastrian_get_money_aspect = {
+	sprite = "GFX_progress_of_the_supreme_governor_icon"
+	cost = 100
+	trigger = {
+		NOT = { treasury = 1000000 }
 	}
+
+	effect = {
+		add_years_of_income = 0.25
+	}
+
 	ai_will_do = {
-		factor = 10
-		modifier = {
-			factor = 2
-			governing_capacity_percentage = 0.9
+		factor = 1
+	}
+}
+
+pf_zoroastrian_inward_focus_aspect = {
+	sprite = "GFX_progress_of_the_supreme_governor_icon"
+	cost = 200
+	trigger = {
+		NOT = { has_country_modifier = pf_zoroastrian_inward_focus }
+	}
+
+	effect = {
+		custom_tooltip = pf_zoroastrian_inward_focus_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = pf_zoroastrian_inward_focus
+				duration = 3650
+				hidden = no
+			}
 		}
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+pf_zoroastrian_harvest_rituals_aspect = {
+	sprite = "GFX_progress_of_the_supreme_governor_icon"
+	cost = 100
+	trigger = {
+		NOT = { has_country_modifier = pf_zoroastrian_harvest_rituals_flag }
+	}
+
+	effect = {
+		custom_tooltip = pf_zoroastrian_harvest_rituals_tt
+		hidden_effect = {
+			add_country_modifier = {
+			name = pf_zoroastrian_harvest_rituals_flag
+			duration = 3650
+			hidden = yes
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						trade_goods = grain
+						trade_goods = livestock
+						trade_goods = fish
+						trade_goods = wine
+					}
+				}
+				add_province_modifier = {
+					name = pf_zoroastrian_harvest_rituals
+					duration = 3650
+					hidden = no
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+pf_zoroastrian_inspire_zealotry_aspect = {
+	sprite = "GFX_progress_of_the_supreme_governor_icon"
+	cost = 100
+	trigger = {
+		NOT = { has_country_modifier = pf_zoroastrian_inspire_zealotry }
+	}
+
+	effect = {
+		custom_tooltip = pf_zoroastrian_inspire_zealotry_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = pf_zoroastrian_inspire_zealotry
+				duration = 3650
+				hidden = no
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 0.2
+		modifier = {
+			factor = 10
+			is_at_war = yes
+		}
+	}
+}
+
+pf_zoroastrian_fire_worship_aspect = {
+	sprite = "GFX_progress_of_the_supreme_governor_icon"
+	cost = 100
+	trigger = {
+		NOT = { has_country_modifier = pf_zoroastrian_fire_worship }
+	}
+
+	effect = {
+		custom_tooltip = pf_zoroastrian_fire_worship_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = pf_zoroastrian_fire_worship
+				duration = 3650
+				hidden = no
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 0.25
+		modifier = {
+			factor = 10
+			is_at_war = yes
+		}
+	}
+}
+
+pf_zoroastrian_promote_mobads_aspect = {
+	sprite = "GFX_progress_of_the_supreme_governor_icon"
+	cost = 50
+	trigger = {
+		NOT = { has_country_modifier = pf_zoroastrian_promote_mobads }
+	}
+
+	effect = {
+		custom_tooltip = pf_zoroastrian_promote_mobads_tt
+		hidden_effect = {
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			add_country_modifier = {
+				name = pf_zoroastrian_promote_mobads
+				duration = 3650
+				hidden = no
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 0.5
 		modifier = {
 			factor = 3
-			governing_capacity_percentage = 1.0
+			tax_income_percentage = 0.3
 		}
 	}
 }
 
-blessing_dakhma = {
-	is_blessing = yes
-
-	modifier = {
-		build_cost = -0.10
+pf_zoroastrian_conversion_efforts_aspect = {
+	sprite = "GFX_progress_of_the_supreme_governor_icon"
+	cost = 100
+	trigger = {
+		NOT = { has_country_modifier = pf_zoroastrian_conversion_efforts }
 	}
+
+	effect = {
+		custom_tooltip = pf_zoroastrian_conversion_efforts_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = pf_zoroastrian_conversion_efforts
+				duration = 3650
+				hidden = no
+			}
+		}
+	}
+
 	ai_will_do = {
-		factor = 10
+		factor = 4
+		modifier = {
+			factor = 0.5
+			religious_unity = 50
+		}
+		modifier = {
+			factor = 0.4
+			religious_unity = 70
+		}
+		modifier = {
+			factor = 0.1
+			religious_unity = 90
+		}
 	}
 }

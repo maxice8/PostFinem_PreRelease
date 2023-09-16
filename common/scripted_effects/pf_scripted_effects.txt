@@ -110,3 +110,18 @@ pf_clear_trn_tribe_flags = {
 	clr_country_flag = chose_regni_secondary
 	clr_country_flag = chose_catuvellauni_secondary
 }
+
+pf_per_clear_satrapy_revolt_modifiers = {
+	remove_country_modifier = pf_per_satrapy_compromised
+	remove_country_modifier = pf_per_satrapy_refused
+	remove_country_modifier = pf_per_satrapy_collaborated
+}
+
+pf_per_clear_satrapy_revolt_modifiers_persia = {
+	remove_country_modifier = pf_per_satrapy_appealed_to_religion
+	remove_country_modifier = pf_per_ready_for_war
+	remove_country_modifier = pf_per_asked_for_help
+	remove_country_modifier = pf_per_ally_talked
+	remove_country_modifier = pf_per_satrapy_intimidated
+	remove_country_modifier = pf_per_satrapy_divided
+}

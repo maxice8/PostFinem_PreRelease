@@ -1,0 +1,412 @@
+namespace = pf_per_events
+
+country_event = {
+	id = pf_per_events.0
+	title = "pf_per_events_0_title"
+	desc = "pf_per_events_0_desc"
+	picture = OVEREXTENSION_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PER
+	}
+
+	option = {
+		name = "pf_per_events_0_option"
+		ai_chance = { factor = 100 }
+		custom_tooltip = pf_per_events_0_tt
+	}
+}
+
+country_event = {
+	id = pf_per_events.1
+	title = "pf_per_events_1_title"
+	desc = "pf_per_events_1_desc"
+	picture = CIVIL_WAR_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			every_subject_country = {
+				capital_scope = { independence_rebels = 3 }
+			}
+		}
+	}
+
+	option = {
+		name = "pf_per_events_1_option"
+		ai_chance = { factor = 100 }
+		add_stability = -2
+		add_prestige = -20
+		custom_tooltip = pf_per_events_1_tt
+	}
+}
+
+country_event = {
+	id = pf_per_events.2
+	title = "pf_per_events_2_title"
+	desc = "pf_per_events_2_desc"
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+	
+	immediate = {
+		random_subject_country = {
+			limit = { liberty_desire = 50 }
+			save_event_target_as = disobedient_satrap
+		}
+	}
+
+	option = {
+		name = "pf_per_events_2_option"
+		ai_chance = { factor = 100 }
+		add_prestige = -10
+	}
+}
+
+country_event = {
+	id = pf_per_events.3
+	title = "pf_per_events_3_title"
+	desc = "pf_per_events_3_desc"
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+	
+	immediate = {
+		random_subject_country = {
+			limit = { liberty_desire = 50 }
+			save_event_target_as = disobedient_satrap
+		}
+	}
+
+	option = {
+		name = "pf_per_events_3_option_1"
+		ai_chance = { factor = 100 }
+		add_years_of_income = -1
+		event_target:disobedient_satrap = {
+			add_country_modifier = {
+				name = pf_per_satrapy_compromised
+				duration = -1
+				desc = "pf_per_satrapy_revolt_until_end_tt"
+			}
+		}
+	}
+
+	option = {
+		name = "pf_per_events_3_option_2"
+		ai_chance = { factor = 0 }
+		event_target:disobedient_satrap = {
+			add_country_modifier = {
+				name = pf_per_satrapy_refused
+				duration = -1
+				desc = "pf_per_satrapy_revolt_until_end_tt"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pf_per_events.4
+	title = "pf_per_events_4_title"
+	desc = "pf_per_events_4_desc"
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		random_subject_country = {
+			limit = { liberty_desire = 50 }
+			save_event_target_as = disobedient_satrap
+		}
+	}
+
+	option = {
+		name = "pf_per_events_4_option_1"
+		ai_chance = { factor = 100 }
+		add_government_power = {
+			mechanic_type = pf_per_centralisation_mechanic
+			power_type = pf_per_centralisation
+			value = -5
+		}
+		event_target:disobedient_satrap = {
+			add_country_modifier = {
+				name = pf_per_satrapy_compromised
+				duration = -1
+				desc = "pf_per_satrapy_revolt_until_end_tt"
+			}
+		}
+	}
+
+	option = {
+		name = "pf_per_events_4_option_2"
+		ai_chance = { factor = 0 }
+		event_target:disobedient_satrap = {
+			add_country_modifier = {
+				name = pf_per_satrapy_refused
+				duration = -1
+				desc = "pf_per_satrapy_revolt_until_end_tt"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pf_per_events.5
+	title = "pf_per_events_5_title"
+	desc = "pf_per_events_5_desc"
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	
+	immediate = {
+		random_subject_country = {
+			limit = { liberty_desire = 50 }
+			save_event_target_as = disobedient_satrap
+		}
+	}
+
+	option = {
+		name = "pf_per_events_5_option"
+		ai_chance = { factor = 100 }
+		event_target:disobedient_satrap = {
+			capital_scope = { independence_rebels = 3 }
+			random_owned_province = { independence_rebels = 2 }
+			random_owned_province = { independence_rebels = 2 }
+		}
+	}
+}
+
+country_event = {
+	id = pf_per_events.6
+	title = "pf_per_events_6_title"
+	desc = "pf_per_events_6_desc"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	
+	trigger = {
+		calc_true_if = {
+			all_subject_country = { liberty_desire = 50 }
+			amount = 2
+		}
+	}
+
+	immediate = {
+		random_subject_country = {
+			limit = { liberty_desire = 50 }
+			save_event_target_as = disobedient_satrap
+		}
+		random_subject_country = {
+			limit = { 
+				liberty_desire = 50
+				NOT = { tag = event_target:disobedient_satrap }
+			}
+			save_event_target_as = disobedient_satrap2
+		}
+	}
+
+	option = {
+		name = "pf_per_events_6_option"
+		ai_chance = { factor = 100 }
+		event_target:disobedient_satrap = {
+			add_country_modifier = {
+				name = pf_per_satrapy_collaborated
+				duration = -1
+				desc = "pf_per_satrapy_revolt_until_end_tt"
+			}
+		}
+		event_target:disobedient_satrap2 = {
+			add_country_modifier = {
+				name = pf_per_satrapy_collaborated
+				duration = -1
+				desc = "pf_per_satrapy_revolt_until_end_tt"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pf_per_events.7
+	title = "pf_per_events_7_title"
+	desc = "pf_per_events_7_desc"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		any_subject_country = {
+			NOT = { liberty_desire = 100 }
+			
+		}
+	}
+
+	immediate = {
+		random_subject_country = {
+			limit = { NOT = { liberty_desire = 100 } }
+			save_event_target_as = disobedient_satrap # Actually not disobedient
+		}
+	}
+
+	option = {
+		name = "pf_per_events_7_option"
+		ai_chance = { factor = 100 }
+		event_target:disobedient_satrap = {
+			add_country_modifier = {
+				name = pf_per_satrapy_compromised
+				duration = -1
+				desc = "pf_per_satrapy_revolt_until_end_tt"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pf_per_events.8
+	title = "pf_per_events_8_title"
+	desc = "pf_per_events_8_desc"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	mean_time_to_happen = { days = 1 }
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PER
+		is_year = 1450
+		any_subject_country = {
+			liberty_desire = 100
+		}
+		has_disaster = pf_per_satrapy_revolt
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_subject_country = {
+				limit = { liberty_desire = 100}
+				grant_independence = yes
+			}
+		}
+	}
+
+	option = {
+		name = "pf_per_events_8_option"
+		ai_chance = { factor = 100 }
+		custom_tooltip = pf_per_events_8_tt
+		add_stability = -1
+	}
+}
+
+country_event = {
+	id = pf_per_events.9
+	title = "pf_per_events_9_title"
+	desc = {
+		trigger = { 
+			all_subject_country = { NOT = { liberty_desire = 50 } }
+		}
+		desc = "pf_per_events_9_desc_1"
+	}
+	desc = {
+		trigger = { 
+			NOT = { has_government_power = {
+				mechanic_type = pf_per_centralisation_mechanic
+				power_type = pf_per_centralisation
+				value = 20
+			}}
+		}
+		desc = "pf_per_events_9_desc_2"
+	}
+	desc = {
+		trigger = { NOT = { satrapy = 1 } }
+		desc = "pf_per_events_9_desc_3"
+	}
+	
+
+
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = pf_per_had_satrapy_revolt
+	}
+
+	after = {
+		AFG = { pf_per_clear_satrapy_revolt_modifiers = yes }
+		KHU = { pf_per_clear_satrapy_revolt_modifiers = yes }
+		TAB = { pf_per_clear_satrapy_revolt_modifiers = yes }
+		KHO = { pf_per_clear_satrapy_revolt_modifiers = yes }
+		BAL = { pf_per_clear_satrapy_revolt_modifiers = yes }
+		every_subject_nation = { pf_per_clear_satrapy_revolt_modifiers = yes }
+		pf_per_clear_satrapy_revolt_modifiers_persia = yes
+	}
+
+	option = {
+		name = "pf_per_events_9_option_1"
+		trigger = { 
+			all_subject_country = { NOT = { liberty_desire = 50 } }
+		}
+		add_stability = 2
+		add_prestige = 50
+		add_country_modifier = {
+			name = pf_per_won_satrapy_revolt
+			duration = 3650
+		}
+	}
+	option = {
+		name = "pf_per_events_9_option_2"
+		trigger = { 
+			NOT = { has_government_power = {
+				mechanic_type = pf_per_centralisation_mechanic
+				power_type = pf_per_centralisation
+				value = 20
+			}}
+		}
+		add_stability = 1
+		add_country_modifier = {
+			name = pf_per_drew_satrapy_revolt
+			duration = 3650
+		}
+	}
+	option = {
+		name = "pf_per_events_9_option_3"
+		trigger = { NOT = { satrapy = 1 } }
+		add_stability = -3
+		add_prestige = -100
+		add_devotion = -50
+		add_country_modifier = {
+			name = pf_per_lost_satrapy_revolt
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = pf_per_events.10
+	title = "pf_per_events_10_title"
+	desc = "pf_per_events_10_desc"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		random_ally = {
+			limit = { religion = zoroastrian }
+			save_event_target_as = zoroastrian_ally
+		}
+	}
+
+	option = {
+		name = "pf_per_events_10_option_1"
+		ai_chance = { factor = 0 }
+		add_treasury = 100
+	}
+	
+	option = {
+		name = "pf_per_events_10_option_2"
+		ai_chance = { factor = 0 }
+		add_manpower = 2.5
+	}
+	
+	option = {
+		name = "pf_per_events_10_option_3"
+		ai_chance = { factor = 100 }
+		add_country_modifier = {
+			name = pf_per_ally_talked
+			duration = -1
+			desc = pf_per_satrapy_revolt_until_end_tt
+		}
+	}
+}		

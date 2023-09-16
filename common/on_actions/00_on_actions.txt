@@ -59,6 +59,13 @@ on_startup = {
 	#	}
 	#	country_event = { id = ideagroups.1 } #Swap Ideas
 	#}
+	if = {
+		limit = {
+			tag = PER
+			NOT = { is_year = 1445 }
+		}
+		country_event = { id = pf_per_events.0 }
+	}
 }
 
 # country

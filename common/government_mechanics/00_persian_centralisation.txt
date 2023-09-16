@@ -1,0 +1,93 @@
+pf_per_centralisation_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 12
+	available = {
+		tag = PER
+	}
+
+	powers = {
+		pf_per_centralisation = {
+			min = 0
+			max = 100
+			default = 40
+			
+			scaled_modifier = {
+				modifier = {
+					reduced_liberty_desire = -100
+					global_tax_modifier = 0.2
+				}
+			}
+			
+			reverse_scaled_modifier = {
+				modifier = {
+					vassal_forcelimit_bonus = -1.0
+					vassal_manpower_bonus = -1.0
+					global_tax_modifier = -0.8
+				}
+			}
+		}
+	}
+	interactions = {
+		pf_per_centralisation_decrease = {
+			cost_type = pf_per_centralisation
+			cost = 10
+
+			trigger = {
+				has_government_power = {
+					mechanic_type = pf_per_centralisation_mechanic
+					power_type = pf_per_centralisation
+					value = 10
+				}
+			}
+
+			effect = {
+				add_country_modifier = {
+					name = pf_per_satrapies_granted_concessions
+					duration = 1825
+					hidden = no
+				}
+			}
+
+			cooldown_years = 10
+			ai_chance = {
+				factor = 0.1
+				modifier = {
+					factor = 100
+					any_subject_country = {
+						liberty_desire = 50
+					}
+				}
+			}
+		}
+
+		pf_per_centralisation_dummy = {
+			potential = { always = no }
+		}
+
+		pf_per_centralisation_increase = {
+			cost_type = pf_per_centralisation
+			cost = -10
+
+			trigger = { }
+
+			effect = {
+				add_stability = -1
+				add_country_modifier = {
+					name = pf_per_satrapies_seized_privileges
+					duration = 1825
+					hidden = no
+				}
+			}
+			cooldown_years = 10
+			ai_chance = {
+				factor = 0.1
+				modifier = {
+					factor = 100
+					all_subject_country = {
+						NOT = { liberty_desire = 20 }
+					}
+				}
+			}
+		}
+	}
+}
