@@ -2,13 +2,11 @@ pf_mon_sod_stab_for_tributaries = {
 	custom_tooltip = pf_mon_sod_stab_for_tributaries_tt
 	hidden_effect = {
 		every_subject_country = {
-			if = {
-				limit = {
-					is_subject_of_type = tributary_state
-				}
-				overlord = {
-					add_stability = 1
-				}
+			limit = {
+				is_subject_of_type = tributary_state
+			}
+			overlord = {
+				add_stability = 1
 			}
 		}
 	}
@@ -18,24 +16,20 @@ pf_mon_gtt_effect_1 = {
 	custom_tooltip = pf_mon_gtt_effect_1_tt
 	hidden_effect = {
 		every_capital_province = {
-			if = {
-				limit = {
-					region = france_region
-					owner = {
-						NOT = {
-							religion = punic_religion
-						}
-					}
-				}
+			limit = {
+				region = france_region
 				owner = {
-					add_opinion  = {
-						who = ROOT
-						modifier = pf_mon_gtt_opinion_from_upgrade
-					}
-					reverse_add_opinion  = {
-						who = ROOT
-						modifier = pf_mon_gtt_opinion_from_upgrade
-					}
+					NOT = { religion = punic_religion }
+				}
+			}
+			owner = {
+				add_opinion = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
+				}
+				reverse_add_opinion = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
 				}
 			}
 		}
@@ -45,30 +39,28 @@ pf_mon_gtt_effect_2 = {
 	custom_tooltip = pf_mon_gtt_effect_2_tt
 	hidden_effect = {
 		every_capital_province = {
-			if = {
-				limit = {
-					region = france_region
-					NOT = {
-						religion = punic_religion
-					}
-				}
+			limit = {
+				region = france_region
 				owner = {
-					add_opinion  = {
-						who = ROOT
-						modifier = pf_mon_gtt_opinion_from_upgrade
-					}
-					add_opinion  = {
-						who = ROOT
-						modifier = pf_mon_gtt_opinion_from_upgrade
-					}
-					reverse_add_opinion  = {
-						who = ROOT
-						modifier = pf_mon_gtt_opinion_from_upgrade
-					}
-					reverse_add_opinion  = {
-						who = ROOT
-						modifier = pf_mon_gtt_opinion_from_upgrade
-					}
+					NOT = { religion = punic_religion }
+				}
+			}
+			owner = {
+				add_opinion = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
+				}
+				reverse_add_opinion = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
+				}
+				reverse_add_opinion = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
 				}
 			}
 		}
@@ -78,55 +70,62 @@ pf_mon_gtt_effect_3 = {
 	custom_tooltip = pf_mon_gtt_effect_3_tt
 	hidden_effect = {
 		every_capital_province = {
-			if = {
-				limit = {
-					region = france_region
-					NOT = {
-						religion = punic_religion
-					}
-				}
+			limit = {
+				region = france_region
 				owner = {
-					add_opinion  = {
-						who = ROOT
-						modifier = pf_mon_gtt_opinion_from_upgrade
-					}
-					add_opinion  = {
-						who = ROOT
-						modifier = pf_mon_gtt_opinion_from_upgrade
-					}
-					add_opinion  = {
-						who = ROOT
-						modifier = pf_mon_gtt_opinion_from_upgrade
-					}
-					add_opinion  = {
-						who = ROOT
-						modifier = pf_mon_gtt_opinion_from_upgrade
-					}
-					reverse_add_opinion  = {
-						who = ROOT
-						modifier = pf_mon_gtt_opinion_from_upgrade
-					}
-					reverse_add_opinion  = {
-						who = ROOT
-						modifier = pf_mon_gtt_opinion_from_upgrade
-					}
-					reverse_add_opinion  = {
-						who = ROOT
-						modifier = pf_mon_gtt_opinion_from_upgrade
-					}
-					reverse_add_opinion  = {
-						who = ROOT
-						modifier = pf_mon_gtt_opinion_from_upgrade
-					}
+					NOT = { religion = punic_religion }
+				}
+			}
+			owner = {
+				add_opinion = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
+				}
+				reverse_add_opinion = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
+				}
+				reverse_add_opinion = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
+				}
+				reverse_add_opinion = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
+				}
+				reverse_add_opinion = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
 				}
 			}
 		}
 	}
 }
 
-pf_mon_hop_unlock_blessings = {custom_tooltip = pf_mon_hop_unlock_blessings_tt}
-pf_mon_hop_frequent_blessings = {custom_tooltip = pf_mon_hop_frequent_blessings_tt}
-pf_mon_hop_upgrade_blessings = {custom_tooltip = pf_mon_hop_upgrade_blessings_tt}
+pf_mon_hop_unlock_blessings = {
+	custom_tooltip = pf_mon_hop_unlock_blessings_tt
+	# NOTE(howard): might want to add a 'set_countr_flag' here that can be checked
+}
+pf_mon_hop_frequent_blessings = {
+	custom_tooltip = pf_mon_hop_frequent_blessings_tt
+	# NOTE(howard): might want to add a 'set_countr_flag' here that can be checked
+}
+pf_mon_hop_upgrade_blessings = {
+	custom_tooltip = pf_mon_hop_upgrade_blessings_tt
+	# NOTE(howard): might want to add a 'set_countr_flag' here that can be checked
+}
 
 
 pf_random_neighbour_province = {
@@ -177,25 +176,14 @@ pf_upgrade_heir = {
 
 pf_random_upgrade_heir = {
 	random_list = {
-		1 = {pf_upgrade_heir = {type = adm}}
-		1 = {pf_upgrade_heir = {type = dip}}
-		1 = {pf_upgrade_heir = {type = mil}}
+		1 = {
+			pf_upgrade_heir = {type = adm}
+		}
+		1 = {
+			pf_upgrade_heir = {type = dip}
+		}
+		1 = {
+			pf_upgrade_heir = {type = mil}
+		}
 	}
-}
-
-pf_add_loyalty_to_estates = {
-	add_estate_loyalty = {estate = estate_brahmins loyalty = $value$}
-	add_estate_loyalty = {estate = estate_burghers loyalty = $value$}
-	add_estate_loyalty = {estate = estate_church loyalty = $value$}
-	add_estate_loyalty = {estate = estate_cossacks loyalty = $value$}
-	add_estate_loyalty = {estate = estate_dhimmi loyalty = $value$}
-	add_estate_loyalty = {estate = estate_eunuchs loyalty = $value$}
-	add_estate_loyalty = {estate = estate_jains loyalty = $value$}
-	add_estate_loyalty = {estate = estate_janissaries loyalty = $value$}
-	add_estate_loyalty = {estate = estate_maratha loyalty = $value$}
-	add_estate_loyalty = {estate = estate_nobles loyalty = $value$}
-	add_estate_loyalty = {estate = estate_nomadic_tribes loyalty = $value$}
-	add_estate_loyalty = {estate = estate_rajput loyalty = $value$}
-	add_estate_loyalty = {estate = estate_special loyalty = $value$}
-	add_estate_loyalty = {estate = estate_vaisyas loyalty = $value$}
 }

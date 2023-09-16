@@ -1264,7 +1264,12 @@ province_event = { # Blessing of Apollo
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        pf_add_loyalty_to_estates = {value = 10}
+        owner = {
+            add_estate_loyalty = {
+                estate = all
+                loyalty = 10
+            }
+        }
     }
     option = {
         name = pf_mon_events_we_are_truly_blessed
@@ -1278,7 +1283,12 @@ province_event = { # Blessing of Apollo
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        pf_add_loyalty_to_estates = {value = 20}
+        owner = {
+            add_estate_loyalty = {
+                estate = all
+                loyalty = 20
+            }
+        }
     }
 }
 province_event = { # Blessing of Shamem
@@ -1349,7 +1359,12 @@ province_event = { # Blessing of Shamem
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        pf_add_loyalty_to_estates = {value = 10}
+        owner = {
+            add_estate_loyalty = {
+                estate = all
+                loyalty = 10
+            }
+        }
     }
     option = {
         name = pf_mon_events_we_are_truly_blessed
@@ -1363,7 +1378,12 @@ province_event = { # Blessing of Shamem
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        pf_add_loyalty_to_estates = {value = 20}
+        owner = {
+            add_estate_loyalty = {
+                estate = all
+                loyalty = 20
+            }
+        }
     }
 }
 province_event = { # Blessing of Apollo
@@ -1434,7 +1454,12 @@ province_event = { # Blessing of Apollo
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        pf_add_loyalty_to_estates = {value = 10}
+        owner = {
+            add_estate_loyalty = {
+                estate = all
+                loyalty = 10
+            }
+        }
     }
     option = {
         name = pf_mon_events_we_are_truly_blessed
@@ -1448,7 +1473,12 @@ province_event = { # Blessing of Apollo
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        pf_add_loyalty_to_estates = {value = 20}
+        owner = {
+            add_estate_loyalty = {
+                estate = all
+                loyalty = 20
+            }
+        }
     }
 }
 province_event = { # Blessing of Balder
@@ -1519,7 +1549,12 @@ province_event = { # Blessing of Balder
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        pf_add_loyalty_to_estates = {value = 10}
+        owner = {
+            add_estate_loyalty = {
+                estate = all
+                loyalty = 10
+            }
+        }
     }
     option = {
         name = pf_mon_events_we_are_truly_blessed
@@ -1533,7 +1568,12 @@ province_event = { # Blessing of Balder
             factor = 1
         }
         set_province_flag = pf_mon_hop_blessing_flag
-        pf_add_loyalty_to_estates = {value = 20}
+        owner = {
+            add_estate_loyalty = {
+                estate = all
+                loyalty = 20
+            }
+        }
     }
 }
 province_event = { # Blessing of Ares
