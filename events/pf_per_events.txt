@@ -330,7 +330,9 @@ country_event = {
 		TAB = { pf_per_clear_satrapy_revolt_modifiers = yes }
 		KHO = { pf_per_clear_satrapy_revolt_modifiers = yes }
 		BAL = { pf_per_clear_satrapy_revolt_modifiers = yes }
-		every_subject_nation = { pf_per_clear_satrapy_revolt_modifiers = yes }
+		every_subject_country = {
+			pf_per_clear_satrapy_revolt_modifiers = yes
+		}
 		pf_per_clear_satrapy_revolt_modifiers_persia = yes
 	}
 
