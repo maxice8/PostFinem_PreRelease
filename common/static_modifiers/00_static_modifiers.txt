@@ -636,6 +636,7 @@ positive_stability = {
 	yearly_corruption = -0.02
 	global_institution_spread = 0.05
 	yearly_harmony = 0.25
+	monthly_mac_war_cabinet_organization = 0.01
 }
 
 privateering = {
@@ -650,6 +651,7 @@ negative_stability = {
 	devotion = 1
 	caravan_power = 0.05
 	yearly_harmony = 0.25
+	monthly_mac_war_cabinet_organization = 0.03
 }
 
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
@@ -736,6 +738,7 @@ bankruptcy = {
 	idea_cost = 0.5
 	imperial_mandate = -0.1
 	great_project_upgrade_cost = 0.5
+	monthly_mac_war_cabinet_organization = -0.5
 }
 
 
@@ -752,6 +755,7 @@ peace = {
 	rr_girondists_influence = -0.1
 	pr_smugglers_influence = 0.1
 	monthly_militarized_society = -0.1
+	monthly_mac_war_cabinet_organization = -0.05
 }
 
 unconditional_surrender = {
@@ -779,6 +783,7 @@ war_exhaustion = {
 	global_trade_goods_size_modifier = -0.02
 	monthly_militarized_society = -0.05
 	monthly_trn_cohesion = -0.05
+	monthly_mac_war_cabinet_organization = -0.02
 }
 
 doom = {
@@ -1043,6 +1048,7 @@ corruption = {
 	eunuchs_loyalty_modifier = 0.1
 	monthly_heir_claim_increase = 0.025
 	monthly_trn_cohesion = -50
+	monthly_mac_war_cabinet_organization = -0.03
 }
 
 root_out_corruption = {
@@ -1300,6 +1306,7 @@ high_army_professionalism = {
 	siege_ability = 0.2
 	drill_decay_modifier = -0.5
 	allowed_samurai_fraction = 0.1
+	monthly_mac_war_cabinet_organization = 0.5
 }
 
 streltsy_modifier = {
@@ -1548,6 +1555,7 @@ dishonoured_alliance =  {
 
 drilling_armies = { # Multiplied by percentage of forcelimit currently drilling
 	yearly_army_professionalism = 0.01
+	monthly_mac_war_cabinet_organization = 0.03
 }
 
 ##################################################################################################
