@@ -1,0 +1,21 @@
+country_decisions = {
+	freyjas_wisdom = {
+		potential = {
+			religion = norse_pagan_reformed
+			tag = NLD
+		}
+
+		allow = {
+			has_personal_deity = vanir_freyja
+		}
+
+		effect = {
+			custom_tooltip = nld_remove_fow
+			hidden_effect = {
+				every_war_enemy_country = {
+					remove_fow = 24
+				}
+			}
+		}
+	}
+}
