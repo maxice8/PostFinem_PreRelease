@@ -917,7 +917,7 @@ pf_nld_4 = {
 		}
 
 		trigger = {
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 45
 				region = scandinavia_region
 			}
@@ -1608,7 +1608,7 @@ pf_nld_eco_3 = {
 		} 
 
 		trigger = {  
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
 				OR = {
 					region = scandinavia_region
@@ -1850,25 +1850,12 @@ pf_nld_colonisation_1 = {
 		provinces_to_highlight = {  
 			colonial_region = colonial_alaska
 			has_discovered = ROOT
-			NOT = {
-				owner = {
-					OR = {
-						tag = ROOT
-						is_colonial_nation_of = ROOT
-					}
-				}
-			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {  
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
-				owner = {
-					OR = {
-						tag = ROOT
-						is_colonial_nation_of = ROOT
-					}
-				}
 				colonial_region = colonial_alaska
 			}
 		} 
@@ -1957,13 +1944,12 @@ pf_nld_colonisation_2 = {
 		required_missions = { pf_nld_reexplore_the_sagas } 
 		provinces_to_highlight = {  
 			colonial_region = colonial_canada
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			has_discovered = ROOT
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {  
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
 				colonial_region = colonial_canada
 			}
@@ -2008,13 +1994,14 @@ pf_nld_colonisation_2 = {
 		}
 		provinces_to_highlight = {  
 			colonial_region = colonial_louisiana
+			has_discovered = ROOT
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		} 
 
 		trigger = {  
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
 				colonial_region = colonial_louisiana
 			}
@@ -2077,13 +2064,14 @@ pf_nld_colonisation_3 = {
 		required_missions = { pf_nld_a_bit_of_truth_in_legends } 
 		provinces_to_highlight = {  
 			colonial_region = colonial_eastern_america
+			has_discovered = ROOT
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		} 
 
 		trigger = {  
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
 				colonial_region = colonial_eastern_america
 			}
@@ -2126,7 +2114,7 @@ pf_nld_colonisation_4 = {
 		} 
 
 		trigger = {  
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
 				region = guinea_region
 			}
@@ -2162,13 +2150,14 @@ pf_nld_colonisation_4 = {
 		}
 		provinces_to_highlight = {  
 			colonial_region = colonial_the_carribean
+			has_discovered = ROOT
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		} 
 
 		trigger = {  
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
 				colonial_region = colonial_the_carribean
 			}
@@ -2214,7 +2203,7 @@ pf_nld_colonisation_5 = {
 
 		trigger = { 
 			owns_core_province = 1177 
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
 				trade_company_region = trade_company_south_africa
 			}
