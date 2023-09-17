@@ -672,7 +672,7 @@ lingonian_military_academy = { # lma
 		area_modifier = {
 		}
 		country_modifiers = {
-			army_tradition_from_battle = 0.01
+			army_tradition_from_battle = 0.25
 			prestige_from_land = 0.01
 			land_forcelimit_modifier = 0.025
 			monthly_gaul_confederation = 0.05
@@ -690,7 +690,7 @@ lingonian_military_academy = { # lma
 		area_modifier = {
 		}
 		country_modifiers = {
-			army_tradition_from_battle = 0.015
+			army_tradition_from_battle = 0.5
 			prestige_from_land = 0.025
 			land_forcelimit_modifier = 0.05
 			monthly_gaul_confederation = 0.1
@@ -708,7 +708,7 @@ lingonian_military_academy = { # lma
 		area_modifier = {
 		}
 		country_modifiers = {
-			army_tradition_from_battle = 0.02
+			army_tradition_from_battle = 0.75
 			prestige_from_land = 0.05
 			land_forcelimit_modifier = 0.1
 			monthly_gaul_confederation = 0.15
