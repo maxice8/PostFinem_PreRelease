@@ -14,7 +14,7 @@ pf_per_centralization_mechanic = {
 
 			scaled_modifier = {
 				modifier = {
-					reduced_liberty_desire = -50
+					reduced_liberty_desire = -100
 					global_tax_modifier = 0.2
 				}
 			}
@@ -28,6 +28,7 @@ pf_per_centralization_mechanic = {
 			}
 		}
 	}
+
 	interactions = {
 		pf_per_centralization_decrease = {
 			cost_type = pf_per_centralization

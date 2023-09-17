@@ -71,10 +71,20 @@ country_event = {
 	desc = "pf_per_events_3_desc"
 	picture = NOBLE_ESTATE_DEMANDS_eventPicture
 	is_triggered_only = yes
+
+	trigger = {
+		any_subject_country = {
+			liberty_desire = 50
+			NOT = { has_country_modifier = pf_per_satrapy_compromised }
+		}
+	}
 	
 	immediate = {
 		random_subject_country = {
-			limit = { liberty_desire = 50 }
+			limit = {
+				liberty_desire = 50
+				NOT = { has_country_modifier = pf_per_satrapy_compromised }
+			}
 			save_event_target_as = disobedient_satrap
 		}
 	}
@@ -88,6 +98,10 @@ country_event = {
 				name = pf_per_satrapy_compromised
 				duration = -1
 				desc = "pf_per_satrapy_revolt_until_end_tt"
+			}
+			if = {
+				limit = { has_country_modifier = pf_per_satrapy_refused }
+				remove_country_modifier = pf_per_satrapy_refused
 			}
 		}
 	}
@@ -112,9 +126,19 @@ country_event = {
 	picture = NOBLE_ESTATE_DEMANDS_eventPicture
 	is_triggered_only = yes
 
+	trigger = {
+		any_subject_country = {
+			liberty_desire = 50
+			NOT = { has_country_modifier = pf_per_satrapy_compromised }
+		}
+	}
+	
 	immediate = {
 		random_subject_country = {
-			limit = { liberty_desire = 50 }
+			limit = {
+				liberty_desire = 50
+				NOT = { has_country_modifier = pf_per_satrapy_compromised }
+			}
 			save_event_target_as = disobedient_satrap
 		}
 	}
@@ -132,6 +156,10 @@ country_event = {
 				name = pf_per_satrapy_compromised
 				duration = -1
 				desc = "pf_per_satrapy_revolt_until_end_tt"
+			}
+			if = {
+				limit = { has_country_modifier = pf_per_satrapy_refused }
+				remove_country_modifier = pf_per_satrapy_refused
 			}
 		}
 	}
@@ -411,4 +439,58 @@ country_event = {
 			desc = pf_per_satrapy_revolt_until_end_tt
 		}
 	}
-}		
+}
+
+country_event = {
+	id = pf_per_events.11
+	title = "pf_per_events_11_title"
+	desc = "pf_per_events_11_desc"
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+	
+	trigger = {
+		any_subject_country = {
+			liberty_desire = 50
+			NOT = { has_country_modifier = pf_per_satrapy_compromised }
+		}
+	}
+	
+	immediate = {
+		random_subject_country = {
+			limit = {
+				liberty_desire = 50
+				NOT = { has_country_modifier = pf_per_satrapy_compromised }
+			}
+			save_event_target_as = disobedient_satrap
+		}
+	}
+
+	option = {
+		name = "pf_per_events_11_option_1"
+		ai_chance = { factor = 100 }
+		add_yearly_manpower = -1
+		event_target:disobedient_satrap = {
+			add_country_modifier = {
+				name = pf_per_satrapy_compromised
+				duration = -1
+				desc = "pf_per_satrapy_revolt_until_end_tt"
+			}
+			if = {
+				limit = { has_country_modifier = pf_per_satrapy_refused }
+				remove_country_modifier = pf_per_satrapy_refused
+			}
+		}
+	}
+
+	option = {
+		name = "pf_per_events_11_option_2"
+		ai_chance = { factor = 0 }
+		event_target:disobedient_satrap = {
+			add_country_modifier = {
+				name = pf_per_satrapy_refused
+				duration = -1
+				desc = "pf_per_satrapy_revolt_until_end_tt"
+			}
+		}
+	}
+}
