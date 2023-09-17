@@ -1538,7 +1538,10 @@ on_adm_development = {
 	# pf
 	if = {
 		limit = {
-			has_country_modifier = pf_lag_urbanisation
+			OR = {
+				has_country_modifier = pf_lag_urbanisation
+				has_country_modifier = nld_industralize_cities
+			}
 		}
 		random_list = {
 			5 = { add_base_tax = 1 }
@@ -1553,7 +1556,10 @@ on_dip_development = {
 	# pf
 	if = {
 		limit = {
-			has_country_modifier = pf_lag_urbanisation
+			OR = {
+				has_country_modifier = pf_lag_urbanisation
+				has_country_modifier = nld_industralize_cities
+			}
 		}
 		random_list = {
 			5 = { add_base_production = 1 }
@@ -1568,7 +1574,10 @@ on_mil_development = {
 	# pf
 	if = {
 		limit = {
-			has_country_modifier = pf_lag_urbanisation
+			OR = {
+				has_country_modifier = pf_lag_urbanisation
+				has_country_modifier = nld_industralize_cities
+			}
 		}
 		random_list = {
 			5 = { add_base_manpower = 1 }
@@ -3741,6 +3750,64 @@ on_province_culture_converted = {
 	if = {
 		limit = {
 			owner = {
+				OR = {
+					has_country_flag = pf_sami_herding_flag
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_northern_colonies
+						}
+						capital = {
+							colonial_region = colonial_alaska
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_a_bit_of_truth_in_legends
+						}
+						capital = {
+							colonial_region = colonial_canada
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_spread_westwards
+						}
+						capital = {
+							colonial_region = colonial_louisiana
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_new_sweden
+						}
+						capital = {
+							colonial_region = colonial_eastern_america
+						}
+					}
+				}
+			}
+			culture = sapmi
+			trade_goods = fur
+		}
+		add_province_modifier = {
+			name = sami_herding
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_province_modifier = sami_herding
+		}
+		remove_province_modifier = sami_herding
+	}
+
+	if = {
+		limit = {
+			owner = {
 				has_reform = enlightened_norse_kingdom
 			}
 			has_owner_accepted_culture = no
@@ -3931,7 +3998,85 @@ on_province_owner_change = {
 	if = {
 		limit = {
 			owner = {
-				has_country_flag = pf_arctic_expansion_flag
+				OR = {
+					has_country_flag = pf_sami_herding_flag
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_northern_colonies
+						}
+						capital = {
+							colonial_region = colonial_alaska
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_a_bit_of_truth_in_legends
+						}
+						capital = {
+							colonial_region = colonial_canada
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_spread_westwards
+						}
+						capital = {
+							colonial_region = colonial_louisiana
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_new_sweden
+						}
+						capital = {
+							colonial_region = colonial_eastern_america
+						}
+					}
+				}
+			}
+			culture = sapmi
+			trade_goods = fur
+		}
+		add_province_modifier = {
+			name = sami_herding
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_province_modifier = sami_herding
+		}
+		remove_province_modifier = sami_herding
+	}
+
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					has_country_flag = pf_sami_herding_flag
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_northern_colonies
+						}
+						capital = {
+							colonial_region = colonial_alaska
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_a_bit_of_truth_in_legends
+						}
+						capital = {
+							colonial_region = colonial_canada
+						}
+					}
+				}
 			}
 			has_climate = arctic
 		}
@@ -3939,6 +4084,18 @@ on_province_owner_change = {
 			name = swe_arctic_expansion
 			duration = -1
 		}
+	}
+
+	if = {
+		limit = {
+			owner = {
+				NOT = {
+					has_country_flag = pf_arctic_expansion_flag
+				}
+			}
+			has_province_modifier = swe_arctic_expansion
+		}
+		remove_province_modifier = swe_arctic_expansion
 	}
 
 	if = {
@@ -4672,6 +4829,64 @@ on_trade_good_changed = {
 			add_base_production = -1 
 			# ]]]
 		}
+	}
+
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					has_country_flag = pf_sami_herding_flag
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_northern_colonies
+						}
+						capital = {
+							colonial_region = colonial_alaska
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_a_bit_of_truth_in_legends
+						}
+						capital = {
+							colonial_region = colonial_canada
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_spread_westwards
+						}
+						capital = {
+							colonial_region = colonial_louisiana
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_new_sweden
+						}
+						capital = {
+							colonial_region = colonial_eastern_america
+						}
+					}
+				}
+			}
+			culture = sapmi
+			trade_goods = fur
+		}
+		add_province_modifier = {
+			name = sami_herding
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_province_modifier = sami_herding
+		}
+		remove_province_modifier = sami_herding
 	}
 }
 

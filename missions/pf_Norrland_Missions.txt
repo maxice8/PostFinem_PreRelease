@@ -30,23 +30,13 @@ pf_nld_1 = {
 		}
 
 		effect = { 
-			
-			custom_tooltip = nld_assimilate_the_finns_vassal_tt
-			custom_tooltip = unlock_merc_pohjantahden_hevosvaki_tt
-			custom_tooltip = FREE_OF_ARMY_PROFESSIONALISM_COST
-			custom_tooltip = empty_line_tt
-			custom_tooltip = alternatively_tt
-			custom_tooltip = nld_finnish_cavalry_tt
-			custom_tooltip = nld_finnish_cavalry_effects1_tt
-			custom_tooltip = nld_finnish_cavalry_effects2_tt
-			custom_tooltip = empty_line_tt
-
 			if = {
 				limit = {
 					FIN = {
 						is_subject_of = NLD
 					}
 				}
+				custom_tooltip = YES_PF_FIN_MERCS
 				hidden_effect = {
 					unlock_merc_company = {
 						merc_company = merc_pohjantahden_hevosvaki
@@ -54,13 +44,41 @@ pf_nld_1 = {
 					}
 				}
 			} 
-
 			else = {
+				custom_tooltip = NO_PF_FIN_MERCS
+			}
+			tooltip = {
+				unlock_merc_company = {
+					merc_company = merc_pohjantahden_hevosvaki
+					free_merc = yes
+				}
+			}
+
+			custom_tooltip = empty_line_tt
+
+			if = {
+				limit = {
+					NOT = {
+						FIN = {
+							is_subject_of = NLD
+						}
+					}
+				}
+				custom_tooltip = YES_PF_OTHERWISE
 				hidden_effect = {
 					add_country_modifier = {
 						name = nld_finnish_cavalry
 						duration = 5475
 					}
+				}
+			}
+			else = {
+				custom_tooltip = NO_PF_OTHERWISE
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = nld_finnish_cavalry
+					duration = 5475
 				}
 			}
 
@@ -109,12 +127,72 @@ pf_nld_1 = {
 		}
 
 		effect = {  
-			custom_tooltip = nld_protect_the_karelians_tt
-			custom_tooltip = nld_protect_the_karelians_modifier
-			custom_tooltip = empty_line_tt
-			custom_tooltip = alternatively_tt
-			custom_tooltip = nld_karelian_forts
-			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					KRL = {
+						vassal_of = NLD
+						num_of_owned_provinces_with = {
+							value = 5
+							culture = karelian
+							region = russia_region
+						}
+					}
+				}
+				custom_tooltip = YES_PF_KAR_VASSAL
+				hidden_effect = {
+					country_event = {
+						id = nld_karelia_fortifications.1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = NO_PF_KAR_VASSAL
+			}
+			tooltip = {
+				KRL = {
+					add_country_modifier = {
+						name = krl_karelian_fortifications
+						duration = -1
+					}
+				}
+			}
+			
+			
+
+			if = {
+				limit = {
+					NOT = {
+						KRL = {
+							vassal_of = NLD
+						}
+					}	
+				}
+				custom_tooltip = YES_PF_OTHERWISE
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							culture = karelian
+							region = russia_region
+							has_fort_building_trigger = yes
+						}
+						add_province_modifier = {
+							name = nld_karelian_forts
+							duration = -1
+						}
+					}
+				}
+			}
+			else = {
+				custom_tooltip = NO_PF_OTHERWISE
+			}
+			custom_tooltip = nld_every_fort_province
+			tooltip = {
+				add_province_modifier = {
+					name = nld_karelian_forts
+					duration = -1
+				}
+			}
+			
 
 			estonia_ingria_area = {
 				limit = {
@@ -139,36 +217,6 @@ pf_nld_1 = {
 			}
 			add_permanent_claim = 33
 			add_permanent_claim = 34
-
-			hidden_effect = {
-				if = {
-					limit = {
-						KRL = {
-							vassal_of = NLD
-							num_of_owned_provinces_with = {
-								value = 5
-								culture = karelian
-								region = russia_region
-							}
-						}
-					}
-					country_event = {
-						id = nld_karelia_fortifications.1
-					}
-				}
-				else = {
-					every_owned_province = {
-						limit = {
-							culture = karelian
-							region = russia_region
-						}
-						add_province_modifier = {
-							name = nld_karelian_forts
-							duration = -1
-						}
-					}
-				}
-			}
 		} 
 	}
 
@@ -315,6 +363,12 @@ pf_nld_2 = {
 				}
 			}
 			custom_tooltip = pf_nld_arctic_expansion_tt
+			tooltip = {
+				add_province_modifier = {
+					name = swe_arctic_expansion
+					duration = -1
+				}
+			}
 		} 
 	}
 
@@ -441,6 +495,11 @@ pf_nld_2 = {
 		}
 
 		effect = {  
+			add_country_modifier = {
+				name = nld_civilised_the_hordes
+				duration = -1
+			}
+
 			south_slavia_region = {
 				limit = {
 					NOT = { is_core = ROOT } 
@@ -454,11 +513,6 @@ pf_nld_2 = {
 					NOT = { is_permanent_claim = ROOT } 
 				}
 				add_permanent_claim = ROOT
-			}
-
-			add_country_modifier = {
-				name = nld_civilised_the_hordes
-				duration = -1
 			}
 		} 
 	}
@@ -765,6 +819,11 @@ pf_nld_3 = {
 		}
 
 		effect = {  
+			add_country_modifier = {
+				name = nld_northrlandsrikja
+				duration = -1
+			}
+
 			north_german_region = {
 				limit = {
 					NOT = { is_core = ROOT } 
@@ -778,11 +837,6 @@ pf_nld_3 = {
 					NOT = { is_permanent_claim = ROOT } 
 				}
 				add_permanent_claim = ROOT
-			}
-
-			add_country_modifier = {
-				name = nld_northrlandsrikja
-				duration = -1
 			}
 		} 
 	}
@@ -1066,6 +1120,7 @@ pf_nld_5 = {
 		}
 
 		effect = {  
+			unlock_estate_privilege = { estate_privilege = estate_burghers_mountain_expansion }
 			add_permanent_claim = 4110
 			add_permanent_claim = 252
 			add_permanent_claim = 251
@@ -1076,7 +1131,6 @@ pf_nld_5 = {
 			add_permanent_claim = 369
 			add_permanent_claim = 1978
 			add_permanent_claim = 1979
-			unlock_estate_privilege = { estate_privilege = estate_burghers_mountain_expansion }
 		} 
 	}
 
@@ -1117,16 +1171,17 @@ pf_nld_5 = {
 		}
 
 		effect = {  
+			add_country_modifier = {
+				name = nld_legacy_of_knut
+				duration = 18250
+			}
+
 			british_isles_region = {
 				limit = {
 					NOT = { is_core = ROOT } 
 					NOT = { is_permanent_claim = ROOT } 
 				}
 				add_permanent_claim = ROOT
-			}
-			add_country_modifier = {
-				name = nld_legacy_of_knut
-				duration = 18250
 			}
 		} 
 	}
@@ -1194,20 +1249,31 @@ pf_nld_eco_1 = {
 				}
 				custom_tooltip = swe_industrialize_sweden_tt
 			}
+			
+			custom_tooltip = empty_line_tt
 
-			every_owned_province = {
-				limit = {
-					OR = {
-						trade_goods = iron
-						trade_goods = copper
+			custom_tooltip = nld_swedish_metallurgy_tt
+
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							trade_goods = iron
+							trade_goods = copper
+						}
 					}
-				}
-				custom_tooltip = nld_swedish_metallurgy_tt
-				hidden_effect = {
+					
 					add_province_modifier = {
 						name = nld_swedish_metallurgy
 						duration = 7300
 					}
+					
+				}
+			}
+			tooltip = {
+				add_province_modifier = {
+					name = nld_swedish_metallurgy
+					duration = 7300
 				}
 			}
 		} 
@@ -1318,9 +1384,36 @@ pf_nld_eco_2 = {
 				value = 10
 				has_tax_building_trigger = yes
 			}
+			
 		}
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_temples_of_the_north
+				duration = 5475
+			}
+
+			for = {
+				custom_tooltip = nld_upgrade_temple
+				amount = 5
+				effect = "
+				random_province = {
+					if = {
+						limit = {
+							has_building = temple
+						}
+						upgrade_building = {tax = yes}
+					}
+					else_if = {
+						limit = {
+							has_building = cathedral
+						}
+						add_base_tax = 2
+					}
+				}
+				"
+			}
+		} 
 	}
 
 	pf_nld_support_the_gothi = {
@@ -1338,9 +1431,26 @@ pf_nld_eco_2 = {
 				estate = estate_church
 				influence = 40
 			}
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 4
+			}
+			num_of_estate_agendas_completed = {
+				estate = estate_church
+				value = 4
+			}
 		}
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_gothi_loyalty
+				duration = 7300
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 20
+			}
+		} 
 	}
 
 	pf_nld_restrict_the_nobles = {
@@ -1361,7 +1471,19 @@ pf_nld_eco_2 = {
 			}
 		}
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_rein_in_nobles
+				duration = 5475
+			}
+			define_advisor = {
+				type = grand_captain
+				skill = 2
+				religion = ROOT
+				culture = ROOT
+				cost_multiplier = 0.5
+			}
+		} 
 	}
 
 	pf_nld_develop_lulea = {
@@ -1380,10 +1502,19 @@ pf_nld_eco_2 = {
 				development = 30 
 				has_tax_building_trigger = yes
 				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
 			}  
 		} 
 
-		effect = {  } 
+		effect = {  
+			11 = {
+				add_prosperity = 100
+				add_province_modifier = {
+					name = nld_lulea_modifier
+					duration = -1
+				}
+			}
+		} 
 	}
 }
 pf_nld_eco_3 = {
@@ -1407,7 +1538,28 @@ pf_nld_eco_3 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = nld_sami_herding_tt
+			tooltip = {
+				add_province_modifier = {
+					name = sami_herding
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				set_country_flag = pf_sami_herding_flag
+				every_owned_province = {
+					limit = {
+						trade_goods = fur
+						culture = sapmi
+					}
+					add_province_modifier = {
+						name = sami_herding
+						duration = -1
+					}
+				}
+			}
+		} 
 	}
 
 	pf_nld_control_inland_trade_routes = {
@@ -1430,13 +1582,7 @@ pf_nld_eco_3 = {
 					province_has_center_of_trade_of_level = 1
 					has_port = no
 				}
-				province_id = 33
-				province_id = 38
-				province_id = 40
-				province_id = 43
-				province_id = 44
-				province_id = 1858
-				province_id = 1874
+				has_river_estuary_trigger = yes
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1458,23 +1604,22 @@ pf_nld_eco_3 = {
 						province_has_center_of_trade_of_level = 1
 						has_port = no
 					}
-					custom_trigger_tooltip = {
-						tooltip = pf_nld_has_estuary_tt
-						OR = {
-							province_id = 33
-							province_id = 38
-							province_id = 40
-							province_id = 43
-							province_id = 44
-							province_id = 1858
-							province_id = 1874
-						}
-					}
+					has_river_estuary_trigger = yes
 				}
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = nld_4_years_of_income
+			custom_tooltip = empty_line_tt
+			add_years_of_trade_income = {
+				years = 4
+			}
+			custom_tooltip = nld_free_inland_routes
+			hidden_effect = {
+				set_country_flag = pf_improved_inland_routes
+			}
+		} 
 	}
 
 	pf_nld_connection_to_the_vanir = {
@@ -1499,7 +1644,12 @@ pf_nld_eco_3 = {
 
 		} 
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = nld_unlock_vanir_deities
+			hidden_effect = {
+				set_country_flag = pf_nld_vanir_deities 
+			}
+		} 
 	}
 
 	pf_nld_industrialise_the_cities = {
@@ -1521,7 +1671,13 @@ pf_nld_eco_3 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_industralize_cities
+				duration = -1
+			}
+			custom_tooltip = PF_LAG_DOUBLE_DEV_CHANCE
+		} 
 	}
 }
 pf_nld_eco_4 = {
@@ -1551,7 +1707,19 @@ pf_nld_eco_4 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_appease_burghers
+				duration = 3650
+			}
+			define_advisor = {
+				type = trader
+				skill = 2
+				religion = ROOT
+				culture = ROOT
+				cost_multiplier = 0.25
+			}
+		} 
 	}
 
 	pf_nld_increase_production = {
@@ -1567,7 +1735,22 @@ pf_nld_eco_4 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			for = {
+				custom_tooltip = nld_add_base_production
+				amount = 5
+				effect = "
+				random_province = {
+					if = {
+						limit = {
+							has_production_building_trigger = yes
+						}
+						add_base_production = 2
+					}
+				}
+				"
+			}
+		} 
 	}
 }
 pf_nld_eco_5 = {
@@ -1591,10 +1774,15 @@ pf_nld_eco_5 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_seafaring_traders
+				duration = 3650
+			}
+		} 
 	}
 
-	pf_nld_control_the_fur_trade = {
+	pf_nld_dominate_the_fur_trade = {
 		icon = mission_sio_european_trade
 		position = 10
 		required_missions = { pf_nld_seafaring_traders } 
@@ -1610,7 +1798,21 @@ pf_nld_eco_5 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			add_years_of_owned_provinces_production_income = {
+				years = 3
+				trigger = {
+					trade_goods = fur
+				}
+				custom_tooltip = nld_fur_trade_reward_tt
+			}
+			
+			custom_tooltip = empty_line_tt
+			custom_tooltip = nld_dominate_the_fur_trade_tt
+			hidden_effect = {
+				set_country_flag = pf_dominate_fur_trade
+			}
+		} 
 	}
 }
 pf_nld_colonisation_1 = {
@@ -1635,7 +1837,34 @@ pf_nld_colonisation_1 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_northern_winters
+				duration = 7300
+			}
+
+			if = {
+				limit = {
+					mission_completed = pf_nld_utilize_sami_herding
+				}
+				custom_tooltip = YES_NLD_FUR_BUFFS
+			}
+			else = {
+				custom_tooltip = NO_NLD_FUR_BUFFS
+			}
+
+			custom_tooltip = empty_line_tt
+
+			if = {
+				limit = {
+					mission_completed = pf_nld_developed_forests
+				}
+				custom_tooltip = YES_NLD_ARCTIC_BUFFS
+			}
+			else = {
+				custom_tooltip = NO_NLD_ARCTIC_BUFFS
+			}
+		} 
 	}
 }
 pf_nld_colonisation_2 = {
@@ -1669,7 +1898,21 @@ pf_nld_colonisation_2 = {
 			owns_or_non_sovereign_subject_of = 371
 		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_icelandic_colonizers
+				duration = 9125
+			}
+
+			colonial_canada = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					# owner = { tag = } (Waiting for vinland to become a starting tag)
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_nld_a_bit_of_truth_in_legends = {
@@ -1690,7 +1933,34 @@ pf_nld_colonisation_2 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_native_coexistence
+				duration = 7300
+			}
+
+			if = {
+				limit = {
+					mission_completed = pf_nld_utilize_sami_herding
+				}
+				custom_tooltip = YES_NLD_FUR_BUFFS
+			}
+			else = {
+				custom_tooltip = NO_NLD_FUR_BUFFS
+			}
+
+			custom_tooltip = empty_line_tt
+
+			if = {
+				limit = {
+					mission_completed = pf_nld_developed_forests
+				}
+				custom_tooltip = YES_NLD_ARCTIC_BUFFS
+			}
+			else = {
+				custom_tooltip = NO_NLD_ARCTIC_BUFFS
+			}
+		} 
 	}
 
 	pf_nld_spread_westwards = {
@@ -1714,7 +1984,22 @@ pf_nld_colonisation_2 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_colonial_dominance
+				duration = -1
+			}
+
+			if = {
+				limit = {
+					mission_completed = pf_nld_utilize_sami_herding
+				}
+				custom_tooltip = YES_NLD_FUR_BUFFS
+			}
+			else = {
+				custom_tooltip = NO_NLD_FUR_BUFFS
+			}
+		} 
 	}
 }
 pf_nld_colonisation_3 = {
@@ -1738,7 +2023,16 @@ pf_nld_colonisation_3 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_set_sail
+				duration = 9125
+			}
+
+			create_explorer = {
+				tradition = 100
+			}
+		} 
 	}
 
 	pf_nld_new_sweden = {
@@ -1759,7 +2053,22 @@ pf_nld_colonisation_3 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_settle_new_sweden
+				duration = 7300
+			}
+
+			if = {
+				limit = {
+					mission_completed = pf_nld_utilize_sami_herding
+				}
+				custom_tooltip = YES_NLD_FUR_BUFFS
+			}
+			else = {
+				custom_tooltip = NO_NLD_FUR_BUFFS
+			}
+		} 
 	}
 }
 pf_nld_colonisation_4 = {
@@ -1787,7 +2096,25 @@ pf_nld_colonisation_4 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			1466 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 18250
+					power = 50
+					key = nld_extend_reach_trade_node
+				}
+			}
+
+			guinea_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					has_port = yes
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_nld_tropical_isles = {
@@ -1811,7 +2138,24 @@ pf_nld_colonisation_4 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = nld_tropical_islands
+				duration = 9125
+			}
+
+			custom_tooltip = nld_carribean_trade_center_claim
+			hidden_effect = {
+				carribeans_region = {
+					limit = {
+						NOT = {is_core = ROOT}
+						NOT = {is_permanent_claim = ROOT}
+						province_has_center_of_trade_of_level = 1
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		} 
 	}
 }
 pf_nld_colonisation_5 = {
@@ -1840,6 +2184,32 @@ pf_nld_colonisation_5 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			1177 = {
+				add_province_modifier = {
+					name = nld_north_south_cape
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = nld_north_south
+				duration = -1
+			}
+
+			lanka_area = {
+				limit = {
+					NOT = {is_core = ROOT}
+					NOT = {is_permanent_claim = ROOT}
+				}
+				add_permanent_claim = ROOT
+			}
+			south_lanka_area = {
+				limit = {
+					NOT = {is_core = ROOT}
+					NOT = {is_permanent_claim = ROOT}
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 }

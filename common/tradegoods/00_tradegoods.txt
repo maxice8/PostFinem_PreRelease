@@ -439,6 +439,15 @@ fur = {
 				}
 			}
 		}
+		modifier = {
+			factor = 3
+			FROM = {
+				has_country_flag = pf_dominate_fur_trade
+				colonial_parent = {
+					has_country_flag = pf_dominate_fur_trade
+				}
+			}
+		}
 	}
 }
 
