@@ -79,3 +79,25 @@ pf_guidance_of_the_elders_reform = {
 		factor = 1
 	}
 }
+pf_blackcoat_dictatorship = {
+	icon = "blackcoats"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		has_country_flag = blackcoats_in_power
+	}
+	modifiers = {
+		army_tradition = 0.50
+		max_absolutism = 20
+		stability_cost_modifier = 0.50
+	}
+	#custom_attributes = {
+	#	stab_hits_are_doubled = yes
+	#}
+	#government_mechanics = {
+	#	blackcoat_rule_mechanic
+		# scaling bar from 0-100
+		# if it reaches 0, the blackcoats are overthrown in another civil war
+		# at 100 it gives 10% discipline, -20% land maintenance +20% manpower recovery speed, stability cost -50% BUT +5 national unrest
+	#}
+}
