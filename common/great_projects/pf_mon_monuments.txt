@@ -616,7 +616,7 @@ hellenic_religious_building = { # hrb
 	}
 }
 lingonian_military_academy = { # lma
-	start = 183
+	start = 192
 	date = 1.01.01
 	time = {
 		months = 0
@@ -674,6 +674,7 @@ lingonian_military_academy = { # lma
 			army_tradition_from_battle = 0.01
 			prestige_from_land = 0.01
 			land_forcelimit_modifier = 0.025
+			monthly_gaul_confederation = 0.05
 		}
 	}
 	tier_2 = {
@@ -691,6 +692,7 @@ lingonian_military_academy = { # lma
 			army_tradition_from_battle = 0.015
 			prestige_from_land = 0.025
 			land_forcelimit_modifier = 0.05
+			monthly_gaul_confederation = 0.1
 		}
 	}
 	tier_3 = {
@@ -708,6 +710,7 @@ lingonian_military_academy = { # lma
 			army_tradition_from_battle = 0.02
 			prestige_from_land = 0.05
 			land_forcelimit_modifier = 0.10
+			monthly_gaul_confederation = 0.15
 		}
 	}
 }
@@ -858,7 +861,7 @@ seat_of_the_archon = { # soa
 		area_modifier = {
 		}
 		country_modifiers = {
-			church_privilege_slots = 1
+			estate_church_privilege_slots = 1
 		}
 	}
 }
