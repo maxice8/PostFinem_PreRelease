@@ -11,8 +11,10 @@ pf_gallic_hierarchy = {
 			tag = GAU
 		}
 	}
+	government_abilities = {
+		gaul_confederation_mechanic
+	}
 	modifiers = {
-		min_autonomy = 35
 		global_tax_modifier = 0.15
 		num_accepted_cultures = 2
 	}
@@ -22,8 +24,13 @@ pf_gallic_hierarchy = {
 	ai = {
 		factor = 0.5 #generic
 	}
-	custom_attributes = {
-		locked_government_type = yes
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		is_elective = yes
+		custom_attributes = {
+			has_polish_election = yes
+			locked_government_type = yes
+		}
 	}
 }
 
@@ -169,10 +176,13 @@ pf_alexanders_crown = {
 	potential = {
 		tag = MAC
 	}
+	
+	government_abilities = {
+		mac_war_cabinet_mechanic
+	}
 	modifiers = {
 		min_autonomy_in_territories = -0.1
-		land_morale = 0.1
-		global_regiment_cost = 0.25
+		prestige_decay = -0.01
 	}
 	# custom_attributes = {
 	# 	buffed_strong_duchies = yes #+5% Loyalty
@@ -186,9 +196,9 @@ pf_alexanders_crown = {
 }
 
 
-#Selucid Monarchy
-pf_selucid_monarchy = {
-	icon = "selucid"
+#Seleucid  Monarchy
+pf_seleucid_monarchy = {
+	icon = "seleucid "
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = no

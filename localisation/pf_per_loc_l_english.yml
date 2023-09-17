@@ -1,0 +1,122 @@
+﻿l_english:
+# Centralization Mechanic
+ ability_pf_per_centralization_mechanic: "Centralisation"
+ pf_per_centralization: "Centralization"
+ pf_per_centralization_desc: "Centralization is a measure of the control we have over our Satrapies. If this hits 0 all our subjects will become independant!"
+ pf_per_centralization_decrease: "Grant Concessions"
+ pf_per_centralization_decrease_desc: "We can potentially placate the Satrapies by granting them additional privileges, though it would be to our own detriment."
+ pf_per_centralization_increase: "Seize Privileges"
+ pf_per_centralization_increase_desc: "We can revoke privileges previously given to the Satrapies to tighten our hold over them. They are sure to be unhappy about this."
+
+# Estate privs
+ estate_nobles_pf_satrapy_expansion_plan: "Satrapy Expansion Plan"
+ estate_nobles_pf_satrapy_expansion_plan_desc: "After the Dastur's humiliating defeat in the Fourth Satrapy Revolt the Dastur was forced to agree to an expansion plan that assigns vast swathes of land to the Satrapies. We will be forced to grant this land to them as we acquire it, and it will be exceptionally difficult to justify taking land for ourselves before we complete this plan."
+ estate_nobles_pf_satrapy_expansion_plan_tt: "We will be §Rforced to cede lands§! within the §YExpansion Plan§! to new or existing §YSatrapies§! as we conquer it."
+ estate_nobles_pf_satrapy_annexation_ban: "Satrapy Annexation Ban"
+ estate_nobles_pf_satrapy_annexation_ban_desc: "One of the first demands of the Satrapies was to ensure the Dastur had no legal right to annex them or remove them from power. We will have to wait until we have almost complete control over the Satrapies before we can revoke this."
+ estate_nobles_pf_satrapy_annexation_ban_tt: "We cannot §YAnnex§! our §YSatrapies§! while this privilege is granted."
+ estate_nobles_pf_satrapy_exemption_from_conscription: "Satrapy Exemption from Conscription"
+ estate_nobles_pf_satrapy_exemption_from_conscription_desc: "The treaty of the Third Satrapy Revolt banned the Dastur from raising any armies in Satrapy lands. Revoking this would once again allow us to demand some military contributions from the Satrapies."
+ estate_nobles_pf_satrapy_exemption_from_conscription_tt: "We will not get any §YForce Limit§! or §YManpower§! from our §YSatrapies§! while this privilege is granted."
+
+# Modifiers
+ pf_per_satrapies_granted_concessions: "Granted Concessions"
+ pf_per_satrapies_seized_privileges: "Seized Privileges"
+ pf_per_satrapy_compromised: "Compromised with Overlord"
+ pf_per_satrapy_refused: "Overlord refused demands"
+ pf_per_satrapy_collaborated: "Collaborated with other Satrapy"
+ pf_per_won_satrapy_revolt: "Victory in the Satrapy Revolt"
+ pf_per_drew_satrapy_revolt: "Compromise in the Satrapy Revolt"
+ pf_per_lost_satrapy_revolt: "Defeat in the Satrapy Revolt"
+ pf_per_satrapy_appealed_to_religion: "Appealed to Religion"
+ pf_per_ready_for_war: "Ready for War"
+ pf_per_asked_for_help: "Asked for help"
+ pf_per_ally_talked: "Ally helped negotiate"
+ pf_per_satrapy_intimidated: "Intimidated Satrapies"
+ pf_per_satrapy_divided: "Satrapies Divided"
+
+# Satrapy Revolt disaster
+ pf_per_satrapy_revolt: "Satrapy Revolt"
+ desc_pf_per_satrapy_revolt: "The Satrapies have once again risen up against the Dastur. We must stop this revolt quickly before it gets out of hand."
+ pf_per_satrapy_revolt_until_end_tt: "until the end of the §YSatrapy Revolt§! disaster"
+ pf_per_satrapy_revolt_if_in_tt: "If we are in the §YSatrapy Revolt§! disaster:"
+ pf_per_satrapy_revolt_has_finished_tt: "Has finished the §YSatrapy Revolt§! disaster."
+
+# Events
+ pf_per_events_0_title: "Crisis in Persia"
+ pf_per_events_0_desc: "In the decades following the Mongol collapse the Satrapies have become increasingly more bold, staging several armed revolts against the Dasturs of Persia. Undeterred, Dastur Cyrus decided to revoke some privileges in 1440, believing in his personal ability to keep control over the Satraps. Only time will tell if this move was wise."
+ pf_per_events_0_option: "A storm is brewing."
+ pf_per_events_0_tt: "The disaster '§YSatrapy Revolt§!' starts progressing."
+ pf_per_events_1_title: "The Seventh Satrapy Revolt"
+ pf_per_events_1_desc: "Despite Dastur [Root.Monarch.GetName]'s confidence, the Satrapies have once again risen up in arms against us. They are actively opposing our rule and demanding not just a return of their previous privileges but many more too. We must act quickly to crush this revolt."
+ pf_per_events_1_option: "Crush them!"
+ pf_per_events_1_tt: "If any of our §YSatrapies§! still have §R100%§! liberty desire by §Y1450§! they will §Rautomatically become independant!§!"
+ pf_per_events_2_title: "[disobedient_satrap.GetName] disobeys us!"
+ pf_per_events_2_desc: "We have just received word from the vile [disobedient_satrap.Monarch.GetTitle] of [disobedient_satrap.GetName] that they have refused our order to stand down their armies and shown great disobedience in a number of other matters."
+ pf_per_events_2_option: "Heads will roll for this."
+ pf_per_events_3_title: "[disobedient_satrap.GetName] demands funding!"
+ pf_per_events_3_desc: "We have just received a ridiculous demand from the treacherous [disobedient_satrap.Monarch.GetTitle] of [disobedient_satrap.GetName]. They demand an extortionate sum of money from us, and they threaten increased efforts to oppose us if we refuse! What should we do?"
+ pf_per_events_3_option_1: "We have no choice but to pay them off."
+ pf_per_events_3_option_2: "We will refuse to pay this outrageous sum!"
+ pf_per_events_4_title: "[disobedient_satrap.GetName] demands more privileges!"
+ pf_per_events_4_desc: "We have received an envoy from the disgusting [disobedient_satrap.Monarch.GetTitle] of [disobedient_satrap.GetName]. They are demanding we grant them new privileges that will take years of work to undo! What should we do?"
+ pf_per_events_4_option_1: "We have no other choice."
+ pf_per_events_4_option_2: "We will not cave to these demands!"
+ pf_per_events_5_title: "Uprising in [disobedient_satrap.GetName]!"
+ pf_per_events_5_desc: "We have just received word of a large uprising in [disobedient_satrap.GetName]. It seems the local population have also been convinced by the lies of their deceitful [disobedient_satrap.Monarch.GetTitle]!"
+ pf_per_events_5_option: "Crush them at once!"
+ pf_per_events_6_title: "[disobedient_satrap.GetName] and [disobedient_satrap2.GetName] cooperate!"
+ pf_per_events_6_desc: "Usually the Satrapies hate each other almost as much as they hate us, but we have just received the troubling news that [disobedient_satrap.GetName] and [disobedient_satrap2.GetName] have decided to work together against us."
+ pf_per_events_6_option: "This is most troubling."
+ pf_per_events_7_title: "[disobedient_satrap.GetName] agrees to compromise."
+ pf_per_events_7_desc: "The magnificent diplomatic efforts of our great [Root.Monarch.GetTitle] have convinced the [disobedient_satrap.Monarch.GetTitle] of [disobedient_satrap.GetName] that our cause is just. They are sure to soon put down their arms."
+ pf_per_events_7_option: "Wonderful."
+ pf_per_events_8_title: "Satrapies declare independance!"
+ pf_per_events_8_desc: "My [Root.Monarch.GetTitle], we have just received some very troubling news. It seems that some of our Satrapies have declared independance and a number of neighbouring states have already recognised them."
+ pf_per_events_8_option: "They are more trouble than they're worth."
+ pf_per_events_8_tt: "All our §YSatrapies§! that had §R100§! liberty desire are now §YIndependant§!!"
+ pf_per_events_9_title: "End of the Satrapy Revolt"
+ pf_per_events_9_desc_1: "After a long and bloody conflict, we have emerged victorious over the Satrapies. They have agreed to submit to our rule and accept their current privileges."
+ pf_per_events_9_desc_2: "After a long and bloody conflict, [ROOT.Monarch.GetTitle] [ROOT.Monarch.GetName] has made the wise decision to grant new privileges to our Satrapies. They have accepted this compromise and agreed to continue being our subjects but our control over them is tenuous at best."
+ pf_per_events_9_desc_3: "After a long and bloody conflict, we have been forced to concede defeat to the Satrapies. They are now all independant, and [ROOT.Monarch.GetTitle] [ROOT.Monarch.GetName] has been humiliated on the world stage."
+ pf_per_events_9_option_1: "Ah, victory."
+ pf_per_events_9_option_2: "A display of diplomatic excellence."
+ pf_per_events_9_option_3: "[Root.GetName] may never recover."
+ pf_per_events_10_title: "Help from [zoroastrian_ally.GetName]!"
+ pf_per_events_10_desc: "My [Root.Monarch.GetTitle], after your incredible diplomatic efforts in acquiring new allies, we think it prudent to ask [zoroastrian_ally.GetName] for support. What do we need most?"
+ pf_per_events_10_option_1: "More money is always useful."
+ pf_per_events_10_option_2: "I need men to fight!"
+ pf_per_events_10_option_3: "Maybe we can ask them to talk to the Satraps?"
+
+# Missions
+ pf_per_appeal_to_religion_title: "Appeal to Religion"
+ pf_per_raise_the_army_title: "Raise the Army"
+ pf_per_find_allies_title: "Find Allies"
+ pf_per_end_the_revolt_title: "End the Revolt"
+ pf_per_show_our_strength_title: "Show our Strength"
+ pf_per_divide_and_conquer_title: "Divide and Conquer"
+ pf_per_appeal_to_religion_desc: "One of the only things the Dastur and the Satrapies agree on is matters of faith, perhaps by showing our devotion to the faith we can convince them of our just intentions."
+ pf_per_raise_the_army_desc: "In order to successfully deal with this uprising we must raise a strong army and crush armed rebellions with force."
+ pf_per_find_allies_desc: "Using the exquisite diplomatic skills of the Dastur, we should easily be able to find some allies that can assist us with this threat. Of course, we should only consider those of the true faith in our search, filthy heretics are still out of the question."
+ pf_per_end_the_revolt_desc: "We have finally ended the open conflict between us and the Satrapies. The future of Persia is uncertain, but there is no one better than the Dastur to lead us through it."
+ pf_per_show_our_strength_desc: "By showing the power of our armies on an equally sized foe we can intimidate the Satrapies into conceding defeat to our superior strength."
+ pf_per_divide_and_conquer_desc: "The Satrapies only have any power because they have united against us. If we can convince one of them to join our side it will be much easier to convince the rest."
+
+# Mission tooltips
+ pf_per_zoroastrian_allies_tt: "Allied to §Y[Root.GetName]§!\nReligion is §YZoroastrian§!"
+ pf_per_events_10_tt: "The event '§YHelp from an ally!§!' happens."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

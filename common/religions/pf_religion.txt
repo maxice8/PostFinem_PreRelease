@@ -199,22 +199,26 @@ zoroastrian_group = {
 		}
 		country = {
 			tolerance_own = 2
-			trade_efficiency = 0.1
+			build_cost = -0.1
 		}
 		country_as_secondary = {
 			merchants = 1
 			tolerance_own = 1
 		}
 
-		holy_sites = { 421 4430 2223 441 2235 }
+		uses_anglican_power = yes
 
-		blessings = {
-			blessing_yasna
-			blessing_haoma
-			blessing_navjote
-			blessing_manthras
-			blessing_dakhma
+		aspects = {
+			pf_zoroastrian_execute_heretics_aspect
+			pf_zoroastrian_inward_focus_aspect
+			pf_zoroastrian_get_money_aspect
+			pf_zoroastrian_harvest_rituals_aspect
+			pf_zoroastrian_inspire_zealotry_aspect
+			pf_zoroastrian_fire_worship_aspect
+			pf_zoroastrian_conversion_efforts_aspect
+			pf_zoroastrian_promote_mobads_aspect
 		}
+		aspects_name = pf_zoroastrian_aspects
 		
 		heretic = { MAZDAKI MANICHEAN }	
 	}
@@ -233,8 +237,8 @@ germanic_group = {
 		icon = 21
 		color = { 191 191 191 }
 		country = {
-			naval_forcelimit_modifier = 0.25
-			land_maintenance_modifier = -0.1
+			naval_forcelimit_modifier = 0.2
+			may_perform_slave_raid = yes
 		}
 		country_as_secondary = {
 			merc_maintenance_modifier = -0.1

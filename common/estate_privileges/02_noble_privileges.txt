@@ -24,6 +24,10 @@ estate_nobles_land_rights = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }
 		modifier = { monthly_russian_modernization = -0.05 }
 	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = gaul_confederation_mechanic }
+		modifier = { monthly_gaul_confederation = -0.05 }
+	}
 	#conditional_modifier = {
 	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
 	#	modifier = { monthly_ottoman_decadence = 0.02 }
@@ -224,6 +228,10 @@ estate_nobles_nobility_primacy = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }
 		modifier = { monthly_russian_modernization = -0.05 }
 	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = gaul_confederation_mechanic }
+		modifier = { monthly_gaul_confederation = -0.1 }
+	}
 	#conditional_modifier = {
 	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
 	#	modifier = { monthly_ottoman_decadence = 0.02 }
@@ -344,6 +352,10 @@ estate_nobles_levies = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }
 		modifier = { monthly_russian_modernization = -0.05 }
 	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = gaul_confederation_mechanic }
+		modifier = { monthly_gaul_confederation = -0.10 }
+	}
 	#conditional_modifier = {
 	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
 	#	modifier = { monthly_ottoman_decadence = 0.02 }
@@ -459,6 +471,10 @@ estate_nobles_right_of_counsel = {
 	conditional_modifier = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }
 		modifier = { monthly_russian_modernization = -0.05 }
+	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = gaul_confederation_mechanic }
+		modifier = { monthly_gaul_confederation = -0.025 }
 	}
 	#conditional_modifier = {
 	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
@@ -612,6 +628,10 @@ estate_nobles_supremacy_over_crown = {
 	conditional_modifier = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }
 		modifier = { monthly_russian_modernization = -0.05 }
+	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = gaul_confederation_mechanic }
+		modifier = { monthly_gaul_confederation = -0.05 }
 	}
 	#conditional_modifier = {
 	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
@@ -1019,6 +1039,10 @@ estate_nobles_strong_duchies = {
 		}
 		NOT = { has_estate_privilege = estate_nobles_french_strong_duchies }
 	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = gaul_confederation_mechanic }
+		modifier = { monthly_gaul_confederation = 0.05 }
+	}
 	can_select = {
 		custom_trigger_tooltip = {
 			tooltip = estate_nobles_strong_duchies_trigger_tooltip
@@ -1232,18 +1256,23 @@ estate_nobles_veto_heir_apparent = {
 	icon = privilege_royal_authority
 	max_absolutism = -5
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
-	loyalty = -0.05
+	loyalty = -0.10
 	is_valid = {
 		has_dlc = "Emperor"
 		OR = { 
 			has_reform = polish_elective_monarchy
 			has_reform = elective_monarchy
+			has_reform = pf_gallic_hierarchy
 		}
 	}
 	penalties = {
 	}
 	benefits = {
 		monthly_support_heir_gain = 0.33
+	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = gaul_confederation_mechanic }
+		modifier = { monthly_gaul_confederation = -0.05 }
 	}
 	ai_will_do = {
 		factor = 0
@@ -1350,6 +1379,10 @@ estate_nobles_better_integration = {
 	conditional_modifier = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }
 		modifier = { monthly_russian_modernization = -0.05 }
+	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = gaul_confederation_mechanic }
+		modifier = { monthly_gaul_confederation = 0.025 }
 	}
 	#conditional_modifier = {
 	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }

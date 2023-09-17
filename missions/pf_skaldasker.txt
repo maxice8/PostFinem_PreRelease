@@ -9,11 +9,31 @@ pf_skl_1 = {
 		icon = mission_deccanis
 		position = 14
 		required_missions = { pf_skl_a_new_identity } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			NOT = { culture = skalder }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 30
+				culture = skalder
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt		 	
+			distribute_base_dev_to_provinces = {
+				num = 15
+				amount = 1
+				type = tax
+				trigger = "
+					culture = skalder
+				"
+				tooltip = skl_widespread_assimilation_tt
+			}
+		} 
 	}
 }
 pf_skl_2 = {
@@ -26,33 +46,113 @@ pf_skl_2 = {
 	pf_skl_a_new_identity = {
 		icon = mission_modern_ottoman_soldiers
 		position = 13
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			region =  british_isles_region
+			NOT = { culture = norwegian }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 10
+				region = british_isles_region
+				culture = norwegian
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			country_event = {
+				id = nrd_flavor_events.12
+			}
+			custom_tooltip = empty_line_tt  
+			eastern_norway = { add_permanent_claim = ROOT }
+			western_norway = { add_permanent_claim = ROOT }
+			northern_norway = { add_permanent_claim = ROOT }
+		} 
 	}
 
 	pf_skl_continue_the_trend = {
 		icon = mission_noble_council
 		position = 14
 		required_missions = { pf_skl_a_new_identity } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				area = brittany_area
+				area = normandy_area
+			}
+			NOT = { culture = skalder }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 6
+				OR = {
+					area = normandy_area
+					area = brittany_area
+				}
+				culture = skalder
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_dip_power = 100
+			custom_tooltip = empty_line_tt
+			custom_tooltip = skl_continue_the_trend_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = brittany_area
+							area = normandy_area
+						}
+						culture = skalder
+					}
+					change_culture = karnutir
+				}
+			}
+		} 
 	}
 
 	pf_skl_inferior_northmen = {
 		icon = mission_crown_of_denmark
 		position = 15
 		required_missions = { pf_skl_the_old_fatherland } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				area = jutland_area
+				area = denmark_area
+				area = skaneland_area
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  		
+			jutland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}  		
+			denmark_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}  		
+			skaneland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}  
+		} 
 
-		effect = {  } 
+		effect = {
+			define_admiral = {
+				shock = 4
+				fire = 4
+				manuever = 3
+				siege = 1
+				name = "Tómas Kókrhöfn"
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = skl_inferior_northmen_modifier
+				duration = -1
+			}
+		 } 
 	}
 
 	pf_skl_leader_of_the_norse_world = {
@@ -62,11 +162,26 @@ pf_skl_2 = {
 			pf_skl_revive_old_rivalries
 			pf_skl_inferior_northmen
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			region = scandinavia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  			
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 40
+				region =  scandinavia_region
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = skl_leader_of_the_norse_world_modifier
+				duration = 7300
+			}
+			baltic_region = { add_permanent_claim = ROOT }
+			poland_region = { add_permanent_claim = ROOT }
+		} 
 	}
 }
 pf_skl_3 = {
@@ -80,22 +195,117 @@ pf_skl_3 = {
 		icon = mission_norwegian_independence
 		position = 14
 		required_missions = { pf_skl_a_new_identity } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				 AND = {
+					  province_id = 17
+					  NOT = { owned_by = ROOT }
+				 }
+				 AND = {
+					  OR = {
+							area = northern_norway
+							area = western_norway
+							area = eastern_norway
+					  }
+					  NOT = {
+							  country_or_non_sovereign_subject_holds = ROOT
+					  }  
+				 }
+			} 
+	  }
 
-		trigger = {  } 
+		trigger = {  
+			owns_core_province = 17
+			northern_norway = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}  
+			western_norway = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastern_norway = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			17 = {
+				add_province_modifier = {
+					name = control_the_skagerak_modifier
+					duration = -1
+				}
+			}
+			scandinavia_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_skl_revive_old_rivalries = {
 		icon = mission_conquer_sweden
 		position = 15
 		required_missions = { pf_skl_the_old_fatherland } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				AND = {
+					 province_id = 1
+					 NOT = { owned_by = ROOT }
+				}
+				AND = {
+					OR = {
+						area = vastra_gotaland_area
+						area = gotaland_area
+						area = svealand_area
+						area = ostra_svealand_area
+						area = norrland_area
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			owns_core_province = 1
+			vastra_gotaland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			gotaland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			svealand_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ostra_svealand_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			norrland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			1 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 2
+			}
+			custom_tooltip = empty_line_tt
+			1 = {						
+				add_or_upgrade_dock_building = yes
+			}
+			
+			custom_tooltip = empty_line_tt
+			1 = {			
+				set_center_level_3_center_of_trade = yes
+			} 
+		} 
 	}
 
 	pf_skl_ruler_of_the_north = {
@@ -105,11 +315,23 @@ pf_skl_3 = {
 			pf_skl_leader_of_the_norse_world
 			pf_skl_gallic_dominion
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
 
-		trigger = {  } 
+		} 
 
-		effect = {  } 
+		trigger = {  
+			france_region = { country_or_non_sovereign_subject_holds = ROOT }
+			scandinavia_region = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			add_country_modifier = {
+				name = skl_ruler_of_the_north
+				duration = -1
+			}
+			north_german_region = { add_permanent_claim = ROOT }
+			south_german_region = { add_permanent_claim = ROOT }
+		} 
 	}
 }
 pf_skl_4 = {
@@ -122,33 +344,105 @@ pf_skl_4 = {
 	pf_skl_a_new_target = {
 		icon = mission_control_the_channel
 		position = 13
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				area = normandy_area
+				area = brittany_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = skl_a_new_target
+					has_country_flag = skl_a_new_target_flag
+				}
+				AND = {
+					normandy_area = { 
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					brittany_area = { 
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
 
-		effect = {  } 
+		} 
+
+		effect = {  
+			add_country_modifier = {
+				name = skl_a_new_target_modifier
+				duration = 7300
+			}
+			picardy_area = { add_permanent_claim = ROOT }
+			flanders_area = { add_permanent_claim = ROOT }
+		} 
 	}
 
 	pf_skl_northern_tribes = {
 		icon = mission_control_the_barbary_coast
 		position = 14
 		required_missions = { pf_skl_a_new_target } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				area = brittany_area
+				area = normandy_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			normandy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			brittany_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = skl_northern_tribes_modifier
+				duration = 7300
+			}
+			poitou_area = { add_permanent_claim = ROOT }
+			loire_area = { add_permanent_claim = ROOT }
+			orleans_area = { add_permanent_claim = ROOT }
+			ile_de_france_area = { add_permanent_claim = ROOT }
+		} 
 	}
 
 	pf_skl_gallic_dominion = {
 		icon = centralize_france
 		position = 16
 		required_missions = { pf_skl_northern_tribes } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			region = france_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				region =  france_region
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = skl_gallic_dominion_modifier
+				duration = 7300
+			}
+			france_region = { add_permanent_claim = ROOT }
+			low_countries_region = { add_permanent_claim = ROOT }
+		} 
 	}
 }
 pf_skl_5 = {
@@ -161,32 +455,99 @@ pf_skl_5 = {
 	pf_skl_clear_the_forests = {
 		icon = mission_clear_the_delta
 		position = 14
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
 
-		trigger = {  } 
+		} 
 
-		effect = {  } 
+		trigger = {  
+			development_in_provinces = {
+				value = 150
+				region = france_region
+			}
+		} 
+
+		effect = { 
+			add_years_of_estate_land_income = 2
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = skl_clear_the_forests_modifier
+				duration = 7300
+			}
+		} 
 	}
 
 	pf_skl_secure_supply_lines = {
 		icon = mission_divert_trade_from_bengal
 		position = 15
 		required_missions = { pf_skl_clear_the_forests } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			region = france_region
+			owned_by = ROOT
+			NOT = { development = 20 }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 8
+				region = france_region
+				development = 20
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_yearly_manpower = 3
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = skl_secure_supply_lines_modifier
+				duration = -1
+			}
+		} 
 	}
 
 	pf_skl_into_warmer_waters = {
 		icon = mission_rb_mediterranean_authority
 		position = 16
 		required_missions = { pf_skl_secure_supply_lines } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			region = france_region
+			NOT = { owned_by = ROOT }
+			OR = {
+				area = languedoc_area
+				area = provence_area
+			}
+			has_port = yes
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 3
+				OR = {
+					area = languedoc_area
+					area = provence_area
+				}
+				has_port = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			random_owned_province = {
+				limit = {				
+					any_neighbor_province = {
+						OR = {
+							province_id = 1296
+							province_id = 1297
+							province_id = 1298
+						}
+					}
+				}
+				add_province_modifier = {
+					name = skl_warmer_waters_modifier
+					duration = -1
+				}
+			}
+			corsica_sardinia_area = { add_permanent_claim = ROOT }
+			corsica_area = { add_permanent_claim = ROOT }
+			baleares_area = { add_permanent_claim = ROOT }
+		} 
 	}
 }
