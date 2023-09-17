@@ -3,9 +3,10 @@ l_english:
   # Stone of Power: on_upgraded
  pf_mon_sod_stab_for_tributaries_tt:0 "Gain §G1§! stability for each tributary you have."
   # Grand Temple to Tanit: on_upgraded
- pf_mon_gtt_effect_1_tt:0 "You lose §R25§! opinion with each non-punic country with their capital in the Gaul region."
- pf_mon_gtt_effect_2_tt:0 "You lose §R50§! opinion with each non-punic country with their capital in the Gaul region.\nAllows you to use the §YSpread Punic Religion§! decision."
- pf_mon_gtt_effect_3_tt:0 "You lose §R100§! opinion with each non-punic country with their capital in the Gaul region."
+ pf_mon_gtt_lose_opinion_1_tt:0 "You lose §R25§! opinion with each non-punic country with their capital in the Gaul region."
+ pf_mon_gtt_lose_opinion_2_tt:0 "You lose §R50§! opinion with each non-punic country with their capital in the Gaul region."
+ pf_mon_gtt_lose_opinion_3_tt:0 "You lose §R100§! opinion with each non-punic country with their capital in the Gaul region."
+ pf_mon_gtt_spread_religion_tt:0 "Allows you to use the §YSpread Punic Religion§! decision."
   # Grand Temple to Tanit: on_upgraded: Opinion loss
  pf_mon_gtt_opinion_from_upgrade:0 "Invested in the Grand Temple to Tanit"
   # Grand Temple to Tanit: decision: Spread Punic Religion

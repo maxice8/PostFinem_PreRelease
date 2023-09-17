@@ -85,8 +85,8 @@ pf_mon_sod_stab_for_tributaries = {
 }
 
 
-pf_mon_gtt_effect_1 = {
-	custom_tooltip = pf_mon_gtt_effect_1_tt
+pf_mon_gtt_lose_opinion_1 = {
+	custom_tooltip = pf_mon_gtt_lose_opinion_1_tt
 	hidden_effect = {
 		every_capital_province = {
 			limit = {
@@ -104,8 +104,8 @@ pf_mon_gtt_effect_1 = {
 		}
 	}
 }
-pf_mon_gtt_effect_2 = {
-	custom_tooltip = pf_mon_gtt_effect_2_tt
+pf_mon_gtt_lose_opinion_2 = {
+	custom_tooltip = pf_mon_gtt_lose_opinion_2_tt
 	hidden_effect = {
 		every_capital_province = {
 			limit = {
@@ -127,8 +127,8 @@ pf_mon_gtt_effect_2 = {
 		}
 	}
 }
-pf_mon_gtt_effect_3 = {
-	custom_tooltip = pf_mon_gtt_effect_3_tt
+pf_mon_gtt_lose_opinion_3 = {
+	custom_tooltip = pf_mon_gtt_lose_opinion_3_tt
 	hidden_effect = {
 		every_capital_province = {
 			limit = {
@@ -157,6 +157,9 @@ pf_mon_gtt_effect_3 = {
 			}
 		}
 	}
+}
+pf_mon_gtt_spread_religion = {
+	custom_tooltip = pf_mon_gtt_spread_religion_tt
 }
 
 pf_mon_hop_unlock_blessings = {

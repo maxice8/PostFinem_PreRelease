@@ -209,7 +209,7 @@ grand_temple_to_tanit = { # gtt
 		}
 		on_upgraded = {
 			owner = {
-			    pf_mon_gtt_effect_1 = yes
+			    pf_mon_gtt_lose_opinion_1 = yes
 			}
 		}
 	}
@@ -233,8 +233,9 @@ grand_temple_to_tanit = { # gtt
 			global_heathen_missionary_strength = 0.015
 		}
 		on_upgraded = {
+			pf_mon_gtt_spread_religion = yes
 			owner = {
-			    pf_mon_gtt_effect_2 = yes
+			    pf_mon_gtt_lose_opinion_2 = yes
 			}
 		}
 	}
@@ -259,7 +260,7 @@ grand_temple_to_tanit = { # gtt
 		}
 		on_upgraded = {
 			owner = {
-			    pf_mon_gtt_effect_3 = yes
+			    pf_mon_gtt_lose_opinion_3 = yes
 			}
 		}
 	}
