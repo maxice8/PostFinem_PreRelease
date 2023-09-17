@@ -1293,8 +1293,14 @@ pf_nld_eco_1 = {
 			owns_core_province = 8
 			8 = {
 				base_production = 10
+			}
+			8 = {
 				has_production_building_trigger = yes
+			}
+			8 = {
 				has_manufactory_trigger = yes
+			}
+			8 = {
 				prosperity = 25
 			}
 		}
