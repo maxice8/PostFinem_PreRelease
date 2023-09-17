@@ -116,6 +116,7 @@ pf_nld_1 = {
 		provinces_to_highlight = { 
 			region = russia_region
 			culture = karelian 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {
@@ -231,7 +232,9 @@ pf_nld_1 = {
 			dip_power = 100
 			government_reform_progress = 100
 			num_of_subjects = 3
-			NOT = { all_subject_country = { liberty_desire = 20 }  } 
+			all_subject_country = {
+				NOT = { liberty_desire = 20 }
+			}
 			num_accepted_cultures = 4
 			NOT = { dominant_culture = ROOT } 
 		}
@@ -323,6 +326,7 @@ pf_nld_2 = {
 				has_terrain = forest
 			}
 			region = scandinavia_region
+			owned_by = ROOT
 			NOT = { development = 10 }
 		} 
 
@@ -1377,7 +1381,10 @@ pf_nld_eco_2 = {
 	pf_nld_temples_of_the_north = {
 		icon = mission_protestant_heddal_church
 		position = 8
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			has_tax_building_trigger = no
+		 } 
 
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -1499,9 +1506,15 @@ pf_nld_eco_2 = {
 
 		trigger = { 
 			11 = { 
-				development = 30 
+				development = 30
+			}
+			11 = { 
 				has_tax_building_trigger = yes
+			}
+			11 = {
 				has_production_building_trigger = yes
+			}
+			11 = {
 				has_trade_building_trigger = yes
 			}  
 		} 
@@ -1527,7 +1540,12 @@ pf_nld_eco_3 = {
 	pf_nld_utilize_sami_herding = {
 		icon = mission_control_fur_trade
 		position = 7
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			culture = sapmi
+			trade_goods = fur
+			NOT = { development = 10 }
+		} 
 
 		trigger = {  
 			num_of_owned_provinces_with = {
@@ -1629,7 +1647,7 @@ pf_nld_eco_3 = {
 			pf_nld_support_the_gothi
 			pf_nld_control_inland_trade_routes
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { province_id = 1 } 
 
 		trigger = {  
 			has_personal_deity = njord
@@ -1660,8 +1678,8 @@ pf_nld_eco_3 = {
 			pf_nld_increase_production
 		}
 		provinces_to_highlight = {  
+			owned_by = ROOT
 			has_manufactory_trigger = no
-			country_or_non_sovereign_subject_holds = ROOT
 		} 
 
 		trigger = {  
@@ -1726,7 +1744,10 @@ pf_nld_eco_4 = {
 		icon = mission_industrial_forging
 		position = 11
 		required_missions = { pf_nld_appease_the_burghers } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			has_production_building_trigger = no
+		 } 
 
 		trigger = {  
 			num_of_owned_provinces_with = {
@@ -1828,11 +1849,26 @@ pf_nld_colonisation_1 = {
 		required_missions = { pf_nld_a_bit_of_truth_in_legends } 
 		provinces_to_highlight = {  
 			colonial_region = colonial_alaska
+			has_discovered = ROOT
+			NOT = {
+				owner = {
+					OR = {
+						tag = ROOT
+						is_colonial_nation_of = ROOT
+					}
+				}
+			}
 		} 
 
 		trigger = {  
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
+				owner = {
+					OR = {
+						tag = ROOT
+						is_colonial_nation_of = ROOT
+					}
+				}
 				colonial_region = colonial_alaska
 			}
 		} 
