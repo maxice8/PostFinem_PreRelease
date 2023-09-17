@@ -1212,7 +1212,6 @@ pf_nld_eco_1 = {
 				NOT = { is_core = ROOT } 
 				NOT = { base_production = 5 } 
 				has_production_building_trigger = no
-				has_no_manufactory_trigger = yes
 			}
 		}
 
