@@ -9,6 +9,7 @@ odin = {
 	potential = {
 		religion = norse_pagan_reformed
 		NOT = { has_country_flag = pf_lag_stronger_deities }
+		NOT = { has_country_flag = pf_nld_vanir_deities }
 	}
 	trigger = { }
 	sprite = 7
@@ -35,6 +36,7 @@ freya = {
 	potential = {
 		religion = norse_pagan_reformed
 		NOT = { has_country_flag = pf_lag_stronger_deities }
+		NOT = { has_country_flag = pf_nld_vanir_deities }
 	}
 	trigger = { }
 	sprite = 8
@@ -61,6 +63,7 @@ tor = {
 	potential = {
 		religion = norse_pagan_reformed
 		NOT = { has_country_flag = pf_lag_stronger_deities }
+		NOT = { has_country_flag = pf_nld_vanir_deities }
 	}
 	trigger = { }
 	sprite = 9
@@ -99,6 +102,7 @@ tyr = {
 	potential = {
 		religion = norse_pagan_reformed
 		NOT = { has_country_flag = pf_lag_stronger_deities }
+		NOT = { has_country_flag = pf_nld_vanir_deities }
 	}
 	trigger = { }
 	sprite = 10
@@ -125,6 +129,7 @@ njord = {
 	potential = {
 		religion = norse_pagan_reformed
 		NOT = { has_country_flag = pf_lag_stronger_deities }
+		NOT = { has_country_flag = pf_nld_vanir_deities }
 	}
 	trigger = { }
 	sprite = 11
@@ -156,6 +161,7 @@ snotra = {
 	potential = {
 		religion = norse_pagan_reformed
 		NOT = { has_country_flag = pf_lag_stronger_deities }
+		NOT = { has_country_flag = pf_nld_vanir_deities }
 	}
 	trigger = { }
 	sprite = 12

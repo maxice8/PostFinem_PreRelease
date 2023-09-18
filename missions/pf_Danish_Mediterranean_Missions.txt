@@ -1,0 +1,101 @@
+new_branch = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	new_mission = {
+		icon = gfx_mission_trigger
+		position = 3
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+new_branch = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	pf_drk_to_new_lands = {
+		icon = mission_explore_the_world
+		position = 2
+		required_missions = { pf_drk_dire_times } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+new_branch = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	pf_drk_dire_times = {
+		icon = mission_humiliate_lubeck
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_settle_the_island = {
+		icon = mission_dominate_the_mediterranean
+		position = 3
+		required_missions = {
+			pf_drk_to_new_lands
+			pf_drk_build_up_transportation
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+new_branch = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	pf_drk_build_up_transportation = {
+		icon = mission_longships
+		position = 2
+		required_missions = { pf_drk_dire_times } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+new_branch = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	new_mission4 = {
+		icon = gfx_mission_trigger
+		position = 3
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
