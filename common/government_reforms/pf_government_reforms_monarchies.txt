@@ -227,6 +227,73 @@ pf_seleucid_monarchy = {
 	}
 }
 
+#Enlightened Norse Kingdom
+enlightened_norse_kingdom = {
+	icon = "viking"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+	potential = {
+		OR = {
+			tag = NLD
+			was_tag = NLD
+		}
+	}
+	modifiers = {
+		no_religion_penalty = yes
+	}
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+				limit = {
+					has_owner_accepted_culture = no
+					has_owner_culture = no
+					culture_group = ROOT
+				}
+				add_province_modifier = {
+					name = nld_tolerant_culture_group
+					duration = -1
+				}
+			}
+			 else_if = {
+				limit = {
+					has_owner_accepted_culture = no
+					has_owner_culture = no
+					NOT = {
+						culture_group = ROOT
+					}
+				}
+				add_province_modifier = {
+					name = nld_tolerant_culture
+					duration = -1
+				}
+			}
+			}
+		}
+	}
+	post_removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = {
+						has_province_modifier = nld_tolerant_culture_group
+					}
+					remove_province_modifier = nld_tolerant_culture_group
+				}
+				else_if = {
+					limit = { 
+						has_province_modifier = nld_tolerant_culture
+					}
+					remove_province_modifier = nld_tolerant_culture
+				}
+			}
+		}
+	}
+	custom_attributes = {
+		enlightened_norse_kingdom_tolerance = yes
+	}
+}
 pf_nordhafnadr_kingdom = {
 	icon = "norse_kingdom"
 	allow_normal_conversion = yes
