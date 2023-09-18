@@ -61,8 +61,10 @@ pf_per_1 = {
 
 		required_missions = { pf_per_end_the_revolt }
 
+		# Have 5 provinces in Oman
 		trigger = {}
 
+		# Permanent claims on rest of Oman and Qatar area
 		effect = {}
 	}
 
@@ -72,8 +74,10 @@ pf_per_1 = {
 
 		required_missions = { pf_per_cross_the_strait pf_per_dominate_tigris }
 
+		# Own all provinces in Hormuz node, 80% trade power, trade power edict on Hormuz
 		trigger = {}
 
+		# Add trade power bonus toll on Hormuz, 10% trade eff for 10 years
 		effect = {}
 	}
 
@@ -83,8 +87,10 @@ pf_per_1 = {
 
 		required_missions = { pf_per_control_hormuz }
 
+		# Own all coastal persian gulf provinces, 5 galleys on each internal tile
 		trigger = {}
 
+		# Basra and Hormuz get -90% privateer eff until end of game, provinces get +10% trade value for 20 years
 		effect = {}
 	}
 
@@ -94,8 +100,10 @@ pf_per_1 = {
 
 		required_missions = { pf_per_secure_the_gulf pf_per_establish_control }
 
+		# Either own 3 ports in Gujarat or be allied to Zoroastrians that own them
 		trigger = {}
 
+		# Trading with faithful trade power bonus in Gujarat, improve relations with the allies OR trade power in the ports
 		effect = {}
 	}
 
@@ -105,8 +113,10 @@ pf_per_1 = {
 
 		required_missions = { pf_per_trade_with_faithful pf_per_invade_armenia }
 
+		# 90% trade power in Persia, Persia has a value of at least 15? ducats
 		trigger = {}
 
+		# Domestic trade power and trade power for 10 years, 10 mercantilism
 		effect = {}
 	}
 
@@ -116,8 +126,10 @@ pf_per_1 = {
 
 		required_missions = { pf_per_trade_in_persia}
 
+		# 80% trade in 4 nodes, trade income at least 20? ducats, burghers 80 loyalty
 		trigger = {}
 
+		# Satrapies transfer 50% trade automatically, 10% trade eff for 20 years, add burgher priv that does better trade power?
 		effect = {}
 	}
 
@@ -127,8 +139,10 @@ pf_per_1 = {
 
 		required_missions = { pf_per_continue_expansion }
 
+		# Baghdad, Teheran, Mashhad, Herat and Samarkand, must be 25 dev, workshop, marketplace, expanded infrastructure
 		trigger = {}
 
+		# Province trade good changes to silk, gets +10% goods produced until end of game
 		effect = {}
 	}
 
@@ -138,8 +152,10 @@ pf_per_1 = {
 
 		required_missions = { pf_per_revive_silk_road }
 
+		# Has 100 dev clicks in Persian land, income above 100, prosperity in 5 states
 		trigger = {}
 
+		# All land in Persia gets 50% progress towards prosperity, 10% dev cost for 20 years
 		effect = {}
 	}
 }
@@ -204,8 +220,10 @@ pf_per_2 = {
 
 		required_missions = { pf_per_fulfil_satrapies }
 
+		# Own Basra and Iraq Arabi areas
 		trigger = {}
 
+		# Baghdad gets -15% dev cost until end of game, trade centre in Baghdad and Basra upgraded to 2
 		effect = {}
 	}
 
@@ -215,8 +233,10 @@ pf_per_2 = {
 
 		required_missions = { pf_per_dominate_tigris }
 
+		# Seleucia does not exist
 		trigger = {}
 
+		# 10 permanent pp, +1 prestige for 10 years
 		effect = {}
 	}
 
@@ -226,8 +246,10 @@ pf_per_2 = {
 
 		required_missions = { pf_per_destroy_seleucia }
 
+		# Baghdad is 30 dev, has a church, marketplace and trade centre level 3
 		trigger = {}
 
+		# Event to choose whether to move cap to Baghdad, give it +20% trade power and goods prod until end of game
 		effect = {}
 	}
 
@@ -237,19 +259,23 @@ pf_per_2 = {
 
 		required_missions = { pf_per_establish_control }
 
+		# Own all provinces in Armenia area
 		trigger = {}
 
+		# Permanent claims on rest of Armenia
 		effect = {}
 	}
 
-	pf_per_cross_lesser_caucasus = {
+	pf_per_defend_the_mountains = {
 		icon = mission_unknown_mission
 		position = 10
 
 		required_missions = { pf_per_invade_armenia }
 
+		# 3 mountain forts in Armenia or Tabriz areas, have the money for ramparts
 		trigger = {}
 
+		# +20% fort defense on those forts until end of game, start construction on ramparts for half price
 		effect = {}
 	}
 
@@ -259,8 +285,10 @@ pf_per_2 = {
 
 		required_missions = { pf_per_continue_expansion }
 
+		# Own all required provinces in the West
 		trigger = {}
 
+		# Satrapy there gets +5 FL, +20% manpower, +10% morale until the end of the game
 		effect = {}
 	}
 
@@ -270,8 +298,10 @@ pf_per_2 = {
 
 		required_missions = { pf_per_conquer_armenia }
 
+		# Have 5 mountain forts with Ramparts on
 		trigger = {}
 
+		# Those provinces get +20% fort defense (if they didn't already have it) and +20% garrison size until end of game
 		effect = {}
 	}
 
@@ -281,8 +311,10 @@ pf_per_2 = {
 
 		required_missions = {  }
 
+		# Fill adm idea or 15 adm/month, adm tech 7
 		trigger = {}
 
+		# 100 gov reform progress, can fabricate for subjects until end of game
 		effect = {}
 	}
 }
@@ -394,8 +426,10 @@ pf_per_3 = {
 
 		required_missions = { pf_per_end_the_revolt }
 
+		# Own the provinces designated for the original satrapies
 		trigger = {}
 
+		# Original Satrapies get -10% liberty desire until end of game, perma claims
 		effect = {}
 	}
 
@@ -405,8 +439,10 @@ pf_per_3 = {
 
 		required_missions = { pf_per_fulfil_satrapies }
 
+		# Own Shirvan area
 		trigger = {}
 
+		# Begin constructing free fort on Shamakhi, permanent claims on Tabrizia
 		effect = {}
 	}
 
@@ -416,8 +452,10 @@ pf_per_3 = {
 
 		required_missions = { pf_per_reach_caucasus pf_per_destroy_seleucia }
 
+		# Own all provinces in Tabriz and Shahrizor areas
 		trigger = {}
 
+		# Permanent claims on Armenia, Tabriz gets -10% dev cost, +1 prosperity growth, -5 unrest for 20 years 
 		effect = {}
 	}
 
@@ -427,8 +465,10 @@ pf_per_3 = {
 
 		required_missions = { pf_per_secure_the_gulf pf_per_converge_on_tabrizia pf_per_assist_satrapies }
 
+		# 8 Satrapies with <25% LD, 50% centralisation, No Satrapy over 50% LD
 		trigger = {}
 
+		# Change Satrapy Demands to Requires (less negative consequences), +0.5 yearly centralisation and -10% LD for 10 years
 		effect = {}
 	}
 
@@ -438,19 +478,23 @@ pf_per_3 = {
 
 		required_missions = { pf_per_establish_control }
 
+		# Has Renaissance embraced in all provinces
 		trigger = {}
 
+		# Gets -10% dev cost and -10% tech cost for 10 years
 		effect = {}
 	}
 
-	pf_per_restore_samarkand = {
+	pf_per_develop_mountain_cities = {
 		icon = mission_unknown_mission
 		position = 9
 
 		required_missions = { pf_per_embrace_renaissance }
 
+		# At least 8 mountains have at least 5 dev clicks and a church
 		trigger = {}
 
+		# Unlock Burgher priv giving -25% dev cost on mountains
 		effect = {}
 	}
 
@@ -460,8 +504,10 @@ pf_per_3 = {
 
 		required_missions = { }
 
+		# 20 provinces in Satrapies have a workshop and 5 production development
 		trigger = {}
 
+		# Add ducats, +10% trade efficiency for 10 years, Satrapies all get +10% goods prod for 20 years
 		effect = {}
 	}
 
@@ -471,8 +517,10 @@ pf_per_3 = {
 
 		required_missions = { pf_per_cross_lesser_caucasus pf_per_invest_in_satrapies pf_per_deal_gujarat }
 
+		# Have 12 Satrapies, all Satrapies below 25% liberty desire and have courthouse in capital, 70% centralisation
 		trigger = {}
 
+		# Change Satrapy Requires to Requests (less negative consequences), permanent claims
 		effect = {}
 	}
 	
@@ -482,8 +530,10 @@ pf_per_3 = {
 
 		required_missions = { pf_per_continue_expansion }
 
+		# All estates have either 80% loyalty or more loyalty than influence, crownland at least 30%
 		trigger = {}
 
+		# Can revoke estate privileges always, +10% loyalty with all estates for 20 years
 		effect = {}
 	}
 
@@ -493,8 +543,10 @@ pf_per_3 = {
 
 		required_missions = { pf_per_control_estates }
 
+		# 15 Satrapy Requests completed, each Satrapy has "Sent Gift" modifier and a 25 dev capital
 		trigger = {}
 
+		# Rewards of Satrapy Requests increased, permanent -10% liberty desire
 		effect = {}
 	}
 
@@ -504,8 +556,10 @@ pf_per_3 = {
 
 		required_missions = { pf_per_fortify_the_border pf_per_persuade_satrapies pf_per_dominate_northern_india }
 
+		# All 15 Satrapies have the required land, Less than 25% liberty desire
 		trigger = {}
 
+		# Change Satrapy Requests to Petitions (no negative consequences), revoke Satrapy Expansion Plan
 		effect = {}
 	}
 
@@ -515,8 +569,10 @@ pf_per_3 = {
 
 		required_missions = { pf_per_persian_prosperity pf_per_modernise_the_government pf_per_complete_expansion pf_per_expel_all_heresy pf_per_raise_standing_army }
 
+		# Have "Centralized Zoroastrian Theocracy" reform
 		trigger = {}
 
+		# Revokes annexation ban, all original Satrapies with 0% LD and 100 trust integrated for free
 		effect = {}
 	}
 }
@@ -585,8 +641,10 @@ pf_per_4 = {
 
 		required_missions = { pf_per_fulfil_satrapies }
 
+		# Own 8 provinces on Indian Subcontinent
 		trigger = {}
 
+		# Permanent claims, temp mil modifier
 		effect = {}
 	}
 
@@ -596,8 +654,10 @@ pf_per_4 = {
 
 		required_missions = { pf_per_invade_india }
 
+		# Own multan area, Multan does not exist
 		trigger = {}
 
+		# Multan gets trade centre level 2, +20% trade power and +10% goods produced for 20 years
 		effect = {}
 	}
 
@@ -607,8 +667,10 @@ pf_per_4 = {
 
 		required_missions = { }
 
+		# Complete 5 Satrapy Demands
 		trigger = {}
 
+		# Rewards of Satrapy Demands increased, Income from Subjects +10% for 15 years
 		effect = {}
 	}
 
@@ -618,8 +680,10 @@ pf_per_4 = {
 
 		required_missions = { pf_per_establish_control }
 
+		# Southern Sindh, Marwar and Patan areas owned or owned by Gujarat
 		trigger = {}
 
+		# Perma claims, some power points
 		effect = {}
 	}
 
@@ -629,8 +693,10 @@ pf_per_4 = {
 
 		required_missions = { pf_per_push_western_india }
 
+		# Either allied to Gujarat with 100 trust, 190 opinion or owns Saurashtra, Ahmedabad and Tapti areas
 		trigger = {}
 
+		# If allied to Gujarat they become a Satrapy, cede any land outside their Satrapy region to other Satrapies, else Satrapy there gets base production there
 		effect = {}
 	}
 
@@ -640,6 +706,7 @@ pf_per_4 = {
 
 		required_missions = { pf_per_continue_expansion }
 
+		# All Zoroastrian Provinces owned by Persia or subjects
 		trigger = {}
 
 		effect = {}
@@ -651,8 +718,10 @@ pf_per_4 = {
 
 		required_missions = { pf_per_unite_the_faith }
 
+		# Own all required Satrapy land in India
 		trigger = {}
 
+		# All provinces there get +10% production efficiency, 50% progress towards prosperity, -5 unrest
 		effect = {}
 	}
 
@@ -662,8 +731,10 @@ pf_per_4 = {
 
 		required_missions = { pf_per_dominate_northern_india }
 
+		# No owned or Satrapy province is not zoroastrian
 		trigger = {}
 
+		# Get +2% missionary strength, +1 missionary until end of the game
 		effect = {}
 	}
 }
@@ -731,8 +802,10 @@ pf_per_5 = {
 
 		required_missions = { pf_per_end_the_revolt }
 
+		# Khuttalan, Transoxiana and Ferghana areas owned
 		trigger = {}
 
+		# Conquered areas lose devastation, flip Zoroastrian
 		effect = {}
 	}
 
@@ -742,8 +815,10 @@ pf_per_5 = {
 
 		required_missions = { pf_per_drive_back_hordes }
 
+		# 4 forts on border with a horde
 		trigger = {}
 
+		# Those forts get +20% fort defence until end of game, horde raid events stop
 		effect = {}
 	}
 
@@ -753,8 +828,10 @@ pf_per_5 = {
 
 		required_missions = { pf_per_invade_india }
 
+		# Zoroastrian provinces owned by Sirhind are owned by a Zoroastrian nation
 		trigger = {}
 
+		# Get +20% church power for 10 years, provinces get -5 unrest, 20% tax eff
 		effect = {}
 	}
 
@@ -764,8 +841,10 @@ pf_per_5 = {
 
 		required_missions = { pf_per_liberate_zoroastrians pf_per_assist_satrapies }
 
+		# Have 200 church power, every Satrapy has a church in the capital and so does Persia
 		trigger = {}
 
+		# Persia gets -15% war score cost vs other religions for 20 years, Satrapies get +20% church power, -10% liberty desire until end of game
 		effect = {}
 	}
 
@@ -775,8 +854,10 @@ pf_per_5 = {
 
 		required_missions = { pf_per_push_western_india pf_per_unity_in_faith }
 
+		# Be defender of the faith, no Zoroastrian province owned by non-Zoroastrian nation
 		trigger = {}
 
+		# Adds triggered modifier adding extra buffs to Defender of the Faith for Persia
 		effect = {}
 	}
 
@@ -786,8 +867,10 @@ pf_per_5 = {
 
 		required_missions = { pf_per_defender_of_faith }
 
+		# Gov reform tier 4, Clergy influence at least 80, 150 Zoroastrian provinces
 		trigger = {}
 
+		# Unlock gov reform Persian Zealotry, giving +2 ToTF, -2 ToH, -20% culture conversion cost, double bonuses from Religious Culture
 		effect = {}
 	}
 
@@ -797,8 +880,10 @@ pf_per_5 = {
 
 		required_missions = { }
 
+		# Has unlocked idea Persian Arquebus or Mil tech 6, has 20% army prof, 30 army trad
 		trigger = {}
 
+		# Gets +0.2 infantry fire for 20 years, gets 5% professionalism
 		effect = {}
 	}
 
@@ -808,8 +893,23 @@ pf_per_5 = {
 
 		required_missions = { pf_per_persian_arquebus }
 
+		# Has mil tech 7, has 10 cannons, completed mil idea group or 14 mil/month
 		trigger = {}
 
+		# Gets +20% siege ability, -10% mil tech cost for 20 years
+		effect = {}
+	}
+
+	pf_per_recruit_from_satrapies = {
+		icon = mission_unknown_mission
+		position = 13
+
+		required_missions = { pf_per_develop_siege_tech }
+
+		# Have 40k manpower, 10 provinces with barracks, every Satrapy capital has a barracks
+		trigger = {}
+
+		# Can conscript from Satrapies, +100% manpower and FL from subjects for 20 years
 		effect = {}
 	}
 
@@ -817,10 +917,36 @@ pf_per_5 = {
 		icon = mission_unknown_mission
 		position = 14
 
-		required_missions = { pf_per_develop_siege_tech }
+		required_missions = { pf_per_recruit_from_satrapies }
 
+		# Has 100k troops, 40% professionalism, 110% discipline
 		trigger = {}
 
+		# Get +5% discipline, +20% FL for 20 years
+		effect = {}
+	}
+}
+
+pf_persian_empire_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = PER
+	}
+	
+	pf_per_a_persian_empire = {
+		icon = mission_unknown_mission
+		position = 16
+
+		required_missions = { }
+
+		# Adm tech 10, Seleucia and all original Satrapies don't exist, all of Perisa and Khorasan regions cored, completed A Centralized State mission
+		trigger = {}
+
+		# Unlocks Persian Empire tree
 		effect = {}
 	}
 }
