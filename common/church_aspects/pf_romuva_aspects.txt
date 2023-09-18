@@ -1,0 +1,269 @@
+perkunas_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		country_military_power = 1
+	}
+}
+
+bangputys_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		country_diplomatic_power = 1
+	}
+}
+
+auslavis_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		country_admin_power = 1
+	}
+}
+
+saule_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		mil_tech_cost_modifier = -0.1
+	}
+}
+
+dalia_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		dip_tech_cost_modifier = -0.1
+	}
+}
+
+ausrine_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		adm_tech_cost_modifier = -0.1
+	}
+}
+
+perkunas_lightning_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		shock_damage = 0.1
+	}
+}
+
+perkunas_thunder_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		morale_damage = 0.1
+	}
+}
+
+perkunas_order_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		yearly_corruption = -0.5
+	}
+}
+
+perkunas_rain_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		development_cost_modifier = -0.05
+	}
+}
+
+bangputys_winds_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		movement_speed_in_fleet_modifier = 0.1
+	}
+}
+
+bangputys_storms_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		naval_morale_damage = 0.1
+	}
+}
+
+bangputys_ships_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		global_ship_cost = -0.15
+	}
+}
+
+bangputys_merchants_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		trade_steering = 0.1
+	}
+}
+
+auslavis_healing_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		manpower_recovery_speed = 0.10
+	}
+}
+
+auslavis_renewal_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		recover_army_morale_speed = 0.15
+	}
+}
+
+auslavis_rejuvenation_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		global_monthly_devastation = -0.1
+	}
+}
+
+auslavis_recovery_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		stability_cost_modifier = -0.15
+	}
+}
+
+saule_fire_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		fire_damage = 0.1
+	}
+}
+
+saule_luck_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		own_territory_dice_roll_bonus = 1
+	}
+}
+
+saule_life_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		trade_goods_size_modifier = 0.05
+	}
+}
+
+saule_horses_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		caravan_power = 0.15
+	}
+}
+
+dalia_fortune_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		available_province_loot = 0.5
+	}
+}
+
+dalia_fate_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		province_warscore_cost = -0.1
+	}
+}
+
+dalia_prosperity_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		global_prosperity_growth = 0.5
+	}
+}
+
+dalia_wealth_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		production_efficiency = 0.15
+	}
+}
+
+ausrine_rebirth_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		global_manpower_modifier = 0.15
+	}
+}
+
+ausrine_youth_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		land_morale = 0.1
+	}
+}
+
+ausrine_beginnings_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		colonist_placement_chance = 0.15
+	}
+}
+
+ausrine_beauty_aspect = {
+	cost = 200
+	trigger = {
+	}
+	modifier = {
+		diplomatic_reputation = 1
+	}
+}
