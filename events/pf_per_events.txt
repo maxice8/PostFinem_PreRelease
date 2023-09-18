@@ -92,7 +92,19 @@ country_event = {
 	option = {
 		name = "pf_per_events_3_option_1"
 		ai_chance = { factor = 100 }
-		add_years_of_income = -1
+
+		if = {
+			limit = { event_target:disobedient_satrap = { liberty_desire = 100 } }
+			add_years_of_income = -1.2
+		}
+		else_if = {
+			limit = { event_target:disobedient_satrap = { liberty_desire = 75 } }
+			add_years_of_income = -0.9
+		}
+		else = {
+			add_years_of_income = -0.6
+		}
+			
 		event_target:disobedient_satrap = {
 			add_country_modifier = {
 				name = pf_per_satrapy_compromised
@@ -195,9 +207,24 @@ country_event = {
 		name = "pf_per_events_5_option"
 		ai_chance = { factor = 100 }
 		event_target:disobedient_satrap = {
-			capital_scope = { independence_rebels = 3 }
-			random_owned_province = { independence_rebels = 2 }
-			random_owned_province = { independence_rebels = 2 }
+
+			if = {
+				limit = { liberty_desire = 100 }
+				capital_scope = { independence_rebels = 4 }
+				random_owned_province = { independence_rebels = 3 }
+				random_owned_province = { independence_rebels = 3 }
+			}
+			else_if = {
+				limit = { liberty_desire = 75 }
+				capital_scope = { independence_rebels = 3 }
+				random_owned_province = { independence_rebels = 2 }
+				random_owned_province = { independence_rebels = 2 }
+			}
+			else = {
+				capital_scope = { independence_rebels = 2 }
+				random_owned_province = { independence_rebels = 1 }
+				random_owned_province = { independence_rebels = 1 }
+			}
 		}
 	}
 }
@@ -468,7 +495,19 @@ country_event = {
 	option = {
 		name = "pf_per_events_11_option_1"
 		ai_chance = { factor = 100 }
-		add_yearly_manpower = -1
+
+		if = {
+			limit = { event_target:disobedient_satrap = { liberty_desire = 100 } }
+			add_yearly_manpower = -1.2
+		}
+		else_if = {
+			limit = { event_target:disobedient_satrap = { liberty_desire = 75 } }
+			add_yearly_manpower = -0.9
+		}
+		else = {
+			add_yearly_manpower = -0.6
+		}
+
 		event_target:disobedient_satrap = {
 			add_country_modifier = {
 				name = pf_per_satrapy_compromised

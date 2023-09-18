@@ -54,6 +54,94 @@ pf_per_1 = {
 			}
 		}
 	}
+
+	pf_per_cross_the_strait = {
+		icon = mission_unknown_mission
+		position = 3
+
+		required_missions = { pf_per_end_the_revolt }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_control_hormuz = {
+		icon = mission_unknown_mission
+		position = 5
+
+		required_missions = { pf_per_cross_the_strait pf_per_dominate_tigris }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_secure_the_gulf = {
+		icon = mission_unknown_mission
+		position = 6
+
+		required_missions = { pf_per_control_hormuz }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_trade_with_faithful = {
+		icon = mission_unknown_mission
+		position = 8
+
+		required_missions = { pf_per_secure_the_gulf pf_per_establish_control }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_trade_in_persia = {
+		icon = mission_unknown_mission
+		position = 9
+
+		required_missions = { pf_per_trade_with_faithful pf_per_invade_armenia }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_merchant_class = {
+		icon = mission_unknown_mission
+		position = 10
+
+		required_missions = { pf_per_trade_in_persia}
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_revive_silk_road = {
+		icon = mission_unknown_mission
+		position = 12
+
+		required_missions = { pf_per_continue_expansion }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_persian_prosperity = {
+		icon = mission_unknown_mission
+		position = 14
+
+		required_missions = { pf_per_revive_silk_road }
+
+		trigger = {}
+
+		effect = {}
+	}
 }
 
 pf_per_2 = {
@@ -108,6 +196,94 @@ pf_per_2 = {
 				}
 			}
 		}
+	}
+
+	pf_per_dominate_tigris = {
+		icon = mission_unknown_mission
+		position = 4
+
+		required_missions = { pf_per_fulfil_satrapies }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_destroy_seleucia = {
+		icon = mission_unknown_mission
+		position = 5
+
+		required_missions = { pf_per_dominate_tigris }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_restore_baghdad = {
+		icon = mission_unknown_mission
+		position = 6
+
+		required_missions = { pf_per_destroy_seleucia }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_invade_armenia = {
+		icon = mission_unknown_mission
+		position = 8
+
+		required_missions = { pf_per_establish_control }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_cross_lesser_caucasus = {
+		icon = mission_unknown_mission
+		position = 10
+
+		required_missions = { pf_per_invade_armenia }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_conquer_armenia = {
+		icon = mission_unknown_mission
+		position = 12
+
+		required_missions = { pf_per_continue_expansion }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_fortify_the_border = {
+		icon = mission_unknown_mission
+		position = 13
+
+		required_missions = { pf_per_conquer_armenia }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_modernise_the_government = {
+		icon = mission_unknown_mission
+		position = 14
+
+		required_missions = {  }
+
+		trigger = {}
+
+		effect = {}
 	}
 }
 
@@ -176,7 +352,7 @@ pf_per_3 = {
 
 	pf_per_end_the_revolt = {
 		icon = mission_empire
-		position = 1
+		position = 2
 
 		required_missions = { pf_per_appeal_to_religion pf_per_raise_the_army pf_per_find_allies pf_per_show_our_strength pf_per_divide_and_conquer }
 
@@ -210,6 +386,138 @@ pf_per_3 = {
 				add_permanent_claim = BAL
 			}
 		}
+	}
+
+	pf_per_fulfil_satrapies = {
+		icon = mission_conquer_50_development
+		position = 3
+
+		required_missions = { pf_per_end_the_revolt }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_reach_caucasus = {
+		icon = mission_unknown_mission
+		position = 4
+
+		required_missions = { pf_per_fulfil_satrapies }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_converge_on_tabrizia = {
+		icon = mission_unknown_mission
+		position = 6
+
+		required_missions = { pf_per_reach_caucasus pf_per_destroy_seleucia }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_establish_control = {
+		icon = mission_subdue_the_afghans
+		position = 7
+
+		required_missions = { pf_per_secure_the_gulf pf_per_converge_on_tabrizia pf_per_assist_satrapies }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_embrace_renaissance = {
+		icon = mission_unknown_mission
+		position = 8
+
+		required_missions = { pf_per_establish_control }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_restore_samarkand = {
+		icon = mission_unknown_mission
+		position = 9
+
+		required_missions = { pf_per_embrace_renaissance }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_invest_in_satrapies = {
+		icon = mission_early_game_buildings
+		position = 10
+
+		required_missions = { }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_continue_expansion = {
+		icon = mission_unknown_mission
+		position = 11
+
+		required_missions = { pf_per_cross_lesser_caucasus pf_per_invest_in_satrapies pf_per_deal_gujarat }
+
+		trigger = {}
+
+		effect = {}
+	}
+	
+	pf_per_control_estates = {
+		icon = mission_unknown_mission
+		position = 12
+
+		required_missions = { pf_per_continue_expansion }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_persuade_satrapies = {
+		icon = king_of_kings
+		position = 13
+
+		required_missions = { pf_per_control_estates }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_complete_expansion = {
+		icon = mission_unknown_mission
+		position = 14
+
+		required_missions = { pf_per_fortify_the_border pf_per_persuade_satrapies pf_per_dominate_northern_india }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_centralized_state = {
+		icon = mission_unknown_mission
+		position = 15
+
+		required_missions = { pf_per_persian_prosperity pf_per_modernise_the_government pf_per_complete_expansion pf_per_expel_all_heresy pf_per_raise_standing_army }
+
+		trigger = {}
+
+		effect = {}
 	}
 }
 
@@ -270,6 +578,94 @@ pf_per_4 = {
 			}
 		}
 	}
+
+	pf_per_invade_india = {
+		icon = mission_unknown_mission
+		position = 4
+
+		required_missions = { pf_per_fulfil_satrapies }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_crush_multan = {
+		icon = mission_unknown_mission
+		position = 5
+
+		required_missions = { pf_per_invade_india }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_assist_satrapies = {
+		icon = mission_noble_council
+		position = 6
+
+		required_missions = { }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_push_western_india = {
+		icon = mission_unknown_mission
+		position = 8
+
+		required_missions = { pf_per_establish_control }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_deal_gujarat = {
+		icon = mission_unknown_mission
+		position = 10
+
+		required_missions = { pf_per_push_western_india }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_unite_the_faith = {
+		icon = mission_unknown_mission
+		position = 12
+
+		required_missions = { pf_per_continue_expansion }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_dominate_northern_india = {
+		icon = mission_unknown_mission
+		position = 13
+
+		required_missions = { pf_per_unite_the_faith }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_expel_all_heresy = {
+		icon = mission_unknown_mission
+		position = 14
+
+		required_missions = { pf_per_dominate_northern_india }
+
+		trigger = {}
+
+		effect = {}
+	}
 }
 
 pf_per_5 = {
@@ -327,5 +723,104 @@ pf_per_5 = {
 				}
 			}
 		}
+	}
+
+	pf_per_drive_back_hordes = {
+		icon = mission_unknown_mission
+		position = 3
+
+		required_missions = { pf_per_end_the_revolt }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_build_good_wall = {
+		icon = mission_unknown_mission
+		position = 4
+
+		required_missions = { pf_per_drive_back_hordes }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_liberate_zoroastrians = {
+		icon = mission_unknown_mission
+		position = 5
+
+		required_missions = { pf_per_invade_india }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_unity_in_faith = {
+		icon = mission_unknown_mission
+		position = 7
+
+		required_missions = { pf_per_liberate_zoroastrians pf_per_assist_satrapies }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_defender_of_faith = {
+		icon = mission_unknown_mission
+		position = 9
+
+		required_missions = { pf_per_push_western_india pf_per_unity_in_faith }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_unify_religion_and_state = {
+		icon = mission_unknown_mission
+		position = 10
+
+		required_missions = { pf_per_defender_of_faith }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_persian_arquebus = {
+		icon = mission_unknown_mission
+		position = 11
+
+		required_missions = { }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_develop_siege_tech = {
+		icon = mission_unknown_mission
+		position = 12
+
+		required_missions = { pf_per_persian_arquebus }
+
+		trigger = {}
+
+		effect = {}
+	}
+
+	pf_per_raise_standing_army = {
+		icon = mission_unknown_mission
+		position = 14
+
+		required_missions = { pf_per_develop_siege_tech }
+
+		trigger = {}
+
+		effect = {}
 	}
 }
