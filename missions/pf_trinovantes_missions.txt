@@ -1600,6 +1600,8 @@ pf_trn_5 = {
 				name = "pf_trn_reformed_confederation"
 				duration = 9125
 			}
+			set_country_flag = pf_trn_unlocked_court_bards
+			custom_tooltip = unlocks_court_bards_privilege_tt
 		}
 	}
 

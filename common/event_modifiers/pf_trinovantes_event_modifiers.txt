@@ -198,3 +198,8 @@ pf_trn_blackcoat_fugitives = {
 	land_forcelimit_modifier = -0.20
 	global_unrest = 2
 }
+
+pf_bri_royal_court_modifier = {
+	legitimacy = 1
+	reform_progress_growth = 0.25
+}
