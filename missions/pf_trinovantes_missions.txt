@@ -1442,6 +1442,8 @@ pf_trn_4 = {
 		effect = {
 			add_prestige = 25
 			custom_tooltip = empty_line_tt
+			change_government_reform_progress = 100
+			custom_tooltip = empty_line_tt
 			236 = {
 				remove_province_modifier = pf_trn_a_strangers_city
 				add_province_modifier = {
@@ -1753,10 +1755,10 @@ pf_trn_5 = {
 				owned_by = ROOT
 				development = 18
 			}
-			total_development = 90
+			total_development = 100
 			OR = {
-				adm_tech = 8
-				has_idea_group = administrative_ideas
+				monthly_adm = 12
+				full_idea_group = administrative_ideas
 			}
 		}
 		effect = {

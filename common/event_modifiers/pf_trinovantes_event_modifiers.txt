@@ -165,6 +165,7 @@ pf_trn_the_garden_of_albion_modifier = {
 	prestige = 0.50
 	province_trade_power_value = 10
 	allowed_num_of_buildings = 3
+	build_cost = -0.05			# this is purposefully global
 }
 pf_trn_blackcoat_rule = {
 	discipline = 0.05

@@ -620,7 +620,6 @@ war_taxes = {
 stability = {
 	global_trade_power = 0.01			#1% chance each step.
 	global_spy_defence = 0.05				#-15 to +15% modifier
-	monthly_trn_cohesion = 0.20
 }
 
 positive_stability = {
@@ -636,6 +635,7 @@ positive_stability = {
 	yearly_corruption = -0.02
 	global_institution_spread = 0.05
 	yearly_harmony = 0.25
+	monthly_trn_cohesion = 0.20
 }
 
 privateering = {
@@ -650,6 +650,7 @@ negative_stability = {
 	devotion = 1
 	caravan_power = 0.05
 	yearly_harmony = 0.25
+	monthly_trn_cohesion = 0.5
 }
 
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
@@ -2255,7 +2256,7 @@ reverse_average_subject_liberty_desire = { #100% LD => 0% modifier
 }
 
 average_global_autonomy = { #100% autonomy => 100% modifier
-	monthly_trn_cohesion = -5
+	monthly_trn_cohesion = -10
 }
 
 reverse_average_global_autonomy = { #100% autonomy => 0% modifier
