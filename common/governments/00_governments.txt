@@ -225,6 +225,9 @@ monarchy = {
 		}
 		military_doctrines = {
 			reforms = {
+				# pf [[[
+				pf_integrated_phalanx
+				# ]]]
 				organized_military_staff_reform
 				military_engineering_reform
 				defensive_stance_reform
@@ -703,6 +706,7 @@ republic = {
 			reforms = {
 				# pf [[[
 				pf_lag_lowlander_naval_tradition_reform
+				pf_integrated_phalanx
 				# ]]]
 				organized_military_staff_reform
 				military_engineering_reform
@@ -1012,6 +1016,9 @@ tribal = {
 		}
 		tribal_military_doctrines = {
 			reforms = {
+				# pf [[[
+				pf_longboat_focus
+				# ]]]
 				organized_military_staff_reform
 				military_engineering_reform
 				defensive_stance_reform
@@ -1253,6 +1260,9 @@ theocracy = {
 		}
 		military_doctrines = {
 			reforms = {
+				# pf [[[
+				pf_integrated_phalanx
+				# ]]]
 				organized_military_staff_reform
 				military_engineering_reform
 				defensive_stance_reform

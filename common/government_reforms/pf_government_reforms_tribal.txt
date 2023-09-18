@@ -29,7 +29,10 @@ pf_naval_society_reform = {
 	allow_normal_conversion = no
 	# lock_level_when_selected = yes
 	potential = {
-		religion = norse_pagan_reformed
+		OR = {
+			culture_group = scandinavian
+			religion = norse_pagan_reformed
+		}
 	}
 	modifiers = {
 		galley_power = 0.15
@@ -48,11 +51,37 @@ pf_berzerker_zeal_reform = {
 	allow_normal_conversion = no
 	# lock_level_when_selected = yes
 	potential = {
-		religion = norse_pagan_reformed
+		OR = {
+			culture_group = scandinavian
+			religion = norse_pagan_reformed
+		}
 	}
 	modifiers = {
 		manpower_in_true_faith_provinces = 0.2
 		global_missionary_strength = 0.01
+	}
+	# custom_attributes = {
+	# 	buffed_strong_duchies = yes #+5% Loyalty
+	# }
+	ai = {
+		factor = 2 #generic
+	}
+}
+
+pf_longboat_focus = {
+	icon = "pf_longboat"
+	allow_normal_conversion = no
+	# lock_level_when_selected = yes
+	potential = {
+		OR = {
+			culture_group = scandinavian
+			religion = norse_pagan_reformed
+		}
+	}
+	modifiers = {
+		has_galleass = yes
+		allowed_galleass_fraction = 0.2
+		naval_maintenance_modifier = -0.1
 	}
 	# custom_attributes = {
 	# 	buffed_strong_duchies = yes #+5% Loyalty
