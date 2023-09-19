@@ -128,3 +128,17 @@ pf_establish_permanent_settlements_reform = {
 		factor = 2 #generic
 	}
 }
+
+pf_romuva_tribes = {
+	icon = "crown"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		tolerance_own = 1
+		church_power_modifier = -1
+	}
+	ai = {
+		factor = 1
+	}
+}
