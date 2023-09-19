@@ -110,3 +110,27 @@ pf_blackcoat_dictatorship = {
 		# at 100 it gives 10% discipline, -20% land maintenance +20% manpower recovery speed, stability cost -50% BUT +5 national unrest
 	#}
 }
+pf_brittonic_tribe_reform = {
+	icon = "native_war_band_reform"
+	allow_normal_conversion = no
+	lock_level_when_selected = no
+	allow_force_tributary = no
+
+	potential = {
+		culture_group = old_celtic
+	}
+	trigger = {
+		culture_group = old_celtic
+	}
+	modifiers = {
+		global_manpower_modifier = 0.10
+		estate_interaction_cooldown_modifier = -0.25
+		max_absolutism = -10
+	}
+	government_abilities = {
+		brittonic_song_mechanic
+	}
+	ai = {
+		factor = 1
+	}
+}

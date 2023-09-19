@@ -1,0 +1,96 @@
+brittonic_song_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 8
+	available = {
+	}
+	
+	interactions = {
+		bri_song_1 = {
+			icon = GFX_bri_song_1_button
+			trigger = {
+			}
+			effect = {
+				hidden_effect = {
+					remove_country_modifier = bri_song_1_modifier
+					remove_country_modifier = bri_song_2_modifier
+					remove_country_modifier = bri_song_3_modifier
+				}
+				add_country_modifier = {
+					name = bri_song_1_modifier
+					duration = -1
+					desc = " until a different Song is selected"
+				}
+				if = {
+					limit = {
+						has_country_flag = pf_bri_upgraded_song_ability
+					}
+					add_mercantilism = 1
+				}
+			}
+			cooldown_years = 20
+			cooldown_token = brittonic_song_mechanic
+			cooldown_desc = BRITTONIC_SONG
+			ai_chance = {
+				factor = 10
+			}
+		}
+		bri_song_2 = {
+			icon = GFX_bri_song_2_button
+			trigger = { 
+			}
+			effect = { 
+				hidden_effect = {
+					remove_country_modifier = bri_song_1_modifier
+					remove_country_modifier = bri_song_2_modifier
+					remove_country_modifier = bri_song_3_modifier
+				}
+				add_country_modifier = {
+					name = bri_song_2_modifier
+					duration = -1
+					desc = " until a different Song is selected"
+				}
+				if = {
+					limit = {
+						has_country_flag = pf_bri_upgraded_song_ability
+					}
+					change_government_reform_progress = 25
+				}
+			}
+			cooldown_years = 20
+			cooldown_token = brittonic_song_mechanic
+			cooldown_desc = BRITTONIC_SONG
+			ai_chance = {
+				factor = 10
+			}
+		}
+		bri_song_3 = {
+			icon = GFX_bri_song_3_button
+			trigger = {
+			}
+			effect = { 
+				hidden_effect = {
+					remove_country_modifier = bri_song_1_modifier
+					remove_country_modifier = bri_song_2_modifier
+					remove_country_modifier = bri_song_3_modifier
+				}
+				add_country_modifier = {
+					name = bri_song_3_modifier
+					duration = -1
+					desc = " until a different Song is selected"
+				}
+				if = {
+					limit = {
+						has_country_flag = pf_bri_upgraded_song_ability
+					}
+					add_army_professionalism = 0.01
+				}
+			}
+			cooldown_years = 20
+			cooldown_token = brittonic_song_mechanic
+			cooldown_desc = BRITTONIC_SONG
+			ai_chance = {
+				factor = 10
+			}
+		}
+	}
+}

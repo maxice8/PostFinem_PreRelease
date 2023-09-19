@@ -203,3 +203,25 @@ pf_bri_royal_court_modifier = {
 	legitimacy = 1
 	reform_progress_growth = 0.25
 }
+
+bri_song_1_modifier = {
+	global_trade_goods_size_modifier = 0.10
+	trade_efficiency = 0.10
+	build_cost = -0.10
+}
+bri_song_2_modifier = {
+	monthly_splendor = 2
+	reform_progress_growth = 0.15
+	advisor_cost = -0.20
+}
+bri_song_3_modifier = {
+	recover_army_morale_speed = 0.10
+	manpower_recovery_speed = 0.15
+	morale_damage = 0.10
+}
+
+pf_bri_coels_wall_modifier = {
+	local_defensiveness = 0.15
+	local_defender_dice_roll_bonus = 1
+	local_garrison_size = 0.25
+}

@@ -64,7 +64,10 @@ brittonic_confederation_names = {
 	}
 
 	trigger = {
-		has_reform = brittonic_confederation_reform
+		OR = {
+			has_reform = brittonic_confederation_reform
+			has_reform = pf_brittonic_tribe_reform
+		}
 	}
 }
 

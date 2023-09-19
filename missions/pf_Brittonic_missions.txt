@@ -26,14 +26,115 @@ pf_bri_1 = {
 				num_of_times_improved = 5
 			}
 			has_advisor = yes
-			prestige = 25
 		}
 		effect = {
-			add_adm_power = 100
+			add_adm_power = 50
 			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = "pf_bri_royal_court_modifier"
 				duration = 9125
+			}
+		}
+	}
+	pf_bri_bards_loyalty = {
+		icon = mission_market_place_with_asian_traders
+		position = 2
+		required_missions = { pf_bri_royal_court } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 60
+			}
+			OR = {
+				has_country_modifier = bri_song_1_modifier
+				has_country_modifier = bri_song_2_modifier
+				has_country_modifier = bri_song_2_modifier
+			}
+		}
+		effect = {
+			add_splendor = 100
+			define_advisor = {
+				type = artist
+				skill = 1
+				discount = yes
+			}
+		}
+	}
+}
+pf_bri_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			primary_culture = old_welsh
+			primary_culture = old_cornish
+			primary_culture = briton
+		}
+		NOT = { tag = TRN }
+		NOT = { was_tag = TRN }
+	}
+
+	pf_bri_coels_wall = {
+		icon = mission_great_wall
+		position = 1
+		required_missions = { } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 246
+				province_id = 247
+			}
+			OR = {
+				NOT = { has_fort_building_trigger = yes }
+				NOT = { has_manpower_building_trigger = yes }
+			}
+		}
+		trigger = {
+			owns_core_province = 246
+			owns_core_province = 247
+			OR = {
+				246 = {
+					has_fort_building_trigger = yes
+				}
+				246 = {
+					has_manpower_building_trigger = yes
+				}
+			}
+			OR = {
+				247 = {
+					has_fort_building_trigger = yes
+				}
+				247 = {
+					has_manpower_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			add_army_tradition = 20
+			custom_tooltip = empty_line_tt
+			246 = {
+				add_province_modifier = {
+					name = "pf_bri_coels_wall_modifier"
+					duration = -1
+				}
+			}
+			custom_tooltip = empty_line_tt
+			247 = {
+				add_province_modifier = {
+					name = "pf_bri_coels_wall_modifier"
+					duration = -1
+				}
+			}
+			custom_tooltip = empty_line_tt
+			lowlands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
