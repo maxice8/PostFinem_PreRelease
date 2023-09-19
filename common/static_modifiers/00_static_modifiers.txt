@@ -620,7 +620,6 @@ war_taxes = {
 stability = {
 	global_trade_power = 0.01			#1% chance each step.
 	global_spy_defence = 0.05				#-15 to +15% modifier
-	monthly_trn_cohesion = 0.5
 }
 
 positive_stability = {
@@ -636,6 +635,7 @@ positive_stability = {
 	yearly_corruption = -0.02
 	global_institution_spread = 0.05
 	yearly_harmony = 0.25
+	monthly_trn_cohesion = 0.20
 	monthly_mac_war_cabinet_organization = 0.01
 }
 
@@ -651,6 +651,7 @@ negative_stability = {
 	devotion = 1
 	caravan_power = 0.05
 	yearly_harmony = 0.25
+	monthly_trn_cohesion = 0.5
 	monthly_mac_war_cabinet_organization = 0.03
 }
 
@@ -1352,7 +1353,7 @@ power_projection = {
 	devotion = 0.5
 	horde_unity = 0.5
 	republican_tradition = 0.2
-	monthly_trn_cohesion = 1
+	monthly_trn_cohesion = 0.5
 }
 
 power_projection_25 = {
