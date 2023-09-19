@@ -64,6 +64,8 @@ pf_trn_1 = {
 		position = 4
 		required_missions = { pf_trn_appease_the_druids } 
 		provinces_to_highlight = {
+			owned_by = ROOT
+			has_tax_building_trigger = no
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -383,7 +385,8 @@ pf_trn_2 = {
 		trigger = {
 			OR = {
 				calc_true_if = {
-					all_country = {
+					desc = PF_TRN_NEED_30_SPY_NETWORK_IN_COUNTRIES_WITH_BRITON_PROVINCES
+					all_neighbor_country = {
 						any_owned_province = {
 							culture = briton
 						}
@@ -394,11 +397,8 @@ pf_trn_2 = {
 					}
 					amount = 2
 				}
-				NOT = {
-					any_province = {
-						culture = briton
-						NOT = { owned_by = ROOT }
-					}
+				owns_all_provinces = {
+					culture = briton
 				}
 			}
 		}
@@ -467,7 +467,17 @@ pf_trn_2 = {
 		position = 5
 		required_missions = { pf_trn_magi_and_mystics } 
 		provinces_to_highlight = {
-			province_id = 1266	# North Sea
+			OR = {
+				province_id = 1266
+				AND = {
+					province_id = 1860
+					NOT = { owned_by = ROOT }
+				}
+				AND = {
+					owned_by = ROOT
+					has_trade_building_trigger = no
+				}
+			}
 		}
 		trigger = {
 			1266 = {
@@ -705,10 +715,10 @@ pf_trn_3 = {
 		}
 		trigger = {
 			calc_true_if = {
-				all_country = {
+				amount = 3
+				all_enemy_country = {
 					is_enemy = ROOT
 				}
-				amount = 3
 			}
 			owns = 4370
 			OR = {
@@ -777,8 +787,7 @@ pf_trn_3 = {
 		position = 4
 		required_missions = { pf_trn_awaken_the_britons pf_trn_a_new_outlook pf_trn_stormlander_fleet } 
 		provinces_to_highlight = {
-			owner = { tag = CEL }
-			is_capital = yes
+			is_capital_of = CEL
 		}
 		trigger = {
 			OR = {
@@ -787,6 +796,7 @@ pf_trn_3 = {
 					who = CEL
 					max_years_since = 100
 				}
+				NOT = { exists = CEL }
 			}
 		}
 		effect = {
@@ -846,8 +856,13 @@ pf_trn_3 = {
 		position = 5
 		required_missions = { pf_trn_gaelic_war } 
 		provinces_to_highlight = {
-			owner = { tag = CEL }
-			is_capital = yes
+			OR = {
+				is_capital_of = CEL
+				AND = {
+					culture = briton
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
 		}
 		trigger = {
 			OR = {
@@ -858,12 +873,9 @@ pf_trn_3 = {
 				}
 			}
 			grown_by_development = 15
-			calc_true_if = {
-				all_province = {
-					culture = briton
-					owned_by = ROOT
-				}
-				amount = 10
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				culture = briton
 			}
 		}
 		effect = {
@@ -910,12 +922,9 @@ pf_trn_3 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			calc_true_if = {
-				all_province = {
-					region = british_isles_region
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-				amount = 26
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 26
+				region = british_isles_region
 			}
 		}
 		effect = {
@@ -984,14 +993,14 @@ pf_trn_3 = {
 					loyalty = 70
 				}
 			}
-			owns = 4369
+			owns_core_province = 4369
 			4369 = {
 				OR = {
 					has_dock_building_trigger = yes
 					has_shipyard_building_trigger = yes
 				}
-				development = 14
 			}
+			4369 = { development = 14 }
 		}
 		effect = {
 			add_country_modifier = {
@@ -1033,16 +1042,13 @@ pf_trn_3 = {
 		position = 9
 		required_missions = { } 
 		provinces_to_highlight = {
-			owner = { tag = GAU }
-			is_capital = yes
+			is_capital_of = GAU
 		}
 		trigger = {
 			OR = {
-				GAU = {
-					has_opinion = {
-						who = ROOT
-						value = 180
-					}
+				reverse_has_opinion = {
+					who = GAU
+					value = 180
 				}
 				alliance_with = GAU
 				total_development = GAU
@@ -1428,16 +1434,12 @@ pf_trn_4 = {
 		required_missions = { pf_trn_gaullish_alliance pf_trn_develop_the_nation pf_trn_leadership_of_the_trinovantes } 
 		provinces_to_highlight = {
 			province_id = 236	# Londinion
-			OR = {
-				NOT = { development = 40 }
-			}
+			NOT = { development = 40 }
 		}
 		trigger = {
 			total_development = 300
-			236 = {
-				owned_by = ROOT
-				development = 40
-			}
+			owns_core_province = 236
+			236 = { development = 40 }
 		}
 		effect = {
 			add_prestige = 25
@@ -1600,7 +1602,7 @@ pf_trn_5 = {
 				name = "pf_trn_reformed_confederation"
 				duration = 9125
 			}
-			set_country_flag = pf_trn_unlocked_court_bards
+			set_country_flag = unlocked_privilege_estate_burghers_pf_court_bards
 			custom_tooltip = unlocks_court_bards_privilege_tt
 		}
 	}
@@ -1753,8 +1755,8 @@ pf_trn_5 = {
 			}
 		}
 		trigger = {
+			owns_core_province = 238
 			238 = {
-				owned_by = ROOT
 				development = 18
 			}
 			total_development = 100

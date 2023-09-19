@@ -84,7 +84,16 @@ pf_blackcoat_dictatorship = {
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	potential = {
-		has_country_flag = blackcoats_in_power
+		OR = {
+			tag = TRN
+			tag = ABN
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = pf_trn_allowed_blackcoat_dictatorship_tt
+			has_country_flag = blackcoats_in_power
+		}
 	}
 	modifiers = {
 		army_tradition = 0.50

@@ -713,7 +713,7 @@ country_event = {		# The Black Terror
 
 	trigger = {
 		has_country_modifier = pf_trn_the_blackcoats_modifier
-		NOT = { stability 1 }
+		NOT = { stability = 1 }
 	}
 
 	mean_time_to_happen = {

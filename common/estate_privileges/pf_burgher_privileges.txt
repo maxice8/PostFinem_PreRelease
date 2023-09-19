@@ -93,14 +93,12 @@ estate_burghers_pf_court_bards = {
 	loyalty = 0.05
 	influence = 0.1
 	is_valid = {
-		OR = {
-			has_unlocked_estate_privilege = {
-				estate_privilege = estate_burghers_pf_court_bards
-			}
-			has_country_flag = pf_trn_unlocked_court_bards
-		}
+		has_mission = pf_trn_reform_the_confederation
 	}
 	can_select = {
+		has_unlocked_estate_privilege = {
+			estate_privilege = estate_burghers_pf_court_bards
+		}
 	}
 	on_granted = {
 	}
@@ -111,7 +109,7 @@ estate_burghers_pf_court_bards = {
 		army_tradition_from_battle = 0.25
 	}
 	conditional_modifier = {
-		trigger = { has_country_flag = upgraded_court_bards }
+		trigger = { has_country_flag = pf_trn_upgraded_court_bards }
 		modifier = { monthly_trn_cohesion = 0.25 }
 	}
 	ai_will_do = {

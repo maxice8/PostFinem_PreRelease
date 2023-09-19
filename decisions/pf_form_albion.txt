@@ -93,32 +93,32 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = ABN
-			custom_tooltip = " "
+			custom_tooltip = empty_line_tt
 			on_change_tag_effect = yes
 			restore_country_name = yes
 			swap_non_generic_missions = yes
-			custom_tooltip = " "
+			custom_tooltip = empty_line_tt
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {
 					NOT = { government_rank = 2 }
 				}
 				set_government_rank = 2
-				custom_tooltip = " "
+				custom_tooltip = empty_line_tt
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
 			add_prestige = 25
-			custom_tooltip = " "
+			custom_tooltip = empty_line_tt
 			if = {
 				limit = {
 					has_custom_ideas = no
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-			set_country_flag = reformed_celtica_flag
+			set_country_flag = formed_albion_flag
 		}
 		ai_will_do = {
 			factor = 1
@@ -167,7 +167,7 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			#is_subject = no
+			is_free_or_tributary_trigger = yes
 			is_nomad = no			
 			scottish_marches_area = {
 				 type = all
