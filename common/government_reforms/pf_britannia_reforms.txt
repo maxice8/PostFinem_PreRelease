@@ -123,8 +123,8 @@ pf_brittonic_tribe_reform = {
 		culture_group = old_celtic
 	}
 	modifiers = {
-		global_manpower_modifier = 0.10
-		estate_interaction_cooldown_modifier = -0.25
+		nobles_loyalty_modifier = 0.05
+		nobles_privilege_slots = 1
 		max_absolutism = -10
 	}
 	government_abilities = {
