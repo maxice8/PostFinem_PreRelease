@@ -26,6 +26,12 @@ brittonic_song_mechanic = {
 					}
 					add_mercantilism = 1
 				}
+				if = {
+					limit = {
+						has_country_flag = pf_bri_song_of_fields_bonus
+					}
+					add_years_of_income = 0.25
+				}
 			}
 			cooldown_years = 20
 			cooldown_token = brittonic_song_mechanic
@@ -55,6 +61,12 @@ brittonic_song_mechanic = {
 					}
 					change_government_reform_progress = 25
 				}
+				if = {
+					limit = {
+						has_country_flag = pf_bri_song_of_ancestors_bonus
+					}
+					add_prestige = 15
+				}
 			}
 			cooldown_years = 20
 			cooldown_token = brittonic_song_mechanic
@@ -83,6 +95,12 @@ brittonic_song_mechanic = {
 						has_country_flag = pf_bri_upgraded_song_ability
 					}
 					add_army_professionalism = 0.01
+				}
+				if = {
+					limit = {
+						has_country_flag = pf_bri_song_of_heroes_bonus
+					}
+					add_army_tradition = 10
 				}
 			}
 			cooldown_years = 20

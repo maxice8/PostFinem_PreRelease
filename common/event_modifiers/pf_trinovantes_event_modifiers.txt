@@ -262,3 +262,22 @@ pf_bri_boudiccas_way_modifier = {
 	allowed_num_of_buildings = 1
 	local_governing_cost_increase = -15
 }
+pf_bri_dumnonian_monarchy = {
+	legitimacy = 1
+	unjustified_demands = -0.50
+}
+pf_bri_chiefs_house_modifier = {
+	governing_capacity_modifier = 0.05
+	local_tax_modifier = 0.35
+}
+pf_bri_efficient_farms = {
+	production_efficiency = 0.10
+	global_prov_trade_power_modifier = 0.10
+}
+pf_bri_copper_deposits = {
+	trade_goods_size = 3
+}
+pf_bri_cities_aplenty = {
+	development_cost = -0.05
+	global_tax_modifier = 0.10
+}
