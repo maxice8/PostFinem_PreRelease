@@ -251,3 +251,14 @@ pf_bri_foreign_support = {
 	manpower_recovery_speed = 0.10
 	global_manpower_modifier = 0.10
 }
+pf_bri_newfound_independence = {
+	stability_cost_modifier = -0.20
+	global_autonomy = -0.05
+}
+pf_bri_boudiccas_way_modifier = {
+	local_friendly_movement_speed = 0.33
+	province_trade_power_modifier = 0.25
+	supply_limit_modifier = 1
+	allowed_num_of_buildings = 1
+	local_governing_cost_increase = -15
+}

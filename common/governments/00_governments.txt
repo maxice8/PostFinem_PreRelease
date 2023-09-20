@@ -158,6 +158,7 @@ monarchy = {
 				separation_of_boyars_from_court_reform
 				# pf [[[
 				pf_guidance_of_the_elders_reform
+				pf_regional_tribal_nobility_reform
 				# ]]]
 			}
 		}
@@ -226,9 +227,6 @@ monarchy = {
 		}
 		military_doctrines = {
 			reforms = {
-				# pf [[[
-				pf_integrated_phalanx
-				# ]]]
 				organized_military_staff_reform
 				military_engineering_reform
 				defensive_stance_reform
@@ -285,6 +283,10 @@ monarchy = {
 				merchant_arsenal_reform
 				tercios_reform
 				expanded_black_army_reform
+				# pf [[[
+				pf_integrated_phalanx
+				pf_militarised_druids_reform
+				# ]]]
 			}
 		}
 		deliberative_assembly = {

@@ -30,18 +30,24 @@ mechanic_techs_give_estate_loyalty_yes:0 "Unlocking any technology increases the
 pf_trn_allowed_blackcoat_dictatorship_tt: "The Blackcoats have taken over in the §YBlackcoat Revolution§! disaster."
 
 pf_brittonic_tribe_reform: "Formalised Brittonic Tribe"
-pf_brittonic_tribe_reform_desc: ""
+pf_brittonic_tribe_reform_desc: "The Britons have long since departed the time of roaming nomadic tribes, and have since settled down and created towns. Over the years, considerable centralisation has occured and what were once a hundred independent bands have consolidated down into confederations like our own. Under the leadership of the principal tribe, these groups form a kind of micro-empire under a great king."
 ability_brittonic_song_mechanic: "Songs"
 bri_song_1_modifier: "Song of the Fields"
 bri_song_2_modifier: "Song of the Ancestors"
 bri_song_3_modifier: "Song of the Heroes"
 bri_song_1: "Song of the Fields"
-bri_song_1_desc: ""
+bri_song_1_desc: "'Animals rejoice, and let the birds sing, for from the darkness of winter, here comes the spring...'\n\n"
 bri_song_2: "Song of the Ancestors"
-bri_song_2_desc: ""
+bri_song_2_desc: "'I feel my ancestors surrounding me, guiding me through this perilous world...'\n\n"
 bri_song_3: "Song of the Heroes"
-bri_song_3_desc: ""
+bri_song_3_desc: "'Let the blood of the heroes flow through me and grant victory in battle...'\n\n"
 BRITTONIC_SONG: "Bardic Song"
+
+pf_regional_tribal_nobility_reform: "Integrate Regional Tribal Nobility"
+pf_regional_tribal_nobility_reform_desc: "The tribes we absorbed to create this chiefdom have their own nobles and notables who have survived our conquest, and continue to act semi-independently, all while constantly complaining they lack enough autonomy. We should put an end to their whining by forcibly ceding their estates to the crown and disenfranchising them from the performance of government as a whole."
+
+pf_militarised_druids_reform: "Militarised Druids"
+pf_militarised_druids_reform_desc: "In olden days, the druids were a major component of Brittonic armies. Their spells and rituals kept us safe from enemies and increased our chances at success in battle. Nowadays, we are moving towards a more scientific world, and have begun to see the deeds of the druids as what they truly were - military tactics. Let us embrace this practice and restore the importance of the druids on the battlefield."
 
  CHIEFTAIN: "Chieftain"
  CHIEFTESS: "Chieftess"
@@ -370,7 +376,7 @@ pf_trn_the_new_north_title: "The New North"
 pf_trn_the_new_north_desc: "In a different world, this place might have been known as a place of myths and legends, a legacy of bygone conquests. But in ours, this is a rich and vibrant region. In the past it held a fascinating bardic culture, with many poems being written about its brave heroes, many of which still survive to this day. Securing the North is vital to controlling the land routes across from Pictland, which when undefended could be used by any unsightly Northman or Celt."
 
 pf_trn_free_the_picts_title: "Free the Picts"
-pf_trn_free_the_picts_desc: "The Picts were once a wild people of the northern highlands of Albion. They lived free, dancing between their painted stones and camping out with the sheep under barren skies. Those days of tranquility are long gone for them now. In the wake of invasions by the Gaels and the Northmen, the Picts have been driven ever farther south, and now their domain lies along the ancient border with the Caledonians. They face the same oppressors as we do - we should help them, and restore their lands to the glory they once enjoyed, as an elder brother would help is sibling."
+pf_trn_free_the_picts_desc: "The Picts were once a wild people of the northern highlands of Albion. They lived free, dancing between their painted stones and camping out with the sheep under barren skies. Those days of tranquility are long gone for them now. In the wake of invasions by the Gaels and the Northmen, the Picts have been driven ever farther south, and now their domain lies along the ancient border with the Caledonians. They face the same oppressors as we do - we should help them, and restore their lands to the glory they once enjoyed, as an elder brother would help his sibling."
 pf_trn_triumph_over_the_northmen: "Triumph over the Northmen"
 pf_trn_free_the_picts_tt: "Every province in the §YLowlands§!, §YHighlands§!, or §YIsles§! areas will get the following effect:"
 
@@ -514,7 +520,7 @@ pf_bri_bards_loyalty_desc: "The bards are an important class within our court an
 #
 
 pf_bri_great_feast_title: "A Great Feast"
-pf_bri_great_feast_desc: "'Diplomats toasting on an open fire...'\n\nWe should show our grandeur and wealth off to our neighbours, and there is no better way of doing that than hosting a splendid feast, and inviting dignitaries of all kinds. With copious amounts of fine food and mead, we will be sure to smooth relations over with our erratic brethren."
+pf_bri_great_feast_desc: "'Diplomats roasting on an open fire...'\n\nWe should show our grandeur and wealth off to our neighbours, and there is no better way of doing that than hosting a splendid feast, and inviting dignitaries of all kinds. With copious amounts of fine food and mead, we will be sure to smooth relations over with our erratic brethren."
 opinion_bri_feast: "Attended our Feast"
 pf_bri_held_a_great_feast: "Held a Great Feast"
 pf_bri_every_briton_gets_opinion_tt: "Every §YCeltic§! cultured country gains §G+50§! opinion of us."
@@ -530,12 +536,19 @@ pf_bri_build_army_desc: "We should assemble a band of warriors to use against ou
 pf_bri_expansionism: "Policy of Expansionism"
 
 pf_bri_secure_help_title: "Appeal to our Brothers"
-pf_bri_secure_help_desc: ""
+pf_bri_secure_help_desc: "We are not the only Britons under the Celtic boot. We should seek to ally with other brothers against our enemies, be they the fellow oppressed, the antagonistic Confederation or powerful friends overseas."
 pf_bri_secure_help_1_tt: "If we complete this mission by §Ysecuring independence ourselves§!, we will gain the following effect:"
 pf_bri_secure_help_2_tt: "If we complete this mission by §Yappealing to the [TRN.GetName]§!, we will gain the following effect:"
 pf_bri_secure_help_3_tt: "If we complete this mission by §Ymaking a powerful ally§!, we will gain the following effect:"
 pf_bri_support_of_the_trinovantes: "Support of the Brittonic Confederation"
 pf_bri_foreign_support: "Foreign Support"
+
+pf_bri_independence_title: "Songs of Freedom"
+pf_bri_independence_desc: "The Celtic Tyranny has kept us desperate and depressed for too long. We must throw off the shackles of Gaelic rule and set out to pursue our own destiny in Albion!"
+pf_bri_newfound_independence: "Newfound Independence"
+
+pf_bri_crown_of_albion_title: "Crown of Albion"
+pf_bri_crown_of_albion_desc: "Albion is an idea more than anything - an idea that the Britons could one day be united under one flag, to serve no masters other than their own morals. No man has achieved this deed before. Thus, it is a great privilege that we are able to share in this dream, and make it a reality."
 
 #
 
@@ -557,7 +570,21 @@ pf_bri_coels_wall_desc: "Coel Hen ruled a kingdom that controlled the entire nor
 pf_bri_coels_wall_modifier: "Coel's Wall"
 
 pf_bri_coels_city_title: "Renovate [245.GetName]"
-pf_bri_coels_city_desc: "The city of [245.GetName] was once a great city under the rule of the ever-present Coel Hen, but in the centuries since his rule, it has declined severely. While it is still one of the largest settlements in the north, there is plenty of room for improvement in public infrastructure, including restoring the old citadel."
+pf_bri_coels_city_desc: "The city of [245.GetName] was once a great metropolis under the rule of the ever-present Coel Hen, but in the centuries since his rule, it has declined severely. While it is still one of the largest settlements in the north, there is plenty of room for improvement in public infrastructure, including restoring the old citadel."
 pf_bri_manpower_building_extra_tt: "If we have a §Ymanpower building§! in [245.GetName], we will gain the following effect:"
 pf_bri_trade_building_extra_tt: "If we have a §Ytrade building§! in [245.GetName], we will gain the following effect:"
 pf_bri_tax_building_extra_tt: "If we have a §Ytax building§! in [245.GetName], we will gain the following effect:"
+
+pf_bri_boudiccas_way_title: "Boudicca's Way"
+pf_bri_boudiccas_way_desc: "Boudicca's Way is a now ancient path crossing through Albion, from Queen Boudicca's ancient territories all the way up to Eburacum. While operational, it served as a vital route for information and armies to travel up and down the spine of the country. With some effort and rebuilding, we can restore this road system back to its former glory."
+pf_bri_boudiccas_way_big_tt: "Each of the highlighted provinces has been §Ydeveloped at least four times§!, has had its §Yinfrastructure expanded at least once§!, and is §Yowned by [Root.GetName]."
+pf_bri_boudiccas_way_effect_tt: "Every highlighted province on §YBoudicca's Way§! will gain the following modifier:"
+pf_bri_boudiccas_way_modifier: "Renovated Boudicca's Way"
+
+
+########## Unique Branches
+
+# Wales
+
+pf_bri_among_the_flocks_title: "Among the Flocks"
+pf_bri_among_the_flocks_desc: "Cymru is famous for the size and quality of its sheep herds, both feeding the people who nuture them and supplying the lifeblood of our economy, wool. We should continue to patronise the wool industry, and ensure that our flocks continue to grow in number."

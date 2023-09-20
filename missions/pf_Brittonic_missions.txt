@@ -61,6 +61,49 @@ pf_bri_1 = {
 				skill = 1
 				discount = yes
 			}
+			custom_tooltip = empty_line_tt
+			set_country_flag = unlocked_privilege_estate_burghers_pf_court_bards
+			custom_tooltip = unlocks_court_bards_privilege_tt
+		}
+	}
+}
+pf_bri_1_welsh = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		primary_culture = old_welsh
+		NOT = { tag = TRN }
+		NOT = { was_tag = TRN }
+	}
+
+	pf_bri_among_the_flocks = {
+		icon = mission_rb_conquer_wales
+		position = 1
+		required_missions = { } 
+		provinces_to_highlight = {
+			area = wales_area
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { development = 7 }
+			}
+		}
+		trigger = {
+			wales_area = {
+				type = all
+				owned_by = ROOT
+				development = 7
+			}
+		}
+		effect = {
+			wales_area = {
+				add_prosperity = 50
+				random = {
+					chance = 50
+					add_base_tax = 1
+				}
+			}
 		}
 	}
 }
@@ -245,6 +288,128 @@ pf_bri_3 = {
 			}
 		}
 	}
+	pf_bri_independence = {
+		icon = mission_pol_deal_mazovia
+		position = 3
+		required_missions = { pf_bri_secure_help } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			is_subject = no
+		}
+		effect = {
+			add_legitimacy = 10
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = pf_bri_newfound_independence
+				duration = 9125
+			}
+			custom_tooltip = empty_line_tt
+			scottish_marches_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			yorkshire_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_midlands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_midlands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			wales_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_anglia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			home_counties_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			wessex_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	pf_bri_crown_of_albion = {
+		icon = mission_crown_of_norway
+		position = 4
+		required_missions = { pf_bri_bards_melody pf_bri_independence pf_bri_drive_out_the_northmen } 
+		provinces_to_highlight = {
+			OR = {
+				area = scottish_marches_area
+				area = yorkshire_area
+				area = east_midlands_area
+				area = west_midlands_area
+				area = east_anglia_area
+				area = wales_area
+				area = home_counties_area
+				area = wessex_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 26
+				OR = {
+					area = scottish_marches_area
+					area = yorkshire_area
+					area = east_midlands_area
+					area = west_midlands_area
+					area = east_anglia_area
+					area = wales_area
+					area = home_counties_area
+					area = wessex_area
+				}
+			}
+		}
+		effect = {
+			set_country_flag = may_form_albion
+			custom_tooltip = pf_trn_dreams_of_albion_tt
+			custom_tooltip = empty_line_tt
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
+			custom_tooltip = empty_line_tt
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 30
+			}
+		}
+	}
 }
 pf_bri_4 = {
 	slot = 4
@@ -361,12 +526,12 @@ pf_bri_4 = {
 		required_missions = { pf_bri_pacify_the_picts pf_bri_coels_city } 
 		provinces_to_highlight = {
 			area = highlands_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			owner = { religion = norse_pagan_reformed }
 		}
 		trigger = {
 			highlands_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				owner = { NOT = { religion = norse_pagan_reformed } }
 			}
 		}
 		effect = {
@@ -531,6 +696,132 @@ pf_bri_5 = {
 			tooltip = {
 				245 = {
 					add_base_tax = 1
+				}
+			}
+		}
+	}
+	pf_bri_boudiccas_way = {
+		icon = mission_silk_road
+		position = 4
+		required_missions = { pf_bri_coels_city } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 245
+				province_id = 4785
+				province_id = 1861
+				province_id = 4376
+				province_id = 237
+				province_id = 236
+				province_id = 238
+				province_id = 1860
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { num_of_times_improved = 4 }
+				NOT = { num_of_times_expanded_infrastructure = 1 }
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = pf_bri_boudiccas_way_big_tt
+				245 = {
+					num_of_times_improved = 4
+					num_of_times_expanded_infrastructure = 1
+					owned_by = ROOT
+				}
+				4785 = {
+					num_of_times_improved = 4
+					num_of_times_expanded_infrastructure = 1
+					owned_by = ROOT
+				}
+				1861 = {
+					num_of_times_improved = 4
+					num_of_times_expanded_infrastructure = 1
+					owned_by = ROOT
+				}
+				4376 = {
+					num_of_times_improved = 4
+					num_of_times_expanded_infrastructure = 1
+					owned_by = ROOT
+				}
+				237 = {
+					num_of_times_improved = 4
+					num_of_times_expanded_infrastructure = 1
+					owned_by = ROOT
+				}
+				236 = {
+					num_of_times_improved = 4
+					num_of_times_expanded_infrastructure = 1
+					owned_by = ROOT
+				}
+				238 = {
+					num_of_times_improved = 4
+					num_of_times_expanded_infrastructure = 1
+					owned_by = ROOT
+				}
+				1860 = {
+					num_of_times_improved = 4
+					num_of_times_expanded_infrastructure = 1
+					owned_by = ROOT
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = pf_bri_boudiccas_way_effect_tt
+			hidden_effect = {
+				245 = {
+					add_province_modifier = {
+						name = "pf_bri_boudiccas_way_modifier"
+						duration = -1
+					}
+				}
+				4785 = {
+					add_province_modifier = {
+						name = "pf_bri_boudiccas_way_modifier"
+						duration = -1
+					}
+				}
+				1861 = {
+					add_province_modifier = {
+						name = "pf_bri_boudiccas_way_modifier"
+						duration = -1
+					}
+				}
+				4376 = {
+					add_province_modifier = {
+						name = "pf_bri_boudiccas_way_modifier"
+						duration = -1
+					}
+				}
+				237 = {
+					add_province_modifier = {
+						name = "pf_bri_boudiccas_way_modifier"
+						duration = -1
+					}
+				}
+				236 = {
+					add_province_modifier = {
+						name = "pf_bri_boudiccas_way_modifier"
+						duration = -1
+					}
+				}
+				238 = {
+					add_province_modifier = {
+						name = "pf_bri_boudiccas_way_modifier"
+						duration = -1
+					}
+				}
+				1860 = {
+					add_province_modifier = {
+						name = "pf_bri_boudiccas_way_modifier"
+						duration = -1
+					}
+				}
+			}
+			tooltip = {
+				add_province_modifier = {
+					name = "pf_bri_boudiccas_way_modifier"
+					duration = -1
 				}
 			}
 		}
