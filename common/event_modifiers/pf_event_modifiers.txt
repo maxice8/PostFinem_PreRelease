@@ -137,3 +137,78 @@ pf_per_satrapy_intimidated = {
 pf_per_satrapy_divided = {
 	reduced_liberty_desire = 10
 }
+
+pf_per_hormuz_toll = {
+	province_trade_power_value = 20
+}
+
+pf_per_trade_boom = {
+	trade_efficiency = 0.1
+}
+
+pf_per_secure_from_pirates = {
+	privateer_efficiency = -0.9
+}
+
+pf_per_secured_gulf = {
+	trade_value_modifier = 0.1
+}
+
+pf_per_baghdad_reborn = {
+	local_development_cost = -0.15
+	local_build_cost = -0.2
+}
+
+pf_per_destroyed_seleucia = {
+	prestige = 1
+}
+
+pf_per_restored_baghdad = {
+	local_development_cost = -0.15
+	local_build_cost = -0.2
+	province_trade_power_modifier = 0.2
+	trade_goods_size_modifier = 0.2
+}
+
+pf_per_rule_in_tabriz = {
+	local_development_cost = -0.1
+	local_prosperity_growth = 0.01
+	local_unrest = -5
+}
+
+pf_per_established_control = {
+	reduced_liberty_desire = 10
+}
+
+pf_per_into_india = {
+	manpower_recovery_speed = 0.2
+	land_morale = 0.05
+}
+
+pf_per_multan_conquered = {
+	province_trade_power_modifier = 0.2
+	trade_goods_size_modifier = 0.1
+}
+
+pf_per_assisted_satrapies = {
+	vassal_income = 0.1
+}
+
+pf_per_good_wall_fort = {
+	local_defensiveness = 0.2
+}
+
+pf_per_liberated_from_heresy = {
+	local_tax_modifier = 0.2
+	local_unrest = -5
+}
+
+pf_per_ignored_satrapy = {
+	liberty_desire = 10
+}
+
+pf_satrapy_expansion_plan_complete = {
+	development_cost = -0.2
+	global_unrest = -2
+	liberty_desire = -10
+}

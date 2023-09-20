@@ -46,19 +46,83 @@ zoroastrian_theocracy_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		tag = PER
+		NOT = { has_country_flag = pf_per_centralization_collapsed }
+		NOT = { has_country_flag = pf_per_centralization_completed }
 	}
 	valid_for_nation_designer = yes
 	nation_designer_trigger = {
 		religion_group = zoroastrian_group
 	}
 	nation_designer_cost = 10
+
+	valid_for_new_country = no
 	modifiers = {
 		church_privilege_slots = 2
 		church_influence_modifier = 0.1
 		manpower_in_accepted_culture_provinces = 0.15
 		vassal_income = -0.1
 	}
+	#fixed_rank = 2
 	government_abilities = { pf_per_centralization_mechanic }
+}
+
+pf_collapsed_zoroastrian_theocracy = {
+	icon = "zoroastrian_theocracy"
+	potential = {
+		tag = PER
+		has_country_flag = pf_per_centralization_collapsed
+	}
+	valid_for_nation_designer = no
+	valid_for_new_country = no
+
+	modifiers = {
+		church_privilege_slots = 2
+		church_influence_modifier = 0.2
+		stability_cost_modifier = 0.5
+		governing_capacity_modifier = -0.5
+		min_autonomy = 25
+	}
+	fixed_rank = 1
+}
+
+pf_centralized_zoroastrian_theocracy = {
+	icon = "zoroastrian_theocracy"
+	allow_normal_conversion = yes
+	potential = {
+		tag = PER
+		has_country_flag = pf_per_centralization_completed
+		NOT = { has_country_flag = pf_per_persian_empire }
+	}
+	valid_for_nation_designer = no
+	valid_for_new_country = no
+
+	modifiers = {
+		church_privilege_slots = 2
+		church_influence_modifier = 0.1
+		manpower_in_accepted_culture_provinces = 0.15
+		global_tax_modifier = 0.2
+		reduced_liberty_desire = -50
+	}
+	fixed_rank = 2
+}
+
+pf_zoroastrian_theocracy_empire = {
+	icon = "zoroastrian_theocracy"
+	allow_normal_conversion = yes
+	potential = {
+		tag = PER
+		has_country_flag = pf_per_persian_empire
+	}
+	valid_for_nation_designer = no
+	valid_for_new_country = no
+
+	modifiers = {
+		church_privilege_slots = 2
+		manpower_in_accepted_culture_provinces = 0.25
+		global_tax_modifier = 0.2
+		governing_capacity = 100
+	}
+	fixed_rank = 3
 }
 
 pf_athens_archon = {

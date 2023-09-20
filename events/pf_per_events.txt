@@ -1,5 +1,6 @@
 namespace = pf_per_events
 
+# Crisis in Persia, triggered on start
 country_event = {
 	id = pf_per_events.0
 	title = "pf_per_events_0_title"
@@ -19,6 +20,7 @@ country_event = {
 	}
 }
 
+# Start of Satrapy Revolt Disaster
 country_event = {
 	id = pf_per_events.1
 	title = "pf_per_events_1_title"
@@ -44,6 +46,7 @@ country_event = {
 	}
 }
 
+# Satrapy Revolt Disaster: Satrapy Disobeys
 country_event = {
 	id = pf_per_events.2
 	title = "pf_per_events_2_title"
@@ -65,6 +68,7 @@ country_event = {
 	}
 }
 
+# Satrapy Revolt Disaster: Satrapy demands money
 country_event = {
 	id = pf_per_events.3
 	title = "pf_per_events_3_title"
@@ -131,6 +135,7 @@ country_event = {
 	}
 }
 
+# Satrapy Revolt Disaster: Satrapy demands privileges
 country_event = {
 	id = pf_per_events.4
 	title = "pf_per_events_4_title"
@@ -189,6 +194,7 @@ country_event = {
 	}
 }
 
+# Satrapy Revolt Disaster: Uprising in Satrapy
 country_event = {
 	id = pf_per_events.5
 	title = "pf_per_events_5_title"
@@ -229,6 +235,7 @@ country_event = {
 	}
 }
 
+# Satrapy Revolt Disaster: Satrapies Collaborate
 country_event = {
 	id = pf_per_events.6
 	title = "pf_per_events_6_title"
@@ -277,6 +284,7 @@ country_event = {
 	}
 }
 
+# Satrapy Revolt Disaster: Satrapy Compromises
 country_event = {
 	id = pf_per_events.7
 	title = "pf_per_events_7_title"
@@ -311,6 +319,7 @@ country_event = {
 	}
 }
 
+# Satrapy Revolt Disaster: Satrapies become independant
 country_event = {
 	id = pf_per_events.8
 	title = "pf_per_events_8_title"
@@ -345,6 +354,7 @@ country_event = {
 	}
 }
 
+# End of Satrapy Revolt
 country_event = {
 	id = pf_per_events.9
 	title = "pf_per_events_9_title"
@@ -377,6 +387,13 @@ country_event = {
 
 	immediate = {
 		set_country_flag = pf_per_had_satrapy_revolt
+		hidden_effect = {
+			complete_mission = pf_per_appeal_to_religion
+			complete_mission = pf_per_raise_the_army
+			complete_mission = pf_per_find_allies
+			complete_mission = pf_per_show_our_strength
+			complete_mission = pf_per_divide_and_conquer
+		}
 	}
 
 	after = {
@@ -431,12 +448,14 @@ country_event = {
 	}
 }
 
+# # Mission Event: Allied to Zoroastrians
 country_event = {
 	id = pf_per_events.10
 	title = "pf_per_events_10_title"
 	desc = "pf_per_events_10_desc"
 	picture = DIPLOMACY_eventPicture
 	is_triggered_only = yes
+	fire_only_once = yes
 
 	immediate = {
 		random_ally = {
@@ -468,6 +487,7 @@ country_event = {
 	}
 }
 
+# Satrapy Revolt Disaster: Satrapy demands Manpower
 country_event = {
 	id = pf_per_events.11
 	title = "pf_per_events_11_title"
@@ -529,6 +549,184 @@ country_event = {
 				name = pf_per_satrapy_refused
 				duration = -1
 				desc = "pf_per_satrapy_revolt_until_end_tt"
+			}
+		}
+	}
+}
+
+# Mission Event: Move Capital to Baghdad 
+country_event = {
+	id = pf_per_events.12
+	title = "pf_per_events_12_title"
+	desc = "pf_per_events_12_desc"
+	picture = CITY_VIEW_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "pf_per_events_12_option_1"
+		ai_chance = { factor = 0 }
+		set_capital = 410
+	}
+
+	option = {
+		name = "pf_per_events_12_option_2"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Centralization hits 0 event
+country_event = {
+	id = pf_per_events.13
+	title = "pf_per_events_13_title"
+	desc = "pf_per_events_13_desc"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "pf_per_events_13_option"
+		ai_chance = { factor = 100 }
+		add_stability = -3
+		add_prestige = -100
+		add_devotion = -100
+		release_all_subjects = yes
+		hidden_effect = {
+			remove_estate_privilege = estate_nobles_pf_satrapy_expansion_plan
+			remove_estate_privilege = estate_nobles_pf_satrapy_annexation_ban
+			remove_estate_privilege = estate_nobles_pf_satrapy_exemption_from_conscription
+		}
+		set_country_flag = pf_per_centralization_collapsed
+		add_government_reform = pf_collapsed_zoroastrian_theocracy
+	}
+}
+
+# Centralization hits 100 event
+country_event = {
+	id = pf_per_events.14
+	title = "pf_per_events_14_title"
+	desc = "pf_per_events_14_desc"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "pf_per_events_14_option"
+		ai_chance = { factor = 100 }
+		add_stability = 1
+		add_prestige = 50
+		add_dip_power = 150
+		set_country_flag = pf_per_centralization_completed
+		add_government_reform = pf_centralized_zoroastrian_theocracy
+	}
+}
+
+# Sack of Baghdad
+country_event = {
+	id = pf_per_events.15
+	title = "pf_per_events_15_title"
+	desc = "pf_per_events_15_desc"
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = PER
+		controls = 410
+		SLC = { owns = 410 }
+	}
+
+	mean_time_to_happen = { days = 3 }
+
+	option = {
+		name = "pf_per_events_15_option"
+		ai_chance = { factor = 100 }
+		410 = {
+			add_base_tax = -3
+			add_base_production = -3
+			add_base_manpower = -3
+			add_devastation = 75
+		}
+		add_treasury = 200
+	}
+}
+
+# Sack of Baghdad, SLC side
+country_event = {
+	id = pf_per_events.16
+	title = "pf_per_events_16_title"
+	desc = "pf_per_events_16_desc"
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	major = yes
+	major_trigger = { total_development = 100 }
+
+	option = {
+		name = "pf_per_events_16_option"
+		ai_chance = { factor = 100 }
+		tooltip = {
+			410 = {
+				add_base_tax = -3
+				add_base_production = -3
+				add_base_manpower = -3
+				add_devastation = 75
+			}
+		}
+		add_treasury = -200
+	}
+}
+
+# Steppe Horde raids Satrapy
+country_event = {
+	id = pf_per_events.17
+	title = "pf_per_events_17_title"
+	desc = "pf_per_events_17_desc"
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+
+	mean_time_to_happen = { months = 30 }
+
+	trigger = {
+		tag = PER
+		NOT = { has_country_flag = pf_per_good_wall_built }
+		any_subject_country = {
+			any_neighbor_country = { has_reform = steppe_horde }
+		}
+	}
+
+	immediate = {
+		random_subject_country = {
+			limit = {
+				any_neighbor_country = { has_reform = steppe_horde }
+			}
+			save_event_target_as = raided_satrap
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						any_neighbor_province = { 
+							owner = { has_reform = steppe_horde }
+						}
+					}
+					add_devastation = 10
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "pf_per_events_17_option_1"
+		ai_chance = { factor = 100 }
+		add_treasury = -100
+		event_target:raided_satrap = { add_treasury = 100 }
+	}
+
+	option = {
+		name = "pf_per_events_17_option_2"
+		ai_chance = { factor = 0 }
+		event_target:raided_satrap = {
+			add_country_modifier = {
+				name = pf_per_ignored_satrapy
+				duration = 1825
 			}
 		}
 	}

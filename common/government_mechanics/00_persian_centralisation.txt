@@ -26,6 +26,14 @@ pf_per_centralization_mechanic = {
 					global_tax_modifier = -0.5
 				}
 			}
+
+			on_max_reached = {
+				country_event = { id = pf_per_events.14 }
+			}
+
+			on_min_reached = {
+				country_event = { id = pf_per_events.13 }
+			}
 		}
 	}
 
