@@ -8,6 +8,15 @@ country_event = {
 	picture = OVEREXTENSION_eventPicture
 	is_triggered_only = yes
 	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				which = pfPerSatrapyDemandsFilled
+				value = 0
+			}
+		}
+	}
 	
 	trigger = {
 		tag = PER
@@ -727,6 +736,185 @@ country_event = {
 			add_country_modifier = {
 				name = pf_per_ignored_satrapy
 				duration = 1825
+			}
+		}
+	}
+}
+
+# Satrapy Demands events: Develop Tax
+country_event = {
+	id = pf_per_events.18
+	title = "pf_per_events_18_title"
+	desc = "pf_per_events_18_desc"
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	trigger = {
+		NOT = { ai = yes }
+		tag = PER
+		has_country_flag = pf_per_had_satrapy_revolt
+		NOT = { has_country_flag = pf_per_has_develop_tax_demand }
+		any_subject_country = {
+			NOT = { has_country_modifier = pf_per_overlord_rejected_demand }
+			NOT = { has_country_modifier = pf_per_overlord_failed_demand }
+			NOT = { has_country_modifier = pf_per_overlord_filled_demand }
+		}
+	}
+
+	immediate = {
+		set_country_flag = pf_per_has_develop_tax_demand
+		random_subject_country = {
+			limit = { 
+				NOT = { has_country_modifier = pf_per_overlord_rejected_demand }
+				NOT = { has_country_modifier = pf_per_overlord_failed_demand }
+				NOT = { has_country_modifier = pf_per_overlord_filled_demand }
+			}
+			save_event_target_as = province_to_tax_dev_owner
+			hidden_effect = {
+				random_owned_province = {
+					save_event_target_as = province_to_tax_dev
+					export_to_variable = {
+						which = pfPerProvinceTaxDev
+						value = base_tax
+					}
+					change_variable = {
+						which = pfPerProvinceTaxDev
+						value = 2
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "pf_per_events_18_option_1"
+		ai_chance = { factor = 100 }
+		goto = province_to_tax_dev
+		custom_tooltip = pf_per_events_18_tt
+		country_event = {
+			id = pf_per_events.28
+			days = 36#5
+		}
+	}
+
+	option = {
+		name = "pf_per_events_18_option_2"
+		ai_chance = { factor = 0 }
+		event_target:province_to_tax_dev_owner = {
+			add_country_modifier = {
+				name = pf_per_overlord_rejected_demand
+				duration = 3650
+			}
+		}
+	}
+}
+
+# Satrapy Demands Follow up Events: Develop Tax
+country_event = {
+	id = pf_per_events.28
+	title = "pf_per_events_28_title"
+	desc = {
+		trigger = {
+			event_target:province_to_tax_dev = {
+				variable_arithmetic_trigger = {
+					export_to_variable = {
+						which = pfPerProvinceTaxDevCheck
+						value = base_tax
+					}
+
+					check_variable = {
+						which = pfPerProvinceTaxDevCheck
+						which = pfPerProvinceTaxDev
+					}
+				}
+			}
+		}
+		desc = "pf_per_events_28_desc_1"
+	}
+
+	desc = {
+		trigger = {
+			event_target:province_to_tax_dev = {
+				NOT = { 
+					variable_arithmetic_trigger = {
+						export_to_variable = {
+							which = pfPerProvinceTaxDevCheck
+							value = base_tax
+						}
+
+						check_variable = {
+							which = pfPerProvinceTaxDevCheck
+							which = pfPerProvinceTaxDev
+						}
+					}
+				}
+			}
+		}
+		desc = "pf_per_events_28_desc_2"
+	}
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_per_events_28_option_1"
+		ai_chance = { factor = 100 }
+		
+		trigger = {
+			event_target:province_to_tax_dev = {
+				variable_arithmetic_trigger = {
+					export_to_variable = {
+						which = pfPerProvinceTaxDevCheck
+						value = base_tax
+					}
+
+					check_variable = {
+						which = pfPerProvinceTaxDevCheck
+						which = pfPerProvinceTaxDev
+					}
+				}
+			}
+		}
+
+		event_target:province_to_tax_dev_owner = {
+			add_country_modifier = {
+				name = pf_per_overlord_filled_demand
+				duration = 3650
+			}
+		}
+
+		hidden_effect = {
+			change_variable = {
+				which = pfPerSatrapyDemandsFilled
+				value = 1
+			}
+		}
+	}
+
+	option = {
+		name = "pf_per_events_28_option_2"
+		ai_chance = { factor = 100 }
+
+		trigger = {
+			event_target:province_to_tax_dev = {
+				NOT = { 
+					variable_arithmetic_trigger = {
+						export_to_variable = {
+							which = pfPerProvinceTaxDevCheck
+							value = base_tax
+						}
+
+						check_variable = {
+							which = pfPerProvinceTaxDevCheck
+							which = pfPerProvinceTaxDev
+						}
+					}
+				}
+			}
+		}
+
+		event_target:province_to_tax_dev_owner = {
+			add_country_modifier = {
+				name = pf_per_overlord_failed_demand
+				duration = 3650
 			}
 		}
 	}
