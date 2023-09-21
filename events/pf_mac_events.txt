@@ -1,0 +1,118 @@
+namespace = pf_mac_events
+
+
+#The Establishment of Magna Greacia
+country_event = {
+	id = pf_mac_events.1
+	title = pf_mac_events.1.t
+	desc = pf_mac_events.1.d
+	picture = CIVIL_WAR_eventPicture
+	
+	trigger = {  }
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	# mean_time_to_happen = {}
+
+	immediate = {  }
+
+	option = {
+		name = pf_mac_events.1.a
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		custom_tooltip = mac_release_magna_graecia_tt
+		hidden_effect = {
+			apulia_area = { 
+				set_in_empire = no
+				add_core = MGN 
+			}
+			calabria_area = { 
+				set_in_empire = no
+				add_core = MGN 
+			}
+			release = MGN
+			create_union = MGN
+		}
+		MGN = {
+			add_country_modifier = {
+				name = pf_mac_events_1_modifier_subj
+				duration = -1
+			}
+		}
+		custom_tooltip = mac_magna_graecia_claims_tt
+		hidden_effect = {
+			sicily_area = { add_permanent_claim = MGN }
+			western_sicily_area = { add_permanent_claim = MGN }
+			naples_area = { add_permanent_claim = MGN }
+			adriatic_italy_area = { add_permanent_claim = MGN }
+		}
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = pf_mac_events_1_modifier_dip
+			duration = -1
+		}
+	}
+
+	option = {
+		name = pf_mac_events.1.b
+		# goto = 
+		ai_chance = { factor = 0 }
+
+		add_country_modifier = {
+			name = pf_mac_events_1_modifier_mil
+			duration = 7300
+		}
+		sicily_area = { add_permanent_claim = ROOT }
+		western_sicily_area = { add_permanent_claim = ROOT }
+		naples_area = { add_permanent_claim = ROOT }
+		adriatic_italy_area = { add_permanent_claim = ROOT }
+	}
+}
+
+#Remove Magna Graeca Diplo Slot
+country_event = {
+	id = pf_mac_events.2
+	title = pf_mac_events.2.t
+	desc = pf_mac_events.2.d
+	picture = CIVIL_WAR_eventPicture
+	hidden = yes
+	
+	trigger = {  
+		has_country_modifier = pf_mac_events_1_modifier_dip
+		NOT = {
+			MGN = { is_subject_of = ROOT }
+		}
+	}
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = pf_mac_events.2.a
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		apulia_area = { add_core = MGN }
+		calabria_area = { add_core = MGN }
+		release = MGN
+		create_union = MGN
+		MGN = {
+			add_country_modifier = {
+				name = pf_mac_events_1_modifier_subj
+				duration = -1
+			}
+		}
+		add_country_modifier = {
+			name = pf_mac_events_1_modifier_dip
+			duration = -1
+		}
+	}
+
+	option = {
+		name = pf_mac_events.1.b
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		remove_country_modifier = pf_mac_events_1_modifier_dip
+	}
+}

@@ -1,0 +1,25 @@
+mac_swell_the_ranks_modifier = {
+   manpower_recovery_speed = 0.1
+   land_forcelimit = 0.1
+}
+mac_our_hebron_neighbors_modifier_1 = {
+   local_missionary_strength = 0.03
+   local_culture_conversion_cost = -0.25
+}
+mac_our_hebron_neighbors_modifier_2 = {
+   reduced_liberty_desire = 0.25
+}
+mac_defend_the_coastlines_modifier = {
+   galley_power = 0.1
+   sunk_ship_morale_hit_recieved = -0.05
+}
+pf_mac_events_1_modifier_subj = {
+   land_forcelimit_modifier = 0.25
+   land_maintenance_modifier = -0.25
+}
+pf_mac_events_1_modifier_dip = {
+   diplomatic_upkeep = 1
+}
+pf_mac_events_1_modifier_mil = {
+   core_creation = -0.1
+}

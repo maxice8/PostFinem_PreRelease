@@ -8,33 +8,135 @@ mac_1 = {
 	pf_mac_fund_the_military = {
 		icon = mission_african_gold
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_id = 1766
+			NOT = { 	owned_by = ROOT }
+			NOT = { 	base_production = 8 }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			owns_core_province = 1766
+			1766 = { base_production = 8 }
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_years_of_income = 2
+			custom_tooltip = empty_line_tt
+			albania_area = { add_permanent_claim = ROOT }
+			rascia_area = { add_permanent_claim = ROOT }
+			serbia_area = { add_permanent_claim = ROOT }		
+		} 
 	}
 
 	pf_mac_our_hebron_neighbors = {
 		icon = jerusalem
 		position = 2
 		required_missions = { pf_mac_fund_the_military } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			area = albania_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			albania_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = mac_our_hebron_neighbors_tt_1
+			tooltip = {
+				albania_area = {
+					add_nationalism = -10
+					add_province_modifier = {
+						name = mac_our_hebron_neighbors_modifier_1
+						duration = -7300
+					}
+				}
+			}
+			custom_tooltip = mac_our_hebron_neighbors_tt_2
+			tooltip = {
+				add_adm_power = 100
+				add_country_modifier = {
+					name = mac_our_hebron_neighbors_modifier_2
+					duration = 7300
+				}
+			}
+			custom_tooltip = empty_line_tt
+			apulia_area = { add_permanent_claim = ROOT }
+			calabria_area = { add_permanent_claim = ROOT }
+			hidden_effect = {
+				if = {
+					limit = {
+						albania_area = {
+							type = all
+							owned_by = ROOT
+						}
+					}
+					albania_area = {
+						add_nationalism = -10
+						add_province_modifier = {
+							name = mac_our_hebron_neighbors_modifier_1
+							duration = -7300
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						albania_area = {
+							type = all
+							owner = { is_subject_of = ROOT }
+						}
+					}				
+					add_adm_power = 100
+					add_country_modifier = {
+						name = mac_our_hebron_neighbors_modifier_2
+						duration = 7300
+					}
+				}
+			}
+		} 
 	}
 
 	pf_mac_magna_graecia = {
 		icon = mission_rule_italy
 		position = 3
 		required_missions = { pf_mac_our_hebron_neighbors } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				area = apulia_area
+				area = calabria_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			apulia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}  
+			apulia_area = {
+				type = all
+				religion = hellenic
+			} 
+			calabria_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			calabria_area = {
+				type = all
+				religion = hellenic
+			} 
+		} 
 
-		effect = {  } 
+		effect = {  
+			country_event = { id = pf_mac_events.1 }
+		} 
 	}
 
 	pf_mac_reclaim_asia = {
@@ -97,9 +199,23 @@ mac_2 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			has_government_power = {
+				mechanic_type = mac_war_cabinet_mechanic
+				power_type = mac_war_cabinet_organization
+				value = 35
+			}
+			army_size_percentage = 1
+			army_professionalism = 0.1
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_mil_power = 100
+			custom_tooltip = empty_line_tt
+			rum_area = { add_permanent_claim = ROOT }
+			karaman_area = { add_permanent_claim = ROOT }
+			cukurova_area = { add_permanent_claim = ROOT }
+		} 
 	}
 
 	pf_mac_campiagns_into_asia = {
@@ -170,11 +286,23 @@ mac_3 = {
 	pf_mac_swell_the_ranks = {
 		icon = mission_modern_knight_army
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			army_size = 40
+			num_of_cavalry = 6
+			num_of_generals = 2
+			manpower_percentage = 0.5
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = mac_swell_the_ranks_modifier
+				duration = 3650
+			}
+			wallachia_area = { add_permanent_claim = ROOT }
+		} 
 	}
 
 	pf_mac_encroach_on_the_federation = {
@@ -231,11 +359,25 @@ mac_4 = {
 	pf_mac_defend_the_coastlines = {
 		icon = mission_galleys_in_port
 		position = 2
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
 
-		trigger = {  } 
+		} 
 
-		effect = {  } 
+		trigger = { 
+			num_of_galley = 15
+			navy_size_percentage = 1
+			num_of_admirals = 1
+		 } 
+
+		effect = {  
+			add_country_modifier = {
+				name = mac_defend_the_coastlines_modifier
+				duration = 7300
+			}
+			aegean_archipelago_area = { add_permanent_claim = ROOT }
+			163 = { add_permanent_claim = ROOT }
+			321 = { add_permanent_claim = ROOT }
+		} 
 	}
 
 	pf_mac_aegean_dominance = {
@@ -261,9 +403,34 @@ mac_5 = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			OR = {
+				calc_true_if = {
+					amount = 2
+					any_ally = {
+						has_opinion = {
+							who = root
+							value = 150
+						}
+					}
+				}
+				calc_true_if = {
+					amount = 3
+					any_subject_country = {
+						has_opinion = {
+							who = root
+							value = 150
+						}
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = mac_why_go_alone_ARCHON_tt
+			custom_tooltip = empty_line_tt
+			swap_non_generic_missions = yes
+		} 
 	}
 }
 mac_locked_1 = {
