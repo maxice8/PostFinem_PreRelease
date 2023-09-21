@@ -25,6 +25,15 @@ trinovantes_rejects_celtica = {
 	yearly_decay = 1
 }
 
+opinion_attended_ricatus_funeral = {
+	opinion = 60
+	yearly_decay = 2.5
+}
+opinion_attended_ricatus_funeral_no = {
+	opinion = -50
+	yearly_decay = 2
+}
+
 # Event Opionions
 
 #Nordanvik

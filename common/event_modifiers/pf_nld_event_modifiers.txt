@@ -1,0 +1,178 @@
+sami_herding = {
+	trade_goods_size_modifier = 0.1
+}
+
+nld_tolerant_culture_group = {
+	local_tax_modifier = 0.075
+	local_manpower_modifier = 0.075
+	local_sailors_modifier = 0.05
+}
+
+nld_tolerant_culture = {
+	local_unrest = -1
+	local_tax_modifier = 0.165
+	local_missionary_strength = 0.01
+	local_manpower_modifier = 0.165
+	local_sailors_modifier = 0.1
+}
+
+nld_finnish_cavalry = {
+	cavalry_cost = -0.15
+	cavalry_power = 0.1
+}
+
+nld_tolerance_heathens = {
+	tolerance_heathen = 2
+}
+
+nld_karelian_forts = {
+	local_defensiveness = 0.15
+	local_fort_maintenance_modifier = -0.25
+}
+
+nld_civilised_the_hordes = {
+	core_creation = -0.15
+	diplomatic_reputation = 2
+}
+
+nld_baltic_fleet = {
+	galley_power = 0.2
+	galley_number_of_cannons_modifier = 0.25
+}
+
+nld_gutish_sailors = {
+	global_ship_cost = -0.15
+	privateer_efficiency = 0.1
+}
+
+krl_karelian_fortifications = {
+	defensiveness = 0.3
+	fort_maintenance_modifier = -0.5
+}
+
+nld_northrlandsrikja = {
+	administrative_efficiency = 0.05
+	global_allowed_num_of_manufactories = 1
+}
+
+nld_united_scandinavia = {
+	years_of_nationalism = -5
+	global_tax_modifier = 0.15
+	global_trade_power = 0.15
+}
+
+nld_modern_longships = {
+	naval_morale = 0.15
+	heavy_ship_number_of_cannons_modifier = 0.2
+}
+
+nld_swedish_steel = {
+	discipline = 0.05
+	infantry_power = 0.15
+}
+
+nld_legacy_of_knut = {
+	shock_damage = 0.15
+	leader_land_fire = 1
+	leader_land_shock = 1
+	leader_land_manuever = 1
+	leader_siege = 1
+}
+
+nld_swedish_metallurgy = {
+	production_efficiency = 0.15
+	trade_goods_size = 1.5
+}
+
+nld_nordic_renaissance = {
+	technology_cost = -0.1
+	idea_cost = -0.1
+}
+
+nld_northern_universities = {
+	innovativeness_gain = 1
+}
+
+nld_temples_of_the_north = {
+	global_tax_modifier = 0.15
+}
+
+nld_gothi_loyalty = {
+	church_loyalty_modifier = 0.1
+}
+
+nld_rein_in_nobles = {
+	nobles_privilege_slots = 1
+	monthly_reform_progress_modifier = 0.1
+}
+
+nld_lulea_modifier = {
+	local_production_efficiency = 0.15
+	province_trade_power_modifier = 0.5
+	allowed_num_of_buildings = 1
+	development_cost_modifier = -0.10
+}
+
+nld_industralize_cities = {
+	global_allowed_num_of_buildings = 1
+	build_cost = -0.1
+}
+
+nld_appease_burghers = {
+	merchants = 1
+	development_cost_modifier = -0.5
+}
+
+nld_seafaring_traders = {
+	ship_trade_power_modifier = 0.25
+	center_of_trade_upgrade_cost = -0.2
+	movement_speed_onto_off_boat_modifier = 0.5
+}
+
+nld_native_coexistence = {
+	global_colonial_growth = 25
+	native_assimilation = 0.25
+	native_uprising_chance = -0.5
+}
+
+nld_northern_winters = {
+	hostile_attrition = 2
+	max_hostile_attrition = 3
+}
+
+nld_icelandic_colonizers = {
+	colonist_placement_chance = 0.1
+}
+
+nld_set_sail = {
+	colonists = 1
+	range = 0.5
+}
+
+nld_colonial_dominance = {
+	reduced_liberty_desire_on_other_continent = 25
+	global_tariffs = 0.1
+	movement_speed_in_fleet_modifier = 0.25
+	heavy_ship_power = 0.1
+}
+
+nld_tropical_islands = {
+	trade_steering = 0.25
+	land_attrition = -0.1
+	naval_attrition = -0.25
+}
+
+nld_north_south_cape = {
+	province_trade_power_value = 10
+	center_of_trade_upgrade_cost = -0.25
+}
+
+nld_north_south = {
+	min_autonomy_in_territories = -0.1
+	trade_company_investment_cost = -0.25
+}
+
+nld_settle_new_sweden = {
+	culture_conversion_cost = -0.1
+	culture_conversion_time = -0.15
+}

@@ -19,7 +19,8 @@ trinovantes_cohesion_mechanic = {
 				modifier = {
 					global_unrest = -2
 					max_absolutism = 5
-					years_of_nationalism = -5
+					min_autonomy = -10
+					global_autonomy = -0.05
 				}
 			}
 			reverse_scaled_modifier = {
@@ -29,6 +30,7 @@ trinovantes_cohesion_mechanic = {
 					global_unrest = 2
 					stability_cost_modifier = 0.50
 					land_morale = -0.10
+					administrative_efficiency = -0.10
 				}
 			}
 		}

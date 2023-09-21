@@ -1,0 +1,543 @@
+mac_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAC } 
+
+	pf_mac_fund_the_military = {
+		icon = mission_african_gold
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_our_hebron_neighbors = {
+		icon = jerusalem
+		position = 2
+		required_missions = { pf_mac_fund_the_military } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_magna_graecia = {
+		icon = mission_rule_italy
+		position = 3
+		required_missions = { pf_mac_our_hebron_neighbors } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_reclaim_asia = {
+		icon = mission_swedish_military_advise
+		position = 4
+		required_missions = { pf_mac_campiagns_into_asia } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_follow_silk_road = {
+		icon = spa_spanish_road
+		position = 5
+		required_missions = { pf_mac_reclaim_asia } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_the_land_between_the_rivers = {
+		icon = mission_se_along_the_river
+		position = 6
+		required_missions = { pf_mac_follow_silk_road } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_crush_the_dastur = {
+		icon = mission_persianate_empire
+		position = 7
+		required_missions = { pf_mac_the_land_between_the_rivers } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mac_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAC } 
+
+	pf_mac_prepare_for_war = {
+		icon = mission_hundred_years_war
+		position = 2
+		required_missions = {
+			pf_mac_swell_the_ranks
+			pf_mac_fund_the_military
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_campiagns_into_asia = {
+		icon = anatolian_frontier
+		position = 3
+		required_missions = { pf_mac_prepare_for_war } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_phoenician_coast = {
+		icon = mission_control_the_barbary_coast
+		position = 4
+		required_missions = { pf_mac_campiagns_into_asia } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_macedonian_silk = {
+		icon = mission_have_manufactories
+		position = 6
+		required_missions = { pf_mac_follow_silk_road } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_argaed_restoration = {
+		icon = mission_empire
+		position = 8
+		required_missions = {
+			pf_mac_crush_the_dastur
+			pf_mac_hellenic_hegemon
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_surpass_alexander = {
+		icon = mission_indian_empire
+		position = 9
+		required_missions = { pf_mac_argaed_restoration } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mac_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAC } 
+
+	pf_mac_swell_the_ranks = {
+		icon = mission_modern_knight_army
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_encroach_on_the_federation = {
+		icon = encroach_on_the_germans
+		position = 3
+		required_missions = { pf_mac_prepare_for_war } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_illyrian_marches = {
+		icon = mission_new_army
+		position = 4
+		required_missions = { pf_mac_encroach_on_the_federation } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_southern_brothers = {
+		icon = mission_levantine_restoration
+		position = 5
+		required_missions = { pf_mac_phoenician_coast } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_hellenic_hegemon = {
+		icon = dreams_of_grandeur
+		position = 7
+		required_missions = { pf_mac_southern_brothers } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mac_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAC } 
+
+	pf_mac_defend_the_coastlines = {
+		icon = mission_galleys_in_port
+		position = 2
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_aegean_dominance = {
+		icon = mission_naval_dominance
+		position = 3
+		required_missions = { pf_mac_defend_the_coastlines } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mac_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAC } 
+
+	pf_mac_why_go_alone = {
+		icon = mission_diplomatic_relation
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mac_locked_1 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAC } 
+
+	pf_mac_branching1 = {
+		icon = mission_locked_mission
+		position = 2
+		required_missions = { pf_mac_why_go_alone } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_branching2 = {
+		icon = mission_locked_mission
+		position = 3
+		required_missions = { pf_mac_branching1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mac_cabinet_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAC } 
+
+	pf_mac_incorporating_big_guns = {
+		icon = mission_cannons_firing
+		position = 5
+		required_missions = { pf_mac_organize_the_cabinet } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mac_cabinet_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAC } 
+
+	pf_mac_organize_the_cabinet = {
+		icon = establish_a_standing_army
+		position = 4
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_centalized_command = {
+		icon = king_of_poland
+		position = 5
+		required_missions = { pf_mac_organize_the_cabinet } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_absolute_control = {
+		icon = mission_english_absolutism
+		position = 6
+		required_missions = {
+			pf_mac_centalized_command
+			pf_mac_incorporating_big_guns
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mac_eco_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAC } 
+
+	pf_mac_dominate_eastern_seas = {
+		icon = mission_dominate_trade_in_bengal
+		position = 11
+		required_missions = { pf_mac_regional_trade_hub } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mac_eco_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAC } 
+
+	pf_mac_regional_trade_hub = {
+		icon = mission_control_fur_trade
+		position = 10
+		required_missions = { pf_mac_beautiful_capital } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mac_eco_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAC } 
+
+	pf_mac_beautiful_capital = {
+		icon = mission_rb_inland_india
+		position = 9
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_macedonian_rugs = {
+		icon = mission_son_own_develop_clothes_and_salt
+		position = 10
+		required_missions = { pf_mac_beautiful_capital } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_riches_of_the_silk_road = {
+		icon = the_shape_of_trades_to_come
+		position = 11
+		required_missions = { pf_mac_macedonian_rugs } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mac_culture_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAC } 
+
+	pf_mac_spread_the_faith = {
+		icon = mission_alliances
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_hellenization = {
+		icon = crush_heretic_strongholds
+		position = 7
+		required_missions = { pf_mac_spread_the_faith } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_beacons_of_hellenic_strength = {
+		icon = mission_metropolis_of_the_deccan
+		position = 8
+		required_missions = {
+			pf_mac_hellenization
+			pf_mac_expose_their_flaws
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mac_eco_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAC } 
+
+	pf_mac_scupi_copper_mines = {
+		icon = mission_kon_anzikus_copper
+		position = 10
+		required_missions = { pf_mac_beautiful_capital } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_iron_for_war = {
+		icon = mission_iron_and_copper
+		position = 11
+		required_missions = { pf_mac_scupi_copper_mines } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mac_eco_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAC } 
+
+}
+mac_culture_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAC } 
+
+	pf_mac_expose_their_flaws = {
+		icon = reform_the_nomocanon
+		position = 7
+		required_missions = { pf_mac_spread_the_faith } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_mac_unite_our_brothers = {
+		icon = evengelize_the_faith
+		position = 9
+		required_missions = {
+			pf_mac_expose_their_flaws
+			pf_mac_beacons_of_hellenic_strength
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
