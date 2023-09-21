@@ -6,7 +6,10 @@ pf_trn_1 = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 	}
 
@@ -90,7 +93,10 @@ pf_trn_1_locked_druid_path = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 		NOT = { has_country_flag = pf_trn_anti_druid }
 		NOT = { has_country_flag = pf_trn_pro_druid }
@@ -137,7 +143,10 @@ pf_trn_1_anti_druid_path = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 		has_country_flag = pf_trn_anti_druid
 	}
@@ -217,7 +226,10 @@ pf_trn_1_pro_druid_path = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 		has_country_flag = pf_trn_pro_druid
 	}
@@ -277,7 +289,10 @@ pf_trn_1_second_path = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 	}
 
@@ -328,7 +343,10 @@ pf_trn_2 = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 	}
 
@@ -682,7 +700,10 @@ pf_trn_3 = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 	}
 
@@ -1075,7 +1096,10 @@ pf_trn_4 = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 	}
 
@@ -1464,7 +1488,10 @@ pf_trn_5 = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 	}
 

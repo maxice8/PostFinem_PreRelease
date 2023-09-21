@@ -836,3 +836,38 @@ country_event = {		# The Blackcoats Slay the Daughters
 		}
 	}
 }
+
+country_event = {		# Finding the White Sun
+	id = pf_trn.20
+	title = pf_trn.20.t
+	desc = pf_trn.20.d
+	picture = northamericagfx_COMET_SIGHTED_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_trn.20.a"
+		trigger = {
+			OR = {
+				primary_culture = old_welsh
+				primary_culture = old_cornish
+			}
+		}
+		highlight = yes
+		restore_country_name = yes
+		custom_tooltip = empty_line_tt
+		override_country_name = PRYTAIN
+		custom_tooltip = empty_line_tt
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 25
+		}
+	}
+	option = {	
+		name = "pf_trn.20.b"
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 25
+		}
+	}
+}

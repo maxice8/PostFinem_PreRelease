@@ -160,11 +160,10 @@ pf_trn_a_strangers_city = {
 	allowed_num_of_buildings = 1
 }
 pf_trn_the_garden_of_albion_modifier = {
-	local_development_cost = -0.15
 	trade_goods_size = 1
 	prestige = 0.50
 	province_trade_power_value = 10
-	allowed_num_of_buildings = 3
+	local_production_efficiency = 0.50
 	build_cost = -0.05			# this is purposefully global
 }
 pf_trn_blackcoat_rule = {
@@ -280,4 +279,53 @@ pf_bri_copper_deposits = {
 pf_bri_cities_aplenty = {
 	development_cost = -0.05
 	global_tax_modifier = 0.10
+}
+pf_abn_powerful_navy = {
+	naval_morale = 0.20
+	heavY_ship_power = 0.15
+}
+pf_abn_colonising_power = {
+	global_colonial_growth = 15
+	colonist_placement_chance = 0.10
+}
+pf_abn_new_albion_modifier = {
+	trade_efficiency = 0.15
+	trade_steering = 0.25
+}
+
+pf_abn_york_city = {
+	reform_progress_growth = 0.10
+	local_governing_cost_increase = -10
+}
+pf_abn_camulodonon_city = {
+	global_tax_modifier = 0.10
+	local_governing_cost_increase = -10
+}
+pf_abn_pengwern_city = {
+	infantry_power = 0.05
+	local_governing_cost_increase = -10
+}
+pf_abn_investment = {
+	development_cost = -0.10
+	build_cost = -0.10
+}
+pf_abn_abona_port_modifier = {
+	naval_forcelimit = 10
+	local_sailors_modifier = 0.50
+	local_ship_cost = -0.25
+	local_ship_repair = 0.25
+	ship_recruit_speed = -0.25
+	hostile_fleet_attrition = 5
+}
+pf_abn_low_countries_conquest = {
+	ae_impact = -0.15
+	land_morale = 0.10
+}
+pf_abn_song_of_albion = {
+	manpower_recovery_speed = 0.10
+	prestige = 1
+}
+pf_abn_invasion_of_gaul = {
+	province_warscore_cost = -0.15
+	ae_impact = -0.10
 }

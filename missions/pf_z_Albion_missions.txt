@@ -1,0 +1,488 @@
+pf_albion_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ABN } 
+
+	pf_abn_imperial_navy = {
+		icon = mission_danzig_or_war
+		position = 12
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			navy_size = 50
+			OR = {
+				naval_morale = 5.0
+				naval_reformer = 3
+			}
+		} 
+
+		effect = {
+			add_navy_tradition = 30
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_abn_powerful_navy"
+				duration = 7300
+			}
+		} 
+	}
+
+	pf_abn_colonial_ambition = {
+		icon = mission_dominate_home_trade_node
+		position = 13
+		required_missions = { pf_abn_imperial_navy } 
+		provinces_to_highlight = {  } 
+		trigger = {
+			OR = {
+				num_of_explorers = 1
+				num_of_colonists = 1
+				north_america = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}	
+		} 
+		effect = {
+			create_explorer = {
+				tradition = 75
+			}
+			custom_tooltip = empty_line_tt
+			define_advisor = {
+				name = "Merllyn Dagamain"
+				type = navigator
+				skill = 3
+				culture = old_welsh
+				religion = ROOT
+				cost_multiplier = 0.25
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_abn_colonising_power"
+				duration = 18250
+			}
+		} 
+	}
+
+	pf_abn_new_albion = {
+		icon = mission_pol_breadbasket_europe
+		position = 14
+		required_missions = {
+			pf_abn_colonial_ambition
+			pf_abn_abona_port
+		}
+		provinces_to_highlight = {
+			colonial_region = colonial_eastern_america
+			has_discovered = ROOT
+			NOT = {
+				OR = {
+					owned_by = ROOT
+					owner = { is_colonial_nation_of = ROOT } 
+				}
+			}
+		} 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				colonial_region = colonial_eastern_america
+				is_city = yes
+			}
+		} 
+
+		effect = {
+			custom_tooltip = pf_abn_new_albion_effect_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						colonial_region = colonial_eastern_america
+						is_city = yes
+						OR = {
+							owned_by = ROOT
+							owner = { is_colonial_nation_of = ROOT } 
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			tooltip = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_abn_new_albion_modifier"
+				duration = 9125
+			}
+		} 
+	}
+}
+pf_albion_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ABN } 
+
+	pf_abn_three_cities = {
+		icon = mission_novgorod_the_great
+		position = 12
+		required_missions = { pf_abn_a_new_era } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 245	# York
+				province_id = 238	# Camulodonnon
+				province_id = 240	# Pengwern
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { development = 25 }
+			}
+		} 
+
+		trigger = {
+			245 = {
+				development = 30
+			}
+			238 = {
+				development = 30
+			}
+			240 = {
+				development = 30
+			}
+			num_of_owned_provinces_with = {
+				value = 30
+				has_trade_building_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 30
+				has_production_building_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				has_courthouse_building_trigger = yes
+			}
+		} 
+
+		effect = {
+			245 = {
+				add_province_modifier = {
+					name = "pf_abn_york_city"
+					duration = -1
+				}
+			}
+			238 = {
+				add_province_modifier = {
+					name = "pf_abn_camulodonon_city"
+					duration = -1
+				}
+			}
+			240 = {
+				add_province_modifier = {
+					name = "pf_abn_pengwern_city"
+					duration = -1
+				}
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_abn_investment"
+				duration = 9125
+			}
+		} 
+	}
+
+	pf_abn_abona_port = {
+		icon = mission_conquer_andhra_bah
+		position = 13
+		required_missions = { pf_abn_three_cities } 
+		provinces_to_highlight = {
+			province_id = 239	# Abona
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_shipyard_building_trigger = yes }
+				NOT = { has_dock_building_trigger = yes }
+				NOT = { development = 20 }
+			}
+		} 
+
+		trigger = {
+			239 = {
+				development = 20
+			}
+			239 = {
+				has_shipyard_building_trigger = yes
+			}
+			239 = {
+				has_dock_building_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 12
+				has_shipyard_building_trigger = yes
+			}
+		} 
+
+		effect = {
+			239 = {
+				add_province_modifier = {
+					name = "pf_abn_abona_port_modifier"
+					duration = -1
+				}
+			}
+			low_countries_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_abn_the_low_countries = {
+		icon = mississippi_company
+		position = 14
+		required_missions = { pf_abn_invade_gaul } 
+		provinces_to_highlight = {
+			region = low_countries_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 12
+				region = low_countries_region
+			}
+		} 
+
+		effect = {
+			add_adm_power = 200
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_abn_low_countries_conquest"
+				duration = 9125
+			}
+		} 
+	}
+}
+pf_albion_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ABN } 
+
+	pf_abn_a_new_era = {
+		icon = kingdom_of_heaven
+		position = 11
+		provinces_to_highlight = {} 
+
+		trigger = {
+			tag = ABN
+		} 
+
+		effect = {
+			country_event = { id = pf_trn.20 }
+		} 
+	}
+
+	pf_abn_unite_the_isles = {
+		icon = mission_rb_rule_britannia_irish_version
+		position = 12
+		required_missions = { pf_abn_a_new_era } 
+		provinces_to_highlight = {
+			region = british_isles_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			british_isles_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {
+			custom_tooltip = pf_abn_unite_the_isles_tt
+			hidden_effect = {
+				british_isles_region = {
+					add_unrest = -4
+					add_prosperity = 25
+				}
+			}
+			tooltip = {
+				add_unrest = -4
+				add_prosperity = 25
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_abn_song_of_albion"
+				duration = -1
+			}
+			custom_tooltip = empty_line_tt
+			normandy_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			brittany_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			picardy_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_abn_invade_gaul = {
+		icon = fra_peninsular_war
+		position = 13
+		required_missions = { pf_abn_unite_the_isles } 
+		provinces_to_highlight = {
+			has_port = yes
+			region = france_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				region = france_region
+				has_port = yes
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_abn_invasion_of_gaul"
+				duration = 10950
+			}
+			france_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_abn_druidic_unity = {
+		icon = mission_pol_raise_noble_host
+		position = 14
+		required_missions = { pf_abn_invade_gaul } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_abn_great_empire = {
+		icon = mission_monarch_in_throne_room
+		position = 15
+		required_missions = {
+			pf_abn_the_low_countries
+			pf_abn_druidic_unity
+			pf_abn_german_expedition
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_albion_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ABN } 
+
+	pf_abn_strike_the_northmen = {
+		icon = mission_raid_the_berbers
+		position = 12
+		required_missions = { pf_abn_a_new_era } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_abn_control_scandinavia = {
+		icon = mission_naval_kingdom
+		position = 13
+		required_missions = { pf_abn_strike_the_northmen } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_abn_german_expedition = {
+		icon = king_of_kings
+		position = 14
+		required_missions = { pf_abn_invade_gaul } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_albion_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ABN } 
+
+	pf_abn_renovate_the_groves = {
+		icon = mission_collect_yasak
+		position = 12
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_abn_absolutism = {
+		icon = mission_english_absolutism
+		position = 13
+		required_missions = { pf_abn_renovate_the_groves } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_abn_white_cliffs = {
+		icon = mission_rb_take_gibraltar
+		position = 14
+		required_missions = {
+			pf_abn_control_scandinavia
+			pf_abn_absolutism
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}

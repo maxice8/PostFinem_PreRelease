@@ -387,7 +387,7 @@ pf_bri_2 = {
 				diplomatic_reputation = 3
 				monthly_dip = 10
 			}
-			stateman = 1
+			statesman = 1
 			prestige = 50
 		}
 		effect = {
@@ -775,7 +775,7 @@ pf_bri_4 = {
 		}
 	}
 	pf_bri_drive_out_the_northmen = {
-		icon = mission_impaled_soldies
+		icon = mission_northumberland_coast
 		position = 3
 		required_missions = { pf_bri_pacify_the_picts pf_bri_coels_city } 
 		provinces_to_highlight = {

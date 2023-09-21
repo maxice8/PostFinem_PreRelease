@@ -20,7 +20,7 @@ estate_burghers_pf_court_bards: "Court Bard Performances"
 estate_burghers_pf_court_bards_desc: "Bards are a wonderful way to relax after a long day of policy making. Let us institute regular state-sponsored performances in our seats of government to brighten up their lives of our often dreary politicians."
 
  pf_clan_supremacy_reform:0 "Supremacy of the Clan"
- pf_clan_supremacy_reform_desc:0 ""
+ pf_clan_supremacy_reform_desc:0 "The old system of the Oaken Five has not worked in the long term. The time has come to formalise the rule of one tribe over all others, fitting in with the general trend of absolutism in Europe."
  mechanic_disables_confederation_elections_yes:0 "Disables elections from within the Tribes."
 
 pf_guidance_of_the_elders_reform:0 "Guidance of the Elders"
@@ -87,9 +87,9 @@ cadarnle_coel: "Cadarnle Coel"
 # Ideas
 ###########
 
- TRN_ideas: "Brittonic Confederation Ideas"
- TRN_ideas_start: "Brittonic Confederation Traditions"
- TRN_ideas_bonus: "Brittonic Confederation Ambition"
+ TRN_ideas: "Confederate Ideas"
+ TRN_ideas_start: "Confederate Traditions"
+ TRN_ideas_bonus: "Confederate Ambition"
 
  trn_confederate_politics: "Confederate Politics"
  trn_confederate_politics_desc: "Managing the Confederation is a difficult practice - one must ensure that the needs of all the tribes are met, but never to excess or the detriment of the others. Every policy and law is a balancing act between a hundred different interest groups."
@@ -272,6 +272,11 @@ pf_trn.19.b: "They have done the world a favour by killing the Daughters."
 begins_blackcoat_revolution_tt: "Begins the §OBlackcoat Revolution§! disaster."
 pf_trn_blackcoat_fugitives: "Hunting Down the Blackcoats"
 pf_trn_supported_the_blackcoats: "Supporting the Blackcoats"
+
+pf_trn.20.t: "The Unification of Albion"
+pf_trn.20.d: "Albion is the name given to the largest island of the Celtic Isles, the one we and countless other peoples call home. Our conquests have brought our armies to the corners of this rich and cultured land, and extended the rule of the [Root.GetName] beyond what our ancestors had previously dreamed was possible. Albion, that great country, is now ruled by one state. At last, our children can rejoice, knowing that they live in a safe and cohesive part of the world, free from open tribal feuds and petty disputes. Instead, they live in a veritable paradise - but unlike that which is told in our myths, this paradise is very much accessable."
+pf_trn.20.a: "This is not a common union, it is a Celtic one!"
+pf_trn.20.b: "Rejoice! The dream is realised!"
 
 ###########
 # Decision
@@ -527,7 +532,7 @@ pf_bri_every_briton_gets_opinion_tt: "Every §YCeltic§! cultured country gains 
 
 pf_bri_bards_melody_title: "Beautiful Melodies"
 pf_bri_bards_melody_desc: "Magnificent pieces of music have been constructed by our bards, to be played at every government building and every ceremony. Theirs is the tune of our nation- let us be sure we patronise them properly."
-pf_bri_upgraded_song_ability_tt: "Unlocks §Yadditional bonuses§! from using from buttons of the §YBardic Songs§! Government Mechanic."
+pf_bri_upgraded_song_ability_tt: "Unlocks additional §Ybonuses§! from using from buttons of the §YBardic Songs§! Government Mechanic."
 
 #
 
