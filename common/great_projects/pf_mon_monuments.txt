@@ -27,32 +27,23 @@ althing_general_assembly = { # aga
     tier_1 = {
         upgrade_time = {months = 120}
         cost_to_upgrade = {factor = 1000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
     tier_2 = {
         upgrade_time = {months = 240}
         cost_to_upgrade = {factor = 2500}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
     tier_3 = {
         upgrade_time = {months = 480}
         cost_to_upgrade = {factor = 5000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
 }
 aqueducts_of_gadir = { # aog
@@ -84,32 +75,23 @@ aqueducts_of_gadir = { # aog
     tier_1 = {
         upgrade_time = {months = 120}
         cost_to_upgrade = {factor = 1000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
     tier_2 = {
         upgrade_time = {months = 240}
         cost_to_upgrade = {factor = 2500}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
     tier_3 = {
         upgrade_time = {months = 480}
         cost_to_upgrade = {factor = 5000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
 }
 grand_temple_to_tanit = { # gtt
@@ -150,8 +132,7 @@ grand_temple_to_tanit = { # gtt
     tier_1 = {
         upgrade_time = {months = 120}
         cost_to_upgrade = {factor = 1000}
-        province_modifiers = {
-        }
+        province_modifiers = {}
         area_modifier = {
             local_institution_spread = 0.05
         }
@@ -159,8 +140,7 @@ grand_temple_to_tanit = { # gtt
             local_missionary_maintenance_cost = -0.1
             province_trade_power_modifier = 0.01
         }
-        country_modifiers = {
-        }
+        country_modifiers = {}
         on_upgraded = {
             owner = {
                 pf_mon_gtt_lose_opinion_1 = yes
@@ -170,8 +150,7 @@ grand_temple_to_tanit = { # gtt
     tier_2 = {
         upgrade_time = {months = 240}
         cost_to_upgrade = {factor = 2500}
-        province_modifiers = {
-        }
+        province_modifiers = {}
         area_modifier = {
             local_institution_spread = 0.15
         }
@@ -192,8 +171,7 @@ grand_temple_to_tanit = { # gtt
     tier_3 = {
         upgrade_time = {months = 480}
         cost_to_upgrade = {factor = 5000}
-        province_modifiers = {
-        }
+        province_modifiers = {}
         area_modifier = {
             local_institution_spread = 0.15
         }
@@ -265,8 +243,7 @@ great_cothon = { # gcn
             local_sailors_modifier = 0.25
             trade_value_modifier = 0.1
         }
-        area_modifier = {
-        }
+        area_modifier = {}
         country_modifiers = {
             trade_efficiency = 0.1
         }
@@ -405,10 +382,8 @@ hall_of_pantheons = { # hop
     tier_1 = {
         upgrade_time = {months = 120}
         cost_to_upgrade = {factor = 1000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
         country_modifiers = {
             tolerance_heathen = 0.5
             tolerance_of_heathens_capacity = 1
@@ -438,10 +413,8 @@ hall_of_pantheons = { # hop
     tier_2 = {
         upgrade_time = {months = 240}
         cost_to_upgrade = {factor = 2500}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
         country_modifiers = {
             tolerance_heathen = 1
             tolerance_of_heathens_capacity = 1
@@ -469,10 +442,8 @@ hall_of_pantheons = { # hop
     tier_3 = {
         upgrade_time = {months = 480}
         cost_to_upgrade = {factor = 5000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
         country_modifiers = {
             tolerance_heathen = 2
             tolerance_of_heathens_capacity = 1.5
@@ -527,32 +498,23 @@ hellenic_religious_building = { # hrb
     tier_1 = {
         upgrade_time = {months = 120}
         cost_to_upgrade = {factor = 1000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
     tier_2 = {
         upgrade_time = {months = 240}
         cost_to_upgrade = {factor = 2500}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
     tier_3 = {
         upgrade_time = {months = 480}
         cost_to_upgrade = {factor = 5000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
 }
 lingonian_military_academy = { # lma
@@ -596,10 +558,8 @@ lingonian_military_academy = { # lma
     tier_1 = {
         upgrade_time = {months = 120}
         cost_to_upgrade = {factor = 1000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
         country_modifiers = {
             army_tradition_from_battle = 0.1
             prestige_from_land = 0.25
@@ -610,10 +570,8 @@ lingonian_military_academy = { # lma
     tier_2 = {
         upgrade_time = {months = 240}
         cost_to_upgrade = {factor = 2500}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
         country_modifiers = {
             army_tradition_from_battle = 0.25
             prestige_from_land = 0.5
@@ -624,10 +582,8 @@ lingonian_military_academy = { # lma
     tier_3 = {
         upgrade_time = {months = 480}
         cost_to_upgrade = {factor = 5000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
         country_modifiers = {
             army_tradition_from_battle = 0.5
             prestige_from_land = 0.75
@@ -665,32 +621,23 @@ minos_dungeons = { # mnd
     tier_1 = {
         upgrade_time = {months = 120}
         cost_to_upgrade = {factor = 1000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
     tier_2 = {
         upgrade_time = {months = 240}
         cost_to_upgrade = {factor = 2500}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
     tier_3 = {
         upgrade_time = {months = 480}
         cost_to_upgrade = {factor = 5000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
 }
 seat_of_the_archon = { # soa
@@ -722,30 +669,22 @@ seat_of_the_archon = { # soa
     tier_1 = {
         upgrade_time = {months = 120}
         cost_to_upgrade = {factor = 1000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
     tier_2 = {
         upgrade_time = {months = 240}
         cost_to_upgrade = {factor = 2500}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
     tier_3 = {
         upgrade_time = {months = 480}
         cost_to_upgrade = {factor = 5000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
         country_modifiers = {
             church_privilege_slots = 1
         }
@@ -863,32 +802,23 @@ temple_of_barcino = { # tob
     tier_1 = {
         upgrade_time = {months = 120}
         cost_to_upgrade = {factor = 1000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
     tier_2 = {
         upgrade_time = {months = 240}
         cost_to_upgrade = {factor = 2500}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
     tier_3 = {
         upgrade_time = {months = 480}
         cost_to_upgrade = {factor = 5000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
 }
 tengri_outpost = { # top
@@ -920,32 +850,23 @@ tengri_outpost = { # top
     tier_1 = {
         upgrade_time = {months = 120}
         cost_to_upgrade = {factor = 1000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
     tier_2 = {
         upgrade_time = {months = 240}
         cost_to_upgrade = {factor = 2500}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
     tier_3 = {
         upgrade_time = {months = 480}
         cost_to_upgrade = {factor = 5000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
 }
 the_looms_of_tol_tzaphon = { # ltt
@@ -977,32 +898,23 @@ the_looms_of_tol_tzaphon = { # ltt
     tier_1 = {
         upgrade_time = {months = 120}
         cost_to_upgrade = {factor = 1000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
     tier_2 = {
         upgrade_time = {months = 240}
         cost_to_upgrade = {factor = 2500}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
     tier_3 = {
         upgrade_time = {months = 480}
         cost_to_upgrade = {factor = 5000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
 }
 uppsala_temple = { # upt
@@ -1034,31 +946,22 @@ uppsala_temple = { # upt
     tier_1 = {
         upgrade_time = {months = 120}
         cost_to_upgrade = {factor = 1000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
     tier_2 = {
         upgrade_time = {months = 240}
         cost_to_upgrade = {factor = 2500}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
     tier_3 = {
         upgrade_time = {months = 480}
         cost_to_upgrade = {factor = 5000}
-        province_modifiers = {
-        }
-        area_modifier = {
-        }
-        country_modifiers = {
-        }
+        province_modifiers = {}
+        area_modifier = {}
+        country_modifiers = {}
     }
 }
