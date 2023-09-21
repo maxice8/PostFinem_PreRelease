@@ -108,12 +108,18 @@ mac_1 = {
 				area = apulia_area
 				area = calabria_area
 			}
-			NOT = {
-				owned_by = ROOT
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					religion = hellenic
+				}
 			}
 		} 
 
 		trigger = {  
+			MGN = { exists = no }
 			apulia_area = {
 				type = all
 				owned_by = ROOT
@@ -143,11 +149,26 @@ mac_1 = {
 		icon = mission_swedish_military_advise
 		position = 4
 		required_missions = { pf_mac_campiagns_into_asia } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			region = anatolia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 40
+				region = anatolia_region
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = mac_reclaim_asia_modifier
+				duration = 7300
+			}
+			al_jazira_area = { add_permanent_claim = ROOT } 
+			shahrizor_area = { add_permanent_claim = ROOT } 
+		} 
 	}
 
 	pf_mac_follow_silk_road = {
@@ -222,22 +243,96 @@ mac_2 = {
 		icon = anatolian_frontier
 		position = 3
 		required_missions = { pf_mac_prepare_for_war } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				area = rum_area
+				area = karaman_area
+				area = cukurova_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					area = rum_area
+					area = karaman_area
+					area = cukurova_area
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			distribute_base_dev_to_provinces = {
+				num = 5
+				amount = 1
+				trigger = "
+					OR = {
+						area = rum_area
+						area = karaman_area
+						area = cukurova_area
+					}
+				"
+				type = tax
+				tooltip = mac_campiagns_into_asia_tt
+			}
+			custom_tooltip = empty_line_tt
+			anatolia_region = { add_permanent_claim = ROOT }
+			syria_area = { add_permanent_claim = ROOT }
+			aleppo_area = { add_permanent_claim = ROOT }
+		} 
 	}
 
 	pf_mac_phoenician_coast = {
 		icon = mission_control_the_barbary_coast
 		position = 4
 		required_missions = { pf_mac_campiagns_into_asia } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				AND = {
+					OR = {
+						area = aleppo_area
+						area = syria_area
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 378
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+			} 
+		}
 
-		trigger = {  } 
+		trigger = {  
+			owns_core_province = 378
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 6
+				OR = {
+					area = aleppo_area
+					area = syria_area
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			378 = {
+				add_or_upgrade_shipyard_building = yes
+			}
+			378 = {
+				set_center_level_3_center_of_trade = yes
+			}
+			378 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+			custom_tooltip = empty_line_tt
+			mashriq_region = { add_permanent_claim = ROOT }
+		} 
 	}
 
 	pf_mac_macedonian_silk = {
@@ -309,20 +404,64 @@ mac_3 = {
 		icon = encroach_on_the_germans
 		position = 3
 		required_missions = { pf_mac_prepare_for_war } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				area = serbia_area
+				area = rascia_area
+				area = albania_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			serbia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}  
+			rascia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			} 
+		} 
 
-		effect = {  } 
+		effect = {  
+			define_advisor = {
+				type = army_reformer
+				discount = yes
+				skill = 2
+				culture = lyros
+				name = "Georgios Mavros"
+			}
+			custom_tooltip = empty_line_tt		
+			bosnia_area = { add_permanent_claim = ROOT }
+			east_adriatic_coast_area = { add_permanent_claim = ROOT }
+			croatia_area = { add_permanent_claim = ROOT }
+		} 
 	}
 
 	pf_mac_illyrian_marches = {
 		icon = mission_new_army
 		position = 4
 		required_missions = { pf_mac_encroach_on_the_federation } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				area = bosnia_area
+				area = east_adriatic_coast_area
+				area = croatia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10			 
+				OR = {
+					area = bosnia_area
+					area = east_adriatic_coast_area
+					area = croatia_area
+				}
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -384,11 +523,35 @@ mac_4 = {
 		icon = mission_naval_dominance
 		position = 3
 		required_missions = { pf_mac_defend_the_coastlines } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			has_port = yes
+			sea_zone = { 
+				province_id = 1319
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			calc_true_if = {
+				amount = 6				 
+				any_owned_province = {
+					has_port = yes
+					sea_zone = { 
+						province_id = 1319
+					}
+				}
+				has_shipyard_building_trigger = yes
+			}
+			num_of_galley = 25
+		} 
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = mac_aegean_dominance_tt
+			set_country_flag = mac_naval_doctrine_flag
+			country_event = {
+				id = pf_mac_events.3
+			}
+		} 
 	}
 }
 mac_5 = {

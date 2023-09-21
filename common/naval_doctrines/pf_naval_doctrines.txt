@@ -1,0 +1,14 @@
+mac_naval_doctrine = {
+	can_select = {
+		has_country_flag = mac_naval_doctrine_flag
+	}
+	
+	country_modifier = {
+		galley_power = 0.2
+		global_ship_repair = 0.25
+	}
+	effect = {}
+	removed_effect = {}
+	
+	button_gfx = 1
+}

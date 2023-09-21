@@ -176,5 +176,21 @@
 		"body": ["custom_tooltip = empty_line_tt"],
 		"description": "Places and empty line in effect tooltips"
 	},
+	"Distribute Base Dev to Provinces": {
+		"prefix": ["distribute_base_dev_to_provinces"],
+		"body": [
+			"effect = {",  			
+			"distribute_base_dev_to_provinces = {",
+				"\tnum = ${1:amount of provinces}",
+				"\tamount = ${2:amount of dev}",
+				"\ttrigger = \"",
+					"\t\t${3:can be any province scope}",
+				"\t\"",
+				"\ttype = ${4|tax,production,manpower|}",
+				"\ttooltip = ${5:tooltip_string}",
+			"}"
+		],
+		"description": "Adds the distribute_base_dev_to_provinces scripted effec"
+	},
 		
 }

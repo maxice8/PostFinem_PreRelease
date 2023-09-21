@@ -23,3 +23,16 @@ pf_mac_events_1_modifier_dip = {
 pf_mac_events_1_modifier_mil = {
    core_creation = -0.1
 }
+uncontested_in_the_aegean_modifier = {
+   naval_forcelimit = 2
+   ship_recruit_speed = -0.25
+   local_ship_repair = 0.25
+}
+uncontested_in_the_aegean_flagship_modifier = {
+   max_flagships = 1
+   ship_durability = 0.05
+}
+mac_reclaim_asia_modifier = {
+   prestige = 1
+   culture_conversion_cost = -0.25
+}
