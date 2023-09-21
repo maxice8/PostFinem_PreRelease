@@ -492,18 +492,29 @@ hall_of_pantheons = { # hop
 		area_modifier = {
 		}
 		country_modifiers = {
+			tolerance_heathen = 0.5
+			tolerance_of_heathens_capacity = 1
+			---country---
 			prestige_from_land = 0.01
 		}
 		on_upgraded = {
 			pf_mon_hop_unlock_blessings = yes
 		}
 		conditional_modifier = {
-			trigger = {
-			    religion = hellenic
-			}
-			modifier = {
-			    army_tradition_from_battle = 0.01
-			}
+		    trigger = {religion = punic_religion}
+		    modifier = {free_city_imperial_authority = 0.05}
+		}
+		conditional_modifier = {
+		    trigger = {religion = hellenic}
+		    modifier = {region = {local_religious_conversion_resistance = 0.1}}
+		}
+		conditional_modifier = {
+		    trigger = {religion = romana}
+		    modifier = {religious_unity = 0.15}
+		}
+		conditional_modifier = {
+		    trigger = {religion = norse_pagan_reformed}
+		    modifier = {years_of_nationalism = -1.5}
 		}
 	}
 	tier_2 = {
@@ -518,9 +529,27 @@ hall_of_pantheons = { # hop
 		area_modifier = {
 		}
 		country_modifiers = {
+			tolerance_heathen = 1
+			tolerance_of_heathens_capacity = 1
 		}
 		on_upgraded = {
 			pf_mon_hop_frequent_blessings = yes
+		}
+		conditional_modifier = {
+		    trigger = {religion = punic_religion}
+		    modifier = {free_city_imperial_authority = 0.75}
+		}
+		conditional_modifier = {
+		    trigger = {religion = hellenic}
+		    modifier = {region = {local_religious_conversion_resistance = 0.15}}
+		}
+		conditional_modifier = {
+		    trigger = {religion = romana}
+		    modifier = {religious_unity = 0.25}
+		}
+		conditional_modifier = {
+		    trigger = {religion = norse_pagan_reformed}
+		    modifier = {years_of_nationalism = -2.5}
 		}
 	}
 	tier_3 = {
@@ -535,9 +564,27 @@ hall_of_pantheons = { # hop
 		area_modifier = {
 		}
 		country_modifiers = {
+			tolerance_heathen = 2
+			tolerance_of_heathens_capacity = 1.5
 		}
 		on_upgraded = {
 			pf_mon_hop_upgrade_blessings = yes
+		}
+		conditional_modifier = {
+		    trigger = {religion = punic_religion}
+		    modifier = {free_city_imperial_authority = 0.1}
+		}
+		conditional_modifier = {
+		    trigger = {religion = hellenic}
+		    modifier = {region = {local_religious_conversion_resistance = 0.25}}
+		}
+		conditional_modifier = {
+		    trigger = {religion = romana}
+		    modifier = {religious_unity = 0.5}
+		}
+		conditional_modifier = {
+		    trigger = {religion = norse_pagan_reformed}
+		    modifier = {years_of_nationalism = -5}
 		}
 	}
 }
