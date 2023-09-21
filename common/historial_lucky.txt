@@ -1,5 +1,65 @@
 # Order here is the priority for taking them, if trigger is true.
 
+MAC = {
+	always = yes
+}
+
+AEG = {
+	NOT = {
+		year = 1700
+	}
+}
+
+PER = {
+	NOT = {
+		year = 1700
+	}
+}
+
+CEL = {
+	NOT = {
+		year = 1700
+	}
+}
+
+SUE = {
+	NOT = {
+		year = 1700
+	}
+}
+
+GAU = {
+	NOT = {
+		year = 1700
+	}
+}
+
+SXY = {
+	alwyas = yes
+}
+
+RMA = {
+	always = yes
+}
+
+KSB = {
+	always = yes
+}
+
+NOR = {
+	always = yes
+}
+
+CAR = {
+	always = yes
+}
+
+
+ASG = {
+	always = yes
+}
+
+
 MJZ = {
 	NOT = {
 		exists = QNG
