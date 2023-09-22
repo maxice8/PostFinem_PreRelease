@@ -218,7 +218,7 @@ estate_burghers_encourage_internal_competition = {
 	}
 	
 	on_granted = {
-		add_mercantilism = -3
+		add_mercantilism = 3
 	}
 	on_revoked = { add_mercantilism = -3 }
 	penalties = {
