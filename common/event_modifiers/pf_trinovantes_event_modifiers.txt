@@ -329,3 +329,42 @@ pf_abn_invasion_of_gaul = {
 	province_warscore_cost = -0.15
 	ae_impact = -0.10
 }
+pf_abn_druidic_unity_modifier = {
+	tolerance_own = 2
+	global_unrest = -1
+}
+pf_abn_empire_of_the_setting_sun = {
+	administrative_efficiency = 0.05
+	governing_capacity_modifier = 0.10
+}
+pf_abn_anti_norse_crusade = {
+	warscore_cost_vs_other_religion = -0.25
+	global_heathen_missionary_strength = 0.03
+}
+pf_abn_bergenhus_depot = {
+	province_trade_power_modifier = 0.50
+	province_trade_power_value = 10
+}
+pf_abn_defeated_kings_of_the_north = {
+	army_tradition = 1
+	land_morale = 0.10
+	prestige = 0.50
+}
+pf_abn_civilising_the_germans = {
+	global_institution_spread = 0.25
+	idea_cost = -0.10
+}
+pf_abn_glorious_groves = {
+	missionaries = 1
+	prestige_per_development_from_conversion = 0.30
+}
+pf_abn_brittonic_absolutism = {
+	global_autonomy = -0.05
+	yearly_absolutism = 0.50
+	all_estate_influence_modifier = -0.10
+}
+pf_abn_white_cliffs_modifier = {
+	allowed_num_of_manufactories = 1
+	build_cost = -0.25
+	build_time = -0.50
+}
