@@ -46,6 +46,12 @@ on_startup = {
 			set_country_flag = ayu_monarch_flag
 		}
 	}
+	if = {
+		limit = {
+			religion = romuva
+		}
+		country_event = { id = romuva_events.1 }
+	}
 	#if = {
 	#	limit = {
 	#		OR = {
@@ -864,6 +870,12 @@ on_monarch_death = {
 	if = {
 		limit = { has_government_attribute = no_stability_loss_on_monarch_death }
 		add_stability = 1
+	}
+	if = {
+		limit = {
+			religion = romuva
+		}
+		country_event = { id = romuva_events.1 }
 	}
 	burgundian_inheritance_start_effect = yes
 	ladislaus_postumus_king_died_effect = yes
@@ -2639,6 +2651,12 @@ on_four_year_pulse = {
 		
 		#Volcano Events
 		75 = volcano_events.2
+
+		#PF Trinovantes cohesion events
+		100 = pf_trn.2
+		100 = pf_trn.3
+		100 = pf_trn.4
+		100 = pf_trn.5
 
 		1000 = 0
 	}
@@ -5428,7 +5446,16 @@ on_core = { #ROOT - Province, #FROM - Country that gets the core
 }
 
 on_tech_taken = { #ROOT - Country
-
+	if = {
+		limit = {
+			has_government_attribute = techs_give_estate_loyalty
+		}
+		add_estate_loyalty = {
+			estate = all
+			loyalty = 3
+			short = yes
+		}
+	}
 }
 
 on_adm_tech_taken = { #ROOT - Country, executed after on_tech_taken!

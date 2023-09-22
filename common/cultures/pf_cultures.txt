@@ -11,8 +11,8 @@
 scandinavian = { #Nordic
 	graphical_culture = westerngfx
 	country = {
-		has_galleass = yes
-		allowed_galleass_fraction = 0.2
+		# has_galleass = yes
+		# allowed_galleass_fraction = 0.2
 	}
 	#country = { land_forcelimit_modifier = 0.25}
 	#province = { local_build_cost = -0.10 }
@@ -573,8 +573,8 @@ caucasian_armenian = {
 
 anatolian_greek = {
 	country = {
-		has_streltsy = yes
-		allowed_streltsy_fraction = 0.25
+		# has_streltsy = yes
+		# allowed_streltsy_fraction = 0.25
 	}
 	graphical_culture = westerngfx
 	delphian = { #Central
@@ -723,8 +723,8 @@ anatolian_greek = {
 
 levantine_greek = {
 	country = {
-		has_streltsy = yes
-		allowed_streltsy_fraction = 0.25
+		# has_streltsy = yes
+		# allowed_streltsy_fraction = 0.25
 	}
 	graphical_culture = westerngfx
 	seleucid = { #Central

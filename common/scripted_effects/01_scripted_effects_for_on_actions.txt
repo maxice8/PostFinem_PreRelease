@@ -1576,6 +1576,15 @@ on_battle_won_country_effect = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			mercenary_company = merc_daughters_of_boudicca
+		}
+		change_variable = {
+			which = BoudiccaBattlesWon
+			value = 1
+		}
+	}
 }
 
 on_battle_ended_effect = {

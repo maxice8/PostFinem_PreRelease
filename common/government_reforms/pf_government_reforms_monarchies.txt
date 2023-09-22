@@ -310,3 +310,48 @@ pf_nordhafnadr_kingdom = {
 		factor = 1
 	}
 }
+
+#Phalanx T5 for Greeks
+pf_integrated_phalanx = {
+	icon = "pf_phalanx"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { tag = MAC }
+		NOT = { tag = AEG }
+		OR = {
+			culture_group = macedonian_greek
+			culture_group = anatolian_greek
+			culture_group = levantine_greek
+			culture_group = egyptian_greek
+		}
+	}
+	modifiers = {
+		has_streltsy = yes
+		allowed_streltsy_fraction = 0.25
+		shock_damage_received = -0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+pf_romuva_kingdom = {
+	icon = "crown"
+	allow_normal_conversion = yes
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+	potential = {
+		religion = romuva
+	}
+
+	modifiers = {
+		tolerance_own = 1
+		global_missionary_strength = 0.01
+		church_power_modifier = -1
+	}
+	ai = {
+		factor = 1
+	}
+}
