@@ -1,0 +1,16 @@
+﻿l_english:
+
+ MODIFIER_HAS_GALLEASSE:0 "Country Allows Longboat Ships"
+ GALLEASS_NAME:0 "Longboat $NAME$"
+ MODIFIER_ALLOWED_GALLEASS_FRACTION:0 "Longboat Force Limit"
+ MODIFIER_LOCAL_HAS_GALLEASS:0 "Province Allows Longboat Ships"
+ GALLEASS_FORCELIMIT:0 "We can recruit up to $LIMIT|Y$ §GLongboat§! owing to:\n$FLAMOUNT|Y$ from $PERC|%Y$ of our naval force-limit of $FL$:\n"
+ GALLEASS_LIMIT_CULTURE:1 "$PROVINCE$ does not have a Dock or Shipyard, so you can not recruit Longboat Ships here."
+ ADD_GALLEASS_SUB_UNIT_EFFECT:0 "Get '§GLongboat§!' $UNIT$ in $WHERE|Y$."
+ GALLEASS_DESC:0 "Viking longboats are masterpieces of maritime design, built for speed, flexibility, and durability. Their shallow-draft hulls allow for both open sea voyages and river navigation. Constructed using the clinker technique, where overlapping planks are riveted together, they combine strength with flexibility. A symmetrical bow and stern enable swift changes in direction. The long, narrow design, powered by both oars and a single square sail, ensures rapid movement. These features make the longboats highly efficient for raiding, trading, and exploration, cementing the Vikings' reputation as formidable seafarers."
+ REGCAT_galleass:0 "Longboat"
+ GALLEASS_REGIMENT:0 "Longboat Ship\n$EFFECT$"
+ HAVE_LESS_GALLEASS_THAN:0 "Have less than §Y$VALUE$§! Longboats.\n"
+ galleass_modifier:0 "Longboat Hired"
+ HAVE_AT_LEAST_GALLEASS_THAN:0 "Have at least §Y$VALUE$§! Longboats.\n"
+ MODIFIER_AMOUNT_OF_GALLEASS:0 "Longboat Force Limit"

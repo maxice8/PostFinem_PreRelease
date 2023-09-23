@@ -375,22 +375,18 @@ hellenic_group = {
 			idea_cost = -0.05
 		}
 
-		# allowed_center_conversion = {
-		# 	orthodox
-		# 	sunni
-		# 	shiite
-		# 	catholic
-		# 	coptic
-		# }
+		allowed_center_conversion = {
+			paradosi
+		}
 
-		# will_get_center = { 
-		# 	any_owned_province = {
-		# 		is_reformation_center = no
-		# 	}
-		# }
+		will_get_center = { 
+			any_owned_province = {
+				is_reformation_center = no
+			}
+		}
 
 		province = {
-			local_culture_conversion_cost = -0.2
+			local_culture_conversion_cost = -0.1
 		}
 		
 		# personal_deity = yes
@@ -400,7 +396,7 @@ hellenic_group = {
 		papacy = {
 			papal_tag = ATH
 			election_cost = 5
-			seat_of_papacy = 146 # rome
+			seat_of_papacy = 146 # Athens
 			
 			
 			#Council of Trent Positions
@@ -651,8 +647,37 @@ hellenic_group = {
 	}
 
 
-	harmonized_modifier = harmonized_hellenic
-	crusade_name = HOLY_WAR
+	paradosi = {
+		icon = 39
+		color = { 190 30 30 }
+		country = {
+			development_cost = -0.1
+			tolerance_own = 2
+		}
+		country_as_secondary = {
+			embracement_cost = -0.2
+			idea_cost = -0.1
+		}
+
+		allowed_center_conversion = {
+			hellenic		
+		}
+
+		will_get_center = { 
+			any_owned_province = {
+				is_reformation_center = no
+			}
+		}
+
+		province = {
+			local_production_efficiency = 0.1
+		}
+
+		heretic = { PROMETHEANS }
+	}
+
+	harmonized_modifier = harmonized_paradosi
+	crusade_name = THEOSEMIA_WAR
 
 }
 

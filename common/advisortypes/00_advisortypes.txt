@@ -1223,6 +1223,14 @@ commandant = {
 		}
 		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				mission_completed = pf_mac_absolute_control
+			}
+		}
+		modifier = { fire_damage = 0.02 }
+	}
 
 	chance = {
 		factor = 1
