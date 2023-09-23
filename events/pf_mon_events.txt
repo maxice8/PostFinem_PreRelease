@@ -1782,7 +1782,7 @@ province_event = { # Blessing of Ares
                 limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
                 limit2 = "is_city = yes
                 NOT = {is_claim = event_target:blessed_country}"
-                a_effect = "add_claim = event_target:blessed_country"
+                effect = "add_claim = event_target:blessed_country"
             }
         }
     }
@@ -1813,7 +1813,7 @@ province_event = { # Blessing of Ares
                 limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
                 limit2 = "is_city = yes
                 NOT = {is_claim = event_target:blessed_country}"
-                a_effect = "add_claim = event_target:blessed_country"
+                effect = "add_claim = event_target:blessed_country"
             }
             pf_random_neighbour_province = {
                 target_country = event_target:blessed_country
@@ -1908,7 +1908,7 @@ province_event = { # Blessing of Reshef
                 limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
                 limit2 = "is_city = yes
                 NOT = {is_claim = event_target:blessed_country}"
-                a_effect = "add_claim = event_target:blessed_country"
+                effect = "add_claim = event_target:blessed_country"
             }
         }
     }
@@ -1939,7 +1939,7 @@ province_event = { # Blessing of Reshef
                 limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
                 limit2 = "is_city = yes
                 NOT = {is_claim = event_target:blessed_country}"
-                a_effect = "add_claim = event_target:blessed_country"
+                effect = "add_claim = event_target:blessed_country"
             }
             pf_random_neighbour_province = {
                 target_country = event_target:blessed_country
@@ -2034,7 +2034,7 @@ province_event = { # Blessing of Mars
                 limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
                 limit2 = "is_city = yes
                 NOT = {is_claim = event_target:blessed_country}"
-                a_effect = "add_claim = event_target:blessed_country"
+                effect = "add_claim = event_target:blessed_country"
             }
         }
     }
@@ -2065,7 +2065,7 @@ province_event = { # Blessing of Mars
                 limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
                 limit2 = "is_city = yes
                 NOT = {is_claim = event_target:blessed_country}"
-                a_effect = "add_claim = event_target:blessed_country"
+                effect = "add_claim = event_target:blessed_country"
             }
             pf_random_neighbour_province = {
                 target_country = event_target:blessed_country
@@ -2160,7 +2160,7 @@ province_event = { # Blessing of Tyr
                 limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
                 limit2 = "is_city = yes
                 NOT = {is_claim = event_target:blessed_country}"
-                a_effect = "add_claim = event_target:blessed_country"
+                effect = "add_claim = event_target:blessed_country"
             }
         }
     }
@@ -2191,7 +2191,7 @@ province_event = { # Blessing of Tyr
                 limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
                 limit2 = "is_city = yes
                 NOT = {is_claim = event_target:blessed_country}"
-                a_effect = "add_claim = event_target:blessed_country"
+                effect = "add_claim = event_target:blessed_country"
             }
             pf_random_neighbour_province = {
                 target_country = event_target:blessed_country
