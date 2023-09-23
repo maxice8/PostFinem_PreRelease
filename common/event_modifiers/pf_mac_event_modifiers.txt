@@ -36,3 +36,44 @@ mac_reclaim_asia_modifier = {
    prestige = 1
    culture_conversion_cost = -0.25
 }
+mac_illyrian_marches_modifier = {
+   local_production_efficiency = 0.2
+   local_culture_conversion_cost = -0.25
+}
+mac_organize_the_cabinet_modifier = {
+   movement_speed = 0.05
+   siege_ability = 0.1
+}
+mac_incorporating_big_guns_modifier = {
+   artillery_fire = 0.5
+   artillery_levels_available_vs_fort = 2
+}
+mac_incorporating_big_guns_modifier_2 = {
+   artillery_power = 0.1
+}
+mac_incorporating_big_guns_modifier_3 = {
+   artillery_cost = -0.25
+}
+mac_macedonian_silk_modifier = {
+   trade_goods_size = 2
+   local_production_efficiency = 0.2
+}
+mac_spread_the_faith_modifier = {
+   culture_conversion_cost = -0.25
+   culture_conversion_time = -0.25
+}
+mac_crush_the_dastur_modifier = {
+   core_creation = -0.1
+}
+mac_crusher_of_the_dastur_modifier = {
+   fire_damage = 0.1
+   warscore_cost_vs_other_religion = -0.1
+}
+mac_hellenic_hegemon_alexandria_modifier = {
+   province_trade_power_modifier = 0.2
+   trade_goods_size = 2
+}
+mac_hellenic_hegemon_aegyptos_modifier = {
+   liberty_desire = -25
+   global_trade_goods_size_modifier = 0.1
+}

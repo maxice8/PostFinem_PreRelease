@@ -163,3 +163,123 @@ country_event = {
 		}
 	}
 }
+
+
+#The Question of the Egyptians
+country_event = {
+	id = pf_mac_events.4
+	title = pf_mac_events.4.t
+	desc = pf_mac_events.4.d
+	picture = CIVIL_WAR_eventPicture
+	
+	trigger = {  }
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	# mean_time_to_happen = {}
+
+	immediate = {  }
+
+	option = { #PU time
+		trigger = {
+			AEG = { exists = yes }
+		}
+		name = pf_mac_events.4.a
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		add_yearly_manpower = 5
+		custom_tooltip = empty_line_tt
+		add_casus_belli = {
+			type = cb_restore_personal_union
+			months = 240
+			target = AEG
+		}
+	}
+
+	option = { #take it yourself
+		name = pf_mac_events.4.b
+		# goto = 
+		ai_chance = { factor = 0 }
+
+		add_yearly_manpower = 5
+		custom_tooltip = empty_line_tt
+		egypt_region = { add_permanent_claim = ROOT }
+	}
+}
+
+#On the Utilization of Heavy Cavalry
+country_event = {
+	id = pf_mac_events.5
+	title = pf_mac_events.5.t
+	desc = pf_mac_events.5.d
+	picture = CIVIL_WAR_eventPicture
+	
+	trigger = {  }
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	# mean_time_to_happen = {}
+
+	immediate = {  }
+
+	option = { #Give Hussars in T5
+		trigger = {
+			AEG = { exists = yes }
+		}
+		name = pf_mac_events.5.a
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		set_country_flag = mac_catephract_flag
+		add_government_reform = pf_catephract_focus
+	}
+
+	option = { #Unlock powerful Merc Company
+		name = pf_mac_events.5.b
+		# goto = 
+		ai_chance = { factor = 0 }
+
+		set_country_flag = mac_mercs_flag
+	}
+}
+
+#Dev Kosovo for stupid-ass AI
+country_event = {
+	id = pf_mac_events.6
+	title = pf_mac_events.6.t
+	desc = pf_mac_events.6.d
+	picture = CIVIL_WAR_eventPicture
+	hidden = yes
+	
+	trigger = {  
+		tag = MAC
+		ai = yes
+		1766 = {
+			owned_by = MAC
+		}
+		1766 = {
+			NOT = { base_production = 6 }
+		}
+	}
+
+	# fire_only_once = yes
+	
+	# is_triggered_only = yes
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	immediate = {  }
+
+	option = { #
+		name = pf_mac_events.6.a
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		1766 = { add_base_production = 2 }
+	}
+
+}

@@ -16,7 +16,13 @@ mac_1 = {
 
 		trigger = {  
 			owns_core_province = 1766
-			1766 = { base_production = 8 }
+			if = {
+				limit = { ai = no }
+				1766 = { base_production = 8 }
+			}
+			else = {
+				1766 = { base_production = 6 }
+			}
 		} 
 
 		effect = {  
@@ -175,33 +181,126 @@ mac_1 = {
 		icon = spa_spanish_road
 		position = 5
 		required_missions = { pf_mac_reclaim_asia } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				AND = {
+					OR = {
+						province_id = 411
+						province_id = 4293
+					}
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = { base_production = 6 }
+				}
+				AND = {
+					OR = {
+						area = al_jazira_area
+						area = shahrizor_area
+					}
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			owns_core_province = 411
+			411 = { base_production = 6 }
+			owns_core_province = 4293
+			4293 = { base_production = 6 }
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 6
+				OR = {
+					area = al_jazira_area
+					area = shahrizor_area
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			411 = { add_manufactory = yes }
+			4293 = { add_manufactory = yes }
+			custom_tooltip = empty_line_tt
+			mesopotamia_region = { 	add_permanent_claim = ROOT }
+		} 
 	}
 
 	pf_mac_the_land_between_the_rivers = {
 		icon = mission_se_along_the_river
 		position = 6
 		required_missions = { pf_mac_follow_silk_road } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				AND = {
+					province_id = 408
+					owned_by = ROOT
+					NOT = { has_shipyard_building_trigger = yes }
+				}
+				AND = {
+					region = mesopotamia_region
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			owns = 408
+			408 = { has_shipyard_building_trigger = yes }
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = mesopotamia_region
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			408 = { add_or_upgrade_shipyard_building = yes }
+			custom_tooltip = empty_line_tt
+			408 = { set_center_level_3_center_of_trade = yes }
+			custom_tooltip = empty_line_tt
+			408 = {
+				add_unit_construction = {
+					type = galley
+					amount = 10
+					speed = 0.1
+					cost = 0
+			  }
+			}
+			custom_tooltip = empty_line_tt
+			persia_region = { add_permanent_claim = ROOT }
+		} 
 	}
 
 	pf_mac_crush_the_dastur = {
 		icon = mission_persianate_empire
 		position = 7
 		required_missions = { pf_mac_the_land_between_the_rivers } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			region = persia_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				region = persia_region
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = mac_crush_the_dastur_modifier
+				duration = 12775
+			}
+			add_ruler_modifier = {
+				name = mac_crusher_of_the_dastur_modifier
+			}
+			khorasan_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 }
 mac_2 = {
@@ -226,8 +325,14 @@ mac_2 = {
 				power_type = mac_war_cabinet_organization
 				value = 35
 			}
-			army_size_percentage = 1
-			army_professionalism = 0.1
+			if = {
+				limit = { ai = no }
+				army_size_percentage = 1
+				army_professionalism = 0.1
+			}
+			else = {
+				army_size_percentage = 0.75
+			}
 		} 
 
 		effect = {  
@@ -322,9 +427,11 @@ mac_2 = {
 			378 = {
 				add_or_upgrade_shipyard_building = yes
 			}
+			custom_tooltip = empty_line_tt
 			378 = {
 				set_center_level_3_center_of_trade = yes
 			}
+			custom_tooltip = empty_line_tt
 			378 = {
 				add_base_tax = 2
 				add_base_production = 2
@@ -339,14 +446,62 @@ mac_2 = {
 		icon = mission_have_manufactories
 		position = 6
 		required_missions = { pf_mac_follow_silk_road } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			trade_goods = cloth
+			NOT = { base_production = 6 }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			if = {
+				limit = { ai = no }
+				num_of_owned_provinces_with = {
+					value = 10
+					trade_goods = cloth
+					base_production = 6
+				}
+			}
+			else = {
+				num_of_owned_provinces_with = {
+					value = 4
+					trade_goods = cloth
+					base_production = 6
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			swap_trade_good_for_max_provinces = {
+				max = 2
+				original = cloth 
+				new = silk
+				tooltip = mac_macedonian_silk_tt
+				trigger = "
+					base_production = 6
+				"
+			}
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						trade_goods = cloth
+						base_production = 6
+					}		
+					add_province_modifier = {
+						name = mac_macedonian_silk_modifier
+						duration = -1
+					}
+				}
+			}
+			tooltip = {
+				add_province_modifier = {
+					name = mac_macedonian_silk_modifier
+					duration = -1
+				}
+			}
+		} 
 	}
 
-	pf_mac_argaed_restoration = {
+	pf_mac_argead_restoration = {
 		icon = mission_empire
 		position = 8
 		required_missions = {
@@ -363,7 +518,7 @@ mac_2 = {
 	pf_mac_surpass_alexander = {
 		icon = mission_indian_empire
 		position = 9
-		required_missions = { pf_mac_argaed_restoration } 
+		required_missions = { pf_mac_argead_restoration } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -385,10 +540,18 @@ mac_3 = {
 		} 
 
 		trigger = {  
-			army_size = 40
-			num_of_cavalry = 6
-			num_of_generals = 2
-			manpower_percentage = 0.5
+			if = {
+				limit = { ai = no }
+				army_size = 40
+				num_of_cavalry = 6
+				num_of_generals = 2
+				manpower_percentage = 0.5
+			}
+			else = {	
+				army_size = 30
+				num_of_cavalry = 4
+				num_of_generals = 1
+			}
 		} 
 
 		effect = {  
@@ -463,29 +626,154 @@ mac_3 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = mac_illyrian_marches_tt #if illyria exists (under 100 develompent) give subjugation cb, else give claims on areas, a modifier and mana
+			hidden_effect = {
+				if = {
+					limit = {
+						ILY = {
+							exists = yes
+							NOT = { total_development = 100 }
+						}
+					}
+					add_casus_belli = {
+						type = cb_vassalize_mission
+						months = 240
+						target = ILY
+					}
+				}
+				else = {
+					add_adm_power = 100
+					every_owned_province = {
+						limit = {	 
+							OR = {
+								area = bosnia_area
+								area = east_adriatic_coast_area
+								area = croatia_area
+							}
+						}
+						add_nationalism = -10
+						add_province_modifier = {
+							name = mac_illyrian_marches_modifier
+							duration = 7300
+						}
+					}
+				}
+			}
+		} 
 	}
 
 	pf_mac_southern_brothers = {
 		icon = mission_levantine_restoration
 		position = 5
 		required_missions = { pf_mac_phoenician_coast } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				AND = {
+					area = palestine_area
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				AND = {
+					region = mashriq_region
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			palestine_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			} 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = mashriq_region
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			country_event = {
+				id = pf_mac_events.4
+			}
+		} 
 	}
 
 	pf_mac_hellenic_hegemon = {
 		icon = dreams_of_grandeur
 		position = 7
 		required_missions = { pf_mac_southern_brothers } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			region = egypt_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			OR = {
+				AND = {
+					owns_core_province = 358
+					num_of_owned_provinces_with = {
+						value = 20
+						region = egypt_region
+					}
+				}
+				any_subject_country = {
+					tag = AEG
+					num_of_owned_provinces_with = {
+						value = 25
+						region = egypt_region
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {    
+			simple_dynamic_effect = {
+				first_custom_tooltip = mac_hellenic_hegemon_tt_1 #if you own the lands directly
+				first_limit = "
+					owns_core_province = 358
+					num_of_owned_provinces_with = {
+						value = 20
+						region = egypt_region
+					}
+				"
+				first_effect = "
+					358 = {
+						add_province_modifier = {
+							name = mac_hellenic_hegemon_alexandria_modifier
+							duration = -1
+						}
+					}
+					358 = {
+						add_base_tax = 2
+						add_base_production = 2
+						add_base_manpower = 2
+					}
+				"
+				# second_custom_tooltip = mac_incorporating_big_guns_tt_2 #else
+				second_limit = "
+					any_subject_country = {
+						tag = AEG
+						num_of_owned_provinces_with = {
+							value = 25
+							region = egypt_region
+						}
+					}
+				"
+				second_effect = "
+					AEG = {
+						add_country_modifier = {
+							name = mac_hellenic_hegemon_aegyptos_modifier
+							duration = -1
+						}
+					}
+				"
+			}	
+			maghreb_region = { add_permanent_claim = ROOT }
+		}  
 	}
 }
 mac_4 = {
@@ -529,20 +817,37 @@ mac_4 = {
 			sea_zone = { 
 				province_id = 1319
 			}
+			has_shipyard_building_trigger = no
 		} 
 
 		trigger = {  
-			calc_true_if = {
-				amount = 6				 
-				any_owned_province = {
-					has_port = yes
-					sea_zone = { 
-						province_id = 1319
+			if = {
+				limit = { ai = no }
+				calc_true_if = {
+					amount = 6				 
+					any_owned_province = {
+						has_port = yes
+						sea_zone = { 
+							province_id = 1319
+						}
 					}
+					has_shipyard_building_trigger = yes
 				}
-				has_shipyard_building_trigger = yes
+				num_of_galley = 25
 			}
-			num_of_galley = 25
+			else = {
+				calc_true_if = {
+					amount = 4				 
+					any_owned_province = {
+						has_port = yes
+						sea_zone = { 
+							province_id = 1319
+						}
+					}
+					has_shipyard_building_trigger = yes
+				}
+				num_of_galley = 20
+			}
 		} 
 
 		effect = {  
@@ -638,9 +943,56 @@ mac_cabinet_4 = {
 		required_missions = { pf_mac_organize_the_cabinet } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {   
+			has_government_power = {
+				mechanic_type = mac_war_cabinet_mechanic
+				power_type = mac_war_cabinet_organization
+				value = 75
+			}
+			OR = {
+				num_of_artillery = 30
+				AND = {
+					num_of_artillery = 15
+					OR = {
+						full_idea_group = firepower_ideas
+						full_idea_group = quality_ideas
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			simple_dynamic_effect = {
+				first_custom_tooltip = mac_incorporating_big_guns_tt_1 #if you have firepower or quality ideas
+				first_limit = "
+					OR = {
+						full_idea_group = firepower_ideas
+						full_idea_group = quality_ideas
+					}
+				"
+				first_effect = "
+					add_country_modifier = {
+						name = mac_incorporating_big_guns_modifier
+						duration = 7300
+					}
+				"
+				# second_custom_tooltip = mac_incorporating_big_guns_tt_2 #else
+				second_limit = "
+					NOT = { full_idea_group = firepower_ideas }
+					NOT = { full_idea_group = quality_ideas }
+				"
+				second_effect = "
+					add_country_modifier = {
+						name = mac_incorporating_big_guns_modifier_2
+						duration = 7300
+					}
+				"
+			}	
+			add_country_modifier = {
+				name = mac_incorporating_big_guns_modifier_3
+				duration = 7300
+			}
+		} 
 	}
 }
 mac_cabinet_5 = {
@@ -655,20 +1007,49 @@ mac_cabinet_5 = {
 		position = 4
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			has_government_power = {
+				mechanic_type = mac_war_cabinet_mechanic
+				power_type = mac_war_cabinet_organization
+				value = 50
+			}
+			land_forcelimit = 60
+			army_size_percentage = 1
+		} 
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = mac_organize_the_cabinet_tt #unlock new decision/buttons for cabinet to manage it
+			set_country_flag = mac_organize_the_cabinet_flag
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = mac_organize_the_cabinet_modifier
+				duration = 12775
+			}
+		} 
 	}
 
-	pf_mac_centalized_command = {
+	pf_mac_centralized_command = {
 		icon = king_of_poland
 		position = 5
 		required_missions = { pf_mac_organize_the_cabinet } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  		
+			has_government_power = {
+				mechanic_type = mac_war_cabinet_mechanic
+				power_type = mac_war_cabinet_organization
+				value = 75
+			}
+			land_forcelimit = 75
+			army_size = 75
+			num_of_cavalry = 20
+		} 
 
-		effect = {  } 
+		effect = {  
+			country_event = {
+				id = pf_mac_events.5
+			}
+		} 
 	}
 
 	pf_mac_absolute_control = {
@@ -680,9 +1061,28 @@ mac_cabinet_5 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  	
+			has_government_power = {
+				mechanic_type = mac_war_cabinet_mechanic
+				power_type = mac_war_cabinet_organization
+				value = 100
+			}
+			has_mil_advisor_3 = yes
+			NOT = { num_of_rebel_armies = 1 }
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+		} 
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = mac_absolute_control_tt #power will be frozen, some modifiers will be changed but new decisions will be unlocked
+			custom_tooltip = empty_line_tt
+			freeze_government_power = {
+				mechanic_type = mac_war_cabinet_mechanic
+				power_type = mac_war_cabinet_organization
+			}
+			set_country_flag = mac_locked_war_cabinet_org
+			custom_tooltip = empty_line_tt
+			custom_tooltip = mac_commandant_fire_damage_tt #commandant advisors now give 2% fire damage per level
+		} 
 	}
 }
 mac_eco_1 = {
@@ -770,22 +1170,50 @@ mac_culture_4 = {
 	pf_mac_spread_the_faith = {
 		icon = mission_alliances
 		position = 6
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			NOT = { religion = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  		
+			check_variable = { which = num_converted_religion value = 5 }
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = mac_spread_the_faith_modifier
+				duration = 7300
+			}
+		} 
 	}
 
 	pf_mac_hellenization = {
 		icon = crush_heretic_strongholds
 		position = 7
 		required_missions = { pf_mac_spread_the_faith } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			NOT = { culture_group = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 50
+				culture_group = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			distribute_base_dev_to_provinces = {
+				num = 10
+				amount = 1
+				trigger = "
+					culture_group = ROOT
+				"
+				type = tax
+				tooltip = mac_hellenization_tt
+			}
+		} 
 	}
 
 	pf_mac_beacons_of_hellenic_strength = {

@@ -178,8 +178,7 @@
 	},
 	"Distribute Base Dev to Provinces": {
 		"prefix": ["distribute_base_dev_to_provinces"],
-		"body": [
-			"effect = {",  			
+		"body": [			
 			"distribute_base_dev_to_provinces = {",
 				"\tnum = ${1:amount of provinces}",
 				"\tamount = ${2:amount of dev}",
@@ -190,7 +189,22 @@
 				"\ttooltip = ${5:tooltip_string}",
 			"}"
 		],
-		"description": "Adds the distribute_base_dev_to_provinces scripted effec"
+		"description": "Adds the distribute_base_dev_to_provinces scripted effect"
+	},
+	"Swap Trade Goods for Max Provinces": {
+		"prefix": ["swap_trade_good_for_max_provinces"],
+		"body": [  			
+			"swap_trade_good_for_max_provinces = {",
+				"\tmax = ${1:amount of provinces}",
+				"\toriginal = ${2:original trade good}",
+				"\tnew = ${3:new trade good}",
+				"\ttooltip = ${4:tooltip_string}",
+				"\ttrigger = \"",
+					"\t\t${5:triggers, not required}",
+				"\t\"",
+			"}"
+		],
+		"description": "Swaps out a specific trade good within defined triggered provinces to a specified new trade good"
 	},
 		
 }
