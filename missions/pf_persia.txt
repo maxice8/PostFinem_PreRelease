@@ -1,0 +1,331 @@
+pf_per_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = PER
+	}
+
+	pf_per_appeal_to_religion = {
+		icon = mission_hands_praying
+		position = 1
+
+		required_missions = { }
+
+		trigger = {
+			OR = {
+				AND = {
+					church_power = 200
+					num_of_estate_privileges = {
+						estate = estate_church
+						value = 6
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = pf_per_satrapy_revolt_has_finished_tt
+					AND = {
+						is_year = 1446
+						NOT = { has_disaster = pf_per_satrapy_revolt }
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = pf_per_satrapy_revolt_if_in_tt
+			tooltip = {
+				add_country_modifier = {
+					name = pf_per_satrapy_appealed_to_religion
+					duration = -1
+					desc = pf_per_satrapy_revolt_until_end_tt
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_disaster = pf_per_satrapy_revolt }
+					add_country_modifier = {
+						name = pf_per_satrapy_appealed_to_religion
+						duration = -1
+						desc = pf_per_satrapy_revolt_until_end_tt
+					}
+				}
+			}
+		}
+	}
+}
+
+pf_per_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = PER
+	}
+
+	pf_per_raise_the_army = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+
+		required_missions = { }
+
+		trigger = {
+			OR = {
+				AND = {
+					army_size_percentage = 1
+					num_of_generals = 2
+				}
+				custom_trigger_tooltip = {
+					tooltip = pf_per_satrapy_revolt_has_finished_tt
+					AND = {
+						is_year = 1446
+						NOT = { has_disaster = pf_per_satrapy_revolt }
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = pf_per_satrapy_revolt_if_in_tt
+			tooltip = {
+				add_country_modifier = {
+					name = pf_per_ready_for_war
+					duration = -1
+					desc = pf_per_satrapy_revolt_until_end_tt
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_disaster = pf_per_satrapy_revolt }
+					add_country_modifier = {
+						name = pf_per_ready_for_war
+						duration = -1
+						desc = pf_per_satrapy_revolt_until_end_tt
+					}
+				}
+			}
+		}
+	}
+}
+
+pf_per_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = PER
+	}
+
+	pf_per_find_allies = {
+		icon = mission_alliances
+		position = 1
+
+		required_missions = { }
+
+		trigger = {
+			OR = {
+				calc_true_if = {
+					custom_trigger_tooltip = {
+						tooltip = pf_per_zoroastrian_allies_tt
+						all_ally = {
+							religion = zoroastrian
+						}
+					}
+					amount = 2
+				}
+				custom_trigger_tooltip = {
+					tooltip = pf_per_satrapy_revolt_has_finished_tt
+					AND = {
+						is_year = 1446
+						NOT = { has_disaster = pf_per_satrapy_revolt }
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = pf_per_satrapy_revolt_if_in_tt
+			tooltip = {
+				add_country_modifier = {
+					name = pf_per_asked_for_help
+					duration = -1
+					desc = pf_per_satrapy_revolt_until_end_tt
+				}
+				country_event = { 
+					id = pf_per_events.10
+					tooltip = pf_per_events_10_tt
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_disaster = pf_per_satrapy_revolt }
+					add_country_modifier = {
+						name = pf_per_asked_for_help
+						duration = -1
+						desc = pf_per_satrapy_revolt_until_end_tt
+					}
+				}
+			}
+		}
+	}
+
+	pf_per_end_the_revolt = {
+		icon = mission_empire
+		position = 1
+
+		required_missions = { pf_per_appeal_to_religion pf_per_raise_the_army pf_per_find_allies pf_per_show_our_strength pf_per_divide_and_conquer }
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = pf_per_satrapy_revolt_has_finished_tt
+				AND = {
+					is_year = 1446
+					NOT = { has_disaster = pf_per_satrapy_revolt }
+				}
+			}
+		}
+
+		effect = {
+			437 = {
+				add_permanent_claim = KHO
+			}
+			438 = {
+				add_permanent_claim = KHO
+			}
+			2349 = {
+				add_permanent_claim = KHO
+			}
+			424 = {
+				add_permanent_claim = TAB
+			}
+			4291 = {
+				add_permanent_claim = KHU
+			}
+			northern_sindh_area = {
+				add_permanent_claim = BAL
+			}
+		}
+	}
+}
+
+pf_per_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = PER
+	}
+
+	pf_per_show_our_strength = {
+		icon = mission_persian_soldiers
+		position = 1
+
+		required_missions = { }
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = obj_humiliate_rival_tooltip
+					has_country_flag = humiliated_rival
+				}
+				custom_trigger_tooltip = {
+					tooltip = pf_per_satrapy_revolt_has_finished_tt
+					AND = {
+						is_year = 1446
+						NOT = { has_disaster = pf_per_satrapy_revolt }
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = pf_per_satrapy_revolt_if_in_tt
+			tooltip = {
+				add_country_modifier = {
+					name = pf_per_satrapy_intimidated
+					duration = -1
+					desc = pf_per_satrapy_revolt_until_end_tt
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_disaster = pf_per_satrapy_revolt }
+					add_country_modifier = {
+						name = pf_per_satrapy_intimidated
+						duration = -1
+						desc = pf_per_satrapy_revolt_until_end_tt
+					}
+				}
+			}
+		}
+	}
+}
+
+pf_per_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = PER
+	}
+
+	pf_per_divide_and_conquer = {
+		icon = mission_unite_home_region
+		position = 1
+
+		required_missions = { }
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			OR = {
+				any_subject_country = {
+					NOT = { liberty_desire = 50 }
+				}
+				custom_trigger_tooltip = {
+					tooltip = pf_per_satrapy_revolt_has_finished_tt
+					AND = {
+						is_year = 1446
+						NOT = { has_disaster = pf_per_satrapy_revolt }
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = pf_per_satrapy_revolt_if_in_tt
+			tooltip = {
+				add_country_modifier = {
+					name = pf_per_satrapy_divided
+					duration = -1
+					desc = pf_per_satrapy_revolt_until_end_tt
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_disaster = pf_per_satrapy_revolt }
+					add_country_modifier = {
+						name = pf_per_satrapy_divided
+						duration = -1
+						desc = pf_per_satrapy_revolt_until_end_tt
+					}
+				}
+			}
+		}
+	}
+}

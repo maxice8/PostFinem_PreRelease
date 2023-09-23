@@ -133,6 +133,59 @@ pf_norse_rulers = {
 
 }
 
+greek_rulers = {
+	rank = {
+		1 = DESPOTATE
+		2 = BASILEIA
+		3 = AUTOKRATORIA
+	}
+
+	ruler_male = {
+		1 = DESPOTES
+		2 = BASILEUS
+		3 = AUTOKRATOR
+	}
+
+	ruler_female = {
+		1 = DESPOTISSA
+		2 = BASILISSA
+		3 = AUTOKRATIRA
+	}
+
+	consort_female = {
+		1 = DESPOTISSA
+		2 = BASILISSA
+		3 = AUTOKRATIRA
+	}
+
+	consort_male = {
+		1 = DESPOTES
+		2 = BASILEUS
+		3 = AUTOKRATOR
+	}
+
+	heir_male = {
+		1 = DIADOCHOS
+		2 = DIADOCHOS
+		3 = DIADOCHOS 
+	}
+	heir_female = {
+		1 = DIADOCHE
+		2 = DIADOCHE
+		3 = DIADOCHE
+	}
+
+	trigger = {
+		OR = {
+			culture_group = macedonian_greek
+			culture_group = anatolian_greek
+			culture_group = levantine_greek
+			culture_group = egyptian_greek
+		}
+	}
+
+}
+
 pf_lagr_republic_names = {
 	rank = {
 		1 = THING

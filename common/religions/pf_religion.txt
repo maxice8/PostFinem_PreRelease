@@ -185,9 +185,6 @@ pagan = {
 	harmonized_modifier = harmonized_pagan
 }
 
-
-
-
 zoroastrian_group = {
 	defender_of_faith = yes
 	flag_emblem_index_range = { 110 110 }
@@ -199,22 +196,26 @@ zoroastrian_group = {
 		}
 		country = {
 			tolerance_own = 2
-			trade_efficiency = 0.1
+			build_cost = -0.1
 		}
 		country_as_secondary = {
 			merchants = 1
 			tolerance_own = 1
 		}
 
-		holy_sites = { 421 4430 2223 441 2235 }
+		uses_anglican_power = yes
 
-		blessings = {
-			blessing_yasna
-			blessing_haoma
-			blessing_navjote
-			blessing_manthras
-			blessing_dakhma
+		aspects = {
+			pf_zoroastrian_execute_heretics_aspect
+			pf_zoroastrian_inward_focus_aspect
+			pf_zoroastrian_get_money_aspect
+			pf_zoroastrian_harvest_rituals_aspect
+			pf_zoroastrian_inspire_zealotry_aspect
+			pf_zoroastrian_fire_worship_aspect
+			pf_zoroastrian_conversion_efforts_aspect
+			pf_zoroastrian_promote_mobads_aspect
 		}
+		aspects_name = pf_zoroastrian_aspects
 		
 		heretic = { MAZDAKI MANICHEAN }	
 	}
@@ -224,21 +225,19 @@ zoroastrian_group = {
 	
 }
 
-
 germanic_group = {
 	defender_of_faith = yes
-	flag_emblem_index_range = { 110 110 }	
-	can_form_personal_unions = yes
-	
+	flag_emblem_index_range = { 110 110 }
+
 	norse_pagan_reformed = {
 		icon = 21
 		color = { 191 191 191 }
 		country = {
 			naval_forcelimit_modifier = 0.25
-			land_maintenance_modifier = -0.1
+			naval_maintenance_modifier = -0.1
 		}
 		country_as_secondary = {
-			merc_maintenance_modifier = -0.2
+			merc_maintenance_modifier = -0.1
 			galley_power = 0.2
 		}
 		province = {
@@ -259,7 +258,7 @@ germanic_group = {
 			free_land_leader_pool = 1
 		}
 		country_as_secondary = {
-			land_forcelimit_modifier = 0.2
+			land_forcelimit_modifier = 0.1
 		}
 
 		province = {
@@ -278,15 +277,15 @@ germanic_group = {
 		icon = 32
 		color = { 160 20 110 }
 		country = {
-			tolerance_own = 2
-			adm_tech_cost_modifier = -0.05
+			max_hostile_attrition = 1
+			free_land_leader_pool = 1
 		}
 		country_as_secondary = {
-			reinforce_cost_modifier = -0.2
+			land_forcelimit_modifier = 0.1
 		}
 
 		province = {
-			
+			local_friendly_movement_speed = 0.1
 		}
 		
 		# personal_deity = yes
@@ -334,11 +333,11 @@ punic_group = {
 		}
 		country_as_secondary = {
 			global_institution_spread = 0.1
-			idea_cost = -0.1
+			idea_cost = -0.05
 		}
 
 		province = {
-			local_missionary_strength = -0.02
+			local_build_cost = -0.1
 		}
 		
 		holy_sites = { 104 118 124 341 146 }
@@ -372,25 +371,22 @@ hellenic_group = {
 			idea_cost = -0.1
 		}
 		country_as_secondary = {
-			warscore_cost_vs_other_religion = -0.1
+			global_institution_spread = 0.1
+			idea_cost = -0.05
 		}
 
-		# allowed_center_conversion = {
-		# 	orthodox
-		# 	sunni
-		# 	shiite
-		# 	catholic
-		# 	coptic
-		# }
+		allowed_center_conversion = {
+			paradosi
+		}
 
-		# will_get_center = { 
-		# 	any_owned_province = {
-		# 		is_reformation_center = no
-		# 	}
-		# }
+		will_get_center = { 
+			any_owned_province = {
+				is_reformation_center = no
+			}
+		}
 
 		province = {
-			local_culture_conversion_cost = -0.2
+			local_culture_conversion_cost = -0.1
 		}
 		
 		# personal_deity = yes
@@ -651,12 +647,40 @@ hellenic_group = {
 	}
 
 
-	harmonized_modifier = harmonized_hellenic
-	crusade_name = HOLY_WAR
+	paradosi = {
+		icon = 39
+		color = { 190 30 30 }
+		country = {
+			development_cost = -0.1
+			tolerance_own = 2
+		}
+		country_as_secondary = {
+			embracement_cost = -0.2
+			idea_cost = -0.1
+		}
+
+		allowed_center_conversion = {
+			hellenic		
+		}
+
+		will_get_center = { 
+			any_owned_province = {
+				is_reformation_center = no
+			}
+		}
+
+		province = {
+			local_production_efficiency = 0.1
+		}
+
+		heretic = { PROMETHEANS }
+	}
+
+	harmonized_modifier = harmonized_paradosi
+	crusade_name = THEOSEMIA_WAR
 
 }
 
-	
 slavic_religion_group = {
 
 	defender_of_faith = yes
@@ -699,15 +723,16 @@ druidic_group = {
 		icon = 37
 		color = { 10 120 50 }
 		country = {
-			tolerance_own = 2
+			tolerance_own = 1
 			same_religion_advisor_cost = -0.2
 		}
 		country_as_secondary = {
-			development_cost_modifier = -0.1
+			global_institution_spread = 0.1
+			idea_cost = -0.05
 		}
 
 		province = {
-			
+			province_trade_power_modifier = 0.1
 		}
 		
 		# personal_deity = yes
@@ -848,9 +873,53 @@ baltic_pagan_group = {
 			local_hostile_attrition = 0.5
 		}
 		
-		# personal_deity = yes
+		uses_church_power = yes
 		
-		heretic = { ROMUVA_HERETIC }
+		aspects = {
+			perkunas_aspect
+			bangputys_aspect
+			auslavis_aspect
+			saule_aspect
+			dalia_aspect
+			ausrine_aspect
+			perkunas_lightning_aspect
+			perkunas_thunder_aspect
+			perkunas_order_aspect
+			perkunas_rain_aspect
+			bangputys_winds_aspect
+			bangputys_storms_aspect
+			bangputys_ships_aspect
+			bangputys_merchants_aspect
+			auslavis_healing_aspect
+			auslavis_renewal_aspect
+			auslavis_rejuvenation_aspect
+			auslavis_recovery_aspect
+			saule_fire_aspect
+			saule_luck_aspect
+			saule_life_aspect
+			saule_horses_aspect
+			dalia_fortune_aspect
+			dalia_fate_aspect
+			dalia_prosperity_aspect
+			dalia_wealth_aspect
+			ausrine_rebirth_aspect
+			ausrine_youth_aspect
+			ausrine_beginnings_aspect
+			ausrine_beauty_aspect
+		}
+		aspects_name = ROMUVA_ASPECTS
+
+		on_convert = {
+			change_religion = romuva
+			add_prestige = -100
+
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+		}
+		
+		heretic = { PROMETHEANS }
 
 	}
 

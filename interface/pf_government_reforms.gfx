@@ -45,8 +45,8 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "government_reform_seleucid "
-		texturefile = "gfx//interface//government_reforms//seleucid .dds"
+		name = "government_reform_selucid"
+		texturefile = "gfx//interface//government_reforms//selucid.dds"
 	}
 
 	spriteType = {
@@ -85,5 +85,13 @@ spriteTypes = {
 	spriteType = {
 		name = "government_reform_pf_marginalism"
 		texturefile = "gfx//interface//government_reforms//pf_lag_marginalism.dds"
+	}
+	spriteType = {
+		name = "government_reform_pf_longboat"
+		texturefile = "gfx//interface//government_reforms//longboats.dds"
+	}
+	spriteType = {
+		name = "government_reform_pf_phalanx"
+		texturefile = "gfx//interface//government_reforms//phalanx.dds"
 	}
 }

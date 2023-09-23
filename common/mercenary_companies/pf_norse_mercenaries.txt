@@ -1,0 +1,21 @@
+merc_pohjantahden_hevosvaki = {
+    regiments_per_development = 0.02
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	cost_modifier = 0.25
+	cavalry_weight = 1
+    home_province = 28 # Nyland
+	sprites = { dlc116_FIN_sprite_pack dlc054_swe_sprite_pack dlc028_swe_sprite_pack swe_base_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		OR = {
+			has_unlocked_merc_company = {
+				merc_company = merc_pohjantahden_hevosvaki
+			}
+		}
+	}
+    modifier = {
+		cavalry_shock = 1 
+		cav_to_inf_ratio = 1 
+		movement_speed = 0.25
+	}
+}

@@ -270,6 +270,15 @@ shipyard = {
 			type = production
 			value = 1
 		}
+		if = {
+			limit = {
+				owner = { has_country_flag = uncontested_in_the_aegean_flag }
+			}
+			add_province_modifier = {
+				name = uncontested_in_the_aegean_modifier
+				duration = -1
+			}
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
@@ -280,6 +289,10 @@ shipyard = {
 		if = {
 			limit = { has_province_modifier = sca_swe_danish_shipyard }
 			remove_province_modifier = sca_swe_danish_shipyard
+		}
+		if = {
+			limit = { has_province_modifier = uncontested_in_the_aegean_modifier }
+			remove_province_modifier = uncontested_in_the_aegean_modifier
 		}
 	}
 	on_obsolete = {
