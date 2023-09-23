@@ -1161,6 +1161,9 @@ separate_clergy_from_state_affairs_reform = {
 	icon = "partial_secularisation_reform"
 	allow_normal_conversion = yes
 	potential = {
+		# pf [[[
+		NOT = { primary_culture = norvegr }
+		# ]]]
 		NOT = { has_government_attribute = is_pirate_republic_reform }
 		OR = {
 			is_revolutionary = no
@@ -1881,6 +1884,8 @@ maritime_military_reform = {
 				government_reform = professional_navy_reform
 			}
 		}
+		# pf (they have their own stronger version)
+		NOT = { primary_culture = norvegr }
 	}
 	trigger = {
 		num_of_ports = 1

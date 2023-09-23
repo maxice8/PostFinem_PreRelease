@@ -1,7 +1,7 @@
 
 #Gallic Hierarchy
 
-gallic_hierarchy = {
+pf_gallic_hierarchy = {
 	icon = "gallic_king"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -11,8 +11,10 @@ gallic_hierarchy = {
 			tag = GAU
 		}
 	}
+	government_abilities = {
+		gaul_confederation_mechanic
+	}
 	modifiers = {
-		min_autonomy = 35
 		global_tax_modifier = 0.15
 		num_accepted_cultures = 2
 	}
@@ -22,14 +24,19 @@ gallic_hierarchy = {
 	ai = {
 		factor = 0.5 #generic
 	}
-	custom_attributes = {
-		locked_government_type = yes
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		is_elective = yes
+		custom_attributes = {
+			has_polish_election = yes
+			locked_government_type = yes
+		}
 	}
 }
 
 #Celtic Lordship
 
-celtic_lordship = {
+pf_celtic_lordship = {
 	icon = "celtic_king"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -57,7 +64,7 @@ celtic_lordship = {
 
 #Crown of Roma
 
-crown_of_roma = {
+pf_crown_of_roma = {
 	icon = "roman_empire"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -83,7 +90,7 @@ crown_of_roma = {
 
 #Auralpina Monarchy
 
-auralpina_monarchy = {
+pf_auralpina_monarchy = {
 	icon = "king_mountains"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -109,7 +116,7 @@ auralpina_monarchy = {
 
 #Hellepharaohcy
 
-hellepharaohcy = {
+pf_hellepharaohcy = {
 	icon = "cleopatra"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -135,7 +142,7 @@ hellepharaohcy = {
 
 #Diadem of Iberia
 
-diadem_of_iberia = {
+pf_diadem_of_iberia = {
 	icon = "explorer_landing"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -161,7 +168,7 @@ diadem_of_iberia = {
 
 #Alexander's Crown
 
-alexanders_crown = {
+pf_alexanders_crown = {
 	icon = "alexander_crown"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -169,10 +176,13 @@ alexanders_crown = {
 	potential = {
 		tag = MAC
 	}
+	
+	government_abilities = {
+		mac_war_cabinet_mechanic
+	}
 	modifiers = {
 		min_autonomy_in_territories = -0.1
-		land_morale = 0.1
-		global_regiment_cost = 0.25
+		prestige_decay = -0.01
 	}
 	# custom_attributes = {
 	# 	buffed_strong_duchies = yes #+5% Loyalty
@@ -186,9 +196,9 @@ alexanders_crown = {
 }
 
 
-#Selucid Monarchy
-selucid_monarchy = {
-	icon = "selucid"
+#Seleucid  Monarchy
+pf_seleucid_monarchy = {
+	icon = "seleucid "
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = no
@@ -214,5 +224,154 @@ selucid_monarchy = {
 	conditional = {
 		allow = { has_dlc = "Third Rome" }
 		claim_states = yes
+	}
+}
+
+#Enlightened Norse Kingdom
+enlightened_norse_kingdom = {
+	icon = "viking"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+	potential = {
+		OR = {
+			tag = NLD
+			was_tag = NLD
+		}
+	}
+	modifiers = {
+		no_religion_penalty = yes
+	}
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+				limit = {
+					has_owner_accepted_culture = no
+					has_owner_culture = no
+					culture_group = ROOT
+				}
+				add_province_modifier = {
+					name = nld_tolerant_culture_group
+					duration = -1
+				}
+			}
+			 else_if = {
+				limit = {
+					has_owner_accepted_culture = no
+					has_owner_culture = no
+					NOT = {
+						culture_group = ROOT
+					}
+				}
+				add_province_modifier = {
+					name = nld_tolerant_culture
+					duration = -1
+				}
+			}
+			}
+		}
+	}
+	post_removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = {
+						has_province_modifier = nld_tolerant_culture_group
+					}
+					remove_province_modifier = nld_tolerant_culture_group
+				}
+				else_if = {
+					limit = { 
+						has_province_modifier = nld_tolerant_culture
+					}
+					remove_province_modifier = nld_tolerant_culture
+				}
+			}
+		}
+	}
+	custom_attributes = {
+		enlightened_norse_kingdom_tolerance = yes
+	}
+}
+pf_nordhafnadr_kingdom = {
+	icon = "norse_kingdom"
+	allow_normal_conversion = yes
+	raze_province = yes
+	potential = {
+		has_country_flag = nrd_reformed_government_flag
+	}
+	modifiers = {
+		army_tradition = 1
+		monarch_military_power = 2
+		movement_speed_onto_off_boat_modifier = 1
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+#Phalanx T5 for Greeks
+pf_integrated_phalanx = {
+	icon = "pf_phalanx"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { tag = MAC }
+		NOT = { tag = AEG }
+		OR = {
+			culture_group = macedonian_greek
+			culture_group = anatolian_greek
+			culture_group = levantine_greek
+			culture_group = egyptian_greek
+		}
+	}
+	modifiers = {
+		has_streltsy = yes
+		allowed_streltsy_fraction = 0.25
+		shock_damage_received = -0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+pf_romuva_kingdom = {
+	icon = "crown"
+	allow_normal_conversion = yes
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+	potential = {
+		religion = romuva
+	}
+
+	modifiers = {
+		tolerance_own = 1
+		global_missionary_strength = 0.01
+		church_power_modifier = -1
+	}
+	ai = {
+		factor = 1
+	}
+
+}
+pf_catephract_focus = {
+	icon = "cavalry"
+	allow_normal_conversion = yes
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+	potential = {
+		has_country_flag = mac_catephract_flag
+	}
+
+	modifiers = {
+		can_recruit_hussars = yes
+		amount_of_hussars = 4
+	}
+	ai = {
+		factor = 1
 	}
 }

@@ -1,0 +1,40 @@
+pf_bri_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			primary_culture = old_welsh
+			primary_culture = old_cornish
+			primary_culture = briton
+		}
+		NOT = { tag = TRN }
+		NOT = { was_tag = TRN }
+	}
+
+	pf_bri_royal_court = {
+		icon = mission_ottoman_harem
+		position = 1
+		required_missions = { } 
+		provinces_to_highlight = {
+			is_capital = yes
+			owned_by = ROOT
+		}
+		trigger = {
+			capital_scope = {
+				num_of_times_improved = 5
+			}
+			has_advisor = yes
+			prestige = 25
+		}
+		effect = {
+			add_adm_power = 100
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_bri_royal_court_modifier"
+				duration = 9125
+			}
+		}
+	}
+}

@@ -1,0 +1,309 @@
+#Change trade goods for a max number of provinces
+swap_trade_good_for_max_provinces = {
+	hidden_effect = {
+		set_variable = {
+			which = max
+			value = $max$
+		}
+		while = {
+			limit = { 
+				check_variable = {
+					which = max
+					value = 1
+				}
+			}
+			random_owned_province = {
+				limit = {
+					$trigger$ #not required if you want it to be random in all owned provinces
+					trade_goods = $original$
+				}
+				change_trade_goods = $new$
+			}
+			change_variable = {
+				which = max
+				value = -1
+			}
+		}
+	}
+	custom_tooltip = $tooltip$
+	#ex: "Up to �G MAX �! provinces producing �Y ORIGINAL �! will now produce �Y NEW �!."
+}
+
+#Distribute X Base Tax to X provinces
+#PARAMERETS ARE num \ trigger (inside " " instead of brackets) \ type (tax production manpower)
+distribute_base_dev_to_provinces = {
+	hidden_effect = {
+		set_variable = {
+			which = num
+			value = $num$
+		}
+		while = {
+			limit = { 
+				check_variable = {
+					which = num
+					value = 1
+				}
+			}
+			random_owned_province = {
+				limit = { 
+					$trigger$ #not required if you want it to be random in all owned provinces
+					NOT = { has_province_flag = received_base_dev_flag }
+				}
+				add_base_$type$ = $amount$
+				set_province_flag = received_base_dev_flag
+			}
+			change_variable = {
+				which = num
+				value = -1
+			}
+		}
+		every_owned_province = {
+			limit = {
+				has_province_flag = received_base_dev_flag
+			}
+			clr_province_flag = received_base_dev_flag
+		}
+	}
+	custom_tooltip = $tooltip$
+	#ex: �G NUM �! random provinces in �Y TRIGGER �! will receive �G AMOUNT �! base �Y TYPE �! development.
+}
+pf_reset_deity = {
+	custom_tooltip = PF_RESET_PERSONAL_DEITY
+	hidden_effect = {
+		change_personal_deity = null
+	}
+}
+# pf_save_random_tribe = {
+#	function = [primary/secondary]
+# }
+pf_save_random_tribe = {
+	hidden_effect = {
+		random_list = {
+			1 = {
+				set_country_flag = chose_iceni_$function$
+			}
+			1 = {
+				set_country_flag = chose_trinovantes_$function$
+			}
+			1 = {
+				set_country_flag = chose_cantiaci_$function$
+			}
+			1 = {
+				set_country_flag = chose_regni_$function$
+			}
+			1 = {
+				set_country_flag = chose_catuvellauni_$function$
+			}
+		}
+	}
+}
+# pf_clear_trn_tribe_flags = yes
+pf_clear_trn_tribe_flags = {
+	clr_country_flag = chose_iceni_primary
+	clr_country_flag = chose_trinovantes_primary
+	clr_country_flag = chose_cantiaci_primary
+	clr_country_flag = chose_regni_primary
+	clr_country_flag = chose_catuvellauni_primary
+	clr_country_flag = chose_iceni_secondary
+	clr_country_flag = chose_trinovantes_secondary
+	clr_country_flag = chose_cantiaci_secondary
+	clr_country_flag = chose_regni_secondary
+	clr_country_flag = chose_catuvellauni_secondary
+}
+
+pf_per_clear_satrapy_revolt_modifiers = {
+	remove_country_modifier = pf_per_satrapy_compromised
+	remove_country_modifier = pf_per_satrapy_refused
+	remove_country_modifier = pf_per_satrapy_collaborated
+}
+
+pf_per_clear_satrapy_revolt_modifiers_persia = {
+	remove_country_modifier = pf_per_satrapy_appealed_to_religion
+	remove_country_modifier = pf_per_ready_for_war
+	remove_country_modifier = pf_per_asked_for_help
+	remove_country_modifier = pf_per_ally_talked
+	remove_country_modifier = pf_per_satrapy_intimidated
+	remove_country_modifier = pf_per_satrapy_divided
+}
+romuva_clear_aspects_scripted_effect = {
+	if = {
+		limit = {
+			has_church_aspect = perkunas_aspect
+		}
+		remove_church_aspect = perkunas_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = bangputys_aspect
+		}
+		remove_church_aspect = bangputys_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = auslavis_aspect
+		}
+		remove_church_aspect = auslavis_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = saule_aspect
+		}
+		remove_church_aspect = saule_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = dalia_aspect
+		}
+		remove_church_aspect = dalia_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = ausrine_aspect
+		}
+		remove_church_aspect = ausrine_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = perkunas_lightning_aspect
+		}
+		remove_church_aspect = perkunas_lightning_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = perkunas_thunder_aspect
+		}
+		remove_church_aspect = perkunas_thunder_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = perkunas_order_aspect
+		}
+		remove_church_aspect = perkunas_order_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = perkunas_rain_aspect
+		}
+		remove_church_aspect = perkunas_rain_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = bangputys_winds_aspect
+		}
+		remove_church_aspect = bangputys_winds_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = bangputys_storms_aspect
+		}
+		remove_church_aspect = bangputys_storms_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = bangputys_ships_aspect
+		}
+		remove_church_aspect = bangputys_ships_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = bangputys_merchants_aspect
+		}
+		remove_church_aspect = bangputys_merchants_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = auslavis_healing_aspect
+		}
+		remove_church_aspect = auslavis_healing_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = auslavis_renewal_aspect
+		}
+		remove_church_aspect = auslavis_renewal_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = auslavis_rejuvenation_aspect
+		}
+		remove_church_aspect = auslavis_rejuvenation_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = auslavis_recovery_aspect
+		}
+		remove_church_aspect = auslavis_recovery_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = saule_fire_aspect
+		}
+		remove_church_aspect = saule_fire_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = saule_luck_aspect
+		}
+		remove_church_aspect = saule_luck_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = saule_life_aspect
+		}
+		remove_church_aspect = saule_life_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = saule_horses_aspect
+		}
+		remove_church_aspect = saule_horses_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = dalia_fortune_aspect
+		}
+		remove_church_aspect = dalia_fortune_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = dalia_fate_aspect
+		}
+		remove_church_aspect = dalia_fate_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = dalia_prosperity_aspect
+		}
+		remove_church_aspect = dalia_prosperity_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = dalia_wealth_aspect
+		}
+		remove_church_aspect = dalia_wealth_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = ausrine_rebirth_aspect
+		}
+		remove_church_aspect = ausrine_rebirth_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = ausrine_youth_aspect
+		}
+		remove_church_aspect = ausrine_youth_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = ausrine_beginnings_aspect
+		}
+		remove_church_aspect = ausrine_beginnings_aspect
+	}
+	if = {
+		limit = {
+			has_church_aspect = ausrine_beauty_aspect
+		}
+		remove_church_aspect = ausrine_beauty_aspect
+	}
+}

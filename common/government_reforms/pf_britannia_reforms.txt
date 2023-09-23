@@ -1,0 +1,112 @@
+brittonic_confederation_reform = {
+	icon = "legislative_assembly_reform"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+
+	potential = {
+		OR = {
+			tag = TRN
+			has_reform = brittonic_confederation_reform
+		}
+	}
+	trigger = {
+		tag = TRN
+	}
+	modifiers = {
+		morale_damage = 0.05
+		global_unrest = -1
+		min_autonomy = 20
+		all_estate_influence_modifier = 0.10
+	}
+	custom_attributes = {
+		confederation_elections = yes
+	}
+	government_abilities = {
+		trinovantes_cohesion_mechanic
+	}
+	election_on_death = yes
+	heir = no
+	ai = {
+		factor = 1
+	}
+}
+
+pf_clan_supremacy_reform = {
+	icon = "man_and_children"
+	allow_normal_conversion = yes
+
+	potential = {
+		has_reform = brittonic_confederation_reform
+	}
+
+	modifiers = {
+		nobles_influence_modifier = -0.15
+		monarch_admin_power = 1
+		monarch_diplomatic_power = 1
+		monarch_military_power = 1
+		monthly_trn_cohesion = 0.2
+	}
+
+	custom_attributes = {
+		disables_confederation_elections = yes
+	}
+	heir = yes
+	maintain_dynasty = yes
+
+	ai = {
+		factor = 1
+	}
+}
+pf_guidance_of_the_elders_reform = {
+	icon = "organising_our_religion_reform"
+	allow_normal_conversion = yes
+
+	potential = {
+		has_reform = brittonic_confederation_reform
+	}
+
+	modifiers = {
+		innovativeness_gain = 0.25
+		embracement_cost = -0.20
+		nobles_influence_modifier = 0.10
+	}
+	custom_attributes = {
+		techs_give_estate_loyalty = yes
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+pf_blackcoat_dictatorship = {
+	icon = "blackcoats"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			tag = TRN
+			tag = ABN
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = pf_trn_allowed_blackcoat_dictatorship_tt
+			has_country_flag = blackcoats_in_power
+		}
+	}
+	modifiers = {
+		army_tradition = 0.50
+		max_absolutism = 20
+		stability_cost_modifier = 0.50
+	}
+	#custom_attributes = {
+	#	stab_hits_are_doubled = yes
+	#}
+	#government_mechanics = {
+	#	blackcoat_rule_mechanic
+		# scaling bar from 0-100
+		# if it reaches 0, the blackcoats are overthrown in another civil war
+		# at 100 it gives 10% discipline, -20% land maintenance +20% manpower recovery speed, stability cost -50% BUT +5 national unrest
+	#}
+}
