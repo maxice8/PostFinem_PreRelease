@@ -1,0 +1,22 @@
+local_autonomy_modifier_G_1 = {
+	min_local_autonomy = -25
+}
+pf_gallic_wars_remant_1 = {
+	min_local_autonomy = 15
+}
+unifier_of_gauls = {
+	manpower_in_culture_group_provinces = 0.10
+}
+nervian_submission = {
+	local_tax_modifier = 0.15
+	local_unrest = -1
+}
+end_the_raids_GAU = {
+	block_slave_raid = yes
+	hostile_disembark_speed = 0.33
+}
+dispell_the_germanics = {
+	local_culture_conversion_cost = -0.25 
+	local_culture_conversion_time = -0.50
+}
+	

@@ -1,5 +1,6 @@
 #When adding effects directly in on_actions always consider if it would be best to do so through a scripted effect. on_actions with a lot of script in them are harder to get an overview of.
 
+
 # country
 on_startup = {
 	if = {
@@ -45,6 +46,12 @@ on_startup = {
 			set_country_flag = ayu_monarch_flag
 		}
 	}
+	if = {
+		limit = {
+			religion = romuva
+		}
+		country_event = { id = romuva_events.1 }
+	}
 	#if = {
 	#	limit = {
 	#		OR = {
@@ -59,7 +66,14 @@ on_startup = {
 	#	}
 	#	country_event = { id = ideagroups.1 } #Swap Ideas
 	#}
-}
+	if = {
+		limit = {
+			tag = PER
+			NOT = { is_year = 1445 }
+		}
+		country_event = { id = pf_per_events.0 }
+	}
+}	
 
 # country
 on_religion_change = {
@@ -426,6 +440,16 @@ on_battle_won_country = {
 on_battle_lost_country = {
 	on_battle_ended_effect = yes
 	battle_cult_spreading_effect = yes #Scripted effect for fetishist cult mechanics.
+	if = {
+		limit = {	
+			owner = { has_government_mechanic = gaul_confederation_mechanic } 
+		}
+		add_government_power = {
+			mechanic_type = gaul_confederation_mechanic
+			power_type = gaul_confederation
+			value = -0.1
+		}
+	}
 	random_events = {
 		90 = 0
 		10 = friendship_events.1 #Historical Friendship Broken
@@ -682,18 +706,19 @@ on_siege_lost_country = {
 	}
 	if = {
 		limit = {
-			owner = { has_government_mechanic = gaul_confederation_mechanic }
-			controller = REB
-		}
-		owner = {
-			add_government_power = {
-				mechanic_type = gaul_confederation_mechanic
-				power_type = gaul_confederation
-				value = -2
+			has_government_mechanic = gaul_confederation_mechanic
+			FROM = {
+				controller = {
+					tag = REB
+				}
 			}
 		}
-	}	
-	
+		add_government_power = {
+			mechanic_type = gaul_confederation_mechanic
+			power_type = gaul_confederation
+			value = -2
+		}
+	}
 }
 
 # province
@@ -829,6 +854,14 @@ on_new_consort = {
 # country
 on_monarch_death = {
 	if = {
+		limit = {
+			tag = NRD
+			has_country_flag = knut_ulriksson_maidenless_flag
+		}
+		clr_country_flag = knut_ulriksson_maidenless_flag
+		country_event = { id = nrd_flavor_events.4 }
+	}
+	if = {
 		limit = { has_country_modifier = sought_after_bachelor }
 		remove_country_modifier = sought_after_bachelor
 	}
@@ -847,6 +880,12 @@ on_monarch_death = {
 	if = {
 		limit = { has_government_attribute = no_stability_loss_on_monarch_death }
 		add_stability = 1
+	}
+	if = {
+		limit = {
+			religion = romuva
+		}
+		country_event = { id = romuva_events.1 }
 	}
 	burgundian_inheritance_start_effect = yes
 	ladislaus_postumus_king_died_effect = yes
@@ -1551,7 +1590,10 @@ on_adm_development = {
 	# pf
 	if = {
 		limit = {
-			has_country_modifier = pf_lag_urbanisation
+			OR = {
+				owner = { has_country_modifier = pf_lag_urbanisation }
+				has_country_modifier = nld_industralize_cities
+			}
 		}
 		random_list = {
 			5 = { add_base_tax = 1 }
@@ -1561,14 +1603,33 @@ on_adm_development = {
 	if = {
 		limit = {
 			owner = { has_government_mechanic = gaul_confederation_mechanic }
-			accepted_culture = ROOT 
-			culture = root
+			OR = {
+				has_owner_accepted_culture = yes 
+				has_owner_culture = yes 
+			}
 		}
-		owner = {
-			add_government_power = {
-				mechanic_type = gaul_confederation_mechanic
-				power_type = gaul_confederation
-				value = 0.25
+		export_to_variable = {
+			which = base_dev_var_GAU
+			value = trigger_value:development
+		}
+		while = {
+			limit = {
+				#While their total tax development is more than 1, add 1.2 Gaulic confed power
+				check_variable = {
+					which = base_dev_var_GAU
+					value = 1
+				}
+			}
+			owner = {
+				add_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 0.1
+				}
+			}
+			subtract_variable = {
+				which = base_dev_var_GAU
+				value = 1
 			}
 		}
 	}	
@@ -1580,7 +1641,10 @@ on_dip_development = {
 	# pf
 	if = {
 		limit = {
-			has_country_modifier = pf_lag_urbanisation
+			OR = {
+				has_country_modifier = pf_lag_urbanisation
+				has_country_modifier = nld_industralize_cities
+			}
 		}
 		random_list = {
 			5 = { add_base_production = 1 }
@@ -1590,17 +1654,36 @@ on_dip_development = {
 	if = {
 		limit = {
 			owner = { has_government_mechanic = gaul_confederation_mechanic }
-			accepted_culture = ROOT 
-			culture = root
-		}
-		owner = {
-			add_government_power = {
-				mechanic_type = gaul_confederation_mechanic
-				power_type = gaul_confederation
-				value = 0.25
+			OR = {
+				has_owner_accepted_culture = yes 
+				has_owner_culture = yes 
 			}
 		}
-	}
+		export_to_variable = {
+			which = base_dev_var_GAU
+			value = trigger_value:development
+		}
+		while = {
+			limit = {
+				#While their total tax development is more than 1, add 1.2 Gaulic confed power
+				check_variable = {
+					which = base_dev_var_GAU
+					value = 1
+				}
+			}
+			owner = {
+				add_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 0.1
+				}
+			}
+			subtract_variable = {
+				which = base_dev_var_GAU
+				value = 1
+			}
+		}
+	}	
 }
 
 # province
@@ -1609,7 +1692,10 @@ on_mil_development = {
 	# pf
 	if = {
 		limit = {
-			has_country_modifier = pf_lag_urbanisation
+			OR = {
+				has_country_modifier = pf_lag_urbanisation
+				has_country_modifier = nld_industralize_cities
+			}
 		}
 		random_list = {
 			5 = { add_base_manpower = 1 }
@@ -1619,17 +1705,36 @@ on_mil_development = {
 	if = {
 		limit = {
 			owner = { has_government_mechanic = gaul_confederation_mechanic }
-			accepted_culture = ROOT 
-			culture = root
-		}
-		owner = {
-			add_government_power = {
-				mechanic_type = gaul_confederation_mechanic
-				power_type = gaul_confederation
-				value = 0.25
+			OR = {
+				has_owner_accepted_culture = yes 
+				has_owner_culture = yes 
 			}
 		}
-	}
+		export_to_variable = {
+			which = base_dev_var_GAU
+			value = trigger_value:development
+		}
+		while = {
+			limit = {
+				#While their total tax development is more than 1, add 1.2 Gaulic confed power
+				check_variable = {
+					which = base_dev_var_GAU
+					value = 1
+				}
+			}
+			owner = {
+				add_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 0.1
+				}
+			}
+			subtract_variable = {
+				which = base_dev_var_GAU
+				value = 1
+			}
+		}
+	}	
 }
 
 on_overextension_pulse = {
@@ -2613,6 +2718,12 @@ on_four_year_pulse = {
 		
 		#Volcano Events
 		75 = volcano_events.2
+
+		#PF Trinovantes cohesion events
+		100 = pf_trn.2
+		100 = pf_trn.3
+		100 = pf_trn.4
+		100 = pf_trn.5
 
 		1000 = 0
 	}
@@ -3792,6 +3903,135 @@ on_province_culture_converted = {
 	judaism_on_province_culture_converted_effect = yes
 	imperial_modifiers_on_province_change_culture_or_change_owner_effect = yes
 	on_province_culture_change_effect = yes
+
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					has_country_flag = pf_sami_herding_flag
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_northern_colonies
+						}
+						capital = {
+							colonial_region = colonial_alaska
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_a_bit_of_truth_in_legends
+						}
+						capital = {
+							colonial_region = colonial_canada
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_spread_westwards
+						}
+						capital = {
+							colonial_region = colonial_louisiana
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_new_sweden
+						}
+						capital = {
+							colonial_region = colonial_eastern_america
+						}
+					}
+				}
+			}
+			culture = sapmi
+			trade_goods = fur
+		}
+		add_province_modifier = {
+			name = sami_herding
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_province_modifier = sami_herding
+		}
+		remove_province_modifier = sami_herding
+	}
+
+	if = {
+		limit = {
+			owner = {
+				has_reform = enlightened_norse_kingdom
+			}
+			has_owner_accepted_culture = no
+			has_owner_culture = no
+			culture_group = owner
+		}
+		add_province_modifier = {
+			name = nld_tolerant_culture_group
+			duration = -1
+		}
+	}
+	 else_if = {
+		limit = {
+			owner = {
+				has_reform = enlightened_norse_kingdom
+			}
+			has_owner_accepted_culture = no
+			has_owner_culture = no
+			NOT = {
+				culture_group = owner
+			}
+		}
+		add_province_modifier = {
+			name = nld_tolerant_culture
+			duration = -1
+		}
+	}
+
+	if = {
+		limit = {
+			has_province_modifier = nld_tolerant_culture_group
+			NOT = {
+				OR = {
+				AND = {
+					has_owner_accepted_culture = no
+					has_owner_culture = no
+					culture_group = owner
+				}
+				owner = {
+					has_reform = enlightened_norse_kingdom
+				}
+			}
+			}
+			
+		}
+		remove_province_modifier = nld_tolerant_culture_group
+	}
+	else_if = {
+		limit = { 
+			has_province_modifier = nld_tolerant_culture
+			NOT = {
+				OR = {
+				AND = {
+					has_owner_accepted_culture = no
+					has_owner_culture = no
+					NOT = {
+						culture_group = owner
+					}
+				}
+				owner = {
+					has_reform = enlightened_norse_kingdom
+				}
+				}
+			}
+		}
+		remove_province_modifier = nld_tolerant_culture
+	}
 }
 
 # province, general conversion through effects
@@ -3800,6 +4040,77 @@ on_province_culture_changed = {
 	judaism_on_province_culture_converted_effect = yes
 	imperial_modifiers_on_province_change_culture_or_change_owner_effect = yes
 	on_province_culture_change_effect = yes
+
+	if = {
+		limit = {
+			owner = {
+				has_reform = enlightened_norse_kingdom
+			}
+			has_owner_accepted_culture = no
+			has_owner_culture = no
+			culture_group = owner
+		}
+		add_province_modifier = {
+			name = nld_tolerant_culture_group
+			duration = -1
+		}
+	}
+	 else_if = {
+		limit = {
+			owner = {
+				has_reform = enlightened_norse_kingdom
+			}
+			has_owner_accepted_culture = no
+			has_owner_culture = no
+			NOT = {
+				culture_group = owner
+			}
+		}
+		add_province_modifier = {
+			name = nld_tolerant_culture
+			duration = -1
+		}
+	}
+
+	if = {
+		limit = {
+			has_province_modifier = nld_tolerant_culture_group
+			NOT = {
+				OR = {
+				AND = {
+					has_owner_accepted_culture = no
+					has_owner_culture = no
+					culture_group = owner
+				}
+				owner = {
+					has_reform = enlightened_norse_kingdom
+				}
+			}
+			}
+			
+		}
+		remove_province_modifier = nld_tolerant_culture_group
+	}
+	else_if = {
+		limit = { 
+			has_province_modifier = nld_tolerant_culture
+			NOT = {
+				OR = {
+				AND = {
+					has_owner_accepted_culture = no
+					has_owner_culture = no
+					NOT = {
+						culture_group = owner
+					}
+				}
+				owner = {
+					has_reform = enlightened_norse_kingdom
+				}
+				}
+			}
+		}
+		remove_province_modifier = nld_tolerant_culture
+	}
 }
 
 # THIS = Province, FROM = Country who Propogated
@@ -3840,6 +4151,140 @@ on_province_owner_change = {
 		japan.1			#Fall of the current Shogun
 	}
 	on_province_owner_change_government_effect = yes
+
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					has_country_flag = pf_sami_herding_flag
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_northern_colonies
+						}
+						capital = {
+							colonial_region = colonial_alaska
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_a_bit_of_truth_in_legends
+						}
+						capital = {
+							colonial_region = colonial_canada
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_spread_westwards
+						}
+						capital = {
+							colonial_region = colonial_louisiana
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_new_sweden
+						}
+						capital = {
+							colonial_region = colonial_eastern_america
+						}
+					}
+				}
+			}
+			culture = sapmi
+			trade_goods = fur
+		}
+		add_province_modifier = {
+			name = sami_herding
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_province_modifier = sami_herding
+		}
+		remove_province_modifier = sami_herding
+	}
+
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					has_country_flag = pf_sami_herding_flag
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_northern_colonies
+						}
+						capital = {
+							colonial_region = colonial_alaska
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_a_bit_of_truth_in_legends
+						}
+						capital = {
+							colonial_region = colonial_canada
+						}
+					}
+				}
+			}
+			has_climate = arctic
+		}
+		add_province_modifier = {
+			name = swe_arctic_expansion
+			duration = -1
+		}
+	}
+
+	if = {
+		limit = {
+			owner = {
+				NOT = {
+					has_country_flag = pf_arctic_expansion_flag
+				}
+			}
+			has_province_modifier = swe_arctic_expansion
+		}
+		remove_province_modifier = swe_arctic_expansion
+	}
+
+	if = {
+		limit = {
+			owner = {
+				has_reform = enlightened_norse_kingdom
+			}
+			has_owner_accepted_culture = no
+			has_owner_culture = no
+			culture_group = owner
+		}
+		add_province_modifier = {
+			name = nld_tolerant_culture_group
+			duration = -1
+		}
+	}
+	 if = {
+		limit = {
+			owner = {
+				has_reform = enlightened_norse_kingdom
+			}
+			has_owner_accepted_culture = no
+			has_owner_culture = no
+			NOT = {
+				culture_group = owner
+			}
+		}
+		add_province_modifier = {
+			name = nld_tolerant_culture
+			duration = -1
+		}
+	}
 
 	if = {
 		limit = {
@@ -4091,6 +4536,11 @@ on_leader_recruited = {
 # country
 on_general_recruited = {
 	on_general_recruited_effect = yes
+	add_government_power = {
+		mechanic_type = mac_war_cabinet_mechanic
+		power_type = mac_war_cabinet_organization
+		value = 0.5
+	}
 }
 
 # country
@@ -4287,6 +4737,37 @@ on_culture_promoted = {
 				value = -3
 				apply_calc = no 
 			}
+		}
+	}
+
+	if = {
+		limit = {
+			owner = {
+				has_reform = enlightened_norse_kingdom
+			}
+			has_owner_accepted_culture = no
+			has_owner_culture = no
+			culture_group = owner
+		}
+		add_province_modifier = {
+			name = nld_tolerant_culture_group
+			duration = -1
+		}
+	}
+	 else_if = {
+		limit = {
+			owner = {
+				has_reform = enlightened_norse_kingdom
+			}
+			has_owner_accepted_culture = no
+			has_owner_culture = no
+			NOT = {
+				culture_group = owner
+			}
+		}
+		add_province_modifier = {
+			name = nld_tolerant_culture
+			duration = -1
 		}
 	}
 }
@@ -4510,6 +4991,64 @@ on_trade_good_changed = {
 			add_base_production = -1 
 			# ]]]
 		}
+	}
+
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					has_country_flag = pf_sami_herding_flag
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_northern_colonies
+						}
+						capital = {
+							colonial_region = colonial_alaska
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_a_bit_of_truth_in_legends
+						}
+						capital = {
+							colonial_region = colonial_canada
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_spread_westwards
+						}
+						capital = {
+							colonial_region = colonial_louisiana
+						}
+					}
+					AND = {
+						colonial_parent = {
+							has_country_flag = pf_sami_herding_flag
+							mission_completed = pf_nld_new_sweden
+						}
+						capital = {
+							colonial_region = colonial_eastern_america
+						}
+					}
+				}
+			}
+			culture = sapmi
+			trade_goods = fur
+		}
+		add_province_modifier = {
+			name = sami_herding
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_province_modifier = sami_herding
+		}
+		remove_province_modifier = sami_herding
 	}
 }
 
@@ -4974,7 +5513,16 @@ on_core = { #ROOT - Province, #FROM - Country that gets the core
 }
 
 on_tech_taken = { #ROOT - Country
-
+	if = {
+		limit = {
+			has_government_attribute = techs_give_estate_loyalty
+		}
+		add_estate_loyalty = {
+			estate = all
+			loyalty = 3
+			short = yes
+		}
+	}
 }
 
 on_adm_tech_taken = { #ROOT - Country, executed after on_tech_taken!

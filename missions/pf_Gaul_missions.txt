@@ -1,0 +1,306 @@
+PF_Gaul_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GAU
+	}
+	pf_gaul_mainland_4 = {
+		icon = xxx
+		position = 3
+		required_missions = {
+			pf_gaul_mainland_2
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				culture = nervian
+				base_tax = 5
+				has_tax_building_trigger = yes
+				value = 5
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { accepted_culture = nervian }
+				}
+				custom_tooltip = if_has_accepted_culture_NERV
+			}
+			else_if = {
+				limit = {
+					accepted_culture = nervian
+				}
+				custom_tooltip = if_not_has_accepted_culture_NERV
+			}
+			custom_tooltip = nervian_submission_tt
+			tooltip = {
+				add_province_modifier = {
+					name = nervian_submission
+					duration = 5475
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = nervian
+					}
+					add_province_modifier = {
+						name = nervian_submission
+						duration = 5475
+					}
+				}
+			}
+		}
+	}
+	pf_gaul_mainland_5 = {
+		icon = xxx
+		position = 5
+		required_missions = {
+			pf_gaul_mainland_3
+			pf_gaul_mainland_4
+		}	
+		provinces_to_highlight = {
+			culture = norvegr
+			OR = {
+				area = holland_area
+				area = frisia_area
+			}
+			NOT = { religion = druidic }
+		}
+		trigger = {
+			holland_area = {
+				type = all
+				NOT = { culture = norvegr }
+				religion = druidic
+			}
+			frisia_area = {
+				type = all
+				NOT = { culture = norvegr }
+				religion = druidic
+			}
+		}
+		effect = {
+			custom_tooltip = maybe_an_event_tt
+			holland_area = {
+				add_province_modifier = {
+					name = end_the_raids_GAU
+					duration = -1
+				}
+			}
+			frisia_area = {
+				add_province_modifier = {
+					name = end_the_raids_GAU
+					duration = -1
+				}
+			}
+			97 = {
+				change_trade_goods = slaves
+				add_base_production = 3
+				add_devastation = 25
+			}
+			custom_tooltip = return_of_the_frisii
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = old_frisian
+					}
+					change_culture = frisii
+				}
+				if = {
+					limit = {
+						accepted_culture = old_frisian
+					}
+					remove_accepted_culture = old_frisian
+				}
+				add_accepted_culture = frisii
+			}
+		}
+	}
+}
+PF_Gaul_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GAU
+	}
+	pf_gaul_mainland_1 = {
+		icon = xxx
+		position = 1
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = {	
+			army_size_percentage = 0.85
+			employed_advisor = { category = MIL }
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = gaul_confederation_mechanic
+				power_type = gaul_confederation
+				value = 10
+			}
+			ile_de_france_area = {
+				add_province_modifier = {
+					name = local_autonomy_modifier_G_1
+					duration = -1
+				}
+			}
+			north_brabant_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			brabant_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	pf_gaul_mainland_2 = {
+		icon = xxx
+		position = 2
+		required_missions = {
+			pf_gaul_mainland_1
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = north_brabant_area
+				area = brabant_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			north_brabant_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			brabant_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+		}
+		effect = {
+			1742 = {
+				add_province_modifier = {
+					name = dispell_the_germanics
+					duration = -1
+				}
+			}
+			add_ruler_modifier = { 
+				name = unifier_of_gauls
+				duration = -1 
+			}
+			holland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			frisia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_rhineland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_rhineland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			palatinate_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	pf_gaul_mainland_3 = {
+		icon = xxx
+		position = 4
+		required_missions = {
+			pf_gaul_mainland_2
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = holland_area
+				area = frisia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			frisia_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			holland_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+		}
+		effect = {
+			add_patriarch_authority = 0.025
+			define_advisor = {
+				type = inquisitor
+				skill = 2
+				discount = yes 
+				culture = ROOT
+			}
+		}
+	}
+}
+PF_Gaul_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GAU
+	}
+	pf_gaul_mainland_6 = {
+		icon = xxx
+		position = 3
+		required_missions = {
+			pf_gaul_mainland_2
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = palatinate_area
+				area = upper_rhineland_area
+				area = lower_rhineland_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			palatinate_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			upper_rhineland_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			lower_rhineland_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+		}
+		effect = {
+			
+}
+PF_Gaul_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GAU
+	}
+}
+PF_Gaul_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GAU
+	}
+}

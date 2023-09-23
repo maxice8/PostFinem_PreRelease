@@ -1,0 +1,45 @@
+estate_nobles_pf_satrapy_expansion_plan = {
+	icon = privilege_grant_autonomy
+	max_absolutism = -10
+	loyalty = 0
+	influence = 0.1
+	is_valid = {
+		tag = PER
+		NOT = { has_country_flag = pf_per_has_revoked_expansion_plan }
+	}
+
+	can_revoke = { always = no }
+	on_granted = { custom_tooltip = estate_nobles_pf_satrapy_expansion_plan_tt }
+	penalties = {
+		core_creation = 1
+		governing_capacity_modifier = -0.5
+	}
+}
+
+estate_nobles_pf_satrapy_annexation_ban = {
+	icon = privilege_better_integration
+	max_absolutism = -10
+	loyalty = 0
+	influence = 0.1
+	is_valid = {
+		tag = PER
+		NOT = { has_country_flag = pf_per_has_revoked_annexation_ban }
+	}
+
+	can_revoke = { always = no }
+	on_granted = { custom_tooltip = estate_nobles_pf_satrapy_annexation_ban_tt }
+}
+
+estate_nobles_pf_satrapy_exemption_from_conscription = {
+	icon = privilege_demand_more_troops
+	max_absolutism = -10
+	loyalty = 0
+	influence = 0.1
+	is_valid = {
+		tag = PER
+		NOT = { has_country_flag = pf_per_has_revoked_exemption_from_conscription }
+	}
+
+	can_revoke = { always = no }
+	on_granted = { custom_tooltip = estate_nobles_pf_satrapy_exemption_from_conscription_tt }
+}

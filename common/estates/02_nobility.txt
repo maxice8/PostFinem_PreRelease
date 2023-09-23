@@ -210,16 +210,18 @@ estate_nobles = {
 	}
 	
 	#Alternative naming of estates
+	# PF [[[
+	custom_name = {
+		desc = estate_elders
+		trigger = {
+			has_reform = brittonic_confederation_reform
+		}
+	}
+	# ]]]
 	custom_name = {
 		desc = estate_imperial_nobility
 		trigger = {
 			has_reform = revolutionary_empire_reform
-		}
-	}
-	custom_name = {
-		desc = estate_hajarlar
-		trigger = {
-			religion = norse_pagan_reformed
 		}
 	}
 	custom_name = {
@@ -476,6 +478,10 @@ estate_nobles = {
 		estate_nobles_force_conscription
 		estate_nobles_noble_officer_right
 		estate_nobles_expedition_rights
+		estate_nobles_pf_satrapy_expansion_plan
+		estate_nobles_pf_satrapy_annexation_ban
+		estate_nobles_pf_satrapy_exemption_from_conscription
+		estate_nobles_pf_gallic_wars_remnant
 	}
 
 	agendas = {
