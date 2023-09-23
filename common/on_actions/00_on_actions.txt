@@ -50,7 +50,7 @@ on_startup = {
 		limit = {
 			religion = romuva
 		}
-		country_event = { id = romuva_events.1 }
+		country_event = { id = pf_romuva_events.1 }
 	}
 	#if = {
 	#	limit = {
@@ -875,7 +875,7 @@ on_monarch_death = {
 		limit = {
 			religion = romuva
 		}
-		country_event = { id = romuva_events.1 }
+		country_event = { id = pf_romuva_events.1 }
 	}
 	burgundian_inheritance_start_effect = yes
 	ladislaus_postumus_king_died_effect = yes
