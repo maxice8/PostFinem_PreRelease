@@ -27,7 +27,21 @@ pf_guidance_of_the_elders_reform:0 "Guidance of the Elders"
 pf_guidance_of_the_elders_reform_desc:0 "For centuries the elders of the tribes have held administrative power, controlling the actions of the group and acting as leaders when the time for war comes. Their role is becoming more and more ceremonial however, as bold young leaders take to the stage, taking the Confederation on a new path towards glory. We must preserve the institution of the Council of Elders, but make them act as more an advisory committee rather than a government body."
 mechanic_techs_give_estate_loyalty_yes:0 "Unlocking any technology increases the loyalty of all estates by §G+3§!"
 
+pf_blackcoat_dictatorship: "Blackcoat Dictatorship"
+pf_blackcoat_dictatorship_desc: "The Blackcoats have seized control of the country and transformed it into a repressive military dictatorship, abolishing all remnants of the old government and instituting in their place strict laws and armed police."
 pf_trn_allowed_blackcoat_dictatorship_tt: "The Blackcoats have taken over in the §YBlackcoat Revolution§! disaster."
+blackcoat_zeal: "Blackcoat Zeal"
+blackcoat_zeal_desc: "Blackcoat Zeal represents the power and stability of the military's rule. It can be increased by:\n\n - Army Tradition\n - Army Professionalism\n - Recruiting Generals\n - Winning Battles\n - Winning Wars"
+monthly_blackcoat_zeal: "Monthly Blackcoat Zeal"
+ability_blackcoat_zeal_mechanic: "Blackcoat Zeal"
+ability_blackcoat_zeal_mechanic_desc: "Blackcoat Zeal represents the power and stability of the military's rule. It can be increased by:\n\n - Army Tradition\n - Army Professionalism\n - Recruiting Generals\n - Winning Battles\n - Winning Wars"
+DICTATORSHIP: "Dictatorship"
+MILITARY_EMPIRE: "Military Empire"
+GENERAL: "General"
+HUSBAND: "Husband"
+WIFE: "Wife"
+SON: "Son"
+DAUGHTER: "Daughter"
 
 pf_brittonic_tribe_reform: "Formalised Brittonic Tribe"
 pf_brittonic_tribe_reform_desc: "The Britons have long since departed the time of roaming nomadic tribes, and have since settled down and created towns. Over the years, considerable centralisation has occured and what were once a hundred independent bands have consolidated down into confederations like our own. Under the leadership of the principal tribe, these groups form a kind of micro-empire under a great king."
@@ -76,12 +90,23 @@ HEN_OGLEDD: "Hen Ogledd"
 HEN_OGLEDD_ADJ: "Hen Ogledd"
 BRITTONIC_CONFEDERATION: "Brittonic Confederation"
 BRITTONIC_CONFEDERATION_ADJ: "Brittonic"
+PRYTAIN: "Prytain"
+PRYTAIN_ADJ: "Prytain"
 
 ###########
 # Monuments
 ###########
 
 cadarnle_coel: "Cadarnle Coel"
+
+###########
+# Disasters
+###########
+
+pf_blackcoat_revolution: "Blackcoat Revolution"
+desc_pf_blackcoat_revolution: "The Blackcoats, a decorate elite regiment of our army and veterans of countless successful campaigns, have launched a coup against the government, claiming mistreatment by authorities has given them the right to overthrow the old regime entirely!"
+pf_trn_blackcoat_revolution_resolution_1_tt: "The Blackcoats have come our triumphant from the struggle."
+pf_trn_blackcoat_revolution_resolution_2_tt: "The Blackcoats have been crushed by loyalist forces."
 
 ###########
 # Ideas
@@ -266,7 +291,7 @@ pf_trn_sup_tri_1: "Equal Confederation"
 pf_trn_sup_tri_2: "Exclusive Confederation"
 
 pf_trn.19.t: "Wrath of the Blackcoats"
-pf_trn.19.d: "The Blackcoats began as simply a program to ensure our army was tough enough to survive the sometimes brutal weather of Albion, but they have rapidly evolved into a self-sufficient and extremely arrogant military unit. Acting practically as mercenaries and vigilantes, they are using the skills they homed in our army against every day people and causing chaos across the country. Many disaffected Blackcoats essentially rule desolate areas of the countryside as warlords, reigning over their unwilling subjects with terror and torture.\n\nThe problem of the Blackcoats has been at the front of the mind of politicians for a long time, but no one has the gaul to do anything to seriously weaken their power, lest their provoke their wrath. One group stood defiant however - the Daughters of Boudicca. Themselves a mercenary group, the Daughters have done nothing but actively voice their concerns about the Blackcoats in the years since their founding, much to the distaste of the latter. Before now, their competition had been lobbying within the government and particularly stressful card games, but now things have stepped up into a national crisis.\n\nA rogue band of Blackcoats, apparently acting on the orders of the officer of the whole regiment, broke into the barracks of the Daughters of Boudicca and committed a massacre. By the time local police forces arrived, it was too late. Every single one of the Daughters had been slaughted, most of them while they slept. Some three hundred bodies had to be cleared from the building before a proper investigation could begin, some of them slain in the most savage manners imaginable. The Blackcoats have openly claimed responsibility and now gloat of their supremacy within the army, their only real opposition now removed. The world leans in to listen to the chaos unfolding. Many in the government believe we are but months away from a full on military coup, and demand that action be taken against the Blackcoats now before it is too late."
+pf_trn.19.d: "The Blackcoats began as simply a program to ensure our army was tough enough to survive the sometimes brutal weather of Albion, but they have rapidly evolved into a self-sufficient and extremely arrogant military unit. Acting practically as mercenaries and vigilantes, they are using the skills they homed in our army against every day people and causing chaos across the country. Many disaffected Blackcoats essentially rule desolate areas of the countryside as warlords, reigning over their unwilling subjects with terror and torture.\n\nThe problem of the Blackcoats has been at the front of the mind of politicians for a long time, but no one has the gaul to do anything to seriously weaken their power, lest they provoke their wrath. One group stood defiant however - the Daughters of Boudicca. Themselves a mercenary group, the Daughters have done nothing but actively voice their concerns about the Blackcoats in the years since their founding, much to the distaste of the latter. Before now, their competition had been lobbying within the government and particularly stressful card games, but now things have stepped up into a national crisis.\n\nA rogue band of Blackcoats, apparently acting on the orders of the officer of the whole regiment, broke into the barracks of the Daughters of Boudicca and committed a massacre. By the time local police forces arrived, it was too late. Every single one of the Daughters had been slaughted, most of them while they slept. Some three hundred bodies had to be cleared from the building before a proper investigation could begin, some of them slain in the most savage manners imaginable. The Blackcoats have openly claimed responsibility and now gloat of their supremacy within the army, their only real opposition now removed. The world leans in to listen to the chaos unfolding. Many in the government believe we are but months away from a full on military coup, and demand that action be taken against the Blackcoats now before it is too late."
 pf_trn.19.a: "The Blackcoats are fugitives from justice! Hunt them down and let them hang!"
 pf_trn.19.b: "They have done the world a favour by killing the Daughters."
 begins_blackcoat_revolution_tt: "Begins the §OBlackcoat Revolution§! disaster."
@@ -277,6 +302,37 @@ pf_trn.20.t: "The Unification of Albion"
 pf_trn.20.d: "Albion is the name given to the largest island of the Celtic Isles, the one we and countless other peoples call home. Our conquests have brought our armies to the corners of this rich and cultured land, and extended the rule of the [Root.GetName] beyond what our ancestors had previously dreamed was possible. Albion, that great country, is now ruled by one state. At last, our children can rejoice, knowing that they live in a safe and cohesive part of the world, free from open tribal feuds and petty disputes. Instead, they live in a veritable paradise - but unlike that which is told in our myths, this paradise is very much accessable."
 pf_trn.20.a: "This is not a common union, it is a Celtic one!"
 pf_trn.20.b: "Rejoice! The dream is realised!"
+
+pf_trn.21.t: "The Black Comet"
+pf_trn.21.d: "In the last few weeks an omen has appeared in the sky - a great comet, its trail blazing across perhaps a fifth of the sky, passed by the world. Comets have always been extremely important to our people, interested in astrology and omens as we are, but this one seems to have reached the thoughts of every soul. Such is its beauty and detail, everyone is convinced it has been sent for a reason. Surely such a magnificent comet is an indicator of something equally as magnificent to come, or to some minds, something terribly destructive. While the country is engulfed in civil war against the Blackcoats, all have managed to put down their weapons and stare in awe at the sky, each person giving the sight their own meaning. Many Blackcoats have seen this as an prophecy predicting their victory, and have begun hailing it as the so-called 'Black Comet'. Whether this is true or not remains to be seen, but what is known for certain is that it is a truly a splendid sight to behold."
+pf_trn.21.a: "Whatever it means, it will surely shape our future for years to come!"
+
+pf_trn.22.t: "Losing Control"
+pf_trn.22.d: "The fighting ongoing over the soul of the nation has resulted in local authority in many parts declining, including in [pf_autonomous_province.GetName]. The remote villages in this region are effectively self governing now, and a band of armed men has been set up to act as a defense against government and rebel alike."
+pf_trn.22.a: "We will show them!"
+
+pf_trn.23.t: "The Blackcoats March on [Root.Capital.GetName]"
+pf_trn.23.d: "As their strength grows, the Blackcoats are becoming ever more ambitious with their aims. We have received reports that they are planning to unite their forces and march on [Root.Capital.GetName], with the aim of outright overthrowing our government and establishing our own. Never in our worst nightmares could we have dreamed up such a disasterous scenario."
+pf_trn.23.a: "Man the walls! We fight to the last soul!"
+pf_trn.23.b: "The Blackcoats are right! Down with the old government!"
+pf_trn_a_spirited_defence: "A Spirited Defence"
+
+pf_trn.24.t: "The Elders Meet their End"
+pf_trn.24.d: "The Council of Elders has been the formal government of the country for centuries, and it is to them that we owe our current position. However, they also represent the vestiges of oppression and irritation the Blackcoats have risen up against, and thus it has been determined that they had to die. In one day, the Blackcoats cut their way into the Council Chamber and proceeded to disembowl every man and woman inside, hanging their entrails from the gates and piling the bodies out for all citizens to see. Chaos has gripped the streets of the capital, as now it seems the whole government has collapsed."
+pf_trn.24.a: "My city is unsafe - I must flee into exile!"
+pf_trn.24.b: "We can trust the Blackcoats to restore order."
+
+pf_trn.25.t: "The Counter-Revolution"
+pf_trn.25.d: "The Blackcoat state has proven remarkably unstable and inefficient in even the most basic tenets of government. At last, even its grip over its own generals has faltered, and the very system of justice and policing has disintegrated. In response, the counter-revolutionary movements that had previously been forced underground in the wake of the Blackcoat Revolution, led by the enterprising League of Free Britons, have staged a general uprising. In a matter of hours they seized key positions across the country, clearly reflecting a great deal of foreplanning. Now, their victory seems inevitable, and Blackcoat after Blackcoat are deserting their posts in an attempt to save their lives."
+pf_trn.25.a: "The new Revolution is victorious!"
+pf_trn.25.b: "We will fight to the last Blackcoat!"
+pf_trn_the_counter_revolution_restores_peace: "The Counter-Revolution Restores Peace"
+blackcoat_zeal_end_tt: "§RThe new Regime will suffer a Counter-Revolution.§!"
+
+pf_trn.26.t: "The End of the Revolution"
+pf_trn.26.d1: "At last, Blackcoat forces reign triumphant over [Root.GetName]. Their rule may not be as benevolent as the previous regime, but it will certainly ensure a calibre of military quality and discipline unseen in previous ages. While the last remnants of citizen's resistance is being mopped up, the new government begins to settle in to its position of supreme power."
+pf_trn.26.d2: "At last, the rebellious Blackcoat forces have been defeated, and the central government has firmly re-established its control over the country. Many lay dead, and whole regions are devastated from the fierce fighting, but the sound of gunfire and swords clashing is becoming increasingly rare. This has been a nightmare for all involved, and will surely raise a great many questions about the way this country is run and the position of its military."
+pf_trn.26.a: "It is over."
 
 ###########
 # Decision

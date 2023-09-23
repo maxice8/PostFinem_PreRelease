@@ -1595,7 +1595,7 @@ pf_trn_5 = {
 				power_type = trn_cohesion
 				value = 50
 			}
-			legitimacy = 100
+			legitimacy_equivalent = 100
 		}
 		effect = {
 			add_stability_or_adm_power = yes
@@ -1727,6 +1727,7 @@ pf_trn_5 = {
 					has_country_flag = pf_trn_ended_blackcoat_revolution
 				}
 			}
+			NOT = { has_any_disaster = yes }
 		}
 		effect = {
 			custom_tooltip = pf_trn_blackcoat_revolution_1_tt

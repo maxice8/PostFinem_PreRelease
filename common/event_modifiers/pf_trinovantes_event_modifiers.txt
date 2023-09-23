@@ -368,3 +368,14 @@ pf_abn_white_cliffs_modifier = {
 	build_cost = -0.25
 	build_time = -0.50
 }
+pf_trn_a_spirited_defence = {
+	land_morale = 0.10
+	defensiveness = 0.10
+}
+pf_trn_the_counter_revolution_restores_peace = {
+	global_unrest = -3
+	land_morale = 0.20
+	stability_cost_modifier = -0.50
+	diplomatic_reputation = 2
+	global_autonomy = -0.20
+}

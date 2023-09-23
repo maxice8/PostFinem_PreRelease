@@ -1590,6 +1590,16 @@ on_battle_won_country_effect = {
 			value = 1
 		}
 	}
+	if = {
+		limit = {
+			has_reform = pf_blackcoat_dictatorship
+		}
+		add_government_power = {
+			mechanic_type = blackcoat_zeal_mechanic
+			power_type = blackcoat_zeal
+			value = 2
+		}
+	}
 }
 
 on_battle_ended_effect = {
@@ -2766,6 +2776,16 @@ on_main_war_won_effect = {
 			value = -5
 		}
 	}
+	if = {
+		limit = {
+			has_reform = pf_blackcoat_dictatorship
+		}
+		add_government_power = {
+			mechanic_type = blackcoat_zeal_mechanic
+			power_type = blackcoat_zeal
+			value = 5
+		}
+	}
 }
 
 on_change_tag_effect = {
@@ -2902,6 +2922,16 @@ on_general_recruited_effect = {
 	if = { 
 		limit = { has_country_modifier = fra_french_papal_military_cooperation_modifier } 
 		add_army_professionalism = 0.015
+	}
+	if = {
+		limit = {
+			has_reform = pf_blackcoat_dictatorship
+		}
+		add_government_power = {
+			mechanic_type = blackcoat_zeal_mechanic
+			power_type = blackcoat_zeal
+			value = 1
+		}
 	}
 }
 
