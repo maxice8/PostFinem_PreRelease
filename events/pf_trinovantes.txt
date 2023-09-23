@@ -739,6 +739,8 @@ country_event = {		# The Kingdom of Coel Hen
 
 	is_triggered_only = yes
 
+	major = yes
+
 	option = {	
 		name = "pf_trn.17.a"
 		restore_country_name = yes
@@ -815,6 +817,8 @@ country_event = {		# The Blackcoats Slay the Daughters
 
 	is_triggered_only = yes
 
+	major = yes
+
 	immediate = {
 		set_country_flag = in_blackcoat_revolution
 	}
@@ -863,6 +867,12 @@ country_event = {		# Finding the White Sun
 		restore_country_name = yes
 		custom_tooltip = empty_line_tt
 		override_country_name = PRYTAIN
+		custom_tooltip = empty_line_tt
+		restore_country_color = yes
+		custom_tooltip = empty_line_tt
+		change_country_color = { 
+			color = { 232 23 0 }
+		}
 		custom_tooltip = empty_line_tt
 		add_power_projection = {
 			type = mission_rewards_power_projection
@@ -1035,6 +1045,8 @@ country_event = {		# The Counter-Revolution
 	picture = northamericagfx_REFORM_eventPicture
 
 	is_triggered_only = yes
+
+	major = yes
 
 	option = {
 		name = "pf_trn.25.a"

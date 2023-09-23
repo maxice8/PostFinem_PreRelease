@@ -14,9 +14,10 @@ pf_blackcoat_revolution = {
 		OR = {
 			NOT = { stability = 0 }
 			NOT = { legitimacy = 50 }
-			num_of_revolts = 1
-			num_of_rebel_controlled_provinces = 1
-			num_of_rebel_armies = 1
+			AND = {
+				num_of_revolts = 1
+				num_of_rebel_armies = 1
+			}
 		}
 		has_country_modifier = pf_trn_the_blackcoats_modifier
 		OR = {
@@ -79,6 +80,8 @@ pf_blackcoat_revolution = {
 				has_country_flag = defeated_blackcoats
 			}
 		}
+		stability = 1
+		NOT = { num_of_revolts = 1 }
 	}
 
 	ended_by_country_breaking_to_rebels = no
