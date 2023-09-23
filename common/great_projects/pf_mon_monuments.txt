@@ -22,7 +22,6 @@ althing_general_assembly = { # aga
         province_modifiers = {}
         area_modifier = {}
         country_modifiers = {}
-        on_upgraded = {}
     }
     tier_1 = {
         upgrade_time = {months = 120}
@@ -70,7 +69,6 @@ aqueducts_of_gadir = { # aog
         province_modifiers = {}
         area_modifier = {}
         country_modifiers = {}
-        on_upgraded = {}
     }
     tier_1 = {
         upgrade_time = {months = 120}
@@ -127,7 +125,6 @@ grand_temple_to_tanit = { # gtt
         province_modifiers = {}
         area_modifier = {}
         country_modifiers = {}
-        on_upgraded = {}
     }
     tier_1 = {
         upgrade_time = {months = 120}
@@ -234,7 +231,6 @@ great_cothon = { # gcn
         province_modifiers = {}
         area_modifier = {}
         country_modifiers = {}
-        on_upgraded = {}
     }
     tier_1 = {
         upgrade_time = {months = 120}
@@ -377,7 +373,6 @@ hall_of_pantheons = { # hop
         province_modifiers = {}
         area_modifier = {}
         country_modifiers = {}
-        on_upgraded = {}
     }
     tier_1 = {
         upgrade_time = {months = 120}
@@ -387,8 +382,6 @@ hall_of_pantheons = { # hop
         country_modifiers = {
             tolerance_heathen = 0.5
             tolerance_of_heathens_capacity = 1
-            ---country---
-            prestige_from_land = 0.01
         }
         on_upgraded = {
             pf_mon_hop_unlock_blessings = yes
@@ -399,7 +392,7 @@ hall_of_pantheons = { # hop
         }
         conditional_modifier = {
             trigger = {religion = hellenic}
-            modifier = {region = {local_religious_conversion_resistance = 0.1}}
+            modifier = {local_religious_conversion_resistance = 0.1}
         }
         conditional_modifier = {
             trigger = {religion = romana}
@@ -428,7 +421,7 @@ hall_of_pantheons = { # hop
         }
         conditional_modifier = {
             trigger = {religion = hellenic}
-            modifier = {region = {local_religious_conversion_resistance = 0.15}}
+            modifier = {local_religious_conversion_resistance = 0.15}
         }
         conditional_modifier = {
             trigger = {religion = romana}
@@ -457,7 +450,7 @@ hall_of_pantheons = { # hop
         }
         conditional_modifier = {
             trigger = {religion = hellenic}
-            modifier = {region = {local_religious_conversion_resistance = 0.25}}
+            modifier = {local_religious_conversion_resistance = 0.25}
         }
         conditional_modifier = {
             trigger = {religion = romana}
@@ -493,7 +486,6 @@ hellenic_religious_building = { # hrb
         province_modifiers = {}
         area_modifier = {}
         country_modifiers = {}
-        on_upgraded = {}
     }
     tier_1 = {
         upgrade_time = {months = 120}
@@ -553,7 +545,6 @@ lingonian_military_academy = { # lma
         province_modifiers = {}
         area_modifier = {}
         country_modifiers = {}
-        on_upgraded = {}
     }
     tier_1 = {
         upgrade_time = {months = 120}
@@ -602,12 +593,21 @@ minos_dungeons = { # mnd
     starting_tier = 1
     type = monument
     build_trigger = {
+        province_is_or_accepts_religion = {
+            religion = hellenic
+        }
     }
     on_built = {}
     on_destroyed = {}
     can_use_modifiers_trigger = {
+        province_is_or_accepts_religion = {
+            religion = hellenic
+        }
     }
     can_upgrade_trigger = {
+        province_is_or_accepts_religion = {
+            religion = hellenic
+        }
     }
     keep_trigger = {}
     tier_0 = {
@@ -616,28 +616,68 @@ minos_dungeons = { # mnd
         province_modifiers = {}
         area_modifier = {}
         country_modifiers = {}
-        on_upgraded = {}
     }
     tier_1 = {
         upgrade_time = {months = 120}
         cost_to_upgrade = {factor = 1000}
-        province_modifiers = {}
-        area_modifier = {}
-        country_modifiers = {}
+        province_modifiers = {
+            local_unrest = -1
+        }
+        area_modifier = {
+            local_institution_spread = 0.1
+        }
+        country_modifiers = {
+            max_absolutism = 5
+            spy_action_cost_modifier = -0.1
+        }
     }
     tier_2 = {
         upgrade_time = {months = 240}
         cost_to_upgrade = {factor = 2500}
-        province_modifiers = {}
-        area_modifier = {}
-        country_modifiers = {}
+        province_modifiers = {
+            local_unrest = -2.5
+        }
+        area_modifier = {
+            local_institution_spread = 0.15
+        }
+        country_modifiers = {
+            max_absolutism = 10
+            spy_action_cost_modifier = -0.2
+        }
+        on_upgraded = {
+            owner = {
+                add_power_projection = {
+                    type = pf_monument_upgrade_power_projection
+                    amount = 5
+                }
+            }
+        }
     }
     tier_3 = {
         upgrade_time = {months = 480}
         cost_to_upgrade = {factor = 5000}
-        province_modifiers = {}
-        area_modifier = {}
-        country_modifiers = {}
+        province_modifiers = {
+            local_unrest = -5
+        }
+        area_modifier = {
+            local_institution_spread = 0.2
+        }
+        country_modifiers = {
+            max_absolutism = 15
+            spy_action_cost_modifier = -0.35
+        }
+        conditional_modifier = {
+            trigger = {primary_culture = kretan}
+            modifier = {can_claim_states = yes}
+        }
+        on_upgraded = {
+            owner = {
+                add_power_projection = {
+                    type = pf_monument_upgrade_power_projection
+                    amount = 10
+                }
+            }
+        }
     }
 }
 seat_of_the_archon = { # soa
@@ -664,7 +704,6 @@ seat_of_the_archon = { # soa
         province_modifiers = {}
         area_modifier = {}
         country_modifiers = {}
-        on_upgraded = {}
     }
     tier_1 = {
         upgrade_time = {months = 120}
@@ -723,7 +762,6 @@ stone_of_destiny = { # sod
         province_modifiers = {}
         area_modifier = {}
         country_modifiers = {}
-        on_upgraded = {}
     }
     tier_1 = {
         upgrade_time = {months = 120}
@@ -797,7 +835,6 @@ temple_of_barcino = { # tob
         province_modifiers = {}
         area_modifier = {}
         country_modifiers = {}
-        on_upgraded = {}
     }
     tier_1 = {
         upgrade_time = {months = 120}
@@ -845,7 +882,6 @@ tengri_outpost = { # top
         province_modifiers = {}
         area_modifier = {}
         country_modifiers = {}
-        on_upgraded = {}
     }
     tier_1 = {
         upgrade_time = {months = 120}
@@ -893,7 +929,6 @@ the_looms_of_tol_tzaphon = { # ltt
         province_modifiers = {}
         area_modifier = {}
         country_modifiers = {}
-        on_upgraded = {}
     }
     tier_1 = {
         upgrade_time = {months = 120}
@@ -941,7 +976,6 @@ uppsala_temple = { # upt
         province_modifiers = {}
         area_modifier = {}
         country_modifiers = {}
-        on_upgraded = {}
     }
     tier_1 = {
         upgrade_time = {months = 120}
