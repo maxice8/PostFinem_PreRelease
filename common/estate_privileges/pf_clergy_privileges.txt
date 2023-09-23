@@ -1,0 +1,15 @@
+estate_clergy_pf_gallic_wars_remnant = {
+	icon = privilege_recruit_minister
+	max_absolutism = -10
+	loyalty = 0
+	influence = 0.2
+	is_valid = {
+		tag = GAUL
+		NOT = { has_country_flag = pf_per_has_revoked_estate_clergy_pf_gallic_wars_remnant }
+	}
+
+	can_revoke = { always = no }
+	benefits = {
+		min_autonomy = 15
+	}
+}

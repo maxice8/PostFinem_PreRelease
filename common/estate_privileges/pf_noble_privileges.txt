@@ -43,3 +43,18 @@ estate_nobles_pf_satrapy_exemption_from_conscription = {
 	can_revoke = { always = no }
 	on_granted = { custom_tooltip = estate_nobles_pf_satrapy_exemption_from_conscription_tt }
 }
+estate_nobles_pf_gallic_wars_remnant = {
+	icon = privilege_demand_more_troops
+	max_absolutism = -10
+	loyalty = 0
+	influence = 0.2
+	is_valid = {
+		tag = GAUL
+		NOT = { has_country_flag = pf_per_has_revoked_estate_nobles_pf_gallic_wars_remnant }
+	}
+
+	can_revoke = { always = no }
+	benefits = {
+		min_autonomy = 15
+	}
+}
