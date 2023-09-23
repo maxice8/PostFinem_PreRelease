@@ -119,6 +119,9 @@ mac_1 = {
 					owned_by = ROOT
 				}
 				NOT = {
+					is_core = ROOT
+				}
+				NOT = {
 					religion = hellenic
 				}
 			}
@@ -406,8 +409,10 @@ mac_2 = {
 				}
 				AND = {
 					province_id = 378
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
 				}
 			} 
 		}
@@ -571,7 +576,6 @@ mac_3 = {
 			OR = {
 				area = serbia_area
 				area = rascia_area
-				area = albania_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
@@ -704,11 +708,22 @@ mac_3 = {
 		icon = dreams_of_grandeur
 		position = 7
 		required_missions = { pf_mac_southern_brothers } 
-		provinces_to_highlight = {  
-			region = egypt_region
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+		provinces_to_highlight = { 
+			OR = {
+				AND = {
+					province_id = 358
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+				}
+				AND = {
+					region = egypt_region
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			} 
 		} 
 
 		trigger = {  
@@ -823,26 +838,22 @@ mac_4 = {
 		trigger = {  
 			if = {
 				limit = { ai = no }
-				calc_true_if = {
-					amount = 6				 
-					any_owned_province = {
-						has_port = yes
-						sea_zone = { 
-							province_id = 1319
-						}
+				num_of_owned_provinces_with = {
+					value = 6
+					has_port = yes
+					sea_zone = {
+						province_id = 1319
 					}
 					has_shipyard_building_trigger = yes
 				}
 				num_of_galley = 25
 			}
 			else = {
-				calc_true_if = {
-					amount = 4				 
-					any_owned_province = {
-						has_port = yes
-						sea_zone = { 
-							province_id = 1319
-						}
+				num_of_owned_provinces_with = {
+					value = 4
+					has_port = yes
+					sea_zone = {
+						province_id = 1319
 					}
 					has_shipyard_building_trigger = yes
 				}
@@ -869,13 +880,27 @@ mac_5 = {
 	pf_mac_why_go_alone = {
 		icon = mission_diplomatic_relation
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				NOT = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+				OR = {
+					alliance_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		} 
 
 		trigger = {  
 			OR = {
 				calc_true_if = {
 					amount = 2
-					any_ally = {
+					all_ally = {
 						has_opinion = {
 							who = root
 							value = 150
@@ -884,7 +909,7 @@ mac_5 = {
 				}
 				calc_true_if = {
 					amount = 3
-					any_subject_country = {
+					all_subject_country = {
 						has_opinion = {
 							who = root
 							value = 150
