@@ -675,6 +675,20 @@ hellenic_group = {
 				}
 			}
 		}
+		on_convert = {
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						can_have_center_of_reformation_trigger = {
+							RELIGION = paradosi
+						}
+					}
+					change_religion = paradosi
+					add_reform_center = paradosi
+				}
+			}
+			custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
+		}
 
 		province = {
 			local_production_efficiency = 0.1
