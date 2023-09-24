@@ -1,0 +1,162 @@
+#Look man I can figure out judaism mechanics
+
+neterist_serapis_cult_aspect = {
+	cost = 200
+	modifier = {
+		tolerance_own = 2
+		stability_cost_modifier = -0.2
+	}
+	ai_will_do = {
+		factor = 0
+	}
+
+	monarch_power = adm
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+neterist_religious_divinity_aspect = {
+	cost = 200
+	modifier = {
+		global_unrest = -1
+		global_missionary_strength = 0.015
+	}
+	ai_will_do = {
+		factor = 0
+	}
+
+	monarch_power = adm
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+neterist_recruit_scholars_aspect = {
+	cost = 200
+	modifier = {
+		advisor_cost = -0.15
+		advisor_pool = 2
+	}
+	ai_will_do = {
+		factor = 0
+	}
+
+	monarch_power = adm
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+#MILITARY ASPECTS
+
+neterist_false_conversion_aspect = { #Freeing our provinces restores some manpower
+	cost = 150
+	modifier = {
+		hostile_attrition = 2
+	}
+	ai_will_do = {
+		factor = 0
+	}
+
+	monarch_power = MIL
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+neterist_embedded_converts_aspect = { #Conquered provinces start with lowered autonomy
+	cost = 150
+	modifier = {
+		warscore_cost_vs_other_religion = -0.1
+	}
+	ai_will_do = {
+		factor = 0
+	}
+
+	monarch_power = MIL
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+neterist_adaptive_conquerors_aspect = { 
+	cost = 150
+	modifier = {
+		years_of_nationalism = -5
+	}
+	ai_will_do = {
+		factor = 0
+	}
+
+	monarch_power = MIL
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+#DIPLOMATIC ASPECTS
+
+neterist_wandering_scholars_aspect = { #Increases all countries' opinion of us passively by 25
+	cost = 150
+	modifier = {
+		improve_relation_modifier = 0.15
+	}
+	ai_will_do = {
+		factor = 0
+	}
+	effect = {
+		hidden_effect = {
+			ar_egypt_neterist_communities_province_modifiers_global = yes
+			ar_egypt_update_relations_neterist = yes
+		}
+	}
+
+
+	monarch_power = DIP
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+neterist_communities_aspect = { #Neterist provinces cost less to govern
+	cost = 150
+	modifier = {
+		yearly_corruption = -0.1
+	}
+	ai_will_do = {
+		factor = 0
+	}
+
+	effect = {
+		hidden_effect = {
+			ar_egypt_neterist_communities_province_modifiers_global = yes
+			ar_egypt_update_relations_neterist = yes
+		}
+	}
+
+	monarch_power = DIP
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+neterist_alexandrian_philosophy_aspect = { #Building temples, universities gives us 0.5 innovativness
+	cost = 150
+	modifier = {
+		tolerance_heathen = 2
+	}
+	ai_will_do = {
+		factor = 0
+	}
+	effect = {
+		hidden_effect = {
+			ar_egypt_neterist_communities_province_modifiers_global = yes
+			ar_egypt_update_relations_neterist = yes
+		}
+	}
+	monarch_power = DIP
+	ai_will_do = {
+		factor = 0
+	}
+}
