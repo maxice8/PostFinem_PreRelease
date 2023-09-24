@@ -206,5 +206,15 @@
 		],
 		"description": "Swaps out a specific trade good within defined triggered provinces to a specified new trade good"
 	},
+	"Add Opinion Both": {
+		"prefix": ["add_opinion_both"],
+		"body": [  			
+			"pf_add_opinion_both = {",
+				"\twho = ${1:target tag}",
+				"\tmodifier = ${2:opinion_modifier name}",
+			"}"
+		],
+		"description": "Scripted effect to apply mutual relations"
+	},
 		
 }
