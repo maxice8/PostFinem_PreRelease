@@ -8,6 +8,7 @@ country_decisions = {
 			religion = hellenic
 			culture_group = kemetic
 			is_colonial_nation = no
+			NOT = { tag = KEM }
 		}
 		provinces_to_highlight = {
 			OR = {
