@@ -741,7 +741,7 @@ mac_3 = {
 						 value = 25
 						 region = egypt_region
 					}
-			  }
+				}
 			}
 		} 
 
@@ -770,11 +770,11 @@ mac_3 = {
 				"
 				# second_custom_tooltip = mac_incorporating_big_guns_tt_2 #else
 				second_limit = "
-					any_subject_country = {
-						tag = AEG
+					AEG = {
+						is_subject_of = ROOT
 						num_of_owned_provinces_with = {
-							value = 25
-							region = egypt_region
+							 value = 25
+							 region = egypt_region
 						}
 					}
 				"

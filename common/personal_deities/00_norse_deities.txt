@@ -181,21 +181,3 @@ snotra = {
 		}		
 	}
 }
-
-reset_deity = {
-	potential = {
-		always = no
-	}
-	trigger = {
-		always = no
-	}
-	sprite = 12
-	effect = {
-	}
-	removed_effect = {
-		
-	}
-	ai_will_do = {
-		factor = 0
-	}
-}

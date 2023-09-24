@@ -18,8 +18,7 @@ pf_bri_1 = {
 		position = 1
 		required_missions = { } 
 		provinces_to_highlight = {
-			is_capital = yes
-			owned_by = ROOT
+			is_capital_of = ROOT
 		}
 		trigger = {
 			capital_scope = {

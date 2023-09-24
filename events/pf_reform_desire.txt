@@ -446,9 +446,9 @@ country_event = {
 
 #
 country_event = {
-	id = pf_reform_desire.10
-	title = pf_reform_desire.10.t
-	desc = pf_reform_desire.10.d
+	id = pf_reform_desire.11
+	title = pf_reform_desire.11.t
+	desc = pf_reform_desire.11.d
 	picture = RELIGION_eventPicture
 	
 	is_triggered_only = yes
@@ -466,13 +466,13 @@ country_event = {
 		
 	}
 	option = {
-		name = pf_reform_desire.10.a
+		name = pf_reform_desire.11.a
 		ai_chance = { factor = 5 }
 		add_reform_desire = 0.02
 		add_prestige_or_monarch_power = { amount = 25 }
 	}
 	option = {
-		name = pf_reform_desire.10.b
+		name = pf_reform_desire.11.b
 		ai_chance = { factor = 1 }
 		add_reform_desire = -0.021
 		add_papal_influence = 10
@@ -481,9 +481,9 @@ country_event = {
 
 #
 country_event = {
-	id = pf_reform_desire.11
-	title = pf_reform_desire.11.t
-	desc = pf_reform_desire.11.d
+	id = pf_reform_desire.12
+	title = pf_reform_desire.12.t
+	desc = pf_reform_desire.12.d
 	picture = RELIGION_eventPicture
 	
 	is_triggered_only = yes
@@ -501,13 +501,13 @@ country_event = {
 		
 	}
 	option = {
-		name = pf_reform_desire.11.a
+		name = pf_reform_desire.12.a
 		ai_chance = { factor = 5 }
 		add_reform_desire = 0.02
 		add_stability_or_adm_power = yes
 	}
 	option = {
-		name = pf_reform_desire.11.b
+		name = pf_reform_desire.12.b
 		ai_chance = { factor = 1 }
 		add_reform_desire = -0.01
 		add_papal_influence = 25
