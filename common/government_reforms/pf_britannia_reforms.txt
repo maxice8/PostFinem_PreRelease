@@ -175,3 +175,42 @@ pf_militarised_druids_reform = {
 		factor = 1
 	}
 }
+
+pf_sardinian_league_reform = {
+	icon = "sardinian_league"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+	duration = 5
+
+	potential = {
+		tag = SAR
+	}
+	trigger = {
+		tag = SAR
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
+	}
+	modifiers = {
+		trade_efficiency = 0.05
+		development_cost_in_primary_culture = -0.05
+		global_unrest = -0.50
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	#government_abilities = {
+	#	trinovantes_cohesion_mechanic
+	#}
+	ai = {
+		factor = 1
+	}
+}

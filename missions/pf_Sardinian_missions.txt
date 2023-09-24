@@ -1,0 +1,652 @@
+pf_sar_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SAR } 
+
+	pf_sar_found_the_marines = {
+		icon = mission_new_army
+		position = 1
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+			OR = {
+				has_idea = sar_marines
+				num_of_marines = 1
+			}
+			navy_size = 24
+			OR = {
+				national_focus = DIP
+				national_focus = MIL
+			}
+		} 
+
+		effect = {
+			add_sailors = 2500
+			define_admiral = {
+				fire = 3
+				shock = 4
+				manuever = 3
+				siege = 0
+				name = "Guillemo Carabello"
+			}
+			capital_scope = {
+				add_unit_construction = {
+					type = light_ship
+					amount = 3
+					speed = 0.25
+					cost = 0
+				}
+			}
+		} 
+	}
+
+	pf_sar_upgrade_the_marines = {
+		icon = mission_gujarati_diaspora
+		position = 2
+		required_missions = { pf_sar_found_the_marines } 
+		provinces_to_highlight = {
+			province_id = 2986	# Cagliari
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_shipyard_building_trigger = yes }
+				NOT = { num_of_times_improved = 5 }
+			}
+		} 
+
+		trigger = {
+			owns_core_province = 2986
+			2986 = {
+				has_shipyard_building_trigger = yes
+			}
+			2986 = {
+				num_of_times_improved = 5
+			}
+			OR = {
+				monthly_dip = 10
+				monthly_mil = 10
+			}
+			army_professionalism = 0.10
+		}
+
+		effect = {
+			country_event = { id = pf_sar.1 }
+		} 
+	}
+
+	pf_sar_stormtroopers = {
+		icon = mission_corsairs_of_the_north_sea
+		position = 3
+		required_missions = {
+			pf_sar_upgrade_the_marines
+			pf_sar_the_red_fleet
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_sar_rule_the_seas = {
+		icon = mission_norwegian_ship
+		position = 4
+		required_missions = { pf_sar_stormtroopers } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_sar_invade_sicily = {
+		icon = king_of_sicily
+		position = 6
+		required_missions = { pf_sar_arm_the_people } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_sar_italian_holdings = {
+		icon = mission_rule_italy
+		position = 8
+		required_missions = { pf_sar_invade_sicily } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_sar_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SAR } 
+
+	pf_sar_the_red_fleet = {
+		icon = mission_rb_a_mighty_fleet
+		position = 2
+		required_missions = {
+			pf_sar_found_the_marines
+			pf_sar_unite_the_island
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_sar_the_twelve_laws = {
+		icon = law_of_the_pious
+		position = 4
+		required_missions = { pf_sar_found_parliament } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_sar_arm_the_people = {
+		icon = mission_modern_knight_army
+		position = 5
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_sar_conquer_baleares = {
+		icon = mission_mediterranean_islands
+		position = 6
+		required_missions = { pf_sar_arm_the_people } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_sar_mare_nostrum = {
+		icon = mission_mare_nostrum
+		position = 9
+		required_missions = {
+			pf_sar_italian_holdings
+			pf_sar_coastal_holdings
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_sar_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SAR } 
+
+	pf_sar_unite_the_island = {
+		icon = seize_sardinia
+		position = 1
+		provinces_to_highlight = {
+			area = corsica_sardinia_area
+			OR = {
+				NOT = { owned_by = ROOT }
+				local_autonomy = 10
+				unrest = 1
+			}
+		} 
+
+		trigger = {
+			corsica_sardinia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			corsica_sardinia_area = {
+				type = all
+				NOT = { local_autonomy = 10 }
+			}
+			corsica_sardinia_area = {
+				type = all
+				NOT = { unrest = 1 }
+			}
+			stability = 1
+			republican_tradition = 90
+		} 
+
+		effect = {
+			distribute_base_dev_to_provinces = {
+				num = 5
+				amount = 1
+				trigger = "area = corsica_sardinia_area"
+				type = tax
+				tooltip = pf_sar_united_sardinia_development_tt
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_sar_sardinian_unity"
+				duration = 7300
+			}
+		} 
+	}
+
+	pf_sar_found_parliament = {
+		icon = mission_educated_people
+		position = 3
+		required_missions = {
+			pf_sar_unite_the_island
+			pf_sar_sardinian_renaissance
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				has_reform_on_level = 2
+				monthly_adm = 10
+			}
+			current_size_of_parliament = 4
+			has_parliament = yes
+		} 
+
+		effect = {
+			add_republican_tradition = 5
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_sar_a_common_theatre"
+				duration = 9125
+			}
+		} 
+	}
+
+	pf_sar_promote_sardinian_merchants = {
+		icon = the_shape_of_trades_to_come
+		position = 4
+		required_missions = { pf_sar_found_parliament } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 60
+			}
+			OR = {
+				mercantilism = 40
+				trade_efficiency = 1
+				full_idea_group = trade_ideas
+			}
+			num_of_owned_provinces_with = {
+				value = 2
+				has_trade_building_trigger = yes
+			}
+		} 
+
+		effect = {
+			add_mercantilism = 3
+			custom_tooltip = empty_line_tt
+			define_advisor = {
+				type = trader
+				skill = 2
+				discount = yes
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_sar_powerful_merchants"
+				duration = 9125
+			}
+		} 
+	}
+
+	pf_sar_seize_corsica = {
+		icon = rule_corsica
+		position = 6
+		required_missions = { pf_sar_arm_the_people } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_sar_lord_of_the_islands = {
+		icon = mission_invade_island
+		position = 7
+		required_missions = {
+			pf_sar_seize_corsica
+			pf_sar_conquer_baleares
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_sar_coastal_holdings = {
+		icon = mission_turkish_merchants
+		position = 8
+		required_missions = { pf_sar_lord_of_the_islands } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_sar_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SAR } 
+
+	pf_sar_sardinian_renaissance = {
+		icon = florentine_renaissance
+		position = 2
+		required_missions = { pf_sar_noble_electorate } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			has_institution = renaissance
+			has_adm_advisor = yes
+			has_dip_advisor = yes
+			has_mil_advisor = yes
+			is_in_deficit = no
+		} 
+
+		effect = {
+			custom_tooltip = pf_sar_art_will_require_money_tt
+			# access to 'commission art' decision to create a customised art piece to hang in the parliament
+		} 
+	}
+
+	pf_sar_expand_the_electorate = {
+		icon = mission_among_the_great_powers
+		position = 4
+		required_missions = { pf_sar_found_parliament } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				has_reform = democratic_values_reform
+				statesman = 3
+			}
+			monthly_adm = 12
+			stability = 3
+			NOT = { corruption = 1 }
+		} 
+
+		effect = {
+			change_government_reform_progress = 100
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_sar_universal_suffrage"
+				duration = -1
+			}
+		} 
+	}
+
+	pf_sar_italian_bankers = {
+		icon = medici_bank_ledgers
+		position = 5
+		required_missions = { pf_sar_promote_sardinian_merchants } 
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				has_reform = free_city
+			}
+			region = italy_region
+		} 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = pf_sar_italian_bankers_tt
+				any_country = {
+					capital_scope = {
+						region = italy_region
+					}
+					has_reform = free_city
+					has_opinion = {
+						who = ROOT
+						value = 180
+					}
+				}
+			}
+			OR = {
+				num_of_loans = 5
+				treasury = 1000
+			}
+			NOT = { inflation = 1 }
+		}
+
+		effect = {
+			define_advisor = {
+				type = treasurer
+				skill = 3
+				cost_multiplier = 0.25
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_sar_italian_finances"
+				duration = 7300
+			}
+		} 
+	}
+
+	pf_sar_find_silver = {
+		icon = mission_african_gold
+		position = 6
+		required_missions = { pf_sar_italian_bankers } 
+		provinces_to_highlight = {
+			province_id = 4943	# Carbonia
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { num_of_times_expanded_infrastructure = 1 }
+			}
+		} 
+
+		trigger = {
+			owns_core_province = 4943
+			4943 = {
+				num_of_times_expanded_infrastructure = 1
+			}
+			years_of_income = 0.5
+			adm_power_cost = 80
+		} 
+
+		effect = {
+			add_years_of_income = -0.50
+			adm_power_cost = 80
+			country_event = { id = pf_sar.2 }
+		} 
+	}
+
+	pf_sar_shipwrights = {
+		icon = mission_polynesian_navy_build
+		position = 7
+		required_missions = { pf_sar_seize_corsica } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_sar_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SAR } 
+
+	pf_sar_noble_electorate = {
+		icon = glory_to_von_habsburg
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			prestige = 40
+		} 
+
+		effect = {
+			add_adm_power = 50
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_sar_politics"
+				duration = 9125
+			}
+		} 
+	}
+
+	pf_sar_federal_preference = {
+		icon = republican_yearnings
+		position = 3
+		required_missions = { pf_sar_noble_electorate } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_sar_future_of_the_federation = {
+		icon = balance_of_power
+		position = 5
+		required_missions = { pf_sar_federal_preference } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+	pf_sar_invest_in_arborea = {
+		icon = invest_in_the_rich_trades
+		position = 6
+		provinces_to_highlight = {
+			province_id = 4735	# Arborea
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { development = 30 }
+				NOT = { has_tax_building_trigger = yes }
+				NOT = { has_production_building_trigger = yes }
+				NOT = { has_trade_building_trigger = yes }
+			}
+		} 
+
+		trigger = {
+			owns_core_province = 4735
+			4735 = {
+				development = 30
+			}
+			4735 = {
+				has_tax_building_trigger = yes
+			}
+			4735 = {
+				has_production_building_trigger = yes
+			}
+			4735 = {
+				has_trade_building_trigger = yes
+			}
+		} 
+
+		effect = {
+			4735 = {
+				add_province_modifier = {
+					name = "pf_sar_great_port_of_arborea"
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	pf_sar_urbanise_the_island = {
+		icon = renaissance_city
+		position = 7
+		required_missions = {
+			pf_sar_find_silver
+			pf_sar_invest_in_arborea
+		}
+		provinces_to_highlight = {
+			area = corsica_sardinia_area
+		} 
+
+		trigger = {
+			development_in_provinces = {
+				area = corsica_sardinia_area
+				value = 100
+			}
+		} 
+
+		effect = {
+			change_innovativeness = 4
+			custom_tooltip = empty_line_tt
+			corsica_sardinia_area = {
+				add_province_modifier = {
+					name = "pf_sar_prospering_times"
+					duration = 9125
+				}
+			}
+			custom_tooltip = pf_sar_urbanise_the_island_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							full_idea_group = infrastructure_ideas
+							full_idea_group = economic_ideas
+						}
+					}
+					corsica_sardinia_area = {
+						add_province_modifier = {
+							name = "pf_sar_expanded_buildings"
+							duration = -1
+						}
+					}
+				}
+			}
+			tooltip = {
+				corsica_sardinia_area = {
+					add_province_modifier = {
+						name = "pf_sar_expanded_buildings"
+						duration = -1
+					}
+				}
+			}
+		} 
+	}
+
+	pf_sar_more_than_just_a_living = {
+		icon = italian_riches
+		position = 8
+		required_missions = {
+			pf_sar_shipwrights
+			pf_sar_urbanise_the_island
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			has_adm_advisor_3 = yes
+			has_dip_advisor_3 = yes
+			has_mil_advisor_3 = yes
+			is_in_deficit = no
+			monthly_income = 50
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_sar_a_life_of_luxury"
+				duration = -1
+			}
+		} 
+	}
+}

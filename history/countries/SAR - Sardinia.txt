@@ -1,32 +1,20 @@
 government = republic
-add_government_reform = noble_elite_reform
+add_government_reform = pf_sardinian_league_reform
 technology_group = western
 religion = punic_religion
 primary_culture = sardii
 elector = yes
-capital = 127# Cagliari
+capital = 4735# Arborea
 government_rank = 1
 
 1444.11.11 = {
 	monarch = {
-		name = "Bomilcar"
-		dynasty = "Tiberianus"
-		adm = 6
+		name = "Dumal"
+		dynasty = "da Sassari"
+		adm = 5
 		dip = 6
-		mil = 1
+		mil = 3
 		birth_date = 1389.07.20
-		death_date = 1445.01.01
-	}
-}
-
-1444.11.11 = {
-	monarch = {
-		name = "Bomilcar"
-		dynasty = "Tiberianus"
-		adm = 6
-		dip = 6
-		mil = 1
-		birth_date = 1389.09.25
 		death_date = 1445.01.01
 	}
 }

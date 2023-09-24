@@ -1,0 +1,55 @@
+pf_sar_cagliari_marine_corps = {
+	is_marine_modifier = yes
+	regiment_manpower_usage = -0.10
+	shock_damage = 0.10
+}
+pf_sar_carbonia_silver_mines = {
+	trade_goods_size = 0.5
+}
+
+pf_sar_sardinian_unity = {
+	global_tax_modifier = 0.10
+	all_estate_loyalty_equilibrium = 0.05
+}
+
+pf_sar_politics = {
+	improve_relation_modifier = 0.25
+	monthly_splendor = 1
+}
+pf_sar_a_common_theatre = {
+	monthly_reform_progress = 0.5
+	num_of_parliament_issues = 1
+	parliament_backing_chance = 0.20
+}
+pf_sar_powerful_merchants = {
+	trade_efficiency = 0.10
+	placed_merchant_power = 5
+}
+pf_sar_great_port_of_arborea = {
+	local_ship_cost = -0.15
+	local_ship_repair = 0.25
+	build_cost = -0.10
+	build_time = -0.25
+	tax_income = 24
+}
+pf_sar_prospering_times = {
+	local_tax_modifier = 0.33
+	local_prosperity_growth = 1
+}
+pf_sar_expanded_buildings = {
+	allowed_num_of_buildings = 1
+}
+pf_sar_a_life_of_luxury = {
+	global_trade_goods_size_modifier = 0.10
+	prestige_decay = -0.01
+	burghers_loyalty_modifier = 0.05
+}
+pf_sar_universal_suffrage = {
+	female_advisor_chance = 0.20
+	may_recruit_female_generals = yes
+	reelection_cost = -0.10
+}
+pf_sar_italian_finances = {
+	interest = -0.5
+	inflation_reduction = 0.10
+}
