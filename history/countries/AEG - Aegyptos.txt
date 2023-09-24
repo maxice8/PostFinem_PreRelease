@@ -41,6 +41,10 @@ add_legitimacy = -75
 		name = aeg_userper_regent_modifier
 		duration = -1
 	}
+	add_country_modifier = {
+		name = aeg_kemetic_resistance_modifier
+		duration = -1
+	}
 	set_ruler_flag = isadora_gidos_flag
 	set_heir_flag = theodoro_gidos_flag
 }
