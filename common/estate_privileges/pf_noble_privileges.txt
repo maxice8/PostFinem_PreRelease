@@ -49,7 +49,7 @@ estate_nobles_pf_gallic_wars_remnant = {
 	loyalty = 0
 	influence = 0.2
 	is_valid = {
-		tag = GAUL
+		tag = GAU
 		NOT = { has_country_flag = pf_per_has_revoked_estate_nobles_pf_gallic_wars_remnant }
 	}
 

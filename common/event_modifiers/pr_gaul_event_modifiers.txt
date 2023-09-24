@@ -19,4 +19,14 @@ dispell_the_germanics = {
 	local_culture_conversion_cost = -0.25 
 	local_culture_conversion_time = -0.50
 }
-	
+start_german_campaigns = {
+	land_attrition = -0.10 
+	recover_army_morale_speed = 0.10 
+}
+fortify_germany = {
+	defensiveness = 0.33
+}
+the_natural_borders_gau = {
+	leader_land_fire = 1 
+	morale_damage_received = -0.025 
+}

@@ -61,12 +61,14 @@ PF_Gaul_1 = {
 			pf_gaul_mainland_4
 		}	
 		provinces_to_highlight = {
-			culture = norvegr
 			OR = {
 				area = holland_area
 				area = frisia_area
 			}
-			NOT = { religion = druidic }
+			OR = {
+				religion = druidic 
+				culture = norvegr
+			}
 		}
 		trigger = {
 			holland_area = {
@@ -240,6 +242,46 @@ PF_Gaul_2 = {
 				discount = yes 
 				culture = ROOT
 			}
+			change_mil = 1
+		}
+	}
+	pf_gaul_mainland_8 = {
+		icon = xxx
+		position = 6
+		required_missions = { 
+			pf_gaul_mainland_3
+			pf_gaul_mainland_7
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = north_rhine_area
+				area = north_westphalia_area
+				area = westphalia_area
+			}
+			NOT = {	
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			north_rhine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_westphalia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			westphalia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = the_natural_borders_gau
+				duration = -1
+			}
+			custom_tooltip = enable_the_germanic_wars
 		}
 	}
 }
@@ -265,9 +307,14 @@ PF_Gaul_3 = {
 			alsace_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
+			add_government_power = {
+				mechanic_type = gaul_confederation_mechanic
+				power_type = gaul_confederation
+				value = 5
+			}
 			add_country_modifier = {
 				name = start_german_campaigns
-				duration = 73000
+				duration = 7300
 			}
 			upper_rhineland_area = {
 				limit = {
@@ -294,7 +341,7 @@ PF_Gaul_3 = {
 	}
 	pf_gaul_mainland_7 = {
 		icon = xxx
-		position = 4
+		position = 5
 		required_missions = {
 			pf_gaul_mainland_6
 		}
@@ -312,6 +359,32 @@ PF_Gaul_3 = {
 			lower_rhineland_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
+			add_country_modifier = {
+				name = fortify_germany
+				duration = 3650
+			}
+			custom_tooltip = allemania_mercenary_TT
+			north_rhine_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_westphalia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			westphalia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}		
 }
