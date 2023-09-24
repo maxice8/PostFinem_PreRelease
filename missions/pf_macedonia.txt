@@ -720,13 +720,13 @@ mac_3 = {
 						region = egypt_region
 					}
 				}
-				any_subject_country = {
-					tag = AEG
+				AEG = {
+					is_subject_of = ROOT
 					num_of_owned_provinces_with = {
-						value = 25
-						region = egypt_region
+						 value = 25
+						 region = egypt_region
 					}
-				}
+			  }
 			}
 		} 
 
