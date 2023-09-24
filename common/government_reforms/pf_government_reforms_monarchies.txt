@@ -354,4 +354,24 @@ pf_romuva_kingdom = {
 	ai = {
 		factor = 1
 	}
+
+}
+pf_catephract_focus = {
+	icon = "cavalry"
+	allow_normal_conversion = yes
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+	potential = {
+		has_country_flag = mac_catephract_flag
+	}
+
+	modifiers = {
+		can_recruit_hussars = yes
+		amount_of_hussars = 4
+	}
+	ai = {
+		factor = 1
+	}
 }

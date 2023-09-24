@@ -47,8 +47,9 @@ pf_skl_2 = {
 		icon = mission_modern_ottoman_soldiers
 		position = 13
 		provinces_to_highlight = {  
-			region =  british_isles_region
+			region = british_isles_region
 			NOT = { culture = norwegian }
+			NOT = { owned_by = ROOT }
 		} 
 
 		trigger = {  
@@ -80,6 +81,7 @@ pf_skl_2 = {
 				area = normandy_area
 			}
 			NOT = { culture = skalder }
+			NOT = { owned_by = ROOT }
 		} 
 
 		trigger = {  
@@ -122,6 +124,7 @@ pf_skl_2 = {
 				area = denmark_area
 				area = skaneland_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {  		
@@ -199,17 +202,20 @@ pf_skl_3 = {
 			OR = {
 				 AND = {
 					  province_id = 17
-					  NOT = { owned_by = ROOT }
+					  OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					  }
 				 }
 				 AND = {
-					  OR = {
-							area = northern_norway
-							area = western_norway
-							area = eastern_norway
-					  }
-					  NOT = {
-							  country_or_non_sovereign_subject_holds = ROOT
-					  }  
+					OR = {
+						area = northern_norway
+						area = western_norway
+						area = eastern_norway
+					}
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}  
 				 }
 			} 
 	  }
@@ -251,7 +257,10 @@ pf_skl_3 = {
 			OR = {
 				AND = {
 					 province_id = 1
-					 NOT = { owned_by = ROOT }
+					 OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					 }
 				}
 				AND = {
 					OR = {
@@ -316,7 +325,11 @@ pf_skl_3 = {
 			pf_skl_gallic_dominion
 		}
 		provinces_to_highlight = {  
-
+			OR = {
+				region = france_region
+				region = scandinavia_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {  
@@ -456,7 +469,8 @@ pf_skl_5 = {
 		icon = mission_clear_the_delta
 		position = 14
 		provinces_to_highlight = {  
-
+			owned_by = ROOT
+			region = france_region
 		} 
 
 		trigger = {  
@@ -508,8 +522,7 @@ pf_skl_5 = {
 		icon = mission_rb_mediterranean_authority
 		position = 16
 		required_missions = { pf_skl_secure_supply_lines } 
-		provinces_to_highlight = {  
-			region = france_region
+		provinces_to_highlight = { 
 			NOT = { owned_by = ROOT }
 			OR = {
 				area = languedoc_area
