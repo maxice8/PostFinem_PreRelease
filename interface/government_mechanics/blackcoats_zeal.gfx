@@ -7,12 +7,12 @@ spriteTypes = {
 	}
 
 	progressbartype = {
-		name = "GFX_single_government_power_bar_blackcoat_zeal"
+		name = "GFX_blackcoat_zeal_progressbar"
 		color = { 1.0 0.0 0.0 }
 		colortwo = { 1.0 1.0 1.0 }
-		textureFile1 = "gfx/interface/government_mechanics/blackcoat_zeal/blackcoat_zeal_active.dds"
-		textureFile2 = "gfx/interface/government_mechanics/blackcoat_zeal/blackcoat_zeal_passive.dds"
-		size = { x = 274 y = 110 }
+		textureFile1 = "gfx/interface/government_mechanics/blackcoat_zeal/blackcoat_zeal_progressbar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/blackcoat_zeal/blackcoat_zeal_progressbar_frame.dds"
+		size = { x = 232 y = 20 }
 		effectFile = "gfx/FX/progress.lua"
 	}
 }
