@@ -307,3 +307,128 @@ romuva_clear_aspects_scripted_effect = {
 		remove_church_aspect = ausrine_beauty_aspect
 	}
 }
+
+#kemetic effects
+pf_egypt_kemetic_communities_province_modifiers_global = {
+	if = {
+		limit = {
+			has_church_aspect = kemetic_communities_aspect
+		}
+		every_owned_province = {
+			limit = {
+				religion = kemetic
+			}
+			add_province_modifier = {
+				name = pf_egypt_kemetic_communities
+				duration = -1
+			}
+		}
+	}
+	else = {
+		every_owned_province = {
+			limit = {
+				has_province_modifier = pf_egypt_kemetic_communities
+			}
+			add_province_modifier = {
+				name = pf_egypt_kemetic_communities
+				duration = -1
+			}
+		}
+	}
+}
+pf_egypt_kemetic_communities_province_modifiers_local = {
+	if = {
+		limit = {
+			NOT = {
+				has_province_modifier = pf_egypt_kemetic_communities
+			}
+			religion = kemetic
+			owner = {
+				religion = kemetic
+				has_church_aspect = kemetic_communities_aspect
+			}
+		}
+		add_province_modifier = {
+			name = pf_egypt_kemetic_communities
+			duration = -1
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				has_province_modifier = pf_egypt_kemetic_communities
+			}
+		}
+		remove_province_modifier = pf_egypt_kemetic_communities
+	}
+}
+pf_egypt_update_relations_kemetic = {
+	if = {
+		limit = {
+			has_church_aspect = kemetic_wandering_scholars_aspect
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					religion = kemetic
+				}
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = pf_egypt_wandering_scholars
+					}
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = pf_egypt_wandering_scholars
+			}
+		}
+	}
+	else = {
+		every_country = {
+			limit = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = pf_egypt_wandering_scholars
+				}
+			}
+			remove_opinion = {
+				who = ROOT
+				modifier = pf_egypt_wandering_scholars
+			}
+		}
+	}
+}
+pf_egypt_update_relations_non_kemetic = {
+	if = {
+		limit = {
+			NOT = {
+				religion = kemetic
+			}
+			any_known_country = {
+				religion = kemetic
+				has_church_aspect = kemetic_wandering_scholars_aspect
+				ROOT = {
+					NOT = {
+						has_opinion_modifier = {
+							who = PREV
+							modifier = pf_egypt_wandering_scholars
+						}
+					}
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				religion = kemetic
+			}
+			ROOT = {
+				add_opinion = {
+					who = PREV
+					modifier = pf_egypt_wandering_scholars
+				}
+			}
+		}
+	}
+}
