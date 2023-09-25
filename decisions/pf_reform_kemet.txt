@@ -3,33 +3,35 @@ country_decisions = {
 	reform_kemet = {
 		major = yes
 		potential = {
+			NOT = { tag = KEM }
+			NOT = { exists = KEM }
+			NOT = { has_country_flag = pf_formed_kemet }
 			was_never_end_game_tag_trigger = yes
 			is_free_or_tributary_trigger = yes
 			religion = hellenic
 			culture_group = kemetic
 			is_colonial_nation = no
-			NOT = { tag = KEM }
 		}
 		provinces_to_highlight = {
 			OR = {
 				AND = {
 					region = egypt_region
-					root = {
-						NOT = {
-							num_of_owned_provinces_with = {
-								value = 29
-								region = egypt_region
-								is_core = root
-							}
-						}
+					NOT = { owned_by = ROOT }
+				}
+				AND = {
+					OR = {
+						province_id = 2324
+						province_id = 1232
+					}
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
 					}
 				}
-				province_id = 2324
-				province_id = 1232
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				AND = {
+					province_id = 361
+					is_state = no
+				}
 			}
 		}
 		allow = {
@@ -37,7 +39,6 @@ country_decisions = {
 			is_subject = no
 			is_nomad = no			
 			NOT = { exists = AEG }
-			NOT = { exists = KEM }
 			owns_core_province = 2324
 			owns_core_province = 1232
 			361 = { 					#  Men-Nefer
@@ -53,6 +54,7 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			change_tag = KEM
+			set_country_flag = pf_formed_kemet
 			custom_tooltip = empty_line_tt
 			on_change_tag_effect = yes
 			restore_country_name = yes
