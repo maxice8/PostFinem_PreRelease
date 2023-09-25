@@ -3,7 +3,6 @@ country_decisions = {
 	reform_kemet = {
 		major = yes
 		potential = {
-			NOT = { tag = KEM }
 			NOT = { exists = KEM }
 			NOT = { has_country_flag = pf_formed_kemet }
 			was_never_end_game_tag_trigger = yes
