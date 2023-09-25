@@ -1,0 +1,515 @@
+namespace = pf_reform_desire
+
+
+# Simony
+country_event = {
+	id = pf_reform_desire.1
+	title = pf_reform_desire.1.t
+	desc = pf_reform_desire.1.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = hellenic
+		NOT = { is_religion_enabled = paradosi }
+		NOT = { tag = ATH }
+	}
+	
+	mean_time_to_happen = {
+		days = 1	
+	}
+
+	option = {
+		name = pf_reform_desire.4.a
+		ai_chance = {
+			factor = 10
+		}
+		add_years_of_income = 0.5
+		add_reform_desire = 0.01
+	}
+	option = {
+		name = pf_reform_desire.1.b
+		ai_chance = {
+			factor = 1
+		}
+		add_papal_influence = 10
+		add_devotion = 1
+	}
+}
+
+# Selling of indulgences
+country_event = {
+	id = pf_reform_desire.2
+	title = pf_reform_desire.2.t
+	desc = pf_reform_desire.2.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = hellenic
+		NOT = { is_religion_enabled = paradosi }
+		NOT = { tag = ATH }
+		is_year = 1480
+		ruler_age = 45
+		NOT = {
+			has_global_flag = pap_disables_indulgences_flag
+		}
+		is_excommunicated = no
+		NOT = { has_country_modifier = papal_indulgence }
+		NOT = {
+			reverse_has_opinion_modifier = {
+				who = ATH
+				modifier = bought_indulgence
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = pf_reform_desire.2.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.5
+				is_rival = ATH
+			}
+		}
+		add_years_of_income = -1
+		if = {
+			limit = { NOT = { num_of_cities = 6 } }
+			add_curia_treasur_small_effect = yes
+		}
+		else = {
+			add_curia_treasury_medium_effect = yes
+		}
+		add_papal_influence = 10
+		add_reform_desire = 0.01
+	}
+	option = {
+		name = pf_reform_desire.2.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.5
+				alliance_with = ATH
+			}
+		}
+		add_reform_desire = -0.004
+		add_papal_influence = -10
+		ATH = {
+			add_opinion = {
+				who = root
+				modifier = catholic_obstructing_church
+			}
+		}
+	}
+}
+
+# Veneration of Relics
+country_event = {
+	id = pf_reform_desire.3
+	title = pf_reform_desire.3.t
+	desc = pf_reform_desire.3.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = hellenic
+		NOT = { is_religion_enabled = paradosi }
+		NOT = { tag = ATH }
+		any_owned_province = {
+			religion = catholic
+		}
+		# is_year = 1490
+		NOT = {
+			has_global_flag = pap_disables_veneration_relics_flag
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					religion = hellenic
+				}
+				save_event_target_as = unrest_province
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+	}
+	option = {
+		name = pf_reform_desire.3.a
+		ai_chance = {
+			factor = 10
+		}
+		add_reform_desire = 0.01
+		add_papal_influence = 2
+	}
+	option = {
+		name = pf_reform_desire.3.b
+		goto = unrest_province
+		ai_chance = {
+			factor = 10
+		}
+		event_target:unrest_province = {
+			add_unrest = 5
+		}
+	}
+}
+
+# Veneration of the Virgin Mary
+country_event = {
+	id = pf_reform_desire.4
+	title = pf_reform_desire.4.t
+	desc = pf_reform_desire.4.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = hellenic
+		NOT = { is_religion_enabled = paradosi }
+		NOT = { tag = ATH }
+
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		
+	}
+	option = {
+		name = pf_reform_desire.4.a
+		add_reform_desire = 0.01
+		add_papal_influence = 10
+	}
+	option = {
+		name = pf_reform_desire.4.b
+		ATH = {
+			add_opinion = {
+				who = root
+				modifier = opinion_denying_archon
+			}
+		}
+	}
+}
+
+# The Doctrine of Particular Judgement
+country_event = {
+	id = pf_reform_desire.5
+	title = pf_reform_desire.5.t
+	desc = pf_reform_desire.5.d
+	picture = POPE_PREACHING_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = hellenic
+		NOT = { is_religion_enabled = paradosi }
+		NOT = { tag = ATH }
+		any_owned_province = {
+			religion = hellenic
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					religion = hellenic
+				}
+				save_event_target_as = unrest_province
+			}
+		}
+	}
+	option = {
+		name = pf_reform_desire.5.a
+		ai_chance = {
+			factor = 5
+		}
+		add_reform_desire = 0.01
+		add_papal_influence = 5
+	}
+	option = {
+		name = pf_reform_desire.5.b
+		ai_chance = {
+			factor = 1
+		}
+		goto = unrest_province
+		add_reform_desire = -0.01
+		event_target:unrest_province = {
+			add_unrest = 5
+		}
+	}
+}
+
+# A new Confession of Faith
+country_event = {
+	id = pf_reform_desire.6
+	title = pf_reform_desire.6.t
+	desc = pf_reform_desire.6.d
+	picture = POPE_PREACHING_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = hellenic
+		NOT = { is_religion_enabled = paradosi }
+		NOT = { tag = ATH }
+		reform_desire = 0.2
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		
+	}
+	option = {
+		name = pf_reform_desire.6.a
+		ai_chance = {
+			factor = 5
+		}
+		add_reform_desire = 0.01
+		add_adm_power = 50
+	}
+	option = {
+		name = pf_reform_desire.6.b
+		ai_chance = {
+			factor = 1
+		}
+		add_reform_desire = 0.005
+		add_papal_influence = 10
+		add_devotion = 1
+	}
+}
+
+#A Promise of Safe Passage?
+country_event = {
+	id = pf_reform_desire.7
+	title = pf_reform_desire.7.t
+	desc = pf_reform_desire.7.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = hellenic
+		NOT = { is_religion_enabled = paradosi }
+		NOT = { tag = ATH }
+		reform_desire = 0.9
+		# is_year = 1520
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		
+	}
+	option = {
+		name = pf_reform_desire.7.a
+		ai_chance = {
+			factor = 5
+		}
+		add_reform_desire = 0.02
+		add_dip_power = 100
+	}
+	option = {
+		name = pf_reform_desire.7.b
+		ai_chance = {
+			factor = 1
+		}
+		add_reform_desire = 0.01
+		add_papal_influence = 15
+		add_devotion = 1
+	}
+}
+
+#
+country_event = {
+	id = pf_reform_desire.8
+	title = pf_reform_desire.8.t
+	desc = pf_reform_desire.8.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = hellenic
+		NOT = { is_religion_enabled = paradosi }
+		NOT = { tag = ATH }
+		reform_desire = 0.10
+		# is_year = 1520
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		
+	}
+	option = {
+		name = pf_reform_desire.8.a
+		ai_chance = { factor = 5 }
+		add_reform_desire = 0.01
+		add_mil_power = 50
+	}
+	option = {
+		name = pf_reform_desire.8.b
+		ai_chance = { factor = 1 }
+		add_reform_desire = 0.005
+		add_papal_influence = 10
+	}
+}
+
+#
+country_event = {
+	id = pf_reform_desire.9
+	title = pf_reform_desire.9.t
+	desc = pf_reform_desire.9.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = hellenic
+		NOT = { is_religion_enabled = paradosi }
+		NOT = { tag = ATH }
+		reform_desire = 0.20
+		# is_year = 1520
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		
+	}
+	option = {
+		name = pf_reform_desire.9.a
+		ai_chance = { factor = 5 }
+		add_reform_desire = 0.01
+		add_treasury = 0.5
+	}
+	option = {
+		name = pf_reform_desire.9.b
+		ai_chance = { factor = 1 }
+		add_reform_desire = -0.005
+		add_papal_influence = 10
+	}
+}
+
+#
+country_event = {
+	id = pf_reform_desire.10
+	title = pf_reform_desire.10.t
+	desc = pf_reform_desire.10.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = hellenic
+		NOT = { is_religion_enabled = paradosi }
+		NOT = { tag = ATH }
+		reform_desire = 0.3
+		# is_year = 1520
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		
+	}
+	option = {
+		name = pf_reform_desire.10.a
+		ai_chance = { factor = 5 }
+		add_reform_desire = 0.01
+		random_owned_province = {
+			random_list = {
+				1 = { add_base_tax = 1 }
+				1 = { add_base_production = 1 }
+				1 = { add_base_manpower = 1 }
+			}
+		}
+	}
+	option = {
+		name = pf_reform_desire.10.b
+		ai_chance = { factor = 1 }
+		add_reform_desire = 0.005
+		add_papal_influence = 10
+	}
+}
+
+#
+country_event = {
+	id = pf_reform_desire.11
+	title = pf_reform_desire.11.t
+	desc = pf_reform_desire.11.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = hellenic
+		NOT = { is_religion_enabled = paradosi }
+		NOT = { tag = ATH }
+		reform_desire = 0.4
+		# is_year = 1520
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		
+	}
+	option = {
+		name = pf_reform_desire.11.a
+		ai_chance = { factor = 5 }
+		add_reform_desire = 0.02
+		add_prestige_or_monarch_power = { amount = 25 }
+	}
+	option = {
+		name = pf_reform_desire.11.b
+		ai_chance = { factor = 1 }
+		add_reform_desire = -0.021
+		add_papal_influence = 10
+	}
+}
+
+#
+country_event = {
+	id = pf_reform_desire.12
+	title = pf_reform_desire.12.t
+	desc = pf_reform_desire.12.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = hellenic
+		NOT = { is_religion_enabled = paradosi }
+		NOT = { tag = ATH }
+		reform_desire = 0.5
+		# is_year = 1520
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		
+	}
+	option = {
+		name = pf_reform_desire.12.a
+		ai_chance = { factor = 5 }
+		add_reform_desire = 0.02
+		add_stability_or_adm_power = yes
+	}
+	option = {
+		name = pf_reform_desire.12.b
+		ai_chance = { factor = 1 }
+		add_reform_desire = -0.01
+		add_papal_influence = 25
+	}
+}

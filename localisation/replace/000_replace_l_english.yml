@@ -263,3 +263,21 @@
  elective_monarchy.17.d:0 "Ruling in [Root.GetName] is not like ruling in other nations. Dictating the nation's goals is difficult without approval from nobles, sometimes impossible. To a foreign monarch, this may seem disappointing and frustrating, but this cornerstone of [Root.GetAdjective] politics is highly valued in its homeland and is, in fact, what [Root.Monarch.GetName] has to thank for coming into power in the first place. Embracing these ideas might make the [Root.Monarch.GetTitle] seem weak internationally, but would aid in integrating better and gaining supporters in the Confederation."
 
  BOOKMARK_COUNTRY_EASY:0 "§GThis country is recommended to players new to Post Finem§!"
+
+ # Special Units
+ REGCAT_voc_indiamen:1 "LAF Knarr"
+ voc_indiamen_modifier:1 "LAF Knarr Hired"
+ voc_indiamen_ship:0 "Bonus from LAF Knarr"
+ VOC_INDIAMEN_NAME:1 "LAF Knarr $NAME$"
+ MODIFIER_ALLOWED_VOC_INDIAMEN_FRACTION:1 "LAF Knarr Force Limit"
+ MODIFIER_LOCAL_HAS_VOC_INDIAMEN:1 "Province Allows LAF Knarr Ships"
+ VOC_INDIAMEN_FORCELIMIT:1 "We can recruit up to $LIMIT|Y$ §GLAF Knarr§! owing to:\n$FLAMOUNT|Y$ from $PERC|%Y$ of our naval force-limit of $FL$:\n"
+ VOC_INDIAMEN_LIMIT_CULTURE:1 "$PROVINCE$ is a $CULTURE$ province, so can not recruit LAF Knarr Ships here."
+ ADD_VOC_INDIAMEN_SUB_UNIT_EFFECT:1 "Get '§GLAF Knarr§!' $UNIT$ in $WHERE|Y$."
+ VOC_INDIAMEN_DESC:1 "LAF Knarr are ships operating under the charter license of the Lagrlondi Austurríki Félagslag (Lagrlond East India Company), build to carry as much goods as possible, and armed to defend themselves from potential pirate raids.\nThe number of LAF Knarr that can be built depends on our trade efficiency and can be constructed in coastal provinces."
+ VOC_INDIAMEN_REGIMENT:1 "LAF Knarr Ship\n$EFFECT$"
+ HAVE_LESS_VOC_INDIAMEN_THAN:1 "Have less LAF Knarr than §Y$VALUE$§!.\n"
+ HAVE_AT_LEAST_VOC_INDIAMEN_THAN:1 "Have at least §Y$VALUE$§! LAF Knarr.\n"
+ MODIFIER_AMOUNT_OF_VOC_INDIAMEN:1 "LAF Knarr Force Limit"
+ ONLY_VOC_INDIAMEN_MODIFIER:0 "§YAffects only LAF Knarr Ships§!"
+ MODIFIER_HAS_VOC_INDIAMEN:0 "Country Allows LAF Knarr Ships"

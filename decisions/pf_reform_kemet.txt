@@ -1,0 +1,79 @@
+country_decisions = {
+
+	reform_kemet = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_free_or_tributary_trigger = yes
+			religion = hellenic
+			culture_group = kemetic
+			is_colonial_nation = no
+			NOT = { tag = KEM }
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					region = egypt_region
+					root = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 29
+								region = egypt_region
+								is_core = root
+							}
+						}
+					}
+				}
+				province_id = 2324
+				province_id = 1232
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no			
+			NOT = { exists = AEG }
+			NOT = { exists = KEM }
+			owns_core_province = 2324
+			owns_core_province = 1232
+			361 = { 					#  Men-Nefer
+				is_state = yes
+			}
+			egypt_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			361 = { 					#  Macedonia
+				move_capital_effect = yes
+			}
+			change_tag = KEM
+			custom_tooltip = " "
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			custom_tooltip = " "
+			remove_non_electors_emperors_from_empire_effect = yes
+			custom_tooltip = " "
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

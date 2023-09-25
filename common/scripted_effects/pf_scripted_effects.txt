@@ -70,7 +70,7 @@ distribute_base_dev_to_provinces = {
 pf_reset_deity = {
 	custom_tooltip = PF_RESET_PERSONAL_DEITY
 	hidden_effect = {
-		change_personal_deity = null
+		change_personal_deity = setting_invalid_deity_to_reset
 	}
 }
 # pf_save_random_tribe = {
