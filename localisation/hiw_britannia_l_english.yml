@@ -334,6 +334,12 @@ pf_trn.26.d1: "At last, Blackcoat forces reign triumphant over [Root.GetName]. T
 pf_trn.26.d2: "At last, the rebellious Blackcoat forces have been defeated, and the central government has firmly re-established its control over the country. Many lay dead, and whole regions are devastated from the fierce fighting, but the sound of gunfire and swords clashing is becoming increasingly rare. This has been a nightmare for all involved, and will surely raise a great many questions about the way this country is run and the position of its military."
 pf_trn.26.a: "It is over."
 
+pf_trn.27.t: "[Root.GetPrimaryTribe] Rallies for War"
+pf_trn.27.d: "Despite the current state of peace with our neighbours, one of the tribes of the Confederation has been crying out desperately for war. The constant marching of their warriors and target practice has annoyed the people of [Root.GetSecondaryTribe], who have issued a formal complaint to the Council of Elders. Which tribe should we favour?"
+pf_trn.27.a: "Allow the [Root.GetPrimaryTribe] to train their troops."
+pf_trn.27.b: "Favour the [Root.GetSecondaryTribe] point of view."
+pf_trn.27.c: "Surely we can come to some kind of arrangement?"
+
 ###########
 # Decision
 ###########

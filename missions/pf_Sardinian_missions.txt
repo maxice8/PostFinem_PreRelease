@@ -139,9 +139,26 @@ pf_sar_2 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			navy_size_percentage = 0.90
+			OR = {
+				num_of_galley = 20
+				num_of_heavy_ship = 5
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				has_shipyard_building_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_navy_tradition = 30
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_sar_the_red_fleet_modifier"
+				duration = 9125
+			}
+		} 
 	}
 
 	pf_sar_the_twelve_laws = {
@@ -150,9 +167,36 @@ pf_sar_2 = {
 		required_missions = { pf_sar_found_parliament } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			NOT = {
+				has_estate_privilege = estate_burghers_pf_league_agreements
+			}
+			corsica_sardinia_area = {
+				type = all
+				base_tax = 6
+			}
+			OR = {
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 60
+				}
+				NOT = {
+					estate_influence = {
+						estate = estate_nobles
+						influence = 40
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_adm_power = 100
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_sar_the_twelve_laws_modifier"
+				duration = -1
+			}
+		} 
 	}
 
 	pf_sar_arm_the_people = {
@@ -160,9 +204,46 @@ pf_sar_2 = {
 		position = 5
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			army_size_percentage = 1
+			navy_size_percentage = 1
 
-		effect = {  } 
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = pf_sar_thirst_for_war
+				duration = 7300
+			}
+			corsica_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			baleares_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			western_sicily_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sicily_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_sar_conquer_baleares = {

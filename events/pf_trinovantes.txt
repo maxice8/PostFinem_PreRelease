@@ -1120,3 +1120,59 @@ country_event = {		# The end of the revolution
 		remove_country_modifier = pf_trn_blackcoat_fugitives
 	}
 }
+country_event = {		# Tribe Rallies for War
+	id = pf_trn.27
+	title = pf_trn.27.t
+	desc = pf_trn.27.d
+	picture = northamericagfx_LAND_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = brittonic_confederation_reform
+		num_of_cities = 5	# approx the five tribes kinda
+		is_at_war = no
+	}
+
+	immediate = {
+		hidden_effect = {
+			pf_save_random_tribe = {
+				function = primary
+			}
+			pf_save_random_tribe = {
+				function = secondary
+			}
+		}
+	}
+
+	option = {		# Favour tribe 1
+		name = "pf_trn.27.a"
+		add_yearly_manpower = 1
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = -25
+		}
+	}
+	option = {		# favour tribe 2
+		name = "pf_trn.27.b"
+		add_dip_power = 50
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = -25
+		}
+	}
+	option = {		# resolve it in a court of law
+		name = "pf_trn.27.dd"
+		trigger = {
+			ruler_has_personality = silver_tongue_personality
+		}
+		highlight = yes
+		add_legitimacy = -5
+	}
+
+	after = {
+		pf_clear_trn_tribe_flags = yes
+	}
+}

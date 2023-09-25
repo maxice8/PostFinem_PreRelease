@@ -17,4 +17,14 @@ government_rank = 1
 		birth_date = 1389.07.20
 		death_date = 1445.01.01
 	}
+	every_owned_province = {
+		add_local_autonomy = 35
+	}
+	4942 = {
+		add_local_autonomy = 15
+	}
+	2986 = {
+		add_local_autonomy = 10
+	}
+	set_estate_privilege = estate_burghers_pf_league_agreements
 }
