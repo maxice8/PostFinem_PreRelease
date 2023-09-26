@@ -513,11 +513,51 @@ mac_2 = {
 			pf_mac_crush_the_dastur
 			pf_mac_hellenic_hegemon
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			AND = {
+				OR = {
+					region = persia_region
+					region = khorasan_region
+				}
+				NOT = { owned_by = ROOT }
+				}
+			AND = {
+				region = egypt_region
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			egypt_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			} 
+			persia_region = {
+				type = all
+				owned_by = ROOT
+			} 
+			khorasan_region = {
+				type = all
+				owned_by = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			set_country_flag = mac_argead_restoration_flag
+			override_country_name = ARGEAD_EMPIRE
+			change_country_color = {
+				color = { 110 230 255 }
+			}
+			custom_tooltip = empty_line_tt
+			add_government_reform = pf_argead_aegis
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = mac_argead_restoration_modifier
+				duration = -1
+			}
+		} 
 	}
 
 	pf_mac_surpass_alexander = {
@@ -1223,14 +1263,14 @@ mac_culture_4 = {
 
 		trigger = {  
 			num_of_owned_provinces_with = {
-				value = 50
+				value = 60
 				culture_group = ROOT
 			}
 		} 
 
 		effect = {  
 			distribute_base_dev_to_provinces = {
-				num = 10
+				num = 15
 				amount = 1
 				trigger = "
 					culture_group = ROOT
@@ -1248,11 +1288,49 @@ mac_culture_4 = {
 			pf_mac_hellenization
 			pf_mac_expose_their_flaws
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			culture_group = ROOT
+			NOT = { development = 30 }
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 5
+				culture_group = ROOT
+				development = 30
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = mac_beacons_tt
+			tooltip = {			
+				add_province_modifier = {
+					name = mac_beacons_province_modifier
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						culture_group = ROOT
+						development = 30
+					}
+					add_province_modifier = {
+						name = mac_beacons_province_modifier
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = { religion = hellenic }
+				custom_tooltip = mac_beacons_hellenic_center_tt
+				random_owned_province = {
+					limit = { has_province_modifier = mac_beacons_province_modifier }
+					add_reform_center = hellenic
+				}
+			}
+		} 
 	}
 }
 mac_eco_4 = {
@@ -1304,10 +1382,31 @@ mac_culture_5 = {
 		position = 7
 		required_missions = { pf_mac_spread_the_faith } 
 		provinces_to_highlight = {  } 
+		trigger = { 
+			is_religion_enabled = paradosi
+			OR = {
+				religion = hellenic
+				religion = paradosi
+			}
+			if = {
+				limit = { ai = no }
+				religious_unity = 0.9
+				num_of_cities = 60
+			}
+			else = {
+				religious_unity = 0.75
+				num_of_cities = 50
+			}
+		} 
 
-		trigger = {  } 
-
-		effect = {  } 
+		effect = {  
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = mac_expose_their_flaws_modifier
+				duration = 7300
+			}
+		} 
 	}
 
 	pf_mac_unite_our_brothers = {

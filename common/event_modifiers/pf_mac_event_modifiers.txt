@@ -77,3 +77,15 @@ mac_hellenic_hegemon_aegyptos_modifier = {
    liberty_desire = -25
    global_trade_goods_size_modifier = 0.1
 }
+mac_expose_their_flaws_modifier = {
+   global_heretic_missionary_strength = 0.02
+   cb_on_religious_enemies = yes
+}
+mac_argead_restoration_modifier= {
+   administrative_efficiency = 0.05
+   trade_efficiency = 0.1
+}
+mac_beacons_province_modifier = {
+   local_tax_modifier = 0.3
+   allowed_num_of_buildings = 2
+}
