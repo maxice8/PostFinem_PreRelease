@@ -751,7 +751,7 @@ country_event = {		# The Kingdom of Coel Hen
 				NOT = { government_rank = 2 }
 			}
 			set_government_rank = 2
-			custom_tooltip = " "
+			custom_tooltip = empty_line_tt
 		}
 		add_prestige = 25
 		custom_tooltip = empty_line_tt
@@ -767,7 +767,7 @@ country_event = {		# The Kingdom of Coel Hen
 				NOT = { government_rank = 2 }
 			}
 			set_government_rank = 2
-			custom_tooltip = " "
+			custom_tooltip = empty_line_tt
 		}
 		add_prestige = 25
 		custom_tooltip = empty_line_tt
