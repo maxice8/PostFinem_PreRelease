@@ -556,7 +556,6 @@ pf_per_3 = {
 
 		effect = {
 			437 = { add_permanent_claim = KHO }
-			438 = { add_permanent_claim = KHO }
 			2349 = { add_permanent_claim = KHO }
 			424 = { add_permanent_claim = TAB }
 			4291 = { add_permanent_claim = KHU }
@@ -1445,24 +1444,6 @@ pf_persian_empire_3 = {
 		effect = {
 			set_country_flag = pf_per_persian_empire
 			add_government_reform = pf_zoroastrian_theocracy_empire
-
-			complete_mission = pf_per_cross_the_strait
-			complete_mission = pf_per_control_hormuz
-			complete_mission = pf_per_secure_the_gulf
-			complete_mission = pf_per_trade_with_faithful
-			complete_mission = pf_per_dominate_tigris
-			complete_mission = pf_per_destroy_seleucia
-			complete_mission = pf_per_restore_baghdad
-			complete_mission = pf_per_fulfil_satrapies
-			complete_mission = pf_per_reach_caucasus
-			complete_mission = pf_per_converge_on_tabrizia
-			complete_mission = pf_per_establish_control
-			complete_mission = pf_per_drive_back_hordes
-			complete_mission = pf_per_build_good_wall
-			complete_mission = pf_per_assist_satrapies
-			complete_mission = pf_per_invade_india
-			complete_mission = pf_per_crush_multan
-			complete_mission = pf_per_liberate_zoroastrians
 		}
 	}
 }

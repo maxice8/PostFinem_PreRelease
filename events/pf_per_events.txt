@@ -1049,3 +1049,887 @@ country_event = {
 		}
 	}
 }
+
+# Satrapy Expansion Plan: Grant Land to Khorasan
+country_event = {
+	id = pf_per_events.38
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_38_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		KHO = {
+			hidden_effect = {
+				save_event_target_as = receiving_satrapy
+			}
+		}
+	}
+	
+	trigger = {
+		tag = PER
+		exists = KHO
+		pf_kho_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_38_option"
+		ai_chance = { factor = 100 }
+		pf_kho_expansion_claims = {
+			limit = { owned_by = ROOT }
+			cede_province = KHO
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Grant Land to Tabaristan
+country_event = {
+	id = pf_per_events.39
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_38_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		TAB = {
+			hidden_effect = {
+				save_event_target_as = receiving_satrapy
+			}
+		}
+	}
+	
+	trigger = {
+		tag = PER
+		exists = TAB
+		pf_tab_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_38_option"
+		ai_chance = { factor = 100 }
+		pf_tab_expansion_claims = {
+			limit = { owned_by = ROOT }
+			cede_province = TAB
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Grant Land to Khuzestan
+country_event = {
+	id = pf_per_events.40
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_38_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		KHU = {
+			hidden_effect = {
+				save_event_target_as = receiving_satrapy
+			}
+		}
+	}
+	
+	trigger = {
+		tag = PER
+		exists = KHU
+		pf_khu_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_38_option"
+		ai_chance = { factor = 100 }
+		pf_khu_expansion_claims = {
+			limit = { owned_by = ROOT }
+			cede_province = KHU
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Grant Land to Baluchistan
+country_event = {
+	id = pf_per_events.41
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_38_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		BAL = {
+			hidden_effect = {
+				save_event_target_as = receiving_satrapy
+			}
+		}
+	}
+	
+	trigger = {
+		tag = PER
+		exists = BAL
+		pf_bal_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_38_option"
+		ai_chance = { factor = 100 }
+		pf_bal_expansion_claims = {
+			limit = { owned_by = ROOT }
+			cede_province = BAL
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Grant Land to Babylonia
+country_event = {
+	id = pf_per_events.42
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_38_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		BAB = {
+			hidden_effect = {
+				save_event_target_as = receiving_satrapy
+			}
+		}
+	}
+	
+	trigger = {
+		tag = PER
+		exists = BAB
+		pf_bab_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_38_option"
+		ai_chance = { factor = 100 }
+		pf_bab_expansion_claims = {
+			limit = { owned_by = ROOT }
+			cede_province = BAB
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Grant Land to Assyria
+country_event = {
+	id = pf_per_events.43
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_38_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		ASY = {
+			hidden_effect = {
+				save_event_target_as = receiving_satrapy
+			}
+		}
+	}
+	
+	trigger = {
+		tag = PER
+		exists = ASY
+		pf_asy_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_38_option"
+		ai_chance = { factor = 100 }
+		pf_asy_expansion_claims = {
+			limit = { owned_by = ROOT }
+			cede_province = ASY
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Grant Land to Tigristan
+country_event = {
+	id = pf_per_events.44
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_38_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		TIG = {
+			hidden_effect = {
+				save_event_target_as = receiving_satrapy
+			}
+		}
+	}
+	
+	trigger = {
+		tag = PER
+		exists = TIG
+		pf_tig_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_38_option"
+		ai_chance = { factor = 100 }
+		pf_tig_expansion_claims = {
+			limit = { owned_by = ROOT }
+			cede_province = TIG
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Grant Land to Caspia
+country_event = {
+	id = pf_per_events.45
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_38_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		CSP = {
+			hidden_effect = {
+				save_event_target_as = receiving_satrapy
+			}
+		}
+	}
+	
+	trigger = {
+		tag = PER
+		exists = CSP
+		pf_csp_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_38_option"
+		ai_chance = { factor = 100 }
+		pf_csp_expansion_claims = {
+			limit = { owned_by = ROOT }
+			cede_province = CSP
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Grant Land to Colchis
+country_event = {
+	id = pf_per_events.46
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_38_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		CLC = {
+			hidden_effect = {
+				save_event_target_as = receiving_satrapy
+			}
+		}
+	}
+	
+	trigger = {
+		tag = PER
+		exists = CLC
+		pf_clc_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_38_option"
+		ai_chance = { factor = 100 }
+		pf_clc_expansion_claims = {
+			limit = { owned_by = ROOT }
+			cede_province = CLC
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Grant Land to Magan
+country_event = {
+	id = pf_per_events.47
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_38_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		MGA = {
+			hidden_effect = {
+				save_event_target_as = receiving_satrapy
+			}
+		}
+	}
+	
+	trigger = {
+		tag = PER
+		exists = MGA
+		pf_mga_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_38_option"
+		ai_chance = { factor = 100 }
+		pf_mga_expansion_claims = {
+			limit = { owned_by = ROOT }
+			cede_province = MGA
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Grant Land to Rajastan
+country_event = {
+	id = pf_per_events.48
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_38_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		RJT = {
+			hidden_effect = {
+				save_event_target_as = receiving_satrapy
+			}
+		}
+	}
+	
+	trigger = {
+		tag = PER
+		exists = RJT
+		pf_rjt_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_38_option"
+		ai_chance = { factor = 100 }
+		pf_rjt_expansion_claims = {
+			limit = { owned_by = ROOT }
+			cede_province = RJT
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Grant Land to Gujaratistan
+country_event = {
+	id = pf_per_events.49
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_38_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		GJR = {
+			hidden_effect = {
+				save_event_target_as = receiving_satrapy
+			}
+		}
+	}
+	
+	trigger = {
+		tag = PER
+		exists = GJR
+		pf_gjr_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_38_option"
+		ai_chance = { factor = 100 }
+		pf_gjr_expansion_claims = {
+			limit = { owned_by = ROOT }
+			cede_province = GJR
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Grant Land to Panjabistan
+country_event = {
+	id = pf_per_events.50
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_38_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		PAJ = {
+			hidden_effect = {
+				save_event_target_as = receiving_satrapy
+			}
+		}
+	}
+	
+	trigger = {
+		tag = PER
+		exists = PAJ
+		pf_paj_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_38_option"
+		ai_chance = { factor = 100 }
+		pf_paj_expansion_claims = {
+			limit = { owned_by = ROOT }
+			cede_province = PAJ
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Grant Land to Kashmiristan
+country_event = {
+	id = pf_per_events.51
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_38_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		KSM = {
+			hidden_effect = {
+				save_event_target_as = receiving_satrapy
+			}
+		}
+	}
+	
+	trigger = {
+		tag = PER
+		exists = KSM
+		pf_ksm_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_38_option"
+		ai_chance = { factor = 100 }
+		pf_ksm_expansion_claims = {
+			limit = { owned_by = ROOT }
+			cede_province = KSM
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Grant Land to Amyrgia
+country_event = {
+	id = pf_per_events.52
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_38_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		AMY = {
+			hidden_effect = {
+				save_event_target_as = receiving_satrapy
+			}
+		}
+	}
+	
+	trigger = {
+		tag = PER
+		exists = AMY
+		pf_amy_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_38_option"
+		ai_chance = { factor = 100 }
+		pf_amy_expansion_claims = {
+			limit = { owned_by = ROOT }
+			cede_province = AMY
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Release Babylonia
+country_event = {
+	id = pf_per_events.53
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_53_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		tag = PER
+		NOT = { exists = BAB }
+		pf_bab_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_53_option"
+		ai_chance = { factor = 100 }
+		pf_bab_expansion_claims = {
+			limit = { owned_by = ROOT }
+			add_core = BAB
+		}
+		release = BAB
+		create_subject = {
+			subject_type = satrapy
+			subject = BAB
+		}
+		pf_bab_expansion_claims = {
+			add_permanent_claim = BAB
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Release Assyria
+country_event = {
+	id = pf_per_events.54
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_53_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		tag = PER
+		NOT = { exists = ASY }
+		pf_asy_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_54_option"
+		ai_chance = { factor = 100 }
+		pf_asy_expansion_claims = {
+			limit = { owned_by = ROOT }
+			add_core = ASY
+		}
+		release = ASY
+		create_subject = {
+			subject_type = satrapy
+			subject = ASY
+		}
+		pf_asy_expansion_claims = {
+			add_permanent_claim = ASY
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Release Tigristan
+country_event = {
+	id = pf_per_events.55
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_53_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		tag = PER
+		NOT = { exists = TIG }
+		pf_tig_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_55_option"
+		ai_chance = { factor = 100 }
+		pf_tig_expansion_claims = {
+			limit = { owned_by = ROOT }
+			add_core = TIG
+		}
+		release = TIG
+		create_subject = {
+			subject_type = satrapy
+			subject = TIG
+		}
+		pf_tig_expansion_claims = {
+			add_permanent_claim = TIG
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Release Caspia
+country_event = {
+	id = pf_per_events.56
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_53_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		tag = PER
+		NOT = { exists = CSP }
+		pf_csp_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_56_option"
+		ai_chance = { factor = 100 }
+		pf_csp_expansion_claims = {
+			limit = { owned_by = ROOT }
+			add_core = CSP
+		}
+		release = CSP
+		create_subject = {
+			subject_type = satrapy
+			subject = CSP
+		}
+		pf_csp_expansion_claims = {
+			add_permanent_claim = CSP
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Release Colchis
+country_event = {
+	id = pf_per_events.57
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_53_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		tag = PER
+		NOT = { exists = CLC }
+		pf_clc_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_57_option"
+		ai_chance = { factor = 100 }
+		pf_clc_expansion_claims = {
+			limit = { owned_by = ROOT }
+			add_core = CLC
+		}
+		release = CLC
+		create_subject = {
+			subject_type = satrapy
+			subject = CLC
+		}
+		pf_clc_expansion_claims = {
+			add_permanent_claim = CLC
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Release Magan
+country_event = {
+	id = pf_per_events.58
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_53_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		tag = PER
+		NOT = { exists = MGA }
+		pf_mga_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_58_option"
+		ai_chance = { factor = 100 }
+		pf_mga_expansion_claims = {
+			limit = { owned_by = ROOT }
+			add_core = MGA
+		}
+		release = MGA
+		create_subject = {
+			subject_type = satrapy
+			subject = MGA
+		}
+		pf_mga_expansion_claims = {
+			add_permanent_claim = MGA
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Release Rajastan
+country_event = {
+	id = pf_per_events.59
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_53_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		tag = PER
+		NOT = { exists = RJT }
+		pf_rjt_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_59_option"
+		ai_chance = { factor = 100 }
+		pf_rjt_expansion_claims = {
+			limit = { owned_by = ROOT }
+			add_core = RJT
+		}
+		release = RJT
+		create_subject = {
+			subject_type = satrapy
+			subject = RJT
+		}
+		pf_rjt_expansion_claims = {
+			add_permanent_claim = RJT
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Release Gujaratistan
+country_event = {
+	id = pf_per_events.60
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_53_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		tag = PER
+		NOT = { exists = GJR }
+		pf_gjr_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_60_option"
+		ai_chance = { factor = 100 }
+		pf_gjr_expansion_claims = {
+			limit = { owned_by = ROOT }
+			add_core = GJR
+		}
+		release = GJR
+		create_subject = {
+			subject_type = satrapy
+			subject = GJR
+		}
+		pf_gjr_expansion_claims = {
+			add_permanent_claim = GJR
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Release Panjabistan
+country_event = {
+	id = pf_per_events.61
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_53_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		tag = PER
+		NOT = { exists = PAJ }
+		pf_paj_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_61_option"
+		ai_chance = { factor = 100 }
+		pf_paj_expansion_claims = {
+			limit = { owned_by = ROOT }
+			add_core = PAJ
+		}
+		release = PAJ
+		create_subject = {
+			subject_type = satrapy
+			subject = PAJ
+		}
+		pf_paj_expansion_claims = {
+			add_permanent_claim = PAJ
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Release Kashmiristan
+country_event = {
+	id = pf_per_events.62
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_53_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		tag = PER
+		NOT = { exists = KSM }
+		pf_ksm_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_62_option"
+		ai_chance = { factor = 100 }
+		pf_ksm_expansion_claims = {
+			limit = { owned_by = ROOT }
+			add_core = KSM
+		}
+		release = KSM
+		create_subject = {
+			subject_type = satrapy
+			subject = KSM
+		}
+		pf_ksm_expansion_claims = {
+			add_permanent_claim = KSM
+		}
+	}
+}
+
+# Satrapy Expansion Plan: Release Amyrgia
+country_event = {
+	id = pf_per_events.63
+	title = "pf_per_events_38_title"
+	desc = "pf_per_events_53_desc"
+	picture = CONQUEST_eventPicture
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		tag = PER
+		NOT = { exists = AMY }
+		pf_amy_expansion_claims = {
+			owned_by = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_63_option"
+		ai_chance = { factor = 100 }
+		pf_amy_expansion_claims = {
+			limit = { owned_by = ROOT }
+			add_core = AMY
+		}
+		release = AMY
+		create_subject = {
+			subject_type = satrapy
+			subject = AMY
+		}
+		pf_amy_expansion_claims = {
+			add_permanent_claim = AMY
+		}
+	}
+}
