@@ -3057,47 +3057,6 @@ SAV_ideas = {
 	}
 }
 
-
-SAR_ideas = {
-	start = {
-		idea_cost = -0.1
-		naval_forcelimit_modifier = 0.2
-	}
-	
-	bonus = {
-		global_tax_modifier = 0.1
-	}
-	
-	trigger = {
-		tag = SAR
-	}
-	free = yes		#will be added at load.
-	
-	SAR_judicate = {
-		land_morale = 0.1
-	}
-	SAR_papal_restoration = {
-		tolerance_own = 1
-		papal_influence = 1
-	}
-	SAR_viceroyalty = {
-		global_unrest = -2
-	}
-	SAR_and_COR = {
-		ae_impact = -0.1
-	}
-	SAR_piedmontese_ambition = {
-		core_creation = -0.1
-	}
-	SAR_cathedrals = {
-		build_cost = -0.1
-	}
-	SAR_saint_maurice = {
-		discipline = 0.05
-	}
-}
-
-
 COR_ideas = {
 	start = {
 		naval_forcelimit_modifier = 0.2
