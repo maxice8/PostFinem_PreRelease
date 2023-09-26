@@ -1,18 +1,10 @@
 # 4942 - Olbia
-# controller = 
-# owner = 
-# culture = 
-# religion = 
-# hre = yes
 is_city = yes
 capital = "Olbia"
-#Total development: 3
-base_tax = 5
-base_production = 4
+base_tax = 3
+base_production = 3
 base_manpower = 3
-trade_goods = grain
-# fort_15th = yes # No fort in this province
-# center_of_trade = 1 # No CoT in province
+trade_goods = fish
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
@@ -23,5 +15,5 @@ culture = sardii
 religion = punic_religion
 controller = SAR
 hre = yes
-center_of_trade = 1
-fort_15th = yes
+
+

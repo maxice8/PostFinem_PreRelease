@@ -64,10 +64,60 @@ brittonic_confederation_names = {
 	}
 
 	trigger = {
-		has_reform = brittonic_confederation_reform
+		OR = {
+			has_reform = brittonic_confederation_reform
+			has_reform = pf_brittonic_tribe_reform
+		}
 	}
 }
 
+blackcoat_dictatorship_names = {
+	rank = {
+		1 = DICTATORSHIP
+		2 = DICTATORSHIP
+		3 = MILITARY_EMPIRE
+	}
+
+	ruler_male = {
+		1 = GENERAL
+		2 = GENERAL
+		3 = GENERAL
+	}
+
+	ruler_female = {
+		1 = GENERAL
+		2 = GENERAL
+		3 = GENERAL
+	}
+
+	consort_male = {
+		1 = HUSBAND
+		2 = HUSBAND
+		3 = HUSBAND
+	}
+
+	consort_female = {
+		1 = WIFE
+		2 = WIFE
+		3 = WIFE
+	}
+	
+	heir_male = {
+		1 = SON
+		2 = SON
+		3 = SON
+	}
+
+	heir_female = {
+		1 = DAUGHTER
+		2 = DAUGHTER
+		3 = DAUGHTER
+	}
+
+	trigger = {
+		has_reform = pf_blackcoat_dictatorship
+	}
+}
 pf_hierophant = {
 	rank = {
 		1 = HIEROPHANTATE
