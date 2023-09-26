@@ -211,8 +211,16 @@ pf_per_overlord_rejected_demand = {
 	liberty_desire = 10
 }
 
+pf_per_overlord_rejected_demand_reduced = {
+	liberty_desire = 5
+}
+
 pf_per_overlord_failed_demand = {
 	liberty_desire = 20
+}
+
+pf_per_overlord_failed_demand_reduced = {
+	liberty_desire = 10
 }
 
 pf_per_overlord_filled_demand = {

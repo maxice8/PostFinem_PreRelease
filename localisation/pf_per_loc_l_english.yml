@@ -42,7 +42,9 @@
  pf_per_liberated_from_heresy: "Liberated from Heresy"
  pf_per_ignored_satrapy: "Ignored by our Overlord"
  pf_per_overlord_rejected_demand: "Overlord Refused Demand"
+ pf_per_overlord_rejected_demand_reduced: "Overlord Refused Demand"
  pf_per_overlord_failed_demand: "Overlord Failed Demand"
+ pf_per_overlord_failed_demand_reduced: "Overlord Failed Demand"
  pf_per_overlord_filled_demand: "Overlord Completed Demand"
  pf_satrapy_expansion_plan_complete: "Expansion Promises Fulfilled"
 
@@ -121,14 +123,17 @@
  pf_per_events_17_desc: "We have just received news from [raided_satrap.GetName]. They have just suffered a large raid at the hands of their nomadic neighbours, and are seeking our support. What shall we do, my [Root.Monarch.GetTitle]?"
  pf_per_events_17_option_1: "Send them a few ducats."
  pf_per_events_17_option_2: "Doesn't sound like my problem!"
- pf_per_events_18_title: "[province_to_tax_dev_owner.GetName] sends a Demand!"
- pf_per_events_18_desc: "We have just received a demand from [province_to_tax_dev_owner.GetName]. They want us to invest in the infrastructure in their province of [province_to_tax_dev.GetName]. What shall we do, my [Root.Monarch.GetTitle]?"
+ pf_per_events_18_title: "Envoy from [province_to_tax_dev_owner.GetName]!"
+ pf_per_events_18_desc_1: "We have just received a demand from [province_to_tax_dev_owner.GetName]. They want us to invest in the infrastructure in their province of [province_to_tax_dev.GetName]. What shall we do, my [Root.Monarch.GetTitle]?"
+ pf_per_events_18_desc_2: "We have just received a letter from [province_to_tax_dev_owner.GetName]. They want us to invest in the infrastructure in their province of [province_to_tax_dev.GetName]. What shall we do, my [Root.Monarch.GetTitle]?"
+ pf_per_events_18_desc_3: "We have just received a request from [province_to_tax_dev_owner.GetName]. They are asking us to invest in the infrastructure in their province of [province_to_tax_dev.GetName]. What shall we do, my [Root.Monarch.GetTitle]?"
+ pf_per_events_18_desc_4: "We have just received a petition from [province_to_tax_dev_owner.GetName]. They are asking us to invest in the infrastructure in their province of [province_to_tax_dev.GetName]. What shall we do, my [Root.Monarch.GetTitle]?"
  pf_per_events_18_option_1: "That can be arranged."
  pf_per_events_18_option_2: "We cannot do that at this time."
  pf_per_events_18_tt: "We will commit to increasing the §YBase Tax§! in [province_to_tax_dev.GetName] to [province_to_tax_dev.pfPerProvinceTaxDev.GetValue].\n§YIf we fail to do this within a year our Satrapy will be more angry than if we say no now!§!"
  pf_per_events_28_title: "[province_to_tax_dev_owner.GetName] follows up!"
- pf_per_events_28_desc_1: "My [Root.Monarch.GetTitle], we have received further correspondance from [province_to_tax_dev_owner.GetName] on the topic of their prior demand. They have sent a letter of thanks for our investments in them!"
- pf_per_events_28_desc_2: "My [Root.Monarch.GetTitle], we have received further correspondance from [province_to_tax_dev_owner.GetName] on the topic of their prior demand. They have sent a letter of anger at our failure to meet their demands, and have further expressed their distaste at being our subject!"
+ pf_per_events_28_desc_1: "My [Root.Monarch.GetTitle], we have received further correspondance from [province_to_tax_dev_owner.GetName] on the topic of our previous commitment. They have sent a small gift and letter of thanks for our investments in them!"
+ pf_per_events_28_desc_2: "My [Root.Monarch.GetTitle], we have received further correspondance from [province_to_tax_dev_owner.GetName] on the topic of our previous commitment. They have sent a letter of anger at our failure to meet their demands, and have further expressed their distaste at being our subject!"
  pf_per_events_28_option_1: "We accept their gratitude."
  pf_per_events_28_option_2: "They will just have to deal with it!"
 
@@ -276,8 +281,12 @@
  pf_per_owner_is_zoroastrian_tt: "Religion of Province Owner is §YZoroastrian§!"
  pf_satrapy_while_subject_tt: "whilst a subject of §YPersia§!"
  pfPerSatrapyDemandsFilled: "Satrapy Demands Fulfilled"
-
-
+ pf_per_satrapy_demand_rewards_1_tt: "Successfully completing §YSatrapy Demands§! events will now grant better rewards!"
+ pf_per_satrapy_demand_consequences_1_tt: "Refusing or Failing §YSatrapy Demands§! events will now have less severe consequences!"
+ pf_per_satrapy_demand_rewards_2_tt: "Successfully completing §YSatrapy Requires§! events will now grant better rewards!"
+ pf_per_satrapy_demand_consequences_2_tt: "Refusing or Failing §YSatrapy Requires§! events will now have less severe consequences!"
+ pf_per_satrapy_demand_rewards_3_tt: "Successfully completing §YSatrapy Requests§! events will now grant better rewards!"
+ pf_per_satrapy_demand_consequences_3_tt: "Refusing §YSatrapy Requests§! events will now have no negative consequences!"
 
 
 
