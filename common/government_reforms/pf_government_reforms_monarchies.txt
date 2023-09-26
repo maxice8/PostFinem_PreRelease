@@ -214,6 +214,8 @@ pf_argead_aegis = {
 		min_autonomy_in_territories = -0.2
 		governing_capacity = 250
 		prestige_decay = -0.01
+		max_absolutism = 15
+		yearly_absolutism = 0.5
 	}
 	# custom_attributes = {
 	# 	buffed_strong_duchies = yes #+5% Loyalty
