@@ -305,6 +305,42 @@ mac_1 = {
 			}
 		} 
 	}
+
+	pf_mac_surpass_alexander = {
+		icon = mission_indian_empire
+		position = 9
+		required_missions = { pf_mac_argead_restoration } 
+		provinces_to_highlight = {  
+			OR = {
+				region = hindusthan_region
+				region = west_india_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 50
+				OR = {
+					region = hindusthan_region
+					region = west_india_region
+				}
+			}
+		} 
+
+		effect = {  
+			add_prestige_or_monarch_power = { amount = 100 }
+			custom_tooltip = empty_line_tt
+			add_ruler_modifier = {
+				name = mac_surpass_alexander_modifier
+			}
+			india_superregion = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
 }
 mac_2 = {
 	slot = 2
@@ -557,18 +593,9 @@ mac_2 = {
 				name = mac_argead_restoration_modifier
 				duration = -1
 			}
+			hindusthan_region = { add_permanent_claim = ROOT }
+			west_india_region = { add_permanent_claim = ROOT }
 		} 
-	}
-
-	pf_mac_surpass_alexander = {
-		icon = mission_indian_empire
-		position = 9
-		required_missions = { pf_mac_argead_restoration } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
 	}
 }
 mac_3 = {
@@ -1159,7 +1186,7 @@ mac_eco_1 = {
 
 	pf_mac_dominate_eastern_seas = {
 		icon = mission_dominate_trade_in_bengal
-		position = 11
+		position = 10
 		required_missions = { pf_mac_regional_trade_hub } 
 		provinces_to_highlight = {  } 
 
@@ -1177,13 +1204,54 @@ mac_eco_2 = {
 
 	pf_mac_regional_trade_hub = {
 		icon = mission_control_fur_trade
-		position = 10
+		position = 9
 		required_missions = { pf_mac_beautiful_capital } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			trade_node = 1319
+			province_has_center_of_trade_of_level = 1
+			NOT = { province_has_center_of_trade_of_level = 2 }
+			NOT = { has_trade_building_trigger = yes }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			1319 = {
+				trade_node_value = 20
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				trade_node = 1319
+				province_has_center_of_trade_of_level = 2
+				has_trade_building_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_years_of_trade_income = {
+				years = 2
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = mac_region_trade_hub_modifier
+				duration = 7300
+			}
+			1298 = {
+					add_trade_modifier = {
+					who = ROOT
+					duration = 12775
+					power = 50
+					key = mac_regional_trade_hub_key
+				}
+			}
+			341 = {
+					add_trade_modifier = {
+					who = ROOT
+					duration = 12775
+					power = 50
+					key = mac_regional_trade_hub_key
+				}
+			}
+		} 
 	}
 }
 mac_eco_3 = {
@@ -1195,28 +1263,107 @@ mac_eco_3 = {
 
 	pf_mac_beautiful_capital = {
 		icon = mission_rb_inland_india
-		position = 9
-		provinces_to_highlight = {  } 
+		position = 8
+		provinces_to_highlight = {  
+			is_capital_of = ROOT
+			NOT = { development = 30 }
+			NOT = { province_has_center_of_trade_of_level = 3 }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			capital_scope = {
+				development = 30
+			}
+			capital_scope = {
+				province_has_center_of_trade_of_level = 3
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			capital_scope = {
+				change_trade_goods = gems
+			}
+			custom_tooltip = empty_line_tt 
+			capital_scope = {
+				add_province_modifier = {
+					name = mac_beautiful_capital_modifier
+					duration = -1
+				}
+			}
+		} 
 	}
 
 	pf_mac_macedonian_rugs = {
 		icon = mission_son_own_develop_clothes_and_salt
-		position = 10
+		position = 9
 		required_missions = { pf_mac_beautiful_capital } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			OR = {
+				AND = {
+					OR = {
+						trade_goods = silk
+						trade_goods = cloth
+					}
+					NOT = { base_production = 8 }
+				}
+				AND = {
+					trade_goods = wool
+					NOT = { base_production = 6 }
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			if = {
+				limit = {  ai = no }
+				num_of_owned_provinces_with = {
+					value = 10
+					OR = {
+						trade_goods = silk
+						trade_goods = cloth
+					}
+					base_production = 8
+				} 
+				num_of_owned_provinces_with = {
+					value = 5
+					trade_goods = wool
+					base_production = 6
+				}
+			}
+			else = {
+				num_of_owned_provinces_with = {
+					value = 6
+					OR = {
+						trade_goods = silk
+						trade_goods = cloth
+					}
+					base_production = 6
+				} 
+				num_of_owned_provinces_with = {
+					value = 3
+					trade_goods = wool
+					base_production = 4
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			swap_trade_good_for_max_provinces = {
+				max = 5
+				original = wool
+				new = cloth
+				tooltip = mac_macedonian_rugs_tt
+				trigger = "
+					base_production = 6
+				"
+			}
+		} 
 	}
 
 	pf_mac_riches_of_the_silk_road = {
 		icon = the_shape_of_trades_to_come
-		position = 11
+		position = 10
 		required_missions = { pf_mac_macedonian_rugs } 
 		provinces_to_highlight = {  } 
 
@@ -1342,18 +1489,64 @@ mac_eco_4 = {
 
 	pf_mac_scupi_copper_mines = {
 		icon = mission_kon_anzikus_copper
-		position = 10
+		position = 9
 		required_missions = { pf_mac_beautiful_capital } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_id = 3001
+			NOT = { base_production = 10 }
+			NOT = { has_production_building_trigger = yes }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			if = {
+				limit = { ai = no }
+				owns_core_province = 3001
+				3001 = {
+					base_production = 10
+				}
+				3001 = {
+					has_production_building_trigger = yes
+				}
+			} 
+			else = {
+				owns_core_province = 3001
+				3001 = {
+					base_production = 6
+				}
+				3001 = {
+					has_production_building_trigger = yes
+				}
+			}
+		}
 
-		effect = {  } 
+		effect = {  
+			add_years_of_owned_provinces_production_income = {
+				years = 5
+				trigger = {
+					OR = {
+						trade_goods = iron
+						trade_goods = copper
+					}
+				}
+				custom_tooltip = mac_scupi_mines_tt
+			}
+			custom_tooltip = empty_line_tt
+			3001 = {
+				add_manufactory = yes
+			}
+			custom_tooltip = empty_line_tt
+			3001 = {
+				add_province_modifier = {
+					name = mac_scupi_mines_modifier
+					duration = -1
+				}
+			}
+		} 
 	}
 
 	pf_mac_iron_for_war = {
 		icon = mission_iron_and_copper
-		position = 11
+		position = 10
 		required_missions = { pf_mac_scupi_copper_mines } 
 		provinces_to_highlight = {  } 
 
@@ -1362,6 +1555,7 @@ mac_eco_4 = {
 		effect = {  } 
 	}
 }
+
 mac_eco_5 = {
 	slot = 5
 	generic = no
@@ -1416,10 +1610,49 @@ mac_culture_5 = {
 			pf_mac_expose_their_flaws
 			pf_mac_beacons_of_hellenic_strength
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			NOT = { religion = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			if = {
+				limit = { ai = no } 
+				num_of_owned_provinces_with = {
+					value = 100
+					religion = ROOT
+				}
+				religious_unity = 0.9
+			}
+			else = {
+				num_of_owned_provinces_with = {
+					value = 75
+					religion = ROOT
+				}
+				religious_unity = 0.75
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			if = {
+				limit = { religion = hellenic }
+				custom_tooltip = mac_unite_our_brother_hellenic_tt
+			}  
+			else_if = {
+				limit = { religion = paradosi }
+				custom_tooltip = mac_unite_our_brother_paradosi_tt
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {  
+						religion_group = ROOT
+						NOT = { religion = ROOT }
+					}
+					country_event = {
+						id = pf_reformation.2
+					}
+				}
+			}
+		} 
 	}
 }

@@ -89,3 +89,18 @@ mac_beacons_province_modifier = {
    local_tax_modifier = 0.3
    allowed_num_of_buildings = 2
 }
+mac_surpass_alexander_modifier = {
+   province_warscore_cost = -0.2
+   core_creation = -0.1
+}
+mac_beautiful_capital_modifier = {
+   province_trade_power_value = 20
+   trade_goods_size = 1
+}
+mac_region_trade_hub_modifier = {
+   ship_trade_power_modifier = 0.25
+   naval_tradition_from_trade = 0.5
+}
+mac_scupi_mines_modifier = {
+   trade_goods_size = 1
+}
