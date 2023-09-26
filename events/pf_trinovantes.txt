@@ -923,12 +923,14 @@ country_event = {		# Losing Control
 		}
 	}
 
-	immediate = [
-		random_owned_province = {
-			limit = {
-				NOT = { local_autonomy = 70 }
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					NOT = { local_autonomy = 70 }
+				}
+				save_event_target_as = pf_autonomous_province
 			}
-			save_event_target_as = pf_autonomous_province
 		}
 	}
 
