@@ -90,6 +90,7 @@ pf_sar_rules_the_waves = {
 }
 pf_sar_conquest_of_sicily = {
 	legitimacy = 1
+	republican_tradition = 0.5
 	prestige = 1
 }
 pf_sar_conquest_of_italy = {
@@ -102,8 +103,7 @@ pf_sar_corsica_integration = {
 }
 pf_sar_recruiting_old_pirates = {
 	sailors_recovery_speed = 0.33
-	global_ship_cost = -0.15
-	global_ship_recruit_speed = -0.25
+	global_ship_trade_power = 0.20
 }
 pf_sar_ports_of_the_med = {
 	global_trade_power = 0.20

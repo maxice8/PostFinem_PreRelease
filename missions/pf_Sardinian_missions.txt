@@ -16,7 +16,6 @@ pf_sar_1 = {
 				has_idea = sar_marines
 				num_of_marines = 1
 			}
-			navy_size = 24
 			OR = {
 				national_focus = DIP
 				national_focus = MIL
@@ -25,6 +24,7 @@ pf_sar_1 = {
 
 		effect = {
 			add_sailors = 2500
+			custom_tooltip = empty_line_tt
 			define_admiral = {
 				fire = 3
 				shock = 4
@@ -32,6 +32,7 @@ pf_sar_1 = {
 				siege = 0
 				name = "Guillemo Carabello"
 			}
+			custom_tooltip = empty_line_tt
 			capital_scope = {
 				add_unit_construction = {
 					type = light_ship
@@ -277,7 +278,10 @@ pf_sar_2 = {
 		icon = law_of_the_pious
 		position = 4
 		required_missions = { pf_sar_found_parliament } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			area = corsica_sardinia_area
+			NOT = { base_tax = 6 }
+		} 
 
 		trigger = {
 			NOT = {
@@ -733,9 +737,7 @@ pf_sar_4 = {
 		trigger = {
 			has_institution = renaissance
 			has_adm_advisor = yes
-			has_dip_advisor = yes
-			has_mil_advisor = yes
-			is_in_deficit = no
+			years_of_income = 0.50
 		} 
 
 		effect = {
