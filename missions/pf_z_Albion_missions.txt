@@ -76,12 +76,8 @@ pf_albion_1 = {
 		provinces_to_highlight = {
 			colonial_region = colonial_eastern_america
 			has_discovered = ROOT
-			NOT = {
-				OR = {
-					owned_by = ROOT
-					owner = { is_colonial_nation_of = ROOT } 
-				}
-			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			is_city = no
 		} 
 
 		trigger = {
@@ -138,23 +134,39 @@ pf_albion_2 = {
 		required_missions = { pf_abn_a_new_era } 
 		provinces_to_highlight = {
 			OR = {
-				province_id = 245	# York
-				province_id = 238	# Camulodonnon
-				province_id = 240	# Pengwern
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { development = 25 }
+				AND = {
+					OR = {
+						province_id = 245	# York
+						province_id = 238	# Camulodonnon
+						province_id = 240	# Pengwern		
+					}
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+						NOT = { development = 30 }
+					}
+				}
+				AND = {
+					owned_by = ROOT
+					OR = {
+						has_trade_building_trigger = no
+						has_tax_building_trigger = no
+						has_courthouse_building_trigger = no
+					}
+				}
 			}
 		} 
 
 		trigger = {
+			owns_core_province = 245
 			245 = {
 				development = 30
 			}
+			owns_core_province = 238
 			238 = {
 				development = 30
 			}
+			owns_core_province = 240
 			240 = {
 				development = 30
 			}
@@ -204,16 +216,27 @@ pf_albion_2 = {
 		position = 13
 		required_missions = { pf_abn_three_cities } 
 		provinces_to_highlight = {
-			province_id = 239	# Abona
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { has_shipyard_building_trigger = yes }
-				NOT = { has_dock_building_trigger = yes }
-				NOT = { development = 20 }
+				AND = {
+					province_id = 239
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+						NOT = { development = 20 }
+						has_shipyard_building_trigger = no
+						has_dock_building_trigger = no
+					}
+				}
+				AND = {
+					owned_by = ROOT
+					has_port = yes
+					has_shipyard_building_trigger = no
+				}
 			}
 		} 
 
 		trigger = {
+			owns_core_province = 239
 			239 = {
 				development = 20
 			}
@@ -489,10 +512,21 @@ pf_albion_4 = {
 		required_missions = { pf_abn_a_new_era } 
 		provinces_to_highlight = {
 			OR = {
-				area = eastern_norway
-				area = western_norway
+				AND = {
+					OR = {
+						area = eastern_norway
+						area = western_norway
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 23
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {
@@ -615,7 +649,7 @@ pf_albion_5 = {
 		position = 12
 		provinces_to_highlight = {
 			owned_by = ROOT
-			NOT = { has_tax_building_trigger = yes }
+			has_tax_building_trigger = no
 		} 
 
 		trigger = {
@@ -783,12 +817,8 @@ pf_albion_1_general = {
 		provinces_to_highlight = {
 			colonial_region = colonial_eastern_america
 			has_discovered = ROOT
-			NOT = {
-				OR = {
-					owned_by = ROOT
-					owner = { is_colonial_nation_of = ROOT } 
-				}
-			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			is_city = no
 		} 
 
 		trigger = {
@@ -845,23 +875,39 @@ pf_albion_2_general = {
 		required_missions = { pf_abn_a_new_era_general } 
 		provinces_to_highlight = {
 			OR = {
-				province_id = 245	# York
-				province_id = 238	# Camulodonnon
-				province_id = 240	# Pengwern
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { development = 25 }
+				AND = {
+					OR = {
+						province_id = 245	# York
+						province_id = 238	# Camulodonnon
+						province_id = 240	# Pengwern		
+					}
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+						NOT = { development = 30 }
+					}
+				}
+				AND = {
+					owned_by = ROOT
+					OR = {
+						has_trade_building_trigger = no
+						has_tax_building_trigger = no
+						has_courthouse_building_trigger = no
+					}
+				}
 			}
 		} 
 
 		trigger = {
+			owns_core_province = 245
 			245 = {
 				development = 30
 			}
+			owns_core_province = 238
 			238 = {
 				development = 30
 			}
+			owns_core_province = 240
 			240 = {
 				development = 30
 			}
@@ -911,16 +957,27 @@ pf_albion_2_general = {
 		position = 7
 		required_missions = { pf_abn_three_cities_general } 
 		provinces_to_highlight = {
-			province_id = 239	# Abona
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { has_shipyard_building_trigger = yes }
-				NOT = { has_dock_building_trigger = yes }
-				NOT = { development = 20 }
+				AND = {
+					province_id = 239
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+						NOT = { development = 20 }
+						has_shipyard_building_trigger = no
+						has_dock_building_trigger = no
+					}
+				}
+				AND = {
+					owned_by = ROOT
+					has_port = yes
+					has_shipyard_building_trigger = no
+				}
 			}
 		} 
 
 		trigger = {
+			owns_core_province = 239
 			239 = {
 				development = 20
 			}
@@ -1197,10 +1254,21 @@ pf_albion_4_general = {
 		required_missions = { pf_abn_a_new_era_general } 
 		provinces_to_highlight = {
 			OR = {
-				area = eastern_norway
-				area = western_norway
+				AND = {
+					OR = {
+						area = eastern_norway
+						area = western_norway
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 23
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {
@@ -1323,7 +1391,7 @@ pf_albion_5_general = {
 		position = 6
 		provinces_to_highlight = {
 			owned_by = ROOT
-			NOT = { has_tax_building_trigger = yes }
+			has_tax_building_trigger = no
 		} 
 
 		trigger = {
