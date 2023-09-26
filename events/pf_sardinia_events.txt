@@ -40,3 +40,45 @@ country_event = {		# Carbonian Silver
 		}
 	}
 }
+country_event = {		# A work of art
+	id = pf_sar.3
+	title = pf_sar.3.t 
+	desc = pf_sar.3.d
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_sar.3.a"
+		add_years_of_income = -0.5
+		add_prestige = 15
+		capital_scope = {
+			add_province_modifier = {
+				name = "pf_sar_art_1"
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = "pf_sar.3.c"
+		add_years_of_income = -1
+		add_prestige = 20
+		capital_scope = {
+			add_province_modifier = {
+				name = "pf_sar_art_3"
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = "pf_sar.3.a"
+		add_years_of_income = -1.5
+		add_prestige = 25
+		capital_scope = {
+			add_province_modifier = {
+				name = "pf_sar_art_2"
+				duration = -1
+			}
+		}
+	}
+}

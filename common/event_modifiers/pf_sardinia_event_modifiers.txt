@@ -78,3 +78,58 @@ pf_sar_thirst_for_war = {
 	manpower_recovery_speed = 0.2
 	sailors_recovery_speed = 0.2
 }
+pf_sar_stormtrooper_marines = {
+	regiment_disembark_speed = 1
+	assault_fort_ability = 1
+	is_marine_modifier = yes
+}
+pf_sar_rules_the_waves = {
+	navy_tradition = 1
+	prestige_from_naval = 1
+	naval_tradition_from_battle = 1
+}
+pf_sar_conquest_of_sicily = {
+	legitimacy = 1
+	prestige = 1
+}
+pf_sar_conquest_of_italy = {
+	ae_impact = -0.15
+	province_warscore_cost = -0.10
+}
+pf_sar_corsica_integration = {
+	local_autonomy = -0.05
+	local_unrest = -2
+}
+pf_sar_recruiting_old_pirates = {
+	sailors_recovery_speed = 0.33
+	global_ship_cost = -0.15
+	global_ship_recruit_speed = -0.25
+}
+pf_sar_ports_of_the_med = {
+	global_trade_power = 0.20
+	center_of_trade_upgrade_cost = -0.25
+}
+pf_sar_skilled_shipbuilders = {
+	global_ship_recruit_speed = -0.33
+	global_ship_cost = -0.10
+	naval_attrition = -0.20
+}
+pf_sar_federal_preference_modifier = {
+	diplomatic_reputation = 1
+	ae_impact = -0.20
+}
+pf_sar_above_the_federation = {
+	administrative_efficiency = 0.05
+}
+pf_sar_art_1 = {
+	prestige = 0.25
+	reform_progress_growth = 0.05
+}
+pf_sar_art_2 = {
+	prestige = 0.5
+	diplomatic_reputation = 1
+}
+pf_sar_art_3 = {
+	prestige = 0.35
+	republican_tradition = 0.20
+}

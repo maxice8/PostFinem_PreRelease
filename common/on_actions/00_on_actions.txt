@@ -4492,6 +4492,12 @@ on_admiral_recruited = {
 		limit = { has_country_flag = admirals_give_army_professionalism }
 		add_army_professionalism = 0.005
 	}
+	if = {
+		limit = {
+			has_country_flag = pf_sar_recruiting_admirals_gives_tradition }
+		}
+		add_navy_tradition = 1
+	}
 }
 
 # country
