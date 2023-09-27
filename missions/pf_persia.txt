@@ -78,6 +78,7 @@ pf_per_1 = {
 		# Permanent claims on rest of Oman and Qatar area
 		effect = {
 			2333 = { add_permanent_claim = PER }
+			404 = { add_permanent_claim = PER }
 			bahrain_area = { add_permanent_claim = PER }
 			oman_area = { add_permanent_claim = PER }
 		}
@@ -85,7 +86,7 @@ pf_per_1 = {
 
 	pf_per_control_hormuz = {
 		icon = mission_dominate_home_trade_node
-		position = 5
+		position = 4
 
 		required_missions = { pf_per_cross_the_strait pf_per_dominate_tigris }
 
@@ -198,7 +199,7 @@ pf_per_1 = {
 
 	pf_per_trade_in_persia = {
 		icon = mission_dominate_persian_gulf
-		position = 9
+		position = 10
 
 		required_missions = { pf_per_trade_with_faithful pf_per_invade_armenia }
 
@@ -211,7 +212,7 @@ pf_per_1 = {
 
 	pf_per_merchant_class = {
 		icon = mission_the_tamil_trade_guilds
-		position = 10
+		position = 11
 
 		required_missions = { pf_per_trade_in_persia}
 
@@ -298,9 +299,9 @@ pf_per_2 = {
 
 	pf_per_dominate_tigris = {
 		icon = mission_central_asian_city
-		position = 4
+		position = 3
 
-		required_missions = { pf_per_fulfil_satrapies }
+		required_missions = { pf_per_end_the_revolt }
 
 		provinces_to_highlight = {
 			OR = {
@@ -354,12 +355,14 @@ pf_per_2 = {
 					duration = -1
 				}
 			}
+			al_jazira_area = { add_permanent_claim = PER }
+			shahrizor_area = { add_permanent_claim = PER }
 		}
 	}
 
 	pf_per_destroy_seleucia = {
 		icon = mission_persian_soldiers
-		position = 5
+		position = 4
 
 		required_missions = { pf_per_dominate_tigris }
 
@@ -382,6 +385,18 @@ pf_per_2 = {
 			add_country_modifier = {
 				name = pf_per_destroyed_seleucia
 				duration = 3650
+			}
+			iraq_arabi_area = {
+				change_culture = parthian
+			}
+
+			if = {
+				limit = { 
+					415 = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				415 = {
+					change_culture = tigran
+				}
 			}
 		}
 	}
@@ -419,11 +434,49 @@ pf_per_2 = {
 		}
 	}
 
-	pf_per_invade_armenia = {
-		icon = mission_persian_soldiers
+	pf_per_converge_on_tabrizia = {
+		icon = mission_cannons_firing
 		position = 8
 
 		required_missions = { pf_per_establish_control }
+
+		provinces_to_highlight = {
+			OR = {
+				area = tabriz_area
+				area = shahrizor_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		# Own all provinces in Tabriz and Shahrizor areas
+		trigger = {
+			tabriz_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shahrizor_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		# Permanent claims on Armenia, Tabriz gets -10% dev cost, +1 prosperity growth, -5 unrest for 20 years 
+		effect = {
+			416 = {
+				add_province_modifier = {
+					name = pf_per_rule_in_tabriz
+					duration = 7300
+				}
+			}
+			armenia_area = { add_permanent_claim = ROOT }
+		}
+	}
+
+	pf_per_invade_armenia = {
+		icon = mission_persian_soldiers
+		position = 9
+
+		required_missions = { pf_per_converge_on_tabrizia }
 
 		# Own all provinces in Armenia area
 		trigger = {}
@@ -555,24 +608,52 @@ pf_per_3 = {
 		}
 
 		effect = {
-			437 = { add_permanent_claim = KHO }
-			2349 = { add_permanent_claim = KHO }
-			424 = { add_permanent_claim = TAB }
-			4291 = { add_permanent_claim = KHU }
-			northern_sindh_area = { add_permanent_claim = BAL }
-
 			397 = { add_permanent_claim = PER }
 			398 = { add_permanent_claim = PER }
 			mascat_area = { add_permanent_claim = PER }
 			termez_area = { add_permanent_claim = PER }
+			basra_area = { add_permanent_claim = PER }
+			sind_sagar_area = { add_permanent_claim = PER }
+		}
+	}
+
+	pf_per_reach_caucasus = {
+		icon = mission_the_caucasus_rus
+		position = 3
+
+		required_missions = { pf_per_end_the_revolt }
+
+		provinces_to_highlight = {
+			area = shirvan_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		# Own Shirvan area
+		trigger = {
+			shirvan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		# Begin constructing free fort on Shamakhi, permanent claims on Tabrizia
+		effect = {
+			4299 = {
+				add_building_construction = {
+					building = fort_15th
+					speed = 1.0
+					cost = 0.0
+				}
+			}
+			tabriz_area = { add_permanent_claim = ROOT }
 		}
 	}
 
 	pf_per_fulfil_satrapies = {
 		icon = mission_conquer_50_development
-		position = 3
+		position = 5
 
-		required_missions = { pf_per_end_the_revolt }
+		required_missions = { pf_per_destroy_seleucia pf_per_reach_caucasus pf_per_invade_kashmir }
 
 		provinces_to_highlight = {
 			OR = {
@@ -625,82 +706,6 @@ pf_per_3 = {
 					duration = -1
 				}
 			}
-			basra_area = { add_permanent_claim = ROOT }
-			iraq_arabi_area = { add_permanent_claim = ROOT }
-			shirvan_area = { add_permanent_claim = ROOT }
-			sind_sagar_area = { add_permanent_claim = ROOT }
-			sindh_area = { add_permanent_claim = ROOT }
-		}
-	}
-
-	pf_per_reach_caucasus = {
-		icon = mission_the_caucasus_rus
-		position = 4
-
-		required_missions = { pf_per_fulfil_satrapies }
-
-		provinces_to_highlight = {
-			area = shirvan_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
-		# Own Shirvan area
-		trigger = {
-			shirvan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-
-		# Begin constructing free fort on Shamakhi, permanent claims on Tabrizia
-		effect = {
-			4299 = {
-				add_building_construction = {
-					building = fort_15th
-					speed = 1.0
-					cost = 0.0
-				}
-			}
-			tabriz_area = { add_permanent_claim = ROOT }
-			shahrizor_area = { add_permanent_claim = ROOT }
-		}
-	}
-
-	pf_per_converge_on_tabrizia = {
-		icon = mission_cannons_firing
-		position = 6
-
-		required_missions = { pf_per_reach_caucasus pf_per_destroy_seleucia }
-
-		provinces_to_highlight = {
-			OR = {
-				area = tabriz_area
-				area = shahrizor_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
-		# Own all provinces in Tabriz and Shahrizor areas
-		trigger = {
-			tabriz_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			shahrizor_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-
-		# Permanent claims on Armenia, Tabriz gets -10% dev cost, +1 prosperity growth, -5 unrest for 20 years 
-		effect = {
-			416 = {
-				add_province_modifier = {
-					name = pf_per_rule_in_tabriz
-					duration = 7300
-				}
-			}
-			armenia_area = { add_permanent_claim = ROOT }
 		}
 	}
 
@@ -708,7 +713,7 @@ pf_per_3 = {
 		icon = mission_subdue_the_afghans
 		position = 7
 
-		required_missions = { pf_per_secure_the_gulf pf_per_converge_on_tabrizia pf_per_assist_satrapies }
+		required_missions = { pf_per_secure_the_gulf pf_per_fulfil_satrapies pf_per_assist_satrapies }
 
 		provinces_to_highlight = {
 			owner = {
@@ -913,19 +918,19 @@ pf_per_4 = {
 
 	pf_per_invade_india = {
 		icon = mission_indian_empire
-		position = 4
+		position = 3
 
-		required_missions = { pf_per_fulfil_satrapies }
+		required_missions = { pf_per_end_the_revolt }
 
 		provinces_to_highlight = {
 			superregion = india_superregion
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
-		# Own 8 provinces on Indian Subcontinent
+		# Own 6 provinces on Indian Subcontinent
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 8
+				value = 6
 				superregion = india_superregion
 			}
 		}
@@ -936,8 +941,42 @@ pf_per_4 = {
 				name = pf_per_into_india
 				duration = 3650
 			}
-			multan_area = { add_permanent_claim = ROOT }
+			kashmir_area = { add_permanent_claim = ROOT }
+			sindh_area = { add_permanent_claim = ROOT }
+		}
+	}
+
+	pf_per_invade_kashmir = {
+		icon = mission_unknown_mission
+		position = 4
+
+		required_missions = { pf_per_invade_india pf_per_drive_back_hordes }
+
+		provinces_to_highlight = {
+			area = kashmir_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		# Own Kashmir area
+		trigger = {
+			kashmir_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		# Build fort on Ladakh, 50 adm
+		effect = {
+			2074 = {
+				add_building_construction = {
+					building = fort_15th
+					speed = 1.0
+					cost = 0.0
+				}
+			}
+			add_adm_power = 50
 			lahore_area = { add_permanent_claim = ROOT }
+			multan_area = { add_permanent_claim = ROOT }
 		}
 	}
 
@@ -945,7 +984,7 @@ pf_per_4 = {
 		icon = mission_restore_rule_over_multan
 		position = 5
 
-		required_missions = { pf_per_invade_india }
+		required_missions = { pf_per_invade_kashmir }
 
 		provinces_to_highlight = {
 			area = multan_area
@@ -1156,12 +1195,16 @@ pf_per_5 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			1967 = {
-				type = all
+			2349 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			458 = {
-				type = all
+			438 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			437 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			441 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -1176,11 +1219,19 @@ pf_per_5 = {
 				add_devastation = -100
 				change_religion = zoroastrian
 			}
-			1967 = {
+			2349 = {
 				add_devastation = -100
 				change_religion = zoroastrian
 			}
-			458 = {
+			438 = {
+				add_devastation = -100
+				change_religion = zoroastrian
+			}
+			437 = {
+				add_devastation = -100
+				change_religion = zoroastrian
+			}
+			441 = {
 				add_devastation = -100
 				change_religion = zoroastrian
 			}
@@ -1257,7 +1308,7 @@ pf_per_5 = {
 		icon = mission_hands_praying
 		position = 5
 
-		required_missions = { pf_per_invade_india }
+		required_missions = { pf_per_invade_kashmir }
 
 		provinces_to_highlight = {
 			OR = {
