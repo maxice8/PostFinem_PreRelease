@@ -175,6 +175,7 @@ pf_alexanders_crown = {
 	allow_force_tributary = no
 	potential = {
 		tag = MAC
+		NOT = { has_country_flag = mac_argead_restoration_flag }
 	}
 	
 	government_abilities = {
@@ -183,6 +184,38 @@ pf_alexanders_crown = {
 	modifiers = {
 		min_autonomy_in_territories = -0.1
 		prestige_decay = -0.01
+	}
+	# custom_attributes = {
+	# 	buffed_strong_duchies = yes #+5% Loyalty
+	# }
+	ai = {
+		factor = 0.5 #generic
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+#Upgraded Alexander's Crown for Argead Restoration
+
+pf_argead_aegis = {
+	icon = "pf_argead_aegis"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+	potential = {
+		has_country_flag = mac_argead_restoration_flag
+	}
+	
+	government_abilities = {
+		mac_war_cabinet_mechanic
+	}
+	modifiers = {
+		min_autonomy_in_territories = -0.2
+		governing_capacity = 250
+		prestige_decay = -0.01
+		max_absolutism = 15
+		yearly_absolutism = 0.5
 	}
 	# custom_attributes = {
 	# 	buffed_strong_duchies = yes #+5% Loyalty

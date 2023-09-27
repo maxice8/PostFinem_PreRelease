@@ -134,3 +134,23 @@ country_event = {
 	}
 }
 
+#Schizm event, allows people to flip
+country_event = {
+	id = pf_reformation.2
+	title = pf_reformation.2.t
+	desc = pf_reformation.2.d
+	picture = PROTESTANT_GREAT_REFORMER_eventPicture
+	is_triggered_only = yes
+	
+	
+	# trigger = {  }
+	
+	# mean_time_to_happen = {  }
+
+	option = {
+		name = pf_reformation.2.a
+
+		
+	}
+}
+

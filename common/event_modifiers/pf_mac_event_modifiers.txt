@@ -1,6 +1,6 @@
 mac_swell_the_ranks_modifier = {
    manpower_recovery_speed = 0.1
-   land_forcelimit = 0.1
+   land_forcelimit_modifier = 0.1
 }
 mac_our_hebron_neighbors_modifier_1 = {
    local_missionary_strength = 0.03
@@ -76,4 +76,42 @@ mac_hellenic_hegemon_alexandria_modifier = {
 mac_hellenic_hegemon_aegyptos_modifier = {
    liberty_desire = -25
    global_trade_goods_size_modifier = 0.1
+}
+mac_expose_their_flaws_modifier = {
+   global_heretic_missionary_strength = 0.02
+   cb_on_religious_enemies = yes
+}
+mac_argead_restoration_modifier= {
+   administrative_efficiency = 0.05
+   trade_efficiency = 0.1
+}
+mac_beacons_province_modifier = {
+   local_tax_modifier = 0.3
+   allowed_num_of_buildings = 2
+}
+mac_surpass_alexander_modifier = {
+   province_warscore_cost = -0.2
+   core_creation = -0.1
+}
+mac_beautiful_capital_modifier = {
+   province_trade_power_value = 20
+   trade_goods_size = 1
+}
+mac_region_trade_hub_modifier = {
+   ship_trade_power_modifier = 0.25
+   naval_tradition_from_trade = 0.5
+}
+mac_scupi_mines_modifier = {
+   trade_goods_size = 1
+}
+mac_unite_brothers_modifier = {
+   diplomatic_reputation = 1
+   manpower_in_true_faith_provinces = 0.1
+}
+mac_riches_of_silk_road_modifier = {
+   global_trade_goods_size_modifier = 0.05
+   caravan_power = 0.25
+}
+mac_iron_for_war_modifier = {
+   land_forcelimit_modifier = 0.1
 }
