@@ -385,6 +385,14 @@ on_war_won = {
 			}
 		}
 	}
+
+	if = {
+		limit = {
+			tag = PER
+			NOT = { mission_completed = pf_per_complete_expansion }
+		}
+		pf_per_release_satrapies_scripted_effect = yes
+	}
 }
 
 # country
@@ -1603,7 +1611,18 @@ on_adm_development = {
 				value = 0.25
 			}
 		}
-	}	
+	}
+	if = {
+		limit = {
+			owner = { overlord = { tag = PER } }
+			event_target:pf_per_et_province_to_tax_dev = { province_id = ROOT }
+		}
+		owner = {
+			overlord = {
+				country_event = { id = pf_per_events.68 }
+			}
+		}
+	}
 }
 
 # province
@@ -1636,6 +1655,17 @@ on_dip_development = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			owner = { overlord = { tag = PER } }
+			event_target:pf_per_et_province_to_prod_dev = { province_id = ROOT }
+		}
+		owner = {
+			overlord = {
+				country_event = { id = pf_per_events.69 } # Nice
+			}
+		}
+	}
 }
 
 # province
@@ -1665,6 +1695,17 @@ on_mil_development = {
 				mechanic_type = gaul_confederation_mechanic
 				power_type = gaul_confederation
 				value = 0.25
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = { overlord = { tag = PER } }
+			event_target:pf_per_et_province_to_mil_dev = { province_id = ROOT }
+		}
+		owner = {
+			overlord = {
+				country_event = { id = pf_per_events.70 }
 			}
 		}
 	}

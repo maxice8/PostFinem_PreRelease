@@ -350,7 +350,7 @@ pf_per_2 = {
 				}
 			}
 			410 = {
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 					name = pf_per_baghdad_reborn
 					duration = -1
 				}
@@ -430,7 +430,6 @@ pf_per_2 = {
 					duration = -1
 				}
 			}
-			country_event = { id = pf_per_events.12 }
 		}
 	}
 
@@ -1179,8 +1178,10 @@ pf_per_5 = {
 			OR = {
 				area = termez_area
 				area = transoxiana_area
-				province_id = 1967
-				province_id = 458
+				province_id = 2349
+				province_id = 438
+				province_id = 437
+				province_id = 441
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1195,18 +1196,10 @@ pf_per_5 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			2349 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			438 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			437 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			441 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			2349 = { country_or_non_sovereign_subject_holds = ROOT }
+			438 = { country_or_non_sovereign_subject_holds = ROOT }
+			437 = { country_or_non_sovereign_subject_holds = ROOT }
+			441 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		# Conquered areas lose devastation, flip Zoroastrian
