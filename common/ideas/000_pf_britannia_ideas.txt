@@ -118,3 +118,42 @@ brittonic_ideas = {		# Brittonic minors
 		army_tradition_from_battle = 0.50
 	}
 }
+SAR_ideas = {		# Sardinian League
+	start = {	
+		naval_forcelimit_modifier = 0.20
+		idea_cost = -0.10
+	}
+	bonus = {
+		global_ship_cost = -0.10
+	}	
+	trigger = {
+		tag = SAR
+	}
+	free = yes
+	
+	sar_marines = {
+		allowed_marine_fraction = 0.50
+		global_sailors_modifier = 0.25
+	}
+	sar_republic = {
+		merchants = 1
+	}
+	sar_constitution = {
+		republican_tradition = 0.50
+		#legitimacy = 1
+	}
+	sar_trade_nexus = {
+		global_prov_trade_power_modifier = 0.25
+	}
+	sar_national_zeal = {
+		land_morale = 0.10
+		naval_morale = 0.10
+	}
+	sar_crossroads_of_cultures = {
+		num_accepted_cultures = 2
+	}
+	sar_mercantile_ambition = {
+		burghers_loyalty_modifier = 0.05
+		placed_merchant_power = 5
+	}
+}
