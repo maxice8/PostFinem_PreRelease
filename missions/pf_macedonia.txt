@@ -622,7 +622,6 @@ mac_3 = {
 			else = {	
 				army_size = 30
 				num_of_cavalry = 4
-				num_of_generals = 1
 			}
 		} 
 
@@ -1105,8 +1104,15 @@ mac_cabinet_5 = {
 				power_type = mac_war_cabinet_organization
 				value = 50
 			}
-			land_forcelimit = 60
-			army_size_percentage = 1
+			if = { 
+				limit = { ai = no }
+				land_forcelimit = 60
+				army_size_percentage = 1
+			}
+			else = {
+				land_forcelimit = 50
+				army_size_percentage = 0.75
+			}
 		} 
 
 		effect = {  
@@ -1188,11 +1194,40 @@ mac_eco_1 = {
 		icon = mission_dominate_trade_in_bengal
 		position = 10
 		required_missions = { pf_mac_regional_trade_hub } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				AND = {		
+					province_id = 1319
+					NOT = { highest_value_trade_node = yes }
+				}
+				AND = {
+					OR = {
+						province_id = 1319
+						province_id = 358
+						province_id = 377
+						province_id = 328
+					}
+					NOT = {
+						has_most_province_trade_power = ROOT
+					}
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			1319 = { highest_value_trade_node = yes }
+			1319 = { has_most_province_trade_power = ROOT }
+			358 = { has_most_province_trade_power = ROOT }
+			377 = { has_most_province_trade_power = ROOT }
+			328 = { has_most_province_trade_power = ROOT }
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_years_of_trade_income = 3
+			custom_tooltip = empty_line_tt
+			set_country_flag = mac_dominate_eastern_seas_flag
+			custom_tooltip = mac_dominate_eastern_seas_tt
+		} 
 	}
 }
 mac_eco_2 = {
@@ -1377,9 +1412,33 @@ mac_eco_3 = {
 		required_missions = { pf_mac_macedonian_rugs } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			trading_bonus = {
+				trade_goods = silk
+				value = yes
+			}
+			production_leader = {
+				trade_goods = silk
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_years_of_owned_provinces_production_income = {
+				years = 5
+				trigger = {
+					OR = {
+						trade_goods = silk
+						trade_goods = cloth
+					}
+				}
+				custom_tooltip = mac_riches_of_silk_road_tt
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = mac_riches_of_silk_road_modifier
+				duration = -1
+			}
+		} 
 	}
 }
 
@@ -1559,11 +1618,27 @@ mac_eco_4 = {
 		icon = mission_iron_and_copper
 		position = 10
 		required_missions = { pf_mac_scupi_copper_mines } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			trade_goods = iron
+			has_manufactory_trigger = no
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 3
+				has_manufactory_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_mil_power = 100
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = mac_iron_for_war_modifier
+				duration = -1
+			}
+		} 
 	}
 }
 

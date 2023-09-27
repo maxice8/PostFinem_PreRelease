@@ -1,6 +1,6 @@
 mac_swell_the_ranks_modifier = {
    manpower_recovery_speed = 0.1
-   land_forcelimit = 0.1
+   land_forcelimit_modifier = 0.1
 }
 mac_our_hebron_neighbors_modifier_1 = {
    local_missionary_strength = 0.03
@@ -107,4 +107,11 @@ mac_scupi_mines_modifier = {
 mac_unite_brothers_modifier = {
    diplomatic_reputation = 1
    manpower_in_true_faith_provinces = 0.1
+}
+mac_riches_of_silk_road_modifier = {
+   global_trade_goods_size_modifier = 0.05
+   caravan_power = 0.25
+}
+mac_iron_for_war_modifier = {
+   land_forcelimit_modifier = 0.1
 }
