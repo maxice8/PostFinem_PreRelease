@@ -6,7 +6,10 @@ pf_trn_1 = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 	}
 
@@ -90,7 +93,10 @@ pf_trn_1_locked_druid_path = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 		NOT = { has_country_flag = pf_trn_anti_druid }
 		NOT = { has_country_flag = pf_trn_pro_druid }
@@ -137,7 +143,10 @@ pf_trn_1_anti_druid_path = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 		has_country_flag = pf_trn_anti_druid
 	}
@@ -237,7 +246,10 @@ pf_trn_1_pro_druid_path = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 		has_country_flag = pf_trn_pro_druid
 	}
@@ -297,7 +309,10 @@ pf_trn_1_second_path = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 	}
 
@@ -348,7 +363,10 @@ pf_trn_2 = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 	}
 
@@ -700,7 +718,10 @@ pf_trn_3 = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 	}
 
@@ -1091,7 +1112,10 @@ pf_trn_4 = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 	}
 
@@ -1479,7 +1503,10 @@ pf_trn_5 = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 	}
 
@@ -1576,14 +1603,14 @@ pf_trn_5 = {
 		trigger = {
 			OR = {
 				has_reform = pf_guidance_of_the_elders_reform
-				has_reform_on_level = 2
+				has_reform_on_level = 1
 			}
 			has_government_power = {
 				mechanic_type = trinovantes_cohesion_mechanic
 				power_type = trn_cohesion
 				value = 50
 			}
-			legitimacy = 100
+			legitimacy_equivalent = 100
 		}
 		effect = {
 			add_stability_or_adm_power = yes
@@ -1606,7 +1633,7 @@ pf_trn_5 = {
 			NOT = { corruption = 0.1 }
 			total_development = 120
 			OR = {
-				has_reform_on_level = 4
+				has_reform_on_level = 3
 				has_adm_advisor_3 = yes
 			}
 		}
@@ -1711,10 +1738,9 @@ pf_trn_5 = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = pf_trn_blackcoat_rebellion_trigger_tt
-				OR = {
-					has_country_flag = pf_trn_ended_blackcoat_revolution
-				}
+				has_country_flag = pf_had_blackcoat_revolution
 			}
+			NOT = { has_any_disaster = yes }
 		}
 		effect = {
 			custom_tooltip = pf_trn_blackcoat_revolution_1_tt

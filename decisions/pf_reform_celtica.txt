@@ -76,18 +76,18 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			change_tag = CEL
-			custom_tooltip = " "
+			custom_tooltip = empty_line_tt
 			on_change_tag_effect = yes
 			restore_country_name = yes
 			swap_non_generic_missions = yes
-			custom_tooltip = " "
+			custom_tooltip = empty_line_tt
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {
 					NOT = { government_rank = 2 }
 				}
 				set_government_rank = 2
-				custom_tooltip = " "
+				custom_tooltip = empty_line_tt
 			}
 			british_isles_region = {
 				limit = {
@@ -95,7 +95,7 @@ country_decisions = {
 				}
 				add_permanent_claim = CEL
 			}
-			custom_tooltip = " "
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
