@@ -10,6 +10,7 @@ estate_nobles_pf_satrapy_expansion_plan = {
 
 	can_revoke = { always = no }
 	on_granted = { custom_tooltip = estate_nobles_pf_satrapy_expansion_plan_tt }
+	on_revoked = { custom_tooltip = estate_nobles_pf_satrapy_expansion_plan_rt }
 	penalties = {
 		core_creation = 1
 		governing_capacity_modifier = -0.5
@@ -28,6 +29,7 @@ estate_nobles_pf_satrapy_annexation_ban = {
 
 	can_revoke = { always = no }
 	on_granted = { custom_tooltip = estate_nobles_pf_satrapy_annexation_ban_tt }
+	on_revoked = { custom_tooltip = estate_nobles_pf_satrapy_annexation_ban_rt }
 }
 
 estate_nobles_pf_satrapy_exemption_from_conscription = {
@@ -42,4 +44,5 @@ estate_nobles_pf_satrapy_exemption_from_conscription = {
 
 	can_revoke = { always = no }
 	on_granted = { custom_tooltip = estate_nobles_pf_satrapy_exemption_from_conscription_tt }
+	on_revoked = { custom_tooltip = estate_nobles_pf_satrapy_exemption_from_conscription_rt }
 }

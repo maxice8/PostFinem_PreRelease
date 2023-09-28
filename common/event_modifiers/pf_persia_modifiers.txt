@@ -158,3 +158,39 @@ pf_satrapy_expansion_plan_complete = {
 pf_per_conquered_our_claims = {
 	liberty_desire = -10
 }
+
+pf_per_faithful_trading_port = {
+	province_trade_power_modifier = 0.25
+}
+
+pf_per_trading_in_persia = {
+	trade_efficiency = 0.1
+	global_own_trade_power = 0.2
+}
+
+pf_per_economical_boost_modifier = {
+	placed_merchant_power = 20
+	global_prov_trade_power_modifier = 0.5
+	mercantilism_cost = -0.5
+}
+
+pf_per_defended_mountain_fort = {
+	local_defensiveness = 0.2
+}
+
+pf_per_mountain_development = {
+	local_development_cost = -0.25
+}
+
+pf_per_embraced_renaissance = {
+	development_cost = -0.1
+	technology_cost = -0.1
+}
+
+pf_per_satrapy_investment_boom = {
+	global_trade_goods_size_modifier = 0.1
+}
+
+pf_per_continued_expansion = {
+	reduced_liberty_desire = 10
+}

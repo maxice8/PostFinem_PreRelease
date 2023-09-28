@@ -4,12 +4,24 @@
  estate_nobles_pf_satrapy_expansion_plan: "Satrapy Expansion Plan"
  estate_nobles_pf_satrapy_expansion_plan_desc: "After the Dastur's humiliating defeat in the Fourth Satrapy Revolt the Dastur was forced to agree to an expansion plan that assigns vast swathes of land to the Satrapies. We will be forced to grant this land to them as we acquire it, and it will be exceptionally difficult to justify taking land for ourselves before we complete this plan."
  estate_nobles_pf_satrapy_expansion_plan_tt: "We will be §Rforced to cede lands§! within the §YExpansion Plan§! to new or existing §YSatrapies§! as we conquer it."
+ estate_nobles_pf_satrapy_expansion_plan_rt: "We will no longer be §Rforced to cede lands§! within the §YExpansion Plan§! to new or existing §YSatrapies§!."
  estate_nobles_pf_satrapy_annexation_ban: "Satrapy Annexation Ban"
  estate_nobles_pf_satrapy_annexation_ban_desc: "One of the first demands of the Satrapies was to ensure the Dastur had no legal right to annex them or remove them from power. We will have to wait until we have almost complete control over the Satrapies before we can revoke this."
  estate_nobles_pf_satrapy_annexation_ban_tt: "We cannot §YAnnex§! our §YSatrapies§! while this privilege is granted."
+ estate_nobles_pf_satrapy_annexation_ban_rt: "We will be able to §YAnnex§! our §YSatrapies§!."
  estate_nobles_pf_satrapy_exemption_from_conscription: "Satrapy Exemption from Conscription"
  estate_nobles_pf_satrapy_exemption_from_conscription_desc: "The treaty of the Third Satrapy Revolt banned the Dastur from raising any armies in Satrapy lands. Revoking this would once again allow us to demand some military contributions from the Satrapies."
  estate_nobles_pf_satrapy_exemption_from_conscription_tt: "We will not get any §YForce Limit§! or §YManpower§! from our §YSatrapies§! while this privilege is granted."
+ estate_nobles_pf_satrapy_exemption_from_conscription_rt: "We will gain §YForce Limit§! and §YManpower§! contributions from our §YSatrapies§! again."
+ estate_burghers_pf_per_economical_boost: "Persian Merchant Guild Freedom"
+ estate_burghers_pf_per_economical_boost_desc: "After the success of letting the Burghers have their own free hand over economic matters, we have decided to enshrine this right in law and even extend it, continuing this mutually beneficial arrangement."
+ estate_burghers_pf_per_economical_boost_tt: "§YScales with Influence§!\nAt §Y100%§! influence the privilege has the following effect:"
+ pf_per_economical_boost_modifier: "Guaranteed Economical Freedom"
+ pf_per_until_revoked_tt: "until revoked"
+ estate_burghers_pf_per_mountain_development: "Mountain Development Program"
+ estate_burghers_pf_per_mountain_development_desc: "Our homeland is filled with many mountainous lands that we have over time grown to utilise effectively. Our expertise in constructing mountain cities is now unparalleled."
+ estate_burghers_pf_per_mountain_development_tt: "Every owned §YMountain§! province:"
+ estate_burghers_pf_per_mountain_development_rt: "The modifier '§YMountain Development§!' is removed from all §YMountain§! provinces"
 
 # Modifiers
  pf_per_satrapies_granted_concessions: "Granted Concessions"
@@ -48,6 +60,11 @@
  pf_per_overlord_filled_demand: "Overlord Completed Demand"
  pf_satrapy_expansion_plan_complete: "Expansion Promises Fulfilled"
  pf_per_conquered_our_claims: "Conquered our Claims"
+ pf_per_trading_in_persia: "Dominating Persian Trade"
+ pf_per_embraced_renaissance: "Persian Renaissance"
+ pf_per_mountain_development: "Mountain Development"
+ pf_per_satrapy_investment_boom: "Economic Boom"
+ pf_per_continued_expansion: "Continued Expansion"
 
 # Satrapy Revolt disaster
  pf_per_satrapy_revolt: "Satrapy Revolt"
@@ -362,7 +379,16 @@
  pf_per_satrapy_demand_consequences_2_tt: "Refusing or Failing §YSatrapy Requires§! events will now have less severe consequences!"
  pf_per_satrapy_demand_rewards_3_tt: "Successfully completing §YSatrapy Requests§! events will now grant better rewards!"
  pf_per_satrapy_demand_consequences_3_tt: "Refusing §YSatrapy Requests§! events will now have no negative consequences!"
-
-
-
-
+ pf_per_trading_in_gujarat: "Trading with the Faithful"
+ pf_per_faithful_trading_port: "Faithful Trading Port"
+ pf_per_faithful_trading_partner: "Trading Partner"
+ pf_per_is_zoroastrian_tt: "Religion is §YZoroastrian§!"
+ pf_per_trading_with_faithful_tt: "\nIf we complete the mission by owning the provinces:"
+ pf_per_trading_with_faithful_2_tt: "Alternatively, if we complete the mission by allying the owner of the provinces, each ally gets:\nOpinion of §YPersia§! changed by §G+50§!"
+ pf_per_trade_nodes_traded_tt: " Trade Nodes:\n    Is §YPersia§!, §YBasra§!, §YHormuz§!, §YSamarkand§!, §YGujarat§! or §YLahore§!\n    §YPersia§! has §Y80%§! or more trade power."
+ pf_per_merchant_class_income_tt: "Gain 12 months of income from each of the mentioned trade nodes.\n§YAllow Merchant Guilds Economic Freedom§! will be upgraded to §YPersian Merchant Guild Freedom§!"
+ pf_per_merchant_class_40_trade_income_tt: "Have an income from §YTrade§! of at least §G40§! ducats."
+ pf_per_defended_mountain_fort: "Important Border Fort"
+ pf_per_defend_the_mountains_tt: "The required provinces get:\nStart construction of Ramparts for §Y0.0%§! of the cost, and §Y100.0%§! of the time."
+ pf_per_unlock_mountain_development_tt: "Enables the Merchant Guilds privilege '§YMountain Development Program§!'"
+ pf_per_satrapy_province_invested_tt: " Provinces in Satrapies:\n    Base Production at least §Y5§!£icon_production_in_text£\n    Has a §YWorkshop§! or a §YCounting House§! building."
