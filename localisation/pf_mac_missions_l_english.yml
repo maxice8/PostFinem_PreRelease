@@ -1,13 +1,12 @@
 ﻿l_english:
  pf_mac_fund_the_military_title:0 "Fund the Military"
- pf_mac_fund_the_military_desc:0 "get kosovo up to 8 prod dev / give claims on rascia, albania and serbia"
+ pf_mac_fund_the_military_desc:0 "Gold, the lifeblood of empires, now beckons [Root.GetName]. By securing a rich gold mine, we ensure a steady flow of wealth to maintain our professional troops. With every nugget extracted, the [Root.GetAdjective] military grows stronger, funded and ready to defend our realm's interests."
 
  pf_mac_our_hebron_neighbors_title:0 "Our Hebron Neighbors"
- pf_mac_our_hebron_neighbors_desc:0 "own or subject own albania / if nek is subject give one, if annexed give another, give claims on calabria and apulia"
+ pf_mac_our_hebron_neighbors_desc:0 "Having leased our lands to the exiled Israelites, the time has come for [Root.GetName] to reconsider its stance. While they've found refuge in Nekharot, our Macedonian interests must prevail. Whether through direct rule or a [Root.GetAdjective] puppet, the Hebron destiny is intertwined with Macedonian ambitions."
 
  pf_mac_magna_graecia_title:0 "Establish Magna Graecia"
- pf_mac_magna_graecia_desc:0 "own cores in apulia and calabria / event: release magna graecia as a personal union with no diplo slot, give them claims on sicily and all of southern italy OR get the claims yourself and a modifier"
- mac_release_magna_graecia_tt: "§YMagna Graecia§! will be released under a §YPersonal Union§!"
+ pf_mac_magna_graecia_desc:0 "As [Root.GetName] looks across the Adriatic, toward Italian shores, visions of a distant past come to mind, with Magna Graecia emerging. By marching upon the Italian Federation and carving out Hellenic territories in the south, we may craft a new era of prosperity and glory, side by side with our Hellenic kin."
  mac_magna_graecia_claims_tt: "§YMagna Graecia§! gains permanent claims on the §YSicilian§!, §YCapitania§!, and §YMolise§! areas."
 
  pf_mac_reclaim_asia_title:0 "Asia Reclaimed"
@@ -64,12 +63,27 @@
 
  pf_mac_why_go_alone_title:0 "Why Go Alone?"
  pf_mac_why_go_alone_desc:0 "at least 2 allies or 3 subjects with 150 opinion / modifier, extra bonus if allied to archon"
+ mac_subjugated_archon_reform_tt: "This will greatly upset the §YHellenic§! world and may have long-lasting implications"
+ mac_why_go_alone_ARCHON_CONSEQUENCES_tt: "The completion of this mission will heavily determine our path once the §YHellenic Reformation§! occurs"
+ mac_why_go_alone_ARCHON_FRIEND_tt: "If completing the mission via befriending the §YArchon§!"
+ mac_why_go_alone_ARCHON_SUBJECT_tt: "If the §YArchon§! is subjugated"
+ mac_converting_paradosi_tt: "Due to Macedonian subjugation of the §YArchon§! prior to conversion:"
 
  pf_mac_branching1_title:0 "Locked Mission"
- pf_mac_branching1_desc:0 ""
+ pf_mac_branching1_desc:0 "This mission will be unlocked upon completion of the §YWhy Go Alone?§! mission"
 
  pf_mac_branching2_title:0 "Locked Mission"
- pf_mac_branching2_desc:0 ""
+ pf_mac_branching2_desc:0 "This mission will be unlocked upon completion of the §YWhy Go Alone?§! mission"
+
+ mac_archon_friend_1_title: "Athenaean Ties"
+ mac_archon_friend_1_desc: ""
+ mac_archon_friend_2_title: "Offer the Archon Refuge"
+ mac_archon_friend_2_desc: ""
+
+mac_archon_subject_1_title: "The Paradosi Reformation"
+mac_archon_subject_1_desc: ""
+mac_archon_subject_2_title: "Hellenism Conquered"
+mac_archon_subject_2_desc: ""
 
  pf_mac_incorporating_big_guns_title:0 "Incorporating Big Guns"
  pf_mac_incorporating_big_guns_desc:0 "At least 75 org, at least 20k arty OR have 10k arty and firepower or quality ideas / if firepower or quality ideas get modifier for arty bonus vs forts and siege ability, add modifier for arty damage from backrow and arty cost"

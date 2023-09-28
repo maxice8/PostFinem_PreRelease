@@ -115,3 +115,15 @@ mac_riches_of_silk_road_modifier = {
 mac_iron_for_war_modifier = {
    land_forcelimit_modifier = 0.1
 }
+mac_why_go_alone_ARCHON_FRIEND_modifier = {
+   papal_influence = 2
+   prestige = 0.5
+}
+mac_why_go_alone_ARCHON_SUBJECT_modifier = {
+   papal_influence = -2
+   diplomatic_annexation_cost = -0.25
+}
+mac_converting_paradosi_modifier = {
+   missionaries = 1
+   prestige_per_development_from_conversion = 0.2
+}
