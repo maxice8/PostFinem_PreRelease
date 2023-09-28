@@ -1611,6 +1611,366 @@ province_event = { # Blessing of Balder
             type = hall_of_pantheons
             tier = 1
         }
+        province_is_or_accepts_religion = {religion = hellenic}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
+            }
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 2555
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+    }
+
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            save_event_target_as = blessed_country
+            add_country_modifier = { 
+                name = pf_mon_hop_ares_blessing
+                duration = 365
+            }
+            custom_tooltip = pf_mon_events.17.tt1_1
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                effect = "add_claim = event_target:blessed_country"
+            }
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            save_event_target_as = blessed_country
+            add_country_modifier = { 
+                name = pf_mon_hop_ares_blessing
+                duration = 730
+            }
+            custom_tooltip = pf_mon_events.17.tt1_1
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                effect = "add_claim = event_target:blessed_country"
+            }
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes"
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                effect = "add_claim = event_target:blessed_country"
+            }
+        }
+    }
+}
+province_event = { # Blessing of Reshef
+    id = pf_mon_events.18
+    title = pf_mon_events.18.title
+    desc = pf_mon_events.18.desc
+    picture = NORSE_TEMPLE_eventPicture
+    goto = ROOT
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
+    trigger = {
+        has_great_project = {
+            type = hall_of_pantheons
+            tier = 1
+        }
+        province_is_or_accepts_religion = {religion = punic_religion}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
+            }
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 2555
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+    }
+
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            save_event_target_as = blessed_country
+            add_country_modifier = { 
+                name = pf_mon_hop_reshef_blessing
+                duration = 365
+            }
+            custom_tooltip = pf_mon_events.18.tt1_1
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                effect = "add_claim = event_target:blessed_country"
+            }
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            save_event_target_as = blessed_country
+            add_country_modifier = { 
+                name = pf_mon_hop_reshef_blessing
+                duration = 730
+            }
+            custom_tooltip = pf_mon_events.18.tt1_1
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                effect = "add_claim = event_target:blessed_country"
+            }
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes"
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                effect = "add_claim = event_target:blessed_country"
+            }
+        }
+    }
+}
+province_event = { # Blessing of Mars
+    id = pf_mon_events.19
+    title = pf_mon_events.19.title
+    desc = pf_mon_events.19.desc
+    picture = NORSE_TEMPLE_eventPicture
+    goto = ROOT
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
+    trigger = {
+        has_great_project = {
+            type = hall_of_pantheons
+            tier = 1
+        }
+        province_is_or_accepts_religion = {religion = romana}
+        if = { # Reduced cooldown if the monument is tier 2
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 2
+                }
+            }
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 2555
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 1788
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+        else = {
+            OR = {
+                NOT = {has_province_flag = pf_mon_hop_blessing_flag}
+                had_province_flag = {
+                    flag = pf_mon_hop_blessing_flag
+                    days = 3650
+                }
+                AND = { # Reduced cooldown if you have <0 stability
+                    had_province_flag = {
+                        flag = pf_mon_hop_blessing_flag
+                        days = 2555
+                    }
+                    NOT = {owner = {stability = 0}}
+                }
+            }
+        }
+    }
+
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            NOT = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 3
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            save_event_target_as = blessed_country
+            add_country_modifier = { 
+                name = pf_mon_hop_mars_blessing
+                duration = 365
+            }
+            custom_tooltip = pf_mon_events.19.tt1_1
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                effect = "add_claim = event_target:blessed_country"
+            }
+        }
+    }
+    option = {
+        name = pf_mon_events_we_are_truly_blessed
+        trigger = {
+            has_great_project = {
+                type = hall_of_pantheons
+                tier = 3
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        set_province_flag = pf_mon_hop_blessing_flag
+        owner = {
+            save_event_target_as = blessed_country
+            add_country_modifier = { 
+                name = pf_mon_hop_mars_blessing
+                duration = 730
+            }
+            custom_tooltip = pf_mon_events.19.tt1_1
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                effect = "add_claim = event_target:blessed_country"
+            }
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes"
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                effect = "add_claim = event_target:blessed_country"
+            }
+        }
+    }
+}
+province_event = { # Blessing of Tyr
+    id = pf_mon_events.20
+    title = pf_mon_events.20.title
+    desc = pf_mon_events.20.desc
+    picture = NORSE_TEMPLE_eventPicture
+    goto = ROOT
+    mean_time_to_happen = {months = 6} # This is in concurrence with the flag cooldown
+    
+    trigger = {
+        has_great_project = {
+            type = hall_of_pantheons
+            tier = 1
+        }
         province_is_or_accepts_religion = {religion = norse_pagan_reformed}
         if = { # Reduced cooldown if the monument is tier 2
             limit = {
@@ -1673,6 +2033,18 @@ province_event = { # Blessing of Balder
             add_estate_loyalty = {
                 estate = all
                 loyalty = 10
+            save_event_target_as = blessed_country
+            add_country_modifier = { 
+                name = pf_mon_hop_tyr_blessing
+                duration = 365
+            }
+            custom_tooltip = pf_mon_events.20.tt1_1
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                effect = "add_claim = event_target:blessed_country"
             }
         }
     }
@@ -1695,6 +2067,25 @@ province_event = { # Blessing of Balder
             add_estate_loyalty = {
                 estate = all
                 loyalty = 20
+            save_event_target_as = blessed_country
+            add_country_modifier = { 
+                name = pf_mon_hop_tyr_blessing
+                duration = 730
+            }
+            custom_tooltip = pf_mon_events.20.tt1_1
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes" # CWTools doesn't like this but I've tested it and it works - Diamond
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                effect = "add_claim = event_target:blessed_country"
+            }
+            pf_random_neighbour_province = {
+                target_country = event_target:blessed_country
+                limit1 = "is_city = yes"
+                limit2 = "is_city = yes
+                NOT = {is_claim = event_target:blessed_country}"
+                effect = "add_claim = event_target:blessed_country"
             }
         }
     }
@@ -3458,3 +3849,4 @@ province_event = { # Blessing of Eir
         }
     }
 }
+    }

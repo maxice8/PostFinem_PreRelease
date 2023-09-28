@@ -50,7 +50,7 @@ on_startup = {
 		limit = {
 			religion = romuva
 		}
-		country_event = { id = romuva_events.1 }
+		country_event = { id = pf_romuva_events.1 }
 	}
 	#if = {
 	#	limit = {
@@ -875,7 +875,7 @@ on_monarch_death = {
 		limit = {
 			religion = romuva
 		}
-		country_event = { id = romuva_events.1 }
+		country_event = { id = pf_romuva_events.1 }
 	}
 	burgundian_inheritance_start_effect = yes
 	ladislaus_postumus_king_died_effect = yes
@@ -2158,21 +2158,25 @@ on_bi_yearly_pulse_5 = {
 
 		#Orthodox Metropolitans
 		# pf-loc same as Orthodox icons
-		125 = patriarch_events.1
-		125 = patriarch_events.2
-		125 = patriarch_events.3
-		75 = patriarch_events.4
-		75 = patriarch_events.5
+		# 125 = patriarch_events.1
+		# 125 = patriarch_events.2
+		# 125 = patriarch_events.3
+		# 75 = patriarch_events.4
+		# 75 = patriarch_events.5
 
-		# Catholic  Events
+		# Hellenic Events
 		# pf-loc catholic events
-		100 = catholic_flavor.4
-		100 = catholic_flavor.5
-		100 = catholic_flavor.6
-		100 = catholic_flavor.7
-		100 = catholic_flavor.8
-		100 = catholic_flavor.9
-		100 = catholic_flavor.10
+		100 = pf_reform_desire.1
+		100 = pf_reform_desire.2
+		100 = pf_reform_desire.3
+		100 = pf_reform_desire.4
+		100 = pf_reform_desire.5
+		100 = pf_reform_desire.6
+		100 = pf_reform_desire.7
+		100 = pf_reform_desire.8
+		100 = pf_reform_desire.9
+		100 = pf_reform_desire.10
+		100 = pf_reform_desire.11
 
 		# Japanese Daimyos
 		15 = flavor_jap.10
@@ -2657,6 +2661,7 @@ on_four_year_pulse = {
 		100 = pf_trn.3
 		100 = pf_trn.4
 		100 = pf_trn.5
+		100 = pf_trn.27
 
 		1000 = 0
 	}
@@ -3847,7 +3852,7 @@ on_province_culture_converted = {
 							has_country_flag = pf_sami_herding_flag
 							mission_completed = pf_nld_northern_colonies
 						}
-						capital = {
+						capital_scope = {
 							colonial_region = colonial_alaska
 						}
 					}
@@ -3856,7 +3861,7 @@ on_province_culture_converted = {
 							has_country_flag = pf_sami_herding_flag
 							mission_completed = pf_nld_a_bit_of_truth_in_legends
 						}
-						capital = {
+						capital_scope = {
 							colonial_region = colonial_canada
 						}
 					}
@@ -3865,7 +3870,7 @@ on_province_culture_converted = {
 							has_country_flag = pf_sami_herding_flag
 							mission_completed = pf_nld_spread_westwards
 						}
-						capital = {
+						capital_scope = {
 							colonial_region = colonial_louisiana
 						}
 					}
@@ -3874,7 +3879,7 @@ on_province_culture_converted = {
 							has_country_flag = pf_sami_herding_flag
 							mission_completed = pf_nld_new_sweden
 						}
-						capital = {
+						capital_scope = {
 							colonial_region = colonial_eastern_america
 						}
 					}
@@ -4095,7 +4100,7 @@ on_province_owner_change = {
 							has_country_flag = pf_sami_herding_flag
 							mission_completed = pf_nld_northern_colonies
 						}
-						capital = {
+						capital_scope = {
 							colonial_region = colonial_alaska
 						}
 					}
@@ -4104,7 +4109,7 @@ on_province_owner_change = {
 							has_country_flag = pf_sami_herding_flag
 							mission_completed = pf_nld_a_bit_of_truth_in_legends
 						}
-						capital = {
+						capital_scope = {
 							colonial_region = colonial_canada
 						}
 					}
@@ -4113,7 +4118,7 @@ on_province_owner_change = {
 							has_country_flag = pf_sami_herding_flag
 							mission_completed = pf_nld_spread_westwards
 						}
-						capital = {
+						capital_scope = {
 							colonial_region = colonial_louisiana
 						}
 					}
@@ -4122,7 +4127,7 @@ on_province_owner_change = {
 							has_country_flag = pf_sami_herding_flag
 							mission_completed = pf_nld_new_sweden
 						}
-						capital = {
+						capital_scope = {
 							colonial_region = colonial_eastern_america
 						}
 					}
@@ -4153,7 +4158,7 @@ on_province_owner_change = {
 							has_country_flag = pf_sami_herding_flag
 							mission_completed = pf_nld_northern_colonies
 						}
-						capital = {
+						capital_scope = {
 							colonial_region = colonial_alaska
 						}
 					}
@@ -4162,7 +4167,7 @@ on_province_owner_change = {
 							has_country_flag = pf_sami_herding_flag
 							mission_completed = pf_nld_a_bit_of_truth_in_legends
 						}
-						capital = {
+						capital_scope = {
 							colonial_region = colonial_canada
 						}
 					}
@@ -4469,10 +4474,15 @@ on_leader_recruited = {
 # country
 on_general_recruited = {
 	on_general_recruited_effect = yes
-	add_government_power = {
-		mechanic_type = mac_war_cabinet_mechanic
-		power_type = mac_war_cabinet_organization
-		value = 0.5
+	if = {
+		limit = {
+			has_government_mechanic = mac_war_cabinet_mechanic
+		}
+		add_government_power = {
+			mechanic_type = mac_war_cabinet_mechanic
+			power_type = mac_war_cabinet_organization
+			value = 0.5
+		}
 	}
 }
 
@@ -4936,7 +4946,7 @@ on_trade_good_changed = {
 							has_country_flag = pf_sami_herding_flag
 							mission_completed = pf_nld_northern_colonies
 						}
-						capital = {
+						capital_scope = {
 							colonial_region = colonial_alaska
 						}
 					}
@@ -4945,7 +4955,7 @@ on_trade_good_changed = {
 							has_country_flag = pf_sami_herding_flag
 							mission_completed = pf_nld_a_bit_of_truth_in_legends
 						}
-						capital = {
+						capital_scope = {
 							colonial_region = colonial_canada
 						}
 					}
@@ -4954,7 +4964,7 @@ on_trade_good_changed = {
 							has_country_flag = pf_sami_herding_flag
 							mission_completed = pf_nld_spread_westwards
 						}
-						capital = {
+						capital_scope = {
 							colonial_region = colonial_louisiana
 						}
 					}
@@ -4963,7 +4973,7 @@ on_trade_good_changed = {
 							has_country_flag = pf_sami_herding_flag
 							mission_completed = pf_nld_new_sweden
 						}
-						capital = {
+						capital_scope = {
 							colonial_region = colonial_eastern_america
 						}
 					}
