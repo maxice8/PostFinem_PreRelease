@@ -44,32 +44,60 @@ mac_1 = {
 		} 
 
 		trigger = {  
-			albania_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				albania_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+				}
+				NEK = {
+					is_subject_of = ROOT
+					albania_area = {
+						type = all
+						owned_by = PREV
+					}
+				}
 			}
 		} 
 
 		effect = {  
-			custom_tooltip = mac_our_hebron_neighbors_tt_1
-			tooltip = {
-				albania_area = {
-					add_nationalism = -10
-					add_province_modifier = {
-						name = mac_our_hebron_neighbors_modifier_1
-						duration = -7300
+			simple_dynamic_effect = {
+				first_custom_tooltip = mac_our_hebron_neighbors_tt_1 #if you own the lands directly
+				first_limit = "
+					albania_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
 					}
-				}
-			}
-			custom_tooltip = mac_our_hebron_neighbors_tt_2
-			tooltip = {
-				add_adm_power = 100
-				add_country_modifier = {
-					name = mac_our_hebron_neighbors_modifier_2
-					duration = 7300
-				}
-			}
-			custom_tooltip = empty_line_tt
+				"
+				first_effect = "
+					albania_area = {
+						add_nationalism = -10
+						add_province_modifier = {
+							name = mac_our_hebron_neighbors_modifier_1
+							duration = -7300
+						}
+					}
+				"
+				second_custom_tooltip = mac_our_hebron_neighbors_tt_2 #if they're a subject
+				second_limit = "
+					NEK = {
+						is_subject_of = ROOT
+						albania_area = {
+							type = all
+							owned_by = PREV
+						}
+					}
+				"
+				second_effect = "
+					add_adm_power = 100
+					add_country_modifier = {
+						name = mac_our_hebron_neighbors_modifier_2
+						duration = 7300
+					}
+				"
+			}	
+
 			apulia_area = { add_permanent_claim = ROOT }
 			calabria_area = { add_permanent_claim = ROOT }
 			hidden_effect = {
@@ -698,21 +726,23 @@ mac_3 = {
 
 		effect = {  
 			custom_tooltip = mac_illyrian_marches_tt #if illyria exists (under 100 develompent) give subjugation cb, else give claims on areas, a modifier and mana
-			hidden_effect = {
-				if = {
-					limit = {
-						ILY = {
-							exists = yes
-							NOT = { total_development = 100 }
-						}
+			if = {
+				limit = {
+					ILY = {
+						exists = yes
+						NOT = { total_development = 100 }
 					}
+				}
+				hidden_effect = {
 					add_casus_belli = {
 						type = cb_vassalize_mission
 						months = 240
 						target = ILY
 					}
 				}
-				else = {
+			}
+			else = {
+				hidden_effect = {
 					add_adm_power = 100
 					every_owned_province = {
 						limit = {	 
@@ -727,6 +757,12 @@ mac_3 = {
 							name = mac_illyrian_marches_modifier
 							duration = 7300
 						}
+					}
+				}
+				tooltip = {				
+					add_province_modifier = {
+						name = mac_illyrian_marches_modifier
+						duration = 7300
 					}
 				}
 			}
@@ -930,6 +966,7 @@ mac_4 = {
 		effect = {  
 			custom_tooltip = mac_aegean_dominance_tt
 			set_country_flag = mac_naval_doctrine_flag
+			custom_tooltip = empty_line_tt
 			country_event = {
 				id = pf_mac_events.3
 			}
@@ -1304,12 +1341,13 @@ mac_cabinet_5 = {
 		} 
 
 		effect = {  
-			custom_tooltip = mac_absolute_control_tt #power will be frozen, some modifiers will be changed but new decisions will be unlocked
 			custom_tooltip = empty_line_tt
 			freeze_government_power = {
 				mechanic_type = mac_war_cabinet_mechanic
 				power_type = mac_war_cabinet_organization
 			}
+			custom_tooltip = mac_absolute_control_tt #power will be frozen, some modifiers will be changed but new decisions will be unlocked
+			
 			set_country_flag = mac_locked_war_cabinet_org
 			custom_tooltip = empty_line_tt
 			custom_tooltip = mac_commandant_fire_damage_tt #commandant advisors now give 2% fire damage per level

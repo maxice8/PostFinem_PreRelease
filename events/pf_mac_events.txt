@@ -138,7 +138,8 @@ country_event = {
 		# goto = 
 		ai_chance = { factor = 1 }
 
-		add_yearly_sailors = 10
+		add_yearly_sailors = 7
+		custom_tooltip = empty_line_tt
 		custom_tooltip = uncontested_in_the_aegean_tt #Shipyard effects are doubled
 		set_country_flag = uncontested_in_the_aegean_flag
 		hidden_effect = {
@@ -157,7 +158,8 @@ country_event = {
 		# goto = 
 		ai_chance = { factor = 1 }
 
-		add_yearly_sailors = 10
+		add_yearly_sailors = 7
+		custom_tooltip = empty_line_tt
 		add_country_modifier = {
 			name = uncontested_in_the_aegean_flagship_modifier
 			duration = -1
