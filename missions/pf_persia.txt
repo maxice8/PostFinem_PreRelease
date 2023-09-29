@@ -469,7 +469,7 @@ pf_per_1 = {
 		icon = mission_silk_road
 		position = 12
 
-		required_missions = { pf_per_continue_expansion }
+		required_missions = { pf_per_continue_expansion pf_per_merchant_class }
 
 		# Baghdad, Teheran, Mashhad, Herat and Samarkand, must be 25 dev, workshop, marketplace, expanded infrastructure
 		trigger = {}
@@ -485,7 +485,16 @@ pf_per_1 = {
 		required_missions = { pf_per_revive_silk_road }
 
 		# Has 100 dev clicks in Persian land, income above 100, prosperity in 5 states
-		trigger = {}
+		trigger = {
+			development_in_provinces = {
+				value = 350
+				OR = {
+					region = persia_region
+					region = khorasan_region
+					area = khuzestan_area
+				}
+			}
+		}
 
 		# All land in Persia gets 50% progress towards prosperity, 10% dev cost for 20 years
 		effect = {}
@@ -746,6 +755,15 @@ pf_per_2 = {
 
 		required_missions = { pf_per_invade_armenia }
 
+		provinces_to_highlight = {
+			OR = {
+				area = armenia_area
+				area = tabriz_area
+			}
+			has_terrain = mountain
+			NOT = { has_fort_building_trigger = yes }
+		}
+
 		# 3 mountain forts in Armenia or Tabriz areas, have the money for ramparts
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -984,29 +1002,9 @@ pf_per_3 = {
 
 		# Original Satrapies get -10% liberty desire until end of game, perma claims
 		effect = {
-			KHU = {
-				add_country_modifier = {
-					name = pf_per_conquered_our_claims
-					duration = -1
-				}
-			}
-			TAB = {
-				add_country_modifier = {
-					name = pf_per_conquered_our_claims
-					duration = -1
-				}
-			}
-			KHO = {
-				add_country_modifier = {
-					name = pf_per_conquered_our_claims
-					duration = -1
-				}
-			}
-			BAL = {
-				add_country_modifier = {
-					name = pf_per_conquered_our_claims
-					duration = -1
-				}
+			add_country_modifier = {
+				name = pf_per_following_the_plan
+				duration = -1
 			}
 		}
 	}
@@ -1058,6 +1056,9 @@ pf_per_3 = {
 			set_country_flag = pf_per_satrapy_demand_consequences_1
 			custom_tooltip = pf_per_satrapy_demand_consequences_1_tt
 		}
+
+		marwar_area = { add_permanent_claim = PER }
+		patan_area = { add_permanent_claim = PER }
 	}
 
 	pf_per_embrace_renaissance = {
@@ -1065,6 +1066,11 @@ pf_per_3 = {
 		position = 8
 
 		required_missions = { pf_per_establish_control }
+
+		provinces_to_highlight = {
+			owned_by = PER
+			NOT = { renaissance = 100 }
+		}
 
 		# Has Renaissance embraced in all provinces
 		trigger = {
@@ -1087,6 +1093,15 @@ pf_per_3 = {
 		position = 9
 
 		required_missions = { pf_per_embrace_renaissance }
+
+#		provinces_to_highlight = {
+#			owned_by = PER
+#			has_terrain = mountain
+#			OR = {
+#				NOT = { has_tax_building_trigger = yes }
+#				NOT = { num_of_times_improved = 5 }
+#			}
+#		}
 
 		# At least 8 mountains have at least 5 dev clicks and a church
 		trigger = {
@@ -1145,42 +1160,156 @@ pf_per_3 = {
 
 		required_missions = { pf_per_defend_the_mountains pf_per_invest_in_satrapies pf_per_deal_gujarat }
 
+		provinces_to_highlight = {
+			owner = {
+				overlord = { tag = PER }
+				OR = {
+					NOT = { has_country_flag = pf_per_satrapy_finished }
+					liberty_desire = 25
+					capital_scope = {
+						NOT = { has_courthouse_building_trigger = yes }
+					}
+				}
+			}
+		}
+
 		# Have 12 Satrapies, all Satrapies below 25% liberty desire and have courthouse in capital, 70% centralisation
-		trigger = {}
+		trigger = {
+			calc_true_if = {
+				all_subject_country = {
+					has_country_flag = pf_per_satrapy_finished
+				}
+				desc = pf_per_satrapy_finished_2_tt
+				amount = 12
+			}
+			all_subject_country = {
+				NOT = { liberty_desire = 25 }
+				capital_scope = { has_courthouse_building_trigger = yes }
+			}
+			has_government_power = {
+				mechanic_type = pf_per_centralization_mechanic
+				power_type = pf_per_centralization
+				value = 70
+			}
+		}
 
 		# Change Satrapy Requires to Requests (less negative consequences), permanent claims
 		effect = {
-			add_country_modifier = {
-				name = pf_per_continued_expansion
-				duration = -1
+			set_country_flag = pf_per_satrapy_demand_consequences_2
+			custom_tooltip = pf_per_satrapy_demand_consequences_2_tt
+
+			custom_tooltip = pf_per_get_claims_on_rest_of_expansion_plan_tt
+			hidden_effect = {
+				pf_afg_expansion_claims = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					add_permanent_claim = ROOT
+				}
+				pf_bal_expansion_claims = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					add_permanent_claim = ROOT
+				}
+				pf_kho_expansion_claims = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					add_permanent_claim = ROOT
+				}
+				pf_khu_expansion_claims = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					add_permanent_claim = ROOT
+				}
+				pf_tab_expansion_claims = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					add_permanent_claim = ROOT
+				}
+				pf_bab_expansion_claims = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					add_permanent_claim = ROOT
+				}
+				pf_asy_expansion_claims = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					add_permanent_claim = ROOT
+				}
+				pf_tig_expansion_claims = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					add_permanent_claim = ROOT
+				}
+				pf_csp_expansion_claims = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					add_permanent_claim = ROOT
+				}
+				pf_clc_expansion_claims = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					add_permanent_claim = ROOT
+				}
+				pf_mga_expansion_claims = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					add_permanent_claim = ROOT
+				}
+				pf_rjt_expansion_claims = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					add_permanent_claim = ROOT
+				}
+				pf_gjr_expansion_claims = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					add_permanent_claim = ROOT
+				}
+				pf_paj_expansion_claims = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					add_permanent_claim = ROOT
+				}
+				pf_ksm_expansion_claims = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					add_permanent_claim = ROOT
+				}
+				pf_amy_expansion_claims = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					add_permanent_claim = ROOT
+				}
 			}
 		}
-	}
-	
-	pf_per_control_estates = {
-		icon = appease_the_estates
-		position = 12
-
-		required_missions = { pf_per_continue_expansion }
-
-		# All estates have either 80% loyalty or more loyalty than influence, crownland at least 30%
-		trigger = {}
-
-		# Can revoke estate privileges always, +10% loyalty with all estates for 20 years
-		effect = {}
 	}
 
 	pf_per_persuade_satrapies = {
 		icon = king_of_kings
 		position = 13
 
-		required_missions = { pf_per_control_estates }
+		required_missions = { pf_per_continue_expansion }
+
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = { overlord = { tag = PER } }
+			NOT = { development = 25 }
+		}
 
 		# 15 Satrapy Requests completed, each Satrapy has "Sent Gift" modifier and a 25 dev capital
-		trigger = {}
+		trigger = {
+			if = {
+				limit = { NOT = { ai = yes } }
+				check_variable = {
+					which = pfPerSatrapyDemandsFilled
+					value = 15
+				}
+			}
+			all_subject_country = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = sent_gift
+				}
+				capital_scope = {
+					development = 25
+				}
+			}
+		}
 
 		# Rewards of Satrapy Requests increased, permanent -10% liberty desire
-		effect = {}
+		effect = {
+			set_country_flag = pf_per_satrapy_demand_rewards_3
+			custom_tooltip = pf_per_satrapy_demand_rewards_3_tt
+
+			add_country_modifier = {
+				name = pf_per_satrapies_onboard
+				duration = -1
+			}
+		}
 	}
 
 	pf_per_complete_expansion = {
@@ -1189,11 +1318,35 @@ pf_per_3 = {
 
 		required_missions = { pf_per_fortify_the_border pf_per_persuade_satrapies pf_per_dominate_northern_india }
 
-		# All 15 Satrapies have the required land, Less than 25% liberty desire
-		trigger = {}
+		provinces_to_highlight = {
+			owner = {
+				overlord = { tag = PER }
+				OR = {
+					NOT = { has_country_flag = pf_per_satrapy_finished }
+					liberty_desire = 25
+				}
+			}
+		}
+
+		# All 16 Satrapies have the required land, Less than 25% liberty desire
+		trigger = {
+			calc_true_if = {
+				all_subject_country = {
+					has_country_flag = pf_per_satrapy_finished
+					NOT = { liberty_desire = 25 }
+				}
+				desc = pf_per_satrapy_finished_tt
+				amount = 16
+			}
+		}
 
 		# Change Satrapy Requests to Petitions (no negative consequences), revoke Satrapy Expansion Plan
-		effect = {}
+		effect = {
+			set_country_flag = pf_per_satrapy_demand_consequences_3
+			custom_tooltip = pf_per_satrapy_demand_consequences_3_tt
+
+			remove_estate_privilege = estate_nobles_pf_satrapy_expansion_plan
+		}
 	}
 
 	pf_per_centralized_state = {
@@ -1203,10 +1356,26 @@ pf_per_3 = {
 		required_missions = { pf_per_persian_prosperity pf_per_modernise_the_government pf_per_complete_expansion pf_per_expel_all_heresy pf_per_raise_standing_army }
 
 		# Have "Centralized Zoroastrian Theocracy" reform
-		trigger = {}
+		trigger = {
+			has_reform = pf_centralized_zoroastrian_theocracy
+		}
 
 		# Revokes annexation ban, all original Satrapies with 0% LD and 100 trust integrated for free
-		effect = {}
+		effect = {
+			remove_estate_privilege = estate_nobles_pf_satrapy_annexation_ban
+			persia_region = {
+				limit = {
+					owner = { overlord = { tag = PER } }
+				}
+				add_core = PER
+			}
+			khorasan_region = {
+				limit = {
+					owner = { overlord = { tag = PER } }
+				}
+				add_core = PER
+			}
+		}
 	}
 }
 
@@ -1405,11 +1574,50 @@ pf_per_4 = {
 
 		required_missions = { pf_per_establish_control }
 
+		provinces_to_highlight = {
+			OR = {
+				area = marwar_area
+				area = patan_area
+				area = sindh_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { owned_by = GUJ }
+		}
+
 		# Southern Sindh, Marwar and Patan areas owned or owned by Gujarat
-		trigger = {}
+		trigger = {
+			marwar_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owned_by = GUJ
+				}
+			}
+			patan_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owned_by = GUJ
+				}
+			}
+			sindh_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owned_by = GUJ
+				}
+			}
+		}
 
 		# Perma claims, some power points
-		effect = {}
+		effect = {
+			add_dip_power = 100
+
+			saurashtra_area = { add_permanent_claim = ROOT }
+			ahmedabad_area = { add_permanent_claim = ROOT }
+			517 = { add_permanent_claim = ROOT }
+			4430 = { add_permanent_claim = ROOT }
+		}
 	}
 
 	pf_per_deal_gujarat = {
@@ -1418,11 +1626,105 @@ pf_per_4 = {
 
 		required_missions = { pf_per_push_western_india }
 
+		provinces_to_highlight = {
+			OR = {
+				area = saurashtra_area
+				area = ahmedabad_area
+				province_id = 517
+				province_id = 4430
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
 		# Either allied to Gujarat with 100 trust, 190 opinion or owns Saurashtra, Ahmedabad and Tapti areas
-		trigger = {}
+		trigger = {
+			OR = {
+				AND = {
+					saurashtra_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					ahmedabad_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					517 = { country_or_non_sovereign_subject_holds = ROOT }
+					4430 = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					GUJ = {
+						alliance_with = PER
+						has_opinion = {
+							who = ROOT
+							value = 190
+						}
+						trust = {
+							who = ROOT
+							value = 90
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = pf_per_does_not_have_satrapy_in_gujarat
+						NOT = { exists = GJR }
+					}
+				}
+			}
+		}
 
 		# If allied to Gujarat they become a Satrapy, cede any land outside their Satrapy region to other Satrapies, else Satrapy there gets base production there
-		effect = {}
+		effect = {
+			custom_tooltip = pf_per_deal_with_gujarat_tt
+			tooltip = {
+				saurashtra_area = { add_base_production = 1 }
+				ahmedabad_area = { add_base_production = 1 }
+				517 = { add_base_production = 1 }
+				4430 = { add_base_production = 1 }
+			}
+			custom_tooltip = pf_per_deal_with_gujarat_2_tt
+			tooltip = {
+				create_subject = {
+					subject_type = satrapy
+					subject = GUJ
+				}
+			}
+			custom_tooltip = pf_per_deal_with_gujarat_3_tt
+			hidden_effect = {
+				if = {
+					limit = { 517 = { country_or_non_sovereign_subject_holds = ROOT } } # Chose conquest path
+					saurashtra_area = { add_base_production = 1 }
+					ahmedabad_area = { add_base_production = 1 }
+					517 = { add_base_production = 1 }
+					4430 = { add_base_production = 1 }
+				}
+				else = { # Chose ally path
+					GUJ = {
+						change_tag = GJR
+						on_change_tag_effect = yes
+						swap_non_generic_missions = yes
+						hidden_effect = {
+							pf_gjr_expansion_claims = {
+								add_permanent_claim = GJR
+							}
+							override_country_name = pf_per_satrapy_names_gujarat
+						}
+					}
+					create_subject = {
+						subject_type = satrapy
+						subject = GJR
+					}
+					hidden_effect = {
+						pf_per_release_satrapies_scripted_effect = yes
+					}
+					if = {
+						limit = { NOT = { dip = 6 } }
+						change_dip = 1
+					}
+					else = {
+						add_dip_power = 100
+					}
+				}
+			}
+		}
 	}
 
 	pf_per_unite_the_faith = {
@@ -1431,8 +1733,23 @@ pf_per_4 = {
 
 		required_missions = { pf_per_continue_expansion }
 
+		provinces_to_highlight = {
+			religion = zoroastrian
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
 		# All Zoroastrian Provinces owned by Persia or subjects
-		trigger = {}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = pf_per_unite_the_faith_tt
+				all_province = {
+					OR = {
+						NOT = { religion = zoroastrian }
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+		}
 
 		effect = {}
 	}
@@ -1443,11 +1760,84 @@ pf_per_4 = {
 
 		required_missions = { pf_per_unite_the_faith }
 
+		provinces_to_highlight = {
+			OR = {
+				province_group = pf_gjr_expansion_claims
+				province_group = pf_rjt_expansion_claims
+				province_group = pf_paj_expansion_claims
+				province_group = pf_ksm_expansion_claims
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
 		# Own all required Satrapy land in India
-		trigger = {}
+		trigger = {
+			GJR = {
+				custom_trigger_tooltip = {
+					tooltip = pf_per_dominate_northern_india_tt
+					pf_gjr_expansion_claims = {
+						type = all
+						owned_by = GJR
+					}
+				}
+			}
+			RJT = {
+				custom_trigger_tooltip = {
+					tooltip = pf_per_dominate_northern_india_tt
+					pf_gjr_expansion_claims = {
+						type = all
+						owned_by = RJT
+					}
+				}
+			}
+			PAJ = {
+				custom_trigger_tooltip = {
+					tooltip = pf_per_dominate_northern_india_tt
+					pf_gjr_expansion_claims = {
+						type = all
+						owned_by = PAJ
+					}
+				}
+			}
+			KSM = {
+				custom_trigger_tooltip = {
+					tooltip = pf_per_dominate_northern_india_2_tt
+					pf_gjr_expansion_claims = {
+						type = all
+						owned_by = KSM
+					}
+				}
+			}
+		}
 
 		# All provinces there get +10% production efficiency, 50% progress towards prosperity, -5 unrest
-		effect = {}
+		effect = {
+			add_mil_power = 100
+			GJR = {
+				add_country_modifier = {
+					name = pf_per_rule_in_india
+					duration = -1
+				}
+			}
+			RJT = {
+				add_country_modifier = {
+					name = pf_per_rule_in_india
+					duration = -1
+				}
+			}
+			PAJ = {
+				add_country_modifier = {
+					name = pf_per_rule_in_india
+					duration = -1
+				}
+			}
+			KSM = {
+				add_country_modifier = {
+					name = pf_per_rule_in_india
+					duration = -1
+				}
+			}
+		}
 	}
 
 	pf_per_expel_all_heresy = {
@@ -1456,11 +1846,41 @@ pf_per_4 = {
 
 		required_missions = { pf_per_dominate_northern_india }
 
+		provinces_to_highlight = {
+			owner = {
+				OR = {
+					tag = PER
+					overlord = { tag = PER }
+				}
+			}
+			NOT = { religion = zoroastrian }
+		}
+		
 		# No owned or Satrapy province is not zoroastrian
-		trigger = {}
+		trigger = {
+			all_owned_province = {
+				custom_trigger_tooltip = {
+					tooltip = pf_per_is_zoroastrian_tt
+					religion = zoroastrian
+				}
+			}
+			all_subject_country = {
+				all_owned_province = {
+					custom_trigger_tooltip = {
+						tooltip = pf_per_is_zoroastrian_tt
+						religion = zoroastrian
+					}
+				}
+			}
+		}
 
 		# Get +2% missionary strength, +1 missionary until end of the game
-		effect = {}
+		effect = {
+			add_country_modifier = {
+				name = pf_per_heretics_expelled
+				duration = -1
+			}
+		}
 	}
 }
 
@@ -1691,7 +2111,7 @@ pf_per_5 = {
 			}
 		}
 
-		# Get +20% church power for 10 years, provinces get -5 unrest, 20% tax eff
+		# Get 100 church power, provinces get -5 unrest, 20% tax eff
 		effect = {
 			add_church_power = 100
 			2076 = {
@@ -1727,11 +2147,41 @@ pf_per_5 = {
 
 		required_missions = { pf_per_liberate_zoroastrians pf_per_assist_satrapies }
 
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				OR = {
+					tag = PER
+					overlord = { tag = PER }
+				}
+			}
+			NOT = { has_tax_building_trigger = yes }
+		}
+
 		# Have 200 church power, every Satrapy has a church in the capital and so does Persia
-		trigger = {}
+		trigger = {
+			church_power = 200
+			capital_scope = {
+				has_tax_building_trigger = yes
+			}
+			all_subject_country = {
+				custom_trigger_tooltip = {
+					tooltip = pf_per_is_zoroastrian_tt
+					religion = zoroastrian
+				}
+				capital_scope = {
+					has_tax_building_trigger = yes
+				}
+			}
+		}
 
 		# Persia gets -15% war score cost vs other religions for 20 years, Satrapies get +20% church power, -10% liberty desire until end of game
-		effect = {}
+		effect = {
+			add_country_modifier = {
+				name = pf_per_united_in_faith
+				duration = -1
+			}
+		}
 	}
 
 	pf_per_defender_of_faith = {
@@ -1740,11 +2190,36 @@ pf_per_5 = {
 
 		required_missions = { pf_per_push_western_india pf_per_unity_in_faith }
 
+		provinces_to_highlight = {
+			religion = zoroastrian
+			NOT = { owner = { religion = zoroastrian } }
+		}
+
 		# Be defender of the faith, no Zoroastrian province owned by non-Zoroastrian nation
-		trigger = {}
+		trigger = {
+			is_defender_of_faith = yes
+			custom_trigger_tooltip = {
+				tooltip = pf_per_all_zoroastrian_free_tt
+				all_province = {
+					OR = {
+						NOT = { religion = zoroastrian }
+						owner = { religion = zoroastrian }
+					}
+				}
+			}
+		}
 
 		# Adds triggered modifier adding extra buffs to Defender of the Faith for Persia
-		effect = {}
+		effect = {
+			tooltip = {
+				add_country_modifier = {
+					name = pf_per_upgrade_dotf_modifier
+					duration = -1
+					desc = pf_per_while_dotf
+				}
+			}
+			set_country_flag = pf_per_upgraded_dotf_unlocked
+		}
 	}
 
 	pf_per_unify_religion_and_state = {
@@ -1754,10 +2229,26 @@ pf_per_5 = {
 		required_missions = { pf_per_defender_of_faith }
 
 		# Gov reform tier 4, Clergy influence at least 80, 150 Zoroastrian provinces
-		trigger = {}
+		trigger = {
+			reform_level = 4
+			estate_influence = {
+				estate = estate_church
+				influence = 80
+			}
+			calc_true_if = {
+				all_province = {
+					religion = zoroastrian
+				}
+				amount = 175
+				desc = pf_per_num_zoroastrian_provinces_tt
+			}
+		}
 
-		# Unlock gov reform Persian Zealotry, giving +2 ToTF, -2 ToH, -20% culture conversion cost, double bonuses from Religious Culture
-		effect = {}
+		# Unlock gov reform Persian Zealotry, giving +2 ToTF, -2 ToH, -20% culture conversion cost, +10% manpower in true faith
+		effect = {
+			set_country_flag = pf_per_persian_zealotry_unlocked
+			country_event = { id = pf_per_events.64 }
+		}
 	}
 
 	pf_per_persian_arquebus = {
@@ -1767,10 +2258,24 @@ pf_per_5 = {
 		required_missions = { }
 
 		# Has unlocked idea Persian Arquebus or Mil tech 6, has 20% army prof, 30 army trad
-		trigger = {}
+		trigger = {
+			OR = {
+				has_idea = superior_firepower
+				has_idea = PER_ideas_2
+				mil_tech = 6
+			}
+			army_professionalism = 0.2
+			army_tradition = 30
+		}
 
 		# Gets +0.2 infantry fire for 20 years, gets 5% professionalism
-		effect = {}
+		effect = {
+			add_army_professionalism = 0.05
+			add_country_modifier = {
+				name = pf_per_persian_arquebus_modifier
+				duration = 7300
+			}
+		}
 	}
 
 	pf_per_develop_siege_tech = {
@@ -1780,10 +2285,23 @@ pf_per_5 = {
 		required_missions = { pf_per_persian_arquebus }
 
 		# Has mil tech 7, has 10 cannons, completed mil idea group or 14 mil/month
-		trigger = {}
+		trigger = {
+			mil_tech = 7
+			num_of_artillery = 10
+			OR = {
+				has_completed_idea_group_of_category = { mil_ideas = yes }
+				monthly_mil = 14
+			}
+		}
 
 		# Gets +20% siege ability, -10% mil tech cost for 20 years
-		effect = {}
+		effect = {
+			add_mil_power = 100
+			add_country_modifier = {
+				name = pf_per_new_siege_tech
+				duration = 7300
+			}
+		}
 	}
 
 	pf_per_recruit_from_satrapies = {
@@ -1792,11 +2310,34 @@ pf_per_5 = {
 
 		required_missions = { pf_per_develop_siege_tech }
 
-		# Have 40k manpower, 10 provinces with barracks, every Satrapy capital has a barracks
-		trigger = {}
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = { overlord = { tag = PER } }
+			NOT = { has_manpower_building_trigger = yes }
+		}
+
+		# Have 50k max manpower, 10 provinces with barracks, every Satrapy capital has a barracks
+		trigger = {
+			max_manpower = 50
+			num_of_owned_provinces_with = {
+				value = 10
+				has_manpower_building_trigger = yes
+			}
+			all_subject_country = {
+				capital_scope = {
+					has_manpower_building_trigger = yes
+				}
+			}
+		}
 
 		# Can conscript from Satrapies, +100% manpower and FL from subjects for 20 years
-		effect = {}
+		effect = {
+			remove_estate_privilege = estate_nobles_pf_satrapy_exemption_from_conscription
+			add_country_modifier = {
+				name = pf_per_conscripting_from_satrapies
+				duration = 7300
+			}
+		}
 	}
 
 	pf_per_raise_standing_army = {
@@ -1806,10 +2347,22 @@ pf_per_5 = {
 		required_missions = { pf_per_recruit_from_satrapies }
 
 		# Has 100k troops, 40% professionalism, 110% discipline
-		trigger = {}
+		trigger = {
+			army_size = 100
+			army_professionalism = 0.4
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.1
+			}
+		}
 
 		# Get +5% discipline, +20% FL for 20 years
-		effect = {}
+		effect = {
+			add_country_modifier = {
+				name = pf_per_might_of_the_persian_army
+				duration = 7300
+			}
+		}
 	}
 }
 
@@ -1836,12 +2389,11 @@ pf_persian_empire_3 = {
 		effect = {
 			set_country_flag = pf_per_persian_empire
 			#add_government_reform = pf_zoroastrian_theocracy_empire
-			complete_mission = pf_per_secure_the_gulf
-			complete_mission = pf_per_establish_control
-			complete_mission = pf_per_assist_satrapies
-			complete_mission = pf_per_liberate_zoroastrians
+			complete_mission = pf_per_continue_expansion
+			complete_mission = pf_per_merchant_class
 			set_country_flag = pf_per_unlocked_upgraded_trade_privilege
 			set_country_flag = pf_per_unlocked_mountain_development_privilege
+			set_country_flag = pf_per_upgraded_dotf_unlocked
 		}
 	}
 }

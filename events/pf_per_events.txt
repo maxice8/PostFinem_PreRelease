@@ -2391,6 +2391,32 @@ country_event = {
 	}
 }
 
+# Persian Zealotry
+country_event = {
+	id = pf_per_events.64
+	title = "pf_per_events_64_title"
+	desc = "pf_per_events_64_desc"
+	picture = CHURCH_ESTATE_2_eventPicture
+	is_triggered_only = yes
+	fires_only_once = yes
+
+	option = {
+		name = "pf_per_events_64_option_1"
+		ai_chance = { factor = 100 }
+		add_adm_power = 100
+		custom_tooltip = pf_per_unlocks_persian_zealotry_tt
+		add_government_reform = pf_persian_zealotry_reform
+	}
+
+	option = {
+		name = "pf_per_events_64_option_2"
+		ai_chance = { factor = 0 }
+		add_adm_power = 100
+		custom_tooltip = pf_per_unlocks_persian_zealotry_tt
+		change_government_reform_progress = 50
+	}
+}
+
 # Satrapy Demands events: Develop Tax Success
 country_event = {
 	id = pf_per_events.68

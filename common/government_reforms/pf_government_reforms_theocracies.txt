@@ -137,6 +137,21 @@ pf_zoroastrian_theocracy_empire = {
 	}
 }
 
+pf_persian_zealotry_reform = {
+	icon = "zoroastrian_theocracy"
+	allow_normal_conversion = yes
+	potential = {
+		tag = PER
+		has_country_flag = pf_per_persian_zealotry_unlocked
+	}
+	modifiers = {
+		tolerance_own = 2
+		tolerance_heathen = -2
+		global_missionary_strength = 0.03
+		manpower_in_true_faith_provinces = 0.1
+	}
+}
+
 pf_athens_archon = {
 	potential = {
 		tag = ATH

@@ -59,12 +59,22 @@
  pf_per_overlord_failed_demand_reduced: "Overlord Failed Demand"
  pf_per_overlord_filled_demand: "Overlord Completed Demand"
  pf_satrapy_expansion_plan_complete: "Expansion Promises Fulfilled"
- pf_per_conquered_our_claims: "Conquered our Claims"
+ pf_per_following_the_plan: "Following the Expansion Plan"
  pf_per_trading_in_persia: "Dominating Persian Trade"
  pf_per_embraced_renaissance: "Persian Renaissance"
  pf_per_mountain_development: "Mountain Development"
  pf_per_satrapy_investment_boom: "Economic Boom"
- pf_per_continued_expansion: "Continued Expansion"
+ pf_per_continued_expansion: "Persia Rising"
+ pf_per_united_in_faith: "United in Faith"
+ pf_per_upgraded_dotf: "Defender of the Zoroastrian Faith"
+ pf_per_upgrade_dotf_modifier: "Defender of the Zoroastrian Faith"
+ pf_per_persian_arquebus_modifier: "Persian Arquebus"
+ pf_per_new_siege_tech: "Siege Technology"
+ pf_per_conscripting_from_satrapies: "Conscripting from Satrapies"
+ pf_per_might_of_the_persian_army: "Might of the Persian Army"
+ pf_per_rule_in_india: "Persian Rule in India"
+ pf_per_heretics_expelled: "Heretics Expelled"
+ pf_per_satrapies_onboard: "Satrapies Persuaded"
 
 # Satrapy Revolt disaster
  pf_per_satrapy_revolt: "Satrapy Revolt"
@@ -192,6 +202,11 @@
  pf_per_events_62_tt: "Release §YKashmiristan§! as a §YSatrapy§!"
  pf_per_events_63_tt: "Release §YAmyrgia§! as a §YSatrapy§!"
 
+ pf_per_events_64_title: "Persian Zealotry"
+ pf_per_events_64_desc: "Every since the creation of our state we have been a very religious state. Our people are devout followers of Zoroastrianism, as are our leaders and our subjects. But the threat of heresy is ever present. Shall we institute a set of laws to make practicing all other religions illegal, to further boost unity within our state?"
+ pf_per_events_64_option_1: "What an excellent idea!"
+ pf_per_events_64_option_2: "We should not be so harsh to unbelievers."
+
  pf_per_events_68_option: "We accept their gratitude."
  pf_per_events_68_desc: "My [Root.Monarch.GetTitle], we have received further correspondance from [pf_per_et_province_to_tax_dev_owner.GetName] on the topic of our previous commitment. They have sent a small gift and letter of thanks for our investments in them!"
  pf_per_events_69_desc: "My [Root.Monarch.GetTitle], we have received further correspondance from [pf_per_et_province_to_prod_dev_owner.GetName] on the topic of our previous commitment. They have sent a small gift and letter of thanks for our investments in them!"
@@ -244,7 +259,6 @@
  pf_per_revive_silk_road_title: "Revive Silk Road Cities"
  pf_per_persian_prosperity_title: "Persian Prosperity"
  pf_per_persuade_satrapies_title: "Persuade the Satrapies"
- pf_per_control_estates_title: "Control the Estates"
  pf_per_modernise_the_government_title: "Modernise the Government"
  pf_per_complete_expansion_title: "Complete the Expansion Plan"
  pf_per_persian_arquebus_title: "Persian Arquebus"
@@ -300,7 +314,6 @@
  pf_per_revive_silk_road_desc: ""
  pf_per_persian_prosperity_desc: ""
  pf_per_persuade_satrapies_desc: ""
- pf_per_control_estates_desc: ""
  pf_per_modernise_the_government_desc: ""
  pf_per_complete_expansion_desc: ""
  pf_per_persian_arquebus_desc: ""
@@ -359,6 +372,10 @@
  pf_per_satrapy_finished_decision_tt: " §YSatrapies§!:\n   Has all the provinces promised to it under the §YSatrapy Expansion Plan§!\n§YYou can check the requirements for each Satrapy in your Subject's Missions!§!"
  pf_per_click_to_show_provinces_tt: "Click to show all required provinces"
 
+# Alternate Satrapy Names
+
+ pf_per_satrapy_names_gujarat: "Gujarat"
+
 # Mission tooltips
  pf_per_has_satrapy_revolt_or_finished_tt: "Is currently in §YSatrapy Revolt§!.\nThis mission will be §Ycompleted without rewards§! if we finish the §YSatrapy Revolt§! disaster."
  pf_per_satrapy_revolt_has_finished_tt: "Has completed the §YSatrapy Revolt§! disaster."
@@ -366,6 +383,7 @@
  pf_per_events_10_tt: "The event '§YHelp from an ally!§!' happens."
  pf_per_gulf_coast: "Gulf Coast"
  pf_per_satrapy_finished_tt: " §YSatrapies§!:\n   Liberty Desire less than §Y25.00%§!\n   Has all the provinces promised to it under the §YSatrapy Expansion Plan§!\n§YYou can check the requirements in your Subject's Missions!§!"
+ pf_per_satrapy_finished_2_tt: " §YSatrapies§!:\n   Has all the provinces promised to it under the §YSatrapy Expansion Plan§!\n§YYou can check the requirements in your Subject's Missions!§!"
  pf_per_if_lvl_1_tc_tt: "If it has a Center of Trade of level §Y1§!:"
  pf_per_horde_border_fort_tt: " provinces in the §YSamarkand§! node:\n    Owned by a §YSatrapy§! of Persia.\n    Has a §YFort§! building.\n    Any neighboring province:\n      Province Owner:\n        Has enacted Government Reform §YSteppe Nomads§!"
  pf_per_good_wall_tt: "All provinces that meet the requirements:"
@@ -373,12 +391,12 @@
  pf_per_owner_is_zoroastrian_tt: "Religion of Province Owner is §YZoroastrian§!"
  pf_satrapy_while_subject_tt: "whilst a subject of §YPersia§!"
  pfPerSatrapyDemandsFilled: "Satrapy Demands Fulfilled"
- pf_per_satrapy_demand_rewards_1_tt: "Successfully completing §YSatrapy Demands§! events will now grant better rewards!"
- pf_per_satrapy_demand_consequences_1_tt: "Refusing or Failing §YSatrapy Demands§! events will now have less severe consequences!"
+ pf_per_satrapy_demand_rewards_1_tt: "Successfully completing §YSatrapy Demands§! events will now grant better rewards!\n"
+ pf_per_satrapy_demand_consequences_1_tt: "\nRefusing or Failing §YSatrapy Demands§! events will now have less severe consequences!"
  pf_per_satrapy_demand_rewards_2_tt: "Successfully completing §YSatrapy Requires§! events will now grant better rewards!"
  pf_per_satrapy_demand_consequences_2_tt: "Refusing or Failing §YSatrapy Requires§! events will now have less severe consequences!"
- pf_per_satrapy_demand_rewards_3_tt: "Successfully completing §YSatrapy Requests§! events will now grant better rewards!"
- pf_per_satrapy_demand_consequences_3_tt: "Refusing §YSatrapy Requests§! events will now have no negative consequences!"
+ pf_per_satrapy_demand_rewards_3_tt: "Successfully completing §YSatrapy Requests§! events will now grant better rewards!\n"
+ pf_per_satrapy_demand_consequences_3_tt: "Refusing §YSatrapy Requests§! events will now have no negative consequences!\n"
  pf_per_trading_in_gujarat: "Trading with the Faithful"
  pf_per_faithful_trading_port: "Faithful Trading Port"
  pf_per_faithful_trading_partner: "Trading Partner"
@@ -391,4 +409,22 @@
  pf_per_defended_mountain_fort: "Important Border Fort"
  pf_per_defend_the_mountains_tt: "The required provinces get:\nStart construction of Ramparts for §Y0.0%§! of the cost, and §Y100.0%§! of the time."
  pf_per_unlock_mountain_development_tt: "Enables the Merchant Guilds privilege '§YMountain Development Program§!'"
- pf_per_satrapy_province_invested_tt: " Provinces in Satrapies:\n    Base Production at least §Y5§!£icon_production_in_text£\n    Has a §YWorkshop§! or a §YCounting House§! building."
+ pf_per_satrapy_province_invested_tt: " Provinces in §YSatrapies§!:\n    Base Production at least §Y5§!£icon_production_in_text£\n    Has a §YWorkshop§! or a §YCounting House§! building."
+ pf_per_get_claims_on_rest_of_expansion_plan_tt: "\n§YPersia§! gains a permanent claim on the rest of the §YSatrapy Expansion Plan§!."
+ pf_per_does_not_have_satrapy_in_gujarat: "§YPersia§! does NOT have a §YSatrapy§! in the §YSaurashtra§!, §YAhmedabad§! or §YTapti§! Areas."
+ pf_per_deal_with_gujarat_tt: "If we choose to conquer the required provinces:"
+ pf_per_deal_with_gujarat_2_tt: "\nAlternatively, if we choose to ally §YGujarat§!:"
+ pf_per_deal_with_gujarat_3_tt: "\n[Root.Monarch.GetName] Gain §G1§! £dip£\nExcess Points over §Y6§! £dip£ will be converted into §G100§! Diplomatic Power."
+ pf_per_while_dotf: "while we are Defender of the Faith"
+ pf_per_all_zoroastrian_free_tt: "All §YZoroastrian§! provinces:\n    Religion of Province Owner is §YZoroastrian§!"
+ pf_per_num_zoroastrian_provinces_tt: " provinces:\nIs §YZoroastrian§!"
+ pf_per_unlocks_persian_zealotry_tt: "Unlocks §YPersian Zealotry§! Tier 4 Government Reform."
+ pf_per_unite_the_faith_tt: "All §YZoroastrian§! provinces:\n    Owned by §YPersia§! or its non-Tributary Subjects."
+ pf_per_dominate_northern_india_tt: "Has all the provinces promised to it under the §YSatrapy Expansion Plan§!"
+ pf_per_dominate_northern_india_2_tt: "Has all the provinces promised to it under the §YSatrapy Expansion Plan§!\n§YYou can check the requirements in your Subject's Missions!§!"
+
+
+
+
+
+

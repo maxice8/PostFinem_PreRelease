@@ -155,8 +155,8 @@ pf_satrapy_expansion_plan_complete = {
 	liberty_desire = -10
 }
 
-pf_per_conquered_our_claims = {
-	liberty_desire = -10
+pf_per_following_the_plan = {
+	reduced_liberty_desire = 10
 }
 
 pf_per_faithful_trading_port = {
@@ -192,5 +192,50 @@ pf_per_satrapy_investment_boom = {
 }
 
 pf_per_continued_expansion = {
+	reduced_liberty_desire = 10
+}
+
+pf_per_united_in_faith = {
+	reduced_liberty_desire = 10
+	warscore_cost_vs_other_religion = -0.1
+}
+
+pf_per_upgrade_dotf_modifier = {
+	relation_with_same_religion = 40
+	reverse_relation_with_same_religion = 40
+	diplomatic_reputation = 2
+	church_power_modifier = 0.2
+}
+
+pf_per_persian_arquebus_modifier = {
+	infantry_fire = 0.2
+}
+
+pf_per_new_siege_tech = {
+	siege_ability = 0.2
+	mil_tech_cost_modifier = -0.1
+}
+
+pf_per_conscripting_from_satrapies = {
+	vassal_manpower_bonus = 1
+	vassal_forcelimit_bonus = 1
+}
+
+pf_per_might_of_the_persian_army = {
+	discipline = 0.05
+	land_forcelimit_modifier = 0.2
+}
+
+pf_per_rule_in_india = {
+	production_efficiency = 0.1
+	global_unrest = -5
+}
+
+pf_per_heretics_expelled = {
+	global_missionary_strength = 0.02
+	missionaries = 1
+}
+
+pf_per_satrapies_onboard = {
 	reduced_liberty_desire = 10
 }
