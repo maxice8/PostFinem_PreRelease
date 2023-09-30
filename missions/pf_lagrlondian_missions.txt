@@ -2809,9 +2809,9 @@ second_4 = {
 		} 
 
 		effect = {
-			custom_tooltip = PF_LAG_3_YEARS_OF_INCOME
 			add_years_of_trade_income = {
 				years = 3
+				custom_tooltip = PF_GAIN_3_YEARS_OF_INCOME
 			}
 			add_country_modifier = {
 				name = pf_lag_lagrlondian_fur
@@ -3009,9 +3009,9 @@ fourth_3 = {
 		} 
 
 		effect = {
-			custom_tooltip = PF_LAG_2_YEARS_OF_INCOME
 			add_years_of_trade_income = {
 				years = 2
+				custom_tooltip = PF_GAIN_2_YEARS_OF_INCOME
 			}
 			custom_tooltip = empty_line_tt
 			change_price = {
