@@ -1,0 +1,253 @@
+﻿l_english:
+
+
+################
+# Governments
+################
+
+pf_ritualised_diplomacy_reform: "Ritualised Diplomacy"
+pf_ritualised_diplomacy_reform_desc: "War is devastating for all those involved, and as such should only be considered a last resort. Diplomacy on the other hand, is the spice that entertains the lives of dreary men. Disagreements can simply be talked out, and countless souls can be saved. We should ritualise this practice and ensure its proper function within our courts."
+mechanic_enables_discounted_host_feast_yes: "Reduces the cost of §YHosting a Feast§! by §G-50.0%§!"
+
+neapolitan_principality_reform: "Neapolitan Principality"
+neapolitan_principality_reform_desc: "Naples is a powerful city at the center of a collection of territories. While its ruler remains humble, titling themselves as only the Lord or Lady of Naples, the extent of our indirect rule across Southern Italy is known to all."
+PRINCE: "Prince"
+HEIRESS: "Heiress"
+
+pf_citizen_volunteers_reform: "Citizen Volunteers"
+pf_citizen_volunteers_reform_desc: "The people of our state are privileged in their citizenship, giving them unique access to certain rights and abilities within our jurisdiction. This service has, however, often come without a price. We should extend citizenship to a wider audience but at the cost of enlistment in our army. This will ensure a steady flow of new patriotic recruits, ready to die to earn their place in this country, even posthumously."
+
+MERIDIA: "Meridia"
+MERIDIA_ADJ: "Meridian"
+
+################
+# Ideas
+################
+
+italian_minor_ideas: "Romqart Ideas"
+italian_minor_ideas_start: "Romqart Traditions"
+italian_minor_ideas_bonus: "Romqart Ambition"
+
+italian_minor_ideas_1: "Growth of the Towns of Italia"
+italian_minor_ideas_1_desc: ""
+italian_minor_ideas_2: "Encourage Innovation"
+italian_minor_ideas_2_desc: ""
+italian_minor_ideas_3: "Courts of the Federation"
+italian_minor_ideas_3_desc: ""
+italian_minor_ideas_4: "Free Trade Leagues"
+italian_minor_ideas_4_desc: ""
+italian_minor_ideas_5: "Soldiers of Lesser Fortune"
+italian_minor_ideas_5_desc: ""
+italian_minor_ideas_6: "Italian Naval Prowess"
+italian_minor_ideas_6_desc: ""
+italian_minor_ideas_7: "A Land of Many Gods"
+italian_minor_ideas_7_desc: ""
+
+NAP_ideas: "Neapolitan Ideas"
+NAP_ideas_start: "Neapolitan Traditions"
+NAP_ideas_bonus: "Neapolitan Ambition"
+
+nap_lady_of_naples: "The Lady of Naples"
+nap_lady_of_naples_desc: ""
+nap_princes_of_the_south: "Princes of the South"
+nap_princes_of_the_south_desc: ""
+nap_purple_dye: "Revitalisation of Tyrian Purple"
+nap_purple_dye_desc: ""
+nap_secular_clergy: "Empower the Secular Clergy"
+nap_secular_clergy_desc: ""
+nap_castles: "Aristocratic Castles"
+nap_castles_desc: ""
+nap_city_of_pleasure: "The City of Pleasure"
+nap_city_of_pleasure_desc: ""
+nap_mecenate: "Patron of the Arts"
+nap_mecenate_desc: ""
+
+if_free_city_ideas: "Free City Ideas"
+if_free_city_ideas_start: "Free City Traditions"
+if_free_city_ideas_bonus: "Free City Ambition"
+
+iffc_local_governance: "Local Governance"
+iffc_local_governance_desc: ""
+iffc_direct_democracy: "Direct Democracy"
+iffc_direct_democracy_desc: ""
+iffc_guilds: "Strengthen the Guilds"
+iffc_guilds_desc: ""
+iffc_bankers: "Italian Banking Families"
+iffc_bankers_desc: ""
+iffc_civitas: "Defence of the Civitas"
+iffc_civitas_desc: ""
+iffc_ballroom_dancing: "Festivals and Balls"
+iffc_ballroom_dancing_desc: ""
+iffc_banishment: "Criminal Law Code"
+iffc_banishment_desc: ""
+
+SNO_ideas: "Salerno Ideas"
+SNO_ideas_start: "Salerno Traditions"
+SNO_ideas_bonus: "Salerno Ambition"
+
+sno_priesthood_of_salerno: "Priesthood of Salerno"
+sno_priesthood_of_salerno_desc: ""
+sno_prayers: "Making the World Go Round"
+sno_prayers_desc: ""
+sno_evangelism_by_sea: "Evangelism by the Sea"
+sno_evangelism_by_sea_desc: ""
+sno_fight_heathens: "The Feuding Faiths"
+sno_fight_heathens_desc: ""
+sno_lord_of_the_south: "Lord of the South"
+sno_lord_of_the_south_desc: ""
+sno_by_the_gods: "Patronage of the Gods"
+sno_by_the_gods_desc: ""
+sno_church_lands: "Control Over Clerical Lands"
+sno_church_lands_desc: ""
+
+################
+# Events
+################
+
+pf_if.1.t: "Federal Dignitaries"
+pf_if.1.d: "The Federation has a great many nobles and autocrats hailing from its diverse collection of cultures. These wealthy men and women demand to be entertained by only the finest courts, given the finest dinners and listen to only the finest music. As such, it is a great honour that a group of them have asked to be hosted in our capital."
+pf_if.1.a: "They will bring prestige to [Root.Capital.GetName]!"
+
+pf_if.2.t: "An Ambassador for [Root.GetName]"
+pf_if.2.d: "Every state should have an official ambassador to go to the court of the Italian Federation and represent our interests. In the current moment, we are lacking such an important figure. The state department has hand-picked a selection of candidates for us to recruit from."
+pf_if.2.a: "Appoint him as our state ambassador."
+pf_if.2.b: "He will make a great diplomat."
+
+pf_if.3.t: "The Growth of [growth_province.GetName]"
+pf_if.3.d: "The city of [growth_province.GetName] is a growing metropolis, full of eager businessmen and investors who would gladly see the state invest in its infrastructure. Let us take care of this little town, so that one day it might be a jewel in our crown."
+pf_if.3.a: "Invest in the administrative infrastructure of [growth_province.GetName]."
+pf_if.3.b: "Increase the industrial capabilities of the region."
+pf_if.3.c: "Tighten the laws of conscription in the province."
+pf_if.3.e: "There are great things awaiting [growth_province.GetName] in the future"
+pf_if_growth_of_a_city: "Growth of a City"
+
+pf_if.4.t: "Federal Art"
+pf_if.4.d: "A new style of art is emerging in the marble palaces of Italia. Referred to as 'Federal Art', this style has been spreading like the great northern winds. Several masterpieces have already been created for the courts of other countries. If we invest in the movement while it is still in its infant years, we can secure a larger portion of the glory for ourselves."
+pf_if.4.a: "Make sure we are a part of this exciting movement!"
+pf_if.4.b: "We cannot afford to patronise them."
+pf_if_federal_art_style: "Investing in Federal Art"
+
+pf_if.5.t: "Peace in Our Time"
+pf_if.5.d: "Under the rule of the Federation, peace has fallen over our country. Our people feel safe on the streets, and our armies do not need fear death on foreign soils."
+pf_if.5.a: "Excellent!"
+
+pf_if.6.t: "Federal Embargo"
+pf_if.6.d: "One of the most prolific traders has fallen foul of Federal guidelines and as a result has had a formal embargo issued against him. This is potentially disasterous for our networks and imports, but if we do not hand him over the Federation will surely come down harder against us in the future."
+pf_if.6.a: "Ignore them, keep trading but more covertly."
+pf_if.6.b: "Respect the rule fo the Federation."
+pf_if_smuggling: "Encouraging Smugglers"
+pf_if_merchant_embargo: "Embargo on our Merchant"
+
+pf_if.7.t: "Anti-Federation Sentiment"
+pf_if.7.d: "There is a small faction within the elite of [Root.GetName] that distrusts the authority of the Federation, and continually campaigns for '[Root.GetAdjective] Independence. Their pretensions that we are forced to act at the whim of the Federal government is clearly nonsense, and we benefit immeasurably from their funding. Despite this, the protestors are getting increasingly uppity, and we will have to deal with them."
+pf_if.7.a: "Let the police handle them."
+pf_if.7.b: "Maybe they have some points..."
+
+pf_if.8.t: "Good Advice"
+pf_if.8.d: "The people we have picked to give advice to our government have proven themselves worth of the positions they occupy. With their assistance, we are running the state better than ever before."
+pf_if.8.a: "Where would we be without them?"
+pf_if.8.b: "Most of the credit is mine!"
+
+pf_if.9.t: "Federation Strengthens Trade Laws"
+pf_if.9.d: "The Grand Adirim of the Federation has decided to tighten existing Federal trade laws, hoping to stabilise the prices of basic goods within its jurisdiction and control the ambitions of greedy foreign merchants. While on the face of it this sounds like a good plan, many worry that keeping merchants out of our markets will do more harm than good to the amount and quality of our imports."
+pf_if.9.a: "Okay."
+
+pf_if.10.t: "Limits on Trade"
+pf_if.10.d: "Trade is sometimes a dangerous endeavour. Storms, pirates, and worst of all, tariffs, make the daily lives of our hard-working merchants closer to hell than any man should experience. Some countries choose to impose laws to protect their merchants from daylight robbery, despite the protests of those who favour absolute free trade."
+pf_if.10.a: "Institute laws to protect our merchants."
+pf_if.10.b: "Continue to allow free trade."
+
+pf_if.11.t: "Martial Desires"
+pf_if.11.d: ""
+pf_if.11.a: "War is still legal! Let us wage it."
+pf_if.11.b: "The law of the Federation mandates peace."
+
+pf_if.12.t: "Burdens on the Military Establishment"
+pf_if.12.d: ""
+pf_if.12.a: "We will have to take the brunt of the cost."
+pf_if.12.b: "Spend every effort to ensure the crisis calms down."
+pf_if_expensive_armies: "Increased Military Expenditure"
+
+pf_if.13.t: "The Festival of the Night"
+pf_if.13.d: ""
+pf_if.13.a: "The state will give money to support this event!"
+pf_if.13.b: "Let the clergy keep control of it."
+
+pf_feast.1.t: "[Root.Monarch.GetName]'s Great Feast"
+pf_feast.1.d: "The time has come to host a magnificent feast! The quality and length of the feast will depend on the amount of money we put into it. During a feast, various events can fire, involving interactions within the royal family, estates, leaders of foreign countries, advisors, and the Federation. The more expensive the feast, the better the events will be! Let us begin the preparations and decide what kind of feast it will shape up to be..."
+pf_feast.1.a: "A modest feast will do."
+pf_feast.1.b: "It must be suitably grand."
+pf_feast.1.c: "We must stop at no expense."
+pf_feast.1.dd: "Wait, I'm not hungry actually..."
+tier_1_feast_tt: "The feast will last only §Ysixth months§! and feature an assortment of §Yaverage events§!."
+tier_2_feast_tt: "The feast will last §Gone year§! and feature an assortment of §Yaverage events§!."
+tier_3_feast_tt: "The feast will last §Gone year§! and feature an assortment of §Yexcellent events§!."
+go_back_tt: "Go back."
+pf_feast_reputation_boost: "Reputation for Feasting"
+
+pf_feast.2.t: "Nobles Quarrel"
+pf_feast.2.d: "It began as a friendly conversation, but the effects of excessive drink and late nights have finally caught up on the jubilant attendees to our feast. Two of the realm's foremost aristocrats, [Root.noble_1.GetName] and [Root.noble_2.GetName], known for being long time friends, began a debate over whether Romans or Carthaginians ought to have won the Second Punic War. This debate rapidly developed into a spat, each taking offence to the other's view. Soon enough they were on the banqueting table wrestling each other, with a crowd gathered round cheering them on."
+pf_feast.2.a: "Reprimand them both for improper behaviour"
+pf_feast.2.b: "Join the debate, I have lots to say on this topic."
+pf_feast.2.c: "Attempt to ignore them."
+pf_feast.2.d: "This is the kind of atmosphere I want in my court!"
+pf_feast_results_depend_on_ruler_skills_dip_tt: "\nThe results of this challenge depend on our ruler's §Ydiplomatic§! £dip£ skills."
+pf_feast_results_depend_on_ruler_skills_adm_tt: "\nThe results of this challenge depend on our ruler's §Yadministrative§! £adm£ skills."
+pf_feast_results_depend_on_ruler_skills_mil_tt: "\nThe results of this challenge depend on our ruler's §Ymilitary§! £mil£ skills."
+
+pf_feast.3.t: "Greedy Priest"
+pf_feast.3.d: "An influential priest from one of our provinces, [Root.priest.GetName], has been noted for his excessive eating during the feast thusfar. Even the cooks are complaining they are being overworked in our attempts to accomodate this man, and the waiters are growing tired of marching back and forth from his table. To add to the insult, greed is one of the most prominent sins in our religion, and being a man of the robes he clearly knows this, but accepts his own hypocrisy."
+pf_feast.3.a: "Confront him about his gluttony."
+pf_feast.3.b: "If he's still hungry, he can have more food."
+pf_feast.3.c: "Publicly mock him."
+
+pf_feast.4.t: "Diverted Attention"
+pf_feast.4.d: "You stand in the middle of a circle at the end of the great banquet hall, surrounded by cheerful nobles and priests and other notables of the realm. They quiz and question you, making light-hearted conversation while throwing in the occassional joke. Out of the corner of your eye you catch the [Root.Consort.GetTitle] at the other end of the room, standing there with [Root.Consort.GetHerHis] arms crossed, eying you up. As [Root.Consort.GetSheHe] approaches, you can already sense the anger contained, and the noise of your courtiers is momentarily drowned out.\n'Dearest, might we have a conversation together? In private?' [Root.Consort.GetTitle] [Root.Consort.GetName] sternly asks, a forced smile on [Root.Consort.GetHerHis] face."
+pf_feast.4.a: "Excuse me gentlemen, my dear [Root.Consort.GetTitle] calls on me."
+pf_feast.4.b: "Can't you see I've got more important things going on darling?"
+pf_feast.4.c: "I am afraid I must get some fresh air, I apologise!"
+
+pf_feast.5.t: "Satisfying Meal"
+pf_feast.5.d: "'My my...' you mutter to yourself as you slurp up the last remnants of the greenish soup from your bowl. 'That was delicious.' And truly it was. You think that perhaps it was the best soup you've ever had, and even the thought of its taste is enough to give you a fuzzy feeling all over."
+pf_feast.5.a: "I shall give personal praises to the cook."
+pf_feast.5.b: "I could do some work over a bowl of this!"
+pf_feast.5.c: "This has put me in an excellent mood!"
+
+pf_feast.6.t: "The Game of Old Ur"
+pf_feast.6.d: "Since time immemorial, the Royal Game of Ur has been played upon the tables of kings, peasants, and all in between. Consisting of pieces which must be moved across a grid of squares safely, this game is reminiscent of many other classics, but for some odd reason, it has stuck around the longest. One of the more boisterous and ambitious nobles at the feast has challenged you, the [Root.Monarch.GetTitle], to a game - the gall! Nevertheless, there is some part of your mind convinced that victory in such a match would serve to show off your prowess to your subjects..."
+pf_feast.6.a: "Let us begin then sire."
+pf_feast.6.b: "I have better things to be doing!"
+pf_feast.6.c: "I'll hire a professional player to take my place."
+
+pf_feast.7.t: "Inadequate Food"
+pf_feast.7.d: "It is only now that you are tasting it yourself that you finally believe the reports. The food before you is dry, chewy and quite frankly disgusting. You try your hardest to keep a straight face as you force your mouth to move. Your courtiers look on expectantly, looking for some sign of a shared disgrace."
+pf_feast.7.a: "I'm so sorry, I'll order new food."
+pf_feast.7.b: "Mmmm, this is delicious gentlemen, you should try it! bleugh"
+pf_feast.7.c: "Uhum, anyway, have any of you heard about the war in Gaul recently?"
+
+pf_feast.8.t: "No Fighting at the Dinner Table!"
+pf_feast.8.d: ""
+pf_feast.8.a: "Put that dastardly thing down!"
+pf_feast.8.b: "Thank you, but I can teach my child myself."
+pf_feast.8.c: "No no please, carry on!"
+pf_feast_results_depend_on_nobles_loyalty_tt: "\nThe results of this challenge depend on the §Yloyalty§! of the §YNobility§! estate."
+
+################
+# Decisions
+################
+
+pf_if_reform_trade_laws_title: "Reform Federal Trade Laws"
+pf_if_reform_trade_laws_desc: "The existing Federal trade laws do not protect local merchants enough, and leave our markets open to foreign exploitation. Let us strengthen the legislation surrounding them to ensure the continued safety and prosperity of the burghers."
+pf_if_every_prince_gets_mercantilism_tt: "Every member of the §YItalian Federation§! gains §G+1§! Mercantilism."
+pf_if_10_year_cooldown_tt: "We can only enact this §Yonce every ten years§!."
+
+pf_if_meridia_nation_title: "Unite the Southern States"
+pf_if_meridia_nation_desc: "The south of Italia has always had its own separate identity, too rural for the cities of the north, and too isolated for the adventurers of the Mediterranean. Our obscurity is over however, as one of the ambitious princes of the region has taken up the mantle of legitimate kingship and united all the southerners under one banner, one great Midday Kingdom."
+pf_if_union_of_southern_italy: "Union of Southern Italia"
+
+pf_if_host_a_feast_title: "Host a Feast"
+pf_if_host_a_feast_desc: "The time has come to host a magnificent feast! The quality and length of the feast will depend on the amount of money we put into it. During a feast, various events can fire, involving interactions within the royal family, estates, leaders of foreign countries, advisors, and the Federation. The more expensive the feast, the better the events will be!\n\n'Light the fires and host the hogs, for tonight we're gonna party!'"
+
+################
+# Missions
+################

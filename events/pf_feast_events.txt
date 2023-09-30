@@ -1,0 +1,575 @@
+namespace = pf_feast
+
+country_event = {		# Feast Start Screen
+	id = pf_feast.1
+	title = pf_feast.1.t 
+	desc = pf_feast.1.d
+	picture = FEAST_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_feast.1.a"
+		trigger = {
+			government_rank = 1
+		}
+		highlight = yes
+		if = {
+			limit = {
+				NOT = { has_government_attribute = enables_discounted_host_feast }
+			}
+			add_years_of_income = -0.5
+		}
+		else = {
+			add_years_of_income = -0.25
+		}
+		set_country_flag = tier_1_feast
+		custom_tooltip = tier_1_feast_tt
+		set_country_flag = hosted_feast_flag
+		if = {
+			limit = {
+				has_country_flag = feasts_give_reputation
+			}
+			add_ruler_modifier = {
+				name = "pf_feast_reputation_boost"
+				duration = 365
+			}
+		}
+		set_country_flag = is_in_feast
+	}
+	option = {
+		name = "pf_feast.1.b"
+		trigger = {
+			government_rank = 2
+		}
+		highlight = yes
+		if = {
+			limit = {
+				NOT = { has_government_attribute = enables_discounted_host_feast }
+			}
+			add_years_of_income = -2
+		}
+		else = {
+			add_years_of_income = -1
+		}
+		set_country_flag = tier_1_feast
+		custom_tooltip = tier_1_feast_tt
+		set_country_flag = hosted_feast_flag
+		if = {
+			limit = {
+				has_country_flag = feasts_give_reputation
+			}
+			add_ruler_modifier = {
+				name = "pf_feast_reputation_boost"
+				duration = 365
+			}
+		}
+		set_country_flag = is_in_feast
+	}
+	option = {
+		name = "pf_feast.1.c"
+		trigger = {
+			government_rank = 3
+		}
+		highlight = yes
+		if = {
+			limit = {
+				NOT = { has_government_attribute = enables_discounted_host_feast }
+			}
+			add_years_of_income = -5
+		}
+		else = {
+			add_years_of_income = -2.5
+		}
+		set_country_flag = tier_3_feast
+		custom_tooltip = tier_3_feast_tt
+		set_country_flag = hosted_feast_flag
+		if = {
+			limit = {
+				has_country_flag = feasts_give_reputation
+			}
+			add_ruler_modifier = {
+				name = "pf_feast_reputation_boost"
+				duration = 365
+			}
+		}
+		set_country_flag = is_in_feast
+	}
+	option = {
+		name = "pf_feast.1.dd"
+		custom_tooltip = go_back_tt
+	}
+}
+
+country_event = {			# Feast: Nobles Quarrel
+	id = pf_feast.2
+	title = pf_feast.2.t
+	desc = "pf_feast.2.d"
+	picture = FEAST_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+		has_estate = estate_nobles
+	}
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_saved_name = {
+    				key = noble_1
+    				type = advisor
+    				scope = ROOT
+			}
+			set_saved_name = {
+    				key = noble_2
+    				type = advisor
+    				scope = ROOT
+			}
+		}
+	}
+	after = {
+		clear_saved_name = noble_1
+		clear_saved_name = noble_2
+	}
+	
+	option = {		# Reprimand them both
+		name = pf_feast.2.a
+		add_prestige = 5
+		add_legitimacy = 5
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+	}
+	option = {		# Join the debate
+		name = pf_feast.2.b
+		add_prestige = -5
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 1.2
+					dip = 4
+				}
+				modifier = {
+					factor = 1.2
+					dip = 5
+				}
+				modifier = {
+					factor = 1.2
+					dip = 6
+				}
+				add_dip_power = 50
+			}
+			50 = {
+				modifier = {
+					factor = 1.2
+					NOT = { dip = 4 }
+				}
+				modifier = {
+					factor = 1.2
+					NOT = { dip = 3 }
+				}
+				modifier = {
+					factor = 1.2
+					NOT = { dip = 2 }
+				}
+				add_dip_power = -25
+			}
+		}
+		custom_tooltip = pf_feast_results_depend_on_ruler_skills_dip_tt
+	}
+	option = {		# Ignore them
+		name = pf_feast.2.c
+		add_prestige = -10
+	}
+	option = {		# This is the kind of atmosphere I want in my court!
+		name = pf_feast.2.e
+		trigger = {
+			ruler_has_personality = scholar_personality
+		}
+		highlight = yes
+		add_dip_power = 50
+	} 
+}
+country_event = {	# Feast: Greedy Priest
+	id = pf_feast.3
+	title = pf_feast.3.t
+	desc = "pf_feast.3.d"
+	picture = FEAST_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+		has_estate = estate_church
+		NOT = { has_ruler_modifier = pf_feast_pious_ruler }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_saved_name = {
+    			key = priest
+    			type = advisor
+    			scope = ROOT
+			}
+		}
+	}
+	after = {
+		clear_saved_name = priest
+	}
+	
+	option = {		# Confront him about his gluttony 
+		name = pf_feast.3.a
+		add_ruler_modifier = {
+			name = "pf_feast_pious_ruler"
+			duration = 1825
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+	}
+	option = {		# Supply him with more food
+		name = pf_feast.3.b
+		add_years_of_income = -0.05
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 5
+		}
+	}
+	option = {		# Publicly mock him
+		name = pf_feast.3.c
+		add_prestige = -10
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_adm_power = 50
+	} 
+}
+country_event = {	# Feast: Diverted Attention
+	id = pf_feast.4
+	title = pf_feast.4.t
+	desc = "pf_feast.4.d"
+	picture = FEAST_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+		has_consort = yes
+		NOT = { has_ruler_modifier = pf_feast_attentive_spouse }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+
+	option = {		# She who holds the seat of our heart is more important
+		name = pf_feast.4.a
+		add_ruler_modifier = {
+			name = "pf_feast_attentive_spouse"
+			duration = 1825
+		}
+		add_estate_loyalty = {
+			estate = all
+			loyalty = -5
+			short = yes
+		}
+	}
+	option = {		# I've got more important things going on darling
+		name = pf_feast.4.b
+		add_prestige = -10
+		add_estate_loyalty = {
+			estate = all
+			loyalty = 5
+			short = yes
+		}
+	}
+	option = {		# Distract them
+		name = pf_feast.4.c
+		add_dip_power = -30
+	} 
+}
+country_event = {	# Feast: Satifying Meal
+	id = pf_feast.5
+	title = pf_feast.5.t
+	desc = "pf_feast.5.d"
+	picture = FEAST_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {		# Praise the cook
+		name = pf_feast.5.a
+		add_prestige = 5
+		add_dip_power = 30
+	}
+	option = {		# I could do some work over a bowl of this
+		name = pf_feast.5.b
+		add_years_of_income = -0.05
+		change_innovativeness = 1
+	}
+	option = {		# This will put me in an excellent mood
+		name = pf_feast.5.c
+		add_estate_loyalty = {
+			estate = all
+			loyalty = 5
+			short = yes
+		}
+	} 
+}
+country_event = {	# Feast: A Game of Old Ur
+	id = pf_feast.6
+	title = pf_feast.6.t
+	desc = "pf_feast.6.d"
+	picture = FEAST_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {		# Accept the challenge
+		name = pf_feast.6.a
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 1.2
+					mil = 4
+				}
+				modifier = {
+					factor = 1.2
+					mil = 5
+				}
+				modifier = {
+					factor = 1.2
+					mil = 6
+				}
+				add_splendor = 50
+			}
+			50 = {
+				modifier = {
+					factor = 1.2
+					NOT = { mil = 4 }
+				}
+				modifier = {
+					factor = 1.2
+					NOT = { mil = 3 }
+				}
+				modifier = {
+					factor = 1.2
+					NOT = { mil = 2 }
+				}
+				add_mil_power = -25
+			}
+		}
+		custom_tooltip = pf_feast_results_depend_on_ruler_skills_mil_tt
+	}
+	option = {		# I cannot
+		name = pf_feast.6.b
+		add_prestige = -10
+	}
+	option = {		# Hire an expert to play in my place
+		name = pf_feast.6.c
+		trigger = {
+			OR = {
+				ruler_has_personality = craven_personality
+				ruler_has_personality = greedy_personality
+				ruler_has_personality = embezzler_personality
+			}
+		}
+		highlight = yes
+		add_years_of_income = -0.10
+		add_prestige = 5
+	} 
+}
+country_event = {	# Feast: Inadequate food
+	id = pf_feast.7
+	title = pf_feast.7.t
+	desc = "pf_feast.7.d"
+	picture = FEAST_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {		# Apologise and get new food
+		name = pf_feast.7.a
+		add_prestige = -10
+		add_years_of_income = -0.20
+	}
+	option = {		# Chew through, it's not that bad
+		name = pf_feast.7.b
+		add_estate_loyalty = {
+			estate = all
+			loyalty = -10
+			short = yes
+		}
+	}
+	option = {		# Distract
+		name = pf_feast.7.c
+		add_dip_power = -70
+	} 
+}
+country_event = {	# Feast: No Fighting at the Dinner Table!
+	id = pf_feast.8
+	title = pf_feast.8.t
+	desc = "pf_feast.8.d"
+	picture = FEAST_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+		has_heir = yes
+		NOT = { heir_mil = 6 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {		# Put that dastardly thing down!
+		name = pf_feast.8.a
+		add_heir_claim = -5
+		add_prestige = -5
+	}
+	option = {		# Thank you, but I can teach my child
+		name = pf_feast.8.b
+		add_legitimacy = 5
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+	}
+	option = {		# No no carry on
+		name = pf_feast.8.c
+		add_prestige = -10
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 1.5
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 55
+					}
+				}
+				modifier = {
+					factor = 1.5
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 60
+					}
+				}
+				modifier = {
+					factor = 1.5
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 65
+					}
+				}
+				modifier = {
+					factor = 1.5
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 70
+					}
+				}
+				modifier = {
+					factor = 1.5
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 75
+					}
+				}
+				modifier = {
+					factor = 1.5
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 80
+					}
+				}
+				change_heir_mil = 1
+			}
+			50 = {
+				modifier = {
+					factor = 1.5
+					NOT = {
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 50
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					NOT = {
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 45
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					NOT = {
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 40
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					NOT = {
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 35
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					NOT = {
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 30
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					NOT = {
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 25
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = pf_feast_results_depend_on_nobles_loyalty_tt
+	} 
+}

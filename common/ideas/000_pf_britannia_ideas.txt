@@ -157,3 +157,119 @@ SAR_ideas = {		# Sardinian League
 		placed_merchant_power = 5
 	}
 }
+NAP_ideas = {		# Naples
+	start = {	
+		infantry_power = 0.10
+		state_maintenance_modifier = -0.25
+	}
+	bonus = {
+		land_morale = 0.15
+	}	
+	trigger = {
+		tag = NAP
+	}
+	free = yes
+	
+	nap_lady_of_naples = {
+		female_advisor_chance = 0.2
+		idea_cost = -0.10
+	}
+	nap_princes_of_the_south = {
+		diplomatic_reputation = 1
+	}
+	nap_purple_dye = {
+		discipline = 0.05
+	}
+	nap_secular_clergy = {
+		church_loyalty_modifier = 0.10
+	}
+	nap_castles = {
+		defensiveness = 0.10
+		fort_maintenance_modifier = -0.20
+	}
+	nap_city_of_pleasure = {
+		global_unrest = -1
+		heir_chance = 0.5
+	}
+	nap_mecenate = {
+		monarch_admin_power = 1
+	}
+}
+if_free_city_ideas = {		# Italian Federation Free City
+	start = {	
+		trade_efficiency = 0.10
+		burghers_loyalty_modifier = 0.05
+	}
+	bonus = {
+		development_cost = -0.10
+	}	
+	trigger = {
+		has_reform = free_city
+		is_part_of_hre = yes
+	}
+	free = yes
+	
+	iffc_local_governance = {
+		global_tax_modifier = 0.10
+	}
+	iffc_direct_democracy = {
+		republican_tradition = 0.3
+		reform_progress_growth = 0.15
+	}
+	iffc_guilds = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	iffc_bankers = {
+		interest = -0.50
+	}
+	iffc_civitas = {
+		global_manpower_modifier = 0.15
+		global_garrison_growth = 0.25
+	}
+	iffc_ballroom_dancing = {
+		diplomats = 1
+		diplomatic_reputation = 1
+	}
+	iffc_banishment = {
+		global_spy_defence = 0.30
+		stability_cost_modifier = -0.10
+	}
+}
+SNO_ideas = {		# Salerno
+	start = {	
+		tolerance_own = 2
+		stability_cost_modifier = -0.10
+	}
+	bonus = {
+		development_cost = -0.10
+	}	
+	trigger = {
+		tag = SNO
+	}
+	free = yes
+	
+	sno_priesthood_of_salerno = {
+		prestige = 1
+	}
+	sno_prayers = {
+		all_estate_loyalty_equilibrium = 0.10
+	}
+	sno_evangelism_by_sea = {
+		naval_morale = 0.10
+		naval_maintenance_modifier = -0.10
+	}
+	sno_fight_heathens = {
+		global_missionary_strength = 0.02
+	}
+	sno_lord_of_the_south = {
+		core_creation = -0.10
+		governing_capacity_modifier = 0.10
+	}
+	sno_by_the_gods = {
+		ae_impact = -0.15
+	}
+	sno_church_lands = {
+		production_efficiency = 0.10
+		global_autonomy = -0.03
+	}
+}

@@ -1716,6 +1716,17 @@ on_siberian_pulse = {
 
 # country random events
 on_monthly_pulse = {
+	random_events = {
+		1000 = 0
+
+		#Feast time!
+		100 = pf_feast.2	# Nobles quarrel
+		100 = pf_feast.3	# Greedy priest
+		100 = pf_feast.4	# Diverted attention
+		100 = pf_feast.5	# Satifying meal
+		100 = pf_feast.6	# Game of old Ur
+		100 = pf_feast.7	# Inadequate food
+	}
 }
 on_yearly_pulse = {
 }
@@ -2669,7 +2680,21 @@ on_four_year_pulse = {
 
 on_four_year_pulse_2 = {
 	random_events = {
-		200 = 0
+		1000 = 0
+
+		# Italian Federation flavour events
+		100 = pf_if.1
+		100 = pf_if.2
+		100 = pf_if.3
+		100 = pf_if.4
+		100 = pf_if.5
+		100 = pf_if.6
+		100 = pf_if.7
+		100 = pf_if.8
+		100 = pf_if.10
+		100 = pf_if.11
+		100 = pf_if.12
+		100 = pf_if.13
 	}
 }
 
@@ -4496,7 +4521,7 @@ on_admiral_recruited = {
 		limit = {
 			has_country_flag = pf_sar_recruiting_admirals_gives_tradition }
 		}
-		add_navy_tradition = 1
+		add_navy_tradition = 2
 	}
 }
 

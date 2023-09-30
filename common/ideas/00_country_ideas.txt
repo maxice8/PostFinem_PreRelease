@@ -2155,50 +2155,6 @@ MAM_ideas = {
 	}
 }
 
-
-NAP_ideas = {
-	start = {
-		global_institution_spread = 0.1 #University of Naples, Angevine Heritage, Academies, centre of Neapolitan renaissance.
-		trade_efficiency = 0.1 #One of the main trade port of the mediterrenean for much of the timeframe
-	}
-	
-	bonus = {
-		global_manpower_modifier = 0.2
-	}
-	
-	trigger = {
-		tag = NAP
-	}
-	
-	free = yes
-	
-	consolidate_the_royal_domain = {
-		global_trade_goods_size_modifier = 0.1
-	}
-	academia_pontaniana = {
-		technology_cost = -0.05
-	}
-	encouraged_city_living = {
-		development_cost = -0.1 #Often among the largest cities of Europe
-	}
-	crush_the_barons = {
-		land_morale = 0.1
-	}
-	expanded_arsenale = {
-		global_ship_cost = -0.1
-	}
-	city_of_artists = {
-		prestige = 1
-	}
-	lazzaroni_support = {
-		legitimacy = 1
-		devotion = 1
-		republican_tradition = 0.3
-		meritocracy = 1	#For completion's sake
-		horde_unity = 1
-	}
-}
-
 SIC_ideas = {
 	start = {
 		land_morale = 0.1

@@ -1,0 +1,403 @@
+namespace = pf_if
+
+country_event = {		# Federal Dignitaries 
+	id = pf_if.1
+	title = pf_if.1.t 
+	desc = pf_if.1.d
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_at_war = no
+		capital_scope = {
+			NOT = { devastation = 10 }
+		}
+		is_part_of_hre = yes
+	}
+
+	option = {
+		name = "pf_if.1.a"
+		add_prestige = 5
+		add_splendor = 25
+	}
+}
+country_event = {		# Ambassador for [Root.GetName]
+	id = pf_if.2
+	title = pf_if.2.t 
+	desc = pf_if.2.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { statesman = 1 }
+		is_part_of_hre = yes
+	}
+
+	option = {
+		name = "pf_if.2.a"
+		if = {
+			limit = {
+				NOT = { monthly_income = 12 }
+			}
+			define_advisor = {
+				type = statesman
+				skill = 1
+				cost_multiplier = 0.75
+			}
+		}
+		if_else = {
+			limit = {
+				NOT = { monthly_income = 35 }
+			}
+			define_advisor = {
+				type = statesman
+				skill = 2
+				cost_multiplier = 0.75
+			}
+		}
+		else = {
+			define_advisor = {
+				type = statesman
+				skill = 3
+				cost_multiplier = 0.75
+			}
+		}
+	}
+	option = {
+		name = "pf_if.2.b"
+		trigger = {
+			ruler_has_personality = silver_tongue_personality
+		}
+		highlight = yes
+		add_dip_power = 30
+		define_advisor = {
+			type = diplomat
+			skill = 2
+			discount = yes
+		}
+	}
+}
+country_event = {		# Growth of a City
+	id = pf_if.3
+	title = pf_if.3.t 
+	desc = pf_if.3.d
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_owned_province = {
+			NOT = { development = 30 }
+		}
+		is_part_of_hre = yes
+	}
+
+	immediate = {
+		random_owned_province = {
+			limit = {
+				NOT = { development = 30 }
+			}
+			save_event_target_as = growth_province
+		}
+	}
+
+	goto = growth_province
+
+	option = {
+		name = "pf_if.3.a"
+		event_target:growth_province = {
+			add_base_tax = 1
+		}
+	}
+	option = {
+		name = "pf_if.3.b"
+		event_target:growth_province = {
+			add_base_production = 1
+		}
+	}
+	option = {
+		name = "pf_if.3.c"
+		event_target:growth_province = {
+			add_base_manpower = 1
+		}
+	}
+	option = {
+		name = "pf_if.3.e"
+		trigger = {
+			OR = {
+				ruler_has_personality = industrious_personality
+				ruler_has_personality = entrepreneur_personality
+				ruler_has_personality = architectural_visionary_personality
+			}
+		}
+		highlight = yes
+		event_target:growth_province = {
+			add_province_modifier = {
+				name = "pf_if_growth_of_a_city"
+				duration = 3650
+			}
+		}
+	}
+}
+country_event = {		# Federal Art
+	id = pf_if.4
+	title = pf_if.4.t 
+	desc = pf_if.4.d
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			adm = 4
+			prestige = 20
+		}
+		is_part_of_hre = yes
+		NOT = { has_country_modifier = pf_if_federal_art_style }
+	}
+
+	option = {
+		name = "pf_if.4.a"
+		add_years_of_income = -0.25
+		define_advisor = {
+			type = artist
+			skill = 2
+			discount = yes
+		}
+		add_country_modifier = {
+			name = "pf_if_federal_art_style"
+			duration = 9125
+		}
+	}
+	option = {
+		name = "pf_if.4.b"
+		add_prestige = -5
+	}
+}
+country_event = {		# Peace in our time
+	id = pf_if.5
+	title = pf_if.5.t 
+	desc = pf_if.5.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_part_of_hre = yes
+		is_at_war = no
+	}
+
+	option = {
+		name = "pf_if.5.a"
+		add_stability_or_adm_power = yes
+	}
+}
+country_event = {		# Federal Embargo
+	id = pf_if.6
+	title = pf_if.6.t 
+	desc = pf_if.6.d
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_part_of_hre = yes
+		num_of_merchants = 2
+	}
+
+	option = {
+		name = "pf_if.6.a"
+		add_mercantilism = 1
+		add_country_modifier = {
+			name = "pf_if_smuggling"
+			duration = 1825
+		}
+	}
+	option = {
+		name = "pf_if.6.b"
+		add_country_modifier = {
+			name = "pf_if_merchant_embargo"
+			duration = 1825
+		}
+	}
+}
+country_event = {		# Anti-Federation Sentiment
+	id = pf_if.7
+	title = pf_if.7.t 
+	desc = pf_if.7.d
+	picture = EMPEROR_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_part_of_hre = yes
+		NOT = { is_elector = yes }
+		NOT = { is_emperor = yes }
+	}
+
+	option = {
+		name = "pf_if.7.a"
+		capital_scope = {
+			particularist_rebels = 1
+		}
+	}
+	option = {
+		name = "pf_if.7.b"
+		every_neighbor_country = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			add_aggressive_expansion = {
+				who = ROOT
+				value = 10
+				apply_calc = yes
+			}
+		}
+	}
+}
+country_event = {		# Good Advice
+	id = pf_if.8
+	title = pf_if.8.t 
+	desc = pf_if.8.d
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_part_of_hre = yes
+		has_adm_advisor = yes
+		has_dip_advisor = yes
+		has_mil_advisor = yes
+	}
+
+	option = {
+		name = "pf_if.8.a"
+		add_adm_power = 25
+		add_dip_power = 25
+		add_mil_power = 25
+		add_prestige = -5
+	}
+	option = {
+		name = "pf_if.8.b"
+		add_legitimacy = 5
+		add_prestige = 5
+	}
+}
+country_event = {		# Adirim increases Federation exclusivity
+	id = pf_if.9
+	title = pf_if.9.t 
+	desc = pf_if.9.d
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_if.9.a"
+		add_mercantilism = 1
+	}
+}
+country_event = {		# Limits of Trade
+	id = pf_if.10
+	title = pf_if.10.t 
+	desc = pf_if.10.d
+	picture = MERCHANTS_ARGUING_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_part_of_hre = yes
+		NOT = { mercantilism = 100 }
+	}
+
+	option = {
+		name = "pf_if.10.a"
+		add_mercantilism = 1
+		add_estate_burghers_loyalty_effect = -5
+	}
+	option = {
+		name = "pf_if.10.b"
+		add_treasury = 10
+		add_estate_burghers_loyalty_effect = 5
+	}
+}
+country_event = {		# Martial Desires
+	id = pf_if.11
+	title = pf_if.11.t 
+	desc = pf_if.11.d
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_part_of_hre = yes
+		OR = {
+			is_at_war = yes
+			mil = 4
+			has_mil_advisor = yes
+		}
+	}
+
+	option = {
+		name = "pf_if.11.a"
+		add_army_tradition = 10
+		add_dip_power = -25
+	}
+	option = {
+		name = "pf_if.11.b"
+		add_dip_power = 40
+	}
+}
+country_event = {		# Military Expenditure
+	id = pf_if.12
+	title = pf_if.12.t 
+	desc = pf_if.12.d
+	picture = OVEREXTENSION_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_part_of_hre = yes
+		army_size = 1
+		NOT = { has_country_modifier = pf_if_expensive_armies }
+	}
+
+	option = {
+		name = "pf_if.12.a"
+		add_country_modifier = {
+			name = "pf_if_expensive_armies"
+			duration = 3650
+		}
+	}
+	option = {
+		name = "pf_if.12.b"
+		add_years_of_income = -0.15
+	}
+}
+country_event = {		# Religious Festival
+	id = pf_if.13
+	title = pf_if.13.t 
+	desc = pf_if.13.d
+	picture = ICONS_IN_CHURCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_part_of_hre = yes
+		religion = punic_religion
+	}
+
+	option = {
+		name = "pf_if.13.a"
+		add_years_of_income = -0.10
+		random = {
+			chance = 50
+			add_stability = 1
+		}
+	}
+	option = {
+		name = "pf_if.13.b"
+		add_estate_church_loyalty_effect = 5
+	}
+}

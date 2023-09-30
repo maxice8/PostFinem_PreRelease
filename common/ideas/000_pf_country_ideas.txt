@@ -3514,11 +3514,11 @@ old_germanic_ideas = {
 italian_minor_ideas = {
 	start = {
 		global_tax_modifier = 0.1
-		improve_relation_modifier = 0.15
+		advisor_pool = 1
 	}
 	
 	bonus = {
-		diplomatic_upkeep = 1
+		advisor_cost = -0.10
 	}	
 
 	trigger = {
@@ -3529,38 +3529,41 @@ italian_minor_ideas = {
 	#Investing in Infrastructure
 	italian_minor_ideas_1 = {
 		build_cost = -0.1
+		development_cost = -0.05
 	}
 
 	#Italo-Punic Ancestors
 	italian_minor_ideas_2 = {
-		prestige = 1
+		idea_cost = -0.10
 	}
 
 	#Espionage Departments
 	italian_minor_ideas_3 = {
-		global_spy_defence = 0.25
+		diplomats = 1
 	}
 
 	#Riches of Italia
 	italian_minor_ideas_4 = {
 		trade_efficiency = 0.1
+		transfer_trade_power_reasons = 5
 	}
 
 	#Standing Armies
 	italian_minor_ideas_5 = {
-		drill_gain_modifier = 0.25
-		land_morale = 0.1
+		drill_gain_modifier = 0.33
+		allow_mercenary_drill = yes
 	}
 
 	#Surrounded by Seas
 	italian_minor_ideas_6 = {
-		ship_recruit_speed = -0.1
-		naval_forcelimit = 0.1
+		global_ship_cost = -0.10
+		global_ship_repair = 0.20
 	}
 
 	#Investing in Knowledge
 	italian_minor_ideas_7 = {
-		idea_cost = -0.1
+		tolerance_heathen = 1
+		tolerance_of_heathens_capacity = 1
 	}
 }
 

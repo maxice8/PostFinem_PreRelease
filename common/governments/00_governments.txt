@@ -17,6 +17,7 @@ monarchy = {
 				pf_nordhafnadr_kingdom
 				pf_brittonic_tribe_reform
 				pf_blackcoat_dictatorship
+				neapolitan_principality_reform
 				# ]]]
 
 				#Vanilla
@@ -186,6 +187,9 @@ monarchy = {
 				ottoman_provincial_government_system_reform
 				namestnik_reform
 				consulate_of_the_sea
+				# pf [[[
+				pf_ritualised_diplomacy_reform
+				# ]]]
 			}
 		}
 		state_and_religion = {
@@ -232,6 +236,7 @@ monarchy = {
 				pf_integrated_phalanx
 				pf_catephract_focus
 				pf_militarised_druids_reform
+				pf_citizen_volunteers_reform
 				# ]]]
 				organized_military_staff_reform
 				military_engineering_reform
@@ -663,6 +668,9 @@ republic = {
 				legislative_assembly_reform
 				national_constituent_reform
 				national_assembly_reform
+				# pf [[[
+				pf_ritualised_diplomacy_reform
+				# ]]]
 			}
 		}
 		republic_and_religion = {
@@ -713,6 +721,7 @@ republic = {
 				# pf [[[
 				pf_lag_lowlander_naval_tradition_reform
 				pf_integrated_phalanx
+				pf_citizen_volunteers_reform
 				# ]]]
 				organized_military_staff_reform
 				military_engineering_reform
@@ -1230,6 +1239,9 @@ theocracy = {
 				education_of_the_advisors_reform
 				education_of_the_missionaries_reform
 				education_of_the_people_reform
+				# pf [[[
+				pf_ritualised_diplomacy_reform
+				# ]]]
 			}
 		}
 		religoius_doctrine = {
@@ -1268,6 +1280,7 @@ theocracy = {
 			reforms = {
 				# pf [[[
 				pf_integrated_phalanx
+				pf_citizen_volunteers_reform
 				# ]]]
 				organized_military_staff_reform
 				military_engineering_reform

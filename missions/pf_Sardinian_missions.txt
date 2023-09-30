@@ -380,8 +380,8 @@ pf_sar_2 = {
 
 		effect = {
 			if = {
-				limit = { NOT = { accepted_culture = catalan } }
-				add_accepted_culture = catalan
+				limit = { NOT = { accepted_culture = carventian } }
+				add_accepted_culture = carventian
 			}
 			else = {
 				add_dip_power = 50
@@ -431,7 +431,7 @@ pf_sar_2 = {
 
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 30
+				value = 60
 				sea_zone = {
 					OR = {
 						area = eastern_mediterrenean_area
@@ -594,12 +594,10 @@ pf_sar_3 = {
 					duration = 3650
 				}
 			}
-			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = "pf_sar_recruiting_old_pirates"
 				duration = 9125
 			}
-			custom_tooltip = empty_line_tt
 			2954 = {
 				add_permanent_claim = ROOT
 			}

@@ -133,3 +133,42 @@ pf_sar_art_3 = {
 	prestige = 0.35
 	republican_tradition = 0.20
 }
+
+# Italian Federation Flavour
+
+pf_if_growth_of_a_city = {
+	local_development_cost_modifier = -0.10
+}
+pf_if_federal_art_style = {
+	prestige = 0.5
+	monthly_splendor = 1
+	advisor_cost = -0.05
+}
+pf_if_smuggling = {
+	trade_efficiency = -0.10
+	yearly_corruption = 0.05
+}
+pf_if_merchant_embargo = {
+	merchants = -1
+}
+pf_if_expensive_armies = {
+	land_maintenance_modifier = 0.15
+}
+pf_if_union_of_southern_italy = {
+	governing_capacity = 100
+	prestige = 0.25
+	land_morale = 0.05
+}
+
+pf_feast_reputation_boost = {
+	diplomatic_reputation = 3
+	improve_relation_modifier = 0.33
+}
+
+pf_feast_pious_ruler = {
+	tolerance_own = 1
+}
+pf_feast_attentive_spouse = {
+	diplomatic_reputation = 0.5
+	legitimacy = 0.20
+}
