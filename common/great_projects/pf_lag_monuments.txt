@@ -12,8 +12,12 @@ pf_dom_tower_of_utrecht = {
 	
 	build_trigger = {
 		OR = {
-			province_is_or_accepts_religion_group = {
-				religion_group = germanic_group
+			custom_trigger_tooltip = {
+				tooltip = province_is_or_accepts_germanic_group_tt
+				AND = {
+					owner = { religion_group = germanic_group }
+					religion_group = germanic_group	
+				}
 			}
 			owner = {
 				NOT = { religion_group = germanic_group }
@@ -27,8 +31,12 @@ pf_dom_tower_of_utrecht = {
 
 	can_use_modifiers_trigger = {
 		OR = {
-			province_is_or_accepts_religion_group = {
-				religion_group = germanic_group
+			custom_trigger_tooltip = {
+				tooltip = province_is_or_accepts_germanic_group_tt
+				AND = {
+					owner = { religion_group = germanic_group }
+					religion_group = germanic_group	
+				}
 			}
 			owner = {
 				NOT = { religion_group = germanic_group }
@@ -42,8 +50,12 @@ pf_dom_tower_of_utrecht = {
 
 	can_upgrade_trigger = {
 		OR = {
-			province_is_or_accepts_religion_group = {
-				religion_group = germanic_group
+			custom_trigger_tooltip = {
+				tooltip = province_is_or_accepts_germanic_group_tt
+				AND = {
+					owner = { religion_group = germanic_group }
+					religion_group = germanic_group	
+				}
 			}
 			owner = {
 				NOT = { religion_group = germanic_group }
@@ -89,16 +101,21 @@ pf_dom_tower_of_utrecht = {
 		cost_to_upgrade = { 
 			factor = 1000
 		}
-		province_modifiers = { }
-		area_modifier = { }
+		province_modifiers = {
+			local_tax_modifier = 0.25
+			local_development_cost = -0.05
+		}
+		area_modifier = {
+			local_tax_modifier = 0.25
+		}
 		country_modifiers = {
-
 		}
 		on_upgraded = {
 			owner = {
+				change_innovativeness = 1
 				add_estate_loyalty = {
 					estate = estate_church
-					loyalty = 10
+					loyalty = 0.1
 				}
 			}
 		}
@@ -110,16 +127,24 @@ pf_dom_tower_of_utrecht = {
 		cost_to_upgrade = { 
 			factor = 2500
 		}
-		province_modifiers = { }
-		area_modifier = { }
+		province_modifiers = {
+			local_tax_modifier = 0.5
+			local_development_cost = -0.1
+		}
+		area_modifier = {
+			local_tax_modifier = 0.25
+			local_development_cost = -0.05
+		}
 		country_modifiers = {
-			
+			technology_cost = -0.05
+			idea_cost = -0.1
 		}
 		on_upgraded = {
 			owner = {
+				change_innovativeness = 2
 				add_estate_loyalty = {
 					estate = estate_church
-					loyalty = 10
+					loyalty = 0.15
 				}
 			}
 		}
@@ -131,16 +156,24 @@ pf_dom_tower_of_utrecht = {
 		cost_to_upgrade = { 
 			factor = 5000
 		}
-		province_modifiers = { }
-		area_modifier = { }
+		province_modifiers = {
+			local_tax_modifier = 0.75
+			local_development_cost = -0.15
+		}
+		area_modifier = {
+			local_tax_modifier = 0.5
+			local_development_cost = -0.1
+		}
 		country_modifiers = {
-			
+			technology_cost = -0.1
+			idea_cost = -0.2
 		}
 		on_upgraded = {
 			owner = {
+				change_innovativeness = 3
 				add_estate_loyalty = {
 					estate = estate_church
-					loyalty = 10
+					loyalty = 0.2
 				}
 			}
 		}
