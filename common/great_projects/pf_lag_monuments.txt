@@ -16,9 +16,6 @@ pf_dom_tower_of_utrecht = {
 				religion_group = germanic_group
 			}
 			owner = {
-				religion_group = germanic_group
-			}
-			owner = {
 				NOT = { religion_group = germanic_group }
 				has_global_modifier_value = {
 					which = tolerance_heathen
@@ -34,9 +31,6 @@ pf_dom_tower_of_utrecht = {
 				religion_group = germanic_group
 			}
 			owner = {
-				religion_group = germanic_group
-			}
-			owner = {
 				NOT = { religion_group = germanic_group }
 				has_global_modifier_value = {
 					which = tolerance_heathen
@@ -49,9 +43,6 @@ pf_dom_tower_of_utrecht = {
 	can_upgrade_trigger = {
 		OR = {
 			province_is_or_accepts_religion_group = {
-				religion_group = germanic_group
-			}
-			owner = {
 				religion_group = germanic_group
 			}
 			owner = {
