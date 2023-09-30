@@ -102,8 +102,6 @@ pf_dom_tower_of_utrecht = {
 			factor = 1000
 		}
 		province_modifiers = {
-			local_tax_modifier = 0.25
-			local_development_cost = -0.05
 		}
 		area_modifier = {
 			local_tax_modifier = 0.25
@@ -128,11 +126,9 @@ pf_dom_tower_of_utrecht = {
 			factor = 2500
 		}
 		province_modifiers = {
-			local_tax_modifier = 0.5
-			local_development_cost = -0.1
 		}
 		area_modifier = {
-			local_tax_modifier = 0.25
+			local_tax_modifier = 0.5
 			local_development_cost = -0.05
 		}
 		country_modifiers = {
@@ -157,11 +153,9 @@ pf_dom_tower_of_utrecht = {
 			factor = 5000
 		}
 		province_modifiers = {
-			local_tax_modifier = 0.75
-			local_development_cost = -0.15
 		}
 		area_modifier = {
-			local_tax_modifier = 0.5
+			local_tax_modifier = 0.75
 			local_development_cost = -0.1
 		}
 		country_modifiers = {
