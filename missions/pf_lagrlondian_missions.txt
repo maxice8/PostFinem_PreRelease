@@ -891,6 +891,7 @@ fourth = {
 				area = north_rhine_area
 				area = lower_rhineland_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
