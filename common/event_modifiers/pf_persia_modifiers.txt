@@ -232,10 +232,20 @@ pf_per_rule_in_india = {
 }
 
 pf_per_heretics_expelled = {
-	global_missionary_strength = 0.02
-	missionaries = 1
+	devotion = 2
+	same_religion_advisor_cost = -0.1
+}
+
+pf_per_zoroastrian_hegemon = {
+	prestige = 1
+	monthly_splendor = 1
 }
 
 pf_per_satrapies_onboard = {
 	reduced_liberty_desire = 10
+}
+
+pf_per_persia_prospering = {
+	development_cost = -0.1
+	global_trade_goods_size_modifier = 0.1
 }

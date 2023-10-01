@@ -75,6 +75,8 @@
  pf_per_rule_in_india: "Persian Rule in India"
  pf_per_heretics_expelled: "Heretics Expelled"
  pf_per_satrapies_onboard: "Satrapies Persuaded"
+ pf_per_zoroastrian_hegemon: "Zoroastrian Hegemon"
+ pf_per_persia_prospering: "Persia Prospering"
 
 # Satrapy Revolt disaster
  pf_per_satrapy_revolt: "Satrapy Revolt"
@@ -387,7 +389,7 @@
  pf_per_if_lvl_1_tc_tt: "If it has a Center of Trade of level §Y1§!:"
  pf_per_horde_border_fort_tt: " provinces in the §YSamarkand§! node:\n    Owned by a §YSatrapy§! of Persia.\n    Has a §YFort§! building.\n    Any neighboring province:\n      Province Owner:\n        Has enacted Government Reform §YSteppe Nomads§!"
  pf_per_good_wall_tt: "All provinces that meet the requirements:"
- pf_per_no_more_raids_tt: "The event '§YRaid on our Satrapy!§!' will no longer happen."
+ pf_per_no_more_raids_tt: "The event '§YRaid on our Satrapy!§!' will no longer happen.\n"
  pf_per_owner_is_zoroastrian_tt: "Religion of Province Owner is §YZoroastrian§!"
  pf_satrapy_while_subject_tt: "whilst a subject of §YPersia§!"
  pfPerSatrapyDemandsFilled: "Satrapy Demands Fulfilled"
@@ -404,7 +406,7 @@
  pf_per_trading_with_faithful_tt: "\nIf we complete the mission by owning the provinces:"
  pf_per_trading_with_faithful_2_tt: "Alternatively, if we complete the mission by allying the owner of the provinces, each ally gets:\nOpinion of §YPersia§! changed by §G+50§!"
  pf_per_trade_nodes_traded_tt: " Trade Nodes:\n    Is §YPersia§!, §YBasra§!, §YHormuz§!, §YSamarkand§!, §YGujarat§! or §YLahore§!\n    §YPersia§! has §Y80%§! or more trade power."
- pf_per_merchant_class_income_tt: "Gain 12 months of income from each of the mentioned trade nodes.\n§YAllow Merchant Guilds Economic Freedom§! will be upgraded to §YPersian Merchant Guild Freedom§!"
+ pf_per_merchant_class_income_tt: "Gain 12 months of income from each of the mentioned trade nodes.\n\n§YAllow Merchant Guilds Economic Freedom§! will be upgraded to §YPersian Merchant Guild Freedom§!\n"
  pf_per_merchant_class_40_trade_income_tt: "Have an income from §YTrade§! of at least §G40§! ducats."
  pf_per_defended_mountain_fort: "Important Border Fort"
  pf_per_defend_the_mountains_tt: "The required provinces get:\nStart construction of Ramparts for §Y0.0%§! of the cost, and §Y100.0%§! of the time."
@@ -422,9 +424,9 @@
  pf_per_unite_the_faith_tt: "All §YZoroastrian§! provinces:\n    Owned by §YPersia§! or its non-Tributary Subjects."
  pf_per_dominate_northern_india_tt: "Has all the provinces promised to it under the §YSatrapy Expansion Plan§!"
  pf_per_dominate_northern_india_2_tt: "Has all the provinces promised to it under the §YSatrapy Expansion Plan§!\n§YYou can check the requirements in your Subject's Missions!§!"
-
-
-
+ pf_per_is_prosperous_tt: " owned provinces:\n    Is §YProsperous§!\n    One of the following must be true:\n        §YProvince(s)§! is in the area §YKhuzestan§!\n        §YProvince(s)§! is in the region §YPersia§!\n        §YProvince(s)§! is in the region §YKhorasan§!"
+ pf_per_all_required_province_tt: "All required provinces get:"
+ pf_per_silk_road_reopened: "Silk Road Revival"
 
 
 

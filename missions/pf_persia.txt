@@ -462,6 +462,14 @@ pf_per_1 = {
 				set_estate_privilege = estate_burghers_pf_per_economical_boost
 			}
 			set_country_flag = pf_per_unlocked_upgraded_trade_privilege
+
+			define_advisor = {
+				type = trader
+				skill = 3
+				cost_multiplier = 0.25
+				religion = zoroastrian
+				culture = isfahani
+			}
 		}
 	}
 
@@ -472,10 +480,94 @@ pf_per_1 = {
 		required_missions = { pf_per_continue_expansion pf_per_merchant_class }
 
 		# Baghdad, Teheran, Mashhad, Herat and Samarkand, must be 25 dev, workshop, marketplace, expanded infrastructure
-		trigger = {}
+		trigger = {
+			410 = {
+				development = 25
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+				
+			}
+			428 = {
+				development = 25
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+				
+			}
+			4326 = {
+				development = 25
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+				
+			}
+			446 = {
+				development = 25
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+				
+			}
+			454 = {
+				development = 25
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+				
+			}
+		}
 
 		# Province trade good changes to silk, gets +10% goods produced until end of game
-		effect = {}
+		effect = {
+			custom_tooltip = pf_per_all_required_provinces_tt:
+			tooltip = {
+				change_trade_goods = silk
+				add_province_modifier = {
+					name = pf_per_silk_road_city
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				410 = {
+					change_trade_goods = silk
+					add_province_modifier = {
+						name = pf_per_silk_road_city
+						duration = -1
+					}
+				}
+				428 = {
+					change_trade_goods = silk
+					add_province_modifier = {
+						name = pf_per_silk_road_city
+						duration = -1
+					}
+				}
+				4326 = {
+					change_trade_goods = silk
+					add_province_modifier = {
+						name = pf_per_silk_road_city
+						duration = -1
+					}
+				}
+				446 = {
+					change_trade_goods = silk
+					add_province_modifier = {
+						name = pf_per_silk_road_city
+						duration = -1
+					}
+				}
+				454 = {
+					change_trade_goods = silk
+					add_province_modifier = {
+						name = pf_per_silk_road_city
+						duration = -1
+					}
+				}
+			}
+
+			change_price = {
+				trade_goods = silk
+				key = pf_per_silk_road_reopened
+				value = 0.2
+				duration = 3650
+			}
+		}
 	}
 
 	pf_per_persian_prosperity = {
@@ -483,6 +575,15 @@ pf_per_1 = {
 		position = 14
 
 		required_missions = { pf_per_revive_silk_road }
+
+		provinces_to_highlight = {
+			OR = {
+				region = persia_region
+				region = khorasan_region
+				region = khuzestan_area
+			}
+			owned_by = PER
+		}
 
 		# Has 100 dev clicks in Persian land, income above 100, prosperity in 5 states
 		trigger = {
@@ -494,10 +595,31 @@ pf_per_1 = {
 					area = khuzestan_area
 				}
 			}
+
+			monthly_income = 100
+
+			calc_true_if = {
+				all_owned_province = {
+					OR = {
+						region = persia_region
+						region = khorasan_region
+						area = khuzestan_area
+					}
+					is_prosperous = yes
+				}
+				amount = 25
+				desc = pf_per_is_prosperous_tt
 		}
 
-		# All land in Persia gets 50% progress towards prosperity, 10% dev cost for 20 years
-		effect = {}
+		# Ducats, 10% dev cost and 10% goods produced for 20 years
+		effect = {
+			add_years_of_income = 2
+
+			add_country_modifier = {
+				name = pf_per_persia_prospering
+				duration = 7300
+			}
+		}
 	}
 }
 
@@ -1751,7 +1873,20 @@ pf_per_4 = {
 			}
 		}
 
-		effect = {}
+		effect = {
+			add_country_modifier = {
+				name = pf_per_zoroastrian_hegemon
+				duration = -1
+			}
+
+			define_advisor = {
+				type = inquisitor
+				skill = 3
+				cost_multiplier = 0.25
+				religion = zoroastrian
+				culture = isfahani
+			}
+		}		
 	}
 
 	pf_per_dominate_northern_india = {
@@ -2043,6 +2178,8 @@ pf_per_5 = {
 					duration = -1
 				}
 			}
+			set_country_flag = pf_per_good_wall_built
+
 			custom_tooltip = pf_per_no_more_raids_tt
 			hidden_effect = {
 				trade_company_samarkand = {
@@ -2059,8 +2196,15 @@ pf_per_5 = {
 						name = pf_per_good_wall_fort
 						duration = -1
 					}
-				}
-				set_country_flag = pf_per_good_wall_built
+				}	
+			}
+
+			define_advisor = {
+				type = fortification_expert
+				skill = 2
+				cost_multiplier = 0.5
+				religion = zoroastrian
+				culture = isfahani
 			}
 		}
 	}
