@@ -2132,7 +2132,7 @@ fourth_2 = {
 			culture = old_frisian
 			OR = {
 				devastation = 1
-				local_autonomy_above_min = 0
+				local_autonomy_above_min = 1
 			}
 		 } 
 
@@ -2140,8 +2140,10 @@ fourth_2 = {
 			NOT = {
 				any_owned_province = {
 					culture = old_frisian
-					devastation = 0
-					NOT = { local_autonomy_above_min = 1 }
+					OR = {
+						devastation = 1
+						local_autonomy_above_min = 1
+					}
 				}
 			}
 		} 
