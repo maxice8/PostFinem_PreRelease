@@ -1,0 +1,176 @@
+pf_dom_tower_of_utrecht = {
+	start = 98
+	date = 1321.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 6
+	starting_tier = 0
+	type = monument
+	
+	build_trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = province_is_or_accepts_germanic_group_tt
+				AND = {
+					owner = { religion_group = germanic_group }
+					religion_group = germanic_group	
+				}
+			}
+			owner = {
+				NOT = { religion_group = germanic_group }
+				has_global_modifier_value = {
+					which = tolerance_heathen
+					value = 0.03
+				}
+			}
+		}
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = province_is_or_accepts_germanic_group_tt
+				AND = {
+					owner = { religion_group = germanic_group }
+					religion_group = germanic_group	
+				}
+			}
+			owner = {
+				NOT = { religion_group = germanic_group }
+				has_global_modifier_value = {
+					which = tolerance_heathen
+					value = 0.03
+				}
+			}
+		}
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = province_is_or_accepts_germanic_group_tt
+				AND = {
+					owner = { religion_group = germanic_group }
+					religion_group = germanic_group	
+				}
+			}
+			owner = {
+				NOT = { religion_group = germanic_group }
+				has_global_modifier_value = {
+					which = tolerance_heathen
+					value = 0.03
+				}
+			}
+		}
+	}
+
+	keep_trigger = {
+	}
+
+
+	#tier data
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = { 
+			months = 120
+		}
+		cost_to_upgrade = { 
+			factor = 1000
+		}
+		province_modifiers = {
+			local_tax_modifier = 0.25
+			local_development_cost = -0.05
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+			owner = {
+				change_innovativeness = 1
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 10
+				}
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { 
+			months = 240
+		}
+		cost_to_upgrade = { 
+			factor = 2500
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_tax_modifier = 0.25
+			local_development_cost = -0.05
+		}
+		country_modifiers = {
+			technology_cost = -0.05
+		}
+		on_upgraded = {
+			owner = {
+				change_innovativeness = 2
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 15
+				}
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { 
+			months = 480
+		}
+		cost_to_upgrade = { 
+			factor = 5000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		region_modifier = {
+			local_tax_modifier = 0.25
+			local_development_cost = -0.05
+		}
+		country_modifiers = {
+			technology_cost = -0.1
+		}
+		on_upgraded = {
+			owner = {
+				change_innovativeness = 3
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 20
+				}
+			}
+		}
+	}
+}
