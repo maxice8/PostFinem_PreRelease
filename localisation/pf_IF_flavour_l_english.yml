@@ -158,18 +158,18 @@ pf_if.10.a: "Institute laws to protect our merchants."
 pf_if.10.b: "Continue to allow free trade."
 
 pf_if.11.t: "Martial Desires"
-pf_if.11.d: ""
-pf_if.11.a: "War is still legal! Let us wage it."
+pf_if.11.d: "War between the states of the Italian Federation is somewhat taboo, but that fact does not change the intrinsic desire within every human soul to fight. There is always more territory and more glory to be won. The nation longs for battle!"
+pf_if.11.a: "Let us wage war!"
 pf_if.11.b: "The law of the Federation mandates peace."
 
 pf_if.12.t: "Burdens on the Military Establishment"
-pf_if.12.d: ""
+pf_if.12.d: "The cost of fighting has gotten much more expensive in recent years, with soaring prices for basic things like weaponry and armour putting many soldiers and officers off performing their service. In response, the state has started taking on more and more of the cost in an effort to keep the army running as usual, but despite this the crisis only seems to be getting worse."
 pf_if.12.a: "We will have to take the brunt of the cost."
 pf_if.12.b: "Spend every effort to ensure the crisis calms down."
 pf_if_expensive_armies: "Increased Military Expenditure"
 
-pf_if.13.t: "The Festival of the Night"
-pf_if.13.d: ""
+pf_if.13.t: "The Festival"
+pf_if.13.d: "One of the most important festival days of the year is upon us! The worship of every god in the Punic pantheon is important, but some spark more joy and capture the imaginations of the people more effectively. The upcoming occassion is one such event, where the clergy expect to make a lot of money from people attending and buying icons and other souvenirs from the many shops that pop up along the path of the anticipated procession."
 pf_if.13.a: "The state will give money to support this event!"
 pf_if.13.b: "Let the clergy keep control of it."
 
@@ -200,12 +200,14 @@ pf_feast.3.d: "An influential priest from one of our provinces, [Root.priest.Get
 pf_feast.3.a: "Confront him about his gluttony."
 pf_feast.3.b: "If he's still hungry, he can have more food."
 pf_feast.3.c: "Publicly mock him."
+pf_feast_pious_ruler: "Pious Ruler"
 
 pf_feast.4.t: "Diverted Attention"
 pf_feast.4.d: "You stand in the middle of a circle at the end of the great banquet hall, surrounded by cheerful nobles and priests and other notables of the realm. They quiz and question you, making light-hearted conversation while throwing in the occassional joke. Out of the corner of your eye you catch the [Root.Consort.GetTitle] at the other end of the room, standing there with [Root.Consort.GetHerHis] arms crossed, eying you up. As [Root.Consort.GetSheHe] approaches, you can already sense the anger contained, and the noise of your courtiers is momentarily drowned out.\n'Dearest, might we have a conversation together? In private?' [Root.Consort.GetTitle] [Root.Consort.GetName] sternly asks, a forced smile on [Root.Consort.GetHerHis] face."
 pf_feast.4.a: "Excuse me gentlemen, my dear [Root.Consort.GetTitle] calls on me."
 pf_feast.4.b: "Can't you see I've got more important things going on darling?"
 pf_feast.4.c: "I am afraid I must get some fresh air, I apologise!"
+pf_feast_attentive_spouse: "Attentive Spouse"
 
 pf_feast.5.t: "Satisfying Meal"
 pf_feast.5.d: "'My my...' you mutter to yourself as you slurp up the last remnants of the greenish soup from your bowl. 'That was delicious.' And truly it was. You think that perhaps it was the best soup you've ever had, and even the thought of its taste is enough to give you a fuzzy feeling all over."
@@ -226,11 +228,23 @@ pf_feast.7.b: "Mmmm, this is delicious gentlemen, you should try it! bleugh"
 pf_feast.7.c: "Uhum, anyway, have any of you heard about the war in Gaul recently?"
 
 pf_feast.8.t: "No Fighting at the Dinner Table!"
-pf_feast.8.d: ""
+pf_feast.8.d: "One of the nobles attending the feast has taken it upon himself to teach the young [Root.Heir.GetName] the art of sword fighting, despite his obvious lack of expertise on the subject himself. [Root.Heir.GetName] has become so enamoured with the fighting however, that they have taken it even into the feasting hall!"
 pf_feast.8.a: "Put that dastardly thing down!"
 pf_feast.8.b: "Thank you, but I can teach my child myself."
 pf_feast.8.c: "No no please, carry on!"
 pf_feast_results_depend_on_nobles_loyalty_tt: "\nThe results of this challenge depend on the §Yloyalty§! of the §YNobility§! estate."
+
+pf_feast.9.t: "Having a Good Time"
+pf_feast.9.d: ""
+pf_feast.9.a: "Isn't it amazing?"
+pf_feast.9.b: "I'm so glad everyone is having a good time."
+
+pf_feast.10.t: "The End of the Feast"
+pf_feast.10.d: ""
+pf_feast.10.a: "It was a blast!"
+pf_feast.10.b: "Until next time!"
+pf_feast.10.c: "That was the best time of my life!"
+the_feast_ends_tt: "The §YFeast§! has come to an end. Another cannot be hosted until the cooldown ends."
 
 ################
 # Decisions
@@ -246,7 +260,7 @@ pf_if_meridia_nation_desc: "The south of Italia has always had its own separate 
 pf_if_union_of_southern_italy: "Union of Southern Italia"
 
 pf_if_host_a_feast_title: "Host a Feast"
-pf_if_host_a_feast_desc: "The time has come to host a magnificent feast! The quality and length of the feast will depend on the amount of money we put into it. During a feast, various events can fire, involving interactions within the royal family, estates, leaders of foreign countries, advisors, and the Federation. The more expensive the feast, the better the events will be!\n\n'Light the fires and host the hogs, for tonight we're gonna party!'"
+pf_if_host_a_feast_desc: "The time has come to host a magnificent feast! The quality and length of the feast will depend on the amount of money we put into it. During a feast, various events can fire, involving interactions within the royal family, estates, leaders of foreign countries, advisors, and the Federation. The more expensive the feast, the better the events will be!\n\n'Light the fires and roast the hogs, for tonight we're gonna party!'"
 
 ################
 # Missions

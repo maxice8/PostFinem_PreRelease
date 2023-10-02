@@ -252,7 +252,7 @@ country_event = {		# Anti-Federation Sentiment
 			add_aggressive_expansion = {
 				who = ROOT
 				value = 10
-				apply_calc = yes
+				apply_calc = no
 			}
 		}
 	}
@@ -267,9 +267,7 @@ country_event = {		# Good Advice
 
 	trigger = {
 		is_part_of_hre = yes
-		has_adm_advisor = yes
-		has_dip_advisor = yes
-		has_mil_advisor = yes
+		has_advisor = yes
 	}
 
 	option = {
@@ -277,7 +275,7 @@ country_event = {		# Good Advice
 		add_adm_power = 25
 		add_dip_power = 25
 		add_mil_power = 25
-		add_prestige = -5
+		add_prestige = -10
 	}
 	option = {
 		name = "pf_if.8.b"
@@ -372,7 +370,7 @@ country_event = {		# Military Expenditure
 	}
 	option = {
 		name = "pf_if.12.b"
-		add_years_of_income = -0.15
+		add_years_of_income = -1
 	}
 }
 country_event = {		# Religious Festival
@@ -398,6 +396,6 @@ country_event = {		# Religious Festival
 	}
 	option = {
 		name = "pf_if.13.b"
-		add_estate_church_loyalty_effect = 5
+		add_estate_church_loyalty_effect = 10
 	}
 }
