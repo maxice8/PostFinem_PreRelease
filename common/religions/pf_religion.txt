@@ -676,7 +676,16 @@ hellenic_group = {
 			}
 		}
 		on_convert = {
+			if = {
+				limit = { has_country_flag = mac_subjugated_archon_flag }
+				custom_tooltip = mac_converting_paradosi_tt
+				add_country_modifier = {
+					name = mac_converting_paradosi_modifier
+					duration = 7300
+				}
+			}
 			hidden_effect = {
+				change_religion = paradosi
 				random_owned_province = {
 					limit = {
 						can_have_center_of_reformation_trigger = {
@@ -688,6 +697,11 @@ hellenic_group = {
 				}
 			}
 			custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}	
 		}
 
 		province = {

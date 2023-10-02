@@ -7,7 +7,7 @@ mac_our_hebron_neighbors_modifier_1 = {
    local_culture_conversion_cost = -0.25
 }
 mac_our_hebron_neighbors_modifier_2 = {
-   reduced_liberty_desire = 0.25
+   reduced_liberty_desire = 25
 }
 mac_defend_the_coastlines_modifier = {
    galley_power = 0.1
@@ -45,7 +45,7 @@ mac_organize_the_cabinet_modifier = {
    siege_ability = 0.1
 }
 mac_incorporating_big_guns_modifier = {
-   artillery_fire = 0.5
+   artillery_fire = 1
    artillery_levels_available_vs_fort = 2
 }
 mac_incorporating_big_guns_modifier_2 = {
@@ -114,4 +114,19 @@ mac_riches_of_silk_road_modifier = {
 }
 mac_iron_for_war_modifier = {
    land_forcelimit_modifier = 0.1
+}
+mac_why_go_alone_ARCHON_FRIEND_modifier = {
+   papal_influence = 2
+   prestige = 0.5
+}
+mac_why_go_alone_ARCHON_SUBJECT_modifier = {
+   papal_influence = -2
+   diplomatic_annexation_cost = -0.25
+}
+mac_converting_paradosi_modifier = {
+   missionaries = 1
+   prestige_per_development_from_conversion = 0.2
+}
+kallias_philoxenos_modifier = {
+   global_unrest = 1
 }

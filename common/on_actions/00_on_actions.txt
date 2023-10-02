@@ -2214,8 +2214,12 @@ on_bi_yearly_pulse_5 = {
 on_thri_yearly_pulse = {
 	#events = {
 	#	flavor_dan.100
-	#}
+	#
 	random_events = {
+
+		#PF Events
+		100 = pf_mac_events.9 #Macedonian War Cabinet Promotes General
+
 		# Republics
 		100 = republics.4
 		100 = republics.5
