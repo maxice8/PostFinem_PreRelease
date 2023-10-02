@@ -17,7 +17,7 @@ country_event = {
 
 	immediate = {  }
 
-	option = {
+	option = { #Release Them
 		name = pf_mac_events.1.a
 		# goto = 
 		ai_chance = { factor = 1 }
@@ -55,7 +55,7 @@ country_event = {
 		}
 	}
 
-	option = {
+	option = { #Take the claims for yourself
 		name = pf_mac_events.1.b
 		# goto = 
 		ai_chance = { factor = 0 }
@@ -91,30 +91,9 @@ country_event = {
 		name = pf_mac_events.2.a
 		# goto = 
 		ai_chance = { factor = 1 }
-
-		apulia_area = { add_core = MGN }
-		calabria_area = { add_core = MGN }
-		release = MGN
-		create_union = MGN
-		MGN = {
-			add_country_modifier = {
-				name = pf_mac_events_1_modifier_subj
-				duration = -1
-			}
-		}
-		add_country_modifier = {
-			name = pf_mac_events_1_modifier_dip
-			duration = -1
-		}
-	}
-
-	option = {
-		name = pf_mac_events.1.b
-		# goto = 
-		ai_chance = { factor = 1 }
-
 		remove_country_modifier = pf_mac_events_1_modifier_dip
 	}
+	
 }
 
 #Uncontested in the Aegean
@@ -283,6 +262,311 @@ country_event = {
 		ai_chance = { factor = 1 }
 
 		1766 = { add_base_production = 2 }
+	}
+
+}
+
+#The Tumultuous Rule of Kallias Philoxnos
+#He's inherited a nation in decline by his father, and he's not expected to be much better
+#Very decadent, very disconnected, and widely disliked by the people
+country_event = {
+	id = pf_mac_events.7
+	title = pf_mac_events.7.t
+	desc = pf_mac_events.7.d
+	picture = ECONOMICALLY_TALLANTED_RULER_eventPicture
+	
+	trigger = {  
+		tag = MAC
+		has_ruler_flag = kallias_philoxenos_flag
+	}
+
+	fire_only_once = yes
+	
+	# is_triggered_only = yes
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	immediate = {  }
+
+	option = { #
+		name = pf_mac_events.7.a
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		custom_tooltip = kallias_philoxenos_tt
+		set_country_flag = kallias_philoxenos_country_flag
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = kallias_philoxenos_modifier
+			duration = 3600
+		}
+	}
+}
+
+
+#A Blessing from Posiedon
+#A strong admiral makes his name known
+country_event = {
+	id = pf_mac_events.8
+	title = pf_mac_events.8.t
+	desc = pf_mac_events.8.d
+	picture = NAVAL_MILITARY_eventPicture
+	
+	trigger = {  
+		tag = MAC
+		num_of_galley = 20
+		naval_forcelimit = 40
+	}
+
+	fire_only_once = yes
+	
+	# is_triggered_only = yes
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	immediate = {  }
+
+	option = { #admiral
+		name = pf_mac_events.8.a
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		add_yearly_sailors = 2
+		custom_tooltip = empty_line_tt
+		define_admiral = {
+			shock = 5
+			fire = 4
+			manuever = 4
+			name = "Aristodinos Kokkinopogon"
+		}
+	}
+
+	option = { #cabinet
+		name = pf_mac_events.8.b
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		add_yearly_sailors = 2
+		custom_tooltip = empty_line_tt
+		define_advisor = {
+			type = naval_reformer
+			skill = 3
+			cost_multiplier = 0.25
+		}
+	}
+}
+
+
+#The Cabinet Proposes a Promotion
+#Roll a new general, trade org for it
+#Pulse event, 4-5 years prob
+country_event = {
+	id = pf_mac_events.9
+	title = pf_mac_events.9.t
+	desc = pf_mac_events.9.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	
+	trigger = {  
+		tag = MAC
+		NOT = { num_of_generals = 1 }
+		has_government_mechanic = mac_war_cabinet_mechanic
+		NOT = {  
+			has_government_power = {
+				mechanic_type = mac_war_cabinet_mechanic
+				power_type = mac_war_cabinet_organization
+				value = 100
+			}
+		}
+	}
+
+	# fire_only_once = yes
+	
+	# is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {  }
+
+	option = { #Trade org for general
+		name = pf_mac_events.9.a
+		# goto = 
+		ai_chance = { 
+			factor = 2
+			modifier = {
+				factor = 10
+				is_in_important_war = yes
+			} 
+			modifier = {
+				factor = 1.5
+				num_of_generals = 1
+			} 
+			modifier = {
+				factor = 0
+				num_of_generals = 2
+			} 
+		}
+
+		add_government_power = {
+			mechanic_type = mac_war_cabinet_mechanic
+			power_type = mac_war_cabinet_organization
+			value = -10
+		}
+		custom_tooltip = empty_line_tt
+		create_general = {
+			tradition = 75
+		}
+	}
+
+	option = { #Trade org for advisor
+		name = pf_mac_events.9.b
+		# goto = 
+		ai_chance = { 
+			factor = 2
+			modifier = {
+				factor = 0.5
+				is_in_important_war = yes
+			} 
+			modifier = {
+				factor = 2
+				num_of_generals = 2
+			} 
+			modifier = {
+				factor = 2
+				NOT = { monthly_mil = 3 }
+			} 
+			modifier = {
+				factor = 1.5
+				NOT = { monthly_mil = 4 }
+			} 
+			modifier = {
+				factor = 1.5
+				NOT = { monthly_mil = 5 }
+			} 
+			modifier = {
+				factor = 0.5
+				has_mil_advisor_3 = yes
+			} 
+		}
+
+
+		add_government_power = {
+			mechanic_type = mac_war_cabinet_mechanic
+			power_type = mac_war_cabinet_organization
+			value = -10
+		}
+		custom_tooltip = empty_line_tt
+		define_advisor = {
+			type = commandant
+			skill = 3
+			discount = yes
+		}
+	}
+
+	option = { #Neither
+		name = pf_mac_events.9.c
+		# goto = 
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				is_in_important_war = yes
+			} 
+			modifier = {
+				factor = 2
+				num_of_generals = 2
+			} 
+			modifier = {
+				factor = 2
+				monthly_mil = 6
+			} 
+			modifier = {
+				factor = 2
+				NOT = { prestige = 0 }
+			} 
+			modifier = {
+				factor = 2
+				NOT = { prestige = 10 }
+			} 
+			modifier = {
+				factor = 2
+				NOT = { prestige = 20 }
+			} 
+			modifier = {
+				factor = 2
+				NOT = { legitimacy = 50 }
+			} 
+			modifier = {
+				factor = 2
+				NOT = { legitimacy = 60 }
+			} 
+			modifier = {
+				factor = 2
+				NOT = { legitimacy = 70 }
+			} 
+		}
+
+		add_legitimacy = 10
+		add_prestige = 10
+		custom_tooltip = empty_line_tt
+		add_government_power = {
+			mechanic_type = mac_war_cabinet_mechanic
+			power_type = mac_war_cabinet_organization
+			value = 5
+		}
+	}
+}
+
+
+#The Cabinet Proposes a Promotion
+#Roll a new general, trade org for it
+#Pulse event, 4-5 years prob
+country_event = {
+	id = pf_mac_events.10
+	title = pf_mac_events.10.t
+	desc = pf_mac_events.10.d
+	picture = CIVIL_WAR_eventPicture
+	
+	trigger = {  
+		tag = MAC
+		NOT = { num_of_generals = 1 }
+		has_government_mechanic = mac_war_cabinet_mechanic
+		NOT = {  
+			has_government_power = {
+				mechanic_type = mac_war_cabinet_mechanic
+				power_type = mac_war_cabinet_organization
+				value = 100
+			}
+		}
+	}
+
+	# fire_only_once = yes
+	
+	# is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {  }
+
+	option = { #Trade org for general
+		name = pf_mac_events.9.a
+		# goto = 
+		ai_chance = { 
+			factor = 1
+		}
+	}
+
+
+
+	option = { #Trade org for advisor
+		name = pf_mac_events.9.b
+		# goto = 
+		ai_chance = { 
+			factor = 1
+		}
 	}
 
 }
