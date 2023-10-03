@@ -44,32 +44,60 @@ mac_1 = {
 		} 
 
 		trigger = {  
-			albania_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				albania_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+				}
+				NEK = {
+					is_subject_of = ROOT
+					albania_area = {
+						type = all
+						owned_by = PREV
+					}
+				}
 			}
 		} 
 
 		effect = {  
-			custom_tooltip = mac_our_hebron_neighbors_tt_1
-			tooltip = {
-				albania_area = {
-					add_nationalism = -10
-					add_province_modifier = {
-						name = mac_our_hebron_neighbors_modifier_1
-						duration = -7300
+			simple_dynamic_effect = {
+				first_custom_tooltip = mac_our_hebron_neighbors_tt_1 #if you own the lands directly
+				first_limit = "
+					albania_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
 					}
-				}
-			}
-			custom_tooltip = mac_our_hebron_neighbors_tt_2
-			tooltip = {
-				add_adm_power = 100
-				add_country_modifier = {
-					name = mac_our_hebron_neighbors_modifier_2
-					duration = 7300
-				}
-			}
-			custom_tooltip = empty_line_tt
+				"
+				first_effect = "
+					albania_area = {
+						add_nationalism = -10
+						add_province_modifier = {
+							name = mac_our_hebron_neighbors_modifier_1
+							duration = -7300
+						}
+					}
+				"
+				second_custom_tooltip = mac_our_hebron_neighbors_tt_2 #if they're a subject
+				second_limit = "
+					NEK = {
+						is_subject_of = ROOT
+						albania_area = {
+							type = all
+							owned_by = PREV
+						}
+					}
+				"
+				second_effect = "
+					add_adm_power = 100
+					add_country_modifier = {
+						name = mac_our_hebron_neighbors_modifier_2
+						duration = 7300
+					}
+				"
+			}	
+
 			apulia_area = { add_permanent_claim = ROOT }
 			calabria_area = { add_permanent_claim = ROOT }
 			hidden_effect = {
@@ -122,7 +150,7 @@ mac_1 = {
 					is_core = ROOT
 				}
 				NOT = {
-					religion = hellenic
+					religion = ROOT
 				}
 			}
 		} 
@@ -136,7 +164,7 @@ mac_1 = {
 			}  
 			apulia_area = {
 				type = all
-				religion = hellenic
+				religion = ROOT
 			} 
 			calabria_area = {
 				type = all
@@ -145,7 +173,7 @@ mac_1 = {
 			}
 			calabria_area = {
 				type = all
-				religion = hellenic
+				religion = ROOT
 			} 
 		} 
 
@@ -698,21 +726,23 @@ mac_3 = {
 
 		effect = {  
 			custom_tooltip = mac_illyrian_marches_tt #if illyria exists (under 100 develompent) give subjugation cb, else give claims on areas, a modifier and mana
-			hidden_effect = {
-				if = {
-					limit = {
-						ILY = {
-							exists = yes
-							NOT = { total_development = 100 }
-						}
+			if = {
+				limit = {
+					ILY = {
+						exists = yes
+						NOT = { total_development = 100 }
 					}
+				}
+				hidden_effect = {
 					add_casus_belli = {
 						type = cb_vassalize_mission
 						months = 240
 						target = ILY
 					}
 				}
-				else = {
+			}
+			else = {
+				hidden_effect = {
 					add_adm_power = 100
 					every_owned_province = {
 						limit = {	 
@@ -727,6 +757,12 @@ mac_3 = {
 							name = mac_illyrian_marches_modifier
 							duration = 7300
 						}
+					}
+				}
+				tooltip = {				
+					add_province_modifier = {
+						name = mac_illyrian_marches_modifier
+						duration = 7300
 					}
 				}
 			}
@@ -930,6 +966,7 @@ mac_4 = {
 		effect = {  
 			custom_tooltip = mac_aegean_dominance_tt
 			set_country_flag = mac_naval_doctrine_flag
+			custom_tooltip = empty_line_tt
 			country_event = {
 				id = pf_mac_events.3
 			}
@@ -982,11 +1019,75 @@ mac_5 = {
 						}
 					}
 				}
+			}	
+			OR = {
+				AND = {
+					papal_influence = 50
+					alliance_with = ATH
+					ATH = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+				any_subject_country = {
+					tag = ATH
+					owns_core_province = 143
+				}
 			}
 		} 
 
 		effect = {  
-			custom_tooltip = mac_why_go_alone_ARCHON_tt
+			simple_dynamic_effect = {
+				first_custom_tooltip = mac_why_go_alone_ARCHON_FRIEND_tt
+				first_limit = "
+					papal_influence = 50
+					alliance_with = ATH
+					ATH = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				"
+				first_effect = "
+					set_country_flag = mac_befriend_archon_flag
+					add_prestige_or_monarch_power = { amount = 25 }
+					custom_tooltip = empty_line_tt
+					ATH = {
+						add_trust = {
+							who = ROOT
+							value = 25
+						}
+					}
+					custom_tooltip = empty_line_tt
+					add_country_modifier = {
+						name = mac_why_go_alone_ARCHON_FRIEND_modifier
+						duration = 7300
+					}
+				"
+				second_custom_tooltip = mac_why_go_alone_ARCHON_SUBJECT_tt
+				second_limit = "
+					any_subject_country = {
+						tag = ATH
+						owns_core_province = 146
+					}
+				"
+				second_effect = "
+					set_country_flag = mac_subjugated_archon_flag
+					custom_tooltip = mac_subjugated_archon_reform_tt
+					custom_tooltip = empty_line_tt
+					add_reform_desire = 0.05
+					custom_tooltip = empty_line_tt				
+					add_country_modifier = {
+						name = mac_why_go_alone_ARCHON_SUBJECT_modifier
+						duration = 7300
+					}
+				"
+			}	
+			custom_tooltip = empty_line_tt
+			custom_tooltip = mac_why_go_alone_ARCHON_CONSEQUENCES_tt
 			custom_tooltip = empty_line_tt
 			swap_non_generic_missions = yes
 		} 
@@ -997,7 +1098,11 @@ mac_locked_1 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = MAC } 
+	potential = { 
+		tag = MAC 
+		NOT = { has_country_flag = mac_befriend_archon_flag }
+		NOT = { has_country_flag = mac_subjugated_archon_flag }
+	} 
 
 	pf_mac_branching1 = {
 		icon = mission_locked_mission
@@ -1021,6 +1126,71 @@ mac_locked_1 = {
 		effect = {  } 
 	}
 }
+mac_archon_friend_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = MAC 
+		has_country_flag = mac_befriend_archon_flag
+	} 
+
+	mac_archon_friend_1 = {
+		icon = catholic_confraternity
+		position = 2
+		required_missions = { pf_mac_why_go_alone } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	mac_archon_friend_2 = {
+		icon = catholic_volunteers
+		position = 3
+		required_missions = { mac_archon_friend_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+mac_archon_subject_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = MAC 
+		has_country_flag = mac_subjugated_archon_flag
+	} 
+
+	mac_archon_subject_1 = {
+		icon = pf_hellenic_temple_burning
+		position = 2
+		required_missions = { pf_mac_why_go_alone } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	mac_archon_subject_2 = {
+		icon = counter_reformation
+		position = 3
+		required_missions = { mac_archon_subject_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+
 mac_cabinet_4 = {
 	slot = 4
 	generic = no
@@ -1171,12 +1341,13 @@ mac_cabinet_5 = {
 		} 
 
 		effect = {  
-			custom_tooltip = mac_absolute_control_tt #power will be frozen, some modifiers will be changed but new decisions will be unlocked
 			custom_tooltip = empty_line_tt
 			freeze_government_power = {
 				mechanic_type = mac_war_cabinet_mechanic
 				power_type = mac_war_cabinet_organization
 			}
+			custom_tooltip = mac_absolute_control_tt #power will be frozen, some modifiers will be changed but new decisions will be unlocked
+			
 			set_country_flag = mac_locked_war_cabinet_org
 			custom_tooltip = empty_line_tt
 			custom_tooltip = mac_commandant_fire_damage_tt #commandant advisors now give 2% fire damage per level

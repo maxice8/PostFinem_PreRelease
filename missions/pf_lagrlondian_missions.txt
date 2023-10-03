@@ -891,6 +891,7 @@ fourth = {
 				area = north_rhine_area
 				area = lower_rhineland_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
@@ -1704,7 +1705,7 @@ second_2 = {
 				skill = 3
 				religion = ROOT
 				culture = ROOT
-				cost_multiplier = 0.5
+				cost_multiplier = 0.25
 			}
 		 } 
 	}
@@ -2132,7 +2133,7 @@ fourth_2 = {
 			culture = old_frisian
 			OR = {
 				devastation = 1
-				local_autonomy_above_min = 0
+				local_autonomy_above_min = 1
 			}
 		 } 
 
@@ -2140,8 +2141,10 @@ fourth_2 = {
 			NOT = {
 				any_owned_province = {
 					culture = old_frisian
-					devastation = 0
-					NOT = { local_autonomy_above_min = 1 }
+					OR = {
+						devastation = 1
+						local_autonomy_above_min = 1
+					}
 				}
 			}
 		} 
