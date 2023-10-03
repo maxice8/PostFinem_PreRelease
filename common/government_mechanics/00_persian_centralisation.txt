@@ -61,11 +61,11 @@ pf_per_centralization_mechanic = {
 
 			cooldown_years = 10
 			ai_chance = {
-				factor = 0.1
+				factor = 1
 				modifier = {
-					factor = 100
-					any_subject_country = {
-						liberty_desire = 50
+					factor = 0
+					all_subject_country = {
+						NOT = { liberty_desire = 50 }
 					}
 				}
 			}
@@ -88,11 +88,11 @@ pf_per_centralization_mechanic = {
 			}
 			cooldown_years = 10
 			ai_chance = {
-				factor = 0.1
+				factor = 1
 				modifier = {
-					factor = 100
-					all_subject_country = {
-						NOT = { liberty_desire = 20 }
+					factor = 0
+					any_subject_country = {
+						liberty_desire = 20
 					}
 				}
 			}

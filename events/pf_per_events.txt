@@ -457,7 +457,7 @@ country_event = {
 	}
 }
 
-# # Mission Event: Allied to Zoroastrians
+# Mission Event: Allied to Zoroastrians
 country_event = {
 	id = pf_per_events.10
 	title = "pf_per_events_10_title"
@@ -582,7 +582,6 @@ country_event = {
 		hidden_effect = {
 			remove_estate_privilege = estate_nobles_pf_satrapy_expansion_plan
 			remove_estate_privilege = estate_nobles_pf_satrapy_annexation_ban
-			remove_estate_privilege = estate_nobles_pf_satrapy_exemption_from_conscription
 		}
 		set_country_flag = pf_per_centralization_collapsed
 		add_government_reform = pf_collapsed_zoroastrian_theocracy
@@ -881,6 +880,8 @@ country_event = {
 			}
 		}
 		clr_country_flag = pf_per_has_develop_tax_demand
+		clear_global_event_target = pf_per_et_province_to_tax_dev_owner
+		clear_global_event_target = pf_per_et_province_to_tax_dev
 	}
 }
 
@@ -1045,6 +1046,8 @@ country_event = {
 			}
 		}
 		clr_country_flag = pf_per_has_develop_prod_demand
+		clear_global_event_target = pf_per_et_province_to_prod_dev_owner
+		clear_global_event_target = pf_per_et_province_to_prod_dev
 	}
 }
 
@@ -1209,6 +1212,333 @@ country_event = {
 			}
 		}
 		clr_country_flag = pf_per_has_develop_mil_demand
+		clear_global_event_target = pf_per_et_province_to_mil_dev_owner
+		clear_global_event_target = pf_per_et_province_to_mil_dev
+	}
+}
+
+# Satrapy Demands events: Convert our province
+country_event = {
+	id = pf_per_events.21
+	title = "pf_per_events_21_title"
+
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 }
+		}
+		desc = "pf_per_events_21_desc_1"
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = pf_per_satrapy_demand_consequences_1
+			NOT = { has_country_flag = pf_per_satrapy_demand_consequences_2 }
+		}
+		desc = "pf_per_events_21_desc_2"
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = pf_per_satrapy_demand_consequences_2
+			NOT = { has_country_flag = pf_per_satrapy_demand_consequences_3 }
+		}
+		desc = "pf_per_events_21_desc_3"
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = pf_per_satrapy_demand_consequences_3
+		}
+		desc = "pf_per_events_21_desc_4"
+	}
+
+	
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	trigger = {
+		NOT = { ai = yes }
+		tag = PER
+		has_country_flag = pf_per_had_satrapy_revolt
+		NOT = { has_country_flag = pf_per_has_convert_province_demand }
+		any_subject_country = {
+			NOT = { has_country_modifier = pf_per_overlord_rejected_demand }
+			NOT = { has_country_modifier = pf_per_overlord_failed_demand }
+			NOT = { has_country_modifier = pf_per_overlord_rejected_demand_reduced }
+			NOT = { has_country_modifier = pf_per_overlord_failed_demand_reduced }
+			NOT = { has_country_modifier = pf_per_overlord_filled_demand }
+			any_owned_province = { NOT = { religion = zoroastrian } }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 108
+		modifier = {
+			factor = 1.33
+			OR = {
+				adm_tech = 5
+				dip_tech = 5
+				mil_tech = 5
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+			OR = {
+				adm_tech = 7
+				dip_tech = 7
+				mil_tech = 7
+			}
+		}
+
+		modifier = {
+			factor = 2
+			has_country_flag = pf_per_satrapy_demand_consequences_1
+		}
+
+		modifier = {
+			factor = 2
+			has_country_flag = pf_per_satrapy_demand_consequences_2
+		}
+
+		modifier = {
+			factor = 2
+			has_country_flag = pf_per_satrapy_demand_consequences_3
+		}
+	}
+
+	immediate = {
+		set_country_flag = pf_per_has_convert_province_demand
+		random_subject_country = {
+			limit = { 
+				NOT = { has_country_modifier = pf_per_overlord_rejected_demand }
+				NOT = { has_country_modifier = pf_per_overlord_failed_demand }
+				NOT = { has_country_modifier = pf_per_overlord_rejected_demand_reduced }
+				NOT = { has_country_modifier = pf_per_overlord_failed_demand_reduced }
+				NOT = { has_country_modifier = pf_per_overlord_filled_demand }
+				any_owned_province = { NOT = { religion = zoroastrian } }
+			}
+			save_global_event_target_as = pf_per_et_province_to_convert_owner
+			hidden_effect = {
+				random_owned_province = {
+					limit = { NOT = { religion = zoroastrian } }
+					save_global_event_target_as = pf_per_et_province_to_convert
+					save_event_target_as = goto_province
+				}
+			}
+		}
+	}
+
+	goto = goto_province
+
+	# Agree to convert
+	option = {
+		name = "pf_per_events_18_option_1"
+		ai_chance = { factor = 100 }
+		goto = goto_province
+		custom_tooltip = pf_per_events_21_tt
+		hidden_effect = {
+			country_event = {
+				id = pf_per_events.31
+				days = 1825
+			}
+		}
+	}
+
+	# Refuse to dev province
+	option = {
+		name = "pf_per_events_18_option_2"
+		ai_chance = { factor = 0 }
+		event_target:pf_per_et_province_to_convert_owner = {
+			if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 } }
+				add_country_modifier = {
+					name = pf_per_overlord_rejected_demand
+					duration = 3650
+				}
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_2 } }
+				add_country_modifier = {
+					name = pf_per_overlord_rejected_demand
+					duration = 1825
+				}
+			}
+
+			else_if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_3 } }
+				add_country_modifier = {
+					name = pf_per_overlord_rejected_demand_reduced
+					duration = 1825
+				}
+			}
+		}
+		clr_country_flag = pf_per_has_convert_province_demand
+		clear_global_event_target = pf_per_et_province_to_convert_owner
+		clear_global_event_target = pf_per_et_province_to_convert
+	}
+}
+
+# Satrapy Demands events: Conquer our claim
+country_event = {
+	id = pf_per_events.22
+	title = "pf_per_events_22_title"
+
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 }
+		}
+		desc = "pf_per_events_22_desc_1"
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = pf_per_satrapy_demand_consequences_1
+			NOT = { has_country_flag = pf_per_satrapy_demand_consequences_2 }
+		}
+		desc = "pf_per_events_22_desc_2"
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = pf_per_satrapy_demand_consequences_2
+			NOT = { has_country_flag = pf_per_satrapy_demand_consequences_3 }
+		}
+		desc = "pf_per_events_22_desc_3"
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = pf_per_satrapy_demand_consequences_3
+		}
+		desc = "pf_per_events_22_desc_4"
+	}
+
+	
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	trigger = {
+		NOT = { ai = yes }
+		tag = PER
+		has_country_flag = pf_per_had_satrapy_revolt
+		NOT = { has_country_flag = pf_per_has_conquer_province_demand }
+		any_subject_country = {
+			NOT = { has_country_modifier = pf_per_overlord_rejected_demand }
+			NOT = { has_country_modifier = pf_per_overlord_failed_demand }
+			NOT = { has_country_modifier = pf_per_overlord_rejected_demand_reduced }
+			NOT = { has_country_modifier = pf_per_overlord_failed_demand_reduced }
+			NOT = { has_country_modifier = pf_per_overlord_filled_demand }
+			NOT = { has_country_flag = pf_per_satrapy_finished }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 108
+		modifier = {
+			factor = 1.33
+			OR = {
+				adm_tech = 5
+				dip_tech = 5
+				mil_tech = 5
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+			OR = {
+				adm_tech = 7
+				dip_tech = 7
+				mil_tech = 7
+			}
+		}
+
+		modifier = {
+			factor = 2
+			has_country_flag = pf_per_satrapy_demand_consequences_1
+		}
+
+		modifier = {
+			factor = 2
+			has_country_flag = pf_per_satrapy_demand_consequences_2
+		}
+
+		modifier = {
+			factor = 2
+			has_country_flag = pf_per_satrapy_demand_consequences_3
+		}
+	}
+
+	immediate = {
+		set_country_flag = pf_per_has_conquer_province_demand
+		random_subject_country = {
+			limit = { 
+				NOT = { has_country_modifier = pf_per_overlord_rejected_demand }
+				NOT = { has_country_modifier = pf_per_overlord_failed_demand }
+				NOT = { has_country_modifier = pf_per_overlord_rejected_demand_reduced }
+				NOT = { has_country_modifier = pf_per_overlord_failed_demand_reduced }
+				NOT = { has_country_modifier = pf_per_overlord_filled_demand }
+				NOT = { has_country_flag = pf_per_satrapy_finished }
+			}
+			save_global_event_target_as = pf_per_et_province_to_conquer_owner
+			hidden_effect = {
+				random_province = {
+					limit = { 
+						is_permanent_claim = PREV
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					save_global_event_target_as = pf_per_et_province_to_conquer
+					save_event_target_as = goto_province
+				}
+			}
+		}
+	}
+
+	goto = goto_province
+
+	# Agree to conquer
+	option = {
+		name = "pf_per_events_18_option_1"
+		ai_chance = { factor = 100 }
+		goto = goto_province
+		custom_tooltip = pf_per_events_22_tt
+		hidden_effect = {
+			country_event = {
+				id = pf_per_events.32
+				days = 2920
+			}
+		}
+	}
+
+	# Refuse to dev province
+	option = {
+		name = "pf_per_events_18_option_2"
+		ai_chance = { factor = 0 }
+		event_target:pf_per_et_province_to_conquer_owner = {
+			if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 } }
+				add_country_modifier = {
+					name = pf_per_overlord_rejected_demand
+					duration = 3650
+				}
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_2 } }
+				add_country_modifier = {
+					name = pf_per_overlord_rejected_demand
+					duration = 1825
+				}
+			}
+
+			else_if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_3 } }
+				add_country_modifier = {
+					name = pf_per_overlord_rejected_demand_reduced
+					duration = 1825
+				}
+			}
+		}
+		clr_country_flag = pf_per_has_conquer_province_demand
+		clear_global_event_target = pf_per_et_province_to_conquer_owner
+		clear_global_event_target = pf_per_et_province_to_conquer
 	}
 }
 
@@ -1401,6 +1731,108 @@ country_event = {
 	}
 }
 
+# Satrapy Demands Events: Convert Province Fail
+country_event = {
+	id = pf_per_events.31
+	title = "pf_per_events_21_title"
+	desc = "pf_per_events_31_desc"
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+
+	after = {
+		clr_country_flag = pf_per_has_convert_province_demand
+		clear_global_event_target = pf_per_et_province_to_convert_owner
+		clear_global_event_target = pf_per_et_province_to_convert
+	}
+
+	trigger = {
+		event_target:pf_per_et_province_to_convert = {
+			NOT = { religion = zoroastrian }
+		}
+	}
+
+	# Failed
+	option = {
+		name = "pf_per_events_28_option"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_et_province_to_convert_owner = {
+			if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 } }
+				add_country_modifier = {
+					name = pf_per_overlord_failed_demand
+					duration = 3650
+				}
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_2 } }
+				add_country_modifier = {
+					name = pf_per_overlord_failed_demand
+					duration = 1825
+				}
+			}
+
+			else = {
+				add_country_modifier = {
+					name = pf_per_overlord_failed_demand_reduced
+					duration = 1825
+				}
+			}
+		}
+	}
+}
+
+# Satrapy Demands Events: Conquer Province Fail
+country_event = {
+	id = pf_per_events.32
+	title = "pf_per_events_22_title"
+	desc = "pf_per_events_32_desc"
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+
+	after = {
+		clr_country_flag = pf_per_has_conquer_province_demand
+		clear_global_event_target = pf_per_et_province_to_conquer_owner
+		clear_global_event_target = pf_per_et_province_to_conquer
+	}
+
+	trigger = {
+		event_target:pf_per_et_province_to_conquer = {
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+	}
+
+	# Failed
+	option = {
+		name = "pf_per_events_28_option"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_et_province_to_conquer_owner = {
+			if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 } }
+				add_country_modifier = {
+					name = pf_per_overlord_failed_demand
+					duration = 3650
+				}
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_2 } }
+				add_country_modifier = {
+					name = pf_per_overlord_failed_demand
+					duration = 1825
+				}
+			}
+
+			else = {
+				add_country_modifier = {
+					name = pf_per_overlord_failed_demand_reduced
+					duration = 1825
+				}
+			}
+		}
+	}
+}
+
 # Satrapy Expansion Plan: Grant Land to Khorasan
 country_event = {
 	id = pf_per_events.38
@@ -1415,7 +1847,10 @@ country_event = {
 				save_event_target_as = receiving_satrapy
 			}
 			pf_kho_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { 
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = KHO }
+				}
 				cede_province = KHO
 			}
 		}
@@ -1426,7 +1861,8 @@ country_event = {
 		exists = KHO
 		KHO = { is_subject_of = PER }
 		pf_kho_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { owned_by = KHO }
 		}
 	}
 
@@ -1451,7 +1887,10 @@ country_event = {
 				save_event_target_as = receiving_satrapy
 			}
 			pf_tab_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { 
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = TAB }
+				}
 				cede_province = TAB
 			}
 		}
@@ -1462,7 +1901,8 @@ country_event = {
 		exists = TAB
 		TAB = { is_subject_of = PER }
 		pf_tab_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { owned_by = TAB }
 		}
 	}
 
@@ -1487,7 +1927,10 @@ country_event = {
 				save_event_target_as = receiving_satrapy
 			}
 			pf_khu_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { 
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = KHU }
+				}
 				cede_province = KHU
 			}
 		}
@@ -1498,7 +1941,8 @@ country_event = {
 		exists = KHU
 		KHU = { is_subject_of = PER }
 		pf_khu_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { owned_by = KHU }
 		}
 	}
 
@@ -1523,7 +1967,10 @@ country_event = {
 				save_event_target_as = receiving_satrapy
 			}
 			pf_bal_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { 
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = BAL }
+				}
 				cede_province = BAL
 			}
 		}
@@ -1534,7 +1981,8 @@ country_event = {
 		exists = BAL
 		BAL = { is_subject_of = PER }
 		pf_bal_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { owned_by = BAL }
 		}
 	}
 
@@ -1559,7 +2007,10 @@ country_event = {
 				save_event_target_as = receiving_satrapy
 			}
 			pf_bab_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { 
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = BAB }
+				}
 				cede_province = BAB
 			}
 		}
@@ -1570,7 +2021,8 @@ country_event = {
 		exists = BAB
 		BAB = { is_subject_of = PER }
 		pf_bab_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { owned_by = BAB }
 		}
 	}
 
@@ -1595,7 +2047,10 @@ country_event = {
 				save_event_target_as = receiving_satrapy
 			}
 			pf_asy_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { 
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = ASY }
+				}
 				cede_province = ASY
 			}
 		}
@@ -1606,7 +2061,8 @@ country_event = {
 		exists = ASY
 		ASY = { is_subject_of = PER }
 		pf_asy_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { owned_by = ASY }
 		}
 	}
 
@@ -1631,7 +2087,10 @@ country_event = {
 				save_event_target_as = receiving_satrapy
 			}
 			pf_tig_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { 
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = TIG }
+				}
 				cede_province = TIG
 			}
 		}
@@ -1642,7 +2101,8 @@ country_event = {
 		exists = TIG
 		TIG = { is_subject_of = PER }
 		pf_tig_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { owned_by = TIG }
 		}
 	}
 
@@ -1667,7 +2127,10 @@ country_event = {
 				save_event_target_as = receiving_satrapy
 			}
 			pf_csp_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { 
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = CSP }
+				}
 				cede_province = CSP
 			}
 		}
@@ -1678,7 +2141,8 @@ country_event = {
 		exists = CSP
 		CSP = { is_subject_of = PER }
 		pf_csp_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { owned_by = CSP }
 		}
 	}
 
@@ -1703,7 +2167,10 @@ country_event = {
 				save_event_target_as = receiving_satrapy
 			}
 			pf_clc_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { 
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = CLC }
+				}
 				cede_province = CLC
 			}
 		}
@@ -1714,7 +2181,8 @@ country_event = {
 		exists = CLC
 		CLC = { is_subject_of = PER }
 		pf_clc_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { owned_by = CLC }
 		}
 	}
 
@@ -1739,7 +2207,10 @@ country_event = {
 				save_event_target_as = receiving_satrapy
 			}
 			pf_mga_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { 
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = MGA }
+				}
 				cede_province = MGA
 			}
 		}
@@ -1750,7 +2221,8 @@ country_event = {
 		exists = MGA
 		MGA = { is_subject_of = PER }
 		pf_mga_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { owned_by = MGA }
 		}
 	}
 
@@ -1775,7 +2247,10 @@ country_event = {
 				save_event_target_as = receiving_satrapy
 			}
 			pf_rjt_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { 
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = RAJ }
+				}
 				cede_province = RJT
 			}
 		}
@@ -1786,7 +2261,8 @@ country_event = {
 		exists = RJT
 		RJT = { is_subject_of = PER }
 		pf_rjt_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { owned_by = RJT }
 		}
 	}
 
@@ -1810,7 +2286,10 @@ country_event = {
 				save_event_target_as = receiving_satrapy
 			}
 			pf_gjr_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { 
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = GJR }
+				}
 				cede_province = GJR
 			}
 		}
@@ -1821,7 +2300,8 @@ country_event = {
 		exists = GJR
 		GJR = { is_subject_of = PER }
 		pf_gjr_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { owned_by = GJR }
 		}
 	}
 
@@ -1846,7 +2326,10 @@ country_event = {
 				save_event_target_as = receiving_satrapy
 			}
 			pf_paj_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { 
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = PAJ }
+				}
 				cede_province = PAJ
 			}
 		}
@@ -1857,7 +2340,8 @@ country_event = {
 		exists = PAJ
 		PAJ = { is_subject_of = PER }
 		pf_paj_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { owned_by = PAJ }
 		}
 	}
 
@@ -1882,7 +2366,10 @@ country_event = {
 				save_event_target_as = receiving_satrapy
 			}
 			pf_ksm_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { 
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = KSM }
+				}
 				cede_province = KSM
 			}
 		}
@@ -1893,7 +2380,8 @@ country_event = {
 		exists = KSM
 		KSM = { is_subject_of = PER }
 		pf_ksm_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { owned_by = KSM }
 		}
 	}
 
@@ -1918,7 +2406,10 @@ country_event = {
 				save_event_target_as = receiving_satrapy
 			}
 			pf_amy_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { 
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = AMY }
+				}
 				cede_province = AMY
 			}
 		}
@@ -1929,7 +2420,8 @@ country_event = {
 		exists = AMY
 		AMY = { is_subject_of = PER }
 		pf_amy_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { owned_by = AMY }
 		}
 	}
 
@@ -1953,7 +2445,7 @@ country_event = {
 		tag = PER
 		NOT = { exists = BAB }
 		pf_bab_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 
@@ -1966,7 +2458,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			pf_bab_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = BAB
 			}
 			release = BAB
@@ -1994,7 +2486,7 @@ country_event = {
 		tag = PER
 		NOT = { exists = ASY }
 		pf_asy_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 
@@ -2007,7 +2499,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			pf_asy_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = ASY
 			}
 			release = ASY
@@ -2035,7 +2527,7 @@ country_event = {
 		tag = PER
 		NOT = { exists = TIG }
 		pf_tig_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 
@@ -2048,7 +2540,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			pf_tig_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = TIG
 			}
 			release = TIG
@@ -2076,7 +2568,7 @@ country_event = {
 		tag = PER
 		NOT = { exists = CSP }
 		pf_csp_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 
@@ -2089,7 +2581,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			pf_csp_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = CSP
 			}
 			release = CSP
@@ -2117,7 +2609,7 @@ country_event = {
 		tag = PER
 		NOT = { exists = CLC }
 		pf_clc_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 
@@ -2130,7 +2622,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			pf_clc_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = CLC
 			}
 			release = CLC
@@ -2158,7 +2650,7 @@ country_event = {
 		tag = PER
 		NOT = { exists = MGA }
 		pf_mga_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 
@@ -2171,7 +2663,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			pf_mga_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = MGA
 			}
 			release = MGA
@@ -2199,7 +2691,7 @@ country_event = {
 		tag = PER
 		NOT = { exists = RJT }
 		pf_rjt_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 
@@ -2212,7 +2704,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			pf_rjt_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = RJT
 			}
 			release = RJT
@@ -2240,7 +2732,7 @@ country_event = {
 		tag = PER
 		NOT = { exists = GJR }
 		pf_gjr_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 
@@ -2253,7 +2745,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			pf_gjr_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = GJR
 			}
 			release = GJR
@@ -2281,7 +2773,7 @@ country_event = {
 		tag = PER
 		NOT = { exists = PAJ }
 		pf_paj_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 
@@ -2294,7 +2786,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			pf_paj_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = PAJ
 			}
 			release = PAJ
@@ -2322,7 +2814,7 @@ country_event = {
 		tag = PER
 		NOT = { exists = KSM }
 		pf_ksm_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 
@@ -2335,7 +2827,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			pf_ksm_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = KSM
 			}
 			release = KSM
@@ -2363,7 +2855,7 @@ country_event = {
 		tag = PER
 		NOT = { exists = AMY }
 		pf_amy_expansion_claims = {
-			owned_by = ROOT
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 
@@ -2376,7 +2868,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			pf_amy_expansion_claims = {
-				limit = { owned_by = ROOT }
+				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = AMY
 			}
 			release = AMY
@@ -2612,6 +3104,146 @@ country_event = {
 		ai_chance = { factor = 100 }
 
 		event_target:pf_per_et_province_to_mil_dev_owner = {
+			if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_2 } }
+				add_country_modifier = {
+					name = pf_per_overlord_filled_demand
+					duration = 3650
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = pf_per_overlord_filled_demand
+					duration = 7300
+				}
+			}
+		}
+
+		if = {
+			limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_1 } }
+			add_prestige = 10
+		}
+
+		else_if = {
+			limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_2 } }
+			add_treasury = 50
+		}
+
+		else_if = {
+			limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_3 } }
+			add_treasury = 150
+		}
+
+		else = {
+			add_adm_power = 25
+			add_dip_power = 25
+			add_mil_power = 25
+		}
+
+		hidden_effect = {
+			change_variable = {
+				which = pfPerSatrapyDemandsFilled
+				value = 1
+			}
+		}
+	}
+}
+
+# Satrapy Demands events: Convert Province Success
+country_event = {
+	id = pf_per_events.71
+	title = "pf_per_events_21_title"
+	desc = "pf_per_events_71_desc"
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+
+	after = {
+		clr_country_flag = pf_per_has_convert_province_demand
+		clear_global_event_target = pf_per_et_province_to_convert_owner
+		clear_global_event_target = pf_per_et_province_to_convert
+	}
+
+	trigger = {
+		event_target:pf_per_et_province_to_convert = {
+			religion = zoroastrian
+		}
+	}
+
+	option = {
+		name = "pf_per_events_68_option"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_et_province_to_convert_owner = {
+			if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_2 } }
+				add_country_modifier = {
+					name = pf_per_overlord_filled_demand
+					duration = 3650
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = pf_per_overlord_filled_demand
+					duration = 7300
+				}
+			}
+		}
+
+		if = {
+			limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_1 } }
+			add_prestige = 10
+		}
+
+		else_if = {
+			limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_2 } }
+			add_treasury = 50
+		}
+
+		else_if = {
+			limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_3 } }
+			add_treasury = 150
+		}
+
+		else = {
+			add_adm_power = 25
+			add_dip_power = 25
+			add_mil_power = 25
+		}
+
+		hidden_effect = {
+			change_variable = {
+				which = pfPerSatrapyDemandsFilled
+				value = 1
+			}
+		}
+	}
+}
+
+# Satrapy Demands events: Conquer Province Success
+country_event = {
+	id = pf_per_events.72
+	title = "pf_per_events_22_title"
+	desc = "pf_per_events_72_desc"
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+
+	after = {
+		clr_country_flag = pf_per_has_conquer_province_demand
+		clear_global_event_target = pf_per_et_province_to_conquer_owner
+		clear_global_event_target = pf_per_et_province_to_conquer
+	}
+
+	trigger = {
+		event_target:pf_per_et_province_to_conquer = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+	}
+
+	option = {
+		name = "pf_per_events_68_option"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_et_province_to_conquer_owner = {
 			if = {
 				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_2 } }
 				add_country_modifier = {

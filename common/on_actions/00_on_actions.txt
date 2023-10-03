@@ -3870,6 +3870,18 @@ on_lose_great_power_status = {
 on_province_religion_converted = {
 	on_province_religion_changed_effect = yes
 	on_province_religion_converted_effect = yes
+
+	if = {
+		limit = {
+			owner = { overlord = { tag = PER } }
+			event_target:pf_per_et_province_to_convert = { province_id = ROOT }
+		}
+		owner = {
+			overlord = {
+				country_event = { id = pf_per_events.71 }
+			}
+		}
+	}
 }
 
 on_province_religion_changed = {

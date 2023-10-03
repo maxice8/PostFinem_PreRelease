@@ -31,18 +31,3 @@ estate_nobles_pf_satrapy_annexation_ban = {
 	on_granted = { custom_tooltip = estate_nobles_pf_satrapy_annexation_ban_tt }
 	on_revoked = { custom_tooltip = estate_nobles_pf_satrapy_annexation_ban_rt }
 }
-
-estate_nobles_pf_satrapy_exemption_from_conscription = {
-	icon = privilege_demand_more_troops
-	max_absolutism = -10
-	loyalty = 0
-	influence = 0.1
-	is_valid = {
-		tag = PER
-		NOT = { has_country_flag = pf_per_has_revoked_exemption_from_conscription }
-	}
-
-	can_revoke = { always = no }
-	on_granted = { custom_tooltip = estate_nobles_pf_satrapy_exemption_from_conscription_tt }
-	on_revoked = { custom_tooltip = estate_nobles_pf_satrapy_exemption_from_conscription_rt }
-}

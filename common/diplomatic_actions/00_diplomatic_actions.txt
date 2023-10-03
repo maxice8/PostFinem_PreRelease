@@ -366,6 +366,16 @@ annexationaction = {
 			}
 		}
 	}
+	# Annexing Satrapies
+	condition = {
+		tooltip = pf_per_cannot_annex_with_annexation_ban_tt
+		potential = {
+			has_estate_privilege = estate_nobles_pf_satrapy_annexation_ban
+		}
+		allow = {
+			NOT = { has_estate_privilege = estate_nobles_pf_satrapy_annexation_ban }
+		}
+	}
 	effect = {
 		if = {
 			limit = {

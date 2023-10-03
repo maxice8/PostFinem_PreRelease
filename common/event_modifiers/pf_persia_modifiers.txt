@@ -249,3 +249,30 @@ pf_per_persia_prospering = {
 	development_cost = -0.1
 	global_trade_goods_size_modifier = 0.1
 }
+
+pf_per_fortified_border_fort = {
+	local_defensiveness = 0.2
+	local_garrison_size = 0.2
+}
+
+pf_per_modern_governing = {
+	can_fabricate_for_vassals = yes
+	yearly_corruption = -0.05
+}
+
+pf_per_bulwark_satrapy = {
+	fort_maintenance_modifier = -0.5
+	defensiveness = 0.2
+	own_territory_dice_roll_bonus = 1
+}
+
+pf_per_silk_road_city = {
+	trade_goods_size_modifier = 0.1
+	province_trade_power_modifier = 0.5
+}
+
+pf_per_listened_to_the_satrapies = {
+	reduced_liberty_desire = 15
+	devotion = -1
+	prestige = -1
+}
