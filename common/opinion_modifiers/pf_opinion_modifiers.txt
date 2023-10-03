@@ -25,6 +25,19 @@ trinovantes_rejects_celtica = {
 	yearly_decay = 1
 }
 
+opinion_attended_ricatus_funeral = {
+	opinion = 60
+	yearly_decay = 2.5
+}
+opinion_attended_ricatus_funeral_no = {
+	opinion = -50
+	yearly_decay = 2
+}
+opinion_bri_feast = {
+	opinion = 50
+	yearly_decay = 2
+}
+
 # Event Opionions
 
 #Nordanvik
@@ -39,4 +52,11 @@ denied_viking_pu_opinion = {
 nrd_helped_trn_opinion = {
 	opinion = 100
 	yearly_decay = 3
+}
+
+#Hellenic and Paradosi
+
+opinion_denying_archon = {
+	opinion = 50
+	yearly_decay = 1
 }

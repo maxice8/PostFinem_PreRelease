@@ -1,0 +1,48 @@
+country_decisions = {
+	pf_druidic_ritual = {
+		potential = {
+			religion = druidic
+		}
+		allow = {
+			religion = druidic
+			NOT = {
+				has_country_modifier = performed_druidic_ritual
+			}
+			years_of_income = 0.1
+			adm_power = 50
+		}
+		effect = {
+			add_years_of_income = -0.10
+			add_adm_power = -50
+			add_country_modifier = {
+				name = "performed_druidic_ritual"
+				duration = 1825
+			}
+			set_country_flag = done_druidic_ritual
+		}
+	}
+	pf_druidic_wicker_man = {
+		potential = {
+			religion = druidic
+		}
+		allow = {
+			religion = druidic
+			NOT = {
+				has_country_modifier = local_wicker_man
+			}
+			mil_power = 100
+			rebel_progress_at_least = { value = 10 }
+		}
+		effect = {
+			add_mil_power = -100
+			add_rebel_progress = {
+				value = -30
+			}
+			add_country_modifier = {
+				name = "local_wicker_man"
+				duration = 1825
+			}
+			set_country_flag = done_druidic_wicker_man
+		}
+	}
+}

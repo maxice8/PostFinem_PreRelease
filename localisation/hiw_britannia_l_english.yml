@@ -9,12 +9,57 @@
  brittonic_confederation_reform_desc: "Long ago, our way of life came under threat. The Gaels of Ireland encroached ever deeper into deer Prydain from the west, while the vile Norse marauders harass us from the north and east. The tribes of the east were forced to come together, to put aside their differences, and unite their forces into one Confederation. Aimed at mutual self-defence and eventually dismantling their enemies, the Confederation relies on its internal cohesion to maintain proper operations."
  mechanic_confederation_elections_yes: "Rulers are elected from within the Tribes."
 ability_trinovantes_cohesion_mechanic: "Cohesion"
-trn_cohesion: "Cohesion"
- monthly_trn_cohesion: "Monthly Cohesion"
+ability_trinovantes_cohesion_mechanic_desc: "Managing the separate ambitions and demands of the constituent tribes of the Confederation can be difficult and requires an immense amount of skill and patience. Cohesion represents that ability, with higher levels signifying a more stable and productive alliance, and negative values indicating a state of general collapse.\n\nCohesion can be §Gincreased§! by:\n - Positive stability\n - Legitimacy\n - Power Projection\n - Monarch Skills\n\nCohesion can be §Rdecreased§! by:\n - Negative stability\n - War exhaustion\n - Corruption\n - Average Autonomy\n - Being over governing capacity\n"
+
+estate_druids: "Druids"
+estate_elders: "Elders"
+estate_bards: "Bards"
+estate_burghers_pf_court_bards: "Court Bard Performances"
+estate_burghers_pf_court_bards_desc: "Bards are a wonderful way to relax after a long day of policy making. Let us institute regular state-sponsored performances in our seats of government to brighten up their lives of our often dreary politicians."
 
  pf_clan_supremacy_reform:0 "Supremacy of the Clan"
- pf_clan_supremacy_reform_desc:0 ""
+ pf_clan_supremacy_reform_desc:0 "The old system of the Oaken Five has not worked in the long term. The time has come to formalise the rule of one tribe over all others, fitting in with the general trend of absolutism in Europe."
  mechanic_disables_confederation_elections_yes:0 "Disables elections from within the Tribes."
+
+pf_guidance_of_the_elders_reform:0 "Guidance of the Elders"
+pf_guidance_of_the_elders_reform_desc:0 "For centuries the elders of the tribes have held administrative power, controlling the actions of the group and acting as leaders when the time for war comes. Their role is becoming more and more ceremonial however, as bold young leaders take to the stage, taking the Confederation on a new path towards glory. We must preserve the institution of the Council of Elders, but make them act as more an advisory committee rather than a government body."
+mechanic_techs_give_estate_loyalty_yes:0 "Unlocking any technology increases the loyalty of all estates by §G+3§!"
+
+pf_blackcoat_dictatorship: "Blackcoat Dictatorship"
+pf_blackcoat_dictatorship_desc: "The Blackcoats have seized control of the country and transformed it into a repressive military dictatorship, abolishing all remnants of the old government and instituting in their place strict laws and armed police."
+pf_trn_allowed_blackcoat_dictatorship_tt: "The Blackcoats have taken over in the §YBlackcoat Revolution§! disaster."
+blackcoat_zeal: "Blackcoat Zeal"
+blackcoat_zeal_desc: "Blackcoat Zeal represents the power and stability of the military's rule. It can be increased by:\n\n - Army Tradition\n - Army Professionalism\n - Recruiting Generals\n - Winning Battles\n - Winning Wars"
+monthly_blackcoat_zeal: "Monthly Blackcoat Zeal"
+ability_blackcoat_zeal_mechanic: "Blackcoat Zeal"
+ability_blackcoat_zeal_mechanic_desc: "Blackcoat Zeal represents the power and stability of the military's rule. It can be increased by:\n\n - Army Tradition\n - Army Professionalism\n - Recruiting Generals\n - Winning Battles\n - Winning Wars"
+DICTATORSHIP: "Dictatorship"
+MILITARY_EMPIRE: "Military Empire"
+GENERAL: "General"
+HUSBAND: "Husband"
+WIFE: "Wife"
+SON: "Son"
+DAUGHTER: "Daughter"
+
+pf_brittonic_tribe_reform: "Formalised Brittonic Tribe"
+pf_brittonic_tribe_reform_desc: "The Britons have long since departed the time of roaming nomadic tribes, and have since settled down and created towns. Over the years, considerable centralisation has occured and what were once a hundred independent bands have consolidated down into confederations like our own. Under the leadership of the principal tribe, these groups form a kind of micro-empire under a great king."
+ability_brittonic_song_mechanic: "Songs"
+bri_song_1_modifier: "Song of the Fields"
+bri_song_2_modifier: "Song of the Ancestors"
+bri_song_3_modifier: "Song of the Heroes"
+bri_song_1: "Song of the Fields"
+bri_song_1_desc: "'Animals rejoice, and let the birds sing, for from the darkness of winter, here comes the spring...'\n\n"
+bri_song_2: "Song of the Ancestors"
+bri_song_2_desc: "'I feel my ancestors surrounding me, guiding me through this perilous world...'\n\n"
+bri_song_3: "Song of the Heroes"
+bri_song_3_desc: "'Let the blood of the heroes flow through me and grant victory in battle...'\n\n"
+BRITTONIC_SONG: "Bardic Song"
+
+pf_regional_tribal_nobility_reform: "Integrate Regional Tribal Nobility"
+pf_regional_tribal_nobility_reform_desc: "The tribes we absorbed to create this chiefdom have their own nobles and notables who have survived our conquest, and continue to act semi-independently, all while constantly complaining they lack enough autonomy. We should put an end to their whining by forcibly ceding their estates to the crown and disenfranchising them from the performance of government as a whole."
+
+pf_militarised_druids_reform: "Militarised Druids"
+pf_militarised_druids_reform_desc: "In olden days, the druids were a major component of Brittonic armies. Their spells and rituals kept us safe from enemies and increased our chances at success in battle. Nowadays, we are moving towards a more scientific world, and have begun to see the deeds of the druids as what they truly were - military tactics. Let us embrace this practice and restore the importance of the druids on the battlefield."
 
  CHIEFTAIN: "Chieftain"
  CHIEFTESS: "Chieftess"
@@ -32,28 +77,95 @@ CANTIACI_ADJ: "Cantiaci"
 CATUVELLAUNI: "Catuvellauni"
 CATUVELLAUNI_ADJ: "Catuvellauni"
 
+GDD: "Gododdin"
+GDD_ADJ: "Gododdin"
+ELM: "Elmet"
+ELM_ADJ: "Elmeter"
+RHG: "Rheged"
+RHG_ADJ: "Rheged"
+
+HEN_OGLEDD: "Hen Ogledd"
+HEN_OGLEDD_ADJ: "Hen Ogledd"
+BRITTONIC_CONFEDERATION: "Brittonic Confederation"
+BRITTONIC_CONFEDERATION_ADJ: "Brittonic"
+PRYTAIN: "Prytain"
+PRYTAIN_ADJ: "Prytaini"
+
+###########
+# Monuments
+###########
+
+cadarnle_coel: "Cadarnle Coel"
+
+###########
+# Disasters
+###########
+
+pf_blackcoat_revolution: "Blackcoat Revolution"
+desc_pf_blackcoat_revolution: "The Blackcoats, a decorate elite regiment of our army and veterans of countless successful campaigns, have launched a coup against the government, claiming mistreatment by authorities has given them the right to overthrow the old regime entirely!"
+pf_trn_blackcoat_revolution_resolution_1_tt: "The Blackcoats have come our triumphant from the struggle."
+pf_trn_blackcoat_revolution_resolution_2_tt: "The Blackcoats have been crushed by loyalist forces."
+
 ###########
 # Ideas
 ###########
 
- TRN_ideas: "Brittonic Confederation Ideas"
- TRN_ideas_start: "Brittonic Confederation Traditions"
- TRN_ideas_bonus: "Brittonic Confederation Ambition"
+ TRN_ideas: "Confederate Ideas"
+ TRN_ideas_start: "Confederate Traditions"
+ TRN_ideas_bonus: "Confederate Ambition"
 
  trn_confederate_politics: "Confederate Politics"
- trn_confederate_politics_desc: ""
- trn_tribes_together_strong: "Strength in Numbers"
- trn_tribes_together_strong_desc: ""
+ trn_confederate_politics_desc: "Managing the Confederation is a difficult practice - one must ensure that the needs of all the tribes are met, but never to excess or the detriment of the others. Every policy and law is a balancing act between a hundred different interest groups."
+ trn_legendary_heroes: "A Storied Land of Heroes"
+ trn_legendary_heroes_desc: "Albion is a land of many stories and heroes, with every region having its own diverse traditions and epic poetry. The east is no different - our heroes are more ancient than those of the Hen Ogledd, but they are nonetheless still relevant to the everyday traditions of the tribes."
  trn_collectivist_food: "Farms and Fields"
  trn_collectivist_food_desc: "The east of Albion is famed for its fertile lands and vast open fields. This land of plenty brings great riches to each of the tribes that inhabit it, and ensures steady amounts of tribute can be spared to the Council of Elders."
- trn_heirs_of_arthur: "Heirs of Arthur"
- trn_heirs_of_arthur_desc: ""
+ trn_treaty_of_the_oak: "Treaty of the Oak"
+ trn_treaty_of_the_oak_desc: "Faced with the threat of Celtic invasion and raids from the Northmen, the 'Oaken Five' tribes of the east came together to create a Confederation of mutual defence. Under the terms of the 'Treaty of the Oak', every tribe must support each other in time of conflict and a portion of their collective resources are pooled to be used for the common good by the Council of Elders."
  trn_unified_identity: "Uniting the Sheepfold"
- trn_unified_identity_desc: ""
- trn_female_warriors: "Warrior Women"
- trn_female_warriors_desc: ""
+ trn_unified_identity_desc: "The Confederation is a rare site of safety within the turbulent world. It is our duty to spread the peace and prosperity we have created for ourselves to the rest of Albion, and unite that great sheepfold under one flag."
+ trn_red_moon_band: "Warriors and Warlocks"
+ trn_red_moon_band_desc: "Albion is a land as steeped in blood as it is in history. Many great conquerors have risen and fallen, tyrants have committed atrocities that would pale the faces of our Carthaginian visitors, and countless men, women and children now lie in mass graves, victims of sport rather than necessity. Throughout the ages, our people have learned to fight and to fight well at that, because every moment is a battle in itself."
  trn_reconnect_north_sea_trade: "Revitalisation of the North Sea Trades"
- trn_reconnect_north_sea_trade_desc: ""
+ trn_reconnect_north_sea_trade_desc: "The North Sea was once a hub of trade in northern Europe, unrivalled by any nexus outside of the Mediterranean. Recent times have been hard however, and in the face of a changing climate, increasing Norse raids, and general instability in the Celtic Isles and on the continent, most of that once lucrative trade has slumped away into the shadows of history. Our policies to bring peace to Albion have achieved great things already - perhaps we could even succeed in restoring wealth to the North Sea?"
+
+ABN_ideas: "Albion Ideas"
+ABN_ideas_start: "Albion Traditions"
+ABN_ideas_bonus: "Albion Ambition"
+
+abn_the_white_sun_rises: "The White Sun Rises"
+abn_the_white_sun_rises_desc: "Albion is named after the fabulous white cliffs that line its southern shore. Sitting at the far west of Europe, Albion is a bastion at the edge of the world, a great white wall against the expanse of unknown beyond. Our empire is just beginning - with the Brittonic peoples united, there is nothing we cannot do together. We are no long content merely guarding the frontier - we seek to conquer and proclaim an empire for ourselves on the continent. All our enemies will be blinded before the brilliant light of the white sunrise."
+abn_secular_state: "Rites of Caerlyndon"
+abn_secular_state_desc: "The empire of Albion is a diverse place, with many settlements being full of foreigners, each speaking a different language and preaching a different faith. To combat any disunity before it arose, the Grand Council of Albion convened a set of Rites, which were then signed in Caerlyndon, protecting people of every religion from religious discrimination within Albionic territories."
+abn_warriors_of_the_isles: "Warriors of the Isles"
+abn_warriors_of_the_isles_desc: "Our people have been fighting each other since the dawn of time, and as such have learned many important lessons about the art of war as a whole. We can take these hard-won lessons and use them against our enemies, where ever they may be, to forge our own path to victory."
+abn_bardic_poetry: "Bardic Poetry"
+abn_bardic_poetry_desc: "Bards are a staple of Brittonic culture. They entertain every landed gentleman, every decorated aristocrat, and soothe every destitute lowlife. The continued patronage of the bards is vitally important both to the traditions and sanity of the nation."
+abn_men_of_old: "The Legacy of Conquerors"
+abn_men_of_old_desc: "There have been many great conquers in the Celtic Isles, each forging their own mighty states. We can look back at these empires, and learn from their mistakes, so that our new empire will not suffer the same fate as all others - fading into obscurity."
+abn_caledfwlch_order: "Order of Caledfwlch"
+abn_caledfwlch_order_desc: "Caledfwlch was the legendary sword of the famous Arthur, a Brittonic warlord who fought back invasions from Germania many hundreds of years ago. Thanks to his success and talent on the battlefield, our islands have remained clear of Germans until the modern day. In memory of this great service, a new military order has been formed, the Order of Caledfwlch, to recognise our most distinguised and diligent soldiers and generals."
+abn_looking_to_the_stars: "Answers in the Heavens"
+abn_looking_to_the_stars_desc: "People have been looking to the stars for answers since the day our ancestors first walked the earth. We Britons are no different, regularly consulting our astrologers before making life-changing decisions, and sometimes seeking omens to better prepare ourselves for the future. Let us keep this venerable tradition alive for generations to come to enjoy. May all our children bask safely under the celestial tapestry."
+
+brittonic_ideas: "Brittonic Ideas"
+brittonic_ideas_start: "Brittonic Traditions"
+brittonic_ideas_bonus: "Brittonic Ambition"
+
+brt_hillforts: "Hillfort Settlements"
+brt_hillforts_desc: "For centuries the Britons have lived in hillforts, settlements built on raised land that act as centers of local government. These defensible positions provide stability and legitimacy to the rule of our chiefs."
+brt_painted_people: "The Painted People"
+brt_painted_people_desc: "The native name for the Celtic Britons is Pretani, meaning 'the painted ones'. This name reflects our tradition of tattooing our bodies, showing the lives we have lived and the spirits we are dedicated to."
+brt_ancient_kingdoms: "Ancient Kingdoms"
+brt_ancient_kingdoms_desc: "Many of the polities on the Celtic Isles have existed in some form or another for hundreds of years, in some cases thousands. While they are not always direct successors to each other, kingdoms forming one after another based around the same continuing core ensures a level of legitimacy and tradition can be afforded to any reigning king."
+brt_poetry: "Epic Stories and Poems"
+brt_poetry_desc: "Albion is a storied land, rich with tales of heroes and gods of all kinds. They form the basis of our heritage, and every person who grows up under our flag will know them."
+brt_celtic_gods: "Gods of Celtica"
+brt_celtic_gods_desc: "The traditional religion of the Celts has become very decentralised over the years, and now the gods are little more than memories. However, their duties and associated spirits remain, and form a fundamental tenet of daily life."
+brt_heroes_and_kings: "Heroes and Warrior Kings"
+brt_heroes_and_kings_desc: "In ancient times, kings were warriors themselves, and led their men out into battle personally. This practice has begun to decline in Europe as monarchs get ever more cowardly, but this trend will not take hold in our country. The enemy will face the full might of our military, led by the monarch themself."
+brt_albion_identity: "One People, One Nation"
+brt_albion_identity_desc: "The Brittonic people have been broken up into many smaller kingdoms for all of their existence. Ideas of common identity and nationalism are beginning to take hold however, prompting some to wonder whether one day a united Albionic nation may come into existence."
 
 ###########
 # Events
@@ -75,11 +187,174 @@ pf_trn.2.b: "There must be more tribute to be taken then!"
 pf_trn.2.c: "This is testament to our benevolent policies."
 
 pf_trn.3.t: "A Trial of Swords and Clubs"
-pf_trn.3.d: "Tensions ran high as a fierce competition unfolded between the [Root.GetPrimaryTribe] and [Root.GetSecondaryTribe] tribes, threatening to escalate into violence. What began as a spirited contest to assert dominance over a fertile border region had spiraled into a dangerous rivalry. Both tribes, fiercely proud of their heritage, vied for control of valuable farmland and trade routes, their chieftains stoking the flames of competition. Verbal disputes turned into skirmishes, and there were whispers of alliances being forged with neighboring tribes. The fragile peace of the Confederation hung in the balance, awaiting a resolution that might either solidify their enmity or offer a path towards reconciliation and cooperation."
+pf_trn.3.d: "Tensions ran high as a fierce competition unfolded between the [Root.GetPrimaryTribe] and [Root.GetSecondaryTribe] tribes, threatening to escalate into violence. What began as a spirited contest to assert dominance over a fertile border region had spiralled into a dangerous rivalry. Both tribes, fiercely proud of their heritage, vied for control of valuable farmland and trade routes, their chieftains stoking the flames of competition. Verbal disputes turned into skirmishes, and there were whispers of alliances being forged with neighboring tribes. The fragile peace of the Confederation hung in the balance, awaiting a resolution that might either solidify their enmity or offer a path towards reconciliation and cooperation."
 pf_trn.3.a: "Favour the [Root.GetPrimaryTribe]"
 pf_trn.3.b: "Favour the [Root.GetSecondaryTribe]"
 pf_trn.3.c: "Let them sort it out amongst themselves."
 pf_trn.3.dd: "Resolve the dispute in a court of law."
+
+pf_trn.4.t: "The Many Paths of War"
+pf_trn.4.d: "Within the Confederation's council chamber, a bitter conflict raged between two prominent tribes, each advocating a different approach to manage the ongoing war. The [Root.GetPrimaryTribe], known for their fierce warriors, clamored for an aggressive, offensive strategy, believing that seizing the initiative would secure victory swiftly. In contrast, the [Root.GetSecondaryTribe], renowned for their diplomatic finesse, argued for a more cautious, diplomatic route, advocating for negotiations and alliances with neighboring nations to avoid further bloodshed. Tensions escalated as each faction staunchly defended their stance, threatening to fracture the unity of the Confederation just when it was needed most on the battlefield. The stakes were high, and the decision they made would determine not only the course of the war but the very future of the Confederation itself."
+pf_trn.4.a: "The [Root.GetPrimaryTribe]'s plan seems promising..."
+pf_trn.4.b: "... but I like the ideas of the [Root.GetSecondaryTribe] better."
+pf_trn.4.c: "The Council will decide its own course in war!"
+pf_trn.4.dd: "There is no time for fighting amongst ourselves, there is glory to be won!"
+
+pf_trn.5.t: "The Disgraced Chief"
+pf_trn.5.d: "In a solemn gathering of the Council of Elders, the chief of one of the Confederation's tribes faced a grave judgment. Accused of betraying the trust of the alliance by forging secret alliances with an enemy faction, the chief was found guilty after hours of deliberation. The room, heavy with tension, echoed with the weight of the verdict. The elders' decision, delivered with a heavy heart, stripped the chief of leadership and cast a shadow over the once-respected figure. It was a somber reminder that even the most powerful must answer for their actions, and the Confederation's unity stood above individual ambition."
+pf_trn.5.a: "Respect the decision of the Council."
+pf_trn.5.b: "This man was wrongfully convicted!"
+pf_trn.5.c: "We will make sure he has a plentiful retirement."
+
+pf_trn.6.t: "Searching the Stars"
+pf_trn.6.d: "The court of the Confederacy beckoned the skilled astrologer to its grand observatory, seeking his wisdom and foresight among the celestial tapestry. With eyes fixed upon the heavens, the astrologer meticulously charted the movements of stars and planets. He delved into the ancient scrolls, seeking patterns and deciphering cryptic alignments that might unveil the kingdom's destiny. The weight of high expectations hung heavy as he scanned the cosmos for portents, searching for answers in the distant constellations, hoping to reveal prophecies hidden among the celestial wonders above."
+pf_trn.6.a: "What secrets do the heavens hold?"
+pf_trn_searching_the_stars_tt: "The astrologer will search the skies for omens for the next year."
+
+pf_trn.7.t: "Good Omens"
+pf_trn.7.d: "After a year of studying the stars for omens about the future of the Confederation, our astrologer has reported back to the Council with his findings. He says he observed various remarkable celestial events, including astounding planetary alignments and stars that grow and shrink in brightness. From this evidence has come up with a conclusion - there are good omens from above. The heavens predict power will come to the Confederation to the detriment of our enemies, bringing about a new era of hope and glory for all Britons."
+pf_trn.7.a: "What marvellous news!"
+
+pf_trn.8.t: "A Man of Other Worlds"
+pf_trn.8.d: "Ricatus was the chief of the Trinovantes, given power at a young age at the death of his uncle. After years of successfuly policies in his locality, the Council of Elders deisgnated him to govern over the whole Confederation. He was best known for his well-mannered speech and considerate tone, always soothing the anxieties of our enemies even in the most dire situations. Using these skills, he took a diplomatic approach to foreign policy, securing a surprising peace with the Lords of Celtica and even with the marauding Northmen. Many did not approve of this peaceful approach however, leading to increasing accusations of weakness and even a common theory that Ricatus was deluded and living in another world. Despite these fears, his reign did not lead to the collapse of the Confederation, and in fact it rather strengthened the country, leaving it in a favourable political and economic position.\nHis death has been a great blow to our nation. To commemorate his extraordinary life a great funeral has been arranged, complete with all the usual rituals and games of Druidic practice."
+pf_trn.8.a: "Invite the nations that most benefited from his truce."
+pf_trn.8.b: "Give him a warrior's funeral in Brittonic style."
+
+pf_trn.9.t: "The Death of Ricatus 'the Shield'"
+pf_trn.9.d: "Ricatus was one of the most respectable chiefs of the Brittonic Confederation we have ever dealt with. His conciliatory and cowering approach to our people was greatly effective for us, allowing us to squeeze what we wanted out of the region without the boring spectacle of war. But alas, he is dead, and our security is no more. It appears that his successors in the Confederation are pursuing a more aggressive foreign policy, and are perhaps even plotting for war with [Root.GetName]!\n\nIn his memory, a grand funeral complete with games and rituals is being held, and in their grace, the Council of Elders has issued an invite to the [Root.Monarch.GetTitle] of [Root.GetName] as well. How should we respond?"
+pf_trn.9.a: "Attend the funeral."
+pf_trn.9.b: "We are glad he is dead!"
+
+pf_trn.10.t: "Assistance from the Druids"
+pf_trn.10.d: "With our willingness to give them what they want proven, the Druids of the realm have come together and elected representatives to meet with the Council. Anxious to keep their new privileges and lands, they may be willing to offer their support in the upcoming war with the down-trodden subject Britons. In what area do we require the most assistance?"
+pf_trn.10.a: "Request their assistance in rallying the people for war."
+pf_trn.10.b: "Let them serve in the administration to ease the burden of war."
+pf_trn.10.c: "They should focus on the spiritual conflict fought simultaneously."
+pf_trn.10.dd: "I do not need their help."
+pf_trn_no_druid_support_reward_tt: "If we successfully defeat the §YCeltic Tyranny§! without the help of the Druids, we will gain extra bonuses from the associated mission."
+pf_trn_druid_help_1: "Druid War Support"
+pf_trn_druid_help_2: "Druid War Support"
+pf_trn_druid_help_3: "Druid War Support"
+
+pf_trn.11.t: "The Celtic Tyranny"
+pf_trn.11.d: "Long ago, the peoples of Albion lived in harmony. Wars and petty tribal conflicts had plagued the island for centuries, but peace had at last arrived on its sightly golden chariot. Old grudges were set aside, and agreement of mutual defence were made. Peoples who had for centuries lived in competition with one another now lived in bliss.\n\nEverything changed when the Gaels attacked. They entered these isles just like their ancestors did - accompanied by hoards of bowmen and savage thugs. This time, however, they had not come just to raid - they had come to conquer. The tribes of Celtica had been united by force only a few years prior, creating a new power in the region with resources and warriors in amounts no other tribe had seen before. They turned this new war machine against our fair island, and laid siege to its extremeties.\n\nThe peoples of the north stood no chance - too busy with their own squabbling, the Pictish tribes fell one by one. The people of north and south Cymry too, divided they fell. In the east, where the most ancient of the tribes of the Celtic Isles dwelt, that peaceful orchard among a flaming forest, they felt the harded resistance. Despite the best efforts of the alliances of bold and mighty kings and their druids, much of Albion was placed under the boot of Celtica and set ablaze. Facing certain doom otherwise, the tribes of the far east, known to history as the Oaken Five, formed a confederation between their leaderships, and placed their combined armies at the whim of a joint Council of Elders. They successfully mounted a defence of the frontiers along the Thames river, and scored a decisive victory at the battle of Camulodunon, forcing the Gaelic dragon out of Confederate lands.\n\nIn the years since this victory, the Confederation has prospered through mutual cooperation and the sharing of resources, maintaining its independence even as the new threat of Nordic invaders loomed on the horizon. In contrast, the subjugated Britons, now forced to pay yearly tribute to the Lord of Celtica, wallowed in their misery with each passing season. Their wifes were taken, their leaders executed, and now even their harvests were not fully theirs. While at night they dreamed of independence, by day the served like a faithful hound before its master. The Confederation is the last hope for these down-trodden people. By force of might, we must overthrow this Celtic Tyranny and liberate our brothers and sisters!"
+pf_trn.11.a: "Now we just need a plan!"
+pf_trn_celtic_tyranny_tt: "The ambitions of the younger chiefs grow, while the elders still play their games of truces and diplomacy..."
+
+pf_trn.12.t: "Like Mother, Like Daughter"
+pf_trn.12.d: "The Daughters of Boudicca have performed well for us on the battlefield, scoring many key victories and greatly assisting our efforts to put down rebellions. For their service, they have been rewarded handsomely with shares of the war booty and extra payment upon their return to their villages. Such is the extent of their success, however, that many in our military establishment long for them to be a formal part of the growing Confederate Army. We could then use their skills whenever we need, and at potentially much lower prices. On the other hand, there are many, particularly amongst the Daughters themselves, that they should retain their independence, running through the wilds with sword in hand beholden to know government without a contract. What will be their future?"
+pf_trn.12.a: "Integrate them into our standing army."
+pf_trn.12.b: "Let the Daughters retain their freedom."
+pf_trn_future_of_the_daughters_1_tt: "§RWe will no longer be able to hire the §YDaughters of Boudicca§!.§!"
+pf_trn_future_of_the_daughters_2_tt: "We will unlock an upgraded version of the §YDaughters of Boudicca§! that will be available to hire."
+pf_trn_integrate_daughters_of_boudicca: "The Daughters of Boudicca Regiment"
+
+pf_trn.13.t: "The Magic of the Druids"
+pf_trn.13.d: "The druids have always been associated with magic and mystic actions. From their earliest days, they were said to be able to cast spells that would create a 'fence of protection' around armies, raise ferocious storms to hinder invading armies, and predict the future with remarkable accuracy. Most of these powers are now thought to be little more than myths created by our excited ancestors. While the druids certainly have profound influence with the gods and nature, they are no more wizards than the rest of us. A few old folk hang on to these beliefs however, and swear they saw their long dead relatives practices benign magic. This is clearly nothing but baseless superstition, but there is a certain part of the mind of every one of us that wants it to be true..."
+pf_trn.13.a: "We must look to the future, not to the past."
+pf_trn.13.b: "Our traditions mean more than anything to us."
+pf_trn_will_influence_future_missions_tt: "§OChoosing this option will influence our future missions.§!"
+pf_trn_looking_to_the_future_tt: "This will lead us down a path of modernisation and secularism."
+pf_trn_looking_to_the_past_tt: "This will lead us down a path of authority and magic."
+pf_trn_looking_to_the_future: "Looking to the Future"
+pf_trn_looking_to_the_past: "Looking to the Past"
+
+pf_trn.14.t: "The Thirteen Treasures of Albion"
+pf_trn.14.d: "Legends tell of a collection of artefacts known as the 'Thirteen Treasures of Albion'. The objects are the subjects of many myths, and are encountered in a vast array of tales about great heroes of old from across the Brittonic world. Several notable items include the Hamper of Gwyddno Garanhir, which when food was placed within it, would return it a hundred-fold; the Whetstone of Tudwal Tudglyd, which when a brave man sharpened his sword on it, would guarantee the death of any man cut by that sword; and the Mantle of Arthur, which would grant invisibility to those under it, while still being able to see normally themselves. Whether or not these treasures are real is debatable, but they are certainly an important part of our cultural history. Without the shrewd work of poets and bards, these stories would be lost to time."
+pf_trn.14.a: "Wonderful."
+pf_trn_thirteen_treasures_tt: "§YArtist§! advisors will grant §G+1 Monthly Splendor§! per level when recruited."
+
+pf_trn.15.t: "Marching through the Winters"
+pf_trn.15.d: "As the climate cools off into winter, our armies face a new challenge, often more of a threat than enemies soldiers - the cold. Extreme cold and snowfall slows down marches and severely hampers the troops' fighting ability, often leaving us vulernable to ambushes and attacks by local tribes more familiar with the terrain. A new practice of introducing thick black fur coats is beginning, and officers are readily adopting it across the field. These new 'blackcoated' men and women are tougher and able to withstand the harsh environment."
+pf_trn.15.a: "Distribute the black coats more widely."
+pf_trn.15.b: "Let them freeze!"
+
+pf_trn.16.t: "The Black Terror"
+pf_trn.16.d: "The Blackcoats have grown used to their success and fame. When they march through a village and are greeted with the usual cheers and claps, it no longer brings joy to their faces. They have become desensitised to the way life is for normal people. As a result, they are acting increasingly violent and launching citizens over minor provocations, completely against the rules of our army and our country."
+pf_trn.16.a: "We cannot hope to control them."
+pf_trn.16.b: "Punish the perpetrators."
+
+pf_trn.17.t: "The Legacy of Old King Coel"
+pf_trn.17.d: "King Coel was a legendary Brittonic figure who ruled much of the north of Albion from his stronghold in Eburacum. His empire was the greatest yet seen from the northern reaches, only succeeded by the Iceni Empire of Boudicca. We now control much the same borders as the great king, and also his capital fortress. In order to legitimise our claim to the region, we have taken on the mantle of 'Successors to King Coel', 'Meibion y Coel Hen'."
+pf_trn.17.a: "His was truly a realm of the Old North."
+pf_trn.17.b: "No one shall question our conquests now."
+pf_trn_kingdom_of_coel_hen: "Claimed the Kingdom of Coel Hen"
+desc_pf_trn_kingdom_of_coel_hen: "Coel Hen was an ancient king of northern Albion who ruled a diverse region from Pictland to Elmet. With our conquest of the same region, we have taken up the mantle of his true successors."
+
+pf_trn.18.t: "Supremacy of the Trinovantes"
+pf_trn.18.d: "The Trinovantes tribe were the most powerful of the Oaken Five when the Confederation was first formed. It was their chief Bronwen that proposed the alliance against Celtic incursion in the first place. As a result, the Trinovantes have always held a privileged position compared to the other tribes, with even their capital of Camulodonon serving as the seat of the Council of Elders. Times have changed since the foundation of the Confederation however, and some of the other tribes have grown more powerful at the expense of the Trinovantes, leaving many of them to question why their tribe is not elevated to the same extent. How shall we address this situation?"
+pf_trn.18.a: "Every tribe in the Confederation is equal."
+pf_trn.18.b: "The Trinovantes' leadership brings stability to the country."
+pf_trn_sup_tri_1: "Equal Confederation"
+pf_trn_sup_tri_2: "Exclusive Confederation"
+
+pf_trn.19.t: "Wrath of the Blackcoats"
+pf_trn.19.d: "The Blackcoats began as simply a program to ensure our army was tough enough to survive the sometimes brutal weather of Albion, but they have rapidly evolved into a self-sufficient and extremely arrogant military unit. Acting practically as mercenaries and vigilantes, they are using the skills they homed in our army against every day people and causing chaos across the country. Many disaffected Blackcoats essentially rule desolate areas of the countryside as warlords, reigning over their unwilling subjects with terror and torture.\n\nThe problem of the Blackcoats has been at the front of the mind of politicians for a long time, but no one has the gaul to do anything to seriously weaken their power, lest they provoke their wrath. One group stood defiant however - the Daughters of Boudicca. Themselves a mercenary group, the Daughters have done nothing but actively voice their concerns about the Blackcoats in the years since their founding, much to the distaste of the latter. Before now, their competition had been lobbying within the government and particularly stressful card games, but now things have stepped up into a national crisis.\n\nA rogue band of Blackcoats, apparently acting on the orders of the officer of the whole regiment, broke into the barracks of the Daughters of Boudicca and committed a massacre. By the time local police forces arrived, it was too late. Every single one of the Daughters had been slaughted, most of them while they slept. Some three hundred bodies had to be cleared from the building before a proper investigation could begin, some of them slain in the most savage manners imaginable. The Blackcoats have openly claimed responsibility and now gloat of their supremacy within the army, their only real opposition now removed. The world leans in to listen to the chaos unfolding. Many in the government believe we are but months away from a full on military coup, and demand that action be taken against the Blackcoats now before it is too late."
+pf_trn.19.a: "The Blackcoats are fugitives from justice! Hunt them down and let them hang!"
+pf_trn.19.b: "They have done the world a favour by killing the Daughters."
+begins_blackcoat_revolution_tt: "Begins the §OBlackcoat Revolution§! disaster."
+pf_trn_blackcoat_fugitives: "Hunting Down the Blackcoats"
+pf_trn_supported_the_blackcoats: "Supporting the Blackcoats"
+
+pf_trn.20.t: "The Unification of Albion"
+pf_trn.20.d: "Albion is the name given to the largest island of the Celtic Isles, the one we and countless other peoples call home. Our conquests have brought our armies to the corners of this rich and cultured land, and extended the rule of the [Root.GetName] beyond what our ancestors had previously dreamed was possible. Albion, that great country, is now ruled by one state. At last, our children can rejoice, knowing that they live in a safe and cohesive part of the world, free from open tribal feuds and petty disputes. Instead, they live in a veritable paradise - but unlike that which is told in our myths, this paradise is very much accessable."
+pf_trn.20.a: "This is not a common union, it is a Celtic one!"
+pf_trn.20.b: "Rejoice! The dream is realised!"
+
+pf_trn.21.t: "The Black Comet"
+pf_trn.21.d: "In the last few weeks an omen has appeared in the sky - a great comet, its trail blazing across perhaps a fifth of the sky, passed by the world. Comets have always been extremely important to our people, interested in astrology and omens as we are, but this one seems to have reached the thoughts of every soul. Such is its beauty and detail, everyone is convinced it has been sent for a reason. Surely such a magnificent comet is an indicator of something equally as magnificent to come, or to some minds, something terribly destructive. While the country is engulfed in civil war against the Blackcoats, all have managed to put down their weapons and stare in awe at the sky, each person giving the sight their own meaning. Many Blackcoats have seen this as an prophecy predicting their victory, and have begun hailing it as the so-called 'Black Comet'. Whether this is true or not remains to be seen, but what is known for certain is that it is a truly a splendid sight to behold."
+pf_trn.21.a: "Whatever it means, it will surely shape our future for years to come!"
+
+pf_trn.22.t: "Losing Control"
+pf_trn.22.d: "The fighting ongoing over the soul of the nation has resulted in local authority in many parts declining, including in [pf_autonomous_province.GetName]. The remote villages in this region are effectively self governing now, and a band of armed men has been set up to act as a defense against government and rebel alike."
+pf_trn.22.a: "We will show them!"
+
+pf_trn.23.t: "The Blackcoats March on [Root.Capital.GetName]"
+pf_trn.23.d: "As their strength grows, the Blackcoats are becoming ever more ambitious with their aims. We have received reports that they are planning to unite their forces and march on [Root.Capital.GetName], with the aim of outright overthrowing our government and establishing our own. Never in our worst nightmares could we have dreamed up such a disasterous scenario."
+pf_trn.23.a: "Man the walls! We fight to the last soul!"
+pf_trn.23.b: "The Blackcoats are right! Down with the old government!"
+pf_trn_a_spirited_defence: "A Spirited Defence"
+
+pf_trn.24.t: "The Elders Meet their End"
+pf_trn.24.d: "The Council of Elders has been the formal government of the country for centuries, and it is to them that we owe our current position. However, they also represent the vestiges of oppression and irritation the Blackcoats have risen up against, and thus it has been determined that they had to die. In one day, the Blackcoats cut their way into the Council Chamber and proceeded to disembowl every man and woman inside, hanging their entrails from the gates and piling the bodies out for all citizens to see. Chaos has gripped the streets of the capital, as now it seems the whole government has collapsed."
+pf_trn.24.a: "My city is unsafe - I must flee into exile!"
+pf_trn.24.b: "We can trust the Blackcoats to restore order."
+
+pf_trn.25.t: "The Counter-Revolution"
+pf_trn.25.d: "The Blackcoat state has proven remarkably unstable and inefficient in even the most basic tenets of government. At last, even its grip over its own generals has faltered, and the very system of justice and policing has disintegrated. In response, the counter-revolutionary movements that had previously been forced underground in the wake of the Blackcoat Revolution, led by the enterprising League of Free Britons, have staged a general uprising. In a matter of hours they seized key positions across the country, clearly reflecting a great deal of foreplanning. Now, their victory seems inevitable, and Blackcoat after Blackcoat are deserting their posts in an attempt to save their lives."
+pf_trn.25.a: "The new Revolution is victorious!"
+pf_trn.25.b: "We will fight to the last Blackcoat!"
+pf_trn_the_counter_revolution_restores_peace: "The Counter-Revolution Restores Peace"
+blackcoat_zeal_end_tt: "§RThe new Regime will suffer a Counter-Revolution.§!"
+
+pf_trn.26.t: "The End of the Revolution"
+pf_trn.26.d1: "At last, Blackcoat forces reign triumphant over [Root.GetName]. Their rule may not be as benevolent as the previous regime, but it will certainly ensure a calibre of military quality and discipline unseen in previous ages. While the last remnants of citizen's resistance is being mopped up, the new government begins to settle in to its position of supreme power."
+pf_trn.26.d2: "At last, the rebellious Blackcoat forces have been defeated, and the central government has firmly re-established its control over the country. Many lay dead, and whole regions are devastated from the fierce fighting, but the sound of gunfire and swords clashing is becoming increasingly rare. This has been a nightmare for all involved, and will surely raise a great many questions about the way this country is run and the position of its military."
+pf_trn.26.a: "It is over."
+
+pf_trn.27.t: "[Root.GetPrimaryTribe] Rallies for War"
+pf_trn.27.d: "Despite the current state of peace with our neighbours, one of the tribes of the Confederation has been crying out desperately for war. The constant marching of their warriors and target practice has annoyed the people of [Root.GetSecondaryTribe], who have issued a formal complaint to the Council of Elders. Which tribe should we favour?"
+pf_trn.27.a: "Allow the [Root.GetPrimaryTribe] to train their troops."
+pf_trn.27.b: "Favour the [Root.GetSecondaryTribe] point of view."
+pf_trn.27.c: "Surely we can come to some kind of arrangement?"
+
+###########
+# Decision
+###########
+
+pf_druidic_ritual_title: "Organise Druidic Ritual"
+pf_druidic_ritual_desc: "The druids are prepared, and the time has come for a ritual. Let us practice the ancient religion of our ancestors and bring prosperity and joy to the present."
+performed_druidic_ritual: "Performed Druidic Ritual"
+
+pf_druidic_wicker_man_title: "Burn a Wicker Man"
+pf_druidic_wicker_man_desc: "This peculiar practice was once commonplace among our ancestors, but in modern times many consider it too barbaric. A giant statue made of wicker is constructed, in which various animals and people, often criminals or rebels, are placed. The whole this is then set ablaze, burning all those inside alive. This show of force is sure to keep our enemies in order."
+local_wicker_man: "Wicker Man Burning"
+
+form_albion_title: "Proclaim the Union of Albion"
+form_albion_desc: "At last, the Brittonic tribes of Albion have been united under one banner. Let us now formalise our rule by taking up the mantle of Albion, the White Sun. May Albion prosper!"
+
+realm_of_coel_hen_title: "Realm of Coel Hen"
+realm_of_coel_hen_desc: "Long ago a great military leader known simply as 'Old Cole' ruled the lands to the north of Albion. His domain shattered upon his death, but it was briefly one of the greatest empires the islands have ever known. The many local dynasties that succeeded him claimed to be his successors, collectively known as the Coelings, for centuries afterwards. By our times his name is little more than a legend, but a powerful one at that. We are now in control of much the same territory Coel managed in his heyday. Perhaps it would be appropriate to crown ourselves his true successors?"
 
 ###########
 # Custom loc
@@ -95,3 +370,324 @@ trn_trinovantes_secondary_tt: "Trinovantes"
 trn_cantiaci_secondary_tt: "Cantiaci"
 trn_regni_secondary_tt: "Regni"
 trn_catuvellauni_secondary_tt: "Catuvellauni"
+
+###########
+# Missions
+###########
+
+#
+
+pf_trn_astrology_title: "Signs in the Stars"
+pf_trn_astrology_desc: "The future of the Confederation is uncertain, with many fearing the ever-growing cancers of the Celtic Lordship or the vile Northmen will overcome our walls and destroy us. In these times, the people need strong leadership, guidance, and most importantly, hope. Let us turn to the stars, to see if any omens or prophecies can be decoded from them that might light the fires of national spirit."
+pf_trn_destiny_awaits: "Destiny Awaits!"
+
+pf_trn_appease_the_druids_title: "Appease the Druids"
+pf_trn_appease_the_druids_desc: "The Druids are essential to everyday life in Albion. Their ceremonies dictate the passing of the year, their prophecies decide the extent of the harvest and our military victories, and their members are key advisors to the Council of Elders. They could always be more help to us, however, if we can convince them."
+pf_trn_done_ritual_or_wicker_man_tt: "Performed either a §YDruidic Ritual§! or burned a §YWicker Man§!."
+
+pf_trn_magi_and_mystics_title: "Magi and Mystics"
+pf_trn_magi_and_mystics_desc: "The world is changing, and with it so to is the role of the druids. Once, they were revered as mighty wielders of magical powers, our only connection between the Earth and the gods. Now, they are more a body of clergy than wizards. What will the future bring for these declining druids?"
+mission_not_unlocked_tt: "This mission has not been unlocked yet so you cannot see its effects."
+pf_trn_locked_druid_path_1_title: "Locked Mission"
+pf_trn_locked_druid_path_1_desc: "This mission requires a previous mission to be complete to unlock."
+pf_trn_locked_druid_path_2_title: "Locked Mission"
+pf_trn_locked_druid_path_2_desc: "This mission requires a previous mission to be complete to unlock."
+
+pf_trn_cleanse_the_north_title: "Cleanse the North"
+pf_trn_cleanse_the_north_desc: "The Northmen arrived on our shores long ago, but they came as raiders and pirates. While annoying for governments to deal with and devastating to local communities, that rabble was certainly not an existential threat to our Confederation. As time went on however, they became more and more daring, and at last made landfall and settled there. This situation is simply unacceptable - we must drive the Northmen back to their desolate wastes and away from our shores!"
+pf_trn_norse_explusion_tt: "Every §YNorse§! province owned by either us or our subjects gets the following effects:"
+pf_trn_norse_expulsion: "Explusion of the Northmen"
+
+######
+
+pf_trn_reach_out_title: "Open to the World"
+pf_trn_reach_out_desc: "As we move past our old restrictive traditions, it is becoming more advantageous to us to open ourselves to the outside world for guidance. There are many nations that are remarkably technologically advanced compared to us. Though we may be vulerable to their whims, if we can establish good relations with them, there may be a chance of gaining some useful knowledge."
+pf_trn_knowledge_of_the_world: "Knowledge of the World"
+
+pf_trn_natural_society_title: "The Natural Society"
+pf_trn_natural_society_desc: "The world is out there and ours to explore. No longer will we sit idly by fires and listen to semi-lucid druids tell stories of our past - we will work out who we are for ourselves. Let us a begin a bright new shining age of exploration and knowledge."
+pf_trn_the_natural_society: "The Natural Society"
+
+######
+
+pf_trn_religious_revolution_title: "Druidic Revolution"
+pf_trn_religious_revolution_desc: "As our country readily embraces the druids and their religious orders, it is becoming clear that our current system is not well equiped to cope with close cooperation with the clergy. The old institution that kept our noble druid brothers and sisters out for so long must be torn up and rewritten."
+pf_trn_rush_of_new_druids: "Rush of New Druids"
+
+pf_trn_druid_strength_title: "Grove and State"
+pf_trn_druid_strength_desc: "The druids are growing more respected and renowned for their insights and miracles across the country. Many say we are doing our people a disserivce by not including the druids among our panel of core advisors. While they are still learning about secular matters, their insight on metaphysical matters and problems pertaining to the fate of the soul will be most helpful in deciding our future policies."
+pf_trn_strongest_druids: "Druids in Formal Government"
+
+#
+
+pf_trn_build_army_title: "Take Up Arms"
+pf_trn_build_army_desc: "With a revolution ongoing within the Council, it is more important than ever that we act quickly to secure our nation's interests. While Ricatus' shrewd diplomacy may have kept us safe, with his passing we have no choice but to rally together our strongest warriors in a show of martial might."
+pf_trn_tribal_levy: "Raising the Tribal Levy"
+pf_trn_build_army_tt: "If the §YElders estate§! has at least §l60 loyalty§!, the follow effect will occur:"
+
+pf_trn_awaken_the_britons_title: "Awaken the Britons"
+pf_trn_awaken_the_britons_desc: "For too long our brethen have lived under the feet of tyrants. Our Confederation is strong and united - there is no reason why we cannot muster our forces together and liberate our lost brothers and sisters. Let us send a message to them, promising freedom - we will come, and we will save you."
+pf_trn_awaken_the_britons_tt: "If we complete this mission by §Yspying§!, the follow effect will occur to all §Ynon-owned Brittonic§! provinces:"
+pf_trn_awaken_the_britons_1_tt: "Otherwise, the follow effect will occur to §Yowned Brittonic provinces§!:"
+pf_trn_brittonic_nationalism_local: "Brittonic Nationalism"
+PF_TRN_NEED_30_SPY_NETWORK_IN_COUNTRIES_WITH_BRITON_PROVINCES: " countries that own §YBriton§! provinces have at least §Y30 spy network§! from us."
+
+pf_trn_merchant_adventurers_title: "Merchant Adventurers"
+pf_trn_merchant_adventurers_desc: "The North Sea has been a hub of trade for centuries, and was once one of the richest regions in the world as a result. The recent surge in nefarious activities by the Northmen has severely hampered this wealth however, and left control over the local trades to whomever is strongest. Our merchants push towards Scandinavia in search of good deals, and with them, they will carry the banner of the Confederation, so that the foreigners may know who we are and that we mean business."
+pf_trn_booming_trade_town: "Booming Trade Town"
+pf_trn_merchant_adventurers_tt: "Every owned province with a §Ytrade building§! will get the following effect:"
+
+pf_trn_the_new_north_title: "The New North"
+pf_trn_the_new_north_desc: "In a different world, this place might have been known as a place of myths and legends, a legacy of bygone conquests. But in ours, this is a rich and vibrant region. In the past it held a fascinating bardic culture, with many poems being written about its brave heroes, many of which still survive to this day. Securing the North is vital to controlling the land routes across from Pictland, which when undefended could be used by any unsightly Northman or Celt."
+
+pf_trn_free_the_picts_title: "Free the Picts"
+pf_trn_free_the_picts_desc: "The Picts were once a wild people of the northern highlands of Albion. They lived free, dancing between their painted stones and camping out with the sheep under barren skies. Those days of tranquility are long gone for them now. In the wake of invasions by the Gaels and the Northmen, the Picts have been driven ever farther south, and now their domain lies along the ancient border with the Caledonians. They face the same oppressors as we do - we should help them, and restore their lands to the glory they once enjoyed, as an elder brother would help his sibling."
+pf_trn_triumph_over_the_northmen: "Triumph over the Northmen"
+pf_trn_free_the_picts_tt: "Every province in the §YLowlands§!, §YHighlands§!, or §YIsles§! areas will get the following effect:"
+
+pf_trn_conquer_eriu_title: "Spirit of Ériu"
+pf_trn_conquer_eriu_desc: "Many groups of people have conquered Ériu before us. They have arrived on their ships and ploughed through the storms, each successive group defeating gods, demons and warriors. We face a new kind of evil in our conquest of fair Ériu's island - the people of Celtica. Taking the ancient Song of Amergin to heart, we will set forth and claim the island for ourselves!"
+pf_trn_new_irish_conquerors: "New Conquerors in Ériu"
+
+#
+
+pf_trn_ricatus_legacy_title: "Ricatus' Legacy"
+pf_trn_ricatus_legacy_desc: "Ricatus was a great leader of the Confederation. He led our country on the path of peace and diplomacy, securing relations with our neighbours and organising effective truces. Many just a few decades prior had feared we would be overrun by now, but thanks to the hard work and dedication of Ricatus, those worries proved unfounded. With his passing however, a shadow has fallen over the Confederation. The peace he built may prove to be a glass cannon, and upon the moment of his death we can already feel the hounds sniffing for blood. Ricatus only dreamed of a strong and independent Confederation - his successors dream of Empire."
+opinion_attended_ricatus_funeral: "Attended Ricatus' Funeral"
+opinion_attended_ricatus_funeral_no: "Refused to Attend Ricatus' Funeral"
+pf_trn_diplomatic_legacy: "Diplomatic Legacy"
+pf_trn_aggressive_legacy: "Aggressive Legacy"
+pf_trn_ricatus_legacy_tt: "A funeral will be held for §YRicatus§!, where we will be able to chose to invite the enemies of our realm."
+
+pf_trn_a_new_outlook_title: "A New Outlook"
+pf_trn_a_new_outlook_desc: "The age of diplomacy is over. With Ricatus gone, there is no one left to limit our military potential. The time has come to prepare for war - war with the barbaric Gaels, who have for too long slept peacefully in their ivory towers while Albion pays liberal tribute. In order to prepare for this conflict, we must ensure our own flank is secure - the site of the old hill fort of Cair Grauth has been chosen to be strengthened, preventing an enemy from marching across the flanks of the great marshes to strike at our heartland."
+pf_trn_a_new_outlook_tt: "If we complete this mission by §Yconstructing a fort§! in [4370.GetName], the follow effect will occur:"
+pf_trn_a_new_outlook_1_tt: "Otherwise, the follow effect will occur:"
+pf_trn_brittonic_bastion: "Brittonic Bastion"
+
+pf_trn_gaelic_war_title: "The Gaelic War"
+pf_trn_gaelic_war_desc: "The time has come to launch our attack against the Celtic Tyranny. In this righteous war, the Britons of the land are sure to join us in open rebellion, so that we can throw out the disgusting Gaels at last! Forward, march!"
+
+pf_trn_defeat_celtica_title: "Triumph Over Celtica"
+pf_trn_defeat_celtica_desc: "Our campaigns have proven victories, and our armies triumphant. The Celtic Tyranny is defeated! Hail the Confederation!"
+pf_trn_defeated_celtica: "Defeated Celtica"
+pf_trn_defeat_celtic_extra_reward_tt: "If we complete this mission while having decided §Ynot to accept help from the Druids§! in the §YAppease the Druids§! Mission, the following effect will occur:"
+
+pf_trn_dreams_of_albion_title: "Dreams of Albion"
+pf_trn_dreams_of_albion_desc: "In a far off land, kings and emperors sleep peacefully. They know not hunger or strife, and spend all day reading poetry and entertaining foreign guests. This is not that land. Here our leaders fight for their homes every day. They know every trial that man can face. They are truly one of, and one with, the people. While other kings dream of silk caravans and golden toilets, ours dream of hope - a hope that one day, the Britons can be united, just as was done by the heroes of old, and a great new White Sun will emerge from the horizon."
+pf_trn_allowed_to_form_via_mission_tt: "We must complete the §Yrelevant mission§! before we can form this nation."
+pf_trn_dreams_of_albion_tt: "Unlock the formation of @ABN §YAlbion§!"
+pf_trn_united_the_british_tribes: "The End of a Long Night"
+
+pf_trn_conquer_wales_title: "Land of Sheep and Stories"
+pf_trn_conquer_wales_desc: "The western reaches of Albion are filled with mountains and valleys, and plenty of sheep. The people there have an ancient history, originally written by bards in their hillforts, and now in their impressive castles. Our Confederation is expanding to encompass all the Brittonic lands - let us absorb this corner of the world also, and try not to pay too close attention to their peculiar barnyard habits."
+pf_trn_mathrafal_castle: "Restored Mathrafal Castle"
+pf_trn_sheepfuckers: "Woollen Bed, Wool in Bed"
+pf_trn_sheepfuckers_desc: "Baaaaaaa!"
+
+pf_trn_song_of_amergin_title: "The Song of Amergin"
+pf_trn_song_of_amergin_desc: "I am the wind on the sea;\nI am the wave of the sea;\nI am the bull of seven battles;\nI am the eagle on the rock\nI am a flash from the sun;\nI am the most beautiful of plants;\nI am a strong wild boar;\nI am a salmon in the water;\nI am a lake in the plain;\nI am the word of knowledge;\nI am the head of the spear in battle;\nI am the god that puts fire in the head;\nWho spreads light in the gathering on the hills?\nWho can tell the ages of the moon?\nWho can tell the place where the sun rests?"
+pf_trn_the_song_of_amergin: "The Song of Amergin"
+
+pf_trn_gaullish_alliance_title: "Oak and Boar"
+pf_trn_gaullish_alliance_desc: "The mighty Gaulish state to our south is a confederation of tribes much like our own, and shares the same hatred of the Celtic nation. Perhaps we can come to come kind of agreement with them, whereby assist each other in our respective goals, united by our faith."
+pf_trn_a_strangers_city: "A Stranger's City"
+pf_trn_gaullish_alliance_tt: "The settlement of §Y[236.GetName]§! will become the nexus of foreign activity in the country, attracting business interests and settlement from across Europe."
+
+#
+
+pf_trn_the_gaelic_menace_title: "The Gaelic Menace"
+pf_trn_the_gaelic_menace_desc: "The Gaels of Celtica have been a thorn in the side of peace in Albion for many years. While we may have succeeded in stopping them from conquering us in the short term, our long term survival looks ever more shaky. We must decide on a path to confront them, and aim to drive them out of Albion once and for all!"
+pf_trn_great_gaelic_war: "The Great Gaelic War"
+pf_trn_great_gaelic_war_tt: "If we complete this mission while having at least §Y25 Power Projection§!, the following effect will occur:"
+
+pf_trn_stormlander_fleet_title: "Stormlander Fleet"
+pf_trn_stormlander_fleet_desc: "Even if defeated in Albion, the vile Celts would simply cross back over the Irish Sea to their wallows where they think we cannot get them. Behind their mud houses and wooden walls, they believe themselves safe. We must construct a new fleet, one brave enough to weather the stormiest seas, to land our brave men and women on the shores of Gaelland and bring down their empire once and for all."
+pf_trn_stormlander_fleet_tt: "If we complete this misison while having a §YNaval Reformer§! advisor employed, the following effect will occur:"
+pf_trn_launch_the_stormlander_fleet: "Launching the Stormlander Fleet"
+
+pf_trn_the_folk_council_title: "The Folk Council"
+pf_trn_the_folk_council_desc: "The Council of Elders has held supreme power over the Confederation for too long. It was their indecisive and passive nature that led to Celtica taking over as much land as it did, a situation that was only rectified when the common people of the realm stepped forward for service. Like the winds, the times are changing. Let us reduce the Council of Elders to a more ceremonial position, and create a new 'Folk Council' made up of free commonfolk to debate and introduce laws and policies."
+pf_trn_folk_council: "The Folk Council"
+
+pf_trn_professional_army_title: "By Sword and Spear"
+pf_trn_professional_army_desc: "The army of the Confederation has for a long time been made up of irregular troops, random folk drawn from the villages to come and protect our borders. With military technology advancing by the year and conflicts becoming ever more crucial and costly, it is important that we move towards creating a permanent and professional standing army, just as many countries on the continent have done."
+pf_trn_professional_army_reward_tt: "Gain §Y5 Army Tradition§! for each §YMilitary Skill§! of our ruler, in total:"
+
+pf_trn_oak_in_blossom_title: "The Oak in Blossom"
+pf_trn_oak_in_blossom_desc: "The lands of the Oaken Five are still tribal in many ways, much like the rest of the Brittonic territories. In comparison to the dazzling kingdoms and cities of the Mediterranean however, ours feel like little more than collections of tents. Let us invest in the core provinces and enrich each member of the Confederation equally."
+pf_trn_springtime: "Springtime in the Confederation"
+
+pf_trn_develop_the_nation_title: "Patronise the Cities"
+pf_trn_develop_the_nation_desc: "Population growth in the isles has begun a movement away from the countryside and towards urbanisation, and our biggest towns are struggling to cope with this new influx of people. Expanding the infrastructure of our provinces will go a long way towards accomodating for the future."
+pf_trn_develop_the_nation_tt: "Every owned province gains §G+50§! prosperity progress."
+pf_trn_bountiful_tribute: "Bountiful Tribute"
+
+pf_trn_the_garden_of_albion_title: "The Garden of Albion"
+pf_trn_the_garden_of_albion_desc: "The status of Londinion as a center of foreign trade and settlement in our country has only grown over the years, and it is turning into a rapidly expanding metropolis. A new local government will have to be created for this autonomous city, and new wide-reaching infrastructure projects initiated, turning this once barren marshland into the garden of all of Albion."
+pf_trn_the_garden_of_albion_modifier: "The Garden of Albion"
+
+#
+
+pf_trn_the_oaken_five_title: "The Oaken Five"
+pf_trn_the_oaken_five_desc: "Long ago, the five most powerful tribes of the east, the Trinovantes, the Iceni, the Regni, the Cantiaci, and the Catuvellauni, came together and signed a treaty of eternal cooperation. Their leaders met underneath a great oak tree on the outskirts of Uenta Icenorum, giving the alliance its informal name - the Oaken Five. Will the alliance stand together in this moment of flux, or will the petty disputes between the tribes finally break that oath?"
+pf_trn_oaken_five_alliance: "Alliance of the Oaken Five"
+pf_trn_the_oaken_five_tt: "If we complete this mission while having at least §Y25 Cohesion§!, the duration of the modifier will be §Gdoubled§!."
+
+pf_trn_ouroboros_oath_title: "Ouroboros Oath"
+pf_trn_ouroboros_oath_desc: "The Ouroboros is the symbol of our Confederation. The snake eating its own tail represents the cycladic nature of life, showing birth and death as but inevitable parts of the world. Inspired by this image, let us introduce a new oath for chiefs of the tribes to take upon ascension. They will swear loyalty to the Confederation for eternity, and even death will not nullify their promise."
+pf_trn_ouroboros_oath_modifier: "The Ouroboros Oath"
+
+pf_trn_reform_the_confederation_title: "Reform the Confederation"
+pf_trn_reform_the_confederation_desc: "Recent victories and successfull economic policies have greatly increased the amount of people and settlements the Confederate government has to manage, and it is clear that this burden is growing too much too quickly. We must enact sweeping reforms to clean up any corruption in the Council, streamline our administration, and introduce more meritocratic recruitment for minor governmental roles."
+pf_trn_reformed_confederation: "Reformed the Confederation"
+unlocks_court_bards_privilege_tt: "Unlocks the §YCourt Bard Performances§! privilege for the §YBards§! estate."
+
+pf_trn_daughters_of_boudicca_title: "Daughters of Boudicca"
+pf_trn_daughters_of_boudicca_desc: "Boudicca is a legendary heroine of the Iceni tribe, who led her people to regional domination many years ago. Spurred on by the mistreatment of her and her daughters by the invasive Trinovantes after the death of her husband, Boudicca led a campaign of conquest and revenge that took her across Albion, establishing Iceni dominion where ever she went. While her empire collapsed quickly after her death, the tales of her deeds are yet to die - many generations of Iceni warriors have looked to her as the guiding hand behind their victories, with some even offering sacrifices to appease her still-living spirit. A group of women, who would traditionally have been reserved for domestic life, known as the 'Daughters of Boudicca', claim to be her descendants, and continue to practice her battle techniques and preach of her righteous conquest. The Daughters are some of the most well trained and skilled fighters in all the land - let us offer them some money for their service."
+pf_trn_daughters_of_boudicca_mercs_tt: "Allows the §MDaughters of Boudicca§! Mercenary Company to be employed."
+merc_daughters_of_boudicca: "§MDaughters of Boudicca§!"
+
+pf_trn_the_blood_between_us_title: "The Blood Between Us"
+pf_trn_the_blood_between_us_desc: "Families stick together, no matter what. In that aspect, sisters in combat are alike a family - they never lose sight of each other and will always be there by each others' sides when needed. The Daughters of Boudicca have proven themselves better than we could have imagined, carrying us to many victories. The time has come to question their place in our military, and how we will use their skills."
+pf_trn_the_blood_between_us_trigger_tt: "Won at least §Y25 battles§! while the §MDaughters of Boudicca§! Mercenary Company is employed (currently §Y[Root.BoudiccaBattlesWon.GetValue]§!)."
+pf_trn_the_blood_between_us_tt: "This event will allow us to choose whether to integrate the §YDaughters§! into our own military or strengthen their existing company."
+merc_upgraded_daughters_of_boudicca: "§MDaughters of Boudicca§!"
+
+pf_trn_the_blackcoats_title: "The Blackcoats"
+pf_trn_the_blackcoats_desc: "The way that war is waged is changing all across Europe. If we wish to stay competitive, we must reform our military also. It is not enough to have elite regiments, or even simple conscription tests. We must uproot our army and regrow it from the ground up. Our new forces will be based around a core of Blackcoats, professionally trained and dangerous troops who will serve the commands of the Council no matter what. Through rain, sleet and snow, they will march undetered. No army will be able to face them. To glance at a Blackcoat is to stare into the face of Death itself."
+pf_trn_the_blackcoats_modifier: "The Blackcoats"
+
+pf_trn_blackcoat_revolution_title: "Blackcoat Revolution"
+pf_trn_blackcoat_revolution_desc: "The Blackcoats were our fiercest asset in war time, and like the Daughters of Boudicca before them, they carried us to a great many impressive victories. Their ambition outgrew their place in society, and as a result, a ferocious conflict over leadership of the country emerged. Which side will come out triumphant?"
+pf_trn_blackcoat_rebellion_trigger_tt: "Had the §YBlackcoat Revolution§!."
+pf_trn_blackcoat_revolution_1_tt: "If we complete this mission by §lembracing§! the §YBlackcoat Revolution§!, we gain the following effect:"
+pf_trn_blackcoat_revolution_2_tt: "If we complete this mission by §Odefeating§! the §YBlackcoat Revolution§!, we gain the following effect:"
+pf_trn_blackcoat_rule: "Rule of the Blackcoats"
+pf_trn_blackcoat_defeat: "Defeated the Blackcoats"
+
+pf_trn_leadership_of_the_trinovantes_title: "The Tribal Pyramid"
+pf_trn_leadership_of_the_trinovantes_desc: "The Trinovantes tribe were the most powerful of the Oaken Five when the Confederation was first formed. It was their chief Bronwen that proposed the alliance against Celtic incursion in the first place. As a result, the Trinovantes have always held a privileged position compared to the other tribes, with even their capital of Camulodonon serving as the seat of the Council of Elders. Times have changed since the foundation of the Confederation however, and some of the other tribes have grown more powerful at the expense of the Trinovantes, leaving many of them to question why their tribe is not elevated to the same extent."
+pf_trn_leadership_of_the_trinovantes_tt: "This event will decide between maintaining the supremacy of the Trinovantes or reshaping into a more equal Confederation."
+
+
+##############
+# BRITTONIC
+##############
+
+pf_bri_royal_court_title: "A Royal Court"
+pf_bri_royal_court_desc: "We must ensure our capital and court are as opulent and fancy as they can be, to show off our wealth and culture to foreign leaders and our subjects alike."
+pf_bri_royal_court_modifier: "Efficient Royal Court"
+
+pf_bri_bards_loyalty_title: "Loyalty of the Bards"
+pf_bri_bards_loyalty_desc: "The bards are an important class within our court and culture. Without their songs and poems, we would not know our history nor have entertainment in the darkest days. Let us make clear we appreciate their services by appeasing their desires."
+
+#
+
+pf_bri_great_feast_title: "A Great Feast"
+pf_bri_great_feast_desc: "'Diplomats roasting on an open fire...'\n\nWe should show our grandeur and wealth off to our neighbours, and there is no better way of doing that than hosting a splendid feast, and inviting dignitaries of all kinds. With copious amounts of fine food and mead, we will be sure to smooth relations over with our erratic brethren."
+opinion_bri_feast: "Attended our Feast"
+pf_bri_held_a_great_feast: "Held a Great Feast"
+pf_bri_every_briton_gets_opinion_tt: "Every §YCeltic§! cultured country gains §G+50§! opinion of us."
+
+pf_bri_bards_melody_title: "Beautiful Melodies"
+pf_bri_bards_melody_desc: "Magnificent pieces of music have been constructed by our bards, to be played at every government building and every ceremony. Theirs is the tune of our nation- let us be sure we patronise them properly."
+pf_bri_upgraded_song_ability_tt: "Unlocks additional §Ybonuses§! from using from buttons of the §YBardic Songs§! Government Mechanic."
+
+#
+
+pf_bri_build_army_title: "Band of Warriors"
+pf_bri_build_army_desc: "We should assemble a band of warriors to use against our enemies and secure our interests, be it expansion, safety, or justice."
+pf_bri_expansionism: "Policy of Expansionism"
+
+pf_bri_secure_help_title: "Appeal to our Brothers"
+pf_bri_secure_help_desc: "We are not the only Britons under the Celtic boot. We should seek to ally with other brothers against our enemies, be they the fellow oppressed, the antagonistic Confederation or powerful friends overseas."
+pf_bri_secure_help_1_tt: "If we complete this mission by §Ysecuring independence ourselves§!, we will gain the following effect:"
+pf_bri_secure_help_2_tt: "If we complete this mission by §Yappealing to the [TRN.GetName]§!, we will gain the following effect:"
+pf_bri_secure_help_3_tt: "If we complete this mission by §Ymaking a powerful ally§!, we will gain the following effect:"
+pf_bri_support_of_the_trinovantes: "Support of the Brittonic Confederation"
+pf_bri_foreign_support: "Foreign Support"
+
+pf_bri_independence_title: "Songs of Freedom"
+pf_bri_independence_desc: "The Celtic Tyranny has kept us desperate and depressed for too long. We must throw off the shackles of Gaelic rule and set out to pursue our own destiny in Albion!"
+pf_bri_newfound_independence: "Newfound Independence"
+
+pf_bri_crown_of_albion_title: "Crown of Albion"
+pf_bri_crown_of_albion_desc: "Albion is an idea more than anything - an idea that the Britons could one day be united under one flag, to serve no masters other than their own morals. No man has achieved this deed before. Thus, it is a great privilege that we are able to share in this dream, and make it a reality."
+
+#
+
+pf_bri_pacify_the_picts_title: "Pacify the Picts"
+pf_bri_pacify_the_picts_desc: "The Picts have raided at our borders for centuries, devastating whole towns and ruining livelihoods. Kings of the north have campaigned relentlessly at no end to finally pacify these wild people, but as of yet they have been unsuccessfull. Even now, divided as they are between Celtic and Norse lords, the Picts are still a nuisance. Let us organise a final push to seal these barbarians into the history books once and for all."
+pf_bri_pacify_the_picts_1_tt: "If we complete this mission via §Yconquest§!, we will gain the following effect:"
+pf_bri_pacify_the_picts_2_tt: "If we complete this mission via §Ytruce§!, we will gain the following effect:"
+pf_bri_lowlands_pacification: "Lowland Pacification"
+pf_bri_safe_from_picts: "Safe from the Picts"
+
+pf_bri_drive_out_the_northmen_title: "Expel the Northmen"
+pf_bri_drive_out_the_northmen_desc: "The Northmen arrived on our shores many years ago, and while they were once simple raiders, they have now turned into conquerors. The existence of Nordanvik is an existential threat to our nation and all the Brittonic peoples. We must take the fight to them and drive out the northerners from our shores once and for all."
+
+
+#
+
+pf_bri_coels_wall_title: "Coel's Wall"
+pf_bri_coels_wall_desc: "Coel Hen ruled a kingdom that controlled the entire north, but even he could not defeat the barbarous tribes of the north. Failing to conquer them, he constructed a great wall across the border region, known to history as Coel's Wall. It is now broken and crumbling - we should restore it to once again establish a tough frontier with the uncivilised tribes."
+pf_bri_coels_wall_modifier: "Coel's Wall"
+
+pf_bri_coels_city_title: "Renovate [245.GetName]"
+pf_bri_coels_city_desc: "The city of [245.GetName] was once a great metropolis under the rule of the ever-present Coel Hen, but in the centuries since his rule, it has declined severely. While it is still one of the largest settlements in the north, there is plenty of room for improvement in public infrastructure, including restoring the old citadel."
+pf_bri_manpower_building_extra_tt: "If we have a §Ymanpower building§! in [245.GetName], we will gain the following effect:"
+pf_bri_trade_building_extra_tt: "If we have a §Ytrade building§! in [245.GetName], we will gain the following effect:"
+pf_bri_tax_building_extra_tt: "If we have a §Ytax building§! in [245.GetName], we will gain the following effect:"
+
+pf_bri_boudiccas_way_title: "Boudicca's Way"
+pf_bri_boudiccas_way_desc: "Boudicca's Way is a now ancient path crossing through Albion, from Queen Boudicca's ancient territories all the way up to Eburacum. While operational, it served as a vital route for information and armies to travel up and down the spine of the country. With some effort and rebuilding, we can restore this road system back to its former glory."
+pf_bri_boudiccas_way_big_tt: "Each of the highlighted provinces has been §Ydeveloped at least four times§!, has had its §Yinfrastructure expanded at least once§!, and is §Yowned by [Root.GetName]."
+pf_bri_boudiccas_way_effect_tt: "Every highlighted province on §YBoudicca's Way§! will gain the following modifier:"
+pf_bri_boudiccas_way_modifier: "Renovated Boudicca's Way"
+
+
+########## Unique Branches
+
+# Wales
+
+pf_bri_among_the_flocks_title: "Among the Flocks"
+pf_bri_among_the_flocks_desc: "Cymru is famous for the size and quality of its sheep herds, both feeding the people who nuture them and supplying the lifeblood of our economy, wool. We should continue to patronise the wool industry, and ensure that our flocks continue to grow in number."
+
+pf_bri_mathrafal_castle_title: "Renovate Mathrafal"
+pf_bri_mathrafal_castle_desc: "The fortress of Mathrafal was built by Welsh kings of the past to defend against incursions from the often ambitious lords of Pengwern. Over the centuries, like much of the infrastructure in Albion, the castle has fallen into disrepair. We should repair it and once again restore glory to Wales."
+
+pf_bri_farm_estates_title: "Farms and Fields"
+pf_bri_farm_estates_desc: "We Welsh feed off our fields. We must make hay while the sun shines, and live in plenty."
+pf_bri_farm_estates_tt: "Every owned province with a §YFarm Estate§! gets the following effect:"
+pf_bri_efficient_farms: "Spreading the Sheep Fields"
+pf_bri_song_of_fields_give_money_tt: "The Bard Song §YSong of the Fields§! will grant an extra cash bonus upon enaction."
+
+# Dumnonian
+
+pf_bri_unite_dumnonia_title: "Unite Dumnonia"
+pf_bri_unite_dumnonia_desc: "Dumnonia is a large and diverse region that stretches from Land's End to the far Belgaea territories. It is our birthright to control this territory, through conquest or diplomacy."
+pf_bri_dumnonian_monarchy: "Dumnonian Monarchy"
+
+pf_bri_tarnished_gold_title: "The Copper Isles"
+pf_bri_tarnished_gold_desc: "In ancient times Albion was known for its bountiful copper deposits, the source of much of the bronze that was so highly prized in the Near East, taken over the wicked waves by Phoenician trading boats. Nowadays, the importance of Cornwall as a copper source has largely diminished, but that is largely due to our slump in production. If we expand the mines, then surely we will be able to dominate the regional copper market once more."
+pf_bri_copper_deposits: "Vast Copper Mines"
+
+pf_bri_cornish_channel_title: "The Cornish Channel"
+pf_bri_cornish_channel_desc: "Trade in the Irish Sea is the lifeblood of the region, even with the political turmoil it is currently in. With such wealth flowing past us every day, surely it would not be unreasonable for us to want to seize a portion of it for ourselves?"
+pf_bri_song_of_ancestors_give_money_tt: "The Bard Song §YSong of the Ancestors§! will grant an extra prestige bonus upon enaction."
+
+# Briton
+
+pf_bri_chiefs_house_title: "Chief's Residence"
+pf_bri_chiefs_house_desc: "The power of our tribe comes from the chief. It is important that their residence accurately reflects the extent of our influence."
+pf_bri_chiefs_house_modifier: "The Seat of the Chief"
+
+pf_bri_tribal_growth_title: "Tribal Growth"
+pf_bri_tribal_growth_desc: "In order to show the continued might of our tribe, it must grow and consume other minor peoples. Let us conquer and be carried by our expansionist inertia."
+PF_BRI_TRIBAL_GROWTH_DEV_TT: "§G10§! random provinces in §YCeltic provinces§! will receive §G1§! base §Ytax§! development."
+
+pf_bri_land_of_cities_title: "Land of Cities"
+pf_bri_land_of_cities_desc: "In years gone by Albion was a land of cities, with every tribe having its own bustling capital. The age of warfare and disorder tha succeeded that time led to the destruction and decline of many of those ancient metropoli. Restore some of the old, and construct some new cities to be the beacons of light for our darling civilisation."
+pf_bri_song_of_heroes_give_money_tt: "The Bard Song §YSong of the Heroes§! will grant an extra army tradition bonus upon enaction."
+pf_bri_cities_aplenty: "Cities Aplenty"

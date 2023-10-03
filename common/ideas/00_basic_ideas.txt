@@ -1632,6 +1632,10 @@ influence_ideas = {
 			num_of_subjects = 3
 		}
 		modifier = {
+			factor = 1.5
+			num_of_subjects = 4
+		}
+		modifier = {
 			factor = 0.75
 			NOT = { monthly_dip = 8 }
 		}

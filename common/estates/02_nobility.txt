@@ -210,16 +210,18 @@ estate_nobles = {
 	}
 	
 	#Alternative naming of estates
+	# PF [[[
+	custom_name = {
+		desc = estate_elders
+		trigger = {
+			has_reform = brittonic_confederation_reform
+		}
+	}
+	# ]]]
 	custom_name = {
 		desc = estate_imperial_nobility
 		trigger = {
 			has_reform = revolutionary_empire_reform
-		}
-	}
-	custom_name = {
-		desc = estate_hajarlar
-		trigger = {
-			religion = norse_pagan_reformed
 		}
 	}
 	custom_name = {

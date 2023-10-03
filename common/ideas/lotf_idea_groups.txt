@@ -49,6 +49,10 @@ liberty_ideas = {
 			factor = 1.25
 			government = republic
 		}	
+		modifier = {
+			factor = 0
+			government = tribal
+		}	
 	}
 }
 
@@ -161,6 +165,10 @@ firepower_ideas = {
 		modifier = {
 			factor = 1.5
 			current_age = age_of_revolutions
+		}		
+		modifier = {
+			factor = 0
+			NOT = { mil_tech = 7 }
 		}	
 	}
 }

@@ -49,6 +49,11 @@ aeg_theodoro_ascended_modifier = {
 	global_prosperity_growth = 1
 }
 
+aeg_kemetic_resistance_modifier = {
+	global_missionary_strength = -1
+	promote_culture_cost = 500
+}
+
 pf_zoroastrian_inward_focus = {
 	development_cost = -0.1
 }
@@ -137,3 +142,4 @@ pf_per_satrapy_intimidated = {
 pf_per_satrapy_divided = {
 	reduced_liberty_desire = 10
 }
+

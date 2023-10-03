@@ -12,9 +12,12 @@ monarchy = {
 				pf_diadem_of_iberia
 				pf_alexanders_crown
 				pf_seleucid_monarchy
-				brittonic_confederation_reform	#hiw
+				brittonic_confederation_reform
 				enlightened_norse_kingdom
 				pf_nordhafnadr_kingdom
+				pf_argead_aegis
+				pf_brittonic_tribe_reform
+				pf_blackcoat_dictatorship
 				# ]]]
 
 				#Vanilla
@@ -155,6 +158,10 @@ monarchy = {
 				house_of_lords_reform
 				ministerialis_promotion_reform
 				separation_of_boyars_from_court_reform
+				# pf [[[
+				pf_guidance_of_the_elders_reform
+				pf_regional_tribal_nobility_reform
+				# ]]]
 			}
 		}
 		bureaucracy = {
@@ -224,6 +231,8 @@ monarchy = {
 			reforms = {
 				# pf [[[
 				pf_integrated_phalanx
+				pf_catephract_focus
+				pf_militarised_druids_reform
 				# ]]]
 				organized_military_staff_reform
 				military_engineering_reform
@@ -571,6 +580,7 @@ republic = {
 			reforms = {
 				# pf = [[[
 				pf_lagr_republic
+				pf_sardinian_league_reform
 				# ]]]
 				oligarchy_reform
 				signoria_reform

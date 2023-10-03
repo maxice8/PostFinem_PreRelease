@@ -1,0 +1,572 @@
+namespace = pf_mac_events
+
+
+#The Establishment of Magna Greacia
+country_event = {
+	id = pf_mac_events.1
+	title = pf_mac_events.1.t
+	desc = pf_mac_events.1.d
+	picture = CIVIL_WAR_eventPicture
+	
+	trigger = {  }
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	# mean_time_to_happen = {}
+
+	immediate = {  }
+
+	option = { #Release Them
+		name = pf_mac_events.1.a
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		custom_tooltip = mac_release_magna_graecia_tt
+		hidden_effect = {
+			apulia_area = { 
+				set_in_empire = no
+				add_core = MGN 
+				remove_core = ROOT
+			}
+			calabria_area = { 
+				set_in_empire = no
+				add_core = MGN 
+				remove_core = ROOT
+			}
+			release = MGN
+			create_union = MGN
+			MGN = { change_religion = ROOT }
+		}
+		MGN = {
+			add_country_modifier = {
+				name = pf_mac_events_1_modifier_subj
+				duration = -1
+			}
+		}
+		sicily_area = { add_permanent_claim = MGN }
+		western_sicily_area = { add_permanent_claim = MGN }
+		naples_area = { add_permanent_claim = MGN }
+		adriatic_italy_area = { add_permanent_claim = MGN }
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = pf_mac_events_1_modifier_dip
+			duration = -1
+		}
+	}
+
+	option = { #Take the claims for yourself
+		name = pf_mac_events.1.b
+		# goto = 
+		ai_chance = { factor = 0 }
+
+		add_country_modifier = {
+			name = pf_mac_events_1_modifier_mil
+			duration = 7300
+		}
+		sicily_area = { add_permanent_claim = ROOT }
+		western_sicily_area = { add_permanent_claim = ROOT }
+		naples_area = { add_permanent_claim = ROOT }
+		adriatic_italy_area = { add_permanent_claim = ROOT }
+	}
+}
+
+#Remove Magna Graeca Diplo Slot
+country_event = {
+	id = pf_mac_events.2
+	title = pf_mac_events.2.t
+	desc = pf_mac_events.2.d
+	picture = CIVIL_WAR_eventPicture
+	hidden = yes
+	
+	trigger = {  
+		has_country_modifier = pf_mac_events_1_modifier_dip
+		NOT = {
+			MGN = { is_subject_of = ROOT }
+		}
+	}
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = pf_mac_events.2.a
+		# goto = 
+		ai_chance = { factor = 1 }
+		remove_country_modifier = pf_mac_events_1_modifier_dip
+	}
+	
+}
+
+#Uncontested in the Aegean
+country_event = {
+	id = pf_mac_events.3
+	title = pf_mac_events.3.t
+	desc = pf_mac_events.3.d
+	picture = CIVIL_WAR_eventPicture
+	
+	trigger = {  }
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	# mean_time_to_happen = {}
+
+	immediate = {  }
+
+	option = { #buff shipyards
+		name = pf_mac_events.3.a
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		add_yearly_sailors = 7
+		custom_tooltip = empty_line_tt
+		custom_tooltip = uncontested_in_the_aegean_tt #Shipyard effects are doubled
+		set_country_flag = uncontested_in_the_aegean_flag
+		hidden_effect = {
+			every_owned_province = {
+				limit = { has_shipyard_building_trigger = yes }
+				add_province_modifier = {
+					name = uncontested_in_the_aegean_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+
+	option = { #more flagships!
+		name = pf_mac_events.3.b
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		add_yearly_sailors = 7
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = uncontested_in_the_aegean_flagship_modifier
+			duration = -1
+		}
+	}
+}
+
+
+#The Question of the Egyptians
+country_event = {
+	id = pf_mac_events.4
+	title = pf_mac_events.4.t
+	desc = pf_mac_events.4.d
+	picture = CIVIL_WAR_eventPicture
+	
+	trigger = {  }
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	# mean_time_to_happen = {}
+
+	immediate = {  }
+
+	option = { #PU time
+		trigger = {
+			AEG = { exists = yes }
+		}
+		name = pf_mac_events.4.a
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		add_yearly_manpower = 5
+		custom_tooltip = empty_line_tt
+		add_casus_belli = {
+			type = cb_restore_personal_union
+			months = 240
+			target = AEG
+		}
+	}
+
+	option = { #take it yourself
+		name = pf_mac_events.4.b
+		# goto = 
+		ai_chance = { factor = 0 }
+
+		add_yearly_manpower = 5
+		custom_tooltip = empty_line_tt
+		egypt_region = { add_permanent_claim = ROOT }
+	}
+}
+
+#On the Utilization of Heavy Cavalry
+country_event = {
+	id = pf_mac_events.5
+	title = pf_mac_events.5.t
+	desc = pf_mac_events.5.d
+	picture = CIVIL_WAR_eventPicture
+	
+	trigger = {  }
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	# mean_time_to_happen = {}
+
+	immediate = {  }
+
+	option = { #Give Hussars in T5
+		trigger = {
+			AEG = { exists = yes }
+		}
+		name = pf_mac_events.5.a
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		set_country_flag = mac_catephract_flag
+		add_government_reform = pf_catephract_focus
+	}
+
+	option = { #Unlock powerful Merc Company
+		name = pf_mac_events.5.b
+		# goto = 
+		ai_chance = { factor = 0 }
+
+		set_country_flag = mac_mercs_flag
+	}
+}
+
+#Dev Kosovo for stupid-ass AI
+country_event = {
+	id = pf_mac_events.6
+	title = pf_mac_events.6.t
+	desc = pf_mac_events.6.d
+	picture = CIVIL_WAR_eventPicture
+	hidden = yes
+	
+	trigger = {  
+		tag = MAC
+		ai = yes
+		1766 = {
+			owned_by = MAC
+		}
+		1766 = {
+			NOT = { base_production = 6 }
+		}
+	}
+
+	# fire_only_once = yes
+	
+	# is_triggered_only = yes
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	immediate = {  }
+
+	option = { #
+		name = pf_mac_events.6.a
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		1766 = { add_base_production = 2 }
+	}
+
+}
+
+#The Tumultuous Rule of Kallias Philoxnos
+#He's inherited a nation in decline by his father, and he's not expected to be much better
+#Very decadent, very disconnected, and widely disliked by the people
+country_event = {
+	id = pf_mac_events.7
+	title = pf_mac_events.7.t
+	desc = pf_mac_events.7.d
+	picture = ECONOMICALLY_TALLANTED_RULER_eventPicture
+	
+	trigger = {  
+		tag = MAC
+		has_ruler_flag = kallias_philoxenos_flag
+	}
+
+	fire_only_once = yes
+	
+	# is_triggered_only = yes
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	immediate = {  }
+
+	option = { #
+		name = pf_mac_events.7.a
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		custom_tooltip = kallias_philoxenos_tt
+		set_country_flag = kallias_philoxenos_country_flag
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = kallias_philoxenos_modifier
+			duration = 3600
+		}
+	}
+}
+
+
+#A Blessing from Posiedon
+#A strong admiral makes his name known
+country_event = {
+	id = pf_mac_events.8
+	title = pf_mac_events.8.t
+	desc = pf_mac_events.8.d
+	picture = NAVAL_MILITARY_eventPicture
+	
+	trigger = {  
+		tag = MAC
+		num_of_galley = 20
+		naval_forcelimit = 40
+	}
+
+	fire_only_once = yes
+	
+	# is_triggered_only = yes
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	immediate = {  }
+
+	option = { #admiral
+		name = pf_mac_events.8.a
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		add_yearly_sailors = 2
+		custom_tooltip = empty_line_tt
+		define_admiral = {
+			shock = 5
+			fire = 4
+			manuever = 4
+			name = "Aristodinos Kokkinopogon"
+		}
+	}
+
+	option = { #cabinet
+		name = pf_mac_events.8.b
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		add_yearly_sailors = 2
+		custom_tooltip = empty_line_tt
+		define_advisor = {
+			type = naval_reformer
+			skill = 3
+			cost_multiplier = 0.25
+		}
+	}
+}
+
+
+#The Cabinet Proposes a Promotion
+#Roll a new general, trade org for it
+#Pulse event, 4-5 years prob
+country_event = {
+	id = pf_mac_events.9
+	title = pf_mac_events.9.t
+	desc = pf_mac_events.9.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	
+	trigger = {  
+		tag = MAC
+		NOT = { num_of_generals = 1 }
+		has_government_mechanic = mac_war_cabinet_mechanic
+		NOT = {  
+			has_government_power = {
+				mechanic_type = mac_war_cabinet_mechanic
+				power_type = mac_war_cabinet_organization
+				value = 100
+			}
+		}
+	}
+
+	# fire_only_once = yes
+	
+	# is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {  }
+
+	option = { #Trade org for general
+		name = pf_mac_events.9.a
+		# goto = 
+		ai_chance = { 
+			factor = 2
+			modifier = {
+				factor = 10
+				is_in_important_war = yes
+			} 
+			modifier = {
+				factor = 1.5
+				num_of_generals = 1
+			} 
+			modifier = {
+				factor = 0
+				num_of_generals = 2
+			} 
+		}
+
+		add_government_power = {
+			mechanic_type = mac_war_cabinet_mechanic
+			power_type = mac_war_cabinet_organization
+			value = -10
+		}
+		custom_tooltip = empty_line_tt
+		create_general = {
+			tradition = 75
+		}
+	}
+
+	option = { #Trade org for advisor
+		name = pf_mac_events.9.b
+		# goto = 
+		ai_chance = { 
+			factor = 2
+			modifier = {
+				factor = 0.5
+				is_in_important_war = yes
+			} 
+			modifier = {
+				factor = 2
+				num_of_generals = 2
+			} 
+			modifier = {
+				factor = 2
+				NOT = { monthly_mil = 3 }
+			} 
+			modifier = {
+				factor = 1.5
+				NOT = { monthly_mil = 4 }
+			} 
+			modifier = {
+				factor = 1.5
+				NOT = { monthly_mil = 5 }
+			} 
+			modifier = {
+				factor = 0.5
+				has_mil_advisor_3 = yes
+			} 
+		}
+
+
+		add_government_power = {
+			mechanic_type = mac_war_cabinet_mechanic
+			power_type = mac_war_cabinet_organization
+			value = -10
+		}
+		custom_tooltip = empty_line_tt
+		define_advisor = {
+			type = commandant
+			skill = 3
+			discount = yes
+		}
+	}
+
+	option = { #Neither
+		name = pf_mac_events.9.c
+		# goto = 
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				is_in_important_war = yes
+			} 
+			modifier = {
+				factor = 2
+				num_of_generals = 2
+			} 
+			modifier = {
+				factor = 2
+				monthly_mil = 6
+			} 
+			modifier = {
+				factor = 2
+				NOT = { prestige = 0 }
+			} 
+			modifier = {
+				factor = 2
+				NOT = { prestige = 10 }
+			} 
+			modifier = {
+				factor = 2
+				NOT = { prestige = 20 }
+			} 
+			modifier = {
+				factor = 2
+				NOT = { legitimacy = 50 }
+			} 
+			modifier = {
+				factor = 2
+				NOT = { legitimacy = 60 }
+			} 
+			modifier = {
+				factor = 2
+				NOT = { legitimacy = 70 }
+			} 
+		}
+
+		add_legitimacy = 10
+		add_prestige = 10
+		custom_tooltip = empty_line_tt
+		add_government_power = {
+			mechanic_type = mac_war_cabinet_mechanic
+			power_type = mac_war_cabinet_organization
+			value = 5
+		}
+	}
+}
+
+
+#The Cabinet Proposes a Promotion
+#Roll a new general, trade org for it
+#Pulse event, 4-5 years prob
+country_event = {
+	id = pf_mac_events.10
+	title = pf_mac_events.10.t
+	desc = pf_mac_events.10.d
+	picture = CIVIL_WAR_eventPicture
+	
+	trigger = {  
+		tag = MAC
+		NOT = { num_of_generals = 1 }
+		has_government_mechanic = mac_war_cabinet_mechanic
+		NOT = {  
+			has_government_power = {
+				mechanic_type = mac_war_cabinet_mechanic
+				power_type = mac_war_cabinet_organization
+				value = 100
+			}
+		}
+	}
+
+	# fire_only_once = yes
+	
+	# is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {  }
+
+	option = { #Trade org for general
+		name = pf_mac_events.9.a
+		# goto = 
+		ai_chance = { 
+			factor = 1
+		}
+	}
+
+
+
+	option = { #Trade org for advisor
+		name = pf_mac_events.9.b
+		# goto = 
+		ai_chance = { 
+			factor = 1
+		}
+	}
+
+}

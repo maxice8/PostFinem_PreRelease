@@ -293,3 +293,888 @@ country_event = {		# Inter-tribal unrest
 		pf_clear_trn_tribe_flags = yes
 	}
 }
+country_event = {		# Tribes disagree over war plans
+	id = pf_trn.4
+	title = pf_trn.4.t
+	desc = pf_trn.4.d
+	picture = BATTLE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = brittonic_confederation_reform
+		is_at_war = yes
+	}
+
+	immediate = {
+		hidden_effect = {
+			pf_save_random_tribe = {
+				function = primary
+			}
+			pf_save_random_tribe = {
+				function = secondary
+			}
+		}
+	}
+
+	option = {		# Favour tribe 1
+		name = "pf_trn.4.a"
+		add_army_tradition = 10
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = -25
+		}
+	}
+	option = {		# favour tribe 2
+		name = "pf_trn.4.b"
+		add_mil_power = 50
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = -25
+		}
+	}
+	option = {		# favour neither
+		name = "pf_trn.4.c"
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = -10
+		}
+	}
+	option = {		# beat them into shape
+		name = "pf_trn.4.dd"
+		trigger = {
+			ruler_has_personality = strict_personality
+		}
+		highlight = yes
+		add_army_professionalism = 0.01
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = 10
+		}
+	}
+
+	after = {
+		pf_clear_trn_tribe_flags = yes
+	}
+}
+country_event = {		# The Disgraced Chief
+	id = pf_trn.5
+	title = pf_trn.5.t
+	desc = pf_trn.5.d
+	picture = BATTLE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = brittonic_confederation_reform
+		NOT = { stability = 3 }
+	}
+
+	option = {		# Respect the decision of the council
+		name = "pf_trn.5.a"
+		random = {
+			chance = 33
+			add_stability_or_adm_power = yes
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+	}
+	option = {		# Support the wronged man
+		name = "pf_trn.5.b"
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = 25
+		}
+	}
+	option = {		# ensure him a plentiful retirement
+		name = "pf_trn.5.c"
+		trigger = {
+			OR = {
+				ruler_has_personality = silver_tongue_personality
+				ruler_has_personality = kind_hearted_personality
+				ruler_has_personality = benevolent_personality
+			}
+		}
+		highlight = yes
+		add_adm_power = 100
+		add_years_of_income = -0.10
+	}
+}
+country_event = {		# Searching the Stars
+	id = pf_trn.6
+	title = pf_trn.6.t
+	desc = pf_trn.6.d
+	picture = RUNESTONE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {		# Get looking
+		name = "pf_trn.6.a"
+		custom_tooltip = pf_trn_searching_the_stars_tt
+		hidden_effect = {
+			country_event = { id = pf_trn.7 days = 365 random = 60 }
+		}
+	}
+}
+country_event = {		# Searching the Stars (result)
+	id = pf_trn.7
+	title = pf_trn.7.t
+	desc = pf_trn.7.d
+	picture = RUNESTONE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {		# Get looking
+		name = "pf_trn.7.a"
+		add_prestige = 10
+		add_country_modifier = {
+			name = "pf_trn_destiny_awaits"
+			duration = 3650
+		}
+		define_advisor = {
+			type = natural_scientist
+			skill = 2
+			discount = yes
+		}
+	}
+}
+country_event = {		# Ricatus funeral
+	id = pf_trn.8
+	title = pf_trn.8.t
+	desc = pf_trn.8.d
+	picture = northamericagfx_DEATH_OF_HEIR_eventPicture
+	
+	is_triggered_only = yes
+
+	major = yes
+	major_trigger = {
+		capital_scope = {
+			region = british_isles_region
+		}
+	}
+
+	option = {		# Invite our neighbours
+		name = "pf_trn.8.a"
+		add_dip_power = 50
+		add_country_modifier = {
+			name = "pf_trn_diplomatic_legacy"
+			duration = 7300
+		}
+		custom_tooltip = pf_trn_ricatus_legacy_tt
+		CEL = {		# Celtica
+			country_event = { id = pf_trn.9 }
+		}
+		NRD = {		# Nordanvik
+			country_event = { id = pf_trn.9 }
+		}
+	}
+	option = {		# Give him a warriors funeral
+		name = "pf_trn.8.b"
+		add_mil_power = 50
+		add_country_modifier = {
+			name = "pf_trn_aggressive_legacy"
+			duration = 7300
+		}
+	}
+}
+country_event = {		# Foreign invited to ricatus funeral
+	id = pf_trn.9
+	title = pf_trn.9.t
+	desc = pf_trn.9.d
+	picture = northamericagfx_DEATH_OF_HEIR_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {		# Attend
+		name = "pf_trn.9.a"
+		TRN = {
+			add_opinion = {
+				modifier = opinion_attended_ricatus_funeral
+				who = ROOT
+			}
+			reverse_add_opinion = {
+				modifier = opinion_attended_ricatus_funeral
+				who = ROOT
+			}
+		}
+	}
+	option = {		# Do not attend
+		name = "pf_trn.9.b"
+		TRN = {
+			add_opinion = {
+				modifier = opinion_attended_ricatus_funeral_no
+				who = ROOT
+			}
+			reverse_add_opinion = {
+				modifier = opinion_attended_ricatus_funeral_no
+				who = ROOT
+			}
+		}
+	}
+}
+
+country_event = {		# Help from the Druids
+	id = pf_trn.10
+	title = pf_trn.10.t
+	desc = pf_trn.10.d
+	picture = northamericagfx_CULTURE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {	
+		name = "pf_trn.10.a"
+		add_country_modifier = {
+			name = "pf_trn_druid_help_1"
+			duration = 9125
+		}
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = 20
+		}
+	}
+	option = {	
+		name = "pf_trn.10.b"
+		add_country_modifier = {
+			name = "pf_trn_druid_help_2"
+			duration = 9125
+		}
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = 20
+		}
+	}
+	option = {	
+		name = "pf_trn.10.c"
+		add_country_modifier = {
+			name = "pf_trn_druid_help_3"
+			duration = 9125
+		}
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = 20
+		}
+	}
+	option = {	
+		name = "pf_trn.10.dd"
+		add_legitimacy = 25
+		set_country_flag = trn_no_druid_support
+		custom_tooltip = pf_trn_no_druid_support_reward_tt
+	}
+}
+
+country_event = {		# The Celtic Tyranny
+	id = pf_trn.11
+	title = pf_trn.11.t
+	desc = pf_trn.11.d
+	picture = northamericagfx_COURT_eventPicture
+
+	trigger = {
+		tag = TRN
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	fire_only_once = yes
+
+	option = {	
+		name = "pf_trn.11.a"
+		custom_tooltip = pf_trn_celtic_tyranny_tt
+	}
+}
+
+country_event = {		# The Future of the Daughters
+	id = pf_trn.12
+	title = pf_trn.12.t
+	desc = pf_trn.12.d
+	picture = northamericagfx_LAND_MILITARY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {	
+		name = "pf_trn.12.a"
+		clr_country_flag = allow_daughters_of_boudicca
+		custom_tooltip = pf_trn_future_of_the_daughters_1_tt
+		add_country_modifier = {
+			name = "pf_trn_integrate_daughters_of_boudicca"
+			duration = -1
+		}
+	}
+	option = {	
+		name = "pf_trn.12.b"
+		set_country_flag = allow_upgraded_daughters_of_boudicca
+		custom_tooltip = pf_trn_future_of_the_daughters_2_tt
+		add_army_professionalism = 0.05
+	}
+}
+
+country_event = {		# The Magic of the Druids
+	id = pf_trn.13
+	title = pf_trn.13.t
+	desc = pf_trn.13.d
+	picture = FORESTS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {	
+		name = "pf_trn.13.a"
+		custom_tooltip = pf_trn_will_influence_future_missions_tt
+		custom_tooltip = pf_trn_looking_to_the_future_tt
+		set_country_flag = pf_trn_anti_druid
+		add_country_modifier = {
+			name = "pf_trn_looking_to_the_future"
+			duration = 9125
+		}
+		swap_non_generic_missions = yes
+	}
+	option = {	
+		name = "pf_trn.13.b"
+		custom_tooltip = pf_trn_will_influence_future_missions_tt
+		custom_tooltip = pf_trn_looking_to_the_past_tt
+		set_country_flag = pf_trn_pro_druid
+		add_country_modifier = {
+			name = "pf_trn_looking_to_the_past"
+			duration = 9125
+		}
+		swap_non_generic_missions = yes
+	}
+}
+country_event = {		# The Thirteen Treasures of Albion
+	id = pf_trn.14
+	title = pf_trn.14.t
+	desc = pf_trn.14.d
+	picture = FORESTS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {	
+		name = "pf_trn.14.a"
+		add_splendor = 100
+		add_treasury = 250
+		set_country_flag = pf_trn_splendor_art
+		custom_tooltip = pf_trn_thirteen_treasures_tt
+	}
+}
+country_event = {		# Marching Through the Winter
+	id = pf_trn.15
+	title = pf_trn.15.t
+	desc = pf_trn.15.d
+	picture = SOLDIERS_FREEZING_eventPicture
+
+	trigger = {
+		OR = {
+			tag = TRN
+			tag = ABN
+		}
+		army_size = 22
+		OR = {
+			army_tradition = 30
+			army_professionalism = 0.10
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	fire_only_once = yes
+
+	option = {	
+		name = "pf_trn.15.a"
+		add_years_of_income = -0.25
+		add_mil_power = 50
+		add_army_professionalism = 0.05
+	}
+	option = {
+		name = "pf_trn.15.b"
+		add_yearly_manpower = -3
+	}
+}
+country_event = {		# The Black Terror
+	id = pf_trn.16
+	title = pf_trn.16.t
+	desc = pf_trn.16.d
+	picture = SCOTTISH_MERCENARIES_eventPicture
+
+	trigger = {
+		has_country_modifier = pf_trn_the_blackcoats_modifier
+		NOT = { stability = 1 }
+	}
+
+	mean_time_to_happen = {
+		months = 400
+	}
+
+	fire_only_once = yes
+
+	option = {	
+		name = "pf_trn.16.a"
+		add_army_tradition = -25
+	}
+	option = {
+		name = "pf_trn.16.b"
+		add_army_professionalism = -0.05
+	}
+}
+country_event = {		# The Kingdom of Coel Hen
+	id = pf_trn.17
+	title = pf_trn.17.t
+	desc = pf_trn.17.d
+	picture = CONQUEROR_eventPicture
+
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {	
+		name = "pf_trn.17.a"
+		restore_country_name = yes
+		custom_tooltip = empty_line_tt
+		override_country_name = HEN_OGLEDD
+		if = {
+			limit = {
+				NOT = { government_rank = 2 }
+			}
+			set_government_rank = 2
+			custom_tooltip = empty_line_tt
+		}
+		add_prestige = 25
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = "pf_trn_kingdom_of_coel_hen"
+			duration = -1
+		}
+	}
+	option = {
+		name = "pf_trn.17.b"
+		if = {
+			limit = {
+				NOT = { government_rank = 2 }
+			}
+			set_government_rank = 2
+			custom_tooltip = empty_line_tt
+		}
+		add_prestige = 25
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = "pf_trn_kingdom_of_coel_hen"
+			duration = -1
+		}
+	}
+}
+
+country_event = {		# Supremacy of the Trinovantes
+	id = pf_trn.18
+	title = pf_trn.18.t
+	desc = pf_trn.18.d
+	picture = CONQUEROR_eventPicture
+
+	is_triggered_only = yes
+
+	option = {	
+		name = "pf_trn.18.a"
+		restore_country_name = yes
+		custom_tooltip = empty_line_tt
+		override_country_name = BRITTONIC_CONFEDERATION
+		custom_tooltip = empty_line_tt
+		add_dip_power = 50
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = "pf_trn_sup_tri_1"
+			duration = -1
+		}
+	}
+	option = {
+		name = "pf_trn.18.b"
+		add_stability_or_adm_power = yes
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = "pf_trn_sup_tri_2"
+			duration = -1
+		}
+	}
+}
+country_event = {		# The Blackcoats Slay the Daughters
+	id = pf_trn.19
+	title = pf_trn.19.t
+	desc = pf_trn.19.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+
+	is_triggered_only = yes
+
+	major = yes
+
+	immediate = {
+		set_country_flag = in_blackcoat_revolution
+	}
+
+	option = {
+		name = "pf_trn.19.a"
+		custom_tooltip = begins_blackcoat_revolution_tt
+		add_stability = -2
+		add_country_modifier = {
+			name = "pf_trn_blackcoat_fugitives"
+			duration = -1
+			desc = "until the end of the disaster"
+		}
+		remove_country_modifier = pf_trn_the_blackcoats_modifier
+	}
+	option = {	
+		name = "pf_trn.19.b"
+		custom_tooltip = begins_blackcoat_revolution_tt
+		add_stability = -2
+		add_country_modifier = {
+			name = "pf_trn_supported_the_blackcoats"
+			duration = -1
+			desc = "until the end of the disaster"
+		}
+		remove_country_modifier = pf_trn_the_blackcoats_modifier
+	}
+}
+
+country_event = {		# Finding the White Sun
+	id = pf_trn.20
+	title = pf_trn.20.t
+	desc = pf_trn.20.d
+	picture = northamericagfx_COMET_SIGHTED_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_trn.20.a"
+		trigger = {
+			OR = {
+				primary_culture = old_welsh
+				primary_culture = old_cornish
+			}
+		}
+		highlight = yes
+		restore_country_name = yes
+		custom_tooltip = empty_line_tt
+		override_country_name = PRYTAIN
+		custom_tooltip = empty_line_tt
+		restore_country_color = yes
+		custom_tooltip = empty_line_tt
+		change_country_color = { 
+			color = { 232 23 0 }
+		}
+		custom_tooltip = empty_line_tt
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 25
+		}
+	}
+	option = {	
+		name = "pf_trn.20.b"
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 25
+		}
+	}
+}
+
+country_event = {		# The Black Comet
+	id = pf_trn.21
+	title = pf_trn.21.t
+	desc = pf_trn.21.d
+	picture = northamericagfx_COMET_SIGHTED_eventPicture
+
+	trigger = {
+		had_country_flag = {
+			flag = in_blackcoat_revolution
+			days = 20
+		}
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "pf_trn.21.a"
+		add_stability = -1
+	}
+}
+
+country_event = {		# Losing Control
+	id = pf_trn.22
+	title = pf_trn.22.t
+	desc = pf_trn.22.d
+	picture = northamericagfx_ELECTION_REPUBLICAN_eventPicture
+
+	trigger = {
+		any_owned_province = {
+			NOT = { local_autonomy = 70 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					NOT = { local_autonomy = 70 }
+				}
+				save_event_target_as = pf_autonomous_province
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	goto = pf_autonomous_province
+
+	option = {
+		name = "pf_trn.22.a"
+		event_target:pf_autonomous_province = {
+			add_local_autonomy = 30
+		}
+	}
+}
+
+country_event = {		# The Blackcoats March on [Root.Capital.GetName]
+	id = pf_trn.23
+	title = pf_trn.23.t
+	desc = pf_trn.23.d
+	picture = northamericagfx_ACCUSATION_eventPicture
+
+	trigger = {
+		had_country_flag = {
+			flag = in_blackcoat_revolution
+			days = 50
+		}
+		NOT = { has_country_flag = br_had_march_on_capital }
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = br_had_march_on_capital
+	}
+
+	option = {
+		name = "pf_trn.23.a"
+		trigger = {
+			has_country_modifier = pf_trn_blackcoat_fugitives
+		}
+		highlight = yes
+		add_country_modifier = {
+			name = "pf_trn_a_spirited_defence"
+			duration = 730
+		}
+		capital_scope = {
+			pretender_rebels = 5		# placeholder
+		}
+	}
+	option = {
+		name = "pf_trn.23.b"
+		trigger = {
+			has_country_modifier = pf_trn_supported_the_blackcoats
+		}
+		highlight = yes
+		add_stability = -1
+		set_country_flag = is_blackcoats
+		add_government_reform = pf_blackcoat_dictatorship
+		add_government_power = {
+			mechanic_type = blackcoat_zeal_mechanic
+			power_type = blackcoat_zeal
+			value = 50
+		}
+	}
+}
+
+country_event = {		# The Blackcoats Massacre the Council of Elders
+	id = pf_trn.24
+	title = pf_trn.24.t
+	desc = pf_trn.24.d
+	picture = northamericagfx_REVOLUTION_eventPicture
+
+	trigger = {
+		had_country_flag = {
+			flag = br_had_march_on_capital
+			days = 30
+		}
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "pf_trn.24.a"
+		trigger = {
+			has_country_modifier = pf_trn_blackcoat_fugitives
+		}
+		highlight = yes
+		add_prestige = -30
+		add_legitimacy = -50
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = -50
+		}
+	}
+	option = {
+		name = "pf_trn.24.b"
+		trigger = {
+			has_country_modifier = pf_trn_supported_the_blackcoats
+		}
+		highlight = yes
+		add_legitimacy = 20
+		add_mil_power = 50
+	}
+}
+country_event = {		# The Counter-Revolution
+	id = pf_trn.25
+	title = pf_trn.25.t
+	desc = pf_trn.25.d
+	picture = northamericagfx_REFORM_eventPicture
+
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = "pf_trn.25.a"
+		add_stability = -1
+		kill_ruler = yes
+		change_government = republic
+		add_government_reform = oligarchy_reform
+		add_country_modifier = {
+			name = "pf_trn_the_counter_revolution_restores_peace"
+			duration = 9125
+		}
+		#kill_units = {
+		#	who = ROOT
+		#}
+	}
+	option = {
+		name = "pf_trn.25.b"
+		add_legitimacy = -25
+		add_government_power = {
+			mechanic_type = blackcoat_zeal_mechanic
+			power_type = blackcoat_zeal
+			value = 30
+		}
+		capital_scope = {
+			revolutionary_rebels = 3
+			revolutionary_rebels = 4
+			revolutionary_rebels = 5
+		}
+	}
+}
+country_event = {		# The end of the revolution
+	id = pf_trn.26
+	title = pf_trn.26.t
+	desc = {
+		trigger = {
+			has_reform = pf_blackcoat_dictatorship
+		}
+		desc = pf_trn.26.d1
+	}
+	desc = {
+		trigger = {
+			NOT = { has_reform = pf_blackcoat_dictatorship }
+		}
+		desc = pf_trn.26.d2
+	}
+	picture = northamericagfx_ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = pf_had_blackcoat_revolution
+	}
+
+	option = {
+		name = "pf_trn.26.a"
+		if = {
+			limit = {
+				NOT = { has_reform = pf_blackcoat_dictatorship }
+			}
+			set_country_flag = defeated_blackcoats
+			hidden_effect = {
+				every_owned_province = {
+					add_local_autonomy = -50
+				}
+			}
+		}
+		remove_country_modifier = pf_trn_a_spirited_defence
+		remove_country_modifier = pf_trn_supported_the_blackcoats
+		remove_country_modifier = pf_trn_blackcoat_fugitives
+	}
+}
+country_event = {		# Tribe Rallies for War
+	id = pf_trn.27
+	title = pf_trn.27.t
+	desc = pf_trn.27.d
+	picture = northamericagfx_LAND_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = brittonic_confederation_reform
+		num_of_cities = 5	# approx the five tribes kinda
+		is_at_war = no
+	}
+
+	immediate = {
+		hidden_effect = {
+			pf_save_random_tribe = {
+				function = primary
+			}
+			pf_save_random_tribe = {
+				function = secondary
+			}
+		}
+	}
+
+	option = {		# Favour tribe 1
+		name = "pf_trn.27.a"
+		add_yearly_manpower = 1
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = -25
+		}
+	}
+	option = {		# favour tribe 2
+		name = "pf_trn.27.b"
+		add_dip_power = 50
+		add_government_power = {
+			mechanic_type = trinovantes_cohesion_mechanic
+			power_type = trn_cohesion
+			value = -25
+		}
+	}
+	option = {		# resolve it in a court of law
+		name = "pf_trn.27.dd"
+		trigger = {
+			ruler_has_personality = silver_tongue_personality
+		}
+		highlight = yes
+		add_legitimacy = -5
+	}
+
+	after = {
+		pf_clear_trn_tribe_flags = yes
+	}
+}

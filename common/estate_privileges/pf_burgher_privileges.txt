@@ -86,3 +86,72 @@ estate_burghers_pf_peace_of_utrech = {
 		factor = 100
 	}
 }
+estate_burghers_pf_court_bards = {
+	icon = privilege_coup_detat
+	land_share = 5
+	max_absolutism = 0
+	loyalty = 0.05
+	influence = 0.1
+	is_valid = {
+		has_mission = pf_trn_reform_the_confederation
+	}
+	can_select = {
+		has_unlocked_estate_privilege = {
+			estate_privilege = estate_burghers_pf_court_bards
+		}
+	}
+	on_granted = {
+	}
+	on_revoked = {
+	}
+	benefits = {
+		monthly_splendor = 1
+		army_tradition_from_battle = 0.25
+	}
+	conditional_modifier = {
+		trigger = { has_country_flag = pf_trn_upgraded_court_bards }
+		modifier = { monthly_trn_cohesion = 0.25 }
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+estate_burghers_pf_league_agreements = {
+	icon = privilege_coup_detat
+	land_share = 0
+	max_absolutism = -10
+	loyalty = 0.10
+	influence = 0.15
+	is_valid = {
+		has_reform = pf_sardinian_league_reform
+	}
+	can_select = {
+		has_reform = pf_sardinian_league_reform
+	}
+	on_granted = {
+	}
+	can_revoke = {
+		has_parliament = yes
+		OR = {
+			full_idea_group = administrative_ideas
+			ruler_has_personality = lawgiver_personality
+			monthly_adm = 12
+		}
+	}
+	on_revoked = {
+		add_stability = -1
+	}
+	benefits = {
+		free_adm_policy = 1
+		state_maintenance_modifier = 0.25
+		global_autonomy = 0.05
+	}
+	#conditional_modifier = {
+	#	trigger = { republican_tradition = 90 }
+	#	modifier = { advisor_cost = -0.10 }
+	#}
+	# not sure about this one?
+	ai_will_do = {
+		factor = 100
+	}
+}

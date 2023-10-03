@@ -251,6 +251,14 @@ artist = {
 			build_time = -0.02
 		 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_trn_splendor_art }
+		}
+		modifier = {
+			monthly_splendor = 1
+		 }
+	}
 
 	chance = {
 		factor = 1
@@ -1214,6 +1222,14 @@ commandant = {
 			}
 		}
 		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				mission_completed = pf_mac_absolute_control
+			}
+		}
+		modifier = { fire_damage = 0.02 }
 	}
 
 	chance = {

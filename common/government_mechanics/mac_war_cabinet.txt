@@ -19,8 +19,25 @@ mac_war_cabinet_mechanic = {
 					global_unrest = -2				
 					global_regiment_cost = -0.1
 					recover_army_morale_speed = 0.05
+				}
+			}
+			scaled_modifier = {
+				start_value = 50
+				trigger = {
+					NOT = { has_country_flag = mac_locked_war_cabinet_org }
+				}
+				modifier = {
 					reinforce_cost_modifier = -0.25
 					discipline = 0.05
+				}
+			}
+			scaled_modifier = {
+				start_value = 25
+				trigger = {
+					NOT = { has_country_flag = mac_locked_war_cabinet_org }
+				}
+				modifier = {
+					monthly_mac_war_cabinet_organization = -0.1
 				}
 			}
 			reverse_scaled_modifier = {
@@ -31,8 +48,16 @@ mac_war_cabinet_mechanic = {
 					recover_army_morale_speed = -0.1
 					reinforce_cost_modifier = 0.5
 					discipline = -0.05
+					land_forcelimit_modifier = -0.5
 				}
 			}
+			# reverse_scaled_modifier = {  #Cheat for stupid-ass AI
+			# 	end_value = 75 
+			# 	trigger = { ai = yes }
+			# 	modifier = {
+			# 		monthly_mac_war_cabinet_organization = 0.1
+			# 	}
+			# }
 		}
 	}
 }

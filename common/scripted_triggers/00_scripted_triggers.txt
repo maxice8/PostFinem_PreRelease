@@ -435,18 +435,13 @@ consort_has_bad_mil_personality = {
  
 can_have_center_of_reformation_trigger = { #Province Scope
 	#$RELIGION$ needs to match the religion of the center that is being spawned.
-	continent = europe
-	OR = {
-		religion = protestant
-		religion = catholic
-		religion = reformed
-	}
-	NOT = { province_id = 118 }
+	religion = hellenic
+	NOT = { province_id = 146 }
 	is_in_capital_area = yes
 	is_reformation_center = no
 	is_island = no
 	expelling_minorities = no
-	development = 10
+	development = 8
 	NOT = {
 		any_neighbor_province = {
 			is_reformation_center = yes
