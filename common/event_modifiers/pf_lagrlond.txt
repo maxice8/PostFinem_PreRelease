@@ -37,7 +37,7 @@ pf_lag_push_consolidate = {
 # pf_lag_brest
 pf_lag_brest_dockyards = {
 	local_ship_cost = -0.25
-	local_ship_repair = -0.25
+	local_ship_repair = 0.25
 	allowed_voc_indiamen_fraction = 0.01
 }
 
