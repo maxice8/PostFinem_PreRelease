@@ -793,17 +793,17 @@ country_event = {
 
 		modifier = {
 			factor = 2
-			has_country_flag = pf_per_satrapy_demand_consequences_1
+			has_country_flag = pf_per_satrapy_demand_rewards_1
 		}
 
 		modifier = {
 			factor = 2
-			has_country_flag = pf_per_satrapy_demand_consequences_2
+			has_country_flag = pf_per_satrapy_demand_rewards_2
 		}
 
 		modifier = {
 			factor = 2
-			has_country_flag = pf_per_satrapy_demand_consequences_3
+			has_country_flag = pf_per_satrapy_demand_rewards_3
 		}
 	}
 
@@ -959,17 +959,17 @@ country_event = {
 
 		modifier = {
 			factor = 2
-			has_country_flag = pf_per_satrapy_demand_consequences_1
+			has_country_flag = pf_per_satrapy_demand_rewards_1
 		}
 
 		modifier = {
 			factor = 2
-			has_country_flag = pf_per_satrapy_demand_consequences_2
+			has_country_flag = pf_per_satrapy_demand_rewards_2
 		}
 
 		modifier = {
 			factor = 2
-			has_country_flag = pf_per_satrapy_demand_consequences_3
+			has_country_flag = pf_per_satrapy_demand_rewards_3
 		}
 	}
 
@@ -1125,17 +1125,17 @@ country_event = {
 
 		modifier = {
 			factor = 2
-			has_country_flag = pf_per_satrapy_demand_consequences_1
+			has_country_flag = pf_per_satrapy_demand_rewards_1
 		}
 
 		modifier = {
 			factor = 2
-			has_country_flag = pf_per_satrapy_demand_consequences_2
+			has_country_flag = pf_per_satrapy_demand_rewards_2
 		}
 
 		modifier = {
 			factor = 2
-			has_country_flag = pf_per_satrapy_demand_consequences_3
+			has_country_flag = pf_per_satrapy_demand_rewards_3
 		}
 	}
 
@@ -1292,17 +1292,17 @@ country_event = {
 
 		modifier = {
 			factor = 2
-			has_country_flag = pf_per_satrapy_demand_consequences_1
+			has_country_flag = pf_per_satrapy_demand_rewards_1
 		}
 
 		modifier = {
 			factor = 2
-			has_country_flag = pf_per_satrapy_demand_consequences_2
+			has_country_flag = pf_per_satrapy_demand_rewards_2
 		}
 
 		modifier = {
 			factor = 2
-			has_country_flag = pf_per_satrapy_demand_consequences_3
+			has_country_flag = pf_per_satrapy_demand_rewards_3
 		}
 	}
 
@@ -1539,6 +1539,638 @@ country_event = {
 		clr_country_flag = pf_per_has_conquer_province_demand
 		clear_global_event_target = pf_per_et_province_to_conquer_owner
 		clear_global_event_target = pf_per_et_province_to_conquer
+	}
+}
+
+# Satrapy Demands events: Build Tax Building
+country_event = {
+	id = pf_per_events.23
+	title = "pf_per_events_23_title"
+
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 }
+		}
+		desc = "pf_per_events_23_desc_1"
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = pf_per_satrapy_demand_consequences_1
+			NOT = { has_country_flag = pf_per_satrapy_demand_consequences_2 }
+		}
+		desc = "pf_per_events_23_desc_2"
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = pf_per_satrapy_demand_consequences_2
+			NOT = { has_country_flag = pf_per_satrapy_demand_consequences_3 }
+		}
+		desc = "pf_per_events_23_desc_3"
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = pf_per_satrapy_demand_consequences_3
+		}
+		desc = "pf_per_events_23_desc_4"
+	}
+
+	
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	trigger = {
+		NOT = { ai = yes }
+		tag = PER
+		has_country_flag = pf_per_had_satrapy_revolt
+		NOT = { has_country_flag = pf_per_has_build_tax_demand }
+		any_subject_country = {
+			NOT = { has_country_modifier = pf_per_overlord_rejected_demand }
+			NOT = { has_country_modifier = pf_per_overlord_failed_demand }
+			NOT = { has_country_modifier = pf_per_overlord_rejected_demand_reduced }
+			NOT = { has_country_modifier = pf_per_overlord_failed_demand_reduced }
+			NOT = { has_country_modifier = pf_per_overlord_filled_demand }
+			any_owned_province = { NOT = { has_tax_building_trigger = yes } }
+		}
+		OR = {
+			adm_tech = 5
+			dip_tech = 5
+			mil_tech = 5
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 144
+
+		modifier = {
+			factor = 1.25
+			OR = {
+				adm_tech = 7
+				dip_tech = 7
+				mil_tech = 7
+			}
+		}
+
+		modifier = {
+			factor = 2
+			has_country_flag = pf_per_satrapy_demand_rewards_1
+		}
+
+		modifier = {
+			factor = 2
+			has_country_flag = pf_per_satrapy_demand_rewards_2
+		}
+
+		modifier = {
+			factor = 2
+			has_country_flag = pf_per_satrapy_demand_rewards_3
+		}
+	}
+
+	immediate = {
+		set_country_flag = pf_per_has_build_tax_demand
+		random_subject_country = {
+			limit = { 
+				NOT = { has_country_modifier = pf_per_overlord_rejected_demand }
+				NOT = { has_country_modifier = pf_per_overlord_failed_demand }
+				NOT = { has_country_modifier = pf_per_overlord_rejected_demand_reduced }
+				NOT = { has_country_modifier = pf_per_overlord_failed_demand_reduced }
+				NOT = { has_country_modifier = pf_per_overlord_filled_demand }
+				any_owned_province = { NOT = { has_tax_building_trigger = yes } }
+			}
+			save_global_event_target_as = pf_per_et_province_to_build_tax_owner
+			hidden_effect = {
+				random_owned_province = {
+					limit = { NOT = { has_tax_building_trigger = yes } }
+					save_global_event_target_as = pf_per_et_province_to_build_tax
+					save_event_target_as = goto_province
+				}
+			}
+		}
+	}
+
+	goto = goto_province
+
+	# Agree to build tax building
+	option = {
+		name = "pf_per_events_18_option_1"
+		ai_chance = { factor = 100 }
+		goto = goto_province
+		custom_tooltip = pf_per_events_23_tt
+		hidden_effect = {
+			country_event = {
+				id = pf_per_events.33
+				days = 10#95
+			}
+		}
+	}
+
+	# Refuse to build tax building
+	option = {
+		name = "pf_per_events_18_option_2"
+		ai_chance = { factor = 0 }
+		event_target:pf_per_et_province_to_build_tax_owner = {
+			if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 } }
+				add_country_modifier = {
+					name = pf_per_overlord_rejected_demand
+					duration = 3650
+				}
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_2 } }
+				add_country_modifier = {
+					name = pf_per_overlord_rejected_demand
+					duration = 1825
+				}
+			}
+
+			else_if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_3 } }
+				add_country_modifier = {
+					name = pf_per_overlord_rejected_demand_reduced
+					duration = 1825
+				}
+			}
+		}
+		clr_country_flag = pf_per_has_build_tax_demand
+		clear_global_event_target = pf_per_et_province_to_build_tax_owner
+		clear_global_event_target = pf_per_et_province_to_build_tax
+	}
+}
+
+# Satrapy Demands events: Build Trade Building
+country_event = {
+	id = pf_per_events.24
+	title = "pf_per_events_24_title"
+
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 }
+		}
+		desc = "pf_per_events_24_desc_1"
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = pf_per_satrapy_demand_consequences_1
+			NOT = { has_country_flag = pf_per_satrapy_demand_consequences_2 }
+		}
+		desc = "pf_per_events_24_desc_2"
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = pf_per_satrapy_demand_consequences_2
+			NOT = { has_country_flag = pf_per_satrapy_demand_consequences_3 }
+		}
+		desc = "pf_per_events_24_desc_3"
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = pf_per_satrapy_demand_consequences_3
+		}
+		desc = "pf_per_events_24_desc_4"
+	}
+
+	
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	trigger = {
+		NOT = { ai = yes }
+		tag = PER
+		has_country_flag = pf_per_had_satrapy_revolt
+		NOT = { has_country_flag = pf_per_has_build_trade_demand }
+		any_subject_country = {
+			NOT = { has_country_modifier = pf_per_overlord_rejected_demand }
+			NOT = { has_country_modifier = pf_per_overlord_failed_demand }
+			NOT = { has_country_modifier = pf_per_overlord_rejected_demand_reduced }
+			NOT = { has_country_modifier = pf_per_overlord_failed_demand_reduced }
+			NOT = { has_country_modifier = pf_per_overlord_filled_demand }
+			any_owned_province = { NOT = { has_trade_building_trigger = yes } }
+		}
+		OR = {
+			adm_tech = 5
+			dip_tech = 5
+			mil_tech = 5
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 144
+
+		modifier = {
+			factor = 1.25
+			OR = {
+				adm_tech = 7
+				dip_tech = 7
+				mil_tech = 7
+			}
+		}
+
+		modifier = {
+			factor = 2
+			has_country_flag = pf_per_satrapy_demand_rewards_1
+		}
+
+		modifier = {
+			factor = 2
+			has_country_flag = pf_per_satrapy_demand_rewards_2
+		}
+
+		modifier = {
+			factor = 2
+			has_country_flag = pf_per_satrapy_demand_rewards_3
+		}
+	}
+
+	immediate = {
+		set_country_flag = pf_per_has_build_trade_demand
+		random_subject_country = {
+			limit = { 
+				NOT = { has_country_modifier = pf_per_overlord_rejected_demand }
+				NOT = { has_country_modifier = pf_per_overlord_failed_demand }
+				NOT = { has_country_modifier = pf_per_overlord_rejected_demand_reduced }
+				NOT = { has_country_modifier = pf_per_overlord_failed_demand_reduced }
+				NOT = { has_country_modifier = pf_per_overlord_filled_demand }
+				any_owned_province = { NOT = { has_trade_building_trigger = yes } }
+			}
+			save_global_event_target_as = pf_per_et_province_to_build_trade_owner
+			hidden_effect = {
+				random_owned_province = {
+					limit = { NOT = { has_trade_building_trigger = yes } }
+					save_global_event_target_as = pf_per_et_province_to_build_trade
+					save_event_target_as = goto_province
+				}
+			}
+		}
+	}
+
+	goto = goto_province
+
+	# Agree to build trade building
+	option = {
+		name = "pf_per_events_18_option_1"
+		ai_chance = { factor = 100 }
+		goto = goto_province
+		custom_tooltip = pf_per_events_24_tt
+		hidden_effect = {
+			country_event = {
+				id = pf_per_events.34
+				days = 10#95
+			}
+		}
+	}
+
+	# Refuse to build trade building
+	option = {
+		name = "pf_per_events_18_option_2"
+		ai_chance = { factor = 0 }
+		event_target:pf_per_et_province_to_build_trade_owner = {
+			if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 } }
+				add_country_modifier = {
+					name = pf_per_overlord_rejected_demand
+					duration = 3650
+				}
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_2 } }
+				add_country_modifier = {
+					name = pf_per_overlord_rejected_demand
+					duration = 1825
+				}
+			}
+
+			else_if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_3 } }
+				add_country_modifier = {
+					name = pf_per_overlord_rejected_demand_reduced
+					duration = 1825
+				}
+			}
+		}
+		clr_country_flag = pf_per_has_build_trade_demand
+		clear_global_event_target = pf_per_et_province_to_build_trade_owner
+		clear_global_event_target = pf_per_et_province_to_build_trade
+	}
+}
+
+# Satrapy Demands events: Build Production Building
+country_event = {
+	id = pf_per_events.25
+	title = "pf_per_events_25_title"
+
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 }
+		}
+		desc = "pf_per_events_25_desc_1"
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = pf_per_satrapy_demand_consequences_1
+			NOT = { has_country_flag = pf_per_satrapy_demand_consequences_2 }
+		}
+		desc = "pf_per_events_25_desc_2"
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = pf_per_satrapy_demand_consequences_2
+			NOT = { has_country_flag = pf_per_satrapy_demand_consequences_3 }
+		}
+		desc = "pf_per_events_25_desc_3"
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = pf_per_satrapy_demand_consequences_3
+		}
+		desc = "pf_per_events_25_desc_4"
+	}
+
+	
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	trigger = {
+		NOT = { ai = yes }
+		tag = PER
+		has_country_flag = pf_per_had_satrapy_revolt
+		NOT = { has_country_flag = pf_per_has_build_production_demand }
+		any_subject_country = {
+			NOT = { has_country_modifier = pf_per_overlord_rejected_demand }
+			NOT = { has_country_modifier = pf_per_overlord_failed_demand }
+			NOT = { has_country_modifier = pf_per_overlord_rejected_demand_reduced }
+			NOT = { has_country_modifier = pf_per_overlord_failed_demand_reduced }
+			NOT = { has_country_modifier = pf_per_overlord_filled_demand }
+			any_owned_province = { NOT = { has_production_building_trigger = yes } }
+		}
+		OR = {
+			adm_tech = 5
+			dip_tech = 5
+			mil_tech = 5
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 144
+
+		modifier = {
+			factor = 1.25
+			OR = {
+				adm_tech = 7
+				dip_tech = 7
+				mil_tech = 7
+			}
+		}
+
+		modifier = {
+			factor = 2
+			has_country_flag = pf_per_satrapy_demand_rewards_1
+		}
+
+		modifier = {
+			factor = 2
+			has_country_flag = pf_per_satrapy_demand_rewards_2
+		}
+
+		modifier = {
+			factor = 2
+			has_country_flag = pf_per_satrapy_demand_rewards_3
+		}
+	}
+
+	immediate = {
+		set_country_flag = pf_per_has_build_production_demand
+		random_subject_country = {
+			limit = { 
+				NOT = { has_country_modifier = pf_per_overlord_rejected_demand }
+				NOT = { has_country_modifier = pf_per_overlord_failed_demand }
+				NOT = { has_country_modifier = pf_per_overlord_rejected_demand_reduced }
+				NOT = { has_country_modifier = pf_per_overlord_failed_demand_reduced }
+				NOT = { has_country_modifier = pf_per_overlord_filled_demand }
+				any_owned_province = { NOT = { has_production_building_trigger = yes } }
+			}
+			save_global_event_target_as = pf_per_et_province_to_build_production_owner
+			hidden_effect = {
+				random_owned_province = {
+					limit = { NOT = { has_production_building_trigger = yes } }
+					save_global_event_target_as = pf_per_et_province_to_build_production
+					save_event_target_as = goto_province
+				}
+			}
+		}
+	}
+
+	goto = goto_province
+
+	# Agree to build production building
+	option = {
+		name = "pf_per_events_18_option_1"
+		ai_chance = { factor = 100 }
+		goto = goto_province
+		custom_tooltip = pf_per_events_25_tt
+		hidden_effect = {
+			country_event = {
+				id = pf_per_events.35
+				days = 10#95
+			}
+		}
+	}
+
+	# Refuse to build production building
+	option = {
+		name = "pf_per_events_18_option_2"
+		ai_chance = { factor = 0 }
+		event_target:pf_per_et_province_to_build_production_owner = {
+			if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 } }
+				add_country_modifier = {
+					name = pf_per_overlord_rejected_demand
+					duration = 3650
+				}
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_2 } }
+				add_country_modifier = {
+					name = pf_per_overlord_rejected_demand
+					duration = 1825
+				}
+			}
+
+			else_if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_3 } }
+				add_country_modifier = {
+					name = pf_per_overlord_rejected_demand_reduced
+					duration = 1825
+				}
+			}
+		}
+		clr_country_flag = pf_per_has_build_production_demand
+		clear_global_event_target = pf_per_et_province_to_build_production_owner
+		clear_global_event_target = pf_per_et_province_to_build_production
+	}
+}
+
+# Satrapy Demands events: Build Manpower Building
+country_event = {
+	id = pf_per_events.26
+	title = "pf_per_events_26_title"
+
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 }
+		}
+		desc = "pf_per_events_26_desc_1"
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = pf_per_satrapy_demand_consequences_1
+			NOT = { has_country_flag = pf_per_satrapy_demand_consequences_2 }
+		}
+		desc = "pf_per_events_26_desc_2"
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = pf_per_satrapy_demand_consequences_2
+			NOT = { has_country_flag = pf_per_satrapy_demand_consequences_3 }
+		}
+		desc = "pf_per_events_26_desc_3"
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = pf_per_satrapy_demand_consequences_3
+		}
+		desc = "pf_per_events_26_desc_4"
+	}
+
+	
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	trigger = {
+		NOT = { ai = yes }
+		tag = PER
+		has_country_flag = pf_per_had_satrapy_revolt
+		NOT = { has_country_flag = pf_per_has_build_manpower_demand }
+		any_subject_country = {
+			NOT = { has_country_modifier = pf_per_overlord_rejected_demand }
+			NOT = { has_country_modifier = pf_per_overlord_failed_demand }
+			NOT = { has_country_modifier = pf_per_overlord_rejected_demand_reduced }
+			NOT = { has_country_modifier = pf_per_overlord_failed_demand_reduced }
+			NOT = { has_country_modifier = pf_per_overlord_filled_demand }
+			any_owned_province = { NOT = { has_manpower_building_trigger = yes } }
+		}
+		OR = {
+			adm_tech = 5
+			dip_tech = 5
+			mil_tech = 5
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 144
+
+		modifier = {
+			factor = 1.25
+			OR = {
+				adm_tech = 7
+				dip_tech = 7
+				mil_tech = 7
+			}
+		}
+
+		modifier = {
+			factor = 2
+			has_country_flag = pf_per_satrapy_demand_rewards_1
+		}
+
+		modifier = {
+			factor = 2
+			has_country_flag = pf_per_satrapy_demand_rewards_2
+		}
+
+		modifier = {
+			factor = 2
+			has_country_flag = pf_per_satrapy_demand_rewards_3
+		}
+	}
+
+	immediate = {
+		set_country_flag = pf_per_has_build_manpower_demand
+		random_subject_country = {
+			limit = { 
+				NOT = { has_country_modifier = pf_per_overlord_rejected_demand }
+				NOT = { has_country_modifier = pf_per_overlord_failed_demand }
+				NOT = { has_country_modifier = pf_per_overlord_rejected_demand_reduced }
+				NOT = { has_country_modifier = pf_per_overlord_failed_demand_reduced }
+				NOT = { has_country_modifier = pf_per_overlord_filled_demand }
+				any_owned_province = { NOT = { has_manpower_building_trigger = yes } }
+			}
+			save_global_event_target_as = pf_per_et_province_to_build_manpower_owner
+			hidden_effect = {
+				random_owned_province = {
+					limit = { NOT = { has_manpower_building_trigger = yes } }
+					save_global_event_target_as = pf_per_et_province_to_build_manpower
+					save_event_target_as = goto_province
+				}
+			}
+		}
+	}
+
+	goto = goto_province
+
+	# Agree to build manpower building
+	option = {
+		name = "pf_per_events_18_option_1"
+		ai_chance = { factor = 100 }
+		goto = goto_province
+		custom_tooltip = pf_per_events_26_tt
+		hidden_effect = {
+			country_event = {
+				id = pf_per_events.36
+				days = 10#95
+			}
+		}
+	}
+
+	# Refuse to build manpower building
+	option = {
+		name = "pf_per_events_18_option_2"
+		ai_chance = { factor = 0 }
+		event_target:pf_per_et_province_to_build_manpower_owner = {
+			if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 } }
+				add_country_modifier = {
+					name = pf_per_overlord_rejected_demand
+					duration = 3650
+				}
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_2 } }
+				add_country_modifier = {
+					name = pf_per_overlord_rejected_demand
+					duration = 1825
+				}
+			}
+
+			else_if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_3 } }
+				add_country_modifier = {
+					name = pf_per_overlord_rejected_demand_reduced
+					duration = 1825
+				}
+			}
+		}
+		clr_country_flag = pf_per_has_build_manpower_demand
+		clear_global_event_target = pf_per_et_province_to_build_manpower_owner
+		clear_global_event_target = pf_per_et_province_to_build_manpower
 	}
 }
 
@@ -1808,6 +2440,210 @@ country_event = {
 		ai_chance = { factor = 100 }
 
 		event_target:pf_per_et_province_to_conquer_owner = {
+			if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 } }
+				add_country_modifier = {
+					name = pf_per_overlord_failed_demand
+					duration = 3650
+				}
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_2 } }
+				add_country_modifier = {
+					name = pf_per_overlord_failed_demand
+					duration = 1825
+				}
+			}
+
+			else = {
+				add_country_modifier = {
+					name = pf_per_overlord_failed_demand_reduced
+					duration = 1825
+				}
+			}
+		}
+	}
+}
+
+# Satrapy Demands Events: Build Tax Building Fail
+country_event = {
+	id = pf_per_events.33
+	title = "pf_per_events_23_title"
+	desc = "pf_per_events_33_desc"
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+
+	after = {
+		clr_country_flag = pf_per_has_build_tax_demand
+		clear_global_event_target = pf_per_et_province_to_build_tax_owner
+		clear_global_event_target = pf_per_et_province_to_build_tax
+	}
+
+	trigger = {
+		event_target:pf_per_et_province_to_build_tax = {
+			NOT = { has_tax_building_trigger = yes }
+		}
+	}
+
+	# Failed
+	option = {
+		name = "pf_per_events_28_option"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_et_province_to_build_tax_owner = {
+			if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 } }
+				add_country_modifier = {
+					name = pf_per_overlord_failed_demand
+					duration = 3650
+				}
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_2 } }
+				add_country_modifier = {
+					name = pf_per_overlord_failed_demand
+					duration = 1825
+				}
+			}
+
+			else = {
+				add_country_modifier = {
+					name = pf_per_overlord_failed_demand_reduced
+					duration = 1825
+				}
+			}
+		}
+	}
+}
+
+# Satrapy Demands Events: Build Trade Building Fail
+country_event = {
+	id = pf_per_events.34
+	title = "pf_per_events_24_title"
+	desc = "pf_per_events_34_desc"
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+
+	after = {
+		clr_country_flag = pf_per_has_build_trade_demand
+		clear_global_event_target = pf_per_et_province_to_build_trade_owner
+		clear_global_event_target = pf_per_et_province_to_build_trade
+	}
+
+	trigger = {
+		event_target:pf_per_et_province_to_build_trade = {
+			NOT = { has_trade_building_trigger = yes }
+		}
+	}
+
+	# Failed
+	option = {
+		name = "pf_per_events_28_option"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_et_province_to_build_trade_owner = {
+			if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 } }
+				add_country_modifier = {
+					name = pf_per_overlord_failed_demand
+					duration = 3650
+				}
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_2 } }
+				add_country_modifier = {
+					name = pf_per_overlord_failed_demand
+					duration = 1825
+				}
+			}
+
+			else = {
+				add_country_modifier = {
+					name = pf_per_overlord_failed_demand_reduced
+					duration = 1825
+				}
+			}
+		}
+	}
+}
+
+# Satrapy Demands Events: Build Production Building Fail
+country_event = {
+	id = pf_per_events.35
+	title = "pf_per_events_25_title"
+	desc = "pf_per_events_35_desc"
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+
+	after = {
+		clr_country_flag = pf_per_has_build_production_demand
+		clear_global_event_target = pf_per_et_province_to_build_production_owner
+		clear_global_event_target = pf_per_et_province_to_build_production
+	}
+
+	trigger = {
+		event_target:pf_per_et_province_to_build_production = {
+			NOT = { has_production_building_trigger = yes }
+		}
+	}
+
+	# Failed
+	option = {
+		name = "pf_per_events_28_option"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_et_province_to_build_production_owner = {
+			if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 } }
+				add_country_modifier = {
+					name = pf_per_overlord_failed_demand
+					duration = 3650
+				}
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_2 } }
+				add_country_modifier = {
+					name = pf_per_overlord_failed_demand
+					duration = 1825
+				}
+			}
+
+			else = {
+				add_country_modifier = {
+					name = pf_per_overlord_failed_demand_reduced
+					duration = 1825
+				}
+			}
+		}
+	}
+}
+
+# Satrapy Demands Events: Build Manpower Building Fail
+country_event = {
+	id = pf_per_events.36
+	title = "pf_per_events_26_title"
+	desc = "pf_per_events_36_desc"
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+
+	after = {
+		clr_country_flag = pf_per_has_build_manpower_demand
+		clear_global_event_target = pf_per_et_province_to_build_manpower_owner
+		clear_global_event_target = pf_per_et_province_to_build_manpower
+	}
+
+	trigger = {
+		event_target:pf_per_et_province_to_build_manpower = {
+			NOT = { has_manpower_building_trigger = yes }
+		}
+	}
+
+	# Failed
+	option = {
+		name = "pf_per_events_28_option"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_et_province_to_build_manpower_owner = {
 			if = {
 				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_consequences_1 } }
 				add_country_modifier = {
@@ -3244,6 +4080,286 @@ country_event = {
 		ai_chance = { factor = 100 }
 
 		event_target:pf_per_et_province_to_conquer_owner = {
+			if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_2 } }
+				add_country_modifier = {
+					name = pf_per_overlord_filled_demand
+					duration = 3650
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = pf_per_overlord_filled_demand
+					duration = 7300
+				}
+			}
+		}
+
+		if = {
+			limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_1 } }
+			add_prestige = 10
+		}
+
+		else_if = {
+			limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_2 } }
+			add_treasury = 50
+		}
+
+		else_if = {
+			limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_3 } }
+			add_treasury = 150
+		}
+
+		else = {
+			add_adm_power = 25
+			add_dip_power = 25
+			add_mil_power = 25
+		}
+
+		hidden_effect = {
+			change_variable = {
+				which = pfPerSatrapyDemandsFilled
+				value = 1
+			}
+		}
+	}
+}
+
+# Satrapy Demands events: Build Tax Building Success
+country_event = {
+	id = pf_per_events.73
+	title = "pf_per_events_23_title"
+	desc = "pf_per_events_73_desc"
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+
+	after = {
+		clr_country_flag = pf_per_has_build_tax_demand
+		clear_global_event_target = pf_per_et_province_to_build_tax_owner
+		clear_global_event_target = pf_per_et_province_to_build_tax
+	}
+
+	trigger = {
+		event_target:pf_per_et_province_to_build_tax = {
+			has_tax_building_trigger = yes
+		}
+	}
+
+	option = {
+		name = "pf_per_events_68_option"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_et_province_to_build_tax_owner = {
+			if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_2 } }
+				add_country_modifier = {
+					name = pf_per_overlord_filled_demand
+					duration = 3650
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = pf_per_overlord_filled_demand
+					duration = 7300
+				}
+			}
+		}
+
+		if = {
+			limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_1 } }
+			add_prestige = 10
+		}
+
+		else_if = {
+			limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_2 } }
+			add_treasury = 50
+		}
+
+		else_if = {
+			limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_3 } }
+			add_treasury = 150
+		}
+
+		else = {
+			add_adm_power = 25
+			add_dip_power = 25
+			add_mil_power = 25
+		}
+
+		hidden_effect = {
+			change_variable = {
+				which = pfPerSatrapyDemandsFilled
+				value = 1
+			}
+		}
+	}
+}
+
+# Satrapy Demands events: Build Trade Building Success
+country_event = {
+	id = pf_per_events.74
+	title = "pf_per_events_24_title"
+	desc = "pf_per_events_74_desc"
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+
+	after = {
+		clr_country_flag = pf_per_has_build_trade_demand
+		clear_global_event_target = pf_per_et_province_to_build_trade_owner
+		clear_global_event_target = pf_per_et_province_to_build_trade
+	}
+
+	trigger = {
+		event_target:pf_per_et_province_to_build_trade = {
+			has_trade_building_trigger = yes
+		}
+	}
+
+	option = {
+		name = "pf_per_events_68_option"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_et_province_to_build_trade_owner = {
+			if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_2 } }
+				add_country_modifier = {
+					name = pf_per_overlord_filled_demand
+					duration = 3650
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = pf_per_overlord_filled_demand
+					duration = 7300
+				}
+			}
+		}
+
+		if = {
+			limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_1 } }
+			add_prestige = 10
+		}
+
+		else_if = {
+			limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_2 } }
+			add_treasury = 50
+		}
+
+		else_if = {
+			limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_3 } }
+			add_treasury = 150
+		}
+
+		else = {
+			add_adm_power = 25
+			add_dip_power = 25
+			add_mil_power = 25
+		}
+
+		hidden_effect = {
+			change_variable = {
+				which = pfPerSatrapyDemandsFilled
+				value = 1
+			}
+		}
+	}
+}
+
+# Satrapy Demands events: Build Production Building Success
+country_event = {
+	id = pf_per_events.75
+	title = "pf_per_events_25_title"
+	desc = "pf_per_events_75_desc"
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+
+	after = {
+		clr_country_flag = pf_per_has_build_production_demand
+		clear_global_event_target = pf_per_et_province_to_build_production_owner
+		clear_global_event_target = pf_per_et_province_to_build_production
+	}
+
+	trigger = {
+		event_target:pf_per_et_province_to_build_production = {
+			has_production_building_trigger = yes
+		}
+	}
+
+	option = {
+		name = "pf_per_events_68_option"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_et_province_to_build_production_owner = {
+			if = {
+				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_2 } }
+				add_country_modifier = {
+					name = pf_per_overlord_filled_demand
+					duration = 3650
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = pf_per_overlord_filled_demand
+					duration = 7300
+				}
+			}
+		}
+
+		if = {
+			limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_1 } }
+			add_prestige = 10
+		}
+
+		else_if = {
+			limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_2 } }
+			add_treasury = 50
+		}
+
+		else_if = {
+			limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_3 } }
+			add_treasury = 150
+		}
+
+		else = {
+			add_adm_power = 25
+			add_dip_power = 25
+			add_mil_power = 25
+		}
+
+		hidden_effect = {
+			change_variable = {
+				which = pfPerSatrapyDemandsFilled
+				value = 1
+			}
+		}
+	}
+}
+
+# Satrapy Demands events: Build Manpower Building Success
+country_event = {
+	id = pf_per_events.76
+	title = "pf_per_events_26_title"
+	desc = "pf_per_events_76_desc"
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+
+	after = {
+		clr_country_flag = pf_per_has_build_manpower_demand
+		clear_global_event_target = pf_per_et_province_to_build_manpower_owner
+		clear_global_event_target = pf_per_et_province_to_build_manpower
+	}
+
+	trigger = {
+		event_target:pf_per_et_province_to_build_manpower = {
+			has_manpower_building_trigger = yes
+		}
+	}
+
+	option = {
+		name = "pf_per_events_68_option"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_et_province_to_build_manpower_owner = {
 			if = {
 				limit = { NOT = { has_country_flag = pf_per_satrapy_demand_rewards_2 } }
 				add_country_modifier = {
