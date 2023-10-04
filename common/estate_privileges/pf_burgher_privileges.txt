@@ -231,3 +231,42 @@ estate_burghers_encourage_internal_competition = {
 		factor = 10
 	}
 }
+estate_burghers_pf_league_agreements = {
+	icon = privilege_coup_detat
+	land_share = 0
+	max_absolutism = -10
+	loyalty = 0.10
+	influence = 0.15
+	is_valid = {
+		has_reform = pf_sardinian_league_reform
+	}
+	can_select = {
+		has_reform = pf_sardinian_league_reform
+	}
+	on_granted = {
+	}
+	can_revoke = {
+		has_parliament = yes
+		OR = {
+			full_idea_group = administrative_ideas
+			ruler_has_personality = lawgiver_personality
+			monthly_adm = 12
+		}
+	}
+	on_revoked = {
+		add_stability = -1
+	}
+	benefits = {
+		free_adm_policy = 1
+		state_maintenance_modifier = 0.25
+		global_autonomy = 0.05
+	}
+	#conditional_modifier = {
+	#	trigger = { republican_tradition = 90 }
+	#	modifier = { advisor_cost = -0.10 }
+	#}
+	# not sure about this one?
+	ai_will_do = {
+		factor = 100
+	}
+}

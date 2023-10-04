@@ -891,6 +891,7 @@ fourth = {
 				area = north_rhine_area
 				area = lower_rhineland_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
@@ -1704,7 +1705,7 @@ second_2 = {
 				skill = 3
 				religion = ROOT
 				culture = ROOT
-				cost_multiplier = 0.5
+				cost_multiplier = 0.25
 			}
 		 } 
 	}
@@ -1900,10 +1901,14 @@ second_3_religious = {
 			NOT = { religion = ROOT }
 		 } 
 
-		trigger = { 
-			has_global_modifier_value = {
-				which = global_missionary_strength
-				value = 0.045
+		trigger = {
+			num_of_estate_agendas_completed = {
+				estate = estate_church
+				value = 4
+			}
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 3
 			}
 			OR = {
 				theologian = 3
@@ -2074,12 +2079,43 @@ third_2 = {
 			}
 		} 
 	}
+	
+	pf_lag_universities = {
+		icon = mission_early_modern_university
+		position = 13
+		required_missions = {
+			pf_lag_renaissance
+			pf_lag_centralize
+		} 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			NOT = { has_building = university }
+		 } 
+
+		trigger = { 
+			OR = {
+				innovativeness = 50
+				full_idea_group = innovativeness_ideas
+				university = 5
+			}
+		} 
+
+		effect = { 
+			change_innovativeness = 4
+
+			custom_tooltip = empty_line_tt
+			
+			add_country_modifier = {
+				name = pf_lag_educated_elite
+				duration = 3650
+			}
+		} 
+	}
 
 	pf_lag_absolutism = {
 		icon = mission_english_absolutism
 		position = 14
 		required_missions = {
-			pf_lag_renaissance
 			pf_lag_universities
 		}
 		provinces_to_highlight = { 
@@ -2132,7 +2168,7 @@ fourth_2 = {
 			culture = old_frisian
 			OR = {
 				devastation = 1
-				local_autonomy_above_min = 0
+				local_autonomy_above_min = 1
 			}
 		 } 
 
@@ -2140,8 +2176,10 @@ fourth_2 = {
 			NOT = {
 				any_owned_province = {
 					culture = old_frisian
-					devastation = 0
-					NOT = { local_autonomy_above_min = 1 }
+					OR = {
+						devastation = 1
+						local_autonomy_above_min = 1
+					}
 				}
 			}
 		} 
@@ -2337,36 +2375,6 @@ fourth_2 = {
 			add_government_reform = pf_lagr_republic
 		 } 
 	}
-
-	pf_lag_universities = {
-		icon = mission_early_modern_university
-		position = 13
-		required_missions = { pf_lag_centralize } 
-		provinces_to_highlight = { 
-			owned_by = ROOT
-			NOT = { has_building = university }
-		 } 
-
-		trigger = { 
-			OR = {
-				innovativeness = 50
-				full_idea_group = innovativeness_ideas
-				university = 5
-			}
-		} 
-
-		effect = { 
-			change_innovativeness = 4
-
-			custom_tooltip = empty_line_tt
-			
-			add_country_modifier = {
-				name = pf_lag_educated_elite
-				duration = 3650
-			}
-		} 
-	}
-
 	pf_lag_medical_school = {
 		icon = mission_book_of_royal_degrees
 		position = 14
@@ -2809,9 +2817,9 @@ second_4 = {
 		} 
 
 		effect = {
-			custom_tooltip = PF_LAG_3_YEARS_OF_INCOME
 			add_years_of_trade_income = {
 				years = 3
+				custom_tooltip = PF_GAIN_3_YEARS_OF_INCOME
 			}
 			add_country_modifier = {
 				name = pf_lag_lagrlondian_fur
@@ -3009,9 +3017,9 @@ fourth_3 = {
 		} 
 
 		effect = {
-			custom_tooltip = PF_LAG_2_YEARS_OF_INCOME
 			add_years_of_trade_income = {
 				years = 2
+				custom_tooltip = PF_GAIN_2_YEARS_OF_INCOME
 			}
 			custom_tooltip = empty_line_tt
 			change_price = {

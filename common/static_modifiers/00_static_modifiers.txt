@@ -636,7 +636,7 @@ positive_stability = {
 	global_institution_spread = 0.05
 	yearly_harmony = 0.25
 	monthly_trn_cohesion = 0.20
-	monthly_mac_war_cabinet_organization = 0.01
+	monthly_mac_war_cabinet_organization = 0.02
 }
 
 privateering = {
@@ -757,6 +757,7 @@ peace = {
 	pr_smugglers_influence = 0.1
 	monthly_militarized_society = -0.1
 	monthly_mac_war_cabinet_organization = -0.05
+	monthly_blackcoat_zeal = -0.25
 }
 
 unconditional_surrender = {
@@ -837,6 +838,7 @@ army_tradition = {
 	janissaries_loyalty_modifier = 0.05
 	allowed_tercio_fraction = 0.1
 	allowed_samurai_fraction = 0.1
+	monthly_blackcoat_zeal = 0.5
 }
 
 navy_tradition = {
@@ -1065,6 +1067,7 @@ recovery_motivation = {
 	global_unrest = -5
 	interest = -1
 	horde_unity = 10
+	monthly_blackcoat_zeal = 1
 }
 
 luck = {
@@ -1307,7 +1310,8 @@ high_army_professionalism = {
 	siege_ability = 0.2
 	drill_decay_modifier = -0.5
 	allowed_samurai_fraction = 0.1
-	monthly_mac_war_cabinet_organization = 0.5
+	monthly_mac_war_cabinet_organization = 0.3
+	monthly_blackcoat_zeal = 0.5
 }
 
 streltsy_modifier = {
