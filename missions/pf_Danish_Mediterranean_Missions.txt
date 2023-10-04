@@ -473,7 +473,7 @@ pf_drk_colonial_1 = {
 
 	pf_drk_westward_expansion = {
 		icon = mission_colonize_california
-		position = 21
+		position = 20
 		required_missions = { pf_drk_control_mississippi } 
 		provinces_to_highlight = {  } 
 
@@ -538,7 +538,7 @@ pf_drk_colonial_2 = {
 
 	pf_drk_north_america = {
 		icon = mission_ruler_of_north_america
-		position = 22
+		position = 21
 		required_missions = {
 			pf_drk_westward_expansion
 			pf_drk_east_coast
@@ -605,7 +605,7 @@ pf_drk_colonial_3 = {
 
 	pf_drk_havets_herskere = {
 		icon = mission_naval_kingdom
-		position = 23
+		position = 22
 		required_missions = {
 			pf_drk_north_america
 			pf_drk_south_america
@@ -660,7 +660,7 @@ pf_drk_colonial_4 = {
 
 	pf_drk_india = {
 		icon = mission_rb_inland_india
-		position = 22
+		position = 21
 		required_missions = {
 			pf_drk_spice
 			pf_drk_india_trade_ports
@@ -703,7 +703,7 @@ pf_drk_colonial_5 = {
 
 	pf_drk_india_trade_ports = {
 		icon = mission_indian_trade_company
-		position = 21
+		position = 20
 		required_missions = { pf_drk_east_indies } 
 		provinces_to_highlight = {  } 
 
