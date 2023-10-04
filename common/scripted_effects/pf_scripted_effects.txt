@@ -309,7 +309,7 @@ romuva_clear_aspects_scripted_effect = {
 }
 
 #neterist effects
-pf_egypt_kemetic_communities_province_modifiers_global = {
+pf_egypt_neterist_communities_province_modifiers_global = {
 	if = {
 		limit = {
 			has_church_aspect = neterist_communities_aspect
