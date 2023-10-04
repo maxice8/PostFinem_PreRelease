@@ -37,19 +37,19 @@ mac_war_cabinet_coup = {
 	progress = {
 		modifier = {
 			factor = 1
-			NOT = { stability = 0 }
+			NOT = { stability = 1 }
 		}
 		modifier = {
 			factor = 1
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 2
 			NOT = { stability = -1 }
 		}
 		modifier = {
 			factor = 2
 			NOT = { stability = -2 }
-		}
-		modifier = {
-			factor = 2
-			NOT = { stability = -3 }
 		}
 		modifier = {
 			factor = 0.5
@@ -127,7 +127,9 @@ mac_war_cabinet_coup = {
 		}
 		random_events = {
 			1000 = 0
-			# 50 = TODO
+			50 = pf_mac_disaster.3
+			100 = pf_mac_disaster.4
+			100 = pf_mac_disaster.5
 		}
 	}
 }

@@ -55,17 +55,16 @@ country_event = {
 		tooltip = {	add_stability = -1 }
 		kill_heir = { allow_new_heir = no }
 		exile_ruler_as = { name = exiled_mac_ruler }
-		custom_tooltip = empty_line_tt
 		if = {
 			limit = {
 				has_leader = "Nico Samaras"
 			}
 			define_leader_to_ruler = {
 				name = "Nico Samaras"
-				adm = 1
+				adm = 2
 				dip = 1
-				mil = 3
-				# fixed = no
+				mil = 5
+				fixed = yes
 				claim = 50
 			}
 		}
@@ -79,10 +78,10 @@ country_event = {
 			}
 			define_leader_to_ruler = {
 				name = "Nico Samaras"
-				adm = 1
+				adm = 2
 				dip = 1
-				mil = 2
-				# fixed = no
+				mil = 5
+				fixed = yes
 				claim = 50
 			}
 		}
@@ -120,6 +119,9 @@ country_event = {
 		add_stability_or_adm_power = yes
 		custom_tooltip = empty_line_tt
 		set_ruler = exiled_mac_ruler
+		set_country_flag = mac_abolished_war_cabinet
+		custom_tooltip = "The War Cabinet will be abolished"
+		regenerate_government_mechanics  = yes
 		custom_tooltip = empty_line_tt
 		add_country_modifier = {
 			name = mac_finished_coup_disaster_modifier
@@ -134,8 +136,188 @@ country_event = {
 
 		add_stability_or_adm_power = yes
 		custom_tooltip = empty_line_tt
-		set_country_flag = mac_abolished_war_cabinet
-		custom_tooltip = "The War Cabinet will be abolished"
+		set_ruler = exiled_mac_ruler
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = mac_finished_coup_disaster_modifier_2
+			duration = 3650
+		}
 
+	}
+}
+
+
+#Rebel time
+country_event = {
+	id = pf_mac_disaster.3
+	title = pf_mac_disaster.3.t
+	desc = pf_mac_disaster.3.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+	
+	# trigger = {  }
+
+	# fire_only_once = yes
+	
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = { 
+		hidden_effect = {
+			random_owned_province = {
+				save_event_target_as = prov_1
+				spawn_rebels = {
+					type = particularist_rebels
+					size = 2
+				}
+			}
+			random_owned_province = {
+				save_event_target_as = prov_2
+				spawn_rebels = {
+					type = particularist_rebels
+					size = 1
+				}
+			}
+			random_owned_province = {
+				save_event_target_as = prov_3
+				spawn_rebels = {
+					type = particularist_rebels
+					size = 1
+				}
+			}
+		}
+	}
+
+	option = { #harsh
+		name = pf_mac_disaster.3.a
+		ai_chance = { factor = 1 }
+		
+		add_legitimacy = -10
+		custom_tooltip = empty_line_tt
+		tooltip = {
+			event_target:prov_1 = {		
+				spawn_rebels = {
+					type = particularist_rebels
+					size = 2
+				}
+			}
+			event_target:prov_2 = {		
+				spawn_rebels = {
+					type = particularist_rebels
+					size = 1
+				}
+			}
+			event_target:prov_3 = {		
+				spawn_rebels = {
+					type = particularist_rebels
+					size = 1
+				}
+			}
+		}
+
+	}
+}
+
+
+#Cabinet concedes
+country_event = {
+	id = pf_mac_disaster.4
+	title = pf_mac_disaster.4.t
+	desc = pf_mac_disaster.4.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+	
+	# trigger = {  }
+
+	# fire_only_once = yes
+	
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = { 
+	}
+
+	option = { #ay nice
+		name = pf_mac_disaster.4.a
+		ai_chance = { factor = 1 }
+		
+		add_legitimacy = 10
+		custom_tooltip = empty_line_tt
+		add_yearly_manpower = 2
+		custom_tooltip = empty_line_tt
+		add_government_power = {
+			mechanic_type = mac_war_cabinet_mechanic
+			power_type = mac_war_cabinet_organization
+			value = 5
+		}
+
+	}
+	option = { #ay VERY nice
+		name = pf_mac_disaster.4.b
+		ai_chance = { factor = 1 }
+		
+		add_mil_power = -100
+		add_yearly_manpower = -1
+		custom_tooltip = empty_line_tt
+		add_government_power = {
+			mechanic_type = mac_war_cabinet_mechanic
+			power_type = mac_war_cabinet_organization
+			value = 10
+		}
+	}
+}
+
+
+#Paying off disloyal generals
+country_event = {
+	id = pf_mac_disaster.5
+	title = pf_mac_disaster.5.t
+	desc = pf_mac_disaster.5.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+	
+	# trigger = {  }
+
+	# fire_only_once = yes
+	
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = { 
+	}
+
+	option = { #buy organization
+		name = pf_mac_disaster.5.a
+		ai_chance = { factor = 5 }
+		
+		add_years_of_income = -0.75
+		custom_tooltip = empty_line_tt
+		add_government_power = {
+			mechanic_type = mac_war_cabinet_mechanic
+			power_type = mac_war_cabinet_organization
+			value = 5
+		}
+
+	}
+	option = { #can't affort it
+		name = pf_mac_disaster.5.b
+		ai_chance = {
+			factor = 1 
+			modifier = {
+				factor = 0
+				NOT = { treasury = 100 }
+			}
+		}
+		
+		add_mil_power = 50
+		custom_tooltip = empty_line_tt
+		add_government_power = {
+			mechanic_type = mac_war_cabinet_mechanic
+			power_type = mac_war_cabinet_organization
+			value = -5
+		}
 	}
 }
