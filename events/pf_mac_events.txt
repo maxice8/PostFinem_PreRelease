@@ -520,53 +520,200 @@ country_event = {
 }
 
 
-#The Cabinet Proposes a Promotion
-#Roll a new general, trade org for it
-#Pulse event, 4-5 years prob
+#Alexandria ad Issum Reclaimed!
+
 country_event = {
 	id = pf_mac_events.10
 	title = pf_mac_events.10.t
 	desc = pf_mac_events.10.d
-	picture = CIVIL_WAR_eventPicture
+	picture = CITY_VIEW_eventPicture
 	
 	trigger = {  
 		tag = MAC
-		NOT = { num_of_generals = 1 }
-		has_government_mechanic = mac_war_cabinet_mechanic
-		NOT = {  
-			has_government_power = {
-				mechanic_type = mac_war_cabinet_mechanic
-				power_type = mac_war_cabinet_organization
-				value = 100
-			}
-		}
+		owns_core_province = 2313
 	}
 
-	# fire_only_once = yes
+	fire_only_once = yes
 	
-	is_triggered_only = yes
+	# is_triggered_only = yes
 	mean_time_to_happen = {
-		days = 1
+		months = 6
 	}
 
 	immediate = {  }
 
-	option = { #Trade org for general
-		name = pf_mac_events.9.a
-		# goto = 
-		ai_chance = { 
+	option = { #Rename it in his honor!
+		name = pf_mac_events.10.a
+		ai_chance = {
 			factor = 1
 		}
-	}
+		goto = 2313
 
-
-
-	option = { #Trade org for advisor
-		name = pf_mac_events.9.b
-		# goto = 
-		ai_chance = { 
-			factor = 1
+		add_prestige_or_monarch_power = {
+			amount = 25
+		}
+		custom_tooltip = empty_line_tt
+		2313 = {
+			change_province_name = "Issum"
+			rename_capital = "Alexandria ad Issum"
+		}
+		custom_tooltip = empty_line_tt
+		2313 = {
+			add_base_tax = 2
+			add_base_production = 3
+			add_base_manpower = 2
+		}
+		custom_tooltip = empty_line_tt
+		2313 = {
+			add_or_upgrade_shipyard_building = yes
 		}
 	}
+}
 
+#Alexandria of the Caucasus Reclaimed!
+
+country_event = {
+	id = pf_mac_events.11
+	title = pf_mac_events.11.t
+	desc = pf_mac_events.11.d
+	picture = CITY_VIEW_eventPicture
+	
+	trigger = {  
+		tag = MAC
+		owns_core_province = 451
+	}
+
+	fire_only_once = yes
+	
+	# is_triggered_only = yes
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	immediate = {  }
+
+	option = { #Rename it in his honor!
+		name = pf_mac_events.11.a
+		ai_chance = {
+			factor = 1
+		}
+		goto = 451
+
+		add_prestige_or_monarch_power = {
+			amount = 25
+		}
+		custom_tooltip = empty_line_tt
+		451 = {
+			change_province_name = "Alasandra"
+			rename_capital = "Alexandria ad Caucasus"
+		}
+		custom_tooltip = empty_line_tt
+		451 = {
+			add_base_tax = 3
+			add_base_production = 2
+			add_base_manpower = 2
+		}
+		custom_tooltip = empty_line_tt	
+		451 = {
+			set_center_level_3_center_of_trade = yes
+		}
+	}
+}
+
+
+# Alexandria Arachosia Reclaimed!
+
+country_event = {
+	id = pf_mac_events.12
+	title = pf_mac_events.12.t
+	desc = pf_mac_events.12.d
+	picture = CITY_VIEW_eventPicture
+	
+	trigger = {  
+		tag = MAC
+		owns_core_province = 454
+	}
+
+	fire_only_once = yes
+	
+	# is_triggered_only = yes
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	immediate = {  }
+
+	option = { #Rename it in his honor!
+		name = pf_mac_events.12.a
+		ai_chance = {
+			factor = 1
+		}
+		goto = 454
+
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		custom_tooltip = empty_line_tt
+		454 = {
+			change_province_name = "Oxiana"
+			rename_capital = "Alexandria Oxiana"
+		}
+		custom_tooltip = empty_line_tt
+		454 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 1
+		}
+	}
+}
+
+
+# Charax Spasinu Reclaimed!
+
+country_event = {
+	id = pf_mac_events.13
+	title = pf_mac_events.13.t
+	desc = pf_mac_events.13.d
+	picture = CITY_VIEW_eventPicture
+	
+	trigger = {  
+		tag = MAC
+		owns_core_province = 412
+	}
+
+	fire_only_once = yes
+	
+	# is_triggered_only = yes
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	immediate = {  }
+
+	option = { #Rename it in his honor!
+		name = pf_mac_events.13.a
+		ai_chance = {
+			factor = 1
+		}
+		goto = 412
+
+		add_prestige_or_monarch_power = {
+			amount = 25
+		}
+		custom_tooltip = empty_line_tt
+		412 = {
+			change_province_name = "Charax"
+			rename_capital = "Charax Spasinu"
+		}
+		custom_tooltip = empty_line_tt
+		412 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+		}
+		custom_tooltip = empty_line_tt		
+		412 = {
+			add_or_upgrade_shipyard_building = yes
+		}
+	}
 }

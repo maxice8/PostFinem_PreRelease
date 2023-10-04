@@ -1,0 +1,141 @@
+namespace = pf_mac_disaster
+
+
+#Disaster Begins, Kill the ruler!
+country_event = {
+	id = pf_mac_disaster.1
+	title = pf_mac_disaster.1.t
+	desc = pf_mac_disaster.1.d
+	picture = CIVIL_WAR_eventPicture
+	
+	trigger = {  }
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	# mean_time_to_happen = {}
+
+	immediate = {  
+		hidden_effect = {
+			add_stability = -1
+			define_general = {
+				name = "Nico Samaras"
+				fire = 5
+				shock = 4
+				manuever = 5
+				siege = 2
+			}
+			set_country_flag = mac_war_cabinet_coup_happened
+			random_owned_province = {
+				spawn_rebels = {
+					type = leadered_peasant_rebels
+					size = 2
+				}
+			}			
+			random_owned_province = {
+				spawn_rebels = {
+					type = leadered_peasant_rebels
+					size = 2
+				}
+			}			
+			random_owned_province = {
+				spawn_rebels = {
+					type = particularist_rebels
+					size = 3
+				}
+			}
+		}
+	}
+
+	option = { #Fuck it, we ball
+		name = pf_mac_disaster.1.a
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		tooltip = {	add_stability = -1 }
+		kill_heir = { allow_new_heir = no }
+		exile_ruler_as = { name = exiled_mac_ruler }
+		custom_tooltip = empty_line_tt
+		if = {
+			limit = {
+				has_leader = "Nico Samaras"
+			}
+			define_leader_to_ruler = {
+				name = "Nico Samaras"
+				adm = 1
+				dip = 1
+				mil = 3
+				# fixed = no
+				claim = 50
+			}
+		}
+		else = {
+			define_general = {
+				name = "Nico Samaras"
+				fire = 5
+				shock = 4
+				manuever = 5
+				siege = 2
+			}
+			define_leader_to_ruler = {
+				name = "Nico Samaras"
+				adm = 1
+				dip = 1
+				mil = 2
+				# fixed = no
+				claim = 50
+			}
+		}
+	}
+}
+
+
+#Disaster Ends, order is restored
+country_event = {
+	id = pf_mac_disaster.2
+	title = pf_mac_disaster.2.t
+	desc = pf_mac_disaster.2.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+	
+	trigger = {  }
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	# mean_time_to_happen = {}
+
+	immediate = { 
+		hidden_effect = {
+			if = {
+				limit = { has_leader = "Nico Samaras" }
+				kill_ruler = yes
+			}
+		}
+	}
+
+	option = { #Keep the War Cabinet
+		name = pf_mac_disaster.2.a
+		ai_chance = { factor = 20 }
+
+		add_stability_or_adm_power = yes
+		custom_tooltip = empty_line_tt
+		set_ruler = exiled_mac_ruler
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = mac_finished_coup_disaster_modifier
+			duration = 3650
+		}
+
+	}
+	option = { #Abolish it
+		name = pf_mac_disaster.2.b
+		# goto = 
+		ai_chance = { factor = 1 }
+
+		add_stability_or_adm_power = yes
+		custom_tooltip = empty_line_tt
+		set_country_flag = mac_abolished_war_cabinet
+		custom_tooltip = "The War Cabinet will be abolished"
+
+	}
+}

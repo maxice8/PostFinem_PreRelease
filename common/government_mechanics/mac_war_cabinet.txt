@@ -2,7 +2,9 @@ mac_war_cabinet_mechanic = {
 	alert_icon_gfx = GFX_alerticons_government_mechanics
 	alert_icon_index = 11
 	available = {
-		always = yes
+		NOT = {
+			has_country_flag = mac_abolished_war_cabinet
+		}
 	}
 
 	powers = {
