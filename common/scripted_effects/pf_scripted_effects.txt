@@ -308,18 +308,18 @@ romuva_clear_aspects_scripted_effect = {
 	}
 }
 
-#kemetic effects
+#neterist effects
 pf_egypt_kemetic_communities_province_modifiers_global = {
 	if = {
 		limit = {
-			has_church_aspect = kemetic_communities_aspect
+			has_church_aspect = neterist_communities_aspect
 		}
 		every_owned_province = {
 			limit = {
-				religion = kemetic
+				religion = neterist
 			}
 			add_province_modifier = {
-				name = pf_egypt_kemetic_communities
+				name = pf_egypt_neterist_communities
 				duration = -1
 			}
 		}
@@ -327,50 +327,50 @@ pf_egypt_kemetic_communities_province_modifiers_global = {
 	else = {
 		every_owned_province = {
 			limit = {
-				has_province_modifier = pf_egypt_kemetic_communities
+				has_province_modifier = pf_egypt_neterist_communities
 			}
 			add_province_modifier = {
-				name = pf_egypt_kemetic_communities
+				name = pf_egypt_neterist_communities
 				duration = -1
 			}
 		}
 	}
 }
-pf_egypt_kemetic_communities_province_modifiers_local = {
+pf_egypt_neterist_communities_province_modifiers_local = {
 	if = {
 		limit = {
 			NOT = {
-				has_province_modifier = pf_egypt_kemetic_communities
+				has_province_modifier = pf_egypt_neterist_communities
 			}
-			religion = kemetic
+			religion = neterist
 			owner = {
-				religion = kemetic
-				has_church_aspect = kemetic_communities_aspect
+				religion = neterist
+				has_church_aspect = neterist_communities_aspect
 			}
 		}
 		add_province_modifier = {
-			name = pf_egypt_kemetic_communities
+			name = pf_egypt_neterist_communities
 			duration = -1
 		}
 	}
 	else = {
 		if = {
 			limit = {
-				has_province_modifier = pf_egypt_kemetic_communities
+				has_province_modifier = pf_egypt_neterist_communities
 			}
 		}
-		remove_province_modifier = pf_egypt_kemetic_communities
+		remove_province_modifier = pf_egypt_neterist_communities
 	}
 }
-pf_egypt_update_relations_kemetic = {
+pf_egypt_update_relations_neterist = {
 	if = {
 		limit = {
-			has_church_aspect = kemetic_wandering_scholars_aspect
+			has_church_aspect = neterist_wandering_scholars_aspect
 		}
 		every_country = {
 			limit = {
 				NOT = {
-					religion = kemetic
+					religion = neterist
 				}
 				NOT = {
 					has_opinion_modifier = {
@@ -400,15 +400,15 @@ pf_egypt_update_relations_kemetic = {
 		}
 	}
 }
-pf_egypt_update_relations_non_kemetic = {
+pf_egypt_update_relations_non_neterist = {
 	if = {
 		limit = {
 			NOT = {
-				religion = kemetic
+				religion = neterist
 			}
 			any_known_country = {
-				religion = kemetic
-				has_church_aspect = kemetic_wandering_scholars_aspect
+				religion = neterist
+				has_church_aspect = neterist_wandering_scholars_aspect
 				ROOT = {
 					NOT = {
 						has_opinion_modifier = {
@@ -421,7 +421,7 @@ pf_egypt_update_relations_non_kemetic = {
 		}
 		every_country = {
 			limit = {
-				religion = kemetic
+				religion = neterist
 			}
 			ROOT = {
 				add_opinion = {
