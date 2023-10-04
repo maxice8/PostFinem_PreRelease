@@ -2075,12 +2075,43 @@ third_2 = {
 			}
 		} 
 	}
+	
+	pf_lag_universities = {
+		icon = mission_early_modern_university
+		position = 13
+		required_missions = {
+			pf_lag_renaissance
+			pf_lag_centralize
+		} 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			NOT = { has_building = university }
+		 } 
+
+		trigger = { 
+			OR = {
+				innovativeness = 50
+				full_idea_group = innovativeness_ideas
+				university = 5
+			}
+		} 
+
+		effect = { 
+			change_innovativeness = 4
+
+			custom_tooltip = empty_line_tt
+			
+			add_country_modifier = {
+				name = pf_lag_educated_elite
+				duration = 3650
+			}
+		} 
+	}
 
 	pf_lag_absolutism = {
 		icon = mission_english_absolutism
 		position = 14
 		required_missions = {
-			pf_lag_renaissance
 			pf_lag_universities
 		}
 		provinces_to_highlight = { 
@@ -2340,36 +2371,6 @@ fourth_2 = {
 			add_government_reform = pf_lagr_republic
 		 } 
 	}
-
-	pf_lag_universities = {
-		icon = mission_early_modern_university
-		position = 13
-		required_missions = { pf_lag_centralize } 
-		provinces_to_highlight = { 
-			owned_by = ROOT
-			NOT = { has_building = university }
-		 } 
-
-		trigger = { 
-			OR = {
-				innovativeness = 50
-				full_idea_group = innovativeness_ideas
-				university = 5
-			}
-		} 
-
-		effect = { 
-			change_innovativeness = 4
-
-			custom_tooltip = empty_line_tt
-			
-			add_country_modifier = {
-				name = pf_lag_educated_elite
-				duration = 3650
-			}
-		} 
-	}
-
 	pf_lag_medical_school = {
 		icon = mission_book_of_royal_degrees
 		position = 14
