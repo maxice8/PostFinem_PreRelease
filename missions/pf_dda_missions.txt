@@ -1,0 +1,62 @@
+pf_dda_5 = {
+    generic = no
+    has_country_shield = yes
+    ai = yes
+    slot = 5
+    potential = {
+        tag = DDA
+    }
+    pf_dda_become_blessed = {
+        position = 0
+        icon = mission_hands_praying
+        provinces_to_highlight = {
+            has_great_project = {
+                type = hall_of_pantheons
+            }
+        }
+        trigger = {
+            custom_trigger_tooltip = {
+                tooltip = pf_dda_pf_dda_become_blessed_tt1
+                any_owned_province = {
+                    has_province_flag = pf_mon_hop_blessing_flag
+                    NOT = {
+                        had_province_flag = {
+                            flag = pf_mon_hop_blessing_flag
+                            days = 1826
+                        }
+                    }
+                }
+            }
+        }
+        effect = {
+            add_army_professionalism = 0.05
+        }
+    }
+    pf_dda_a_deal_with_rome = {
+        position = 1
+        icon = mission_alliances
+        provinces_to_highlight = {
+            owned_by = emperor
+        }
+        trigger = {
+            if = {
+                limit = {
+                    hre_size = 1
+                }
+                reverse_has_opinion = {
+                    who = emperor
+                    value = 75
+                }
+            }
+            else = {
+                total_development = 100
+            }
+        }
+        effect = {
+            add_country_modifier = {
+                name = pf_dda_diplo_rep
+                duration = 365
+            }
+        }
+    }
+}

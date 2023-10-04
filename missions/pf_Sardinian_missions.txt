@@ -137,7 +137,11 @@ pf_sar_2 = {
 			pf_sar_found_the_marines
 			pf_sar_unite_the_island
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_port = yes
+			has_shipyard_building_trigger = no
+		} 
 
 		trigger = {
 			navy_size_percentage = 0.90
@@ -165,7 +169,13 @@ pf_sar_2 = {
 		icon = law_of_the_pious
 		position = 4
 		required_missions = { pf_sar_found_parliament } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			area = corsica_sardinia_area
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { base_tax = 6 }
+			}
+		} 
 
 		trigger = {
 			NOT = {
@@ -174,6 +184,7 @@ pf_sar_2 = {
 			corsica_sardinia_area = {
 				type = all
 				base_tax = 6
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			OR = {
 				estate_loyalty = {
@@ -355,7 +366,10 @@ pf_sar_3 = {
 		icon = the_shape_of_trades_to_come
 		position = 4
 		required_missions = { pf_sar_found_parliament } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			has_trade_building_trigger = no
+		} 
 
 		trigger = {
 			estate_loyalty = {
@@ -533,6 +547,7 @@ pf_sar_4 = {
 			province_id = 4943	# Carbonia
 			OR = {
 				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 				NOT = { num_of_times_expanded_infrastructure = 1 }
 			}
 		} 
