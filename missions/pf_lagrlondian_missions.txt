@@ -1901,10 +1901,14 @@ second_3_religious = {
 			NOT = { religion = ROOT }
 		 } 
 
-		trigger = { 
-			has_global_modifier_value = {
-				which = global_missionary_strength
-				value = 0.045
+		trigger = {
+			num_of_estate_agendas_completed = {
+				estate = estate_church
+				value = 4
+			}
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 3
 			}
 			OR = {
 				theologian = 3
