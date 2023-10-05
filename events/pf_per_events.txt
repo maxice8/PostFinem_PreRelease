@@ -3709,7 +3709,7 @@ country_event = {
 	desc = "pf_per_events_64_desc"
 	picture = CHURCH_ESTATE_2_eventPicture
 	is_triggered_only = yes
-	fires_only_once = yes
+	fire_only_once = yes
 
 	option = {
 		name = "pf_per_events_64_option_1"
