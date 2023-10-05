@@ -3067,7 +3067,7 @@ country_event = {
 			pf_rjt_expansion_claims = {
 				limit = { 
 					country_or_non_sovereign_subject_holds = ROOT
-					NOT = { owned_by = RAJ }
+					NOT = { owned_by = RJT }
 				}
 				cede_province = RJT
 			}
