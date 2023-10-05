@@ -1910,23 +1910,14 @@ country_event = {
 			any_owned_province = { NOT = { has_production_building_trigger = yes } }
 		}
 		OR = {
-			adm_tech = 5
-			dip_tech = 5
-			mil_tech = 5
+			adm_tech = 7
+			dip_tech = 7
+			mil_tech = 7
 		}
 	}
 
 	mean_time_to_happen = {
-		months = 144
-
-		modifier = {
-			factor = 1.25
-			OR = {
-				adm_tech = 7
-				dip_tech = 7
-				mil_tech = 7
-			}
-		}
+		months = 180
 
 		modifier = {
 			factor = 2
@@ -2068,23 +2059,14 @@ country_event = {
 			any_owned_province = { NOT = { has_manpower_building_trigger = yes } }
 		}
 		OR = {
-			adm_tech = 5
-			dip_tech = 5
-			mil_tech = 5
+			adm_tech = 7
+			dip_tech = 7
+			mil_tech = 7
 		}
 	}
 
 	mean_time_to_happen = {
-		months = 144
-
-		modifier = {
-			factor = 1.25
-			OR = {
-				adm_tech = 7
-				dip_tech = 7
-				mil_tech = 7
-			}
-		}
+		months = 180
 
 		modifier = {
 			factor = 2
