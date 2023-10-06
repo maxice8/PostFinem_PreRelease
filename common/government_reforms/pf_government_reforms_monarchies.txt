@@ -370,7 +370,6 @@ pf_integrated_phalanx = {
 pf_romuva_kingdom = {
 	icon = "crown"
 	allow_normal_conversion = yes
-	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 
@@ -388,10 +387,10 @@ pf_romuva_kingdom = {
 	}
 
 }
+
 pf_catephract_focus = {
 	icon = "cavalry"
 	allow_normal_conversion = yes
-	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 

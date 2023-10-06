@@ -1,12 +1,12 @@
 namespace = pf_mac_events
 
 
-#The Establishment of Magna Greacia
+#The Establishment of Magna Graecia
 country_event = {
 	id = pf_mac_events.1
 	title = pf_mac_events.1.t
 	desc = pf_mac_events.1.d
-	picture = CIVIL_WAR_eventPicture
+	picture = FREE_CITY_eventPicture
 	
 	trigger = {  }
 
@@ -96,12 +96,37 @@ country_event = {
 	
 }
 
+#Remove Magna Graeca March buff
+country_event = {
+	id = pf_mac_events.2
+	title = pf_mac_events.2.t
+	desc = pf_mac_events.2.d
+	picture = CIVIL_WAR_eventPicture
+	hidden = yes
+	
+	trigger = {  
+		has_country_modifier = pf_mac_events_1_modifier_subj
+		NOT = {
+			MGN = { is_subject_of = ROOT }
+		}
+	}
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = pf_mac_events.2.a
+		# goto = 
+		ai_chance = { factor = 1 }
+		remove_country_modifier = pf_mac_events_1_modifier_dip
+	}
+	
+}
+
 #Uncontested in the Aegean
 country_event = {
 	id = pf_mac_events.3
 	title = pf_mac_events.3.t
 	desc = pf_mac_events.3.d
-	picture = CIVIL_WAR_eventPicture
+	picture = BYZ_HARBOUR_eventPicture
 	
 	trigger = {  }
 
@@ -152,7 +177,7 @@ country_event = {
 	id = pf_mac_events.4
 	title = pf_mac_events.4.t
 	desc = pf_mac_events.4.d
-	picture = CIVIL_WAR_eventPicture
+	picture = COURT_eventPicture
 	
 	trigger = {  }
 
@@ -196,7 +221,7 @@ country_event = {
 	id = pf_mac_events.5
 	title = pf_mac_events.5.t
 	desc = pf_mac_events.5.d
-	picture = CIVIL_WAR_eventPicture
+	picture = QIZILBASH_CAVALRY_CHARGING_eventPicture
 	
 	trigger = {  }
 
@@ -208,9 +233,6 @@ country_event = {
 	immediate = {  }
 
 	option = { #Give Hussars in T5
-		trigger = {
-			AEG = { exists = yes }
-		}
 		name = pf_mac_events.5.a
 		# goto = 
 		ai_chance = { factor = 1 }
@@ -225,6 +247,7 @@ country_event = {
 		ai_chance = { factor = 0 }
 
 		set_country_flag = mac_mercs_flag
+		custom_tooltip = mac_mercs_event_tt
 	}
 }
 
@@ -261,7 +284,7 @@ country_event = {
 		# goto = 
 		ai_chance = { factor = 1 }
 
-		1766 = { add_base_production = 2 }
+		1766 = { set_base_production = 6 }
 	}
 
 }
@@ -294,9 +317,6 @@ country_event = {
 		# goto = 
 		ai_chance = { factor = 1 }
 
-		custom_tooltip = kallias_philoxenos_tt
-		set_country_flag = kallias_philoxenos_country_flag
-		custom_tooltip = empty_line_tt
 		add_country_modifier = {
 			name = kallias_philoxenos_modifier
 			duration = 3600
@@ -659,7 +679,7 @@ country_event = {
 	id = pf_mac_events.12
 	title = pf_mac_events.12.t
 	desc = pf_mac_events.12.d
-	picture = CITY_VIEW_eventPicture
+	picture = CITY_DEVELOPMENT_eventPicture
 	
 	trigger = {  
 		tag = MAC
@@ -706,7 +726,7 @@ country_event = {
 	id = pf_mac_events.13
 	title = pf_mac_events.13.t
 	desc = pf_mac_events.13.d
-	picture = CITY_VIEW_eventPicture
+	picture = CITY_DEVELOPMENT_eventPicture
 	
 	trigger = {  
 		tag = MAC
