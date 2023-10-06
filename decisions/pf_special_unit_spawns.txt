@@ -49,14 +49,10 @@ country_decisions = {
 		}
 		allow = {
 			NOT = {
-				had_country_flag = {
-					flag = pf_recruited_phalanx_flag
-					days = 1825
-				}
+				has_country_modifier = pf_recruited_phalanx_modifier
 			}
 		}
 		effect = {
-			clr_country_flag = pf_recruited_phalanx_flag
 			if = {
 				limit = { land_forcelimit = 50 }
 				capital_scope = {
@@ -99,7 +95,11 @@ country_decisions = {
 				add_treasury = -20
 				add_mil_power = -20
 			}
-			set_country_flag = pf_recruited_phalanx_flag
+			add_country_modifier = {
+				name = pf_recruited_phalanx_modifier
+				duration = 1825
+				hidden = yes
+			}
 		}
 	}
 }

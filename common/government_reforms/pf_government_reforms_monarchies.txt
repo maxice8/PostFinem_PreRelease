@@ -230,7 +230,7 @@ pf_argead_aegis = {
 
 #Seleucid  Monarchy
 pf_seleucid_monarchy = {
-	icon = "seleucid "
+	icon = "seleucid"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = no
@@ -363,7 +363,7 @@ pf_integrated_phalanx = {
 		shock_damage_received = -0.1
 	}
 	ai = {
-		factor = 1
+		factor = 5
 	}
 }
 
