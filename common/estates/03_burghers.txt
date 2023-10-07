@@ -215,6 +215,12 @@ estate_burghers = {
 		}
 	}
 	custom_name = {
+		desc = estate_kupcy
+		trigger = {
+			culture_group = pagan_slavic
+		}
+	}
+	custom_name = {
 		desc = estate_quartersmasters
 		trigger = {
 			has_government_attribute = is_pirate_republic_reform

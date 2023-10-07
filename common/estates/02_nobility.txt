@@ -212,9 +212,9 @@ estate_nobles = {
 	#Alternative naming of estates
 	# PF [[[
 	custom_name = {
-		desc = estate_elders
+		desc = estate_druids
 		trigger = {
-			has_reform = brittonic_confederation_reform
+			religion = druidic
 		}
 	}
 	# ]]]
@@ -257,6 +257,7 @@ estate_nobles = {
 				primary_culture = bulgarian
 				primary_culture = romanian
 				culture_group = slavic
+				culture_group = pagan_slavic
 			}
 			NOT = { primary_culture = polish_new }
 		}

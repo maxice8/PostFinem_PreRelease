@@ -201,6 +201,12 @@ estate_church = {
 		}
 	}
 	custom_name = {
+		desc = estate_volkhvs
+		trigger = {
+			religion = slavic_religion
+		}
+	}
+	custom_name = {
 		desc = estate_ogboni
 		trigger = {
 			tag = OYO
