@@ -444,6 +444,9 @@ estate_nobles = {
 	color = { 200 0 50 }
 	
 	privileges = {
+		# [[[ PF Nation Specific
+		estate_nobles_cabinet_autonomy
+		# ]]]
 		estate_nobles_land_rights
 		estate_nobles_nobility_primacy
 		estate_nobles_officer_corp
@@ -507,13 +510,14 @@ estate_nobles = {
 		estate_nobles_pf_satrapy_expansion_plan
 		estate_nobles_pf_satrapy_annexation_ban
 		estate_nobles_pf_satrapy_exemption_from_conscription
-		#Generic Modded
+		# [[[ Generic PF
 		estate_nobles_electorate_nobility
 		estate_nobles_white_cloth_nobles
 		estate_nobles_assign_grand_offices
 		estate_nobles_seal_of_approval
 		estate_nobles_allow_hereditary_titles
 		estate_nobles_command_of_the_troops
+		# ]]]
 	}
 
 	agendas = {
