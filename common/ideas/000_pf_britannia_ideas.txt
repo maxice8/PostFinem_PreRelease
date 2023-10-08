@@ -89,6 +89,7 @@ brittonic_ideas = {		# Brittonic minors
 			primary_culture = old_welsh
 			primary_culture = old_cornish
 		}
+		NOT = { tag = CLN }
 	}
 	free = yes
 	
@@ -159,11 +160,11 @@ SAR_ideas = {		# Sardinian League
 }
 NAP_ideas = {		# Naples
 	start = {	
-		infantry_power = 0.10
-		state_maintenance_modifier = -0.25
+		trade_efficiency = 0.10
+		monarch_admin_power = 1
 	}
 	bonus = {
-		land_morale = 0.15
+		vassal_forcelimit_bonus = 1
 	}	
 	trigger = {
 		tag = NAP
@@ -171,7 +172,7 @@ NAP_ideas = {		# Naples
 	free = yes
 	
 	nap_lady_of_naples = {
-		female_advisor_chance = 0.2
+		female_advisor_chance = 0.25
 		idea_cost = -0.10
 	}
 	nap_princes_of_the_south = {
@@ -182,23 +183,24 @@ NAP_ideas = {		# Naples
 	}
 	nap_secular_clergy = {
 		church_loyalty_modifier = 0.10
+		overextension_impact_modifier = -0.10
 	}
 	nap_castles = {
 		defensiveness = 0.10
 		fort_maintenance_modifier = -0.20
 	}
 	nap_city_of_pleasure = {
-		global_unrest = -1
-		heir_chance = 0.5
+		heir_chance = 0.50
+		diplomatic_upkeep = 1
 	}
 	nap_mecenate = {
-		monarch_admin_power = 1
+		prestige = 1
 	}
 }
 if_free_city_ideas = {		# Italian Federation Free City
 	start = {	
-		trade_efficiency = 0.10
-		burghers_loyalty_modifier = 0.05
+		global_prov_trade_power_modifier = 0.20
+		build_cost = -0.10
 	}
 	bonus = {
 		development_cost = -0.10
@@ -262,7 +264,7 @@ SNO_ideas = {		# Salerno
 		global_missionary_strength = 0.02
 	}
 	sno_lord_of_the_south = {
-		core_creation = -0.10
+		core_creation = -0.05
 		governing_capacity_modifier = 0.10
 	}
 	sno_by_the_gods = {
@@ -271,5 +273,162 @@ SNO_ideas = {		# Salerno
 	sno_church_lands = {
 		production_efficiency = 0.10
 		global_autonomy = -0.03
+	}
+}
+ANC_ideas = {		# Ancona
+	start = {	
+		trade_steering = 0.25
+		diplomats = 1
+	}
+	bonus = {
+		global_trade_power = 0.10
+	}	
+	trigger = {
+		tag = ANC
+	}
+	free = yes
+	
+	anc_merchant_republic = {
+		merchants = 1
+	}
+	anc_italian_captains = {
+		leader_land_manuever = 1
+		leader_land_fire = 1
+	}
+	anc_christian_community = {
+		tolerance_heathen = 3
+	}
+	anc_western_port = {
+		naval_forcelimit_modifier = 0.20
+		naval_maintenance_modifier = -0.10
+	}
+	anc_expand_the_citadel = {
+		build_cost = -0.15
+	}
+	anc_embrace_christ = {
+		prestige_per_development_from_conversion = 0.33
+		establish_order_cost = -0.20
+	}
+	anc_agents_of_chaos = {
+		spy_offence = 0.33
+	}
+}
+CLN_ideas = {		# Conan's adventurer state in Sicily
+	start = {
+		tolerance_own = 3
+		discipline = 0.05
+	}
+	bonus = {
+		army_tradition_decay = -0.01
+	}	
+	trigger = {
+		tag = CLN
+	}
+	free = yes
+	
+	cln_adventurers_home = {
+		leader_land_manuever = 1
+		land_morale = 0.10
+	}
+	cln_patronage_of_astarte = {
+		warscore_cost_vs_other_religion = -0.15
+	}
+	cln_mahedi = {
+		infantry_power = 0.10
+		cavalry_power = 0.10
+	}
+	cln_insurance_tax = {
+		global_tax_modifier = 0.10
+	}
+	cln_rule_by_the_sword = {
+		legitimacy = 1
+	}
+	cln_love_poems = {
+		heir_chance = 0.50
+	}
+	cln_ambitions = {
+		enforce_religion_cost = -0.33
+		fire_damage = 0.10
+	}
+}
+
+ITY_ideas = {
+	start = {
+		advisor_cost = -0.10
+		leader_land_shock = 1
+	}
+	
+	bonus = {
+		prestige_per_development_from_conversion = 0.50
+	}	
+
+	trigger = {
+		tag = ITY
+	}
+	free = yes
+	
+	ity_roman_rites = {
+		global_missionary_strength = 0.02
+		tolerance_own = 1
+	}
+	ity_po_valley = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	ity_sappers = {
+		siege_ability = 0.15
+	}
+	ity_university_cities = {
+		global_institution_spread = 0.25
+	}
+	ity_grand_temple_of_mars = {
+		army_tradition = 0.50
+		fire_damage = 0.10
+	}
+	ity_court_of_the_north = {
+		yearly_corruption = -0.10
+		all_estate_loyalty_equilibrium = 0.05
+	}
+	ity_the_rebel_prince = {
+		infantry_power = 0.10
+	}
+}
+
+SZO_ideas = {		# Saluzzo
+	start = {
+		global_spy_defence = 0.33
+		ae_impact = -0.15
+	}
+	
+	bonus = {
+		monarch_military_power = 1
+	}	
+
+	trigger = {
+		tag = SZO
+	}
+	free = yes
+	
+	szo_castle_on_the_hill = {
+		defensiveness = 0.25
+	}
+	szo_iron_mines = {
+		production_efficiency = 0.10
+	}
+	szo_master_manipulators = {
+		improve_relation_modifier = 0.20
+		discovered_relations_impact = -0.25
+	}
+	szo_the_spies = {
+		spy_offence = 0.50
+		diplomats = 1
+	}
+	szo_safeguard_the_alpine_passes = {
+		caravan_power = 0.20
+	}
+	szo_the_codex = {
+		stability_cost_modifier = -0.20
+	}
+	szo_let_the_people_rise = {
+		rebel_support_efficiency = 1
 	}
 }

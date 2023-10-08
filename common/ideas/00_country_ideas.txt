@@ -1199,46 +1199,6 @@ PGA_ideas = {
 		unjustified_demands = -0.2
 	}
 }
-
-SZO_ideas = {
-	start = {
-		ae_impact = -0.15
-		infantry_power = 0.1
-	}
-	
-	bonus = {
-		core_creation = -0.15
-	}
-	
-	trigger = {
-		tag = SZO
-	}
-	free = yes		#will be added at load.
-	
-	SZO_golden_age = {
-		global_prov_trade_power_modifier = 0.1
-	}
-	SZO_rich_mountain = {
-		global_trade_goods_size_modifier = 0.1
-	}
-	SZO_marquisate = {
-		land_morale = 0.1
-	}
-	SZO_alpine_engineering = {
-		movement_speed = 0.15
-	}
-	SZO_key_to_italy = {
-		trade_steering = 0.2
-	}
-	SZO_chiesa_san_giovanni = {
-		tolerance_own = 1
-		global_missionary_strength = 0.01
-	}
-	SZO_mint = {
-		global_tax_modifier = 0.1
-	}
-}
-
 MFA_ideas = {
 	start = {
 		recover_army_morale_speed = 0.05

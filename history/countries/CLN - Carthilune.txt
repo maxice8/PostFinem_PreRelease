@@ -1,29 +1,37 @@
 government = monarchy
-add_government_reform = feudalism_reform
+add_government_reform = astartean_adventurer_reform
 government_rank = 1
 technology_group = western
-capital = 4736
+capital = 125	# Palermo
 religion = punic_religion
-primary_culture = siculi
+primary_culture = briton
+#add_accepted_culture = siculi
+
 1444.11.11 = { 
 	monarch = { 
-		name = "Gaius"
-		dynasty = "Agrippanis"
-		adm = 1
-		dip = 6
-		mil = 3
-		birth_date = 1411.04.04
+		name = "Conan Astarte"
+		dynasty = "ap Deifr"
+		adm = 5
+		dip = 3
+		mil = 6
+		birth_date = 1422.4.12
 		death_date = 1445.01.01
 	}
+	add_ruler_personality = bold_fighter_personality
+	add_ruler_personality = zealot_personality
+	add_ruler_personality = conqueror_personality
 }
 1444.11.11 = { 
-	monarch = { 
-		name = "Gaius"
-		dynasty = "Agrippanis"
-		adm = 1
-		dip = 6
+	queen = { 
+		name = "Guinevere" 
+		dynasty = "ap Iceni"
+		adm = 4
+		dip = 5
 		mil = 3
-		birth_date = 1411.09.21
+		birth_date = 1425.7.18
 		death_date = 1445.01.01
+		female = yes
 	}
+	add_queen_personality = silver_tongue_personality
+	add_queen_personality = fertile_personality
 }

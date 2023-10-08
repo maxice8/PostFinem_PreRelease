@@ -399,3 +399,72 @@ country_event = {		# Religious Festival
 		add_estate_church_loyalty_effect = 10
 	}
 }
+country_event = {		# Growth of the City
+	id = pf_if.14
+	title = pf_if.14.t 
+	desc = pf_if.14.d
+	picture = FREE_CITY_eventPicture
+
+	is_triggered_only = yes
+
+	goto = 121
+
+	option = {
+		name = "pf_if.14.a"
+		add_splendor = 100
+		custom_tooltip = empty_line_tt
+		set_country_flag = naples_gets_bonus_from_dev_flag
+		custom_tooltip = pf_if_naples_development_bonus_tt
+	}
+}
+country_event = {		# The Fatal Blade
+	id = pf_if.15
+	title = pf_if.15.t 
+	desc = pf_if.15.d
+	picture = ASSASSINATION_eventPicture
+
+	trigger = {
+		is_part_of_hre = yes
+		OR = {
+			NOT = { stability = -2 }
+			NOT = { legitimacy_equivalent = 20 }
+		}
+		NOT = { dip = 4 }
+		NOT = { has_country_modifier = pf_if_assassinated_ruler }
+	}
+
+	mean_time_to_happen = {
+		months = 800
+	}
+
+	option = {
+		name = "pf_if.15.a"
+		kill_ruler = yes
+		add_country_modifier = {
+			name = "pf_if_assassinated_ruler"
+			duration = 3650
+		}
+	}
+}
+country_event = {		# The Travels of Conan the Sicilian
+	id = pf_if.16
+	title = pf_if.16.t 
+	desc = pf_if.16.d
+	picture = BYZ_BYZANTINE_EMPEROR_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_heir = { allow_new_heir = no }
+		}
+	}
+
+	option = {
+		name = "pf_if.16.a"
+		add_ruler_modifier = {
+			name = "pf_cln_conans_travels"
+			duration = -1
+		}
+	}
+}

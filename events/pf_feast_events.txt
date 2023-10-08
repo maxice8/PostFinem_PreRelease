@@ -8,6 +8,10 @@ country_event = {		# Feast Start Screen
 
 	is_triggered_only = yes
 
+	immediate = {
+		clr_country_flag = is_in_feast
+	}
+
 	option = {
 		name = "pf_feast.1.a"
 		trigger = {
@@ -59,8 +63,8 @@ country_event = {		# Feast Start Screen
 		else = {
 			add_years_of_income = -1
 		}
-		set_country_flag = tier_1_feast
-		custom_tooltip = tier_1_feast_tt
+		set_country_flag = tier_2_feast
+		custom_tooltip = tier_2_feast_tt
 		set_country_flag = hosted_feast_flag
 		if = {
 			limit = {

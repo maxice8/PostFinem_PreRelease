@@ -1,0 +1,926 @@
+# Ayup! Just to let you know, I'm using slot 43 on the messageicons.dds strip for the Federal Petitions. In vanilla it is unused
+
+petition_for_ruler_support = {
+	category = imperial_influence
+
+	require_acceptance = yes
+
+	alert_index = 43
+	alert_tooltip = petition_for_ruler_support_alert_tooltip
+
+	is_visible = {
+		is_part_of_hre = yes
+		NOT = { is_emperor = yes }
+		FROM = { is_emperor = yes }
+	}
+	is_allowed = {
+		FROM = { is_emperor = yes }
+		emperor = {
+			has_opinion = {
+				who = ROOT
+				value = 50
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = pf_if_petition_cooldown_tt
+			OR = {
+				NOT = { has_country_flag = used_petition }
+				had_country_flag = {
+					flag = used_petition
+					days = 9125
+				}
+			}
+		}
+	}
+	on_accept = {
+		emperor = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_used_petition
+			}
+			add_legitimacy = -10
+			add_adm_power = -50
+			add_imperial_influence = 1
+		}
+		clr_country_flag = used_petition
+		set_country_flag = used_petition
+		add_ruler_modifier = {
+			name = "pf_petition_1_modifier"
+			duration = 9125
+		}
+	}
+	on_decline = {
+		emperor = {
+			add_imperial_influence = -1
+		}
+	}
+
+	ai_will_do = {
+		is_at_war = no
+		emperor = {
+			has_opinion = {
+				who = ROOT
+				value = 100
+			}
+		}
+		OR = {
+			emperor = {
+				alliance_with = ROOT
+			}
+			emperor = {
+				trust = {
+					who = ROOT
+					value = 75
+				}
+			}
+		}
+	}
+
+	ai_acceptance = {
+        add_entry = {
+            name = PETITION_OPINION
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			divide_variable = {
+				which = ai_value 
+				value = 4
+			}
+        }
+		add_entry = {
+			name = PETITION_TRUST
+			export_to_variable = {
+				variable_name = ai_value
+				value = trust
+				who = FROM
+				with = ROOT
+			}			
+			subtract_variable = { 
+				which = ai_value
+				value = 50
+			}
+		}
+		add_entry = {
+			name = PETITION_DIPLO_REP
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:diplomatic_reputation
+			}
+			#1 rep = 4
+			multiply_variable = {
+				which = ai_value
+				value = 4
+			}
+		}
+		add_entry = {
+			name = PETITION_LEGITIMACY
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:legitimacy_equivalent
+			}
+			subtract_variable = {
+				which = ai_value
+				value = 100
+			}
+			divide_variable = {
+				which = ai_value
+				value = 2
+			}
+		}
+		add_entry = {
+			name = PETITION_OUR_STRENGTH
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:total_development
+			}
+			multiply_variable = {
+				which = ai_value
+				value = -1
+			}
+		}
+		add_entry = {
+			name = PETITION_KINGDOM
+			limit = {
+				ROOT = { government_rank = 2 }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = -50
+			}
+		}
+		add_entry = {
+			name = PETITION_AT_WAR
+			limit = {
+				ROOT = { is_at_war = yes }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = -50
+			}
+		}
+		add_entry = {
+			name = PETITION_IMPERIAL_AUTHORITY
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:imperial_influence
+				who = FROM
+			}
+			multiply_variable = {
+				which = ai_value
+				value = -1
+			}
+		}
+		add_entry = {
+			name = attitude_rivalry_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_rivalry } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -100 }
+		}
+		add_entry = {
+			name = attitude_hostile_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_hostile } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -100 }
+		}
+		add_entry = {
+			name = attitude_friendly_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_friendly } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 10 }
+		}
+		add_entry = {
+			name = attitude_outraged_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_outraged } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -50 }
+		}
+		add_entry = {
+			name = attitude_domineering_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_domineering } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -100 }
+		}
+		add_entry = {
+			name = attitude_protective_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_protective } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 50 }
+		}
+		add_entry = {
+			name = PETITION_ALLIANCE
+			limit = {
+				FROM = { alliance_with = ROOT }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 20
+			}
+		}
+		add_entry = {
+			name = PETITION_BONUS_REASONS
+			limit = {
+				ROOT = { has_government_attribute = more_reasons_for_petition_acceptance }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 30
+			}
+		}
+	}
+}
+petition_for_military_support = {
+	category = imperial_influence
+
+	require_acceptance = yes
+
+	alert_index = 43
+	alert_tooltip = petition_for_military_support_alert_tooltip
+
+	is_visible = {
+		is_part_of_hre = yes
+		NOT = { is_emperor = yes }
+		FROM = { is_emperor = yes }
+	}
+	is_allowed = {
+		FROM = { is_emperor = yes }
+		emperor = {
+			has_opinion = {
+				who = ROOT
+				value = 50
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = pf_if_petition_cooldown_tt
+			OR = {
+				NOT = { has_country_flag = used_petition }
+				had_country_flag = {
+					flag = used_petition
+					days = 9125
+				}
+			}
+		}
+	}
+	on_accept = {
+		emperor = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_used_petition
+			}
+			add_legitimacy = -10
+			add_mil_power = -50
+			add_imperial_influence = 1
+		}
+		clr_country_flag = used_petition
+		set_country_flag = used_petition
+		add_ruler_modifier = {
+			name = "pf_petition_2_modifier"
+			duration = 9125
+		}
+	}
+	on_decline = {
+		emperor = {
+			add_imperial_influence = -1
+		}
+	}
+
+	ai_will_do = {
+		is_at_war = no
+		emperor = {
+			has_opinion = {
+				who = ROOT
+				value = 100
+			}
+		}
+		OR = {
+			emperor = {
+				alliance_with = ROOT
+			}
+			emperor = {
+				trust = {
+					who = ROOT
+					value = 75
+				}
+			}
+		}
+	}
+
+	ai_acceptance = {
+        add_entry = {
+            name = PETITION_OPINION
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			divide_variable = {
+				which = ai_value 
+				value = 4
+			}
+        }
+		add_entry = {
+			name = PETITION_TRUST
+			export_to_variable = {
+				variable_name = ai_value
+				value = trust
+				who = FROM
+				with = ROOT
+			}			
+			subtract_variable = { 
+				which = ai_value
+				value = 50
+			}
+		}
+		add_entry = {
+			name = PETITION_DIPLO_REP
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:diplomatic_reputation
+			}
+			#1 rep = 4
+			multiply_variable = {
+				which = ai_value
+				value = 4
+			}
+		}
+		add_entry = {
+			name = PETITION_LEGITIMACY
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:legitimacy_equivalent
+			}
+			subtract_variable = {
+				which = ai_value
+				value = 100
+			}
+			divide_variable = {
+				which = ai_value
+				value = 2
+			}
+		}
+		add_entry = {
+			name = PETITION_OUR_STRENGTH
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:total_development
+			}
+			multiply_variable = {
+				which = ai_value
+				value = -1
+			}
+		}
+		add_entry = {
+			name = PETITION_KINGDOM
+			limit = {
+				ROOT = { government_rank = 2 }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = -50
+			}
+		}
+		add_entry = {
+			name = PETITION_AT_WAR
+			limit = {
+				ROOT = { is_at_war = yes }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = -50
+			}
+		}
+		add_entry = {
+			name = PETITION_IMPERIAL_AUTHORITY
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:imperial_influence
+				who = FROM
+			}
+			multiply_variable = {
+				which = ai_value
+				value = -1
+			}
+		}
+		add_entry = {
+			name = attitude_rivalry_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_rivalry } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -100 }
+		}
+		add_entry = {
+			name = attitude_hostile_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_hostile } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -100 }
+		}
+		add_entry = {
+			name = attitude_friendly_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_friendly } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 10 }
+		}
+		add_entry = {
+			name = attitude_outraged_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_outraged } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -50 }
+		}
+		add_entry = {
+			name = attitude_domineering_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_domineering } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -100 }
+		}
+		add_entry = {
+			name = attitude_protective_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_protective } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 50 }
+		}
+		add_entry = {
+			name = PETITION_ALLIANCE
+			limit = {
+				FROM = { alliance_with = ROOT }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 20
+			}
+		}
+		add_entry = {
+			name = PETITION_BONUS_REASONS
+			limit = {
+				ROOT = { has_government_attribute = more_reasons_for_petition_acceptance }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 30
+			}
+		}
+	}
+}
+petition_for_development_support = {
+	category = imperial_influence
+
+	require_acceptance = yes
+
+	alert_index = 43
+	alert_tooltip = petition_for_development_support_alert_tooltip
+
+	is_visible = {
+		is_part_of_hre = yes
+		NOT = { is_emperor = yes }
+		FROM = { is_emperor = yes }
+	}
+	is_allowed = {
+		FROM = { is_emperor = yes }
+		emperor = {
+			has_opinion = {
+				who = ROOT
+				value = 50
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = pf_if_petition_cooldown_tt
+			OR = {
+				NOT = { has_country_flag = used_petition }
+				had_country_flag = {
+					flag = used_petition
+					days = 9125
+				}
+			}
+		}
+	}
+	on_accept = {
+		emperor = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_used_petition
+			}
+			add_legitimacy = -10
+			add_dip_power = -50
+			add_imperial_influence = 1
+		}
+		clr_country_flag = used_petition
+		set_country_flag = used_petition
+		add_ruler_modifier = {
+			name = "pf_petition_3_modifier"
+			duration = 9125
+		}
+	}
+	on_decline = {
+		emperor = {
+			add_imperial_influence = -1
+		}
+	}
+
+	ai_will_do = {
+		is_at_war = no
+		emperor = {
+			has_opinion = {
+				who = ROOT
+				value = 100
+			}
+		}
+		OR = {
+			emperor = {
+				alliance_with = ROOT
+			}
+			emperor = {
+				trust = {
+					who = ROOT
+					value = 75
+				}
+			}
+		}
+	}
+
+	ai_acceptance = {
+        add_entry = {
+            name = PETITION_OPINION
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			divide_variable = {
+				which = ai_value 
+				value = 4
+			}
+        }
+		add_entry = {
+			name = PETITION_TRUST
+			export_to_variable = {
+				variable_name = ai_value
+				value = trust
+				who = FROM
+				with = ROOT
+			}			
+			subtract_variable = { 
+				which = ai_value
+				value = 50
+			}
+		}
+		add_entry = {
+			name = PETITION_DIPLO_REP
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:diplomatic_reputation
+			}
+			#1 rep = 4
+			multiply_variable = {
+				which = ai_value
+				value = 4
+			}
+		}
+		add_entry = {
+			name = PETITION_LEGITIMACY
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:legitimacy_equivalent
+			}
+			subtract_variable = {
+				which = ai_value
+				value = 100
+			}
+			divide_variable = {
+				which = ai_value
+				value = 2
+			}
+		}
+		add_entry = {
+			name = PETITION_OUR_STRENGTH
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:total_development
+			}
+			multiply_variable = {
+				which = ai_value
+				value = -1
+			}
+		}
+		add_entry = {
+			name = PETITION_KINGDOM
+			limit = {
+				ROOT = { government_rank = 2 }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = -50
+			}
+		}
+		add_entry = {
+			name = PETITION_AT_WAR
+			limit = {
+				ROOT = { is_at_war = yes }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = -50
+			}
+		}
+		add_entry = {
+			name = PETITION_IMPERIAL_AUTHORITY
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:imperial_influence
+				who = FROM
+			}
+			multiply_variable = {
+				which = ai_value
+				value = -1
+			}
+		}
+		add_entry = {
+			name = attitude_rivalry_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_rivalry } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -100 }
+		}
+		add_entry = {
+			name = attitude_hostile_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_hostile } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -100 }
+		}
+		add_entry = {
+			name = attitude_friendly_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_friendly } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 10 }
+		}
+		add_entry = {
+			name = attitude_outraged_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_outraged } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -50 }
+		}
+		add_entry = {
+			name = attitude_domineering_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_domineering } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -100 }
+		}
+		add_entry = {
+			name = attitude_protective_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_protective } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 50 }
+		}
+		add_entry = {
+			name = PETITION_ALLIANCE
+			limit = {
+				FROM = { alliance_with = ROOT }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 20
+			}
+		}
+		add_entry = {
+			name = PETITION_BONUS_REASONS
+			limit = {
+				ROOT = { has_government_attribute = more_reasons_for_petition_acceptance }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 30
+			}
+		}
+	}
+}
+petition_for_trade_support = {
+	category = imperial_influence
+
+	require_acceptance = yes
+
+	alert_index = 43
+	alert_tooltip = petition_for_trade_support_alert_tooltip
+
+	is_visible = {
+		is_part_of_hre = yes
+		NOT = { is_emperor = yes }
+		FROM = { is_emperor = yes }
+	}
+	is_allowed = {
+		FROM = { is_emperor = yes }
+		emperor = {
+			has_opinion = {
+				who = ROOT
+				value = 50
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = pf_if_petition_cooldown_tt
+			OR = {
+				NOT = { has_country_flag = used_petition }
+				had_country_flag = {
+					flag = used_petition
+					days = 9125
+				}
+			}
+		}
+	}
+	on_accept = {
+		emperor = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_used_petition
+			}
+			add_legitimacy = -10
+			add_dip_power = -50
+			add_imperial_influence = 1
+		}
+		clr_country_flag = used_petition
+		set_country_flag = used_petition
+		add_ruler_modifier = {
+			name = "pf_petition_4_modifier"
+			duration = 9125
+		}
+	}
+	on_decline = {
+		emperor = {
+			add_imperial_influence = -1
+		}
+	}
+
+	ai_will_do = {
+		is_at_war = no
+		emperor = {
+			has_opinion = {
+				who = ROOT
+				value = 100
+			}
+		}
+		OR = {
+			emperor = {
+				alliance_with = ROOT
+			}
+			emperor = {
+				trust = {
+					who = ROOT
+					value = 75
+				}
+			}
+		}
+	}
+
+	ai_acceptance = {
+        add_entry = {
+            name = PETITION_OPINION
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			divide_variable = {
+				which = ai_value 
+				value = 4
+			}
+        }
+		add_entry = {
+			name = PETITION_TRUST
+			export_to_variable = {
+				variable_name = ai_value
+				value = trust
+				who = FROM
+				with = ROOT
+			}			
+			subtract_variable = { 
+				which = ai_value
+				value = 50
+			}
+		}
+		add_entry = {
+			name = PETITION_DIPLO_REP
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:diplomatic_reputation
+			}
+			#1 rep = 4
+			multiply_variable = {
+				which = ai_value
+				value = 4
+			}
+		}
+		add_entry = {
+			name = PETITION_LEGITIMACY
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:legitimacy_equivalent
+			}
+			subtract_variable = {
+				which = ai_value
+				value = 100
+			}
+			divide_variable = {
+				which = ai_value
+				value = 2
+			}
+		}
+		add_entry = {
+			name = PETITION_OUR_STRENGTH
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:total_development
+			}
+			multiply_variable = {
+				which = ai_value
+				value = -1
+			}
+		}
+		add_entry = {
+			name = PETITION_KINGDOM
+			limit = {
+				ROOT = { government_rank = 2 }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = -50
+			}
+		}
+		add_entry = {
+			name = PETITION_AT_WAR
+			limit = {
+				ROOT = { is_at_war = yes }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = -50
+			}
+		}
+		add_entry = {
+			name = PETITION_IMPERIAL_AUTHORITY
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:imperial_influence
+				who = FROM
+			}
+			multiply_variable = {
+				which = ai_value
+				value = -1
+			}
+		}
+		add_entry = {
+			name = attitude_rivalry_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_rivalry } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -100 }
+		}
+		add_entry = {
+			name = attitude_hostile_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_hostile } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -100 }
+		}
+		add_entry = {
+			name = attitude_friendly_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_friendly } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 10 }
+		}
+		add_entry = {
+			name = attitude_outraged_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_outraged } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -50 }
+		}
+		add_entry = {
+			name = attitude_domineering_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_domineering } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -100 }
+		}
+		add_entry = {
+			name = attitude_protective_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_protective } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 50 }
+		}
+		add_entry = {
+			name = PETITION_ALLIANCE
+			limit = {
+				FROM = { alliance_with = ROOT }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 20
+			}
+		}
+		add_entry = {
+			name = PETITION_BONUS_REASONS
+			limit = {
+				ROOT = { has_government_attribute = more_reasons_for_petition_acceptance }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 30
+			}
+		}
+	}
+}

@@ -757,61 +757,6 @@ ILY_ideas = {
 	}
 }
 
-ITY_ideas = {
-	start = {
-		tolerance_own = 2
-		prestige = 1
-	}
-	
-	bonus = {
-		imperial_authority = 0.10
-	}	
-
-	trigger = {
-		tag = ITY
-	}
-	free = yes
-	
-	#Spiritual Guidance
-	ITY_ideas_1 = {
-		global_missionary_strength = 0.02
-	}
-
-	#Imperial Ambitions
-	ITY_ideas_2 = {
-		diplomatic_annexation_cost = -0.10
-		unjustified_demands = -0.20
-	}
-
-	#Prestigious Lineage
-	ITY_ideas_3 = {
-		legitimacy = 1
-		heir_chance = 0.50
-	}
-
-	#Religious Unity
-	ITY_ideas_4 = {
-		religious_unity = 0.20
-	}
-
-	#Enforced Hierarchy
-	ITY_ideas_5 = {
-		global_autonomy = -0.1
-	}
-
-	#Divine Diplomacy
-	ITY_ideas_6 = {
-		diplomatic_reputation = 2
-		diplomats = 1
-	}
-
-	#Imperial Consolidation
-	ITY_ideas_7 = {
-		province_warscore_cost = -0.10
-	}
-}
-
-
 #Europunic Minors
 ORA_ideas = {
 	start = {
@@ -3514,7 +3459,7 @@ old_germanic_ideas = {
 italian_minor_ideas = {
 	start = {
 		global_tax_modifier = 0.1
-		advisor_pool = 1
+		inflation_reduction = 0.10
 	}
 	
 	bonus = {
@@ -3529,7 +3474,6 @@ italian_minor_ideas = {
 	#Investing in Infrastructure
 	italian_minor_ideas_1 = {
 		build_cost = -0.1
-		development_cost = -0.05
 	}
 
 	#Italo-Punic Ancestors
@@ -3539,7 +3483,7 @@ italian_minor_ideas = {
 
 	#Espionage Departments
 	italian_minor_ideas_3 = {
-		diplomats = 1
+		advisor_pool = 1
 	}
 
 	#Riches of Italia
@@ -3550,14 +3494,14 @@ italian_minor_ideas = {
 
 	#Standing Armies
 	italian_minor_ideas_5 = {
-		drill_gain_modifier = 0.33
-		allow_mercenary_drill = yes
+		mercenary_cost = -0.20
+		merc_maintenance_modifier = -0.10
 	}
 
 	#Surrounded by Seas
 	italian_minor_ideas_6 = {
-		global_ship_cost = -0.10
-		global_ship_repair = 0.20
+		naval_forcelimit_modifier = 0.20
+		naval_morale = 0.10
 	}
 
 	#Investing in Knowledge

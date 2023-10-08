@@ -266,8 +266,8 @@ neapolitan_principality_reform = {
 		tag = NAP
 	}
 	modifiers = {
-		vassal_forcelimit_bonus = 0.5
 		vassal_income = 0.25
+		governing_capacity = -150
 		vassal_manpower_bonus = 0.50
 		diplomatic_upkeep = 1
 		nobles_influence_modifier = 0.10
@@ -275,5 +275,97 @@ neapolitan_principality_reform = {
 	}
 	ai = {
 		factor = 1
+	}
+}
+pf_eager_councillors_reform = {
+	icon = "pf_provincial_things"
+	allow_normal_conversion = no
+
+	potential = {
+		is_part_of_hre = yes
+	}
+	trigger = {
+		is_part_of_hre = yes
+	}
+	modifiers = {
+		possible_policy = 1
+		dip_tech_cost_modifier = -0.10
+	}
+	custom_attributes = {
+		more_reasons_for_petition_acceptance = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+pf_punic_festivals_reform = {
+	icon = "zeus"
+	allow_normal_conversion = no
+
+	potential = {
+		religion = punic_religion
+	}
+	trigger = {
+		religion = punic_religion
+	}
+	modifiers = {
+		stability_cost_modifier = -0.10
+		tolerance_own = 1
+		same_religion_advisor_cost = -0.15
+	}
+	custom_attributes = {
+		ending_wars_gives_stability = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+astartean_adventurer_reform = {
+	icon = "negusa_nagast"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+
+	potential = {
+		tag = CLN	# Conan's realm
+	}
+	trigger = {
+		tag = CLN
+	}
+	modifiers = {
+		years_of_nationalism = -5
+		loot_amount = 0.20
+		max_absolutism = -30
+	}
+	#government_abilities = {
+	#	trinovantes_cohesion_mechanic
+	#}
+	ai = {
+		factor = 5
+	}
+}
+order_of_the_shadows_reform = {
+	icon = "assassin"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+
+	potential = {
+		tag = SZO	# Saluzzo
+	}
+	trigger = {
+		tag = SZO	# Saluzzo
+	}
+	modifiers = {
+		spy_action_cost_modifier = -0.10
+		spy_offence = 0.10
+		global_autonomy = -0.05
+		max_absolutism = 10
+	}
+	government_abilities = {
+		espionage_policy_mechanic
+	}
+	ai = {
+		factor = 5
 	}
 }

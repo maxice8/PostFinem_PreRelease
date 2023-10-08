@@ -1,0 +1,173 @@
+espionage_policy_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 12
+	available = {
+		always = yes
+	}
+
+	powers = {
+		pf_sneakiness = {
+			min = 0
+			max = 100
+			default = 40
+			gui = pf_sneakiness_gov_mech
+
+			scaled_modifier = {
+				modifier = {
+					discovered_relations_impact = -0.5
+					improve_relation_modifier = 0.25
+					all_estate_loyalty_equilibrium = 0.05
+				}
+			}
+
+			reverse_scaled_modifier = {
+				modifier = {
+					stability_cost_to_declare_war = 1
+				}
+			}
+		}
+	}
+	interactions = {
+		pf_ep_subversion = {
+			cost_type = pf_sneakiness
+			gui = ep_button_1
+			center = no
+			cost = 0
+
+			trigger = {
+				if = {
+					limit = {
+						NOT = { has_country_modifier = ep_subversion_modifier }
+					}
+					has_government_power = {
+						mechanic_type = espionage_policy_mechanic
+						power_type = pf_sneakiness
+						value = 10
+					}
+				}
+				else = {
+					has_country_modifier = ep_subversion_modifier
+				}
+			}
+
+			effect = {
+				if = {
+					limit = {
+						NOT = { has_country_modifier = ep_subversion_modifier }
+					}
+					add_government_power = {
+						mechanic_type = espionage_policy_mechanic
+						power_type = pf_sneakiness
+						value = -10
+					}
+					add_country_modifier = {
+						name = "ep_subversion_modifier"
+						duration = 1825
+					}
+				}
+				else = {
+					remove_country_modifier = ep_subversion_modifier
+				}
+			}
+
+			cooldown_years = 1
+			ai_chance = {
+				factor = 0
+			}
+		}
+		pf_ep_subterfuge = {
+			cost_type = pf_sneakiness
+			gui = ep_button_2
+			center = no
+			cost = 0
+
+			trigger = {
+				if = {
+					limit = {
+						NOT = { has_country_modifier = ep_subterfuge_modifier }
+					}
+					has_government_power = {
+						mechanic_type = espionage_policy_mechanic
+						power_type = pf_sneakiness
+						value = 10
+					}
+				}
+				else = {
+					has_country_modifier = ep_subterfuge_modifier
+				}
+			}
+
+			effect = {
+				if = {
+					limit = {
+						NOT = { has_country_modifier = ep_subterfuge_modifier }
+					}
+					add_government_power = {
+						mechanic_type = espionage_policy_mechanic
+						power_type = pf_sneakiness
+						value = -10
+					}
+					add_country_modifier = {
+						name = "ep_subterfuge_modifier"
+						duration = 1825
+					}
+				}
+				else = {
+					remove_country_modifier = ep_subterfuge_modifier
+				}
+			}
+
+			cooldown_years = 1
+			ai_chance = {
+				factor = 0
+			}
+		}
+		pf_ep_infiltration = {
+			cost_type = pf_sneakiness
+			gui = ep_button_3
+			center = no
+			cost = 0
+
+			trigger = {
+				if = {
+					limit = {
+						NOT = { has_country_modifier = ep_infiltration_modifier }
+					}
+					has_government_power = {
+						mechanic_type = espionage_policy_mechanic
+						power_type = pf_sneakiness
+						value = 10
+					}
+				}
+				else = {
+					has_country_modifier = ep_infiltration_modifier
+				}
+			}
+
+			effect = {
+				if = {
+					limit = {
+						NOT = { has_country_modifier = ep_infiltration_modifier }
+					}
+					add_government_power = {
+						mechanic_type = espionage_policy_mechanic
+						power_type = pf_sneakiness
+						value = -10
+					}
+					add_country_modifier = {
+						name = "ep_infiltration_modifier"
+						duration = 1825
+					}
+				}
+				else = {
+					remove_country_modifier = ep_infiltration_modifier
+				}
+			}
+
+			cooldown_years = 1
+			ai_chance = {
+				factor = 0
+			}
+		}
+	}
+}

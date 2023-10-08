@@ -73,6 +73,13 @@ on_startup = {
 		}
 		country_event = { id = pf_per_events.0 }
 	}
+	if = {
+		limit = {
+			tag = CLN
+			NOT = { is_year = 1445 }
+		}
+		country_event = { id = pf_if.16 }	# The travels of Conan
+	}
 }	
 
 # country
@@ -1614,6 +1621,14 @@ on_adm_development = {
 			90 = { }
 		}
 	}
+	if = {
+		limit = {
+			province_id = 121	# Naples
+			owner = { has_country_flag = naples_gets_bonus_from_dev_flag }
+		}
+		add_prosperity = 1
+		owner = { add_corruption = -0.05 }
+	}
 }
 
 # province
@@ -1656,6 +1671,14 @@ on_dip_development = {
 			90 = { }
 		}
 	}
+	if = {
+		limit = {
+			province_id = 121	# Naples
+			owner = { has_country_flag = naples_gets_bonus_from_dev_flag }
+		}
+		add_prosperity = 1
+		owner = { add_prestige = 0.5 }
+	}
 }
 
 # province
@@ -1697,6 +1720,14 @@ on_mil_development = {
 			10 = { add_base_tax = 1 }
 			90 = { }
 		}
+	}
+	if = {
+		limit = {
+			province_id = 121	# Naples
+			owner = { has_country_flag = naples_gets_bonus_from_dev_flag }
+		}
+		add_prosperity = 1
+		owner = { add_manpower = 0.5 }
 	}
 }
 
@@ -5556,7 +5587,13 @@ on_scorch_earth  = { #ROOT - scorching country, FROM - scorched province
 }
 
 on_war_ended = { #ROOT - Winer FROM - Loser
-	
+	if = {
+		limit = { has_government_attribute = ending_wars_gives_stability }
+		random = {
+			chance = 25
+			add_stability_or_adm_power = yes
+		}
+	}
 }
 
 on_alliance_broken = { #ROOT - Original alliance creator, FROM - Alliance accepter

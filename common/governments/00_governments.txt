@@ -18,6 +18,7 @@ monarchy = {
 				pf_brittonic_tribe_reform
 				pf_blackcoat_dictatorship
 				neapolitan_principality_reform
+				astartean_adventurer_reform
 				# ]]]
 
 				#Vanilla
@@ -228,6 +229,9 @@ monarchy = {
 				head_of_the_patriarchy_reform
 				anglican_state_church_reform
 				english_conciliarism_reform
+				# pf [[[
+				pf_punic_festivals_reform
+				# ]]]
 			}
 		}
 		military_doctrines = {
@@ -341,6 +345,9 @@ monarchy = {
 				direct_royal_administration_reform
 				administration_of_the_parliament_reform
 				strengthened_parliament_reform
+				# pf [[[
+				pf_eager_councillors_reform
+				# ]]]
 			}
 		}
 		economical_matters = {
@@ -675,9 +682,6 @@ republic = {
 		}
 		republic_and_religion = {
 			reforms = {
-				# pf [[[
-				pf_lag_acts_of_toleration
-				# ]]]
 				papal_embassy_reform
 				lands_for_the_monasteries_reform
 				focus_of_the_patriarchy_reform
@@ -714,6 +718,10 @@ republic = {
 				head_of_the_patriarchy_reform
 				anglican_state_church_reform
 				english_conciliarism_reform
+				# pf [[[
+				pf_punic_festivals_reform
+				pf_lag_acts_of_toleration
+				# ]]]
 			}
 		}
 		military_doctrines = {
@@ -809,6 +817,7 @@ republic = {
 			reforms = {
 				# pf [[[
 				pf_lag_provincial_things
+				pf_eager_councillors_reform
 				# ]]]
 				provincial_governments_reform
 				administrative_divisions_reform
@@ -1189,6 +1198,7 @@ theocracy = {
 				# pf [[[
 				pf_persian_satrapy
 				pf_athens_archon
+				order_of_the_shadows_reform
 				# ]]]
 				# Vanilla
 				leading_clergy_reform
@@ -1274,6 +1284,9 @@ theocracy = {
 				strengthened_the_patriarchy_reform
 				head_of_the_patriarchy_reform
 				anglican_state_church_reform
+				# pf [[[
+				pf_punic_festivals_reform
+				# ]]]
 			}
 		}
 		military_doctrines = {
@@ -1364,6 +1377,9 @@ theocracy = {
 				pious_merchants_reform
 				monastic_breweries_reform
 				warrior_monks_reform
+				# pf [[[
+				pf_eager_councillors_reform
+				# ]]]
 			}
 		}
 		economical_matters = {
