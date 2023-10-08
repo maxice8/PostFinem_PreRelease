@@ -16736,3 +16736,53 @@ UKR_ideas = {
 		yearly_patriarch_authority = 0.005
 	}
 }
+
+satrapy_ideas = {
+	start = {
+		global_unrest = -2
+		advisor_cost = -0.1
+	}
+	
+	bonus = {
+		culture_conversion_cost = -0.1
+	}
+	
+	trigger = {
+		OR = {
+			tag = BAB
+			tag = ASY
+			tag = CLC
+			tag = CSP
+			tag = TIG
+			tag = RJT
+			tag = GJR
+			tag = PAJ
+			tag = KSM
+			tag = MGA
+			tag = AMY
+		}
+	}
+	free = yes
+
+	satrapy_ideas_1 = {
+		tolerance_own = 2
+	}
+	satrapy_ideas_2 = {
+		fort_maintenance_modifier = -0.1
+	}
+	satrapy_ideas_3 = {
+		build_cost = -0.1
+	}
+	satrapy_ideas_4 = {
+		infantry_power = 0.15
+	}
+	satrapy_ideas_5 = {
+		adm_tech_cost_modifier = -0.1
+	}
+	satrapy_ideas_6 = {
+		development_cost = -0.1
+	}
+	satrapy_ideas_7 = {
+		global_trade_power = 0.1
+	}
+}
