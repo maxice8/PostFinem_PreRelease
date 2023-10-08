@@ -1,0 +1,19 @@
+namespace = pf_ksb_events
+
+country_event = {
+	id = pf_ksb_events.1
+	title = pf_ksb_events.1.t
+	desc = pf_ksb_events.1.d
+	picture = FLAGSHIP_SUNK_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		tag = ksb
+	}
+	option = {
+		name = pf_ksb_events.1a
+		4745 = {
+			add_permanent_claim = ROOT
+		}
+		add_prestige = 10
+	}
+}
