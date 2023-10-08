@@ -3067,7 +3067,7 @@ country_event = {
 			pf_rjt_expansion_claims = {
 				limit = { 
 					country_or_non_sovereign_subject_holds = ROOT
-					NOT = { owned_by = RAJ }
+					NOT = { owned_by = RJT }
 				}
 				cede_province = RJT
 			}
@@ -3088,6 +3088,7 @@ country_event = {
 		name = "pf_per_events_38_option"
 		ai_chance = { factor = 100 }
 		custom_tooltip = pf_per_events_38_tt
+	}
 }
 
 # Satrapy Expansion Plan: Grant Land to Gujaratistan
@@ -3708,7 +3709,7 @@ country_event = {
 	desc = "pf_per_events_64_desc"
 	picture = CHURCH_ESTATE_2_eventPicture
 	is_triggered_only = yes
-	fires_only_once = yes
+	fire_only_once = yes
 
 	option = {
 		name = "pf_per_events_64_option_1"
