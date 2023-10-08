@@ -6,14 +6,58 @@ country_event = {
 	desc = pf_ksb_events.1.d
 	picture = FLAGSHIP_SUNK_eventPicture
 	is_triggered_only = yes
+	fire_only_once = yes
 	trigger = {
-		tag = ksb
+		tag = KSB
 	}
 	option = {
 		name = pf_ksb_events.1a
 		4745 = {
 			add_permanent_claim = ROOT
 		}
-		add_prestige = 10
+		add_prestige = 5
+		add_legitimacy = -20
 	}
 }
+
+country_event = {
+	id = pf_ksb_events.2
+	title = pf_ksb_events.2.t
+	desc = pf_ksb_events.2.d
+	picture = RUNESTONE_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = KSB
+		controls = 4745
+	}
+	option = {
+		name = pf_ksb_events.2a
+		4745 = {
+			add_core = ROOT
+		}
+		add_legitimacy = 20
+	}
+}
+
+province_event = {
+	id = pf_ksb_events.3
+	title = pf_ksb_events.3.t
+	desc = pf_ksb_events.3.d
+	picture = RUNESTONE_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		root = {
+			area = vorpommern_area
+			controlled_by = KSB
+		}
+	}
+	option = {
+		name = pf_ksb_events.3a
+		root = {
+			change_culture = polabian
+			change_religion = slavic_religion
+		}
+	}
+}
+

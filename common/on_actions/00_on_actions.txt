@@ -52,6 +52,13 @@ on_startup = {
 		}
 		country_event = { id = pf_romuva_events.1 }
 	}
+	if = {
+		limit = {
+			tag = KSB
+			NOT = { is_year = 1445 }
+		}
+		country_event = { id = pf_ksb_events.1 }
+	}
 	#if = {
 	#	limit = {
 	#		OR = {
@@ -659,6 +666,12 @@ on_siege_won_country = {
 			add_church_power = 5
 		}
 	}
+	if = {
+		limit = {
+			tag = KSB
+		}
+		country_event = { id = pf_ksb_events.2 }
+	}
 	grant_manpower_from_besieging_fort = yes
 	events = {
 		flavor_oir.5 # Oirats capture Beijing
@@ -759,6 +772,17 @@ on_siege_won_province = {
 				limit = { is_claim = ROOT}
 				remove_claim = ROOT
 			}
+		}
+	}
+	if = {
+		limit = {
+			controller = {
+				tag = KSB
+			}
+			area = vorpommern_area
+		}
+		province_event = {
+			id = pf_ksb_events.3
 		}
 	}
 }
