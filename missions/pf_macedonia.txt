@@ -847,7 +847,7 @@ mac_3 = {
 			}
 		} 
 
-		effect = {    
+		effect = {  
 			simple_dynamic_effect = {
 				first_custom_tooltip = mac_hellenic_hegemon_tt_1 #if you own the lands directly
 				first_limit = "
@@ -881,6 +881,15 @@ mac_3 = {
 					}
 				"
 				second_effect = "
+					hidden_effect = {
+						AEG = {						
+							add_historical_friend = ROOT
+							remove_historical_rival = ROOT  
+						}
+					}				
+					remove_historical_rival = AEG  
+					add_historical_friend = AEG
+					custom_tooltip = empty_line_tt
 					AEG = {
 						add_country_modifier = {
 							name = mac_hellenic_hegemon_aegyptos_modifier
@@ -891,6 +900,7 @@ mac_3 = {
 			}	
 			maghreb_region = { add_permanent_claim = ROOT }
 		}  
+		
 	}
 }
 mac_4 = {
@@ -1311,6 +1321,7 @@ mac_cabinet_5 = {
 			land_forcelimit = 75
 			army_size = 75
 			num_of_cavalry = 20
+			reform_level = 5
 		} 
 
 		effect = {  
