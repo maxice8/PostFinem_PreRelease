@@ -158,3 +158,17 @@ has_atleast_x_trading_bonuses = {
 		}
 	}
 }
+
+
+pf_belongs_to_greek_culture_group = {
+	custom_trigger_tooltip = {
+		tooltip = belongs_to_greek_group_tt
+		OR = {
+			culture_group = macedonian_greek
+			culture_group = levantine_greek
+			culture_group = anatolian_greek
+			culture_group = egyptian_greek
+		}
+	}
+
+}

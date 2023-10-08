@@ -7,6 +7,13 @@
  CRO_CAR: "Car"
  ancient_cultures: "Ancient Cultures"
 
+#Holy Sites
+ EST_104_HOLY_SITE:0 "From the §Y[104.GetName]§! Holy Site: "
+ EST_118_HOLY_SITE:0 "From the §Y[118.GetName]§! Holy Site: "
+ EST_124_HOLY_SITE:0 "From the §Y[124.GetName]§! Holy Site: "
+ EST_341_HOLY_SITE:0 "From the §Y[341.GetName]§! Holy Site: "
+ EST_146_HOLY_SITE:0 "From the §Y[146.GetName]§! Holy Site: "
+
  punic_group:0 "Punic"
  punic_religion: "Punic"
  romana: "Romana"
@@ -161,3 +168,69 @@
  njord_lag_upgraded_desc:0 "The father of Freya, god of the sea and wealth will bring food to the table for his worshippers."
  snotra_lag_upgraded:0 "Snotra"
  snotra_lag_upgraded_desc:0 "Snotra is the clever goddess. A wise man or woman can be called snotr in her honor."
+
+
+ #Religion itself
+ kemetic:0 "Kemetic"
+ kemetic_religion_desc:0 "Kemeticism was a complex system of polytheistic beliefs and rituals that formed an integral part of ancient Egyptian culture. It centered on the Egyptians' interactions with many deities believed to be present in, and in control of the world. Rituals such as prayer and offerings were provided to the gods to gain their favor. Formal religious practice centered on the pharaohs, the rulers of Egypt, believed to possess divine powers by virtue of their positions."
+ kemetic_rebels_demand:0 "Convert $COUNTRYNAME$"
+ kemetic_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ kemetic_rebels_title:0 "Religious"
+ kemetic_rebels_name:0 "$RELIGION$ Zealots"
+ kemetic_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ kemetic_rebels_army:0 "$RELIGION$ Army"
+
+ #Deities
+ pf_amenra:0 "Amen-Ra"
+ pf_aset:0 "Aset"
+ pf_heru:0 "Heru"
+ pf_sutekh:0 "Sutekh"
+ pf_sebek:0 "Sebek"
+ pf_wsir:0 "Usir"
+ pf_ptah:0 "Ptah"
+ pf_djehuty:0 "Djehuty"
+
+ pf_amenra_desc:0 "Amen-Ra is the God of the sun, King of the God and chief of the Heliopolitan Ennead."
+ pf_aset_desc:0 "Aset is the Godess of Magic, Family and Motherhood. The wife to Usir and mother of Heru, she helped the latter overthrow his uncle - the pretender Sutekh."
+ pf_heru_desc:0 "Heru is the God of Royalty, War and Vengeance, as well as the mythical progenitor of every egyptian Pharaoh according to Kemetic beliefs. According to these same beliefs he was the last God to rule the earth."
+ pf_sutekh_desc:0 "Sutekh is the god of Chaos, Deserts, Strength and Darkness. He rules the arid red lands bordering the valley. A temperamental deity, he can be both a threat or an ally to the people of Kemet."
+ pf_sebek_desc:0 "Sebek is the crocodile-headed deity of the Fayyum. A violent, aimalistic God, he protects fishermen, lends his strength to the ruler and was said to manifest in the form of a huge sacred beast at Kom-Ombos."
+ pf_wsir_desc:0 "Usir is the God of the Dead, whom he also judges. He holds sway over the Nile's waters. After being murdered, he was succeeded to the throne of Kemet by his usurper and brother, Sutekh."
+ pf_ptah_desc:0 "Ptah is the patron of craftsmen, and according to some tales, the shaper of the earth and men - though he is also sometimes said to share this task with the ram-headed Khnum or Amen-Ra. He rewards the dilligent and the crafty."
+ pf_djehuty_desc:0 "Djehuty is the God of Maths, Writing and Law, and is often represented as an Ibis. According to Kemetic beliefs, he was responsible for inventing hieroglyphs and the creation of the fear epagomenal days after gambling with the moon God Khonsu."
+
+ EGYPT_HERETIC:0 "Atenist"
+
+ # Neterism
+ neterist:0 "Neterist"
+ neterist_religion_desc:0 "Neterism is one of the denominations for a highly syncretic belief, representing the final evolution of the native Egyptian paganism by combining it with Greek beliefs, hellenic philosophy and heavily emphasising the divine nature of the monarch - who was believed to be the child of Zeus-Amon."
+ neteristrebels_demand:0 "Convert $COUNTRYNAME$"
+ neterist_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ neterist_rebels_title:0 "Religious"
+ neterist_rebels_name:0 "$RELIGION$ Zealots"
+ neterist_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ neterist_rebels_army:0 "$RELIGION$ Army"
+ NETERIST_ASPECTS_LONG:0 "Tenet"
+ NETERIST_ASPECTS_SHORT:0 "Tenet"
+
+ NETERIST_HERETIC:0 "Platonists"
+
+# Aspects
+ neterist_serapis_cult_aspect:0 "The Cult of Serapis"
+ desc_neterist_serapis_cult_aspect:0 "§YFestival§!: celebrating this festival will reduce autonomy in all of our provinces by §G20§!."
+ neterist_religious_divinity_aspect:0 "Proclaim Religious Divinity"
+ desc_neterist_religious_divinity_aspect:0 "§YFestival§!: celebrating this festival will give us §G20§! government reform progress and increase our estates' loyalty by §G5§!."
+ neterist_recruit_scholars_aspect:0 "Recruit Mystic Scholars"
+ desc_neterist_recruit_scholars_aspect:0 "§YFestival§!: celebrating this festival will grant us a randomly selected, discounted, level 3 advisor."
+ neterist_false_conversion_aspect:0 "Sanctioned False Conversions"
+ desc_neterist_false_conversion_aspect:0 "Freeing our provinces will grant us some §Ymanpower§!."
+ neterist_wandering_scholars_aspect:0 "Wandering Scholars"
+ desc_neterist_wandering_scholars_aspect:0 "All non-neterist countries gain a passive §G+20§! to their opinion of us."
+ neterist_embedded_converts_aspect:0 "Embedded Converts"
+ desc_neterist_embedded_converts_aspect:0 "Conquered provinces start with less autonomy."
+ neterist_adaptive_conquerors_aspect:0 "Adaptive Conquerors"
+ desc_neterist_adaptive_conquerors_aspect:0 ""
+ neterist_alexandrian_philosophy_aspect:0 "Alexandrian Philosophy"
+ desc_neterist_alexandrian_philosophy_aspect:0 "Building universities or temples increases or innovativness by §Y1§!. Destroying these buildings reduces our innovativness by this same ammount."
+ neterist_communities_aspect:0 "Communities of the Faithful"
+ desc_neterist_communities_aspect:0 "Neterist provinces cost less to govern and have a lowered state maintenance."
