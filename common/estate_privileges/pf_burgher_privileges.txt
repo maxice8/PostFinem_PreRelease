@@ -332,9 +332,20 @@ estate_burghers_pf_per_mountain_development = {
 	influence = 0.05
 	loyalty = 0.05
 	is_valid = {
-		has_country_flag = pf_per_unlocked_mountain_development_privilege
+		OR = {
+			has_mission = pf_per_develop_mountain_cities
+			has_unlocked_estate_privilege = {
+				estate_privilege = estate_burghers_pf_per_mountain_development
+			}
+		}
 	}
 	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = has_unlocked_estate_burghers_pf_per_mountain_development
+			has_unlocked_estate_privilege = {
+				estate_privilege = estate_burghers_pf_per_mountain_development
+			}
+		}
 		any_owned_province = {
 			has_terrain = mountain
 		}

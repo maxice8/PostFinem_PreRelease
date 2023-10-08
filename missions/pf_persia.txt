@@ -476,6 +476,11 @@ pf_per_1 = {
 				remove_estate_privilege = estate_burghers_economical_boost
 				set_estate_privilege = estate_burghers_pf_per_economical_boost
 			}
+			hidden_effect = {
+				unlock_estate_privilege = {
+					estate_privilege = estate_burghers_pf_per_economical_boost
+				}
+			}
 			set_country_flag = pf_per_unlocked_upgraded_trade_privilege
 
 			define_advisor = {
@@ -1433,8 +1438,9 @@ pf_per_3 = {
 
 		# Unlock Burgher priv giving -25% dev cost on mountains
 		effect = {
-			custom_tooltip = pf_per_unlock_mountain_development_tt
-			set_country_flag = pf_per_unlocked_mountain_development_privilege
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_pf_per_mountain_development
+			}
 		}
 	}
 
