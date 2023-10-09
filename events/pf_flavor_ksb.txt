@@ -58,6 +58,38 @@ province_event = {
 			change_culture = polabian
 			change_religion = slavic_religion
 		}
+		KSB = {
+			country_event = {
+				id = pf_ksb_events.4
+			}
+		}
 	}
 }
+
+country_event = {
+	id = pf_ksb_events.4
+	title = pf_ksb_events.4.t
+	desc = pf_ksb_events.4.d
+	picture = RUNESTONE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = pf_ksb_events.4a
+		custom_tooltip = "ksb_polabians_again_tt"
+	}
+}
+
+country_event = {
+	id = pf_ksb_events.1000
+	title = pf_ksb_events.1000.t
+	desc = pf_ksb_events.1000.d
+	picture = RUNESTONE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = pf_ksb_events.1000a
+		change_government = theocracy
+		add_government_reform = pf_svetovid_theocracy
+	}
+}
+
+
 
