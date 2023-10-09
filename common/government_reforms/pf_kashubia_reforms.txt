@@ -30,8 +30,12 @@ pf_svetovid_theocracy = {
 		church_loyalty_modifier = 0.1
 		extra_manpower_at_religious_war = yes
 		church_power_modifier = 0.25
+		devotion = -1
 	}
 	ai = {
 		factor = 0.5 #generic
+	}
+	government_abilities = {
+		pf_svetovid_dedication_mechanic
 	}
 }

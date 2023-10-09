@@ -392,6 +392,16 @@ on_war_won = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			has_government_mechanic = pf_svetovid_dedication_mechanic
+		}
+		add_government_power = {
+			mechanic_type = pf_svetovid_dedication_mechanic
+			power_type = pf_svetovid_dedication
+			value = 10
+		}
+	}
 }
 
 # country
@@ -424,6 +434,18 @@ on_war_lost = {
 		name = just_lost_war_timer
 		duration = 10
 		hidden = yes
+	}
+	if = {
+		limit = {
+			has_government_mechanic = pf_svetovid_dedication_mechanic
+		}
+		
+			add_government_power = {
+				mechanic_type = pf_svetovid_dedication_mechanic
+				power_type = pf_svetovid_dedication
+				value = -10
+			}
+		
 	}
 }
 on_main_war_lost = {
@@ -578,6 +600,20 @@ on_battle_won_unit = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			unit_owner = {
+				has_government_mechanic = pf_svetovid_dedication_mechanic
+			}
+		}
+		unit_owner ={
+		add_government_power = {
+			mechanic_type = pf_svetovid_dedication_mechanic
+			power_type = pf_svetovid_dedication
+			value = 1
+		}
+		}
+	}
 }
 
 # #Unit Scope OnAction for Battle Lost
@@ -600,6 +636,20 @@ on_battle_lost_unit = {
             country_event = { id = flavor_oir.2 }
         }
     }
+	if = {
+		limit = {
+			unit_owner = {
+			has_government_mechanic = pf_svetovid_dedication_mechanic
+			}
+		}
+		unit_owner = {
+			add_government_power = {
+				mechanic_type = pf_svetovid_dedication_mechanic
+				power_type = pf_svetovid_dedication
+				value = -1
+			}
+		}
+	}
 }
 
 # province
@@ -1627,7 +1677,20 @@ on_adm_development = {
 				value = 0.25
 			}
 		}
-	}	
+	}
+	if = {
+		limit = {
+			owner = { has_government_mechanic = pf_svetovid_dedication_mechanic }
+			religion = ROOT
+		}
+		owner = {
+			add_government_power = {
+				mechanic_type = pf_svetovid_dedication_mechanic
+				power_type = pf_svetovid_dedication
+				value = 0.25
+			}
+		}
+	}
 }
 
 # province
@@ -1660,6 +1723,19 @@ on_dip_development = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			owner = { has_government_mechanic = pf_svetovid_dedication_mechanic }
+			religion = ROOT
+		}
+		owner = {
+			add_government_power = {
+				mechanic_type = pf_svetovid_dedication_mechanic
+				power_type = pf_svetovid_dedication
+				value = 0.25
+			}
+		}
+	}
 }
 
 # province
@@ -1688,6 +1764,19 @@ on_mil_development = {
 			add_government_power = {
 				mechanic_type = gaul_confederation_mechanic
 				power_type = gaul_confederation
+				value = 0.25
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = { has_government_mechanic = pf_svetovid_dedication_mechanic }
+			religion = ROOT
+		}
+		owner = {
+			add_government_power = {
+				mechanic_type = pf_svetovid_dedication_mechanic
+				power_type = pf_svetovid_dedication
 				value = 0.25
 			}
 		}

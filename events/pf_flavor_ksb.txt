@@ -88,6 +88,14 @@ country_event = {
 		name = pf_ksb_events.1000a
 		change_government = theocracy
 		add_government_reform = pf_svetovid_theocracy
+		if = {
+			limit = { has_government_mechanic =  pf_svetovid_dedication_mechanic }
+			add_government_power = {
+				mechanic_type = pf_svetovid_dedication_mechanic
+				power_type = pf_svetovid_dedication
+				value = 5
+			}
+		}
 	}
 }
 
