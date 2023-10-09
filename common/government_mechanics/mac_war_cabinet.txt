@@ -40,6 +40,15 @@ mac_war_cabinet_mechanic = {
 					monthly_mac_war_cabinet_organization = -0.1
 				}
 			}
+			scaled_modifier = {
+				start_value = 25
+				trigger = {
+					NOT = { has_country_modifier = mac_promote_cohesion_with_war_cabinet_modifier }
+				}
+				modifier = {
+					monthly_mac_war_cabinet_organization = -0.05
+				}
+			}
 			reverse_scaled_modifier = {
 				end_value = 50 
 				modifier = {
@@ -51,13 +60,6 @@ mac_war_cabinet_mechanic = {
 					land_forcelimit_modifier = -0.5
 				}
 			}
-			# reverse_scaled_modifier = {  #Cheat for stupid-ass AI
-			# 	end_value = 75 
-			# 	trigger = { ai = yes }
-			# 	modifier = {
-			# 		monthly_mac_war_cabinet_organization = 0.1
-			# 	}
-			# }
 		}
 	}
 }
