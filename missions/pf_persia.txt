@@ -1839,8 +1839,13 @@ pf_per_4 = {
 		required_missions = { pf_per_invade_kashmir }
 
 		provinces_to_highlight = {
-			area = multan_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			OR = {
+				AND = {
+					area = multan_area
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				owned_by = MUL
+			}
 		}
 
 		# Own multan area, Multan does not exist
