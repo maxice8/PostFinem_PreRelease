@@ -211,8 +211,8 @@ estate_nobles_assign_grand_offices = {
 
 	}
 	benefits = {
-		relation_with_same_culture = 5
-		allow_client_states = yes
+		relation_with_same_culture = 15
+		legitimacy = 1
 	}
 	ai_will_do = {
 		factor = 10

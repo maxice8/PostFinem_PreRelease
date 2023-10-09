@@ -1195,20 +1195,52 @@ mac_archon_friend_5 = {
 		required_missions = { pf_mac_why_go_alone } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			is_defender_of_faith = yes
+			is_papal_controller = yes
+			papal_influence = 100
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_prestige_or_monarch_power = { amount = 25 }
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = mac_archon_friend_modifier
+				duration = 7300
+			}
+		} 
 	}
 
 	mac_archon_friend_2 = {
 		icon = catholic_volunteers
 		position = 3
 		required_missions = { mac_archon_friend_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				AND = {
+					owned_by = ROOT
+					NOT = { religion = hellenic }
+				}
+				AND = {
+					owned_by = ATH
+					owner = {
+						NOT = { alliance_with = ROOT }
+					}
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			alliance_with = ATH
+			num_of_owned_provinces_with = {
+				value = 100
+				religion = hellenic
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			pf_unlock_great_crusade_cb = yes
+		} 
 	}
 }
 mac_archon_subject_5 = {
@@ -1486,16 +1518,19 @@ mac_eco_2 = {
 			1319 = {
 				trade_node_value = 20
 			}
-			num_of_owned_provinces_with = {
-				value = 5
-				OR = {
-					province_id = 1319
-					any_trade_node_member_province = {
+			custom_trigger_tooltip = {
+				tooltip = mac_regional_trade_hub_trigger
+				num_of_owned_provinces_with = {
+					value = 5
+					OR = {
 						province_id = 1319
+						any_trade_node_member_province = {
+							province_id = 1319
+						}
 					}
+					province_has_center_of_trade_of_level = 2
+					has_trade_building_trigger = yes
 				}
-				province_has_center_of_trade_of_level = 2
-				has_trade_building_trigger = yes
 			}
 		} 
 
