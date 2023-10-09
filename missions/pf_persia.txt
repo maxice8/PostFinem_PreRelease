@@ -1378,10 +1378,11 @@ pf_per_3 = {
 			}
 			set_country_flag = pf_per_satrapy_demand_consequences_1
 			custom_tooltip = pf_per_satrapy_demand_consequences_1_tt
+			
+			marwar_area = { add_permanent_claim = PER }
+			patan_area = { add_permanent_claim = PER }
 		}
 
-		marwar_area = { add_permanent_claim = PER }
-		patan_area = { add_permanent_claim = PER }
 	}
 
 	pf_per_embrace_renaissance = {
