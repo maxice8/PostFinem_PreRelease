@@ -215,7 +215,7 @@ pf_per_1 = {
 			NOT = {
 				owner = {
 					religion = zoroastrian
-					any_ally = { tag = PER }
+					alliance_with = PER
 				}
 			}
 		}
