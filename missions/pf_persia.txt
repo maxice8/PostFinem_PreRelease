@@ -2017,14 +2017,29 @@ pf_per_4 = {
 
 		# If allied to Gujarat they become a Satrapy, cede any land outside their Satrapy region to other Satrapies, else Satrapy there gets base production there
 		effect = {
-			custom_tooltip = pf_per_deal_with_gujarat_tt
+			if = {
+				limit = { exists = GJR }
+				custom_tooltip = pf_per_deal_with_gujarat_yes_tt
+			}
+			else = {
+				custom_tooltip = pf_per_deal_with_gujarat_no_tt
+			}
 			tooltip = {
 				saurashtra_area = { add_base_production = 1 }
 				ahmedabad_area = { add_base_production = 1 }
 				517 = { add_base_production = 1 }
 				4430 = { add_base_production = 1 }
 			}
-			custom_tooltip = pf_per_deal_with_gujarat_2_tt
+			if = {
+				limit = {
+					NOT = { exists = GJR }
+					alliance_with = GUJ
+				}
+				custom_tooltip = pf_per_deal_with_gujarat_2_yes_tt
+			}
+			else = {
+				custom_tooltip = pf_per_deal_with_gujarat_2_no_tt
+			}
 			tooltip = {
 				create_subject = {
 					subject_type = satrapy
