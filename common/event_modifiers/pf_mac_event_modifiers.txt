@@ -141,3 +141,12 @@ mac_finished_coup_disaster_modifier_2 = {
 pf_recruited_phalanx_modifier = {
 
 }
+
+mac_promote_cohesion_with_war_cabinet_modifier = {
+   movement_speed = 0.1
+   army_tradition_from_battle = 0.5
+}
+mac_archon_friend_modifier = {
+   papal_influence = 2
+   prestige_per_development_from_conversion = 0.25
+}

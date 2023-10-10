@@ -1212,45 +1212,45 @@ herzegovina_monarchy = {
 
 holy_roman_electors_monarchy = {
 	rank = {
-		1 = ELECTORATE_DUCHY #Kurfuerstentum
-		2 = KINGDOM
-		3 = EMPIRE
+		1 = ELECTOR_DUCATUS
+		2 = ELECTOR_REGNUM
+		3 = ELECTOR_IMPERIUM
 	}
 
 	ruler_male = {
-		1 = PRINCE_ELECTOR
-		2 = KING_ELECTOR
-		3 = EMPEROR
+		1 = ELECTOR_DUX
+		2 = ELECTOR_REX
+		3 = ELECTOR_IMPERATOR
 	}
 
 	ruler_female = {
-		1 = PRINCESS_ELECTOR
-		2 = QUEEN_ELECTOR	
-		3 = EMPRESS
+		1 = ELECTOR_DUCESSA
+		2 = ELECTOR_REGINNA
+		3 = ELECTOR_IMPERATRIX
 	}
 	
 	consort_male  = {
-		1 = ELECTOR
-		2 = ELECTOR
-		3 = ELECTOR
+		1 = DUCALIS
+		2 = REGALIS
+		3 = IMPERIALIS
 	}
 	
 	consort_female = {
-		1 = ELECTRESS
-		2 = ELECTRESS
-		3 = ELECTRESS
+		1 = DUCALINA
+		2 = REGALINA
+		3 = IMPERALINA
 	}
 	
 	heir_male = {
-		1 = HEIR
-		2 = HEIR
-		3 = HEIR
+		1 = DUCULUS
+		2 = REGULUS
+		3 = CAESAR
 	}
 
 	heir_female = {
-		1 = HEIR_fem
-		2 = HEIR_fem
-		3 = HEIR_fem
+		1 = DUCULA
+		2 = REGULA
+		3 = CAESARA
 	}
 	
 	trigger = {
@@ -1263,21 +1263,21 @@ holy_roman_electors_monarchy = {
 
 holy_roman_electors_bishoprics = {
 	rank = {
-		1 = ELECTORATE_BISHOPRIC
-		2 = ARCHBISHOPRIC
-		3 = PATRIARCHATE
+		1 = ELECTOR_SACRARIUM
+		2 = ELECTOR_TEMPLATUM
+		3 = ELECTOR_DIVINATUM
 	}
 
 	ruler_male = {
-		1 = BISHOP_ELECTOR
-		2 = ARCHBISHOP_ELECTOR
-		3 = PATRIARCH_ELECTOR
+		1 = ELECTOR_FLAMEN
+		2 = ELECTOR_PONTIFEX
+		3 = ELECTOR_ARCHFLAMEN
 	}
 
 	ruler_female = {
-		1 = BISHOP_ELECTOR_fem
-		2 = ARCHBISHOP_ELECTOR_fem
-		3 = MATRIARCH_ELECTOR
+		1 = ELECTOR_FLAMINA
+		2 = ELECTOR_PONTIFICA
+		3 = ELECTOR_ARCHFLAMINA
 	}
 
 	heir_male = {
@@ -1301,21 +1301,21 @@ holy_roman_electors_bishoprics = {
 
 holy_roman_electors_republic = {
 	rank = {
-		1 = ELECTORAL_REPUBLIC
-		2 = GRAND_ELECTORAL_REPUBLIC
-		3 = GREAT_ELECTORAL_REPUBLIC
+		1 = ELECTOR_CIVITATUM
+		2 = ELECTOR_LIGATUM
+		3 = ELECTOR_RES_MAGNA
 	}
 
 	ruler_male = {
-		1 = CONSUL_ELECTOR
-		2 = GRAND_CONSUL_ELECTOR
-		3 = GREAT_CONSUL_ELECTOR
+		1 = ELECTOR_PRAETOR
+		2 = ELECTOR_CONSUL
+		3 = ELECTOR_PROCONSUL
 	}
 
 	ruler_female = {
-		1 = CONSULESS_ELECTOR
-		2 = GRAND_CONSULESS_ELECTOR
-		3 = GREAT_CONSULESS_ELECTOR
+		1 = ELECTOR_PRAETORA
+		2 = ELECTOR_CONSULA
+		3 = ELECTOR_PROCONSULA
 	}
 
 	trigger = {

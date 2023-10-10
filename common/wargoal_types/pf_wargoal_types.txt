@@ -79,3 +79,43 @@ pf_war_dominate_seas = {
 
 	war_name = PF_DOMINATE_SEAS_WAR_NAME
 }
+
+superiority_great_crusade = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0.75
+		prestige_factor = 1.5
+		peace_cost_factor = 0.75	
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+		country_desc = ALL_INFIDELS
+		prov_desc = ALL_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 0.75
+		prestige_factor = 1.5
+		peace_cost_factor = 0.75	
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+		country_desc = ALL_INFIDELS
+		prov_desc = ALL_PROVS
+	}	
+	
+	war_name = GREAT_CRUSADE_WAR_NAME	
+}

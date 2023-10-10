@@ -86,6 +86,80 @@ estate_burghers_pf_peace_of_utrech = {
 		factor = 100
 	}
 }
+estate_burghers_pf_mac_influential_guilds = {
+	icon = privilege_placeholder
+	# land_share = 5
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.2
+	is_valid = {
+		NOT = { has_country_flag = mac_abolished_trader_guilds_flag }
+		OR = {
+			tag = MAC
+			was_tag = MAC
+		}
+	}
+	can_select = {
+		always = no
+	}
+	on_granted = {
+	}
+	can_revoke = {
+		stability = 1
+		1319 = {
+			trade_share = {
+				country = root
+				share = 50
+			}
+		}
+		328 = {
+			trade_share = {
+				country = root
+				share = 50
+			}
+		}
+		377 = {
+			trade_share = {
+				country = root
+				share = 25
+			}
+		}
+	}
+	penalties = {
+		trade_efficiency = -0.25
+		# production_efficiency = -0.25
+	}
+	benefits = {
+		development_cost = -0.1
+	}
+	on_granted_province = {
+	}
+	on_revoked = {
+		custom_tooltip = mac_abolished_trader_guilds_tt
+		set_country_flag = mac_abolished_trader_guilds_flag
+	}
+	on_revoked_province = {
+		custom_tooltip = mac_abolished_trader_guilds_rebels_tt
+		hidden_effect = {
+			if = {
+				limit = { 				
+					province_has_center_of_trade_of_level = 1 
+				}
+				spawn_rebels = {
+					size = 2
+					type = noble_rebels
+				}
+			}
+		}
+	}
+	on_invalid = {
+	}
+	on_invalid_province = {
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
 estate_burghers_pf_court_bards = {
 	icon = privilege_coup_detat
 	land_share = 5

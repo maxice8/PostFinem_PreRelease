@@ -12,9 +12,23 @@ adirim_of_confederation_names = {
 		3 = GRAND_ADIRIM
 	}
 	ruler_female = {
-		3 = GRAND_ADIRIM
+		3 = IMPERATRIX
 	}
 
+	consort_female = {
+		3 = IMPERALINA
+	}
+
+	consort_male = {
+		3 = IMPERIALIS
+	}
+
+	heir_male = {
+		3 = CAESAR
+	}
+	heir_female = {
+		3 = CAESARA
+	}
 	trigger = {
 		is_emperor = yes
 	}
@@ -139,6 +153,8 @@ pf_hierophant = {
 	}
 }
 
+#GENERIC
+
 pf_norse_rulers = {
 	rank = {
 		1 = THING
@@ -181,6 +197,110 @@ pf_norse_rulers = {
 		}
 	}
 
+}
+italo_punic_rulers_monarchy = {
+	rank = {
+		1 = DUCATUS
+		2 = REGNUM
+		3 = IMPERIUM
+	}
+
+	ruler_male = {
+		1 = DUX
+		2 = REX
+		3 = IMPERATOR
+	}
+
+	ruler_female = {
+		1 = DUCESSA
+		2 = REGINNA
+		3 = IMPERATRIX
+	}
+
+	consort_female = {
+		1 = DUCALINA
+		2 = REGALINA
+		3 = IMPERALINA
+	}
+
+	consort_male = {
+		1 = DUCALIS
+		2 = REGALIS
+		3 = IMPERIALIS
+	}
+
+	heir_male = {
+		1 = DUCULUS
+		2 = REGULUS
+		3 = CAESAR
+	}
+	heir_female = {
+		1 = DUCULA
+		2 = REGULA
+		3 = CAESARA
+	}
+	trigger = {
+		OR = {
+			culture_group = italo_punic
+			is_part_of_hre = yes
+		}
+		government = monarchy
+		is_emperor = no
+	}
+}
+italo_punic_rulers_republic = {
+	rank = {
+		1 = CIVITATUM
+		2 = LIGATUM
+		3 = RES_MAGNA
+	}
+
+	ruler_male = {
+		1 = PRAETOR
+		2 = CONSUL
+		3 = PROCONSUL
+	}
+
+	ruler_female = {
+		1 = PRAETORA
+		2 = CONSULA
+		3 = PROCONSULA
+	}
+	trigger = {
+		OR = {
+			culture_group = italo_punic
+			is_part_of_hre = yes
+		}
+		government = republic
+		is_emperor = no
+	}
+}
+italo_punic_rulers_theocracy = {
+	rank = {
+		1 = SACRARIUM
+		2 = TEMPLATUM
+		3 = DIVINATUM
+	}
+
+	ruler_male = {
+		1 = FLAMEN
+		2 = PONTIFEX
+		3 = ARCHFLAMEN
+	}
+
+	ruler_female = {
+		1 = FLAMINA
+		2 = PONTIFICA
+		3 = ARCHFLAMINA
+	}
+	trigger = {
+		OR = {
+			culture_group = italo_punic
+			is_part_of_hre = yes
+		}
+		government = theocracy
+		is_emperor = no
+	}
 }
 
 greek_rulers = {

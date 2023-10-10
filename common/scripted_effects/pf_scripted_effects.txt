@@ -432,3 +432,8 @@ pf_egypt_update_relations_non_neterist = {
 		}
 	}
 }
+
+pf_unlock_great_crusade_cb = {
+	set_country_flag = pf_unlock_great_crusade_cb
+	custom_tooltip = pf_unlock_great_crusade_tt
+}
