@@ -13,7 +13,6 @@
  estate_burghers_pf_per_economical_boost_desc: "After the success of letting the Burghers have their own free hand over economic matters, we have decided to enshrine this right in law and even extend it, continuing this mutually beneficial arrangement."
  estate_burghers_pf_per_economical_boost_tt: "§YScales with Influence§!\nAt §Y100%§! influence the privilege has the following effect:"
  pf_per_economical_boost_modifier: "Guaranteed Economical Freedom"
- pf_per_until_revoked_tt: "until revoked"
  estate_burghers_pf_per_mountain_development: "Mountain Development Program"
  estate_burghers_pf_per_mountain_development_desc: "Our homeland is filled with many mountainous lands that we have over time grown to utilise effectively. Our expertise in constructing mountain cities is now unparalleled."
  estate_burghers_pf_per_mountain_development_tt: "Every owned §YMountain§! province:"
@@ -499,3 +498,10 @@
 
  pf_per_cannot_annex_with_annexation_ban_tt: "§RYou may not Annex any §YSatrapies§! while the Estate Privilege §YSatrapy Annexation Ban§! is granted.§!"
  theocracy.1.k: "Let the Satrapies decide"
+ promote_vassal_to_satrapy: "Promote to Satrapy"
+ promote_vassal_to_satrapy_title: "Promote to Satrapy"
+ promote_vassal_to_satrapy_desc: "Do you wish to turn §Y[From.GetName]§! into a §YSatrapy§!?\n§YSatrapies§! are not automatically called into your wars. However, they do not use a Diplomatic Relations slot and provide additional Manpower and Sailors."
+ promote_vassal_to_satrapy_tooltip: "Promote a vassal to the status of a Satrapy."
+ promote_vassal_to_satrapy_alert_tooltip: "An offer to promote us to a §YSatrapy§!"
+ promote_vassal_to_satrapy_dialog: "[This.GetName] offers us to become their Satrapy subject. This will grant us additional autonomy and we will no longer be called into wars automatically."
+ 

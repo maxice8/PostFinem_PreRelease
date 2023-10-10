@@ -157,7 +157,9 @@ country_event = {
 				color = { 180 179 100 }    # Yellow-Gray 
 			}
 		}
-		
+		else = {
+			restore_country_color = yes
+		}
 		ai_chance = {
 			factor = 1
 		}
