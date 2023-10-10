@@ -351,6 +351,11 @@ country_event = {
 			every_subject_country = {
 				limit = { liberty_desire = 100}
 				grant_independence = yes
+				reverse_add_casus_belli = {
+					target = ROOT
+					type = cb_persian_subjugation_war
+					months = 240
+				}
 			}
 		}
 	}

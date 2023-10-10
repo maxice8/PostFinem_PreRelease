@@ -84,9 +84,40 @@ pf_take_capital_satrapy_war = {
 	type = take_capital
 
 	attacker = {
+		badboy_factor = 0.5
+		prestige_factor = 1
+		peace_cost_factor = 1
+
+		allowed_provinces_are_eligible = yes
+		allowed_provinces = {
+			always = no
+		}
+
+		peace_options = {
+			pf_per_establish_satrapy
+		}
+	}
+
+	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
 		peace_cost_factor = 1
+
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+
+	war_name = pf_per_enforce_satrapy_war_name
+}
+
+pf_take_capital_persian_offensive = {
+	type = take_capital
+
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1.25
+		peace_cost_factor = 0.75
 
 		required_treaty_to_take_provinces = {
 			pf_per_establish_satrapy
@@ -108,7 +139,8 @@ pf_take_capital_satrapy_war = {
 		}
 	}
 
-	war_name = pf_per_enforce_satrapy_war_name
+	war_name = pf_per_persian_offensive_war_name
+}
 
 superiority_great_crusade = {
 	type = superiority

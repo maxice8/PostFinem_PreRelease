@@ -34,7 +34,7 @@ cb_dominate_seas = {
 	war_goal = pf_war_dominate_seas
 }
 
-# CB for Persia to create a Satrapy
+# CB for Persia to retake a Satrapy
 cb_persian_subjugation_war = {
 	valid_for_subject = no
 
@@ -42,6 +42,16 @@ cb_persian_subjugation_war = {
 	months = 240
 
 	war_goal = pf_take_capital_satrapy_war
+}
+
+# CB for Persia to create a new Satrapy
+cb_grand_persian_offensive = {
+	valid_for_subject = no
+
+	is_triggered_only = yes
+	months = 240
+
+	war_goal = pf_take_capital_persian_offensive
 }
 
 # Great Crusade

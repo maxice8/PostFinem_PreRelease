@@ -112,3 +112,133 @@ promote_vassal_to_satrapy = {
 		}
 	}
 }
+
+# Fabricate Grand Persian Offensive cb
+fabricate_persian_offensive_cb = {
+	category = covert
+
+	require_acceptance = no
+
+	is_visible = {
+		has_government_attribute = pf_per_can_grand_persian_offensive
+		#tag = PER
+	}
+	is_allowed = {
+		if = {
+			limit = {
+				FROM = { total_development = 125 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_HAS_NOT_125_TOTAL_DEV
+				FROM = { NOT = { total_development = 125 } }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_spy_network_in = {
+						who = FROM
+						value = 40
+					}
+				}
+				NOT = { full_idea_group = spy_ideas }
+			}
+			custom_trigger_tooltip = {
+				tooltip = REQUIRES_40_SPY_NETWORK_TT
+				has_spy_network_in = {
+					who = FROM
+					value = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_spy_network_in = {
+						who = FROM
+						value = 32
+					}
+				}
+				full_idea_group = spy_ideas
+			}
+			custom_trigger_tooltip = {
+				tooltip = REQUIRES_32_SPY_NETWORK_TT
+				has_spy_network_in = {
+					who = FROM
+					value = 32
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_casus_belli = {
+					type = cb_grand_persian_offensive
+					target = FROM
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = HAS_PERSIAN_OFFENSIVE_CB_ALREADY_TT
+				NOT = {
+					has_casus_belli = {
+						type = cb_grand_persian_offensive
+						target = FROM
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = { is_subject = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = CANNOT_DO_ACTION_TO_SUBJECTS_TT
+				FROM = { is_subject = no }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { is_neighbor_of = FROM }
+				NOT = {
+					any_subject_country = {
+						is_neighbor_of = FROM
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_MUST_BE_NEIGHBOR_TT
+				is_neighbor_of = FROM
+			}
+		}
+	}
+	on_accept = {
+		if = {
+			limit = {
+				full_idea_group = spy_ideas
+			}
+			add_spy_network_in = {
+				who = FROM
+				value = -32
+			}
+		}
+		else = {
+			add_spy_network_in = {
+				who = FROM
+				value = -40
+			}
+		}
+		add_casus_belli = {
+			target = FROM
+			type = cb_grand_persian_offensive
+			months = 60
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = { # this is a trigger
+		has_spy_network_in = {
+			who = FROM
+			value = 50
+		}
+	}
+}

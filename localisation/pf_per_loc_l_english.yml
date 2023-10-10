@@ -509,13 +509,21 @@
  CB_ALLOWED_pf_per_establish_satrapy: "Establish Satrapy"
  pf_per_establish_satrapy: "Establish Satrapy"
  pf_per_establish_satrapy_desc: "[From.GetName] will become a Satrapy of [Root.GetName]"
- cb_persian_subjugation_war: "Establish Satrapy"
- cb_persian_subjugation_war_desc: "Their territory is a rightful part of Persia. They shall serve us as our loyal Satrapy!"
+ cb_persian_subjugation_war: "Recover Satrapy"
+ cb_persian_subjugation_war_desc: "They belong as a Satrapy of Persia. They shall serve us once again!"
  pf_take_capital_satrapy_war: "Take the capital"
  pf_take_capital_satrapy_war_desc: "War goal is to take the capital"
- pf_per_enforce_satrapy_war_name: "$ORDER$$FIRST$ Subjugation of $SECOND_NAME$"
- 
-
-
+ pf_per_enforce_satrapy_war_name: "$ORDER$$FIRST$ Reconquest of $SECOND_NAME$"
+ REQUIRES_32_SPY_NETWORK_TT: "§R- We need a spy network of at least the size of §Y32§! in §Y[From.GetName]§!.§!"
+ HAS_PERSIAN_OFFENSIVE_CB_ALREADY_TT: "§R- §Y[Root.GetName]§! already has a §YGrand Persian Offensive§! casus belli against §Y[From.GetName]§!.§!"
+ fabricate_persian_offensive_cb: "Justify Grand Offensive"
+ fabricate_persian_offensive_cb_title: "Justify Grand Offensive"
+ fabricate_persian_offensive_cb_desc: "Justify Grand Offensive will reduce the size of our §Y[From.GetAdjective]§! Spy Network by §R40.00§! and will give us the '§YGrand Persian Offensive§!' casus belli against §Y[From.GetName]§!, allowing us to subjugate §Y[From.GetName]§! and turn them into a §YSatrapy§! of our [Root.GovernmentName].\n\nThis casus belli will last for §Y5 years§!."
+ fabricate_persian_offensive_cb_tooltip: "Justify a Grand Offensive against the target country and gain the 'Grand Persian Offensive' casus belli against them."
+ cb_grand_persian_offensive: "Grand Persian Offensive"
+ cb_grand_persian_offensive_desc: "Their lands are a rightful part of the Persian Empire. They shall serve us as our loyal Satrapy!"
+ pf_take_capital_persian_offensive: "Take the capital"
+ pf_take_capital_persian_offensive_desc: "War goal is to take the capital"
+ pf_per_persian_offensive_war_name: "$ORDER$Grand Persian Offensive on $SECOND_NAME$"
 
 
