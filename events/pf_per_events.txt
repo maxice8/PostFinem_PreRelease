@@ -3288,8 +3288,8 @@ country_event = {
 			pf_bab_expansion_claims = {
 				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = BAB
+				cede_province = BAB
 			}
-			release = BAB
 			create_subject = {
 				subject_type = satrapy
 				subject = BAB
@@ -3330,8 +3330,8 @@ country_event = {
 			pf_asy_expansion_claims = {
 				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = ASY
+				cede_province = ASY
 			}
-			release = ASY
 			create_subject = {
 				subject_type = satrapy
 				subject = ASY
@@ -3372,8 +3372,8 @@ country_event = {
 			pf_tig_expansion_claims = {
 				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = TIG
+				cede_province = TIG
 			}
-			release = TIG
 			create_subject = {
 				subject_type = satrapy
 				subject = TIG
@@ -3414,8 +3414,8 @@ country_event = {
 			pf_csp_expansion_claims = {
 				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = CSP
+				cede_province = CSP
 			}
-			release = CSP
 			create_subject = {
 				subject_type = satrapy
 				subject = CSP
@@ -3456,8 +3456,8 @@ country_event = {
 			pf_clc_expansion_claims = {
 				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = CLC
+				cede_province = CLC
 			}
-			release = CLC
 			create_subject = {
 				subject_type = satrapy
 				subject = CLC
@@ -3498,8 +3498,8 @@ country_event = {
 			pf_mga_expansion_claims = {
 				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = MGA
+				cede_province = MGA
 			}
-			release = MGA
 			create_subject = {
 				subject_type = satrapy
 				subject = MGA
@@ -3540,8 +3540,8 @@ country_event = {
 			pf_rjt_expansion_claims = {
 				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = RJT
+				cede_province = RJT
 			}
-			release = RJT
 			create_subject = {
 				subject_type = satrapy
 				subject = RJT
@@ -3582,8 +3582,8 @@ country_event = {
 			pf_gjr_expansion_claims = {
 				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = GJR
+				cede_province = GJR
 			}
-			release = GJR
 			create_subject = {
 				subject_type = satrapy
 				subject = GJR
@@ -3624,8 +3624,8 @@ country_event = {
 			pf_paj_expansion_claims = {
 				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = PAJ
+				cede_province = PAJ
 			}
-			release = PAJ
 			create_subject = {
 				subject_type = satrapy
 				subject = PAJ
@@ -3666,8 +3666,8 @@ country_event = {
 			pf_ksm_expansion_claims = {
 				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = KSM
+				cede_province = KSM
 			}
-			release = KSM
 			create_subject = {
 				subject_type = satrapy
 				subject = KSM
@@ -3708,8 +3708,8 @@ country_event = {
 			pf_amy_expansion_claims = {
 				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				add_core = AMY
+				cede_province = AMY
 			}
-			release = AMY
 			create_subject = {
 				subject_type = satrapy
 				subject = AMY

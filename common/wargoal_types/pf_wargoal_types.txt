@@ -79,3 +79,33 @@ pf_war_dominate_seas = {
 
 	war_name = PF_DOMINATE_SEAS_WAR_NAME
 }
+
+pf_take_capital_satrapy_war = {
+	type = take_capital
+
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+
+		required_treaty_to_take_provinces = {
+			pf_per_establish_satrapy
+		}
+
+		peace_options = {
+			po_demand_provinces
+			pf_per_establish_satrapy
+		}
+	}
+
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+
+	war_name = pf_per_enforce_satrapy_war_name

@@ -500,8 +500,22 @@
  theocracy.1.k: "Let the Satrapies decide"
  promote_vassal_to_satrapy: "Promote to Satrapy"
  promote_vassal_to_satrapy_title: "Promote to Satrapy"
- promote_vassal_to_satrapy_desc: "Do you wish to turn §Y[From.GetName]§! into a §YSatrapy§!?\n§YSatrapies§! are not automatically called into your wars. However, they do not use a Diplomatic Relations slot and provide additional Manpower and Sailors."
+ promote_vassal_to_satrapy_desc: "Do you wish to turn §Y[From.GetName]§! into a §YSatrapy§!?\n§YSatrapies§! are not automatically called into your wars. However, they do not use a Diplomatic Relations slot and provide additional Manpower, Sailors, Force Limit and Income than regular vassals."
  promote_vassal_to_satrapy_tooltip: "Promote a vassal to the status of a Satrapy."
  promote_vassal_to_satrapy_alert_tooltip: "An offer to promote us to a §YSatrapy§!"
  promote_vassal_to_satrapy_dialog: "[This.GetName] offers us to become their Satrapy subject. This will grant us additional autonomy and we will no longer be called into wars automatically."
+ pf_per_is_enforce_satrapy_target_tt: "§R- Enemy War Leader is NOT the target of our §YInvasion§!.§!"
+ PEACE_pf_per_establish_satrapy: "Establish Satrapy"
+ CB_ALLOWED_pf_per_establish_satrapy: "Establish Satrapy"
+ pf_per_establish_satrapy: "Establish Satrapy"
+ pf_per_establish_satrapy_desc: "[From.GetName] will become a Satrapy of [Root.GetName]"
+ cb_persian_subjugation_war: "Establish Satrapy"
+ cb_persian_subjugation_war_desc: "Their territory is a rightful part of Persia. They shall serve us as our loyal Satrapy!"
+ pf_take_capital_satrapy_war: "Take the capital"
+ pf_take_capital_satrapy_war_desc: "War goal is to take the capital"
+ pf_per_enforce_satrapy_war_name: "$ORDER$$FIRST$ Subjugation of $SECOND_NAME$"
  
+
+
+
+
