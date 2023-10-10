@@ -2411,6 +2411,7 @@ country_event = {
 	}
 
 	trigger = {
+		has_saved_global_event_target = pf_per_et_province_to_conquer
 		event_target:pf_per_et_province_to_conquer = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -4064,6 +4065,7 @@ country_event = {
 	}
 
 	trigger = {
+		has_saved_global_event_target = pf_per_et_province_to_conquer
 		event_target:pf_per_et_province_to_conquer = {
 			country_or_non_sovereign_subject_holds = ROOT
 		}
