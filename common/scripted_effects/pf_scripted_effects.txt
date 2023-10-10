@@ -335,12 +335,12 @@ pf_per_release_satrapies_scripted_effect = {
 	country_event = { id = pf_per_events.61 }
 	country_event = { id = pf_per_events.62 }
 	country_event = { id = pf_per_events.63 }
-	country_event = { id = pf_per_events.72 }
 }
 
 pf_on_tax_building_built_effect = {
 	if = {
 		limit = {
+			has_saved_global_event_target = pf_per_et_province_to_build_tax
 			owner = {
 				is_subject_of = PER
 			}
@@ -357,6 +357,7 @@ pf_on_tax_building_built_effect = {
 pf_on_trade_building_built_effect = {
 	if = {
 		limit = {
+			has_saved_global_event_target = pf_per_et_province_to_build_trade
 			owner = {
 				is_subject_of = PER
 			}
@@ -373,6 +374,7 @@ pf_on_trade_building_built_effect = {
 pf_on_production_building_built_effect = {
 	if = {
 		limit = {
+			has_saved_global_event_target = pf_per_et_province_to_build_production
 			owner = {
 				is_subject_of = PER
 			}
@@ -389,6 +391,7 @@ pf_on_production_building_built_effect = {
 pf_on_manpower_building_built_effect = {
 	if = {
 		limit = {
+			has_saved_global_event_target = pf_per_et_province_to_build_manpower
 			owner = {
 				is_subject_of = PER
 			}

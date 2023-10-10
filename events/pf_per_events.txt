@@ -2171,6 +2171,7 @@ country_event = {
 	}
 
 	trigger = {
+		has_saved_global_event_target = pf_per_et_province_to_tax_dev
 		event_target:pf_per_et_province_to_tax_dev = {
 			NOT = {
 				variable_arithmetic_trigger = {
@@ -2234,6 +2235,7 @@ country_event = {
 	}
 
 	trigger = {
+		has_saved_global_event_target = pf_per_et_province_to_prod_dev
 		event_target:pf_per_et_province_to_prod_dev = {
 			NOT = {
 				variable_arithmetic_trigger = {
@@ -2297,6 +2299,7 @@ country_event = {
 	}
 
 	trigger = {
+		has_saved_global_event_target = pf_per_et_province_to_mil_dev
 		event_target:pf_per_et_province_to_mil_dev = {
 			NOT = {
 				variable_arithmetic_trigger = {
@@ -2360,6 +2363,7 @@ country_event = {
 	}
 
 	trigger = {
+		has_saved_global_event_target = pf_per_et_province_to_convert
 		event_target:pf_per_et_province_to_convert = {
 			NOT = { religion = zoroastrian }
 		}
@@ -2463,6 +2467,7 @@ country_event = {
 	}
 
 	trigger = {
+		has_saved_global_event_target = pf_per_et_province_to_build_tax
 		event_target:pf_per_et_province_to_build_tax = {
 			NOT = { has_tax_building_trigger = yes }
 		}
@@ -2514,6 +2519,7 @@ country_event = {
 	}
 
 	trigger = {
+		has_saved_global_event_target = pf_per_et_province_to_build_trade
 		event_target:pf_per_et_province_to_build_trade = {
 			NOT = { has_trade_building_trigger = yes }
 		}
@@ -2565,6 +2571,7 @@ country_event = {
 	}
 
 	trigger = {
+		has_saved_global_event_target = pf_per_et_province_to_build_production
 		event_target:pf_per_et_province_to_build_production = {
 			NOT = { has_production_building_trigger = yes }
 		}
@@ -2616,6 +2623,7 @@ country_event = {
 	}
 
 	trigger = {
+		has_saved_global_event_target = pf_per_et_province_to_build_manpower
 		event_target:pf_per_et_province_to_build_manpower = {
 			NOT = { has_manpower_building_trigger = yes }
 		}
@@ -4065,7 +4073,6 @@ country_event = {
 	}
 
 	trigger = {
-		has_saved_global_event_target = pf_per_et_province_to_conquer
 		event_target:pf_per_et_province_to_conquer = {
 			country_or_non_sovereign_subject_holds = ROOT
 		}
