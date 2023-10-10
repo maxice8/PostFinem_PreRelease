@@ -45,6 +45,7 @@ svetovids_temple = { # svt
         country_modifiers = {
             morale_damage_received = -0.025
             global_trade_goods_size_modifier = 0.05
+            monthly_pf_svetovid_dedication = 0.05
         }
         on_upgraded = {
             4745 ={
@@ -68,7 +69,7 @@ svetovids_temple = { # svt
         country_modifiers = {
             morale_damage_received = -0.05
             global_trade_goods_size_modifier = 0.05
-            monthly_pf_svetovid_dedication = 0.15
+            monthly_pf_svetovid_dedication = 0.1
         }
         on_upgraded = {
             4745 ={
@@ -96,7 +97,7 @@ svetovids_temple = { # svt
         country_modifiers = {
            morale_damage_received = -0.1
            global_trade_goods_size_modifier = 0.1
-           monthly_pf_svetovid_dedication = 0.25
+           monthly_pf_svetovid_dedication = 0.15
         }
         conditional_modifier = {
             trigger = {

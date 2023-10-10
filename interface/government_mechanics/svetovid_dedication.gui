@@ -1,0 +1,31 @@
+guiTypes = {
+	windowType = {
+		name = "svetovid_dedication_gov_mech"
+		backGround = ""
+		position = { x = 0 y = 0 }
+		size = { x = 300 y = 82 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		#bar and frame
+		iconType = {
+			name = "dedication_bg"
+			spriteType = "GFX_dedication_bg"
+			position = { x = 10 y = -10 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "government_power_bar"
+			spriteType = "GFX_svetovid_dedication_bar"
+			position = { x = 26 y = 60 }
+		}
+		iconType = {
+			name = "svetovid_dedication_frame"
+			spriteType = "GFX_svetovid_dedication_frame"
+			position = { x = 10 y = 11 }
+			alwaystransparent = yes
+		}
+		
+	}
+}

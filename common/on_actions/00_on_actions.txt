@@ -59,6 +59,16 @@ on_startup = {
 		}
 		country_event = { id = pf_ksb_events.1 }
 	}
+	if = {
+		limit = {
+			OR = {
+				tag = KRA
+				tag = POL
+			}
+			NOT = { is_year = 1445 }
+		}
+		country_event = { id = pf_pol_events.1 } 
+	}
 	#if = {
 	#	limit = {
 	#		OR = {
@@ -924,6 +934,26 @@ on_monarch_death = {
 		}
 		clr_country_flag = knut_ulriksson_maidenless_flag
 		country_event = { id = nrd_flavor_events.4 }
+	}
+	if = {
+		limit = {
+			tag = KRA
+			AND = {
+				NOT = { has_ruler = "Caspar Lazarevic" }
+				NOT = { has_ruler_flag = kra_caspar_rules_flag }
+			}
+		}
+		country_event = { id = pf_pol_events.2 }
+	}
+	if = {
+		limit = {
+			tag = POL
+			AND = {
+				NOT = { has_ruler = "Ignacij Lazarevic" }
+				NOT = { has_ruler_flag = pol_ignacij_rules_flag }
+			}
+		}
+		country_event = { id = pf_pol_events.4 }
 	}
 	if = {
 		limit = { has_country_modifier = sought_after_bachelor }

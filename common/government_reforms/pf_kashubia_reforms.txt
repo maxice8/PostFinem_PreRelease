@@ -1,5 +1,5 @@
 pf_semi_feudal_tribe = {
-	icon = "tribal_civil_society"
+	icon = "boyar"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = yes
@@ -18,7 +18,7 @@ pf_semi_feudal_tribe = {
 }
 
 pf_svetovid_theocracy = {
-	icon = "religious_leader"
+	icon = "stone_tablet"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = yes
@@ -26,11 +26,9 @@ pf_svetovid_theocracy = {
 		tag = KSB
 	}
 	modifiers = {
+		manpower_in_true_faith_provinces = 0.25
 		church_influence_modifier = 0.2
-		church_loyalty_modifier = 0.1
-		extra_manpower_at_religious_war = yes
-		church_power_modifier = 0.25
-		devotion = -1
+		devotion = -0.75
 	}
 	ai = {
 		factor = 0.5 #generic
