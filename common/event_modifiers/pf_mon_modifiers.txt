@@ -75,3 +75,21 @@ pf_dda_invade = {
 	global_monthly_devastation = -0.5
 }
 
+pf_dda_tolerance = {
+	tolerance_heretic = 1
+	tolerance_heathen = 1
+}
+
+pf_dda_mercantile_strategy = {
+	placed_merchant_power_modifier = 0.5
+}
+
+pf_dda_willing_army = {
+	land_maintenance_modifier = -0.1
+}
+
+pf_dda_unite_all_religions = {
+	can_claim_states = yes
+	years_of_nationalism = -1
+}
+

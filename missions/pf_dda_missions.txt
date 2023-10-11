@@ -57,7 +57,10 @@ pf_dda_2 = {
             any_ally = {NOT = {has_matching_religion = ROOT}}
         }
         effect = {
-            #e7
+            add_country_modifier = {
+                name = pf_dda_tolerance
+                duration = 18250
+            }
         }
     }
     pf_dda_the_hall_of_pantheons = {
@@ -86,7 +89,8 @@ pf_dda_2 = {
             }
         }
         effect = {
-            #e10
+            custom_tooltip = pf_dda_pf_dda_the_hall_of_pantheons_tt2
+            set_country_flag = my_flag
         }
     }
     pf_dda_a_holy_nation = {
@@ -98,7 +102,11 @@ pf_dda_2 = {
         trigger = {
             custom_trigger_tooltip = {
                 tooltip = pf_dda_pf_dda_a_holy_nation_tt1
-                norse_pagan_reformed = 1
+                AND = {
+                    norse_pagan_reformed = 1
+                    hellenic = 1
+                    romana = 1
+                }
             }
             any_owned_province = {
                 has_owner_religion = no
@@ -188,7 +196,7 @@ pf_dda_3 = {
             }
         }
         effect = {
-            #e12
+            add_adm_power = 100
         }
     }
     pf_dda_a_stable_nation = {
@@ -203,9 +211,12 @@ pf_dda_3 = {
             all_owned_province = {
                 is_core = DDA
             }
+            crown_land_share = 30
         }
         effect = {
-            #e16
+            capital_scope = {
+                add_permanent_claim = FRA
+            }
         }
     }
     pf_dda_a_sanctuary_for_all_faiths = {
@@ -222,6 +233,10 @@ pf_dda_3 = {
         }
         effect = {
             override_country_name = pf_dda_pf_dda_a_sanctuary_for_all_faiths_tt1
+            add_country_modifier = {
+                name = pf_dda_unite_all_religions
+                duration = -1
+            }
         }
     }
     pf_dda_a_blessed_nation = {
@@ -268,7 +283,10 @@ pf_dda_4 = {
             army_size_percentage = 0.85
         }
         effect = {
-            land_maintenance_modifier = -0.1
+            add_country_modifier = {
+                name = pf_dda_willing_army
+                duration = 1825
+            }
         }
     }
     pf_dda_turn_the_tide = {
@@ -287,7 +305,18 @@ pf_dda_4 = {
             }
         }
         effect = {
-            #e9
+            target_unique_provinces = {
+                $num$ = 5
+                $trigger$ = "has_owner_culture = no"
+                $effect$ = "add_culture_construction = {speed = 0.9 cost = 0}"
+                $tooltip$ = "§G5§! random provinces that are not your primary culture will receive $begin conversion$."
+            }
+            random_owned_province = {
+                add_culture_construction = {
+                    speed = 0.9
+                    cost = 0
+                }
+            }
         }
     }
     pf_dda_naval_dominance = {
@@ -316,6 +345,8 @@ pf_dda_4 = {
                     who = ILY
                     value = 1.5
             }
+            is_subject = no
+            num_of_allies = 2
         }
         effect = {
             #e17
@@ -334,16 +365,19 @@ pf_dda_5 = {
         position = 1
         icon = interest_of_holland
         trigger = {
+            capital = 4957
             capital_scope = {development = 16}
         }
         effect = {
-            if = {
-                limit = {has_building = courthouse}
-                add_base_tax = 1
-                add_base_production = 1
-                add_base_manpower = 1
+            capital_scope = {
+                if = {
+                    limit = {has_building = courthouse}
+                    add_base_tax = 2
+                    add_base_production = 2
+                    add_base_manpower = 2
+                }
+                else = {add_building = courthouse}
             }
-            else = {add_building = courthouse}
         }
     }
     pf_dda_embrace_renaissance = {
@@ -354,9 +388,10 @@ pf_dda_5 = {
         }
         trigger = {
             has_institution = renaissance
+            prestige = 0
         }
         effect = {
-            #e6
+            change_innovativeness = 10
         }
     }
     pf_dda_improve_trade = {
@@ -366,18 +401,15 @@ pf_dda_5 = {
             pf_dda_embrace_renaissance
         }
         trigger = {
-            home_trade_node = {
-                ROOT = {
-                    trading_policy_in_node = {
-                        node = PREV
-                        policy = maximize_profit
-                    }
-                }
-            }
+            light_ship_fraction = 0.3
+            navy_size = ILY
             mercantilism = 14
         }
         effect = {
-            #e10
+            add_country_modifier = {
+                name = pf_dda_mercantile_strategy
+                duration = 5475
+            }
         }
     }
     pf_dda_jewel_of_the_adriatic = {
@@ -395,7 +427,13 @@ pf_dda_5 = {
             }
         }
         effect = {
-            #e14
+            capital_scope = {
+                center_of_trade = 1
+            }
+            every_owned_province = {
+                limit = {province_has_center_of_trade_of_level = 1}
+                add_center_of_trade_level = 1
+            }
         }
     }
     pf_dda_a_wealthy_nation = {
@@ -405,11 +443,15 @@ pf_dda_5 = {
             pf_dda_jewel_of_the_adriatic
         }
         trigger = {
-            treasury = 500
+            treasury = 1000
             NOT = {num_of_loans = 1}
+            NOT = {corruption = 0.1}
         }
         effect = {
-            #e18
+            country_event_with_insight = {
+                id = pf_mon_events.mt_dda_1
+                insight_tooltip = pf_dda_pf_dda_a_wealthy_nation_tt1
+            }
         }
     }
 }
