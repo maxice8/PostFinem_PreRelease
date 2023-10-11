@@ -432,3 +432,45 @@ SZO_ideas = {		# Saluzzo
 		rebel_support_efficiency = 1
 	}
 }
+
+ILY_ideas = {
+	start = {
+		global_manpower_modifier = 0.20
+		land_maintenance_modifier = -0.10
+	}
+	
+	bonus = {
+		land_forcelimit_modifier = 0.20
+	}	
+
+	trigger = {
+		tag = ILY		# Illyria
+	}
+	free = yes
+	
+	ily_the_marcher_lord = {
+		diplomats = 1
+		hostile_attrition = 1
+	}
+	ily_arm_the_serfs = {
+		global_regiment_cost = -0.10
+	}
+	ily_adriatic_trade_fleets = {
+		trade_efficiency = 0.10
+		light_ship_power = 0.15
+	}
+	ily_illyrian_pride = {
+		land_morale = 0.10
+	}
+	ily_renaissance = {
+		innovativeness_gain = 0.50
+	}
+	ily_delegated_power = {
+		cavalry_power = 0.10
+		army_tradition = 0.5
+	}
+	ily_musket_bearers = {
+		fire_damage_received = -0.1
+		movement_speed = 0.05
+	}
+}

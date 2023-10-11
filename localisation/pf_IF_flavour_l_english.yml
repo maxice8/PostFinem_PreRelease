@@ -44,6 +44,9 @@ ep_subversion_modifier: "Subversion"
 ep_subterfuge_modifier: "Subterfuge"
 ep_infiltration_modifier: "Infiltration"
 
+illyrian_kingdom_reform: "Illyrian Kingdom"
+illyrian_kingdom_reform_desc: "The Illyrian state operates as a collection of marcher lords, minor nobles whose collective taxes and levies go towards the common defense of the region from tribal raids and the aggression of local superpowers. It is our duty to stand at the gates, sword in hand, and hold off the barbarians from pillaging the Federation."
+
 MERIDIA: "Meridia"
 MERIDIA_ADJ: "Meridian"
 ALPINIA: "Alpinia"
@@ -53,6 +56,11 @@ pf_if_ancona_paper_mills: "Paper Mills of Ancona"
 pf_if_palermo_dockyard: "Greek Dockyards of Palermo"
 pf_if_naples_gardens: "Hanging Gardens of Naples"
 pf_if_mantua_clothiers: "Home of the Mantuan Clothiers"
+
+# Estate stuff
+
+estate_nobles_pf_marcher_freedom: "Freedom of the Marchers"
+estate_nobles_pf_marcher_freedom_desc: "We shall not interefere with the internal affairs of the Marcher Lords, granting them near complete autonomy over their territories so long as they swear to uphold their duties to the country."
 
 ################
 # Mercenaries
@@ -217,6 +225,25 @@ szo_the_codex: "The Codex of Artismer"
 szo_the_codex_desc: "One of the original founding members of the Order, a noble man named Artismer, was the first to suggest a set of formal written 'laws' should be compiled for use within our communes. The resulting document is known as the Codex of Artismer after him, and gives suggestions on the proper behaviour of members and illustrates potential punishments for listed crimes in gruesome detail. Every child born within our convent is taught these rules from the earliest age, and hence many of our agents have grown up with them baked into their very souls. These rulers will provide stability to the Order for years to come."
 szo_let_the_people_rise: "Thus Always to Tyrants"
 szo_let_the_people_rise_desc: "We are not fond of tyrannical rulers, be they monarchs, priests, or so-called representatives of the people. Many in our ranks have had their own experiences within the dungeons of these god-ordained kings, and as such have a strong hate for any such institution. Where ever there are downtrodden people in the world, if we can help them to get back on their feet and strike back at their former masters, we will do so."
+
+ILY_ideas: "Illyrian Ideas"
+ILY_ideas_start: "Illyrian Traditions"
+ILY_ideas_bonus: "Illyrian Ambition"
+
+ily_the_marcher_lord: "The Marcher King"
+ily_the_marcher_lord_desc: "Illyria is a kingdom on the frontiers of the Federation, the only bulwark against the Germanic tribes and the threatening Macedonian empire. Through the strength of our arms, the perseverance of our people, and the effectiveness of our diplomacy, we will come out triumphant and hold against all enemies, and, like the great walls of the ancients, we will still stand to guard these lands in a thousand years."
+ily_arm_the_serfs: "Arming the Serfs"
+ily_arm_the_serfs_desc: "Unlike the more urbanised and wealthy states of the Federation, we do not have the luxury of being able to hire trained professional troops and mercenaries. Apart from the core section of mounted aristocrats, the rest of our armies are made up of irregular commonfolk pressed into service. Let us scour the beaches and hillsides for every man available, and send him off to war!"
+ily_adriatic_trade_fleets: "Adriatic Ordinances"
+ily_adriatic_trade_fleets_desc: "The Adriatic Sea is a lucrative place for trade, hosting the sea route to the Aegean and our direct connenctions with Italia. It is also a hotly contested area, full of competing merchants and rampant piracy. We should introduce a new set of policies to combat these problems and sure Illyrian interests come out on top in the region."
+ily_illyrian_pride: "Illyrian Pride"
+ily_illyrian_pride_desc: "In the past, we were a thousand different peoples with a thousand different traditions and a thousand difference tongues. Now, we are one, united under our glorious flag, and ready to stand side by side until our dying moments. The patriotism of an Illyrian is obvious from the most lowly alewife to the servants of the king himself."
+ily_renaissance: "Patronising New Ideas"
+ily_renaissance_desc: "A new era is dawning across the world - an era of free thinking and science. While our country has been a bastion of tradition and aristocracy for many centuries, there is no reason why these two ideas should compete. Let us patronise these new ways of thinking and incorporate their technologies into our governance, keeping the hand of the monarch steady and the rule of the great barons enshrined."
+ily_delegated_power: "The Iron Rule"
+ily_delegated_power_desc: "There are many nobles who rule vast estates in the hills and mountains, far from any source of real state power. We can do little but trust in their allegiance to us, creating a situation that leaves the realm open to internal rebellion and strife. Introduce a new Iron Rule, a code of conduct regarding the powerful aristocrats - so long as they continue to provide levies and taxes, we will not overstep onto their estates, and will respect their autonomy."
+ily_musket_bearers: "Snoop and Shoot"
+ily_musket_bearers_desc: "The difficult terrain of the Balkans peninsular has led to a new style of battle emerging. Since there is little room and even fewer opportunities for an open pitched battle in the style of those in Western Europe, our generals pick their locations carefully, using the cover provided by the terrain to their fullest advantage. Our musketeers hide behind trees and rocks, peek out to meet their targets, shoot, and then disappear once more into the environment. Armies unused to this irregular style will surely be taken by surprise and fall into panic rather quickly."
 
 ################
 # Events
@@ -383,6 +410,183 @@ pf_if.16.t: "The Travels of Conan the Sicilian"
 pf_if.16.d: "By Astarte's call, those men did roam,\nA tale unfolded, of Conan bold,\nA king of vigor, a heart of stone,\nFrom Albion's shores to lands untold.\nWith banner raised, his steed astride,\nIn armor gleaming, sword by side,\nHe set forth on a noble quest,\nTo Sicily's shores, his goddess' behest.\n-\nFrom 'The Travels of Conan the Sicilian', written by his friend Prasag 'the Noble'.\n\nLong ago, Conan was a simple prince, the son of the chief of the Deifr. When the Brigantes seized control over much of the north of Albion, his family was driven out into exile in the Brittonic Confederation in the south. There, the young man met Guinevere, a beautiful and capable princess of the Iceni, and discovered the love of his life. One night, while recovering from a terrible fever, he was visited in a dream by the eastern goddess Astarte, who commanded him to take up arms and reconquer Phoenicia for her true believers. Despite the unusual nature of his vision, he gathered a strong following and departed from the shores of Albion with his men in spring 1442. In the following year, they battled pirates and fierce storms, before finally making permanent landfall in Sicily. The band fought with the local king and seized nearly half the island, believing it would make a useful base of operations for their further campaigns. Now, Conan stands at a crossroads. His goddess still calls to him, like a siren ushering him closer to Phoenicia. But their travels have been years already, and many in his entourage are tired and wish to settle down in the rich lands they have just recently conquered. Yet Conan is still the master of his own fate - the world will bend and twist at his whim."
 pf_if.16.a: "The adventure continues..."
 pf_cln_conans_travels: "The Travels of Conan"
+
+pf_feast.11.t: "A Pleasant Conversation"
+pf_feast.11.d: "After many hours, the conversation appears to be drawing to a close. It was so complex and engrossing you hadn't realised how much time has passed, and hence had to gently nudge the learned advisor before you to let you go. While the matters of the state still need attending, there is something about today's conversation that just cannot escape your mind..."
+pf_feast.11.a: "This has been so interesting!"
+
+pf_feast.12.t: "A Pleasant Conversation"
+pf_feast.12.d: "After many hours, the conversation appears to be drawing to a close. It was so complex and engrossing you hadn't realised how much time has passed, and hence had to gently nudge the learned advisor before you to let you go. While the matters of the state still need attending, there is something about today's conversation that just cannot escape your mind..."
+pf_feast.12.a: "Fascinating!"
+
+pf_feast.13.t: "A Pleasant Conversation"
+pf_feast.13.d: "After many hours, the conversation appears to be drawing to a close. It was so complex and engrossing you hadn't realised how much time has passed, and hence had to gently nudge the learned advisor before you to let you go. While the matters of the state still need attending, there is something about today's conversation that just cannot escape your mind..."
+pf_feast.13.a: "I just can't get it out of my head!"
+
+pf_feast.14.t: "Valuable Trinket"
+pf_feast.14.d: ""
+pf_feast.14.a: "We'll give it a chance!"
+pf_feast.14.b: "Haha! What a nice joke, that is worthless!"
+
+pf_feast.15.t: "Fire Grows Out of Control!"
+pf_feast.15.d: ""
+pf_feast.15.a: "Spend everything to fix it as soon as possible."
+pf_feast.15.b: "Our guests can contribute to the reconstruction."
+pf_feast.15.c: "We'll have to move the feast temporarily."
+
+pf_feast.16.t: "Magnificent Speech"
+pf_feast.16.d: ""
+pf_feast.16.a: "Thank you, thank you!"
+pf_feast.16.b: "I spent hours writing that speech!"
+
+pf_feast.17.t: "The Bard's Performance"
+pf_feast.17.d: ""
+pf_feast.17.a: "Wonderful!"
+pf_feast.17.b: "Hire this jolly fellow!"
+
+pf_feast.18.t: "A Stray Coin"
+pf_feast.18.d: ""
+pf_feast.18.a: "Oh shiny!"
+pf_feast.18.b: "Is this anyones?"
+
+pf_feast.19.t: "A Stray Coin: Value Beyond the Face"
+pf_feast.19.d: ""
+pf_feast.19.a: "Excellent!"
+
+pf_feast.20.t: "A Stray Coin: Cursed!"
+pf_feast.20.d: ""
+pf_feast.20.a: "Damn!"
+pf_feast_cursed: "Cursed by a vengeful god"
+
+pf_feast.21.t: "A Stray Coin: The Collection"
+pf_feast.21.d: ""
+pf_feast.21.a: "Oh well that's wonderful!"
+
+pf_feast.22.t: "Stuffed with Food"
+pf_feast.22.d: ""
+pf_feast.22.a: "Oof."
+pf_feast.22.b: "Just popping to the loo!"
+pf_feast.22.c: "Wow, what a good meal!"
+
+pf_if.17.t: "A Meeting of the Marchers"
+pf_if.17.d: "It was late afternoon by the time they all arrived. A row of sturdy men, suited in their most impressive sets of armour, awaited the arrival of the [Root.Monarch.GetTitle]. When the time came, they bowed one after the other, and all at once, raised their swords. Every man took a seat at the great circular table in the middle of the room, eagerly anticipating their own winnings from the coming negotiations. The [Root.Monarch.GetTitle], on the other hand, was more interested in the safety and integrity of the realm than personal gain - a noble thought often frustratingly rare in sovereigns. Taking a seat [Root.Monarch.GetHerselfHimself], [Root.Monarch.GetName] cleared [Root.Monarch.GetHerHis] throat and then began with a start; "Gentlemen, we are gathered here today..."\n\nAfter many hours, the sun had disappeared from the sky, and the only light was from the wicked tongues of flame that leaped out of the fireplace. After a long and intense session of debate, a resolution had been reached about the future of the country. The lords who had arrived at the meeting with so many hopes in their hearts had demanded great privileges in return for an extension of their services, but it had been up to the [Root.Monarch.GetTitle] to decide whether they had earned them, and whether the country needed them."
+pf_if.17.a: "Grant them the privileges they desire, and they will provide."
+pf_if.17.b: "Retain supreme power in the state."
+pf_ily_sponsoring_the_marchers: "Favour of the Marchers"
+pf_allows_marcher_freedom: "Unlocks the privilege §YFreedom of the Marchers§!."
+pf_marcher_freedom_allowed_tt: "Is allowed to enact §YFreedom of the Marchers§!."
+
+pf_if.18.t: "Tales of Chivalry"
+pf_if.18.d: "In the heart of Illyria, nestled amidst blasted hills and dense forests, there lay a remote village named Sonhavn. Its people were humble, hardworking, and isolated from the world beyond their borders. One fateful summer, as golden fields of wheat danced in the breeze and the village celebrated the harvest festival, a dark shadow descended upon Sonhavn. A ruthless band of marauders, cloaked in black armor and driven by greed, swept down from the northern mountains. With fire and sword, they pillaged the village, leaving a trail of destruction in their wake.\n\nAmidst the smoke and chaos, a lone knight of Illyria arrived on horseback, his armor glistening in the setting sun. Sir Agron, renowned for his chivalry and honor, had heard of the village's plight and vowed to defend its people. With unwavering courage, Sir Agron confronted the marauders, his sword flashing like a comet. His shield bore the emblem of a white stag, symbolizing the purity of his cause. He fought valiantly, disarming foes and rallying the villagers to resist. Sonhavn's brave men and women, inspired by the knight's noble example, took up makeshift weapons and stood alongside him.\n\nThe battle raged from dawn until dusk, but the marauders, disheartened by the villagers' newfound resolve and Sir Agron's unwavering valor, were driven back. The knight's unwavering commitment to chivalry and the defense of the innocent had saved Sonhavn from ruin. As the moon rose that night, the villagers gathered around a bonfire to celebrate their victory and express their gratitude to Sir Agron. They offered him their finest foods and told tales of his gallant deeds that would be sung for generations to come.\n\nWith a humble smile, Sir Agron declined their offerings, stating that it was his duty as a knight to protect those in need. With a promise to return if ever they required aid, he rode into the night, leaving Sonhavn bathed in the warm glow of newfound hope.\n\n-\nAn extract from "Tales of Chivalry", written by Bato 'Pensmith', around 1430 CE."
+pf_if.18.a: "These stories are so inspiring."
+pf_if_chivalric_duties: "Illyrian Chivalric Duties"
+
+pf_if.19.t: "The Son Left Behind"
+pf_if.19.d: "When [Root.Heir.GetName] was chosen as the sole heir of the kingdom, many felt betrayed that his more capable brother Percus was not chosen, most of all Percus himself. Many reasoned it was simply a father's affection for his favourite son, but that this affection had overcome his usual drive for the good of the realm. In the years since this decision, [Root.Heir.GetName] has proven himself more skilled than anyone could imagine, and is shaping up to be a collected and wise young man. Percus has spent those years seething in the background, despairing at the gradual loss of support for his cause, and disappearing ever more into the shadow of his wonder brother. In an act of desperation, Percus has gathered his followers and raised an army, threatening to march on the capital if his demands are not met. His ultimatum requires that [Root.Heir.GetName] be killed and that Percus be appointed as heir in his place. How should we respond to this bastard?"
+pf_if.19.a: "We will meet him in the field of battle."
+pf_if.19.b: "Appoint him as the rightful heir."
+
+pf_if.20.t: "The Fate of the Jews"
+pf_if.20.d: "The Jews have found a safe haven under the protection of Macedonia, in the lands formerly inhabited by the vicious Albanian tribes. While we are happy the barbarians are gone, their replacements strike many as strange, and play into the fears of ethnic replacement by the Macedonians that many of our nobility hold. Now that we are in control of the mountains of Nekharot, we must decide what to do with its large Jewish population. Should we extend their contract with the Greeks, and guarantee them religious autonomy, or should we break their hold on the region entirely and settle them as minorities across the country?"
+pf_if.20.a: "They cannot have their own kingdom within ours."
+pf_if.20.b: "We have no problem with them, let them be."
+pf_ily_resettling_jews: "Resettling the Jews"
+pf_ily_tolerated_jews: "Tolerating the Jews"
+
+pf_if.21.t: "The Fall of Macedonia"
+pf_if.21.d: "Macedonia has been a great mass of land untouchable by the local lords for centuries, posing a constant threat to all those smaller countries that border it. Spanning across the two continents, and retaining a remarkable level of stability since the days of Alexander, this empire is long overdue its death date. Many peoples have tried, but all have failed - until now. Our glorious armies march through the walls of the capital, and are greeted with cheers from the locals. Their flags flown high, their smiles electric, many of our soldiers have described it as the happiest moment of their lives. Macedon has fallen at last, and so begins a new age in Balkan politics - perhaps the first truly revolutionary thing to happen here in a thousand years. The old empire is dead - long live Illyria!"
+pf_if.21.a: "Sack the city to show our strength."
+pf_if.21.b: "We must savour our triumph as it is."
+
+pf_if.22.t: "The Colonial System"
+pf_if.22.d: "Much of the lands of the Balkans is wild and untamed, with local tribes and villages reigning supreme and disobeying any order from central authority, if those orders can even reach them through dangerous mountain passes and forests. These peoples, deprived of their own identities for so long by foreign rule, have experienced an outburst of patriotism and rebelliousness, which while inspiring, have caused nothing but trouble for our country. A new system will have to be devised, with the support and consent of the great magnates of the realm. In the conquered regions, nobles will be granted estates to settle with serfs from the homeland, thereby gradually spreading our culture, tongue, and identity across the region. Every town will benefit from becoming one of us."
+pf_if.22.a: "Institute it."
+pf_ily_colonial_system_modifier: "The Colonial System"
+pf_ily_colonial_system_passive_tt: "Non-§YIllyrian§! provinces will periodically change culture to our own by a random event, its frequency depending the §Yinfluence§! of the §YNobles§!."
+
+pf_if.24.t: "The Karthalian Succession"
+pf_if.24.d: "Karthalis is a land claimed by many different dynasties. The Illyrians demand our submission, using their previous rule in our country has justification for our complete subjugation. The government of Italia too wishes to control our lands, hoping to strengthen the grip of the Romana resistance in the north. The Grand Adirim has offered himself as a mediator, but in reality everyone knows he has ambitions for the throne himself. With the death of our last ruler, a succession war is sure to erupt..."
+pf_if.24.a: "Karthalis will remain independent!"
+pf_if.24.b: "The Italians will provide protection for us."
+pf_if.24.c: "Surrender to the Illyrians."
+pf_if.24.e: "Let us fall under the liegedom of the Grand Adirim."
+pf_if_karthalis_remains_independent_tt: "§RWhile we may be free, we will be vulnerable to the powers we have spurned in making this decision.§!"
+
+pf_if.25.t: "Beyond the Federation"
+pf_if.25.d: "Illyria has served as a bulwark against barbarian invasion and Macedonian aggression for the Italian Federation for countless generations. However, in recent years, our expansionism and rapid rise to power have forced many to rethink our position. While the Federal officials are happy to have a strong ally in the east, many in our own government and population feel restrained by the laws of the institution and believe we would be better off without them. If this is true we cannot say, but a rapid anti-Federation campaign is sweeping the country and convincing many people with its promises."
+pf_if.25.a: "It is time we forged our own empire."
+pf_if.25.b: "Our duty of protection to the Adirim is eternal."
+pf_ily_a_new_future: "Illyrexit"
+pf_ily_defender_of_the_empire: "Defender of the Federation"
+pf_if_24_gain_diplo_for_every_hre_state_tt: "Gain §G10§!£dip£ for every §Ymember state§! of the §YItalian Federation§!."
+
+pf_feast.23.t: "Tales of Battles Long Past"
+pf_feast.23.d: "The [Root.Monarch.GetTitle] sat in the library, feeling the heat of the fireplace and the stares of a dozen bored nobles around [Root.Monarch.GetHerHim]. For perhaps an hour now, [Root.Monarch.GetSheHe] had detailed [Root.Monarch.GetHerHis] long campaigns and war games, which had initially been received enthusiastically, but after a certain point, everyone had had enough. Not wanting to annoy the [Root.Monarch.GetTitle] however, they have determined to stay, even as their eyes drop off into slumber."
+pf_feast.23.a: "Perhaps we can change up the conversation a little bit."
+pf_feast.23.b: "My war stories are my best! What are you complaining about?"
+
+pf_feast.24.t: "The [Root.Monarch.GetTitle]'s Art Collection"
+pf_feast.24.d: "All the lords and ladies present at the feast had heard about the [Root.Monarch.GetTitle]'s famed art collection. Now they clamour at [Root.Monarch.GetHerHis] chambers, asking to see this wonder of the world with their own eyes."
+pf_feast.24.a: "Come, ladies and gentlemen, let me show you my wares."
+pf_feast.24.b: "Haven't we got more important things to be doing?"
+pf_feast.24.c: "It is surely the finest collection in the realm!"
+
+pf_feast.25.t: "My Fair Maiden"
+pf_feast.25.d: "She stands at the far corner of the room, her eyes locked to yours. Despite the clamour of the crowd that dances between you, you can see her more clearly than anything. Her smile is beautiful and her eyes even more tempting. Lost in the moment, you watch carefully as she gestures for you to come over to her."
+pf_feast.25.a: "My my..."
+pf_feast.25.b: "I have to snap out of this!"
+pf_feast.25.c: "Remember, I have a [Root.Consort.GetTitle]!"
+
+pf_feast.26.t: "Running Out of Wine"
+pf_feast.26.d: "The feast has been going on for a long time by this point, and despite our best efforts at planning it appears we are soon going to run out of wine to sustain all our guests. This is disasterous! Whatever shall we do?"
+pf_feast.26.a: "I apologise for this, but we might have to drink water instead."
+pf_feast.26.b: "Seek out a wine merchant and sell him out of his finest wine!"
+pf_feast.26.c: "Let us try some of the local delicacy, [Root.GetAdjective] Red."
+
+pf_feast.27.t: "A Good Debate"
+pf_feast.27.d: "In a great test of [Root.Monarch.GetHerHis] tenacity and intellect, [Root.Monarch.GetTitle] [Root.Monarch.GetName] has engaged with one of the guests at the feast, arguing over various philosophical ideas in such depth that most ordinary men would have fainted long ago. What is sure however, is that both parties will leave this debate enriched and fulfilled, their brains suitably exercised."
+pf_feast.27.a: "Bravo!"
+
+pf_feast.28.t: "Stories of Old"
+pf_feast.28.d: "Several of the guests at our feast are old, so very old that they remember the rule of the previous monarch of [Root.GetName]. They are full of stories of ages gone by, and often make sly quips about your ancestors, known to you by little more than their paintings, still displayed proudly on the walls of the great hall."
+pf_feast.28.a: "Truly my ancestors were great individuals."
+pf_feast.28.b: "I will be the best of my line, above all the rest!"
+
+pf_feast.29.t: "Great Painter in Attendance"
+pf_feast.29.d: "Rumours have been swirling that one of the guests in attendance at our feast is a famous painter. Before he made himself known, no one could have guessed - he looked shabby, unkempt and rather smelly, but nontheless, there was some genuis laying behind those twisted locks of hair."
+pf_feast.29.a: "Hire him to paint a picture of all our guests!"
+pf_feast.29.b: "Are you sure this is the guy?"
+
+pf_feast.30.t: "Travelling Minstrel Seeks Patronage"
+pf_feast.30.d: "A joyful travelling minstrel has arrived at our court today, after hearing about the number of people attending because of the feast. He seeks patronage for his craft in exchange for what he promises will be a riveting performance for all our guests."
+pf_feast.30.a: "Let us hear your songs!"
+pf_feast.30.b: "He can play for the commonfolk of [Root.GetName] instead."
+
+pf_feast.31.t: "Laughing with my Pals"
+pf_feast.31.d: "The jester we hired for the feast has proven to be a hit with all our guests. After a long night of jokes and sons, all of our stomachs' were hurting from too much laughter."
+pf_feast.31.a: "Hahaha!"
+
+pf_feast.32.t: "Jester Mocks the [Root.Monarch.GetTitle]"
+pf_feast.32.d: "The jester we hired for the feast was doing great, but then he made a rather dicey joke about the [Root.Monarch.GetTitle]. The room fell silent, with all our guests waiting to see the reaction of the monarch to what was clearly an insulting jab that had gone way too far."
+pf_feast.32.a: "Umm maybe we should go to another room."
+pf_feast.32.b: "Guards, execute this jester for treason!"
+pf_feast.32.c: "Hahaha! That was so funny."
+
+pf_feast.33.t: "Too Drunk"
+pf_feast.33.d: "All of us have drunk so much wine, we now mope around uncontrolled throughout the halls and libraries. Whatever spirit of fun and activity we had before the drink is long gone by this point."
+pf_feast.33.a: "Ugh this is going to be an awful hangover..."
+pf_feast.33.b: "Get everyone a bowl of water! We will work through this."
+
+pf_feast.34.t: "General Offers Service"
+pf_feast.34.d: "A reportedly skilled and capable general has come to the feast and offered his services to the [Root.Monarch.GetTitle]."
+pf_feast.34.a: "Welcome to the team!"
+pf_feast.34.b: "No thanks, we have our own generals to worry about."
+
+pf_feast.35.t: "Showing Our Glory"
+pf_feast.35.d: "As we expected, our latest feast is proving to be a testament to our glory among our subjects and foreign leaders alike."
+pf_feast.35.a: "[Root.GetName] is truly the best."
+pf_feast.35.b: "What a wonderful time to live."
+pf_feast.35.c: "Muhahah, now they will fear us!"
 
 ################
 # Decisions
@@ -586,7 +790,7 @@ pf_szo_industrial_power_modifier: "Industrial Power"
 
  pf_szo_halls_of_power_title:0 "In the Halls of Power"
  pf_szo_halls_of_power_desc:0 ""
-may_bribe_rulers_tt: "Unlocks the espionage diplomatic action §YBribe Ruler§!."
+may_bribe_rulers_tt: "Unlocks the espionage diplomatic action §YInfluence Politics§!, allowing us to increase a country's opinion of us using spy network."
 
  pf_szo_shadow_agents_title:0 "An Agent in Every Shadow"
  pf_szo_shadow_agents_desc:0 ""
@@ -596,6 +800,94 @@ may_assassinate_rulers_tt: "Unlocks the espionage diplomatic action §YAssassina
  pf_szo_universal_diplomacy_desc:0 ""
 pf_szo_universal_diplomacy_tt: "If we have finished our §Ygolden age§!, we will be able to proclaim another. If we are still in our §Ygolden age§!, it will be extended for another §Yfifty years§!."
 pf_szo_universal_influence: "Universal Influence"
+
+# Illyria
+
+pf_ily_conquer_serbia_title: "Conquer Serbia"
+pf_ily_conquer_serbia_desc: "The frontier zone between our kingdom and Macedonia is controlled by a number of independent petty kings and lords, each trying to make their own way in a dangerous world, caught between great powers. Let us take them under our wing and absorb their lands into our greater whole, so that we can face the Greek threat together."
+pf_ily_frontier_with_macedonia: "Defense of the Macedonian Frontiers"
+
+pf_ily_nekharot_title: "A Stronghold Far From Home"
+pf_ily_nekharot_desc: "The Jews were settled in Albania to provide them with the protection they sorely desired after the fall of their homeland. Now, their autonomous region lies on our path of expansion. We must decide eventually what the future of the Balkan Jews is to be."
+
+pf_ily_into_greece_title: "Sweep the Peloponnese"
+pf_ily_into_greece_desc: "The Peloponnese has remained fractured and independent despite the power of Macedonia, perhaps due to the intercession of the leaders of the holy site in Athens. What ever the reason, this gives us a clear path forward, opening the doors to our conquest far into the south of Greece."
+
+pf_ily_break_hellenism_title: "Break Hellenism"
+pf_ily_break_hellenism_desc: "The Hellenic faith derives its structure and institution from the seat of the Archon in Athens. If we truly want to cause disorder in their lands, we should seize control of this holy site, and prove to them their leaders are not the infaliable chosen ones they claim to be."
+pf_ily_triumph_over_hellenic: "Triumph over Hellenism"
+pf_ily_every_hellenic_province_could_convert_tt: "Every one of our §YHellenic§! provinces has a §G50.0%§! chance of converting to our religion."
+pf_ily_every_hellenic_country_gets_bad_modifier_tt: "Every §YHellenic§! country gets §R-2§! Tolerance of the True Faith and §R+33.0%§! Stability Cost for §Ytwenty-five years§!."
+
+
+#
+
+pf_ily_secure_the_throne_title: "Secure the Throne"
+pf_ily_secure_the_throne_desc: "There are many threats to our leadership, despite the recent success of the ruling family. We must stamp them all out and secure the throne for its rightful heirs, and preserve the peace and strength of Illyria."
+pf_ily_strong_monarch: "Power Behind the Monarch"
+pf_ily_secure_the_throne_tt: "Had the event §YThe Son Left Behind§!."
+
+pf_ily_seize_dardana_title: "Seize Dardana"
+pf_ily_seize_dardana_desc: "The city state of Dardana has been a thorn in our side for years. Despite the best efforts of past kings, they still remain independent, clinging onto to a small section of our rightful coastline. If they think that their walls will hold and the flimsy guarantee by the Grand Adirim will protect them, they are sorely misguided."
+pf_ily_dalmatian_supremacy: "Dalmatian Supremacy"
+
+pf_ily_strike_at_macedonia_title: "Strike At Macedonia"
+pf_ily_strike_at_macedonia_desc: "The Macedonian empire is a hulking mass at our border, constantly threatening both the integrity of our nation and the security of the Federation as a whole. We must strike at them at an opportune moment, and, like in the old Jewish story of David and Goliath, we will slay this giant."
+
+pf_ily_conquer_macedonia_title: "Dethrone the Giant"
+pf_ily_conquer_macedonia_desc: "For centuries, we have lived in the shadow of Macedonia. Now, like a slave rising to cut down his master, we are free, and we will turn our vengeful eye onto that wretched state and destroy them once and for all. Glory to Illyria!"
+
+pf_ily_illyrian_empire_title: "The Future of Illyria"
+pf_ily_illyrian_empire_desc: "We have grown in size and power beyond the wildest dreams of our ancestors, by such an extent in fact that many believe we are only constrained by our ties to the Federation now. We shall have to consider the question of membership, and whether we have great potential inside or outside the Federation."
+
+#
+
+pf_ily_assemble_the_marchers_title: "Assemble the Marchers"
+pf_ily_assemble_the_marchers_desc: "The strength of our country is built on the shoulders of the powerful marcher lords who rule much of the hinterland. Let us call a meeting of their most important representatives and negotiate a new deal for the nation, whereby in exchange for certain privileges they will take on more duties in the defence of the homeland."
+
+pf_ily_knights_of_illyria_title: "Knights of Illyria"
+pf_ily_knights_of_illyria_desc: "For centuries Illyria has had a strong culture of chivalry and service amongst the landed gentry, who often train their whole lives in sword fighting and horse riding waiting for the day they are called to war. While the world may be changing around us, we must make sure that this tradition never dies, and continues on ever more gallantly into the future."
+pf_ily_knightly_culture: "Reinforcing Knightly Culture"
+
+pf_ily_tales_of_chivalry_title: "Tales of Chivalry"
+pf_ily_tales_of_chivalry_desc: "The knights of the realm understand their duties - to defend the homeland, the monarchy, and the faith. Over the years, our people have seen countless demonstrations of their commitment, and stories of their heroism and bravery are told across the land."
+
+pf_ily_karthalian_succession_title: "The Karthalian Succession"
+pf_ily_karthalian_succession_desc: "Our dynasty once ruled in Karthalis, but have since been overthrown and cast out into the hills of Illyria. That wretched country has suffered no good fortune since those times, and as a result, now faces a serious succession crisis. It is time for us to step in and take control of the region and restore the equilibrium our kings once enforced there."
+pf_ily_king_of_karthalis: "King of Karthalis"
+
+pf_ily_secure_the_danube_title: "Secure the Danube"
+pf_ily_secure_the_danube_desc: "The Danube is the vein that connects the Black Sea to Germany, ferrying merchants across thousands of miles of otherwise unsafe and often uncharted lands. Who ever control this route will have the power to control the wealth and direction of this trade. While we do not have a strong grip upstream, we can certainly set our ambitions on securing the river at its eastern most points, and up into Carpathia."
+pf_ily_control_of_the_danube: "Control the Danubian Trade"
+
+#
+
+pf_ily_ragusa_toll_title: "The Ragusa Toll"
+pf_ily_ragusa_toll_desc: "The Adriatic is the heart of the local trade network, being host to a great bounty of wealth that flows everyday past our coasts. Given our position along this highway, one would think we would be rich, but in fact it is quite the opposite - our merchants are hugely out competed, and our trade situation as a whole is dire. Let us turn to the philosophy of mercantilism to provide us with some revenue, and introduce a toll on all merchant ships stopping in the major port of Ragusa."
+pf_ily_ragusa_toll_modifier: "Ragusa Toll"
+
+pf_ily_wealthy_nation_title: "Let the Wealth Flow"
+pf_ily_wealthy_nation_desc: "The riches the state missed out in past years are now piling into our coffers at last. Effective taxation policies, strengthening local trade laws, and investment in the local guilds has resulted in our country being richer than ever, and more capable of supporting our growing towns as a result."
+pf_ily_investing_in_the_country: "Investing in the Country"
+
+pf_ily_conquer_quadia_title: "Conquer Quadia"
+pf_ily_conquer_quadia_desc: "Quadia is a land on the frontier of civilisation, the border between the Federation and the Germanic wilds of northern Europe. The region is famed for its warriors, who will surely put up a tough opposition to our armies extending our control there, but nevertheless, it is something that must be done. We cannot allow these barbarians to have control over the highlands surrounding the Federation - it must be us who look down on them, not the other way around."
+pf_ily_integrate_the_ostgermanics: "Integrate the Ostgermanics"
+
+#
+
+pf_ily_reform_the_provinces_title: "Reform the Provinces"
+pf_ily_reform_the_provinces_desc: "The traditional way we govern our core provinces is prone to corruption and misguided rule. Let us scrap the old system and reorganise our administration from the ground up, to provide a more stable ground from which to build a modern state upon."
+pf_ily_reform_the_provinces_tt: "No owned province has more than §Y10.0%§! Local Autonomy."
+
+pf_ily_colonial_system_title: "The Colonial System"
+pf_ily_colonial_system_desc: "Our land is not big enough for all our people and the ambitions of our nobles. There is space aplenty in the Balkans, but it is currently being exploited by tribes and unorganised peoples who are not taking full advantage of it. Let us move in and take control and enhance these wild lands for our own ends."
+
+pf_ily_settle_the_balkans_title: "Settle the Balkans"
+pf_ily_settle_the_balkans_desc: "The new colonial policy has been successful, and now Illyrian blood is spread out across the land. While our cultural impact has skyrocketed, so has the power of the magnates, who now control vast swathes of territory in the remote forests and mountains. This will bring in a new period of investment and prosperity to our nation!"
+pf_ily_settle_dev_tt: "Distribute §G20§! base production £dip£ across provinces with our §Yprimary culture§!."
+pf_ily_developing_cities: "Development of the Illyrian Colonial Towns"
+pf_ily_settle_the_balkans_tt: "Ends the §Ypassive colonisation§! events."
 
 ################
 # Diplomatic actions
@@ -641,7 +933,7 @@ pf_petition_3_modifier: "Petition: Federal Developmental Support"
 
 petition_for_trade_support: "£italian_federation_icon£ Petition for Trade Support"
 petition_for_trade_support_title: "Petition for Trade Support"
-petition_for_trade_support_desc: "Request support for our trade from the Grand Adirim.\n\nIf they accept, §Y[Root.Monarch.GetTitle] [Root.Monarch.GetName]§! gets §G-33.0%§! increase mercantilism cost, §G+50.0%§! merchant trade power, and §G+25.0%§! ship trade power for §Y25 years§!, at the cost of §R-100§! of our opinion of them. Granting this request will cost the Grand Adirim §R-10§! legitimacy and §R-50§! Diplomatic Power £dip£, but gain them §G+1§! Federal Authority. Declining will cost them §R-1§! Federal Authority."
+petition_for_trade_support_desc: "Request support for our trade from the Grand Adirim.\n\nIf they accept, §Y[Root.Monarch.GetTitle] [Root.Monarch.GetName]§! gets §G-33.0%§! increase mercantilism cost, §G+50.0%§! merchant trade power, and §G+25.0%§! ship trade power for §Y25 years§!, at the cost of §R-100§! of their opinion of us. Granting this request will cost the Grand Adirim §R-10§! legitimacy and §R-50§! Diplomatic Power £dip£, but gain them §G+1§! Federal Authority. Declining will cost them §R-1§! Federal Authority."
 petition_for_trade_support_tooltip: "Request support for our trade from the Grand Adirim."
 petition_for_trade_support_alert_tooltip: "§YPetition§!: Request for Trade Support"
 petition_for_trade_support_dialog: "§Y[Root.GetName]§! has issued a petition to the [From.Monarch.GetTitle], requesting support for their trade. \n\nIf we accept, §Y[Root.Monarch.GetTitle] [Root.Monarch.GetName]§! gets §G-33.0%§! increase mercantilism cost, §G+50.0%§! merchant trade power, and §G+25.0%§! ship trade power for §Y25 years§!, at the cost of §R-100§! of our opinion of them.\n\nGranting this request will cost us §R-10§! legitimacy and §R-50§! Diplomatic Power £dip£, but gain us §G+1§! Federal Authority.\n\nDeclining will cost us §R-1§! Federal Authority.\n\nDo you want to accept?"
@@ -652,3 +944,11 @@ bribe_ruler_spy_action_title: "Influence Politics"
 bribe_ruler_spy_action_desc: "Use our established spy network to influence their politics, ensuring the policies of their ruler and government are more favorable to our interests.\n\nIncreases §Y[From.GetName]§!'s opinion of us by §G+50§!.\nThis will cost §R40§! Spy Network in their country."
 bribe_ruler_spy_action_tooltip: "Use §Y40 Spy Network§! to increase their opinion of us by §G+50§!."
 opinion_bribe_ruler_esp: "Influenced Politics"
+
+petition_for_advisor: "£italian_federation_icon£ Petition for Advisor"
+petition_for_advisor_title: "Petition for Advisor"
+petition_for_advisor_desc: "Request an advisor from the Grand Adirim.\n\nIf they accept, a random advisor will be created for our court at §G15.0%§! cost, at the cost of §R-100§! of their opinion of us. Granting this request will cost the Grand Adirim §R-10§! legitimacy and §R-50§! Administrative Power £adm£, but gain them §G+1§! Federal Authority. Declining will cost them §R-1§! Federal Authority."
+petition_for_advisor_tooltip: "Request an advisor from the Grand Adirim."
+petition_for_advisor_alert_tooltip: "§YPetition§!: Request for Advisor"
+petition_for_advisor_dialog: "§Y[Root.GetName]§! has issued a petition to the [From.Monarch.GetTitle], requesting a specialist advisor. \n\nIf we accept, §Y[Root.GetName]§! a random advisor will be created for our court at §G15.0%§! cost, at the cost of §R-100§! of our opinion of them.\n\nGranting this request will cost us §R-10§! legitimacy and §R-50§! Diplomatic Power £dip£, but gain us §G+1§! Federal Authority.\n\nDeclining will cost us §R-1§! Federal Authority.\n\nDo you want to accept?"
+pf_grant_random_advisor_tt: "A random advisor will be created of skill $level$ and discount of $discount$."

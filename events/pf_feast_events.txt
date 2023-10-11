@@ -58,10 +58,10 @@ country_event = {		# Feast Start Screen
 			limit = {
 				NOT = { has_government_attribute = enables_discounted_host_feast }
 			}
-			add_years_of_income = -2
+			add_years_of_income = -1
 		}
 		else = {
-			add_years_of_income = -1
+			add_years_of_income = -0.5
 		}
 		set_country_flag = tier_2_feast
 		custom_tooltip = tier_2_feast_tt
@@ -94,10 +94,10 @@ country_event = {		# Feast Start Screen
 			limit = {
 				NOT = { has_government_attribute = enables_discounted_host_feast }
 			}
-			add_years_of_income = -5
+			add_years_of_income = -2
 		}
 		else = {
-			add_years_of_income = -2.5
+			add_years_of_income = -1
 		}
 		set_country_flag = tier_3_feast
 		custom_tooltip = tier_3_feast_tt
@@ -637,13 +637,16 @@ country_event = {	# End of the Feast
 		days = 1
 	}
 	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = is_in_feast
+	}
 	
 	option = {		# this feast is great
 		name = pf_feast.10.a
 		trigger = {
 			has_country_flag = tier_1_feast
 		}
-		clr_country_flag = is_in_feast
 		clr_country_flag = tier_1_feast
 		custom_tooltip = the_feast_ends_tt
 		add_adm_power = 25
@@ -657,7 +660,6 @@ country_event = {	# End of the Feast
 		trigger = {
 			has_country_flag = tier_2_feast
 		}
-		clr_country_flag = is_in_feast
 		clr_country_flag = tier_2_feast
 		custom_tooltip = the_feast_ends_tt
 		add_adm_power = 35
@@ -671,7 +673,6 @@ country_event = {	# End of the Feast
 		trigger = {
 			has_country_flag = tier_3_feast
 		}
-		clr_country_flag = is_in_feast
 		clr_country_flag = tier_3_feast
 		custom_tooltip = the_feast_ends_tt
 		add_adm_power = 50
@@ -680,5 +681,741 @@ country_event = {	# End of the Feast
 		add_prestige = 20
 		add_splendor = 25
 		remove_country_modifier = pf_feast_reputation_boost
+	}
+}
+country_event = {	# Feast: A Pleasant Conversation
+	id = pf_feast.11
+	title = pf_feast.11.t
+	desc = "pf_feast.11.d"
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+		has_advisor = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {		# amazing
+		name = pf_feast.11.a
+		add_adm_power = 50
+		random = {
+			chance = 10
+			change_adm = 1
+		}
+	}
+}
+country_event = {	# Feast: A Pleasant Conversation
+	id = pf_feast.12
+	title = pf_feast.12.t
+	desc = "pf_feast.12.d"
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+		has_advisor = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {		# amazing
+		name = pf_feast.12.a
+		add_dip_power = 50
+		random = {
+			chance = 10
+			change_dip = 1
+		}
+	}
+}
+country_event = {	# Feast: A Pleasant Conversation
+	id = pf_feast.13
+	title = pf_feast.13.t
+	desc = "pf_feast.13.d"
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+		has_advisor = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {		# amazing
+		name = pf_feast.13.a
+		add_mil_power = 50
+		random = {
+			chance = 10
+			change_mil = 1
+		}
+	}
+}
+
+country_event = {	# Feast: Valuable trinket
+	id = pf_feast.14
+	title = pf_feast.14.t
+	desc = "pf_feast.14.d"
+	picture = ARTWORK_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {		# buy it
+		name = pf_feast.14.a
+		add_years_of_income = -0.05
+		random = {
+			chance = 50
+			add_splendor = 20
+		}
+	}
+	option = {		# refuse
+		name = pf_feast.14.b
+		add_prestige = 5
+		add_estate_burghers_loyalty_effect = -5
+	}
+}
+country_event = {	# Feast: The Fire
+	id = pf_feast.15
+	title = pf_feast.15.t
+	desc = "pf_feast.15.d"
+	picture = CONSORT_DOING_BADLY_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+		capital_scope = {
+			NOT = { devastation = 10 }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {		# contribute to help
+		name = pf_feast.15.a
+		add_years_of_income = -0.20
+		capital_scope = {
+			add_devastation = 25
+		}
+	}
+	option = {		# our guests will help
+		name = pf_feast.15.b
+		add_estate_loyalty = {
+			estate = all
+			loyalty = -8
+			short = yes
+		}
+		capital_scope = {
+			add_devastation = 25
+		}
+	}
+	option = {		# send everyone home!
+		name = pf_feast.15.c
+		add_dip_power = -50
+		capital_scope = {
+			add_devastation = 25
+		}
+	}
+}
+country_event = {	# Feast: Magnificent Speech
+	id = pf_feast.16
+	title = pf_feast.16.t
+	desc = "pf_feast.16.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {		# me me me
+		name = pf_feast.16.a
+		add_legitimacy_equivalent = {
+			amount = 10
+		}
+	}
+	option = {		# excellent skills
+		name = pf_feast.16.b
+		add_dip_power = 30
+	}
+}
+country_event = {	# Feast: Bard Performance
+	id = pf_feast.17
+	title = pf_feast.17.t
+	desc = "pf_feast.17.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+		NOT = { artist = 1 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {		# wonderful
+		name = pf_feast.17.a
+		add_splendor = 10
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+	}
+	option = {		# excellent skills
+		name = pf_feast.17.b
+		add_adm_power = 10
+		add_dip_power = 10
+		define_advisor = {
+			type = artist
+			skill = 1
+			discount = yes
+		}
+	}
+}
+country_event = {	# Feast: A Coin on the Floor
+	id = pf_feast.18
+	title = pf_feast.18.t
+	desc = "pf_feast.18.d"
+	picture = muslim_GOOD_WITH_MONARCH_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+		NOT = { has_ruler_modifier = pf_feast_cursed }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {		# pick it up
+		name = pf_feast.18.a
+		add_treasury = 1
+		hidden_effect = {
+			random_list = {
+				10 = {
+					country_event = { id = pf_feast.19 days = 7 random = 3 }		# valuable coin
+				}
+				10 = {
+					country_event = { id = pf_feast.20 days = 7 random = 3 }		# cursed coin
+				}
+				10 = {
+					country_event = { id = pf_feast.21 days = 7 random = 3 }		# coin collection
+				}
+				70 = {
+
+				}
+			}
+		}
+	}
+	option = {		# is this yours
+		name = pf_feast.18.b
+		add_prestige = 1
+	}
+}
+
+country_event = {	# Feast: A Coin on the Floor valuable
+	id = pf_feast.19
+	title = pf_feast.19.t
+	desc = "pf_feast.19.d"
+	picture = muslim_GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {		# pick it up
+		name = pf_feast.19.a
+		add_years_of_income = 0.10
+	}
+}
+country_event = {	# Feast: A Coin on the Floor curse
+	id = pf_feast.20
+	title = pf_feast.20.t
+	desc = "pf_feast.20.d"
+	picture = muslim_GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {		# pick it up
+		name = pf_feast.20.a
+		add_treasury = -1
+		add_ruler_modifier = {
+			name = "pf_feast_cursed"
+			duration = 1825
+		}
+	}
+}
+country_event = {	# Feast: A Coin on the Floor collection
+	id = pf_feast.21
+	title = pf_feast.21.t
+	desc = "pf_feast.21.d"
+	picture = muslim_GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {		# pick it up
+		name = pf_feast.21.a
+		add_prestige = 10
+		add_treasury = 25
+	}
+}
+country_event = {	# Feast: Stuffed with food
+	id = pf_feast.22
+	title = pf_feast.22.t
+	desc = "pf_feast.22.d"
+	picture = FEAST_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {		# oof
+		name = pf_feast.22.a
+		add_adm_power = 10
+	}
+	option = {		# just popping to the loo
+		name = pf_feast.22.b
+		add_dip_power = 10
+	}
+	option = {		# such a good meal
+		name = pf_feast.22.c
+		add_mil_power = 10
+	}
+}
+country_event = {	# Feast: At War
+	id = pf_feast.23
+	title = pf_feast.23.t
+	desc = "pf_feast.23.d"
+	picture = BATTLE_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = pf_feast.23.a
+		add_dip_power = 50
+	}
+	option = {
+		name = pf_feast.23.b
+		add_army_tradition = 10
+	}
+}
+country_event = {	# Feast: Showing Off Art
+	id = pf_feast.24
+	title = pf_feast.24.t
+	desc = "pf_feast.24.d"
+	picture = CULTURE_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = pf_feast.24.a
+		add_dip_power = -30
+		add_estate_loyalty = {
+			estate = all
+			loyalty = 10
+		}
+	}
+	option = {
+		name = pf_feast.24.b
+		add_dip_power = 10
+	}
+	option = {
+		name = pf_feast.24.c
+		trigger = {
+			has_estate_privilege = estate_burghers_patronage_of_the_arts
+		}
+		highlight = yes
+		add_prestige_or_monarch_power = {
+			amount = 20
+		}
+		add_estate_loyalty = {
+			estate = all
+			loyalty = 10
+		}
+	}
+}
+country_event = {	# Feast: My Fair Maiden
+	id = pf_feast.25
+	title = pf_feast.25.t
+	desc = "pf_feast.25.d"
+	picture = CULTURE_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+		NOT = { has_heir = yes }
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = pf_feast.25.a
+		add_legitimacy_equivalent = {
+			amount = -10
+		}
+		define_heir = {
+			claim = 20
+			dynasty = ROOT
+		}
+	}
+	option = {
+		name = pf_feast.25.b
+		add_prestige = -10
+	}
+	option = {
+		name = pf_feast.25.c
+		trigger = {
+			has_consort = yes
+		}
+		highlight = yes
+		add_dip_power = -30
+		add_mil_power = -30
+	}
+}
+country_event = {	# Feast: Running out of wine
+	id = pf_feast.26
+	title = pf_feast.26.t
+	desc = "pf_feast.26.d"
+	picture = FEAST_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = pf_feast.26.a
+		add_adm_power = -20
+		add_estate_loyalty = {
+			estate = all
+			loyalty = -5
+		}
+	}
+	option = {
+		name = pf_feast.26.b
+		add_years_of_income = -0.15
+		add_prestige = 5
+	}
+	option = {
+		name = pf_feast.26.c
+		trigger = {
+			any_owned_province = {
+				trade_goods = wine
+			}
+		}
+		highlight = yes
+		add_years_of_income = -0.05
+		add_prestige = 10
+	}
+}
+country_event = {	# Feast: The Debate
+	id = pf_feast.27
+	title = pf_feast.27.t
+	desc = "pf_feast.27.d"
+	picture = FEAST_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = pf_feast.27.a
+		if = {
+			limit = {
+				NOT = { dip = 6 }
+			}
+			change_dip = 1
+		}
+		else = {
+			add_dip_power = 100
+		}
+	}
+}
+country_event = {	# Feast: Memories of Old
+	id = pf_feast.28
+	title = pf_feast.28.t
+	desc = "pf_feast.28.d"
+	picture = FEAST_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = pf_feast.28.a
+		add_legitimacy_equivalent = {
+			amount = -5
+		}
+	}
+	option = {
+		name = pf_feast.28.b
+		add_mil_power = 25
+	}
+}
+country_event = {	# Feast: Great Painter
+	id = pf_feast.29
+	title = pf_feast.29.t
+	desc = "pf_feast.29.d"
+	picture = FEAST_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = pf_feast.29.a
+		add_years_of_income = -0.15
+		define_advisor = {
+			type = artist
+			skill = 1
+			discount = yes
+		}
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+	}
+	option = {
+		name = pf_feast.29.b
+		add_prestige = -5
+	}
+}
+country_event = {	# Feast: Travelling Minstrel Seeks Patronage
+	id = pf_feast.30
+	title = pf_feast.30.t
+	desc = "pf_feast.30.d"
+	picture = FEAST_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = pf_feast.30.a
+		add_years_of_income = -0.10
+		add_stability_or_adm_power = yes
+	}
+	option = {
+		name = pf_feast.30.b
+		add_prestige = 10
+	}
+}
+country_event = {	# Feast: Laughing at Jester
+	id = pf_feast.31
+	title = pf_feast.31.t
+	desc = "pf_feast.31.d"
+	picture = FEAST_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = pf_feast.31.a
+		add_prestige_or_monarch_power = {
+			amount = 5
+		}
+	}
+}
+country_event = {	# Feast: Jester mocks ruler
+	id = pf_feast.32
+	title = pf_feast.32.t
+	desc = "pf_feast.32.d"
+	picture = FEAST_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = pf_feast.32.a
+		add_legitimacy_equivalent = {
+			amount = -20
+		}
+	}
+	option = {
+		name = pf_feast.32.b
+		add_mil_power = -50
+		add_estate_loyalty = {
+			estate = all
+			loyalty = -5
+		}
+	}
+	option = {
+		name = pf_feast.32.c
+		trigger = {
+			ruler_has_personality = naive_personality
+		}
+		highlight = yes
+		add_prestige = -5
+	}
+}
+country_event = {	# Feast: Too drunk
+	id = pf_feast.33
+	title = pf_feast.33.t
+	desc = "pf_feast.33.d"
+	picture = FEAST_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = pf_feast.33.a
+		add_war_exhaustion = 2
+	}
+	option = {
+		name = pf_feast.33.b
+		add_adm_power = -25
+		add_dip_power = -25
+		add_mil_power = -25
+	}
+}
+country_event = {	# Feast: General offers services
+	id = pf_feast.34
+	title = pf_feast.34.t
+	desc = "pf_feast.34.d"
+	picture = FEAST_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = pf_feast.34.a
+		if = {
+			limit = {
+				has_country_flag = tier_1_feast
+			}
+			create_general = {
+				tradition = 50
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = tier_2_feast
+			}
+			create_general = {
+				tradition = 75
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = tier_3_feast
+			}
+			create_general = {
+				tradition = 100
+			}
+		}
+	}
+	option = {
+		name = pf_feast.34.b
+		add_mil_power = 10
+	}
+}
+country_event = {	# Feast: Showing Our Glory
+	id = pf_feast.35
+	title = pf_feast.35.t
+	desc = "pf_feast.35.d"
+	picture = FEAST_eventPicture
+
+	trigger = {
+		has_country_flag = is_in_feast
+		OR = {
+			has_country_flag = tier_2_feast
+			has_country_flag = tier_3_feast
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = pf_feast.35.a
+		add_prestige_or_monarch_power = {
+			amount = 20
+		}
+	}
+	option = {
+		name = pf_feast.35.b
+		add_splendor = 100
+	}
+	option = {
+		name = pf_feast.35.c
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 10
+		}
 	}
 }
