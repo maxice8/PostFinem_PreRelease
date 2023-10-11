@@ -381,6 +381,12 @@ pf_per_1 = {
 				duration = 3650
 			}
 			add_mercantilism = 10
+
+			custom_tooltip = empty
+			hidden_effect = {
+				remove_ruler_personality = drunkard_personality
+			}
+			add_ruler_personality = entrepreneur_personality
 		}
 	}
 
@@ -501,39 +507,6 @@ pf_per_1 = {
 
 		# Baghdad, Teheran, Mashhad, Herat and Samarkand, must be 25 dev, workshop, marketplace, expanded infra
 		trigger = {
-#			custom_trigger_tooltip = {
-#				tooltip = pf_per_revive_silk_road_tt
-#				410 = {
-#					development = 25
-#					has_production_building_trigger = yes
-#					has_trade_building_trigger = yes
-#					num_of_times_expanded_infrastructure = 1
-#				}
-#				428 = {
-#					development = 25
-#					has_production_building_trigger = yes
-#					has_trade_building_trigger = yes
-#					num_of_times_expanded_infrastructure = 1
-#				}
-#				4326 = {
-#					development = 25
-#					has_production_building_trigger = yes
-#					has_trade_building_trigger = yes
-#					num_of_times_expanded_infrastructure = 1
-#				}
-#				446 = {
-#					development = 25
-#					has_production_building_trigger = yes
-#					has_trade_building_trigger = yes
-#					num_of_times_expanded_infrastructure = 1
-#				}
-#				454 = {
-#					development = 25
-#					has_production_building_trigger = yes
-#					has_trade_building_trigger = yes
-#					num_of_times_expanded_infrastructure = 1
-#				}
-#			}
 			custom_trigger_tooltip = {
 				tooltip = pf_per_revive_silk_road_2_tt
 				410 = {
@@ -586,6 +559,9 @@ pf_per_1 = {
 			custom_tooltip = pf_per_all_required_provinces_tt
 			tooltip = {
 				change_trade_goods = silk
+			}
+			custom_tooltip = empty
+			tooltip = {
 				add_province_modifier = {
 					name = pf_per_silk_road_city
 					duration = -1
@@ -636,6 +612,7 @@ pf_per_1 = {
 				duration = 3650
 			}
 
+			custom_tooltip = empty
 			428 = {
 				center_of_trade = 2
 			}
@@ -669,6 +646,7 @@ pf_per_1 = {
 			}
 
 			monthly_income = 100
+			custom_tooltip = empty
 
 			calc_true_if = {
 				all_owned_province = {
@@ -687,6 +665,7 @@ pf_per_1 = {
 		# Ducats, 10% dev cost and 10% goods produced for 20 years
 		effect = {
 			add_years_of_income = 2
+			custom_tooltip = empty
 
 			add_country_modifier = {
 				name = pf_per_persia_prospering
@@ -771,30 +750,9 @@ pf_per_2 = {
 
 		# Baghdad gets -15% dev cost until end of game, trade centre in Baghdad and Basra upgraded to 2
 		effect = {
-			custom_tooltip = pf_per_if_lvl_1_tc_tt
-			tooltip = {
-				410 = { add_center_of_trade_level = 1 }
-			}
-			hidden_effect = {
-				410 = {
-					if = {
-						limit = { NOT = { province_has_center_of_trade_of_level = 2 } }
-						add_center_of_trade_level = 1
-					}
-				}
-			}
-			custom_tooltip = pf_per_if_lvl_1_tc_tt
-			tooltip = {
-				408 = { add_center_of_trade_level = 1 }
-			}
-			hidden_effect = {
-				408 = {
-					if = {
-						limit = { NOT = { province_has_center_of_trade_of_level = 2 } }
-						add_center_of_trade_level = 1
-					}
-				}
-			}
+			410 = { set_center_level_2_center_of_trade = yes }
+			408 = { set_center_level_2_center_of_trade = yes }
+			custom_tooltip = empty
 			410 = {
 				add_permanent_province_modifier = {
 					name = pf_per_baghdad_reborn
@@ -1004,6 +962,9 @@ pf_per_2 = {
 					name = pf_per_defended_mountain_fort
 					duration = -1
 				}
+			}
+			custom_tooltip = empty
+			tooltip = {
 				add_building_construction = {
 					building = ramparts
 					speed = 1.0
@@ -1169,9 +1130,15 @@ pf_per_2 = {
 		effect = {
 			change_government_reform_progress = 100
 
+			custom_tooltip = empty
 			add_country_modifier = {
 				name = pf_per_modern_governing
 				duration = -1
+			}
+
+			change_ruler_stat = {
+				stat = adm
+				amount = 1
 			}
 		}
 	}
@@ -1288,6 +1255,8 @@ pf_per_3 = {
 					cost = 0.0
 				}
 			}
+
+			custom_tooltip = empty
 			tabriz_area = { add_permanent_claim = ROOT }
 		}
 	}
@@ -1475,10 +1444,13 @@ pf_per_3 = {
 		# Add ducats, Satrapies all get +10% goods prod for 20 years, -10% liberty desire
 		effect = {
 			add_years_of_income = 2
-			every_subject_country = {
-				add_country_modifier = {
-					name = pf_per_satrapy_investment_boom
-					duration = 7300
+			custom_tooltip = pf_per_invest_in_satrapies_tt
+			hidden_effect = {
+				every_subject_country = {
+					add_country_modifier = {
+						name = pf_per_satrapy_investment_boom
+						duration = 7300
+					}
 				}
 			}
 
@@ -1530,6 +1502,11 @@ pf_per_3 = {
 		effect = {
 			set_country_flag = pf_per_satrapy_demand_consequences_2
 			custom_tooltip = pf_per_satrapy_demand_consequences_2_tt
+
+			change_ruler_stat = {
+				stat = mil
+				amount = 1
+			}
 
 			custom_tooltip = pf_per_get_claims_on_rest_of_expansion_plan_tt
 			hidden_effect = {
@@ -1682,6 +1659,8 @@ pf_per_3 = {
 			custom_tooltip = pf_per_satrapy_demand_consequences_3_tt
 
 			remove_estate_privilege = estate_nobles_pf_satrapy_expansion_plan
+
+			add_ruler_personality = legendary_conqueror_personality
 		}
 	}
 
@@ -1826,7 +1805,11 @@ pf_per_4 = {
 					cost = 0.0
 				}
 			}
+
+			custom_tooltip = empty
 			add_adm_power = 50
+
+			custom_tooltip = empty
 			lahore_area = { add_permanent_claim = ROOT }
 			multan_area = { add_permanent_claim = ROOT }
 		}
@@ -1859,18 +1842,8 @@ pf_per_4 = {
 
 		# Multan gets trade centre level 2, +20% trade power and +10% goods produced for 20 years
 		effect = {
-			custom_tooltip = pf_per_if_lvl_1_tc_tt
-			tooltip = {
-				506 = { add_center_of_trade_level = 1 }
-			}
-			hidden_effect = {
-				506 = {
-					if = {
-						limit = { NOT = { province_has_center_of_trade_of_level = 2 } }
-						add_center_of_trade_level = 1
-					}
-				}
-			}
+			506 = { set_center_level_2_center_of_trade = yes }
+			custom_tooltip = empty
 			506 = {
 				add_province_modifier = {
 					name = pf_per_multan_conquered
@@ -1956,6 +1929,7 @@ pf_per_4 = {
 		# Perma claims, some power points
 		effect = {
 			add_dip_power = 100
+			custom_tooltip = empty
 
 			saurashtra_area = { add_permanent_claim = ROOT }
 			ahmedabad_area = { add_permanent_claim = ROOT }
@@ -2046,7 +2020,13 @@ pf_per_4 = {
 					subject = GUJ
 				}
 			}
-			custom_tooltip = pf_per_deal_with_gujarat_3_tt
+			custom_tooltip = empty
+			tooltip = {
+				change_ruler_stat = {
+					stat = dip
+					amount = 1
+				}
+			}
 			hidden_effect = {
 				if = {
 					limit = { 517 = { country_or_non_sovereign_subject_holds = ROOT } } # Chose conquest path
@@ -2071,15 +2051,10 @@ pf_per_4 = {
 						subject_type = satrapy
 						subject = GJR
 					}
-					hidden_effect = {
-						pf_per_release_satrapies_scripted_effect = yes
-					}
-					if = {
-						limit = { NOT = { dip = 6 } }
-						change_dip = 1
-					}
-					else = {
-						add_dip_power = 100
+					pf_per_release_satrapies_scripted_effect = yes
+					change_ruler_stat = {
+						stat = dip
+						amount = 1
 					}
 				}
 			}
@@ -2123,6 +2098,15 @@ pf_per_4 = {
 				religion = zoroastrian
 				culture = isfahani
 			}
+
+			custom_tooltip = empty
+			hidden_effect = {
+				remove_ruler_personality = free_thinker_personality
+				remove_ruler_personality = tolerant_personality
+				remove_ruler_personality = drunkard_personality
+				remove_ruler_personality = sinner_personality
+			}
+			add_ruler_personality = zealot_personality
 		}		
 	}
 
@@ -2185,6 +2169,8 @@ pf_per_4 = {
 		# All provinces there get +10% production efficiency, 50% progress towards prosperity, -5 unrest
 		effect = {
 			add_mil_power = 100
+			custom_tooltip = empty
+
 			GJR = {
 				add_country_modifier = {
 					name = pf_per_rule_in_india
@@ -2344,29 +2330,36 @@ pf_per_5 = {
 
 		# Conquered areas lose devastation, flip Zoroastrian
 		effect = {
-			termez_area = {
+			custom_tooltip = pf_per_all_required_provinces_tt
+			tooltip = {
 				add_devastation = -100
-				change_religion = zoroastrian
 			}
-			transoxiana_area = {
-				add_devastation = -100
-				change_religion = zoroastrian
-			}
-			2349 = {
-				add_devastation = -100
-				change_religion = zoroastrian
-			}
-			438 = {
-				add_devastation = -100
-				change_religion = zoroastrian
-			}
-			437 = {
-				add_devastation = -100
-				change_religion = zoroastrian
-			}
-			441 = {
-				add_devastation = -100
-				change_religion = zoroastrian
+			custom_tooltip = pf_per_drive_back_hordes_tt
+			hidden_effect = {
+				termez_area = {
+					add_devastation = -100
+					change_religion = zoroastrian
+				}
+				transoxiana_area = {
+					add_devastation = -100
+					change_religion = zoroastrian
+				}
+				2349 = {
+					add_devastation = -100
+					change_religion = zoroastrian
+				}
+				438 = {
+					add_devastation = -100
+					change_religion = zoroastrian
+				}
+				437 = {
+					add_devastation = -100
+					change_religion = zoroastrian
+				}
+				441 = {
+					add_devastation = -100
+					change_religion = zoroastrian
+				}
 			}
 		}
 	}
@@ -2495,6 +2488,8 @@ pf_per_5 = {
 		# Get 100 church power, provinces get -5 unrest, 20% tax eff
 		effect = {
 			add_church_power = 100
+			custom_tooltip = empty
+
 			2076 = {
 				add_province_modifier = {
 					name = pf_per_liberated_from_heresy
@@ -2562,6 +2557,11 @@ pf_per_5 = {
 				name = pf_per_united_in_faith
 				duration = -1
 			}
+
+			hidden_effect = {
+				remove_ruler_personality = babbling_buffoon_personality
+			}
+			add_ruler_personality = charismatic_negotiator_personality
 		}
 	}
 
@@ -2652,6 +2652,7 @@ pf_per_5 = {
 		# Gets +0.2 infantry fire for 20 years, gets 5% professionalism
 		effect = {
 			add_army_professionalism = 0.05
+			custom_tooltip = empty
 			add_country_modifier = {
 				name = pf_per_persian_arquebus_modifier
 				duration = 7300
@@ -2678,6 +2679,7 @@ pf_per_5 = {
 		# Gets +20% siege ability, -10% mil tech cost for 20 years
 		effect = {
 			add_mil_power = 100
+			custom_tooltip = empty
 			add_country_modifier = {
 				name = pf_per_new_siege_tech
 				duration = 7300
