@@ -4771,6 +4771,28 @@ on_dependency_lost = {
 			remove_country_modifier = revoked_war_rights
 		}
 	}
+	# pf
+	if = {
+		limit = {
+			FROM = {
+				tag = MNG
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = pf_mac_events_1_modifier_dip
+			}
+			remove_country_modifier = pf_mac_events_1_modifier_dip
+		}
+		FROM = {
+			if = {
+				limit = {
+					has_country_modifier = pf_mac_events_1_modifier_subj
+				}
+				remove_country_modifier = pf_mac_events_1_modifier_subj
+			}
+		}
+	}
 }
 
 # ROOT = New vassal, FROM = Overlord
