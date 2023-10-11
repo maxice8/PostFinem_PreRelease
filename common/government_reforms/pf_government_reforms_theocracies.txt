@@ -22,6 +22,19 @@ pf_persian_satrapy = {
 		manpower_in_true_faith_provinces = 0.25
 	}
 
+	effect = {
+		hidden_effect = {
+			set_country_flag = has_eyalet_color # Enables decision to restore color
+			set_country_flag = has_overriden_color_flag
+			change_country_color = {
+				# Usually it would be country = overlord so the Satrapy
+				# has the same color as the overlord, but in PF the Satrapies
+				# have a lighter shade of Persia's color
+				color = { 255 186 22 }
+			}
+		}
+	}
+
 	# This restores the colors of countries that broke free
 	removed_effect = {
 		hidden_effect = {
