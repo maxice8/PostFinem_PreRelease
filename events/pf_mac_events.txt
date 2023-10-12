@@ -71,56 +71,6 @@ country_event = {
 	}
 }
 
-#Remove Magna Graeca Diplo Slot
-country_event = {
-	id = pf_mac_events.2
-	title = pf_mac_events.2.t
-	desc = pf_mac_events.2.d
-	picture = CIVIL_WAR_eventPicture
-	hidden = yes
-	
-	trigger = {  
-		has_country_modifier = pf_mac_events_1_modifier_dip
-		NOT = {
-			MGN = { is_subject_of = ROOT }
-		}
-	}
-	mean_time_to_happen = { months = 1 }
-
-	option = {
-		name = pf_mac_events.2.a
-		# goto = 
-		ai_chance = { factor = 1 }
-		remove_country_modifier = pf_mac_events_1_modifier_dip
-	}
-	
-}
-
-#Remove Magna Graeca March buff
-country_event = {
-	id = pf_mac_events.2
-	title = pf_mac_events.2.t
-	desc = pf_mac_events.2.d
-	picture = CIVIL_WAR_eventPicture
-	hidden = yes
-	
-	trigger = {  
-		has_country_modifier = pf_mac_events_1_modifier_subj
-		NOT = {
-			MGN = { is_subject_of = ROOT }
-		}
-	}
-	mean_time_to_happen = { months = 1 }
-
-	option = {
-		name = pf_mac_events.2.a
-		# goto = 
-		ai_chance = { factor = 1 }
-		remove_country_modifier = pf_mac_events_1_modifier_dip
-	}
-	
-}
-
 #Uncontested in the Aegean
 country_event = {
 	id = pf_mac_events.3
