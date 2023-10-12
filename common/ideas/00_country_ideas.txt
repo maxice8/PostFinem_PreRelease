@@ -991,48 +991,6 @@ TUR_ideas = {
 		global_ship_cost = -0.1
 	}
 }
-
-FER_ideas = {
-	start = {
-		light_ship_power = 0.15
-		siege_ability = 0.1
-	}
-	
-	bonus = {
-		global_ship_trade_power = 0.2
-	}
-	
-	trigger = {
-		tag = FER
-	}
-	free = yes		#will be added at load.
-	
-	FER_papal = {
-		papal_influence = 1
-		religious_unity = 0.25
-	}
-	FER_culture = {
-		global_institution_spread = 0.1
-	}
-	FER_alfonso = {
-		artillery_power = 0.1
-	}
-	FER_margrave_of_este = {
-		diplomatic_reputation = 1
-	}
-	FER_resisting_venice = {
-		global_own_trade_power = 0.25
-	}
-	FER_este_castle = {
-		defensiveness = 0.15
-		prestige = 0.5	
-	}
-	FER_ferraran_arsenal = {
-		flagship_cost = -0.5
-		leader_naval_fire = 1
-	}
-}
-
 URB_ideas = {
 	start = {
 		production_efficiency = 0.1

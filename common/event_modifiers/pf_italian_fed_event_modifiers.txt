@@ -490,3 +490,42 @@ pf_ily_defender_of_the_empire = {
 	shock_damage_received = -0.10
 	fire_damage_received = -0.05
 }
+
+# Crown Authority
+
+crown_authority_1 = {
+	reduced_liberty_desire = 25
+	global_tax_modifier = -0.10
+	prestige = -0.5
+	legitimacy = -0.5
+	yearly_absolutism = -0.5
+	max_absolutism = -20
+}
+crown_authority_2 = {
+	reduced_liberty_desire = 5
+	prestige = -0.25
+	max_absolutism = -10
+}
+crown_authority_3 = {
+	reduced_liberty_desire = -5
+	global_autonomy = -0.01
+	vassal_income = 0.10
+	max_absolutism = 5
+}
+crown_authority_4 = {
+	reduced_liberty_desire = -10
+	global_autonomy = -0.02
+	vassal_income = 0.25
+	vassal_forcelimit_bonus = 0.10
+	global_manpower_modifier = 0.05
+	max_absolutism = 10
+}
+crown_authority_5 = {
+	reduced_liberty_desire = -20
+	global_autonomy = -0.03
+	vassal_income = 0.50
+	vassal_forcelimit_bonus = 0.25
+	vassal_manpower_bonus = 0.25
+	global_manpower_modifier = 0.10
+	max_absolutism = 15
+}

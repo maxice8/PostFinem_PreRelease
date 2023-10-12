@@ -387,9 +387,9 @@ illyrian_kingdom_reform = {
 		nobles_influence_modifier = 0.15
 		max_absolutism = 5
 	}
-	#government_abilities = {
-	#	espionage_policy_mechanic
-	#}
+	government_abilities = {
+		crown_authority_mechanic
+	}
 	custom_attributes = {
 		recruiting_generals_increases_nobles_loyalty = yes
 		buffed_strong_duchies = yes #+5% Loyalty

@@ -18,6 +18,10 @@ elector = yes
 		birth_date = 1400.04.18
 		death_date = 1445.01.01
 	}
+	add_country_modifier = {
+		name = "crown_authority_2"
+		duration = -1
+	}
 }
 1444.11.11 = { 
 	heir = { 
