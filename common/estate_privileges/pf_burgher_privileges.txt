@@ -86,6 +86,80 @@ estate_burghers_pf_peace_of_utrech = {
 		factor = 100
 	}
 }
+estate_burghers_pf_mac_influential_guilds = {
+	icon = privilege_placeholder
+	# land_share = 5
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.2
+	is_valid = {
+		NOT = { has_country_flag = mac_abolished_trader_guilds_flag }
+		OR = {
+			tag = MAC
+			was_tag = MAC
+		}
+	}
+	can_select = {
+		always = no
+	}
+	on_granted = {
+	}
+	can_revoke = {
+		stability = 1
+		1319 = {
+			trade_share = {
+				country = root
+				share = 50
+			}
+		}
+		328 = {
+			trade_share = {
+				country = root
+				share = 50
+			}
+		}
+		377 = {
+			trade_share = {
+				country = root
+				share = 25
+			}
+		}
+	}
+	penalties = {
+		trade_efficiency = -0.25
+		# production_efficiency = -0.25
+	}
+	benefits = {
+		development_cost = -0.1
+	}
+	on_granted_province = {
+	}
+	on_revoked = {
+		custom_tooltip = mac_abolished_trader_guilds_tt
+		set_country_flag = mac_abolished_trader_guilds_flag
+	}
+	on_revoked_province = {
+		custom_tooltip = mac_abolished_trader_guilds_rebels_tt
+		hidden_effect = {
+			if = {
+				limit = { 				
+					province_has_center_of_trade_of_level = 1 
+				}
+				spawn_rebels = {
+					size = 2
+					type = noble_rebels
+				}
+			}
+		}
+	}
+	on_invalid = {
+	}
+	on_invalid_province = {
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
 estate_burghers_pf_court_bards = {
 	icon = privilege_coup_detat
 	land_share = 5
@@ -114,6 +188,121 @@ estate_burghers_pf_court_bards = {
 	}
 	ai_will_do = {
 		factor = 100
+	}
+}
+
+estate_burghers_merchants_of_many_ports = {
+	icon = privilege_placeholder
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.05
+	influence = 0.1
+	is_valid = {
+		any_owned_province = {
+			has_port = yes
+		}
+	}
+	can_select = {
+		
+	}
+	
+	on_granted = {
+
+	}
+	penalties = {
+		mercantilism_cost = 0.25
+	}
+	benefits = {
+		merchants = 1
+	}
+	conditional_modifier = {
+		trigger = { has_government_attribute = is_merchant_republic }
+		modifier = { trade_efficiency = 0.05 }
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+estate_burghers_warehouse_rights = {
+	icon = privilege_placeholder
+	land_share = 5
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.1
+	is_valid = {
+		
+	}
+	can_select = {
+		
+	}
+	
+	on_granted = {
+		
+	}
+	penalties = {
+
+	}
+	benefits = {
+		center_of_trade_upgrade_cost = -0.1
+		global_prov_trade_power_modifier = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+estate_burghers_promote_individual_guilds = {
+	icon = privilege_placeholder
+	land_share = 5
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.05
+	is_valid = {
+		
+	}
+	can_select = {
+		
+	}
+	
+	on_granted = {
+
+	}
+	penalties = {
+
+	}
+	benefits = {
+		placed_merchant_power = 10
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+estate_burghers_encourage_internal_competition = {
+	icon = privilege_placeholder
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = -0.05
+	is_valid = {
+		
+	}
+	can_select = {
+		
+	}
+	
+	on_granted = {
+		add_mercantilism = 3
+	}
+	on_revoked = { add_mercantilism = -3 }
+	penalties = {
+
+	}
+	benefits = {
+		global_own_trade_power = 0.1
+	}
+	ai_will_do = {
+		factor = 10
 	}
 }
 estate_burghers_pf_league_agreements = {

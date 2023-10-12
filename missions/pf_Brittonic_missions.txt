@@ -80,7 +80,7 @@ pf_bri_1_welsh = {
 
 	pf_bri_among_the_flocks = {
 		icon = mission_rb_conquer_wales
-		position = 1
+		position = 3
 		required_missions = { } 
 		provinces_to_highlight = {
 			area = wales_area
@@ -116,7 +116,7 @@ pf_bri_1_welsh = {
 	}
 	pf_bri_mathrafal_castle = {
 		icon = mission_castle_construction
-		position = 2
+		position = 4
 		required_missions = { pf_bri_among_the_flocks } 
 		provinces_to_highlight = {
 			province_id = 4366
@@ -151,7 +151,7 @@ pf_bri_1_welsh = {
 	}
 	pf_bri_farm_estates = {
 		icon = mission_peasantry
-		position = 3
+		position = 5
 		required_missions = { pf_bri_mathrafal_castle } 
 		provinces_to_highlight = {
 			owned_by = ROOT
@@ -197,7 +197,7 @@ pf_bri_1_cornish = {
 
 	pf_bri_unite_dumnonia = {
 		icon = mission_redcoats
-		position = 1
+		position = 3
 		required_missions = { } 
 		provinces_to_highlight = {
 			area = wessex_area
@@ -224,7 +224,7 @@ pf_bri_1_cornish = {
 	}
 	pf_bri_tarnished_gold = {
 		icon = mission_iron_and_copper
-		position = 2
+		position = 4
 		required_missions = { pf_bri_unite_dumnonia } 
 		provinces_to_highlight = {
 			province_id = 233	# Cornwall
@@ -256,7 +256,7 @@ pf_bri_1_cornish = {
 	}
 	pf_bri_cornish_channel = {
 		icon = mission_control_the_channel
-		position = 3
+		position = 5
 		required_missions = { pf_bri_tarnished_gold } 
 		provinces_to_highlight = {
 			province_id = 1285
@@ -294,7 +294,7 @@ pf_bri_1_briton = {
 
 	pf_bri_chiefs_house = {
 		icon = mission_swedish_nobility
-		position = 1
+		position = 3
 		required_missions = { } 
 		provinces_to_highlight = {
 			owned_by = ROOT
@@ -319,7 +319,7 @@ pf_bri_1_briton = {
 	}
 	pf_bri_tribal_growth = {
 		icon = mission_southern_frontier_lotn
-		position = 2
+		position = 4
 		required_missions = { pf_bri_chiefs_house } 
 		provinces_to_highlight = {
 		}
@@ -340,7 +340,7 @@ pf_bri_1_briton = {
 	}
 	pf_bri_land_of_cities = {
 		icon = mission_develop_visby
-		position = 3
+		position = 5
 		required_missions = { pf_bri_tribal_growth } 
 		provinces_to_highlight = {
 			owned_by = ROOT

@@ -1,0 +1,105 @@
+country_decisions = {
+	pf_spawn_phalanx = { #For AI to spawn phalanx because they won't build from macrobuilder
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				if = {
+					limit = { land_forcelimit = 50 }
+					OR = {
+						NOT = { treasury = 60 }
+						NOT = { mil_power = 60 }
+					}
+				}
+				else_if = {
+					limit = { land_forcelimit = 40 }
+					OR = {
+						NOT = { treasury = 50 }
+						NOT = { mil_power = 50 }
+					}
+				}
+				else_if = {
+					limit = { land_forcelimit = 30 }
+					OR = {
+						NOT = { treasury = 40 }
+						NOT = { mil_power = 40 }
+					}
+				}
+				else_if = {
+					limit = { land_forcelimit = 20 }
+					OR = {
+						NOT = { treasury = 30 }
+						NOT = { mil_power = 30 }
+					}
+				}
+				else = {
+					OR = {
+						NOT = { treasury = 20 }
+						NOT = { mil_power = 20 }
+					}
+				}
+			}
+		}
+		potential = {
+			ai = yes
+			OR = {
+				has_reform = pf_integrated_phalanx
+				has_reform = pf_seleucid_monarchy
+			}
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = pf_recruited_phalanx_modifier
+			}
+		}
+		effect = {
+			if = {
+				limit = { land_forcelimit = 50 }
+				capital_scope = {
+					streltsy_infantry = ROOT	streltsy_infantry = ROOT 	streltsy_infantry = ROOT 
+					streltsy_infantry = ROOT 	streltsy_infantry = ROOT	streltsy_infantry = ROOT  
+				}
+				add_treasury = -60
+				add_mil_power = -60
+			}
+			else_if = {
+				limit = { land_forcelimit = 40 }
+				capital_scope = {
+					streltsy_infantry = ROOT	streltsy_infantry = ROOT 	streltsy_infantry = ROOT 
+					streltsy_infantry = ROOT	streltsy_infantry = ROOT 
+				}
+				add_treasury = -50
+				add_mil_power = -50
+			}
+			else_if = {
+				limit = { land_forcelimit = 30 }
+				capital_scope = {
+					streltsy_infantry = ROOT	streltsy_infantry = ROOT 	streltsy_infantry = ROOT 
+					streltsy_infantry = ROOT 
+				}				
+				add_treasury = -40
+				add_mil_power = -40
+			}
+			else_if = {
+				limit = { land_forcelimit = 20 }
+				capital_scope = {
+					streltsy_infantry = ROOT	streltsy_infantry = ROOT 	streltsy_infantry = ROOT 
+				}
+				add_treasury = -30
+				add_mil_power = -30
+			}
+			else = {
+				capital_scope = {
+					streltsy_infantry = ROOT	streltsy_infantry = ROOT 
+				}
+				add_treasury = -20
+				add_mil_power = -20
+			}
+			add_country_modifier = {
+				name = pf_recruited_phalanx_modifier
+				duration = 1825
+				hidden = yes
+			}
+		}
+	}
+}

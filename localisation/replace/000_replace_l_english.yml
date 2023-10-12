@@ -2,6 +2,62 @@
 
 gen_hre_relations_with_emperor_title: "Strengthen Federal Ties"
 
+gen_hre_relations_with_emperor_title: "Strengthen Federal Ties"
+
+#Government Names
+    #FE
+ BISHOP_ELECTOR:0 "Flamen-Elector"
+ ARCHBISHOP_ELECTOR:0 "Pontifex-Elector"
+ PATRIARCH_ELECTOR:0 "Pontifex-Elector"
+ MATRIARCH_ELECTOR:0 "Pontifex-Elector"
+ PRINCE_ELECTOR:0 "Dux-Elector"
+ PRINCESS_ELECTOR:0 "Ducessa-Elector"
+ KING_ELECTOR:0 "Rex-Elector"
+ QUEEN_ELECTOR:0 "Regina-Elector"
+ ARCHBISHOP_ELECTOR_fem:0 "Pontifex-Elector"
+ ELECTOR_DUCATUS: "Electorate-Ducatus"
+ ELECTOR_REGNUM: "Electorate-Regnum"
+ ELECTOR_IMPERIUM: "Electorate-Imperium"
+ ELECTOR_DUX: "Dux-Elector"
+ ELECTOR_REX: "Rex-Elector"
+ ELECTOR_IMPERATOR: "Imperator-Elector"
+ ELECTOR_DUCESSA: "Ducessa-Elector"
+ ELECTOR_REGINNA: "Reginna-Elector"
+ ELECTOR_IMPERATRIX: "Elector-Imperatrix"
+ELECTOR_SACRARIUM: "Electorate-Sacrarium"
+ELECTOR_TEMPLATUM: "Electorate-Templatum"
+ELECTOR_DIVINATUM: "Electorate-Divinatum"
+ELECTOR_FLAMEN: "Flamen-Elector"
+ELECTOR_PONTIFEX: "Pontifex-Elector"
+ELECTOR_ARCHFLAMEN: "Archflamen-Elector"
+ELECTOR_FLAMINA: "Flamina-Elector"
+ELECTOR_PONTIFICA: "Pontifica-Elector"
+ELECTOR_ARCHFLAMINA: "Archflamina-Elector"
+ELECTOR_CIVITATUM: "Electorate-Civitatum"
+ELECTOR_LIGATUM: "Electorate-Ligatum"
+ELECTOR_RES_MAGNA: "Electorate-Res Magna"
+ELECTOR_PRAETOR: "Praetor-Elector"
+ELECTOR_CONSUL: "Consul-Elector"
+ELECTOR_PROCONSUL: "Proconsul-Elector"
+ELECTOR_PRAETORA: "Praetora-Elector"
+ELECTOR_CONSULA: "Consula-Elector"
+ELECTOR_PROCONSULA: "Proconsula-Elector"
+
+#Religion
+ CENTER_OF_REFORMATION_POSSIBLE: "A §YCultural Center§! may appear within our borders"
+ REFORM_DESIRE_IS_LESS_THAN:0 "Reform Fervor is less than §Y$SIZE$§!.\n"
+ REFORM_DESIRE_IS_AT_LEAST:0 "Reform Fervor is at least §Y$SIZE$§!.\n"
+ REFORM_DESIRE_EFFECT:1 "Hellenism $DIRECTION$ $PERC|%-$ Reform Fervor.\n"
+ PAPAL_INF_LESS_THAN:0 "Athenaean Influence less than"
+ PAPAL_INF_AT_LEAST:0 "Athenaean Influence at least"
+ INVESTED_PAPAL_INF_LESS_THAN:0 "Invested Athenaean Influence less than"
+ INVESTED_PAPAL_INF_AT_LEAST:0 "Invested Athenaean Influence at least"
+ ADD_PAPAL_INFLUENCE:0 "$DIRECTION$ $VALUE$ Athenaean Influence"
+ PAPACY_IS_ENABLED:0 "The Athenaeum is active"
+ PAPACY_IS_DISABLED:0 "The Athenaeum is NOT active"
+ ENABLE_PAPACY:0 "Enable the Athenaeum"
+ DISABLE_PAPACY:0 "Disable the Athenaeum"
+
 #Cultures
 
 #Units and Technology

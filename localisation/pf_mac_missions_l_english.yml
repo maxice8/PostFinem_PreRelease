@@ -1,122 +1,154 @@
 ﻿l_english:
  pf_mac_fund_the_military_title:0 "Fund the Military"
- pf_mac_fund_the_military_desc:0 "get kosovo up to 8 prod dev / give claims on rascia, albania and serbia"
+ pf_mac_fund_the_military_desc:0 "Gold, the lifeblood of empires, now beckons [Root.GetName]. By securing a rich gold mine, we ensure a steady flow of wealth to maintain our professional troops. With every nugget extracted, the [Root.GetAdjective] military grows stronger, funded and ready to defend our realm's interests."
 
  pf_mac_our_hebron_neighbors_title:0 "Our Hebron Neighbors"
- pf_mac_our_hebron_neighbors_desc:0 "own or subject own albania / if nek is subject give one, if annexed give another, give claims on calabria and apulia"
+ pf_mac_our_hebron_neighbors_desc:0 "Having leased our lands to the exiled Israelites, the time has come for [Root.GetName] to reconsider its stance. While they've found refuge in Nekharot, our Macedonian interests must prevail. Whether through direct rule or a [Root.GetAdjective] puppet, the Hebron destiny is intertwined with Macedonian ambitions."
+ mac_our_hebron_neighbors_tt_1: "If the §YNekharot§! area is owned directly:"
+ mac_our_hebron_neighbors_tt_2: "If the §YNekharot§! area is owned by a subject nation of §YNekharot§!:"
 
  pf_mac_magna_graecia_title:0 "Establish Magna Graecia"
- pf_mac_magna_graecia_desc:0 "own cores in apulia and calabria / event: release magna graecia as a personal union with no diplo slot, give them claims on sicily and all of southern italy OR get the claims yourself and a modifier"
- mac_release_magna_graecia_tt: "§YMagna Graecia§! will be released under a §YPersonal Union§!"
+ pf_mac_magna_graecia_desc:0 "As [Root.GetName] looks across the Adriatic, toward Italian shores, visions of a distant past come to mind, with Magna Graecia emerging. By marching upon the Italian Federation and carving out Hellenic territories in the south, we may craft a new era of prosperity and glory, side by side with our Hellenic kin."
  mac_magna_graecia_claims_tt: "§YMagna Graecia§! gains permanent claims on the §YSicilian§!, §YCapitania§!, and §YMolise§! areas."
 
  pf_mac_reclaim_asia_title:0 "Asia Reclaimed"
- pf_mac_reclaim_asia_desc:0 "own or subject own at least 40 provinces in anatolia / claims on al jazira and shahrizor"
+ pf_mac_reclaim_asia_desc:0 "Anatolia, the gateway to Asia, beckons [Root.GetName]. To set the stage for our grand ambitions in the Hellenic world, we must first lay claim to these ancient lands. With every territory in Anatolia we conquer, the foundation for [Root.GetAdjective] dominance in the wider Hellenic realm grows stronger"
 
  pf_mac_follow_silk_road_title:0 "Follow the Silk Road"
- pf_mac_follow_silk_road_desc:0 "own or subject own at least 6 provinces in al jazira and shahrizor, but own mosul and arbil as core provinces, each with at least 6 production / build manufactories in those provinces, if they already exist give 400 gold and 2 base production, claims on all of mesopotamia"
+ pf_mac_follow_silk_road_desc:0 "The allure of the Silk Road, with its tales of wealth and exotic goods, calls out to [Root.GetName]. By pushing into the fringes of Persian territories, we aim to rekindle the ancient trade routes that once thrived. Every step we take ensures the [Root.GetAdjective] realm reaps the riches of this legendary path."
 
  pf_mac_the_land_between_the_rivers_title:0 "Land Between the Rivers"
- pf_mac_the_land_between_the_rivers_desc:0 "at least 20 provinces in mesopotamia and own core basra with shipyard / upgrade cot and shipyard in basra, build 10 galleys, modifer for galleys, claims on persia region"
+ pf_mac_the_land_between_the_rivers_desc:0 "Mesopotamia, the cradle of civilizations and a land nourished by the Tigris and Euphrates, beckons to [Root.GetName]. By claiming this fertile and ancient territory, we not only gain its bounteous resources but also embed our [Root.GetAdjective] legacy in the annals of its storied history."
 
  pf_mac_crush_the_dastur_title:0 "Crush the Dastur"
- pf_mac_crush_the_dastur_desc:0 "own or subject own 30 provinces in persia / give claims on khorsan region, give modifier"
+ pf_mac_crush_the_dastur_desc:0 "The spirit of Alexander guides [Root.GetName] as we set our sights on Persia. To truly fulfill his legacy, we must vanquish the Persian presence and bring their lands under [Root.GetAdjective] rule. With every victory, the dream of a united realm, from Macedonia to the Indus, grows closer."
 
  pf_mac_prepare_for_war_title:0 "Prepare for War"
- pf_mac_prepare_for_war_desc:0 "war cabinet org at least 35, 100% army force limit, army professionalism at leat 10 / Claims on karaman, rum, cukurova"
+ pf_mac_prepare_for_war_desc:0 "The horizon holds promises of vast territories, from Pontus to Cappadocia and beyond. As [Root.GetName] readies its banners of war, every blacksmith's hammer and every drill of our soldiers signals our intent. The [Root.GetAdjective] realm stands on the precipice of major conquests, and we must be prepared."
 
  pf_mac_campiagns_into_asia_title:0 "Campaigns into Asia"
- pf_mac_campiagns_into_asia_desc:0 "own or subject own 10 provinces in three areas / claims on anatolia, alleppo and syria, add 1 base tax in up to 5 provinces"
+ pf_mac_campiagns_into_asia_desc:0 "As [Root.GetName] embarks on its ambitious journey into Asia, the shadow of Alexander's empire looms large. Every territory we claim, every victory we secure, not only echoes his legendary conquests but also foretells the grand [Root.GetAdjective] saga that's unfolding. A new chapter in history awaits, and its implications are vast."
 
  pf_mac_phoenician_coast_title:0 "Phoenician Coasts"
- pf_mac_phoenician_coast_desc:0 "own at least 6 provinces in alleppo and syria / claims on phoenicia"
+ pf_mac_phoenician_coast_desc:0 "Stretching along the Fertile Crescent and leading to Aegyptos, the Phoenician coasts are a strategic prize. As [Root.GetName] advances southward, our sights are firmly set on the grandeur of Alexandria. Each [Root.GetAdjective] victory in this region solidifies our grip on the ancient world's pivotal centers."
 
  pf_mac_macedonian_silk_title:0 "Macedonian Silk"
- pf_mac_macedonian_silk_desc:0 "have at least 10 provinces that produce cloth with at least 6 production dev / change 2 to silk and give province modifier for production"
+ pf_mac_macedonian_silk_desc:0 "Silk and cloth, the threads that weave prosperity. [Root.GetName] embarks on a mission to elevate its textile industry, aiming to make our nation's fabrics the gold standard. With innovation and craftsmanship, [Root.GetAdjective] textiles will soon drape the halls of power and luxury across the civilized world."
 
  pf_mac_argead_restoration_title:0 "The Argead Restoration"
- pf_mac_argead_restoration_desc:0 "own every prince in persia and khorsan, own or have a subject own all of egypt / change nation to argead empire and give new T1 reform ( if organization is still active give 20), perm modifier giving 5 AE and 10% trade efficiency, claims on western india"
+ pf_mac_argead_restoration_desc:0 "Having fulfilled Alexander's legacy, [Root.GetName] stands at the crossroads of history. But our ambitions don't halt at the Indus. With eyes set on territories beyond, we aim to etch a [Root.GetAdjective] legacy that surpasses even the legendary conqueror, reshaping the world in our vision."
 
  pf_mac_surpass_alexander_title:0 "Surpass Alexander"
- pf_mac_surpass_alexander_desc:0 "own at least 20 provinces in western india, "
+ pf_mac_surpass_alexander_desc:0 "Into the vast expanse of India, [Root.GetName] marches, aiming to achieve what even Alexander could not. By establishing a foothold in this ancient land, we not only expand our empire but also cement our place in history as one of the most formidable powers the world has ever seen."
 
  pf_mac_swell_the_ranks_title:0 "Swell The Ranks"
- pf_mac_swell_the_ranks_desc:0 "at least 40k troops, at least 6 cavalry, 2 generals, 50% manpower / modifier and claims on wallachia"
+ pf_mac_swell_the_ranks_desc:0 "War looms on the horizon, and [Root.GetName] must be prepared. By rallying our people and mustering every available soldier, we build an army of unparalleled might. With our ranks swelled and our resolve unyielding, we stand ready to face any challenge and assert our [Root.GetAdjective] dominance."
 
  pf_mac_encroach_on_the_federation_title:0 "Encroach on the Federation"
- pf_mac_encroach_on_the_federation_desc:0 "own serbia and rascia / claims on croatia, bosnia and dalmatia"
+ pf_mac_encroach_on_the_federation_desc:0 "The borderlands of the Italian Federation are ripe for [Root.GetName]'s ambitions. By advancing into these territories, we not only challenge their sovereignty on the Adriatic but also lay the groundwork for a deeper incursion into Italia. Every [Root.GetAdjective] foothold gained brings us closer to reshaping the balance of power."
 
  pf_mac_illyrian_marches_title:0 "Illyrian Marches"
- pf_mac_illyrian_marches_desc:0 "own or subject own at least 10 provinces in those three areas / if illyria exists, get subjugation cb on them, if not, get 100 adm mana and province modifiers in the three areas for enemy movement speed and build cost, claims on venetia and carniola"
+ pf_mac_illyrian_marches_desc:0 "Securing Illyria is a strategic masterstroke for [Root.GetName]. With control over these eastern gateways, we position ourselves at the very doorstep of the Federation. As we gaze into Italia, our next objective becomes clear: challenge the Punic heathens and further our [Root.GetAdjective] ambitions in the heart of the Mediterranean."
+ mac_illyrian_marches_tt: "If §YIllyria§! exists and is under 100 total development:\n[Root.GetName] will gain a §YSubjugation§! Casus Belli on §YIllyria§!\n\nAlternatively,\nGain §G100§! Administrative Power.\nEvery owned province in the §YBosnia§!, §YCroatia§!, and §YDalmatia§! areas will lose §G10§! years of separatism and will receive:"
 
  pf_mac_southern_brothers_title:0 "Our Southern Brothers"
- pf_mac_southern_brothers_desc:0 "own or subject own at least 10 provinces in phoenicia area, own core subjects in palestine area / event: get PU CB on aegyptos and tell them you will be able to remove historical rival malus evntually, OR get claims on all of their lands and a modifier"
+ pf_mac_southern_brothers_desc:0 "Phoenicia, with its rich history and strategic ports, is integral to [Root.GetName]'s Mediterranean ambitions. By asserting sovereignty over these lands, we not only unite with our southern brethren but also position ourselves for the next grand endeavor: challenging our rivals in Aegyptos and solidifying [Root.GetAdjective] dominance."
 
  pf_mac_hellenic_hegemon_title:0 "Hellenic Hegemon"
- pf_mac_hellenic_hegemon_desc:0 "EITHER own 20 provinces in egypt including core of alexandria or have a subject who owns 25 and has 0 liberty desire / if owned buff alexandria and give trade modifiers, if subject buff subject with modifier, give claims on carthage region"
+ pf_mac_hellenic_hegemon_desc:0 "To truly be the beacon of the Hellenic world, [Root.GetName] must bring Hellenic Egypt under its wing and seize the city of Alexander, Alexandria. By achieving this monumental feat, we not only expand our realm but also stand undisputed as the [Root.GetAdjective] hegemon, the pinnacle of Hellenic power and culture."
+ mac_hellenic_hegemon_tt_1: "If the lands of §YEgypt§! are controlled directly:"
 
  pf_mac_defend_the_coastlines_title:0 "Defend the Coastlines"
- pf_mac_defend_the_coastlines_desc:0 "gave at least 15 galleys, be at naval force limit, have admiral / modifier and claims on the islands"
+ pf_mac_defend_the_coastlines_desc:0 "The Aegean's azure waves hold the key to [Root.GetName]'s maritime dominance. By bolstering our galley fleet, we ensure that no nation can challenge us at sea. With every ship we launch and every sail we unfurl, the [Root.GetAdjective] grip on the Aegean tightens, making its waters our unchallenged domain."
 
  pf_mac_aegean_dominance_title:0 "Aegean Dominance"
- pf_mac_aegean_dominance_desc:0 "at least 6 provinces bordering the aegean with shipyard, at least 20 galleys / unlock naval doctrine, event: give extra flagship or gally buff"
+ pf_mac_aegean_dominance_desc:0 "Building shipyards along the Aegean coastlines is a testament to [Root.GetName]'s maritime ambitions. As our docks bustle with activity and our fleets grow, it becomes evident that the [Root.GetAdjective] rule of the Aegean seas is unassailable and beyond contestation."
  mac_aegean_dominance_tt: "A new §YNaval Doctrine§! will be unlocked"
+ uncontested_in_the_aegean_tt: "§YShipyard§! modifiers will be doubled until the end of the game"
 
  pf_mac_why_go_alone_title:0 "Why Go Alone?"
- pf_mac_why_go_alone_desc:0 "at least 2 allies or 3 subjects with 150 opinion / modifier, extra bonus if allied to archon"
+ pf_mac_why_go_alone_desc:0 "In a world of shifting alliances and unpredictable challenges, [Root.GetName] recognizes the value of steadfast friends. By forging strong diplomatic ties, especially with the Archon of Athens, the beacon of the Hellenic world, we ensure that our [Root.GetAdjective] ambitions are supported by powerful allies and respected peers."
+ mac_subjugated_archon_reform_tt: "This will greatly upset the §YHellenic§! world and may have long-lasting implications"
+ mac_why_go_alone_ARCHON_CONSEQUENCES_tt: "The completion of this mission will heavily determine our path once the §YHellenic Reformation§! occurs"
+ mac_why_go_alone_ARCHON_FRIEND_tt: "If completing the mission via befriending the §YArchon§!"
+ mac_why_go_alone_ARCHON_SUBJECT_tt: "If the §YArchon§! is subjugated"
+ mac_converting_paradosi_tt: "Due to Macedonian subjugation of the §YArchon§! prior to conversion:"
 
  pf_mac_branching1_title:0 "Locked Mission"
- pf_mac_branching1_desc:0 ""
+ pf_mac_branching1_desc:0 "This mission will be unlocked upon completion of the §YWhy Go Alone?§! mission"
 
  pf_mac_branching2_title:0 "Locked Mission"
- pf_mac_branching2_desc:0 ""
+ pf_mac_branching2_desc:0 "This mission will be unlocked upon completion of the §YWhy Go Alone?§! mission"
+
+ mac_archon_friend_1_title: "Athenaean Ties"
+ mac_archon_friend_1_desc: "Pleasing the Archon is paramount to [Root.GetName]'s Hellenic aspirations. By investing in the Athenaeum and showcasing our commitment to safeguarding the Archon, we send a clear message: the [Root.GetAdjective] nation is not only a friend to Athens but also its steadfast protector."
+ mac_archon_friend_2_title: "Offer the Archon Refuge"
+ mac_archon_friend_2_desc: "In times of uncertainty, we must extend a hand of solidarity to the Archon of Athens. By offering to incorporate them into our empire, we make a solemn vow: as long as [Root.GetAdjective] borders stand, the Archon will find safety, respect, and an eternal protector in us."
+
+mac_archon_subject_1_title: "The Paradosi Reformation"
+mac_archon_subject_1_desc: "As the winds of change sweep through the Hellenic faith, [Root.GetName] chooses to anchor itself in tradition. Rejecting the push for centralization, we embrace the Paradosi, the ancient and revered practices. In this reformation, we seek a return to the roots, celebrating the [Root.GetAdjective] devotion in its purest form."
+mac_archon_subject_2_title: "Hellenism Conquered"
+mac_archon_subject_2_desc: "With a vision to restore the true essence of Hellenic faith, [Root.GetName] must seek to conquer the Hellenic world. Our aim is clear: convert them to the Paradosi faith, and diminish the Archon's influence. Through this endeavor, the [Root.GetAdjective] realm seeks to be the beacon of authentic Hellenic tradition."
 
  pf_mac_incorporating_big_guns_title:0 "Incorporating Big Guns"
- pf_mac_incorporating_big_guns_desc:0 "At least 75 org, at least 20k arty OR have 10k arty and firepower or quality ideas / if firepower or quality ideas get modifier for arty bonus vs forts and siege ability, add modifier for arty damage from backrow and arty cost"
+ pf_mac_incorporating_big_guns_desc:0 "The future of warfare demands innovation and firepower. [Root.GetName] recognizes the need to stay ahead and invests heavily in its military. By introducing gunpowder and integrating heavy guns into our formations, we ensure that our [Root.GetAdjective] forces are equipped to deliver devastating blows and inflict maximum casualties upon our adversaries."
+ mac_incorporating_big_guns_tt_1: "If §YQuality§! or §YFirepower§! Ideas have been completed:"
 
  pf_mac_organize_the_cabinet_title:0 "Organize the Cabinet"
- pf_mac_organize_the_cabinet_desc:0 "have at least 50 organization, fl of at least 60k with that in the field / modifier for movement speed and siege ability, unlock cabinet interaction decisions (buttons if applicable)"
+ pf_mac_organize_the_cabinet_desc:0 "Efficiency and unity are paramount in times of conflict. [Root.GetName] takes decisive steps to streamline its war cabinet, ensuring that generals and [Root.Monarch.GetTitle] are in perfect alignment. Within this institution, true cohesion and a unified [Root.GetAdjective] strategy are now within reach."
+ mac_organize_the_cabinet_tt: "New §YDecisions§! will be unlocked in order to further manage §YWar Cabinet Organization§!."
 
  pf_mac_centralized_command_title:0 "Centralized Command"
- pf_mac_centralized_command_desc:0 "At least 75 organization, army size at least 75k with fl, at least 16k cavalry / event: either t5 reform with hussars or unlock merc company, no longer possible to have military coup"
+ pf_mac_centralized_command_desc:0 "The might of [Root.GetName]'s military demands a unified and efficient command structure. As the army swells in ranks, efforts are made to ensure impeccable organization. With the introduction of heavily armored cavalry, the [Root.GetAdjective] forces are poised to field true shock troops, striking fear into the hearts of our adversaries."
 
  pf_mac_absolute_control_title:0 "Absolute Control"
- pf_mac_absolute_control_desc:0 "100 org, no rebels, no disasters, level 3 discipline advisor / give updated modifiers for org, lock at 100, discipline advisors now give fire damage 2% per"
+ pf_mac_absolute_control_desc:0 "The time has come for [Root.GetName] to assert unwavering authority over its military apparatus. By integrating the cabinet into the royal command structure, the era of autonomous generals comes to an end. Every decision, every move, now flows from and reports directly to [Root.Monarch.GetTitle], ensuring a singular [Root.GetAdjective] vision on the battlefield."
+ mac_absolute_control_tt: "Modifiers awarded by §YWar Cabinet Organization§! will be changed."
+ mac_commandant_fire_damage_tt: "§YCommandant§! Military Advisors will now give §G2%§! Fire Damage per Advisor Level."
 
  pf_mac_dominate_eastern_seas_title:0 "Dominate the Eastern Seas"
- pf_mac_dominate_eastern_seas_desc:0 "be top trade power in constantinople, alexandria, allepo, pontus, and have const be the richest node in the world / "
+ pf_mac_dominate_eastern_seas_desc:0 "The ebb and flow of trade in the eastern sea is a testament to its wealth and influence. For [Root.GetName] to truly ascend as a global power, we must seize control of this maritime trade. By dominating these waters, the [Root.GetAdjective] nation cements its position as the preeminent maritime trade force, ensuring prosperity and influence for generations to come."
+ mac_dominate_eastern_seas_tt: "A new §YCasus Belli§! will be available allowing war with any nation that owns coastal land in the Mediterranean"
 
  pf_mac_regional_trade_hub_title:0 "Regional Trade Hub"
- pf_mac_regional_trade_hub_desc:0 "at least 5 level 2 centers of trade in constantinople node with market buildings,  at least 20 value in node / modifier for light ship trade power, temp power in genoa and tunis"
+ pf_mac_regional_trade_hub_desc:0 "Trade is the lifeblood of prosperity, and [Root.GetName] recognizes the need to nurture it. By investing in state-of-the-art trade infrastructure and ensuring safe passage for merchants, we aim to transform our nation into the region's premier trade hub. As commerce thrives, the [Root.GetAdjective] coffers will swell, distributing wealth and benefits throughout the realm."
+ mac_regional_trade_hub_key: "Dominating Maritime Trade"
+ mac_regional_trade_hub_trigger: "At least §Y5§! owned provinces in the §YMacedonia§! trade node with Center of Trade level §Y2§!"
 
  pf_mac_beautiful_capital_title:0 "Our Beautiful Capital"
- pf_mac_beautiful_capital_desc:0 "at least 30 development in capital, level 3 center of trade / upgrade center of trade and chagne trade good to gems"
+ pf_mac_beautiful_capital_desc:0 "The heart of the Capital deserves to shine in all its splendor. By cleaning its streets, erecting grandiose buildings, and preparing the royal palace for a lavish feast, we showcase the prosperity and grandeur of our nation. Every corner of our capital will echo the [Root.GetAdjective] success and the bright future that awaits."
 
  pf_mac_macedonian_rugs_title:0 "Macedonian Rugs"
- pf_mac_macedonian_rugs_desc:0 "own at least 10 provinces producing silk or cloth with at least 8 production, at least 5 wool provinces with 6 production / up to 5 wool provinces will now produce cloth and will gain 2 production dev"
+ pf_mac_macedonian_rugs_desc:0 "The textile industry holds untapped potential for [Root.GetName]. By channeling resources and expertise into manufacturing, we aim to shift from wool production to the more lucrative cloth. As the [Root.GetAdjective] looms weave intricate designs, our nation stands poised to become a leading name in the world of fine textiles and rugs."
 
  pf_mac_riches_of_the_silk_road_title:0 "Riches of the Silk Road"
- pf_mac_riches_of_the_silk_road_desc:0 "be leading producer of silk, "
+ pf_mac_riches_of_the_silk_road_desc:0 "Silk, the fabric of emperors and kings, takes center stage in [Root.GetName]'s economic vision. Prioritizing its production and ensuring the highest quality, we aim to tap into the legendary wealth associated with this luxurious fabric. As [Root.GetAdjective] caravans traverse the Silk Road, our nation's prosperity is woven into every strand."
+ mac_riches_of_silk_road_tt: "from Silk and Cloth production"
 
  pf_mac_spread_the_faith_title:0 "Spread the Faith"
- pf_mac_spread_the_faith_desc:0 "convert at least 5 provinces / modifier for culture conversion cost"
+ pf_mac_spread_the_faith_desc:0 "The true essence of the Hellenic faith must resonate across lands and hearts. [Root.GetName] embarks on a divine mission to enlighten non-believers, bringing them under the [Root.GetAdjective] spiritual fold. With every conversion, the light of our faith shines brighter, uniting people under a shared belief."
 
  pf_mac_hellenization_title:0 "Initiate Hellenization"
- pf_mac_hellenization_desc:0 "own at least 50 provinces in our culture group / 10 random provinces in our culture group will receive 1 manpower dev"
+ pf_mac_hellenization_desc:0 "Culture is a powerful tool in shaping the destiny of a nation. [Root.GetName] recognizes the need to align its cultural demographic with its broader ambitions. By initiating a comprehensive Hellenization process, we aim to infuse [Root.GetAdjective] values, traditions, and practices across our lands, ensuring a harmonious and unified realm."
 
  pf_mac_beacons_of_hellenic_strength_title:0 "Beacons of the Hellenic World"
- pf_mac_beacons_of_hellenic_strength_desc:0 "at least 5 cities in our culture group at least 30 dev / event: one of those cities will receive a big province modifier, center of reformation for our religion will spawn"
+ pf_mac_beacons_of_hellenic_strength_desc:0 "From bustling ports to thriving inland cities, [Root.GetName]'s major metropolitan regions stand as shining examples of Hellenic prosperity and unity. These urban centers, teeming with Greek brothers and sisters, serve as beacons, illuminating the [Root.GetAdjective] realm's prominence and influence in the Hellenic world."
+ mac_beacons_tt: "One random owned province that fulfills the trigger will receive:"
+ mac_beacons_hellenic_center_tt: "Also, a Hellenic §YCultural Center§! will spawn in this province."
 
- pf_mac_scupi_copper_mines_title:0 "The Scupi Copper Mines"
- pf_mac_scupi_copper_mines_desc:0 "at least 10 production in skopje, production building in province / build manufactory or give 4 production, province modifier for goods produced, give money for metal production"
+ pf_mac_scupi_copper_mines_title:0 "The Skoupoi Copper Mines"
+ pf_mac_scupi_copper_mines_desc:0 "The rich veins of copper in Skoupoi hold the key to [Root.GetName]'s economic and military aspirations. By ramping up extraction efforts, we ensure a steady supply of this valuable metal. The [Root.GetAdjective] forges and markets will thrive, powered by the bounteous yields from the Skoupoi mines."
+ mac_scupi_mines_tt: "from Metal production"
 
  pf_mac_iron_for_war_title:0 "Iron for War"
- pf_mac_iron_for_war_desc:0 "at least 3 iron provinces with manufactory / modifier for 10% force limit, permanent"
+ pf_mac_iron_for_war_desc:0 "Iron, the backbone of any formidable military, is of paramount importance to [Root.GetName]. By bolstering our iron production capabilities, we ensure that our [Root.GetAdjective] forces are always equipped with the best. Every sword forged and every shield crafted strengthens our resolve and readiness for war."
 
  pf_mac_expose_their_flaws_title:0 "Expose Their Flaws"
- pf_mac_expose_their_flaws_desc:0 "the reformation has began, religion is either hellenic or the reformation, religious unity is 90, at least 60 total provinces / modifier for missionary buffs, deus vult cb"
+ pf_mac_expose_their_flaws_desc:0 "The reformation and rejection of the Archon have sent ripples throughout [Root.GetName]. As we navigate these turbulent waters, we must decide our stance. Whether we choose to support the Archon or stand against them, our [Root.GetAdjective] actions will be guided by exposing the truths and flaws of this seismic shift in faith and power."
 
  pf_mac_unite_our_brothers_title:0 "Unite Our Brothers"
- pf_mac_unite_our_brothers_desc:0 "at least 100 provinces that follow our religion, 90% religious unity / all nations that still follow heretic religion will have a chance to change to ours, modifier for diplo rep and same religion manpower, permanent"
+ pf_mac_unite_our_brothers_desc:0 "The vast tapestry of the Hellenic world awaits [Root.GetName]'s unifying touch. By bringing together disparate regions under our banner, we aim to forge a cohesive [Root.GetAdjective] empire. Through cultural and religious uniformity, we ensure that our realm stands united, with every citizen echoing the same beliefs and values."
+ mac_unite_our_brother_hellenic_tt: "Every nation that still follows the §YParadosi§! faith will have the opportunity to return to §YHellenic§!"
+ mac_unite_our_brother_paradosi_tt: "Every nation that still follows the §YHellenic§! faith will have the opportunity to convert to §YParadosi§!"
 
 

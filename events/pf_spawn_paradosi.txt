@@ -22,7 +22,15 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 4000
+		months = 2000
+		modifier = {
+			factor = 0.5
+			is_year = 1500
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 1505
+		}
 		modifier = {
 			factor = 0.1
 			is_year = 1510
@@ -131,6 +139,26 @@ country_event = {
 		hidden_effect = {
 			set_global_flag = reformation_started
 		}
+	}
+}
+
+#Schizm event, allows people to flip
+country_event = {
+	id = pf_reformation.2
+	title = pf_reformation.2.t
+	desc = pf_reformation.2.d
+	picture = PROTESTANT_GREAT_REFORMER_eventPicture
+	is_triggered_only = yes
+	
+	
+	# trigger = {  }
+	
+	# mean_time_to_happen = {  }
+
+	option = {
+		name = pf_reformation.2.a
+
+		
 	}
 }
 
