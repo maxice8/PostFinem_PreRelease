@@ -379,3 +379,51 @@ pf_lagr_republic_names = {
 		has_reform = pf_lagr_republic
 	}
 }
+
+slavic_rulers = {
+	rank = {
+		1 = KNYAZHESTWO
+		2 = KROLESTWO
+		3 = VELIKOZEMLJE
+	}
+
+	ruler_male = {
+		1 = KNYAZ
+		2 = KROL
+		3 = VELIKOKNYAZ
+	}
+
+	ruler_female = {
+		1 = KNYAGINA
+		2 = KROLOVA
+		3 = VELIKOKNYAGINA
+	}
+
+	consort_female = {
+		1 = KNYAGINA
+		2 = KROLOVA
+		3 = VELIKOKNYAGINA
+	}
+
+	consort_male = {
+		1 = KNYAZ
+		2 = KROL
+		3 = VELIKOKNYAZ
+	}
+
+	heir_male = {
+		1 = KNYAZHICH
+		2 = KNYAZHICH
+		3 = KNYAZHICH
+	}
+	heir_female = {
+		1 = KNYAZHINA
+		2 = KNYAZHINA
+		3 = KNYAZHINA
+	}
+
+	trigger = {
+		culture_group = pagan_slavic
+	}
+
+}
