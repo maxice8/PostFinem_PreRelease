@@ -26,7 +26,7 @@ country_event = {
 			factor = 10
 		}
 		add_years_of_income = 0.5
-		add_reform_desire = 0.02
+		add_reform_desire = 0.01
 	}
 	option = {
 		name = pf_reform_desire.1.b
@@ -87,7 +87,7 @@ country_event = {
 			add_curia_treasury_medium_effect = yes
 		}
 		add_papal_influence = 10
-		add_reform_desire = 0.01
+		add_reform_desire = 0.005
 	}
 	option = {
 		name = pf_reform_desire.2.b
@@ -99,7 +99,7 @@ country_event = {
 			}
 		}
 		add_papal_influence = -10
-		add_reform_desire = -0.004
+		add_reform_desire = -0.02
 		ATH = {
 			add_opinion = {
 				who = root
@@ -152,7 +152,7 @@ country_event = {
 			factor = 10
 		}
 		add_papal_influence = 2
-		add_reform_desire = 0.02
+		add_reform_desire = 0.01
 	}
 	option = {
 		name = pf_reform_desire.3.b
