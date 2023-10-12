@@ -836,9 +836,7 @@ on_siege_won_province = {
 	}
 	if = {
 		limit = {
-			controller = {
-				tag = KSB
-			}
+			controlled_by = KSB
 			area = vorpommern_area
 		}
 		province_event = {

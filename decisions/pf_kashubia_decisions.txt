@@ -1,0 +1,28 @@
+country_decisions = {
+
+	ksb_reform_clergy = {
+		color = { 60 210 230 }
+		major = yes
+		potential = {
+			has_estate_privilege = estate_church_pf_ksb_corrupt_church
+		}
+
+		allow = {
+			adm_power = 200
+			owns = 4745
+			4745 = {
+				has_great_project = {
+					type = svetovids_temple
+					tier = 1
+				}
+			}
+		}
+
+		effect = {
+			remove_estate_privilege = estate_church_pf_ksb_corrupt_church
+			custom_tooltip = empty_line_tt
+			add_adm_power = -200
+			add_corruption = -2
+		}
+	}
+}
