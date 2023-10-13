@@ -77,13 +77,13 @@ country_event = {
     }
 }
 country_event = {
-    id = pf_mon_events.mt_dda_1
-    title = pf_mon_events.mt_dda_1.title
-    desc = pf_mon_events.mt_dda_1.desc
+    id = pf_mon_events.3
+    title = pf_mon_events.3.title
+    desc = pf_mon_events.3.desc
     picture = ATHENS_eventPicture
     is_triggered_only = yes
     option = {
-        name = pf_mon_events.mt_dda_1.o1
+        name = pf_mon_events.3.o1
         trigger = {
             any_owned_province = {
                 has_great_project = {
@@ -113,7 +113,8 @@ country_event = {
                 }
             }
             add_treasury = -2500
-        } else {
+        } 
+        if = {
             limit = {
                 any_owned_province = {
                     has_great_project = {
@@ -121,9 +122,18 @@ country_event = {
                         tier = 1
                     }
                 }
+                NOT = {
+                    any_owned_province = {
+                        has_great_project = {
+                            type = hall_of_pantheons
+                            tier = 2
+                        }
+                    }
+                }
             }
             add_treasury = -1750
-        } else {
+        } 
+        if = {
             limit = {
                 any_owned_province = {
                     has_great_project = {
@@ -131,10 +141,23 @@ country_event = {
                         tier = 0
                     }
                 }
+                NOT = {
+                    any_owned_province = {
+                        has_great_project = {
+                            type = hall_of_pantheons
+                            tier = 1
+                        }
+                    }
+                }
             }
             add_treasury = -500
         }
         every_owned_province = {
+            limit = {
+                has_great_project = {
+                    type = hall_of_pantheons
+                    tier = 0
+            }
             add_great_project_tier = {
                 type = hall_of_pantheons
                 tier = 1
@@ -142,7 +165,7 @@ country_event = {
         }
     }
     option = {
-        name = pf_mon_events.mt_dda_1.o2
+        name = pf_mon_events.3.o2
         trigger = {
             NOT = {
                 capital_scope = {
@@ -180,29 +203,29 @@ country_event = {
         }
     }
     option = {
-        name = pf_mon_events.mt_dda_1.o3
+        name = pf_mon_events.3.o3
         trigger = {
         }
         ai_chance = {
             factor = 1
         }
         distribute_base_dev_to_provinces = {
-            value = 2
+            amount = 2
             type = "adm"
-            value = 1
-            tooltip = "§G2§! random provinces will receive §G1§! Base Tax £adm£."
+            num = 1
+            tooltip = "§G2§! random provinces will receive §G1§! Base Tax."
         }
         distribute_base_dev_to_provinces = {
-            value = 2
+            amount = 2
             type = "dip"
-            value = 1
-            tooltip = "§G2§! random provinces will receive §G1§! Base Production £dip£."
+            num = 1
+            tooltip = "§G2§! random provinces will receive §G1§! Base Production."
         }
         distribute_base_dev_to_provinces = {
-            value = 2
+            amount = 2
             type = "mil"
-            value = 1
-            tooltip = "§G2§! random provinces will receive §G1§! Base Manpower £mil£."
+            num = 1
+            tooltip = "§G2§! random provinces will receive §G1§! Base Manpower."
         }
         add_treasury = -300
     }
@@ -277,6 +300,10 @@ province_event = { # Blessing of Zeus
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_legitimacy = 15
@@ -300,6 +327,10 @@ province_event = { # Blessing of Zeus
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_legitimacy = 30
@@ -380,6 +411,10 @@ province_event = { # Blessing of Baal Hammon
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_legitimacy = 15
@@ -403,6 +438,10 @@ province_event = { # Blessing of Baal Hammon
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_legitimacy = 30
@@ -483,6 +522,10 @@ province_event = { # Blessing of Jupiter
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_legitimacy = 15
@@ -506,6 +549,10 @@ province_event = { # Blessing of Jupiter
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_legitimacy = 30
@@ -586,6 +633,10 @@ province_event = { # Blessing of Odin
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_legitimacy = 15
@@ -609,6 +660,10 @@ province_event = { # Blessing of Odin
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_legitimacy = 30
@@ -689,6 +744,10 @@ province_event = { # Blessing of Poseidon
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_yearly_sailors = 1.5
@@ -709,6 +768,10 @@ province_event = { # Blessing of Poseidon
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_yearly_sailors = 3
@@ -786,6 +849,10 @@ province_event = { # Blessing of Saphon
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_yearly_sailors = 1.5
@@ -806,6 +873,10 @@ province_event = { # Blessing of Saphon
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_yearly_sailors = 3
@@ -883,6 +954,10 @@ province_event = { # Blessing of Saturn
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_yearly_sailors = 1.5
@@ -903,6 +978,10 @@ province_event = { # Blessing of Saturn
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_yearly_sailors = 3
@@ -980,6 +1059,10 @@ province_event = { # Blessing of Njord
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_yearly_sailors = 1.5
@@ -1000,6 +1083,10 @@ province_event = { # Blessing of Njord
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_yearly_sailors = 3
@@ -1077,6 +1164,10 @@ province_event = { # Blessing of Hera
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             if = {
@@ -1105,6 +1196,10 @@ province_event = { # Blessing of Hera
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             if = {
@@ -1194,6 +1289,10 @@ province_event = { # Blessing of Tanit
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             if = {
@@ -1222,6 +1321,10 @@ province_event = { # Blessing of Tanit
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             if = {
@@ -1311,6 +1414,10 @@ province_event = { # Blessing of Juno
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             if = {
@@ -1339,6 +1446,10 @@ province_event = { # Blessing of Juno
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             if = {
@@ -1428,6 +1539,10 @@ province_event = { # Blessing of Frigg
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             if = {
@@ -1456,6 +1571,10 @@ province_event = { # Blessing of Frigg
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             if = {
@@ -1545,6 +1664,10 @@ province_event = { # Blessing of Apollo
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_estate_loyalty = {
@@ -1567,6 +1690,10 @@ province_event = { # Blessing of Apollo
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_estate_loyalty = {
@@ -1646,6 +1773,10 @@ province_event = { # Blessing of Shamem
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_estate_loyalty = {
@@ -1668,6 +1799,10 @@ province_event = { # Blessing of Shamem
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_estate_loyalty = {
@@ -1747,6 +1882,10 @@ province_event = { # Blessing of Apollo
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_estate_loyalty = {
@@ -1769,6 +1908,10 @@ province_event = { # Blessing of Apollo
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_estate_loyalty = {
@@ -1848,6 +1991,10 @@ province_event = { # Blessing of Balder
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_estate_loyalty = {
@@ -1870,6 +2017,10 @@ province_event = { # Blessing of Balder
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_estate_loyalty = {
@@ -1949,6 +2100,10 @@ province_event = { # Blessing of Ares
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             save_event_target_as = blessed_country
@@ -1980,6 +2135,10 @@ province_event = { # Blessing of Ares
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             save_event_target_as = blessed_country
@@ -2075,6 +2234,10 @@ province_event = { # Blessing of Reshef
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             save_event_target_as = blessed_country
@@ -2106,6 +2269,10 @@ province_event = { # Blessing of Reshef
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             save_event_target_as = blessed_country
@@ -2201,6 +2368,10 @@ province_event = { # Blessing of Mars
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             save_event_target_as = blessed_country
@@ -2232,6 +2403,10 @@ province_event = { # Blessing of Mars
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             save_event_target_as = blessed_country
@@ -2327,6 +2502,10 @@ province_event = { # Blessing of Tyr
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             save_event_target_as = blessed_country
@@ -2358,6 +2537,10 @@ province_event = { # Blessing of Tyr
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             save_event_target_as = blessed_country
@@ -2453,6 +2636,10 @@ province_event = { # Blessing of Heracles
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_country_modifier = { 
@@ -2475,6 +2662,10 @@ province_event = { # Blessing of Heracles
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_country_modifier = { 
@@ -2554,6 +2745,10 @@ province_event = { # Blessing of Melqart
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_country_modifier = { 
@@ -2576,6 +2771,10 @@ province_event = { # Blessing of Melqart
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_country_modifier = { 
@@ -2655,6 +2854,10 @@ province_event = { # Blessing of Hercules
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_country_modifier = { 
@@ -2677,6 +2880,10 @@ province_event = { # Blessing of Hercules
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_country_modifier = { 
@@ -2756,6 +2963,10 @@ province_event = { # Blessing of Tyche
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         random_list = {
             60 = {
@@ -2793,6 +3004,10 @@ province_event = { # Blessing of Tyche
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         random_list = {
             80 = {
@@ -2887,6 +3102,10 @@ province_event = { # Blessing of Ashtarte
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         random_list = {
             60 = {
@@ -2924,6 +3143,10 @@ province_event = { # Blessing of Ashtarte
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         random_list = {
             80 = {
@@ -3018,6 +3241,10 @@ province_event = { # Blessing of Fortuna
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         random_list = {
             60 = {
@@ -3055,6 +3282,10 @@ province_event = { # Blessing of Fortuna
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         random_list = {
             80 = {
@@ -3149,6 +3380,10 @@ province_event = { # Blessing of Loki
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         random_list = {
             60 = {
@@ -3186,6 +3421,10 @@ province_event = { # Blessing of Loki
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         random_list = {
             80 = {
@@ -3280,6 +3519,10 @@ province_event = { # Blessing of Asclepius
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_yearly_manpower = 0.1
@@ -3305,6 +3548,10 @@ province_event = { # Blessing of Asclepius
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_yearly_manpower = 0.2
@@ -3387,6 +3634,10 @@ province_event = { # Blessing of Eshmun
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_yearly_manpower = 0.1
@@ -3412,6 +3663,10 @@ province_event = { # Blessing of Eshmun
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_yearly_manpower = 0.2
@@ -3494,6 +3749,10 @@ province_event = { # Blessing of Asclepius
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_yearly_manpower = 0.1
@@ -3519,6 +3778,10 @@ province_event = { # Blessing of Asclepius
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_yearly_manpower = 0.2
@@ -3601,6 +3864,10 @@ province_event = { # Blessing of Eir
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_yearly_manpower = 0.1
@@ -3626,6 +3893,10 @@ province_event = { # Blessing of Eir
         set_province_flag = pf_mon_hop_blessing_flag
         owner = {
             set_country_flag = pf_mon_hop_recieved_blessing # Used to track blessing in other places.
+            if = {
+                limit = {has_country_flag = pf_dda_blessing_money}
+                add_years_of_income = 0.25
+            }
         }
         owner = {
             add_yearly_manpower = 0.2

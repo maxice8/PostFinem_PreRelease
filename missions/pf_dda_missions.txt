@@ -90,7 +90,7 @@ pf_dda_2 = {
         }
         effect = {
             custom_tooltip = pf_dda_pf_dda_the_hall_of_pantheons_tt2
-            set_country_flag = my_flag
+            set_country_flag = pf_dda_blessing_money
         }
     }
     pf_dda_a_holy_nation = {
@@ -114,7 +114,43 @@ pf_dda_2 = {
             }
         }
         effect = {
-            #e15
+            custom_tooltip = "Start construction of $YTemple$! for $0|%$! of the cost, and $0.5|%$! of the time in §G5§! random owned provinces."
+            hidden_effect = {
+                set_variable = {
+                    which = temp
+                    value = 5
+                }
+                while = {
+                    limit = { 
+                        check_variable = {
+                            which = temp
+                            value = 1
+                        }
+                    }
+                    random_owned_province = {
+                        limit = { 
+                            NOT = {has_building = temple}
+                            NOT = {has_province_flag = target_unique_provinces_temp}
+                        }
+                        add_building_construction = {
+                            building = temple
+                            speed = 0.5
+                            cost = 0
+                        }
+                        set_province_flag = target_unique_provinces_temp
+                    }
+                    change_variable = {
+                        which = temp
+                        value = -1
+                    }
+                }
+                every_owned_province = {
+                    limit = {
+                        has_province_flag = target_unique_provinces_temp
+                    }
+                    clr_province_flag = target_unique_provinces_temp
+                }
+            }
         }
     }
 }
@@ -214,8 +250,8 @@ pf_dda_3 = {
             crown_land_share = 30
         }
         effect = {
-            capital_scope = {
-                add_permanent_claim = FRA
+            illyria_region = {
+                add_permanent_claim = ROOT
             }
         }
     }
@@ -264,7 +300,9 @@ pf_dda_3 = {
             }
         }
         effect = {
-            #e20
+            add_adm_tech = 1
+            add_dip_tech = 1
+            add_mil_tech = 1
         }
     }
 }
@@ -305,16 +343,40 @@ pf_dda_4 = {
             }
         }
         effect = {
-            target_unique_provinces = {
-                $num$ = 5
-                $trigger$ = "has_owner_culture = no"
-                $effect$ = "add_culture_construction = {speed = 0.9 cost = 0}"
-                $tooltip$ = "§G5§! random provinces that are not your primary culture will receive $begin conversion$."
-            }
-            random_owned_province = {
-                add_culture_construction = {
-                    speed = 0.9
-                    cost = 0
+            custom_tooltip = "Start culture conversion for $0|%$! of the cost, and $0.9|%$! of the time in §G5§! random owned provinces that are not of your primary culture."
+            hidden_effect = {
+                set_variable = {
+                    which = temp
+                    value = 5
+                }
+                while = {
+                    limit = { 
+                        check_variable = {
+                            which = temp
+                            value = 1
+                        }
+                    }
+                    random_owned_province = {
+                        limit = { 
+                            NOT = {has_owner_culture = yes}
+                            NOT = {has_province_flag = target_unique_provinces_temp}
+                        }
+                        add_culture_construction = {
+                            speed = 0.9
+                            cost = 0
+                        }
+                        set_province_flag = target_unique_provinces_temp
+                    }
+                    change_variable = {
+                        which = temp
+                        value = -1
+                    }
+                }
+                every_owned_province = {
+                    limit = {
+                        has_province_flag = target_unique_provinces_temp
+                    }
+                    clr_province_flag = target_unique_provinces_temp
                 }
             }
         }
@@ -330,7 +392,7 @@ pf_dda_4 = {
             navy_size = 16
         }
         effect = {
-            #e13
+            add_mercantilism = 3
         }
     }
     pf_dda_a_powerful_nation = {
@@ -349,7 +411,10 @@ pf_dda_4 = {
             num_of_allies = 2
         }
         effect = {
-            #e17
+            add_permanent_power_projection = {
+                type = 25_permanent_power_projection
+                amount = 25
+            }
         }
     }
 }
@@ -443,14 +508,32 @@ pf_dda_5 = {
             pf_dda_jewel_of_the_adriatic
         }
         trigger = {
-            treasury = 1000
+            treasury = 300
             NOT = {num_of_loans = 1}
             NOT = {corruption = 0.1}
         }
         effect = {
-            country_event_with_insight = {
-                id = pf_mon_events.mt_dda_1
-                insight_tooltip = pf_dda_pf_dda_a_wealthy_nation_tt1
+            add_treasury = -300
+            custom_tooltip = "§G3§! random provinces will receive §G2§! Base Tax."
+            custom_tooltip = "§G3§! random provinces will receive §G2§! Base Production."
+            custom_tooltip = "§G3§! random provinces will receive §G2§! Base Manpower."
+            distribute_base_dev_to_provinces = {
+                amount = 3
+                type = "tax"
+                num = 2
+                tooltip = ""
+            }
+            distribute_base_dev_to_provinces = {
+                amount = 3
+                type = "production"
+                num = 2
+                tooltip = ""
+            }
+            distribute_base_dev_to_provinces = {
+                amount = 3
+                type = "manpower"
+                num = 2
+                tooltip = ""
             }
         }
     }
