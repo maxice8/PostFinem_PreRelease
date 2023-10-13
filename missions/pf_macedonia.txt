@@ -12,6 +12,7 @@ mac_1 = {
 			province_id = 1766
 			OR = {
 				NOT = { 	owned_by = ROOT }
+				NOT = { is_core = ROOT }
 				NOT = { 	base_production = 8 }
 			}
 		} 
@@ -1045,10 +1046,14 @@ mac_5 = {
 							}
 						}
 					}
-					any_subject_country = {
-						tag = ATH
-						owns_core_province = 143
-					}
+					ATH = {
+						is_subject_of = ROOT
+						owns_core_province = 146
+					}							
+					AND = {
+						ATH = { exists = no }									
+						owns_core_province = 146	
+					}	
 				}
 			}
 			else = {
@@ -1122,10 +1127,14 @@ mac_5 = {
 				"
 				second_custom_tooltip = mac_why_go_alone_ARCHON_SUBJECT_tt
 				second_limit = "
-					any_subject_country = {
-						tag = ATH
+					ATH = {
+						is_subject_of = ROOT
 						owns_core_province = 146
-					}
+					}							
+					AND = {
+						ATH = { exists = no }									
+						owns_core_province = 146	
+					}	
 				"
 				second_effect = "
 					set_country_flag = mac_subjugated_archon_flag
@@ -1257,21 +1266,74 @@ mac_archon_subject_5 = {
 		icon = pf_hellenic_temple_burning
 		position = 2
 		required_missions = { pf_mac_why_go_alone } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			NOT = { religion = paradosi }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			is_religion_enabled = paradosi
+			religion = paradosi
+			if = {
+				limit = {
+					ai = no
+				}
+				religious_unity = 0.75
+			}
+			else = { religious_unity = 0.5 }
+			
+		} 
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = mac_paradosi_reformation_mission_tt
+			set_country_flag = mac_paradosi_reformation_mission_flag
+			custom_tooltip = empty_line_tt
+			146 = { add_core = ROOT }
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = mac_paradosi_reformation_mission_modifier
+				duration = 7300
+			}
+		} 
 	}
 
 	mac_archon_subject_2 = {
 		icon = counter_reformation
 		position = 3
 		required_missions = { mac_archon_subject_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				AND = {	
+					owned_by = ROOT
+					NOT = { religion = paradosi }
+				}
+				AND = {
+					province_id = 146
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+			}
+		} 
 
-		trigger = {  } 
-
+		trigger = {  
+			owns_core_province = 146
+			religion = paradosi
+			if = {
+				limit = { ai = no }
+				num_of_owned_provinces_with = {
+					value = 100
+					religion = paradosi
+				}
+				religious_unity = 1
+			}
+			else = { 
+				num_of_owned_provinces_with = {
+					value = 75
+					religion = paradosi
+				}
+				religious_unity = 0.75 
+			} 
+		}
 		effect = {  } 
 	}
 }
@@ -1575,8 +1637,10 @@ mac_eco_3 = {
 		position = 8
 		provinces_to_highlight = {  
 			is_capital_of = ROOT
-			NOT = { development = 30 }
-			NOT = { province_has_center_of_trade_of_level = 3 }
+			OR = {
+				NOT = { development = 30 }
+				NOT = { province_has_center_of_trade_of_level = 3 }
+			}
 		} 
 
 		trigger = {  
@@ -1827,8 +1891,12 @@ mac_eco_4 = {
 		required_missions = { pf_mac_beautiful_capital } 
 		provinces_to_highlight = {  
 			province_id = 3001
-			NOT = { base_production = 10 }
-			NOT = { has_production_building_trigger = yes }
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = { base_production = 10 }
+				NOT = { has_production_building_trigger = yes }
+			}
 		} 
 
 		trigger = {  
@@ -1907,14 +1975,6 @@ mac_eco_4 = {
 	}
 }
 
-mac_eco_5 = {
-	slot = 5
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { tag = MAC } 
-
-}
 mac_culture_5 = {
 	slot = 5
 	generic = no
@@ -1926,7 +1986,10 @@ mac_culture_5 = {
 		icon = reform_the_nomocanon
 		position = 7
 		required_missions = { pf_mac_spread_the_faith } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { religion = ROOT }
+		} 
 		trigger = { 
 			is_religion_enabled = paradosi
 			OR = {
