@@ -51,6 +51,7 @@ pf_sar_1 = {
 			province_id = 2986	# Cagliari
 			OR = {
 				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 				NOT = { has_shipyard_building_trigger = yes }
 				NOT = { num_of_times_improved = 5 }
 			}
@@ -507,14 +508,14 @@ pf_sar_4 = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = pf_sar_italian_bankers_tt
-				any_country = {
-					capital_scope = {
-						region = italy_region
-					}
-					has_reform = free_city
-					has_opinion = {
-						who = ROOT
-						value = 180
+				italy_region = {
+					is_capital = yes
+					owner = {
+						has_reform = free_city
+						has_opinion = {
+							who = ROOT
+							value = 180
+						}
 					}
 				}
 			}
@@ -633,6 +634,7 @@ pf_sar_5 = {
 			province_id = 4735	# Arborea
 			OR = {
 				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 				NOT = { development = 30 }
 				NOT = { has_tax_building_trigger = yes }
 				NOT = { has_production_building_trigger = yes }
