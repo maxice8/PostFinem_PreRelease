@@ -1,39 +1,150 @@
-new_branch = {
+pf_drk_conquest_1 = {
 	slot = 1
 	generic = no
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = DRK } 
 
-	new_mission = {
-		icon = gfx_mission_trigger
+	pf_drk_encroach_on_the_federation = {
+		icon = mission_seize_the_isles
 		position = 3
-		provinces_to_highlight = {  } 
+		required_missions = { pf_drk_viking_invasion } 
+		provinces_to_highlight = {  
+			OR = {
+				area = corsica_sardinia_area
+				area = corsica_area
+				area = sicily_area
+				area = western_sicily_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			corsica_sardinia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			corsica_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			western_sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	pf_drk_federation = {
+		icon = mission_rule_italy
+		position = 4
+		required_missions = { pf_drk_encroach_on_the_federation } 
+		provinces_to_highlight = {  
+			OR = {
+				area = calabria_area
+				area = apulia_area
+				area = naples_area
+				area = adriatic_italy_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			OR = {
+				if = {
+					limit = {
+						hre_size = 1
+						num_of_electors = 3
+					}
+					reverse_has_opinion = {
+						who = emperor
+						value = 150
+					}
+					calc_true_if = {
+						amount = 3
+						all_elector = {
+							reverse_has_opinion = {
+								who = THIS
+								value = 150
+							}
+						}
+					}
+				}
+				else = {
+					NOT = { hre_size = 1 }
+					NOT = { exists = HLR }
+				}
+				
+
+				AND = {
+					calabria_area = {
+						type = all 
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					apulia_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					naples_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					adriatic_italy_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+		} 
 
 		effect = {  } 
 	}
 }
-new_branch = {
+pf_drk_conquest_2 = {
 	slot = 2
 	generic = no
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = DRK } 
 
-	pf_drk_to_new_lands = {
-		icon = mission_explore_the_world
-		position = 2
-		required_missions = { pf_drk_dire_times } 
+	pf_drk_riches_of_nile = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { pf_drk_dominate_mediterranean } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
 
 		effect = {  } 
 	}
+
+	pf_drk_reform_administration = {
+		icon = mission_restore_faith_in_the_throne
+		position = 7
+		required_missions = { pf_drk_faith } 
+		provinces_to_highlight = {  
+			province_id = 358
+		} 
+
+		trigger = {  
+			358 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		} 
+
+		effect = {  } 
+	}
 }
-new_branch = {
+pf_drk_conquest_3 = {
 	slot = 3
 	generic = no
 	ai = yes
@@ -45,17 +156,156 @@ new_branch = {
 		position = 1
 		provinces_to_highlight = {  } 
 
+		trigger = {  
+			navy_size_percentage = 1
+			transport_fraction = 0.5
+
+			reverse_has_opinion = {
+				who = SUE
+				value = 10
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	pf_drk_viking_invasion = {
+		icon = mission_modernized_vikings
+		position = 2
+		required_missions = { pf_drk_dire_times } 
+		provinces_to_highlight = {  
+			area = baleares_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		trigger = {  
+			baleares_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	pf_drk_greek_islands = {
+		icon = mission_dominate_the_mediterranean
+		position = 3
+		required_missions = { pf_drk_viking_invasion } 
+		provinces_to_highlight = {  
+			OR = {
+				culture_group = macedonian_greek
+				culture_group = anatolian_greek
+				culture_group = egyptian_greek
+			}
+			island = yes
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 3
+				OR = {
+					culture_group = macedonian_greek
+					culture_group = anatolian_greek
+					culture_group = egyptian_greek
+				}
+				island = yes
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	pf_drk_dominate_mediterranean = {
+		icon = mission_rb_mediterranean_authority
+		position = 4
+		required_missions = {
+			pf_drk_greek_islands
+			pf_drk_challenge_carthage
+			pf_drk_encroach_on_the_federation
+		}
+		provinces_to_highlight = {  
+			OR = {
+				region = illyria_region
+				region = italy_region
+				region = maghreb_region
+				region = egypt_region
+				region = anatolia_region
+				region = mashriq_region
+				region = balkan_region
+				region = south_slavia_region
+				region = caucasia_region
+				region = crimea_region
+				area = lower_andalucia_area
+				area = upper_andalucia_area
+				area = toledo_area
+				area = valencia_area
+				area = catalonia_area
+				area = baleares_area
+				area = languedoc_area
+				area = provence_area
+			}
+			has_port = yes
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = pf_drk_dominate_med_trigger_tt
+				all_country = {
+					if = {
+						limit = {
+							any_owned_province = {
+								OR = {
+									region = illyria_region
+									region = italy_region
+									region = maghreb_region
+									region = egypt_region
+									region = anatolia_region
+									region = mashriq_region
+									region = south_slavia_region
+									region = balkan_region
+									region = caucasia_region
+									region = crimea_region
+									area = lower_andalucia_area
+									area = upper_andalucia_area
+									area = toledo_area
+									area = valencia_area
+									area = catalonia_area
+									area = baleares_area
+									area = languedoc_area
+									area = provence_area
+								}
+								has_port = yes
+							}
+						}
+						NOT = { navy_size = DRK }
+					}
+				}
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	pf_drk_control_straits = {
+		icon = mission_rb_take_gibraltar
+		position = 5
+		required_missions = { pf_drk_dominate_mediterranean } 
+		provinces_to_highlight = {  } 
+
 		trigger = {  } 
 
 		effect = {  } 
 	}
 
-	pf_drk_settle_the_island = {
-		icon = mission_dominate_the_mediterranean
-		position = 3
+	pf_drk_navy_with_state = {
+		icon = mission_rb_a_mighty_fleet
+		position = 8
 		required_missions = {
-			pf_drk_to_new_lands
-			pf_drk_build_up_transportation
+			pf_drk_reform_navy
+			pf_drk_reform_administration
 		}
 		provinces_to_highlight = {  } 
 
@@ -64,17 +314,42 @@ new_branch = {
 		effect = {  } 
 	}
 }
-new_branch = {
+pf_drk_conquest_4 = {
 	slot = 4
 	generic = no
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = DRK } 
 
-	pf_drk_build_up_transportation = {
-		icon = mission_longships
-		position = 2
-		required_missions = { pf_drk_dire_times } 
+	pf_drk_challenge_carthage = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = {
+			pf_drk_viking_invasion
+			pf_drk_worthy_fleet
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_wipe_out_carthage = {
+		icon = Burn_Wooden_Wall
+		position = 5
+		required_missions = { pf_drk_dominate_mediterranean } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_reform_navy = {
+		icon = mission_danish_navy
+		position = 7
+		required_missions = { pf_drk_danish_marines } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -82,16 +357,538 @@ new_branch = {
 		effect = {  } 
 	}
 }
-new_branch = {
+pf_drk_conquest_5 = {
 	slot = 5
 	generic = no
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = DRK } 
 
-	new_mission4 = {
-		icon = gfx_mission_trigger
-		position = 3
+	pf_drk_worthy_fleet = {
+		icon = mission_longships
+		position = 2
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  
+			add_country_modifier = {
+				name = insta_ship
+				duration = -1
+			}
+		} 
+	}
+
+	pf_drk_danish_shipyards = {
+		icon = mission_grand_bengali_shipyards
+		position = 4
+		required_missions = { pf_drk_worthy_fleet } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_danish_marines = {
+		icon = mission_marines
+		position = 6
+		required_missions = { pf_drk_danish_shipyards } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_unrivaled_marines = {
+		icon = mission_expanded_leidang
+		position = 8
+		required_missions = { pf_drk_danish_marines } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_drk_internal_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	pf_drk_faith = {
+		icon = mission_norse_faith
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_assimilate_punics = {
+		icon = evengelize_the_faith
+		position = 7
+		required_missions = { pf_drk_faith } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_for_odit = {
+		icon = mission_unknown_mission
+		position = 8
+		required_missions = { pf_drk_assimilate_punics } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_protectors_of_lands = {
+		icon = alpine_fortifications
+		position = 10
+		required_missions = { pf_drk_raise_flag } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_defend_islands = {
+		icon = adriatic_access
+		position = 12
+		required_missions = { pf_drk_protectors_of_lands } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_drk_internal_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	pf_drk_raise_flag = {
+		icon = mission_north_sea_empire
+		position = 9
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_malta = {
+		icon = fortify_malta
+		position = 11
+		required_missions = { pf_drk_protectors_of_lands } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_journey_to_stars = {
+		icon = mission_pf_astronomer
+		position = 14
+		required_missions = { pf_drk_scandinavian_ingenuity } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_drk_internal_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	pf_drk_secure_supplies = {
+		icon = the_london_steelyard
+		position = 11
+		required_missions = { pf_drk_prosper } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_renaissance = {
+		icon = mission_vedic_education
+		position = 12
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_scandinavian_ingenuity = {
+		icon = mission_plc_edict_education
+		position = 13
+		required_missions = { pf_drk_renaissance } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_blessing_eir = {
+		icon = mission_court_education
+		position = 14
+		required_missions = { pf_drk_scandinavian_ingenuity } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_drk_internal_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	pf_drk_prosper = {
+		icon = develop_provence
+		position = 10
+		required_missions = { pf_drk_raise_flag } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_factories = {
+		icon = mission_state_manufactories
+		position = 12
+		required_missions = {
+			pf_drk_secure_supplies
+			pf_drk_fish
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_striving_for_efficiency = {
+		icon = saxon_manufacturing
+		position = 14
+		required_missions = {
+			pf_drk_scandinavian_ingenuity
+			pf_drk_factories
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_drk_internal_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	pf_drk_fish = {
+		icon = mission_rb_cod_wars
+		position = 11
+		required_missions = { pf_drk_prosper } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_drk_colonial_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	pf_drk_lands_of_gold_and_corn = {
+		icon = mission_zambezi_gold
+		position = 17
+		required_missions = { pf_drk_crossroads_of_continents } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_control_mississippi = {
+		icon = mission_colonize_louisiana
+		position = 19
+		required_missions = { pf_drk_lands_of_gold_and_corn } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_westward_expansion = {
+		icon = mission_colonize_california
+		position = 20
+		required_missions = { pf_drk_control_mississippi } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_drk_colonial_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	pf_drk_crossroads_of_continents = {
+		icon = mission_colonize_panama
+		position = 16
+		required_missions = { pf_drk_to_new_lands } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_southern_expedition = {
+		icon = mission_new_kingdom_of_granada
+		position = 18
+		required_missions = {
+			pf_drk_crossroads_of_continents
+			pf_drk_west_indies
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_mountains_of_peru = {
+		icon = mission_potosi_silver
+		position = 19
+		required_missions = { pf_drk_southern_expedition } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_east_coast = {
+		icon = mission_rb_the_thirteen_colonies
+		position = 20
+		required_missions = { pf_drk_control_mississippi } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_north_america = {
+		icon = mission_ruler_of_north_america
+		position = 21
+		required_missions = {
+			pf_drk_westward_expansion
+			pf_drk_east_coast
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_drk_colonial_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	pf_drk_to_new_lands = {
+		icon = mission_explore_the_world
+		position = 15
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_west_indies = {
+		icon = mission_colonize_the_caribbean
+		position = 17
+		required_missions = { pf_drk_to_new_lands } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_establish_brazil = {
+		icon = mission_brazilian_bandeirantes
+		position = 19
+		required_missions = { pf_drk_southern_expedition } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_south_america = {
+		icon = mission_unknown_mission
+		position = 20
+		required_missions = {
+			pf_drk_establish_brazil
+			pf_drk_mountains_of_peru
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_havets_herskere = {
+		icon = mission_naval_kingdom
+		position = 22
+		required_missions = {
+			pf_drk_north_america
+			pf_drk_south_america
+			pf_drk_india
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_drk_colonial_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	pf_drk_west_african_ports = {
+		icon = mission_mal_west_african_great_power
+		position = 16
+		required_missions = { pf_drk_to_new_lands } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_southern_tip = {
+		icon = mission_unknown_mission
+		position = 18
+		required_missions = { pf_drk_west_african_ports } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_spice = {
+		icon = mission_rb_colonise_spice_islands
+		position = 20
+		required_missions = { pf_drk_southern_tip } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_india = {
+		icon = mission_rb_inland_india
+		position = 21
+		required_missions = {
+			pf_drk_spice
+			pf_drk_india_trade_ports
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_drk_colonial_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	pf_drk_control_african_trade = {
+		icon = mission_trade_in_gold_coast
+		position = 17
+		required_missions = { pf_drk_west_african_ports } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_east_indies = {
+		icon = mission_indian_empire
+		position = 19
+		required_missions = { pf_drk_southern_tip } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_drk_india_trade_ports = {
+		icon = mission_indian_trade_company
+		position = 20
+		required_missions = { pf_drk_east_indies } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
