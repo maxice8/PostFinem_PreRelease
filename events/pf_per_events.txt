@@ -4412,3 +4412,487 @@ country_event = {
 		}
 	}
 }
+
+
+# ---------------- Flavour Events ----------------
+
+# Dummy for copy + paste
+#country_event = {
+#	id = pf_per_events.100
+#	title = "pf_per_events_100_title"
+#	desc = "pf_per_events_100_desc"
+#	picture = 
+#	fire_only_once = yes
+#
+#	trigger = {
+#		always = no
+#	}
+#
+#	mean_time_to_happen = {
+#		months = 1
+#	}
+#
+#	option = {
+#		name = "pf_per_events_100_option"
+#		ai_chance = 100
+#	}
+#}
+
+# Alliance with Gujarat
+country_event = {
+	id = pf_per_events.101
+	title = "pf_per_events_101_title"
+	desc = "pf_per_events_101_desc"
+	picture = DIPLOMACY_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = PER
+		alliance_with = GUJ
+		GUJ = {
+			has_opinion = {
+				who = ROOT
+				value = 100
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 50
+	}
+
+	option = {
+		name = "pf_per_events_101_option"
+		ai_chance = { factor = 100 }
+		add_historical_friend = GUJ
+		GUJ = { add_historical_friend = PER }
+		add_dip_power = 25
+	}
+}
+
+# Academy in Babylon
+country_event = {
+	id = pf_per_events.102
+	title = "pf_per_events_102_title"
+	desc = "pf_per_events_102_desc"
+	picture = INVENTION_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = PER
+		mission_completed = pf_per_restore_baghdad
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = "pf_per_events_102_option_1"
+		ai_chance = { factor = 100 }
+		change_government_reform_progress = 20
+
+		add_country_modifier = {
+			name = pf_per_academy_babylon
+			duration = -1
+		}
+
+		add_years_of_income = -0.5
+	}
+
+	option = {
+		name = "pf_per_events_102_option_2"
+		ai_chance = { factor = 0 }
+		add_prestige = -5
+	}
+}
+
+# War with MAC
+country_event = {
+	id = pf_per_events.103
+	title = "pf_per_events_103_title"
+	desc = "pf_per_events_103_desc"
+	picture = BATTLE_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = PER
+		war_with = MAC
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = "pf_per_events_103_option_1"
+		ai_chance = { factor = 0 }
+
+		add_mil_power = 25
+
+		add_country_modifier = {
+			name = pf_per_glory_to_persia
+			duration = 1825
+		}
+	}
+
+	option = {
+		name = "pf_per_events_103_option_2"
+		ai_chance = { factor = 100 }
+
+		create_units_of_type = {
+			custom_tooltip = pf_per_events_103_tt
+			amount = 10
+			province = capital_scope
+			unit_type = infantry
+		}
+
+		add_country_modifier = {
+			name = pf_per_cautious_war
+			duration = 1825
+		}
+	}
+}
+
+# Conquest of Athens
+country_event = {
+	id = pf_per_events.104
+	title = "pf_per_events_104_title"
+	desc = "pf_per_events_104_desc"
+	picture = CONQUEST_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = PER
+		146 = { country_or_non_sovereign_subject_holds = ROOT }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = "pf_per_events_104_option"
+		ai_chance = { factor = 100 }
+		add_prestige = 100
+		add_devotion = 20
+	}
+}
+
+# Philosophy of Rahbar Jawed
+country_event = {
+	id = pf_per_events.105
+	title = "pf_per_events_105_title"
+	desc = "pf_per_events_105_desc"
+	picture = ADVISOR_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = PER
+		is_year = 1545
+		NOT = { is_year = 1585 }
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	option = {
+		name = "pf_per_events_105_option_1"
+		ai_chance = { factor = 100 }
+		add_country_modifier = {
+			name = pf_per_embraced_jawedism
+			duration = -1
+		}
+	}
+
+	option = {
+		name = "pf_per_events_105_option_2"
+		ai_chance = { factor = 0 }
+
+		add_stability = -1
+
+		add_country_modifier = {
+			name = pf_per_rejected_jawedism
+			duration = -1
+		}
+	}
+}
+
+# Darius Pahlavi
+country_event = {
+	id = pf_per_events.106
+	title = "pf_per_events_106_title"
+	desc = "pf_per_events_106_desc"
+	picture = muslimgfx_GOOD_WITH_MONARCH_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			is_year = 1530
+			has_country_flag = pf_per_centralization_completed
+		}
+		NOT = { is_year = 1560 } 
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "pf_per_events_106_option_1"
+		ai_chance = { factor = 100 }
+		define_ruler = {
+			name = "Darius Pahlavi"
+			age = 15
+			adm = 6
+			dip = 4
+			mil = 5
+			male = yes
+			culture = isfahani
+			religion = zoroastrian
+		}
+	}
+
+	option = {
+		name = "pf_per_events_106_option_2"
+		ai_chance = { factor = 0 }
+		add_devotion = 20
+	}
+}
+
+# Dana Esfahani
+country_event = {
+	id = pf_per_events.107
+	title = "pf_per_events_107_title"
+	desc = "pf_per_events_107_desc"
+	picture = muslimgfx_GOOD_WITH_MONARCH_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1610
+		NOT = { is_year = 1650 }
+		absolutism = 20
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = "pf_per_events_107_option_1"
+		ai_chance = { factor = 100 }
+		define_ruler = {
+			name = "Dana Esfahani"
+			age = 15
+			adm = 5
+			dip = 6
+			mil = 6
+			male = yes
+			culture = isfahani
+			religion = zoroastrian
+		}
+	}
+
+	option = {
+		name = "pf_per_events_107_option_2"
+		ai_chance = { factor = 0 }
+		add_devotion = 20
+	}
+}
+
+# Mamad Yeganeh
+country_event = {
+	id = pf_per_events.108
+	title = "pf_per_events_108_title"
+	desc = "pf_per_events_108_desc"
+	picture = ADVISOR_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1455
+		NOT = { is_year = 1475 }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "pf_per_events_108_option"
+		ai_chance = { factor = 100 }
+		define_advisor = {
+			type = diplomat
+			skill = 2
+			cost_multiplier = 0.5
+			name = "Mamad Yeganeh"
+			age = 25
+			culture = isfahani
+			religion = zoroastrian
+		}
+	}
+}
+
+# Hesam Raeisi
+country_event = {
+	id = pf_per_events.109
+	title = "pf_per_events_109_title"
+	desc = "pf_per_events_109_desc"
+	picture = ADVISOR_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1480
+		NOT = { is_year = 1500 }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "pf_per_events_109_option_1"
+		ai_chance = { factor = 50 }
+		define_advisor = {
+			type = army_organiser
+			skill = 3
+			cost_multiplier = 0.75
+			name = "Hesam Raeisi"
+			age = 25
+			culture = isfahani
+			religion = zoroastrian
+		}
+	}
+
+	option = {
+		name = "pf_per_events_109_option_2"
+		ai_chance = { factor = 50 }
+		define_general = {
+			name = "Hesam Raeisi"
+			shock = 5
+			fire = 3
+			manuever = 4
+			siege = 3
+		}
+	}
+}
+
+# Abbas Afshar
+country_event = {
+	id = pf_per_events.110
+	title = "pf_per_events_110_title"
+	desc = "pf_per_events_110_desc"
+	picture = ADVISOR_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1510
+		NOT = { is_year = 1530 }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "pf_per_events_110_option_1"
+		ai_chance = { factor = 100 }
+		define_advisor = {
+			type = trader
+			skill = 3
+			cost_multiplier = 0.75
+			name = "Abbas Afshar"
+			age = 25
+			culture = isfahani
+			religion = zoroastrian
+		}
+	}
+
+	option = {
+		name = "pf_per_events_110_option_2"
+		ai_chance = { factor = 0 }
+		add_estate_burghers_loyalty_effect = yes
+		add_country_modifier = {
+			name = pf_per_excellent_trader
+			duration = 7300
+		}
+	}
+}
+
+# Benyamin Taheri
+country_event = {
+	id = pf_per_events.111
+	title = "pf_per_events_111_title"
+	desc = "pf_per_events_111_desc"
+	picture = ADVISOR_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1570
+		NOT = { is_year = 1590 }
+		has_country_modifier = pf_per_embraced_jawedism
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "pf_per_events_111_option"
+		ai_chance = { factor = 100 }
+		define_advisor = {
+			type = inquisitor
+			skill = 3
+			cost_multiplier = 0.5
+			name = "Benyamin Taheri"
+			age = 25
+			culture = isfahani
+			religion = zoroastrian
+		}
+	}
+}
+
+# Fazel Rouhani
+country_event = {
+	id = pf_per_events.112
+	title = "pf_per_events_112_title"
+	desc = "pf_per_events_112_desc"
+	picture = ADVISOR_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1620
+		NOT = { is_year = 1640 }
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = "pf_per_events_112_option_1"
+		ai_chance = { factor = 50 }
+		define_advisor = {
+			type = commandant
+			skill = 3
+			cost_multiplier = 0.1
+			name = "Fazel Rouhani"
+			age = 25
+			culture = isfahani
+			religion = zoroastrian
+		}
+	}
+
+	option = {
+		name = "pf_per_events_112_option_2"
+		ai_chance = { factor = 50 }
+		define_general = {
+			name = "Fazel Rouhani"
+			shock = 5
+			fire = 6
+			manuever = 6
+			siege = 4
+		}
+	}
+}
+

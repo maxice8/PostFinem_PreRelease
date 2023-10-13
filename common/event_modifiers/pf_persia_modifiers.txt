@@ -276,3 +276,37 @@ pf_per_listened_to_the_satrapies = {
 	devotion = -1
 	prestige = -1
 }
+
+pf_per_academy_babylon = {
+	innovativeness_gain = 0.2
+	technology_cost = -0.025
+}
+
+pf_per_glory_to_persia = {
+	ae_impact = -0.2
+	warscore_cost_vs_other_religion = -0.25
+	prestige_from_land = 0.5
+}
+
+pf_per_cautious_war = {
+	morale_damage_received = -0.05
+	global_manpower = 0.1
+	war_exhaustion = -0.10
+}
+
+pf_per_embraced_jawedism = {
+	tolerance_heathen = -3
+	global_missionary_strength = 0.02
+	relation_with_heretics = -100
+}
+
+pf_per_rejected_jawedism = {
+	tolerance_heathen = 1
+	tolerance_of_heathens_capacity = 1
+	diplomatic_reputation = 1
+}
+
+pf_per_excellent_trader = {
+	trade_efficiency = 0.1
+	placed_merchant_power = 5
+}
