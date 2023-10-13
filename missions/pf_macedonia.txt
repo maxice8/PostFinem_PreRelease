@@ -12,6 +12,7 @@ mac_1 = {
 			province_id = 1766
 			OR = {
 				NOT = { 	owned_by = ROOT }
+				NOT = { is_core = ROOT }
 				NOT = { 	base_production = 8 }
 			}
 		} 
@@ -1636,8 +1637,10 @@ mac_eco_3 = {
 		position = 8
 		provinces_to_highlight = {  
 			is_capital_of = ROOT
-			NOT = { development = 30 }
-			NOT = { province_has_center_of_trade_of_level = 3 }
+			OR = {
+				NOT = { development = 30 }
+				NOT = { province_has_center_of_trade_of_level = 3 }
+			}
 		} 
 
 		trigger = {  
@@ -1888,8 +1891,12 @@ mac_eco_4 = {
 		required_missions = { pf_mac_beautiful_capital } 
 		provinces_to_highlight = {  
 			province_id = 3001
-			NOT = { base_production = 10 }
-			NOT = { has_production_building_trigger = yes }
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = { base_production = 10 }
+				NOT = { has_production_building_trigger = yes }
+			}
 		} 
 
 		trigger = {  
@@ -1968,14 +1975,6 @@ mac_eco_4 = {
 	}
 }
 
-mac_eco_5 = {
-	slot = 5
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { tag = MAC } 
-
-}
 mac_culture_5 = {
 	slot = 5
 	generic = no
@@ -1987,7 +1986,10 @@ mac_culture_5 = {
 		icon = reform_the_nomocanon
 		position = 7
 		required_missions = { pf_mac_spread_the_faith } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { religion = ROOT }
+		} 
 		trigger = { 
 			is_religion_enabled = paradosi
 			OR = {
