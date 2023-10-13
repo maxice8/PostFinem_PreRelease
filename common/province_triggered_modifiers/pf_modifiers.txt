@@ -40,6 +40,10 @@ non_hellenic_athens = {
 			OR = {
 				religion_group = christian
 				religion_group = punic_group
+				custom_trigger_tooltip = {
+					tooltip = mac_paradosi_athens_occupation_tt
+					has_country_flag = mac_paradosi_reformation_mission_flag
+				}
 			}
 		}
 	}

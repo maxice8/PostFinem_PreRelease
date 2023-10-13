@@ -217,6 +217,54 @@ estate_nobles = {
 			has_reform = brittonic_confederation_reform
 		}
 	}
+	custom_name = {
+		desc = estate_evgenis
+		trigger = {
+			pf_belongs_to_greek_culture_group = yes
+		}
+	}
+	custom_name = {
+		desc = estate_adirimbal
+		trigger = {
+			OR = {
+				culture_group = north_african
+				culture_group = euro_punic
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_adirimbaldi
+		trigger = {
+			culture_group = italo_punic
+		}
+	}
+	custom_name = {
+		desc = estate_rixalos
+		trigger = {
+			culture_group = gallic
+		}
+	}
+	custom_name = {
+		desc = estate_rixalos
+		trigger = {
+			culture_group = illyrian
+		}
+	}
+	custom_name = {
+		desc = estate_jarlrik
+		trigger = {
+			religion = norse_pagan_reformed
+		}
+	}
+	custom_name = {
+		desc = estate_aethelric
+		trigger = {
+			OR = {
+				culture_group = old_germanic
+				culture_group = germanic_carpathian
+			}
+		}
+	}
 	# ]]]
 	custom_name = {
 		desc = estate_imperial_nobility
@@ -244,31 +292,9 @@ estate_nobles = {
 		}
 	}
 	custom_name = {
-		desc = estate_beys
-		trigger = {
-			technology_group = ottoman
-		}
-	}
-	custom_name = {
 		desc = estate_boyars
 		trigger = {
-			OR = {
-				culture_group = east_slavic
-				primary_culture = bulgarian
-				primary_culture = romanian
-				culture_group = slavic
-			}
-			NOT = { primary_culture = polish_new }
-		}
-	}
-	custom_name = {
-		desc = estate_szlachta
-		trigger = {
-			OR = {
-				primary_culture = polish
-				primary_culture = polish_new
-				primary_culture = lithuanian
-			}
+			culture_group = pagan_slavic
 		}
 	}
 	custom_name = {
@@ -418,6 +444,9 @@ estate_nobles = {
 	color = { 200 0 50 }
 	
 	privileges = {
+		# [[[ PF Nation Specific
+		estate_nobles_cabinet_autonomy
+		# ]]]
 		estate_nobles_land_rights
 		estate_nobles_nobility_primacy
 		estate_nobles_officer_corp
@@ -481,6 +510,14 @@ estate_nobles = {
 		estate_nobles_pf_satrapy_expansion_plan
 		estate_nobles_pf_satrapy_annexation_ban
 		estate_nobles_pf_satrapy_exemption_from_conscription
+		# [[[ Generic PF
+		estate_nobles_electorate_nobility
+		estate_nobles_white_cloth_nobles
+		estate_nobles_assign_grand_offices
+		estate_nobles_seal_of_approval
+		estate_nobles_allow_hereditary_titles
+		estate_nobles_command_of_the_troops
+		# ]]]
 	}
 
 	agendas = {

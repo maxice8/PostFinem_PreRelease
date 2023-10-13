@@ -34,3 +34,30 @@ cb_dominate_seas = {
 	war_goal = pf_war_dominate_seas
 }
 
+# Great Crusade
+cb_great_crusade = {
+	valid_for_subject = no
+	holy_war = yes
+
+	prerequisites_self = {
+		is_revolutionary = no
+		has_country_flag = pf_unlock_great_crusade_cb
+	}
+
+	prerequisites = {
+		is_neighbor_of = FROM
+		NOT = { religion_group = FROM }
+		NOT = {	has_matching_religion = FROM }
+		OR = {
+			AND = {
+				crusade_target = { tag = FROM }
+				religion = hellenic
+			}
+			has_country_flag = pf_unlock_great_crusade_cb
+		}
+	}
+
+	war_goal = superiority_great_crusade
+}
+
+

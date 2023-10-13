@@ -1,0 +1,31 @@
+
+#Rabim Qahal for Carthage
+
+pf_rabim_qahal = {
+	icon = "rabim_qahal"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			tag = CAR
+			has_country_flag = enabled_rabim_qahal_flag
+		}
+	}
+	government_abilities = {
+		car_rabim_qahal
+	}
+	modifiers = {
+		global_unrest = -1
+		burghers_loyalty_modifier = 0.1
+		reelection_cost = -0.25
+		max_absolutism = -10
+	}
+	# custom_attributes = {
+	# 	buffed_strong_duchies = yes #+5% Loyalty
+	# }
+	
+	ai = {
+		factor = 0.5 #generic
+	}
+	duration = 6
+}

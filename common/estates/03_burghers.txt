@@ -208,12 +208,56 @@ estate_burghers = {
 		loyalty = -20
 	}
 	#Custom Names
+	# [[[ PF
 	custom_name = {
 		desc = estate_bards
 		trigger = {
 			culture_group = old_celtic
 		}
 	}
+	custom_name = {
+		desc = estate_dimotes
+		trigger = {
+			pf_belongs_to_greek_culture_group = yes
+		}
+	}
+	custom_name = {
+		desc = estate_zarimel
+		trigger = {
+			OR = {
+				culture_group = north_african
+				culture_group = euro_punic
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_zarimello
+		trigger = {
+			culture_group = italo_punic
+		}
+	}
+	custom_name = {
+		desc = estate_stedonar
+		trigger = {
+			culture_group = illyrian
+		}
+	}
+	custom_name = {
+		desc = estate_civitrix
+		trigger = {
+			culture_group = gallic
+		}
+	}
+	custom_name = {
+		desc = estate_stadhwald
+		trigger = {
+			OR = {
+				culture_group = germanic
+				culture_group = germanic_carpathian
+			}
+		}
+	}
+	# ]]]
 	custom_name = {
 		desc = estate_quartersmasters
 		trigger = {
@@ -262,6 +306,9 @@ estate_burghers = {
 	color = { 35 35 150 }
 
 	privileges = {
+		# PF Specific [[[
+		estate_burghers_pf_mac_influential_guilds #Macedonia
+		# ]]]
 		estate_burghers_land_rights
 		estate_burghers_land_of_commerce
 		estate_burghers_admirals
@@ -303,9 +350,13 @@ estate_burghers = {
 		estate_burghers_financial_demand
 		estate_burghers_sindicat_remensa_privilege
 		estate_burghers_promote_burgher_bookkeeping
-		# pf [[[
+		# pf generic [[[
 		estate_burghers_pf_peace_of_utrech
 		estate_burghers_pf_court_bards
+		estate_burghers_merchants_of_many_ports
+		estate_burghers_warehouse_rights
+		estate_burghers_promote_individual_guilds
+		estate_burghers_encourage_internal_competition
 		estate_burghers_pf_league_agreements
 		# ]]]
 	}

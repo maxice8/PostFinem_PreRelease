@@ -10,8 +10,11 @@ mac_1 = {
 		position = 1
 		provinces_to_highlight = {  
 			province_id = 1766
-			NOT = { 	owned_by = ROOT }
-			NOT = { 	base_production = 8 }
+			OR = {
+				NOT = { 	owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = { 	base_production = 8 }
+			}
 		} 
 
 		trigger = {  
@@ -26,7 +29,7 @@ mac_1 = {
 		} 
 
 		effect = {  
-			add_years_of_income = 2
+			add_years_of_income = 0.8
 			custom_tooltip = empty_line_tt
 			albania_area = { add_permanent_claim = ROOT }
 			rascia_area = { add_permanent_claim = ROOT }
@@ -395,7 +398,7 @@ mac_2 = {
 			if = {
 				limit = { ai = no }
 				army_size_percentage = 1
-				army_professionalism = 0.1
+				army_professionalism = 0.05
 			}
 			else = {
 				army_size_percentage = 0.75
@@ -847,7 +850,7 @@ mac_3 = {
 			}
 		} 
 
-		effect = {    
+		effect = {  
 			simple_dynamic_effect = {
 				first_custom_tooltip = mac_hellenic_hegemon_tt_1 #if you own the lands directly
 				first_limit = "
@@ -881,6 +884,15 @@ mac_3 = {
 					}
 				"
 				second_effect = "
+					hidden_effect = {
+						AEG = {						
+							add_historical_friend = ROOT
+							remove_historical_rival = ROOT  
+						}
+					}				
+					remove_historical_rival = AEG  
+					add_historical_friend = AEG
+					custom_tooltip = empty_line_tt
 					AEG = {
 						add_country_modifier = {
 							name = mac_hellenic_hegemon_aegyptos_modifier
@@ -891,6 +903,7 @@ mac_3 = {
 			}	
 			maghreb_region = { add_permanent_claim = ROOT }
 		}  
+		
 	}
 }
 mac_4 = {
@@ -1000,40 +1013,85 @@ mac_5 = {
 		} 
 
 		trigger = {  
-			OR = {
-				calc_true_if = {
-					amount = 2
-					all_ally = {
-						has_opinion = {
-							who = root
-							value = 150
+			if = {
+				limit = { ai = no }
+				OR = {
+					calc_true_if = {
+						amount = 2
+						all_ally = {
+							has_opinion = {
+								who = root
+								value = 150
+							}
 						}
 					}
-				}
-				calc_true_if = {
-					amount = 3
-					all_subject_country = {
-						has_opinion = {
-							who = root
-							value = 150
+					calc_true_if = {
+						amount = 3
+						all_subject_country = {
+							has_opinion = {
+								who = root
+								value = 150
+							}
 						}
 					}
-				}
-			}	
-			OR = {
-				AND = {
-					papal_influence = 50
-					alliance_with = ATH
+				}	
+				OR = {
+					AND = {
+						papal_influence = 50
+						alliance_with = ATH
+						ATH = {
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
+						}
+					}
 					ATH = {
-						has_opinion = {
-							who = ROOT
-							value = 150
+						is_subject_of = ROOT
+						owns_core_province = 146
+					}							
+					AND = {
+						ATH = { exists = no }									
+						owns_core_province = 146	
+					}	
+				}
+			}
+			else = {
+				OR = {
+					calc_true_if = {
+						amount = 1
+						all_ally = {
+							has_opinion = {
+								who = root
+								value = 150
+							}
 						}
 					}
-				}
-				any_subject_country = {
-					tag = ATH
-					owns_core_province = 143
+					calc_true_if = {
+						amount = 2
+						all_subject_country = {
+							has_opinion = {
+								who = root
+								value = 150
+							}
+						}
+					}
+				}	
+				OR = {
+					AND = {
+						papal_influence = 50
+						alliance_with = ATH
+						ATH = {
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
+						}
+					}
+					any_subject_country = {
+						tag = ATH
+						owns_core_province = 143
+					}
 				}
 			}
 		} 
@@ -1069,10 +1127,14 @@ mac_5 = {
 				"
 				second_custom_tooltip = mac_why_go_alone_ARCHON_SUBJECT_tt
 				second_limit = "
-					any_subject_country = {
-						tag = ATH
+					ATH = {
+						is_subject_of = ROOT
 						owns_core_province = 146
-					}
+					}							
+					AND = {
+						ATH = { exists = no }									
+						owns_core_province = 146	
+					}	
 				"
 				second_effect = "
 					set_country_flag = mac_subjugated_archon_flag
@@ -1142,20 +1204,52 @@ mac_archon_friend_5 = {
 		required_missions = { pf_mac_why_go_alone } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			is_defender_of_faith = yes
+			is_papal_controller = yes
+			papal_influence = 100
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_prestige_or_monarch_power = { amount = 25 }
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = mac_archon_friend_modifier
+				duration = 7300
+			}
+		} 
 	}
 
 	mac_archon_friend_2 = {
 		icon = catholic_volunteers
 		position = 3
 		required_missions = { mac_archon_friend_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				AND = {
+					owned_by = ROOT
+					NOT = { religion = hellenic }
+				}
+				AND = {
+					owned_by = ATH
+					owner = {
+						NOT = { alliance_with = ROOT }
+					}
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			alliance_with = ATH
+			num_of_owned_provinces_with = {
+				value = 100
+				religion = hellenic
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			pf_unlock_great_crusade_cb = yes
+		} 
 	}
 }
 mac_archon_subject_5 = {
@@ -1172,21 +1266,74 @@ mac_archon_subject_5 = {
 		icon = pf_hellenic_temple_burning
 		position = 2
 		required_missions = { pf_mac_why_go_alone } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			NOT = { religion = paradosi }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			is_religion_enabled = paradosi
+			religion = paradosi
+			if = {
+				limit = {
+					ai = no
+				}
+				religious_unity = 0.75
+			}
+			else = { religious_unity = 0.5 }
+			
+		} 
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = mac_paradosi_reformation_mission_tt
+			set_country_flag = mac_paradosi_reformation_mission_flag
+			custom_tooltip = empty_line_tt
+			146 = { add_core = ROOT }
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = mac_paradosi_reformation_mission_modifier
+				duration = 7300
+			}
+		} 
 	}
 
 	mac_archon_subject_2 = {
 		icon = counter_reformation
 		position = 3
 		required_missions = { mac_archon_subject_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				AND = {	
+					owned_by = ROOT
+					NOT = { religion = paradosi }
+				}
+				AND = {
+					province_id = 146
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+			}
+		} 
 
-		trigger = {  } 
-
+		trigger = {  
+			owns_core_province = 146
+			religion = paradosi
+			if = {
+				limit = { ai = no }
+				num_of_owned_provinces_with = {
+					value = 100
+					religion = paradosi
+				}
+				religious_unity = 1
+			}
+			else = { 
+				num_of_owned_provinces_with = {
+					value = 75
+					religion = paradosi
+				}
+				religious_unity = 0.75 
+			} 
+		}
 		effect = {  } 
 	}
 }
@@ -1311,6 +1458,7 @@ mac_cabinet_5 = {
 			land_forcelimit = 75
 			army_size = 75
 			num_of_cavalry = 20
+			reform_level = 5
 		} 
 
 		effect = {  
@@ -1432,16 +1580,19 @@ mac_eco_2 = {
 			1319 = {
 				trade_node_value = 20
 			}
-			num_of_owned_provinces_with = {
-				value = 5
-				OR = {
-					province_id = 1319
-					any_trade_node_member_province = {
+			custom_trigger_tooltip = {
+				tooltip = mac_regional_trade_hub_trigger
+				num_of_owned_provinces_with = {
+					value = 5
+					OR = {
 						province_id = 1319
+						any_trade_node_member_province = {
+							province_id = 1319
+						}
 					}
+					province_has_center_of_trade_of_level = 2
+					has_trade_building_trigger = yes
 				}
-				province_has_center_of_trade_of_level = 2
-				has_trade_building_trigger = yes
 			}
 		} 
 
@@ -1486,8 +1637,10 @@ mac_eco_3 = {
 		position = 8
 		provinces_to_highlight = {  
 			is_capital_of = ROOT
-			NOT = { development = 30 }
-			NOT = { province_has_center_of_trade_of_level = 3 }
+			OR = {
+				NOT = { development = 30 }
+				NOT = { province_has_center_of_trade_of_level = 3 }
+			}
 		} 
 
 		trigger = {  
@@ -1738,8 +1891,12 @@ mac_eco_4 = {
 		required_missions = { pf_mac_beautiful_capital } 
 		provinces_to_highlight = {  
 			province_id = 3001
-			NOT = { base_production = 10 }
-			NOT = { has_production_building_trigger = yes }
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = { base_production = 10 }
+				NOT = { has_production_building_trigger = yes }
+			}
 		} 
 
 		trigger = {  
@@ -1803,6 +1960,7 @@ mac_eco_4 = {
 			num_of_owned_provinces_with = {
 				value = 3
 				has_manufactory_trigger = yes
+				trade_goods = iron
 			}
 		} 
 
@@ -1817,14 +1975,6 @@ mac_eco_4 = {
 	}
 }
 
-mac_eco_5 = {
-	slot = 5
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { tag = MAC } 
-
-}
 mac_culture_5 = {
 	slot = 5
 	generic = no
@@ -1836,7 +1986,10 @@ mac_culture_5 = {
 		icon = reform_the_nomocanon
 		position = 7
 		required_missions = { pf_mac_spread_the_faith } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { religion = ROOT }
+		} 
 		trigger = { 
 			is_religion_enabled = paradosi
 			OR = {
