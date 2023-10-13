@@ -83,16 +83,10 @@ country_event = {
 	title = pf_ksb_events.5.t
 	desc = pf_ksb_events.5.d
 	picture = east_slavic_ANGRY_MOB_eventPicture
-	trigger = {
-		tag = SLV
-		government = republic
-		NOT = { has_country_flag = slv_is_republic_flag }
-	}
+	is_triggered_only = yes
 	option = {
 		name = pf_ksb_events.5a
 		override_country_name = "RZECZPOSPOLITA"
-		clr_country_flag = slv_not_republic_flag
-		set_country_flag = slv_is_republic_flag
 	}
 }
 
@@ -101,15 +95,10 @@ country_event = {
 	title = pf_ksb_events.6.t
 	desc = pf_ksb_events.6.d
 	picture = east_slavic_ANGRY_MOB_eventPicture
-	trigger = {
-		tag = SLV
-		NOT = { government = republic }
-		NOT = { has_country_flag = slv_not_republic_flag }
-	}
+	is_triggered_only = yes
 	option = {
 		name = pf_ksb_events.6a
-	    restore_country_name_effect = yes
-		set_country_flag = slv_not_republic_flag
+	    restore_country_name = yes
 	}
 }
 

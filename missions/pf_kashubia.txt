@@ -1,0 +1,521 @@
+ksb_1_slot = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			AND = {
+				was_tag = KSB
+				tag = SEV
+			}
+			AND = {
+				was_tag = KSB
+				tag = SLV
+			}
+			tag = KSB
+		}
+	}
+
+	ksb_retake_rujana = {
+		icon = mission_norse_faith
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	ksb_restore_worship = {
+		icon = mission_hands_praying
+		position = 3
+		required_missions = { ksb_retake_rujana } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+ksb_2_slot = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			AND = {
+				was_tag = KSB
+				tag = SEV
+			}
+			AND = {
+				was_tag = KSB
+				tag = SLV
+			}
+			tag = KSB
+		}
+	}
+
+	ksb_smash_the_saxons = {
+		icon = mission_conquer_5_states
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	ksb_the_polabians = {
+		icon = mission_noble_council
+		position = 2
+		required_missions = {
+			ksb_smash_the_saxons
+			ksb_retake_rujana
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	ksb_push_borderlands = {
+		icon = claim_the_borderlands
+		position = 4
+		required_missions = { ksb_the_polabians } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+ksb_3_slot = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			AND = {
+				was_tag = KSB
+				tag = SEV
+			}
+			AND = {
+				was_tag = KSB
+				tag = SLV
+			}
+			tag = KSB
+		}
+	}
+
+	ksb_rule_silesia = {
+		icon = mission_eastern_european_city
+		position = 2
+		required_missions = { ksb_new_slavic_power } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	ksb_lands_of_czech = {
+		icon = boh_humiliate_austria
+		position = 3
+		required_missions = { ksb_the_polabians } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+ksb_4_slot = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			AND = {
+				was_tag = KSB
+				tag = SEV
+			}
+			AND = {
+				was_tag = KSB
+				tag = SLV
+			}
+			tag = KSB
+		}
+	}
+
+	ksb_new_slavic_power = {
+		icon = mission_the_polish_throne
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	ksb_conquer_pinsk = {
+		icon = mission_the_russian_tsardom
+		position = 2
+		required_missions = { ksb_new_slavic_power } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	ksb_united_severoslavia = {
+		icon = mission_placeholder
+		position = 3
+		required_missions = {
+			ksb_rule_silesia
+			ksb_conquer_pinsk
+			ksb_protect_lechia
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+ksb_5_slot = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			AND = {
+				was_tag = KSB
+				tag = SEV
+			}
+			AND = {
+				was_tag = KSB
+				tag = SLV
+			}
+			tag = KSB
+		}
+	}
+
+	ksb_intervene_in_lechia = {
+		icon = mission_pol_wallachia
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	ksb_protect_lechia = {
+		icon = mission_pol_throne_bohemia
+		position = 2
+		required_missions = { ksb_intervene_in_lechia } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	ksb_conquer_lithuania = {
+		icon = mission_conquer_lithuania
+		position = 4
+		required_missions = { ksb_end_zilant_raids } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	ksb_lords_of_baltic = {
+		icon = mission_conquer_baltic_region
+		position = 5
+		required_missions = { ksb_conquer_lithuania } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	ksb_end_zilant_raids = {
+		icon = mjz_for_the_horde
+		position = 3
+		required_missions = { ksb_conquer_pinsk } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+sevksb_1_branch = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			AND = {
+				was_tag = KSB
+				tag = SEV
+			}
+			AND = {
+				was_tag = KSB
+				tag = SLV
+			}
+		}
+	}
+
+	sev_svetovids_most_faithful = {
+		icon = mission_placeholder
+		position = 5
+		required_missions = { ksb_restore_worship } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	sev_convert_germania = {
+		icon = mission_placeholder
+		position = 6
+		required_missions = { sev_svetovids_most_faithful } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+sevksb_2_branch = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			AND = {
+				was_tag = KSB
+				tag = SEV
+			}
+			AND = {
+				was_tag = KSB
+				tag = SLV
+			}
+		}
+	}
+
+	sev_lords_of_germania = {
+		icon = interfere_in_germany
+		position = 7
+		required_missions = {
+			sev_convert_germania
+			sev_to_the_rhine
+			sev_lombardy_falls
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	sev_to_the_rhine = {
+		icon = mission_se_along_the_river
+		position = 6
+		required_missions = { ksb_push_borderlands } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+sevksb_3_branch = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			AND = {
+				was_tag = KSB
+				tag = SEV
+			}
+			AND = {
+				was_tag = KSB
+				tag = SLV
+			}
+		}
+	}
+
+	sev_conquer_south = {
+		icon = alpine_fortifications
+		position = 5
+		required_missions = { ksb_lands_of_czech } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	sev_lombardy_falls = {
+		icon = polish_diplomacy
+		position = 6
+		required_missions = { sev_conquer_south } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	sev_mountain_crossing = {
+		icon = alpine_defenses
+		position = 7
+		required_missions = { sev_volhynian_conquest } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	sev_lord_of_slavia = {
+		icon = mission_placeholder
+		position = 8
+		required_missions = {
+			sev_mountain_crossing
+			sev_between_seas
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+sevksb_4_branch = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			AND = {
+				was_tag = KSB
+				tag = SEV
+			}
+			AND = {
+				was_tag = KSB
+				tag = SLV
+			}
+		}
+	}
+
+	sev_volhynian_conquest = {
+		icon = mission_advance_to_the_dnieper
+		position = 6
+		required_missions = { ksb_united_severoslavia } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	sev_between_seas = {
+		icon = mission_establish_high_seas_navy
+		position = 7
+		required_missions = { sev_volhynian_conquest } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+sevksb_5_branch = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			AND = {
+				was_tag = KSB
+				tag = SEV
+			}
+			AND = {
+				was_tag = KSB
+				tag = SLV
+			}
+		}
+	}
+
+	sev_wild_frontier = {
+		icon = mission_the_caucasus_rus
+		position = 7
+		required_missions = { ksb_lords_of_baltic } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+slvksb_1_branch = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KSB } 
+
+}
+slvksb_2_branch = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KSB } 
+
+}
+slvksb_3_branch = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KSB } 
+
+}
+slvksb_4_branch = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KSB } 
+
+}
+slvksb_5_branch = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KSB } 
+
+}

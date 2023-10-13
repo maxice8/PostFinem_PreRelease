@@ -153,6 +153,18 @@ country_event = {
 			casus_belli = cb_restore_personal_union
 			who = POL
 		}
+		POL = {
+			add_country_modifier = {
+				name = pol_in_civil_war
+				duration = -1
+			}
+		}
+		KRA = {
+			add_country_modifier = {
+				name = pol_in_civil_war
+				duration = -1
+			}
+		}
 		ai_chance = {
 			factor = 100
 		}
@@ -201,14 +213,14 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-	}
-	option = {
-		name = pf_pol_events.6b
-		add_prestige = 10
-		clr_global_flag = lechia_succession_wars
-		ai_chance = {
-			factor = 0
+		POL = {
+			remove_country_modifier = pol_in_civil_war
 		}
+		KRA = {
+			remove_country_modifier = pol_in_civil_war
+		}
+		set_country_flag = lechia_kingdom_flag
+		add_government_reform = pf_lechite_kingdom
 	}
 }
 
@@ -236,5 +248,61 @@ country_event = {
 		set_government_rank = 2
 		clr_global_flag = lechia_succession_wars
 		override_country_name = "LECHIA"
+		POL = {
+			remove_country_modifier = pol_in_civil_war
+		}
+		KRA = {
+			remove_country_modifier = pol_in_civil_war
+		}
+		set_country_flag = lechia_kingdom_flag
+		add_government_reform = pf_lechite_kingdom
+	}
+}
+
+#intervention by an outside power
+country_event = {
+	id = pf_pol_events.8
+	title = pf_pol_events.8.t
+	desc = pf_pol_events.8.d
+	picture = KING_SICK_IN_BED_eventPicture
+	trigger = {
+		has_global_flag = lechia_succession_wars
+		NOT = {
+			OR = {
+				tag = POL
+				tag = KRA
+			}
+		}
+		OR = {
+			is_in_war = {
+				defenders = KRA
+			}
+			is_in_war = {
+				defenders = POL
+			}
+		}
+		NOT = { has_country_flag = intervening_in_lechia_civil_war } 
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = pf_pol_events.8a
+		set_country_flag = intervening_in_lechia_civil_war
+		POL = {
+			country_event = {
+				id = pf_pol_events.9
+			}
+		}
+		KRA = {
+			country_event = {
+				id = pf_pol_events.9
+			}
+		}
+	}
+	option = {
+		name = pf_pol_events.8b
+		white_peace = KRA
+		white_peace = POL
 	}
 }

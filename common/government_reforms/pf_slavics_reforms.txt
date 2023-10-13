@@ -131,3 +131,53 @@ pf_drakovan_kingdom = {
 		}
 	}
 }
+
+pf_rus_successor = {
+	potential = {
+		tag = PNS
+	}
+	modifiers = {
+		army_tradition_from_battle = 0.5
+		nobles_influence_modifier = 0.1
+		improve_relation_modifier = 0.2
+	}
+	icon = "ruthenia_tsardom"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+}
+
+pf_lechite_kingdom = {
+	potential = {
+		OR = {
+			tag = KRA
+			tag = POL
+		}
+	}
+	modifiers = {
+		monthly_splendor = 1
+		improve_relation_modifier = 0.25
+		army_tradition_decay = -0.01
+	}
+	fixed_rank = 2
+	icon = "king"
+	lock_level_when_selected = yes
+}
+
+pf_reformed_lechite_kingdom = {
+	potential = {
+		OR = {
+			tag = KRA
+			tag = POL
+		}
+		has_country_flag = lechia_kingdom_flag
+	}
+	modifiers = {
+		monthly_splendor = 1
+		diplomatic_reputation = 2
+		army_tradition_decay = -0.01
+		can_claim_states = yes
+	}
+	fixed_rank = 3
+	icon = "legislative_sejm_reform"
+	lock_level_when_selected = yes
+}
