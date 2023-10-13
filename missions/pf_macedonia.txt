@@ -1891,8 +1891,12 @@ mac_eco_4 = {
 		required_missions = { pf_mac_beautiful_capital } 
 		provinces_to_highlight = {  
 			province_id = 3001
-			NOT = { base_production = 10 }
-			NOT = { has_production_building_trigger = yes }
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = { base_production = 10 }
+				NOT = { has_production_building_trigger = yes }
+			}
 		} 
 
 		trigger = {  
