@@ -1,0 +1,51 @@
+althingi_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 3
+	available = {
+		NOT = { has_government_attribute = disallow_althingi_mechanic }
+	}
+	
+	powers = {
+		althingi_adm_power = {
+			max = 100
+			monarch_power = ADM
+			reset_on_new_ruler = yes
+			base_monthly_growth = 0.25
+			scaled_modifier = {
+				modifier = {
+					country_admin_power = 6
+					reform_progress_growth = 0.25
+					adm_advisor_cost = -0.33
+					monthly_althingi_adm_power = -1
+				}
+			}
+		}
+		althingi_dip_power = {
+			max = 100
+			monarch_power = DIP
+			base_monthly_growth = 0.25
+			scaled_modifier = {
+				modifier = {
+					country_diplomatic_power = 6
+					improve_relation_modifier = 0.50
+					dip_advisor_cost = -0.33
+					monthly_althingi_dip_power = -1
+				}
+			}
+		}
+		althingi_mil_power = {
+			max = 100
+			monarch_power = MIL
+			reset_on_new_ruler = yes
+			base_monthly_growth = 0.25
+			scaled_modifier = {
+				modifier = {
+					country_military_power = 6
+					land_maintenance_modifier = -0.20
+					mil_advisor_cost = -0.33
+					monthly_althingi_mil_power = -1
+				}
+			}
+		}
+	}
+}

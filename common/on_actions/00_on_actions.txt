@@ -1815,6 +1815,16 @@ on_monthly_pulse = {
 	}
 }
 on_yearly_pulse = {
+	random_events = {
+		1 = 0
+
+		100 = pf_althingi.1
+		100 = pf_althingi.2
+		100 = pf_althingi.3
+		100 = pf_althingi.4
+		100 = pf_althingi.5
+		100 = pf_althingi.6
+	}
 }
 on_yearly_pulse_2 = {
 }

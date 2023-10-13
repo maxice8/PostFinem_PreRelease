@@ -398,3 +398,37 @@ illyrian_kingdom_reform = {
 		factor = 5
 	}
 }
+
+icelandic_althingi_reform = {
+	icon = "pf_provincial_things"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+	# no elections! They will have a special mechanic muhahah
+	# work replaces the monarch skill basically, work increased by advisors and events
+	duration = 500
+	potential = {
+		tag = ICE
+	}
+	trigger = {
+		tag = ICE
+	}
+	modifiers = {
+		global_unrest = -2
+		republican_tradition = 1
+		governing_capacity_modifier = -0.90
+		max_absolutism = -50
+	}
+	government_abilities = {
+		althingi_mechanic
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	heirs_can_be_generals = no
+	rulers_can_be_generals = no
+	ai = {
+		factor = 5
+	}
+}

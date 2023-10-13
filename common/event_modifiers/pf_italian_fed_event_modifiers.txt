@@ -490,6 +490,21 @@ pf_ily_defender_of_the_empire = {
 	shock_damage_received = -0.10
 	fire_damage_received = -0.05
 }
+pf_ily_dalmatian_trade = {
+	global_trade_power = 0.10
+	build_cost = -0.10
+}
+pf_ily_great_illyradon = {
+	local_tax_modifier = 0.50
+	local_production_efficiency = 0.50
+	local_manpower_modifier = 0.50
+	trade_goods_size = 1
+	local_governing_cost_increase = -20
+}
+pf_ily_absolutism = {
+	max_absolutism = 10
+	yearly_absolutism = 0.5
+}
 
 # Crown Authority
 
@@ -528,4 +543,50 @@ crown_authority_5 = {
 	vassal_manpower_bonus = 0.25
 	global_manpower_modifier = 0.10
 	max_absolutism = 15
+}
+
+# Sicily
+
+pf_sic_unity_aspirations = {
+	land_morale = 0.10
+	manpower_recovery_speed = 0.10
+}
+pf_sic_trade_cities = {
+	global_trade_power = 0.15
+	idea_cost = -0.10
+}
+pf_sic_granary_modifier = {
+	trade_goods_size = 1
+	province_trade_power_modifier = 0.10
+}
+pf_sic_rex_trinacorum = {
+	prestige = 1
+	global_trade_goods_size_modifier = 0.10
+}
+pf_sic_carthage_government = {
+	local_governing_cost_increase = -25
+	governing_capacity_modifier = 0.05
+}
+pf_sic_king_of_africa = {
+	legitimacy = 1
+	global_manpower_modifier = 0.10
+}
+pf_sic_defeated_alexanders_men = {
+	infantry_power = 0.10
+	army_tradition = 1
+}
+pf_sic_sicilian_empire = {
+	administrative_efficiency = 0.05
+	core_creation = -0.10
+}
+
+# Ancona
+
+pf_anc_new_church = {
+	church_loyalty_modifier = 0.10
+	global_missionary_strength = 0.02
+}
+pf_anc_christian_zealotry = {
+	warscore_cost_vs_other_religion = -0.10
+	manpower_in_true_faith_provinces = 0.15
 }

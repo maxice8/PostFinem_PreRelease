@@ -513,3 +513,42 @@ FER_ideas = {
 		fire_damage = 0.10
 	}
 }
+new_SIC_ideas = {
+	start = {
+		naval_morale = 0.15
+		trade_efficiency = 0.10
+	}
+	
+	bonus = {
+		core_creation = -0.10
+	}	
+
+	trigger = {
+		tag = SIC	# Trinacria
+	}
+	free = yes
+	
+	sic_greek_cities = {
+		development_cost = -0.10
+	}
+	sic_parliament = {
+		global_unrest = -2
+	}
+	sic_granary = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	sic_regnum_trinacrianum = {
+		land_morale = 0.10
+		legitimacy = 1
+	}
+	sic_naval_prowess = {
+		navy_tradition = 1
+	}
+	sic_privateers = {
+		privateer_efficiency = 0.20
+		capture_ship_chance = 0.10
+	}
+	sic_royal_academy = {
+		discipline = 0.05
+	}
+}

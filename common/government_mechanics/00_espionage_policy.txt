@@ -25,6 +25,26 @@ espionage_policy_mechanic = {
 					stability_cost_to_declare_war = 1
 				}
 			}
+			on_min_reached = {
+				if = {
+					limit = {
+						has_country_modifier = ep_subversion_modifier
+					}
+					remove_country_modifier = ep_subversion_modifier
+				}
+				if = {
+					limit = {
+						has_country_modifier = ep_subterfuge_modifier
+					}
+					remove_country_modifier = ep_subterfuge_modifier
+				}
+				if = {
+					limit = {
+						has_country_modifier = ep_infiltration_modifier
+					}
+					remove_country_modifier = ep_infiltration_modifier
+				}
+			}
 		}
 	}
 	interactions = {

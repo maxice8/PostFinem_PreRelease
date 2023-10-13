@@ -129,12 +129,12 @@ country_decisions = {
 			is_at_war = no
 			has_regency = no
 			custom_trigger_tooltip = {
-				tooltip = pf_if_10_year_cooldown_tt
+				tooltip = pf_if_25_year_cooldown_tt
 				OR = {
 					NOT = { has_country_flag = hosted_feast_flag }
 					had_country_flag = {
 						flag = hosted_feast_flag
-						days = 3650
+						days = 9125
 					}
 				}
 			}

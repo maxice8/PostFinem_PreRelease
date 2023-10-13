@@ -2073,49 +2073,6 @@ MAM_ideas = {
 	}
 }
 
-SIC_ideas = {
-	start = {
-		land_morale = 0.1
-		global_manpower_modifier = 0.2
-	}
-	
-	bonus = {
-		prestige = 1
-	}
-	
-	trigger = {
-		OR = {
-			tag = TTS
-			tag = SIC
-		}
-	}
-	
-	free = yes
-	
-	sic_university_of_catania = {
-		technology_cost = -0.05
-	}
-	sic_constitions_of_melfi = {
-		global_unrest = -1
-		possible_policy = 1
-	}
-	sic_noble_admirals = {
-		navy_tradition = 1
-	}
-	sic_greater_sicily = {
-		core_creation = -0.1
-	}
-	sic_trade_fleet = {
-		global_ship_trade_power = 0.2
-	}
-	sic_grand_navy = {
-		naval_morale = 0.15
-	}
-	sic_sicilian_silk = {
-		global_trade_goods_size_modifier = 0.1
-	}
-}
-
 ARA_ideas = {
 	start = {
 		galley_power = 0.2

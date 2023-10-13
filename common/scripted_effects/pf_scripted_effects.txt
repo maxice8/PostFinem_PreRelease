@@ -723,3 +723,25 @@ pf_grant_random_advisor = {
 		}
 	}
 }
+
+#upgrade_center_of_trade = yes
+upgrade_center_of_trade = {
+	if = {
+		limit = {
+			NOT = { province_has_center_of_trade_of_level = 1 }
+		}
+		center_of_trade = 1
+	}
+	else_if = {
+		limit = {
+			province_has_center_of_trade_of_level = 1
+			NOT = { province_has_center_of_trade_of_level = 3 }
+		}
+		add_center_of_trade_level = 1
+	}
+	else = {
+		add_base_tax = 1
+		add_base_production = 1
+		add_base_manpower = 1
+	}
+}

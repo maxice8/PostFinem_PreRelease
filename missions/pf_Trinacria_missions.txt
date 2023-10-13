@@ -1,0 +1,561 @@
+pf_sic_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = SIC
+			primary_culture = siculi
+			tag = CLN	# Conan
+		}
+	}
+
+	pf_sic_dreams_of_unity = {
+		icon = fra_peninsular_war
+		position = 1
+		required_missions = { } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			army_size_percentage = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_sic_unity_aspirations"
+				duration = 9125
+			}
+			sicily_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			western_sicily_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	pf_sic_unite_sicily = {
+		icon = mission_conquer_pomerania
+		position = 2
+		required_missions = {
+			pf_sic_dreams_of_unity
+		} 
+		provinces_to_highlight = {
+			OR = {
+				area = sicily_area
+				area = western_sicily_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			sicily_area = {
+				type = all
+				owned_by = ROOT
+			}
+			western_sicily_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_stability = 1
+			add_legitimacy_equivalent = {
+				amount = 50
+			}
+			morea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_greece_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			2954 = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	pf_sic_the_cities = {
+		icon = mission_castle_construction
+		position = 3
+		required_missions = {
+			pf_sic_unite_sicily
+		} 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 125
+				province_id = 124
+				province_id = 2982
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { development = 20 }
+				NOT = { has_tax_building_trigger = yes }
+				NOT = { has_trade_building_trigger = yes }
+			}
+		}
+		trigger = {
+			125 = {
+				owned_by = ROOT
+				development = 20
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+			}
+			124 = {
+				owned_by = ROOT
+				development = 20
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+			}
+			2982 = {
+				owned_by = ROOT
+				development = 20
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+			}
+		}
+		effect = {
+			sicily_area = {
+				add_prosperity = 100
+			}
+			western_sicily_area = {
+				add_prosperity = 100
+			}
+			add_country_modifier = {
+				name = "pf_sic_trade_cities"
+				duration = 9125
+			}
+		}
+	}
+	pf_sic_granary_of_italia = {
+		icon = mission_pol_breadbasket_europe
+		position = 4
+		required_missions = {
+			pf_sic_the_cities
+		} 
+		provinces_to_highlight = {
+			OR = {
+				area = sicily_area
+				area = western_sicily_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { base_production = 8 }
+				NOT = { has_production_building_trigger = yes }
+			}
+		}
+		trigger = {
+			sicily_area = {
+				type = all
+				owned_by = ROOT
+				base_production = 8
+				has_production_building_trigger = yes
+			}
+			western_sicily_area = {
+				type = all
+				owned_by = ROOT
+				base_production = 8
+				has_production_building_trigger = yes
+			}
+		}
+		effect = {
+			add_mercantilism = 5
+			define_advisor = {
+				type = trader
+				skill = 3
+				cost_multiplier = 0.25
+			}
+			sicily_area = {
+				add_province_modifier = {
+					name = "pf_sic_granary_modifier"
+					duration = -1
+				}
+			}
+			western_sicily_area = {
+				add_province_modifier = {
+					name = "pf_sic_granary_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
+	pf_sic_kingdom_of_trinacria = {
+		icon = mission_crown_of_norway
+		position = 5
+		required_missions = {
+			pf_sic_granary_of_italia
+		} 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			government_rank = 2
+			development_in_provinces = {
+				value = 180
+				OR = {
+					area = sicily_area
+					area = western_sicily_area
+				}
+			}
+		}
+		effect = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 25
+			}
+			add_country_modifier = {
+				name = "pf_sic_rex_trinacorum"
+				duration = -1
+			}
+		}
+	}
+}
+
+
+pf_sic_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = SIC
+			primary_culture = siculi
+			tag = CLN	# Conan
+		}
+	}
+
+	pf_sic_kingdom_of_morea = {
+		icon = despot_of_epirus
+		position = 3
+		required_missions = {
+			pf_sic_unite_sicily
+		} 
+		provinces_to_highlight = {
+			OR = {
+				area = morea_area
+				area = northern_greece_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				OR = {
+					area = morea_area
+					area = northern_greece_area
+				}
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			morea_area = {
+				limit = {
+					owned_by = root
+				}
+				add_nationalism = -10
+			}
+			northern_greece_area = {
+				limit = {
+					owned_by = root
+				}
+				add_nationalism = -10
+			}
+			macedonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			thrace_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			aegean_archipelago_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	pf_sic_aegean_dominance = {
+		icon = mission_pf_map_table
+		position = 4
+		required_missions = {
+			pf_sic_kingdom_of_morea
+		} 
+		provinces_to_highlight = {
+			OR = {
+				area = thrace_area
+				area = macedonia_area
+				area = aegean_archipelago_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 8
+				OR = {
+					area = thrace_area
+					area = macedonia_area
+					area = aegean_archipelago_area
+				}
+			}
+		}
+		effect = {
+			add_ruler_personality = legendary_conqueror_personality
+			add_country_modifier = {
+				name = "pf_sic_defeated_alexanders_men"
+				duration = 9125
+			}
+			mashriq_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	pf_sic_east_to_west = {
+		icon = mission_expanded_leidang
+		position = 5
+		required_missions = {
+			pf_sic_aegean_dominance
+		} 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					continent = africa
+					owner = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 12
+								continent = africa
+							}
+						}
+					}
+				}
+				AND = {
+					continent = europe
+					owner = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 20
+								continent = europe
+							}
+						}
+					}
+				}
+				AND = {
+					continent = asia
+					owner = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 8
+								continent = asia
+							}
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 20
+				continent = europe
+			}
+			num_of_owned_provinces_with = {
+				value = 8
+				continent = asia
+			}
+			num_of_owned_provinces_with = {
+				value = 12
+				continent = africa
+			}
+			army_size = 50
+			navy_size = 80
+		}
+		effect = {
+			change_ruler_stat = {
+				stat = adm
+				amount = 1
+			}
+			change_ruler_stat = {
+				stat = dip
+				amount = 1
+			}
+			change_ruler_stat = {
+				stat = mil
+				amount = 1
+			}
+			add_country_modifier = {
+				name = "pf_sic_sicilian_empire"
+				duration = -1
+			}
+		}
+	}
+}
+pf_sic_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = SIC
+			primary_culture = siculi
+			tag = CLN	# Conan
+		}
+	}
+
+	pf_sic_build_ships = {
+		icon = mission_norwegian_ship
+		position = 1
+		required_missions = { } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			navy_size_percentage = 0.85
+			num_of_galley = 8
+		}
+		effect = {
+			create_admiral = {
+				tradition = 50
+			}
+			add_dip_power = 50
+			corsica_sardinia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			corsica_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tunisia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			djerba_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tripolitania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	pf_sic_kingdom_of_africa = {
+		icon = mission_combat_barbary_piracy
+		position = 2
+		required_missions = { pf_sic_build_ships } 
+		provinces_to_highlight = {
+			OR = {
+				area = tunisia_area
+				area = djerba_area
+				area = tripolitania_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			owns = 341
+			num_of_owned_provinces_with = {
+				value = 8
+				OR = {
+					area = tunisia_area
+					area = djerba_area
+					area = tripolitania_area
+				}
+			}
+		}
+		effect = {
+			add_core = 341	# Carthage
+			341 = {
+				add_province_modifier = {
+					name = "pf_sic_carthage_government"
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = "pf_sic_king_of_africa"
+				duration = -1
+			}
+			kabylia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			ouled_nail_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_saharan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			fezzan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tripolitania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			cyrenaica_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

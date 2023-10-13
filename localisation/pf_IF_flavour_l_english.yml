@@ -129,19 +129,19 @@ if_free_city_ideas_start: "Free City Traditions"
 if_free_city_ideas_bonus: "Free City Ambition"
 
 iffc_local_governance: "Local Governance"
-iffc_local_governance_desc: ""
+iffc_local_governance_desc: "Free cities are governed by specialised councils based within the cities themselves, ensuring that policies always reflect the interests of the local community."
 iffc_direct_democracy: "Direct Democracy"
-iffc_direct_democracy_desc: ""
+iffc_direct_democracy_desc: "The City Council is made up from and voted by the citizens of the city, providing a level of democracy found nowhere else in the world."
 iffc_guilds: "Strengthen the Guilds"
-iffc_guilds_desc: ""
+iffc_guilds_desc: "The merchant guilds are the backbone of our economy, managing trade and production within our walls and with other cities. If we wish to flourish, we must give the guilds free reign to act in their best interests, as after all, their best interests are also our best interests."
 iffc_bankers: "Italian Banking Families"
-iffc_bankers_desc: ""
+iffc_bankers_desc: "There are many great banking families in Italia, vast hoard of generational wealth that have fueled the treasuries of kings and counts for centuries. We too should take advantage of this pool of money when needed."
 iffc_civitas: "Defence of the Civitas"
-iffc_civitas_desc: ""
+iffc_civitas_desc: "The rights afforded to a citizen come at a price - every man can be conscripted in times of war and called up to defend his city. Because it is their homes they are fighting for, these men will be more than willing to die for our cause."
 iffc_ballroom_dancing: "Festivals and Balls"
-iffc_ballroom_dancing_desc: ""
+iffc_ballroom_dancing_desc: "One show of wealth is gold and jewels, but a more practical one is great parties and events. Let us use our government buildings to host such occassions and invite dignitaries from across the city and the whole Federation."
 iffc_banishment: "Criminal Law Code"
-iffc_banishment_desc: ""
+iffc_banishment_desc: "Every city needs a law code, else its streets would descend into chaos. In addition to the establishment of a formal Patrol to keep the peace, we must define what is and isn't a crime and how it should be punished."
 
 SNO_ideas: "Salerno Ideas"
 SNO_ideas_start: "Salerno Traditions"
@@ -275,6 +275,25 @@ fer_rivermen: "Rivermen Jurisdiction"
 fer_rivermen_desc: ""
 fer_guns: "Smoke and Fire"
 fer_guns_desc: ""
+
+new_SIC_ideas: "Trinacrian Ideas"
+new_SIC_ideas_start: "Trinacrian Traditions"
+new_SIC_ideas_bonus: "Trinacrian Ambition"
+
+sic_greek_cities: "Apoikìai"
+sic_greek_cities_desc: ""
+sic_parliament: "Trinacrian Parliament"
+sic_parliament_desc: ""
+sic_granary: "Granary of the Mediterranean"
+sic_granary_desc: ""
+sic_regnum_trinacrianum: "Regnum Trinacorum"
+sic_regnum_trinacrianum_desc: ""
+sic_naval_prowess: "Where the Waves Cross"
+sic_naval_prowess_desc: ""
+sic_privateers: "Sponsor Privateers"
+sic_privateers_desc: ""
+sic_royal_academy: "The Royal Military Academy"
+sic_royal_academy_desc: ""
 
 ################
 # Events
@@ -635,6 +654,9 @@ pf_if_union_of_southern_italy: "Union of Southern Italia"
 pf_if_host_a_feast_title: "Host a Feast"
 pf_if_host_a_feast_desc: "The time has come to host a magnificent feast! The quality and length of the feast will depend on the amount of money we put into it. During a feast, various events can fire, involving interactions within the royal family, estates, leaders of foreign countries, advisors, and the Federation. The more expensive the feast, the better the events will be!\n\n'Light the fires and roast the hogs, for tonight we're gonna party!'"
 
+form_trinacria_title: "@SIC Kingdom of Trinacria"
+form_trinacria_desc: "The island of Sicily, formally known by its more ancient name Trinacria, has been divided for too long. Under threat from Carthage, foreign invaders, and trapped under the boot of the Federation, our people have had little room to breathe. This era must come to an end, and a new Golden Age must begin."
+
 ################
 # Casus Belli
 ################
@@ -759,7 +781,7 @@ pf_nap_naples_rules_the_world: "Naples Can Rule the World!"
 # saluzzo
 
  pf_szo_beyond_the_walls_title:0 "Beyond the Walls"
- pf_szo_beyond_the_walls_desc:0 ""
+ pf_szo_beyond_the_walls_desc:0 "Our walls have kept us sheltered from the outside world for years. Despite our fears and rightful reluctance, it appears that the time has come to venture beyond the walls in search of greater meaning to our cause."
 pf_szo_far_from_home_but_strong: "Far from Home, but still Strong"
 
  pf_szo_seize_turin_title:0 "Seize Turin"
@@ -905,6 +927,14 @@ pf_ily_conquer_quadia_title: "Conquer Quadia"
 pf_ily_conquer_quadia_desc: "Quadia is a land on the frontier of civilisation, the border between the Federation and the Germanic wilds of northern Europe. The region is famed for its warriors, who will surely put up a tough opposition to our armies extending our control there, but nevertheless, it is something that must be done. We cannot allow these barbarians to have control over the highlands surrounding the Federation - it must be us who look down on them, not the other way around."
 pf_ily_integrate_the_ostgermanics: "Integrate the Ostgermanics"
 
+pf_ily_invest_in_dalmatia_title: "Invest in Dalmatia"
+pf_ily_invest_in_dalmatia_desc: "Dalmatia is the core of our territory, and as such deserves to be treated with more care than the rest of our wild lands. Let us raise cities and build harbours across its venerable shoreline, and give our homeland some love."
+pf_ily_dalmatian_trade: "Promoting Dalmatian Trade"
+
+pf_ily_found_illyradon_title: "Found Illyradon"
+pf_ily_found_illyradon_desc: "Every great kingdom and empire has their iconic capital. Ours is currently not so well known, and is considered by many to be a backwater fishing settlement compared to the cities of Italia. We should construct a new capital there, renovating all the buildings and greatly expanding its scope, and name it after our glorious motherland, Illyradon."
+pf_ily_great_illyradon: "Great Illyradon"
+
 #
 
 pf_ily_reform_the_provinces_title: "Reform the Provinces"
@@ -919,6 +949,66 @@ pf_ily_settle_the_balkans_desc: "The new colonial policy has been successful, an
 pf_ily_settle_dev_tt: "Distribute §G20§! base production £dip£ across provinces with our §Yprimary culture§!."
 pf_ily_developing_cities: "Development of the Illyrian Colonial Towns"
 pf_ily_settle_the_balkans_tt: "Ends the §Ypassive colonisation§! events."
+
+pf_ily_dominate_the_marchers_title: "Seize Absolute Control"
+pf_ily_dominate_the_marchers_desc: "Time are changing, and the power in the state seems to be consolidating ever more within the hands of the monarch. The marchers, once secure in their power and dominant over even the king, can now be brought to heel. The time of Illyrian Absolutism has begun!"
+pf_ily_absolutism: "Illyrian Absolutism"
+pf_ily_free_marcher_freedom_tt: "The privilege §YFreedom of the Marchers§! will now cost no §YAbsolutism§! or §YPrivilege Slots§!."
+
+# Trinacria
+
+pf_sic_dreams_of_unity_title: "Dreams of Unity"
+pf_sic_dreams_of_unity_desc: "The peoples of Sicily have been disunited for centuries, but we have always shared a common culture. It is only natural that one day we should unite and create a powerful new Kingdom."
+pf_sic_unity_aspirations: "Aspirations of Unity"
+
+pf_sic_unite_sicily_title: "Unite Sicily"
+pf_sic_unite_sicily_desc: "At last, the dream has been realised, and our island home is united under one flag! Hail the [Root.Monarch.GetTitle]!"
+
+pf_sic_the_cities_title: "Tre Città"
+pf_sic_the_cities_desc: "Sicily has been home to a great many magnificent cities and ports over its thousands of years of inhabitation, but none are so mighty as the three former Greek colonies, Palermo, Syracuse, and Messina. Let us invest in these sites and make them as grand as their founders intended."
+pf_sic_trade_cities: "Influx of Foreign Knowledge"
+
+pf_sic_granary_of_italia_title: "Granary of Italia"
+pf_sic_granary_of_italia_desc: "In ancient times, Sicily was known as the 'granary of Italia', due to its vast fields of fertile land and relative underdevelopment compared to the rest of the Roman Republic. After being seized by Carthage, our place as the primary food exporter in the Mediterranean was surplanted by their north African plantations, but we still dream of restoring our cereal dominance."
+pf_sic_granary_modifier: "Restoring the Granary of Italia"
+
+pf_sic_kingdom_of_trinacria_title: "Kingdom of Trinacria"
+pf_sic_kingdom_of_trinacria_desc: "Sicily is affectionately known by its ancient name Trinacria, for it is our past that we have always clung onto the dearest. But now is the time to look to the future - a bright new future, where every Sicilian is born into a mighty kingdom, and has reason to be proud of their heritage."
+pf_sic_rex_trinacorum: "Rex Trinacorum"
+
+#
+
+pf_sic_kingdom_of_morea_title: "Kingdom of Morea"
+pf_sic_kingdom_of_morea_desc: "The Peloponnese are a valuable target for expansion for many reasons, least of all their rich vinyards. Many noble families in Sicily are descended from the former dukes and counts of Morea, before the area became fractured under Macedonian dominance. Let us use their claims as justification to seize these rich lands and extend the Sicilian Empire into Greece."
+
+pf_sic_aegean_dominance_title: "Aegean Dominance"
+pf_sic_aegean_dominance_desc: "Our foothold in Greece is strong enough to allow us to sweep in and claim the Macedonian heartlands for ourselves, finally toppling this great giant."
+pf_sic_defeated_alexanders_men: "Defeated the Heirs of Alexander"
+
+pf_sic_east_to_west_title: "From East to West"
+pf_sic_east_to_west_desc: "Our domains stretch across the Mediterranean Sea, from east to west, from golden beach to golden beach."
+pf_sic_sicilian_empire: "The Sicilian Empire"
+
+#
+
+pf_sic_build_ships_title: "Tame the Waves"
+pf_sic_build_ships_desc: "We Sicilians have always been drawn to the sea. We must set out across the waves, master the waters, and conquer new kingdoms for ourselves abroad."
+
+pf_sic_kingdom_of_africa_title: "Kingdom of Africa"
+pf_sic_kingdom_of_africa_desc: "In times long passed, our ancestors dreamed of conquering Carthage and establishing a new 'Kingdom of Africa' there. In our days this dream looks ever more like it could become a reality, and that one day that golden city could be ours."
+pf_sic_carthage_government: "The African Administration"
+pf_sic_king_of_africa: "King of Africa"
+
+# Ancona
+
+pf_anc_church_of_ancona_title: "Cathedral of Ancona"
+pf_anc_church_of_ancona_desc: "Ancona is a cradle of the Christian community. We should patronise them like we would any of religion, by building a mighty temple, or in this case, cathedral, to show our dedication to God."
+pf_anc_new_church: "Proclaiming a New Church"
+
+pf_anc_patronise_christ_title: "Taking the Cross"
+pf_anc_patronise_christ_desc: "Our faith demands our complete servitude to God's will, and that we shall do. Whatever He commands of us, we will do it to the best of our ability and beyond."
+anc_convert_provinces_tt: "Converted §Y10§! provinces to our religion."
+pf_anc_christian_zealotry: "Christian Zealotry"
 
 ################
 # Diplomatic actions

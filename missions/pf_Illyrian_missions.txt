@@ -799,6 +799,70 @@ pf_illyria_4 = {
 			}
 		} 
 	}
+	pf_ily_invest_in_dalmatia = {
+		icon = take_the_bishoprics
+		position = 6
+		required_missions = { } 
+		provinces_to_highlight = {
+			area = east_adriatic_coast_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			development_in_provinces = {
+				value = 75
+				area = east_adriatic_coast_area
+			}
+		} 
+
+		effect = {
+			capital_scope = {
+				add_prosperity = 100
+			}
+			add_country_modifier = {
+				name = "pf_ily_dalmatian_trade"
+				duration = 9125
+			}
+		} 
+	}
+	pf_ily_found_illyradon = {
+		icon = imperial_capitals
+		position = 7
+		required_missions = { pf_ily_invest_in_dalmatia } 
+		provinces_to_highlight = {
+			province_id = 136	# Split
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { development = 25 }
+				NOT = { num_of_buildings_in_province = 4}
+			}
+		} 
+
+		trigger = {
+			owns_core_province = 136
+			136 = {
+				development = 25
+			}
+			136 = {
+				num_of_buildings_in_province = 4
+			}
+		} 
+
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			136 = {
+				change_province_name = "Illyradon"
+				rename_capital = "Illyradon"
+				upgrade_center_of_trade = yes
+				add_province_modifier = {
+					name = "pf_ily_great_illyradon"
+					duration = -1
+				}
+			}
+		} 
+	}
 }
 pf_illyria_5 = {
 	slot = 5
@@ -907,6 +971,38 @@ pf_illyria_5 = {
 			}
 			set_country_flag = end_passive_colonisation
 			custom_tooltip = pf_ily_settle_the_balkans_tt
+		} 
+	}
+	pf_ily_dominate_the_marchers = {
+		icon = a_show_of_strength
+		position = 7
+		required_missions = { pf_ily_invest_in_dalmatia } 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+				has_country_modifier = crown_authority_5
+			}
+			ruler_total_stats = {
+				stats = 12
+			}
+			legitimacy_equivalent = 100
+			OR = {
+				stability = 3
+				absolutism = 30
+			}
+		} 
+
+		effect = {
+			set_country_flag = free_marcher_freedom
+			custom_tooltip = pf_ily_free_marcher_freedom_tt
+			add_country_modifier = {
+				name = "pf_ily_absolutism"
+				duration = -1
+			}
 		} 
 	}
 }
