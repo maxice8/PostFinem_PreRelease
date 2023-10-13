@@ -1637,8 +1637,10 @@ mac_eco_3 = {
 		position = 8
 		provinces_to_highlight = {  
 			is_capital_of = ROOT
-			NOT = { development = 30 }
-			NOT = { province_has_center_of_trade_of_level = 3 }
+			OR = {
+				NOT = { development = 30 }
+				NOT = { province_has_center_of_trade_of_level = 3 }
+			}
 		} 
 
 		trigger = {  
