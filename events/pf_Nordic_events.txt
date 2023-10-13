@@ -1,0 +1,28 @@
+namespace = pf_nordic
+
+country_event = {		# Uppsala öd
+	id = pf_nordic.1
+	title = pf_nordic.1.t
+	desc = pf_nordic.1.d
+	picture = FARMING_WIFE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = pf_nordic.1.a
+		add_adm_power = 100
+		change_estate_land_share = {
+			estate = all
+			share = -5
+		}
+	}
+	option = {
+		name = pf_nordic.1.b
+		add_years_of_income = 1
+		add_legitimacy = -10
+		change_estate_land_share = {
+			estate = all
+			share = 5
+		}
+	}
+}

@@ -68,7 +68,7 @@ country_event = {		# Extending Fishing Rights
 		name = "pf_althingi.3.a"
 		add_government_power = {
 			mechanic_type = althingi_mechanic
-			power_type = althingi_adm_power
+			power_type = althingi_dip_power
 			value = 20
 		}
 		add_mercantilism = 1
@@ -95,7 +95,7 @@ country_event = {		# Welcome to Iceland
 		name = "pf_althingi.4.a"
 		add_government_power = {
 			mechanic_type = althingi_mechanic
-			power_type = althingi_adm_power
+			power_type = althingi_dip_power
 			value = -40
 		}
 	}

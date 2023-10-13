@@ -552,3 +552,42 @@ new_SIC_ideas = {
 		discipline = 0.05
 	}
 }
+SWE_ideas = {		# New Sweden
+	start = {
+		shock_damage = 0.10
+		land_forcelimit_modifier = 0.20
+	}
+	
+	bonus = {
+		manpower_recovery_speed = 0.20
+	}	
+
+	trigger = {
+		tag = SWE
+	}
+	free = yes
+	
+	swe_runes_and_sagas = {
+		prestige = 1
+	}
+	swe_eagle_of_the_north = {
+		land_morale = 0.10
+		infantry_power = 0.10
+	}
+	swe_power_of_the_jarl = {
+		legitimacy = 1
+	}
+	swe_timber_exports = {
+		production_efficiency = 0.10
+	}
+	swe_spirits_in_the_world = {
+		hostile_attrition = 1.0
+	}
+	swe_realm_of_the_north = {
+		stability_cost_modifier = -0.10
+		yearly_absolutism = 1
+	}
+	swe_nyr_herlith = {
+		discipline = 0.05
+	}
+}

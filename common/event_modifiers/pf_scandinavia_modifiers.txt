@@ -1,0 +1,15 @@
+god_thor_sacrifice = {
+	tolerance_own = 1
+	global_trade_goods_size_modifier = 0.10
+	global_unrest = -2
+}
+god_freyr_sacrifice = {
+	tolerance_own = 1
+	diplomatic_reputation = 2
+	diplomatic_upkeep = 1
+}
+god_odin_sacrifice = {
+	tolerance_own = 1
+	reinforce_speed = 0.33
+	shock_damage = 0.10
+}

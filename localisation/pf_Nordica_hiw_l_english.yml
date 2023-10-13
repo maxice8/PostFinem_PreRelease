@@ -18,6 +18,29 @@ monthly_althingi_dip_power: "Monthly Diplomatic Work"
 monthly_althingi_mil_power: "Monthly Military Work"
 
 ##############
+# Ideas
+##############
+
+SWE_ideas: "Swedish Ideas"
+SWE_ideas_start: "Swedish Traditions"
+SWE_ideas_bonus: "Swedish Ambition"
+
+swe_runes_and_sagas: "Runes and Sagas"
+swe_runes_and_sagas_desc: "Ours is a land of stories, transferred down the generations orally and performed to budding young audiences. The traditions and history of our people is preserved in these tales, and is even codified by some learned men turned into sagas."
+swe_eagle_of_the_north: "The Eagle of the North"
+swe_eagle_of_the_north_desc: "Sweden has risen from a small state in the northern forests to the chief of the Nordic kingdoms, more powerful than any of our ancestors could imagine. Like the sun itself, the eagle of Sweden will rule from horizon to horizon!"
+swe_power_of_the_jarl: "Jarlmikill"
+swe_power_of_the_jarl_desc: "In times long passed kings held mostly informal power, and acted more as war chiefs than actual monarchs. Now, we live in a new era of strong leadership and formalised government, where more and more power is concentrated in the hands of the king."
+swe_timber_exports: "Tend to the Forests"
+swe_timber_exports_desc: "The great forests of the north are treacherous and vast, but they are also one of biggest sources of income. Foreign merchants pay handsomely for freshly cut logs of our study pines, which go on to make the tables and chairs that European nobles and commoners alike rest upon."
+swe_spirits_in_the_world: "Among the Snows"
+swe_spirits_in_the_world_desc: "Cold and dark are the traditional enemies of humankind, but in the desolate north they are our friends. We can hide behind great snowstorms, and lure enemies across dangerous frozen lakes. What is a threat to others, can be our friend."
+swe_realm_of_the_north: "Realm of the North"
+swe_realm_of_the_north_desc: "The Swedish nation is rapidly becoming the foremost power in northern Europe, propelled by the spirit and zeal of our people, but the influence of the king cannot be understated. The king is the center of the realm, its beating heart, and the source of every policy decision."
+swe_nyr_herlith: "Nyrherlith"
+swe_nyr_herlith_desc: "The old informal way of waging war with levies and opportunistic warriors is becoming less and less effective as military technology advances across Europe. If we wish not be consumed by the snapping jaws of history, we must reform our armies and their tactics and ensure our future martial relevance."
+
+##############
 # Events
 ##############
 
@@ -50,3 +73,26 @@ pf_althingi.6.t: "Singing the Sagas"
 pf_althingi.6.d: "The recorded history of our nation and people comprise what are known as the Sagas, which are often sung by our people and transmitted from generation to generation orally. However, some of the younger sons of the gentry are having a rebellious phase and refuse to take part in this venerable tradition. What shall we do with these little brats?"
 pf_althingi.6.a: "Introduce a punishment for not singing."
 pf_althingi.6.b: "We cannot restrict their freedom of speech."
+
+pf_deities.2.t: "Sacrificing to the Gods at Uppsala"
+pf_deities.2.d: "The Uppsala Temple contains three great wooden statues of gods, each of which has its own dedicated priest and cult associated with it. The statue of Thor is sacrificed to in times of famine and plague, when the people need desperately food and health. The statue of Freyr grants desires of marriage and fertility, and its often a favourite of kings and queens in need of an heir. Finally, the statue of Odin is sacrificed to in times of war and conflict, perhaps the most vital sport of our people. Our needs are many, but our focus can only be on one issue. To which god should we sacrifice?\n\nWe will be able to sacrifice to a god if we have an advisor employed in that monarch power category to be sacrificed. If we do no, the option will not show."
+pf_deities.2.a: "Sacrifice to Thor."
+pf_deities.2.b: "Sacrifice to Freyr."
+pf_deities.2.c: "Sacrifice to Odin."
+pf_deities.2.dd: "Go back."
+god_thor_sacrifice: "Sacrificed to Thor"
+god_freyr_sacrifice: "Sacrificed to Freyr"
+god_odin_sacrifice: "Sacrificed to Odin"
+
+pf_nordic.1.t: "The Uppsala Auðr"
+pf_nordic.1.d: "The seat of the kings of Sweden has always been Uppsala, the site of the great Temple and also the seat of Freyr's ancient kingship. It is to Freyr that we owe one of our most important traditions, the Uppsala auðr. This collection of estates was first gathered by the god long ago to ensure the wealth and maintenance of future kings, and this practice has proven to be very beneficial in the years since. Now extending across several provinces and containing more territory than the lands of many magnates combined, this space of land is a testament to the command and power of the King."
+pf_nordic.1.a: "Strengthen this venerable practice."
+pf_nordic.1.b: "Perhaps we can sell part of this land for more short term income?"
+
+###############
+# Decisions
+###############
+
+consult_the_uppsala_gods_title: "Consult the Gods of the Uppsala Temple"
+consult_the_uppsala_gods_desc: "At the Temple of Uppsala, there are different statues of gods to which sacrifices are made in times of need."
+consult_the_uppsala_gods_tt: "This decision can only be used once every §Y25 years§!."
