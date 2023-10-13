@@ -1986,7 +1986,10 @@ mac_culture_5 = {
 		icon = reform_the_nomocanon
 		position = 7
 		required_missions = { pf_mac_spread_the_faith } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { religion = ROOT }
+		} 
 		trigger = { 
 			is_religion_enabled = paradosi
 			OR = {
