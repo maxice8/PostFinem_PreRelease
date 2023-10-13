@@ -857,14 +857,14 @@ hellenic_group = {
 			}
 		}
 		on_convert = {
-			if = {
-				limit = { has_country_flag = mac_subjugated_archon_flag }
-				custom_tooltip = mac_converting_paradosi_tt
-				add_country_modifier = {
-					name = mac_converting_paradosi_modifier
-					duration = 7300
-				}
-			}
+			# if = {
+			# 	limit = { has_country_flag = mac_subjugated_archon_flag }
+			# 	custom_tooltip = mac_converting_paradosi_tt
+			# 	add_country_modifier = {
+			# 		name = mac_converting_paradosi_modifier
+			# 		duration = 7300
+			# 	}
+			# }
 			hidden_effect = {
 				change_religion = paradosi
 				random_owned_province = {
