@@ -12,6 +12,7 @@ mac_1 = {
 			province_id = 1766
 			OR = {
 				NOT = { 	owned_by = ROOT }
+				NOT = { is_core = ROOT }
 				NOT = { 	base_production = 8 }
 			}
 		} 
