@@ -634,6 +634,7 @@ pf_sar_5 = {
 			province_id = 4735	# Arborea
 			OR = {
 				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 				NOT = { development = 30 }
 				NOT = { has_tax_building_trigger = yes }
 				NOT = { has_production_building_trigger = yes }
