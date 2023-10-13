@@ -51,6 +51,7 @@ pf_sar_1 = {
 			province_id = 2986	# Cagliari
 			OR = {
 				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 				NOT = { has_shipyard_building_trigger = yes }
 				NOT = { num_of_times_improved = 5 }
 			}
