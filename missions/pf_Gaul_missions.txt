@@ -66,20 +66,20 @@ PF_Gaul_1 = {
 				area = frisia_area
 			}
 			OR = {
-				religion = druidic 
-				culture = norvegr
+				NOT = { religion = ROOT }	
+				NOT = { culture = norvegr }
 			}
 		}
 		trigger = {
 			holland_area = {
 				type = all
 				NOT = { culture = norvegr }
-				religion = druidic
+				religion = ROOT
 			}
 			frisia_area = {
 				type = all
 				NOT = { culture = norvegr }
-				religion = druidic
+				religion = ROOT
 			}
 		}
 		effect = {
@@ -119,6 +119,184 @@ PF_Gaul_1 = {
 			}
 		}
 	}
+	pf_gaul_german_4 = {
+		icon = xxx
+		position = 7
+		required_missions = {
+			pf_gaul_mainland_8
+		}
+		provinces_to_highlight = {
+			OR = {
+				trade_goods = salt
+				trade_goods = iron
+			}
+			OR = {
+				region = north_german_region
+				region = south_german_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_production_building_trigger = yes
+				base_production = 10
+			}
+		}
+		trigger = { 
+			OR = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					trade_goods = salt
+					OR = {
+						region = north_german_region
+						region = south_german_region
+					}
+					has_production_building_trigger = yes
+					base_production = 10
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					trade_goods = iron
+					OR = {
+						region = north_german_region
+						region = south_german_region
+					}
+					has_production_building_trigger = yes
+					base_production = 10
+				}		
+			}
+			
+		}
+		effect = {
+			define_advisor = {
+				type = natural_scientist
+				skill = 3
+				discount = yes
+				culture = saxon
+			}
+			custom_tooltip = salt_mines_TT
+			tooltip = {
+				change_price = {
+					trade_goods = salt
+					key = germanic_salt_trade
+					value = 0.20
+					duration = 7300
+				}
+			}
+			custom_tooltip = iron_mines_TT
+			tooltip = {
+				change_price = {
+					trade_goods = iron
+					key = germanic_salt_trade
+					value = 0.20
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+							value = 5
+							trade_goods = salt
+							OR = {
+								region = north_german_region
+								region = south_german_region
+							}
+							has_production_building_trigger = yes
+							base_production = 8
+						}
+					}
+					change_price = {
+						trade_goods = salt
+						key = germanic_salt_trade
+						value = 0.20
+						duration = 7300
+					}
+				}
+				if = {
+					limit = {
+						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+							value = 5
+							trade_goods = iron
+							OR = {
+								region = north_german_region
+								region = south_german_region
+							}
+							has_production_building_trigger = yes
+							base_production = 8
+						}
+					}
+					change_price = {
+						trade_goods = iron
+						key = germanic_iron_trade
+						value = 0.2
+						duration = 7300
+					}
+				}
+			}
+		}
+	}
+	pf_gaul_german_5 = {
+		icon = xxx
+		position = 8
+		required_missions = {
+			pf_gaul_german_4
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1763
+				province_id = 82
+				province_id = 62
+			}
+			NOT = {
+				OR = {
+					has_manufactory_trigger = yes
+					development = 20 
+				}
+			}
+		}
+		trigger = {
+			1763 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_manufactory_trigger = yes
+				development = 20
+			}
+			82 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_manufactory_trigger = yes
+				development = 20 
+			}
+			62 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_manufactory_trigger = yes
+				development = 20 
+			}
+			natural_scientist = 1
+		}
+		effect = {
+			1763 = {
+				change_trade_goods = coal
+				add_building = furnace 
+			}
+			82 = {
+				change_trade_goods = coal
+				add_building = furnace 
+			}
+			62 = {
+				change_trade_goods = coal
+				add_building = furnace 
+			}
+			hidden_effect = {
+				1763 = {
+					remove_building = state_house
+				}
+				82 = {
+					remove_building = state_house
+				}
+				62 = {
+					remove_building = state_house
+				}
+			}
+		}
+	}
 }
 PF_Gaul_2 = {
 	slot = 2
@@ -134,7 +312,7 @@ PF_Gaul_2 = {
 		required_missions = { }
 		provinces_to_highlight = { }
 		trigger = {	
-			army_size_percentage = 1
+			manpower_percentage = 0.75
 			employed_advisor = { category = MIL }
 			current_income_balance = 1
 		}
@@ -488,7 +666,7 @@ PF_Gaul_3 = {
 		required_missions = {
 			pf_gaul_mainland_8
 		}
-		position = 6
+		position = 7
 		provinces_to_highlight = {
 			OR = {
 				area = switzerland_area
@@ -528,12 +706,12 @@ PF_Gaul_3 = {
 		trigger = {
 			switzerland_area = {
 				type = all
-				religion = druidic
+				religion = ROOT
 				development = 10
 			}
 			romandie_area = {
 				type = all
-				religion = druidic
+				religion = ROOT
 				development = 10
 			}
 		}
