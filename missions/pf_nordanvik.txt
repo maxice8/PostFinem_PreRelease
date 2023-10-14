@@ -53,10 +53,20 @@ pf_nrd_1 = {
 		icon = mission_che_the_cave_country
 		position = 4
 		required_missions = { pf_nrd_welsh_domain } 
-		provinces_to_highlight = {  
-			area = wessex_area
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+		provinces_to_highlight = { 
+			OR = {
+				AND = {
+					province_id = 234
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+						NOT = { province_has_center_of_trade_of_level = 2 }
+					}
+				}
+				AND = {
+					area = wessex_area
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
 			}
 		} 
 
@@ -86,7 +96,16 @@ pf_nrd_1 = {
 	pf_nrd_establish_trade = {
 		icon = mission_dominate_home_trade_node
 		position = 5
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					owned_by = ROOT
+					NOT = { province_has_center_of_trade_of_level = 2 }
+				}
+				province_id = 1266
+				province_id = 1285
+			}
+		} 
 
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -202,7 +221,10 @@ pf_nrd_1 = {
 		provinces_to_highlight = {  
 			owned_by = ROOT
 			trade_goods = iron
-			NOT = { base_production = 6 }
+			OR = {
+				NOT = { base_production = 6 }
+				has_manufactory_trigger = no
+			}
 		} 
 
 		trigger = {  
@@ -251,7 +273,10 @@ pf_nrd_1 = {
 			pf_nrd_secure_iron
 			pf_nrd_industrialize_the_cloths
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			has_manufactory_trigger = no	
+		} 
 
 		trigger = {  
 			num_of_owned_provinces_with = {
@@ -326,8 +351,19 @@ pf_nrd_2 = {
 			pf_nrd_expand_southward
 		}
 		provinces_to_highlight = {
-			area = wales_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			OR = {
+				AND = {
+					province_id = 242
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+				}
+				AND = {
+					area = wales_area
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
 		}
 
 		trigger = {
@@ -356,7 +392,6 @@ pf_nrd_2 = {
 		position = 5
 		provinces_to_highlight = {
 			is_capital_of = ROOT
-			NOT = { development = 20 } 
 		}
 
 		trigger = {
@@ -409,9 +444,17 @@ pf_nrd_2 = {
 			pf_nrd_economic_boom
 			pf_nrd_stretch_our_legs
 		}
-		provinces_to_highlight = {  
-			owned_by = ROOT
-			has_production_building_trigger = no
+		provinces_to_highlight = { 
+			OR = {
+				AND = {
+					is_capital_of = ROOT
+					NOT = { development = 30 }
+				}
+				AND = {
+					owned_by = ROOT
+					has_production_building_trigger = no
+				}
+			}
 		} 
 
 		trigger = {  
@@ -449,8 +492,10 @@ pf_nrd_2 = {
 		provinces_to_highlight = {  
 			owned_by = ROOT
 			trade_goods = wool
-			NOT = { base_production = 6 }
-			has_production_building_trigger = no
+			OR = {
+				NOT = { base_production = 6 }
+				has_production_building_trigger = no
+			}
 		} 
 
 		trigger = {  
@@ -666,7 +711,7 @@ pf_nrd_3 = {
 				tooltip = pf_nrd_norse_hegemony_trigger_tt
 				all_country = {
 					capital_scope = {
-					continent = europe
+						continent = europe
 					}				
 					NOT = { army_size = ROOT }
 				}
@@ -780,7 +825,7 @@ pf_nrd_4 = {
 				area = munster_area
 				area = connacht_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = { owned_by = ROOT } 
 		}
 
 		trigger = {
@@ -803,7 +848,7 @@ pf_nrd_4 = {
 				add_casus_belli = {
 					type = cb_claim_throne
 					target = CEL
-					months = 60
+					months = 240
 				}
 				custom_tooltip = empty_line_tt
 			}
@@ -916,8 +961,7 @@ pf_nrd_4 = {
 		icon = mission_pol_develop_countryside
 		position = 5
 		provinces_to_highlight = { 
-			owned_by = ROOT
-			area = capital
+			is_capital_of = ROOT
 			is_prosperous = no 
 		} 
 
@@ -972,7 +1016,11 @@ pf_nrd_4 = {
 		position = 8
 		required_missions = { pf_nrd_share_the_sagas } 
 		provinces_to_highlight = {  
-
+			owned_by = ROOT
+			OR = {
+				NOT = { development = 20 }
+				NOT = { religion = norse_pagan_reformed }
+			}
 		} 
 
 		trigger = {  
@@ -1069,8 +1117,7 @@ pf_nrd_5 = {
 				galley_fraction = 0.5
 			}
 			else = {
-				navy_size_percentage = 0.75
-				num_of_galley = 7
+				navy_size_percentage = 0.5
 			}
 		}
 
@@ -1090,7 +1137,14 @@ pf_nrd_5 = {
 		icon = mission_control_venice
 		position = 4
 		required_missions = { pf_nrd_galleys_with_good_oars } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_port = yes
+			OR = {
+				has_shipyard_building_trigger = no
+				has_dock_building_trigger = no
+			}
+		} 
 
 		trigger = {  
 			if = {
@@ -1390,7 +1444,13 @@ pf_nrd_col_2 = {
 		icon = mission_settlers_north_america
 		position = 10
 		required_missions = { pf_nrd_over_the_horizon } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			colonial_region = colonial_eastern_america
+			owner = {
+				NOT = { tag = ROOT }
+				NOT = { is_colonial_nation_of = ROOT }
+			}
+		} 
 
 		trigger = {  
 			has_colonial_nation_trigger = {
@@ -1412,7 +1472,16 @@ pf_nrd_col_2 = {
 		icon = mission_rb_the_thirteen_colonies
 		position = 11
 		required_missions = { pf_nrd_a_whole_new_world } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				colonial_region = colonial_canada
+				colonial_region = colonial_eastern_america
+				colonial_region = colonial_louisiana
+			}
+			owner = {
+				NOT = { tag = ROOT }
+				NOT = { is_colonial_nation_of = ROOT }
+			} } 
 
 		trigger = {  		
 			has_colonial_nation_trigger = {
@@ -1600,6 +1669,7 @@ pf_nrd_col_4 = {
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			is_owned_by_trade_company = no
 		} 
 
 		trigger = {  
@@ -1633,6 +1703,7 @@ pf_nrd_col_4 = {
 		provinces_to_highlight = {  
 			region = niger_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			is_owned_by_trade_company = no
 		} 
 
 		trigger = {  

@@ -70,7 +70,7 @@ distribute_base_dev_to_provinces = {
 pf_reset_deity = {
 	custom_tooltip = PF_RESET_PERSONAL_DEITY
 	hidden_effect = {
-		change_personal_deity = null
+		change_personal_deity = setting_invalid_deity_to_reset
 	}
 }
 # pf_save_random_tribe = {
@@ -306,4 +306,134 @@ romuva_clear_aspects_scripted_effect = {
 		}
 		remove_church_aspect = ausrine_beauty_aspect
 	}
+}
+
+#neterist effects
+pf_egypt_neterist_communities_province_modifiers_global = {
+	if = {
+		limit = {
+			has_church_aspect = neterist_communities_aspect
+		}
+		every_owned_province = {
+			limit = {
+				religion = neterist
+			}
+			add_province_modifier = {
+				name = pf_egypt_neterist_communities
+				duration = -1
+			}
+		}
+	}
+	else = {
+		every_owned_province = {
+			limit = {
+				has_province_modifier = pf_egypt_neterist_communities
+			}
+			add_province_modifier = {
+				name = pf_egypt_neterist_communities
+				duration = -1
+			}
+		}
+	}
+}
+pf_egypt_neterist_communities_province_modifiers_local = {
+	if = {
+		limit = {
+			NOT = {
+				has_province_modifier = pf_egypt_neterist_communities
+			}
+			religion = neterist
+			owner = {
+				religion = neterist
+				has_church_aspect = neterist_communities_aspect
+			}
+		}
+		add_province_modifier = {
+			name = pf_egypt_neterist_communities
+			duration = -1
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				has_province_modifier = pf_egypt_neterist_communities
+			}
+		}
+		remove_province_modifier = pf_egypt_neterist_communities
+	}
+}
+pf_egypt_update_relations_neterist = {
+	if = {
+		limit = {
+			has_church_aspect = neterist_wandering_scholars_aspect
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					religion = neterist
+				}
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = pf_egypt_wandering_scholars
+					}
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = pf_egypt_wandering_scholars
+			}
+		}
+	}
+	else = {
+		every_country = {
+			limit = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = pf_egypt_wandering_scholars
+				}
+			}
+			remove_opinion = {
+				who = ROOT
+				modifier = pf_egypt_wandering_scholars
+			}
+		}
+	}
+}
+pf_egypt_update_relations_non_neterist = {
+	if = {
+		limit = {
+			NOT = {
+				religion = neterist
+			}
+			any_known_country = {
+				religion = neterist
+				has_church_aspect = neterist_wandering_scholars_aspect
+				ROOT = {
+					NOT = {
+						has_opinion_modifier = {
+							who = PREV
+							modifier = pf_egypt_wandering_scholars
+						}
+					}
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				religion = neterist
+			}
+			ROOT = {
+				add_opinion = {
+					who = PREV
+					modifier = pf_egypt_wandering_scholars
+				}
+			}
+		}
+	}
+}
+
+pf_unlock_great_crusade_cb = {
+	set_country_flag = pf_unlock_great_crusade_cb
+	custom_tooltip = pf_unlock_great_crusade_tt
 }

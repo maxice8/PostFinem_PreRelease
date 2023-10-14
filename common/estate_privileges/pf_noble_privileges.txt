@@ -1,6 +1,90 @@
+
+
+estate_nobles_cabinet_autonomy = { #Macedonia Privilage for War Cabinet Organization
+	icon = privilege_placeholder
+	max_absolutism = -10
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			NOT = {			
+				has_government_power = {
+					mechanic_type = mac_war_cabinet_mechanic
+					power_type = mac_war_cabinet_organization
+					value = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {			
+				has_government_power = {
+					mechanic_type = mac_war_cabinet_mechanic
+					power_type = mac_war_cabinet_organization
+					value = 30
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {			
+				has_government_power = {
+					mechanic_type = mac_war_cabinet_mechanic
+					power_type = mac_war_cabinet_organization
+					value = 35
+				}
+			}
+		}
+	}
+	# land_share = 10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.10
+	influence = 0.2
+	is_valid = {
+		has_government_mechanic = mac_war_cabinet_mechanic
+	}
+	can_select = {
+		NOT = {	 
+			has_government_power = {
+				mechanic_type = mac_war_cabinet_mechanic
+				power_type = mac_war_cabinet_organization
+				value = 100
+			}
+		}
+	}
+	
+	on_granted = {
+		add_government_power = {
+			mechanic_type = mac_war_cabinet_mechanic
+			power_type = mac_war_cabinet_organization
+			value = 5
+		}
+	}
+	penalties = {
+		general_cost = 0.25
+	}
+	benefits = {
+		monthly_mac_war_cabinet_organization = 0.02
+	}
+	loyalty_scaled_conditional_modifier = {
+		trigger = {  
+			has_government_power = {
+				mechanic_type = mac_war_cabinet_mechanic
+				power_type = mac_war_cabinet_organization
+				value = 20
+			}
+		}
+		modifier = {
+			army_tradition_decay = -0.01
+			global_manpower_modifier = 0.1	
+		}
+	}
+}
+
 estate_nobles_pf_satrapy_expansion_plan = {
 	icon = privilege_grant_autonomy
 	max_absolutism = -10
+	ai_will_do = { factor = 0 }
 	loyalty = 0
 	influence = 0.1
 	is_valid = {
@@ -19,6 +103,7 @@ estate_nobles_pf_satrapy_expansion_plan = {
 estate_nobles_pf_satrapy_annexation_ban = {
 	icon = privilege_better_integration
 	max_absolutism = -10
+	ai_will_do = { factor = 0 }
 	loyalty = 0
 	influence = 0.1
 	is_valid = {
@@ -33,6 +118,7 @@ estate_nobles_pf_satrapy_annexation_ban = {
 estate_nobles_pf_satrapy_exemption_from_conscription = {
 	icon = privilege_demand_more_troops
 	max_absolutism = -10
+	ai_will_do = { factor = 0 }
 	loyalty = 0
 	influence = 0.1
 	is_valid = {
@@ -42,6 +128,296 @@ estate_nobles_pf_satrapy_exemption_from_conscription = {
 
 	can_revoke = { always = no }
 	on_granted = { custom_tooltip = estate_nobles_pf_satrapy_exemption_from_conscription_tt }
+}
+
+estate_nobles_electorate_nobility = {
+	icon = privilege_placeholder
+	land_share = 10
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.05
+	influence = 0.15
+	
+	on_granted = {
+		add_stability_or_adm_power = yes
+	}
+	on_revoked = {
+		add_stability = -1
+	}
+	penalties = {
+		all_estate_influence_modifier = 0.05
+	}
+	benefits = {
+		imperial_authority = 0.05
+		legitimacy = 1
+		republican_tradition = 0.25
+		devotion = 1 
+		horde_unity = 1
+	}
+	#conditional_modifier = {
+	#	trigger = {  }
+	#	modifier = {  }
+	#}
+	ai_will_do = {
+		factor = 20
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0
+			is_emperor = no
+		}
+	}
+}
+
+estate_nobles_white_cloth_nobles = {
+	icon = privilege_placeholder
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.05
+	influence = 0.1
+	is_valid = {
+		
+	}
+	can_select = {
+		
+	}
+	
+	on_granted = {
+
+	}
+	penalties = {
+
+	}
+	benefits = {
+		num_accepted_cultures = 1
+		state_governing_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_cities = 15	
+		}
+		modifier = {
+			factor = 1.5
+			num_of_cities = 25	
+		}
+		modifier = {
+			factor = 1.5
+			num_of_owned_provinces_with = {
+				value = 5
+				NOT = { culture_group = ROOT }
+				has_owner_accepted_culture = no
+			}
+		}
+		modifier = {
+			factor = 1.5
+			num_of_owned_provinces_with = {
+				value = 10
+				NOT = { culture_group = ROOT }
+				has_owner_accepted_culture = no
+			}
+		}
+		modifier = {
+			factor = 1.5
+			num_of_owned_provinces_with = {
+				value = 15
+				NOT = { culture_group = ROOT }
+				has_owner_accepted_culture = no
+			}
+		}
+	}
+}
+
+estate_nobles_assign_grand_offices = {
+	icon = privilege_placeholder
+	land_share = 5
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.1
+	is_valid = {
+		
+	}
+	can_select = {
+		
+	}
+	
+	on_granted = {
+
+	}
+	penalties = {
+
+	}
+	benefits = {
+		relation_with_same_culture = 15
+		legitimacy = 1
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.1
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { legitimacy_equivalent = 75 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { legitimacy_equivalent = 50 }
+		}
+	}
+}
+
+estate_nobles_seal_of_approval = {
+	icon = privilege_placeholder
+	land_share = 10
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.1
+	is_valid = {
+		
+	}
+	can_select = {
+		
+	}
+	
+	on_granted = {
+
+	}
+	penalties = {
+
+	}
+	benefits = {
+		global_autonomy = -0.025
+	}
+	loyalty_scaled_conditional_modifier = {
+		trigger = { 
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 30
+			}
+		}
+		modifier = { 
+			monthly_reform_progress_modifier = 0.2
+		}
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.1
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 2
+			average_autonomy = 50
+		}
+		modifier = {
+			factor = 2
+			average_autonomy = 75
+		}
+	}
+}
+
+estate_nobles_allow_hereditary_titles = {
+	icon = privilege_placeholder
+	land_share = 5
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.1
+	is_valid = {
+		
+	}
+	can_select = {
+		
+	}
+	
+	on_granted = {
+
+	}
+	penalties = {
+		min_autonomy = 10
+	}
+	benefits = {
+		no_stability_loss_on_monarch_death = yes
+	}
+	loyalty_scaled_conditional_modifier = {
+		trigger = {
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 30
+			}
+		}
+		modifier = {
+			global_tax_modifier = 0.2
+			global_unrest = -2
+		}
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_nobles_command_of_the_troops = {
+	icon = privilege_placeholder
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.1
+	influence = 0.10
+	is_valid = {
+		
+	}
+	can_select = {
+		
+	}
+	
+	on_granted = {
+
+	}
+	penalties = {
+		global_manpower_modifier = -0.1	
+	}
+	benefits = {
+		
+	}
+	loyalty_scaled_conditional_modifier = {
+		trigger = {
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 30
+			}
+		}
+		modifier = {
+			cavalry_cost = -0.2
+			army_tradition = 1
+		}
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 2
+			num_of_cavalry = 6
+		}
+		modifier = {
+			factor = 1.5
+			num_of_cavalry = 10
+		}
+		
+	}
 }
 estate_nobles_pf_gallic_wars_remnant = {
 	icon = privilege_demand_more_troops

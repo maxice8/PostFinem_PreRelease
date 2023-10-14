@@ -175,8 +175,8 @@ pf_alexanders_crown = {
 	allow_force_tributary = no
 	potential = {
 		tag = MAC
+		NOT = { has_country_flag = mac_argead_restoration_flag }
 	}
-	
 	government_abilities = {
 		mac_war_cabinet_mechanic
 	}
@@ -195,10 +195,42 @@ pf_alexanders_crown = {
 	}
 }
 
+#Upgraded Alexander's Crown for Argead Restoration
+
+pf_argead_aegis = {
+	icon = "pf_argead_aegis"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+	potential = {
+		has_country_flag = mac_argead_restoration_flag
+	}
+	
+	government_abilities = {
+		mac_war_cabinet_mechanic
+	}
+	modifiers = {
+		min_autonomy_in_territories = -0.2
+		governing_capacity = 250
+		prestige_decay = -0.01
+		max_absolutism = 15
+		yearly_absolutism = 0.5
+	}
+	# custom_attributes = {
+	# 	buffed_strong_duchies = yes #+5% Loyalty
+	# }
+	ai = {
+		factor = 0.5 #generic
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
 
 #Seleucid  Monarchy
 pf_seleucid_monarchy = {
-	icon = "seleucid "
+	icon = "seleucid"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	allow_force_tributary = no
@@ -331,14 +363,13 @@ pf_integrated_phalanx = {
 		shock_damage_received = -0.1
 	}
 	ai = {
-		factor = 1
+		factor = 5
 	}
 }
 
 pf_romuva_kingdom = {
 	icon = "crown"
 	allow_normal_conversion = yes
-	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 
@@ -356,10 +387,10 @@ pf_romuva_kingdom = {
 	}
 
 }
+
 pf_catephract_focus = {
 	icon = "cavalry"
 	allow_normal_conversion = yes
-	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 

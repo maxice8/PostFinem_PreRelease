@@ -6,7 +6,10 @@ pf_trn_1 = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 	}
 
@@ -90,7 +93,10 @@ pf_trn_1_locked_druid_path = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 		NOT = { has_country_flag = pf_trn_anti_druid }
 		NOT = { has_country_flag = pf_trn_pro_druid }
@@ -137,7 +143,10 @@ pf_trn_1_anti_druid_path = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 		has_country_flag = pf_trn_anti_druid
 	}
@@ -147,6 +156,22 @@ pf_trn_1_anti_druid_path = {
 		position = 6
 		required_missions = { pf_trn_magi_and_mystics } 
 		provinces_to_highlight = {
+			is_capital = yes
+			OR = {
+				owner = {
+					is_neighbor_of = ROOT
+					tech_difference = 1
+				}
+				owner = {
+					NOT = { religion = druidic }
+					NOT = {
+						has_opinion = {
+							who = ROOT
+							value = 80
+						}
+					}
+				}
+			}
 		}
 		trigger = {
 			NOT = {
@@ -186,6 +211,10 @@ pf_trn_1_anti_druid_path = {
 		position = 7
 		required_missions = { pf_trn_reach_out } 
 		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = {
+				new_world_i = 100
+			}
 		}
 		trigger = {
 			innovativeness = 50
@@ -217,7 +246,10 @@ pf_trn_1_pro_druid_path = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 		has_country_flag = pf_trn_pro_druid
 	}
@@ -277,7 +309,10 @@ pf_trn_1_second_path = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 	}
 
@@ -328,7 +363,10 @@ pf_trn_2 = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 	}
 
@@ -408,9 +446,10 @@ pf_trn_2 = {
 			hidden_effect = {
 				if = {
 					limit = {
-						any_province = {
-							culture = briton
-							NOT = { owned_by = ROOT }
+						NOT = {
+							owns_all_provinces = {
+								culture = briton
+							}
 						}
 					}
 					every_province = {
@@ -439,11 +478,8 @@ pf_trn_2 = {
 			hidden_effect = {
 				if = {
 					limit = {
-						NOT = {
-							any_province = {
-								culture = briton
-								NOT = { owned_by = ROOT }
-							}
+						owns_all_provinces = {
+							culture = briton
 						}
 					}
 					every_province = {
@@ -682,7 +718,10 @@ pf_trn_3 = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 	}
 
@@ -977,11 +1016,9 @@ pf_trn_3 = {
 			province_id = 4369		# Cair Marffen
 			OR = {
 				NOT = { development = 14 }
-				NOT = {
-					OR = {
-						has_dock_building_trigger = yes
-						has_shipyard_building_trigger = yes
-					}
+				AND = {
+					has_dock_building_trigger = no
+					has_shipyard_building_trigger = no
 				}
 			}
 		}
@@ -1075,7 +1112,10 @@ pf_trn_4 = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 	}
 
@@ -1084,8 +1124,7 @@ pf_trn_4 = {
 		position = 2
 		required_missions = { pf_trn_ricatus_legacy pf_trn_the_oaken_five } 
 		provinces_to_highlight = {
-			owner = { tag = CEL }
-			is_capital = yes
+			is_capital_of = CEL
 		}
 		trigger = {
 			if = {
@@ -1464,7 +1503,10 @@ pf_trn_5 = {
 	potential = { 
 		OR = {
 			tag = TRN
-			tag = ABN
+			AND = {
+				tag = ABN
+				was_tag = TRN
+			}
 		}
 	}
 
@@ -1561,14 +1603,14 @@ pf_trn_5 = {
 		trigger = {
 			OR = {
 				has_reform = pf_guidance_of_the_elders_reform
-				has_reform_on_level = 2
+				has_reform_on_level = 1
 			}
 			has_government_power = {
 				mechanic_type = trinovantes_cohesion_mechanic
 				power_type = trn_cohesion
 				value = 50
 			}
-			legitimacy = 100
+			legitimacy_equivalent = 100
 		}
 		effect = {
 			add_stability_or_adm_power = yes
@@ -1591,7 +1633,7 @@ pf_trn_5 = {
 			NOT = { corruption = 0.1 }
 			total_development = 120
 			OR = {
-				has_reform_on_level = 4
+				has_reform_on_level = 3
 				has_adm_advisor_3 = yes
 			}
 		}
@@ -1696,10 +1738,9 @@ pf_trn_5 = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = pf_trn_blackcoat_rebellion_trigger_tt
-				OR = {
-					has_country_flag = pf_trn_ended_blackcoat_revolution
-				}
+				has_country_flag = pf_had_blackcoat_revolution
 			}
+			NOT = { has_any_disaster = yes }
 		}
 		effect = {
 			custom_tooltip = pf_trn_blackcoat_revolution_1_tt

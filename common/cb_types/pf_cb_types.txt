@@ -1,3 +1,66 @@
+# INSTRUCTIONS:
+# -------------
+# is_triggered_only - Triggered from within the code or by event effects. DO NOT REMOVE THE STOCK ONES.
+# months - The number of months this CB will be valid. Only works for triggered CBs.
+# prerequisites - A condition that automatically activates a CB. Does not work for triggered CBs.
+# no_opinion_hit - If yes you get no negative opinion from this
+#
+# ROOT = attacker
+# FROM = target
+#
+# NOTE: The order in which the peace options are listed is the order in which the AI will normally prioritize them in peace treaties
+#
+# TRIGGERED - Triggered from within the code or by event effects
+# --------------------------------------------------------------
+
+cb_dominate_seas = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		has_country_flag = mac_dominate_eastern_seas_flag
+	}
+
+	prerequisites = {
+		FROM = {
+			any_owned_province = {			
+				has_port = yes
+				sea_zone = { 
+					region = mediterrenean_region
+				}
+			}
+		} 
+	}
+
+	war_goal = pf_war_dominate_seas
+}
+
+# Great Crusade
+cb_great_crusade = {
+	valid_for_subject = no
+	holy_war = yes
+
+	prerequisites_self = {
+		is_revolutionary = no
+		has_country_flag = pf_unlock_great_crusade_cb
+	}
+
+	prerequisites = {
+		is_neighbor_of = FROM
+		NOT = { religion_group = FROM }
+		NOT = {	has_matching_religion = FROM }
+		OR = {
+			AND = {
+				crusade_target = { tag = FROM }
+				religion = hellenic
+			}
+			has_country_flag = pf_unlock_great_crusade_cb
+		}
+	}
+
+	war_goal = superiority_great_crusade
+}
+
+
 cb_germanic_campaigns = {
 	valid_for_subject = no
 	
