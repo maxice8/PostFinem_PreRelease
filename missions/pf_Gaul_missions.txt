@@ -272,6 +272,17 @@ PF_Gaul_1 = {
 			natural_scientist = 1
 		}
 		effect = {
+			hidden_effect = {
+				1763 = {
+					remove_building = manufactory 
+				}
+				82 = {
+					remove_building = manufactory 
+				}
+				62 = {
+					remove_building = manufactory 
+				}
+			}
 			1763 = {
 				change_trade_goods = coal
 				add_building = furnace 
@@ -284,17 +295,7 @@ PF_Gaul_1 = {
 				change_trade_goods = coal
 				add_building = furnace 
 			}
-			hidden_effect = {
-				1763 = {
-					remove_building = state_house
-				}
-				82 = {
-					remove_building = state_house
-				}
-				62 = {
-					remove_building = state_house
-				}
-			}
+			custom_tooltip = natural_scientist_TT
 		}
 	}
 }

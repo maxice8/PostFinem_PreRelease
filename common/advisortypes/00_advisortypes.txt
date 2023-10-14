@@ -106,6 +106,10 @@ natural_scientist = {
 		modifier = { reform_progress_growth = 0.03 }
 	}
 	skill_scaled_modifier = {
+		trigger = { owner = {  mission_completed = pf_gaul_german_5  } }
+		modifier = { technology_cost = -0.02 }
+	}
+	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
 				has_country_flag = 5_gov_cap_bonus_flag 
