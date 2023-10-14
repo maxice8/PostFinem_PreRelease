@@ -4646,12 +4646,13 @@ country_event = {
 			name = "Darius Pahlavi"
 			age = 15
 			adm = 6
-			dip = 4
-			mil = 5
+			dip = 5
+			mil = 4
 			male = yes
 			culture = isfahani
 			religion = zoroastrian
 		}
+		add_ruler_personality = reformist_personality
 	}
 
 	option = {
@@ -4684,7 +4685,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		define_ruler = {
 			name = "Dana Esfahani"
-			age = 15
+			age = 18
 			adm = 5
 			dip = 6
 			mil = 6
@@ -4692,6 +4693,7 @@ country_event = {
 			culture = isfahani
 			religion = zoroastrian
 		}
+		add_ruler_personality = iron_crowned_personality
 	}
 
 	option = {
@@ -4788,6 +4790,9 @@ country_event = {
 	trigger = {
 		is_year = 1510
 		NOT = { is_year = 1530 }
+		has_unlocked_estate_privilege = {
+			estate_privilege = estate_burghers_pf_per_economical_boost
+		}
 	}
 
 	mean_time_to_happen = {
@@ -4819,7 +4824,7 @@ country_event = {
 	}
 }
 
-# Benyamin Taheri
+# Somayeh Taheri
 country_event = {
 	id = pf_per_events.111
 	title = "pf_per_events_111_title"
@@ -4844,10 +4849,11 @@ country_event = {
 			type = inquisitor
 			skill = 3
 			cost_multiplier = 0.5
-			name = "Benyamin Taheri"
+			name = "Somayeh Taheri"
 			age = 25
 			culture = isfahani
 			religion = zoroastrian
+			female = yes
 		}
 	}
 }
@@ -4877,7 +4883,7 @@ country_event = {
 			skill = 3
 			cost_multiplier = 0.1
 			name = "Fazel Rouhani"
-			age = 25
+			age = 35
 			culture = isfahani
 			religion = zoroastrian
 		}
@@ -4896,3 +4902,180 @@ country_event = {
 	}
 }
 
+# Taxation System
+country_event = {
+	id = pf_per_events.113
+	title = "pf_per_events_113_title"
+	desc = "pf_per_events_113_desc"
+	picture = ADVISOR_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1455
+		NOT = { is_year = 1500 }
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+	
+	option = {
+		name = "pf_per_events_113_option_1"
+		ai_chance = { factor = 50 }
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -20
+		}
+		capital_scope = {
+			add_base_tax = 1
+		}
+		random_owned_province = {
+			add_base_tax = 1
+		}
+		random_owned_province = {
+			add_base_tax = 1
+		}
+	}
+
+	option = {
+		name = "pf_per_events_113_option_2"
+		ai_chance = { factor = 50 }
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+		add_country_modifier = {
+			name = pf_per_nobles_tax_cut
+			duration = 3650
+		}
+	}
+}
+
+# Mohsen and the trading reforms
+country_event = {
+	id = pf_per_events.114
+	title = "pf_per_events_114_title"
+	desc = "pf_per_events_114_desc"
+	picture = ADVISOR_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1500
+		NOT = { is_year = 1570 }
+		NOT = { has_disaster = estate_burghers_disaster }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	option = {
+		name = "pf_per_events_114_option_1"
+		ai_chance = { factor = 10 }
+		add_country_modifier = {
+			name = pf_per_free_merchants
+			duration = -1
+		}
+		add_adm_power = 50
+		add_dip_power = 50
+		set_country_flag = pf_per_had_mohsen_reforms
+		custom_tooltip = pf_per_events_114_tt
+	}
+
+	option = {
+		name = "pf_per_events_114_option_2"
+		ai_chance = { factor = 90 }
+		add_country_modifier = {
+			name = pf_per_restricted_merchants
+			duration = -1
+		}
+	}
+}
+
+# Mohsen Reforms good consequences
+country_event = {
+	id = pf_per_events.115
+	title = "pf_per_events_115_title"
+	desc = "pf_per_events_115_desc"
+	picture = ADVISOR_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1570
+		has_country_flag = pf_per_had_mohsen_reforms
+		NOT = { has_country_flag = pf_per_had_mohsen_reform_consequences }
+		NOT = { has_disaster = estate_burghers_disaster }
+	}
+
+	mean_time_to_happen = {
+		months = 150
+	}
+
+	immediate = {
+		set_country_flag = pf_per_had_mohsen_reform_consequences
+	}
+	
+	option = {
+		name = "pf_per_events_115_option"
+		ai_chance = { factor = 100 }
+		change_government_reform_progress = 50
+		add_adm_power = 200
+		add_years_of_income = 1
+	}
+}
+
+# Mohsen Reforms bad consequences
+country_event = {
+	id = pf_per_events.116
+	title = "pf_per_events_115_title"
+	desc = "pf_per_events_116_desc"
+	picture = ADVISOR_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1570
+		has_country_flag = pf_per_had_mohsen_reforms
+		NOT = { has_country_flag = pf_per_had_mohsen_reform_consequences }
+		NOT = { has_disaster = estate_burghers_disaster }
+	}
+
+	mean_time_to_happen = {
+		months = 150
+	}
+
+	immediate = {
+		set_country_flag = pf_per_had_mohsen_reform_consequences
+	}
+	
+	option = {
+		name = "pf_per_events_116_option_1"
+		ai_chance = { factor = 50 }
+		remove_country_modifier = pf_per_free_merchants
+		add_stability = -2
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = -50
+		}
+
+		if = {
+			limit = { has_country_flag = unlocked_privilege_estate_burghers_pf_per_economical_boost }
+			custom_tooltip = pf_per_events_116_tt
+			clr_country_flag = unlocked_privilege_estate_burghers_pf_per_economical_boost
+		}
+	}
+
+	option = {
+		name = "pf_per_events_116_option_2"
+		ai_chance = { factor = 50 }
+		remove_country_modifier = pf_per_free_merchants
+		add_stability = -1
+		add_country_modifier = {
+			name = pf_per_exploitative_merchants
+			duration = -1
+		}
+	}
+}
