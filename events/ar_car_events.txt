@@ -1,0 +1,253 @@
+namespace = ar_car_events
+
+
+country_event = { #Great Cothon
+	id = ar_car_events.1
+	title = ar_car_events.1.t
+	desc = ar_car_events.1.d
+	picture = GREAT_BUILDING_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = { }
+	
+	# mean_time_to_happen = { }
+
+	option = {
+		name = ar_car_events.1.a
+		ai_chance = { factor = 1 }
+		set_country_flag = car_build_great_cothon_flag
+		add_stability_or_adm_power = yes
+		add_dip_power = 50
+		custom_tooltip = " "
+		341 = {
+			add_great_project = {
+			type = great_cothon
+			instant = yes 
+			}
+		}
+	}
+}
+
+country_event = { #Phoenicia or Exploration
+	id = ar_car_events.2
+	title = ar_car_events.2.t
+	desc = ar_car_events.2.d
+	picture = REFORM_eventPicture
+	
+	trigger = { 
+		mission_completed = car_carthage_reborn
+		NOT = { has_country_flag = phoenicia_or_explo }
+	}
+	
+	mean_time_to_happen = { 
+		months = 60
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_idea_group = exploration_ideas
+				has_idea_group = administrative_ideas
+			}
+		}
+	}
+	
+	immediate = { set_country_flag = phoenicia_or_explo }
+
+	option = { #Explore! Based colonial Carthage
+		name = ar_car_events.2.a
+		ai_chance = { factor = 1 }
+		set_country_flag = car_explo_flag
+		add_dip_power = 200
+		custom_tooltip = " "
+		add_country_modifier = {
+			name = car_explo_modifier
+			duration = -1
+		}
+	}
+	
+	option = { #Phoenicia, return to the motherland
+		name = ar_car_events.2.b
+		ai_chance = { factor = 3 }
+		set_country_flag = car_phoenicia_flag
+		add_adm_power = 200
+		custom_tooltip = " "
+		add_country_modifier = {
+			name = car_phoenicia_modifier
+			duration = -1
+		}
+		cyrenaica_area = { add_permanent_claim = ROOT }
+		delta_area = { add_permanent_claim = ROOT }
+		bahari_area = { add_permanent_claim = ROOT }
+		palestine_area = { add_permanent_claim = ROOT }
+		syria_area = { add_permanent_claim = ROOT }
+	}
+	
+}
+
+province_event = { #Established in Italy, Provincial Capital
+	id = ar_car_events.3
+	title = ar_car_events.3.t
+	desc = ar_car_events.3.d
+	picture = WESTERNISATION_eventPicture
+	fire_only_once = yes
+	trigger = { 
+		owner = { tag = CAR }
+		is_core = CAR
+		region = italy_region
+		NOT = { area = western_sicily_area }
+		NOT = { area = sicily_area }
+		NOT = { area = corsica_sardinia_area }
+		development = 15
+	}
+	
+	mean_time_to_happen = { 
+		months = 240
+		modifier = {
+			factor = 0.9
+			development = 20
+		}
+		modifier = {
+			factor = 0.9
+			development = 25
+		}
+		modifier = {
+			factor = 0.9
+			development = 30
+		}
+		modifier = {
+			factor = 0.1
+			province_id = 118
+		}
+	}
+
+	option = {
+		name = ar_car_events.3.a
+		ai_chance = { factor = 1 }
+		change_culture = owner
+		change_religion = owner
+		custom_tooltip = " "
+		add_base_tax = 1
+		add_base_production = 1
+		add_base_manpower = 1
+		custom_tooltip = " "
+		every_neighbor_province = {
+			add_province_modifier = {
+				name = car_culture_spreading_modifier
+				duration = 18250
+			}
+		}
+		owner = {
+			add_years_of_income = 2
+		}
+	}
+}
+
+
+#ELEPHANTS! Ivory province perhaps with some buffs and change cav model to elephants
+country_event = { 
+	id = ar_car_events.4
+	title = ar_car_events.4.t
+	desc = ar_car_events.4.d
+	picture = TRADEGOODS_eventPicture
+	fire_only_once = yes
+	trigger = { 
+		tag = CAR
+		338 = { owned_by = ROOT }
+		army_size = 30
+	}
+	
+	mean_time_to_happen = { 
+		months = 120
+		modifier = {
+			factor = 0.75
+			has_idea_group = quality_ideas
+		}
+		modifier = {
+			factor = 0.75
+			has_idea_group = trade_ideas
+		}
+
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = car_elephants_enabled
+		}
+	}
+	option = {
+		name = ar_car_events.4.a
+		ai_chance = { factor = 1 }
+		338 = { 
+			add_center_of_trade_level = 1
+			custom_tooltip = " "
+			change_trade_goods = ivory
+			add_building = tradecompany
+			add_base_production = 2
+		}
+		custom_tooltip = " "
+		add_country_modifier = {
+			name = car_elephant_cav_modifier
+			duration = 7300
+		}
+		custom_tooltip = "Upon reloading the save you will now have elephant graphics for your cavalry."
+	}
+}
+
+#Punic Pantheon Spawning, choose to use it or squish it
+country_event = { 
+	id = ar_car_events.5
+	title = ar_car_events.5.t
+	desc = ar_car_events.5.d
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	fire_only_once = yes
+	trigger = { 
+		tag = CAR
+		grown_by_development = 100
+		num_of_states = 10
+	}
+	
+	mean_time_to_happen = { 
+		months = 240
+		modifier = {
+			factor = 0.5
+			has_idea_group = religious_ideas
+		}
+	}
+	immediate = {		
+		custom_tooltip = "A few provinces have been converted as the local populations embrace their heritage and the Punic Pantheon."
+		hidden_effect = {
+			random_owned_province = { 
+				change_religion = punic_religion
+			}
+			random_owned_province = { 
+				change_religion = punic_religion
+			}
+			random_owned_province = { 
+				change_religion = punic_religion
+			}
+		}
+	}
+	option = { #Return to Punic
+		name = ar_car_events.5.a
+		ai_chance = { factor = 10 }
+		add_stability = -2
+		change_religion = punic_religion
+		capital_scope = { change_religion = punic_religion }
+		custom_tooltip = " "
+		add_country_modifier = {
+			name = punic_religion_converted_modifier
+			duration = 3650
+		}
+	}
+	option = { #Keep the boring old religion
+		name = ar_car_events.5.b
+		ai_chance = { factor = 1 }
+		add_stability_or_adm_power = yes
+		add_dip_power = 50
+		custom_tooltip = " "
+		add_country_modifier = {
+			name = punic_religion_resisted_modifier
+			duration = 3650
+		}
+	}
+}
+
