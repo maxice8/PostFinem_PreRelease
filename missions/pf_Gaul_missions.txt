@@ -284,6 +284,102 @@ PF_Gaul_2 = {
 			custom_tooltip = enable_the_germanic_wars
 		}
 	}
+	pf_gaul_german_1 = {
+		icon = xxx
+		position = 7
+		required_missions = {
+			pf_gaul_mainland_8
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = north_german_region
+				region = south_german_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 55
+				OR = {
+					region = south_german_region
+					region = north_german_region
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = own_germany_yourself_TT
+			tooltip = {
+				add_country_modifier = {
+					name = the_conuerors_of_germany_GAU
+					duration = 9125
+				}
+			}
+			custom_tooltip = own_germany_SUB_TT
+			tooltip = {
+				add_country_modifier = {
+					name = SUB_the_conuerors_of_germany_GAU
+					duration = 9125
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+							value = 28
+							OR = {
+								region = south_german_region
+								region = north_german_region
+							}
+							owned_by = ROOT
+						}
+					}
+					add_country_modifier = {
+						name = the_conuerors_of_germany_GAU
+						duration = 9125
+					}
+				}
+				else_if = {
+					limit = {
+						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+							value = 28
+							OR = {
+								region = south_german_region
+								region = north_german_region
+							}
+							NOT = { owned_by = ROOT }
+						}
+					}
+					every_subject_country = {
+						limit = {
+							capital_scope = {
+								OR = {
+									region = south_german_region
+									region = north_german_region
+								}
+							}
+						}
+						add_country_modifier = {
+							name = SUB_the_conuerors_of_germany_GAU
+							duration = 10950
+						}
+					}
+				}
+			}
+			custom_tooltip = all_germanic_claim_TT
+			hidden_effect = {
+				every_province = {
+					limit = {
+						culture_group = old_germanic
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+						NOT = { is_permanent_claim = root }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
 }
 PF_Gaul_3 = {
 	slot = 3
@@ -386,7 +482,92 @@ PF_Gaul_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
-	}		
+	}
+	pf_gaul_german_2 = {
+		icon = xxx
+		required_missions = {
+			pf_gaul_mainland_8
+		}
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = switzerland_area
+				area = romandie_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = { 
+			switzerland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			romandie_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			166 = {
+				add_latest_building = { builder = ROOT fort = yes }
+				add_province_modifier = {
+					name = construct_alpine_fort_GAU
+					duration = -1
+				}
+			}
+			custom_tooltip = enable_mountain_development_tt
+		}
+	}
+	pf_gaul_german_3 = {
+		icon = xxx
+		required_missions = {
+			pf_gaul_german_2
+		}
+		position = 8
+		trigger = {
+			switzerland_area = {
+				type = all
+				religion = druidic
+				development = 10
+			}
+			romandie_area = {
+				type = all
+				religion = druidic
+				development = 10
+			}
+		}
+		effect = {
+			custom_tooltip = return_of_the_helvetii
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = old_lombard
+					}
+					change_culture = helvetii
+				}
+				if = {
+					limit = {
+						accepted_culture = old_lombard
+					}
+					remove_accepted_culture = old_lombard
+				}
+				add_accepted_culture = helvetii
+			}
+			romandie_area = {
+				add_province_modifier = {
+					name = rebuilding_helvetica
+					duration = -1
+				}
+			}
+			switzerland_area = {
+				add_province_modifier = {
+					name = rebuilding_helvetica
+					duration = -1
+				}
+			}
+		}
+	}
 }
 PF_Gaul_4 = {
 	slot = 4

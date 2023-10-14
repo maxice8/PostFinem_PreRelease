@@ -30,3 +30,19 @@ the_natural_borders_gau = {
 	leader_land_fire = 1 
 	morale_damage_received = -0.025 
 }
+SUB_the_conuerors_of_germany_GAU = {
+	vassal_forcelimit_bonus = 0.5
+	vassal_income = 0.15
+}
+the_conuerors_of_germany_GAU = {
+	ae_impact = -0.10
+	diplomatic_reputation = 1 
+}
+construct_alpine_fort_GAU = {
+	local_fort_maintenance_modifier = -0.50
+	local_defender_dice_roll_bonus = 1
+}
+rebuilding_helvetica = {
+	local_development_cost = -0.05
+	trade_goods_size_modifier = 0.10
+}
