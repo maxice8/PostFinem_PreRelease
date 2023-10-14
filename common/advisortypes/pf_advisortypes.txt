@@ -1308,7 +1308,7 @@ colonial_minister = {
 		factor = 1
 		modifier = {
 			factor = 0
-			num_of_colonists = 0
+			owner = { NOT = { num_of_colonists = 1 } }
 		}
 	}
 	
