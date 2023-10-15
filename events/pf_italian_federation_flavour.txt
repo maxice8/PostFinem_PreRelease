@@ -47,7 +47,7 @@ country_event = {		# Ambassador for [Root.GetName]
 				cost_multiplier = 0.75
 			}
 		}
-		if_else = {
+		else_if = {
 			limit = {
 				NOT = { monthly_income = 35 }
 			}
@@ -312,12 +312,28 @@ country_event = {		# Limits of Trade
 	option = {
 		name = "pf_if.10.a"
 		add_mercantilism = 1
-		add_estate_burghers_loyalty_effect = -5
+		if = {
+			limit = {
+				has_estate = estate_burghers
+			}
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = -5
+			}
+		}
 	}
 	option = {
 		name = "pf_if.10.b"
 		add_treasury = 10
-		add_estate_burghers_loyalty_effect = 5
+		if = {
+			limit = {
+				has_estate = estate_burghers
+			}
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 5
+			}
+		}
 	}
 }
 country_event = {		# Martial Desires
@@ -396,7 +412,15 @@ country_event = {		# Religious Festival
 	}
 	option = {
 		name = "pf_if.13.b"
-		add_estate_church_loyalty_effect = 10
+		if = {
+			limit = {
+				has_estate = estate_church
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+		}
 	}
 }
 country_event = {		# Growth of the City

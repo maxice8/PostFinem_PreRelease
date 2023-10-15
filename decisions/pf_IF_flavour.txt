@@ -29,7 +29,15 @@ country_decisions = {
 			set_country_flag = used_reform_trade_laws_adirim
 			add_imperial_influence = -5
 			add_years_of_income = 0.25
-			add_estate_burghers_loyalty_effect = 10
+			if = {
+				limit = {
+					has_estate = estate_burghers
+				}
+				add_estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 10
+				}
+			}
 			custom_tooltip = pf_if_every_prince_gets_mercantilism_tt
 			hidden_effect = {
 				every_known_country = {
