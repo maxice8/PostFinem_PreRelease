@@ -42,16 +42,17 @@ country_decisions = {
 									region = poland_region
 									is_core = root
 								}
+								culture_group = pagan_slavic
 							}
 						}
 						owns_core_province = 1756
-							owns_core_province = 157
-							owns_core_province = 279
-							owns_core_province = 262
-							owns_core_province = 278
-							owns_core_province = 264
-							owns_core_province = 43
-							owns_core_province = 257
+						owns_core_province = 157
+						owns_core_province = 279
+						owns_core_province = 262
+						owns_core_province = 278
+						owns_core_province = 264
+						owns_core_province = 43
+						owns_core_province = 257
 					}
 				}
 				province_id = 1756
@@ -77,6 +78,7 @@ country_decisions = {
 				tag = JUG
 				tag = SEV
 			}
+			adm_tech = 10
 			AND = {
 				owns_core_province = 1756
 				owns_core_province = 157
@@ -140,6 +142,11 @@ country_decisions = {
 		potential = {
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_severoslavia_flag }
+			NOT = { OR = { 
+				tag = SEV
+				tag = JUG
+				tag = SLV
+			} }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -215,6 +222,12 @@ country_decisions = {
 				type = all
 				is_core = ROOT
 			}
+			NOT = { 
+				AND = {
+					tag = KSB
+					NOT = { mission_completed = ksb_united_severoslavia }
+				}
+			} 
 		}
 		effect = {
 			change_tag = SEV
@@ -243,7 +256,7 @@ country_decisions = {
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-			set_country_flag = formed_slavia_flag
+			set_country_flag = formed_severoslavia_flag
 		}
 		ai_will_do = {
 			factor = 1

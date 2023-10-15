@@ -35,7 +35,18 @@ ksb_1_slot = {
 
 		trigger = {  } 
 
-		effect = {  } 
+		effect = {  
+			change_government = theocracy
+		add_government_reform = pf_svetovid_theocracy
+		if = {
+			limit = { has_government_mechanic =  pf_svetovid_dedication_mechanic }
+			add_government_power = {
+				mechanic_type = pf_svetovid_dedication_mechanic
+				power_type = pf_svetovid_dedication
+				value = 5
+			}
+		}
+		} 
 	}
 }
 ksb_2_slot = {
@@ -185,7 +196,7 @@ ksb_4_slot = {
 
 		trigger = {  } 
 
-		effect = {  } 
+		effect = { set_country_flag = ksb_can_form_severoslavia_flag } 
 	}
 }
 ksb_5_slot = {
@@ -228,6 +239,17 @@ ksb_5_slot = {
 		effect = {  } 
 	}
 
+	ksb_end_zilant_raids = {
+		icon = mjz_for_the_horde
+		position = 3
+		required_missions = { ksb_conquer_pinsk } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
 	ksb_conquer_lithuania = {
 		icon = mission_conquer_lithuania
 		position = 4
@@ -243,17 +265,6 @@ ksb_5_slot = {
 		icon = mission_conquer_baltic_region
 		position = 5
 		required_missions = { ksb_conquer_lithuania } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	ksb_end_zilant_raids = {
-		icon = mjz_for_the_horde
-		position = 3
-		required_missions = { ksb_conquer_pinsk } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -300,6 +311,27 @@ sevksb_1_branch = {
 
 		effect = {  } 
 	}
+
+	sev_gdansk = {
+		icon = mission_pol_embellish_gdansk
+		position = 10
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	sev_baltic_monopolies = {
+		icon = mission_baltic_empire
+		position = 12
+		required_missions = { sev_gdansk } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 sevksb_2_branch = {
 	slot = 2
@@ -319,6 +351,17 @@ sevksb_2_branch = {
 		}
 	}
 
+	sev_to_the_rhine = {
+		icon = mission_se_along_the_river
+		position = 6
+		required_missions = { ksb_push_borderlands } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
 	sev_lords_of_germania = {
 		icon = interfere_in_germany
 		position = 7
@@ -327,17 +370,6 @@ sevksb_2_branch = {
 			sev_to_the_rhine
 			sev_lombardy_falls
 		}
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	sev_to_the_rhine = {
-		icon = mission_se_along_the_river
-		position = 6
-		required_missions = { ksb_push_borderlands } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -478,44 +510,235 @@ sevksb_5_branch = {
 
 		effect = {  } 
 	}
+
+	sev_krakow = {
+		icon = mission_pol_revival_krakow
+		position = 10
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	sev_endless_fields = {
+		icon = mission_pol_tend_east
+		position = 12
+		required_missions = { sev_krakow } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 slvksb_1_branch = {
 	slot = 1
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = KSB } 
+	potential = {
+		AND = {
+			was_tag = KSB
+			tag = SLV
+		}
+	}
 
+	slv_enforce_culture = {
+		icon = the_great_school
+		position = 8
+		required_missions = { sev_lords_of_germania } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	slv_2_seas_2_fleets = {
+		icon = crusader_fleet
+		position = 13
+		required_missions = { sev_baltic_monopolies } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 slvksb_2_branch = {
 	slot = 2
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = KSB } 
+	potential = {
+		AND = {
+			was_tag = KSB
+			tag = SLV
+		}
+	}
 
+	slv_ostgermanic_invasion = {
+		icon = invade_poland
+		position = 9
+		required_missions = {
+			sev_lords_of_germania
+			sev_lord_of_slavia
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	slv_illyrian_conquest = {
+		icon = mission_balkan_conquest
+		position = 10
+		required_missions = { slv_ostgermanic_invasion } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	slv_alexanders_lands = {
+		icon = pf_hellenic_temple_burning
+		position = 11
+		required_missions = { slv_illyrian_conquest } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 slvksb_3_branch = {
 	slot = 3
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = KSB } 
+	potential = {
+		AND = {
+			was_tag = KSB
+			tag = SLV
+		}
+	}
 
+	slv_pontus_conquest = {
+		icon = the_russian_campaign
+		position = 9
+		required_missions = { sev_lord_of_slavia } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	slv_restore_rus = {
+		icon = mission_restore_kiev
+		position = 10
+		required_missions = {
+			slv_pontus_conquest
+			slv_kiev_recovered
+			slv_rusnok_lands
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	slv_3rd_empire = {
+		icon = mission_placeholder
+		position = 12
+		required_missions = {
+			slv_alexanders_lands
+			slv_siberian_frontiers
+			slv_restore_rus
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 slvksb_4_branch = {
 	slot = 4
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = KSB } 
+	potential = {
+		AND = {
+			was_tag = KSB
+			tag = SLV
+		}
+	}
 
+	slv_kiev_recovered = {
+		icon = mission_develop_kiev
+		position = 9
+		required_missions = { sev_lord_of_slavia } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	slv_uralic_push = {
+		icon = mission_beyond_the_urals
+		position = 10
+		required_missions = {
+			slv_pontus_conquest
+			slv_kiev_recovered
+			slv_rusnok_lands
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	slv_siberian_frontiers = {
+		icon = mission_recruit_the_cossacks
+		position = 11
+		required_missions = { slv_uralic_push } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 slvksb_5_branch = {
 	slot = 5
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = KSB } 
+	potential = {
+		AND = {
+			was_tag = KSB
+			tag = SLV
+		}
+	}
 
+	slv_rusnok_lands = {
+		icon = mission_marwari_horses
+		position = 9
+		required_missions = {
+			sev_lord_of_slavia
+			sev_wild_frontier
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }

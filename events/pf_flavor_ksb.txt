@@ -1,5 +1,6 @@
 namespace = pf_ksb_events
 
+#Kashubia intor event
 country_event = {
 	id = pf_ksb_events.1
 	title = pf_ksb_events.1.t
@@ -20,6 +21,7 @@ country_event = {
 	}
 }
 
+#capture of rujana
 country_event = {
 	id = pf_ksb_events.2
 	title = pf_ksb_events.2.t
@@ -40,6 +42,7 @@ country_event = {
 	}
 }
 
+#slavs in vorpommern saxony
 province_event = {
 	id = pf_ksb_events.3
 	title = pf_ksb_events.3.t
@@ -66,6 +69,7 @@ province_event = {
 	}
 }
 
+#slavs in vorpommern kashubia
 country_event = {
 	id = pf_ksb_events.4
 	title = pf_ksb_events.4.t
@@ -78,6 +82,7 @@ country_event = {
 	}
 }
 
+#slavia birth of republic
 country_event = {
 	id = pf_ksb_events.5
 	title = pf_ksb_events.5.t
@@ -88,8 +93,13 @@ country_event = {
 		name = pf_ksb_events.5a
 		override_country_name = "RZECZPOSPOLITA"
 	}
+	option = {
+		name = pf_ksb_events.5b
+		override_country_name = "RZECZPOSPOLITA"
+	}
 }
 
+#slavia end of republic
 country_event = {
 	id = pf_ksb_events.6
 	title = pf_ksb_events.6.t
@@ -102,23 +112,178 @@ country_event = {
 	}
 }
 
+#Kashubia on pulse for government [[[
+#prospering fields
 country_event = {
-	id = pf_ksb_events.1000
-	title = pf_ksb_events.1000.t
-	desc = pf_ksb_events.1000.d
-	picture = RUNESTONE_eventPicture
+	id = pf_ksb_events.7
+	title = pf_ksb_events.7.t
+	desc = pf_ksb_events.7.d
+	picture = FARMING_eventPicture
 	is_triggered_only = yes
+	trigger = {
+		has_government_mechanic = pf_svetovid_dedication_mechanic
+		stability = 1
+		devotion = 80
+		NOT = { average_unrest = 0.5 }
+		NOT = { has_country_modifier =  ksb_prospering_fields } 
+	}
 	option = {
-		name = pf_ksb_events.1000a
-		change_government = theocracy
-		add_government_reform = pf_svetovid_theocracy
-		if = {
-			limit = { has_government_mechanic =  pf_svetovid_dedication_mechanic }
-			add_government_power = {
-				mechanic_type = pf_svetovid_dedication_mechanic
-				power_type = pf_svetovid_dedication
-				value = 5
+		name = pf_ksb_events.7a
+	    add_government_power = {
+			mechanic_type = pf_svetovid_dedication_mechanic
+			power_type = pf_svetovid_dedication
+			value = 15
+		}
+	}
+	option = {
+		name = pf_ksb_events.7b
+	    add_years_of_income = 0.25
+		add_country_modifier = {
+			name = ksb_prospering_fields
+			duration = 3650
+		}
+	}
+}
+#religious fundamentalists
+country_event = {
+	id = pf_ksb_events.8
+	title = pf_ksb_events.8.t
+	desc = pf_ksb_events.8.d
+	picture = east_slavic_ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		random_owned_province = {
+			limit = {
+				religion = ROOT
 			}
+			save_event_target_as = religious_revolt_province
+		}
+	}
+	trigger = {
+		has_government_mechanic = pf_svetovid_dedication_mechanic
+		NOT = { devotion = 60 }
+		average_unrest = 1
+		NOT = { has_country_modifier =  ksb_losing_faith } 
+	}
+	option = {
+		name = pf_ksb_events.8a
+		goto = religious_revolt_province
+	    add_government_power = {
+			mechanic_type = pf_svetovid_dedication_mechanic
+			power_type = pf_svetovid_dedication
+			value = -15
+		}
+		event_target:religious_revolt_province = {
+			slavic_zealots = 2
+		}
+	}
+	option = {
+		name = pf_ksb_events.8b
+		goto = religious_revolt_province
+		event_target:religious_revolt_province = {
+			slavic_zealots = 2
+		}
+	    add_prestige = -15
+		add_country_modifier = {
+			name = ksb_losing_faith
+			duration = 3650
+		}
+	}
+}
+#fighting alongside us
+country_event = {
+	id = pf_ksb_events.9
+	title = pf_ksb_events.9.t
+	desc = pf_ksb_events.9.d
+	picture = DISCIPLINED_SOLDIERS_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_government_mechanic = pf_svetovid_dedication_mechanic
+		is_at_war = yes
+		war_exhaustion = 4
+		NOT = { has_country_modifier = ksb_alongside_us } 
+	}
+	option = {
+		name = pf_ksb_events.9a
+		add_war_exhaustion = -4
+		add_government_power = {
+			mechanic_type = pf_svetovid_dedication_mechanic
+			power_type = pf_svetovid_dedication
+			value = 10
+		}
+	}
+	option = {
+		name = pf_ksb_events.9b
+		add_war_exhaustion = -4
+		add_country_modifier = {
+			name = ksb_alongside_us
+			duration = 3650
+		}
+	}
+}
+#religious disagreements between local volkvs
+country_event = {
+	id = pf_ksb_events.10
+	title = pf_ksb_events.10.t
+	desc = pf_ksb_events.10.d
+	picture = MERCHANTS_ARGUING_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_government_mechanic = pf_svetovid_dedication_mechanic
+		NOT = { stability = 1 } 
+		average_unrest = 1
+		NOT = { has_country_modifier = ksb_volkvs_disagree } 
+	}
+	option = {
+		name = pf_ksb_events.11a
+		add_government_power = {
+			mechanic_type = pf_svetovid_dedication_mechanic
+			power_type = pf_svetovid_dedication
+			value = -10
+		}
+	}
+	option = {
+		name = pf_ksb_events.11b
+		add_country_modifier = {
+			name = ksb_volkvs_disagree
+			duration = 3650
+		}
+	}
+}
+#uninspired soldiers
+country_event = {
+	id = pf_ksb_events.11
+	title = pf_ksb_events.11.t
+	desc = pf_ksb_events.11.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_government_mechanic = pf_svetovid_dedication_mechanic
+		is_at_war = yes
+		NOT = { stability = 1 } 
+	}
+	option = {
+		name = pf_ksb_events.11a
+		add_government_power = {
+			mechanic_type = pf_svetovid_dedication_mechanic
+			power_type = pf_svetovid_dedication
+			value = -10
+		}
+	}
+	option = {
+		name = pf_ksb_events.11b
+		add_years_of_income = -0.25
+		add_government_power = {
+			mechanic_type = pf_svetovid_dedication_mechanic
+			power_type = pf_svetovid_dedication
+			value = -5
+		}
+	}
+	option = {
+		name = pf_ksb_events.11c
+		add_country_modifier = {
+			name = ksb_troops_losing_faith
+			duration = 3650
 		}
 	}
 }
