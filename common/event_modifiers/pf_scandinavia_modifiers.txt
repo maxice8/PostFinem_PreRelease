@@ -13,3 +13,34 @@ god_odin_sacrifice = {
 	reinforce_speed = 0.33
 	shock_damage = 0.10
 }
+pf_nordic_centralising_power = {
+	all_power_cost = -0.10
+	global_autonomy = -0.05
+}
+pf_nordic_reign_of_terror = {
+	global_rebel_suppression_efficiency = 1
+	global_unrest = -2
+}
+pf_nordic_converting_finland = {
+	local_missionary_strength = 0.03
+	local_unrest = 2
+}
+pf_nordic_cold_outside = {
+	hostile_attrition = 1.0
+	global_foreign_trade_power = -0.10
+}
+pf_nordic_white_christmas = {
+	tolerance_own = 2
+	global_unrest = -3
+}
+pf_nordic_weather_on_our_side = {
+	hostile_attrition = 1.0
+	shock_damage_received = -0.10
+}
+pf_nordic_reformed_huskarls = {
+	is_carolean_modifier = yes
+	military_tactics = 0.10
+}
+pf_nordic_odin_owns_you_all = {
+	land_morale = 0.10
+}

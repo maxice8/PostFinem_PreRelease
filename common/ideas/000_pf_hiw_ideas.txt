@@ -555,7 +555,7 @@ new_SIC_ideas = {
 SWE_ideas = {		# New Sweden
 	start = {
 		shock_damage = 0.10
-		land_forcelimit_modifier = 0.20
+		leader_land_shock = 1
 	}
 	
 	bonus = {
@@ -589,5 +589,46 @@ SWE_ideas = {		# New Sweden
 	}
 	swe_nyr_herlith = {
 		discipline = 0.05
+	}
+}
+NDH_ideas = {		# Nordheim
+	start = {
+		global_own_trade_power = 0.33
+		manpower_recovery_speed = 0.20
+	}
+	
+	bonus = {
+		max_general_shock = 1
+	}	
+
+	trigger = {
+		tag = NDH
+	}
+	free = yes
+	
+	ndh_great_power = {
+		diplomatic_upkeep = 1
+	}
+	ndh_legacy_of_warriors = {
+		land_morale = 0.20
+		has_carolean = yes
+	}
+	ndh_diversifying_trades = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	ndh_absolutism = {
+		max_absolutism = 10
+		yearly_absolutism = 1
+	}
+	ndh_seamanship = {
+		naval_morale = 0.15
+		sailors_recovery_speed = 0.10
+	}
+	ndh_northern_resilience = {
+		discipline = 0.05
+	}
+	ndh_urbanisation = {
+		development_cost = -0.10
+		global_allowed_num_of_buildings = 1
 	}
 }

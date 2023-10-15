@@ -17,6 +17,22 @@ monthly_althingi_adm_power: "Monthly Administrative Work"
 monthly_althingi_dip_power: "Monthly Diplomatic Work"
 monthly_althingi_mil_power: "Monthly Military Work"
 
+nordic_monarchy_reform: "Nordic Monarchy"
+nordic_monarchy_reform_desc: "Our country has crawled out of the dark ages of tribalism and created formal institutions with which to govern out people, controlled directly by the monarch."
+
+nordic_huskarl_recruitment_reform: "Expand Huskarl Recruitment"
+nordic_huskarl_recruitment_reform_desc: "The Huskarls are traditionally taken from the gentry, but in our recruitment we are missing a potentially big audience. Many nobles have wayward second and third sons, who stand little chance of inheritance and mope around wasting money on life's luxuries instead of doing anything useful for their families. If we offer service to these sons, we would be able to greatly expand the breadth of Huskarl recruitment, as well as remove a nuisance to many a local community."
+
+# Countries
+
+NDH: "Nordheim"
+NDH_ADJ: "Nordheimer"
+
+# Personalities
+
+viking_personality: "Viking"
+desc_viking_personality: "This general has made their name in raids and military expeditions abroad, searching for gold and glory, earning them a prideful place in our society."
+
 ##############
 # Ideas
 ##############
@@ -39,6 +55,25 @@ swe_realm_of_the_north: "Realm of the North"
 swe_realm_of_the_north_desc: "The Swedish nation is rapidly becoming the foremost power in northern Europe, propelled by the spirit and zeal of our people, but the influence of the king cannot be understated. The king is the center of the realm, its beating heart, and the source of every policy decision."
 swe_nyr_herlith: "Nyrherlith"
 swe_nyr_herlith_desc: "The old informal way of waging war with levies and opportunistic warriors is becoming less and less effective as military technology advances across Europe. If we wish not be consumed by the snapping jaws of history, we must reform our armies and their tactics and ensure our future martial relevance."
+
+NDH_ideas: "Nordheim Ideas"
+NDH_ideas_start: "Nordheim Traditions"
+NDH_ideas_bonus: "Nordheim Ambition"
+
+ndh_great_power: "Great Power Politics"
+ndh_great_power_desc: ""
+ndh_legacy_of_warriors: "Strength of the Huskarls"
+ndh_legacy_of_warriors_desc: ""
+ndh_diversifying_trades: "Nyrkaupeyrir"
+ndh_diversifying_trades_desc: ""
+ndh_absolutism: "Nordic Absolutism"
+ndh_absolutism_desc: ""
+ndh_seamanship: "Masters of the Seas"
+ndh_seamanship_desc: ""
+ndh_northern_resilience: "Northern Resilience"
+ndh_northern_resilience_desc: ""
+ndh_urbanisation: "Stórrboer"
+ndh_urbanisation_desc: ""
 
 ##############
 # Events
@@ -85,9 +120,51 @@ god_freyr_sacrifice: "Sacrificed to Freyr"
 god_odin_sacrifice: "Sacrificed to Odin"
 
 pf_nordic.1.t: "The Uppsala Auðr"
-pf_nordic.1.d: "The seat of the kings of Sweden has always been Uppsala, the site of the great Temple and also the seat of Freyr's ancient kingship. It is to Freyr that we owe one of our most important traditions, the Uppsala auðr. This collection of estates was first gathered by the god long ago to ensure the wealth and maintenance of future kings, and this practice has proven to be very beneficial in the years since. Now extending across several provinces and containing more territory than the lands of many magnates combined, this space of land is a testament to the command and power of the King."
+pf_nordic.1.d: "The seat of the kings of Sweden has always been Uppsala, the site of the great Temple and also the seat of Freyr's ancient kingship. It is to Freyr that we owe one of our most important traditions, the Uppsala auðr. This collection of estates was first gathered by the god long ago to ensure the wealth and maintenance of future kings, and this practice has proven to be very beneficial in the years since. Now extending across several provinces and containing more territory than the lands of many magnates combined, this space of land is a testament to the command and power of the [Root.Monarch.GetTitle]."
 pf_nordic.1.a: "Strengthen this venerable practice."
 pf_nordic.1.b: "Perhaps we can sell part of this land for more short term income?"
+
+pf_nordic.2.t: "The Future of Kingship"
+pf_nordic.2.d: "The [Root.Monarch.GetTitle] was always a strongman, the chief among a band of warriors who ruled their land by force. Nowadays, time have changed and a new sense of national spirit is emerging. [Root.Monarch.GetTitle]s are no longer just the mightiest of their men, but they are custodians and representatives of countries and their people. Times are changing in [Root.GetName], and our institutions are becoming more centralised under the grasp of the monarch, much to the distaste of the traditional landholders, the estates. The future of the nation hangs in the balance - what will be the position of the [Root.Monarch.GetTitle] for the generations to come?"
+pf_nordic.2.a: "We do not need warriors, we need [Root.Monarch.GetTitle]s!"
+pf_nordic.2.b: "The old ways have served us well enough."
+pf_nordic_centralising_power: "Centralising Power in the Hands of the Jarl"
+
+pf_nordic.3.t: "Consequences"
+pf_nordic.3.d: "The vile Jarl of Norway has long refused our supremacy, and vainly clung on to his mountain crags, hoping his brother's family will come save him from Albion. We have tried to negotiate with him, but in the end it took nothing short of the full annexation of his kingdom for him to be captured. Now, he is in our prison, and we can do whatever we will with him. In his dishevelled state, one would not assume him a former king, but rather a homeless beggar, and that is certainly how he approaches our guards. Every time he begs for his life, it makes the thought of his oncoming demise all the sweeter. It was decided long ago that we would have our revenge on him, no matter what happened. The time is fast approaching. All we can hear from the meeting chamber are the Jarl's desparate cries and the grating of the executioner sharpening his axe..."
+pf_nordic.3.a: "This is the price you pay for crossing us."
+pf_nordic_reign_of_terror: "The Reign of Terror"
+
+pf_nordic.4.t: "Into the Faithless Forests"
+pf_nordic.4.d: "Our warriors and priests alike tremble at the tales of the misdeeds of the Finns. They are a savage people, living in the wilderness without shelter or solace in even the harshest of conditions, making them appear more like mythical creatures than humans to us. Worst of all, they are known to engage in the most horrific torture and even cannibalism, such lows that even we would not stoop to. We cannot let these people wallow in their disgusting ways anymore. Our conquest of the region has brought a new opportunity to bring these savages into the faith, or to kill them if they refuse."
+pf_nordic.4.a: "The Finns will know exactly how much the gods love them..."
+pf_nordic_converting_finland: "Converting Finland"
+
+pf_nordic.5.t: "[Root.Monarch.GetTitle], it's Cold Outside"
+pf_nordic.5.d: "Recent winters have been getting progressively colder and more deadly. The reasons behind this change are outside of our control, but we can certainly try to adapt to it. Our countrymen and the tribal peoples of the north will be fine, but the frost is making the lives of travellers and foreign merchants here ever harder. All we can do for now is encourage them to wrap up warm and brave the icey death."
+pf_nordic.5.a: "Brrrr!"
+pf_nordic_cold_outside: "Worsening of the Little Ice Age"
+
+pf_nordic.6.t: "White Christmas"
+pf_nordic.6.d: "Our brethren in the far reaches of Arabia could have only dreamed of the sight we saw today - this Christmas, the festival of the birth of our Lord, the heavens opened and a great torrent of pearly snow fell upon the ground, coating our churches in a majestic powder. What a wonderful moment!"
+pf_nordic.6.a: "God's creation is truly beautiful."
+pf_nordic_white_christmas: "Dreaming of a White Christmas"
+
+pf_nordic.7.t: "Magnus 'Snowsson'"
+pf_nordic.7.d: "Born the third son of a wealthy magnate, Magnus always knew there was more waiting for him than a dull domestic life. From an early age, he trained to be a warrior, hoping to become one of the illustrious Huskarls. After his dreams were dashed when he was denied enlistment by the local recruiter due to his feud with the boy's father, Magnus set about taking his own path into the military. Now a man in his own right, he is the leader of a famous mercenary group, the Sons of the Snow, who travel the country enforcing justice at the pay of whatever lords will take them. Tales of his deeds are spreading like wildfire through the commonfolk, focusing around his trademark tactics, seeming control of the weather. Many times, in crucial moments in battle, snowstorms have descended upon the enemy camp and blinded them, giving Magnus and his men a sudden massive edge over their components. Many doubt that he can actually control the weather, but his myth is powerful enough anyway without even thinking about magical powers."
+pf_nordic.7.a: "Recruit him to our general staff."
+pf_nordic.7.b: "He can serve us as an advisor."
+pf_nordic_weather_on_our_side: "Mother Nature Favours Us"
+
+pf_nordic.8.t: "Reforming the Huskarls"
+pf_nordic.8.d: "The Huskarls have been a core part of our armies for many years now, and have more than proved their worth. As the bodyguards of the [Root.Monarch.GetTitle] they have shown time and time again that they are skilled, dilligent, and most importantly, effective. However, there is always room for improvement. Let us institute new reforms to the training and selection process of the Huskarls, instilling within them a deep sense of modern military tactics and professionalism. The world will tremble before our mighty Huskarls."
+pf_nordic.8.a: "Huzzah!"
+pf_nordic_reformed_huskarls: "Reformed the Huskarls"
+
+pf_nordic.9.t: "Battle Cry of the Swedes"
+pf_nordic.9.d: "Our soldiers need rallying before a battle, otherwise their morale and discipline will surely fall apart in the face of the stoney-faced armies of Europe. It is our will and spirit that binds us together, from the moment we are born until death parts us. Let us fall behind one unifying chant to put aside our worries and face the steel side by side."
+pf_nordic.9.a: "Óðinn á yðr Alla!"
+pf_nordic_odin_owns_you_all: "Óðinn á yðr Alla!"
 
 ###############
 # Decisions

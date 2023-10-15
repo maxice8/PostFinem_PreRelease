@@ -10,7 +10,7 @@ country_event = {		# Uppsala öd
 
 	option = {
 		name = pf_nordic.1.a
-		add_adm_power = 100
+		add_stability_or_adm_power = yes
 		change_estate_land_share = {
 			estate = all
 			share = -5
@@ -23,6 +23,222 @@ country_event = {		# Uppsala öd
 		change_estate_land_share = {
 			estate = all
 			share = 5
+		}
+	}
+}
+country_event = {		# The Future of Kingship
+	id = pf_nordic.2
+	title = pf_nordic.2.t
+	desc = pf_nordic.2.d
+	picture = RUNESTONE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = pf_nordic.2.a
+		ai_chance = {
+			factor = 100
+		}
+		change_government_to_monarchy = yes
+		add_government_reform = nordic_monarchy_reform
+		add_country_modifier = {
+			name = "pf_nordic_centralising_power"
+			duration = 9125
+		}
+	}
+	option = {
+		name = pf_nordic.2.b
+		ai_chance = {
+			factor = 0
+		}
+		add_estate_loyalty = {
+			estate = all
+			loyalty = 10
+		}
+	}
+}
+country_event = {		# Execute the king of norway
+	id = pf_nordic.3
+	title = pf_nordic.3.t
+	desc = pf_nordic.3.d
+	picture = KING_ASSASSINATION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {	# Execute
+		name = pf_nordic.3.a
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 25
+		}
+		add_ruler_modifier = {
+			name = "pf_nordic_reign_of_terror"
+			duration = -1
+		}
+	}
+}
+country_event = {		# Conversion of the Finns
+	id = pf_nordic.4
+	title = pf_nordic.4.t
+	desc = pf_nordic.4.d
+	picture = PRESTOR_JOHN_eventPicture
+
+	is_triggered_only = yes
+
+	option = {	# Abo
+		name = pf_nordic.4.a
+		27 = {
+			add_or_upgrade_tax_building = yes
+		}
+		bothnia_area = {
+			add_province_modifier = {
+				name = "pf_nordic_converting_finland"
+				duration = 7300
+			}
+		}
+		finland_area = {
+			add_province_modifier = {
+				name = "pf_nordic_converting_finland"
+				duration = 7300
+			}
+		}
+	}
+}
+country_event = {		# Baby, its cold outside
+	id = pf_nordic.5
+	title = pf_nordic.5.t
+	desc = pf_nordic.5.d
+	picture = SOLDIERS_FREEZING_eventPicture
+
+	trigger = {
+		culture_group = scandinavian
+		is_year = 1600
+		NOT = { has_country_modifier = pf_nordic_cold_outside }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	major = yes
+
+	major_trigger = {
+		NOT = {
+			any_country = {
+				has_country_modifier = pf_nordic_cold_outside
+			}
+		}
+	}
+
+	option = {	# Brrrr!
+		name = pf_nordic.5.a
+		add_country_modifier = {
+			name = "pf_nordic_cold_outside"
+			duration = -1
+		}
+	}
+}
+country_event = {		# White Christmas
+	id = pf_nordic.6
+	title = pf_nordic.6.t
+	desc = pf_nordic.6.d
+	picture = SOUTH_AMERICAN_FESTIVAL_eventPicture
+
+	trigger = {
+		culture_group = scandinavian
+		religion = catholic		# Christian
+		is_month = 11
+		NOT = { has_country_flag = had_white_christmas }
+	}
+
+	mean_time_to_happen = {
+		months = 200
+	}
+
+	option = {	# God's creation is beautiful
+		name = pf_nordic.6.a
+		set_country_flag = had_white_christmas
+		add_prestige_or_monarch_power = {
+			amount = 25
+		}
+		add_country_modifier = {
+			name = "pf_nordic_white_christmas"
+			duration = 365
+		}
+	}
+}
+country_event = {		# Magnus 'Snowsson'
+	id = pf_nordic.7
+	title = pf_nordic.7.t
+	desc = pf_nordic.7.d
+	picture = SCOTTISH_MERCENARIES_eventPicture
+
+	is_triggered_only = yes
+
+	option = {	# Hire him
+		name = pf_nordic.7.a
+		add_country_modifier = {
+			name = "pf_nordic_weather_on_our_side"
+			duration = 7300
+		}
+		define_general = {
+			shock = 5
+			fire = 3
+			manuever = 6
+			siege = 0
+			name = "Magnus Snowsson"
+			trait = viking_personality
+		}
+	}
+	option = {	# Hire him
+		name = pf_nordic.7.b
+		add_country_modifier = {
+			name = "pf_nordic_weather_on_our_side"
+			duration = 7300
+		}
+		define_advisor = {
+			type = army_reformer
+			skill = 3
+			cost_multiplier = 0.25
+			name = "Magnus Snowsson"
+		}
+	}
+}
+country_event = {		# Reforming the Huskarls
+	id = pf_nordic.8
+	title = pf_nordic.8.t
+	desc = pf_nordic.8.d
+	picture = GUARDED_TREASURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {	# Reform
+		name = pf_nordic.8.a
+		add_army_professionalism = 0.05
+		add_mil_power = 100
+		add_country_modifier = {
+			name = "pf_nordic_reformed_huskarls"
+			duration = -1
+		}
+	}
+}
+
+country_event = {		# Battle Cry of the Swedes
+	id = pf_nordic.9
+	title = pf_nordic.9.t
+	desc = pf_nordic.9.d
+	picture = BATTLE_VISTULA_LAGOON_eventPicture
+
+	is_triggered_only = yes
+
+	option = {	# Odin owns you all!
+		name = pf_nordic.9.a
+		add_prestige_or_monarch_power = {
+			amount = 50
+		}
+		add_country_modifier = {
+			name = "pf_nordic_odin_owns_you_all"
+			duration = -1
 		}
 	}
 }

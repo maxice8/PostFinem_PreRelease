@@ -432,3 +432,42 @@ icelandic_althingi_reform = {
 		factor = 5
 	}
 }
+
+nordic_monarchy_reform = {
+	icon = "scandinavian_monarchy"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+
+	potential = {
+		culture_group = scandinavian
+	}
+	trigger = {
+		culture_group = scandinavian
+	}
+	modifiers = {
+		global_manpower_modifier = 0.10
+		embracement_cost = -0.20
+		all_estate_influence_modifier = -0.05
+	}
+	ai = {
+		factor = 5
+	}
+}
+
+
+nordic_huskarl_recruitment_reform = {
+	icon = "huskarl"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = scandinavian
+	}
+	trigger = {
+		culture_group = scandinavian
+	}
+	modifiers = {
+		amount_of_carolean = 0.50
+		monarch_lifespan = 0.10
+		nobles_loyalty_modifier = 0.05
+	}
+}
