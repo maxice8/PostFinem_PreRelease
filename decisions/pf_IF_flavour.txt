@@ -156,33 +156,4 @@ country_decisions = {
 			factor = 1
 		}
 	}
-	pf_if_hold_council_of_the_federation = {
-		color = { 139 0 199 }
-		potential = {
-			is_emperor = yes
-		}
-		allow = {
-			is_at_war = no
-			dip_power_cost = 100
-			custom_trigger_tooltip = {
-				tooltip = pf_if_25_year_cooldown_tt
-				OR = {
-					NOT = { has_country_flag = hosted_cotf_flag }
-					had_country_flag = {
-						flag = hosted_cotf_flag
-						days = 9125
-					}
-				}
-			}
-		}
-		effect = {
-			dip_power_cost = 100
-			clr_country_flag = hosted_cotf_flag
-			set_country_flag = hosted_cotf_flag
-			country_event = { id = pf_cotf.1 }		# Council of the Federation
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
 }
