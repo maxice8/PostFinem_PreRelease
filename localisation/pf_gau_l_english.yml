@@ -3,11 +3,20 @@
 # Missions
 ###########
 
+#Names
+pf_gaul_court_3_title: "Centralizing the Touta"
+pf_gaul_court_3_desc: "Gaul has been divided between toute lines for centuries now, while weak Rigas fail to unify and control their roudy populace. A strong line must take charge and unfiy the country against all internal threats!"
+pf_gaul_court_7_title: "Patriarchs of Gaul"
 
 #Mission Modifiers
 end_the_raids_GAU: "End the Raids"
 dispell_the_germanics: "Expel the Germanics"
 rebuilding_helvetica: "Rebuilding of Helvetia"
+centralization_gaul: "Centralization of Gaul"
+locked_mission_GAUL_1_title: "Locked Mission"
+locked_mission_GAUL_2_title: "Locked Mission"
+
+locked_mission_GAUL_1: "Locked Mission"
 
 #Mission Tooltips
 maybe_an_event_tt: "To do - maybe an event?\n"
@@ -17,6 +26,12 @@ if_not_has_accepted_culture_NERV: "£no£ If we do not have §YNervian§! as an 
 nervian_submission_tt: "All owned provinces with §YNervian§! Culture will gain the following:"
 return_of_the_frisii: "\n§YFrisian§! will shift from the §YGermanic§! to the §YGallic§! Culture Group. All owned provinces with §YFrisian§! culture will become §YFrisii§!. We will gain §YFrisii§! as an accepted culture."
 return_of_the_helvetii: "\n§YLombard§! will shift from the §YGermanic§! to the §YGallic§! Culture Group. All owned provinces with §YLombard§! culture will become §YHelvetii§!. We will gain §YHelvetii§! as an accepted culture.\n"
+obj_convert_20_provinces_tooltip: "Convert 20 Provinces to our Faith."
+religious_gaul_TT: "If we complete this mission by converting 20 provinces"
+enable_icon_lugus_TT:  "We will gain access to the Icon the §YRite of Lugus§!, which grants:\n§G+1§! Missionary\n§G+1§! Yearly Legitimacy"
+tolerance_gaul_TT: "If we complete this mission by having a Tolerance of Heathens of 3"
+sacred_spaces_gaul_TT: "§YTemples§! and §YCathedrals§! in Heathen or Heretic Provinces will now grant §Y-100%§! Religious Unity Contribution."
+tolerance_3_higher_TT: "§YGaul§! has a Tolerance of Heathens of §Y3§!."
 
 allemania_mercenary_TT: "We shall enslave the warriors of §YAlemannia§! and gain access to the §YAlemannian Thralls§! Mercenary Company\n\n"
 merc_alemannian_war_slaves: "Alemannian Thralls"
@@ -30,6 +45,15 @@ own_germany_yourself_TT: "If we complete this mission while §Ydirectly owning 2
 salt_mines_TT: "\nIf we complete this mission by improving Salt provinces, we will gain the following:"
 iron_mines_TT: "\nIf we complete this mission by improving Iron provinces, we will gain the following:"
 natural_scientist_TT: "\n§YNatural Scientists§! will grant us a scaled modifier of §G-2%§! Technology Cost."
+furance_building_TT: "\nIf we complete this mission while having §YAdministrative Technology§! level §Y21§!, these provinces will also gain §YFurnaces§!."
+carantus_counting_TT: "Secure a §YGallic Election§! with the §YCarantus§! dynasty at least 3 times. Current: §T[Root.counting_carantus.GetValue]§!."
+carantus_counting: "Carantus Succession"
+estate_nobles_mission_5_TT: "Have more Crownland than the Rixolar Estate"
+
+pf_gaul_politics_1_TT: "If we complete this mission §Ywith the Dynasty§! §TCarantus§!, it will enable the §YAbsolute Gallic Monarchy§! path.\nThis will also prevent §Yrebels from spawning§! when §YSeizing Land§!\n\n"
+pf_gaul_politics_2_TT: "If we complete this mission §Ywithout the Dynasty§! §TCarantus§!, it will enable the §YGallic Parliament§! path.\nThis will also Negate the Estate Loyalty penalty from §YSeizing Land§! by §Y10%§!\n"
+
+gallic_hegemony_tt_1: "If we complete this mission while having §Y90§! Crownland, we will gain the following:"
 
 own_germany_SUB_TT: "\nIf we complete this mission while having §YSubjects that own 28§! provinces in the §YNorth Germania§! Region or the §YSudwaldia§! Region, all Germanic Subject Nations will gain the following:"
 
@@ -44,7 +68,13 @@ cb_germanic_campaigns_desc: "For far too long have the tribes remained a thorn i
 
 SUBJUGATION_GER_WAR_NAME: "Subjugation of the $SECOND_NAME$"
 
-DCL: "Dual Celtica"
+NOT_HAS_DUBNORIX: "We no longer have our starting ruler of §YDubnorix Carantus§!"
+
+pf_gaul_events.1.t: "The Death of the Riga"
+pf_gaul_events.1.d: "When Dubnorix came to power in the year 1395, his domain was not the expansive one seen in the modern era. His was a small touta on the northern fringe of Europe, the land of the Parisii. In the Era of the Five Riga, the great houses of Carnutia, Senonia, Pictonia, Lingonia, and Parisia dueled one another for nearly a hundred years for dominance. War and famine plagued the land, and as many rulers tried and failed to unify the Rigdom, some assumed that Gaul would pass into the annals of history, just as many who had come before it.\n\nDubnorix, however, was a warrior unlike any other. He defeated armies nearly twice his size, sieged castles in just a few days, and led his cavalry into the thick of battle. His diplomacy left much to be desired, but his might and power overwhelmed and crushed all who stood before him. It was through his might that in 1413, he had united Gaul once more, subjugating the Pretender-Riga and once more declaring the Confederation united.\n\nSo, at the scene of his death, there was much to discuss. Dubnorix kept the state united, but not by law or faith, but fear. And now that he was gone, many nobles were seizing the chance to rise up once more; his heir, while a talented young man indeed, was not his father. With pretenders on the horizon, he would have to fill the shoes his father left him - for he had no other choice."
+pf_gaul_events.1.a: "We must hope for the best."
+
+DCL: "Dual Celticas"
 DCL_ADJ: "Celtic"
 
 LUG: "Lugundia"
@@ -53,5 +83,18 @@ LUG_ADJ: "Lugundian"
 helvetii: "Helvetii"
 helvetii_adj: "Helvetiian"
 
+#Estates
+
+estate_nobles_pf_gallic_wars_remnant: "Touta Dominance"
+estate_clergy_pf_gallic_wars_remnant: "Druidic Dominance"
+
+#Government Reforms
+
+pf_absolute_gallic_monarchy: "Absolute Gallic Monarchy"
+pf_absolute_gallic_monarchy_desc: "The confederation, while still nominally present, has morphed into a centralized and powerful internal state. Under the rule of a single Galatoria, the nation is led to glory and success through their might and power!"
+
+mechanic_buffed_advisors_GAU_yes: "Advisors Grant §G+0.02§! Scaled §YGallic Centralization§!"
+
+PF_political_one : "Absolutist Path"
 
 

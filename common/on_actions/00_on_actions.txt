@@ -73,6 +73,20 @@ on_startup = {
 		}
 		country_event = { id = pf_per_events.0 }
 	}
+	if = {
+		limit = {
+			tag = GAU
+			has_ruler_flag = IS_DUBNORIX_FLAG
+			NOT = {
+				has_country_flag = begin_counting_carantus
+			}
+		}
+		set_variable = {
+			which = counting_carantus
+			value = 0
+		}
+		set_country_flag = begin_counting_carantus
+	}
 }	
 
 # country
@@ -433,6 +447,16 @@ on_separate_war_lost = {
 on_battle_won_country = {
 	on_battle_ended_effect = yes
 	on_battle_won_country_effect = yes
+	if = {
+		limit = {	
+			owner = { has_government_mechanic = gaul_confederation_mechanic } 
+		}
+		add_government_power = {
+			mechanic_type = gaul_confederation_mechanic
+			power_type = gaul_confederation
+			value = 0.1
+		}
+	}
 }
 
 # country
@@ -818,6 +842,41 @@ on_new_monarch = {
 		flavor_daimyo.4			#Shiba Yoshikado
 		flavor_sca.2			# Education Focus of the new Ruler
 	}
+	if = {
+		limit = {
+			tag = GAU
+			has_country_flag = begin_counting_carantus
+			NOT ={
+				OR = {
+					has_country_flag = end_counting_carantus
+					has_country_flag = different_gaul_dynasty
+				}
+			}
+			dynasty = "Carantus"
+		}
+		change_variable = {
+			which = counting_carantus
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			tag = GAU
+			has_country_flag = begin_counting_carantus
+			NOT ={
+				OR = {
+					has_country_flag = end_counting_carantus
+					has_country_flag = different_gaul_dynasty
+				}
+				dynasty = "Carantus"
+			}
+		}
+		set_country_flag = different_gaul_dynasty
+		multiply_variable = {
+			which = counting_carantus
+			value = 0
+		}
+	}
 	random_events = {
 		1000 = 0
 		100 = inti_events.1		# Birth of a Panaca
@@ -825,6 +884,7 @@ on_new_monarch = {
 		50 = dynastic_events.5
 		25 = harem_events.7		#Failed Policy of Fratricide
 	}
+
 }
 
 on_new_consort = {
@@ -886,6 +946,15 @@ on_monarch_death = {
 			religion = romuva
 		}
 		country_event = { id = pf_romuva_events.1 }
+	}
+	if = {
+		limit = {
+			tag = GAU
+			NOT = {
+				has_country_flag = DUB_DEAD
+			}
+		}
+		country_event = { id = pf_gaul_events.1 }
 	}
 	burgundian_inheritance_start_effect = yes
 	ladislaus_postumus_king_died_effect = yes

@@ -46,3 +46,24 @@ rebuilding_helvetica = {
 	local_development_cost = -0.05
 	trade_goods_size_modifier = 0.10
 }
+gaul_confederative_leader = {
+	monthly_gaul_confederation = 0.10
+}
+reclaimer_of_gaul = {
+	land_morale = 0.05
+	global_autonomy = 0.05	
+	national_focus_years = -5
+}
+restriction_of_nobles_GAU = {
+	nobles_influence_modifier = -0.20
+	nobles_loyalty_modifier = -0.10
+	yearly_corruption = -0.02
+	monthly_support_heir_gain = 0.05	
+}
+centralization_gaul = {
+	state_governing_cost = -0.10
+	expand_administration_cost = -0.15
+}
+absolutism_spreads_GAU = {
+	max_absolutism = 25
+}

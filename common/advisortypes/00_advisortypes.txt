@@ -85,7 +85,12 @@ philosopher = {
 			build_time = -0.02
 		 }
 	}
-
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
 	chance = {
 		factor = 1
 	}
@@ -171,6 +176,12 @@ natural_scientist = {
 		modifier = {
 			build_time = -0.02
 		 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
 	}
 
 	chance = {
@@ -263,6 +274,12 @@ artist = {
 			monthly_splendor = 1
 		 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
 
 	chance = {
 		factor = 1
@@ -354,6 +371,12 @@ treasurer = {
 			build_time = -0.02
 		 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
 	
 	chance = {
 		factor = 1
@@ -436,6 +459,12 @@ theologian = {
 		modifier = {
 			build_time = -0.02
 		 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
 	}
 	
 	chance = {
@@ -528,6 +557,12 @@ master_of_mint = {
 		modifier = {
 			build_time = -0.02
 		 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
 	}
 	
 	chance = {
@@ -628,6 +663,12 @@ inquisitor = {
 			build_time = -0.02
 		 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
 	
 	chance = {
 		factor = 1
@@ -700,6 +741,12 @@ statesman = {
 			trade_efficiency = 0.02
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
 
 	chance = {
 		factor = 1
@@ -754,6 +801,12 @@ naval_reformer = {
 		modifier = {
 			trade_efficiency = 0.02
 		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
 	}
 	
 	chance = {
@@ -828,6 +881,12 @@ trader = {
 			trade_efficiency = 0.02
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
 	
 	chance = {
 		factor = 1
@@ -886,6 +945,12 @@ spymaster = {
 			meritocracy = 0.25 
 			trade_efficiency = 0.02
 		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
 	}
 	
 	chance = {
@@ -950,6 +1015,12 @@ colonial_governor = {
 			global_colonial_growth = 5
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
 	
 	chance = {
 		factor = 1
@@ -1012,6 +1083,12 @@ diplomat = {
 			meritocracy = 0.25 
 			trade_efficiency = 0.02
 		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
 	}
 	
 	chance = {
@@ -1076,6 +1153,12 @@ navigator = {
 			global_colonial_growth = 5
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
 
 	chance = {
 		factor = 1
@@ -1139,6 +1222,12 @@ army_reformer = {
 		}
 		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
 
 	chance = {
 		factor = 1
@@ -1182,6 +1271,12 @@ army_organiser = {
 			}
 		}
 		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
 	}
 
 	chance = {
@@ -1235,6 +1330,12 @@ commandant = {
 		}
 		modifier = { fire_damage = 0.02 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
 
 	chance = {
 		factor = 1
@@ -1278,6 +1379,12 @@ quartermaster = {
 			}
 		}
 		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
 	}
 
 	chance = {
@@ -1327,6 +1434,12 @@ recruitmaster = {
 		}
 		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
 
 	chance = {
 		factor = 1
@@ -1375,6 +1488,12 @@ fortification_expert = {
 		}
 		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
 
 	chance = {
 		factor = 1
@@ -1419,6 +1538,12 @@ grand_captain = {
 			}
 		}
 		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
 	}
 
 	chance = {

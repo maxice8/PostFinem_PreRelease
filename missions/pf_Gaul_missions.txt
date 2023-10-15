@@ -272,30 +272,42 @@ PF_Gaul_1 = {
 			natural_scientist = 1
 		}
 		effect = {
-			hidden_effect = {
-				1763 = {
-					remove_building = manufactory 
-				}
-				82 = {
-					remove_building = manufactory 
-				}
-				62 = {
-					remove_building = manufactory 
-				}
-			}
 			1763 = {
 				change_trade_goods = coal
-				add_building = furnace 
 			}
 			82 = {
 				change_trade_goods = coal
-				add_building = furnace 
 			}
 			62 = {
 				change_trade_goods = coal
-				add_building = furnace 
 			}
 			custom_tooltip = natural_scientist_TT
+			custom_tooltip = furance_building_TT
+			hidden_effect = {
+				if = {
+					limit = {
+						adm_tech = 21
+					}
+					1763 = {
+						remove_building = manufactory 
+					}
+					82 = {
+						remove_building = manufactory 
+					}
+					62 = {
+						remove_building = manufactory 
+					}
+					1763 = {
+						add_building = furnace
+					}
+					82 = {
+						add_building = furnace
+					}
+					62 = {
+						add_building = furnace
+					}
+				}
+			}
 		}
 	}
 }
@@ -568,6 +580,32 @@ PF_Gaul_3 = {
 	potential = {
 		tag = GAU
 	}
+	pf_gaul_court_5 = {
+		icon = xxx
+		position = 2
+		required_missions = {
+			pf_gaul_court_1
+		}
+		trigger = {
+			has_government_power = {
+				mechanic_type = gaul_confederation_mechanic
+				power_type = gaul_confederation
+				value = 25
+			}
+			custom_trigger_tooltip = {
+				tooltip = estate_nobles_mission_5_TT
+				crown_land_share = estate_nobles
+			}
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = gaul_confederation_mechanic
+				power_type = gaul_confederation
+				value = -25
+			}
+			remove_estate_privilege = estate_nobles_pf_gallic_wars_remnant
+		}
+	}
 	pf_gaul_mainland_6 = {
 		icon = xxx
 		position = 3
@@ -756,6 +794,204 @@ PF_Gaul_4 = {
 	potential = {
 		tag = GAU
 	}
+	pf_gaul_court_1 = {
+		icon = xxx
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			has_government_power = {
+				mechanic_type = gaul_confederation_mechanic
+				power_type = gaul_confederation
+				value = 50
+			}
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 60
+			}
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 60
+			}
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 60
+			}
+		}
+		effect = {
+			add_heir_support = 15
+			add_ruler_modifier = {
+				name = gaul_confederative_leader
+				duration = -1
+			}
+		}
+	}
+	pf_gaul_court_2 = {
+		icon = xxx
+		position = 2
+		required_missions = {
+			pf_gaul_court_1
+		}
+		provinces_to_highlight = {
+			country_or_non_sovereign_subject_holds = ROOT
+			controlled_by = REB
+		}
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = NOT_HAS_DUBNORIX
+				NOT = {
+					has_ruler_flag = IS_DUBNORIX_FLAG
+				}
+			}
+			NOT = {
+				has_spawned_rebels = noble_rebels
+			}
+			NOT = {
+				has_spawned_rebels = pretender_rebels
+			}
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+		}
+		effect = { 
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = -5
+			}
+			add_country_modifier = {
+				name = restriction_of_nobles_GAU
+				duration = 5475
+			}
+		}
+	}
+	pf_gaul_court_3 = {
+		icon = mission_empire
+		position = 3
+		required_missions = {
+			pf_gaul_court_2
+		}
+		trigger = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = carantus_counting_TT
+					check_variable = {
+						which = counting_carantus
+						value = 3
+					}
+				}
+				has_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 60
+				}
+				AND = {
+					NOT = {
+						dynasty = "Carantus"
+					}
+					has_government_power = {
+						mechanic_type = gaul_confederation_mechanic
+						power_type = gaul_confederation
+						value = 75
+					}
+				}
+			}
+			crown_land_share = 50
+		}
+		effect = {
+			
+			custom_tooltip = pf_gaul_politics_1_TT
+			custom_tooltip = pf_gaul_politics_2_TT
+			hidden_effect = {
+				set_country_flag = end_counting_carantus
+				if = {
+					limit = {
+						custom_trigger_tooltip = {
+							tooltip = carantus_counting_TT
+							check_variable = {
+								which = counting_carantus
+								value = 3
+							}
+						}
+					}
+					set_country_flag = pf_gaul_politics_1
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							dynasty = "Carantus"
+						}
+					}
+					set_country_flag = pf_gaul_politics_2
+				}
+			}
+			swap_non_generic_missions = yes	
+		}
+	}
+}
+PF_Gaul_4_branching = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GAU
+		NOT = {
+			OR = {
+				has_country_flag = pf_gaul_politics_1
+				has_country_flag = pf_gaul_politics_2
+			}
+		}
+	}
+
+	locked_mission_GAUL_1 = {
+		icon = mission_locked_mission
+		position = 4
+		required_missions = { pf_gaul_court_3  } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+PF_Gaul_4_branching_a = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GAU
+		has_country_flag = pf_gaul_politics_1
+	}
+	pf_gaul_court_4a = {
+		icon = mission_empire
+		position = 4
+		required_missions = {
+			pf_gaul_court_3
+		}
+		trigger = {
+			crown_land_share = 75
+			government_reform_progress = 100
+			num_of_owned_provinces_with = {
+				has_courthouse_building_trigger = yes 
+				value = 10
+			}
+		}
+		effect = {
+			set_country_flag = PF_political_one
+			add_government_reform = pf_absolute_gallic_monarchy
+			simple_dynamic_effect = {
+				first_custom_tooltip = gallic_hegemony_tt_1 #get 90 crownland
+				first_limit = "
+					crown_land_share = 90
+				"
+				first_effect = "
+					add_country_modifier = {
+						name = absolutism_spreads_GAU
+						duration = -1
+					}
+				"
+			}
+		}
+	}
 }
 PF_Gaul_5 = {
 	slot = 5
@@ -764,5 +1000,121 @@ PF_Gaul_5 = {
 	has_country_shield = yes
 	potential = {
 		tag = GAU
+	}
+	pf_gaul_court_6 = {
+		icon = xxx
+		position = 2
+		required_missions = {
+			pf_gaul_court_1
+		}
+		trigger = {
+			has_government_power = {
+				mechanic_type = gaul_confederation_mechanic
+				power_type = gaul_confederation
+				value = 25
+			}
+			capital_scope = {
+				has_state_patriach = yes
+			}
+			patriarch_authority = 0.25
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = gaul_confederation_mechanic
+				power_type = gaul_confederation
+				value = -25
+			}
+			remove_estate_privilege = estate_clergy_pf_gallic_wars_remnant
+		}
+	}
+	pf_gaul_court_7 = {
+		icon = mission_norse_faith
+		position = 3
+		required_missions = {
+			pf_gaul_court_6
+		}
+		trigger = {
+			OR = {
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = obj_convert_20_provinces_tooltip
+						check_variable = { which = num_converted_religion value = 20 }
+					}
+					inquisitor = 3
+				}
+				AND = {	
+					custom_trigger_tooltip = {
+						tooltip = tolerance_3_higher_TT
+						has_global_modifier_value = {
+							which = tolerance_heathen
+							value = 3
+						}
+					}
+					theologian = 3
+				}
+			}
+		}
+		effect = {
+			simple_dynamic_effect = {
+				first_custom_tooltip = religious_gaul_TT #Go Religious
+				first_limit = "
+					custom_trigger_tooltip = {
+						tooltip = obj_convert_20_provinces_tooltip
+						check_variable = { which = num_converted_religion value = 20 }
+					}
+					full_idea_group = religious_ideas
+				"
+				first_effect = "
+					custom_tooltip = enable_icon_lugus_TT
+				"
+				second_custom_tooltip = tolerance_gaul_TT #Go Religious
+				second_limit = "
+					has_global_modifier_value = {
+						which = tolerance_heathen
+						value = 3
+					}
+					full_idea_group = humanist_ideas
+				"
+				second_effect = "
+					custom_tooltip = sacred_spaces_gaul_TT
+				"
+			}
+		}
+	}
+}
+PF_Gaul_5_branching = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GAU
+		NOT = {
+			OR = {
+				has_country_flag = pf_gaul_politics_1
+				has_country_flag = pf_gaul_politics_2
+			}
+		}
+	}
+
+	locked_mission_GAUL_2 = {
+		icon = mission_locked_mission
+		position = 5
+		required_missions = { pf_gaul_court_7 locked_mission_GAUL_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+PF_Gaul_5a_branching = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GAU
+		has_country_flag = pf_gaul_politics_1
 	}
 }

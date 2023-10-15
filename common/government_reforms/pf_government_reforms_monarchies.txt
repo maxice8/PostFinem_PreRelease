@@ -34,6 +34,38 @@ pf_gallic_hierarchy = {
 	}
 }
 
+pf_absolute_gallic_monarchy = {
+	icon = "gallic_king"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = { 
+			culture_group = gallic 
+			tag = GAU
+		}
+	}
+	trigger = {
+		has_country_flag = PF_political_one
+	}
+	government_abilities = {
+		gaul_confederation_mechanic
+	}
+	modifiers = {
+		yearly_absolutism = 0.5
+		yearly_corruption = -0.1	
+		diplomatic_reputation = 1	
+	}
+	fixed_rank = 3
+	maintain_dynasty = yes
+	custom_attributes = {
+	 	buffed_advisors_GAU = yes #+0.02 Gallic Confederation from Advisors
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+	
+}
+
 #Celtic Lordship
 
 pf_celtic_lordship = {
