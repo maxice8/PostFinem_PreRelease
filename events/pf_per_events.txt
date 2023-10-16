@@ -428,7 +428,7 @@ country_event = {
 			all_subject_country = { NOT = { liberty_desire = 50 } }
 		}
 		add_stability = 2
-		add_prestige = 50
+		add_prestige_or_monarch_power = { amount = 50 }
 		add_country_modifier = {
 			name = pf_per_won_satrapy_revolt
 			duration = 3650
@@ -605,8 +605,8 @@ country_event = {
 	option = {
 		name = "pf_per_events_14_option"
 		ai_chance = { factor = 100 }
-		add_stability = 1
-		add_prestige = 50
+		add_stability_or_adm_power = yes
+		add_prestige_or_monarch_power = { amount = 50 }
 		add_dip_power = 150
 		set_country_flag = pf_per_centralization_completed
 		add_government_reform = pf_centralized_zoroastrian_theocracy
@@ -4568,7 +4568,7 @@ country_event = {
 	option = {
 		name = "pf_per_events_104_option"
 		ai_chance = { factor = 100 }
-		add_prestige = 100
+		add_prestige_or_monarch_power = { amount = 100 }
 		add_devotion = 20
 	}
 }
