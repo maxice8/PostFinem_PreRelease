@@ -30,6 +30,10 @@ has_mil_advisor = {
 			advisor = recruitmaster
 			advisor = fortification_expert
 			advisor = quartermaster
+			advisor = cannoneer
+			advisor = dragoon
+			advisor = entrenchment_expert
+			advisor = drill_sergeant
 		}
 	}
 }
@@ -45,6 +49,10 @@ has_mil_advisor_2 = {
 			recruitmaster = 2
 			fortification_expert = 2
 			quartermaster = 2
+			cannoneer = 2
+			dragoon = 2
+			entrenchment_expert = 2
+			drill_sergeant = 2
 		}
 	}
 }
@@ -60,6 +68,10 @@ has_mil_advisor_3 = {
 			recruitmaster = 3
 			fortification_expert = 3
 			quartermaster = 3
+			cannoneer = 3
+			dragoon = 3
+			entrenchment_expert = 3
+			drill_sergeant = 3
 		}
 	}
 }
@@ -75,6 +87,11 @@ has_adm_advisor = {
 			advisor = master_of_mint
 			advisor = inquisitor
 			advisor = natural_scientist
+			advisor = city_planner
+			advisor = architect
+			advisor = bureaucrat
+			advisor = governor
+			
 		}
 	}
 }
@@ -90,6 +107,10 @@ has_adm_advisor_2 = {
 			master_of_mint = 2
 			inquisitor = 2
 			natural_scientist = 2
+			city_planner = 2
+			architect = 2
+			bureaucrat = 2
+			governor = 2
 		}
 	}
 }
@@ -105,6 +126,10 @@ has_adm_advisor_3 = {
 			master_of_mint = 3
 			inquisitor = 3
 			natural_scientist = 3
+			city_planner = 3
+			architect = 3
+			bureaucrat = 3
+			governor = 3
 		}
 	}
 }
@@ -121,6 +146,11 @@ has_dip_advisor = {
 			advisor = colonial_governor
 			advisor = navigator
 			advisor = spymaster
+			advisor = logistician
+			advisor = privateer
+			advisor = historian
+			advisor = physician
+			advisor = colonial_minister
 		}
 	}
 }
@@ -136,6 +166,11 @@ has_dip_advisor_2 = {
 			colonial_governor = 2
 			navigator = 2
 			spymaster = 2
+			logistician = 2
+			privateer = 2
+			historian = 2
+			physician = 2
+			colonial_minister = 2
 		}
 	}
 }
@@ -151,6 +186,11 @@ has_dip_advisor_3 = {
 			colonial_governor = 3
 			navigator = 3
 			spymaster = 3
+			logistician = 3
+			privateer = 3
+			historian = 3
+			physician = 3
+			colonial_minister = 3
 		}
 	}
 }

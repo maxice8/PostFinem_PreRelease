@@ -381,6 +381,67 @@ greek_rulers_monarchy = {
 		}
 	}
 }
+
+rabim_qahal_adrim_in_power = {
+	rank = {
+		1 = MEDINAT  
+		2 = HABURAT  
+		3 = RISHONAT 
+	}
+
+	ruler_male = {
+		1 = NASI            # Nasi
+		2 = ROSH            # Rosh
+		3 = GADOL           # Gadol
+	}
+
+	ruler_female = {
+		1 = NASIA           # Nasia
+		2 = ROSHA           # Rosha
+		3 = GADOLA          # Gadola
+	}
+
+	trigger = {
+		has_government_mechanic = car_rabim_qahal
+		NOT = {
+			has_government_power = {
+				mechanic_type = car_rabim_qahal
+				power_type = adirim_vs_suffet
+				value = 0
+			}
+		}
+	}
+}
+
+rabim_qahal_suffet_in_power = {
+	rank = {
+		1 = MEDINAT  
+		2 = HABURAT  
+		3 = RISHONAT 
+	}
+
+	ruler_male = {
+		1 = RAB_QART
+		2 = MELEK 
+		3 = RAB_MELEK 
+	}
+
+	ruler_female = {
+		1 = RABAT_QART
+		2 = MALKAT 
+		3 = RABAT_MALKAT 
+	}
+
+	trigger = {
+		has_government_mechanic = car_rabim_qahal
+		has_government_power = {
+			mechanic_type = car_rabim_qahal
+			power_type = adirim_vs_suffet
+			value = 0
+		}
+	}
+}
+
 punic_monarchy = {
 	rank = {
 		1 = QART
