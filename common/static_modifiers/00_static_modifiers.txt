@@ -1885,6 +1885,75 @@ expansion_focus_modifier = {
 }
 
 ########################################
+# POST FINEM PUNIC Religious Schools
+########################################
+
+
+orthodox_school_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	dip_tech_cost_modifier = -0.05
+}
+
+syncretist_school_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	diplomatic_reputation = 1
+}
+
+baalite_school_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	manpower_recovery_speed = 0.1
+}
+
+melqartian_school_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	shock_damage_received = -0.1
+}
+
+eshmunist_school_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	movement_speed = 0.1
+}
+
+mystic_school_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	prestige = 1
+}
+
+sadeh_school_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_trade_goods_size_modifier = 0.1
+}
+
+yam_school_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	naval_morale = 0.1
+}
+
+########################################
 # Religious Schools
 ########################################
 hanafi_scholar_modifier = {

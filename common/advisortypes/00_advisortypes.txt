@@ -200,6 +200,14 @@ artist = {
 	}
 
 	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_trn_splendor_art }
+		}
+		modifier = {
+			monthly_splendor = 1
+		 }
+	}
+	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
 				has_country_flag = fin_fine_finances_flag 
@@ -249,14 +257,6 @@ artist = {
 		}
 		modifier = {
 			build_time = -0.02
-		 }
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_flag = pf_trn_splendor_art }
-		}
-		modifier = {
-			monthly_splendor = 1
 		 }
 	}
 
@@ -938,14 +938,6 @@ colonial_governor = {
 			trade_efficiency = 0.02
 		}
 	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_flag = pf_lag_extra_settlers }
-		}
-		modifier = { 
-			global_colonial_growth = 5
-		}
-	}
 	
 	chance = {
 		factor = 1
@@ -1028,6 +1020,14 @@ navigator = {
 	
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_country_flag = pf_lag_extra_settlers }
+		}
+		modifier = { 
+			global_colonial_growth = 5
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { 
 				has_country_flag = jap_dip_advisor_culture_conversion_cost_flag
 			}
@@ -1062,14 +1062,6 @@ navigator = {
 		modifier = { 
 			meritocracy = 0.25 
 			trade_efficiency = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_flag = pf_lag_extra_settlers }
-		}
-		modifier = { 
-			global_colonial_growth = 5
 		}
 	}
 
@@ -1340,6 +1332,7 @@ recruitmaster = {
 ######################################################
 fortification_expert = {
 	monarch_power = MIL
+	}
 	
 	# Bonus
 	defensiveness = 0.2
