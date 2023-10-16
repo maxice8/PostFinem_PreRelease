@@ -15,17 +15,6 @@
 ######################################################
 philosopher = {
 	monarch_power = ADM
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	prestige = 1
@@ -125,17 +114,6 @@ philosopher = {
 ######################################################
 natural_scientist = {
 	monarch_power = ADM
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	production_efficiency = 0.10
@@ -227,17 +205,6 @@ natural_scientist = {
 ######################################################
 artist = {
 	monarch_power = ADM
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	stability_cost_modifier = -0.10
@@ -256,6 +223,14 @@ artist = {
 		}
 	}
 
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_trn_splendor_art }
+		}
+		modifier = {
+			monthly_splendor = 1
+		 }
+	}
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -345,17 +320,6 @@ artist = {
 ######################################################
 treasurer = {
 	monarch_power = ADM
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	global_tax_modifier = 0.1
@@ -447,17 +411,6 @@ treasurer = {
 ######################################################
 theologian = {
 	monarch_power = ADM
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	global_unrest = -2
@@ -558,17 +511,6 @@ theologian = {
 ######################################################
 master_of_mint = {
 	monarch_power = ADM
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	inflation_reduction = 0.10
@@ -664,17 +606,6 @@ master_of_mint = {
 ######################################################
 inquisitor = {
 	monarch_power = ADM
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	allow_only_owner_religion = yes
 	
 	# Bonus
@@ -795,17 +726,6 @@ inquisitor = {
 ######################################################
 statesman = {
 	monarch_power = DIP
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	diplomatic_reputation = 1
@@ -869,17 +789,6 @@ statesman = {
 ######################################################
 naval_reformer = {
 	monarch_power = DIP
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	
@@ -951,17 +860,6 @@ naval_reformer = {
 ######################################################
 trader = {
 	monarch_power = DIP
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	trade_efficiency = 0.10
@@ -1039,17 +937,6 @@ trader = {
 ######################################################
 spymaster = {
 	monarch_power = DIP
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	spy_offence = 0.25
@@ -1113,17 +1000,6 @@ spymaster = {
 ######################################################
 colonial_governor = {
 	monarch_power = DIP
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	global_tariffs = 0.10
@@ -1195,17 +1071,6 @@ colonial_governor = {
 ######################################################
 diplomat = {
 	monarch_power = DIP
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	improve_relation_modifier = 0.2
@@ -1269,21 +1134,18 @@ diplomat = {
 ######################################################
 navigator = {
 	monarch_power = DIP
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	range = 0.20
 	
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_extra_settlers }
+		}
+		modifier = { 
+			global_colonial_growth = 5
+		}
+	}
 	skill_scaled_modifier = {
 		trigger = {
 			owner = { 
@@ -1352,17 +1214,6 @@ navigator = {
 ######################################################
 army_reformer = {
 	monarch_power = MIL
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	land_morale = 0.10
@@ -1425,17 +1276,6 @@ army_reformer = {
 ######################################################
 army_organiser = {
 	monarch_power = MIL
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	land_forcelimit_modifier = 0.10
@@ -1488,17 +1328,6 @@ army_organiser = {
 ######################################################
 commandant = {
 	monarch_power = MIL
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	discipline = 0.05
@@ -1559,17 +1388,6 @@ commandant = {
 ######################################################
 quartermaster = {
 	monarch_power = MIL
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	reinforce_speed = 0.33
@@ -1626,17 +1444,6 @@ quartermaster = {
 ######################################################
 recruitmaster = {
 	monarch_power = MIL
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	global_manpower_modifier = 0.10
@@ -1693,16 +1500,6 @@ recruitmaster = {
 ######################################################
 fortification_expert = {
 	monarch_power = MIL
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
 	}
 	
 	# Bonus
@@ -1757,17 +1554,6 @@ fortification_expert = {
 ######################################################
 grand_captain = {
 	monarch_power = MIL
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_government_mechanic = russian_modernization_mechanic
-				NOT = { culture_group = PREV }
-			}
-		}
-		modifier = {
-			monthly_russian_modernization = 0.02
-		}
-	}
 	
 	# Bonus
 	land_maintenance_modifier = -0.10

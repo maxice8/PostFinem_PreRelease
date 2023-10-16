@@ -14,6 +14,7 @@
 
 ######################################################
 
+## PF [[[
 city_planner = {
 	monarch_power = ADM
 	
@@ -372,556 +373,7 @@ governor = {
 	}
 }
 
-######################################################
-natural_scientist = {
-	monarch_power = ADM
-	
-	# Bonus
-	production_efficiency = 0.10
-	skill_scaled_modifier = {
-		trigger = { owner = {  has_government_attribute = reform_progress_from_advisors  } }
-		modifier = { reform_progress_growth = 0.03 }
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = 5_gov_cap_bonus_flag 
-			}
-		}
-		modifier = {
-			governing_capacity_modifier = 0.05
-		}
-	}
-
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = fin_fine_finances_flag 
-			}
-		}
-		modifier = {
-			global_tax_modifier = 0.05
-		}
-	}	
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
-				has_government_attribute = republican_tradition_from_advisors 
-			}
-		}
-		modifier = {
-			republican_tradition = 0.02 
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = {  
-				is_emperor_of_china = yes 
-			}
-		}
-		modifier = { meritocracy = 0.25 }
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = mng_dev_per_adm_advisor_level_flag 
-			}
-		}
-		modifier = {
-			development_cost = -0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_modifier = eng_foreign_religious_control }
-		}
-		modifier = { tolerance_heretic = 1 }
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_flag = pf_lag_adm_build_time }
-		}
-		modifier = {
-			build_time = -0.02
-		 }
-	}
-
-	chance = {
-		factor = 1
-	}
-	
-	ai_will_do = {
-		factor = 1.2
-	}
-}
-
-######################################################
-artist = {
-	monarch_power = ADM
-	
-	# Bonus
-	stability_cost_modifier = -0.10
-	skill_scaled_modifier = {
-		trigger = { owner = {  has_government_attribute = reform_progress_from_advisors  } }
-		modifier = { reform_progress_growth = 0.03 }
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = 5_gov_cap_bonus_flag 
-			}
-		}
-		modifier = {
-			governing_capacity_modifier = 0.05
-		}
-	}
-
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = fin_fine_finances_flag 
-			}
-		}
-		modifier = {
-			global_tax_modifier = 0.05
-		}
-	}	
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
-				has_government_attribute = republican_tradition_from_advisors 
-			}
-		}
-		modifier = {
-			republican_tradition = 0.02 
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = {  
-				is_emperor_of_china = yes 
-			}
-		}
-		modifier = { meritocracy = 0.25 }
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = mng_dev_per_adm_advisor_level_flag 
-			}
-		}
-		modifier = {
-			development_cost = -0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_modifier = eng_foreign_religious_control }
-		}
-		modifier = { tolerance_own = 1 }
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_flag = pf_lag_adm_build_time }
-		}
-		modifier = {
-			build_time = -0.02
-		 }
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_flag = pf_trn_splendor_art }
-		}
-		modifier = {
-			monthly_splendor = 1
-		 }
-	}
-
-	chance = {
-		factor = 1
-	}
-	
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.2
-			NOT = { stability = 1 }
-		}
-		modifier = {
-			factor = 1.2
-			NOT = { stability = 0 }
-		}
-	}
-}
-
-######################################################
-treasurer = {
-	monarch_power = ADM
-	
-	# Bonus
-	global_tax_modifier = 0.1
-	skill_scaled_modifier = {
-		trigger = { owner = {  has_government_attribute = reform_progress_from_advisors  } }
-		modifier = { reform_progress_growth = 0.03 }
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = 5_gov_cap_bonus_flag 
-			}
-		}
-		modifier = {
-			governing_capacity_modifier = 0.05
-		}
-	}
-
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = fin_fine_finances_flag 
-			}
-		}
-		modifier = {
-			global_tax_modifier = 0.05
-		}
-	}	
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
-				has_government_attribute = republican_tradition_from_advisors 
-			}
-		}
-		modifier = {
-			republican_tradition = 0.02 
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = {  
-				is_emperor_of_china = yes 
-			}
-		}
-		modifier = { meritocracy = 0.25 }
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = mng_dev_per_adm_advisor_level_flag 
-			}
-		}
-		modifier = {
-			development_cost = -0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_modifier = eng_foreign_religious_control }
-		}
-		modifier = { religious_unity = 0.15 }
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_flag = pf_lag_adm_build_time }
-		}
-		modifier = {
-			build_time = -0.02
-		 }
-	}
-	
-	chance = {
-		factor = 1
-	}
-	
-	ai_will_do = {
-		factor = 1.5
-	}
-}
-
-######################################################
-theologian = {
-	monarch_power = ADM
-	
-	# Bonus
-	global_unrest = -2
-	skill_scaled_modifier = {
-		trigger = { owner = {  has_government_attribute = reform_progress_from_advisors  } }
-		modifier = { reform_progress_growth = 0.03 }
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = 5_gov_cap_bonus_flag 
-			}
-		}
-		modifier = {
-			governing_capacity_modifier = 0.05
-		}
-	}
-
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = fin_fine_finances_flag 
-			}
-		}
-		modifier = {
-			global_tax_modifier = 0.05
-		}
-	}	
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
-				has_government_attribute = republican_tradition_from_advisors 
-			}
-		}
-		modifier = {
-			republican_tradition = 0.02 
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = {  
-				is_emperor_of_china = yes 
-			}
-		}
-		modifier = { meritocracy = 0.25 }
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = mng_dev_per_adm_advisor_level_flag 
-			}
-		}
-		modifier = {
-			development_cost = -0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_modifier = eng_foreign_religious_control }
-		}
-		modifier = { global_heretic_missionary_strength = 0.01 }
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_flag = pf_lag_adm_build_time }
-		}
-		modifier = {
-			build_time = -0.02
-		 }
-	}
-	
-	chance = {
-		factor = 1
-
-	}
-	
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			unrest = -1
-		}
-		modifier = {
-			factor = 1.5
-			unrest = 1
-		}
-	}
-}
-
-######################################################
-master_of_mint = {
-	monarch_power = ADM
-	
-	# Bonus
-	inflation_reduction = 0.10
-	skill_scaled_modifier = {
-		trigger = { owner = {  has_government_attribute = reform_progress_from_advisors  } }
-		modifier = { reform_progress_growth = 0.03 }
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = 5_gov_cap_bonus_flag 
-			}
-		}
-		modifier = {
-			governing_capacity_modifier = 0.05
-		}
-	}
-
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = fin_fine_finances_flag 
-			}
-		}
-		modifier = {
-			global_tax_modifier = 0.05
-		}
-	}	
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
-				has_government_attribute = republican_tradition_from_advisors 
-			}
-		}
-		modifier = {
-			republican_tradition = 0.02 
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = {  
-				is_emperor_of_china = yes 
-			}
-		}
-		modifier = { meritocracy = 0.25 }
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = mng_dev_per_adm_advisor_level_flag 
-			}
-		}
-		modifier = {
-			development_cost = -0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_modifier = eng_foreign_religious_control }
-		}
-		modifier = { religious_unity = 0.15 }
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_flag = pf_lag_adm_build_time }
-		}
-		modifier = {
-			build_time = -0.02
-		 }
-	}
-	
-	chance = {
-		factor = 1
-	}
-	
-	ai_will_do = {
-		factor = 1.2
-		modifier = {
-			factor = 0.5
-			NOT = { inflation = 1 }
-		}
-	}
-}
-
-######################################################
-inquisitor = {
-	monarch_power = ADM
-	allow_only_owner_religion = yes
-	
-	# Bonus
-	global_missionary_strength = 0.02
-	skill_scaled_modifier = {
-		trigger = { owner = {  has_government_attribute = reform_progress_from_advisors  } }
-		modifier = { reform_progress_growth = 0.03 }
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = 5_gov_cap_bonus_flag 
-			}
-		}
-		modifier = {
-			governing_capacity_modifier = 0.05
-		}
-	}
-
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = fin_fine_finances_flag 
-			}
-		}
-		modifier = {
-			global_tax_modifier = 0.05
-		}
-	}	
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
-				has_government_attribute = republican_tradition_from_advisors 
-			}
-		}
-		modifier = {
-			republican_tradition = 0.02 
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = {  
-				is_emperor_of_china = yes 
-			}
-		}
-		modifier = { meritocracy = 0.25 }
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = mng_dev_per_adm_advisor_level_flag 
-			}
-		}
-		modifier = {
-			development_cost = -0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_modifier = eng_foreign_religious_control }
-		}
-		modifier = { global_heretic_missionary_strength = 0.01 }
-	}
-	
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = empower_inquisitors_flag 
-			}
-		}
-		modifier = {
-			establish_order_cost = -0.05
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_flag = pf_lag_adm_build_time }
-		}
-		modifier = {
-			build_time = -0.02
-		 }
-	}
-	
-	chance = {
-		factor = 1
-		modifier = {
-			factor = 0.1
-			has_owner_religion = no
-		}
-	}
-	
-	ai_will_do = {
-		factor = 1.2
-		modifier = {
-			factor = 0.5
-			religious_unity = 0.95
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { religious_unity = 0.8 }
-		}
-	}
-}
+# ]]]
 
 
 ######################################################
@@ -930,6 +382,8 @@ inquisitor = {
 
 ######################################################
 
+
+## PF [[[
 logistician = {
 	monarch_power = DIP
 	
@@ -1231,12 +685,16 @@ colonial_minister = {
 	}
 }
 
+# ]]]
+
+
 ######################################################
 # Military Advisors
 ######################################################
 
 ######################################################
 
+# PF [[[
 cannoneer = {
 	monarch_power = MIL
 	
@@ -1286,7 +744,11 @@ cannoneer = {
 	}
 	
 	ai_will_do = {
-		factor = 1.8
+		factor = 1
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
 	}
 }
 
@@ -1339,7 +801,15 @@ dragoon = {
 	}
 	
 	ai_will_do = {
-		factor = 1.8
+		factor = 1
+		modifier = {
+			factor = 1.25
+			num_of_cavalry = 8
+		}
+		modifier = {
+			factor = 1.25
+			num_of_cavalry = 12
+		}
 	}
 }
 
@@ -1392,7 +862,11 @@ entrenchment_expert = {
 	}
 	
 	ai_will_do = {
-		factor = 1.8
+		factor = 1
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
 	}
 }
 
@@ -1445,6 +919,8 @@ drill_sergeant = {
 	}
 	
 	ai_will_do = {
-		factor = 1.8
+		factor = 1
 	}
 }
+
+# ]]]
