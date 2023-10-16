@@ -18,3 +18,18 @@ ksb_troops_losing_faith = {
 	land_morale = -0.1
 	morale_damage_received = 0.05
 }
+
+ksb_upgrade_temple = {
+	local_great_project_upgrade_cost = -0.75
+}
+
+pob_loyal_march = {
+	liberty_desire = -75
+	discipline = 0.05
+	defensiveness = 0.25
+	global_unrest = -2
+}
+
+ksb_silesian_iron = {
+	infantry_power = 0.15
+}

@@ -21,6 +21,10 @@ add_truce_with = KRA
 		death_date = 1445.01.01
 	}
 	set_estate_privilege = estate_church_pf_ksb_corrupt_church
+	change_estate_land_share = {
+		estate = estate_church
+		share = 10
+	}
 }
 1444.11.11 = { 
 	heir = { 

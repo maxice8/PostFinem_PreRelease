@@ -1,30 +1,40 @@
 ﻿l_english:
  ksb_retake_rujana_title:0 "Retake Rujana"
- ksb_retake_rujana_desc:0 "conquer rujana to get monument to level 1"
+ ksb_retake_rujana_desc:0 ""
 
  ksb_restore_worship_title:0 "Restore Worship"
- ksb_restore_worship_desc:0 "not has clergy privilege - get access to good privilege"
+ ksb_restore_worship_desc:0 ""
+ ksb_reformed_the_church: "We will gain access to the clergy estate privilege §YHead of the Cult of Svetovid§!"
 
  ksb_smash_the_saxons_title:0 "Smash the Saxons!"
- ksb_smash_the_saxons_desc:0 "insult + rival saxony to get claims"
+ ksb_smash_the_saxons_desc:0 ""
 
  ksb_the_polabians_title:0 "The Polabian Peoples"
- ksb_the_polabians_desc:0 "conquer polabian lands - culture will start spreading"
+ ksb_the_polabians_desc:0 ""
+ ksb_release_polabia_tt: "We will release @POB §YPolabia§! in all mainland provinces in the §YVorpommern§! area"
 
  ksb_push_borderlands_title:0 "Push the Borderlands"
  ksb_push_borderlands_desc:0 ""
+ ksb_yes_polabia:0 "£yes£ If @POB §Y[POB.GetName]§! is our subject:"
+ ksb_no_polabia:0 "£no£ If @POB §Y[POB.GetName]§! is our subject:"
+ ksb_otherwise_yes:0 "£yes£ Otherwise:"
+ ksb_otherwise_no:0 "£no£ Otherwise:"
 
  ksb_rule_silesia_title:0 "Rule Silesia"
- ksb_rule_silesia_desc:0 "ally or conquer silesia - if allied get as vassal but with +15% lib desire"
+ ksb_rule_silesia_desc:0 ""
+ ksb_yes_vassalize_sil: "£yes£ If we are allied to @SIL §Y[SIL.GetName]§! we will vassalise them in the §YUnited Severoslavia§! mission"
+ ksb_no_vassalize_sil: "£no£ If we are allied to @SIL §Y[SIL.GetName]§! we will vassalise them in the §YUnited Severoslavia§! mission"
 
- ksb_lands_of_czech_title:0 "Lands of Czech"
+ ksb_lands_of_czech_title:0 "Lands of Čech"
  ksb_lands_of_czech_desc:0 ""
 
  ksb_new_slavic_power_title:0 "A New Slavic Power"
- ksb_new_slavic_power_desc:0 "get at least 2 allies of slavic religion"
+ ksb_new_slavic_power_desc:0 ""
 
  ksb_conquer_pinsk_title:0 "Last of the Rus'"
- ksb_conquer_pinsk_desc:0 "ally or conquer pinsk - if allied get as vassal but with +15% lib desire"
+ ksb_conquer_pinsk_desc:0 ""
+ ksb_yes_vassalize_pns: "£yes£ If we are allied to @PNS §Y[PNS.GetName]§! we will vassalise them in the §YUnited Severoslavia§! mission"
+ ksb_no_vassalize_pns: "£no£ If we are allied to @PNS §Y[PNS.GetName]§! we will vassalise them in the §YUnited Severoslavia§! mission"
 
  ksb_united_severoslavia_title:0 "United Severoslavia"
  ksb_united_severoslavia_desc:0 ""
@@ -35,94 +45,94 @@
  ksb_protect_lechia_title:0 "Protect Lechia"
  ksb_protect_lechia_desc:0 ""
 
- ksb_end_zilant_raids_title:0 ""
+ ksb_end_zilant_raids_title:0 "End Zilant Raids"
  ksb_end_zilant_raids_desc:0 ""
 
- ksb_conquer_lithuania_title:0 ""
+ ksb_conquer_lithuania_title:0 "Conquer Lithuania"
  ksb_conquer_lithuania_desc:0 ""
 
- ksb_lords_of_baltic_title:0 ""
+ ksb_lords_of_baltic_title:0 "Lords of the Balts"
  ksb_lords_of_baltic_desc:0 ""
 
- sev_svetovids_most_faithful_title:0 ""
+ sev_svetovids_most_faithful_title:0 "Svetovid's Strongest"
  sev_svetovids_most_faithful_desc:0 ""
 
- sev_convert_germania_title:0 ""
+ sev_convert_germania_title:0 "Conversion of the Germanics"
  sev_convert_germania_desc:0 ""
 
- sev_gdansk_title:0 ""
+ sev_gdansk_title:0 "Port of Gdansk"
  sev_gdansk_desc:0 ""
 
- sev_baltic_monopolies_title:0 ""
+ sev_baltic_monopolies_title:0 "Baltic Monopolies"
  sev_baltic_monopolies_desc:0 ""
 
- sev_to_the_rhine_title:0 ""
+ sev_to_the_rhine_title:0 "To the Rhine"
  sev_to_the_rhine_desc:0 ""
 
- sev_lords_of_germania_title:0 ""
+ sev_lords_of_germania_title:0 "Lords of all Germania"
  sev_lords_of_germania_desc:0 ""
 
  sev_conquer_south_title:0 "Long March South"
  sev_conquer_south_desc:0 ""
 
- sev_lombardy_falls_title:0 ""
+ sev_lombardy_falls_title:0 "Fall of Lombardy"
  sev_lombardy_falls_desc:0 ""
 
- sev_mountain_crossing_title:0 ""
+ sev_mountain_crossing_title:0 "Mountain Crossing"
  sev_mountain_crossing_desc:0 ""
 
- sev_lord_of_slavia_title:0 ""
+ sev_lord_of_slavia_title:0 "Lords of all Slavia"
  sev_lord_of_slavia_desc:0 ""
 
- sev_volhynian_conquest_title:0 ""
+ sev_volhynian_conquest_title:0 "Volhynian Campaign"
  sev_volhynian_conquest_desc:0 ""
 
- sev_between_seas_title:0 ""
+ sev_between_seas_title:0 "Between the Seas"
  sev_between_seas_desc:0 ""
 
- sev_wild_frontier_title:0 ""
+ sev_wild_frontier_title:0 "The Wild Frontier"
  sev_wild_frontier_desc:0 ""
 
- sev_krakow_title:0 ""
+ sev_krakow_title:0 "Flourishing of Krakow"
  sev_krakow_desc:0 ""
 
- sev_endless_fields_title:0 ""
+ sev_endless_fields_title:0 "Endless Fields of [Root.GetName]"
  sev_endless_fields_desc:0 ""
 
- slv_enforce_culture_title:0 ""
+ slv_enforce_culture_title:0 "Enforce Slavic Culture"
  slv_enforce_culture_desc:0 ""
 
- slv_2_seas_2_fleets_title:0 ""
+ slv_2_seas_2_fleets_title:0 "Two Seas, Two Fleets"
  slv_2_seas_2_fleets_desc:0 ""
 
- slv_ostgermanic_invasion_title:0 ""
+ slv_ostgermanic_invasion_title:0 "Ostgermanic Invasion"
  slv_ostgermanic_invasion_desc:0 ""
 
- slv_illyrian_conquest_title:0 ""
+ slv_illyrian_conquest_title:0 "Illyrian Conquests"
  slv_illyrian_conquest_desc:0 ""
 
- slv_alexanders_lands_title:0 ""
+ slv_alexanders_lands_title:0 "Land of Alexander"
  slv_alexanders_lands_desc:0 ""
 
- slv_pontus_conquest_title:0 ""
+ slv_pontus_conquest_title:0 "Conquest of Pontus"
  slv_pontus_conquest_desc:0 ""
 
- slv_restore_rus_title:0 ""
+ slv_restore_rus_title:0 "The Rus' Restored!"
  slv_restore_rus_desc:0 ""
 
- slv_3rd_empire_title:0 ""
+ slv_3rd_empire_title:0 "The Third Empire"
  slv_3rd_empire_desc:0 ""
 
- slv_kiev_recovered_title:0 ""
+ slv_kiev_recovered_title:0 "Kiev Recovered"
  slv_kiev_recovered_desc:0 ""
 
- slv_uralic_push_title:0 ""
+ slv_uralic_push_title:0 "Push to the Urals"
  slv_uralic_push_desc:0 ""
 
- slv_siberian_frontiers_title:0 ""
+ slv_siberian_frontiers_title:0 "The Siberian Frontier"
  slv_siberian_frontiers_desc:0 ""
 
- slv_rusnok_lands_title:0 ""
+ slv_rusnok_lands_title:0 "Lands of the Rus"
  slv_rusnok_lands_desc:0 ""
 
 

@@ -53,6 +53,9 @@ svetovids_temple = { # svt
                     limit = { NOT = { province_has_current_tech_fort_trigger = yes } }
                     add_or_upgrade_fort_building = yes
                 }
+                else = {
+                    add_base_manpower = 2
+                }
             }
         }
     }
@@ -78,7 +81,7 @@ svetovids_temple = { # svt
                     add_or_upgrade_fort_building = yes
                 }
                 else = {
-                    add_base_manpower = 1
+                    add_base_manpower = 2
                 }
             }
         }
@@ -101,11 +104,12 @@ svetovids_temple = { # svt
         }
         conditional_modifier = {
             trigger = {
-                root = {
+                owner = {
                     OR = {
                         primary_culture = pomorian
                         primary_culture = podlachian
                         primary_culture = mazovian
+                        primary_culture = polabian
                    }
                 }
             }
@@ -118,7 +122,7 @@ svetovids_temple = { # svt
                     add_or_upgrade_fort_building = yes
                 }
                 else = {
-                    add_base_manpower = 1
+                    add_base_manpower = 2
                 }
             }
         }

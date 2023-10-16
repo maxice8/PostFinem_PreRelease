@@ -287,6 +287,118 @@ country_event = {
 		}
 	}
 }
+#END OF PULSE EVENTS
 
+#release polabia
+country_event = {
+	id = pf_ksb_events.12
+	title = pf_ksb_events.12.t
+	desc = pf_ksb_events.12.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = pf_ksb_events.12a
+		custom_tooltip = "ksb_release_polabia_tt"
+		hidden_effect = {
+			vorpommern_area = {
+				remove_core = ROOT
+				add_core = POB
+			}
+			release = POB
+			create_union = POB
+			4745 = {
+				cede_province = ROOT
+				add_core = ROOT
+			}
+		}
+		mittelmark_area = {
+			add_permanent_claim = POB
+		}
+		south_saxony_area = {
+			add_permanent_claim = POB
+		}
+		northern_saxony_area = {
+			add_permanent_claim = POB
+		}
+		mecklenburg_area = {
+			add_permanent_claim = POB
+		}
+		add_dip_power = 100
+		
+	}
+	option = {
+		name = pf_ksb_events.12b
+		add_prestige = 25
+		mittelmark_area = {
+			add_permanent_claim = ROOT
+		}
+		south_saxony_area = {
+			add_permanent_claim = ROOT
+		}
+		northern_saxony_area = {
+			add_permanent_claim = ROOT
+		}
+		mecklenburg_area = {
+			add_permanent_claim = ROOT
+		}
+		add_dip_power = 100
+	}
+}
 
+#expand polabia
+country_event = {
+	id = pf_ksb_events.13
+	title = pf_ksb_events.13.t
+	desc = pf_ksb_events.13.d
+	picture = CZECH_NOBLES_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = pf_ksb_events.13a
+		mittelmark_area = {
+			remove_core = ROOT
+			add_core = POB
+			cede_province = POB
+		}
+		south_saxony_area = {
+			remove_core = ROOT
+			add_core = POB
+			cede_province = POB
+		}
+		northern_saxony_area = {
+			remove_core = ROOT
+			add_core = POB
+			cede_province = POB
+		}
+		mecklenburg_area = {
+			remove_core = ROOT
+			add_core = POB
+			cede_province = POB
+		}
+		POB = {
+			add_country_modifier = {
+				name = pob_loyal_march
+				duration = -1
+			}
+			set_country_flag = pob_spreading_culture
+		}
+	}
+	option = {
+		name = pf_ksb_events.13b
+		add_prestige = 25
+		mittelmark_area = {
+			add_nationalism = -10
+		}
+		south_saxony_area = {
+			add_nationalism = -10
+		}
+		northern_saxony_area = {
+			add_nationalism = -10
+		}
+		mecklenburg_area = {
+			add_nationalism = -10
+		}
+	}
+}
 

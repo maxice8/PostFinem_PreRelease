@@ -23,6 +23,19 @@ country_decisions = {
 			custom_tooltip = empty_line_tt
 			add_adm_power = -200
 			add_corruption = -2
+			change_estate_land_share = {
+				estate = estate_church
+				share = -10
+			}
+			random_owned_province = {
+				limit = {
+					religion = ROOT
+				}
+				spawn_province_religious_rebels = {
+					size = 2
+				}
+			}
+			set_country_flag = ksb_reformed_church
 		}
 	}
 }
