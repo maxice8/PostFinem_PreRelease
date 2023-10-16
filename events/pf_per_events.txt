@@ -5179,3 +5179,101 @@ country_event = {
 		}
 	}
 }
+
+# End of Persian Inquisition: Heathens eradicated
+country_event = {
+	id = pf_per_events.119
+	title = "pf_per_events_119_title"
+	desc = "pf_per_events_119_desc"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		had_country_flag = {
+			flag = pf_per_started_persian_inquisition
+			days = 10950
+		}
+		has_country_modifier = pf_per_persian_inquisition
+
+		religious_unity = 1
+		NOT = { average_unrest = 2 }
+		NOT = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				NOT = { religion = zoroastrian }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "pf_per_events_119_option"
+		ai_chance = { factor = 100 }
+		remove_country_modifier = pf_per_persian_inquisition
+		add_country_modifier = {
+			name = pf_per_successful_inquisition
+			duration = -1
+		}
+
+		add_stability_or_adm_power = yes
+		add_prestige_or_monarch_power = { amount = 25 }
+		add_devotion = 20
+	}
+}
+
+# End of Persian Inquisition: Heathen uprising
+country_event = {
+	id = pf_per_events.120
+	title = "pf_per_events_120_title"
+	desc = "pf_per_events_120_desc"
+	picture = ANGRY_MOB_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		had_country_flag = {
+			flag = pf_per_started_persian_inquisition
+			days = 10950
+		}
+		has_country_modifier = pf_per_persian_inquisition
+
+		NOT = { religious_unity = 0.8 }
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 40
+			NOT = { religion = zoroastrian }
+		}
+		average_unrest = 2
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "pf_per_events_120_option_1"
+		ai_chance = { factor = 100 }
+		remove_country_modifier = pf_per_persian_inquisition
+		add_stability = -2
+
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -20
+		}
+	}
+
+	option = {
+		name = "pf_per_events_120_option_2"
+		ai_chance = { factor = 50 }
+		every_owned_province = {
+			limit = { NOT = { religion = zoroastrian } }
+			spawn_rebels = {
+				size = 1
+				type = heretic_rebels
+			}
+		}
+
+		add_stability = -1
+	}
+}

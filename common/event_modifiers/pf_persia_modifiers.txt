@@ -353,3 +353,11 @@ pf_per_diplomatic_foreign_policy = {
 	improve_relation_modifier = 0.2
 	ae_impact = -0.1
 }
+
+pf_per_successful_inquisition = {
+	global_missionary_strength = 0.03
+	missionaries = 1
+	tolerance_own = 2
+	tolerance_heathen = -3
+	devotion = 1
+}
