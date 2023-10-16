@@ -1,0 +1,217 @@
+pf_swe_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = SWE
+	}
+
+	pf_swe_build_up_army = {
+		icon = mission_thirty_years_war
+		position = 1
+		required_missions = { } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			if = {
+				limit = {
+					ai = no
+				}
+				army_size_percentage = 1
+				manpower_percentage = 0.50
+			}
+			else = {
+				army_size_percentage = 0.75
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_swe_brave_men_of_sweden"
+				duration = 9125
+			}
+			norrland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_norway = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			western_norway = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_norway = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	pf_swe_conquer_norrland = {
+		icon = mission_swedish_peasantry
+		position = 2
+		required_missions = { pf_swe_build_up_army } 
+		provinces_to_highlight = {
+			area = norrland_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			norrland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_yearly_manpower = 1
+			add_army_tradition = 10
+			bothnia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			finland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			laponia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	pf_swe_seize_finland = {
+		icon = mission_the_finns
+		position = 3
+		required_missions = { pf_swe_conquer_norrland } 
+		provinces_to_highlight = {
+			OR = {
+				area = finland_area
+				area = bothnia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			finland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			bothnia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			country_event = {
+				id = pf_nordic.4		# Conversion of the Finns
+			}		
+			karelia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_karelia = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			pomor_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+pf_swe_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = SWE
+	}
+
+	pf_swe_band_of_warriors = {
+		icon = mission_livonian_intervention
+		position = 1
+		required_missions = { } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			army_size = 30
+			OR = {
+				army_reformer = 1
+				commandant = 1
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_swe_looting_modifier"
+				duration = 7300
+			}
+		}
+	}
+	pf_swe_establish_the_huskarls = {
+		icon = mission_modernized_vikings
+		position = 2
+		required_missions = { pf_swe_band_of_warriors } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			num_of_carolean = 5
+			army_professionalism = 0.30
+		}
+		effect = {
+			country_event = { id = pf_nordic.8 }		# Reforming the Huskarls
+		}
+	}
+	pf_swe_swedish_militarism = {
+		icon = mission_the_caroleans
+		position = 3
+		required_missions = { pf_swe_establish_the_huskarls } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			has_mil_advisor_3 = yes
+			OR = {
+				num_of_regiments_at_full_drill = 40
+				full_idea_group = offensive_ideas
+				full_idea_group = quality_ideas
+			}
+			OR = {
+				mil_tech = 18
+				monthly_mil = 12
+			}
+		}
+		effect = {
+			country_event = { id = pf_nordic.9 }		# Battle Cry of the Swedes
+		}
+	}
+}
