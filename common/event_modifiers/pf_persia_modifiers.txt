@@ -335,3 +335,21 @@ pf_per_exploitative_merchants = {
 	global_trade_power = -0.2
 	global_unrest = 5
 }
+
+pf_per_persian_inquisition = {
+	tolerance_heathen = -10
+	global_missionary_strength = 0.04
+	missionaries = 1
+	tolerance_own = 2
+	relation_with_heretics = -200
+}
+
+pf_per_aggressive_foreign_policy = {
+	warscore_cost_vs_other_religion = -0.1
+	unjustified_demands = -0.2
+}
+
+pf_per_diplomatic_foreign_policy = {
+	improve_relation_modifier = 0.2
+	ae_impact = -0.1
+}

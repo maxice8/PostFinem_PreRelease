@@ -4583,12 +4583,22 @@ country_event = {
 
 	trigger = {
 		tag = PER
-		is_year = 1545
-		NOT = { is_year = 1585 }
+		is_year = 1510
+		NOT = { is_year = 1555 }
 	}
 
 	mean_time_to_happen = {
-		months = 180
+		months = 200
+
+		modifier = {
+			factor = 0.8
+			has_country_modifier = pf_per_aggressive_foreign_policy
+		}
+
+		modifier = {
+			factor = 1.2
+			has_country_modifier = pf_per_diplomatic_foreign_policy
+		}
 	}
 
 	option = {
@@ -4625,6 +4635,11 @@ country_event = {
 		OR = {
 			is_year = 1530
 			has_country_flag = pf_per_centralization_completed
+			has_government_power = {
+				mechanic_type = pf_per_centralization_mechanic
+				power_type = pf_per_centralization
+				value = 80
+			}
 		}
 		NOT = { is_year = 1560 } 
 	}
@@ -4829,7 +4844,7 @@ country_event = {
 	trigger = {
 		is_year = 1570
 		NOT = { is_year = 1590 }
-		has_country_modifier = pf_per_embraced_jawedism
+		has_country_modifier = pf_per_persian_inquisition
 	}
 
 	mean_time_to_happen = {
@@ -5070,6 +5085,97 @@ country_event = {
 		add_country_modifier = {
 			name = pf_per_exploitative_merchants
 			duration = -1
+		}
+	}
+}
+
+# Persian Inquisition
+country_event = {
+	id = pf_per_events.117
+	title = "pf_per_events_117_title"
+	desc = "pf_per_events_117_desc"
+	picture = ACCUSATION_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1550
+		has_country_modifier = pf_per_embraced_jawedism
+	}
+
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	option = {
+		name = "pf_per_events_117_option_1"
+		ai_chance = { factor = 10 }
+		remove_country_modifier = pf_per_embraced_jawedism
+		add_country_modifier = {
+			name = pf_per_persian_inquisition
+			duration = -1
+		}
+		set_country_flag = pf_per_started_persian_inquisition
+	}
+
+	option = {
+		name = "pf_per_events_117_option_2"
+		ai_chance = { factor = 90 }
+		remove_country_modifier = pf_per_embraced_jawedism
+		add_stability = -1
+	}
+}
+
+# Foreign Policy
+country_event = {
+	id = pf_per_events.118
+	title = "pf_per_events_118_title"
+	desc = "pf_per_events_118_desc"
+	picture = DIPLOMACY_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1460
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 15
+			NOT = { religion = zoroastrian }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				NOT = { religion = zoroastrian }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 40
+				NOT = { religion = zoroastrian }
+			}
+		}
+	}
+	
+	option = {
+		name = "pf_per_events_118_option_1"
+		ai_chance = { factor = 10 }
+		add_mil_power = 50
+		add_country_modifier = {
+			name = pf_per_aggressive_foreign_policy
+			duration = 7300
+		}
+	}
+
+	option = {
+		name = "pf_per_events_118_option_2"
+		ai_chance = { factor = 90 }
+		add_dip_power = 50
+		add_country_modifier = {
+			name = pf_per_diplomatic_foreign_policy
+			duration = 7300
 		}
 	}
 }
