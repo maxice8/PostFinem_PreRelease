@@ -5205,6 +5205,20 @@ on_conquest = {
 			add_imperial_influence = 1
 		}
 	}
+	#pf
+	if = {
+		limit = {
+			province_id = 146
+			country_or_non_sovereign_subject_holds = PER
+		}
+		PER = {
+			country_event = {
+				id = pf_per_events.104
+				days = 20
+				random = 40
+			}
+		}
+	}
 }
 
 on_country_creation = {
