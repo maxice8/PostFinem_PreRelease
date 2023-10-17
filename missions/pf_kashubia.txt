@@ -332,6 +332,7 @@ ksb_3_slot = {
 					SIL = {
 						set_country_flag = ksb_gonna_be_vassalized
 					}
+					set_country_flag = ksb_allied_sil
 				}
 				else = {
 					add_country_modifier = {
@@ -369,7 +370,22 @@ ksb_3_slot = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			266 = {
+				change_culture = ceci
+				change_religion = slavic_religion
+				add_nationalism = -5
+			}
+			bohemia_area = {
+				set_province_flag = converting_to_czech_flag
+			}
+			erzgebirge_area = {
+				set_province_flag = converting_to_czech_flag
+			}
+			266 = {
+				clr_province_flag = converting_to_czech_flag
+			}
+		} 
 	}
 }
 ksb_4_slot = {
@@ -501,6 +517,7 @@ ksb_4_slot = {
 					PNS = {
 						set_country_flag = ksb_gonna_be_vassalized
 					}
+					set_country_flag = ksb_allied_pns
 				}
 				else = {
 					add_accepted_culture_or_dip_power = {
@@ -521,9 +538,114 @@ ksb_4_slot = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			prestige = 50
+			custom_trigger_tooltip = {
+				tooltip = "ksb_requirements_change"
+			}
+			if = {
+				limit = {
+					has_country_flag = ksb_allied_pns
+				}
+				alliance_with = PNS
+				PNS = {
+					has_opinion = {
+						who = ROOT
+						value = 190
+					}
+					all_core_province = {
+						owned_by = PNS
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = ksb_allied_sil
+				}
+				alliance_with = SIL
+				SIL = {
+					has_opinion = {
+						who = ROOT
+						value = 190
+					}
+					all_core_province = {
+						owned_by = SIL
+					}
+				}
+			}
+			else = {
+				poland_region = {
+					country_or_non_sovereign_subject_holds = ROOT
+					type = all
+				}
+			}
+		} 
 
-		effect = { set_country_flag = ksb_can_form_severoslavia_flag } 
+		effect = { 
+			if = {
+				limit = {
+					has_country_flag = ksb_allied_sil
+				}
+				custom_tooltip = "ksb_vassalize_silesia_yes_tt"
+			}
+			else = {
+				custom_tooltip = "ksb_vassalize_pinsk_no_tt"
+			}
+			tooltip = {
+				PNS = {
+					country_event = {
+						id = pf_ksb_events.15
+					}
+				}
+			}
+
+			custom_tooltip = "empty_line_tt"
+
+			if = {
+				limit = {
+					has_country_flag = ksb_allied_sil
+				}
+				custom_tooltip = "ksb_vassalize_silesia_yes_tt"
+			}
+			else = {
+				custom_tooltip = "ksb_vassalize_silesia_no_tt"
+			}
+			tooltip = {
+				SIL = {
+					country_event = {
+						id = pf_ksb_events.15
+					}
+				}
+			}
+
+			custom_tooltip = "empty_line_tt"
+
+			custom_tooltip = "ksb_can_form_severoslavia_tt"
+			set_country_flag = ksb_can_form_severoslavia_flag 
+
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = ksb_allied_sil
+					}
+					SIL = {
+						country_event = {
+							id = pf_ksb_events.15
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = ksb_allied_sil
+					}
+					PNS = {
+						country_event = {
+							id = pf_ksb_events.15
+						}
+					}
+				}
+			}
+		} 
 	}
 }
 ksb_5_slot = {
@@ -550,20 +672,219 @@ ksb_5_slot = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			manpower = 2
+			treasury = 100
+			OR = {
+				AND = {
+					if = {
+						limit = { 
+							has_global_flag = lechia_succession_wars
+						}
+						custom_trigger_tooltip = {
+							tooltip = "ksb_lechia_wars_begun_yes"
+						}
+					}
+					else = {
+						custom_trigger_tooltip = {
+							tooltip = "ksb_lechia_wars_begun_no"
+						}
+					}
 
-		effect = {  } 
+				}
+				AND = {
+					if = {
+						limit = { 
+							KRA = {
+								NOT = { has_ruler_flag = kra_caspar_rules_flag }
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = "ksb_lechia_wars_averted_yes"
+						}
+					}
+					else = {
+						custom_trigger_tooltip = {
+							tooltip = "ksb_lechia_wars_averted_no"
+						}
+					}
+				}
+			}
+			hidden_trigger = {
+				OR = {
+					has_global_flag = lechia_succession_wars
+					KRA = {
+						NOT = { has_ruler_flag = kra_caspar_rules_flag }
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			if = {
+				limit = {
+					has_global_flag = lechia_succession_wars
+				}
+				custom_tooltip = "ksb_if_lechia_civil_war_has_begun_yes_tt"
+			}
+			else = {
+				custom_tooltip = "ksb_if_lechia_civil_war_has_begun_no_tt"
+			}
+			tooltip = {
+				country_event = {
+					id = pf_ksb_events.17
+				}
+			}
+
+			custom_tooltip = "empty_line_tt"
+
+			if = {
+				limit = {
+					KRA = {
+						NOT = { has_ruler_flag = kra_caspar_rules_flag }
+					}
+				}
+				custom_tooltip = "ksb_if_lechia_civil_war_has_averted_yes_tt"
+			}
+			else = {
+				custom_tooltip = "ksb_if_lechia_civil_war_has_averted_no_tt"
+			}
+			tooltip = {
+				sandomierz_area = {
+					add_permanent_claim = ROOT
+				}
+				malopolska_area = {
+					add_permanent_claim = ROOT
+				}
+			}
+
+			hidden_effect = {
+				if = {
+					limit = {
+						has_global_flag = lechia_succession_wars
+					}
+					country_event = {
+						id = pf_ksb_events.17
+					}
+					set_country_flag = ksb_supported_lechia_wars
+				}
+				else_if = {
+					limit = {
+						KRA = {
+							NOT = { has_ruler_flag = kra_caspar_rules_flag }
+						}
+					}
+					sandomierz_area = {
+						add_permanent_claim = ROOT
+					}
+					malopolska_area = {
+						add_permanent_claim = ROOT
+					}
+					set_country_flag = ksb_averted_lechia_wars
+				}
+			}
+		} 
 	}
 
 	ksb_protect_lechia = {
 		icon = mission_pol_throne_bohemia
 		position = 2
 		required_missions = { ksb_intervene_in_lechia } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			if = {
+				limit = {
+					root = {
+						AND = {
+							has_country_flag = ksb_supported_lechia_wars
+							has_country_flag = ksb_supported_lechia
+						}
+					}
+				}
+				is_capital_of = POL
+			}
+			else_if = {
+				limit = {
+					root = {
+						AND = {
+							has_country_flag = ksb_supported_lechia_wars
+							has_country_flag = ksb_supported_krakow
+						}
+					}
+				}
+				is_capital_of = KRA
+			}
+			else = {
+				OR = {
+					area = malopolska_area
+					area = sandomierz_area
+				}
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = ksb_requirements_change
+			}
+			if = {
+				limit = { 
+					has_country_flag = ksb_supported_lechia_wars
+				}
+				OR = {
+					alliance_with = KRA
+					alliance_with = POL
+				}
+			}
+			else = {
+				sandomierz_area = {
+					country_or_non_sovereign_subject_holds = ROOT
+					type = all
+				}
+				malopolska_area = {
+					country_or_non_sovereign_subject_holds = ROOT
+					type = all
+				}
+			}
+		}
 
-		effect = {  } 
+
+		effect = {  
+			custom_tooltip = pf_ksb_effects_change_tt
+			if = {
+				limit = { 
+					has_country_flag = ksb_supported_lechia_wars
+					OR = {
+						alliance_with = KRA
+					}
+				}
+				vassalize = KRA
+			}
+			else_if = {
+				limit = { 
+					has_country_flag = ksb_supported_lechia_wars
+					OR = {
+						alliance_with = POL
+					}
+				}
+				vassalize = POL
+			}
+			else = {
+				distribute_base_dev_to_provinces = {
+					num = 3
+					amount = 1
+					trigger = "area = malopolska_area"
+					type = manpower
+					tooltip = PF_KSB_DEV_IN_MALOPOLSKA_TT
+				}
+				distribute_base_dev_to_provinces = {
+					num = 3
+					amount = 1
+					trigger = "area = sandomierz_area"
+					type = manpower
+					tooltip = PF_KSB_DEV_IN_SANDOMIERZ_TT
+				}
+			}
+		} 
 	}
 
 	ksb_end_zilant_raids = {
