@@ -32,12 +32,13 @@ historical_units = {
 }
 monarch_names = { 
 	"Ptolemy #8" = 20
-	"Alexander #3" = 19
-	"Antonius #0" = 17
-	"Demetrius #0" = 16
+	"Pericles #2" = 15
+	"Helios #0" = 15
+	"Alexander #3" = 15
+	"Antonius #0" = 15
+	"Demetrius #0" = 15
 	"Perseus #4" = 15
 	"Hermes #3" = 14
-	"Helios #0" = 13
 	"Zephyros #1" = 12
 	"Themistocles #0" = 11
 	"Phoebus #3" = 10
@@ -49,7 +50,6 @@ monarch_names = {
 	"Apollo #2" = 7
 	"Hermocrates #1" = 6
 	"Euphemios #0" = 6
-	"Pericles #0" = 5
 	"Socrates #0" = 5
 	"Callimachus #0" = 4
 	"Achilles #0" = 4
@@ -61,16 +61,17 @@ monarch_names = {
 	"Hermias #0" = 1
 
 	
-	"Cleopatra #3" = -1
-	"Arsinoe #0" = -1
-	"Berenice #0" = -1
-	"Isis #0" = -1
-	"Helen #0" = -1
-	"Demetria #0" = -1
-	"Olympias #0" = -1
-	"Thais #0" = -1
-	"Antonia #0" = -1
-	"Alexandra #0" = -1
+	"Cleopatra #3" = -20
+	"Alexandra #0" = -20
+	"Isadora #1" = -10
+	"Arsinoe #0" = -10
+	"Berenice #0" = -10
+	"Isis #0" = -10
+	"Helen #0" = -10
+	"Demetria #0" = -5
+	"Olympias #0" = -5
+	"Thais #0" = -5
+	"Antonia #0" = -5
 }
 leader_names = { 
 	Anina Angelopoulos Androutsos Aulakos Botsaris Bouboulis Chatzeris Christianopoulos Chatzimoschos Dalianis
@@ -166,8 +167,8 @@ ship_names = {
 	Zakros Vathypetra Megalopetra 
 }
 fleet_names = { 
-	"Stólos Aigaíou" "Mesogeiakós Stólos" "Stólos tês $PROVINCE$"
+	"Stólos Aigaíou" "Mesogeiakós Stólos" "Stólos ton $PROVINCE$"
 }
 army_names = { 
-	"Megás Stratós" "Voithitikós Stratós" "Stratós tês $PROVINCE$"
+	"Megás Stratós" "Voithitikós Stratós" "Stratós tou $PROVINCE$"
 }
