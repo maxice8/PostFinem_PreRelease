@@ -1,0 +1,174 @@
+has_colonial_nation_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = $tooltip$
+		#you have to type a tooltip because PDX scripted effects sucks
+		#ex: "Own or have a colonial subject own at least §Y PROVINCES §! provinces in §Y COLONIAL_REGION §!"
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = $provinces$
+			owner = {
+				OR = {
+					tag = ROOT
+					is_colonial_nation_of = ROOT
+				}
+			}
+			colonial_region = $colonial_region$
+		}
+	}
+}
+pf_has_any_norse_deity_active = {
+	custom_trigger_tooltip = {
+		tooltip = PF_HAS_ANY_NORSE_DEITY
+		OR = {
+			has_personal_deity = odin
+			has_personal_deity = freya
+			has_personal_deity = tor
+			has_personal_deity = tyr
+			has_personal_deity = njord
+			has_personal_deity = snotra
+			has_personal_deity = odin_lag_upgraded
+			has_personal_deity = freya_lag_upgraded
+			has_personal_deity = tor_lag_upgraded
+			has_personal_deity = tyr_lag_upgraded
+			has_personal_deity = njord_lag_upgraded
+			has_personal_deity = snotra_lag_upgraded
+		}
+	}
+}
+
+## scope = { country }
+has_atleast_x_trading_bonuses = {
+	calc_true_if = {
+		desc = PF_HAS_ATLEAST_X_TRADING_BONUSES
+		amount = $amount$
+		trading_bonus = {
+			trade_goods = grain
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = wine
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = wool
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = cloth
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = fish
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = fur
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = salt
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = copper
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = gold
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = iron
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = slaves
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = ivory
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = tea
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = chinaware
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = spices
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = coffee
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = cotton
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = sugar
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = tobacco
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = cocoa
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = silk
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = dyes
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = livestock
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = incense
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = glass
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = paper
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = gems
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = coal
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = cloves
+			value = yes
+		}
+	}
+}
+
+
+pf_belongs_to_greek_culture_group = {
+	custom_trigger_tooltip = {
+		tooltip = belongs_to_greek_group_tt
+		OR = {
+			culture_group = macedonian_greek
+			culture_group = levantine_greek
+			culture_group = anatolian_greek
+			culture_group = egyptian_greek
+		}
+	}
+
+}

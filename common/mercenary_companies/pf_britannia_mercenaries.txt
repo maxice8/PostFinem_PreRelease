@@ -1,0 +1,39 @@
+merc_daughters_of_boudicca = {
+    regiments_per_development = 0.04
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+    cavalry_weight = 0.1
+    artillery_weight = 0.2
+	cavalry_cap = 2
+    home_province = 1860	# Iceni
+	sprites = { dlc103_swi_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		has_country_flag = allow_daughters_of_boudicca
+		NOT = { has_country_flag = allow_upgraded_daughters_of_boudicca }
+	}
+    modifier = {
+        may_recruit_female_generals = yes
+        female_advisor_chance = 1.0
+        morale_damage = 0.05
+		movement_speed = 0.05
+    }
+}
+merc_upgraded_daughters_of_boudicca = {
+    regiments_per_development = 0.04
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+    cavalry_weight = 0.1
+    artillery_weight = 0.2
+	cavalry_cap = 2
+    home_province = 1860	# Iceni
+	sprites = { dlc103_swi_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		has_country_flag = allow_upgraded_daughters_of_boudicca
+	}
+    modifier = {
+        may_recruit_female_generals = yes
+        female_advisor_chance = 1.0
+        morale_damage = 0.15
+		morale_damage_received = -0.15
+    }
+}

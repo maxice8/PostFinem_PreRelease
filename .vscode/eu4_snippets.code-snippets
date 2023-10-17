@@ -1,0 +1,220 @@
+{
+	// Place your PostFinem_TEST workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+		
+	"Green Loc": {
+		"scope": "eu4,yaml",
+		"prefix": "gg",
+		"body": [
+			"§G${1:TEXT}§! $0"
+		],
+		"description": "Makes green text for loc"
+	},
+	"Cyan Loc": {
+		"scope": "eu4,yaml",
+		"prefix": "cc",
+		"body": [
+			"§C${1:TEXT}§! $0"
+		],
+		"description": "Makes cyan text for loc"
+	},
+	"Red Loc": {
+		"scope": "eu4,yaml",
+		"prefix": ["rr"],
+		"body": ["§R${1:TEXT}§! $0"],
+		"description": "Makes red text for loc"
+	},
+	"Yellow Loc": {
+		"scope": "eu4,yaml",
+		"prefix": "yy",
+		"body": [
+			"§Y${1:TEXT}§! $0"
+		],
+		"description": "Makes yellow text for loc"
+	},
+	"Area": {
+		"prefix": ["ar", "area"],
+		"body": ["${1:name}_area = {\n\t${2:}\n}\n\n$0"],
+		"description": "Red Highlighting for Localisation"
+	},
+	"postivie modifier Percent": {
+		"prefix": ["nm"],
+		"body": ["§R-${1:text}.0%§! $0"], 
+		"description": "Yellow Highlighting for Localisation"
+	},
+	"negative modifier Percent": {
+		"prefix": ["pm"],
+		"body": ["§G+${1:text}.0%§! $0"],
+		"description": "Yellow Highlighting for Localisation"
+	},
+	"if limit": {
+		"prefix": ["iff"],
+		"body": ["if = {\n\tlimit = {\n\t\t${1:}\n\t}\n\t${2:}\n}\n$0"],
+		"description": "An IF statement with a LIMIT"
+	},
+	"if limit no newline": {
+		"prefix": ["ifl"],
+		"body": ["if = { limit = { ${1:} } ${2:} } $0"],
+		"description": "An IF statement with a LIMIT"
+	},
+	"else if limit no newline": {
+		"prefix": ["elifl"],
+		"body": ["else_if = { limit = { ${1:} } ${2:} } $0"],
+		"description": "An IF statement with a LIMIT"
+	},
+	"mod loc": {
+		"prefix": ["modloc"],
+		"body": ["${1:}:0 \"${2:modifier}\"\ndesc_${1:}:0 \"\""],
+		"description": "Localisation template for modifier"
+	},
+	"event loc": {
+		"prefix": ["eloc"],
+		"body": ["${1:}.t:0 \"${2:}\"\n${1:}.d:0 \"$0\""],
+		"description": "Localisation template for event title and desc"
+	},
+	"missions loc": {
+		"prefix": ["mloc"],
+		"body": ["${1:}_title:0 \"${2:}\"\n${1:}_desc:0 \"$0\"\n"],
+		"description": "Localisation template for event title and desc"
+	},
+	"loc": {
+		"prefix": ["loc"],
+		"body": ["${1:}:0 \"${2:}\"\n"],
+		"description": "Localisation template"
+	},
+	"not": {
+		"prefix": ["not"],
+		"body": ["NOT = { ${1:always = no} } $0"],
+		"description": "Singe line not statement"
+	},
+	"else if limit": {
+		"prefix": ["elif", "else"],
+		"body": ["else_if = {\n\tlimit = {\n\t\t${1:}\n\t}\n\t${2:}\n}\n$0"],
+		"description": "An IF statement with a LIMIT"
+	},
+	"mission": {
+        "prefix": ["mis", "mission"],
+        "body": ["${1:MissionName} = {\n\ticon = ${2:mission_ne_palisades}\n\trequired_missions = {\n\t\t${3:}\n\t}\n\tposition = ${4:1}\n\tprovinces_to_highlight = {\n\t\t${5:}\n\t}\n\ttrigger = {\n\t\t${6:has_mil_advisor = yes}\n\t}\n\teffect = {\n\t\t${7:add_army_tradition = 10}\n\t}\n\tai_weight = {\n\t\tfactor = 75\n\t}\n}\n$0"],
+        "description": "Template for a mission"
+    },
+	"Missions Slot": {
+		"prefix": ["slot"],
+		"body": ["${1:SlotName} = {\n\tslot = ${2:1}\n\tgeneric = ${3:no}\n\tai = ${4:yes}\n\tpotential_on_load = {\n\t\t${5:}\n\t}\n\tpotential = {\n\t\t${6:tag = HUN}\n\t}\n\t\n\t$0\n}"],
+		"description": "A template for a mission slot"
+	},
+	"Mercenaries": {
+		"prefix": ["merc", "mercenaries"],
+		"body": ["${1:MercenaryName} ={\n\tregiments_per_development = ${2:0.05}\n\tcavalry_weight = ${3:0.05}\n\tcavalry_cap = ${4:4}\n\tartillery_weight = ${5:0.05}\n\tmax_size = ${6:30}\n\tcost_modifier = ${7:0.33}\n\tsprites = { easterngfx_sprite_pack }\n\ttrigger = {\n\t\tis_allowed_to_recruit_mercenaries = yes\n\t\t${8:}\n\t}\n\tmodifier = {\n\t\t${9:mercenary_manpower = 0.1}\n\t}\n}\n$0"],
+		"description": "A Template for mercenaries"
+	},
+	"edict if limit": {
+		"prefix": ["edict"],
+		"body": ["${1:Edictname} = {\n\tpotential = {\n\t\t${2:always = yes}\n\t}\n\tallow = {\n\t\t${3:}\n\t}\n\tmodifier = {\n\t\t${4:local_institution_spread = 0.33}\n\t}\n\tcolor = { ${5:50 50 50} }\n\tai_will_do = {\n\t\tfactor = 10\n\t}\n}\n$0"],
+		"description": "Gives the structure for a policy"
+	},
+	"personality": {
+		"prefix": ["perso", "personality"],
+		"body": ["${1:personalityName} = {\n\tallow = {\n\t\t${2:}\n\t}\n\t${3:movement_speed = -0.1}\n}\n$0"],
+		"description": "An IF statement with a LIMIT"
+	},
+	"Base Government reform": {
+		"prefix": ["ref", "reform", "govref"],
+		"body": ["${1:reform_name} = {\n\ticon = \"${2:indian_crown}\"\n\tallow_normal_conversion = ${3:yes}\n\tpotential = {\n\t\t${4:religion_group = muslim}\n\t}\n\tmodifiers = {\n\t\t${5:infantry_power = 0.05}\n\t}\n\tai = {\n\t\tfactor = 3\n\t}\n}"],
+		"description": "Base Skeleton for a government reform"
+	},
+	"Event Option": {
+		"prefix": ["opt", "option"],
+		"body": ["option = {\n\tname = \"${1:option_name}\"\n\t${2:add_prestige = 1}\n}"],
+		"description": "An Option for an event"
+	},
+	"Government mechanic interaction": {
+		"prefix": ["int", "intearction"],
+		"body": ["${1:interaction_name} = {\n\ticon = ${2:prussian_militarization_gov_mech_3_interaction}\n\ttrigger = {\n\t\t${3:always = yes}\n\t}\n\teffect = {\n\t\t${4:add_mil_power = -30}\n\t}\n\tcooldown_years = ${5:10}\n\tcooldown_token = ${6:Intearction_cooldown}\n\tai_chance = {\n\t\tfactor = 10\n\t}\n}\n$0"],
+		"description": "Government mechanic interaction"
+	},
+	"Geovernment mechanic power": {
+		"prefix": ["pow", "power"],
+		"body": ["${1:power_name} = {\n\tmin = ${2:0}\n\tmax = ${3:100}\n\tdefault = ${4:0}\n\treset_on_new_ruler = ${5:no}\n\tbase_monthly_growth = ${6:0}\n\tscaled_modifier = {\n\t\t${7:build_cost = -0.1}\n\t}\n\ton_max_reached = {\n\t\t${8:}\n\t}on_min_reached = {\n\t\t${9:}\n\t}\n}\n$0"],
+		"description": "Geovernment mechanic power"
+	},
+	"Government Mechanic Base": {
+		"prefix": ["mech", "mechanic"],
+		"body": ["${1:gov_mech_name} = {\n\talert_icon_index = 10\n\tavailable = {\n\t\t${2:tag = FRA}\n\t}\n\tpowers = {\n\t\t${3:}\n\t}\n\tinteractions = {\n\t\t${4:}\n\t}\n}\n$0"],
+		"description": "Government Mechanic Base Skeletton"
+	},
+	"Event": {
+		"prefix": ["eve", "event"],
+		"body": ["country_event = {\n\tid = ${1:id} \n\ttitle = ${1:id}.t \n\tdesc = ${1:id}.d\n\tpicture = ${2:CITY_DEVELOPMENT_eventPicture}\n\n\ttrigger = {\n\t\t${3:always = no}\n\t}\n\tmean_time_to_happen = {\n\t\tmonths = ${4:360}\n\t}\n\toption = {\n\t\tname = \"${5:option_name}\"\n\t\t${6:add_prestige = 1}\n\n\t\tai_chance = {\n\t\t\tfactor = 50\n\t\t\tmodifier = {\n\t\t\t\tfactor = 0\n\t\t\t\tstability = 2\n\t\t\t}\n\t\t}\n\t}\n}"],
+		"description": "Event module"
+	},
+	"decisions": {
+		"prefix": ["dec", "decision"],
+		"body": ["${1:decisionName} = {\n\tmajor = ${2:yes}\n\tpotential = {\n\t\t${3:tag = HUN}\n\t}\n\tprovinces_to_highlight = {\n\t\t${4:}\n\t}\n\tallow = {\n\t\t${5:adm_tech = 10}\n\t}\n\teffect = {\n\t\t${6:change_tag = ALA}\n\t}\n\tai_will_do = {\n\t\tfactor = 1\n\t}\n}\n$0"],
+		"description": "A base decision"
+	},
+	"icon": {
+		"prefix": ["icon"],
+		"body": ["£${1:mil}£$0"],
+		"description": "Adds the Pound symbols for an icon"
+	},
+	"Empty Line": {
+		"prefix": ["empty"],
+		"body": ["custom_tooltip = empty_line_tt\n"],
+		"description": "Places and empty line in effect tooltips"
+	},
+	"Distribute Base Dev to Provinces": {
+		"prefix": ["distribute_base_dev_to_provinces"],
+		"body": [			
+			"distribute_base_dev_to_provinces = {",
+				"\tnum = ${1:amount of provinces}",
+				"\tamount = ${2:amount of dev}",
+				"\ttrigger = \"",
+					"\t\t${3:can be any province scope}",
+				"\t\"",
+				"\ttype = ${4|tax,production,manpower|}",
+				"\ttooltip = ${5:tooltip_string}",
+			"}"
+		],
+		"description": "Adds the distribute_base_dev_to_provinces scripted effect"
+	},
+	"Swap Trade Goods for Max Provinces": {
+		"prefix": ["swap_trade_good_for_max_provinces"],
+		"body": [  			
+			"swap_trade_good_for_max_provinces = {",
+				"\tmax = ${1:amount of provinces}",
+				"\toriginal = ${2:original trade good}",
+				"\tnew = ${3:new trade good}",
+				"\ttooltip = ${4:tooltip_string}",
+				"\ttrigger = \"",
+					"\t\t${5:triggers, not required}",
+				"\t\"",
+			"}"
+		],
+		"description": "Swaps out a specific trade good within defined triggered provinces to a specified new trade good"
+	},
+	"Add Opinion Both": {
+		"prefix": ["add_opinion_both"],
+		"body": [  			
+			"pf_add_opinion_both = {",
+				"\twho = ${1:target tag}",
+				"\tmodifier = ${2:opinion_modifier name}",
+			"}"
+		],
+		"description": "Scripted effect to apply mutual relations"
+	},
+		
+}

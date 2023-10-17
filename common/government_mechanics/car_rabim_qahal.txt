@@ -1,0 +1,44 @@
+car_rabim_qahal = {
+	alert_icon_index = 10
+	available = {
+		always = yes
+	}
+	powers = {
+		adirim_vs_suffet = {
+			gui = car_rabim_qahal_gov_mech
+			min = -100
+			max = 100
+			default = 0
+			reset_on_new_ruler = no
+			base_monthly_growth = 0
+			range_modifier = {
+				start_value = -100
+				end_value = -1
+				modifier = { 
+					republican_tradition = 1
+					trade_efficiency = 0.1
+					development_cost = -0.1
+				}
+			}
+			range_modifier = {
+				start_value = 0
+				end_value = 100
+				modifier = { 
+					global_manpower_modifier = 0.1
+					core_creation = -0.1
+					diplomatic_reputation = 1
+				}
+			}
+			on_max_reached = {
+				
+			}
+			on_min_reached = {
+				
+			}
+		}
+		
+	}
+	interactions = {
+		
+	}
+}

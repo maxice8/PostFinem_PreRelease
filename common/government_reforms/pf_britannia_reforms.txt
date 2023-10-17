@@ -1,0 +1,216 @@
+brittonic_confederation_reform = {
+	icon = "legislative_assembly_reform"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+
+	potential = {
+		OR = {
+			tag = TRN
+			has_reform = brittonic_confederation_reform
+		}
+	}
+	trigger = {
+		tag = TRN
+	}
+	modifiers = {
+		morale_damage = 0.05
+		global_unrest = -1
+		min_autonomy = 20
+		all_estate_influence_modifier = 0.10
+	}
+	custom_attributes = {
+		confederation_elections = yes
+	}
+	government_abilities = {
+		trinovantes_cohesion_mechanic
+	}
+	election_on_death = yes
+	heir = no
+	ai = {
+		factor = 1
+	}
+}
+
+pf_clan_supremacy_reform = {
+	icon = "man_and_children"
+	allow_normal_conversion = yes
+
+	potential = {
+		has_reform = brittonic_confederation_reform
+	}
+
+	modifiers = {
+		nobles_influence_modifier = -0.15
+		monarch_admin_power = 1
+		monarch_diplomatic_power = 1
+		monarch_military_power = 1
+		monthly_trn_cohesion = 0.2
+	}
+
+	custom_attributes = {
+		disables_confederation_elections = yes
+	}
+	heir = yes
+	maintain_dynasty = yes
+
+	ai = {
+		factor = 1
+	}
+}
+pf_guidance_of_the_elders_reform = {
+	icon = "organising_our_religion_reform"
+	allow_normal_conversion = yes
+
+	potential = {
+		has_reform = brittonic_confederation_reform
+	}
+
+	modifiers = {
+		innovativeness_gain = 0.25
+		embracement_cost = -0.20
+		nobles_influence_modifier = 0.10
+	}
+	custom_attributes = {
+		techs_give_estate_loyalty = yes
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+pf_blackcoat_dictatorship = {
+	icon = "blackcoats"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			tag = TRN
+			tag = ABN
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = pf_trn_allowed_blackcoat_dictatorship_tt
+			has_country_flag = is_blackcoats
+		}
+	}
+	modifiers = {
+		army_tradition = 1
+		max_absolutism = 10
+		legitimacy = -1
+		global_unrest = 2
+		land_morale = 0.10
+		stability_cost_modifier = 0.50
+	}
+	#custom_attributes = {
+	#	stab_hits_are_doubled = yes
+	#}
+	government_abilities = {
+		blackcoat_zeal_mechanic
+	}
+}
+pf_brittonic_tribe_reform = {
+	icon = "brittonic_king"
+	allow_normal_conversion = no
+	lock_level_when_selected = no
+	allow_force_tributary = no
+
+	potential = {
+		culture_group = old_celtic
+	}
+	trigger = {
+		culture_group = old_celtic
+	}
+	modifiers = {
+		nobles_privilege_slots = 1
+		core_creation = -0.05
+		global_manpower_modifier = 0.15
+		max_absolutism = -10
+	}
+	government_abilities = {
+		brittonic_song_mechanic
+	}
+	ai = {
+		factor = 1
+	}
+}
+pf_regional_tribal_nobility_reform = {
+	icon = "gallic_king"
+	allow_normal_conversion = no
+	lock_level_when_selected = no
+
+	potential = {
+		culture_group = old_celtic
+	}
+	trigger = {
+		has_reform = pf_brittonic_tribe_reform
+	}
+	modifiers = {
+		core_decay_on_your_own = -0.25
+		state_governing_cost = -0.15
+		nobles_influence_modifier = -0.10
+	}
+	ai = {
+		factor = 1
+	}
+}
+pf_militarised_druids_reform = {
+	icon = "norse_kingdom"
+	allow_normal_conversion = no
+	lock_level_when_selected = no
+
+	potential = {
+		culture_group = old_celtic
+	}
+	trigger = {
+		culture_group = old_celtic
+	}
+	modifiers = {
+		fire_damage = 0.05
+		mil_tech_cost_modifier = -0.10
+		church_influence_modifier = 0.10
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+pf_sardinian_league_reform = {
+	icon = "sardinian_league"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+	duration = 5
+
+	potential = {
+		tag = SAR
+	}
+	trigger = {
+		tag = SAR
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
+	}
+	modifiers = {
+		trade_efficiency = 0.05
+		development_cost_in_primary_culture = -0.05
+		global_unrest = -0.50
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	#government_abilities = {
+	#	trinovantes_cohesion_mechanic
+	#}
+	ai = {
+		factor = 1
+	}
+}

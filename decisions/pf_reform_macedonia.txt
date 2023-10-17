@@ -1,0 +1,116 @@
+country_decisions = {
+
+	reform_macedonia = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = reformed_macedonia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = AEG }
+			NOT = { tag = SLC }
+			NOT = { tag = ATH }
+			religion = hellenic
+			culture_group = macedonian_greek
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					region = balkan_region
+					root = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 15
+								region = balkan_region
+								is_core = root
+							}
+						}
+						owns_core_province = 148
+						owns_core_province = 1853
+						owns_core_province = 151
+					}
+				}
+				province_id = 148
+				province_id = 1853
+				province_id = 151
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no			
+			NOT = { exists = MAC }
+			owns_core_province = 148
+			owns_core_province = 1853
+			owns_core_province = 151
+			148 = { 					#  Macedonia
+				is_state = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 15
+				region = balkan_region
+				is_core = root
+			}
+		}
+		effect = {
+			148 = { 					#  Macedonia
+				move_capital_effect = yes
+			}
+			change_tag = MAC
+			custom_tooltip = empty_line_tt
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			custom_tooltip = empty_line_tt
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+				custom_tooltip = empty_line_tt
+			}
+			balkan_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MAC
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = reformed_macedonia_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

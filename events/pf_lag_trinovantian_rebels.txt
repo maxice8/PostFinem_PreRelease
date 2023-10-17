@@ -1,0 +1,387 @@
+namespace = pf_lag_trinovantian_rebels
+
+# Iceni revolt
+country_event = {
+	id = pf_lag_trinovantian_rebels.1
+	title = pf_lag_trinovantian_rebels.1.t
+	desc = pf_lag_trinovantian_rebels.1.desc
+	picture = PURITANS_eventPicture
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	trigger = {
+		tag = LAG
+		mission_completed = pf_lag_glorious
+
+		1860 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+	}
+
+	immediate = {
+		# Spawn the rebels so they do not get a chance to stack it
+		set_country_flag = pf_lag_iceni_revolt
+	}
+
+	option = {
+		name = pf_lag_trinovantian_rebels.1.a
+
+		1860 = {
+			spawn_rebels = {
+				type = pretender_rebels
+				leader_dynasty = "ap Iceni"
+				culture = briton
+				size = 2
+			}
+		}
+		custom_tooltip = PF_LAG_SPAWN_BRITON_NOBLE_REBELS
+		hidden_effect = {
+			random_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = briton
+					region = british_isles_region
+					NOT = { province_id = 1860 }
+				}
+				spawn_rebels = {
+					type = noble_rebels
+					culture = briton
+					size = 1
+				}
+			}
+		}
+	}
+}
+
+# Cantiaci revolt
+country_event = {
+	id = pf_lag_trinovantian_rebels.2
+	title = pf_lag_trinovantian_rebels.2.t
+	desc = pf_lag_trinovantian_rebels.2.desc
+	picture = MARCHING_PEASANTS_eventPicture
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	trigger = {
+		tag = LAG
+		mission_completed = pf_lag_glorious
+
+		235 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+	}
+
+	immediate = {
+		# Spawn the rebels so they do not get a chance to stack it
+		set_country_flag = pf_lag_cantiaci_revolt
+	}
+
+	option = {
+		name = pf_lag_trinovantian_rebels.2.a
+
+		235 = {
+			spawn_rebels = {
+				type = pretender_rebels
+				leader_dynasty = "ap Cantiaci"
+				culture = briton
+				size = 2
+			}
+		}
+
+		custom_tooltip = PF_LAG_SPAWN_BRITON_NOBLE_REBELS
+		hidden_effect = {
+			random_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = briton
+					region = british_isles_region
+					NOT = { province_id = 235 }
+				}
+				spawn_rebels = {
+					type = noble_rebels
+					culture = briton
+					size = 1
+				}
+			}
+		}
+	}
+}
+
+# Catuvellauni revolt
+country_event = {
+	id = pf_lag_trinovantian_rebels.3
+	title = pf_lag_trinovantian_rebels.3.t
+	desc = pf_lag_trinovantian_rebels.3.desc
+	picture = REVOLT_HUGUENOTS_eventPicture
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	trigger = {
+		tag = LAG
+		mission_completed = pf_lag_glorious
+
+		4370 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+	}
+
+	immediate = {
+		# Spawn the rebels so they do not get a chance to stack it
+		set_country_flag = pf_lag_catuvellauni_revolt
+	}
+
+	option = {
+		name = pf_lag_trinovantian_rebels.3.a
+
+		4370 = {
+			spawn_rebels = {
+				type = pretender_rebels
+				leader_dynasty = "ap Catuevellauni"
+				culture = briton
+				size = 2
+			}
+		}
+		custom_tooltip = PF_LAG_SPAWN_BRITON_NOBLE_REBELS
+		hidden_effect = {
+			random_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = briton
+					region = british_isles_region
+					NOT = { province_id = 4370 }
+				}
+				spawn_rebels = {
+					type = noble_rebels
+					culture = briton
+					size = 1
+				}
+			}
+		}
+	}
+}
+
+# Regni revolt
+country_event = {
+	id = pf_lag_trinovantian_rebels.4
+	title = pf_lag_trinovantian_rebels.4.t
+	desc = pf_lag_trinovantian_rebels.4.desc
+	picture = REVOLT_HUNGARIAN_eventPicture
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	trigger = {
+		tag = LAG
+		mission_completed = pf_lag_glorious
+
+		4371 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+	}
+
+	immediate = {
+		# Spawn the rebels so they do not get a chance to stack it
+		set_country_flag = pf_lag_regni_revolt
+	}
+
+	option = {
+		name = pf_lag_trinovantian_rebels.4.a
+
+		4371 = {
+			spawn_rebels = {
+				type = pretender_rebels
+				leader_dynasty = "ap Regni"
+				culture = briton
+				size = 2
+			}
+		}
+		custom_tooltip = PF_LAG_SPAWN_BRITON_NOBLE_REBELS
+		hidden_effect = {
+			random_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = briton
+					region = british_isles_region
+					NOT = { province_id = 4371 }
+				}
+				spawn_rebels = {
+					type = noble_rebels
+					culture = briton
+					size = 1
+				}
+			}
+		}
+	}
+}
+
+# Trinovante (they are a clan and country namesake) tag
+country_event = {
+	id = pf_lag_trinovantian_rebels.5
+	title = pf_lag_trinovantian_rebels.5.t
+	desc = pf_lag_trinovantian_rebels.5.desc
+	picture = SIEGE_eventPicture
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 32
+	}
+
+	trigger = {
+		tag = LAG
+		mission_completed = pf_lag_glorious
+
+		238 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		236 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+	}
+
+	immediate = {
+		# Spawn the rebels so they do not get a chance to stack it
+		set_country_flag = pf_lag_trinovante_revolt
+	}
+
+	option = {
+		name = pf_lag_trinovantian_rebels.5.a
+
+		238 = {
+			spawn_rebels = {
+				type = pretender_rebels
+				leader_dynasty = "ap Trinowanti"
+				culture = briton
+				size = 3
+			}
+		}
+		236 = {
+			spawn_rebels = {
+				type = noble_rebels
+				culture = briton
+				size = 2
+			}
+		}
+		custom_tooltip = PF_LAG_SPAWN_BRITON_NOBLE_REBELS
+		hidden_effect = {
+			random_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = briton
+					region = british_isles_region
+					NOT = { province_id = 235 }
+					NOT = { province_id = 238 }
+				}
+				spawn_rebels = {
+					type = noble_rebels
+					culture = briton
+					size = 1
+				}
+			}
+		}
+	}
+}
+
+# The Domesday Book
+country_event = {
+	id = pf_lag_trinovantian_rebels.6
+	title = pf_lag_trinovantian_rebels.6.t
+	desc = pf_lag_trinovantian_rebels.6.desc
+	picture = BIG_BOOK_eventPicture
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	trigger = {
+		tag = LAG
+		has_country_flag = pf_lag_iceni_revolt
+		has_country_flag = pf_lag_catuvellauni_revolt
+		has_country_flag = pf_lag_regni_revolt
+		has_country_flag = pf_lag_cantiaci_revolt
+		has_country_flag = pf_lag_trinovante_revolt
+		NOT = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				region = british_isles_region
+				OR = {
+					controlled_by = REB
+					units_in_province = REB
+				}
+				value = 1
+			}
+		}
+		NOT = {
+			has_country_flag = pf_lag_magna_carta
+		}
+	}
+
+	option = {
+		name = pf_lag_trinovantian_rebels.6.a
+		set_country_flag = pf_lag_domesday_book
+
+		add_stability = 1
+		add_country_modifier = {
+			name = pf_lag_domesday_book
+			duration = -1
+		}
+	}
+}
+
+# The Magna Carta (Lost to rebellion)
+country_event = {
+	id = pf_lag_trinovantian_rebels.7
+	title = pf_lag_trinovantian_rebels.7.t
+	desc = pf_lag_trinovantian_rebels.7.desc
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = LAG
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 6
+			region = british_isles_region
+			controlled_by = REB
+		}
+		236 = {
+			controlled_by = REB
+		}
+		NOT = {
+			has_country_flag = pf_lag_domesday_book
+		}
+	}
+
+	option = {
+		name = pf_lag_trinovantian_rebels.7.a
+		set_country_flag = pf_lag_magna_carta
+
+		# Ideally we would only kill the briton rebels but best
+		# we can do
+		disband_rebels = noble_rebels
+		disband_rebels = pretender_rebels
+		
+		add_stability = 1
+		add_country_modifier = {
+			name = pf_lag_magna_carta
+			duration = -1
+		}
+	}
+}

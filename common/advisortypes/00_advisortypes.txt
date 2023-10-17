@@ -77,6 +77,14 @@ philosopher = {
 		}
 		modifier = { tolerance_heretic = 1 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_adm_build_time }
+		}
+		modifier = {
+			build_time = -0.02
+		 }
+	}
 
 	chance = {
 		factor = 1
@@ -152,6 +160,14 @@ natural_scientist = {
 		}
 		modifier = { tolerance_heretic = 1 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_adm_build_time }
+		}
+		modifier = {
+			build_time = -0.02
+		 }
+	}
 
 	chance = {
 		factor = 1
@@ -183,6 +199,14 @@ artist = {
 		}
 	}
 
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_trn_splendor_art }
+		}
+		modifier = {
+			monthly_splendor = 1
+		 }
+	}
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -226,6 +250,14 @@ artist = {
 			owner = { has_country_modifier = eng_foreign_religious_control }
 		}
 		modifier = { tolerance_own = 1 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_adm_build_time }
+		}
+		modifier = {
+			build_time = -0.02
+		 }
 	}
 
 	chance = {
@@ -310,6 +342,14 @@ treasurer = {
 		}
 		modifier = { religious_unity = 0.15 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_adm_build_time }
+		}
+		modifier = {
+			build_time = -0.02
+		 }
+	}
 	
 	chance = {
 		factor = 1
@@ -384,6 +424,14 @@ theologian = {
 			owner = { has_country_modifier = eng_foreign_religious_control }
 		}
 		modifier = { global_heretic_missionary_strength = 0.01 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_adm_build_time }
+		}
+		modifier = {
+			build_time = -0.02
+		 }
 	}
 	
 	chance = {
@@ -468,6 +516,14 @@ master_of_mint = {
 			owner = { has_country_modifier = eng_foreign_religious_control }
 		}
 		modifier = { religious_unity = 0.15 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_adm_build_time }
+		}
+		modifier = {
+			build_time = -0.02
+		 }
 	}
 	
 	chance = {
@@ -559,6 +615,14 @@ inquisitor = {
 		modifier = {
 			establish_order_cost = -0.05
 		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_adm_build_time }
+		}
+		modifier = {
+			build_time = -0.02
+		 }
 	}
 	
 	chance = {
@@ -956,6 +1020,14 @@ navigator = {
 	
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_country_flag = pf_lag_extra_settlers }
+		}
+		modifier = { 
+			global_colonial_growth = 5
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { 
 				has_country_flag = jap_dip_advisor_culture_conversion_cost_flag
 			}
@@ -1030,12 +1102,30 @@ army_reformer = {
 		}
 	}
 	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_country_flag = nrd_buffed_moral_advisor 
+			}
+		}
+		modifier = { 
+			fire_damage = 0.01
+		}
+	}
+	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
 				is_emperor_of_china = yes 
 			}
 		}
 		modifier = { meritocracy = 0.25 }
+	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_government_mechanic = mac_war_cabinet_mechanic
+			}
+		}
+		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
 	}
 
 	chance = {
@@ -1073,6 +1163,14 @@ army_organiser = {
 		}
 		modifier = { meritocracy = 0.25 }
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_government_mechanic = mac_war_cabinet_mechanic
+			}
+		}
+		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
+	}
 
 	chance = {
 		factor = 1
@@ -1109,6 +1207,22 @@ commandant = {
 		}
 		modifier = { meritocracy = 0.25 }
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_government_mechanic = mac_war_cabinet_mechanic
+			}
+		}
+		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				mission_completed = pf_mac_absolute_control
+			}
+		}
+		modifier = { fire_damage = 0.02 }
+	}
 
 	chance = {
 		factor = 1
@@ -1144,6 +1258,14 @@ quartermaster = {
 			}
 		}
 		modifier = { meritocracy = 0.25 }
+	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_government_mechanic = mac_war_cabinet_mechanic
+			}
+		}
+		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
 	}
 
 	chance = {
@@ -1185,6 +1307,14 @@ recruitmaster = {
 		}
 		modifier = { meritocracy = 0.25 }
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_government_mechanic = mac_war_cabinet_mechanic
+			}
+		}
+		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
+	}
 
 	chance = {
 		factor = 1
@@ -1202,6 +1332,7 @@ recruitmaster = {
 ######################################################
 fortification_expert = {
 	monarch_power = MIL
+	}
 	
 	# Bonus
 	defensiveness = 0.2
@@ -1224,6 +1355,14 @@ fortification_expert = {
 			}
 		}
 		modifier = { meritocracy = 0.25 }
+	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_government_mechanic = mac_war_cabinet_mechanic
+			}
+		}
+		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
 	}
 
 	chance = {
@@ -1261,6 +1400,14 @@ grand_captain = {
 			}
 		}
 		modifier = { meritocracy = 0.25 }
+	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_government_mechanic = mac_war_cabinet_mechanic
+			}
+		}
+		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
 	}
 
 	chance = {

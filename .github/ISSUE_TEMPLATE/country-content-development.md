@@ -8,14 +8,15 @@ assignees: ''
 ---
 
 <!-- These are comments, you can leave them as-is and they won't appear in the final message
- The Example: for each section is just an example Format them how you wish -->
+ Each "Example:" section is just a guideline, it would be nice to follow but if you think
+ there is a better way then format as you wish -->
 
 <!-- Replace [TAG] with the country tag and [NAME] -->
-## [TAG] - [NAME] development
+# [TAG] - [NAME] development
 
 These are the Missions, Reforms, Events, and other stuff for [NAME].
 
-### Missions
+## Missions
 
 <!-- Example:
 - [ ] Conquest Branch
@@ -35,7 +36,7 @@ These are the Missions, Reforms, Events, and other stuff for [NAME].
   - [ ] Playtest
 -->
 
-### Reforms
+## Reforms
 
 <!-- Example:
 - [x] The First Reform
@@ -46,15 +47,31 @@ These are the Missions, Reforms, Events, and other stuff for [NAME].
 - [ ] Third Reform
 -->
 
-### Events
+## Events
 
 <!--
 Example:
-- [x] Native Opposition Chain
-  - [x] Iceni Revolt
-  - [x] Trinovanti Revolt
-  - [x] Ragni Revolt
-  - [x] Rebellion Defeated
-  - [x] Rebellion Victorious
+## Native Opposition Chain
+
+- [x] Iceni Revolt
+  - [x] Scripting
+  - [x] Localization
+- [x] Trinovanti Revolt
+  - [x] Scripting
+  - [x] Localization
+- [ ] Ragni Revolt
+  - [x] Scripting
+  - [ ] Localization
+- [ ] Rebellion Defeated
+  - [x] Scripting
+  - [ ] Localization
+- [x] Rebellion Victorious
+  - [x] Scripting
+  - [x] Localization
+
+## Dutch Election Events
+
+TODO: expand this
+
 - [ ] Dutch Elections events
 -->

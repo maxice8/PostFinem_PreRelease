@@ -1,0 +1,173 @@
+pf_random_neighbour_province = {
+	random_owned_province = { # Selects a random province that you own with a neighbouring province you don't own.
+        limit = {
+            owned_by = $target_country$
+            $limit1$ # Limit for your provinces
+            any_neighbor_province = {
+                NOT = {owned_by = $target_country$}
+				$limit2$ # Limit for neighbour province
+            }
+        }
+        random_neighbor_province = { # Selects a neighbour of that province province.
+            limit = {
+                NOT = {owned_by = $target_country$}
+				$limit2$ # Limit for neighbour province
+            }
+            $effect$
+        }
+    }
+}
+
+pf_add_monarch_power = {
+	add_adm_power = $value$
+	add_dip_power = $value$
+	add_mil_power = $value$
+}
+
+pf_build_in_random_owned_province_without_flag = {
+	random_owned_province = {
+		limit = {
+			AND = {
+				NOT = {has_building = $building$}
+				NOT = {has_province_flag = $flag$}
+			}
+		}
+		add_building = $building$
+	}
+}
+
+pf_upgrade_heir = {
+	if = {
+		limit = {heir_$type$ = 6}
+		add_$type$_power = 100
+	}
+	else = {change_heir_$type$ = 1}
+}
+
+pf_random_upgrade_heir = {
+	random_list = {
+		1 = {
+			pf_upgrade_heir = {type = adm}
+		}
+		1 = {
+			pf_upgrade_heir = {type = dip}
+		}
+		1 = {
+			pf_upgrade_heir = {type = mil}
+		}
+	}
+}
+
+pf_add_opinion_both = {
+	add_opinion = {
+		who = $who$
+		modifier = $modifier$
+	}
+	reverse_add_opinion = {
+		who = $who$
+		modifier = $modifier$
+	}
+}
+
+
+pf_mon_sod_stab_for_tributaries = {
+	custom_tooltip = pf_mon_sod_stab_for_tributaries_tt
+	hidden_effect = {
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = tributary_state
+			}
+			overlord = {
+				add_stability = 1
+			}
+		}
+	}
+}
+
+
+pf_mon_gtt_lose_opinion_1 = {
+	custom_tooltip = pf_mon_gtt_lose_opinion_1_tt
+	hidden_effect = {
+		every_capital_province = {
+			limit = {
+				region = france_region
+				owner = {
+					NOT = {religion = punic_religion}
+				}
+			}
+			owner = {
+				pf_add_opinion_both = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
+				}
+			}
+		}
+	}
+}
+pf_mon_gtt_lose_opinion_2 = {
+	custom_tooltip = pf_mon_gtt_lose_opinion_2_tt
+	hidden_effect = {
+		every_capital_province = {
+			limit = {
+				region = france_region
+				owner = {
+					NOT = {religion = punic_religion}
+				}
+			}
+			owner = {
+				pf_add_opinion_both = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
+				}
+				pf_add_opinion_both = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
+				}
+			}
+		}
+	}
+}
+pf_mon_gtt_lose_opinion_3 = {
+	custom_tooltip = pf_mon_gtt_lose_opinion_3_tt
+	hidden_effect = {
+		every_capital_province = {
+			limit = {
+				region = france_region
+				owner = {
+					NOT = {religion = punic_religion}
+				}
+			}
+			owner = {
+				pf_add_opinion_both = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
+				}
+				pf_add_opinion_both = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
+				}
+				pf_add_opinion_both = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
+				}
+				pf_add_opinion_both = {
+					who = ROOT
+					modifier = pf_mon_gtt_opinion_from_upgrade
+				}
+			}
+		}
+	}
+}
+pf_mon_gtt_spread_religion = {
+	custom_tooltip = pf_mon_gtt_spread_religion_tt
+}
+
+pf_mon_hop_unlock_blessings = {
+	custom_tooltip = pf_mon_hop_unlock_blessings_tt
+}
+pf_mon_hop_frequent_blessings = {
+	custom_tooltip = pf_mon_hop_frequent_blessings_tt
+}
+pf_mon_hop_upgrade_blessings = {
+	custom_tooltip = pf_mon_hop_upgrade_blessings_tt
+}

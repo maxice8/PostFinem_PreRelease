@@ -1,6 +1,6 @@
 #Norse Warlord
 
-norse_warlord = {
+pf_norse_warlord = {
 	icon = "viking"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -9,7 +9,7 @@ norse_warlord = {
 		religion = norse_pagan_reformed
 	}
 	modifiers = {
-		army_tradition = 0.5
+		may_perform_slave_raid = yes
 		naval_morale = 0.1
 		movement_speed_onto_off_boat_modifier = 1
 	}
@@ -24,12 +24,15 @@ norse_warlord = {
 	}
 }
 
-naval_society_reform = {
+pf_naval_society_reform = {
 	icon = "sailors"
 	allow_normal_conversion = no
 	# lock_level_when_selected = yes
 	potential = {
-		religion = norse_pagan_reformed
+		OR = {
+			culture_group = scandinavian
+			religion = norse_pagan_reformed
+		}
 	}
 	modifiers = {
 		galley_power = 0.15
@@ -43,12 +46,15 @@ naval_society_reform = {
 	}
 }
 
-berzerker_zeal_reform = {
+pf_berzerker_zeal_reform = {
 	icon = "berzerker"
 	allow_normal_conversion = no
 	# lock_level_when_selected = yes
 	potential = {
-		religion = norse_pagan_reformed
+		OR = {
+			culture_group = scandinavian
+			religion = norse_pagan_reformed
+		}
 	}
 	modifiers = {
 		manpower_in_true_faith_provinces = 0.2
@@ -62,7 +68,30 @@ berzerker_zeal_reform = {
 	}
 }
 
-norse_nationstates_reform = {
+pf_longboat_focus = {
+	icon = "pf_longboat"
+	allow_normal_conversion = no
+	# lock_level_when_selected = yes
+	potential = {
+		OR = {
+			culture_group = scandinavian
+			religion = norse_pagan_reformed
+		}
+	}
+	modifiers = {
+		has_galleass = yes
+		allowed_galleass_fraction = 0.2
+		naval_maintenance_modifier = -0.1
+	}
+	# custom_attributes = {
+	# 	buffed_strong_duchies = yes #+5% Loyalty
+	# }
+	ai = {
+		factor = 2 #generic
+	}
+}
+
+pf_norse_nationstates_reform = {
 	icon = "nationstates"
 	allow_normal_conversion = no
 	# lock_level_when_selected = yes
@@ -81,7 +110,7 @@ norse_nationstates_reform = {
 	}
 }
 
-establish_permanent_settlements_reform = {
+pf_establish_permanent_settlements_reform = {
 	icon = "free_city"
 	allow_normal_conversion = no
 	# lock_level_when_selected = yes
@@ -97,5 +126,19 @@ establish_permanent_settlements_reform = {
 	# }
 	ai = {
 		factor = 2 #generic
+	}
+}
+
+pf_romuva_tribes = {
+	icon = "crown"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		tolerance_own = 1
+		church_power_modifier = -1
+	}
+	ai = {
+		factor = 1
 	}
 }

@@ -1,0 +1,71 @@
+pf_mon_gtt_convert_decision_cooldown = {
+	picture = "time"
+}
+
+pf_mon_hop_ares_blessing = {
+	picture = "yearly_army_professionalism"
+	land_maintenance_modifier = -0.1
+	yearly_army_professionalism = 0.03
+}
+
+pf_mon_hop_reshef_blessing = {
+	picture = "yearly_army_professionalism"
+	land_maintenance_modifier = -0.1
+	yearly_army_professionalism = 0.03
+}
+
+pf_mon_hop_mars_blessing = {
+	picture = "yearly_army_professionalism"
+	land_maintenance_modifier = -0.1
+	yearly_army_professionalism = 0.03
+}
+
+pf_mon_hop_tyr_blessing = {
+	picture = "yearly_army_professionalism"
+	land_maintenance_modifier = -0.1
+	yearly_army_professionalism = 0.03
+}
+
+pf_mon_hop_heracles_blessing = {
+	picture = "force_march_free"
+	enable_forced_march = yes
+}
+
+pf_mon_hop_melqart_blessing = {
+	picture = "force_march_free"
+	enable_forced_march = yes
+}
+
+pf_mon_hop_hercules_blessing = {
+	picture = "force_march_free"
+	enable_forced_march = yes
+}
+
+pf_mon_hop_hephaestus_blessing = {
+	picture = "build_time"
+	build_cost = -0.15
+	build_time = -0.15
+}
+
+pf_mon_hop_kushor_blessing = {
+	picture = "build_time"
+	build_cost = -0.15
+	build_time = -0.15
+}
+
+pf_mon_hop_vulcan_blessing = {
+	picture = "build_time"
+	build_cost = -0.15
+	build_time = -0.15
+}
+
+pf_dda_diplo_rep = {
+	picture = "diplomatic_reputation_icon"
+	diplomatic_reputation = 2
+}
+
+pf_mnd_state_secrets_compromised = {
+	picture = "global_spy_defence_opposite"
+	global_spy_defence = -0.25
+}
+

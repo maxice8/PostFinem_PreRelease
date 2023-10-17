@@ -1,0 +1,724 @@
+# For specific combinations of culture, religion and other such triggers
+# Will pick the first valid one it finds in list
+
+#Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
+
+# Adirim
+adirim_of_confederation_names = {
+	rank = {
+		3 = FEDERAL_SEAT
+	}
+	ruler_male = {
+		3 = GRAND_ADIRIM
+	}
+	ruler_female = {
+		3 = IMPERATRIX
+	}
+
+	consort_female = {
+		3 = IMPERALINA
+	}
+
+	consort_male = {
+		3 = IMPERIALIS
+	}
+
+	heir_male = {
+		3 = CAESAR
+	}
+	heir_female = {
+		3 = CAESARA
+	}
+	trigger = {
+		is_emperor = yes
+	}
+}
+
+
+punic_pirate_government = {
+	rank = {
+		1 = MARSA          # Marsa (Harbor, inspired by the Semitic root for port or harbor)
+		2 = KORSAYA        # Korsaya (Corsair's Land, "Korsaya" being a fictional term inspired by "corsair")
+		3 = BAHRAT_RABAT   # Bahrat Rabat (Great Sea Dominion, "Bahrat" being inspired by the Semitic root for sea)
+	}
+
+	ruler_male = {
+		1 = REIS           # Reis (Captain, a term used historically in various Mediterranean cultures for ship captains)
+		2 = RAB_REIS       # Rab Reis (Admiral or Chief Captain)
+		3 = BAHR_MELEK     # Bahr Melek (Sea King)
+	}
+
+	ruler_female = {
+		1 = REISA          # Reisa (Female Captain)
+		2 = RABAT_REISA    # Rabat Reisa (Admiral or Chief Female Captain)
+		3 = BAHR_MALKAT    # Bahr Malkat (Sea Queen)
+	}
+
+	trigger = {
+		NOT = { 
+			pf_belongs_to_greek_culture_group = yes
+		}
+		has_reform = pirate_republic_reform
+	}
+}
+brittonic_confederation_names = {
+	rank = {
+		1 = CONFEDERATION
+		2 = CONFEDERATION
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = CHIEFTAIN
+		2 = GREAT_CHIEFTAIN
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = CHIEFTESS
+		2 = GREAT_CHIEFTESS
+		3 = EMPRESS
+	}
+
+	consort_male = {
+		1 = CHIEF
+		2 = CHIEF
+		3 = EMPEROR
+	}
+
+	consort_female = {
+		1 = CHIEFTESS
+		2 = CHIEFTESS
+		3 = EMPRESS
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIRESS
+		2 = HEIRESS
+		3 = HEIRESS
+	}
+
+	trigger = {
+		OR = {
+			has_reform = brittonic_confederation_reform
+			has_reform = pf_brittonic_tribe_reform
+		}
+	}
+}
+
+blackcoat_dictatorship_names = {
+	rank = {
+		1 = DICTATORSHIP
+		2 = DICTATORSHIP
+		3 = MILITARY_EMPIRE
+	}
+
+	ruler_male = {
+		1 = GENERAL
+		2 = GENERAL
+		3 = GENERAL
+	}
+
+	ruler_female = {
+		1 = GENERAL
+		2 = GENERAL
+		3 = GENERAL
+	}
+
+	consort_male = {
+		1 = HUSBAND
+		2 = HUSBAND
+		3 = HUSBAND
+	}
+
+	consort_female = {
+		1 = WIFE
+		2 = WIFE
+		3 = WIFE
+	}
+	
+	heir_male = {
+		1 = SON
+		2 = SON
+		3 = SON
+	}
+
+	heir_female = {
+		1 = DAUGHTER
+		2 = DAUGHTER
+		3 = DAUGHTER
+	}
+
+	trigger = {
+		has_reform = pf_blackcoat_dictatorship
+	}
+}
+pf_hierophant = {
+	rank = {
+		1 = HIEROPHANTATE
+		2 = ARCHONTIC_HIEROPHANTATE
+		3 = ARCHONTIC_HIEROPHANTATE
+	}
+
+	ruler_male = {
+		1 = HIEROPHANT
+		2 = ARCHON_HIEROPHANT
+		3 = ARCHON_HIEROPHANT
+	}
+
+	trigger = {
+		OR = {
+			has_reform = pf_athens_archon
+			# Hypothetical hierophantocracy goes here
+		}
+	}
+}
+
+#GENERIC
+
+pf_norse_rulers = {
+	rank = {
+		1 = THING
+		2 = ALTHINGI
+		3 = STORRAD
+	}
+
+	ruler_male = {
+		1 = JARL
+		2 = KONUNGR
+		3 = HIGH_KONUNGR
+	}
+
+	consort_female = {
+		1 = JARLKONA
+		2 = DROTTNING
+		3 = HIGH_DROTTNING
+	}
+	ruler_female = {
+		1 = JARLKONA
+		2 = DROTTNING
+		3 = HIGH_DROTTNING
+	}
+
+	heir_male = {
+		1 = JARLSSON
+		2 = KONUNGSSON
+		3 = HIGH_KONUNGSSON 
+	}
+	heir_female = {
+		1 = JARLSDOTTIR
+		2 = KONUNGSDOTTIR
+		3 = HIGH_KONUNGSDOTTIR
+	}
+
+	trigger = {
+		AND = {
+			religion = norse_pagan_reformed
+			government = tribal
+		}
+	}
+
+}
+italo_punic_rulers_monarchy = {
+	rank = {
+		1 = DUCATUS
+		2 = REGNUM
+		3 = IMPERIUM
+	}
+
+	ruler_male = {
+		1 = DUX
+		2 = REX
+		3 = IMPERATOR
+	}
+
+	ruler_female = {
+		1 = DUCESSA
+		2 = REGINNA
+		3 = IMPERATRIX
+	}
+
+	consort_female = {
+		1 = DUCALINA
+		2 = REGALINA
+		3 = IMPERALINA
+	}
+
+	consort_male = {
+		1 = DUCALIS
+		2 = REGALIS
+		3 = IMPERIALIS
+	}
+
+	heir_male = {
+		1 = DUCULUS
+		2 = REGULUS
+		3 = CAESAR
+	}
+	heir_female = {
+		1 = DUCULA
+		2 = REGULA
+		3 = CAESARA
+	}
+	trigger = {
+		OR = {
+			culture_group = italo_punic
+			is_part_of_hre = yes
+		}
+		government = monarchy
+		is_emperor = no
+	}
+}
+italo_punic_rulers_republic = {
+	rank = {
+		1 = CIVITATUM
+		2 = LIGATUM
+		3 = RES_MAGNA
+	}
+
+	ruler_male = {
+		1 = PRAETOR
+		2 = CONSUL
+		3 = PROCONSUL
+	}
+
+	ruler_female = {
+		1 = PRAETORA
+		2 = CONSULA
+		3 = PROCONSULA
+	}
+	trigger = {
+		OR = {
+			culture_group = italo_punic
+			is_part_of_hre = yes
+		}
+		government = republic
+		is_emperor = no
+	}
+}
+italo_punic_rulers_theocracy = {
+	rank = {
+		1 = SACRARIUM
+		2 = TEMPLATUM
+		3 = DIVINATUM
+	}
+
+	ruler_male = {
+		1 = FLAMEN
+		2 = PONTIFEX
+		3 = ARCHFLAMEN
+	}
+
+	ruler_female = {
+		1 = FLAMINA
+		2 = PONTIFICA
+		3 = ARCHFLAMINA
+	}
+	trigger = {
+		OR = {
+			culture_group = italo_punic
+			is_part_of_hre = yes
+		}
+		government = theocracy
+		is_emperor = no
+	}
+}
+
+greek_rulers_monarchy = {
+	rank = {
+		1 = DESPOTATE
+		2 = BASILEIA
+		3 = AUTOKRATORIA
+	}
+
+	ruler_male = {
+		1 = DESPOTES
+		2 = BASILEUS
+		3 = AUTOKRATOR
+	}
+
+	ruler_female = {
+		1 = DESPOTISSA
+		2 = BASILISSA
+		3 = AUTOKRATIRA
+	}
+
+	consort_female = {
+		1 = DESPOTISSA
+		2 = BASILISSA
+		3 = AUTOKRATIRA
+	}
+
+	consort_male = {
+		1 = DESPOTES
+		2 = BASILEUS
+		3 = AUTOKRATOR
+	}
+
+	heir_male = {
+		1 = DIADOCHOS
+		2 = DIADOCHOS
+		3 = DIADOCHOS 
+	}
+	heir_female = {
+		1 = DIADOCHE
+		2 = DIADOCHE
+		3 = DIADOCHE
+	}
+
+	trigger = {
+		OR = {
+			culture_group = macedonian_greek
+			culture_group = anatolian_greek
+			culture_group = levantine_greek
+			culture_group = egyptian_greek
+		}
+	}
+}
+
+rabim_qahal_adrim_in_power = {
+	rank = {
+		1 = MEDINAT  
+		2 = HABURAT  
+		3 = RISHONAT 
+	}
+
+	ruler_male = {
+		1 = NASI            # Nasi
+		2 = ROSH            # Rosh
+		3 = GADOL           # Gadol
+	}
+
+	ruler_female = {
+		1 = NASIA           # Nasia
+		2 = ROSHA           # Rosha
+		3 = GADOLA          # Gadola
+	}
+
+	trigger = {
+		has_government_mechanic = car_rabim_qahal
+		NOT = {
+			has_government_power = {
+				mechanic_type = car_rabim_qahal
+				power_type = adirim_vs_suffet
+				value = 0
+			}
+		}
+	}
+}
+
+rabim_qahal_suffet_in_power = {
+	rank = {
+		1 = MEDINAT  
+		2 = HABURAT  
+		3 = RISHONAT 
+	}
+
+	ruler_male = {
+		1 = RAB_QART
+		2 = MELEK 
+		3 = RAB_MELEK 
+	}
+
+	ruler_female = {
+		1 = RABAT_QART
+		2 = MALKAT 
+		3 = RABAT_MALKAT 
+	}
+
+	trigger = {
+		has_government_mechanic = car_rabim_qahal
+		has_government_power = {
+			mechanic_type = car_rabim_qahal
+			power_type = adirim_vs_suffet
+			value = 0
+		}
+	}
+}
+
+punic_monarchy = {
+	rank = {
+		1 = QART
+		2 = MAMLAKAT
+		3 = RABAT
+	}
+
+	ruler_male = {
+		1 = RAB_QART
+		2 = MELEK 
+		3 = RAB_MELEK 
+	}
+
+	ruler_female = {
+		1 = RABAT_QART
+		2 = MALKAT 
+		3 = RABAT_MALKAT 
+	}
+
+	consort_female = {
+		1 = BAALAT_QART 
+		2 = BAALAT_MELEK 
+		3 = BAALAT_RABAT 
+	}
+
+	consort_male = {
+		1 = BAAL_QART 
+		2 = BAAL_MELEK 
+		3 = BAAL_RABAT 
+	}
+
+	heir_male = {
+		1 = BEN_QART 
+		2 = BEN_MELEK 
+		3 = BEN_RABAT  
+	}
+	heir_female = {
+		1 = BINT_QART 
+		2 = BINT_MELEK 
+		3 = BINT_RABAT 
+	}
+
+	trigger = {
+		OR = {
+			culture_group = north_african
+			culture_group = euro_punic
+		}
+		government = monarchy
+	}
+}
+
+punic_rulers_theocracy = {
+	rank = {
+		1 = QODESH         # Qodesh (Holy Place)
+		2 = BAITYL         # Baityl (House of God)
+		3 = ELONAT         # Elonat (Pantheon)
+	}
+
+	ruler_male = {
+		1 = KOHEN          # Kohen (Priest)
+		2 = KOHEN_RAB      # Kohen Rab (High Priest)
+		3 = EL_KOHEN       # El Kohen (God's Priest)
+	}
+
+	ruler_female = {
+		1 = KOHENAT        # Kohenat (Priestess)
+		2 = KOHENAT_RAB    # Kohenat Rab (High Priestess)
+		3 = EL_KOHENAT     # El Kohenat (God's Priestess)
+	}
+
+	consort_female = {
+		1 = ASHERAT        # Asherat (Sacred Consort)
+		2 = BAALAT         # Baalat (Lady)
+		3 = ELAT           # Elat (Goddess)
+	}
+
+	consort_male = {
+		1 = BAAL_KOHEN     # Baal Kohen (Lord Priest)
+		2 = DAGON          # Dagon (Sacred Consort)
+		3 = EL_BAAL        # El Baal (God Lord)
+	}
+
+	heir_male = {
+		1 = BEN_KOHEN      # Ben Kohen (Son of the Priest)
+		2 = BEN_RAB        # Ben Rab (Son of the High)
+		3 = BEN_EL         # Ben El (Son of God)
+	}
+	heir_female = {
+		1 = BINT_KOHEN     # Bint Kohen (Daughter of the Priest)
+		2 = BINT_RAB       # Bint Rab (Daughter of the High)
+		3 = BINT_EL        # Bint El (Daughter of God)
+	}
+
+	trigger = {
+		OR = {
+			culture_group = north_african
+			culture_group = euro_punic
+		}
+		government = theocracy
+	}
+}
+
+punic_rulers_republic = {
+	rank = {
+		1 = MEDINAT        # Medinat (City-State)
+		2 = HABURAT        # Haburat (Federation)
+		3 = RISHONAT       # Rishonat (Great Republic)
+	}
+
+	ruler_male = {
+		1 = SUFFET         # Suffet (Judge or Magistrate)
+		2 = RAB_SUFFET     # Rab Suffet (Chief Magistrate)
+		3 = SHOFET_RISHON  # Shofet Rishon (First Judge)
+	}
+
+	ruler_female = {
+		1 = SUFFETAT       # Suffetat (Female Judge or Magistrate)
+		2 = RABAT_SUFFET   # Rabat Suffet (Chief Female Magistrate)
+		3 = SHOFETAT_RISHON # Shofetat Rishon (First Female Judge)
+	}
+
+	consort_female = {
+		1 = SUFFET_BAALAT  # Suffet Baalat (Lady of the Judge)
+		2 = RAB_BAALAT     # Rab Baalat (Chief Lady)
+		3 = RISHONA_BAALAT # Rishona Baalat (First Lady)
+	}
+
+	consort_male = {
+		1 = SUFFET_BAAL    # Suffet Baal (Lord of the Judge)
+		2 = RAB_BAAL       # Rab Baal (Chief Lord)
+		3 = RISHON_BAAL    # Rishon Baal (First Lord)
+	}
+
+	heir_male = {
+		1 = BEN_SUFFET     # Ben Suffet (Son of the Judge)
+		2 = BEN_RAB        # Ben Rab (Son of the Chief)
+		3 = BEN_RISHON     # Ben Rishon (Son of the First)
+	}
+	heir_female = {
+		1 = BINT_SUFFET    # Bint Suffet (Daughter of the Judge)
+		2 = BINT_RAB       # Bint Rab (Daughter of the Chief)
+		3 = BINT_RISHON    # Bint Rishon (Daughter of the First)
+	}
+
+	trigger = {
+		OR = {
+			culture_group = north_african
+			culture_group = euro_punic
+		}
+		government = republic
+	}
+}
+
+
+punic_rulers_tribal = {
+	rank = {
+		1 = PLEMAT         # Plemat (Tribe or Clan, fictional term inspired by Semitic roots)
+		2 = HABUR          # Habur (Alliance or Confederation, from Semitic roots)
+		3 = RABAT_PLEM     # Rabat Plem (Great Tribal Land, combining "Rabat" for "great" and a fictional term "Plem")
+	}
+
+	ruler_male = {
+		1 = RAB_PLEM       # Rab Plem (Chief of Tribe, combining "Rab" for "chief" and a fictional term "Plem")
+		2 = MELEK_PLEM     # Melek Plem (King of Tribe, from Semitic "Melek" for "king")
+		3 = RAB_MELEK      # Rab Melek (Great Tribal King)
+	}
+
+	ruler_female = {
+		1 = RABAT_PLEM     # Rabat Plem (Female Chief of Tribe)
+		2 = MALKAT_PLEM    # Malkat Plem (Queen of Tribe, from Semitic "Malkat" for "queen")
+		3 = RABAT_MALKAT   # Rabat Malkat (Great Tribal Queen)
+	}
+
+	consort_female = {
+		1 = BAALAT_PLEM    # Baalat Plem (Lady of the Tribe)
+		2 = BAALAT_MELEK   # Baalat Melek (Lady of the Tribal King)
+		3 = BAALAT_RABAT   # Baalat Rabat (Lady of the Great King)
+	}
+
+	consort_male = {
+		1 = BAAL_PLEM      # Baal Plem (Lord of the Tribe)
+		2 = BAAL_MELEK     # Baal Melek (Lord of the Tribal King)
+		3 = BAAL_RABAT     # Baal Rabat (Lord of the Great King)
+	}
+
+	heir_male = {
+		1 = BEN_PLEM       # Ben Plem (Son of the Tribe)
+		2 = BEN_MELEK      # Ben Melek (Son of the Tribal King)
+		3 = BEN_RABAT      # Ben Rabat (Son of the Great King)
+	}
+	heir_female = {
+		1 = BINT_PLEM      # Bint Plem (Daughter of the Tribe)
+		2 = BINT_MELEK     # Bint Melek (Daughter of the Tribal King)
+		3 = BINT_RABAT     # Bint Rabat (Daughter of the Great King)
+	}
+
+	trigger = {
+		OR = {
+			culture_group = north_african
+			culture_group = euro_punic
+		}
+		government = tribal
+	}
+}
+
+
+pf_lagr_republic_names = {
+	rank = {
+		1 = THING
+		2 = ALTHINGI
+		3 = STORRAD
+	}
+
+	ruler_male = {
+		1 = FELAGSHALDARI
+		2 = THINGHALDER
+		3 = GREAT_THINGHALDER
+	}
+
+	ruler_female = {
+		1 = FELAGSHALDARKONA
+		2 = THINGHALDERINA
+		3 = GREAT_THINGHALDERINA
+	}
+
+	trigger = {
+		has_reform = pf_lagr_republic
+	}
+}
+
+satrapy = {
+	rank = {
+		1 = SATRAPY_RANK
+		2 = GREAT_SATRAPY_RANK
+		3 = GREAT_SATRAPY_RANK
+	}
+
+	ruler_male = {
+		1 = HYPARCHOS
+		2 = SATRAP
+		3 = SATRAP
+	}
+
+	ruler_female = {
+		1 = HYPARCHESA
+		2 = SATRAPIA
+		3 = SATRAPIA
+	}
+
+	consort_male = {
+		1 = HYPARCHONOS
+		2 = SATRAPENOS
+		3 = SATRAPENOS
+	}
+
+	consort_female = {
+		1 = HYPARCHESA
+		2 = SATRAPIA
+		3 = SATRAPIA
+	}
+	
+	heir_male = {
+		1 = HYPARCHION
+		2 = SATRAPZADA
+		3 = SATRAPZADA
+	}
+
+	heir_female = {
+		1 = HYPARCHIA
+		2 = SATRAPZADI
+		3 = SATRAPZADI
+	}
+
+	trigger = {
+		is_subject_of_type_with_overlord = {
+			who = PER
+			type = satrapy
+		}
+	}
+}

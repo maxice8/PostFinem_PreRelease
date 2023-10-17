@@ -635,6 +635,8 @@ positive_stability = {
 	yearly_corruption = -0.02
 	global_institution_spread = 0.05
 	yearly_harmony = 0.25
+	monthly_trn_cohesion = 0.20
+	monthly_mac_war_cabinet_organization = 0.02
 }
 
 privateering = {
@@ -649,6 +651,8 @@ negative_stability = {
 	devotion = 1
 	caravan_power = 0.05
 	yearly_harmony = 0.25
+	monthly_trn_cohesion = 0.5
+	monthly_mac_war_cabinet_organization = 0.03
 }
 
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
@@ -735,6 +739,7 @@ bankruptcy = {
 	idea_cost = 0.5
 	imperial_mandate = -0.1
 	great_project_upgrade_cost = 0.5
+	monthly_mac_war_cabinet_organization = -0.5
 }
 
 
@@ -751,6 +756,8 @@ peace = {
 	rr_girondists_influence = -0.1
 	pr_smugglers_influence = 0.1
 	monthly_militarized_society = -0.1
+	monthly_mac_war_cabinet_organization = -0.05
+	monthly_blackcoat_zeal = -0.25
 }
 
 unconditional_surrender = {
@@ -777,6 +784,8 @@ war_exhaustion = {
 	siege_ability = -0.01
 	global_trade_goods_size_modifier = -0.02
 	monthly_militarized_society = -0.05
+	monthly_trn_cohesion = -0.05
+	monthly_mac_war_cabinet_organization = -0.02
 }
 
 doom = {
@@ -829,6 +838,7 @@ army_tradition = {
 	janissaries_loyalty_modifier = 0.05
 	allowed_tercio_fraction = 0.1
 	allowed_samurai_fraction = 0.1
+	monthly_blackcoat_zeal = 0.5
 }
 
 navy_tradition = {
@@ -976,6 +986,7 @@ legitimacy = {
 	monthly_militarized_society = 0.05
 	max_absolutism = 20
 	nobles_loyalty_modifier = 0.1
+	monthly_trn_cohesion = 1
 }
 
 #Multiplied by current Horde Unity - 50
@@ -1039,6 +1050,8 @@ corruption = {
 	janissaries_loyalty_modifier = 0.1
 	eunuchs_loyalty_modifier = 0.1
 	monthly_heir_claim_increase = 0.025
+	monthly_trn_cohesion = -50
+	monthly_mac_war_cabinet_organization = -0.03
 }
 
 root_out_corruption = {
@@ -1054,6 +1067,7 @@ recovery_motivation = {
 	global_unrest = -5
 	interest = -1
 	horde_unity = 10
+	monthly_blackcoat_zeal = 1
 }
 
 luck = {
@@ -1296,6 +1310,8 @@ high_army_professionalism = {
 	siege_ability = 0.2
 	drill_decay_modifier = -0.5
 	allowed_samurai_fraction = 0.1
+	monthly_mac_war_cabinet_organization = 0.3
+	monthly_blackcoat_zeal = 0.5
 }
 
 streltsy_modifier = {
@@ -1341,6 +1357,7 @@ power_projection = {
 	devotion = 0.5
 	horde_unity = 0.5
 	republican_tradition = 0.2
+	monthly_trn_cohesion = 0.5
 }
 
 power_projection_25 = {
@@ -1543,6 +1560,7 @@ dishonoured_alliance =  {
 
 drilling_armies = { # Multiplied by percentage of forcelimit currently drilling
 	yearly_army_professionalism = 0.01
+	monthly_mac_war_cabinet_organization = 0.05
 }
 
 ##################################################################################################
@@ -1867,6 +1885,75 @@ expansion_focus_modifier = {
 }
 
 ########################################
+# POST FINEM PUNIC Religious Schools
+########################################
+
+
+orthodox_school_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	dip_tech_cost_modifier = -0.05
+}
+
+syncretist_school_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	diplomatic_reputation = 1
+}
+
+baalite_school_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	manpower_recovery_speed = 0.1
+}
+
+melqartian_school_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	shock_damage_received = -0.1
+}
+
+eshmunist_school_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	movement_speed = 0.1
+}
+
+mystic_school_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	prestige = 1
+}
+
+sadeh_school_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_trade_goods_size_modifier = 0.1
+}
+
+yam_school_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	naval_morale = 0.1
+}
+
+########################################
 # Religious Schools
 ########################################
 hanafi_scholar_modifier = {
@@ -2094,6 +2181,7 @@ over_governing_capacity_modifier = {
 	monthly_prussian_militarized_society_2 = -1
 	monthly_prussian_militarized_society_3 = -1
 	administrative_efficiency = -0.5
+	monthly_trn_cohesion = -5
 }
 
 # At 1000% below capacity, this modifier will be fully used
@@ -2160,12 +2248,15 @@ num_accepted_cultures = {
 }
 
 ruler_adm = {
+		monthly_trn_cohesion = 0.10
 }
 
 ruler_dip = {
+		monthly_trn_cohesion = 0.10
 }
 
 ruler_mil = {
+		monthly_trn_cohesion = 0.10
 }
 
 heir_adm = {
@@ -2246,6 +2337,7 @@ reverse_average_subject_liberty_desire = { #100% LD => 0% modifier
 }
 
 average_global_autonomy = { #100% autonomy => 100% modifier
+	monthly_trn_cohesion = -5
 }
 
 reverse_average_global_autonomy = { #100% autonomy => 0% modifier

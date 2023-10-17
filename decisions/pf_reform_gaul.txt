@@ -1,0 +1,119 @@
+country_decisions = {
+
+	reform_gaul = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = reformed_gaul_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = GAU }
+			NOT = { tag = CEL }
+			NOT = { tag = ATH }
+			religion = druidic
+			culture_group = gallic
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					region = france_region
+					root = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 15
+								region = france_region
+								is_core = root
+							}
+						}
+						owns_core_province = 182
+						owns_core_province = 172
+						owns_core_province = 4111
+						owns_core_province = 199
+					}
+				}
+				province_id = 182
+				province_id = 172
+				province_id = 4111
+				province_id = 199
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no			
+			NOT = { exists = GAU }
+			owns_core_province = 182
+			owns_core_province = 172
+			owns_core_province = 4111
+			owns_core_province = 199
+			182 = { 					#  Valois
+				is_state = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 15
+				region = france_region
+				is_core = root
+			}
+		}
+		effect = {
+			182 = { 					#  Valois
+				move_capital_effect = yes
+			}
+			change_tag = GAU
+			custom_tooltip = empty_line_tt
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			custom_tooltip = empty_line_tt
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+				custom_tooltip = empty_line_tt
+			}
+			france_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GAU
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = reformed_gaul_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

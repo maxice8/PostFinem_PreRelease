@@ -12,6 +12,10 @@ tags={
 }
 replace_path="common/bookmarks"
 replace_path="gfx/loadingscreens"
+dependencies={
+	"UI a la Artemis"
+	"UI a la Sulfuris"
+}
 name="Post Finem"
 supported_version="1.35.*"
 

@@ -2,3 +2,159 @@ nrd_prepare_for_war_modifier = {
 	manpower_recovery_speed = 0.1
 	infantry_shock = 0.1
 }
+nrd_economic_opportunities_modifier = {
+	merchants = 1
+	trade_efficiency = 0.1
+}
+nrd_productive_fisheries_modifier = {
+	trade_goods_size_modifier = 0.2
+}
+nrd_highland_domination_modifier = {
+	global_autonomy = -0.1
+	global_tax_modifier = 0.1
+}
+nrd_celtic_sea_base_modifier = {
+	local_ship_repair = 0.25
+	local_sailors_modifier = 0.5
+}
+nrd_galley_with_good_oar_modifier = {
+	own_coast_naval_combat_bonus = 1
+}
+nrd_looking_overseas_modifier = {
+	colonists = 1
+	may_explore = yes
+}
+nrd_dominate_celtica_owns_modifier = {
+	local_development_cost_modifier = -0.1
+	local_production_efficiency = 0.1
+}
+nrd_dominate_celtica_subject_modifier = {
+	naval_forcelimit_modifier = 0.25
+	naval_maintenance_modifier = -0.25
+}
+nrd_glorious_ports_modifier = {
+	navy_tradition = 1
+	naval_tradition_from_trade = 0.5
+}
+nrd_expansion_and_prosperity_modifier = {
+	development_cost_modifier = -0.1
+	build_cost = -0.1
+}
+nrd_infrastructure_investment_modifier = {
+	build_time = -0.25
+	movement_speed = 0.1
+}
+nrd_gunpowder_modifier = {
+	artillery_cost = -0.2
+	artillery_levels_available_vs_fort = 1
+}
+nrd_secure_iron_modifier = {
+	trade_goods_size = 2
+	trade_value_modifier = 0.25
+}
+pf_nrd_norse_hegemony_modifier = {
+	diplomatic_reputation = 1
+	warscore_cost_vs_other_religion = -0.1
+}
+nrd_proclaim_odins_name_modifier = {
+	cb_on_religious_enemies = yes
+	global_missionary_strength = 0.02
+}
+nrd_share_the_sagas_modifier = {
+	tolerance_own = 1
+	manpower_in_true_faith_provinces = 0.2
+}
+nrd_prosperous_norse_lands_modifier = {
+	local_prosperity_growth = 1
+	local_production_efficiency = 0.2
+}
+nrd_over_the_horizon_modifier = {
+	auto_explore_adjacent_to_colony = yes
+	global_colonial_growth = 20
+}
+nrd_colonial_ambitions_modifier = {
+	colonist_placement_chance = 0.1
+	global_colonial_growth = 20
+}
+nrd_a_whole_new_world_modifier = {
+	trade_steering = 0.25
+	merchants = 1
+}
+nrd_fruitful_colonies_modifier = {
+	global_trade_goods_size_modifier = 0.20
+	global_colonial_growth = 25
+}
+nrd_fruitful_colonies_modifier2 = {
+	vassal_forcelimit_bonus = 0.25
+	trade_steering = 0.25
+}
+nrd_invest_in_plantation_modifier = {
+	trade_steering = 0.5
+	trade_efficiency = 0.1
+}
+nrd_uncontested_in_new_world_modifier = {
+	liberty_desire_from_subject_development = -0.1
+	colonists = 1
+}
+nrd_approach_the_interior_modifier = {
+	trade_company_investment_cost = -0.1
+	caravan_power = 0.25
+}
+nrd_scandi_refugee_modifier = {
+	local_tax_modifier = 0.1
+	local_culture_conversion_cost = -0.25
+}
+nrd_convert_culture_modifier = {
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+}
+nrd_rules_waves_modifier = {
+	heavy_ship_power = 0.1
+	naval_maintenance_modifier = -0.15
+}
+nrd_norse_settlers_event_modifier = {
+	local_production_efficiency = 0.1
+	trade_value_modifier = 0.25
+}
+
+skl_a_new_target_modifier = {
+	warscore_cost_vs_other_religion = -0.1
+	warscore_from_battles_modifier = 0.25
+}
+skl_a_new_identity_modifier = {
+	culture_conversion_cost = -0.25
+}
+control_the_skagerak_modifier = {
+	hostile_attrition = 5
+	province_trade_power_value = 10
+}
+skl_northern_tribes_modifier = {
+	global_monthly_devastation = -0.05
+	ae_impact = -0.1
+}
+skl_clear_the_forests_modifier = {
+	development_cost = -0.1
+}
+skl_inferior_northmen_modifier = {
+	galley_power = 0.1
+	is_galleass_modifier = yes
+}
+skl_secure_supply_lines_modifier = {
+	global_supply_limit_modifier = 0.2
+}
+skl_warmer_waters_modifier = {
+	local_ship_repair = 0.25
+	local_sailors_modifier = 0.5
+}
+skl_gallic_dominion_modifier = {
+	prestige = 1
+	global_missionary_strength = 0.02
+}
+skl_leader_of_the_norse_world_modifier = {
+	legitimacy = 1
+	trade_efficiency = 0.1
+}
+skl_ruler_of_the_north = {
+	administrative_efficiency = 0.05
+	global_trade_goods_size_modifier = 0.1
+}

@@ -1,5 +1,6 @@
 #Country Name: Please see filename.
 graphical_culture = easterngfx
+preferred_religion = paradosi
 color = { 125 110 225 }
 revolutionary_colors = { 10 0 1 }
 historical_idea_groups = { 
@@ -26,11 +27,11 @@ historical_units = {
 	persian_rifle
 }
 monarch_names = { 
-	"Ptolemy #8" = 20
-	"Alexander #3" = 19
-	"Antonius #0" = 17
+	"Ptolemy #2" = 20
+	"Alexander #1" = 19
+	"Antonius #2" = 17
 	"Demetrius #0" = 16
-	"Perseus #4" = 15
+	"Perseus #1" = 15
 	"Hermes #3" = 14
 	"Helios #0" = 13
 	"Zephyros #1" = 12
@@ -122,8 +123,8 @@ ship_names = {
 	Korax "Mavros Korax" Phovos Dimos "Theodoros Kolokotronis" "Odysseas Andrutsos" "Georgios Karaiskakis" "Rigas Ferraios" "Dionysios Solomos" Dionysios
 	Dionysos Talos Mpoumpoulina "Manto Mavrogenous" "Konstantinos Kanaris" Nikitaras Tourkofagos Nikitas Vulgaroktonos Messologi
 	Palaiologos Komnenos "Isaakios Komnenos" Thalpori Lazaros "Apostolos Andreas" "Apostolos Varnavas" "Apostolos Loukas" "Apostolos Thomas" "Apostolos Petros"
-	"Apostolos Iakovos" "Apostolos Stephanos" "Apostolos Ioannis" "Apostolos Simonas" "Apostolos Vartholomaios" "Apostolos Thaddeos" "12 Apostoloi" "Agioi Saranta" "Agioi Pantes" "Agios Nikolaos"
-	Naftikos "O Leventis ton Psaron" Leventis Tromos Rigaina Rigas Doukaina Dioskouroi Romos Romylos
+	"Apostolos Iakovos" "Apostolos Stephanos" "Apostolos Ioannis" "Apostolos Simonas" "Apostolos Vartholomaios" "Apostolos Thaddeos" "12 Apostoloi" "Agioi Saranta" "Agioi Pantes" "Agios Nikolaos"Army of
+	Naftikos "O Leventis ton Psaron" Leventis Tromos Rigaina Rigas Doukaina Dioskouroi Romos RomylosArmy of
 	"Romos kai Romylos" Papandreas Papamichalis Papakonstantinos "Agios Demetrios" "Agia Marina" "Agia Evlampia" "Agia Charalambia" "Agios Charalambos" "Agios Charilaos"
 	"Agios Antonios" "Agia Antonia" "Agios Amvrosios" "Panagia Aggelovastachti" "Panagia Filoptochi" "Panagia Thalassofiliti" Thalassomachos Amfitriti "Thalassios Ippos" "Thalassios Leontas"
 	Persoktonos "Autokrator Isavros" "Autokrato Makedon" Thekla "Agia Thekla" Papaflessas "Alexandros Ypsilantis" "Nea Ionia" Alikarnassos Voukefalas
@@ -161,8 +162,8 @@ ship_names = {
 	Zakros Vathypetra Megalopetra 
 }
 fleet_names = { 
-	"Stólos Aigaíou" "Mesogeiakós Stólos" "Stólos ton $PROVINCE$"
+	"Stólos ton $PROVINCE$"
 }
 army_names = { 
-	"Megálos Stratós" "Voithitikós Stratós" "Stratós tou $PROVINCE$"
+	"Stratós tou $PROVINCE$"
 }

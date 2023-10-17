@@ -1,0 +1,40 @@
+﻿l_english:
+
+
+###########
+# Governments
+###########
+
+# Carthaginian Rabim Qahal
+ ability_car_rabim_qahal: "Rabim Qahal"
+ adirim_vs_suffet_desc: "The Rabim Qahal is the central legislative body of [Root.GetName], comprised of ruling noble elites which are lead by the council of the Adirim, who ultimately collaborate with the Suffet to govern the nation\n\nThe balance of power shifts between the Adirim and the Suffet based on various decisions and events within and around [Root.GetName]\n\nWith the §GAdirim§! in power, we will receive:\n Development Cost: §G-10.0%§! \n Trade Efficiency: §G+10.0%§! \n Yearly Republican Tradition: §G+1.00§!\n\nWith the §PSuffet§! in power, we will receive:\n National Manpower Modifier: §G+10.0%§!\n Diplomatic Reputation: §G+1§!\n Core-Creation Cost: §G-10.0%§! \n\n"
+ adirim_vs_suffet: "Qahal Balance of Power"
+ monthly_adirim_vs_suffet: "Monthly Qahal Balance of Power Change"
+ adirim_vs_suffet_gain_modifier: "Monthly Qahal Balance of Power Change Modifier"
+
+# Macedonian War Cabinet Organization
+ ability_gaul_confederation_mechanic: "Gallic Confederation"
+ gaul_confederation: "Gallic Centralization"
+ monthly_gaul_confederation: "Monthly Gallic Centralization"
+ gaul_confederation_desc: "While Gaul is nominally united under the banner of the King, the real power is held with individual provinces within the realm, who can restrict troops and funds towards the king at any given moment. \n\n§YGallic Centralization§! can be affected by doing the following:\n - Developing Accepted Culture Provinces: §G+0.25§!\n - Constructing or Upgrading Forts : §G+5§!\n - Rebel Seiging a Province: §R-2§!\n\n"
+ 
+# Gallic Centralization
+ ability_mac_war_cabinet_mechanic: "Macedonian War Cabinet"
+ mac_war_cabinet_organization: "War Cabinet Organization"
+ monthly_mac_war_cabinet_organization: "Monthly War Cabinet Organization"
+ mac_war_cabinet_organization_gain_modifier: "Monthly War Cabinet Organization Gain Modifier"
+ mac_war_cabinet_organization_desc: "The War Cabinet is a vital institution that ensures the strength of the military through its cohesive organization and effective collaboration.\n\nOrganization increases with the following factors:\n - Level of Military Advisor\n - Recuiting Generals\n - Having Postive Stability\n - Having Army Professionalism\n - Being Ahead of Time on Military Technology\n - Drilling Armies\n\nOrganization decreases with the following factors:\n - Having Negative Stability\n - Having Corruption\n - Bankruptcy\n - Being at Peace\n - Having War Exhaustion\n\n"
+
+# Trinovantes Cohesion
+ trn_cohesion: "Cohesion"
+ trn_cohesion_desc: "Managing the separate ambitions and demands of the constituent tribes of the Confederation can be difficult and requires an immense amount of skill and patience. Cohesion represents that ability, with higher levels signifying a more stable and productive alliance, and negative values indicating a state of general collapse.\n\nCohesion can be §Gincreased§! by:\n - Positive stability\n - Legitimacy\n - Power Projection\n - Monarch Skills\n\nCohesion can be §Rdecreased§! by:\n - Negative stability\n - War exhaustion\n - Corruption\n - Average Autonomy\n - Being over governing capacity\n"
+ monthly_trn_cohesion: "Monthly Cohesion"
+ 
+# Persian Centralization
+ ability_pf_per_centralization_mechanic: "Centralisation"
+ pf_per_centralization: "Centralization"
+ pf_per_centralization_desc: "Centralization is a measure of the control we have over our Satrapies. If this hits 0 all our subjects will become independant!"
+ pf_per_centralization_decrease: "Grant Concessions"
+ pf_per_centralization_decrease_desc: "We can potentially placate the Satrapies by granting them additional privileges, though it would be to our own detriment."
+ pf_per_centralization_increase: "Seize Privileges"
+ pf_per_centralization_increase_desc: "We can revoke privileges previously given to the Satrapies to tighten our hold over them. They are sure to be unhappy about this."

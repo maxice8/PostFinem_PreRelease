@@ -1,0 +1,47 @@
+country_decisions = {
+	pf_lag_reset_deity = {
+		potential = {
+			OR = {
+				has_country_flag = pf_lag_can_reset_deities
+				has_country_flag = allfathers_blessing_flag
+			}
+		}
+		allow = {
+			pf_has_any_norse_deity_active = yes
+			if = {
+				limit = {
+					has_country_flag = pf_lag_can_reset_deities
+				}
+				adm_power = 20
+				dip_power = 20
+				mil_power = 20
+			}
+			if = {
+				limit = {
+					has_country_flag = allfathers_blessing_flag
+				}
+				adm_power = 50
+			}
+		}
+		effect = {
+			pf_reset_deity = yes
+
+			custom_tooltip = empty_line_tt
+
+			if = {
+				limit = {
+					has_country_flag = pf_lag_can_reset_deities
+				}
+				add_adm_power = -20
+				add_dip_power = -20
+				add_mil_power = -20
+			}
+			if = {
+				limit = {
+					has_country_flag = allfathers_blessing_flag
+				}
+				add_adm_power = -50
+			}
+		}
+	}
+}

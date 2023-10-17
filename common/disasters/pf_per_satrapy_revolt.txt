@@ -1,0 +1,65 @@
+pf_per_satrapy_revolt = {
+	potential = {
+		tag = PER
+		NOT = { has_country_flag = pf_per_had_satrapy_revolt }
+	}
+
+	can_start = {
+		always = yes
+	}
+
+	can_stop = {
+		always = no
+	}
+
+	progress = {
+		modifier = {
+			factor = 20
+			tag = PER
+		}
+	}
+
+	can_end = {
+		OR = {
+			NOT = { satrapy = 1 }
+			AND = {
+				stability = 0
+				NOT = { num_of_rebel_armies = 1 }
+				NOT = { num_of_rebel_controlled_provinces = 1 }
+				OR = {
+					all_subject_country = { NOT = { liberty_desire = 50 } }
+					NOT = { 
+						has_government_power = {
+							mechanic_type = pf_per_centralization_mechanic
+							power_type = pf_per_centralization
+							value = 20
+						}
+					}
+				}
+			}
+		}
+	}
+
+	ended_by_country_breaking_to_rebels = no
+
+	modifier = {
+		reduced_liberty_desire = -20
+		global_unrest = 5
+	}
+
+	on_start = pf_per_events.1
+	on_end = pf_per_events.9
+
+	on_monthly = {
+		events = { }
+		random_events = {
+			1500 = 0
+			100 = pf_per_events.2 # Satrapy disobeys
+			50 = pf_per_events.3 # Satrapy demands money
+			25 = pf_per_events.4 # Satrapy demands privileges
+			50 = pf_per_events.5 # Uprising in Satrapy
+			25 = pf_per_events.6 # Satrapies ally
+			50 = pf_per_events.7 # Satrapy compromises
+		}
+	}
+}

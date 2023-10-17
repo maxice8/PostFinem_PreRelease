@@ -27,6 +27,10 @@ estate_church_land_rights = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }
 		modifier = { monthly_russian_modernization = -0.03 }
 	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = gaul_confederation_mechanic }
+		modifier = { monthly_gaul_confederation = -0.05 }
+	}
 	#conditional_modifier = {
 	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
 	#	modifier = { monthly_ottoman_decadence = 0.02 }
@@ -217,6 +221,10 @@ estate_church_religious_state = {
 	}
 	benefits = {
 		country_admin_power = 1
+	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = gaul_confederation_mechanic }
+		modifier = { monthly_gaul_confederation = -0.10 }
 	}
 	conditional_modifier = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }

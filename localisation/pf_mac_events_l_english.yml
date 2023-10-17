@@ -1,0 +1,74 @@
+﻿l_english:
+ 
+# MAC Decisions
+ mac_promote_cohesion_with_war_cabinet_title: "Promote War Cabinet Cohesion"
+ mac_promote_cohesion_with_war_cabinet_desc: "Allowing the influential military minds of the War Cabinet to align themselves more closely with the [Monarch.GetTitle] will ensure a more smooth process of streamlining and coordinating future operations."
+ mac_promote_cohesion_with_war_cabinet_effect_tt: "The effect of current §YWar Cabinet Organization§! decay will be §Yhalved§!"
+ mac_martial_education_for_heir_title: "Martial Education for the [Root.Heir.GetTitle]"
+ mac_martial_education_for_heir_desc: "It would do [Root.Heir.GetName] good, no doubt, to immerse himself within a more martial mindset. Committing him to the War Cabinet as a protégé for a high ranking officer will encourge more cooperation between [Monarch.GetTitle] and Cabinet, and he very well may prove to be a gifted leader, given the chance."
+ mac_promote_cohesion_with_war_cabinet_modifier: "War Cabinet Cohesion"
+ mac_committed_to_war_cabinet_effect_tt: "[Root.Heir.GetName] will be converted to a general with §Y75§! Army Tradition"
+
+ pf_mac_events.1.t: "The Establishment of Magna Graecia"
+ pf_mac_events.1.d: "The Kingdom of Magna Graecia, a beacon of Hellenic culture and strategic importance, now stands under our dominion. Its establishment is both a triumph and a responsibility. Direct rule from the capital ensures uniformity and immediate compliance to our directives. Yet, Magna Graecia, with its mosaic of city-states and proud history, might resist centralized control, leading to potential unrest and challenges to our authority.\n\nOn the other hand, appointing a governor, especially one familiar with the region's intricacies, offers a more nuanced approach. This intermediary could manage local affairs, ensuring our interests are upheld while respecting the region's unique identity. Such a choice might foster goodwill, loyalty, and a sense of partnership between the heart of our empire and this new acquisition.\n\nIn deciding our approach, we must weigh immediate control against long-term harmony, considering what's best for both our empire and the flourishing of Magna Graecia."
+ pf_mac_events.1.a: "We shall establish a client kingdom"
+ pf_mac_events.1.b: "The only banner to fly shall be of Macedon!"
+ mac_release_magna_graecia_tt: "@MGN §YMagna Graecia§! will be released as a §YPersonal Union§! from the provinces required for the mission."
+
+ pf_mac_events.3.t: "Uncontested in the Aegean"
+ pf_mac_events.3.d: "Our empire's dominance in the Aegean Sea is unparalleled. The azure waters, dotted with islands, bear witness to our unmatched maritime prowess. Each island, from the smallest rocky outcrop to the largest inhabited landmass, stands as a testament to our control. Our fleets, with their imposing vessels, patrol the waves, ensuring safe passage for our traders and deterring any potential adversaries. The tales of our naval victories and strategic brilliance have echoed across ports and coastal towns, instilling respect and, at times, fear. No other power dares to challenge our authority in the Aegean. The islands, with their rich histories and strategic locations, are securely under our aegis. Our dominance is not just a matter of military might but also of economic and cultural influence, making the Aegean Sea a bastion of our empire's strength and prosperity."
+ pf_mac_events.3.a: "Our ports are legendary"
+ pf_mac_events.3.b: "Efficient leadership is the root"
+
+ pf_mac_events.4.t: "The Question of the Egyptians"
+ pf_mac_events.4.d: "We stand at a pivotal crossroads for our empire. Egypt, with its  amalgamation of Hellenic culture and ancient civilization, fertile Nile delta, and strategic position, is a prize we cannot overlook. Yet, how we integrate this land into our realm is a matter of intense debate.\n\nRuling with the pen suggests a diplomatic approach. By recognizing and respecting Egypt's rich history and culture, we can foster goodwill. Collaborative governance, trade agreements, and cultural exchanges could bind Egypt to us, ensuring loyalty through mutual benefit and respect. This method might be slower, but it promises lasting unity and reduced resistance.\nConversely, ruling with the sword implies direct military control. A swift show of force could quickly bring Egypt under our heel, ensuring immediate compliance. However, this approach risks resentment, potential rebellions, and the loss of Egypt's unique contributions to our empire.\n\nIn deciding between the pen or the sword, we must weigh immediate gains against long-term stability. The essence of Egypt, its people, and its legacy, should guide our choice, ensuring a harmonious future for both our empire and this ancient land."
+ pf_mac_events.4.a: "Let us reign them in.. as friends"
+ pf_mac_events.4.b: "We shall conquer Aegytpos directly"
+
+ pf_mac_events.5.t: "Utilization of Heavy Cavalry"
+ pf_mac_events.5.d: "The Macedonian military, historically anchored by its formidable phalanx, faces a pivotal choice: the reintroduction of the Cataphract, the ancient heavy cavalry. These armored riders, with their steeds equally clad in protective gear, were once the terror of battlefields, known for their line-breaking charges. Embracing the Cataphract would mean blending Macedonia's infantry strength with the mobility and shock value of heavy cavalry.\n\nThis isn't merely about augmenting our forces. It's a strategic evolution, showcasing our adaptability and desire to merge past lessons with present needs. By integrating the Cataphract, Macedonia aims to redefine its military prowess, fusing tradition with innovation."
+ pf_mac_events.5.a: "Let us directly integrate them!"
+ pf_mac_events.5.b: "We shall outsource our cavalry"
+ mac_mercs_event_tt: "You will unlock the §YMacedonian Cataphracts§! mercinary company and they will cost §YNo Army Professionalism§! to hire"
+ mac_merc_catephracts: "Macedonian Cataphracts"
+ 
+
+ pf_mac_events.7.t: "The Tumultuous Rule of Kallias Philoxnos"
+ pf_mac_events.7.d: "Macedonia currently stands on the precipice of a new era. Kallias Philoxnos, freshly crowned, bears the weight of his father Leonidas Philoxnos' legacy, a ruler marked by decadence and cruelty. Leonidas' ascent to power, following a military coup that ousted the previous Basileus, has left deep scars on the nation's political landscape.\n\nCentral to this delicate balance of power is the War Cabinet, a formidable assembly of military and strategic minds. Their influence, bolstered after the coup, is significant. While the Basileus traditionally holds supreme authority, the War Cabinet's role has grown, making them essential players in the governance of Macedonia.\n\nKallias, aware of this intricate dance of power, must navigate his relationship with the War Cabinet carefully. Too much reliance risks diminishing the authority of the crown, while outright confrontation could plunge Macedonia into internal strife. This balance, if not maintained, threatens the very stability of the nation. Future rulers, too, will inherit this delicate equilibrium, and their ability to manage it will determine Macedonia's fate"
+ pf_mac_events.7.a: "May Zeus guide us"
+
+ pf_mac_events.8.t: "A Blessing from Posiedon"
+ pf_mac_events.8.d: "Aristodinos Kokkinopogon is a figure shrouded in legend and awe. Whispers along the coastlines tell of a man who rose from the sea's depths, with tales suggesting Poseidon himself sent Aristodinos as a divine gift to the land. With salt in his hair and the aura of the ocean about him, he was presented to the [Root.Monarch.GetTitle]. Humbly, Aristodinos offered his service to the crown, claiming knowledge of ancient maritime secrets and unparalleled strategic insights. The court is abuzz with speculation and anticipation, as the [Root.Monarch.GetTitle] contemplates the potential of this sea-born enigma and the promise he holds for the realm."
+ pf_mac_events.8.a: "He shall naturally lead the navy"
+ pf_mac_events.8.b: "We need his expertise in [Capital.GetName]"
+
+ pf_mac_events.9.t: "The Cabinet Proposes a Promotion"
+ pf_mac_events.9.d: "The War Cabinet proposes elevating a renowned field general to central command, arguing it would enhance military responsiveness. While cooperation could strengthen ties between [Monarch.GetTitle] and the War Cabinet, leading to potential military successes, it also poses risks. Acquiescing might further empower the War Cabinet, subtly shifting the balance of authority away from the crown. [Monarch.GetTitle] must weigh the immediate benefits against the long-term implications of such a decision."
+ pf_mac_events.9.a: "Promote him in the field"
+ pf_mac_events.9.b: "Bring him to [Capital.GetName]"
+ pf_mac_events.9.c: "We need not cooperate with the Cabinet"
+
+ pf_mac_events.10.t: "Alexandria ad Issum Reclaimed!"
+ pf_mac_events.10.d: "Alexandria ad Issum, once a beacon of Hellenistic grandeur, has been reconquered. This city, strategically nestled in the eastern Mediterranean, has long been a crossroads of trade and culture. Its control offers dominance over pivotal sea routes and lucrative overland paths. Beyond its economic boon, Alexandria ad Issum's historical significance resonates deeply, harking back to eras of ancient influence and knowledge. Its return to our realm not only reclaims a piece of our storied past but also solidifies our strategic foothold, ensuring our prominence in this vital corner of the Mediterranean."
+ pf_mac_events.10.a: "In Alexander's Honor!"
+
+ pf_mac_events.11.t: "Alexandria of the Caucasus Reclaimed!"
+ pf_mac_events.11.d: ""Alexandria of the Caucasus, a gem set amidst the rugged terrains of the Hindu Kush, has been reclaimed. Founded by Alexander the Great during his eastern campaigns, this city stands as a testament to Hellenistic endeavors deep within Asia. Its strategic location, bridging the East and West, has made it a vital hub for trade, culture, and military expeditions. The reconquest of this city not only reconnects us with a storied chapter of ancient conquests but also fortifies our position in a region where empires have vied for dominance. Holding Alexandria of the Caucasus ensures a gateway to the riches of the East and a stronghold in a geographically pivotal area."
+ pf_mac_events.11.a: "We shall invest into this city"
+
+ pf_mac_events.12.t: "Alexandria Arachosia Reclaimed!"
+ pf_mac_events.12.d: "Alexandria Arachosia, nestled in the heart of ancient lands, has once again come under our banner. Established by Alexander the Great, this city is a symbol of Hellenistic reach into the depths of Asia. Positioned near the confluence of major trade routes, it has long served as a vital nexus between the civilizations of the East and West. Its reconquest not only revives our connection to a glorious past but also secures a strategic point in a region rich in resources and history. Controlling Alexandria Arachosia provides a foothold in a key crossroads, enhancing our influence and trade prospects in this diverse and vital region."
+ pf_mac_events.12.a: "Another city of Alexander, reclaimed"
+
+ pf_mac_events.13.t: "Charax Spasinu Reclaimed!"
+ pf_mac_events.13.d: "Charax Spasinu, a bastion by the Persian Gulf, is once again under our dominion. Founded during the Hellenistic era, this port city has been a linchpin in maritime trade and a gateway to the rich lands of Mesopotamia. Its strategic location has made it a coveted prize for empires, offering control over naval routes and access to the wealth of the East. The recent reconquest of Charax Spasinu not only reestablishes our maritime presence in the Gulf but also reconnects us to a legacy of trade and exploration. Holding this city ensures a strengthened position in regional trade dynamics and a fortified naval presence in the southern waters"
+ pf_mac_events.13.a: "Poseidon bless this harbor!"
+
+ pf_mac_events.14.t: "The Cabinet Proposes Cooperation"
+ pf_mac_events.14.d: "Representatives of the War Cabinet have approached [Root.Monarch.GetName] with a proposal of cooperation. Recognizing the evolving dynamics of governance, they are willing to concede more influence within the Cabinet's decision-making processes. In exchange, they seek certain benefits and privileges from the state. This mutual arrangement could streamline governance, ensuring a more unified front in both domestic and foreign affairs. However, while this cooperation might bring about short-term stability and cohesion, [Root.Monarch.GetTitle] must carefully weigh the long-term implications. Conceding too much might embolden the War Cabinet, potentially shifting the balance of power and altering the very fabric of the realm's governance."
+ pf_mac_events.14.a: "We shall grant concessions"
+ pf_mac_events.14.b: "Fund their endeavors"
+ pf_mac_events.14.c: "No, the [Root.Monarch.GetTitle] rules"
+
+ mac_paradosi_athens_occupation_tt: "Is §YMacedonia§! and has finished the §YThe Paradosi Reformation§! mission"
+ mac_paradosi_reformation_mission_tt: "Gain access to §YThe Conquest of Athens§! triggered modifier when directly controlling [146.GetName]"

@@ -1,0 +1,379 @@
+# pf_lag_permanent
+pf_lag_permanent_army = {
+	drill_gain_modifier = 0.1
+	land_morale = 0.1
+}
+
+# pf_lag_gunpower
+pf_lag_artillery = {
+	artillery_cost = -0.1
+	artillery_levels_available_vs_fort = 1
+}
+
+# pf_lag_raise
+pf_lag_second_heathen_army = {
+	morale_damage_received = -0.05
+	manpower_recovery_speed = 0.1
+}
+
+# pf_lag_secure
+pf_lag_conquest_belgica = {
+	core_creation = -0.1
+	promote_culture_cost = -0.1
+}
+
+# pf_lag_break
+pf_lag_gaul_broken = {
+	prestige_decay = -0.01
+	ae_impact = -0.15
+}
+
+# pf_lag_push
+pf_lag_push_consolidate = {
+	local_core_creation = -0.1
+	harsh_treatment_cost = -0.15
+}
+
+# pf_lag_brest
+pf_lag_brest_dockyards = {
+	local_ship_cost = -0.25
+	local_ship_repair = 0.25
+	allowed_voc_indiamen_fraction = 0.01
+}
+
+# pf_lag_longboats
+pf_lag_raiders_storm = {
+	may_perform_slave_raid_on_same_religion = yes
+	coast_raid_range = 1
+}
+
+# pf_lag_encroach
+pf_lag_encroach_on_germans = {
+	warscore_cost_vs_other_religion = -0.05
+	war_exhaustion_cost = -0.2
+	warscore_from_battles_modifier = 0.1
+}
+
+# pf_lag_london
+pf_lag_thames = {
+	local_development_cost = -0.1
+	trade_value_modifier = 0.25
+	local_great_project_upgrade_cost = -0.1
+	province_trade_power_modifier = 0.25
+}
+
+# pf_lag_wool_industry
+pf_lag_cloth_industry = {
+	local_production_efficiency = 0.2
+}
+
+# pf_lag_modernise
+pf_lag_modern_navy = {
+	naval_morale = 0.05
+	naval_forcelimit_modifier = 0.15
+}
+
+# pf_lag_develop_belgica
+pf_lag_belgica_proper = {
+	local_institution_spread = 0.1
+	trade_goods_size_modifier = 0.1
+	build_cost = -0.05
+}
+
+# pf_lag_port_desire
+pf_lag_carthage_north = {
+	province_trade_power_modifier = 0.5
+	trade_value_modifier = 0.25
+	local_prosperity_growth = 1
+	local_development_cost = -0.2
+}
+
+# pf_lag_glorious
+pf_lag_trinovantes_crown = {
+	diplomatic_reputation = 1
+	unjustified_demands = -0.25
+}
+
+# pf_lag_break_clans
+pf_lag_domesday_book = {
+	global_tax_modifier = 0.1
+	land_forcelimit_modifier = 0.05
+	manpower_recovery_speed = 0.1
+}
+
+# pf_lag_break_clans
+pf_lag_magna_carta = {
+	nobles_influence_modifier = 0.1
+	church_influence_modifier = -0.1
+	tolerance_heathen = 2
+	tolerance_of_heathens_capacity = 1
+}
+
+# pf_lag_quarters
+pf_lag_general_staff = {
+	army_tradition_from_battle = 0.25
+	free_leader_pool = 1
+	land_maintenance_modifier = -0.1
+}
+
+# pf_lag_doctrine
+pf_lag_full_quality = {
+	infantry_power = 0.1
+	army_tradition_decay = -0.005
+	drill_gain_modifier = 0.25
+	drill_decay_modifier = -0.25
+}
+
+# pf_lag_doctrine
+pf_lag_full_quantity = {
+	land_maintenance_modifier = -0.05
+	manpower_recovery_speed = 0.1
+	global_manpower_modifier = 0.2
+}
+
+# pf_lag_doctrine
+pf_lag_full_mercenary = {
+	mercenary_manpower = 0.2
+	mercenary_discipline = 0.05
+	monthly_hessian_militarization = 0.25
+}
+
+# pf_lag_doctrine
+pf_lag_full_offensive = {
+	army_tradition_from_battle = 0.5
+	morale_damage = 0.05
+	shock_damage = 0.05
+	siege_ability = 0.1
+}
+
+# pf_lag_doctrine
+pf_lag_full_defensive = {
+	morale_damage_received = -0.05
+	shock_damage_received = -0.05
+	defensiveness = 0.15
+}
+
+# pf_lag_doctrine
+pf_lag_full_firepower = {
+	backrow_artillery_damage = 0.1
+	fire_damage = 0.05
+	fire_damage_received = -0.05
+}
+
+# pf_lag_raid
+pf_lag_experienced_raiders = {
+	naval_tradition_from_battle = 0.1
+}
+
+# pf_lag_rheinland
+pf_lag_consolidate_rheinland = {
+	trade_steering = 0.1
+	caravan_power = 0.15
+}
+
+# pf_lag_push_celts
+pf_lag_danelaw = {
+	global_autonomy = -0.05
+	years_of_nationalism = -5
+	legitimacy = 1
+}
+
+# pf_lag_fortify
+pf_lag_fortress_albion = {
+	local_defender_dice_roll_bonus = 1
+	local_garrison_size = 0.20
+	hostile_attrition = 1
+	max_hostile_attrition = 1
+}
+
+# pf_lag_pax
+pf_lag_pax_lagrlonder = {
+	monthly_splendor = 3
+	administrative_efficiency = 0.05
+	diplomatic_reputation = 2
+}
+
+# pf_lag_embrace_global
+pf_lag_forunner_globalization = {
+	merchants = 1
+	global_trade_power = 0.2
+}
+
+# pf_lag_frisians
+pf_lag_frisian_support = {
+	global_unrest = -1
+	stability_cost_modifier = -0.15 
+}
+
+# pf_lag_rein_nobles
+pf_lag_nobles_curtailed = {
+	global_tax_modifier = 0.1
+	reform_progress_growth = 0.1
+}
+
+# pf_lag_capital
+pf_lag_glorious_court = {
+	same_culture_advisor_cost = -0.25
+}
+
+# pf_lag_universities
+pf_lag_educated_elite = {
+	idea_cost = -0.1
+	global_institution_spread = 0.25
+}
+
+# pf_lag_theology
+pf_lag_controlled_clergy = {
+	adm_tech_cost_modifier = -0.1
+	global_missionary_strength = 0.01
+	relation_with_same_religion = 15
+}
+
+# pf_lag_sway
+pf_lag_burgher_support = {
+	mercantilism_cost = -0.25
+	ship_trade_power_modifier = 0.25
+	naval_tradition_from_trade = 0.50
+}
+
+# pf_lag_renaissance
+pf_lag_scholars = {
+	prestige = 1
+	# TODO: add more cool modifiers
+}
+
+# pf_lag_develop
+pf_lag_burgeoning_lowlands = {
+	development_cost_modifier = -0.1
+	production_efficiency = 0.1
+}
+
+# pf_lag_develop_outer_rim
+pf_lag_developed_outer_rim = {
+	promote_culture_cost = -0.1
+	num_accepted_cultures = 1
+}
+
+# pf_lag_heretics
+pf_lag_religious_unity = {
+	culture_conversion_time = -0.1
+	culture_conversion_cost = -0.15
+	same_religion_advisor_cost = -0.10
+}
+
+# pf_lag_edict
+pf_lag_lagr_tolerance = {
+	# Logic here is that Heathens (Germanics/Druidic) are
+	# much more common than other Norse
+	tolerance_heretic = 1
+	tolerance_heathen = 2
+	relation_with_heathens = 20
+	relation_with_heretics = 15
+}
+
+# pf_lag_peace_of_utrech
+pf_lag_religious_peace = {
+	no_religion_penalty = yes
+}
+
+# estate_burghers_pf_peace_of_utrech
+pf_lag_peace_of_utrech_same_group = {
+	local_tax_modifier = 0.075
+	local_manpower_modifier = 0.075
+	local_sailors_modifier = 0.05
+}
+
+# estate_burghers_pf_peace_of_utrech
+pf_lag_peace_of_utrech_different_group = {
+	local_tax_modifier = 0.165
+	local_missionary_strength = 0.01
+	local_manpower_modifier = 0.165
+	local_sailors_modifier = 0.1
+	local_unrest = -1
+}
+
+# pf_lag_promote_urbanisation
+pf_lag_urbanisation = {
+	global_allowed_num_of_buildings = 1
+	build_cost = -0.05
+}
+
+# pf_lag_made_in
+pf_lag_workshop_world = {
+	global_trade_goods_size_modifier = 0.1
+}
+
+# pf_lag_warehouse
+pf_lag_from_tokyo_to_paris = {
+	global_prosperity_growth = 0.1
+	caravan_power = 0.2
+}
+
+# pf_lag_into_beyond
+pf_lag_into_beyond_modifier = {
+	range = 0.5
+	colonist_placement_chance = 0.05
+}
+
+# pf_lag_carib
+pf_lag_sugar_trade = {
+	global_tariffs = 0.1
+	trade_steering = 0.25
+}
+
+# pf_lag_australia
+pf_lag_penal_colonies = {
+	culture_conversion_cost = -0.1
+	culture_conversion_time = -0.1
+}
+
+# pf_lag_spices
+pf_lag_spices_flow = {
+	trade_company_investment_cost = -0.25
+}
+
+# pf_lag_cape_good_hope
+pf_lag_cape_good_hope_station = {
+	province_trade_power_modifier = 0.15
+	min_local_autonomy = -25
+}
+
+# pf_lag_reach_india
+pf_lag_foothold_india = {
+	province_trade_power_modifier = 0.1
+	min_local_autonomy = -10
+}
+
+# pf_lag_formosa
+pf_lag_fortress_formosa = {
+	province_trade_power_modifier = 0.1
+	min_local_autonomy = -15
+	block_slave_raid = yes
+}
+
+# pf_lag_far_east
+pf_lag_ports_in_the_far_east = {
+	prestige = 0.25
+	republican_tradition = 0.12
+	legitimacy = 0.25
+	devotion = 0.25
+	horde_unity = 0.25
+	meritocracy = 0.1
+	trade_efficiency = 0.5
+}
+
+# pf_lag_louisiana
+pf_lag_up_the_river = {
+	trade_company_investment_cost = -0.25
+}
+
+# pf_lag_california
+pf_lag_gold_rush = {
+	gold_depletion_chance_modifier = -0.25
+	treasure_fleet_income = 0.25
+}
+
+# pf_lag_fur_trade
+pf_lag_lagrlondian_fur = {
+	prestige = 0.5
+}

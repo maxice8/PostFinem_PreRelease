@@ -1,6 +1,6 @@
 capital = 148
 government = monarchy
-add_government_reform = alexanders_crown
+add_government_reform = pf_alexanders_crown
 government_rank = 2
 technology_group = eastern
 add_historical_rival = AEG
@@ -25,6 +25,7 @@ add_accepted_culture = dardanian
 		birth_date = 1425.1.2
 	}
 	add_ruler_personality = craven_personality
+	set_ruler_flag = kallias_philoxenos_flag
 	heir = { 
 		name = "Demetrius"
 		monarch_name = "Demetrius III"
@@ -37,4 +38,5 @@ add_accepted_culture = dardanian
 		birth_date = 1444.4.12
 		death_date = 1445.1.1
 	}
+	set_estate_privilege = estate_burghers_pf_mac_influential_guilds
 }
