@@ -161,12 +161,6 @@ country_decisions = {
 				culture = pomorian
 				culture = slavic_galician
 			}
-			NOT = { 
-				AND = {
-					tag = KSB
-					NOT = { has_country_flag = ksb_can_form_severoslavia_flag }
-				}
-			} 
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
@@ -213,14 +207,22 @@ country_decisions = {
 			NOT = { exists = SEV }
 			
 			AND = {
-				owns_core_province = 278
-				owns_core_province = 264
-				owns_core_province = 43
-				owns_core_province = 257
+				278 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				264 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				43 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				257 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 			poland_region = {
 				type = all
-				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			NOT = { 
 				AND = {

@@ -149,9 +149,9 @@ pf_rus_successor = {
 pf_lechite_kingdom = {
 	potential = {
 		OR = {
-			tag = KRA
-			tag = POL
-		}
+tag = KRA
+tag = POL
+}
 	}
 	modifiers = {
 		monthly_splendor = 1
@@ -166,9 +166,9 @@ pf_lechite_kingdom = {
 pf_reformed_lechite_kingdom = {
 	potential = {
 		OR = {
-			tag = KRA
-			tag = POL
-		}
+tag = KRA
+tag = POL
+}
 		has_country_flag = lechia_kingdom_flag
 	}
 	modifiers = {

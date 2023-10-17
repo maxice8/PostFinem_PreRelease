@@ -25,7 +25,7 @@
  ksb_yes_vassalize_sil: "£yes£ If we are allied to @SIL §Y[SIL.GetName]§! we will vassalise them in the §YUnited Severoslavia§! mission"
  ksb_no_vassalize_sil: "£no£ If we are allied to @SIL §Y[SIL.GetName]§! we will vassalise them in the §YUnited Severoslavia§! mission"
 
- ksb_lands_of_czech_title:0 "Lands of Čech"
+ ksb_lands_of_czech_title:0 "Lands of Czech"
  ksb_lands_of_czech_desc:0 ""
 
  ksb_new_slavic_power_title:0 "A New Slavic Power"
@@ -38,12 +38,29 @@
 
  ksb_united_severoslavia_title:0 "United Severoslavia"
  ksb_united_severoslavia_desc:0 ""
+ ksb_can_form_severoslavia_tt: "We will be able to form @SEV §Y[SEV.GetName]§!"
+ ksb_requirements_change: "The requirements of this mission will change based on how we completed the above missions"
+ ksb_vassalize_silesia_yes_tt: "£yes£ If we are allied to @SIL §Y[SIL.GetName]§! we will vassalise them"
+ ksb_vassalize_silesia_no_tt: "£no£ If we are allied to @SIL §Y[SIL.GetName]§! we will vassalise them"
+ ksb_vassalize_pinsk_no_tt: "£no£ If we are allied to @PNS §Y[PNS.GetName]§! we will vassalise them"
+ ksb_vassalize_pinsk_yes_tt: "£yes£ If we are allied to @PNS §Y[PNS.GetName]§! we will vassalise them"
 
  ksb_intervene_in_lechia_title:0 "Intervene with Lechia"
  ksb_intervene_in_lechia_desc:0 ""
+ ksb_lechia_wars_begun_yes: "£yes£ The §YLechia Civil War§! has begun"
+ ksb_lechia_wars_begun_no: "£no£ The §YLechia Civil War§! has begun"
+ ksb_lechia_wars_averted_yes: "£yes£ The §YLechia Civil War§! has been averted by Caspar of @KRA §Y[KRA.GetName]§! dying"
+ ksb_lechia_wars_averted_no: "£no£ The §YLechia Civil War§! has been averted by Caspar of @KRA §Y[KRA.GetName]§! dying"
+ ksb_if_lechia_civil_war_has_begun_yes_tt: "£yes£ If the §YLechia Civil War§! has begun:"
+ ksb_if_lechia_civil_war_has_begun_no_tt: "£no£ If the §YLechia Civil War§! has begun:"
+ ksb_if_lechia_civil_war_has_averted_yes_tt: "£yes£ If the §YLechia Civil War§! has been averted:"
+ ksb_if_lechia_civil_war_has_averted_no_tt: "£no£ If the §YLechia Civil War§! has been averted:"
 
  ksb_protect_lechia_title:0 "Protect Lechia"
  ksb_protect_lechia_desc:0 ""
+ PF_KSB_DEV_IN_MALOPOLSKA_TT: "Distribute 3 §YManpower§! development in the §YMalopolska§! area"
+ PF_KSB_DEV_IN_SANDOMIERZ_TT: "Distribute 3 §YManpower§! development in the §YSandomierz§! area"
+ pf_ksb_effects_change_tt: "The effects of this mission will change based on the above mission"
 
  ksb_end_zilant_raids_title:0 "End Zilant Raids"
  ksb_end_zilant_raids_desc:0 ""
