@@ -74,6 +74,11 @@ pf_if_mantua_clothiers: "Home of the Mantuan Clothiers"
 estate_nobles_pf_marcher_freedom: "Freedom of the Marchers"
 estate_nobles_pf_marcher_freedom_desc: "We shall not interefere with the internal affairs of the Marcher Lords, granting them near complete autonomy over their territories so long as they swear to uphold their duties to the country."
 
+# PTM
+
+punic_roma_adirim: "Seat of the Adirim"
+desc_punic_roma_adirim: "Roma is the rightful and natural seat of the Grand Adirim, being the most important site in the Federation and a place steeped in both Italian and Punic history."
+
 ################
 # Mercenaries
 ################
@@ -653,9 +658,14 @@ pf_if_union_of_southern_italy: "Union of Southern Italia"
 
 pf_if_host_a_feast_title: "Host a Feast"
 pf_if_host_a_feast_desc: "The time has come to host a magnificent feast! The quality and length of the feast will depend on the amount of money we put into it. During a feast, various events can fire, involving interactions within the royal family, estates, leaders of foreign countries, advisors, and the Federation. The more expensive the feast, the better the events will be!\n\n'Light the fires and roast the hogs, for tonight we're gonna party!'"
+pf_if_25_year_cooldown_tt: "We can only enact this §Yonce every twenty-five years§!."
 
 form_trinacria_title: "@SIC Kingdom of Trinacria"
 form_trinacria_desc: "The island of Sicily, formally known by its more ancient name Trinacria, has been divided for too long. Under threat from Carthage, foreign invaders, and trapped under the boot of the Federation, our people have had little room to breathe. This era must come to an end, and a new Golden Age must begin."
+
+pf_if_show_officers_title: "Show the Officers of the Federation"
+pf_if_show_officers_desc: "The effect tooltip will display the names of our Federation Officers."
+pf_if_show_officers_tt: "£adm£ Grand Marshal: §Y[grand_marshal_officer.GetName]§!\n£dip£ High Priest: §Y[high_priest_officer.GetName]§!\n£mil£ Grand Steward: §Y[grand_steward_officer.GetName]§!"
 
 ################
 # Casus Belli
@@ -1073,3 +1083,24 @@ petition_for_advisor_tooltip: "Request an advisor from the Grand Adirim."
 petition_for_advisor_alert_tooltip: "§YPetition§!: Request for Advisor"
 petition_for_advisor_dialog: "§Y[Root.GetName]§! has issued a petition to the [From.Monarch.GetTitle], requesting a specialist advisor. \n\nIf we accept, §Y[Root.GetName]§! a random advisor will be created for our court at §G15.0%§! cost, at the cost of §R-100§! of our opinion of them.\n\nGranting this request will cost us §R-10§! legitimacy and §R-50§! Diplomatic Power £dip£, but gain us §G+1§! Federal Authority.\n\nDeclining will cost us §R-1§! Federal Authority.\n\nDo you want to accept?"
 pf_grant_random_advisor_tt: "A random advisor will be created of skill $level$ and discount of $discount$."
+
+# Federal Officers
+
+appoint_grand_marshal_action: "Appoint Grand Marshal"
+appoint_grand_marshal_action_title: "Appoint Grand Marshal"
+appoint_grand_marshal_action_desc: "Appoint §Y[From.GetName]§! as the Grand Marshal of the Italian Federation. This position will grant them substantial military bonuses in exchange for protecting the borders of the Federation from incursion.\n\nGranting this position to §Y[From.GetName]§! increases their opinion of us by §G+50§!.\nOnly one country can be appointed to each §MOfficer§! position at one time, but the position can be moved if the previous §MOfficer§! is annexed."
+appoint_grand_marshal_action_tooltip: "Appoint them as Grand Marshal of the Federation."
+opinion_if_gave_office: "Gifted a Federal Office by the Adirim"
+grand_marshal_officer_modifier: "§MOfficer of the Federation:§! §OGrand Marshal§!"
+
+appoint_high_priest_action: "Appoint High Priest"
+appoint_high_priest_action_title: "Appoint High Priest"
+appoint_high_priest_action_desc: "Appoint §Y[From.GetName]§! as the High Priest of the Italian Federation. This position will grant them substantial religious bonuses in exchange for responsibility over the souls of the people of the Federation.\n\nGranting this position to §Y[From.GetName]§! increases their opinion of us by §G+50§!.\nOnly one country can be appointed to each §MOfficer§! position at one time, but the position can be moved if the previous §MOfficer§! is annexed."
+appoint_high_priest_action_tooltip: "Appoint them as High Priest of the Federation."
+high_priest_officer_modifier: "§MOfficer of the Federation:§! §YHigh Priest§!"
+
+appoint_grand_steward_action: "Appoint Grand Steward"
+appoint_grand_steward_action_title: "Appoint Grand Steward"
+appoint_grand_steward_action_desc: "Appoint §Y[From.GetName]§! as the Grand Steward of the Italian Federation. This position will grant them substantial economic bonuses in exchange for command over investment and trade within the Federation.\n\nGranting this position to §Y[From.GetName]§! increases their opinion of us by §G+50§!.\nOnly one country can be appointed to each §MOfficer§! position at one time, but the position can be moved if the previous §MOfficer§! is annexed."
+appoint_grand_steward_action_tooltip: "Appoint them as Grand Steward of the Federation."
+grand_steward_officer_modifier: "§MOfficer of the Federation:§! §GGrand Steward§!"

@@ -1,0 +1,122 @@
+# does this work?
+
+appoint_grand_marshal_action = {
+	category = imperial_influence
+
+	is_visible = {
+		is_emperor = yes
+		NOT = {
+			event_target:grand_marshal_officer = {
+				exists = yes
+			}
+		}
+		FROM = { is_part_of_hre = yes }
+	}
+	is_allowed = {
+		FROM = {
+			is_at_war = no
+		}
+		FROM = {
+			has_regency = no
+		}
+	}
+	on_accept = {
+		FROM = {
+			add_opinion = {
+				who = root
+				modifier = opinion_if_gave_office
+			}
+			add_country_modifier = {
+				name = "grand_marshal_officer_modifier"
+				duration = -1
+			}
+			save_global_event_target_as = grand_marshal_officer
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = {
+		always = no		# done when logic comes in
+	}
+}
+appoint_high_priest_action = {
+	category = imperial_influence
+
+	is_visible = {
+		is_emperor = yes
+		NOT = {
+			event_target:high_priest_officer = {
+				exists = yes
+			}
+		}
+		FROM = { is_part_of_hre = yes }
+	}
+	is_allowed = {
+		FROM = {
+			is_at_war = no
+		}
+		FROM = {
+			has_regency = no
+		}
+	}
+	on_accept = {
+		FROM = {
+			add_opinion = {
+				who = root
+				modifier = opinion_if_gave_office
+			}
+			add_country_modifier = {
+				name = "high_priest_officer_modifier"
+				duration = -1
+			}
+			save_global_event_target_as = high_priest_officer
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = {
+		always = no		# done when logic comes in
+	}
+}
+appoint_grand_steward_action = {
+	category = imperial_influence
+
+	is_visible = {
+		is_emperor = yes
+		NOT = {
+			event_target:grand_steward_officer = {
+				exists = yes
+			}
+		}
+		FROM = { is_part_of_hre = yes }
+	}
+	is_allowed = {
+		FROM = {
+			is_at_war = no
+		}
+		FROM = {
+			has_regency = no
+		}
+	}
+	on_accept = {
+		FROM = {
+			add_opinion = {
+				who = root
+				modifier = opinion_if_gave_office
+			}
+			add_country_modifier = {
+				name = "grand_steward_officer_modifier"
+				duration = -1
+			}
+			save_global_event_target_as = grand_steward_officer
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = {
+		always = no		# done when logic comes in
+	}
+}

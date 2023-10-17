@@ -43,3 +43,27 @@ cb_neapolitan_subjugation = {
 
 	war_goal = take_capital_neapolitan_subjugation
 }
+# Raid CB for Vikings and tribes
+cb_raid = {
+	prerequisites = {
+		is_subject = no
+		OR = {
+			religion = norse_pagan_reformed 	# Asatru
+			government = tribal
+		}
+		FROM = {
+			OR = {
+				is_neighbor_of = ROOT
+				NOT = {
+					border_distance = {
+						who = ROOT
+						distance = 125
+					}
+				}
+			}
+		}
+	}
+	war_goal = show_superiority_raid
+
+	valid_for_subject = no
+}

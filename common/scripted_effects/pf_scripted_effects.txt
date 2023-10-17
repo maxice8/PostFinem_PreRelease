@@ -745,3 +745,50 @@ upgrade_center_of_trade = {
 		add_base_manpower = 1
 	}
 }
+
+#####################
+# Raid Loot
+#####################
+
+# add_loot = {
+#	 amount = X
+# }
+
+add_loot = {
+	change_variable = {
+		which = RaidLoot
+		value = $amount$
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = RaidLoot
+				which = MaxRaidLoot
+			}
+		}
+		set_variable = {
+			which = RaidLoot
+			which = MaxRaidLoot
+		}
+	}
+}
+lose_loot = {
+	subtract_variable = {
+		which = RaidLoot
+		value = $amount$
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = RaidLoot
+					value = 0
+				}
+			}
+		}
+		set_variable = {
+			which = RaidLoot
+			value = 0
+		}
+	}
+}

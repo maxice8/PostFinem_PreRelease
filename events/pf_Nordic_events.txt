@@ -51,6 +51,7 @@ country_event = {		# The Future of Kingship
 		ai_chance = {
 			factor = 0
 		}
+		add_stability_or_adm_power = yes
 		add_estate_loyalty = {
 			estate = all
 			loyalty = 10
@@ -74,6 +75,14 @@ country_event = {		# Execute the king of norway
 		add_ruler_modifier = {
 			name = "pf_nordic_reign_of_terror"
 			duration = -1
+		}
+		if = {
+			limit = {
+				exists = NOR
+			}
+			NOR = {
+				kill_ruler = yes
+			}
 		}
 	}
 }
@@ -239,6 +248,201 @@ country_event = {		# Battle Cry of the Swedes
 		add_country_modifier = {
 			name = "pf_nordic_odin_owns_you_all"
 			duration = -1
+		}
+	}
+}
+country_event = {		# Demand Norway's submission
+	id = pf_nordic.10
+	title = pf_nordic.10.t
+	desc = pf_nordic.10.d
+	picture = CONSPIRACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {	# They will kneel!
+		name = pf_nordic.10.a
+		trigger = {
+			exists = NOR
+		}
+		NOR = {
+			country_event = {
+				id = pf_nordic.11
+			}
+		}
+	}
+	option = {	# We will conquer them later
+		name = pf_nordic.10.b
+		eastern_norway = {
+			add_claim = ROOT
+		}
+		western_norway = {
+			add_claim = root
+		}
+		northern_norway = {
+			add_claim = root
+		}
+	}
+}
+country_event = {		# Demand Norway's submission (Norway)
+	id = pf_nordic.11
+	title = pf_nordic.11.t
+	desc = pf_nordic.11.d
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes
+
+	major = yes
+
+	major_trigger = {
+		culture_group = scandinavian
+	}
+
+	option = {
+		name = pf_nordic.11.a
+		ai_chance = {
+			factor = 99
+		}
+		add_mil_power = 50
+		FROM = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_refused_submission_nor
+			}
+			eastern_norway = {
+				add_permanent_claim = ROOT
+			}
+			western_norway = {
+				add_permanent_claim = ROOT
+			}
+			northern_norway = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	option = {
+		name = pf_nordic.11.b
+		ai_chance = {
+			factor = 1
+		}
+		add_prestige = -10
+		FROM = {
+			vassalize = ROOT
+		}
+	}
+}
+
+country_event = {		# The Skaneland Rising
+	id = pf_nordic.12
+	title = pf_nordic.12.t
+	desc = pf_nordic.12.d
+	picture = EYALET_REBELLION_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		6 = {
+			owner = {
+				save_event_target_as = scania_owner
+			}
+		}
+	}
+
+	major = yes
+
+	option = {
+		name = pf_nordic.12.a
+		event_target:scania_owner = {
+			release = SKD
+		}
+		SKD = {
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.8
+					cavalry = 0.2
+				}
+			}
+			add_country_modifier = {
+				name = "pf_nordic_scanian_revolution"
+				duration = 9125
+			}
+			declare_war_with_cb = {
+				casus_belli = cb_independence_war
+				who = event_target:scania_owner
+			}
+		}
+		create_alliance = SKD
+		join_all_offensive_wars_of = SKD
+		join_all_defensive_wars_of = SKD
+		add_country_modifier = {
+			name = "pf_nordic_scanian_revolution"
+			duration = 9125
+		}
+	}
+}
+
+# Raiding Party Return
+country_event = {
+	id = pf_nordic.13
+	title = "pf_nordic.13.t"
+	desc = "pf_nordic.13.d"
+	picture = BATTLE_eventPicture
+
+	trigger = {
+		check_variable = {
+			which = RaidLoot
+			value = 1
+		}
+		NOT = {
+			is_in_war = {
+				casus_belli = cb_raid
+				attacker_leader = ROOT
+			}
+		}
+		NOT = {
+			any_province = {
+				NOT = {
+					OR = {
+						owned_by = ROOT
+						owner = { is_subject_of = ROOT }
+					}
+				}
+				OR = {
+					infantry_in_province = ROOT
+					cavalry_in_province = ROOT
+					artillery_in_province = ROOT
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		set_country_flag = in_raid_event
+	}
+
+	after = {
+		clr_country_flag = in_raid_event
+	}
+	option = {		# Collect the loot
+		name = "pf_nordic.13.a"
+		custom_tooltip = gain_x_loot_tooltip
+		hidden_effect = {
+			while = {
+				limit = {
+					check_variable = {
+						which = RaidLoot
+						value = 1
+					}
+				}
+				subtract_variable = {
+					which = RaidLoot
+					value = 1
+				}
+				add_treasury = 1
+			}
 		}
 	}
 }

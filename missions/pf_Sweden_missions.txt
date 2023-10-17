@@ -1,30 +1,383 @@
+pf_swe_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SWE } 
+
+	pf_swe_deal_with_the_danish = {
+		icon = mission_danish_flag
+		position = 2
+		required_missions = { pf_swe_build_up_army } 
+		provinces_to_highlight = {
+			OR = {
+				culture = danish
+				area = skaneland_area
+			}
+		}
+
+		trigger = {
+			total_development = 130
+			is_subject = no
+			monthly_adm = 8
+			OR = {
+				accepted_culture = danish
+				NOT = { exists = DRK } 
+			}
+		}
+
+		effect = {
+			custom_tooltip = pf_swe_deal_with_the_danish_1_tt
+			hidden_effect = {
+				if = {
+					limit = { accepted_culture = danish } 
+					add_dip_power = 100
+					skaneland_area = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+			}
+			tooltip = {
+				define_advisor = {
+					type = trader
+					skill = 2
+					discount = yes
+					culture = danish
+				}
+				skaneland_area = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			custom_tooltip = pf_swe_deal_with_the_danish_2_tt
+			hidden_effect = {
+				if = {
+					limit = { NOT = { accepted_culture = danish }  } 
+					add_mil_power = 50
+					skaneland_area = {
+						add_province_modifier = {
+							name = "pf_nordic_converting_scania"
+							duration = -1
+						}
+					}
+				}
+			}
+			tooltip = {
+				add_mil_power = 50
+				skaneland_area = {
+					add_province_modifier = {
+						name = "pf_nordic_converting_scania"
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+
+	pf_swe_deal_conquer_sjaelland = {
+		icon = mission_seize_north_sea_trade
+		position = 3
+		required_missions = { pf_swe_deal_with_the_danish } 
+		provinces_to_highlight = {
+			province_id = 12
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = { 12 = { country_or_non_sovereign_subject_holds = ROOT }  } 
+
+		effect = {
+			add_navy_tradition = 20
+			add_country_modifier = {
+				name = "pf_swe_danish_conquest"
+				duration = 7300
+			}
+			jutland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			holstein_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	pf_swe_baltic_dominance = {
+		icon = mission_baltic_empire
+		position = 5
+		required_missions = { pf_swe_unite_scandinavia } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_swe_into_germania = {
+		icon = interfere_in_germany
+		position = 6
+		required_missions = { pf_swe_baltic_dominance } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_swe_subdue_the_slavs = {
+		icon = the_russian_campaign
+		position = 7
+		required_missions = {
+			pf_swe_into_germania
+			pf_swe_defeat_hordes
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_swe_swedish_empire = {
+		icon = join_the_empire
+		position = 9
+		required_missions = {
+			pf_swe_subdue_the_slavs
+			pf_swe_capital_for_an_empire
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_swe_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SWE } 
+
+	pf_swe_norwegian_fealty = {
+		icon = mission_refine_the_carolean
+		position = 2
+		required_missions = { pf_swe_build_up_army } 
+		provinces_to_highlight = { is_capital_of = NOR } 
+
+		trigger = {
+			is_at_war = no
+			OR = {
+				NOT = { exists = NOR } 
+				AND = {
+					total_development = NOR
+					army_size = NOR
+				}
+			}
+		}
+
+		effect = { country_event = { id = pf_nordic.10 }  } 
+	}
+
+	pf_swe_conquer_norway = {
+		icon = mission_naval_kingdom
+		position = 3
+		required_missions = { pf_swe_norwegian_fealty } 
+		provinces_to_highlight = {
+			OR = {
+				area = eastern_norway
+				area = western_norway
+				area = northern_norway
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			eastern_norway = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			western_norway = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			northern_norway = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			custom_tooltip = pf_swe_conquer_norway_1_tt
+			hidden_effect = {
+				if = {
+					limit = { NOR = { is_subject_of = ROOT }  } 
+					add_yearly_sailors = 4
+					add_country_modifier = {
+						name = "pf_swe_king_of_norway"
+						duration = 9125
+					}
+				}
+			}
+			tooltip = {
+				add_yearly_sailors = 4
+				add_country_modifier = {
+					name = "pf_swe_king_of_norway"
+					duration = 9125
+				}
+			}
+			custom_tooltip = pf_swe_conquer_norway_2_tt
+			hidden_effect = {
+				if = {
+					limit = { NOR = { NOT = { is_subject_of = ROOT }  }  } 
+					add_legitimacy = 20
+					country_event = { id = pf_nordic.3 } 
+					add_accepted_culture_or_dip_power = { culture = norwegian } 
+				}
+			}
+			tooltip = {
+				add_legitimacy = 20
+				country_event = { id = pf_nordic.3 } 
+				add_accepted_culture_or_dip_power = { culture = norwegian } 
+			}
+		}
+	}
+
+	pf_swe_unite_scandinavia = {
+		icon = mission_unite_scandinavia
+		position = 4
+		required_missions = {
+			pf_swe_deal_conquer_sjaelland
+			pf_swe_conquer_norway
+			pf_swe_seize_finland
+		}
+		provinces_to_highlight = {
+			region = scandinavia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			scandinavia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 50
+			}
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			baltic_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	pf_swe_defeat_hordes = {
+		icon = mission_destroy_the_horde
+		position = 6
+		required_missions = { pf_swe_baltic_dominance } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_swe_the_rivermen = {
+		icon = mission_pow_just_around_the_riverbend
+		position = 7
+		required_missions = { pf_swe_defeat_hordes } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_swe_capital_for_an_empire = {
+		icon = develop_our_capital
+		position = 8
+		required_missions = { pf_swe_support_the_towns } 
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+			OR = {
+				NOT = { development = 40 }
+				NOT = { has_tax_building_trigger = yes }
+				NOT = { has_production_building_trigger = yes }
+				NOT = { has_trade_building_trigger = yes }
+				NOT = { has_courthouse_building_trigger = yes }
+				NOT = { has_manpower_building_trigger = yes }
+				NOT = { has_fort_building_trigger = yes }
+				NOT = { prosperity = 100 }
+			}
+		} 
+
+		trigger = {
+			capital_scope = {
+				development = 40
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_courthouse_building_trigger = yes
+				has_manpower_building_trigger = yes
+				has_fort_building_trigger = yes
+				prosperity = 100
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	pf_swe_encourage_literacy = {
+		icon = mission_book_of_royal_degrees
+		position = 10
+		required_missions = { pf_swe_industrialise_sweden } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
 pf_swe_3 = {
 	slot = 3
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { 
-		tag = SWE
-	}
+	potential = { tag = SWE } 
 
 	pf_swe_build_up_army = {
 		icon = mission_thirty_years_war
 		position = 1
-		required_missions = { } 
-		provinces_to_highlight = {
-		}
+		provinces_to_highlight = {  } 
+
 		trigger = {
 			if = {
-				limit = {
-					ai = no
-				}
+				limit = { ai = no } 
 				army_size_percentage = 1
 				manpower_percentage = 0.50
 			}
-			else = {
-				army_size_percentage = 0.75
-			}
+			else = { army_size_percentage = 0.75 } 
 		}
+
 		effect = {
 			add_country_modifier = {
 				name = "pf_swe_brave_men_of_sweden"
@@ -32,74 +385,78 @@ pf_swe_3 = {
 			}
 			norrland_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
 				}
 				add_permanent_claim = ROOT
 			}
 			eastern_norway = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
 				}
 				add_permanent_claim = ROOT
 			}
 			western_norway = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
 				}
 				add_permanent_claim = ROOT
 			}
 			northern_norway = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
+
 	pf_swe_conquer_norrland = {
 		icon = mission_swedish_peasantry
 		position = 2
 		required_missions = { pf_swe_build_up_army } 
 		provinces_to_highlight = {
 			area = norrland_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
+
 		trigger = {
 			norrland_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
+
 		effect = {
 			add_yearly_manpower = 1
 			add_army_tradition = 10
 			bothnia_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
 				}
 				add_permanent_claim = ROOT
 			}
 			finland_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
 				}
 				add_permanent_claim = ROOT
 			}
 			laponia_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
+
 	pf_swe_seize_finland = {
 		icon = mission_the_finns
 		position = 3
@@ -109,8 +466,9 @@ pf_swe_3 = {
 				area = finland_area
 				area = bothnia_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
+
 		trigger = {
 			finland_area = {
 				type = all
@@ -121,32 +479,209 @@ pf_swe_3 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
+
 		effect = {
-			country_event = {
-				id = pf_nordic.4		# Conversion of the Finns
-			}		
+			country_event = { id = pf_nordic.4 } 
 			karelia_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
 				}
 				add_permanent_claim = ROOT
 			}
 			north_karelia = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
 				}
 				add_permanent_claim = ROOT
 			}
 			pomor_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
 				}
 				add_permanent_claim = ROOT
 			}
 		}
+	}
+
+	pf_swe_confront_the_nobility = {
+		icon = mission_noble_council
+		position = 5
+		required_missions = {
+			pf_swe_unite_scandinavia
+			pf_swe_swedish_monarchy
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			stability = 3
+			has_adm_advisor_2 = yes
+			has_dip_advisor_2 = yes
+			has_mil_advisor_2 = yes
+			is_in_deficit = no
+			NOT = { num_of_loans = 1 }
+			is_bankrupt = no
+		} 
+
+		effect = {
+		} 
+	}
+
+	pf_swe_support_the_towns = {
+		icon = mission_hanseatic_city
+		position = 7
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_swe_herring_superpower = {
+		icon = mission_fish_markets
+		position = 8
+		required_missions = { pf_swe_support_the_towns } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_swe_industrialise_sweden = {
+		icon = mission_iron_and_copper
+		position = 9
+		required_missions = { pf_swe_herring_superpower } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_swe_a_learned_people = {
+		icon = pf_fertile_crescent
+		position = 11
+		required_missions = {
+			pf_swe_encourage_literacy
+			pf_swe_monopolise_goods
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_swe_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SWE } 
+
+	pf_swe_adopt_feudal_ways = {
+		icon = mission_norwegian_royal_army
+		position = 2
+		required_missions = { pf_swe_build_up_army } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			has_institution = feudalism
+			if = {
+				limit = { has_estate = estate_nobles } 
+				num_of_estate_agendas_completed = {
+					estate = estate_nobles
+					value = 2
+				}
+			}
+			stability = 1
+			estate_loyalty = {
+				estate = all
+				loyalty = 55
+			}
+		}
+
+		effect = {
+			change_government_reform_progress = 100
+			add_country_modifier = {
+				name = "pf_swe_feudal_management"
+				duration = 9125
+			}
+		}
+	}
+
+	pf_swe_swedish_monarchy = {
+		icon = the_crown_of_lothair
+		position = 4
+		required_missions = { pf_swe_adopt_feudal_ways } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				adm = 5
+				NOT = { current_age = age_of_discovery } 
+			}
+			NOT = { average_autonomy = 10 } 
+			legitimacy = 95
+		}
+
+		effect = { country_event = { id = pf_nordic.2 }  } 
+	}
+
+	pf_swe_odinsson = {
+		icon = pf_arabic_pantheon
+		position = 6
+		required_missions = {
+			pf_swe_confront_the_nobility
+			pf_swe_the_old_ways
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_swe_divine_contract = {
+		icon = mission_protestant_heddal_church
+		position = 8
+		required_missions = {
+			pf_swe_support_the_towns
+			pf_swe_spread_the_faith
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_swe_settle_the_forests = {
+		icon = mission_the_sami
+		position = 9
+		required_missions = { pf_swe_herring_superpower } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_swe_monopolise_goods = {
+		icon = mission_turkish_merchants
+		position = 10
+		required_missions = {
+			pf_swe_industrialise_sweden
+			pf_swe_enlightenment
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
 	}
 }
 pf_swe_5 = {
@@ -154,16 +689,13 @@ pf_swe_5 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { 
-		tag = SWE
-	}
+	potential = { tag = SWE } 
 
 	pf_swe_band_of_warriors = {
 		icon = mission_livonian_intervention
 		position = 1
-		required_missions = { } 
-		provinces_to_highlight = {
-		}
+		provinces_to_highlight = {  } 
+
 		trigger = {
 			army_size = 30
 			OR = {
@@ -171,6 +703,7 @@ pf_swe_5 = {
 				commandant = 1
 			}
 		}
+
 		effect = {
 			add_country_modifier = {
 				name = "pf_swe_looting_modifier"
@@ -178,26 +711,27 @@ pf_swe_5 = {
 			}
 		}
 	}
+
 	pf_swe_establish_the_huskarls = {
 		icon = mission_modernized_vikings
 		position = 2
 		required_missions = { pf_swe_band_of_warriors } 
-		provinces_to_highlight = {
-		}
+		provinces_to_highlight = {  } 
+
 		trigger = {
 			num_of_carolean = 5
 			army_professionalism = 0.30
 		}
-		effect = {
-			country_event = { id = pf_nordic.8 }		# Reforming the Huskarls
-		}
+
+		effect = { country_event = { id = pf_nordic.8 }  } 
 	}
+
 	pf_swe_swedish_militarism = {
 		icon = mission_the_caroleans
 		position = 3
 		required_missions = { pf_swe_establish_the_huskarls } 
-		provinces_to_highlight = {
-		}
+		provinces_to_highlight = {  } 
+
 		trigger = {
 			has_mil_advisor_3 = yes
 			OR = {
@@ -210,8 +744,60 @@ pf_swe_5 = {
 				monthly_mil = 12
 			}
 		}
-		effect = {
-			country_event = { id = pf_nordic.9 }		# Battle Cry of the Swedes
-		}
+
+		effect = { country_event = { id = pf_nordic.9 }  } 
+	}
+
+	pf_swe_the_old_ways = {
+		icon = mission_norse_faith
+		position = 5
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_swe_patronise_uppsala = {
+		icon = mission_mnd_dai_temples
+		position = 6
+		required_missions = { pf_swe_the_old_ways } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_swe_spread_the_faith = {
+		icon = mission_sword_of_the_reformation
+		position = 7
+		required_missions = { pf_swe_patronise_uppsala } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_swe_enlightenment = {
+		icon = immaculate_government
+		position = 9
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_swe_the_black_gold = {
+		icon = mission_rb_prospect_for_coal
+		position = 10
+		required_missions = { pf_swe_enlightenment } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
 	}
 }

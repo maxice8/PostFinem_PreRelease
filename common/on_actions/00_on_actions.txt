@@ -80,6 +80,16 @@ on_startup = {
 		}
 		country_event = { id = pf_if.16 }	# The travels of Conan
 	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = setup_raid_max }
+		}
+		set_variable = {
+			which = MaxRaidLoot
+			value = 200
+		}
+		set_country_flag = setup_raid_max
+	}
 }	
 
 # country
@@ -447,6 +457,41 @@ on_battle_won_country = {
 on_battle_lost_country = {
 	on_battle_ended_effect = yes
 	battle_cult_spreading_effect = yes #Scripted effect for fetishist cult mechanics.
+	if = {
+		limit = {
+			ROOT = {
+				is_in_war = {
+					casus_belli = cb_raid
+					attacker_leader = ROOT
+				}
+			}
+		}
+		ROOT = {
+			set_variable = {
+				which = land_units_killed_for_loot
+				which = land_units_killed
+			}
+			divide_variable = {
+				which = land_units_killed_for_loot
+				value = 100
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = land_units_killed_for_loot
+						value = 1
+					}
+				}
+				subtract_variable = {
+					which = land_units_killed_for_loot
+					value = 1
+				}
+				lose_loot = {
+					amount = 1
+				}
+			}
+		}
+	}
 	random_events = {
 		90 = 0
 		10 = friendship_events.1 #Historical Friendship Broken
@@ -765,6 +810,41 @@ on_siege_won_province = {
 			if = {
 				limit = { is_claim = ROOT}
 				remove_claim = ROOT
+			}
+		}
+	}
+	if = {
+		limit = {
+			controller = {
+				is_in_war = {
+					casus_belli = cb_raid
+					attacker_leader = THIS
+				}
+			}
+		}
+		ROOT = {
+			export_to_variable = {
+				which = RaidFromProv
+				value = development
+				who = ROOT
+			}
+			# space for modifiers
+			while = {
+				limit = {
+					check_variable = {
+						which = RaidFromProv
+						value = 1
+					}
+				}
+				subtract_variable = {
+					which = RaidFromProv
+					value = 1
+				}
+				controller = {
+					add_loot = {
+						amount = 1
+					}
+				}
 			}
 		}
 	}

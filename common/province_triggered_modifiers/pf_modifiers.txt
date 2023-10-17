@@ -61,3 +61,33 @@ non_hellenic_athens = {
 	}
 	
 }
+
+punic_roma_adirim = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	
+	#viewer = {
+	#}
+	
+	trigger = {
+		owner = {
+			religion_group = punic_group
+			is_part_of_hre = yes
+		}
+		is_part_of_hre = yes
+	}
+
+	reasons_to_elect = 10
+	legitimate_subject_elector = 25
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+	
+}

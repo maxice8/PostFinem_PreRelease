@@ -27,11 +27,25 @@ nordic_huskarl_recruitment_reform_desc: "The Huskarls are traditionally taken fr
 
 NDH: "Nordheim"
 NDH_ADJ: "Nordheimer"
+SKD: "Skåneland"
+SKD_ADJ: "Skånelander"
 
 # Personalities
 
 viking_personality: "Viking"
 desc_viking_personality: "This general has made their name in raids and military expeditions abroad, searching for gold and glory, earning them a prideful place in our society."
+
+# Great Projects
+
+danavirki: "Danavirki"
+
+# CBs
+
+cb_raid: "Raid"
+cb_raid_desc: "We can attack other nations for slaves and plunder!"
+show_superiority_raid: "Show Superiority"
+show_superiority_raid_desc: "Gain warscore by defeating enemy armies in battle."
+RAID_WAR_NAME: "$ORDER$$FIRST$ Raid against $SECOND$"
 
 ##############
 # Ideas
@@ -74,6 +88,25 @@ ndh_northern_resilience: "Northern Resilience"
 ndh_northern_resilience_desc: ""
 ndh_urbanisation: "Stórrboer"
 ndh_urbanisation_desc: ""
+
+DRK_ideas: "Danish Ideas"
+DRK_ideas_start: "Danish Traditions"
+DRK_ideas_bonus: "Danish Ambition"
+
+drk_the_two_denmarks: "The Two Denmarks"
+drk_the_two_denmarks_desc: ""
+drk_sigurdsson_rule: "Rule of the Sigurdssons"
+drk_sigurdsson_rule_desc: ""
+drk_the_isles: "Kingdom of the Isles"
+drk_the_isles_desc: ""
+drk_danavirki: "The Danavirki"
+drk_danavirki_desc: ""
+drk_blood_eagle: "Blood for the Gods!"
+drk_blood_eagle_desc: ""
+drk_raiders: "Pillaging Heritage"
+drk_raiders_desc: ""
+drk_dark_storm_ahead: "A Storm Upon the Seas"
+drk_dark_storm_ahead_desc: ""
 
 ##############
 # Events
@@ -166,6 +199,29 @@ pf_nordic.9.d: "Our soldiers need rallying before a battle, otherwise their mora
 pf_nordic.9.a: "Óðinn á yðr Alla!"
 pf_nordic_odin_owns_you_all: "Óðinn á yðr Alla!"
 
+pf_nordic.10.t: "The Submission of Norway"
+pf_nordic.10.d: ""
+pf_nordic.10.a: "Demand they kneel!"
+pf_nordic.10.b: "We will conquer them later."
+
+pf_nordic.11.t: "Sweden demands our Submission"
+pf_nordic.11.d: ""
+pf_nordic.11.a: "We will never surrender!"
+pf_nordic.11.b: "Swear fealty to the rightful king."
+opinion_refused_submission_nor: "Refused Submission"
+
+pf_nordic.12.t: "The Skaneland Revolution"
+pf_nordic.12.d: ""
+pf_nordic.12.a: "They have our full support. To battle!"
+pf_nordic_scanian_revolution: "Scanian Revolution"
+
+pf_nordic.13.t: "Raiding Party Returns"
+pf_nordic.13.d: "After many months far from our shores, our band of brave raiders has returned. Many are wounded and some have acquired great fortunes - the one thing that yet binds them is the continued thirst for adventure. The success of this raid is bound to inspire the next generation of young men and women to cross the waves in search of their own fortunes."
+pf_nordic.13.a: "Let's see what booty you brought back..."
+gain_x_loot_tooltip: "Gain §G[Root.RaidLoot.GetValue]§!¤ from our §YRaid Loot§!."
+RaidLoot: "Raid Loot"
+MaxRaidLoot: "Raid Loot Capacity"
+
 ###############
 # Decisions
 ###############
@@ -174,9 +230,40 @@ consult_the_uppsala_gods_title: "Consult the Gods of the Uppsala Temple"
 consult_the_uppsala_gods_desc: "At the Temple of Uppsala, there are different statues of gods to which sacrifices are made in times of need."
 consult_the_uppsala_gods_tt: "This decision can only be used once every §Y25 years§!."
 
+show_raid_progress_title: "Raid"
+show_raid_progress_desc: "Shows the raid loot gathered, maximum raid loot capacity and grants the ability to instantly end raid wars."
+raid_loot_tooltip: "Current §YRaid Loot§! (§O[Root.RaidLoot.GetValue]§!) out of a maximum of (§M[Root.MaxRaidLoot.GetValue]§!)."
+white_peace_raid_tooltip: "Confirming this decision will cost us §R30§! £mil£ but bring an end instantly to the raid war, concluding with §Ywhite peace§!."
+
 #############
 # Missions
 #############
+
+pf_swe_deal_with_the_danish_title: "Deal with the Danish"
+pf_swe_deal_with_the_danish_desc: "We have subjugated the Danish people of Skaneland for a long time now, but they are still reluctant to switch to our ways. They cling on to their old national identity and insist that there will come a day when they will be free again, much to the enjoyment of we hearty Swedes. We must put them in their place and finally establish full control over our southern provinces."
+pf_swe_deal_with_the_danish_1_tt: "§MIf we have §Yaccepted the Danish culture§!, the following effect will happen:§!"
+pf_swe_deal_with_the_danish_2_tt: "\n§MElse, the following effect will happen:§!"
+pf_nordic_converting_scania: "Converting Skania"
+
+pf_swe_deal_conquer_sjaelland_title: "Secure the Straits"
+pf_swe_deal_conquer_sjaelland_desc: "The Straits of Denmark are a vital channel connecting the Baltics to the North Sea. Both our navies and our merchants depend on the safety of this route, for without it we would be very much cut off from the world. We should send a military expedition in to secure the Straits and ensure safe passage for all Swedish-aligned ships."
+pf_swe_danish_conquest: "Danish Conquest"
+
+#
+
+pf_swe_norwegian_fealty_title: "Demand Norwegian Fealty"
+pf_swe_norwegian_fealty_desc: "The Kingdom of Norway is our only realm rival in the race to dominate Scandinavia. Since our realm is so much stronger than theirs, it would be only right of us to demand their submission first, and if they refuse, to ravage their kingdom justly and thoroughly."
+
+pf_swe_conquer_norway_title: "The Northern Path"
+pf_swe_conquer_norway_desc: "After many years of struggle between our two powers, at least the realms of Norway and Sweden are united. Let us rejoice in our victory relax at the thought of those two glistering crowns sitting side by side."
+pf_swe_conquer_norway_1_tt: "§MIf §YNorway§! is our subject, the following effect will happen:§!"
+pf_swe_conquer_norway_2_tt: "§MElse, the following effect will happen:§!"
+pf_swe_king_of_norway: "King of Norway"
+
+pf_swe_unite_scandinavia_title: "Unite the Northmen"
+pf_swe_unite_scandinavia_desc: "Scandinavia is a divided and warlike part of the world, but despite that it is our home. There is truly no place we would rather rule than these desolate forests and windswept mountains. At last, our goals of complete conquest seem nearly at an end, and one day soon the sun will rise over a united Scandinavia."
+
+#
 
 pf_swe_build_up_army_title: "A Winter Night's Dream"
 pf_swe_build_up_army_desc: "We have great ambitions for our country. Already, we have succeeded in putting Norrland on the backfoot, and driven Danish rule out of Scania. Our state is clearly on the rise, and there is no force that can stem the tide of Swedish nationalism."
@@ -187,6 +274,15 @@ pf_swe_conquer_norrland_desc: "The people of Norrland are similar to us in many 
 
 pf_swe_seize_finland_title: "Subjugate the Finns"
 pf_swe_seize_finland_desc: "The Finns are a dangerous people, but their lands are potentially advantageous to us. Through their land connection to the former lands of the Rus', we can expand our empire eastward and seize ever more territory. The only problem will be dealing with the rebellious and souless inhabitants of Finland..."
+
+#
+
+pf_swe_adopt_feudal_ways_title: "Adopt Feudal Ways"
+pf_swe_adopt_feudal_ways_desc: ""
+pf_swe_feudal_management: "Feudal Management"
+
+pf_swe_swedish_monarchy_title: "A Swedish Monarchy"
+pf_swe_swedish_monarchy_desc: ""
 
 #
 
