@@ -1,0 +1,145 @@
+namespace = pf_flavor_bca
+
+#stratocratic republic events
+
+country_event = { #re-election
+	id = pf_flavor_bca.1
+	title = pf_flavor_bca.1.t
+	desc = pf_flavor_bca.1.d
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			export_to_variable = {
+				which = generalage
+				value = monarch_age
+				who = ROOT
+			}
+			set_saved_name = {
+				key = "rehire name"
+				type = simple
+				name = [ROOT.getMonarchname]
+			}
+			set_ruler_flag = stats_for_general
+		}
+	}
+
+	option = { #re-election option
+		name = pf_flavor_bca.a 
+
+	}
+
+	option = { # elect a general
+		name = pf_flavor_bca.b 
+		if = {
+			limit = {
+				num_of_generals = 2
+			}
+			define_leader_to_ruler = {
+				type = general
+			}
+			add_government_power = {
+				mechanic_type = stratocratic_republic_mechanic
+				power_type = stratocratic_republic_slider
+				value = 10
+			}
+			define_general = {
+				fire = 1
+				shock = 1
+				maneuver = 1
+				siege =1
+				age = 1
+				name = 1
+			}
+		}
+		else = {
+			define_ruler = {
+				max_random_dip = 3
+				max_random_adm = 3
+				max_random_mil = 6
+			}
+			convert_ruler_to_general = yes 
+			add_government_power = {
+				mechanic_type = stratocratic_republic_mechanic
+				power_type = stratocratic_republic_slider
+				value = 10
+			}
+		}
+	}
+
+	option = { #elect an admiral
+		name = pf_flavor_bca.c 
+		if = {
+			limit = {
+				num_of_admirals = 2
+			}
+			define_leader_to_ruler = {
+				type = admiral
+			}
+			add_government_power = {
+				mechanic_type = stratocratic_republic_mechanic
+				power_type = stratocratic_republic_slider
+				value = -10
+			}
+		}
+		else = {
+			define_ruler = {
+				max_random_dip = 6
+				max_random_adm = 3
+				max_random_mil = 3
+			}
+			convert_ruler_to_admiral = yes 
+			add_government_power = {
+				mechanic_type = stratocratic_republic_mechanic
+				power_type = stratocratic_republic_slider
+				value = -10even
+		}
+	}
+	}
+}
+
+country_event = {
+	id = pf_flavor_bca.101
+	title = pf_flavor_bca.101.t
+	desc = pf_flavor_bca.101.d
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = {
+			which = generalfire
+			value = 1
+			}
+		set_variable = {
+			which = generalshock
+			value = 1
+			}
+		set_variable = {
+			which = generalmaneuver
+			value = 1
+			}
+		set_variable = {
+			which = generalsiege
+			value = 1
+			}
+		set_saved_name = {
+			key = rehire_name
+			type = simple
+			name = [ROOT.Monarch.GetName]
+		}
+	}
+
+	option = {
+
+		define_general = {
+			fire = 1
+			shock = 1
+			manuever = 1
+			siege = 1
+			name = rehire_name
+		}
+	}
+}
