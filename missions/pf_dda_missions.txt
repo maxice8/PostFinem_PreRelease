@@ -184,6 +184,9 @@ pf_dda_3 = {
             pf_dda_train_our_army
             pf_dda_increase_conscription
         }
+        provinces_to_highlight = {
+            owned_by = ILY
+        }
         trigger = {
             if = {
                 limit = {exists = ILY}
@@ -211,9 +214,6 @@ pf_dda_3 = {
         required_missions = {
             pf_dda_invade_illyria
         }
-        provinces_to_highlight = {
-            owned_by = ILY
-        }
         trigger = {
             custom_trigger_tooltip = {
                 tooltip = pf_dda_pf_dda_lose_free_city_status_tt1
@@ -236,6 +236,7 @@ pf_dda_3 = {
             pf_dda_lose_free_city_status
         }
         provinces_to_highlight = {
+            owned_by = DDA
             NOT = {fort_level = 2}
         }
         trigger = {
@@ -295,10 +296,15 @@ pf_dda_3 = {
             pf_dda_a_sanctuary_for_all_faiths
         }
         trigger = {
-            any_owned_province = {religion = punic_religion}
-            any_owned_province = {religion = hellenic}
-            any_owned_province = {religion = romana}
-            any_owned_province = {religion = norse_pagan_reformed}
+            OR = {
+                AND = {
+                    any_owned_province = {religion = punic_religion}
+                    any_owned_province = {religion = hellenic}
+                    any_owned_province = {religion = romana}
+                    any_owned_province = {religion = norse_pagan_reformed}
+                }
+                num_of_cities = 500
+            }
         }
         effect = {
             add_adm_tech = 1
@@ -431,7 +437,7 @@ pf_dda_5 = {
         position = 1
         icon = interest_of_holland
         provinces_to_highlight = {
-            4957
+            province_id = 4957
         }
         trigger = {
             capital = 4957
@@ -457,7 +463,7 @@ pf_dda_5 = {
         }
         trigger = {
             has_institution = renaissance
-            prestige = 0
+            prestige = 15
         }
         effect = {
             change_innovativeness = 10

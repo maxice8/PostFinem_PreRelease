@@ -157,6 +157,7 @@ country_event = {
                 has_great_project = {
                     type = hall_of_pantheons
                     tier = 0
+                }
             }
             add_great_project_tier = {
                 type = hall_of_pantheons
@@ -211,19 +212,19 @@ country_event = {
         }
         distribute_base_dev_to_provinces = {
             amount = 2
-            type = "adm"
+            type = "tax"
             num = 1
             tooltip = "§G2§! random provinces will receive §G1§! Base Tax."
         }
         distribute_base_dev_to_provinces = {
             amount = 2
-            type = "dip"
+            type = "production"
             num = 1
             tooltip = "§G2§! random provinces will receive §G1§! Base Production."
         }
         distribute_base_dev_to_provinces = {
             amount = 2
-            type = "mil"
+            type = "manpower"
             num = 1
             tooltip = "§G2§! random provinces will receive §G1§! Base Manpower."
         }
