@@ -224,12 +224,12 @@ country_decisions = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			NOT = { 
-				AND = {
+			if = {
+				limit = {
 					tag = KSB
-					NOT = { mission_completed = ksb_united_severoslavia }
 				}
-			} 
+				mission_completed = ksb_united_severoslavia
+			}
 		}
 		effect = {
 			change_tag = SEV

@@ -494,9 +494,9 @@ country_event = {
 	major = yes
 	major_trigger = {
 		OR = {
-tag = KRA
-tag = POL
-}
+			tag = KRA
+			tag = POL
+		}
 	}
 	option = {
 		name = pf_ksb_events.17a

@@ -306,3 +306,31 @@ country_event = {
 		white_peace = POL
 	}
 }
+
+#Kill ignacij in 1450
+country_event = {
+	id = pf_pol_events.100
+	title = pf_pol_events.100.t
+	desc = pf_pol_events.100.d
+	picture = KING_SICK_IN_BED_eventPicture
+	trigger = {
+		is_year = 1450
+		NOT = { 
+			AND = {
+				has_global_flag = lechia_succession_wars
+				KRA = {
+					has_ruler_flag = kra_caspar_rules_flag
+				}
+			} 
+		}
+		tag = POL
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	hidden = yes
+	option = {
+		name = pf_pol_events.8a
+		kill_ruler = yes
+	}
+}
