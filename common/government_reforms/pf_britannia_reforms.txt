@@ -214,3 +214,258 @@ pf_sardinian_league_reform = {
 		factor = 1
 	}
 }
+pf_ritualised_diplomacy_reform = {
+	icon = "cossacks"
+	allow_normal_conversion = no
+
+	potential = {
+		is_part_of_hre = yes
+	}
+	trigger = {
+		is_part_of_hre = yes
+	}
+	modifiers = {
+		diplomatic_reputation = 1
+		improve_relation_modifier = 0.15
+		diplomats = 1
+	}
+	custom_attributes = {
+		enables_discounted_host_feast = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+pf_citizen_volunteers_reform = {
+	icon = "sisterhood"
+	allow_normal_conversion = no
+
+	potential = {
+		is_part_of_hre = yes
+	}
+	trigger = {
+		is_part_of_hre = yes
+	}
+	modifiers = {
+		global_manpower_modifier = 0.10
+		morale_damage_received = -0.10
+		regiment_manpower_usage = -0.05
+	}
+	ai = {
+		factor = 1
+	}
+}
+neapolitan_principality_reform = {
+	icon = "bohemian_monarchy"
+	allow_normal_conversion = no
+
+	potential = {
+		tag = NAP
+	}
+	trigger = {
+		tag = NAP
+	}
+	modifiers = {
+		vassal_income = 0.25
+		governing_capacity = -150
+		vassal_manpower_bonus = 0.50
+		diplomatic_upkeep = 1
+		nobles_influence_modifier = 0.10
+		max_absolutism = -20
+	}
+	ai = {
+		factor = 1
+	}
+}
+pf_eager_councillors_reform = {
+	icon = "pf_provincial_things"
+	allow_normal_conversion = no
+
+	potential = {
+		is_part_of_hre = yes
+	}
+	trigger = {
+		is_part_of_hre = yes
+	}
+	modifiers = {
+		possible_policy = 1
+		dip_tech_cost_modifier = -0.10
+	}
+	custom_attributes = {
+		more_reasons_for_petition_acceptance = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+pf_punic_festivals_reform = {
+	icon = "zeus"
+	allow_normal_conversion = no
+
+	potential = {
+		religion = punic_religion
+	}
+	trigger = {
+		religion = punic_religion
+	}
+	modifiers = {
+		stability_cost_modifier = -0.10
+		tolerance_own = 1
+		same_religion_advisor_cost = -0.15
+	}
+	custom_attributes = {
+		ending_wars_gives_stability = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+astartean_adventurer_reform = {
+	icon = "negusa_nagast"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+
+	potential = {
+		tag = CLN	# Conan's realm
+	}
+	trigger = {
+		tag = CLN
+	}
+	modifiers = {
+		years_of_nationalism = -5
+		loot_amount = 0.20
+		max_absolutism = -30
+	}
+	#government_abilities = {
+	#	trinovantes_cohesion_mechanic
+	#}
+	ai = {
+		factor = 5
+	}
+}
+order_of_the_shadows_reform = {
+	icon = "assassin"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+
+	potential = {
+		tag = SZO	# Saluzzo
+	}
+	trigger = {
+		tag = SZO	# Saluzzo
+	}
+	modifiers = {
+		spy_action_cost_modifier = -0.10
+		spy_offence = 0.10
+		global_autonomy = -0.05
+		max_absolutism = 10
+	}
+	government_abilities = {
+		espionage_policy_mechanic
+	}
+	ai = {
+		factor = 5
+	}
+}
+illyrian_kingdom_reform = {
+	icon = "regionally_elected_commanders"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+
+	potential = {
+		tag = ILY	# Illyria
+	}
+	trigger = {
+	}
+	modifiers = {
+		fort_maintenance_modifier = -0.20
+		defensiveness = 0.10
+		nobles_influence_modifier = 0.15
+		max_absolutism = 5
+	}
+	government_abilities = {
+		crown_authority_mechanic
+	}
+	custom_attributes = {
+		recruiting_generals_increases_nobles_loyalty = yes
+		buffed_strong_duchies = yes #+5% Loyalty
+	}
+	ai = {
+		factor = 5
+	}
+}
+
+icelandic_althingi_reform = {
+	icon = "pf_provincial_things"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+	# no elections! They will have a special mechanic muhahah
+	# work replaces the monarch skill basically, work increased by advisors and events
+	duration = 500
+	potential = {
+		tag = ICE
+	}
+	trigger = {
+	}
+	modifiers = {
+		global_unrest = -2
+		republican_tradition = 1
+		governing_capacity_modifier = -0.90
+		max_absolutism = -50
+	}
+	government_abilities = {
+		althingi_mechanic
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	heirs_can_be_generals = no
+	rulers_can_be_generals = no
+	ai = {
+		factor = 5
+	}
+}
+
+nordic_monarchy_reform = {
+	icon = "scandinavian_monarchy"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+
+	potential = {
+		culture_group = scandinavian
+	}
+	trigger = {
+		culture_group = scandinavian
+	}
+	modifiers = {
+		global_manpower_modifier = 0.10
+		embracement_cost = -0.20
+		all_estate_influence_modifier = -0.05
+	}
+	ai = {
+		factor = 5
+	}
+}
+
+
+nordic_huskarl_recruitment_reform = {
+	icon = "huskarl"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = scandinavian
+	}
+	trigger = {
+		culture_group = scandinavian
+	}
+	modifiers = {
+		amount_of_carolean = 0.50
+		monarch_lifespan = 0.10
+		nobles_loyalty_modifier = 0.05
+	}
+}

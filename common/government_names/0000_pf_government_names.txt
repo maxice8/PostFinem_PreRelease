@@ -61,6 +61,53 @@ punic_pirate_government = {
 		has_reform = pirate_republic_reform
 	}
 }
+neapolitan_principality_names = {
+	rank = {
+		1 = PRINCIPALITY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = LORD
+		2 = KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = LADY
+		2 = QUEEN
+		3 = EMPRESS
+	}
+
+	consort_male = {
+		1 = PRINCE
+		2 = PRINCE
+		3 = PRINCE
+	}
+
+	consort_female = {
+		1 = PRINCESS
+		2 = PRINCESS
+		3 = PRINCESS
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIRESS
+		2 = HEIRESS
+		3 = HEIRESS
+	}
+
+	trigger = {
+		has_reform = neapolitan_principality_reform
+	}
+}
 brittonic_confederation_names = {
 	rank = {
 		1 = CONFEDERATION
@@ -381,6 +428,67 @@ greek_rulers_monarchy = {
 		}
 	}
 }
+
+rabim_qahal_adrim_in_power = {
+	rank = {
+		1 = MEDINAT  
+		2 = HABURAT  
+		3 = RISHONAT 
+	}
+
+	ruler_male = {
+		1 = NASI            # Nasi
+		2 = ROSH            # Rosh
+		3 = GADOL           # Gadol
+	}
+
+	ruler_female = {
+		1 = NASIA           # Nasia
+		2 = ROSHA           # Rosha
+		3 = GADOLA          # Gadola
+	}
+
+	trigger = {
+		has_government_mechanic = car_rabim_qahal
+		NOT = {
+			has_government_power = {
+				mechanic_type = car_rabim_qahal
+				power_type = adirim_vs_suffet
+				value = 0
+			}
+		}
+	}
+}
+
+rabim_qahal_suffet_in_power = {
+	rank = {
+		1 = MEDINAT  
+		2 = HABURAT  
+		3 = RISHONAT 
+	}
+
+	ruler_male = {
+		1 = RAB_QART
+		2 = MELEK 
+		3 = RAB_MELEK 
+	}
+
+	ruler_female = {
+		1 = RABAT_QART
+		2 = MALKAT 
+		3 = RABAT_MALKAT 
+	}
+
+	trigger = {
+		has_government_mechanic = car_rabim_qahal
+		has_government_power = {
+			mechanic_type = car_rabim_qahal
+			power_type = adirim_vs_suffet
+			value = 0
+		}
+	}
+}
+
 punic_monarchy = {
 	rank = {
 		1 = QART

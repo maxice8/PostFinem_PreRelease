@@ -1178,3 +1178,27 @@ country_event = {		# Tribe Rallies for War
 		pf_clear_trn_tribe_flags = yes
 	}
 }
+country_event = {		# Ricatus Falls
+	id = pf_trn.28
+	title = pf_trn.28.t
+	desc = pf_trn.28.d
+	picture = muslimgfx_DEATH_OF_HEIR_eventPicture
+
+	trigger = {
+		tag = TRN
+		has_ruler = "Ricatus"
+		has_ruler_flag = ricatus_flag
+		is_year = 1448
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = "pf_trn.28.a"
+		kill_ruler = yes
+	}
+}

@@ -1,0 +1,54 @@
+namespace = pf_cotf
+
+country_event = {		# The Council of the Federation
+	id = pf_cotf.1
+	title = pf_cotf.1.t 
+	desc = pf_cotf.1.d
+	picture = COUNCIL_TRENT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_cotf.1.a"
+		custom_tooltip = pf_cotf_what_happens_next_tt
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					NOT = { is_emperor = yes }
+				}
+				country_event = {
+					id = pf_cotf.2
+					days = 14
+					random = 7
+				}
+			}
+		}
+	}
+}
+country_event = {		# The Council of the Federation (members)
+	id = pf_cotf.2
+	title = pf_cotf.2.t 
+	desc = pf_cotf.2.d
+	picture = COUNCIL_TRENT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_cotf.2.a"
+		custom_tooltip = pf_cotf_appease_the_adirim_tt
+		emperor = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_appease_adirim_cotf
+			}
+		}
+	}
+	option = {
+		name = "pf_cotf.2.b"
+		custom_tooltip = pf_cotf_petition_1_tt
+		tooltip = {
+			add_stability_or_adm_power = yes
+		}
+	}
+}
