@@ -456,7 +456,7 @@ pf_sar_2 = {
 			add_dip_power = 100
 			add_mil_power = 100
 			custom_tooltip = empty_line_tt
-			has_country_flag = pf_sar_recruiting_admirals_gives_tradition
+			set_country_flag = pf_sar_recruiting_admirals_gives_tradition
 			custom_tooltip = pf_sar_mare_nostrum_tt
 		} 
 	}
