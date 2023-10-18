@@ -4724,7 +4724,7 @@ on_admiral_recruited = {
 	}
 	if = {
 		limit = {
-			has_country_flag = pf_sar_recruiting_admirals_gives_tradition }
+			has_country_flag = pf_sar_recruiting_admirals_gives_tradition
 		}
 		add_navy_tradition = 2
 	}

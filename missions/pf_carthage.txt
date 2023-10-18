@@ -1,0 +1,431 @@
+car_main_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = CAR } 
+
+	pf_car_prepare_invasion_force = {
+		icon = mission_shipyards_of_gujarat
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_revive_lilybaeum = {
+		icon = mission_found_havana
+		position = 2
+		required_missions = { pf_car_prepare_invasion_force } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_italian_ambitions = {
+		icon = mission_rule_italy
+		position = 4
+		required_missions = { pf_car_revive_lilybaeum } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_approach_the_alpes = {
+		icon = the_alpine_wall
+		position = 6
+		required_missions = {
+			pf_car_italian_ambitions
+			pf_car_finish_the_punic_wars
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_winds_of_change = {
+		icon = mission_book_of_royal_degrees
+		position = 1
+		required_missions = { pf_car_thunder_of_war } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+car_main_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = CAR } 
+
+	pf_car_reestablish_sardan = {
+		icon = seize_sardinia
+		position = 2
+		required_missions = { pf_car_prepare_invasion_force } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_mediterranean_dominance = {
+		icon = mission_naval_kingdom
+		position = 3
+		required_missions = {
+			pf_car_revive_lilybaeum
+			pf_car_reestablish_sardan
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_iberia_reclaimed = {
+		icon = mission_plc_golden_liberty
+		position = 4
+		required_missions = { pf_car_into_iber } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_finish_the_punic_wars = {
+		icon = mission_fall_of_third_rome
+		position = 1
+		required_missions = { pf_car_italian_ambitions } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_thunder_of_war = {
+		icon = pf_war_elephants
+		position = 7
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_fire_of_cannons = {
+		icon = mission_guns_of_urban
+		position = 1
+		required_missions = { pf_car_thunder_of_war } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_leading_from_the_front = {
+		icon = military_self_reliance
+		position = 1
+		required_missions = { pf_car_fire_of_cannons } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+car_main_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = CAR } 
+
+	pf_car_integrate_the_tribes = {
+		icon = mission_turning_the_tables
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_masters_of_mauretania = {
+		icon = mission_moroccan_ports
+		position = 2
+		required_missions = { pf_car_integrate_the_tribes } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_into_iber = {
+		icon = mission_reclaim_andalucia
+		position = 3
+		required_missions = { pf_car_masters_of_mauretania } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_carthago_nova = {
+		icon = renaissance_city
+		position = 4
+		required_missions = { pf_car_into_iber } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_gallic_campaigns = {
+		icon = centralize_france
+		position = 5
+		required_missions = { pf_car_iberia_reclaimed } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_worthy_successors_of_hannibal = {
+		icon = pf_hannibal
+		position = 1
+		required_missions = {
+			pf_car_gallic_campaigns
+			pf_car_finish_the_punic_wars
+			pf_car_phoenicia_our_home
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_thunder_of_war = {
+		icon = pf_war_elephants
+		position = 7
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_reclaimed_glory = {
+		icon = africa_proconsulare
+		position = 7
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_center_of_enlightenment = {
+		icon = mission_early_modern_university
+		position = 9
+		required_missions = { pf_car_reclaimed_glory } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+car_main_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = CAR } 
+
+	pf_car_island_hopping = {
+		icon = mission_invade_island
+		position = 2
+		required_missions = { pf_car_a_navy_worth_of_yam } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_the_land_of_alexander = {
+		icon = mission_rb_seize_alexandria
+		position = 3
+		required_missions = { pf_car_island_hopping } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_the_motherland_beckons = {
+		icon = mission_control_the_barbary_coast
+		position = 1
+		required_missions = { pf_car_the_land_of_alexander } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_phoenicia_our_home = {
+		icon = mission_unite_home_region
+		position = 5
+		required_missions = { pf_car_the_motherland_beckons } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_secure_ports = {
+		icon = mission_secure_hajj_ports
+		position = 7
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_rivaling_roma = {
+		icon = pf_fertile_crescent
+		position = 1
+		required_missions = {
+			pf_car_reclaimed_glory
+			pf_car_secure_ports
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_buns_for_the_people = {
+		icon = prosperity_for_all
+		position = 9
+		required_missions = { pf_car_productive_provinces } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+car_main_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = CAR } 
+
+	pf_car_a_navy_worth_of_yam = {
+		icon = mission_secure_hajj_ports
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_the_punic_admiralty = {
+		icon = mission_danish_navy
+		position = 3
+		required_missions = {
+			pf_car_a_navy_worth_of_yam
+			pf_car_island_hopping
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_the_gateway_to_the_east = {
+		icon = mission_conquer_alexandria
+		position = 4
+		required_missions = { pf_car_the_land_of_alexander } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_phoenician_strongholds = {
+		icon = mission_metropolis_of_the_deccan
+		position = 5
+		required_missions = { pf_car_the_gateway_to_the_east } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_phoenician_trade_routes = {
+		icon = mission_early_game_buildings
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_productive_provinces = {
+		icon = mission_state_manufactories
+		position = 8
+		required_missions = {
+			pf_car_phoenician_trade_routes
+			pf_car_secure_ports
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_clothe_the_citizens = {
+		icon = mission_son_own_develop_clothes_and_salt
+		position = 9
+		required_missions = { pf_car_productive_provinces } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
