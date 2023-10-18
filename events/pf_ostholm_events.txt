@@ -1,0 +1,86 @@
+namespace = pf_ost
+
+country_event = {		#ask Vildheim to PU
+	id = pf_ost.1
+	title = pf_ost.1.t 
+	desc = pf_ost.1.d
+	picture = CAROLEANS_eventPicture
+
+	trigger = {
+		tag = OST
+		is_year = 1460
+		dynasty = "Thorkillingas"
+		at_war = no
+		VLD = {
+			at_war = no
+			exist = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = "pf_ost.1.a"
+		ai_chance = {
+			factor = 50
+		}
+		VLD = {
+			capital_scope = {
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 3
+					friend = OST
+					should_take_capital = yes
+					leader = "Theodoric"
+					leader_dynasty = "Thorkillingas"
+				}
+			}
+		}
+	}
+	option = {
+		name = "pf_ost.1.b"
+		ai_chance = {
+			factor = 50
+		}
+		VLD = {
+			add_trust = {
+				who = ROOT
+				value = 25
+				mutual = yes
+			}
+		}
+		add_stability_or_adm_power = yes
+	}
+}
+
+
+country_event = {		#ask Vildheim to PU answers
+	id = pf_ost.2
+	title = pf_ost.2.t 
+	desc = pf_ost.2.d
+	picture = CAROLEANS_eventPicture
+
+	trigger = {
+		tag = OST
+		dynasty = "Thorkillingas"
+		at_war = no
+		VLD = {
+			dynasty = "Thorkillingas"
+			at_war = no
+			exist = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "pf_ost.2.a"
+		OST = {
+			create_union = VLD
+		}
+	}
+}
+
