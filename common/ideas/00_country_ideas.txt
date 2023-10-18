@@ -308,50 +308,6 @@ EIC_ideas = {
 	}
 }
 
-SWE_ideas = {
-	start = {
-		infantry_power = 0.2
-		merc_maintenance_modifier = -0.15
-	}
-
-	bonus = {
-		leader_land_shock = 1
-	}
-	
-	trigger = {
-		tag = SWE
-	}
-	free = yes		#will be added at load.
-
-	kung_och_riksdag = {
-		legitimacy = 1
-		devotion = 1
-		republican_tradition = 0.3
-		meritocracy = 1	#For completion's sake
-		horde_unity = 1
-		possible_policy = 1
-	}
-	swedish_steel = {
-		discipline = 0.05
-	}
-	hakkapelitta = {
-		cavalry_cost = -0.1
-	}
-	indelningsverket = {
-		manpower_recovery_speed = 0.2
-	}
-	swedish_absolutism = {
-		stability_cost_modifier = -0.1
-		yearly_absolutism = 1
-	}
-	produktplakatet = {
-		global_trade_goods_size_modifier = 0.1
-	}
-	union_and_security_act = {
-		global_manpower_modifier = 0.20
-	}
-}
-
 DAN_ideas = {
 	start = {
 		navy_tradition = 1
@@ -991,48 +947,6 @@ TUR_ideas = {
 		global_ship_cost = -0.1
 	}
 }
-
-FER_ideas = {
-	start = {
-		light_ship_power = 0.15
-		siege_ability = 0.1
-	}
-	
-	bonus = {
-		global_ship_trade_power = 0.2
-	}
-	
-	trigger = {
-		tag = FER
-	}
-	free = yes		#will be added at load.
-	
-	FER_papal = {
-		papal_influence = 1
-		religious_unity = 0.25
-	}
-	FER_culture = {
-		global_institution_spread = 0.1
-	}
-	FER_alfonso = {
-		artillery_power = 0.1
-	}
-	FER_margrave_of_este = {
-		diplomatic_reputation = 1
-	}
-	FER_resisting_venice = {
-		global_own_trade_power = 0.25
-	}
-	FER_este_castle = {
-		defensiveness = 0.15
-		prestige = 0.5	
-	}
-	FER_ferraran_arsenal = {
-		flagship_cost = -0.5
-		leader_naval_fire = 1
-	}
-}
-
 URB_ideas = {
 	start = {
 		production_efficiency = 0.1
@@ -1199,46 +1113,6 @@ PGA_ideas = {
 		unjustified_demands = -0.2
 	}
 }
-
-SZO_ideas = {
-	start = {
-		ae_impact = -0.15
-		infantry_power = 0.1
-	}
-	
-	bonus = {
-		core_creation = -0.15
-	}
-	
-	trigger = {
-		tag = SZO
-	}
-	free = yes		#will be added at load.
-	
-	SZO_golden_age = {
-		global_prov_trade_power_modifier = 0.1
-	}
-	SZO_rich_mountain = {
-		global_trade_goods_size_modifier = 0.1
-	}
-	SZO_marquisate = {
-		land_morale = 0.1
-	}
-	SZO_alpine_engineering = {
-		movement_speed = 0.15
-	}
-	SZO_key_to_italy = {
-		trade_steering = 0.2
-	}
-	SZO_chiesa_san_giovanni = {
-		tolerance_own = 1
-		global_missionary_strength = 0.01
-	}
-	SZO_mint = {
-		global_tax_modifier = 0.1
-	}
-}
-
 MFA_ideas = {
 	start = {
 		recover_army_morale_speed = 0.05
@@ -2152,93 +2026,6 @@ MAM_ideas = {
 	}
 	mam_monopoly_ports = {
 		trade_efficiency = 0.10
-	}
-}
-
-
-NAP_ideas = {
-	start = {
-		global_institution_spread = 0.1 #University of Naples, Angevine Heritage, Academies, centre of Neapolitan renaissance.
-		trade_efficiency = 0.1 #One of the main trade port of the mediterrenean for much of the timeframe
-	}
-	
-	bonus = {
-		global_manpower_modifier = 0.2
-	}
-	
-	trigger = {
-		tag = NAP
-	}
-	
-	free = yes
-	
-	consolidate_the_royal_domain = {
-		global_trade_goods_size_modifier = 0.1
-	}
-	academia_pontaniana = {
-		technology_cost = -0.05
-	}
-	encouraged_city_living = {
-		development_cost = -0.1 #Often among the largest cities of Europe
-	}
-	crush_the_barons = {
-		land_morale = 0.1
-	}
-	expanded_arsenale = {
-		global_ship_cost = -0.1
-	}
-	city_of_artists = {
-		prestige = 1
-	}
-	lazzaroni_support = {
-		legitimacy = 1
-		devotion = 1
-		republican_tradition = 0.3
-		meritocracy = 1	#For completion's sake
-		horde_unity = 1
-	}
-}
-
-SIC_ideas = {
-	start = {
-		land_morale = 0.1
-		global_manpower_modifier = 0.2
-	}
-	
-	bonus = {
-		prestige = 1
-	}
-	
-	trigger = {
-		OR = {
-			tag = TTS
-			tag = SIC
-		}
-	}
-	
-	free = yes
-	
-	sic_university_of_catania = {
-		technology_cost = -0.05
-	}
-	sic_constitions_of_melfi = {
-		global_unrest = -1
-		possible_policy = 1
-	}
-	sic_noble_admirals = {
-		navy_tradition = 1
-	}
-	sic_greater_sicily = {
-		core_creation = -0.1
-	}
-	sic_trade_fleet = {
-		global_ship_trade_power = 0.2
-	}
-	sic_grand_navy = {
-		naval_morale = 0.15
-	}
-	sic_sicilian_silk = {
-		global_trade_goods_size_modifier = 0.1
 	}
 }
 

@@ -1,0 +1,167 @@
+country_decisions = {
+	pf_if_reform_trade_laws = {
+		potential = {
+			is_part_of_hre = yes
+			is_emperor = yes
+		}
+
+		allow = {
+			is_part_of_hre = yes
+			imperial_influence = 5
+			OR = {
+				statesman = 1
+				trader = 1
+			}
+			monthly_dip = 10
+			custom_trigger_tooltip = {
+				tooltip = pf_if_10_year_cooldown_tt
+				OR = {
+					NOT = { has_country_flag = used_reform_trade_laws_adirim }
+					had_country_flag = {
+						flag = used_reform_trade_laws_adirim
+						days = 3650
+					}
+				}
+			}
+		}
+
+		effect = {
+			set_country_flag = used_reform_trade_laws_adirim
+			add_imperial_influence = -5
+			add_years_of_income = 0.25
+			if = {
+				limit = {
+					has_estate = estate_burghers
+				}
+				add_estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 10
+				}
+			}
+			custom_tooltip = pf_if_every_prince_gets_mercantilism_tt
+			hidden_effect = {
+				every_known_country = {
+					limit = {
+						is_part_of_hre = yes
+						NOT = { is_emperor = yes }
+					}
+					country_event = { id = pf_if.9 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { imperial_influence = 70 }
+			}
+			modifier = {
+				factor = 0
+				mercantilism = 50
+			}
+			modifier = {
+				factor = 2
+				is_in_deficit = yes
+			}
+		}
+	}
+	pf_if_meridia_nation = {
+		major = yes
+		potential = {
+			NOT = { is_emperor = yes }
+			OR = {
+				primary_culture = umbrii
+				primary_culture = osci
+				primary_culture = samnitii
+				primary_culture = lucanian
+			}
+			NOT = { has_country_flag = formed_meridia_flag }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+
+		allow = {
+			OR = {
+				primary_culture = umbrii
+				primary_culture = osci
+				primary_culture = samnitii
+				primary_culture = lucanian
+			}
+			is_at_war = no
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 12
+				OR = {
+					area = apulia_area
+					area = calabria_area
+					area = naples_area
+					area = adriatic_italy_area
+				}
+			}
+			capital_scope = {
+				development = 30
+			}
+		}
+
+		effect = {
+			set_country_flag = formed_meridia_flag
+			restore_country_name = yes
+			override_country_name = MERIDIA
+			add_prestige = 25
+			add_country_modifier = {
+				name = "pf_if_union_of_southern_italy"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	pf_if_host_a_feast = {
+		color = { 255 216 23 }
+		potential = {
+			OR = {
+				government = monarchy
+				government = republic
+				government = theocracy
+			}
+			is_part_of_hre = yes	# maybe extend outside federation?
+		}
+
+		allow = {
+			is_at_war = no
+			has_regency = no
+			custom_trigger_tooltip = {
+				tooltip = pf_if_25_year_cooldown_tt
+				OR = {
+					NOT = { has_country_flag = hosted_feast_flag }
+					had_country_flag = {
+						flag = hosted_feast_flag
+						days = 9125
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_government_attribute = enables_discounted_host_feast }
+				}
+				years_of_income = 0.5
+			}
+			else = {
+				years_of_income = 0.25
+			}
+		}
+
+		effect = {
+			country_event = { id = pf_feast.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

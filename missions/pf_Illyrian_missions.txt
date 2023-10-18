@@ -1,0 +1,1008 @@
+pf_illyria_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ILY } 
+
+	pf_ily_conquer_serbia = {
+		icon = moravian_arms
+		position = 2
+		required_missions = {
+			pf_ily_secure_the_throne
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = serbia_area
+				area = rascia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 7
+				OR = {
+					area = serbia_area
+					area = rascia_area
+				}
+			}
+		} 
+
+		effect = {
+			add_adm_power = 100
+			add_country_modifier = {
+				name = "pf_ily_frontier_with_macedonia"
+				duration = 9125
+			}
+			bulgaria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			macedonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			albania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+	pf_ily_nekharot = {
+		icon = protectors_of_christendom
+		position = 3
+		required_missions = {
+			pf_ily_conquer_serbia
+		}
+		provinces_to_highlight = {
+			area = albania_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			albania_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {
+			define_advisor = {
+				type = theologian
+				skill = 2
+				discount = yes
+				religion = jewish
+			}
+			country_event = {
+				id = pf_if.20
+			}
+			northern_greece_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			morea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+	pf_ily_into_greece = {
+		icon = capture_adriatic_ports
+		position = 4
+		required_missions = {
+			pf_ily_nekharot
+			pf_ily_strike_at_macedonia
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = northern_greece_area
+				area = morea_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 6
+				OR = {
+					area = northern_greece_area
+					area = morea_area
+				}
+			}
+		} 
+
+		effect = {
+			add_yearly_sailors = 2
+			add_navy_tradition = 20
+			aegean_archipelago_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+	pf_ily_break_hellenism = {
+		icon = mission_devastate_christianity
+		position = 5
+		required_missions = {
+			pf_ily_into_greece
+		}
+		provinces_to_highlight = {
+			province_id = 146	# Athens
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			146 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			development_in_provinces = {
+				value = 100
+				OR = {
+					area = northern_greece_area
+					area = morea_area
+					area = macedonia_area
+					area = aegean_archipelago_area
+				}
+				OR = {
+					has_owner_accepted_culture = yes
+					has_owner_culture = yes
+				}
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_ily_triumph_over_hellenic"
+				duration = 9125
+			}
+			custom_tooltip = pf_ily_every_hellenic_province_could_convert_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						religion = hellenic
+					}
+					random = {
+						chance = 50
+						change_religion = ROOT
+					}
+				}
+			}
+			custom_tooltip = pf_ily_every_hellenic_country_gets_bad_modifier_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						religion = hellenic
+					}
+					add_country_modifier = {
+						name = "pf_ily_hellenism_shattered"
+						duration = 9125
+					}
+				}
+			}
+		} 
+	}
+}
+pf_illyria_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ILY } 
+
+	pf_ily_secure_the_throne = {
+		icon = mission_pol_deal_mazovia
+		position = 1
+		provinces_to_highlight = { } 
+
+		trigger = {
+			if = {
+				limit = { ai = no }
+				stability = 1
+			}
+			OR = {
+				legitimacy_equivalent = 90
+				num_of_royal_marriages = 3
+			}
+			custom_trigger_tooltip = {
+				tooltip = pf_ily_secure_the_throne_tt
+				has_country_flag = ily_had_sons_rebellion
+			}
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+			NOT = { num_of_rebel_armies = 1 }
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_ily_strong_monarch"
+				duration = 7300
+			}
+			4957 = {
+				add_permanent_claim = ROOT
+			}
+			serbia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			rascia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+	pf_ily_seize_dardana = {
+		icon = mission_the_sound_toll
+		position = 2
+		required_missions = {
+			pf_ily_secure_the_throne
+		}
+		provinces_to_highlight = {
+			province_id = 4957	# Dardania
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			4957 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {
+			4957 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			add_country_modifier = {
+				name = "pf_ily_dalmatian_supremacy"
+				duration = 9125
+			}
+			central_italy_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			adriatic_italy_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+	pf_ily_strike_at_macedonia = {
+		icon = encroach_on_the_germans
+		position = 3
+		required_missions = {
+			pf_ily_conquer_serbia
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = bulgaria_area
+				area = macedonia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			bulgaria_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			macedonia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {
+			add_army_tradition = 15
+			if = {
+				limit = {
+					NOT = { mil = 6 }
+				}
+				change_mil = 2
+			}
+			else = {
+				add_mil_power = 100
+			}
+			add_ruler_personality = legendary_conqueror_personality
+			silistria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			thrace_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			wallachia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+	pf_ily_conquer_macedonia = {
+		icon = mng_thirteen_provinces
+		position = 4
+		required_missions = {
+			pf_ily_strike_at_macedonia
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = bulgaria_area
+				area = silistria_area
+				area = macedonia_area
+				area = thrace_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			148 = { country_or_non_sovereign_subject_holds = ROOT }
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					area = bulgaria_area
+					area = silistria_area
+					area = macedonia_area
+					area = thrace_area
+				}
+			}
+		} 
+
+		effect = {
+			country_event = { id = pf_if.21 }	# The Fall of Macedonia
+			hudavendigar_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			aydin_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			germiyan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			ankara_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	pf_ily_illyrian_empire = {
+		icon = mission_crown_of_sweden
+		position = 6
+		required_missions = {
+			pf_ily_break_hellenism
+			pf_ily_secure_the_danube
+		}
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+			total_development = 500
+		} 
+
+		effect = {
+			country_event = { id = pf_if.25 }		# beyond the federation
+		}
+	}
+}
+pf_illyria_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ILY } 
+
+	pf_ily_assemble_the_marchers = {
+		icon = mission_lit_reform_magdeburg_laws
+		position = 1
+		provinces_to_highlight = { } 
+
+		trigger = {
+			army_size_percentage = 1
+			has_estate = estate_nobles
+		} 
+
+		effect = {
+			country_event = { id = pf_if.17 }
+		} 
+	}
+	pf_ily_knights_of_illyria = {
+		icon = mission_livonian_knights
+		position = 2
+		required_missions = { pf_ily_assemble_the_marchers } 
+		provinces_to_highlight = { } 
+
+		trigger = {
+			num_of_cavalry = 8
+			army_tradition = 40
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 60
+			}
+		} 
+
+		effect = {
+			define_general = {
+				shock = 4
+				fire = 3
+				manuever = 4
+				siege = 0
+				name = "Horace Horseshoe"
+			}
+			add_country_modifier = {
+				name = "pf_ily_knightly_culture"
+				duration = 9125
+			}
+		} 
+	}
+	pf_ily_tales_of_chivalry = {
+		icon = mission_united_knight_order
+		position = 3
+		required_missions = { pf_ily_knights_of_illyria } 
+		provinces_to_highlight = { } 
+
+		trigger = {
+			prestige = 80
+			OR = {
+				ruler_total_stats = {
+					stats = 12
+				}
+				num_of_generals_with_traits = 3
+				has_leader_with = {
+					total_pips = 12
+				}
+			}
+			num_of_estate_agendas_completed = {
+				estate = estate_nobles
+				value = 3
+			}
+		} 
+
+		effect = {
+			country_event = { id = pf_if.18 }
+		} 
+	}
+	pf_ily_karthalian_succession = {
+		icon = king_of_france
+		position = 4
+		required_missions = { } 
+		provinces_to_highlight = {
+			OR = {
+				owned_by = CLI	# Karthalis
+				area = carinthia_area
+			}
+		} 
+
+		trigger = {
+			is_subject = no
+			OR = {
+				CLI = {
+					is_subject_of = root
+					NOT = { liberty_desire = 20 }
+				}
+				carinthia_area = {
+					type = all
+					owned_by = root
+				}
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_ily_king_of_karthalis"
+				duration = 7300
+			}
+			venetia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			inner_austria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			austria_proper_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			slavonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tirol_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+	pf_ily_secure_the_danube = {
+		icon = danubian_power
+		position = 5
+		required_missions = { pf_ily_conquer_macedonia pf_ily_karthalian_succession } 
+		provinces_to_highlight = {
+			OR = {
+				area = slavonia_area
+				area = serbia_area
+				area = bulgaria_area
+				area = silistria_area
+				area = wallachia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			slavonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 11
+				OR = {
+					area = serbia_area
+					area = bulgaria_area
+					area = silistria_area
+					area = wallachia_area
+				}
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_ily_control_of_the_danube"
+				duration = 7300
+			}
+			southern_transylvania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			transylvania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			moldavia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			alfold_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			transdanubia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+pf_illyria_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ILY } 
+
+	pf_ily_ragusa_toll = {
+		icon = mission_lit_reform_magdeburg_laws
+		required_missions = { pf_ily_assemble_the_marchers } 
+		position = 2
+		provinces_to_highlight = {
+			province_id = 137	# Ragusa
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_trade_building_trigger = yes }
+			}
+		} 
+
+		trigger = {
+			owns_core_province = 137
+			137 = {
+				has_trade_building_trigger = yes
+			}
+			if = {
+				limit = { 
+					ai = no
+				}
+				trader = 1
+			}
+		} 
+
+		effect = {
+			add_treasury = 100
+			add_mercantilism = 2
+			137 = {
+				add_province_modifier = {
+					name = "pf_ily_ragusa_toll_modifier"
+					duration = -1
+				}
+			}
+		} 
+	}
+	pf_ily_wealthy_nation = {
+		icon = mission_merchant_of_gujarat
+		required_missions = { pf_ily_ragusa_toll pf_ily_reform_the_provinces } 
+		position = 3
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				NOT = { has_tax_building_trigger = yes }
+				NOT = { has_production_building_trigger = yes }
+			}
+		} 
+
+		trigger = {
+			share_of_starting_income = 2.5
+			num_of_owned_provinces_with = {
+				value = 5
+				has_tax_building_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				has_production_building_trigger = yes
+			}
+		} 
+
+		effect = {
+			add_adm_power = 50
+			define_advisor = {
+				type = treasurer
+				skill = 2
+				discount = yes
+			}
+			add_country_modifier = {
+				name = "pf_ily_investing_in_the_country"
+				duration = 10950
+			}
+		} 
+	}
+	pf_ily_conquer_quadia = {
+		icon = mission_expand_into_the_forest
+		position = 5
+		required_missions = { pf_ily_karthalian_succession } 
+		provinces_to_highlight = {
+			OR = {
+				area = tirol_area
+				area = inner_austria_area
+				area = austria_proper_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					area = tirol_area
+					area = inner_austria_area
+					area = austria_proper_area
+				}
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_ily_integrate_the_ostgermanics"
+				duration = 9125
+			}
+			east_bavaria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_bavaria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_bavaria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_swabia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_swabia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+	pf_ily_invest_in_dalmatia = {
+		icon = take_the_bishoprics
+		position = 6
+		required_missions = { } 
+		provinces_to_highlight = {
+			area = east_adriatic_coast_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			development_in_provinces = {
+				value = 75
+				area = east_adriatic_coast_area
+			}
+		} 
+
+		effect = {
+			capital_scope = {
+				add_prosperity = 100
+			}
+			add_country_modifier = {
+				name = "pf_ily_dalmatian_trade"
+				duration = 9125
+			}
+		} 
+	}
+	pf_ily_found_illyradon = {
+		icon = imperial_capitals
+		position = 7
+		required_missions = { pf_ily_invest_in_dalmatia } 
+		provinces_to_highlight = {
+			province_id = 136	# Split
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { development = 25 }
+				NOT = { num_of_buildings_in_province = 4}
+			}
+		} 
+
+		trigger = {
+			owns_core_province = 136
+			136 = {
+				development = 25
+			}
+			136 = {
+				num_of_buildings_in_province = 4
+			}
+		} 
+
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			136 = {
+				change_province_name = "Illyradon"
+				rename_capital = "Illyradon"
+				upgrade_center_of_trade = yes
+				add_province_modifier = {
+					name = "pf_ily_great_illyradon"
+					duration = -1
+				}
+			}
+		} 
+	}
+}
+pf_illyria_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ILY } 
+
+	pf_ily_reform_the_provinces = {
+		icon = unite_the_wittelsbachs
+		required_missions = { } 
+		position = 2
+		provinces_to_highlight = {
+			owned_by = ROOT
+			local_autonomy = 10
+		} 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = pf_ily_reform_the_provinces_tt
+				NOT = {
+					any_owned_province = {
+						local_autonomy = 10
+					}
+				}
+			}
+			OR = {
+				ruler_has_good_adm_personality = yes
+				monthly_adm = 10
+			}
+			NOT = { corruption = 0.1 }
+			NOT = { inflation = 0.1 }
+			reform_level = 3
+		} 
+
+		effect = {
+			if = {
+				limit = {
+					NOT = { ruler_has_personality = lawgiver_personality }
+				}
+				add_ruler_personality = lawgiver_personality
+			}
+			else = {
+				add_adm_power = 50
+			}
+			change_government_reform_progress = 80
+			add_estate_loyalty = {
+				estate = all
+				loyalty = 10
+				short = yes
+			}
+		} 
+	}
+	pf_ily_colonial_system = {
+		icon = bavarian_cultural_dominance
+		required_missions = { pf_ily_reform_the_provinces } 
+		position = 4
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+			num_of_cities = 20
+			NOT = { dominant_culture = ROOT }
+		} 
+
+		effect = {
+			country_event = { id = pf_if.22 }	# colonial system
+		} 
+	}
+	pf_ily_settle_the_balkans = {
+		icon = negotiate_for_avignon
+		required_missions = { pf_ily_colonial_system } 
+		position = 5
+		provinces_to_highlight = {
+			owned_by = root
+			NOT = { culture = ROOT }
+		} 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 30
+				culture = ROOT
+			}
+			OR = {
+				num_accepted_cultures = 4
+				num_of_owned_provinces_with = {
+					value = 5
+					has_construction = culture
+				}
+			}
+		} 
+
+		effect = {
+			distribute_base_dev_to_provinces = {
+				num = 20
+				amount = 1
+				trigger = "
+					culture = ROOT
+				"
+				type = production
+				tooltip = pf_ily_settle_dev_tt
+			}
+			add_country_modifier = {
+				name = "pf_ily_developing_cities"
+				duration = 10950
+			}
+			set_country_flag = end_passive_colonisation
+			custom_tooltip = pf_ily_settle_the_balkans_tt
+		} 
+	}
+	pf_ily_dominate_the_marchers = {
+		icon = a_show_of_strength
+		position = 7
+		required_missions = { pf_ily_invest_in_dalmatia } 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+				has_country_modifier = crown_authority_5
+			}
+			ruler_total_stats = {
+				stats = 12
+			}
+			legitimacy_equivalent = 100
+			OR = {
+				stability = 3
+				absolutism = 30
+			}
+		} 
+
+		effect = {
+			set_country_flag = free_marcher_freedom
+			custom_tooltip = pf_ily_free_marcher_freedom_tt
+			add_country_modifier = {
+				name = "pf_ily_absolutism"
+				duration = -1
+			}
+		} 
+	}
+}

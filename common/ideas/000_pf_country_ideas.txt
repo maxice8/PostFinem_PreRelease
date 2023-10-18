@@ -702,116 +702,6 @@ ASG_ideas = {
 	}
 }
 
-ILY_ideas = {
-	start = {
-		galley_power = 0.20
-		global_trade_power = 0.10
-	}
-	
-	bonus = {
-		defensiveness = 0.20
-	}	
-
-	trigger = {
-		tag = ILY
-	}
-	free = yes
-	
-	#Mediterranean Dominance
-	ILY_ideas_1 = {
-		galley_cost = -0.15
-		naval_forcelimit_modifier = 0.20
-	}
-
-	#Trade Expansion
-	ILY_ideas_2 = {
-		trade_efficiency = 0.10
-		merchants = 1
-	}
-
-	#Defensive Preparations
-	ILY_ideas_3 = {
-		land_morale = 0.10
-		recover_army_morale_speed = 0.15
-	}
-
-	#Naval Fortifications
-	ILY_ideas_4 = {
-		build_cost = -0.1
-	}
-
-	#Mercantile Legislation
-	ILY_ideas_5 = {
-		global_trade_goods_size_modifier = 0.10
-	}
-
-	#Naval Innovation
-	ILY_ideas_6 = {
-		leader_naval_fire = 1
-		naval_maintenance_modifier = -0.10
-	}
-
-	#Stalwart Defenders
-	ILY_ideas_7 = {
-		fire_damage_received = -0.1
-	}
-}
-
-ITY_ideas = {
-	start = {
-		tolerance_own = 2
-		prestige = 1
-	}
-	
-	bonus = {
-		imperial_authority = 0.10
-	}	
-
-	trigger = {
-		tag = ITY
-	}
-	free = yes
-	
-	#Spiritual Guidance
-	ITY_ideas_1 = {
-		global_missionary_strength = 0.02
-	}
-
-	#Imperial Ambitions
-	ITY_ideas_2 = {
-		diplomatic_annexation_cost = -0.10
-		unjustified_demands = -0.20
-	}
-
-	#Prestigious Lineage
-	ITY_ideas_3 = {
-		legitimacy = 1
-		heir_chance = 0.50
-	}
-
-	#Religious Unity
-	ITY_ideas_4 = {
-		religious_unity = 0.20
-	}
-
-	#Enforced Hierarchy
-	ITY_ideas_5 = {
-		global_autonomy = -0.1
-	}
-
-	#Divine Diplomacy
-	ITY_ideas_6 = {
-		diplomatic_reputation = 2
-		diplomats = 1
-	}
-
-	#Imperial Consolidation
-	ITY_ideas_7 = {
-		province_warscore_cost = -0.10
-	}
-}
-
-
 #Europunic Minors
 ORA_ideas = {
 	start = {
@@ -3514,11 +3404,11 @@ old_germanic_ideas = {
 italian_minor_ideas = {
 	start = {
 		global_tax_modifier = 0.1
-		improve_relation_modifier = 0.15
+		inflation_reduction = 0.10
 	}
 	
 	bonus = {
-		diplomatic_upkeep = 1
+		advisor_cost = -0.10
 	}	
 
 	trigger = {
@@ -3533,34 +3423,36 @@ italian_minor_ideas = {
 
 	#Italo-Punic Ancestors
 	italian_minor_ideas_2 = {
-		prestige = 1
+		idea_cost = -0.10
 	}
 
 	#Espionage Departments
 	italian_minor_ideas_3 = {
-		global_spy_defence = 0.25
+		advisor_pool = 1
 	}
 
 	#Riches of Italia
 	italian_minor_ideas_4 = {
 		trade_efficiency = 0.1
+		transfer_trade_power_reasons = 5
 	}
 
 	#Standing Armies
 	italian_minor_ideas_5 = {
-		drill_gain_modifier = 0.25
-		land_morale = 0.1
+		mercenary_cost = -0.20
+		merc_maintenance_modifier = -0.10
 	}
 
 	#Surrounded by Seas
 	italian_minor_ideas_6 = {
-		ship_recruit_speed = -0.1
-		naval_forcelimit = 0.1
+		naval_forcelimit_modifier = 0.20
+		naval_morale = 0.10
 	}
 
 	#Investing in Knowledge
 	italian_minor_ideas_7 = {
-		idea_cost = -0.1
+		tolerance_heathen = 1
+		tolerance_of_heathens_capacity = 1
 	}
 }
 
