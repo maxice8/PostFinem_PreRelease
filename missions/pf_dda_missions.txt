@@ -54,7 +54,9 @@ pf_dda_2 = {
             pf_dda_italian_diplomacy
         }
         trigger = {
-            any_ally = {NOT = {has_matching_religion = ROOT}}
+            any_ally = {
+                NOT = {has_matching_religion = ROOT}
+            }
         }
         effect = {
             add_country_modifier = {
@@ -102,10 +104,9 @@ pf_dda_2 = {
         trigger = {
             custom_trigger_tooltip = {
                 tooltip = pf_dda_pf_dda_a_holy_nation_tt1
-                AND = {
-                    norse_pagan_reformed = 1
-                    hellenic = 1
-                    romana = 1
+                has_global_modifier_value = {
+                    which = tolerance_heathen
+                    value = 1
                 }
             }
             any_owned_province = {
@@ -114,7 +115,7 @@ pf_dda_2 = {
             }
         }
         effect = {
-            custom_tooltip = "Start construction of $YTemple$! for $0|%$! of the cost, and $0.5|%$! of the time in §G5§! random owned provinces."
+            custom_tooltip = pf_dda_pf_dda_a_holy_nation_tt2
             hidden_effect = {
                 set_variable = {
                     which = temp
@@ -189,7 +190,11 @@ pf_dda_3 = {
                 is_in_war = {
                     attacker_leader = ROOT
                     defender_leader = ILY
-                    casus_belli = cb_core
+                }
+            }
+            else = {
+                any_owned_province = {
+                    is_core = ILY
                 }
             }
         }
@@ -206,10 +211,15 @@ pf_dda_3 = {
         required_missions = {
             pf_dda_invade_illyria
         }
+        provinces_to_highlight = {
+            owned_by = ILY
+        }
         trigger = {
             custom_trigger_tooltip = {
                 tooltip = pf_dda_pf_dda_lose_free_city_status_tt1
-                NOT = {has_government_attribute = free_city}
+                NOT = {
+                    has_government_attribute = free_city
+                }
             }
         }
         effect = {
@@ -224,6 +234,9 @@ pf_dda_3 = {
         icon = fortify_malta
         required_missions = {
             pf_dda_lose_free_city_status
+        }
+        provinces_to_highlight = {
+            NOT = {fort_level = 2}
         }
         trigger = {
             num_of_owned_provinces_with = {
@@ -282,22 +295,10 @@ pf_dda_3 = {
             pf_dda_a_sanctuary_for_all_faiths
         }
         trigger = {
-            if = {
-                limit = {any_province = {religion = punic_religion}}
-                any_owned_province = {religion = punic_religion}
-            }
-            if = {
-                limit = {any_province = {religion = punic_religion}}
-                any_owned_province = {religion = hellenic}
-            }
-            if = {
-                limit = {any_province = {religion = punic_religion}}
-                any_owned_province = {religion = romana}
-            }
-            if = {
-                limit = {any_province = {religion = punic_religion}}
-                any_owned_province = {religion = norse_pagan_reformed}
-            }
+            any_owned_province = {religion = punic_religion}
+            any_owned_province = {religion = hellenic}
+            any_owned_province = {religion = romana}
+            any_owned_province = {religion = norse_pagan_reformed}
         }
         effect = {
             add_adm_tech = 1
@@ -343,7 +344,7 @@ pf_dda_4 = {
             }
         }
         effect = {
-            custom_tooltip = "Start culture conversion for $0|%$! of the cost, and $0.9|%$! of the time in §G5§! random owned provinces that are not of your primary culture."
+            custom_tooltip = pf_dda_pf_dda_turn_the_tide_tt2
             hidden_effect = {
                 set_variable = {
                     which = temp
@@ -404,8 +405,8 @@ pf_dda_4 = {
         trigger = {
             army_professionalism = 0.2
             military_strength = {
-                    who = ILY
-                    value = 1.5
+                who = ILY
+                value = 1.5
             }
             is_subject = no
             num_of_allies = 2
@@ -429,6 +430,9 @@ pf_dda_5 = {
     pf_dda_develop_dardania = {
         position = 1
         icon = interest_of_holland
+        provinces_to_highlight = {
+            4957
+        }
         trigger = {
             capital = 4957
             capital_scope = {development = 16}
@@ -514,9 +518,9 @@ pf_dda_5 = {
         }
         effect = {
             add_treasury = -300
-            custom_tooltip = "§G3§! random provinces will receive §G2§! Base Tax."
-            custom_tooltip = "§G3§! random provinces will receive §G2§! Base Production."
-            custom_tooltip = "§G3§! random provinces will receive §G2§! Base Manpower."
+            custom_tooltip = pf_dda_pf_dda_a_wealthy_nation_tt1
+            custom_tooltip = pf_dda_pf_dda_a_wealthy_nation_tt2
+            custom_tooltip = pf_dda_pf_dda_a_wealthy_nation_tt3
             distribute_base_dev_to_provinces = {
                 amount = 3
                 type = "tax"
