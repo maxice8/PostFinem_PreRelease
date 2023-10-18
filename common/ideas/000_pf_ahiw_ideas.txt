@@ -674,3 +674,42 @@ DRK_ideas = {		# Danmark
 		naval_morale = 0.10
 	}
 }
+JUT_ideas = {		# Jutland
+	start = {
+		galley_power = 0.20
+		hostile_attrition = 1
+	}
+	
+	bonus = {
+		leader_naval_fire = 1
+	}	
+
+	trigger = {
+		tag = JUT
+	}
+	free = yes
+	
+	jut_wild_lands = {
+		defensiveness = 0.10
+	}
+	jut_lessons_of_migrations = {
+		province_warscore_cost = -0.05
+		manpower_recovery_speed = 0.10
+	}
+	jut_anglian_heritage = {
+		same_culture_advisor_cost = -0.15
+	}
+	jut_defensive_fleet = {
+		naval_forcelimit_modifier = 0.25
+	}
+	jut_law_code_of_jutland = {
+		free_adm_policy = 1
+	}
+	jut_border_region = {
+		diplomatic_upkeep = 1
+	}
+	jut_schleswig_canal = {
+		trade_efficiency = 0.10
+		global_prov_trade_power_modifier = 0.10
+	}
+}

@@ -450,6 +450,44 @@ on_separate_war_lost = {
 on_battle_won_country = {
 	on_battle_ended_effect = yes
 	on_battle_won_country_effect = yes
+	if = {
+		limit = {
+			ROOT = {
+				has_country_flag = pf_killing_troops_gives_ducats
+			}
+		}
+		ROOT = {
+			FROM = {
+				set_variable = {
+					which = land_units_killed_for_ducat
+					which = land_units_killed
+				}
+				divide_variable = {
+					which = land_units_killed_for_ducat
+					value = 1000
+				}
+			}
+			while = {
+				limit = {
+					FROM = {
+						check_variable = {
+							which = land_units_killed_for_ducat
+							value = 1
+						}
+					}
+				}
+				FROM = {
+					subtract_variable = {
+						which = land_units_killed_for_ducat
+						value = 1
+					}
+				}
+				ROOT = {
+					add_treasury = 1
+				}
+			}
+		}
+	}
 }
 
 # country
