@@ -510,7 +510,9 @@ pf_szo_branch_4 = {
 		} 
 
 		effect = {
-			add_legitimacy_equivalent = 20
+			add_legitimacy_equivalent = {
+				amount = 20
+			}
 			add_country_modifier = {
 				name = "pf_szo_many_thrones"
 				duration = 9125
