@@ -1,10 +1,7 @@
 pf_per_inquisition = {
 	potential = {
 		tag = PER
-		is_year = 1550
-		NOT = { current_age = age_of_absolutism }
-		NOT = { current_age = age_of_revolutions }
-		has_country_modifier = pf_per_embraced_jawedism
+		has_country_flag = pf_per_started_persian_inquisition
 	}
 
 	can_start = {
@@ -12,12 +9,6 @@ pf_per_inquisition = {
 		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 			value = 20
 			NOT = { religion = zoroastrian }
-		}
-		NOT = {
-			has_global_modifier_value = {
-				which = tolerance_heathen
-				value = -3
-			}
 		}
 	}
 
@@ -34,14 +25,14 @@ pf_per_inquisition = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 1
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 40
 				NOT = { religion = zoroastrian }
 			}
 		}
 		modifier = {
-			factor = 3
+			factor = 1
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 60
 				NOT = { religion = zoroastrian }
@@ -49,33 +40,50 @@ pf_per_inquisition = {
 		}
 		modifier = {
 			factor = 1
-			stability = 0
 			NOT = { stability = 1 }
 		}
 		modifier = {
-			factor = 2
-			stability = -1
+			factor = 1
 			NOT = { stability = 0 }
 		}
 		modifier = {
-			factor = 3
+			factor = 1
 			NOT = { stability = -1 }
 		}
 		modifier = {
 			factor = 1
-			NOT = {
-				has_global_modifier_value = {
-					which = tolerance_heathen
-					value = -5
+			custom_trigger_tooltip = {
+				tooltip = pf_per_has_less_3_toh
+				NOT = {
+					has_global_modifier_value = {
+						which = tolerance_heathen
+						value = -3
+					}
+				}
+			}
+			
+		}
+		modifier = {
+			factor = 1
+			custom_trigger_tooltip = {
+				tooltip = pf_per_has_less_5_toh
+				NOT = {
+					has_global_modifier_value = {
+						which = tolerance_heathen
+						value = -5
+					}
 				}
 			}
 		}
 		modifier = {
-			factor = 2
-			NOT = {
-				has_global_modifier_value = {
-					which = tolerance_heathen
-					value = -7
+			factor = 1
+			custom_trigger_tooltip = {
+				tooltip = pf_per_has_less_7_toh
+				NOT = {
+					has_global_modifier_value = {
+						which = tolerance_heathen
+						value = -7
+					}
 				}
 			}
 		}

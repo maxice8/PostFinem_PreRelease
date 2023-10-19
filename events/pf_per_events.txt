@@ -4419,11 +4419,14 @@ country_event = {
 	title = "pf_per_events_77_title"
 	desc = "pf_per_events_77_desc"
 	picture = ACCUSATION_eventPicture
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = "pf_per_events_77_option_1"
 		ai_chance = { factor = 100 }
+
+		add_stability = -1
 	}
 }
 
@@ -4434,27 +4437,7 @@ country_event = {
 	desc = "pf_per_events_78_desc"
 	picture = GOOD_WITH_MONARCH_eventPicture
 	fire_only_once = yes
-
-	trigger = {
-		had_country_flag = {
-			flag = pf_per_started_persian_inquisition
-			days = 10950
-		}
-		has_country_modifier = pf_per_persian_inquisition
-
-		religious_unity = 1
-		NOT = { average_unrest = 2 }
-		NOT = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 15
-				NOT = { religion = zoroastrian }
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 12
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = "pf_per_events_78_option"
@@ -4727,6 +4710,10 @@ country_event = {
 				NOT = { religion = zoroastrian }
 			}
 		}
+	}
+
+	immediate = {
+		set_country_flag = pf_per_had_jawedism
 	}
 
 	option = {
@@ -5279,15 +5266,7 @@ country_event = {
 	desc = "pf_per_events_118_desc"
 	picture = ACCUSATION_eventPicture
 	fire_only_once = yes
-
-	trigger = {
-		is_year = 1550
-		has_country_modifier = pf_per_embraced_jawedism
-	}
-
-	mean_time_to_happen = {
-		months = 300
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = "pf_per_events_118_option_1"
@@ -5296,7 +5275,9 @@ country_event = {
 		add_country_modifier = {
 			name = pf_per_persian_inquisition
 			duration = -1
+			desc = pf_per_until_end_of_inquisition_tt
 		}
+		custom_tooltip = pf_per_start_inquisition_ticking_tt
 		set_country_flag = pf_per_started_persian_inquisition
 	}
 
@@ -5319,15 +5300,7 @@ country_event = {
 	desc = "pf_per_events_119_desc"
 	picture = ACCUSATION_eventPicture
 	fire_only_once = yes
-
-	trigger = {
-		is_year = 1550
-		has_country_modifier = pf_per_rejected_jawedism
-	}
-
-	mean_time_to_happen = {
-		months = 300
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = "pf_per_events_119_option_1"
@@ -5346,8 +5319,10 @@ country_event = {
 		add_country_modifier = {
 			name = pf_per_persian_inquisition
 			duration = -1
+			desc = pf_per_until_end_of_inquisition_tt
 		}
 		add_stability = -1
+		custom_tooltip = pf_per_start_inquisition_ticking_tt
 		set_country_flag = pf_per_started_persian_inquisition
 	}
 }

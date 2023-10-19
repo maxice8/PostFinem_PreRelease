@@ -99,6 +99,16 @@
  pf_per_satrapy_revolt_until_end_tt: "until the end of the §YSatrapy Revolt§! disaster"
  pf_per_satrapy_revolt_if_in_tt: "If we are in the §YSatrapy Revolt§! disaster:"
 
+# Persian Inquisition disaster
+ pf_per_inquisition: "Persian Inquisition"
+ desc_pf_per_inquisition: "We have begun an inquisition to root out all heresy in Persia and her Satrapies. Unfortunately, some of the heathens aren't particularly pleased about this, so we'll have to deal with them first."
+ pf_per_start_inquisition_ticking_tt: "The disaster '§YPersian Inquisition§!' starts progressing."
+ pf_per_until_end_of_inquisition_tt: "until the end of the §YPersian Inquisition§! disaster."
+ pf_per_has_less_3_toh: "Have less than §R-3§! Tolerance of Heathens"
+ pf_per_has_less_5_toh: "Have less than §R-5§! Tolerance of Heathens"
+ pf_per_has_less_7_toh: "Have less than §R-7§! Tolerance of Heathens"
+ 
+
 # Events
  pf_per_events_0_title: "Crisis in Persia"
  pf_per_events_0_desc: "In the decades following the Mongol collapse the Satrapies have become increasingly more bold, staging several armed revolts against the Dasturs of Persia. Undeterred, Dastur Cyrus decided to revoke some privileges in 1440, believing in his personal ability to keep control over the Satraps. Only time will tell if this move was wise."
@@ -276,6 +286,10 @@
  pf_per_events_74_desc: "My [Root.Monarch.GetTitle], we have received further correspondance from [pf_per_et_province_to_build_trade_owner.GetName] on the topic of our previous commitment. They have sent a small gift and letter of thanks for our investments in them!"
  pf_per_events_75_desc: "My [Root.Monarch.GetTitle], we have received further correspondance from [pf_per_et_province_to_build_production_owner.GetName] on the topic of our previous commitment. They have sent a small gift and letter of thanks for our investments in them!"
  pf_per_events_76_desc: "My [Root.Monarch.GetTitle], we have received further correspondance from [pf_per_et_province_to_build_manpower_owner.GetName] on the topic of our previous commitment. They have sent a small gift and letter of thanks for our investments in them!"
+ 
+ pf_per_events_77_title: "The Persian Inquisition."
+ pf_per_events_77_desc: "With our recent commitment to a full inquisition across Persia, several heathen rebel groups and even other nation states have declared their opposition to us. Despite some internal pushback our efforts are going well, but there is still much work to be done to fully eradicate the heathen resistance inside and outside Persia."
+ pf_per_events_77_option: "Death to the Heathens!"
  pf_per_events_78_title: "End of the Persian Inquisition."
  pf_per_events_78_desc: "After a long and expensive commitment to rooting out all heresy in Persia, we have finally succeeded. All heathen nations have given up on any hope of intervening and all organised resistance has fallen apart. Finally, we may proclaim that Persia is united under the true faith of Zoroastrianism."
  pf_per_events_78_option: "Glory to Persia!"
@@ -418,6 +432,7 @@
  pf_per_centralized_state_title: "A Centralized State"
 
  pf_persian_empire_a_persian_empire_title: "A Persian Empire"
+ pf_persian_empire_religious_question_title: "The Question of Heresy"
 
  pf_per_appeal_to_religion_desc: "One of the only things the Dastur and the Satrapies agree on is matters of faith. Perhaps by showing our devotion to the faith we can convince them of our just intentions."
  pf_per_raise_the_army_desc: "In order to successfully deal with this uprising we must raise a strong army and crush armed rebellions with force."
@@ -473,6 +488,7 @@
  pf_per_centralized_state_desc: "As our government modernises and the power of the Satraps has been all but removed, we are finally able to revoke one of the oldest rights they demanded of us. As of today, any Satrap is at our mercy, their titles may be taken at any time, their realm incorporated fully into ours. While the Satraps may continue to look over the borderlands, the heart of the Persian lands will finally fully be under our direct rule!"
 
  pf_persian_empire_a_persian_empire_desc: "With all pretenders to our claim destroyed, our direct control over the Persian homelands solidified and our administration more efficient and competent than ever before, the day has come to proclaim the Persian Empire! May the world tremble at our feet forever more!"
+ pf_persian_empire_religious_question_desc: "The population of heathens under our rule grows by the day. With our latest conquests we now have a very sizable population of heathens under our rule and they are rather reluctant to convert to the True Faith. Thus, we must decide on how to deal with this problem, should we crush the heathens completely, or come to a more tolerant arrangement?"
 
 # Satrapy Expansion Plan
  pf_satrapy_expansion_plan_missions_tt: "All provinces claimed by §Y[Root.GetName]§! in the §YSatrapy Expansion Plan§!:\n    Owned by §Y[Root.GetName]§!"
@@ -589,7 +605,7 @@
  pf_per_revive_silk_road_6_tt: "Samarkand\n\nEach of the cities listed above must meet the following criteria:\n    Development at least §Y25§!\n    Has a §YWorkshop§! or a §YCounting House§! building.\n    Has a §YMarketplace§!, a §YTrade Depot§! or a §YStock Exchange§! building.\n    Has Expanded Infrastructure at least §Y1§! times."
 
  pf_persian_empire_unlock_empire_tree_tt: "\nUnlock the §YPersian Empire§! missions."
-
+ pf_per_had_jawedism_20_years: "The event '§YPhilosophy of Rahbar Jawed§!' happened at least §Y20§! years ago."
 
 # Misc
 
@@ -623,4 +639,3 @@
  pf_take_capital_persian_offensive_desc: "War goal is to take the capital"
  pf_per_persian_offensive_war_name: "$ORDER$Grand Persian Offensive on $SECOND_NAME$"
  empty: " "
- pf_per_until_end_of_inquisition: "until the end of the §YPersian Inquisition§! disaster."

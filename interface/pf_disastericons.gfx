@@ -6,6 +6,12 @@ spriteTypes = {
 		loadType = "INGAME"
 	}
 	spriteType = {
+		name = "GFX_disaster_pf_per_inquisition"
+		texturefile = "gfx//interface//disasters//pf_per_inquisition.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	spriteType = {
 		name = "GFX_disaster_pf_blackcoat_revolution"
 		texturefile = "gfx//interface//disasters//pf_blackcoat_revolution.dds"
 		noOfFrames = 3
