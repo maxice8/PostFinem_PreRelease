@@ -3342,6 +3342,7 @@ NEK_ideas = {
 }
 
 #OSTGERMANIC 
+
 OST_ideas = {
 	start = {
 		unjustified_demands = -0.2
@@ -3398,6 +3399,115 @@ OST_ideas = {
 		tolerance_own = 2
 	}
 }
+
+VLD_ideas = {
+	start = {
+		cavalry_cost = -0.1
+		nobles_loyalty_modifier = 0.05
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}	
+
+	trigger = {
+		tag = VLD
+	}
+	free = yes
+	
+	#a taxing task
+	VLD_ideas_1 = {
+		global_tax_modifier = 0.33
+	}
+
+	#the reach of Germanic Faith
+	VLD_ideas_2 = {
+		missionaries = 1
+		stability_cost_modifier = -0.1
+	}
+
+	#foreign military advices
+	VLD_ideas_3 = {
+		mil_advisor_cost = -0.25
+	}
+
+	#donovan hussars
+	VLD_ideas_4 = {
+		cavalry_power = 0.15
+		cavalry_flanking = 0.33
+	}
+
+	#hellenic ideals
+	VLD_ideas_5 = {
+		idea_cost = -0.1
+	}
+
+	#wealth of Ost germania
+	VLD_ideas_6 = {
+		build_cost = -0.05
+		trade_efficiency = 0.1
+	}
+
+	#Vildheimer Tactics
+	VLD_ideas_7 = {
+		shock_damage = 0.1
+		shock_damage_received = -0.05
+	}
+}
+
+SLO_ideas = {
+	start = {
+		defensiveness = 0.15
+		fort_maintenance_modifier = -0.15
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}	
+
+	trigger = {
+		tag = SLO
+	}
+	free = yes
+	
+	#unbroken skies
+	SLO_ideas_1 = {
+		garrison_size = 0.25
+		rival_border_fort_maintenance = -0.10
+	}
+
+	#golden hour
+	SLO_ideas_2 = {
+		inflation_action_cost = -0.15
+		gold_depletion_chance_modifier = -0.33
+	}
+
+	#foreign military forces
+	SLO_ideas_3 = {
+		mercenary_cost = -0.10
+		mercenary_manpower = 0.10
+	}
+
+	#eagles of berga
+	SLO_ideas_4 = {
+		land_morale = 0.1
+	}
+
+	#mountain warfare
+	SLO_ideas_5 = {
+		leader_land_manuever = 1
+	}
+
+	#wealth of Ost germania
+	SLO_ideas_6 = {
+		development_cost = -0.15
+	}
+
+	#make one to break one
+	SLO_ideas_7 = {
+		siege_ability = 0.15
+	}
+}
 #GENERIC REGIONAL
 
 #Old Germanic Minor
@@ -3412,9 +3522,6 @@ old_germanic_ideas = {
 	}	
 
 	trigger = {
-		NOT = {
-			tag = OST
-		}
 		OR = {
 			culture_group = old_germanic
 			culture_group = germanic_carpathian

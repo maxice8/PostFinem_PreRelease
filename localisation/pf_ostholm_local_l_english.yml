@@ -17,6 +17,7 @@
 #####CUSTOM
  OST_CT_1:0 "If Allied with @VLD §YVildheim, §Wthe reward will be a Personal Union with @VLD §YVildheim §Winstead."
  OST_CT_2:0 "§G5 §Wprovinces with a §YBarracks Building §Wwill have it §Gupgraded §Wto a §YTraining Field§W, if already a §YTraining Field§W, add §G2 §Ybase Manpower§W."
+ OST_CT_3:0 "§G5 §Wprovinces with §YWine §Wwill recieve the following modifier:"
 #####MODIFIER
  ost_diplomatic_pressure:0 "Royal Envoys"
  ost_diplomatic_pressure_2:0 "Effortless Diplomacy"
@@ -24,23 +25,100 @@
  ost_lords_of_ostgermania:0 "Lords of Osterreich"
  ost_fire_of_war:0 "Fires of War"
  ost_cannons_of_wien:0 "Cannons of Wien"
+ ost_army_grand:0 "Grand Army of Ostholm"
+ ost_powerhouse:0 "Army of OstGermania"
+ ost_wine:0 "Divine Beverages"
 #####GOVERNMENT
 
 
 #####EVENTS
 
  pf_ost.1.t:0 "A Tale of Two Boars"
- pf_ost.1.d:0 "It isn't unusual that tribes form rivalries for the pettiest of things, like whose piece of swamp this is or which side of a river you are.\nEven rarer is those tribes that just go along despite difference in traditions and beliefs.\nBut this is not such a case, for these tribes are split only by the death of one man, who left two boys too early.\nOne would be rather successfull in reuniting the tribes of Ostholm under the Banner of the Thorkillingas, while the other died by the backstabbing Herelingas.\nBut this has happened over 100 years ago and now there is the only chance to avenge our fallen ancestors."
- pf_ost.1.a:0 "Unite the Tribes, as once was."
- pf_ost.1.b:0 "Make Amends, let the Past rest."
+ pf_ost.1.d:0 "It has been over 100 years since the great Ulfwin died and his two sons inherited two realm.\nOstholm went to Ulfwin, the other, who consolidate his father homeland into an united tribe capable of difending against Italian and Illyrian pressure.\nVildheim was given to Adalwin, who discovered that the tribes were only loyal to his father and soon he found a blade in his back.\nWhile many years have passed, some nobles have come to our court to discuss a possible coup, a moment for revenge."
+ pf_ost.1.a:0 "Send them help, my ancestors smile upon me."
+ pf_ost.1.b:0 "I will not strike from the shadows."
 
- pf_ost.2.t:0 "The Restored Union"
- pf_ost.2.d:0 "It isn't unusual that tribes form rivalries for the pettiest of things, like whose piece of swamp this is or which side of a river you are.\nEven rarer is those tribes that just go along despite difference in traditions and beliefs.\nBut this is not such a case, for these tribes are split only by the death of one man, who left two boys too early.\nOne would be rather successfull in reuniting the tribes of Ostholm under the Banner of the Thorkillingas, while the other died by the backstabbing Herelingas.\nBut this has happened over 100 years ago and now there is the only chance to avenge our fallen ancestors."
- pf_ost.2.a:0 "Unite the Tribes, as once was."
+ pf_ost.2.t:0 "The Boar's Feast"
+ pf_ost.2.d:0 "The foolish Vildheimer Royalty have been brought down and our rule is finally restored in the chiefdom.\nOur loyal nobles are more autonomous than we would have preferred, but they will not rebel if they know better."
+ pf_ost.2.a:0 "A Feast for All."
 
+ pf_ost.3.t:0 "The Hog's Rebellion"
+ pf_ost.3.d:0 "The cowardly Thorkillingas have tried all they could to regain control over Vildheim. but time and time again should have thought them that we will not be subjugated.\nA couple of rebellious minor nobles are marching on the capital to restore their rule, but they will only find death."
+ pf_ost.3.a:0 "I will hunt them myself."
+ pf_ost.3.b:0 "Dinner will be served."
 
+ pf_ost.4.t:0 "Markets of the East"
+ pf_ost.4.d:0 "All the goods that pass through our lands will now have to pass through one of our market towns.\nThe law will ensure the proper tariffs and taxes are respected and the wealth will ensure that the town which hosts the biggest market will become a grand metropolis.\nBut which town will it, my liege?"
+ pf_ost.4.a:0 "Graz, where Ostholm started."
+ pf_ost.4.b:0 "Wien, where wine flows like river."
+ pf_ost.4.c:0 "Klagenfurt, for iron and blood."
+ pf_ost.4.e:0 "I know this one place..."
 
+ pf_ost.5.t:0 "Illyrian Settlers"
+ pf_ost.5.d:0 "The people on the opposite sides of the river Sava, the Illyrians, have been at odds with our people since we enstablished ourselves here.\nMany conflicts and small wars have been waged between the Sava and the Drava, where the Illyrians have lost most of them, but managed to crop some town regardless.\nTo the local chiefs, these town cause great headaches as they refuse to pay any tribute or actively attack our envoies.\nThey petition to remove them but maybe there is a better compromise."
+ pf_ost.5.a:0 "Allow limited self rule."
+ pf_ost.5.b:0 "Get our of my land!"
+
+ pf_ost.6.t:0 "The Man of God"
+ pf_ost.6.d:0 "The scholar from Nekharot has taken residence in $CAPITAL_CITY$, lending help and words of advice to our nobles and wisemen.\nThe man spoke of his intention to write about the people and religions north of his homeland.\nWhile many are interested in this cultured men, his religious teachings fall on deaf ears, but many symphatize with the stories of his persecuted people.\n"
+ pf_ost.6.a:0 "You can stay as long as you want."
 
 #####MONUMENTS
 
 #####MISSIONS
+ ost_warrior_manpower_title:0 "To Make a Men"
+ ost_warrior_manpower_desc:0 ""
+
+ ost_eastern_push_title:0 "Piece by Piece"
+ ost_eastern_push_desc:0 ""
+
+ ost_ost_ostgermania_title:0 "Donovan Dominance"
+ ost_ost_ostgermania_desc:0 ""
+
+ ost_warrior_weapons_title:0 "The Sounds of War"
+ ost_warrior_weapons_desc:0 ""
+
+ ost_old_expanse_title:0 "Restore the Old Borders"
+ ost_old_expanse_desc:0 ""
+
+ ost_ostgermania_title:0 "The Germans of the East"
+ ost_ostgermania_desc:0 ""
+
+ ost_regional_power_title:0 "Worthy Ambitions"
+ ost_regional_power_desc:0 ""
+
+ ost_warrior_valors_title:0 "Fiery Tactics"
+ ost_warrior_valors_desc:0 ""
+
+ ost_northern_push_title:0 "Advice And Advantage"
+ ost_northern_push_desc:0 ""
+
+ ost_germanic_faith_title:0 "The Eastern Faith"
+ ost_germanic_faith_desc:0 ""
+
+ ost_warrior_sleep_title:0 "Home of a Soldier"
+ ost_warrior_sleep_desc:0 ""
+
+ ost_warrior_power_title:0 "The Army of Ost Germania"
+ ost_warrior_power_desc:0 ""
+
+ ost_diplomacy_title:0 "The King's Court"
+ ost_diplomacy_desc:0 ""
+
+ ost_big_boys_title:0 "A True Kingdom"
+ ost_big_boys_desc:0 ""
+
+ ost_trade_empire_title:0 "The Alpine Toll"
+ ost_trade_empire_desc:0 ""
+
+ ost_warrior_ideas_title:0 "Learned Leadership"
+ ost_warrior_ideas_desc:0 ""
+
+ ost_good_harvest_title:0 "Prepare for the Harvest"
+ ost_good_harvest_desc:0 ""
+
+ ost_good_wine_title:0 "Of Wine And Mead"
+ ost_good_wine_desc:0 ""
+
+ ost_grand_army_title:0 "The Fighting Flock"
+ ost_grand_army_desc:0 ""

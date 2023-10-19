@@ -4,11 +4,11 @@ country_event = {		#ask Vildheim to PU
 	id = pf_ost.1
 	title = pf_ost.1.t 
 	desc = pf_ost.1.d
-	picture = CAROLEANS_eventPicture
+	picture = CIVIL_WAR_eventPicture
 
 	trigger = {
 		tag = OST
-		is_year = 1460
+		is_year = 1450
 		dynasty = "Thorkillingas"
 		at_war = no
 		VLD = {
@@ -16,7 +16,7 @@ country_event = {		#ask Vildheim to PU
 			exist = yes
 		}
 	}
-
+	fire_only_once = yes
 	mean_time_to_happen = {
 		months = 12
 	}
@@ -26,11 +26,19 @@ country_event = {		#ask Vildheim to PU
 		ai_chance = {
 			factor = 50
 		}
+		add_casus_belli = {
+			target = VLD
+			type = cb_restore_personal_union
+			months = 60
+		}
 		VLD = {
+			country_event = {
+				id = pf_ost.3
+			}
 			capital_scope = {
 				spawn_rebels = {
 					type = pretender_rebels
-					size = 3
+					size = 5
 					friend = OST
 					should_take_capital = yes
 					leader = "Theodoric"
@@ -60,7 +68,7 @@ country_event = {		#ask Vildheim to PU answers
 	id = pf_ost.2
 	title = pf_ost.2.t 
 	desc = pf_ost.2.d
-	picture = CAROLEANS_eventPicture
+	picture = CONQUEST_eventPicture
 
 	trigger = {
 		tag = OST
@@ -72,7 +80,7 @@ country_event = {		#ask Vildheim to PU answers
 			exist = yes
 		}
 	}
-
+	fire_only_once = yes
 	mean_time_to_happen = {
 		months = 12
 	}
@@ -84,3 +92,128 @@ country_event = {		#ask Vildheim to PU answers
 	}
 }
 
+country_event = {		#ask Vildheim to PU answers
+	id = pf_ost.3
+	title = pf_ost.3.t 
+	desc = pf_ost.3.d
+	picture = CAROLEANS_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = "pf_ost.3.a"
+		OST = {
+			add_trust = {
+				who = ROOT
+				value = -25
+				mutual = yes
+			}
+		}
+		#to have the player known what happened
+	}
+	option = {
+		name = "pf_ost.3.b"
+	}
+}
+
+country_event = {		#get a tradecenter
+	id = pf_ost.4
+	title = pf_ost.4.t 
+	desc = pf_ost.4.d
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = "pf_ost.4.a"
+		1863 = {
+			center_of_trade = 2
+		}
+	}
+	option = {
+		name = "pf_ost.4.b"
+		134 = {
+			center_of_trade = 2
+		}
+	}
+	option = {
+		name = "pf_ost.4.c"
+		128 = {
+			center_of_trade = 2
+		}
+	}
+	option = {
+		name = "pf_ost.4.e"
+		capital_scope = {
+			center_of_trade = 2
+		}
+	}
+}
+
+country_event = {		#Illyrian Settlers
+	id = pf_ost.5
+	title = pf_ost.5.t 
+	desc = pf_ost.5.d
+	picture = ANGRY_MOB_eventPicture
+
+	trigger = {
+		tag = OST
+		is_year = 1445
+	}
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = "pf_ost.5.a"
+		ai_chance = {
+			factor = 50
+		}
+		1767 = {
+			add_local_autonomy = 50
+			add_base_manpower = 1
+			add_next_institution_embracement = 40
+		}
+		4756 = {
+			add_local_autonomy = 50
+			add_base_manpower = 1
+			add_next_institution_embracement = 40
+		}
+	}
+	option = {
+		name = "pf_ost.5.b"
+		ai_chance = {
+			factor = 50
+		}
+		every_owned_province = {
+			add_next_institution_embracement = -10
+		}
+	}
+}
+
+country_event = {		#right hand
+	id = pf_ost.6
+	title = pf_ost.6.t 
+	desc = pf_ost.6.d
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		tag = OST
+		is_year = 1455
+	}
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = "pf_ost.6.a"
+		define_advisor = {
+			type = city_planner 
+			name = "Saul Damaris"
+			skill = 3
+			culture = hebren
+			religion = jewish
+			discount = yes
+		}
+	}
+}
