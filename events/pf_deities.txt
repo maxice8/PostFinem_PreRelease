@@ -97,3 +97,62 @@ country_event = {
 		change_personal_deity = snotra_lag_upgraded
 	}
 }
+country_event = {		# Consulting the Gods at Uppsala
+	id = pf_deities.2
+	title = pf_deities.2.t
+	desc = pf_deities.2.d
+	picture = INCAN_GODS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {		# Thor (plague/famine)
+		name = pf_deities.2.a
+		trigger = {
+			has_adm_advisor = yes
+		}
+		set_country_flag = uppsala_gods_cooldown
+		adm_power_cost = 50
+		kill_advisor_by_category_effect = {
+			ADM = yes
+		}
+		add_country_modifier = {
+			name = "god_thor_sacrifice"
+			duration = 3650
+		}
+	}
+	option = {		# Freyr (marriage)
+		name = pf_deities.2.b
+		trigger = {
+			has_dip_advisor = yes
+		}
+		set_country_flag = uppsala_gods_cooldown
+		dip_power_cost = 50
+		kill_advisor_by_category_effect = {
+			DIP = yes
+		}
+		add_country_modifier = {
+			name = "god_freyr_sacrifice"
+			duration = 3650
+		}
+	}
+	option = {		# Odin (war)
+		name = pf_deities.2.c
+		trigger = {
+			has_mil_advisor = yes
+		}
+		set_country_flag = uppsala_gods_cooldown
+		mil_power_cost = 50
+		kill_advisor_by_category_effect = {
+			MIL = yes
+		}
+		add_country_modifier = {
+			name = "god_odin_sacrifice"
+			duration = 3650
+		}
+	}
+	
+	option = {		# Go back
+		name = pf_deities.2.dd
+		
+	}
+}

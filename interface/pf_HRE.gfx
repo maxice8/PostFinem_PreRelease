@@ -24,4 +24,15 @@ spriteTypes = {
 		texturefile = "gfx/interface/imperial_incident_denial_of_request.dds"
 		loadType = "INGAME"
 	}
+	# Federation petitions diplo category
+	spriteType = {
+		name = "GFX_diplomacy_action_imperial_influence"
+		texturefile = "gfx//interface//icon_diplomacy_imperial_influence.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_italian_federation_icon"
+		texturefile = "gfx//interface//ideas_EU4//italian_federation_icon.dds"
+		loadType = "INGAME"
+	}
 }

@@ -1,6 +1,6 @@
 capital = 136
 government = monarchy
-add_government_reform = feudalism_reform
+add_government_reform = illyrian_kingdom_reform
 government_rank = 2
 technology_group = western
 primary_culture = illyrian
@@ -12,18 +12,22 @@ elector = yes
 1444.11.11 = { 
 	monarch = { 
 		name = "Zetor"
-		dynasty = "Xerxes"
+		dynasty = "Atargonid"
 		adm = 5
 		dip = 3
 		mil = 3
 		birth_date = 1400.04.18
 		death_date = 1445.01.01
 	}
+	add_country_modifier = {
+		name = "crown_authority_2"
+		duration = -1
+	}
 }
 1444.11.11 = { 
 	heir = { 
 		name = "Tyndar"
-		dynasty = "Xerxes"
+		dynasty = "Atargonid"
 		adm = 5
 		dip = 3
 		mil = 4

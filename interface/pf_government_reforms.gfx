@@ -45,8 +45,8 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "government_reform_selucid"
-		texturefile = "gfx//interface//government_reforms//selucid.dds"
+		name = "government_reform_seleucid"
+		texturefile = "gfx//interface//government_reforms//seleucid.dds"
 	}
 
 	spriteType = {
@@ -113,5 +113,17 @@ spriteTypes = {
 	spriteType = {
 		name = "government_reform_rabim_qahal"
 		texturefile = "gfx//interface//government_reforms//rabim_qahal.dds"
+	}
+	spriteType = {
+		name = "government_reform_assassin"
+		texturefile = "gfx//interface//government_reforms//assassin.dds"
+	}
+	spriteType = {
+		name = "government_reform_scandinavian_monarchy"
+		texturefile = "gfx//interface//government_reforms//scandinavian_monarchy.dds"
+	}
+	spriteType = {
+		name = "government_reform_huskarl"
+		texturefile = "gfx//interface//government_reforms//huskarl.dds"
 	}
 }

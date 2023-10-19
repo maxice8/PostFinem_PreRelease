@@ -1,0 +1,75 @@
+pf_anc_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = ANC
+	}
+
+	pf_anc_church_of_ancona = {
+		icon = show_piety
+		position = 1
+		required_missions = { } 
+		provinces_to_highlight = {
+			province_id = 119	# Ancona
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_tax_building_trigger = yes }
+			}
+		}
+		trigger = {
+			119 = {
+				owned_by = root
+				has_tax_building_trigger = yes
+			}
+			religion = catholic
+		}
+		effect = {
+			119 = {
+				add_or_upgrade_tax_building = yes
+			}
+			add_country_modifier = {
+				name = "pf_anc_new_church"
+				duration = 9125
+			}
+		}
+	}
+	pf_anc_patronise_christ = {
+		icon = spread_piety
+		position = 2
+		required_missions = { pf_anc_church_of_ancona } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				num_of_estate_agendas_completed = {
+					estate = estate_church
+					value = 3
+				}
+				full_idea_group = religious_ideas
+				custom_trigger_tooltip = {
+					tooltip = anc_convert_provinces_tt
+					check_variable = {
+						which = num_converted_religion
+						value = 10
+					}
+				}
+			}
+			OR = {
+				theologian = 1
+				inquisitor = 1
+			}
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			add_country_modifier = {
+				name = "pf_anc_christian_zealotry"
+				duration = -1
+			}
+		}
+	}
+}

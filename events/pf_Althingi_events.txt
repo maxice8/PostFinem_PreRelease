@@ -1,0 +1,158 @@
+namespace = pf_althingi
+
+country_event = {		# Successful at getting taxes
+	id = pf_althingi.1
+	title = pf_althingi.1.t 
+	desc = pf_althingi.1.d
+	picture = ECONOMICALLY_TALLANTED_RULER_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_government_mechanic = althingi_mechanic
+	}
+
+	option = {
+		name = "pf_althingi.1.a"
+		add_government_power = {
+			mechanic_type = althingi_mechanic
+			power_type = althingi_adm_power
+			value = 20
+		}
+		add_years_of_income = 0.10
+	}
+	option = {
+		name = "pf_althingi.1.b"
+		add_adm_power = 50
+		add_years_of_income = 0.10
+	}
+}
+country_event = {		# Tyrannical Landlords
+	id = pf_althingi.2
+	title = pf_althingi.2.t 
+	desc = pf_althingi.2.d
+	picture = CORRUPTION_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_government_mechanic = althingi_mechanic
+	}
+
+	option = {
+		name = "pf_althingi.2.a"
+		add_government_power = {
+			mechanic_type = althingi_mechanic
+			power_type = althingi_adm_power
+			value = -40
+		}
+	}
+	option = {
+		name = "pf_althingi.2.b"
+		add_stability = -1
+	}
+}
+country_event = {		# Extending Fishing Rights
+	id = pf_althingi.3
+	title = pf_althingi.3.t 
+	desc = pf_althingi.3.d
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_government_mechanic = althingi_mechanic
+	}
+
+	option = {
+		name = "pf_althingi.3.a"
+		add_government_power = {
+			mechanic_type = althingi_mechanic
+			power_type = althingi_dip_power
+			value = 20
+		}
+		add_mercantilism = 1
+	}
+	option = {
+		name = "pf_althingi.3.b"
+		add_dip_power = 50
+		add_mercantilism = 1
+	}
+}
+country_event = {		# Welcome to Iceland
+	id = pf_althingi.4
+	title = pf_althingi.4.t 
+	desc = pf_althingi.4.d
+	picture = ACCUSATION_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_government_mechanic = althingi_mechanic
+	}
+
+	option = {
+		name = "pf_althingi.4.a"
+		add_government_power = {
+			mechanic_type = althingi_mechanic
+			power_type = althingi_dip_power
+			value = -40
+		}
+	}
+	option = {
+		name = "pf_althingi.4.b"
+		add_prestige = -20
+	}
+}
+country_event = {		# Weapons Training
+	id = pf_althingi.5
+	title = pf_althingi.5.t 
+	desc = pf_althingi.5.d
+	picture = FAT_WARRIORS_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_government_mechanic = althingi_mechanic
+	}
+
+	option = {
+		name = "pf_althingi.5.a"
+		add_government_power = {
+			mechanic_type = althingi_mechanic
+			power_type = althingi_mil_power
+			value = 20
+		}
+		add_army_tradition = 10
+	}
+	option = {
+		name = "pf_althingi.5.b"
+		add_mil_power = 50
+		add_army_professionalism = 0.005
+	}
+}
+country_event = {		# Songs of Iceland
+	id = pf_althingi.6
+	title = pf_althingi.6.t 
+	desc = pf_althingi.6.d
+	picture = CORRUPTION_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_government_mechanic = althingi_mechanic
+	}
+
+	option = {
+		name = "pf_althingi.6.a"
+		add_government_power = {
+			mechanic_type = althingi_mechanic
+			power_type = althingi_mil_power
+			value = -40
+		}
+	}
+	option = {
+		name = "pf_althingi.5.b"
+		add_republican_tradition = -5
+	}
+}
