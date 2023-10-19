@@ -1,0 +1,117 @@
+pf_per_inquisition = {
+	potential = {
+		tag = PER
+		is_year = 1550
+		NOT = { current_age = age_of_absolutism }
+		NOT = { current_age = age_of_revolutions }
+		has_country_modifier = pf_per_embraced_jawedism
+	}
+
+	can_start = {
+		has_any_disaster = no
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 20
+			NOT = { religion = zoroastrian }
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = tolerance_heathen
+				value = -3
+			}
+		}
+	}
+
+	can_stop = {
+		always = no
+	}
+
+	progress = {
+		modifier = {
+			factor = 1
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				NOT = { religion = zoroastrian }
+			}
+		}
+		modifier = {
+			factor = 2
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 40
+				NOT = { religion = zoroastrian }
+			}
+		}
+		modifier = {
+			factor = 3
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 60
+				NOT = { religion = zoroastrian }
+			}
+		}
+		modifier = {
+			factor = 1
+			stability = 0
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 2
+			stability = -1
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 3
+			NOT = { stability = -1 }
+		}
+		modifier = {
+			factor = 1
+			NOT = {
+				has_global_modifier_value = {
+					which = tolerance_heathen
+					value = -5
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				has_global_modifier_value = {
+					which = tolerance_heathen
+					value = -7
+				}
+			}
+		}
+	}
+
+	can_end = {
+		stability = 1
+		all_subject_country = {
+			NOT = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 1
+					NOT = { religion = zoroastrian }
+				}
+			}
+		}
+		NOT = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1
+				NOT = { religion = zoroastrian }
+			}
+		}
+	}
+
+	modifier = {
+		tolerance_heathen = -5
+		relation_with_heretics = -200
+		global_unrest = 5
+	}
+
+	on_start = pf_per_events.77
+	on_end = pf_per_events.78
+
+	on_monthly = {
+		events = {}
+		random_events = {
+
+		}
+	}
+}

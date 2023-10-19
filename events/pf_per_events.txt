@@ -4413,6 +4413,117 @@ country_event = {
 	}
 }
 
+# Persian Inquisition: Start
+country_event = {
+	id = pf_per_events.77
+	title = "pf_per_events_77_title"
+	desc = "pf_per_events_77_desc"
+	picture = ACCUSATION_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_per_events_77_option_1"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Persian Inquisition: Ending - Heathens Eradicated
+country_event = {
+	id = pf_per_events.78
+	title = "pf_per_events_78_title"
+	desc = "pf_per_events_78_desc"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		had_country_flag = {
+			flag = pf_per_started_persian_inquisition
+			days = 10950
+		}
+		has_country_modifier = pf_per_persian_inquisition
+
+		religious_unity = 1
+		NOT = { average_unrest = 2 }
+		NOT = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				NOT = { religion = zoroastrian }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "pf_per_events_78_option"
+		ai_chance = { factor = 100 }
+		remove_country_modifier = pf_per_persian_inquisition
+		add_country_modifier = {
+			name = pf_per_successful_inquisition
+			duration = -1
+		}
+
+		add_stability_or_adm_power = yes
+		add_prestige_or_monarch_power = { amount = 25 }
+		add_devotion = 20
+	}
+}
+
+# Persian Inquisition: Great Heathen Uprising
+country_event = {
+	id = pf_per_events.79
+	title = "pf_per_events_79_title"
+	desc = "pf_per_events_79_desc"
+	picture = ANGRY_MOB_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		had_country_flag = {
+			flag = pf_per_started_persian_inquisition
+			days = 10950
+		}
+		has_country_modifier = pf_per_persian_inquisition
+
+		NOT = { religious_unity = 0.8 }
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 40
+			NOT = { religion = zoroastrian }
+		}
+		average_unrest = 2
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "pf_per_events_79_option_1"
+		ai_chance = { factor = 100 }
+		remove_country_modifier = pf_per_persian_inquisition
+		add_stability = -2
+
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -20
+		}
+	}
+
+	option = {
+		name = "pf_per_events_79_option_2"
+		ai_chance = { factor = 50 }
+		every_owned_province = {
+			limit = { NOT = { religion = zoroastrian } }
+			spawn_rebels = {
+				size = 1
+				type = heretic_rebels
+			}
+		}
+
+		add_stability = -1
+	}
+}
 
 # ---------------- Flavour Events ----------------
 
@@ -4584,7 +4695,6 @@ country_event = {
 	trigger = {
 		tag = PER
 		is_year = 1510
-		NOT = { is_year = 1555 }
 	}
 
 	mean_time_to_happen = {
@@ -4599,11 +4709,29 @@ country_event = {
 			factor = 1.2
 			has_country_modifier = pf_per_diplomatic_foreign_policy
 		}
+
+		modifier = {
+			factor = 0.1
+			is_year = 1530
+		}
+
+		modifier = {
+			factor = 0.01
+			is_year = 1540
+		}
+
+		modifier = {
+			factor = 0.5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				NOT = { religion = zoroastrian }
+			}
+		}
 	}
 
 	option = {
 		name = "pf_per_events_105_option_1"
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 10 }
 		add_country_modifier = {
 			name = pf_per_embraced_jawedism
 			duration = -1
@@ -4612,7 +4740,7 @@ country_event = {
 
 	option = {
 		name = "pf_per_events_105_option_2"
-		ai_chance = { factor = 0 }
+		ai_chance = { factor = 90 }
 
 		add_stability = -1
 
@@ -5089,47 +5217,11 @@ country_event = {
 	}
 }
 
-# Persian Inquisition
+# Foreign Policy
 country_event = {
 	id = pf_per_events.117
 	title = "pf_per_events_117_title"
 	desc = "pf_per_events_117_desc"
-	picture = ACCUSATION_eventPicture
-	fire_only_once = yes
-
-	trigger = {
-		is_year = 1550
-		has_country_modifier = pf_per_embraced_jawedism
-	}
-
-	mean_time_to_happen = {
-		months = 300
-	}
-	
-	option = {
-		name = "pf_per_events_117_option_1"
-		ai_chance = { factor = 10 }
-		remove_country_modifier = pf_per_embraced_jawedism
-		add_country_modifier = {
-			name = pf_per_persian_inquisition
-			duration = -1
-		}
-		set_country_flag = pf_per_started_persian_inquisition
-	}
-
-	option = {
-		name = "pf_per_events_117_option_2"
-		ai_chance = { factor = 90 }
-		remove_country_modifier = pf_per_embraced_jawedism
-		add_stability = -1
-	}
-}
-
-# Foreign Policy
-country_event = {
-	id = pf_per_events.118
-	title = "pf_per_events_118_title"
-	desc = "pf_per_events_118_desc"
 	picture = DIPLOMACY_eventPicture
 	fire_only_once = yes
 
@@ -5160,7 +5252,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "pf_per_events_118_option_1"
+		name = "pf_per_events_117_option_1"
 		ai_chance = { factor = 10 }
 		add_mil_power = 50
 		add_country_modifier = {
@@ -5170,7 +5262,7 @@ country_event = {
 	}
 
 	option = {
-		name = "pf_per_events_118_option_2"
+		name = "pf_per_events_117_option_2"
 		ai_chance = { factor = 90 }
 		add_dip_power = 50
 		add_country_modifier = {
@@ -5180,100 +5272,83 @@ country_event = {
 	}
 }
 
-# End of Persian Inquisition: Heathens eradicated
+# Persian Inquisition, Jawedism embraced
+country_event = {
+	id = pf_per_events.118
+	title = "pf_per_events_118_title"
+	desc = "pf_per_events_118_desc"
+	picture = ACCUSATION_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1550
+		has_country_modifier = pf_per_embraced_jawedism
+	}
+
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	option = {
+		name = "pf_per_events_118_option_1"
+		ai_chance = { factor = 0 }
+		remove_country_modifier = pf_per_embraced_jawedism
+		add_country_modifier = {
+			name = pf_per_persian_inquisition
+			duration = -1
+		}
+		set_country_flag = pf_per_started_persian_inquisition
+	}
+
+	option = {
+		name = "pf_per_events_118_option_2"
+		ai_chance = { factor = 100 }
+		remove_country_modifier = pf_per_embraced_jawedism
+		add_country_modifier = {
+			name = pf_per_persian_tolerance
+			duration = -1
+		}
+		add_stability = -1
+	}
+}
+
+# Persian Inquisition, Jawedism rejected
 country_event = {
 	id = pf_per_events.119
 	title = "pf_per_events_119_title"
 	desc = "pf_per_events_119_desc"
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = ACCUSATION_eventPicture
 	fire_only_once = yes
 
 	trigger = {
-		had_country_flag = {
-			flag = pf_per_started_persian_inquisition
-			days = 10950
-		}
-		has_country_modifier = pf_per_persian_inquisition
-
-		religious_unity = 1
-		NOT = { average_unrest = 2 }
-		NOT = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 15
-				NOT = { religion = zoroastrian }
-			}
-		}
+		is_year = 1550
+		has_country_modifier = pf_per_rejected_jawedism
 	}
 
 	mean_time_to_happen = {
-		months = 12
+		months = 300
 	}
 	
 	option = {
-		name = "pf_per_events_119_option"
+		name = "pf_per_events_119_option_1"
 		ai_chance = { factor = 100 }
-		remove_country_modifier = pf_per_persian_inquisition
+		remove_country_modifier = pf_per_rejected_jawedism
 		add_country_modifier = {
-			name = pf_per_successful_inquisition
+			name = pf_per_persian_tolerance
 			duration = -1
 		}
-
-		add_stability_or_adm_power = yes
-		add_prestige_or_monarch_power = { amount = 25 }
-		add_devotion = 20
-	}
-}
-
-# End of Persian Inquisition: Heathen uprising
-country_event = {
-	id = pf_per_events.120
-	title = "pf_per_events_120_title"
-	desc = "pf_per_events_120_desc"
-	picture = ANGRY_MOB_eventPicture
-	fire_only_once = yes
-
-	trigger = {
-		had_country_flag = {
-			flag = pf_per_started_persian_inquisition
-			days = 10950
-		}
-		has_country_modifier = pf_per_persian_inquisition
-
-		NOT = { religious_unity = 0.8 }
-		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-			value = 40
-			NOT = { religion = zoroastrian }
-		}
-		average_unrest = 2
-	}
-
-	mean_time_to_happen = {
-		months = 12
-	}
-	
-	option = {
-		name = "pf_per_events_120_option_1"
-		ai_chance = { factor = 100 }
-		remove_country_modifier = pf_per_persian_inquisition
-		add_stability = -2
-
-		add_estate_loyalty = {
-			estate = estate_church
-			loyalty = -20
-		}
 	}
 
 	option = {
-		name = "pf_per_events_120_option_2"
-		ai_chance = { factor = 50 }
-		every_owned_province = {
-			limit = { NOT = { religion = zoroastrian } }
-			spawn_rebels = {
-				size = 1
-				type = heretic_rebels
-			}
+		name = "pf_per_events_119_option_2"
+		ai_chance = { factor = 0 }
+		remove_country_modifier = pf_per_rejected_jawedism
+		add_country_modifier = {
+			name = pf_per_persian_inquisition
+			duration = -1
 		}
-
 		add_stability = -1
+		set_country_flag = pf_per_started_persian_inquisition
 	}
 }
+
