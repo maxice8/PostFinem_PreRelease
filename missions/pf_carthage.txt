@@ -45,11 +45,32 @@ car_main_1 = {
 		icon = mission_found_havana
 		position = 2
 		required_missions = { pf_car_prepare_invasion_force } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			area = western_sicily_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			western_sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4736 = { development = 15 }
+		} 
 
-		effect = {  } 
+		effect = {  
+			4736 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_or_upgrade_shipyard_building = yes
+			}
+			sicily_area = { add_permanent_claim = ROOT }
+			calabria_area = { add_permanent_claim = ROOT }
+			apulia_area = { add_permanent_claim = ROOT }
+		} 
 	}
 
 	pf_car_italian_ambitions = {
@@ -99,11 +120,44 @@ car_main_2 = {
 		icon = seize_sardinia
 		position = 2
 		required_missions = { pf_car_prepare_invasion_force } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			area = corsica_sardinia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			corsica_sardinia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			simple_dynamic_effect = {
+				first_custom_tooltip = car_reestablish_sardan_1 #claims
+				first_limit = "
+					EYL = {
+						is_part_of_hre = no
+					}
+				"
+				first_effect = "
+					corsica_area = { add_permanent_claim = ROOT }
+				"
+				second_custom_tooltip = car_reestablish_sardan_2 #subjugation
+				second_limit = "
+					EYL = {
+						is_part_of_hre = yes
+					}
+				"
+				second_effect = "
+					add_casus_belli = {
+						type = cb_vassalize_mission
+						target = EYL
+						months = 120
+					}	
+				"
+			}
+		} 
 	}
 
 	pf_car_mediterranean_dominance = {
@@ -197,7 +251,7 @@ car_main_3 = {
 
 		trigger = {  
 			num_of_owned_provinces_with = {
-				value = 20
+				value = 25
 				region = maghreb_region
 			}
 			NOT = {
@@ -212,7 +266,9 @@ car_main_3 = {
 		} 
 
 		effect = {  
-
+			mauretania_region = {
+				add_permanent_claim = ROOT
+			}
 		} 
 	}
 
@@ -393,9 +449,27 @@ car_main_5 = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			if = { 
+				limit = { ai = no } 
+				navy_size_percentage = 1
+			} 
+			else = {
+				navy_size_percentage = 0.75
+			}
+			num_of_galley = 10
+			num_of_admirals = 1
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = car_navy_worthy_of_yam_modifier
+				duration = 3650
+			}
+			142 = { add_permanent_claim = ROOT }
+			4698 = { add_permanent_claim = ROOT }
+			163 = { add_permanent_claim = ROOT }
+		} 
 	}
 
 	pf_car_the_punic_admiralty = {
