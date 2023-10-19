@@ -16,7 +16,6 @@ pf_sar_1 = {
 				has_idea = sar_marines
 				num_of_marines = 1
 			}
-			navy_size = 24
 			OR = {
 				national_focus = DIP
 				national_focus = MIL
@@ -25,6 +24,7 @@ pf_sar_1 = {
 
 		effect = {
 			add_sailors = 2500
+			custom_tooltip = empty_line_tt
 			define_admiral = {
 				fire = 3
 				shock = 4
@@ -32,6 +32,7 @@ pf_sar_1 = {
 				siege = 0
 				name = "Guillemo Carabello"
 			}
+			custom_tooltip = empty_line_tt
 			capital_scope = {
 				add_unit_construction = {
 					type = light_ship
@@ -84,11 +85,38 @@ pf_sar_1 = {
 			pf_sar_upgrade_the_marines
 			pf_sar_the_red_fleet
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				NOT = { has_manpower_building_trigger = yes }
+				NOT = { has_dock_building_trigger = yes }
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_marines = 25
+			OR = {
+				full_idea_group = firepower_ideas
+				army_professionalism = 0.5
+			}
+			num_of_owned_provinces_with = {
+				has_manpower_building_trigger = yes
+				has_dock_building_trigger = yes
+				value = 5
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = "pf_sar_stormtrooper_marines"
+				duration = -1
+			}
+			define_advisor = {
+				type = naval_reformer
+				skill = 3
+				cost_multiplier = 0.25
+			}
+		} 
 	}
 
 	pf_sar_rule_the_seas = {
@@ -97,31 +125,116 @@ pf_sar_1 = {
 		required_missions = { pf_sar_stormtroopers } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = pf_sar_rule_the_seas_tt
+				NOT = {
+					any_country = {
+						any_owned_province = {
+							sea_zone = {
+								OR = {
+									area = eastern_mediterrenean_area
+									area = western_mediterrenean_area
+									area = black_sea_area
+								}
+							}
+						}
+						navy_size = ROOT
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = "pf_sar_rules_the_waves"
+				duration = -1
+			}
+		} 
 	}
 
 	pf_sar_invade_sicily = {
 		icon = king_of_sicily
 		position = 6
 		required_missions = { pf_sar_arm_the_people } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = western_sicily_area
+				area = sicily_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				OR = {
+					area = western_sicily_area
+					area = sicily_area
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = "pf_sar_conquest_of_sicily"
+				duration = 7300
+			}
+			calabria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			naples_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			apulia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_sar_italian_holdings = {
 		icon = mission_rule_italy
 		position = 8
 		required_missions = { pf_sar_invade_sicily } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			region = italy_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = italy_region
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_adm_power = 150
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_sar_conquest_of_italy"
+				duration = 9125
+			}
+			italy_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 }
 pf_sar_2 = {
@@ -262,11 +375,49 @@ pf_sar_2 = {
 		icon = mission_mediterranean_islands
 		position = 6
 		required_missions = { pf_sar_arm_the_people } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			area = baleares_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			baleares_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			if = {
+				limit = { NOT = { accepted_culture = carventian } }
+				add_accepted_culture = carventian
+			}
+			else = {
+				add_dip_power = 50
+			}
+			custom_tooltip = empty_line_tt
+			catalonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			valencia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			aragon_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_sar_mare_nostrum = {
@@ -276,11 +427,38 @@ pf_sar_2 = {
 			pf_sar_italian_holdings
 			pf_sar_coastal_holdings
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			sea_zone = {
+				OR = {
+					area = eastern_mediterrenean_area
+					area = western_mediterrenean_area
+					area = black_sea_area
+				}
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 60
+				sea_zone = {
+					OR = {
+						area = eastern_mediterrenean_area
+						area = western_mediterrenean_area
+						area = black_sea_area
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			custom_tooltip = empty_line_tt
+			set_country_flag = pf_sar_recruiting_admirals_gives_tradition
+			custom_tooltip = pf_sar_mare_nostrum_tt
+		} 
 	}
 }
 pf_sar_3 = {
@@ -408,11 +586,61 @@ pf_sar_3 = {
 		icon = rule_corsica
 		position = 6
 		required_missions = { pf_sar_arm_the_people } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			area = corsica_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			corsica_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			corsica_area = {
+				add_devastation = -10
+				add_province_modifier = {
+					name = "pf_sar_corsica_integration"
+					duration = 3650
+				}
+			}
+			add_country_modifier = {
+				name = "pf_sar_recruiting_old_pirates"
+				duration = 9125
+			}
+			2954 = {
+				add_permanent_claim = ROOT
+			}
+			126 = {
+				add_permanent_claim = ROOT
+			}
+			163 = {
+				add_permanent_claim = ROOT
+			}
+			321 = {
+				add_permanent_claim = ROOT
+			}
+			4698 = {
+				add_permanent_claim = ROOT
+			}
+			142 = {
+				add_permanent_claim = ROOT
+			}
+			320 = {
+				add_permanent_claim = ROOT
+			}
+			2348 = {
+				add_permanent_claim = ROOT
+			}
+			4700 = {
+				add_permanent_claim = ROOT
+			}
+			164 = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_sar_lord_of_the_islands = {
@@ -422,22 +650,85 @@ pf_sar_3 = {
 			pf_sar_seize_corsica
 			pf_sar_conquer_baleares
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			OR = {
+				province_id = 2954
+				province_id = 126
+				province_id = 163
+				province_id = 321
+				province_id = 4698
+				province_id = 142
+				province_id = 320
+				province_id = 2348
+				province_id = 4700
+				province_id = 164
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				OR = {
+					province_id = 2954
+					province_id = 126
+					province_id = 163
+					province_id = 321
+					province_id = 4698
+					province_id = 142
+					province_id = 320
+					province_id = 2348
+					province_id = 4700
+					province_id = 164
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_navy_tradition = 20
+			custom_tooltip = empty_line_tt
+			add_power_projection = {
+				type = 10_permanent_power_projection
+				amount = 10
+			}
+			custom_tooltip = pf_sar_power_projection_is_permanent_tt
+		} 
 	}
 
 	pf_sar_coastal_holdings = {
 		icon = mission_turkish_merchants
 		position = 8
 		required_missions = { pf_sar_lord_of_the_islands } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				NOT = { has_shipyard_building_trigger = yes }
+				NOT = { num_of_times_improved_by_owner = 6 }
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 12
+				has_shipyard_building_trigger = yes
+				num_of_times_improved_by_owner = 6
+			}
+			development_in_provinces = {
+				value = 300
+				has_port = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_years_of_income = 1
+			custom_tooltip = empty_line_tt
+			add_mercantilism = 4
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_sar_ports_of_the_med"
+				duration = 7300
+			}
+		} 
 	}
 }
 pf_sar_4 = {
@@ -456,13 +747,13 @@ pf_sar_4 = {
 		trigger = {
 			has_institution = renaissance
 			has_adm_advisor = yes
-			has_dip_advisor = yes
-			has_mil_advisor = yes
-			is_in_deficit = no
+			years_of_income = 0.50
 		} 
 
 		effect = {
 			custom_tooltip = pf_sar_art_will_require_money_tt
+			custom_tooltip = empty_line_tt
+			country_event = { id = pf_sar.3 }
 			# access to 'commission art' decision to create a customised art piece to hang in the parliament
 		} 
 	}
@@ -573,11 +864,30 @@ pf_sar_4 = {
 		icon = mission_polynesian_navy_build
 		position = 7
 		required_missions = { pf_sar_seize_corsica } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_shipyard_building_trigger = yes }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				num_of_light_ship = 50
+				num_of_galley = 50
+				num_of_heavy_ship = 20
+			}
+			num_of_owned_provinces_with = {
+				value = 14
+				has_shipyard_building_trigger = yes
+			}
+			navy_tradition = 80
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = "pf_sar_skilled_shipbuilders"
+				duration = -1
+			}
+		} 
 	}
 }
 pf_sar_5 = {
@@ -610,22 +920,59 @@ pf_sar_5 = {
 		icon = republican_yearnings
 		position = 3
 		required_missions = { pf_sar_noble_electorate } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			is_capital_of = emperor
+		} 
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				is_emperor = yes
+				emperor = {
+					has_opinion = {
+						who = ROOT
+						value = 180
+					}
+				}
+				NOT = { hre_size = 1 }
+			}
+			OR = {
+				full_idea_group = diplomatic_ideas
+				full_idea_group = influence_ideas
+				statesman = 3
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			change_government_reform_progress = 50
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_sar_federal_preference_modifier"
+				duration = 9125
+			}
+		} 
 	}
 
 	pf_sar_future_of_the_federation = {
 		icon = balance_of_power
 		position = 5
 		required_missions = { pf_sar_federal_preference } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			is_capital_of = emperor
+		} 
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				is_emperor = yes
+				NOT = { hre_size = 1 }
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = "pf_sar_above_the_federation"
+				duration = 7300
+			}
+		} 
 	}
 	pf_sar_invest_in_arborea = {
 		icon = invest_in_the_rich_trades

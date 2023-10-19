@@ -90,6 +90,13 @@ on_startup = {
 		}
 		country_event = { id = pf_per_events.0 }
 	}
+	if = {
+		limit = {
+			tag = CLN
+			NOT = { is_year = 1445 }
+		}
+		country_event = { id = pf_if.16 }	# The travels of Conan
+	}
 }	
 
 # country
@@ -988,6 +995,7 @@ on_monarch_death = {
 		flavor_mal.11 # Mali pretenders
 		flavor_mal.47 # Pilgrimage ends prematurely
 		government_events.3	# Election of a new Ruler
+		pf_if.24	# Karthalis Succession
 	}
 }
 
@@ -1719,6 +1727,24 @@ on_adm_development = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			owner = { has_country_flag = pf_fc_expand_influence_developing_bonus_flag }
+			accepted_culture = ROOT
+		}
+		random_list = {
+			10 = { add_base_tax = 1 }
+			90 = { }
+		}
+	}
+	if = {
+		limit = {
+			province_id = 121	# Naples
+			owner = { has_country_flag = naples_gets_bonus_from_dev_flag }
+		}
+		add_prosperity = 1
+		owner = { add_corruption = -0.05 }
+	}
 }
 
 # province
@@ -1764,6 +1790,24 @@ on_dip_development = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			owner = { has_country_flag = pf_fc_expand_influence_developing_bonus_flag }
+			accepted_culture = ROOT
+		}
+		random_list = {
+			10 = { add_base_tax = 1 }
+			90 = { }
+		}
+	}
+	if = {
+		limit = {
+			province_id = 121	# Naples
+			owner = { has_country_flag = naples_gets_bonus_from_dev_flag }
+		}
+		add_prosperity = 1
+		owner = { add_prestige = 0.5 }
+	}
 }
 
 # province
@@ -1808,6 +1852,24 @@ on_mil_development = {
 				value = 0.25
 			}
 		}
+	}
+	if = {
+		limit = {
+			owner = { has_country_flag = pf_fc_expand_influence_developing_bonus_flag }
+			accepted_culture = ROOT
+		}
+		random_list = {
+			10 = { add_base_tax = 1 }
+			90 = { }
+		}
+	}
+	if = {
+		limit = {
+			province_id = 121	# Naples
+			owner = { has_country_flag = naples_gets_bonus_from_dev_flag }
+		}
+		add_prosperity = 1
+		owner = { add_manpower = 0.5 }
 	}
 }
 
@@ -1857,8 +1919,53 @@ on_siberian_pulse = {
 
 # country random events
 on_monthly_pulse = {
+	random_events = {
+		100 = 0
+
+		#Feast time!
+		100 = pf_feast.2	# Nobles quarrel
+		100 = pf_feast.3	# Greedy priest
+		100 = pf_feast.4	# Diverted attention
+		100 = pf_feast.5	# Satifying meal
+		100 = pf_feast.6	# Game of old Ur
+		100 = pf_feast.7	# Inadequate food
+		100 = pf_feast.8	# Fighting at the dinner table
+		100 = pf_feast.9	# Having a good time
+		100 = pf_feast.11	# Pleasant conversation adm
+		100 = pf_feast.12	# Pleasant conversation	dip
+		100 = pf_feast.13	# Pleasant conversation mil
+		100 = pf_feast.14	# Valuable trinket
+		100 = pf_feast.15	# Fire gets out of control
+		100 = pf_feast.16	# Magnificent speech
+		100 = pf_feast.17	# Bard performance
+		100 = pf_feast.18	# Valuable coin (19-21)
+		100 = pf_feast.22	# Stuffed with food
+		100 = pf_feast.23	# Battle stories
+		100 = pf_feast.24	# Showing off art
+		100 = pf_feast.25	# Fair maiden
+		100 = pf_feast.26	# Running out of wine
+		100 = pf_feast.27	# Debate
+		100 = pf_feast.28	# Old stories about your dynasty
+		100 = pf_feast.29	# Great artist here
+		100 = pf_feast.30	# Minstrel seeks patronage
+		100 = pf_feast.31	# Good jester
+		100 = pf_feast.32	# Jester mocks you
+		100 = pf_feast.33	# Too drunk
+		100 = pf_feast.34	# General offers service
+		100 = pf_feast.35	# Showing off our glory
+	}
 }
 on_yearly_pulse = {
+	random_events = {
+		1 = 0
+
+		100 = pf_althingi.1
+		100 = pf_althingi.2
+		100 = pf_althingi.3
+		100 = pf_althingi.4
+		100 = pf_althingi.5
+		100 = pf_althingi.6
+	}
 }
 on_yearly_pulse_2 = {
 }
@@ -2820,7 +2927,21 @@ on_four_year_pulse = {
 
 on_four_year_pulse_2 = {
 	random_events = {
-		200 = 0
+		1000 = 0
+
+		# Italian Federation flavour events
+		100 = pf_if.1
+		100 = pf_if.2
+		100 = pf_if.3
+		100 = pf_if.4
+		100 = pf_if.5
+		100 = pf_if.6
+		100 = pf_if.7
+		100 = pf_if.8
+		100 = pf_if.10
+		100 = pf_if.11
+		100 = pf_if.12
+		100 = pf_if.13
 	}
 }
 
@@ -4644,6 +4765,12 @@ on_admiral_recruited = {
 		limit = { has_country_flag = admirals_give_army_professionalism }
 		add_army_professionalism = 0.005
 	}
+	if = {
+		limit = {
+			has_country_flag = pf_sar_recruiting_admirals_gives_tradition
+		}
+		add_navy_tradition = 2
+	}
 }
 
 # country
@@ -5667,7 +5794,13 @@ on_scorch_earth  = { #ROOT - scorching country, FROM - scorched province
 }
 
 on_war_ended = { #ROOT - Winer FROM - Loser
-	
+	if = {
+		limit = { has_government_attribute = ending_wars_gives_stability }
+		random = {
+			chance = 25
+			add_stability_or_adm_power = yes
+		}
+	}
 }
 
 on_alliance_broken = { #ROOT - Original alliance creator, FROM - Alliance accepter

@@ -63,6 +63,14 @@ philosopher = {
 	}
 	skill_scaled_modifier = {
 		trigger = { 
+			owner = {  
+				is_emperor_of_china = yes 
+			}
+		}
+		modifier = { meritocracy = 0.25 }
+	}
+	skill_scaled_modifier = {
+		trigger = { 
 			owner = { 
 				has_country_flag = mng_dev_per_adm_advisor_level_flag 
 			}
@@ -84,6 +92,14 @@ philosopher = {
 		modifier = {
 			build_time = -0.02
 		 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_adm_power = 0.25
+		}
 	}
 
 	chance = {
@@ -167,6 +183,14 @@ natural_scientist = {
 		modifier = {
 			build_time = -0.02
 		 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_adm_power = 0.25
+		}
 	}
 
 	chance = {
@@ -259,6 +283,22 @@ artist = {
 			build_time = -0.02
 		 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_trn_splendor_art }
+		}
+		modifier = {
+			monthly_splendor = 1
+		 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_adm_power = 0.25
+		}
+	}
 
 	chance = {
 		factor = 1
@@ -350,6 +390,14 @@ treasurer = {
 			build_time = -0.02
 		 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_adm_power = 0.25
+		}
+	}
 	
 	chance = {
 		factor = 1
@@ -432,6 +480,14 @@ theologian = {
 		modifier = {
 			build_time = -0.02
 		 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_adm_power = 0.25
+		}
 	}
 	
 	chance = {
@@ -524,6 +580,14 @@ master_of_mint = {
 		modifier = {
 			build_time = -0.02
 		 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_adm_power = 0.25
+		}
 	}
 	
 	chance = {
@@ -624,6 +688,14 @@ inquisitor = {
 			build_time = -0.02
 		 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_adm_power = 0.25
+		}
+	}
 	
 	chance = {
 		factor = 1
@@ -696,6 +768,14 @@ statesman = {
 			trade_efficiency = 0.02
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_dip_power = 0.25
+		}
+	}
 
 	chance = {
 		factor = 1
@@ -749,6 +829,14 @@ naval_reformer = {
 		}
 		modifier = {
 			trade_efficiency = 0.02
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_dip_power = 0.25
 		}
 	}
 	
@@ -824,6 +912,14 @@ trader = {
 			trade_efficiency = 0.02
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_dip_power = 0.25
+		}
+	}
 	
 	chance = {
 		factor = 1
@@ -883,6 +979,14 @@ spymaster = {
 			trade_efficiency = 0.02
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_dip_power = 0.25
+		}
+	}
 	
 	chance = {
 		factor = 1
@@ -936,6 +1040,14 @@ colonial_governor = {
 		modifier = { 
 			meritocracy = 0.25 
 			trade_efficiency = 0.02
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_extra_settlers }
+		}
+		modifier = { 
+			global_colonial_growth = 5
 		}
 	}
 	
@@ -1001,6 +1113,14 @@ diplomat = {
 			trade_efficiency = 0.02
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_dip_power = 0.25
+		}
+	}
 	
 	chance = {
 		factor = 1
@@ -1062,6 +1182,14 @@ navigator = {
 		modifier = { 
 			meritocracy = 0.25 
 			trade_efficiency = 0.02
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = pf_lag_extra_settlers }
+		}
+		modifier = { 
+			global_colonial_growth = 5
 		}
 	}
 
@@ -1127,6 +1255,14 @@ army_reformer = {
 		}
 		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_mil_power = 0.25
+		}
+	}
 
 	chance = {
 		factor = 1
@@ -1170,6 +1306,14 @@ army_organiser = {
 			}
 		}
 		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_mil_power = 0.25
+		}
 	}
 
 	chance = {
@@ -1223,6 +1367,14 @@ commandant = {
 		}
 		modifier = { fire_damage = 0.02 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_mil_power = 0.25
+		}
+	}
 
 	chance = {
 		factor = 1
@@ -1266,6 +1418,14 @@ quartermaster = {
 			}
 		}
 		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_mil_power = 0.25
+		}
 	}
 
 	chance = {
@@ -1314,6 +1474,14 @@ recruitmaster = {
 			}
 		}
 		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_mil_power = 0.25
+		}
 	}
 
 	chance = {
@@ -1364,6 +1532,14 @@ fortification_expert = {
 		}
 		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_mil_power = 0.25
+		}
+	}
 
 	chance = {
 		factor = 1
@@ -1408,6 +1584,14 @@ grand_captain = {
 			}
 		}
 		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = icelandic_althingi_reform }
+		}
+		modifier = {
+			monthly_althingi_mil_power = 0.25
+		}
 	}
 
 	chance = {

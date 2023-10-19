@@ -437,3 +437,311 @@ pf_unlock_great_crusade_cb = {
 	set_country_flag = pf_unlock_great_crusade_cb
 	custom_tooltip = pf_unlock_great_crusade_tt
 }
+
+#neterist effects
+pf_egypt_neterist_communities_province_modifiers_global = {
+	if = {
+		limit = {
+			has_church_aspect = neterist_communities_aspect
+		}
+		every_owned_province = {
+			limit = {
+				religion = neterist
+			}
+			add_province_modifier = {
+				name = pf_egypt_neterist_communities
+				duration = -1
+			}
+		}
+	}
+	else = {
+		every_owned_province = {
+			limit = {
+				has_province_modifier = pf_egypt_neterist_communities
+			}
+			add_province_modifier = {
+				name = pf_egypt_neterist_communities
+				duration = -1
+			}
+		}
+	}
+}
+pf_egypt_neterist_communities_province_modifiers_local = {
+	if = {
+		limit = {
+			NOT = {
+				has_province_modifier = pf_egypt_neterist_communities
+			}
+			religion = neterist
+			owner = {
+				religion = neterist
+				has_church_aspect = neterist_communities_aspect
+			}
+		}
+		add_province_modifier = {
+			name = pf_egypt_neterist_communities
+			duration = -1
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				has_province_modifier = pf_egypt_neterist_communities
+			}
+		}
+		remove_province_modifier = pf_egypt_neterist_communities
+	}
+}
+pf_egypt_update_relations_neterist = {
+	if = {
+		limit = {
+			has_church_aspect = neterist_wandering_scholars_aspect
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					religion = neterist
+				}
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = pf_egypt_wandering_scholars
+					}
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = pf_egypt_wandering_scholars
+			}
+		}
+	}
+	else = {
+		every_country = {
+			limit = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = pf_egypt_wandering_scholars
+				}
+			}
+			remove_opinion = {
+				who = ROOT
+				modifier = pf_egypt_wandering_scholars
+			}
+		}
+	}
+}
+pf_egypt_update_relations_non_neterist = {
+	if = {
+		limit = {
+			NOT = {
+				religion = neterist
+			}
+			any_known_country = {
+				religion = neterist
+				has_church_aspect = neterist_wandering_scholars_aspect
+				ROOT = {
+					NOT = {
+						has_opinion_modifier = {
+							who = PREV
+							modifier = pf_egypt_wandering_scholars
+						}
+					}
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				religion = neterist
+			}
+			ROOT = {
+				add_opinion = {
+					who = PREV
+					modifier = pf_egypt_wandering_scholars
+				}
+			}
+		}
+	}
+}
+
+pf_unlock_great_crusade_cb = {
+	set_country_flag = pf_unlock_great_crusade_cb
+	custom_tooltip = pf_unlock_great_crusade_tt
+}
+
+pf_grant_random_advisor = {
+	custom_tooltip = pf_grant_random_advisor_tt
+	random_list = {
+		# adm
+		1 = {
+			define_advisor = {
+				type = natural_scientist
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = philosopher
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = artist
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = treasurer
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = theologian
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = master_of_mint
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = inquisitor
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		# diplo
+		1 = {
+			define_advisor = {
+				type = statesman
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = naval_reformer
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = trader
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = spymaster
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = colonial_governor
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = diplomat
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = navigator
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		# mil
+		1 = {
+			define_advisor = {
+				type = army_organiser
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = army_reformer
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = commandant
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = quartermaster
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = recruitmaster
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = fortification_expert
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = grand_captain
+				skill = $level$
+				cost_multiplier = $discount$
+			}
+		}
+	}
+}
+
+#upgrade_center_of_trade = yes
+upgrade_center_of_trade = {
+	if = {
+		limit = {
+			NOT = { province_has_center_of_trade_of_level = 1 }
+		}
+		center_of_trade = 1
+	}
+	else_if = {
+		limit = {
+			province_has_center_of_trade_of_level = 1
+			NOT = { province_has_center_of_trade_of_level = 3 }
+		}
+		add_center_of_trade_level = 1
+	}
+	else = {
+		add_base_tax = 1
+		add_base_production = 1
+		add_base_manpower = 1
+	}
+}

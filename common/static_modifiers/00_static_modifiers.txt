@@ -277,7 +277,7 @@ development = {
 	province_trade_power_value = 0.2
 	local_amount_of_banners = 0.066
 	local_amount_of_cawa = 0.125
-	local_amount_of_carolean = 0.1
+	local_amount_of_carolean = 0.03
 	local_amount_of_hussars = 0.01
 }
 
@@ -653,6 +653,7 @@ negative_stability = {
 	yearly_harmony = 0.25
 	monthly_trn_cohesion = 0.5
 	monthly_mac_war_cabinet_organization = 0.03
+	monthly_pf_sneakiness = 0.25
 }
 
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
@@ -746,6 +747,7 @@ bankruptcy = {
 war = {
 	monthly_militarized_society = 0.1
 	rr_girondists_influence = 0.15
+	monthly_pf_sneakiness = -0.5
 }
 
 peace = {
@@ -1053,6 +1055,7 @@ corruption = {
 	monthly_heir_claim_increase = 0.025
 	monthly_trn_cohesion = -50
 	monthly_mac_war_cabinet_organization = -0.03
+	monthly_pf_sneakiness = -50
 }
 
 root_out_corruption = {
@@ -1113,6 +1116,7 @@ over_extension = {
 	mr_guilds_influence = 0.5
 	yearly_corruption = 0.5
 	ottoman_decadence_gain_modifier = 0.25
+	monthly_pf_sneakiness = -1
 }
 
 prestige = {
@@ -2115,12 +2119,16 @@ voc_indiamen_ship = {
 
 
 cossacks_regiment = {
-    shock_damage = 0.15
+	shock_damage = 0.25
+	shock_damage_received = -0.25
+	land_attrition = 0.50
+	land_maintenance_modifier = 1
 }
 
-carolean_regiment = {
-	morale_damage = 0.05
-	drill_decay_modifier = -0.25
+carolean_regiment = {	# Huskarls
+	fire_damage_received = -0.20
+	infantry_power = 0.25
+	reinforce_cost_modifier = 1
 }
 
 revolutionary_guard_regiment = {
@@ -2183,6 +2191,7 @@ over_governing_capacity_modifier = {
 	monthly_prussian_militarized_society_3 = -1
 	administrative_efficiency = -0.5
 	monthly_trn_cohesion = -5
+	monthly_pf_sneakiness = -5
 }
 
 # At 1000% below capacity, this modifier will be fully used
@@ -2234,6 +2243,7 @@ guru_teaching = {
 }
 
 diplomatic_reputation = {
+	monthly_pf_sneakiness = 0.10
 }
 
 tolerance_own = {
@@ -2254,6 +2264,7 @@ ruler_adm = {
 
 ruler_dip = {
 		monthly_trn_cohesion = 0.10
+		monthly_pf_sneakiness = 0.10
 }
 
 ruler_mil = {
