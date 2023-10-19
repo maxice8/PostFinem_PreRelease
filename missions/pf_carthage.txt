@@ -10,9 +10,35 @@ car_main_1 = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			if = {
+				limit = {
+					ai = no
+				}
+				army_size_percentage = 1
+			}
+			else = {
+				army_size_percentage = 0.75
+			}
+			num_of_generals = 1
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_mil_power = 100
+			custom_tooltip = empty_line_tt
+			baleares_area = {
+				add_permanent_claim = ROOT
+			}
+			corsica_sardinia_area = {
+				add_permanent_claim = ROOT
+			}
+			western_sicily_area = {
+				add_permanent_claim = ROOT
+			}
+			sicily_area = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_car_revive_lilybaeum = {
@@ -158,11 +184,36 @@ car_main_3 = {
 	pf_car_integrate_the_tribes = {
 		icon = mission_turning_the_tables
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owner = {
+				OR = {
+					tag = ALG
+					tag = NMD
+					tag = TRP
+				}
+				is_subject_of = ROOT
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 20
+				region = maghreb_region
+			}
+			NOT = {
+				any_subject_country = {				
+					OR = {
+						tag = ALG
+						tag = NMD
+						tag = TRP
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+
+		} 
 	}
 
 	pf_car_masters_of_mauretania = {
