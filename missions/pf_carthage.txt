@@ -53,7 +53,7 @@ car_main_1 = {
 
 	pf_car_winds_of_change = {
 		icon = mission_book_of_royal_degrees
-		position = 1
+		position = 8
 		required_missions = { pf_car_thunder_of_war } 
 		provinces_to_highlight = {  } 
 
@@ -223,17 +223,6 @@ car_main_3 = {
 
 		effect = {  } 
 	}
-
-	pf_car_thunder_of_war = {
-		icon = pf_war_elephants
-		position = 7
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
 	pf_car_reclaimed_glory = {
 		icon = africa_proconsulare
 		position = 7
