@@ -1,0 +1,789 @@
+pf_drk_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	pf_drk_support_scania = {
+		icon = mission_conquer_skaneland
+		position = 2
+		required_missions = { pf_drk_learnings_of_a_wolf } 
+		provinces_to_highlight = {
+			area = skaneland_area
+			OR = {
+				country_or_non_sovereign_subject_holds = ROOT
+				NOT = { owned_by = ROOT }
+			}
+		} 
+
+		trigger = {
+			is_at_war = no
+			OR = {
+				AND = {
+					army_size_percentage = 1
+					manpower = 5
+					skaneland_area = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+				}
+				AND = {
+					skaneland_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				AND = {
+					exists = SKD
+					alliance_with = SKD
+				}
+			}
+		} 
+
+		effect = {
+			custom_tooltip = pf_support_scania_1_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						skaneland_area = {
+							NOT = { country_or_non_sovereign_subject_holds = ROOT }
+						}
+					}
+					add_manpower = -5
+					country_event = { id = pf_nordic.12 }	# skaneland revolution
+				}
+			}
+			tooltip = {
+				add_manpower = -5
+				country_event = { id = pf_nordic.12 }	# skaneland revolution
+			}
+			custom_tooltip = pf_support_scania_2_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							alliance_with = SKD
+							skaneland_area = {
+								type = all
+								country_or_non_sovereign_subject_holds = ROOT
+							}
+						}
+					}
+					add_adm_power = 100
+					SKD = {
+						add_trust = {
+							who = root
+							value = 25
+						}
+					}
+					add_trust = {
+						who = SKD
+						value = 25
+					}
+				}
+			}
+			tooltip = {
+				add_adm_power = 100
+				SKD = {
+					add_trust = {
+						who = root
+						value = 25
+					}
+				}
+				add_trust = {
+					who = SKD
+					value = 25
+				}
+			}
+		} 
+	}
+
+	pf_drk_conquer_scania = {
+		icon = revenge_for_nicopolis
+		position = 3
+		required_missions = { pf_drk_support_scania } 
+		provinces_to_highlight = {
+			area = skaneland_area
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { owned_by = SKD }
+			}
+		} 
+
+		trigger = {
+			is_at_war = no
+			skaneland_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owned_by = SKD
+				}
+			}
+			OR = {
+				NOT = { exists = SKD }
+				SKD = {
+					is_subject = no
+				}
+				SKD = {
+					is_subject_of = root
+				}
+			}
+		} 
+
+		effect = {
+			if = {
+				limit = {
+					SKD = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				ROOT = {
+					vassalize = SKD
+				}
+			}
+			6 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 25
+			}
+		} 
+	}
+
+	pf_drk_our_shared_spirit = {
+		icon = immaculate_government
+		position = 5
+		required_missions = { pf_drk_unite_danmark } 
+		provinces_to_highlight = {
+			culture = danish
+			OR = {
+				NOT = { num_of_buildings_in_province = 5 }
+				NOT = { owned_by = ROOT }
+			}
+		} 
+
+		trigger = {
+			development_in_provinces = {
+				value = 250
+				culture = danish
+			}
+			all_province = {
+				culture = danish
+				continent = europe
+				owned_by = ROOT
+				num_of_buildings_in_province = 5
+			}
+			13 = {
+				owned_by = root
+				OR = {
+					has_great_project = {
+						type = danavirki
+						tier = 2
+					}
+					has_great_project = {
+						type = danavirki
+						tier = 3
+					}
+				}
+			}
+		} 
+
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 50
+			}
+			add_country_modifier = {
+				name = "pf_drk_danish_nationalism"
+				duration = -1
+			}
+		} 
+	}
+}
+pf_drk_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	pf_drk_learnings_of_a_wolf = {
+		icon = mission_book_of_royal_degrees
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			has_mil_advisor = yes
+			treasury = 100
+		} 
+
+		effect = {
+			add_treasury = -100
+			change_innovativeness = 1
+			change_mil = 1
+			define_ruler_to_general = {
+				fire = 3
+				shock = 6
+				manuever = 5
+				siege = 3
+				name = "Bjørn Wolfsheart"
+				trait = viking_personality
+			}
+			skaneland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			jutland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			13 = {
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = { 
+					JUT = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					target = JUT
+					months = 300
+				}
+			}
+		} 
+	}
+
+	pf_drk_the_wayward_brother = {
+		icon = bavarian_cultural_dominance
+		position = 2
+		required_missions = { pf_drk_learnings_of_a_wolf } 
+		provinces_to_highlight = {
+			OR = {
+				area = jutland_area
+				province_id = 13
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		} 
+
+		trigger = {
+			jutland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			13 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			add_legitimacy = 20
+			add_adm_power = 100
+			custom_tooltip = pf_wayward_brother_1_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						JUT = { is_subject_of = ROOT }
+					}
+					JUT = {
+						every_owned_province = {
+							add_core = ROOT
+						}
+					}
+				}
+			}
+		} 
+	}
+
+	pf_drk_unite_danmark = {
+		icon = mission_danish_royal_army
+		position = 4
+		required_missions = {
+			pf_drk_conquer_scania
+			pf_drk_the_wayward_brother
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = jutland_area
+				province_id = 13
+				area = denmark_area
+				area = skaneland_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			denmark_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			skaneland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			jutland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			13 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {
+			custom_tooltip = pf_danish_provinces_get_1_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						culture = danish
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					add_province_modifier = {
+						name = "pf_drk_danish_rule"
+						duration = -1
+					}
+				}
+			}
+			tooltip = {
+				add_province_modifier = {
+					name = "pf_drk_danish_rule"
+					duration = -1
+				}
+			}
+			gotaland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			vastra_gotaland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_norway = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			western_norway = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			holstein_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			mecklenburg_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_saxony_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			weser_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_drk_nordic_wars = {
+		icon = mission_unite_scandinavia
+		position = 5
+		required_missions = { pf_drk_unite_danmark } 
+		provinces_to_highlight = {
+			region = scandinavia_region
+		} 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 25
+				region = scandinavia_region
+			}
+			NOT = {
+				any_known_country = {
+					capital_scope = {
+						region = scandinavia_region
+					}
+					army_size = ROOT
+				}
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_drk_the_nordic_wars"
+				duration = 9125
+			}
+			scandinavia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+pf_drk_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	pf_drk_conduct_a_raid_war = {
+		icon = mission_african_gold
+		position = 2
+		required_missions = { pf_drk_vikings_home } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			is_at_war = yes
+			is_in_war = {
+				attacker_leader = ROOT
+				casus_belli = cb_raid
+			}
+			war_score = 30
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_drk_making_a_living"
+				duration = 7300
+			}
+			define_general = {
+				shock = 3
+				fire = 4
+				manuever = 4
+				siege = 0
+				name = "Ulrik Bjornsson"
+				trait = viking_personality
+			}
+		} 
+	}
+
+	pf_drk_raid_on_britain = {
+		icon = mission_rb_rule_britannia_scottish_version
+		position = 4
+		required_missions = { pf_drk_conduct_a_raid_war } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			any_country = {
+				capital_scope = {
+					region = british_isles_region
+				}
+				is_in_war = {
+					defender_leader = THIS
+					attacker_leader = ROOT
+					casus_belli = cb_raid
+				}
+			}
+			war_score = 50
+			british_isles_region = {
+				controlled_by = ROOT
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_drk_against_albion_steel"
+				duration = 9125
+			}
+			east_anglia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_midlands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			yorkshire_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			scottish_marches_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+pf_drk_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	pf_drk_vikings_home = {
+		icon = mission_modernized_vikings
+		position = 1
+		provinces_to_highlight = {
+			area = denmark_area
+			OR = {
+				NOT = { owned_by = ROOT }
+				AND = {
+					NOT = { development = 10 }
+					NOT = { num_of_buildings_in_province = 1 }
+				}
+			}
+		} 
+
+		trigger = {
+			denmark_area = {
+				type = all
+				owned_by = ROOT
+			}
+			denmark_area = {
+				type = all
+				OR = {
+					development = 10
+					num_of_buildings_in_province = 1
+				}
+			}
+		} 
+
+		effect = {
+			add_army_tradition = 10
+			add_navy_tradition = 10
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 1
+			}
+		} 
+	}
+
+	pf_drk_raiding_fleet = {
+		icon = crusader_fleet
+		position = 3
+		required_missions = { pf_drk_vikings_home } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			navy_size = 30
+			navy_size_percentage = 0.85
+		} 
+
+		effect = {
+			add_yearly_sailors = 5
+			add_country_modifier = {
+				name = "pf_drk_launch_the_longboats"
+				duration = 9125
+			}
+			baltic_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_drk_invade_the_baltics = {
+		icon = mission_conquer_baltic_region
+		position = 4
+		required_missions = { pf_drk_raiding_fleet } 
+		provinces_to_highlight = {
+			region = baltic_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 6
+				region = baltic_region
+			}
+		} 
+
+		effect = {
+			custom_tooltip = pf_invade_baltics_1_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						region = baltic_region
+						country_or_non_sovereign_subject_holds = root
+					}
+					add_province_modifier = {
+						name = "pf_drk_integrating_the_baltics"
+						duration = 9125
+					}
+				}
+			}
+			tooltip = {
+				add_province_modifier = {
+					name = "pf_drk_integrating_the_baltics"
+					duration = 9125
+				}
+			}
+			east_prussia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_prussia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hinter_pommern_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			vorpommern_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_drk_terror_of_the_north = {
+		icon = mission_longships
+		position = 5
+		required_missions = {
+			pf_drk_raid_on_britain
+			pf_drk_invade_the_baltics
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_heavy_ship = 10
+			num_of_galley = 50
+			navy_tradition = 70
+			has_commanding_three_star = yes
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_drk_terror"
+				duration = -1
+			}
+		} 
+	}
+}
+pf_drk_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DRK } 
+
+	pf_drk_build_mead_hall = {
+		icon = mission_el_badi_palace
+		position = 2
+		required_missions = { pf_drk_vikings_home } 
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+			OR = {
+				NOT = { has_courthouse_building_trigger = yes }
+				NOT = { base_tax = 8 }
+			}
+		} 
+
+		trigger = {
+			capital_scope = {
+				has_courthouse_building_trigger = yes
+				base_tax = 8
+			}
+			treasury = 150
+		} 
+
+		effect = {
+			add_treasury = -150
+			capital_scope = {
+				add_province_modifier = {
+					name = "pf_drk_viking_mead_hall"
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	pf_drk_the_golden_price = {
+		icon = mission_early_russian_army
+		position = 4
+		required_missions = { pf_drk_raiding_fleet } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			army_size = 40
+			num_of_artillery = 8
+			OR = {
+				has_global_modifier_value = {
+					which = land_morale
+					value = 0.6
+				}
+				has_global_modifier_value = {
+					which = naval_morale
+					value = 0.6
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 8
+				has_manpower_building_trigger = yes
+			}
+		} 
+
+		effect = {
+			set_country_flag = pf_killing_troops_gives_ducats
+			custom_tooltip = pf_drk_the_golden_price_tt
+		} 
+	}
+}
