@@ -65,8 +65,10 @@ car_main_1 = {
 				add_base_tax = 1
 				add_base_production = 1
 				add_base_manpower = 1
+				custom_tooltip = empty_line_tt
 				add_or_upgrade_shipyard_building = yes
 			}
+			custom_tooltip = empty_line_tt
 			sicily_area = { add_permanent_claim = ROOT }
 			calabria_area = { add_permanent_claim = ROOT }
 			apulia_area = { add_permanent_claim = ROOT }
@@ -134,27 +136,27 @@ car_main_2 = {
 
 		effect = {  
 			simple_dynamic_effect = {
-				first_custom_tooltip = car_reestablish_sardan_1 #claims
+				first_custom_tooltip = car_reestablish_sardan_2
 				first_limit = "
-					EYL = {
-						is_part_of_hre = no
-					}
-				"
-				first_effect = "
-					corsica_area = { add_permanent_claim = ROOT }
-				"
-				second_custom_tooltip = car_reestablish_sardan_2 #subjugation
-				second_limit = "
 					EYL = {
 						is_part_of_hre = yes
 					}
 				"
-				second_effect = "
+				first_effect = "
 					add_casus_belli = {
 						type = cb_vassalize_mission
 						target = EYL
 						months = 120
 					}	
+				"
+				# second_custom_tooltip = car_reestablish_sardan_1
+				second_limit = "
+					EYL = {
+						is_part_of_hre = no
+					}
+				"
+				second_effect = "
+					corsica_area = { add_permanent_claim = ROOT }
 				"
 			}
 		} 
@@ -265,7 +267,14 @@ car_main_3 = {
 			}
 		} 
 
-		effect = {  
+		effect = {  		
+			if = {
+				limit = {
+					has_country_modifier = annexers_legacy
+				}
+				remove_country_modifier = annexers_legacy
+				custom_tooltip = empty_line_tt
+			}
 			mauretania_region = {
 				add_permanent_claim = ROOT
 			}
@@ -276,11 +285,36 @@ car_main_3 = {
 		icon = mission_moroccan_ports
 		position = 2
 		required_missions = { pf_car_integrate_the_tribes } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			region = mauretania_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = mauretania_region
+			}	
+		} 
 
-		effect = {  } 
+		effect = {  	
+			custom_tooltip = car_masters_maghreb_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						capital_scope = { region = maghreb_region }
+						NOT = { total_development = 50 }
+						NOT = { is_subject_of = ROOT }
+						is_subject = no
+					}
+					reverse_add_casus_belli = {
+						target = ROOT
+						type = cb_vassalize_mission 
+						months = 120
+					}
+				}
+			}
+		} 
 	}
 
 	pf_car_into_iber = {
