@@ -487,3 +487,29 @@ nordic_entrenched_raids_reform = {
 		raids_give_money_from_temples = yes
 	}
 }
+
+pf_norse_jarldom = {
+	icon = "viking"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = yes
+	potential = {
+		religion = norse_pagan_reformed
+		NOT = { has_reform = pf_norse_warlord }
+	}
+	modifiers = {
+		manpower_recovery_speed = 0.10
+		land_maintenance_modifier = -0.20
+		governing_capacity_modifier = -0.25
+		technology_cost = 0.10
+		may_perform_slave_raid = yes
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+	custom_attributes = {
+		locked_government_type = yes
+		allows_viking_raids = yes
+		raiding_gives_extra_devastation = yes
+	}
+}

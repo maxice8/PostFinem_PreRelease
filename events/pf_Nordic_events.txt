@@ -446,3 +446,153 @@ country_event = {
 		}
 	}
 }
+
+country_event = {		# Valuable Hostages
+	id = pf_nordic.14
+	title = "pf_nordic.14.t"
+	desc = "pf_nordic.14.d"
+	picture = LORD_OF_GOTLAND_eventPicture
+
+	trigger = {
+		country_is_part_of_raid_war = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {		# No mercy
+		name = "pf_nordic.14.a"
+		add_army_tradition = -5
+		add_loot_medium = yes
+	}
+	option = {		# Let them go
+		name = "pf_nordic.14.b"
+		add_prestige_or_monarch_power = {
+			amount = 5
+		}
+	}
+	option = {		# Surely you have more money than just that?
+		name = "pf_nordic.14.c"
+		trigger = {
+			OR = {
+				ruler_has_personality = cruel_personality
+				ruler_has_personality = embezzler_personality
+			}
+		}
+		add_loot_large = yes
+	}
+}
+country_event = {		# Wealthy Treasure Seized
+	id = pf_nordic.15
+	title = "pf_nordic.15.t"
+	desc = "pf_nordic.15.d"
+	picture = FAILED_REVOLUTION_eventPicture
+
+	trigger = {
+		country_is_part_of_raid_war = yes
+		NOT = { has_country_modifier = pf_nordic_well_paid_men }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {		# Take it
+		name = "pf_nordic.15.a"
+		add_loot_medium = yes
+	}
+	option = {		# Distribute it among the men
+		name = "pf_nordic.15.b"
+		add_country_modifier = {
+			name = "pf_nordic_well_paid_men"
+			duration = 1825
+		}
+	}
+}
+country_event = {		# Dinner Time
+	id = pf_nordic.16
+	title = "pf_nordic.16.t"
+	desc = "pf_nordic.16.d"
+	picture = BATTLE_eventPicture
+
+	trigger = {
+		country_is_part_of_raid_war = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {		# Yum
+		name = "pf_nordic.16.a"
+		add_loot_small = yes
+	}
+}
+country_event = {		# Fleeing Civilians
+	id = pf_nordic.17
+	title = "pf_nordic.17.t"
+	desc = "pf_nordic.17.d"
+	picture = BATTLE_eventPicture
+
+	trigger = {
+		country_is_part_of_raid_war = yes
+		any_province = {
+			NOT = { owned_by = ROOT }
+			controlled_by = ROOT
+			owner = {
+				is_in_war = {
+					casus_belli = cb_raid
+					defenders = THIS
+				}
+			}
+			base_tax = 2
+		}
+	}
+
+	immediate = {
+		random_province = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				controlled_by = ROOT
+				owner = {
+					is_in_war = {
+						casus_belli = cb_raid
+						defenders = THIS
+					}
+				}
+				base_tax = 2
+			}
+			save_event_target_as = fleeing_prov
+		}
+	}
+
+	goto = fleeing_prov
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {		# gather them and force them to ransom
+		name = "pf_nordic.17.a"
+		add_adm_power = -10
+		add_mil_power = -20
+		add_loot_medium = yes
+	}
+	option = {		# let them leave
+		name = "pf_nordic.17.b"
+		event_target:fleeing_prov = {
+			random = {
+				chance = 20
+				add_base_tax = -1
+			}
+		}
+	}
+	option = {		# kill them all
+		name = "pf_nordic.17.c"
+		add_army_tradition = 5
+		event_target:fleeing_prov = {
+			add_devastation = 30
+		}
+	}
+}

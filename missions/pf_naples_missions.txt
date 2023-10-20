@@ -328,14 +328,20 @@ pf_nap_3 = {
 			pf_nap_splendid_city
 		}
 		provinces_to_highlight = {
-			region = italy_region
+			OR = {
+				region = italy_region
+				region = north_italy_region
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 45
-				region = italy_region
+				OR = {
+					region = italy_region
+					region = north_italy_region
+				}
 			}
 		} 
 

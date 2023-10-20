@@ -20,20 +20,19 @@ cb_neapolitan_subjugation = {
 				}
 				AND = {
 					ROOT = { mission_completed = pf_nap_secure_the_south }
-					OR = {
-						capital_scope = {
+					capital_scope = {
+						OR = {
 							area = western_sicily_area
-						}
-						capital_scope = {
 							area = sicily_area
 						}
 					}
 				}
 				AND = {
 					ROOT = { mission_completed = pf_nap_subdue_sicily }
-					OR = {
-						capital_scope = {
+					capital_scope = {
+						OR = {
 							region = italy_region
+							region = north_italy_region
 						}
 					}
 				}
@@ -47,17 +46,28 @@ cb_neapolitan_subjugation = {
 cb_raid = {
 	prerequisites = {
 		is_subject = no
-		OR = {
-			religion = norse_pagan_reformed 	# Asatru
-			government = tribal
-		}
+		has_government_attribute = allows_viking_raids
 		FROM = {
 			OR = {
-				is_neighbor_of = ROOT
-				NOT = {
-					border_distance = {
-						who = ROOT
-						distance = 125
+				OR = {
+					is_neighbor_of = ROOT
+					NOT = {
+						border_distance = {
+							who = ROOT
+							distance = 125
+						}
+					}
+				}
+				AND = {
+					ROOT = { mission_completed = pf_drk_terror_of_the_north }
+					OR = {
+						is_neighbor_of = ROOT
+						NOT = {
+							border_distance = {
+								who = ROOT
+								distance = 187
+							}
+						}
 					}
 				}
 			}

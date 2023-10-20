@@ -27,12 +27,19 @@ nordic_entrenched_raids_reform: "Merciless Raiders"
 nordic_entrenched_raids_reform_desc: "Our ancestors have been raiding and pillaging for centuries - in a poor land such as ours, it was the only real way to make a living. Now, such raiding has become more of a sport and a show of martial prowess, but it is nonetheless a core part of our culture. Our attacks are so impactful that many of the peoples we target have begun calling us by a new name - not 'Northmen', but 'vikings', literally pirates. Instead of cowering, we should embrace this new identity, and make sure that everyone knows we are the terror of the land and the seas."
 mechanic_raids_give_money_from_temples_yes: "Sieging provinces in §Yraid wars§! with §YTemples§! or §YCathedrals§! grants us §G5§!¤ and §G10§!¤ §MLoot§! respectively."
 
+pf_norse_jarldom: "Norse Jarldom"
+pf_norse_jarldom_desc: ""
+mechanic_allows_viking_raids_yes: "Allows §YViking Raid§! wars."
+mechanic_raiding_gives_extra_devastation_yes: "Raiding provinces gives them an extra §R+10§! Devastation."
+
 # Countries
 
 NDH: "Nordheim"
 NDH_ADJ: "Nordheimer"
 SKD: "Skåneland"
 SKD_ADJ: "Skånelander"
+
+finnic: "Finnic"  # Culture group
 
 # Personalities
 
@@ -98,7 +105,7 @@ DRK_ideas_start: "Danish Traditions"
 DRK_ideas_bonus: "Danish Ambition"
 
 drk_the_two_denmarks: "The Three Danmarks"
-drk_the_two_denmarks_desc: "Long ago, the Danish people lived in peace and harmony across the lands of southern Scandinavia. A mighty kingdom ruled there, forged by the keen axe-work of Erik Bloodaxe, the ancestor of many present noble and royal families throughout the region. In 1388, upon the death of the Jarl Ivar, the realm was split in two - a western province, ruled by the brash and unruly younger son, and the core islands and Skaneland, ruled by the capable Thornarr Thunderfist. While the descendents of the worse brother went on in relative peace and isolation, protected from the menacing Saxons by the great Danavirki, our realm suffered great traumas during the first half of the 15th century.\n\nConstant attacks from the unchained Jutes and Angles and even raids from the sons of Ulrik of Norway plagued our fortunes, until the greatest blow of all was dealt - the Swedish invasion. We stood little chance at defending against the newly reorganised armies of the Jarl, and all our fears proved to be true. The Swedes swept from village to village, massacring the peaceful Danes and eventuall establishing their rule over all of Skaneland. Our claims are many, but thusfar our chances have been few. One day, the Danes will rule from sea to shining sea once more, and our beautiful realm, now smashed like a vase on the floor, will be carefully pieced back together."
+drk_the_two_denmarks_desc: "Long ago, the Danish people lived in peace and harmony across the lands of southern Scandinavia. A mighty kingdom ruled there, forged by the keen axe-work of Erik Bloodaxe, the ancestor of many present noble and royal families throughout the region. In 1388, upon the death of the Jarl Ivar, the realm was split in two - a western province, ruled by the brash and unruly younger son, and the core islands and Skaneland, ruled by the capable Thornarr Thunderfist. While the descendents of the worse brother went on in relative peace and isolation, protected from the menacing Saxons by the great Danavirki, our realm suffered great traumas during the first half of the 15th century. Constant attacks from the unchained Jutes and Angles and even raids from the sons of Ulrik of Norway plagued our fortunes, until the greatest blow of all was dealt - the Swedish invasion. We stood little chance at defending against the newly reorganised armies of the Jarl, and all our fears proved to be true. The Swedes swept from village to village, massacring the peaceful Danes and eventuall establishing their rule over all of Skaneland. Our claims are many, but thusfar our chances have been few. One day, the Danes will rule from sea to shining sea once more, and our beautiful realm, now smashed like a vase on the floor, will be carefully pieced back together."
 drk_sigurdsson_rule: "Rule of the Sigurdssons"
 drk_sigurdsson_rule_desc: "Jarl Sigurd was the the king of the Danes looked back on fondly by many. Living in a realm just beyond the borders of living memory, Sigurd ruled a united Danmark and ruled it well, instituting a number of administrative reforms, personally leading a great many raids into the Baltics and Albion, and refurbishing the western flank of the Danavirki. If it were not for his choice of heir, the foolish Ivar who cleaved our country in half, we could reasonably claim him the greatest king. His legacy is so strong and ever present in the minds of kings and commoners alike today that the rulers of Danmark and Jutland still cling on to his heritage, titling themselves not sons of their fathers but sons of Sigurd the Mighty. His name carries weight among all peoples; even those living across vast seas from us tell their children stories at night about the raids of the terrifying 'Sigurd', the Butcherer of the Night. Stressed our inheritance from this great man will only serve to further reinforce our legitimacy in the eyes of all who remember his might and deeds."
 drk_the_isles: "Kingdom of the Isles"
@@ -244,6 +251,33 @@ pf_nordic.13.a: "Let's see what booty you brought back..."
 gain_x_loot_tooltip: "Gain §G[Root.RaidLoot.GetValue]§!¤ from our §YRaid Loot§!."
 RaidLoot: "Raid Loot"
 MaxRaidLoot: "Raid Loot Capacity"
+
+pf_nordic.14.t: "Valuable Hostages"
+pf_nordic.14.d: "A recent raid upon one of the enemy towns we have targeted has resulted in the capture of a whole family of local nobles. Since their seizure, they have done nothing but beg for their freedom, offering up great riches before the [Root.Monarch.GetTitle] in exchange for it. What should we do with these hostages?"
+pf_nordic.14.a: "That price seems fair enough for freedom."
+pf_nordic.14.b: "Let them go without a cost."
+pf_nordic.14.c: "Surely you have more money than just that?"
+province_is_part_of_raid_war_tt: "This province is sieged as part of a §YRaid War§!."
+country_is_part_of_raid_war_tt: "This country is the attacker in a §YRaid War§!."
+add_loot_small_tt: "Add §G10§!¤ §YLoot§!"
+add_loot_medium_tt: "Add §G25§!¤ §YLoot§!"
+add_loot_large_tt: "Add §G50§!¤ §YLoot§!"
+
+pf_nordic.15.t: "Wealthy Treasure Seized"
+pf_nordic.15.d: "One of our raiding parties has encountered a partially buried hoard of treasures, presumably the result of a failed attempt by some local lord or dignitary to hide their precious items from us. Upon digging it out, even the chiefs of our parties were astounded at the magnitude of the treasury and the value it contained."
+pf_nordic.15.a: "The gods are truly on our side!"
+pf_nordic.15.b: "Distribute the riches among our men."
+pf_nordic_well_paid_men: "Well Paid Warriors"
+
+pf_nordic.16.t: "Dinner Time"
+pf_nordic.16.d: "In one of the houses our plunderers entered, they found a full roast dinner set out upon the kitchen table. By the looks of it, the family that lived there was just about to tuck into a delicious meal when they heard news of our arrival and fled. Luckily for us, the food is still warm, and is plenty enough to fill the stomachs of our brave warriors."
+pf_nordic.16.a: "Yum!"
+
+pf_nordic.17.t: "Fleeing Civilians"
+pf_nordic.17.d: "We know all to well that upon hearing that we are coming many communities flee into the forests and hills to try and save their lives from our bloodthirsty warriors, but on this occassion we have caught them in the act. What should we do with these wretched people?"
+pf_nordic.17.a: "Force them to pay for their freedom."
+pf_nordic.17.b: "Let them flee."
+pf_nordic.17.c: "Slaughter every last one of them!"
 
 ###############
 # Decisions

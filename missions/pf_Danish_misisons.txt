@@ -169,10 +169,16 @@ pf_drk_1 = {
 		trigger = {
 			development_in_provinces = {
 				value = 250
-				culture = danish
+				OR = {
+					culture = danish
+					culture = angle
+				}
 			}
 			all_province = {
-				culture = danish
+				OR = {
+					culture = danish
+					culture = angle
+				}
 				continent = europe
 				owned_by = ROOT
 				num_of_buildings_in_province = 5
@@ -285,6 +291,14 @@ pf_drk_2 = {
 			13 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			OR = {
+				accepted_culture = angle
+				JUT = { is_subject_of = ROOT }
+				jutland_area = {
+					type = all
+					culture = danish
+				}
+			}
 		}
 
 		effect = {
@@ -346,7 +360,10 @@ pf_drk_2 = {
 			hidden_effect = {
 				every_province = {
 					limit = {
-						culture = danish
+						OR = {
+							culture = danish
+							culture = angle
+						}
 						country_or_non_sovereign_subject_holds = ROOT
 					}
 					add_province_modifier = {
@@ -493,6 +510,7 @@ pf_drk_3 = {
 				name = "Ulrik Bjornsson"
 				trait = viking_personality
 			}
+			add_loot_large = yes
 		} 
 	}
 
@@ -711,6 +729,7 @@ pf_drk_4 = {
 		} 
 
 		effect = {
+			custom_tooltip = pf_drk_longer_raid_war_distance_tt
 			add_country_modifier = {
 				name = "pf_drk_terror"
 				duration = -1
@@ -764,17 +783,7 @@ pf_drk_5 = {
 
 		trigger = {
 			army_size = 40
-			num_of_artillery = 8
-			OR = {
-				has_global_modifier_value = {
-					which = land_morale
-					value = 0.6
-				}
-				has_global_modifier_value = {
-					which = naval_morale
-					value = 0.6
-				}
-			}
+			has_mil_advisor_2 = yes
 			num_of_owned_provinces_with = {
 				value = 8
 				has_manpower_building_trigger = yes

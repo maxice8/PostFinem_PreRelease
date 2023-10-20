@@ -792,3 +792,28 @@ lose_loot = {
 		}
 	}
 }
+
+add_loot_small = {
+	custom_tooltip = add_loot_small_tt
+	hidden_effect = {
+		add_loot = {
+			amount = 10
+		}
+	}
+}
+add_loot_medium = {
+	custom_tooltip = add_loot_medium_tt
+	hidden_effect = {
+		add_loot = {
+			amount = 25
+		}
+	}
+}
+add_loot_large = {
+	custom_tooltip = add_loot_large_tt
+	hidden_effect = {
+		add_loot = {
+			amount = 50
+		}
+	}
+}

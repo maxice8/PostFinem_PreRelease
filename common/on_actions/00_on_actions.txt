@@ -5141,6 +5141,19 @@ on_raid_coast = {
 			amount = 1
 		}
 	}
+	if = {
+		limit = {
+			has_government_attribute = raiding_gives_extra_devastation
+		}
+		FROM = {
+			every_neighbor_province = {
+				limit = {
+					is_city = yes
+				}
+				add_devastation = 10
+			}
+		}
+	}
 }
 
 # ROOT = Tag that captured the flagship, FROM = Tag that lost the flagship
