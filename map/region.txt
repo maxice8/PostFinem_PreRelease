@@ -107,24 +107,23 @@ maghreb_region = {
 }
 mashriq_region = { 
 	areas = { 
-		syria_area palestine_area trans_jordan_area syrian_desert_area aleppo_area 
+		syria_area palestine_area trans_jordan_area syrian_desert_area aleppo_area east_syria_area 
 	}
 }
 mesopotamia_region = { 
 	areas = { 
-		shahrizor_area khuzestan_area luristan_area al_jazira_area iraq_arabi_area basra_area 
+		shahrizor_area khuzestan_area luristan_area iraq_arabi_area basra_area al_jazira_area 
 	}
 }
 anatolia_region = { 
 	areas = { 
-		hudavendigar_area aydin_area karaman_area rum_area kastamonu_area erzurum_area north_kurdistan_area dulkadir_area cukurova_area ankara_area
-		germiyan_area 
+		hudavendigar_area aydin_area kastamonu_area ankara_area germiyan_area karaman_area cukurova_area rum_area dulkadir_area 
 	}
 }
 persia_region = { 
 	areas = { 
-		farsistan_area iraq_e_ajam_area tabarestan_area azerbaijan_area isfahan_area kerman_area persian_gulf_coast tabriz_area mogostan_area mashhad_area
-		birjand_area 
+		farsistan_area iraq_e_ajam_area tabarestan_area azerbaijan_area isfahan_area kerman_area persian_gulf_coast mogostan_area mashhad_area birjand_area
+		tabriz_area 
 	}
 }
 khorasan_region = { 
@@ -134,7 +133,7 @@ khorasan_region = {
 }
 caucasia_region = { 
 	areas = { 
-		circassia_area shirvan_area armenia_area dagestan_area imereti_area samtskhe_area kartli_kakheti_area 
+		circassia_area shirvan_area armenia_area dagestan_area imereti_area samtskhe_area kartli_kakheti_area lake_van_area erzurum_area north_kurdistan_area
 	}
 }
 arabia_region = { 
