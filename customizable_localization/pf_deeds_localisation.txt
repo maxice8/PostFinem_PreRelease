@@ -1,0 +1,353 @@
+defined_text = {
+	name = GetDeedsEpithet
+	random = no
+
+	# Country specific
+	text = {
+		localisation_key = deeds_epithet_conan_astarte
+		trigger = {
+			has_ruler = "Conan Astarte"
+			tag = CLN
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_ricatus
+		trigger = {
+			has_ruler_flag = ricatus_flag
+			tag = TRN
+		}
+	}
+
+	# Generic based on personalities
+	text = {
+		localisation_key = deeds_epithet_conqueror
+		trigger = {
+			ruler_has_personality = conqueror_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_bold
+		trigger = {
+			ruler_has_personality = bold_fighter_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_brave
+		trigger = {
+			ruler_has_personality = inspiring_leader_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_hard
+		trigger = {
+			ruler_has_personality = strict_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_knight
+		trigger = {
+			ruler_has_personality = martial_educator_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_pious
+		trigger = {
+			OR = {
+				ruler_has_personality = pious_personality
+				ruler_has_personality = zealot_personality
+			}
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_kind
+		trigger = {
+			ruler_has_personality = kind_hearted_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_just
+		trigger = {
+			ruler_has_personality = just_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_noble
+		trigger = {
+			ruler_has_personality = righteous_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_lustful
+		trigger = {
+			ruler_has_personality = fertile_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_generous
+		trigger = {
+			OR = {
+				ruler_has_personality = charismatic_negotiator_personality
+				ruler_has_personality = silver_tongue_personality
+			}
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_barren
+		trigger = {
+			ruler_has_personality = infertile_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_coward
+		trigger = {
+			ruler_has_personality = craven_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_cruel
+		trigger = {
+			ruler_has_personality = cruel_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_good
+		trigger = {
+			ruler_has_personality = calm_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_timid
+		trigger = {
+			ruler_has_personality = careful_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_drunkard
+		trigger = {
+			ruler_has_personality = drunkard_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_otherworldly
+		trigger = {
+			ruler_has_personality = immortal_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_learned
+		trigger = {
+			ruler_has_personality = scholar_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_mean
+		trigger = {
+			ruler_has_personality = fierce_negotiator_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_open_minded
+		trigger = {
+			ruler_has_personality = free_thinker_personality
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_benevolent
+		trigger = {
+			OR = {
+				ruler_has_personality = tolerant_personality
+				ruler_has_personality = benevolent_personality
+			}
+		}
+	}
+	text = {
+		localisation_key = deeds_epithet_nothing_much
+		trigger = {
+			always = yes
+		}
+	}
+}
+defined_text = {
+	name = GetDeedsMonarchSkill
+	random = no
+	text = {
+		localisation_key = deeds_mil_skill
+		trigger = {
+			mil = 4
+		}
+	}
+	text = {
+		localisation_key = deeds_adm_skill
+		trigger = {
+			adm = 4
+		}
+	}
+	text = {
+		localisation_key = deeds_dip_skill
+		trigger = {
+			dip = 4
+		}
+	}
+	text = {
+		localisation_key = deeds_skill_issue
+		trigger = {
+			NOT = { adm = 1 }
+			NOT = { dip = 1 }
+			NOT = { mil = 1 }
+		}
+	}
+	text = {
+		localisation_key = deeds_no_skill
+		trigger = {
+			always = yes
+		}
+	}
+}
+defined_text = {
+	name = GetDeedsYoungOld
+	random = no
+	text = {
+		localisation_key = deeds_old
+		trigger = {
+			ruler_age = 60
+		}
+	}
+	text = {
+		localisation_key = deeds_middle_aged
+		trigger = {
+			ruler_age = 30
+		}
+	}
+	text = {
+		localisation_key = deeds_young
+		trigger = {
+			ruler_age = 15
+		}
+	}
+	text = {
+		localisation_key = deeds_child
+		trigger = {
+			NOT = { ruler_age = 15 }
+		}
+	}
+}
+defined_text = {
+	name = GetDeedsWarmonger
+	random = no
+	text = {
+		localisation_key = deeds_warmonger
+		trigger = {
+			variable_arithmetic_trigger = {
+				set_variable = {
+					which = pre_YearsAtWar
+					which = YearsAtWar
+				}
+				set_variable = {
+					which = pre_YearsAtPeace
+					which = YearsAtPeace
+				}
+				divide_variable = {
+					which = pre_YearsAtWar
+					which = pre_YearsAtPeace
+				}
+				check_variable = {
+					which = pre_YearsAtWar
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = deeds_opportunist
+		trigger = {
+			variable_arithmetic_trigger = {
+				set_variable = {
+					which = pre_YearsAtWar
+					which = YearsAtWar
+				}
+				set_variable = {
+					which = pre_YearsAtPeace
+					which = YearsAtPeace
+				}
+				divide_variable = {
+					which = pre_YearsAtWar
+					which = pre_YearsAtPeace
+				}
+				check_variable = {
+					which = pre_YearsAtWar
+					value = 0.5
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = deeds_peacemonger
+		trigger = {
+			always = yes
+		}
+	}
+}
+defined_text = {
+	name = GetDeedsAdirim
+	random = no
+	text = {
+		localisation_key = deeds_good_adirim
+		trigger = {
+			imperial_influence = 30
+			is_emperor = yes
+		}
+	}
+	text = {
+		localisation_key = deeds_okay_adirim
+		trigger = {
+			imperial_influence = 10
+			is_emperor = yes
+		}
+	}
+	text = {
+		localisation_key = deeds_bad_adirim
+		trigger = {
+			is_emperor = yes
+		}
+	}
+	text = {
+		localisation_key = deeds_not_adirim
+		trigger = {
+			always = yes
+		}
+	}
+}
+defined_text = {
+	name = GetDeedsConsortSkill
+	random = no
+	text = {
+		localisation_key = deeds_mil_consort
+		trigger = {
+			consort_mil = 4
+		}
+	}
+	text = {
+		localisation_key = deeds_adm_consort
+		trigger = {
+			consort_adm = 4
+		}
+	}
+	text = {
+		localisation_key = deeds_dip_consort
+		trigger = {
+			consort_dip = 4
+		}
+	}
+	text = {
+		localisation_key = deeds_bad_consort
+		trigger = {
+			has_consort = yes
+		}
+	}
+	text = {
+		localisation_key = deeds_maidenless
+		trigger = {
+			always = yes
+		}
+	}
+}

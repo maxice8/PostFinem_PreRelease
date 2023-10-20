@@ -1026,6 +1026,14 @@ on_monarch_death = {
 		}
 		country_event = { id = pf_romuva_events.1 }
 	}
+	set_variable = {
+		which = YearsAtWar
+		value = 0
+	}
+	set_variable = {
+		which = YearsAtPeace
+		value = 0
+	}
 	burgundian_inheritance_start_effect = yes
 	ladislaus_postumus_king_died_effect = yes
 	joan_de_trastamara_king_died_effect = yes
@@ -1969,6 +1977,21 @@ on_yearly_pulse = {
 	}
 }
 on_yearly_pulse_2 = {
+	if = {
+		limit = {
+			is_at_war = yes
+		}
+		change_variable = {
+			which = YearsAtWar
+			value = 1
+		}
+	}
+	else = {
+		change_variable = {
+			which = YearsAtPeace
+			value = 1
+		}
+	}
 }
 on_yearly_pulse_3 = {
 }
