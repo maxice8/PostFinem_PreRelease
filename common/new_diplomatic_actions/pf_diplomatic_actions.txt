@@ -1,0 +1,242 @@
+promote_vassal_to_satrapy = {
+	category = influence
+
+	require_acceptance = yes
+
+	alert_index = 6
+	alert_tooltip = promote_vassal_to_eyalet_alert_tooltip
+
+	is_visible = {
+		has_government_attribute = pf_per_can_create_satrapies
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = vassal
+		}
+	}
+	is_allowed = {
+		if = {
+			limit = {
+				FROM = { liberty_desire = 50 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_REBELLIOUS_TT
+				FROM = { liberty_desire = 50 }
+			}
+		}
+	}
+	on_accept = {
+		create_subject = {
+			subject_type = satrapy
+			subject = FROM
+			keep_liberty_desire = yes
+		}
+		FROM = {
+			if = {
+				limit = {
+					NOT = { has_reform = papacy_reform }
+					NOT = { has_reform = celestial_empire }
+					NOT = { has_reform = shogunate }
+				}
+				if = {
+					limit = { NOT = { government = theocracy } }
+					change_government = theocracy
+				}
+				add_government_reform = pf_persian_satrapy
+			}
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = { # this is a trigger
+		always = no	#Too risky to test this out with the AI
+	}
+
+	ai_acceptance = {
+        add_entry = {
+            name = DIPLO_OPPINION
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			multiply_variable = {
+				which = ai_value 
+				value = 0.2
+			}
+        }
+		add_entry = {
+			name = AI_TRUST_TOWARDS_ROOT
+			export_to_variable = {
+				variable_name = ai_value
+				value = trust
+				who = FROM
+				with = ROOT
+			}			
+			subtract_variable = { 
+				which = ai_value
+				value = 50
+			}
+			#1 trust = +4 ai points
+			multiply_variable = {
+				which = ai_value
+				value = 0.4
+			}
+		}
+		add_entry = {
+			name = AI_DIPLOMATIC_REPUTATION
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:diplomatic_reputation
+			}
+			#1 rep = 4
+			multiply_variable = {
+				which = ai_value
+				value = 4
+			}
+		}
+		add_entry = {
+			name = AI_LIBERTY_DESIRE
+			export_to_variable = {
+				variable_name = ai_value
+				value = liberty_desire
+				who = FROM
+			}
+			multiply_variable = {
+				which = ai_value
+				value = -1
+			}
+		}
+	}
+}
+
+# Fabricate Grand Persian Offensive cb
+fabricate_persian_offensive_cb = {
+	category = covert
+
+	require_acceptance = no
+
+	is_visible = {
+		has_government_attribute = pf_per_can_grand_persian_offensive
+		#tag = PER
+	}
+	is_allowed = {
+		if = {
+			limit = {
+				FROM = { total_development = 125 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_HAS_NOT_125_TOTAL_DEV
+				FROM = { NOT = { total_development = 125 } }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_spy_network_in = {
+						who = FROM
+						value = 40
+					}
+				}
+				NOT = { full_idea_group = spy_ideas }
+			}
+			custom_trigger_tooltip = {
+				tooltip = REQUIRES_40_SPY_NETWORK_TT
+				has_spy_network_in = {
+					who = FROM
+					value = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_spy_network_in = {
+						who = FROM
+						value = 32
+					}
+				}
+				full_idea_group = spy_ideas
+			}
+			custom_trigger_tooltip = {
+				tooltip = REQUIRES_32_SPY_NETWORK_TT
+				has_spy_network_in = {
+					who = FROM
+					value = 32
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_casus_belli = {
+					type = cb_grand_persian_offensive
+					target = FROM
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = HAS_PERSIAN_OFFENSIVE_CB_ALREADY_TT
+				NOT = {
+					has_casus_belli = {
+						type = cb_grand_persian_offensive
+						target = FROM
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = { is_subject = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = CANNOT_DO_ACTION_TO_SUBJECTS_TT
+				FROM = { is_subject = no }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { is_neighbor_of = FROM }
+				NOT = {
+					any_subject_country = {
+						is_neighbor_of = FROM
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_MUST_BE_NEIGHBOR_TT
+				is_neighbor_of = FROM
+			}
+		}
+	}
+	on_accept = {
+		if = {
+			limit = {
+				full_idea_group = spy_ideas
+			}
+			add_spy_network_in = {
+				who = FROM
+				value = -32
+			}
+		}
+		else = {
+			add_spy_network_in = {
+				who = FROM
+				value = -40
+			}
+		}
+		add_casus_belli = {
+			target = FROM
+			type = cb_grand_persian_offensive
+			months = 60
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = { # this is a trigger
+		has_spy_network_in = {
+			who = FROM
+			value = 50
+		}
+	}
+}

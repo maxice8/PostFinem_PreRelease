@@ -1,0 +1,55 @@
+country_decisions = {
+
+	pf_per_show_satrapy_expansion_plan = {
+		
+		color = { 150 20 11 }
+		
+		potential = {
+			tag = PER
+			NOT = { has_country_flag = pf_per_has_completed_satrapy_expansion_plan }
+			NOT = { has_country_flag = pf_per_centralization_collapsed }
+		}
+
+		allow = {
+			calc_true_if = {
+				all_subject_country = {
+					has_country_flag = pf_per_satrapy_finished
+				}
+				amount = 16
+				desc = pf_per_satrapy_finished_decision_tt
+			}
+			custom_trigger_tooltip = {
+				tooltip = pf_per_click_to_show_provinces_tt
+				always = no
+			}
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				province_group = pf_afg_expansion_claims
+				province_group = pf_bal_expansion_claims
+				province_group = pf_kho_expansion_claims
+				province_group = pf_khu_expansion_claims
+				province_group = pf_tab_expansion_claims
+				province_group = pf_bab_expansion_claims
+				province_group = pf_asy_expansion_claims
+				province_group = pf_tig_expansion_claims
+				province_group = pf_csp_expansion_claims
+				province_group = pf_clc_expansion_claims
+				province_group = pf_mga_expansion_claims
+				province_group = pf_rjt_expansion_claims
+				province_group = pf_gjr_expansion_claims
+				province_group = pf_paj_expansion_claims
+				province_group = pf_ksm_expansion_claims
+				province_group = pf_amy_expansion_claims
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		effect = { }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -11,9 +11,8 @@ satrapy = {
 	
 	transfer_trade_power = yes
 	joins_overlords_wars = no
-	can_be_annexed = no
-	# Can be integrated just like Personal Unions1
-	can_be_integrated = yes
+	can_be_annexed = yes
+	can_be_integrated = no
 	has_power_projection = no
 	gets_help_with_rebels = yes
 	forms_trade_companies = no

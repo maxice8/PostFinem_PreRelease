@@ -1,0 +1,125 @@
+pf_per_inquisition = {
+	potential = {
+		tag = PER
+		has_country_flag = pf_per_started_persian_inquisition
+	}
+
+	can_start = {
+		has_any_disaster = no
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 20
+			NOT = { religion = zoroastrian }
+		}
+	}
+
+	can_stop = {
+		always = no
+	}
+
+	progress = {
+		modifier = {
+			factor = 1
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				NOT = { religion = zoroastrian }
+			}
+		}
+		modifier = {
+			factor = 1
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 40
+				NOT = { religion = zoroastrian }
+			}
+		}
+		modifier = {
+			factor = 1
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 60
+				NOT = { religion = zoroastrian }
+			}
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = -1 }
+		}
+		modifier = {
+			factor = 1
+			custom_trigger_tooltip = {
+				tooltip = pf_per_has_less_3_toh
+				NOT = {
+					has_global_modifier_value = {
+						which = tolerance_heathen
+						value = -3
+					}
+				}
+			}
+			
+		}
+		modifier = {
+			factor = 1
+			custom_trigger_tooltip = {
+				tooltip = pf_per_has_less_5_toh
+				NOT = {
+					has_global_modifier_value = {
+						which = tolerance_heathen
+						value = -5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			custom_trigger_tooltip = {
+				tooltip = pf_per_has_less_7_toh
+				NOT = {
+					has_global_modifier_value = {
+						which = tolerance_heathen
+						value = -7
+					}
+				}
+			}
+		}
+	}
+
+	can_end = {
+		stability = 1
+		all_subject_country = {
+			NOT = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 1
+					NOT = { religion = zoroastrian }
+				}
+			}
+		}
+		NOT = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1
+				NOT = { religion = zoroastrian }
+			}
+		}
+	}
+
+	modifier = {
+		tolerance_heathen = -5
+		relation_with_heretics = -200
+		global_unrest = 5
+	}
+
+	on_start = pf_per_events.77
+	on_end = pf_per_events.78
+
+	on_monthly = {
+		events = {}
+		random_events = {
+
+		}
+	}
+}

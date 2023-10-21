@@ -46,3 +46,20 @@ athenian_subjugation = {
 
 	diplomatic_reputation = -2
 }
+
+pf_per_upgraded_dotf = {
+	potential = {
+		tag = PER
+		has_country_flag = pf_per_upgraded_dotf_unlocked
+		religion = zoroastrian
+	}
+
+	trigger = {
+		is_defender_of_faith = yes
+	}
+
+	relation_with_same_religion = 40
+	reverse_relation_with_same_religion = 40
+	diplomatic_reputation = 2
+	church_power_modifier = 0.2
+}
