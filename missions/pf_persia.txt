@@ -2826,37 +2826,38 @@ pf_persian_empire_3 = {
 			custom_tooltip = pf_persian_empire_unlock_empire_tree_tt
 		}
 	}
-
-	pf_persian_empire_religious_question = {
-		icon = mission_unknown_mission
-		position = 17
-
-		required_missions = { pf_persian_empire_a_persian_empire }
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = pf_per_had_jawedism_20_years
-				had_country_flag = {
-					flag = pf_per_had_jawedism
-					days = 7300
-				}
-			}
-
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 20
-				NOT = { religion = zoroastrian }
-			}
-		}
-
-		effect = {
-			# Same event title so no TT needed
-			if = {
-				limit = { has_country_modifier = pf_per_embraced_jawedism }
-				country_event = { id = pf_per_events.118 }
-			}
-			else = {
-				country_event = { id = pf_per_events.119 }
-			}
-		}
-	}
 }
+
+#	pf_persian_empire_religious_question = {
+#		icon = mission_unknown_mission
+#		position = 17
+#
+#		required_missions = { pf_persian_empire_a_persian_empire }
+#
+#		trigger = {
+#			custom_trigger_tooltip = {
+#				tooltip = pf_per_had_jawedism_20_years
+#				had_country_flag = {
+#					flag = pf_per_had_jawedism
+#					days = 7300
+#				}
+#			}
+#
+#			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+#				value = 20
+#				NOT = { religion = zoroastrian }
+#			}
+#		}
+#
+#		effect = {
+#			# Same event title so no TT needed
+#			if = {
+#				limit = { has_country_modifier = pf_per_embraced_jawedism }
+#				country_event = { id = pf_per_events.118 }
+#			}
+#			else = {
+#				country_event = { id = pf_per_events.119 }
+#			}
+#		}
+#	}
+#}
