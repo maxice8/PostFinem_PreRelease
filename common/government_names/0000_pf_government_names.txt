@@ -814,6 +814,10 @@ slavic_rulers = {
 
 	trigger = {
 		culture_group = pagan_slavic
+		OR = {
+			NOT = { government = theocracy }
+			NOT = { government = republic }
+		}
 	}
 
 }

@@ -19,10 +19,10 @@
  pf_ksb_events.3a: "Damn those meddling [KSB.GetAdjective]!"
 
 #Capture of vorpommern provinces - kashubian side
- pf_ksb_events.4.t: "Slavic Expansion into Vorpommern"
+ pf_ksb_events.4.t: "Slavic Expansion into [vorpommern_area.GetName]"
  pf_ksb_events.4.d: "REPLACE_ME"
  pf_ksb_events.4a: "Huzzah! A people restored!"
- ksb_polabians_again_tt: "A province in the §YVorpommern§W area has changed it culture to §YPolabian§W and religion to §YSlavic§W"
+ ksb_polabians_again_tt: "A province in the §Y[vorpommern_area.GetName]§W area has changed it culture to §YPolabian§W and religion to §YSlavic§W"
 
 #Slavia birth of the republic
  pf_ksb_events.5.t: "Birth of the Republic"
@@ -79,7 +79,7 @@
  pf_ksb_events.13b: "On second thought, nevermind"
 
 #converting to czech event
- pf_ksb_events.14.t: "Czeci Expansion"
+ pf_ksb_events.14.t: "Czeci Expansion in [culture_conversion_province.GetName]"
  pf_ksb_events.14.d: "REPLACE_ME"
  pf_ksb_events.14a: "Ok"
 
@@ -94,3 +94,14 @@
  pf_ksb_events.17.d: "REPLACE_ME"
  pf_ksb_events.17a: "Support The Legitimist Side"
  pf_ksb_events.17b: "Support Caspar of Krakow"
+
+#Germans embrace irminovci cultre
+ pf_ksb_events.18.t: "Germans Embrace Slavic Culture in [culture_conversion_province.GetName]"
+ pf_ksb_events.18.d: "REPLACE_ME"
+ pf_ksb_events.18a: "Ok"
+
+
+#fall of Volyn - talk about how perun was centered here and now that volyn is gone the cult of perun has fallen
+ pf_ksb_events.19.t: "Fall of the Volkhvate of Volyn"
+ pf_ksb_events.19.d: "talk about how perun was centered here and now that volyn is gone the cult of perun has fallen"
+ pf_ksb_events.19a: "Svetovid stands supreme!"

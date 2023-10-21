@@ -23,12 +23,16 @@ pf_svetovid_theocracy = {
 	lock_level_when_selected = yes
 	allow_force_tributary = yes
 	potential = {
-		tag = KSB
+		OR = {
+			has_reform = pf_svetovid_theocracy
+			have_had_reform = pf_svetovid_theocracy
+		}
 	}
 	modifiers = {
 		manpower_in_true_faith_provinces = 0.25
 		church_influence_modifier = 0.2
 		devotion = -0.75
+		global_missionary_strength = 0.02
 	}
 	ai = {
 		factor = 0.5 #generic

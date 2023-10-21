@@ -302,9 +302,7 @@ ksb_3_slot = {
 				change_religion = slavic_religion
 				add_nationalism = -5
 			}
-			bohemia_area = { set_province_flag = converting_to_czech_flag } 
-			erzgebirge_area = { set_province_flag = converting_to_czech_flag } 
-			266 = { clr_province_flag = converting_to_czech_flag } 
+			set_country_flag = ksb_converting_ceci_flag
 			custom_tooltip = ksb_converting_to_czech_tt
 		}
 	}
@@ -452,6 +450,10 @@ ksb_4_slot = {
 		}
 
 		effect = {
+			south_slavia_region = {
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = empty_line_tt
 			if = {
 				limit = { has_country_flag = ksb_allied_sil } 
 				custom_tooltip = ksb_vassalize_silesia_yes_tt
@@ -661,15 +663,15 @@ ksb_5_slot = {
 		icon = mission_conquer_lithuania
 		position = 3
 		required_missions = { ksb_conquer_pinsk } 
-		provinces_to_highlight = {  
+		provinces_to_highlight = {
 			OR = {
 				area = samogitia_area
 				area = lithuania_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
-		} 
+		}
 
-		trigger = {  
+		trigger = {
 			samogitia_area = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
@@ -681,25 +683,21 @@ ksb_5_slot = {
 				}
 				type = all
 			}
-		} 
+		}
 
-		effect = {  
-			baltic_region = {
-				add_permanent_claim = ROOT
-			}
-		} 
+		effect = { baltic_region = { add_permanent_claim = ROOT }  } 
 	}
 
 	ksb_lords_of_baltic = {
 		icon = mission_conquer_baltic_region
 		position = 4
 		required_missions = { ksb_conquer_lithuania } 
-		provinces_to_highlight = {  
+		provinces_to_highlight = {
 			region = baltic_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
-		} 
+		}
 
-		trigger = {  
+		trigger = {
 			baltic_region = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
@@ -708,15 +706,9 @@ ksb_5_slot = {
 					religion = ROOT
 				}
 			}
-		} 
+		}
 
-		effect = {  
-			ZLT = {
-				every_owned_province = {
-					add_permanent_claim = ROOT
-				}
-			}
-		} 
+		effect = { ZLT = { every_owned_province = { add_permanent_claim = ROOT }  }  } 
 	}
 
 	ksb_end_zilant_raids = {
@@ -734,17 +726,11 @@ ksb_5_slot = {
 			4242 = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 
-		effect = {  
-			white_ruthenia_area = {
-				add_permanent_claim = ROOT
-			}
-			smolensk_area = {
-				add_permanent_claim = ROOT
-			}
-			pskov_area = {
-				add_permanent_claim = ROOT
-			}
-		} 
+		effect = {
+			white_ruthenia_area = { add_permanent_claim = ROOT } 
+			smolensk_area = { add_permanent_claim = ROOT } 
+			pskov_area = { add_permanent_claim = ROOT } 
+		}
 	}
 }
 sevksb_1_branch = {
@@ -771,15 +757,59 @@ sevksb_1_branch = {
 		required_missions = { ksb_restore_worship } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			has_estate_privilege = estate_church_pf_ksb_head_of_cult
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 60
+			}
+			4745 = {
+				has_great_project = {
+					type = svetovids_temple
+					tier = 2
+				}
+			}
+			legitimacy = 100
+		}
 
-		effect = {  } 
+		effect = {
+			change_government = theocracy
+			add_government_reform = pf_svetovid_theocracy
+		}
 	}
 
 	sev_convert_germania = {
 		icon = mission_placeholder
 		position = 6
 		required_missions = { sev_svetovids_most_faithful } 
+		provinces_to_highlight = {
+			region = north_german_region
+			NOT = { religion = ROOT } 
+			owned_by = ROOT
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = north_german_region
+				religion = slavic_religion
+			}
+		}
+
+		effect = {
+			add_government_power = {
+				mechanic_type = pf_svetovid_dedication_mechanic
+				power_type = pf_svetovid_dedication
+				value = 25
+			}
+			add_stability_or_adm_power = yes
+			add_estate_church_loyalty_effect = yes
+		}
+	}
+
+	sev_gdansk = {
+		icon = mission_pol_embellish_gdansk
+		position = 8
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -787,9 +817,10 @@ sevksb_1_branch = {
 		effect = {  } 
 	}
 
-	sev_gdansk = {
-		icon = mission_pol_embellish_gdansk
-		position = 10
+	sev_protect_coast = {
+		icon = pf_fertile_crescent
+		position = 9
+		required_missions = { sev_gdansk } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -799,8 +830,8 @@ sevksb_1_branch = {
 
 	sev_baltic_monopolies = {
 		icon = mission_baltic_empire
-		position = 12
-		required_missions = { sev_gdansk } 
+		position = 11
+		required_missions = { sev_protect_coast } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -830,11 +861,53 @@ sevksb_2_branch = {
 		icon = mission_se_along_the_river
 		position = 6
 		required_missions = { ksb_push_borderlands } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			region = north_german_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 45
+				region = north_german_region
+			}
+			north_rhine_area = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
 
-		effect = {  } 
+		effect = {
+			hidden_effect = {
+				random_owned_province = {
+					limit = { region = north_german_region } 
+					change_culture = irminovci
+					change_religion = slavic_religion
+				}
+				random_owned_province = {
+					limit = { region = north_german_region } 
+					change_culture = irminovci
+					change_religion = slavic_religion
+				}
+				random_owned_province = {
+					limit = { region = north_german_region } 
+					change_culture = irminovci
+					change_religion = slavic_religion
+				}
+				random_owned_province = {
+					limit = { region = north_german_region } 
+					change_culture = irminovci
+					change_religion = slavic_religion
+				}
+				random_owned_province = {
+					limit = { region = north_german_region } 
+					change_culture = irminovci
+					change_religion = slavic_religion
+				}
+			}
+			custom_tooltip = ksb_5_provinces_irminovci_convert_tt
+			add_country_modifier = {
+				name = "ksb_spreading_slavic_culture"
+				duration = 10950
+			}
+		}
 	}
 
 	sev_lords_of_germania = {
@@ -845,11 +918,37 @@ sevksb_2_branch = {
 			sev_to_the_rhine
 			sev_lombardy_falls
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			AND = {
+				OR = {
+					region = south_german_region
+					region = north_german_region
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				culture_group = pagan_slavic
+				religion = slavic_religion
+				OR = {
+					region = north_german_region
+					region = south_german_region
+				}
+			}
+		}
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = ksb_irminovci_converting_tt
+			set_country_flag = ksb_irminovci_converting_flag
+			add_country_modifier = {
+				name = "ksb_lord_of_germania"
+				duration = -1
+			}
+		}
 	}
 }
 sevksb_3_branch = {
@@ -874,33 +973,108 @@ sevksb_3_branch = {
 		icon = alpine_fortifications
 		position = 5
 		required_missions = { ksb_lands_of_czech } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = upper_bavaria_area
+				area = lower_bavaria_area
+				area = east_bavaria_area
+				area = upper_franconia_area
+				area = franconia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
 
-		trigger = {  } 
+		trigger = {
+			upper_bavaria_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			lower_bavaria_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			east_bavaria_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			upper_franconia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			franconia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
 
-		effect = {  } 
+		effect = {
+			south_german_region = { add_permanent_claim = ROOT } 
+			add_country_modifier = {
+				name = "ksb_break_the_lombards"
+				duration = 10950
+			}
+		}
 	}
 
 	sev_lombardy_falls = {
 		icon = polish_diplomacy
 		position = 6
 		required_missions = { sev_conquer_south } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			region = south_german_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				region = south_german_region
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				province_has_current_tech_fort_trigger = yes
+				region = south_german_region
+			}
+		}
 
-		effect = {  } 
+		effect = {
+			every_owned_province = {
+				limit = {
+					region = south_german_region
+					province_has_current_tech_fort_trigger = yes
+				}
+				add_province_modifier = {
+					name = "ksb_mountain_bastions"
+					duration = -1
+				}
+			}
+		}
 	}
 
 	sev_mountain_crossing = {
 		icon = alpine_defenses
 		position = 7
 		required_missions = { sev_volhynian_conquest } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			area = transylvania_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			transylvania_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = ksb_drakovan_defensiveness
+				duration = -1
+			}
+		} 
 	}
 
 	sev_lord_of_slavia = {
@@ -910,11 +1084,40 @@ sevksb_3_branch = {
 			sev_mountain_crossing
 			sev_between_seas
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			culture_group = pagan_slavic
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			all_province = {
+				culture_group = pagan_slavic
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = ksb_lord_of_all_slavs
+				duration = -1
+			}
+			crimea_region = {
+				add_permanent_claim = ROOT
+			}
+			280 = {
+				add_core = ROOT
+			}
+			if = {
+				limit = {
+					NOT = {
+						mission_completed = sev_wild_frontier
+					}
+				}
+				ruthenia_region = {
+					add_permanent_claim = ROOT
+				}
+			}
+		} 
 	}
 }
 sevksb_4_branch = {
@@ -939,22 +1142,65 @@ sevksb_4_branch = {
 		icon = mission_advance_to_the_dnieper
 		position = 6
 		required_missions = { ksb_united_severoslavia } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				area = red_ruthenia_area
+				area = volhynia_area
+				province_id = 281
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			red_ruthenia_area = {
+				country_or_non_sovereign_subject_holds = root
+				type = all
+			}
+			volhynia_area = {
+				country_or_non_sovereign_subject_holds = root
+				type = all
+			}
+			owns_or_non_sovereign_subject_of = 281
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = ksb_great_march_south
+				duration = 7300
+			}
+			every_province = {
+				limit = {
+					culture_group = pagan_slavic
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	sev_between_seas = {
 		icon = mission_establish_high_seas_navy
 		position = 7
 		required_missions = { sev_volhynian_conquest } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			area = moldavia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			moldavia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			1756 = {
+				add_province_modifier = {
+					name = ksb_mouth_of_the_danube
+					duration = -1
+				}
+			}
+		} 
 	}
 }
 sevksb_5_branch = {
@@ -979,9 +1225,29 @@ sevksb_5_branch = {
 		icon = mission_the_caucasus_rus
 		position = 7
 		required_missions = { ksb_end_zilant_raids } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = smolensk_area
+				area = pskov_area
+				area = white_ruthenia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
 
-		trigger = {  } 
+		trigger = {
+			smolensk_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			pskov_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			white_ruthenia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
 
 		effect = {  } 
 	}
@@ -1019,20 +1285,9 @@ slvksb_1_branch = {
 		}
 	}
 
-	slv_enforce_culture = {
-		icon = the_great_school
-		position = 8
-		required_missions = { sev_lords_of_germania } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
 	slv_2_seas_2_fleets = {
 		icon = crusader_fleet
-		position = 13
+		position = 12
 		required_missions = { sev_baltic_monopolies } 
 		provinces_to_highlight = {  } 
 

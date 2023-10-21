@@ -38,3 +38,46 @@ lechia_supported_by_kashubia = {
 	discipline = 0.05
 	siege_ability = 0.2
 }
+
+ksb_break_the_lombards = {
+	siege_ability = 0.2
+}
+
+ksb_spreading_slavic_culture = {
+	culture_conversion_cost = -0.33
+}
+
+ksb_mountain_bastions = {
+	local_defensiveness = 0.5
+}
+
+ksb_lord_of_germania = {
+	monthly_splendor = 1
+	prestige = 1
+	num_accepted_cultures = 3
+	army_tradition_decay = -0.01
+}
+
+ksb_great_march_south = {
+	land_morale = 0.1
+	movement_speed = 0.1
+
+}
+
+ksb_mouth_of_the_danube = {
+	local_center_of_trade_upgrade_cost = -0.5
+	caravan_power = 0.2
+	province_trade_power_value = 20
+}
+
+ksb_drakovan_defensiveness = {
+	defensiveness = 0.2
+	garrison_growth = 0.2
+}
+
+ksb_lord_of_all_slavs = {
+	monthly_splendor = 1
+	prestige = 1
+	development_cost = -0.05
+	manpower_in_culture_group_provinces = 0.2
+}

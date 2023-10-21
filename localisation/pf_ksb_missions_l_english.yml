@@ -38,11 +38,11 @@
  ksb_conquer_lithuania_title:0 "Conquer Lithuania"
  ksb_conquer_lithuania_desc:0 ""
 
- ksb_end_zilant_raids_title:0 "End Zilant Raids"
- ksb_end_zilant_raids_desc:0 ""
-
  ksb_lords_of_baltic_title:0 "Lords of the Balts"
  ksb_lords_of_baltic_desc:0 ""
+
+ ksb_end_zilant_raids_title:0 "End Zilant Raids"
+ ksb_end_zilant_raids_desc:0 ""
 
  sev_svetovids_most_faithful_title:0 "Svetovid's Strongest"
  sev_svetovids_most_faithful_desc:0 ""
@@ -52,6 +52,9 @@
 
  sev_gdansk_title:0 "Port of Gdansk"
  sev_gdansk_desc:0 ""
+
+ sev_protect_coast_title:0 "Protect the Coast"
+ sev_protect_coast_desc:0 ""
 
  sev_baltic_monopolies_title:0 "Baltic Monopolies"
  sev_baltic_monopolies_desc:0 ""
@@ -89,9 +92,6 @@
  sev_endless_fields_title:0 "Endless Fields of [Root.GetName]"
  sev_endless_fields_desc:0 ""
 
- slv_enforce_culture_title:0 "Enforce Slavic Culture"
- slv_enforce_culture_desc:0 ""
-
  slv_2_seas_2_fleets_title:0 "Two Seas, Two Fleets"
  slv_2_seas_2_fleets_desc:0 ""
 
@@ -126,8 +126,10 @@
  slv_rusnok_lands_desc:0 ""
 
 
+ slv_enforce_culture_title:0 "Enforce Slavic Culture"
+ slv_enforce_culture_desc:0 ""
  ksb_reformed_the_church:0 "We will gain access to the clergy estate privilege §YHead of the Cult of Svetovid§!"
- ksb_release_polabia_tt:0 "We will release @POB §YPolabia§! in all mainland provinces in the §YVorpommern§! area"
+ ksb_release_polabia_tt:0 "We will release @POB §YPolabia§! in all mainland provinces in the §Y[vorpommern_area.GetName]§! area"
  ksb_yes_polabia:0 "£yes£ If @POB §Y[POB.GetName]§! is our subject:"
  ksb_no_polabia:0 "£no£ If @POB §Y[POB.GetName]§! is our subject:"
  ksb_otherwise_yes:0 "£yes£ Otherwise:"
@@ -154,3 +156,6 @@
  PF_KSB_DEV_IN_MALOPOLSKA_TT:0 "Distribute 3 §YManpower§! development in the §YMalopolska§! area"
  PF_KSB_DEV_IN_SANDOMIERZ_TT:0 "Distribute 3 §YManpower§! development in the §YSandomierz§! area"
  pf_ksb_effects_change_tt:0 "The effects of this mission will change based on the above mission"
+ ksb_irminovci_converting_tt:0 "Our germanic provinces in the §YNorth Germania§! and §YSudwaldia§! will now begin changing culture to §YIrminovci§! over time"
+ ksb_5_provinces_irminovci_convert_tt:0 "§G5§! provinces in the §YNorth Germania§! region will convert to §YIrminovci§! culture and §YSlavic§! religion"
+ ksb_to_be_added_tt:0 "TO BE ADDED WHEN RELIGIOUS MECHANICS"

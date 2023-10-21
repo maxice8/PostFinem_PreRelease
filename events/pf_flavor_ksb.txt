@@ -411,36 +411,40 @@ country_event = {
 	immediate = {
 		random_owned_province = {
 			limit = {
-				AND = {
-					OR = {
-						area = erzgebirge_area
-						area = bohemia_area
-					}
-					has_province_flag = converting_to_czech_flag
-				}
-			}
-			save_event_target_as = czech_conversion_province
-		}
-	}
-	trigger = {
-		any_owned_province = {
-			AND = {
 				OR = {
 					area = erzgebirge_area
 					area = bohemia_area
 				}
-				has_province_flag = converting_to_czech_flag
+				OR = {
+					culture_group = germanic_carpathian
+					culture_group = old_germanic
+				}
 			}
+			save_event_target_as = culture_conversion_province
 		}
 	}
-	mean_time_to_happen = {
-		days = 500
+	trigger = {
+		any_owned_province = {
+			OR = {
+				area = erzgebirge_area
+				area = bohemia_area
+			}
+			OR = {
+				culture_group = germanic_carpathian
+				culture_group = old_germanic
+			}
+		}
+		has_country_flag = ksb_converting_ceci_flag
 	}
+	mean_time_to_happen = {
+		months = 120
+	}
+	
 	option = {
 		name = pf_ksb_events.14a
-		event_target:czech_conversion_province = {
+		event_target:culture_conversion_province = {
 			change_culture = ceci
-			change_religion = slavic_religion
+		change_religion = slavic_religion
 		}
 	}
 }
@@ -530,3 +534,66 @@ country_event = {
 	}
 }
 
+#spread of Irminovci culture
+country_event = {
+	id = pf_ksb_events.18
+	title = pf_ksb_events.18.t
+	desc = pf_ksb_events.18.d
+	picture = CZECH_NOBLES_eventPicture
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						region = north_german_region
+						region = south_german_region
+					}
+					OR = {
+						culture_group = germanic_carpathian
+						culture_group = old_germanic
+					}
+				}
+				save_event_target_as = culture_conversion_province
+			}
+		}
+	}
+	trigger = {
+		any_owned_province = {
+			OR = {
+				region = north_german_region
+				region = south_german_region
+			}
+			OR = {
+				culture_group = germanic_carpathian
+				culture_group = old_germanic
+			}
+		}
+		has_country_flag = ksb_irminovci_converting_flag
+	}
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = pf_ksb_events.18a
+		event_target:culture_conversion_province = {
+			change_culture = irminovci
+			change_religion = slavic_religion
+		}
+	}
+}
+
+#Volkhvate of Volyn event
+country_event = {
+	id = pf_ksb_events.19
+	title = pf_ksb_events.19.t
+	desc = pf_ksb_events.19.d
+	picture = ANGRY_SHAMANS_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = pf_ksb_events.18a
+		custom_tooltip = ksb_to_be_added_tt
+		#Add stuff when religious mechanics get added
+	}
+}
