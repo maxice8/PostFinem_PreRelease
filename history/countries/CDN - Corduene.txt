@@ -5,3 +5,27 @@ technology_group = eastern
 religion = hellenic
 capital = 418
 primary_culture = sophi
+
+1444.11.11 = { 
+	monarch = { 
+		name = "Ignatios"
+		dynasty = "Apokapis"
+		ADM = 1
+		claim = 95
+		DIP = 2
+		MIL = 5
+		culture = sophi
+		birth_date = 1404.1.19
+	}
+	heir = { 
+		name = "Pyrros"
+		dynasty = "Apokapis"
+		ADM = 2
+		claim = 95
+		DIP = 3
+		MIL = 3
+		culture = sophi
+		birth_date = 1422.6.19
+		death_date = 1445.1.1
+	}
+}

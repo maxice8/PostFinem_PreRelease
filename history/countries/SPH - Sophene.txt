@@ -5,3 +5,18 @@ technology_group = eastern
 capital = 377
 religion = hellenic
 primary_culture = sophi
+
+add_army_professionalism = 0.1
+
+1444.11.11 = { 
+	monarch = { 
+		name = "Maximus"
+		dynasty = "Bekkos"
+		ADM = 3
+		claim = 80
+		DIP = 5
+		MIL = 2
+		culture = sophi
+		birth_date = 1399.3.17
+	}
+}
