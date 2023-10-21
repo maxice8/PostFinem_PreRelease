@@ -859,6 +859,7 @@ punic_group = {
 	punic_religion = {
 		icon = 33
 		color = { 185 55 225 }
+		hre_religion = yes
 		country = {
 			trade_efficiency = 0.1
 			diplomatic_reputation = 1
@@ -878,6 +879,7 @@ punic_group = {
 	
 	romana = {
 		icon = 35
+		hre_heretic_religion = yes
 		color = { 220 70 70 }
 		country = {
 			innovativeness_gain = 0.5
