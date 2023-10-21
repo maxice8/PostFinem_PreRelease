@@ -308,6 +308,103 @@ romuva_clear_aspects_scripted_effect = {
 	}
 }
 
+pf_per_release_satrapies_scripted_effect = {
+	country_event = { id = pf_per_events.38 }
+	country_event = { id = pf_per_events.39 }
+	country_event = { id = pf_per_events.40 }
+	country_event = { id = pf_per_events.41 }
+	country_event = { id = pf_per_events.42 }
+	country_event = { id = pf_per_events.43 }
+	country_event = { id = pf_per_events.44 }
+	country_event = { id = pf_per_events.45 }
+	country_event = { id = pf_per_events.46 }
+	country_event = { id = pf_per_events.47 }
+	country_event = { id = pf_per_events.48 }
+	country_event = { id = pf_per_events.49 }
+	country_event = { id = pf_per_events.50 }
+	country_event = { id = pf_per_events.51 }
+	country_event = { id = pf_per_events.52 }
+	country_event = { id = pf_per_events.53 }
+	country_event = { id = pf_per_events.54 }
+	country_event = { id = pf_per_events.55 }
+	country_event = { id = pf_per_events.56 }
+	country_event = { id = pf_per_events.57 }
+	country_event = { id = pf_per_events.58 }
+	country_event = { id = pf_per_events.59 }
+	country_event = { id = pf_per_events.60 }
+	country_event = { id = pf_per_events.61 }
+	country_event = { id = pf_per_events.62 }
+	country_event = { id = pf_per_events.63 }
+}
+
+pf_on_tax_building_built_effect = {
+	if = {
+		limit = {
+			has_saved_global_event_target = pf_per_et_province_to_build_tax
+			owner = {
+				is_subject_of = PER
+			}
+			event_target:pf_per_et_province_to_build_tax = { province_id = ROOT }
+		}
+		owner = {
+			overlord = {
+				country_event = { id = pf_per_events.73 }
+			}
+		}
+	}
+}
+
+pf_on_trade_building_built_effect = {
+	if = {
+		limit = {
+			has_saved_global_event_target = pf_per_et_province_to_build_trade
+			owner = {
+				is_subject_of = PER
+			}
+			event_target:pf_per_et_province_to_build_trade = { province_id = ROOT }
+		}
+		owner = {
+			overlord = {
+				country_event = { id = pf_per_events.74 }
+			}
+		}
+	}
+}
+
+pf_on_production_building_built_effect = {
+	if = {
+		limit = {
+			has_saved_global_event_target = pf_per_et_province_to_build_production
+			owner = {
+				is_subject_of = PER
+			}
+			event_target:pf_per_et_province_to_build_production = { province_id = ROOT }
+		}
+		owner = {
+			overlord = {
+				country_event = { id = pf_per_events.75 }
+			}
+		}
+	}
+}
+
+pf_on_manpower_building_built_effect = {
+	if = {
+		limit = {
+			has_saved_global_event_target = pf_per_et_province_to_build_manpower
+			owner = {
+				is_subject_of = PER
+			}
+			event_target:pf_per_et_province_to_build_manpower = { province_id = ROOT }
+		}
+		owner = {
+			overlord = {
+				country_event = { id = pf_per_events.76 }
+			}
+		}
+	}
+}
+
 #neterist effects
 pf_egypt_neterist_communities_province_modifiers_global = {
 	if = {
@@ -336,6 +433,9 @@ pf_egypt_neterist_communities_province_modifiers_global = {
 		}
 	}
 }
+
+
+
 pf_egypt_neterist_communities_province_modifiers_local = {
 	if = {
 		limit = {
@@ -362,6 +462,7 @@ pf_egypt_neterist_communities_province_modifiers_local = {
 		remove_province_modifier = pf_egypt_neterist_communities
 	}
 }
+
 pf_egypt_update_relations_neterist = {
 	if = {
 		limit = {
@@ -400,6 +501,7 @@ pf_egypt_update_relations_neterist = {
 		}
 	}
 }
+
 pf_egypt_update_relations_non_neterist = {
 	if = {
 		limit = {

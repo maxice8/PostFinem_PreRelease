@@ -14,7 +14,7 @@ pf_per_centralization_mechanic = {
 
 			scaled_modifier = {
 				modifier = {
-					reduced_liberty_desire = -50
+					reduced_liberty_desire = -100
 					global_tax_modifier = 0.2
 				}
 			}
@@ -26,8 +26,17 @@ pf_per_centralization_mechanic = {
 					global_tax_modifier = -0.5
 				}
 			}
+
+			on_max_reached = {
+				country_event = { id = pf_per_events.14 }
+			}
+
+			on_min_reached = {
+				country_event = { id = pf_per_events.13 }
+			}
 		}
 	}
+
 	interactions = {
 		pf_per_centralization_decrease = {
 			cost_type = pf_per_centralization
@@ -52,11 +61,11 @@ pf_per_centralization_mechanic = {
 
 			cooldown_years = 10
 			ai_chance = {
-				factor = 0.1
+				factor = 1
 				modifier = {
-					factor = 100
-					any_subject_country = {
-						liberty_desire = 50
+					factor = 0
+					all_subject_country = {
+						NOT = { liberty_desire = 50 }
 					}
 				}
 			}
@@ -79,11 +88,11 @@ pf_per_centralization_mechanic = {
 			}
 			cooldown_years = 10
 			ai_chance = {
-				factor = 0.1
+				factor = 1
 				modifier = {
-					factor = 100
-					all_subject_country = {
-						NOT = { liberty_desire = 20 }
+					factor = 0
+					any_subject_country = {
+						liberty_desire = 20
 					}
 				}
 			}
