@@ -427,3 +427,126 @@ estate_burghers_pf_league_agreements = {
 		factor = 100
 	}
 }
+
+estate_burghers_pf_per_economical_boost = {
+	icon = privilege_monopoly
+	loyalty = 0.1
+	influence = 0.05
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	is_valid = {
+		has_dlc = "Domination"
+		has_country_flag = pf_per_unlocked_upgraded_trade_privilege
+	}
+	can_select = {
+		if = {
+			limit = { has_estate_privilege = estate_vaisyas_economical_boost }
+			NOT = { has_estate_privilege = estate_vaisyas_economical_boost }
+		}
+		if = {
+			limit = { has_estate_privilege = estate_jains_economical_boost }
+			NOT = { has_estate_privilege = estate_jains_economical_boost }
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_pf_per_economical_boost_tt
+		tooltip = {
+			add_country_modifier = {
+				name = pf_per_economical_boost_modifier
+				duration = -1
+				desc = UNTIL_REVOKED
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_pf_per_economical_boost_tt
+		tooltip = {
+			add_country_modifier = {
+				name = pf_per_economical_boost_modifier
+				duration = -1
+				desc = UNTIL_REVOKED
+			}
+		}
+	}
+
+	influence_scaled_conditional_modifier = {	#Modifier that are applied if the specified conditions are true. At 100% Influence you gain 100% of the modifier.
+		modifier = {
+			placed_merchant_power = 20
+			global_prov_trade_power_modifier = 0.5
+			mercantilism_cost = -0.5
+		}
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_burghers_pf_per_mountain_development = {
+	icon = privilege_dev_cost_desert
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		OR = {
+			has_mission = pf_per_develop_mountain_cities
+			has_unlocked_estate_privilege = {
+				estate_privilege = estate_burghers_pf_per_mountain_development
+			}
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = has_unlocked_estate_burghers_pf_per_mountain_development
+			has_unlocked_estate_privilege = {
+				estate_privilege = estate_burghers_pf_per_mountain_development
+			}
+		}
+		any_owned_province = {
+			has_terrain = mountain
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_pf_per_mountain_development_tt
+		tooltip = {
+			add_province_modifier = {
+				name = pf_per_mountain_development
+				duration = -1
+				desc = UNTIL_REVOKED
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_terrain = mountain
+				}
+				add_province_modifier = {
+					name = pf_per_mountain_development
+					duration = -1
+				}
+			}		
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_pf_per_mountain_development_rt
+		tooltip = {
+			remove_province_modifier = pf_per_mountain_development
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = pf_per_mountain_development
+				}
+				remove_province_modifier = pf_per_mountain_development
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}

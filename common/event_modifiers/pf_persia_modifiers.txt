@@ -1,0 +1,368 @@
+pf_per_satrapies_granted_concessions = {
+	reduced_liberty_desire = 10
+}
+
+pf_per_satrapies_seized_privileges = {
+	reduced_liberty_desire = -20
+}
+
+pf_per_satrapy_compromised = {
+	liberty_desire = -10
+}
+
+pf_per_satrapy_refused = {
+	liberty_desire = 10
+}
+
+pf_per_satrapy_collaborated = {
+	liberty_desire = 10
+	global_tax_income = 24
+}
+
+pf_per_won_satrapy_revolt = {
+	reduced_liberty_desire = 10
+	prestige = 2
+	devotion = 1
+}
+
+pf_per_drew_satrapy_revolt = {
+	reduced_liberty_desire = 10
+}
+
+pf_per_lost_satrapy_revolt = {
+	prestige = -5
+	devotion = -5
+	land_morale = -0.2
+}
+
+pf_per_satrapy_appealed_to_religion = {
+	reduced_liberty_desire = 10
+}
+
+pf_per_ready_for_war = {
+	manpower_recovery_speed = 0.2
+	merc_maintenance_modifier = -0.2
+}
+
+pf_per_asked_for_help = {
+	diplomatic_reputation = 1
+}
+
+pf_per_ally_talked = {
+	diplomatic_reputation = 1
+}
+
+pf_per_satrapy_intimidated = {
+	reduced_liberty_desire = 10
+}
+
+pf_per_satrapy_divided = {
+	reduced_liberty_desire = 10
+}
+
+pf_per_hormuz_toll = {
+	province_trade_power_value = 20
+}
+
+pf_per_trade_boom = {
+	trade_efficiency = 0.1
+}
+
+pf_per_secure_from_pirates = {
+	privateer_efficiency = -0.9
+}
+
+pf_per_secured_gulf = {
+	trade_value_modifier = 0.1
+}
+
+pf_per_baghdad_reborn = {
+	local_development_cost = -0.15
+	local_build_cost = -0.2
+}
+
+pf_per_destroyed_seleucia = {
+	prestige = 1
+}
+
+pf_per_restored_baghdad = {
+	local_development_cost = -0.15
+	local_build_cost = -0.2
+	province_trade_power_modifier = 0.2
+	trade_goods_size_modifier = 0.2
+}
+
+pf_per_rule_in_tabriz = {
+	local_development_cost = -0.1
+	local_prosperity_growth = 0.01
+	local_unrest = -5
+}
+
+pf_per_established_control = {
+	reduced_liberty_desire = 10
+}
+
+pf_per_into_india = {
+	manpower_recovery_speed = 0.2
+	land_morale = 0.05
+}
+
+pf_per_multan_conquered = {
+	province_trade_power_modifier = 0.2
+	trade_goods_size_modifier = 0.1
+}
+
+pf_per_assisted_satrapies = {
+	vassal_income = 0.15
+}
+
+pf_per_good_wall_fort = {
+	local_defensiveness = 0.2
+}
+
+pf_per_liberated_from_heresy = {
+	local_tax_modifier = 0.2
+	local_unrest = -5
+}
+
+pf_per_ignored_satrapy = {
+	liberty_desire = 10
+}
+
+pf_per_overlord_rejected_demand = {
+	liberty_desire = 10
+}
+
+pf_per_overlord_rejected_demand_reduced = {
+	liberty_desire = 5
+}
+
+pf_per_overlord_failed_demand = {
+	liberty_desire = 20
+}
+
+pf_per_overlord_failed_demand_reduced = {
+	liberty_desire = 10
+}
+
+pf_per_overlord_filled_demand = {
+	liberty_desire = -10
+}
+
+pf_satrapy_expansion_plan_complete = {
+	development_cost = -0.2
+	global_unrest = -2
+	liberty_desire = -10
+}
+
+pf_per_following_the_plan = {
+	reduced_liberty_desire = 10
+}
+
+pf_per_faithful_trading_port = {
+	province_trade_power_modifier = 0.25
+}
+
+pf_per_trading_in_persia = {
+	trade_efficiency = 0.1
+	global_own_trade_power = 0.2
+}
+
+pf_per_economical_boost_modifier = {
+	placed_merchant_power = 20
+	global_prov_trade_power_modifier = 0.5
+	mercantilism_cost = -0.5
+}
+
+pf_per_defended_mountain_fort = {
+	local_defensiveness = 0.2
+}
+
+pf_per_mountain_development = {
+	local_development_cost = -0.25
+}
+
+pf_per_embraced_renaissance = {
+	development_cost = -0.1
+	technology_cost = -0.1
+}
+
+pf_per_satrapy_investment_boom = {
+	global_trade_goods_size_modifier = 0.1
+}
+
+pf_per_continued_expansion = {
+	reduced_liberty_desire = 10
+}
+
+pf_per_united_in_faith = {
+	reduced_liberty_desire = 10
+	warscore_cost_vs_other_religion = -0.1
+}
+
+pf_per_upgrade_dotf_modifier = {
+	relation_with_same_religion = 40
+	reverse_relation_with_same_religion = 40
+	diplomatic_reputation = 2
+	church_power_modifier = 0.2
+}
+
+pf_per_persian_arquebus_modifier = {
+	infantry_fire = 0.2
+}
+
+pf_per_new_siege_tech = {
+	siege_ability = 0.2
+	mil_tech_cost_modifier = -0.1
+}
+
+pf_per_conscripting_from_satrapies = {
+	vassal_manpower_bonus = 1
+	vassal_forcelimit_bonus = 1
+}
+
+pf_per_might_of_the_persian_army = {
+	discipline = 0.05
+	land_forcelimit_modifier = 0.2
+}
+
+pf_per_rule_in_india = {
+	production_efficiency = 0.1
+	global_unrest = -5
+}
+
+pf_per_heretics_expelled = {
+	devotion = 2
+	same_religion_advisor_cost = -0.1
+}
+
+pf_per_zoroastrian_hegemon = {
+	prestige = 1
+	monthly_splendor = 1
+}
+
+pf_per_satrapies_onboard = {
+	reduced_liberty_desire = 10
+}
+
+pf_per_persia_prospering = {
+	development_cost = -0.1
+	global_trade_goods_size_modifier = 0.1
+}
+
+pf_per_fortified_border_fort = {
+	local_defensiveness = 0.2
+	local_garrison_size = 0.2
+}
+
+pf_per_modern_governing = {
+	can_fabricate_for_vassals = yes
+	yearly_corruption = -0.05
+}
+
+pf_per_bulwark_satrapy = {
+	fort_maintenance_modifier = -0.5
+	defensiveness = 0.2
+	own_territory_dice_roll_bonus = 1
+}
+
+pf_per_silk_road_city = {
+	trade_goods_size_modifier = 0.1
+	province_trade_power_modifier = 0.5
+}
+
+pf_per_listened_to_the_satrapies = {
+	reduced_liberty_desire = 15
+	devotion = -1
+	prestige = -1
+}
+
+pf_per_academy_babylon = {
+	innovativeness_gain = 0.2
+	technology_cost = -0.025
+}
+
+pf_per_glory_to_persia = {
+	ae_impact = -0.2
+	warscore_cost_vs_other_religion = -0.25
+	prestige_from_land = 0.5
+}
+
+pf_per_cautious_war = {
+	morale_damage_received = -0.05
+	global_manpower = 0.1
+	war_exhaustion = -0.10
+}
+
+pf_per_embraced_jawedism = {
+	tolerance_heathen = -3
+	global_missionary_strength = 0.02
+	relation_with_heretics = -100
+}
+
+pf_per_rejected_jawedism = {
+	tolerance_heathen = 1
+	tolerance_of_heathens_capacity = 1
+	diplomatic_reputation = 1
+}
+
+pf_per_excellent_trader = {
+	trade_efficiency = 0.1
+	placed_merchant_power = 5
+}
+
+pf_per_nobles_tax_cut = {
+	global_tax_modifier = -0.1
+	global_unrest = -2
+}
+
+pf_per_free_merchants = {
+	trade_steering = 0.2
+	global_trade_power = 0.1
+	burghers_loyalty_modifier = 0.1
+	burghers_influence_modifier = 0.2
+}
+
+pf_per_restricted_merchants = {
+	burghers_influence_modifier = -0.1
+	burghers_loyalty_modifier = -0.1
+	global_trade_power = -0.1
+}
+
+pf_per_exploitative_merchants = {
+	burghers_influence_modifier = 0.3
+	trade_efficiency = -0.1
+	global_trade_power = -0.2
+	global_unrest = 5
+}
+
+pf_per_persian_inquisition = {
+	global_missionary_strength = 0.04
+	missionaries = 1
+	tolerance_own = 2
+}
+
+pf_per_persian_tolerance = {
+	tolerance_heathen = 3
+	tolerance_of_heathens_capacity = 3
+	tolerance_own = -2
+	diplomatic_reputation = 2
+}
+
+pf_per_aggressive_foreign_policy = {
+	warscore_cost_vs_other_religion = -0.1
+	unjustified_demands = -0.2
+}
+
+pf_per_diplomatic_foreign_policy = {
+	improve_relation_modifier = 0.2
+	ae_impact = -0.1
+}
+
+pf_per_successful_inquisition = {
+	global_missionary_strength = 0.03
+	missionaries = 1
+	tolerance_own = 2
+	tolerance_heathen = -3
+	devotion = 1
+}

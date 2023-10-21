@@ -596,6 +596,7 @@ republic = {
 				# pf = [[[
 				pf_lagr_republic
 				pf_sardinian_league_reform
+				pf_syncretic_state
 				pf_rabim_qahal
 				icelandic_althingi_reform
 				# ]]]
@@ -1207,6 +1208,9 @@ theocracy = {
 			reforms = {
 				# pf [[[
 				pf_persian_satrapy
+				pf_collapsed_zoroastrian_theocracy
+				pf_centralized_zoroastrian_theocracy
+				pf_zoroastrian_theocracy_empire
 				pf_athens_archon
 				order_of_the_shadows_reform
 				# ]]]
@@ -1295,6 +1299,7 @@ theocracy = {
 				head_of_the_patriarchy_reform
 				anglican_state_church_reform
 				# pf [[[
+				pf_persian_zealotry_reform
 				pf_punic_festivals_reform
 				# ]]]
 			}

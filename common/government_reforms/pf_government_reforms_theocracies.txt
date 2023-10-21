@@ -22,6 +22,19 @@ pf_persian_satrapy = {
 		manpower_in_true_faith_provinces = 0.25
 	}
 
+	effect = {
+		hidden_effect = {
+			set_country_flag = has_eyalet_color # Enables decision to restore color
+			set_country_flag = has_overriden_color_flag
+			change_country_color = {
+				# Usually it would be country = overlord so the Satrapy
+				# has the same color as the overlord, but in PF the Satrapies
+				# have a lighter shade of Persia's color
+				color = { 255 186 22 }
+			}
+		}
+	}
+
 	# This restores the colors of countries that broke free
 	removed_effect = {
 		hidden_effect = {
@@ -46,19 +59,111 @@ zoroastrian_theocracy_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		tag = PER
+		NOT = { has_country_flag = pf_per_centralization_collapsed }
+		NOT = { has_country_flag = pf_per_centralization_completed }
 	}
 	valid_for_nation_designer = yes
 	nation_designer_trigger = {
 		religion_group = zoroastrian_group
 	}
 	nation_designer_cost = 10
+
+	valid_for_new_country = no
+	lock_level_when_selected = yes
 	modifiers = {
 		church_privilege_slots = 2
 		church_influence_modifier = 0.1
 		manpower_in_accepted_culture_provinces = 0.15
 		vassal_income = -0.1
+		governing_capacity = 100
 	}
+	fixed_rank = 2
 	government_abilities = { pf_per_centralization_mechanic }
+}
+
+pf_collapsed_zoroastrian_theocracy = {
+	icon = "zoroastrian_theocracy"
+	potential = {
+		tag = PER
+		has_country_flag = pf_per_centralization_collapsed
+	}
+	valid_for_nation_designer = no
+	valid_for_new_country = no
+	lock_level_when_selected = yes
+
+	modifiers = {
+		church_privilege_slots = 2
+		church_influence_modifier = 0.2
+		stability_cost_modifier = 0.5
+		governing_capacity_modifier = -0.5
+		min_autonomy = 25
+	}
+	fixed_rank = 1
+}
+
+pf_centralized_zoroastrian_theocracy = {
+	icon = "zoroastrian_theocracy"
+	allow_normal_conversion = yes
+	potential = {
+		tag = PER
+		has_country_flag = pf_per_centralization_completed
+		NOT = { has_country_flag = pf_per_persian_empire }
+	}
+	valid_for_nation_designer = no
+	valid_for_new_country = no
+	lock_level_when_selected = yes
+
+	modifiers = {
+		church_privilege_slots = 2
+		church_influence_modifier = 0.1
+		manpower_in_accepted_culture_provinces = 0.15
+		global_tax_modifier = 0.2
+		reduced_liberty_desire = -50
+		governing_capacity = 100
+	}
+	fixed_rank = 2
+	custom_attributes = {
+		pf_per_can_create_satrapies = yes
+	}
+}
+
+pf_zoroastrian_theocracy_empire = {
+	icon = "zoroastrian_theocracy"
+	allow_normal_conversion = yes
+	potential = {
+		tag = PER
+		has_country_flag = pf_per_persian_empire
+	}
+	valid_for_nation_designer = no
+	valid_for_new_country = no
+	lock_level_when_selected = yes
+
+	modifiers = {
+		church_privilege_slots = 2
+		manpower_in_accepted_culture_provinces = 0.25
+		global_tax_modifier = 0.2
+		governing_capacity = 200
+	}
+	fixed_rank = 3
+	custom_attributes = {
+		pf_per_can_create_satrapies = yes
+		pf_per_can_grand_persian_offensive = yes
+	}
+}
+
+pf_persian_zealotry_reform = {
+	icon = "zoroastrian_theocracy"
+	allow_normal_conversion = yes
+	potential = {
+		tag = PER
+		has_country_flag = pf_per_persian_zealotry_unlocked
+	}
+	modifiers = {
+		tolerance_own = 2
+		tolerance_heathen = -2
+		global_missionary_strength = 0.03
+		manpower_in_true_faith_provinces = 0.1
+	}
 }
 
 pf_athens_archon = {
