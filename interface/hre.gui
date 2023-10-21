@@ -18,7 +18,7 @@ guiTypes = {
 		{
 			name ="hre_bg_extended"
 			spriteType = "GFX_custom_hre_bg_extended"
-			position = { x= -100 y = -55 } # NEEDS TO BE TWEAKED / TESTED
+			position = { x= -110 y = -85 }
 		}
 
 		iconType =
@@ -37,7 +37,7 @@ guiTypes = {
 
 		guiButtonType = {
 			name = "join_league_button"
-			position = { x= -40 y = 98 }
+			position = { x= -53 y = 88 }
 			quadTextureSprite ="GFX_join_league_button"
 			tooltip = ""
 			tooltipText =""
@@ -49,7 +49,7 @@ guiTypes = {
 
 		guiButtonType = {
 			name = "join_heretic_league_button"
-			position = { x= 850 y = 98 }
+			position = { x= 980 y = 88 }
 			quadTextureSprite ="GFX_join_heretic_league_button"
 			tooltip = ""
 			tooltipText =""
@@ -63,7 +63,7 @@ guiTypes = {
 		{
 			name ="hre_religion_icon"
 			spriteType = "GFX_province_view_religion"
-			position = { x= -20 y = 115 }
+			position = { x= -33 y = 105 }
 			hint_tag = "hint_religion"
 			alwaystransparent = yes
 		}
@@ -80,7 +80,7 @@ guiTypes = {
 		{
 			name ="hre_heretic_religion_icon"
 			spriteType = "GFX_province_view_religion"
-			position = { x= 870 y = 115 }
+			position = { x= 1000 y = 105 }
 			hint_tag = "hint_religion"
 			alwaystransparent = yes
 		}
@@ -97,7 +97,7 @@ guiTypes = {
 		{
 			name ="hre_official_religion_icon"
 			spriteType = "GFX_join_league_button"
-			position = { x= 392 y = 150 }
+			position = { x= 394 y = 150 }
 			hint_tag = "hint_religion"
 			frame = 3
 		}
@@ -106,13 +106,13 @@ guiTypes = {
 		{
 			name ="hre_imperial_authority_icon"
 			spriteType = "GFX_imperial_authority"
-			position = { x= 406 y = 100 }
+			position = { x= 405 y = 101 }
 			scale = 0.7
 		}
 
 		instantTextBoxType = {
 			name = "dominantfaith_label"
-			position = { x = 455 y = 175 }
+			position = { x = 459 y = 171 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 0}
@@ -127,17 +127,17 @@ guiTypes = {
 		{
 			name ="hre_war_peace_icon"
 			spriteType = "GFX_hre_war_peace_strip"
-			position = { x= 396 y = 158 }
+			position = { x= 400 y = 148 }
 			hint_tag = "hint_religion"
 			frame = 1
-			scale = 0.8
+			scale = 1
 		}
 
 		iconType =
 		{
 			name ="hre_religion_icon_2"
 			spriteType = "GFX_province_view_religion"
-			position = { x= 411 y = 166 }
+			position = { x= 414 y = 166 }
 			hint_tag = "hint_religion"
 			alwaystransparent = yes
 		}
@@ -203,7 +203,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "left_branch_label"
-			position = { x = 151 y = 210 }
+			position = { x = 151 y = 212 }
 			format = centre
 			textureFile = ""
 			font = "vic_18"
@@ -215,7 +215,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "right_branch_label"
-			position = { x = 150 y = 330 }
+			position = { x = 150 y = 333 }
 			format = centre
 			textureFile = ""
 			font = "vic_18"
@@ -301,8 +301,8 @@ guiTypes = {
 		guiButtonType =
 		{
 			name ="emperor_shield"
-			quadTextureSprite = "GFX_shield_thin"
-			position = { x= 443 y = 290 }
+			quadTextureSprite = "GFX_if_adirim_shield"
+			position = { x= 418 y = 240 }
 			tooltip = ""
 			tooltipText =""
 			delayedTooltipText = ""
@@ -315,17 +315,18 @@ guiTypes = {
 		{
 			name ="benefits_icon"
 			spriteType = "GFX_hre_emp_benefits_icon"
-			position = { x= 513 y = 350 }
+			position = { x= 514 y = 355 }
 			Orientation = "UPPER_LEFT"
+			scale = 1.3
 		}
 
-		iconType =
-		{
-			name ="diplomatic_actions_icon"
-			spriteType = "GFX_more_dip_actions_icon"
-			position = { x= 437 y = 348 }
-			Orientation = "UPPER_LEFT"
-		}
+		# iconType =
+		# {
+		# 	name ="diplomatic_actions_icon"
+		# 	spriteType = "GFX_more_dip_actions_icon"
+		# 	position = { x= 437 y = 348 }
+		# 	Orientation = "UPPER_LEFT"
+		# }
 
 		windowType = {
 			name = "emepror_feature_window"
@@ -477,9 +478,9 @@ guiTypes = {
 
 		smoothListboxType = {
 			name = "hre_league"
-			position = { x=-45 y =167 }
+			position = { x=-52 y =157 }
 			backGround=""
-			size = { x=69 y=510 }
+			size = { x=75 y=510 }
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 0
@@ -489,9 +490,9 @@ guiTypes = {
 
 		smoothListboxType = {
 			name = "hre_heretic_league"
-			position = { x=845 y =167 }
+			position = { x=972 y =157 }
 			backGround=""
-			size = { x=69 y=510 }
+			size = { x=75 y=510 }
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 0
