@@ -1,0 +1,31 @@
+government = monarchy
+add_government_reform = autocracy_reform
+government_rank = 1
+technology_group = eastern
+religion = hellenic
+capital = 4995
+primary_culture = heliodori
+
+1444.11.11 = { 
+	monarch = { 
+		name = "Konstantinos"
+		dynasty = "Matzas"
+		ADM = 5
+		claim = 95
+		DIP = 3
+		MIL = 6
+		culture = heliodori
+		birth_date = 1387.8.1
+	}
+	heir = { 
+		name = "Nikodemos"
+		dynasty = "Matzas"
+		ADM = 2
+		claim = 95
+		DIP = 2
+		MIL = 2
+		culture = heliodori
+		birth_date = 1402.9.2
+		death_date = 1445.1.1
+	}
+}

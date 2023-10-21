@@ -1,0 +1,31 @@
+government = monarchy
+add_government_reform = principality
+government_rank = 1
+technology_group = eastern
+religion = hellenic
+capital = 4989
+primary_culture = delphian
+
+1444.11.11 = { 
+	monarch = { 
+		name = "Alexios"
+		dynasty = "Notaras"
+		ADM = 1
+		claim = 95
+		DIP = 2
+		MIL = 5
+		culture = delphian
+		birth_date = 1414.3.5
+	}
+	heir = { 
+		name = "Aristoteles"
+		dynasty = "Notaras"
+		ADM = 2
+		claim = 95
+		DIP = 3
+		MIL = 3
+		culture = delphian
+		birth_date = 1441.6.16
+		death_date = 1445.1.1
+	}
+}
