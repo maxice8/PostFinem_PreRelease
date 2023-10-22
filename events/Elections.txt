@@ -47,6 +47,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		NOT = { has_reform = pf_rabim_qahal }
 		NOT = { has_states_general_mechanic = yes }
 		NOT = { has_government_attribute = lottery_election }
 		NOT = { has_government_attribute = is_pirate_republic_reform }
@@ -846,6 +847,10 @@ country_event = {
 		trigger = { has_reform = pf_lagr_republic }
 		desc = elections.720.dlag
 	}
+	desc = {
+		trigger = { has_reform = pf_rabim_qahal }
+		desc = elections.720.dcar
+	}
 	
 	desc = {
 		trigger = { 
@@ -860,10 +865,15 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_states_general_mechanic = yes
 		OR = {
-			is_lesser_in_union = no
-			is_statists_in_power = yes
+			has_reform = pf_rabim_qahal
+			AND = {
+				has_states_general_mechanic = yes
+				OR = {
+					is_lesser_in_union = no
+					is_statists_in_power = yes
+				}
+			}
 		}
 	}
 	
@@ -1032,6 +1042,203 @@ country_event = {
 			}
 		}
 		change_statists_vs_orangists = -0.33
+	}
+	option = {
+		name = elections.720.pf_car_a
+		trigger = {  
+			has_reform = pf_rabim_qahal		
+			pf_rabim_qahal_adirim_control = yes
+		}
+		ai_chance = { 
+			factor = 60
+			modifier = {
+				factor = 0
+				NOT = { republican_tradition = 25 }
+			}	
+			modifier = {
+				factor = 0.5
+				NOT = { republican_tradition = 50 }
+			}				
+			modifier = {
+				factor = 0.5
+				NOT = { republican_tradition = 75 }
+			}	
+			modifier = {
+				factor = 2.0
+				republican_tradition = 90
+			}		
+		}
+		custom_tooltip = remains_ruler
+		if = {
+			limit = { has_government_attribute = has_limited_terms }
+			custom_tooltip = current_term_tt
+		}
+		change_adm = 1
+		change_dip = 1
+		change_mil = 1
+		if = {
+			limit = {
+				is_tribal = no 
+				government = republic
+				NOT = { republican_tradition = 20 }				
+				NOT = { is_revolutionary_republic_trigger = yes }
+				has_dlc = "Res Publica"
+				NOT = { has_government_attribute = cannot_become_dictatorship }
+			}
+			add_government_reform = presidential_despot_reform	
+		}
+		else_if = {
+			limit = {
+				government = republic
+				NOT = { republican_tradition = 20 }	
+				is_revolutionary_republic_trigger = yes
+			}
+			change_government = monarchy
+			add_government_reform = revolutionary_empire_reform
+		}
+		if = {
+			limit = {
+				is_tribal = no  
+				government = republic
+				NOT = { republican_tradition = 20 }
+				NOT = { has_dlc = "Res Publica" }
+				NOT = { has_government_attribute = cannot_become_dictatorship }
+			}
+			change_government = monarchy
+			#set_legacy_government = despotic_monarchy
+		}
+		if = {
+			limit = {
+				has_country_flag = strengthened_signoria_flag
+			}
+			custom_tooltip = strengthened_signoria_election_tt
+			clr_country_flag = strengthened_signoria_flag
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = increased_election_cost
+				}
+				add_scaled_republican_tradition = -15
+				clr_country_flag = increased_election_cost
+			}
+			else = {
+				add_scaled_republican_tradition = -10
+			}
+		}
+		random_list = {
+			10 = {
+				add_adm_power = 50
+			}
+			10 = {
+				add_dip_power = 50
+			}
+			10 = {
+				add_mil_power = 50
+			}
+		}
+		if = {
+			limit = {
+				has_government_attribute = reelection_depowers_estates
+			}
+			add_estate_influence_modifier = {
+				estate = all
+				influence = -10
+				duration = 1460
+				desc = REELCTION_DEPOWER_ESTATES
+			}
+		}
+		if = {
+			limit = { has_government_attribute = elections_influence_estates }
+			add_estate_loyalty = {
+				estate = all
+				loyalty = 5
+			}
+		}
+	}
+	option = {
+		name = elections.720.pf_car_b
+		trigger = { has_reform = pf_rabim_qahal }		
+		ai_chance = { 
+			factor = 60
+			modifier = {
+				factor = 2
+				NOT = { republican_tradition = 25 }
+			}	
+			modifier = {
+				factor = 1.5
+				NOT = { republican_tradition = 50 }
+			}				
+			modifier = {
+				factor = 1.25
+				NOT = { republican_tradition = 75 }
+			}	
+			modifier = {
+				factor = 0
+				republican_tradition = 90
+			}		
+		}
+		if = {
+			limit = {
+				pf_rabim_qahal_adirim_dominant = yes
+			}	
+			define_ruler = {
+				min_age = 40
+				adm = 1
+				dip = 2
+				mil = 1
+			}
+		}
+		else = {
+			define_ruler = {
+				min_age = 40
+			}
+		}
+		add_government_power = {
+			mechanic_type = car_rabim_qahal
+			power_type = adirim_vs_suffet
+			value = -25
+		}
+	}
+	option = {
+		name = elections.720.pf_car_c
+		trigger = { has_reform = pf_rabim_qahal }
+		ai_chance = { 
+			factor = 60
+			modifier = {
+				factor = 1.5
+				pf_rabim_qahal_sufete_control = yes
+			}		
+			modifier = {
+				factor = 1.5
+				pf_rabim_qahal_sufete_dominant = yes
+			}		
+		}
+		if = {
+			limit = {
+				has_government_power = {			
+					mechanic_type = car_rabim_qahal
+					power_type = adirim_vs_suffet
+					value = 50
+				}
+			}	
+			define_ruler = {
+				min_age = 35
+				adm = 2
+				dip = 1
+				mil = 1
+			}
+		}
+		else = {
+			define_ruler = {
+				min_age = 35
+			}
+		}
+		add_government_power = {
+			mechanic_type = car_rabim_qahal
+			power_type = adirim_vs_suffet
+			value = -25
+		}
 	}
 }
 
