@@ -3,7 +3,7 @@ pf_fc_1 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { has_reform = free_city } 
+	potential = { has_reform = free_city NOT = { tag = DDA } } 
 
 	pf_fc_grow_the_city = {
 		icon = the_great_city_of_buda
@@ -93,7 +93,7 @@ pf_fc_2 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { has_reform = free_city } 
+	potential = { has_reform = free_city NOT = { tag = DDA } } 
 
 	pf_fc_appease_the_burghers = {
 		icon = mission_subjugate_the_merchants
@@ -173,7 +173,7 @@ pf_fc_3 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { has_reform = free_city } 
+	potential = { has_reform = free_city NOT = { tag = DDA } } 
 
 	pf_fc_vibrant_court = {
 		icon = king_of_kings
@@ -247,7 +247,7 @@ pf_fc_4 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { has_reform = free_city } 
+	potential = { has_reform = free_city NOT = { tag = DDA } } 
 
 	pf_fc_adirim_relations = {
 		icon = mission_empire_of_russia

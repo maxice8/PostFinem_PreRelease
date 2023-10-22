@@ -27,5 +27,48 @@ pf_rabim_qahal = {
 	ai = {
 		factor = 0.5 #generic
 	}
-	duration = 6
+	duration = 4
+	custom_attributes = {		
+		cannot_become_dictatorship = yes
+	}
+	conditional = {
+		allow = { 
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+}
+
+pf_syncretic_state = {
+	icon = "clergyman"
+	potential = {
+		 OR = {
+		  has_reform = pf_syncretic_state
+		  have_had_reform = pf_syncretic_state
+	  }
+	}
+
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	has_term_election = no
+	valid_for_new_country = yes
+	modifiers = {
+		 no_religion_penalty = yes
+		 religious_unity = 1
+		 can_not_build_missionaries = yes
+		 tolerance_own = -0.5
+	  max_absolutism = -10
+		 reverse_relation_with_same_religion = -10
+	}
+	
+	custom_attributes = {
+		 enables_plutocratic_idea_group = no
+	  enables_divine_idea_group = yes
+	}
+	ai = {
+		 factor = 100
+	}
 }

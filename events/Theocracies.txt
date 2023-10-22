@@ -98,6 +98,7 @@ country_event = {
 			clr_country_flag = theo_papal_protege_flag
 			clr_country_flag = theo_imam_khatib_flag
 			clr_country_flag = theo_influential_reformer_flag
+			clr_country_flag = theo_satrapy_candidate_flag
 			
 			#Local Noble,etc:
 			if = {
@@ -1386,6 +1387,80 @@ country_event = {
 		}
 	}
 	option = {
+		name = theocracy.1.k		# PF: Favoured candidate of the Satrapies
+		trigger = {
+			tag = PER
+			has_subject_of_type = satrapy
+		}
+		set_country_flag = theo_satrapy_candidate_flag
+		if = {
+			limit = {
+				has_estate = estate_nobles
+			}
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 15
+			}
+		}
+		add_country_modifier = {
+			name = pf_per_listened_to_the_satrapies
+			duration = 7300
+		}
+		if = {
+			limit = { has_government_attribute = can_see_theocratic_heir_stats }
+			if = {
+				limit = {
+					has_global_modifier_value = {
+						which = female_advisor_chance
+						value = 1
+					}
+				}
+				define_heir = {
+					age = 35
+					female = yes
+				}
+			}
+			else = {
+				define_heir = {
+					age = 35
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					has_global_modifier_value = {
+						which = female_advisor_chance
+						value = 1
+					}
+				}
+				define_heir = {
+					age = 35
+					female = yes
+					hidden = yes
+				}
+			}
+			else = {
+				define_heir = {
+					age = 35
+					hidden = yes
+				}
+			}
+		}
+		add_devotion = -5
+		add_prestige = -25
+		clr_country_flag = in_theocracy_heir_selection
+		custom_tooltip = theocracy.1.tt
+		if = {
+			limit = {
+				has_government_attribute = theocratic_monarchy_mechanic
+			}
+			custom_tooltip = monarchistic_direction_tt
+			set_heir_flag = monarchistic_heir
+			change_statists_vs_orangists = 0.15
+		}
+	}
+	option = {
 		name = theocracy.1.j		# Let the Lottery decide!
 		trigger = {
 			NOT = { has_country_flag = KOL_secondogeniture_of_BAV }
@@ -1447,6 +1522,13 @@ country_event = {
 				}
 			}
 			1 = {
+				trigger = {
+					any_neighbor_country = {
+						government = monarchy
+						has_regency = no
+						religion = ROOT
+					}
+				}
 				custom_tooltip = theocracy.1.j.b
 				set_country_flag = theo_foreign_noble_flag # USED IN DEVOTION.TXT
 				random_neighbor_country = { 
@@ -1540,7 +1622,7 @@ country_event = {
 				}
 			}
 			1 = {
-				custom_tooltip = theocracy.1.j.d
+				custom_tooltip = theocracy.1.j.e
 				set_country_flag = theo_talented_theologian_flag # USED IN DEVOTION.TXT
 				if = {
 					limit = {
@@ -1597,7 +1679,7 @@ country_event = {
 				trigger = {
 					NOT = { religion_group = muslim }
 				}
-				custom_tooltip = theocracy.1.j.e
+				custom_tooltip = theocracy.1.j.f
 				set_country_flag = theo_local_preacher_flag # USED IN DEVOTION.TXT
 				if = {
 					limit = {
@@ -1654,7 +1736,7 @@ country_event = {
 				trigger = {
 					religion = catholic
 				}
-				custom_tooltip = theocracy.1.j.f
+				custom_tooltip = theocracy.1.j.d
 				set_country_flag = theo_papal_protege_flag # USED IN DEVOTION.TXT
 				if = {
 					limit = {

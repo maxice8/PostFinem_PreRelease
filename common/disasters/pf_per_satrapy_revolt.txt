@@ -43,7 +43,7 @@ pf_per_satrapy_revolt = {
 	ended_by_country_breaking_to_rebels = no
 
 	modifier = {
-		reduced_liberty_desire = -20
+		reduced_liberty_desire = -40
 		global_unrest = 5
 	}
 
@@ -53,13 +53,14 @@ pf_per_satrapy_revolt = {
 	on_monthly = {
 		events = { }
 		random_events = {
-			1500 = 0
-			100 = pf_per_events.2 # Satrapy disobeys
-			50 = pf_per_events.3 # Satrapy demands money
-			25 = pf_per_events.4 # Satrapy demands privileges
-			50 = pf_per_events.5 # Uprising in Satrapy
-			25 = pf_per_events.6 # Satrapies ally
-			50 = pf_per_events.7 # Satrapy compromises
+			250 = 0
+			10 = pf_per_events.2 # Satrapy disobeys
+			10 = pf_per_events.5 # Uprising in Satrapy
+			6 = pf_per_events.7 # Satrapy compromises
+			4 = pf_per_events.3 # Satrapy demands money
+			4 = pf_per_events.11 # Satrapy demands manpower
+			2 = pf_per_events.4 # Satrapy demands privileges
+			1 = pf_per_events.6 # Satrapies ally
 		}
 	}
 }

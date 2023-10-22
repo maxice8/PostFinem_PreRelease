@@ -35,6 +35,7 @@ marketplace = {
 		province_trade_power_modifier = 0.5
 	}
 	on_built = {
+		pf_on_trade_building_built_effect = yes
 		add_development_from_building = {
 			building = marketplace
 			type = production
@@ -67,6 +68,7 @@ workshop = {
 		local_production_efficiency = 0.5
 	}
 	on_built = {
+		pf_on_production_building_built_effect = yes
 		add_development_from_building = {
 			building = workshop
 			type = production
@@ -97,6 +99,7 @@ temple = {
 		local_tax_modifier = 0.4
 	}
 	on_built = {
+		pf_on_tax_building_built_effect = yes
 		on_province_tax_building_built_estate_privileges_effect = yes
 		add_development_from_building = {
 			building = temple
@@ -159,6 +162,7 @@ barracks = {
 		local_manpower_modifier = 0.5
 	}
 	on_built = {
+		pf_on_manpower_building_built_effect = yes
 		if = {
 			limit = {
 				FROM = {
@@ -832,6 +836,7 @@ cathedral = {
 		local_tax_modifier = 0.6
 	}
 	on_built = {
+		pf_on_tax_building_built_effect = yes
 		on_province_tax_building_built_estate_privileges_effect = yes
 		add_development_from_upgrading_or_building = {
 			building = cathedral
@@ -994,6 +999,7 @@ trade_depot = {
 	}
 
 	on_built = {
+		pf_on_trade_building_built_effect = yes
 		add_development_from_upgrading_or_building = {
 			building = trade_depot
 			obsolete_building = marketplace
@@ -1104,6 +1110,7 @@ training_fields = {
 	}
 	
 	on_built = {
+		pf_on_manpower_building_built_effect = yes
 		if = {
 			limit = {
 				FROM = {
@@ -1287,6 +1294,7 @@ stock_exchange = {
 	}
 
 	on_built = {
+		pf_on_trade_building_built_effect = yes
 		if = {
 			limit = {
 				has_province_flag = built_dev_trade_depot
@@ -1344,6 +1352,7 @@ counting_house = {
 	}
 
 	on_built = {
+		pf_on_production_building_built_effect = yes
 		add_development_from_upgrading_or_building = {
 			building = counting_house
 			obsolete_building = workshop
