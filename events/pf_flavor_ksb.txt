@@ -592,8 +592,63 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = pf_ksb_events.18a
+		name = pf_ksb_events.19a
 		custom_tooltip = ksb_to_be_added_tt
 		#Add stuff when religious mechanics get added
+	}
+}
+
+#Fall of Athens
+country_event = {
+	id = pf_ksb_events.20
+	title = pf_ksb_events.20.t
+	desc = pf_ksb_events.20.d
+	picture = VILLAGE_BURNING_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			papal_controller = {
+				save_event_target_as = papal_controller_targer
+			}
+		}
+	}
+	option = {
+		name = pf_ksb_events.20a
+		event_target:papal_controller_targer = { 
+			set_papacy_active = no 
+			add_prestige = -20
+			add_legitimacy_equivalent = {
+				amount = -50
+			}
+		}
+	}
+}
+
+#move the capital to Kiev?
+country_event = {
+	id = pf_ksb_events.21
+	title = pf_ksb_events.21.t
+	desc = pf_ksb_events.21.d
+	picture = VILLAGE_BURNING_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = pf_ksb_events.21a
+		set_capital = 280
+		280 = {
+			add_base_manpower = 2
+			add_base_production = 2
+			add_base_tax = 3
+		}
+	}
+	option = {
+		name = pf_ksb_events.21b
+		add_prestige = 10
+		capital = {
+			add_base_manpower = 2
+			add_base_production = 2
+			add_base_tax = 3
+		}
 	}
 }
