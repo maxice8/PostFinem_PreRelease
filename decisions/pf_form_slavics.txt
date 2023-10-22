@@ -31,7 +31,7 @@ country_decisions = {
 					culture_group = pagan_slavic
 					root = {
 						NOT = {
-							OR = {
+							AND = {
 								num_of_owned_provinces_with = {
 									value = 25
 									region = south_slavia_region
@@ -315,9 +315,9 @@ country_decisions = {
 							}
 						}
 						owns_core_province = 1756
-							owns_core_province = 157
-							owns_core_province = 279
-							owns_core_province = 262
+						owns_core_province = 157
+						owns_core_province = 279
+						owns_core_province = 262
 							
 					}
 				}

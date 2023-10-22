@@ -1168,11 +1168,17 @@ sevksb_4_branch = {
 				name = ksb_great_march_south
 				duration = 7300
 			}
-			every_province = {
-				limit = {
-					culture_group = pagan_slavic
+			custom_tooltip = "ksb_claim_all_slavic_provinces"
+			hidden_effect = {
+				every_province = {
+					limit = {
+						culture_group = pagan_slavic
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
+			}
+			country_event = {
+				id = pf_ksb_events.19
 			}
 		} 
 	}
@@ -1249,7 +1255,14 @@ sevksb_5_branch = {
 			}
 		}
 
-		effect = {  } 
+		effect = {  
+			russia_region = {
+				add_permanent_claim = ROOT
+			}
+			ruthenia_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	sev_krakow = {
