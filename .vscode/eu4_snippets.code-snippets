@@ -216,5 +216,12 @@
 		],
 		"description": "Scripted effect to apply mutual relations"
 	},
+	"Add Perm Claims for ROOT": {
+		"prefix": ["add_permanent_claim"],
+		"body": [  			
+			"add_permanent_claim = ROOT"
+		],
+		"description": "Adds permanent claims for ROOT"
+	},
 		
 }

@@ -333,7 +333,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "incident_label"
-				position = { x = 260 y = 580 }
+				position = { x = 190 y = 620 }
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 4 y = 0}
@@ -345,7 +345,7 @@ guiTypes = {
 
 			OverlappingElementsBoxType = { 
 				name = "incident_options"
-				position = { x = 160 y = 600 }
+				position = { x = 190 y = 640 }
 				size = { x = 268 y = 100}
 				format = left
 				spacing = 72
@@ -377,8 +377,8 @@ guiTypes = {
 
 			listboxType = {
 				name = "previous_incidents_container"
-				position = { x = 595 y = 600 }
-				size = { x = 108 y = 80 }
+				position = { x = 615 y = 650 }
+				size = { x = 185 y = 70 }
 				scrollbartype = "standardlistbox_slider"
 			}
 
