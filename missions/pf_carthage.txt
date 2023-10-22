@@ -179,9 +179,18 @@ car_main_2 = {
 				area = corsica_area
 				area = baleares_area
 			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 
-		trigger = {  } 
+		trigger = {  
+			sicily_area = { country_or_non_sovereign_subject_holds = ROOT }
+			western_sicily_area = { country_or_non_sovereign_subject_holds = ROOT }
+			corsica_sardinia_area = { country_or_non_sovereign_subject_holds = ROOT }
+			corsica_area = { country_or_non_sovereign_subject_holds = ROOT }
+			baleares_area = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
 		effect = {  } 
 	}
