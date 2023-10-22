@@ -19,10 +19,10 @@
  pf_ksb_events.3a: "Damn those meddling [KSB.GetAdjective]!"
 
 #Capture of vorpommern provinces - kashubian side
- pf_ksb_events.4.t: "Slavic Expansion into [vorpommern_area.GetName]"
+ pf_ksb_events.4.t: "Slavic Expansion into Vorpommern"
  pf_ksb_events.4.d: "REPLACE_ME"
  pf_ksb_events.4a: "Huzzah! A people restored!"
- ksb_polabians_again_tt: "A province in the §Y[vorpommern_area.GetName]§W area has changed it culture to §YPolabian§W and religion to §YSlavic§W"
+ ksb_polabians_again_tt: "A province in the §YVormpommern§W area has changed it culture to §YPolabian§W and religion to §YSlavic§W"
 
 #Slavia birth of the republic
  pf_ksb_events.5.t: "Birth of the Republic"
@@ -115,4 +115,9 @@
  pf_ksb_events.21.t: "Move the Capital to Kyiv?"
  pf_ksb_events.21.d: "REPLACE_ME"
  pf_ksb_events.21a: "Kyiv would make a fine capital for [Root.GetName]"
- pf_ksb_events.21b: "No, [Root.GetCapitalName] is fine"
+ pf_ksb_events.21b: "No, [Root.Capital.GetCapitalName] is fine"
+
+#Germans embrace irminovci cultre
+ pf_ksb_events.22.t: "Mongols` Embrace Slavic Culture in [culture_conversion_province.GetName]"
+ pf_ksb_events.22.d: "REPLACE_ME"
+ pf_ksb_events.22a: "Ok"

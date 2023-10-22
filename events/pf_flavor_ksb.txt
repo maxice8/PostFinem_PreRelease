@@ -630,7 +630,7 @@ country_event = {
 	id = pf_ksb_events.21
 	title = pf_ksb_events.21.t
 	desc = pf_ksb_events.21.d
-	picture = VILLAGE_BURNING_eventPicture
+	picture = CITY_VIEW_eventPicture
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -645,10 +645,53 @@ country_event = {
 	option = {
 		name = pf_ksb_events.21b
 		add_prestige = 10
-		capital = {
+		capital_scope = {
 			add_base_manpower = 2
 			add_base_production = 2
 			add_base_tax = 3
+		}
+	}
+}
+
+#spread of Rus culture
+country_event = {
+	id = pf_ksb_events.22
+	title = pf_ksb_events.22.t
+	desc = pf_ksb_events.22.d
+	picture = CZECH_NOBLES_eventPicture
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						region = ruthenia_region
+						region = russia_region
+					}
+					culture_group = west_mongol
+				}
+				save_event_target_as = culture_conversion_province
+			}
+		}
+	}
+	trigger = {
+		any_owned_province = {
+			OR = {
+				region = ruthenia_region
+				region = russia_region
+			}
+			culture_group = west_mongol
+		}
+		has_country_flag = ksb_converting_rus_flag
+	}
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = pf_ksb_events.22a
+		event_target:culture_conversion_province = {
+			change_culture = rus_new
+			change_religion = slavic_religion
 		}
 	}
 }

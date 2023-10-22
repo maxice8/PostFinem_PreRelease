@@ -94,3 +94,12 @@ ksb_rus_capital = {
 	allowed_num_of_buildings = 3
 	local_development_cost = -0.2
 }
+
+ksb_siberian_frontier = {
+	may_establish_frontier = yes
+	auto_explore_adjacent_to_colony = yes
+}
+
+ksb_convert_mongols = {
+	global_heathen_missionary_strength = 0.03
+}
