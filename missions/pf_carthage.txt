@@ -171,7 +171,15 @@ car_main_2 = {
 			pf_car_revive_lilybaeum
 			pf_car_reestablish_sardan
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				area = sicily_area
+				area = western_sicily_area
+				area = corsica_sardinia_area
+				area = corsica_area
+				area = baleares_area
+			}
+		} 
 
 		trigger = {  } 
 
@@ -271,11 +279,11 @@ car_main_3 = {
 
 		effect = { 
 			add_stability_or_adm_power = yes 		
+			custom_tooltip = empty_line_tt
 			if = {
 				limit = {
 					has_country_modifier = annexers_legacy
 				}
-				custom_tooltip = empty_line_tt
 				remove_country_modifier = annexers_legacy
 				custom_tooltip = empty_line_tt
 			}
@@ -296,7 +304,7 @@ car_main_3 = {
 
 		trigger = {  
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 20
+				value = 10
 				region = mauretania_region
 			}	
 		} 
@@ -317,6 +325,12 @@ car_main_3 = {
 						months = 120
 					}
 				}
+			}
+			upper_andalucia_area = {
+				add_permanent_claim = ROOT
+			}
+			lower_andalucia_area = {
+				add_permanent_claim = ROOT
 			}
 		} 
 	}
@@ -400,11 +414,48 @@ car_main_4 = {
 		icon = mission_invade_island
 		position = 2
 		required_missions = { pf_car_a_navy_worth_of_yam } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				AND = {
+					OR = {
+					province_id = 142
+					province_id = 4698
+					}
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}			
+				AND = {
+					province_id = 163
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			owns_core_province = 163
+			142 = { country_or_non_sovereign_subject_holds = ROOT }
+			4698 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		effect = {  } 
+		effect = {  
+			163 = {
+				add_or_upgrade_shipyard_building = yes
+			}
+			163 = {
+				add_province_modifier = {
+					name = car_island_hopping_modifier
+					duration = -1
+				}
+			}
+			cyrenaica_area = {
+				add_permanent_claim = ROOT
+			}
+			delta_area = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_car_the_land_of_alexander = {
