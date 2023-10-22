@@ -16,5 +16,9 @@ discovered_by = ottoman
 discovered_by = nomad_group
 culture = vanite
 religion = hellenic
-is_city = no
+ 
 add_core = VAS
+trade_goods = salt
+latent_trade_goods = { 
+	coal 
+}

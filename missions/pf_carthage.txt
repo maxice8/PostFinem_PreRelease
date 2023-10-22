@@ -16,9 +16,11 @@ car_main_1 = {
 					ai = no
 				}
 				army_size_percentage = 1
+				manpower_percentage = 0.5
 			}
 			else = {
 				army_size_percentage = 0.75
+				manpower_percentage = 0.33
 			}
 			num_of_generals = 1
 		} 
@@ -267,11 +269,13 @@ car_main_3 = {
 			}
 		} 
 
-		effect = {  		
+		effect = { 
+			add_stability_or_adm_power = yes 		
 			if = {
 				limit = {
 					has_country_modifier = annexers_legacy
 				}
+				custom_tooltip = empty_line_tt
 				remove_country_modifier = annexers_legacy
 				custom_tooltip = empty_line_tt
 			}
