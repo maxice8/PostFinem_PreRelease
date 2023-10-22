@@ -52,6 +52,15 @@ pf_ost_1 = {
 		}
 
 		effect = {
+			custom_tooltip = OST_CT_1
+			if = {
+				limit = {
+					VLD = {
+						is_subject_of = ROOT
+					}
+				}
+				inherit = VLD
+			}
 			add_country_modifier = {
 				name = "ost_lords_of_ostgermania"
 				duration = -1
@@ -85,7 +94,7 @@ pf_ost_1 = {
 
 		trigger = {
 			owns = 134
-			134 = { development = 15 } 
+			134 = { development = 25 } 
 			num_of_artillery = 10
 		}
 
@@ -111,9 +120,6 @@ pf_ost_2 = {
 	ost_old_expanse = {
 		icon = mission_unite_home_region
 		position = 1
-		required_missions = { ost_two_boars } 
-		provinces_to_highlight = {  } 
-
 		trigger = {
 			army_size_percentage = 0.85
 			num_of_generals = 2
@@ -191,7 +197,22 @@ pf_ost_2 = {
 			total_development = 500
 		}
 
-		effect = { set_government_rank = 3 } 
+		effect = {
+			change_tag = DNV
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			set_government_rank = 2
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		} 
 	}
 
 	ost_warrior_manpower = {
@@ -318,7 +339,7 @@ pf_ost_3 = {
 		effect = {
 			add_country_modifier = {
 				name = "ost_powerhouse"
-				duration = 12850
+				duration = 14600
 			}
 		}
 	}

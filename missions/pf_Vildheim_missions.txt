@@ -1,0 +1,415 @@
+pf_vld_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = VLD } 
+
+	vld_east_push = {
+		icon = mission_non-western_cavalry_raid
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = { army_size_percentage = 0.85 } 
+
+		effect = {
+			slavonia_area = { add_permanent_claim = ROOT } 
+			transdanubia_area = { add_permanent_claim = ROOT } 
+		}
+	}
+
+	vld_horse_horse = {
+		icon = mission_chinese_general_riding
+		position = 2
+		required_missions = { vld_east_push } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			trade_goods = livestock
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				trade_goods = livestock
+				OR = {
+					base_production = 5
+					base_manpower = 5
+				}
+			}
+		}
+
+		effect = {
+			add_manpower = 5
+			capital_scope = { add_base_production = 2 } 
+		}
+	}
+
+	vld_horse_again = {
+		icon = mission_dominate_home_trade_node
+		position = 4
+		required_missions = { vld_horse_horse } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			trade_goods = livestock
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				trade_goods = livestock
+				has_trade_building_trigger = yes
+			}
+		}
+
+		effect = {
+			add_years_of_owned_provinces_production_income = {
+				years = 10
+				trigger = { trade_goods = livestock } 
+				custom_tooltip = MONOPOLY_INCOME_LIVESTOCK_DESC
+			}
+		}
+	}
+}
+pf_vld_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = VLD } 
+
+	vld_slavonia = {
+		icon = mission_cossack_cavalry
+		position = 2
+		required_missions = { vld_east_push } 
+		provinces_to_highlight = {
+			OR = {
+				area = slavonia_area
+				area = transdanubia_area
+			}
+		}
+
+		trigger = {
+			slavonia_area = {
+				type = all
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
+			}
+			transdanubia_area = {
+				type = all
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
+			}
+		}
+
+		effect = {
+			add_army_tradition = 10
+			austria_proper_area = { add_permanent_claim = ROOT } 
+			inner_austria_area = { add_permanent_claim = ROOT } 
+			153 = {
+				if = {
+					limit = { has_province_modifier = vld_the_wild_hunt } 
+					extend_province_modifier = {
+						name = "vld_the_wild_hunt"
+						duration = 3650
+					}
+				}
+				else = {
+					if = {
+						limit = { NOT = { is_year = 1450 }  } 
+						custom_tooltip = VLD_CT_2
+					}
+				}
+			}
+		}
+	}
+
+	vld_ostholm_proper = {
+		icon = mission_crusade_for_varna
+		position = 3
+		required_missions = { vld_slavonia } 
+		provinces_to_highlight = {
+			OR = {
+				area = austria_proper_area
+				area = inner_austria_area
+			}
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 6
+				OR = {
+					area = austria_proper_area
+					area = inner_austria_area
+				}
+			}
+		}
+
+		effect = {
+			add_prestige = 10
+			define_advisor = {
+				type = treasurer
+				skill = 2
+				discount = yes
+			}
+			carpathia_region = { add_permanent_claim = ROOT } 
+			153 = {
+				if = {
+					limit = { has_province_modifier = vld_the_wild_hunt } 
+					extend_province_modifier = {
+						name = "vld_the_wild_hunt"
+						duration = 3650
+					}
+				}
+				else = {
+					if = {
+						limit = { NOT = { is_year = 1450 }  } 
+						custom_tooltip = VLD_CT_2
+					}
+				}
+			}
+		}
+	}
+}
+pf_vld_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = VLD } 
+
+	vld_vild_hunter = {
+		icon = pf_carnyx_horn
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_cavalry = 4
+			NOT = { is_year = 1450 } 
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "vld_costly_army"
+				duration = 9125
+			}
+			153 = {
+				add_permanent_province_modifier = {
+					name = "vld_the_wild_hunt"
+					duration = 9125
+				}
+				custom_tooltip = VLD_CT_1
+			}
+		}
+	}
+
+	vld_moravia = {
+		icon = mission_zambezi_gold
+		position = 3
+		required_missions = { vld_eagle_nest } 
+		provinces_to_highlight = { area = moravia_area } 
+
+		trigger = {
+			moravia_area = {
+				type = all
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
+			}
+		}
+
+		effect = {
+			add_adm_power = 100
+			add_treasury = 300
+			bohemia_area = { add_permanent_claim = ROOT } 
+			153 = {
+				if = {
+					limit = { has_province_modifier = vld_the_wild_hunt } 
+					extend_province_modifier = {
+						name = "vld_the_wild_hunt"
+						duration = 3650
+					}
+				}
+				else = {
+					if = {
+						limit = { NOT = { is_year = 1450 }  } 
+						custom_tooltip = VLD_CT_2
+					}
+				}
+			}
+		}
+	}
+
+	vld_east_germany = {
+		icon = mission_golden_century
+		position = 4
+		required_missions = {
+			vld_moravia
+			vld_ostholm_proper
+		}
+		provinces_to_highlight = { region = carpathia_region } 
+
+		trigger = {
+			carpathia_region = {
+				type = all
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
+			}
+		}
+
+		effect = {
+			change_tag = DNV
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			set_government_rank = 2
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no } 
+				country_event = { id = ideagroups.1 } 
+			}
+			153 = {
+				custom_tooltip = VLD_CT_3
+				if = {
+					limit = { has_province_modifier = vld_the_wild_hunt } 
+					remove_province_modifier = vld_the_wild_hunt
+					add_country_modifier = {
+						name = "vld_the_wild_hunter"
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+pf_vld_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = VLD } 
+
+	vld_eagle_nest = {
+		icon = encroach_on_the_germans
+		position = 2
+		required_missions = { vld_west_push } 
+		provinces_to_highlight = { area = slovakia_area } 
+
+		trigger = {
+			slovakia_area = {
+				type = all
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
+			}
+		}
+
+		effect = {
+			add_dip_power = 100
+			moravia_area = { add_permanent_claim = ROOT } 
+			153 = {
+				if = {
+					limit = { has_province_modifier = vld_the_wild_hunt } 
+					extend_province_modifier = {
+						name = "vld_the_wild_hunt"
+						duration = 3650
+					}
+				}
+				else = {
+					if = {
+						limit = { NOT = { is_year = 1450 }  } 
+						custom_tooltip = VLD_CT_2
+					}
+				}
+			}
+		}
+	}
+}
+pf_vld_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = VLD } 
+
+	vld_west_push = {
+		icon = alpine_fortifications
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			prestige = 10
+			num_of_generals = 2
+		}
+
+		effect = {
+			slovakia_area = { add_permanent_claim = ROOT } 
+			transylvania_area = { add_permanent_claim = ROOT } 
+		}
+	}
+
+	vld_dracula = {
+		icon = mission_plc_break_the_rus
+		position = 3
+		required_missions = { vld_west_push } 
+		provinces_to_highlight = { area = transylvania_area } 
+
+		trigger = {
+			transylvania_area = {
+				type = all
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
+			}
+		}
+
+		effect = {
+			define_general = {
+				shock = 4
+				fire = 1
+				manuever = 4
+				siege = 3
+				name = "Eren Yeager"
+			}
+			capital_scope = { add_base_tax = 3 } 
+		}
+	}
+
+	vld_sylvania = {
+		icon = mission_early_russian_army
+		position = 4
+		required_missions = { vld_dracula } 
+		provinces_to_highlight = { area = transylvania_area } 
+
+		trigger = {
+			transylvania_area = {
+				type = all
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
+				religion = ROOT
+			}
+		}
+
+		effect = {
+			transylvania_area = {
+				add_base_tax = 1
+				add_local_autonomy = -30
+				add_nationalism = -5
+			}
+		}
+	}
+}

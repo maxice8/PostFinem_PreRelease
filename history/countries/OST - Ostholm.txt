@@ -7,10 +7,24 @@ capital = 1863
 primary_culture = quadi
 add_accepted_culture = fyrnir
 add_accepted_culture = illyrian
+
+1356.11.11 = { 
+	monarch = { 
+		name = "Odor"
+		dynasty = "Ostholm"
+		adm = 5
+		dip = 5
+		mil = 4
+		birth_date = 1343.01.14
+		death_date = 1394.02.23
+	}
+	capital = 134
+}
+
 1444.11.11 = { 
 	monarch = { 
 		name = "Theodoric"
-		dynasty = "Thorkillingas"
+		dynasty = "Ostholm"
 		adm = 3
 		dip = 1
 		mil = 4
@@ -21,7 +35,7 @@ add_accepted_culture = illyrian
 1444.11.11 = { 
 	heir = { 
 		name = "Theobald"
-		dynasty = "Thorkillingas"
+		dynasty = "Ostholm"
 		adm = 4
 		dip = 2
 		mil = 2

@@ -9,7 +9,7 @@ country_event = {		#ask Vildheim to PU
 	trigger = {
 		tag = OST
 		is_year = 1450
-		dynasty = "Thorkillingas"
+		dynasty = "Ostholm"
 		at_war = no
 		VLD = {
 			at_war = no
@@ -42,7 +42,7 @@ country_event = {		#ask Vildheim to PU
 					friend = OST
 					should_take_capital = yes
 					leader = "Theodoric"
-					leader_dynasty = "Thorkillingas"
+					leader_dynasty = "Ostholm"
 				}
 			}
 		}
@@ -72,10 +72,10 @@ country_event = {		#ask Vildheim to PU answers
 
 	trigger = {
 		tag = OST
-		dynasty = "Thorkillingas"
+		dynasty = "Ostholm"
 		at_war = no
 		VLD = {
-			dynasty = "Thorkillingas"
+			dynasty = "Ostholm"
 			at_war = no
 			exist = yes
 		}
@@ -183,6 +183,12 @@ country_event = {		#Illyrian Settlers
 		name = "pf_ost.5.b"
 		ai_chance = {
 			factor = 50
+		}
+		152 = {
+			change_culture = fyrnir
+		}
+		4756 = {
+			change_culture = fyrnir
 		}
 		every_owned_province = {
 			add_next_institution_embracement = -10

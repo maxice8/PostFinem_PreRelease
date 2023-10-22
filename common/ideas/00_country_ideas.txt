@@ -9177,43 +9177,6 @@ WUR_ideas = {
 	}
 }
 
-SLO_ideas = {
-	start = {
-		infantry_power = 0.1
-		defensiveness = 0.2
-	}
-	bonus = {
-		production_efficiency = 0.1
-	}
-	trigger = {
-		tag = SLO
-	}
-	free = yes
-	
-	slo_rudohorie = {
-		global_trade_goods_size_modifier = 0.1
-	}
-	slo_universitas_istropolitana = {
-		adm_tech_cost_modifier = -0.1
-	}
-	slo_golden_kremnica = {
-		inflation_reduction = 0.1
-	}
-	slo_land_of_castles = {
-		fort_maintenance_modifier = -0.1
-		garrison_size = 0.1
-	}
-	slo_town_air_liberates = {
-		infantry_cost = -0.1
-	}
-	slo_literary_language = {
-		global_unrest = -1
-	}
-	slo_slovak_national_awakening = {
-		land_morale = 0.1
-	}
-}
-
 GLH_ideas = {
 	start = {
 		global_manpower_modifier = 0.25
