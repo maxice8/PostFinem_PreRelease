@@ -227,6 +227,58 @@ pf_hierophant = {
 	}
 }
 
+
+satrapy = {
+	rank = {
+		1 = SATRAPY_RANK
+		2 = GREAT_SATRAPY_RANK
+		3 = GREAT_SATRAPY_RANK
+	}
+
+	ruler_male = {
+		1 = HYPARCHOS
+		2 = SATRAP
+		3 = SATRAP
+	}
+
+	ruler_female = {
+		1 = HYPARCHESA
+		2 = SATRAPIA
+		3 = SATRAPIA
+	}
+
+	consort_male = {
+		1 = HYPARCHONOS
+		2 = SATRAPENOS
+		3 = SATRAPENOS
+	}
+
+	consort_female = {
+		1 = HYPARCHESA
+		2 = SATRAPIA
+		3 = SATRAPIA
+	}
+	
+	heir_male = {
+		1 = HYPARCHION
+		2 = SATRAPZADA
+		3 = SATRAPZADA
+	}
+
+	heir_female = {
+		1 = HYPARCHIA
+		2 = SATRAPZADI
+		3 = SATRAPZADI
+	}
+
+	trigger = {
+		is_subject_of_type_with_overlord = {
+			who = PER
+			type = satrapy
+		}
+	}
+}
+
 #GENERIC
 
 pf_norse_rulers = {
@@ -729,56 +781,5 @@ pf_lagr_republic_names = {
 
 	trigger = {
 		has_reform = pf_lagr_republic
-	}
-}
-
-satrapy = {
-	rank = {
-		1 = SATRAPY_RANK
-		2 = GREAT_SATRAPY_RANK
-		3 = GREAT_SATRAPY_RANK
-	}
-
-	ruler_male = {
-		1 = HYPARCHOS
-		2 = SATRAP
-		3 = SATRAP
-	}
-
-	ruler_female = {
-		1 = HYPARCHESA
-		2 = SATRAPIA
-		3 = SATRAPIA
-	}
-
-	consort_male = {
-		1 = HYPARCHONOS
-		2 = SATRAPENOS
-		3 = SATRAPENOS
-	}
-
-	consort_female = {
-		1 = HYPARCHESA
-		2 = SATRAPIA
-		3 = SATRAPIA
-	}
-	
-	heir_male = {
-		1 = HYPARCHION
-		2 = SATRAPZADA
-		3 = SATRAPZADA
-	}
-
-	heir_female = {
-		1 = HYPARCHIA
-		2 = SATRAPZADI
-		3 = SATRAPZADI
-	}
-
-	trigger = {
-		is_subject_of_type_with_overlord = {
-			who = PER
-			type = satrapy
-		}
 	}
 }
