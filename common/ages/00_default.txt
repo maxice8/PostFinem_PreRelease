@@ -607,11 +607,8 @@ age_of_absolutism = {
 			allow = {
 				culture_group = euro_punic
 			}
-			effect = {
-				global_trade_goods_size_modifier = 0.2
-			}
 			modifier = {
-				amount_of_banners = 0.5
+				global_trade_goods_size_modifier = 0.2
 			}
 			ai_will_do = {
 				factor = 100
@@ -780,38 +777,38 @@ age_of_revolutions = {
 		}
 		ab_slavia_oe_effect = {
 			allow = {
-				OR = {
-					tag = AVE
-					tag = GBR
-				}
+				tag = SLV
 			}
 			modifier = {
-				max_admiral_fire = 1
+				overextension_impact_modifier = -0.5
 			}
 			ai_will_do = {
 				factor = 100
 			}
 		}
-		ab_russia_boost = {
+		ab_rome_effect_of_absolutism = {
 			allow = {
-				tag = RUS
+				OR = {
+					tag = RME
+					tag = ELY
+				}
 			}
 			modifier = {
-				min_autonomy_in_territories = -0.1
+				max_absolutism_effect = 0.3
 			}	
 			ai_will_do = {
 				factor = 100
 			}
 		}
-		ab_austrian_morale = {
+		ab_mongol_horde_autonomy = {
 			allow = {
-				OR = {
-					tag = HAB
-					tag = HLR
+				AND = {
+					culture_group = west_mongol
+					government = tribal
 				}
 			}
 			modifier = {
-				morale_damage_received = -0.2
+				min_autonomy_in_territories = -0.2
 			}
 			ai_will_do = {
 				factor = 100
