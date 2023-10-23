@@ -73,6 +73,7 @@ car_main_1 = {
 			custom_tooltip = empty_line_tt
 			sicily_area = { add_permanent_claim = ROOT }
 			calabria_area = { add_permanent_claim = ROOT }
+			naples_area = { add_permanent_claim = ROOT }
 			apulia_area = { add_permanent_claim = ROOT }
 		} 
 	}
@@ -81,11 +82,39 @@ car_main_1 = {
 		icon = mission_rule_italy
 		position = 4
 		required_missions = { pf_car_revive_lilybaeum } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				AND = {
+					region = italy_region
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 121
+					NOT = {
+						AND = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			owns_core_province = 121
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			italy_region = {
+				add_permanent_claim = ROOT
+			}
+			north_italy_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_car_approach_the_alpes = {
@@ -207,11 +236,35 @@ car_main_2 = {
 		icon = mission_plc_golden_liberty
 		position = 4
 		required_missions = { pf_car_into_iber } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			region = iberia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 45
+				region = iberia_region
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = unlock_gallic_wars_cb_tt
+			set_country_flag = unlock_gallic_wars_cb_flag
+			custom_tooltip = empty_line_tt
+			guyenne_area = {
+				add_permanent_claim = ROOT
+			}
+			pyrenees_area = {
+				add_permanent_claim = ROOT
+			}
+			languedoc_area = {
+				add_permanent_claim = ROOT
+			}
+			provence_area = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_car_finish_the_punic_wars = {
