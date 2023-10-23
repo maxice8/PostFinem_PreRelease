@@ -90,12 +90,8 @@ car_main_1 = {
 				}
 				AND = {
 					province_id = 121
-					NOT = {
-						AND = {
-							owned_by = ROOT
-							is_core = ROOT
-						}
-					}
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
 				}
 			}
 		} 
@@ -448,11 +444,34 @@ car_main_3 = {
 		icon = renaissance_city
 		position = 4
 		required_missions = { pf_car_into_iber } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_id = 1750
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+			development = 25
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			owns_core_province = 1750
+			1750 = { development = 25 }
+		} 
 
-		effect = {  } 
+		effect = {  
+			1750 = {
+				center_of_trade = 2
+			}
+			custom_tooltip = empty_line_tt
+			1750 = {
+				add_base_tax = 1
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+			custom_tooltip = empty_line_tt
+			1750 = {
+				change_trade_goods = paper
+				add_building = mills
+			}
+		} 
 	}
 
 	pf_car_gallic_campaigns = {
@@ -600,11 +619,32 @@ car_main_4 = {
 		icon = mission_control_the_barbary_coast
 		position = 1
 		required_missions = { pf_car_the_land_of_alexander } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				area = bahari_area
+				area = palestine_area
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			bahari_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}  
+			palestine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			egypt_region = {
+				add_permanent_claim = ROOT
+			}
+			mashriq_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_car_phoenicia_our_home = {
@@ -733,22 +773,91 @@ car_main_5 = {
 		icon = mission_conquer_alexandria
 		position = 4
 		required_missions = { pf_car_the_land_of_alexander } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_id = 358
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			owns_core_province = 358
+			358 = { development = 25 }
+			358 = { has_shipyard_building_trigger = yes }
+			358 = { has_trade_building_trigger = yes }
+		} 
 
-		effect = {  } 
+		effect = {  
+			358 = { change_province_name = "Hannibalia" }
+			hidden_effect = { 
+				358 = { rename_capital = "Hannibalia" } 
+			}
+			custom_tooltip = empty_line_tt
+			358 = { 
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			custom_tooltip = empty_line_tt
+			country_event = {
+				id = pf_car.1
+			}
+		}
 	}
 
 	pf_car_phoenician_strongholds = {
 		icon = mission_metropolis_of_the_deccan
 		position = 5
 		required_missions = { pf_car_the_gateway_to_the_east } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				AND = {
+					OR = {
+						region = italy_region
+						region = north_italy_region
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 118
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			owns_core_province = 118
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = italy_region
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = north_italy_region
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			118 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+			custom_tooltip = empty_line_tt
+			118 = {
+				add_province_modifier = {
+					name = car_roma_claimed_modifier
+					duration = -1
+				}
+			}
+			custom_tooltip = empty_line_tt
+			341 = {
+				add_province_modifier = {
+					name = car_eternal_punic_war_victor_modifier
+					duration = -1
+				}
+			}
+		} 
 	}
 
 	pf_car_phoenician_trade_routes = {

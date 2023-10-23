@@ -175,57 +175,52 @@ age_of_discovery = {
 			}
 		}
 		
-		ab_ottoman_siege_ability = {
+		ab_suebi_naval_maintenance = {
 			allow = {
-				tag = TUR
+				tag = SUE
 			}
 			modifier = {
-				leader_siege = 1 
+				naval_maintenance_modifier = -0.25
 			}
 			ai_will_do = {
 				factor = 100
 			}
 		}
 		
-		ab_portugal_colonial_growth = {
+		ab_saxon_defensiveness = {
 		
 			allow = {
-				tag = POR
-			}
-			modifier = {
-				global_colonial_growth = 50
-			}
-			ai_will_do = {
-				factor = 100
-			}
-		}
-		ab_denmark_reduced_lib_desire = {
-		
-			allow = {
-				tag = DAN
-			}
-			modifier = {
-				reduced_liberty_desire = 30
-			}
-			ai_will_do = {
-				factor = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_subject_country = {
-							liberty_desire = 20
-						}
-					}
+				OR = {
+					tag = SXY
+					was_tag = SXY
 				}
 			}
+			modifier = {
+				defensiveness = 0.33
+			}
+			ai_will_do = {
+				factor = 100
+			}
 		}
-		ab_venice_ship_trade = {
+		ab_macedonia_army_tradidion = {
 		
 			allow = {
-				tag = VEN
+				tag = MAC
 			}
 			modifier = {
-				global_ship_trade_power = 0.5
+				army_tradition = 1
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_persia_improve_relations = {
+		
+			allow = {
+				tag = PER
+			}
+			modifier = {
+				improve_relation_modifier = 0.33
 			}
 			ai_will_do = {
 				factor = 100
@@ -383,54 +378,47 @@ age_of_reformation = {
 			}
 		}
 
-		ab_spain_shock_tactics = {
+		ab_carthage_cav_cost = {
 			allow = {
-				tag = SPA
+				tag = CAR
 			}
 			modifier = {
-				leader_land_shock = 1
+				cavalry_cost = -0.25
 			}
 			ai_will_do = {
 				factor = 100
 			}
 		}
-		ab_mughal_artillery = {
+		ab_italia_shock_damage_received = {
 			allow = {
-				tag = MUG
+				tag = ITY
 			}
 			modifier = {
-				artillery_power = 0.15
-			}
-			ai_will_do = {
-				factor = 100
-			}
-		}
-		
-		ab_polish_legitimacy = {
-			allow = {
-				OR = {
-					tag = PLC
-					tag = POL
-					custom_trigger_tooltip = {
-						tooltip = enable_this_ability_tt
-						has_country_flag = unlock_polish_ability_flag
-					}
-				}
-			}
-			modifier = {
-				global_trade_goods_size_modifier = 0.33
+				shock_damage_received = -0.2
 			}
 			ai_will_do = {
 				factor = 100
 			}
 		}
 		
-		ab_persia_development = {
+		ab_aegyptos_missionary_strength = {
 			allow = {
-				tag = PER
+				tag = AEG
 			}
 			modifier = {
-				development_cost = -0.2
+				global_heathen_missionary_strength = 0.03
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		
+		ab_roma_dip_rep = {
+			allow = {
+				tag = RMA
+			}
+			modifier = {
+				diplomatic_reputation = 3
 			}
 			ai_will_do = {
 				factor = 100
@@ -574,59 +562,53 @@ age_of_absolutism = {
 		}
 	
 	
-		ab_french_absolutism = {
+		ab_swedish_regiment_cost = {
 			allow = {
-				tag = FRA
+				OR = {
+					tag = SWE
+					tag = NDH
+				}
 			}
 			modifier = {
-				max_absolutism_effect = 0.3
+				global_regiment_cost = -0.2
 			}
 			ai_will_do = {
 				factor = 100
 			}
 		}
-		ab_dutch_trade = {
+		ab_celtic_isles_artillery_fire = {
 			allow = {
-				tag = NED
+				OR = {
+					tag = ABN
+					tag = SKL
+					tag = BRN
+				}
 			}
 			modifier = {
-				trade_steering = 0.33
+				artillery_fire = 1
 			}
 			ai_will_do = {
 				factor = 100
 			}
 		}	
-		ab_sweden_manpower = {
+		ab_sparta_fire_damage = {
 			allow = {
-				OR = {
-					tag = SWE
-					tag = SCA
-				}
+				tag = SPT
 			}
 			modifier = {
-				manpower_recovery_speed = 0.35
+				fire_damage = 0.2
 			}
 			ai_will_do = {
 				factor = 100
 			}
 		}
 
-		ab_manchu_banner = {
+		ab_barqanesh_goods_produced = {
 			allow = {
-				OR = {
-					tag = MCH
-					tag = QNG
-				}
+				culture_group = euro_punic
 			}
 			effect = {
-				if = {
-					limit = {
-						NOT = { primary_culture = manchu }
-						NOT = { primary_culture = manchu_new }
-						NOT = { has_government_attribute = allow_banners }
-					}
-					custom_tooltip = ab_manchu_banner_tt
-				}
+				global_trade_goods_size_modifier = 0.2
 			}
 			modifier = {
 				amount_of_banners = 0.5
@@ -785,21 +767,18 @@ age_of_revolutions = {
 				}
 			}
 		}
-		ab_pru_military = {
+		ab_germania_siege_ability = {
 			allow = {
-				OR = {
-					tag = PRU
-					tag = GER
-				}
+				tag = GMN
 			}
 			modifier = {
-				fire_damage_received = -0.2
+				siege_ability = 0.25
 			}
 			ai_will_do = {
 				factor = 100
 			}
 		}
-		ab_gbr_fleet = {
+		ab_slavia_oe_effect = {
 			allow = {
 				OR = {
 					tag = AVE
