@@ -185,14 +185,22 @@ car_main_2 = {
 		} 
 
 		trigger = {  
-			sicily_area = { country_or_non_sovereign_subject_holds = ROOT }
-			western_sicily_area = { country_or_non_sovereign_subject_holds = ROOT }
-			corsica_sardinia_area = { country_or_non_sovereign_subject_holds = ROOT }
-			corsica_area = { country_or_non_sovereign_subject_holds = ROOT }
-			baleares_area = { country_or_non_sovereign_subject_holds = ROOT }
+			sicily_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			western_sicily_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			corsica_sardinia_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			corsica_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			baleares_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = car_unlock_yam_tt
+			set_country_flag = car_unlock_yam_flag
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = car_mediterranean_dominance_modifier
+				duration = 7300
+			}
+		} 
 	}
 
 	pf_car_iberia_reclaimed = {
@@ -348,11 +356,39 @@ car_main_3 = {
 		icon = mission_reclaim_andalucia
 		position = 3
 		required_missions = { pf_car_masters_of_mauretania } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				area = upper_andalucia_area
+				area = lower_andalucia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			upper_andalucia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lower_andalucia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			if = {
+				limit = { SUE = { exists = yes } }
+			}
+			add_casus_belli = {
+				type = cb_restore_personal_union
+				target = SUE
+				months = 120
+			}
+			custom_tooltip = empty_line_tt
+			iberia_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_car_carthago_nova = {
@@ -452,6 +488,7 @@ car_main_4 = {
 			163 = {
 				add_or_upgrade_shipyard_building = yes
 			}
+			custom_tooltip = empty_line_tt
 			163 = {
 				add_province_modifier = {
 					name = car_island_hopping_modifier
@@ -471,11 +508,39 @@ car_main_4 = {
 		icon = mission_rb_seize_alexandria
 		position = 3
 		required_missions = { pf_car_island_hopping } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				area = cyrenaica_area
+				area = delta_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			cyrenaica_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}  
+			delta_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_prestige_or_monarch_power = { amount = 25 }
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = car_the_land_of_alexander_modifier
+				duration = 7300
+			}
+			bahari_area = {
+				add_permanent_claim = ROOT
+			}
+			palestine_area = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_car_the_motherland_beckons = {
@@ -577,11 +642,38 @@ car_main_5 = {
 			pf_car_a_navy_worth_of_yam
 			pf_car_island_hopping
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_id = 341
+			NOT = {
+				has_great_project = {
+					type = great_cothon
+					tier = 2
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			owns_core_province = 341
+			341 = {				
+				has_great_project = {
+					type = great_cothon
+					tier = 2
+				}
+			}
+			naval_forcelimit = 50
+			navy_size = 50
+			num_of_heavy_ship = 5
+			has_reform_on_level = 5
+		} 
 
-		effect = {  } 
+		effect = {  
+			341 = {
+				set_great_project_tier_3 = { type = great_cothon }
+			}
+			custom_tooltip = empty_line_tt
+			set_country_flag = pf_quinquereme_allowed_flag
+			add_government_reform = pf_quinquereme_shipyards
+		} 
 	}
 
 	pf_car_the_gateway_to_the_east = {

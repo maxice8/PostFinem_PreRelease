@@ -47,11 +47,11 @@ religious_center = {
 		# 	}
 		# 	religion = catholic
 		# }
-		else_if = {
-			limit = {
-				province_id = 4288 # Taiz
-			}
-			religion_group = muslim
+		# else_if = {
+		# 	limit = {
+		# 		province_id = 4288 # Taiz
+		# 	}
+		# 	religion_group = muslim
 		# }
 		# else_if = {
 		# 	limit = {
@@ -145,7 +145,7 @@ religious_center = {
 			limit = {
 				province_id = 341 #Carthage
 			}
-			religion = punic
+			religion = punic_religion
 		}
 		else_if = {
 			limit = {
@@ -157,14 +157,14 @@ religious_center = {
 			limit = {
 				province_id = 213 #Barcino
 			}
-			religion = punic
+			religion = punic_religion
 		}
 		else_if = {
 			limit = {
 				province_id = 4772 #Irminsul
 			}
 			OR = {
-				religion = germanic
+				religion = germanic_religion
 				religion = south_germanic_religion
 			}
 		}
