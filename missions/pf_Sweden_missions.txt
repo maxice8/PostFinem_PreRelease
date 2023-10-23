@@ -115,22 +115,75 @@ pf_swe_1 = {
 		icon = mission_baltic_empire
 		position = 5
 		required_missions = { pf_swe_unite_scandinavia } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			region = baltic_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				region = baltic_region
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = "pf_swe_dominance_of_the_baltic"
+				duration = 9125
+			}
+			north_german_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			russia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_swe_into_germania = {
 		icon = interfere_in_germany
 		position = 6
 		required_missions = { pf_swe_baltic_dominance } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			region = north_german_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		} 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = north_german_region
+			}
+		} 
 
-		trigger = {  } 
-
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = "pf_swe_beyond_the_danavirki"
+				duration = 10950
+			}
+			poland_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			south_german_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_swe_subdue_the_slavs = {
@@ -140,11 +193,32 @@ pf_swe_1 = {
 			pf_swe_into_germania
 			pf_swe_defeat_hordes
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			region = poland_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = poland_region
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_mil_power = 100
+			add_country_modifier = {
+				name = "pf_swe_slavic_integration"
+				duration = 9125
+			}
+			carpathia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_swe_swedish_empire = {
@@ -156,9 +230,25 @@ pf_swe_1 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			is_great_power = yes
+			government_rank = 3
+			army_size = 500
+		} 
 
-		effect = {  } 
+		effect = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 50
+			}
+			add_prestige_or_monarch_power = {
+				amount = 100
+			}
+			add_country_modifier = {
+				name = "pf_swe_empire_of_the_swedes"
+				duration = -1
+			}
+		} 
 	}
 }
 pf_swe_2 = {
@@ -294,22 +384,94 @@ pf_swe_2 = {
 		icon = mission_destroy_the_horde
 		position = 6
 		required_missions = { pf_swe_baltic_dominance } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			region = russia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = russia_region
+			}
+		}
 
-		effect = {  } 
+		effect = {
+			add_ruler_modifier = {
+				name = "pf_swe_hordesbane"
+				duration = -1
+			}
+			ruthenia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			crimea_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_swe_the_rivermen = {
 		icon = mission_pow_just_around_the_riverbend
 		position = 7
 		required_missions = { pf_swe_defeat_hordes } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				region = ruthenia_region
+				region = crimea_region
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 35
+				OR = {
+					region = ruthenia_region
+					region = crimea_region
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = "pf_swe_rusmen"
+				duration = 9125
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					280 = {
+						trade_share = {
+							country = root
+							share = 50
+						}
+					}
+				}
+				custom_tooltip = pf_swe_the_rivermen_1_tt
+				hidden_effect = {
+					add_dip_power = 200
+				}
+				tooltip = {
+					add_dip_power = 200
+				}
+			}
+			else = {
+				custom_tooltip = pf_swe_the_rivermen_2_tt
+				hidden_effect = {
+					add_dip_power = 200
+				}
+				tooltip = {
+					add_dip_power = 200
+				}
+			}
+		} 
 	}
 
 	pf_swe_capital_for_an_empire = {
@@ -343,18 +505,51 @@ pf_swe_2 = {
 			}
 		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = "pf_swe_an_empire_expands"
+				duration = 10950
+			}
+		} 
 	}
 
 	pf_swe_encourage_literacy = {
 		icon = mission_book_of_royal_degrees
 		position = 10
 		required_missions = { pf_swe_industrialise_sweden } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_building = university }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 20
+				has_building = university
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			change_innovativeness = 2
+			custom_tooltip = pf_swe_every_university_gets_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = { has_building = university }
+					random_list = {
+						1 = { add_base_tax = 1 }
+						1 = { add_base_production = 1 }
+						1 = { add_base_manpower = 1 }
+					}
+				}
+			}
+			tooltip = {
+				random_list = {
+					1 = { add_base_tax = 1 }
+					1 = { add_base_production = 1 }
+					1 = { add_base_manpower = 1 }
+				}
+			}
+		} 
 	}
 }
 pf_swe_3 = {
@@ -534,31 +729,192 @@ pf_swe_3 = {
 		position = 7
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			owns_core_province = 1
+			num_of_owned_provinces_with = {
+				value = 4
+				development = 16
+			}
+			development_in_provinces = {
+				value = 100
+				province_has_center_of_trade_of_level = 1
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			1 = {
+				change_trade_goods = cloth
+			}
+			define_advisor = {
+				type = architect
+				skill = 2
+				discount = yes
+			}
+			add_adm_power = 100
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					1926 = {
+						trade_share = {
+							country = root
+							share = 50
+						}
+					}
+				}
+				custom_tooltip = pf_swe_support_the_towns_1_tt
+				hidden_effect = {
+					add_mercantilism = 4
+				}
+				tooltip = {
+					add_mercantilism = 4
+				}
+			}
+			else = {
+				custom_tooltip = pf_swe_support_the_towns_2_tt
+				hidden_effect = {
+					add_mercantilism = 4
+				}
+				tooltip = {
+					add_mercantilism = 4
+				}
+			}
+		} 
 	}
 
 	pf_swe_herring_superpower = {
 		icon = mission_fish_markets
 		position = 8
 		required_missions = { pf_swe_support_the_towns } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			trade_goods = fish
+			owned_by = ROOT
+			NOT = { has_production_building_trigger = yes }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			owns_core_province = 6
+			trade_goods_produced_amount = {
+				trade_goods = fish
+				amount = 10
+			}
+			num_of_owned_provinces_with = {
+				value = 8
+				trade_goods = fish
+				has_production_building_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			6 = {
+				if = {
+					limit = { has_manufactory_trigger = no }
+					add_building = wharf
+				}
+				else = {
+					upgrade_center_of_trade = yes
+				}
+			}
+			add_country_modifier = {
+				name = "pf_swe_fish_exporter"
+				duration = 9125
+			}
+			if = {
+				limit = {
+					trading_bonus = {
+						trade_goods = fish
+						value = yes
+					}
+				}
+				custom_tooltip = pf_swe_herring_1_tt
+				hidden_effect = {
+					change_price = {
+						trade_goods = fish
+						key = SWE_HERRING_BOOST
+						value = 0.25
+						duration = 18250
+					}
+				}
+				tooltip = {
+					change_price = {
+						trade_goods = fish
+						key = SWE_HERRING_BOOST
+						value = 0.25
+						duration = 18250
+					}
+				}
+			}
+			else = {
+				custom_tooltip = pf_swe_herring_2_tt
+				hidden_effect = {
+					change_price = {
+						trade_goods = fish
+						key = SWE_HERRING_BOOST
+						value = 0.25
+						duration = 18250
+					}
+				}
+				tooltip = {
+					change_price = {
+						trade_goods = fish
+						key = SWE_HERRING_BOOST
+						value = 0.25
+						duration = 18250
+					}
+				}
+			}
+		} 
 	}
 
 	pf_swe_industrialise_sweden = {
 		icon = mission_iron_and_copper
 		position = 9
 		required_missions = { pf_swe_herring_superpower } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4
+				province_id = 5
+				province_id = 8
+				province_id = 1985
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_manufactory_trigger = yes }
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {
+			4 = {
+				owned_by = root
+				has_manufactory_trigger = yes
+			}
+			5 = {
+				owned_by = root
+				has_manufactory_trigger = yes
+			}
+			8 = {
+				owned_by = root
+				has_manufactory_trigger = yes
+			}
+			1985 = {
+				owned_by = root
+				has_manufactory_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_ruler_personality = industrious_personality
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			8 = {
+				add_province_modifier = {
+					name = "pf_swe_endless_copper"
+					duration = -1
+				}
+			}
+		} 
 	}
 
 	pf_swe_a_learned_people = {
@@ -568,11 +924,33 @@ pf_swe_3 = {
 			pf_swe_encourage_literacy
 			pf_swe_monopolise_goods
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			devastation = 1
+		} 
 
-		trigger = {  } 
+		trigger = {
+			innovativeness = 75
+			development_in_provinces = {
+				value = 500
+				culture = swedish
+			}
+			custom_trigger_tooltip = {
+				tooltip = pf_swe_no_devastation_tt
+				NOT = {
+					any_owned_province = {
+						devastation = 1
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = "pf_swe_center_of_knowledge"
+				duration = -1
+			}
+		} 
 	}
 }
 pf_swe_4 = {
@@ -605,10 +983,10 @@ pf_swe_4 = {
 		}
 
 		effect = {
-			change_government_reform_progress = 100
+			change_government_reform_progress = 25
 			add_country_modifier = {
 				name = "pf_swe_feudal_management"
-				duration = 9125
+				duration = 10950
 			}
 		}
 	}
@@ -640,9 +1018,56 @@ pf_swe_4 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			ruler_total_stats = {
+				amount = 12
+			}
+			OR = {
+				absolutism = 50
+				revolutionary_zeal = 50
+				land_morale = 6.0
+			}
+			is_monarch_leader = yes
+		} 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = pf_swe_odinsson_tt
+			set_country_flag = swe_power_projection_from_battles
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					has_personal_deity = odin
+				}
+				custom_tooltip = pf_swe_has_odin_1_tt
+				hidden_effect = {
+					add_country_modifier = {
+						name = "pf_swe_mandate_of_odin"
+						duration = 10950
+					}
+				}
+				tooltip = {
+					add_country_modifier = {
+						name = "pf_swe_mandate_of_odin"
+						duration = 10950
+					}
+				}
+			}
+			else = {
+				custom_tooltip = pf_swe_has_odin_2_tt
+				hidden_effect = {
+					add_country_modifier = {
+						name = "pf_swe_mandate_of_odin"
+						duration = 10950
+					}
+				}
+				tooltip = {
+					add_country_modifier = {
+						name = "pf_swe_mandate_of_odin"
+						duration = 10950
+					}
+				}
+			}
+		} 
 	}
 
 	pf_swe_divine_contract = {
@@ -654,20 +1079,95 @@ pf_swe_4 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			monthly_adm = 12
+			reform_level = 6
+			OR = {
+				has_country_modifier = god_odin_sacrifice
+				has_country_modifier = god_freyr_sacrifice
+				has_country_modifier = god_thor_sacrifice
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = pf_swe_free_sacrifices_tt
+			set_country_flag = pf_free_sacrifices
+		} 
 	}
 
 	pf_swe_settle_the_forests = {
 		icon = mission_the_sami
 		position = 9
 		required_missions = { pf_swe_herring_superpower } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = northern_norway
+				area = norrland_area
+				area = laponia_area
+				area = bothnia_area
+				area = finland_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { development = 12 }
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {
+			northern_norway = {
+				type = all
+				owned_by = ROOT
+				development = 12
+			}
+			norrland_area = {
+				type = all
+				owned_by = ROOT
+				development = 12
+			}
+			laponia_area = {
+				type = all
+				owned_by = ROOT
+				development = 12
+			}
+			bothnia_area = {
+				type = all
+				owned_by = ROOT
+				development = 12
+			}
+			finland_area = {
+				type = all
+				owned_by = ROOT
+				development = 12
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = pf_swe_every_sami_and_finnish_province_gets_manpower_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture = sapmi
+							culture = finnish
+						}
+					}
+					add_province_modifier = {
+						name = "pf_swe_sami_recruitment"
+						duration = -1
+					}
+				}
+			}
+			tooltip = {
+				add_province_modifier = {
+					name = "pf_swe_sami_recruitment"
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = "pf_swe_wood_from_forests"
+				duration = 10950
+			}
+		} 
 	}
 
 	pf_swe_monopolise_goods = {
@@ -677,11 +1177,39 @@ pf_swe_4 = {
 			pf_swe_industrialise_sweden
 			pf_swe_enlightenment
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1926
+				province_id = 45
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_trading_bonuses = 3
+			1926 = {
+				trade_share = {
+					country = root
+					share = 75
+				}
+			}
+			45 = {
+				trade_share = {
+					country = root
+					share = 50
+				}
+			}
+			has_dip_advisor_3 = yes
+		} 
 
-		effect = {  } 
+		effect = {
+			add_years_of_trade_income = {
+				years = 5
+			}
+			add_country_modifier = {
+				name = "pf_swe_global_trade_dominance"
+				duration = -1
+			}
+		} 
 	}
 }
 pf_swe_5 = {
@@ -751,22 +1279,82 @@ pf_swe_5 = {
 	pf_swe_the_old_ways = {
 		icon = mission_norse_faith
 		position = 5
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_tax_building_trigger = yes }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			owns_core_province = 1
+			1 = {
+				has_great_project = {
+					type = uppsala_temple
+					tier = 1
+				}
+			}
+			prestige = 50
+			num_of_owned_provinces_with = {
+				value = 5
+				has_tax_building_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			1 = {
+				add_great_project_tier = {
+					type = uppsala_temple
+					tier = 1
+				}
+			}
+			add_country_modifier = {
+				name = "pf_swe_norse_good"
+				duration = 9125
+			}
+		} 
 	}
 
 	pf_swe_patronise_uppsala = {
 		icon = mission_mnd_dai_temples
 		position = 6
 		required_missions = { pf_swe_the_old_ways } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			province_id = 1
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_tax_building_trigger = yes }
+				NOT = { has_production_building_trigger = yes }
+				NOT = { has_manpower_building_trigger = yes }
+				NOT = { num_of_times_expanded_infrastructure = 1 }
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {
+			owns_core_province = 1
+			1 = {
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes
+				has_manpower_building_trigger = yes
+			}
+			1 = {
+				num_of_times_expanded_infrastructure = 1
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			1 = {
+				upgrade_center_of_trade = yes
+				add_province_modifier = {
+					name = "pf_swe_development_of_uppsala"
+					duration = 9125
+				}
+			}
+			define_advisor = {
+				type = city_planner
+				skill = 1
+				discount = yes
+				culture = swedish
+			}
+		} 
 	}
 
 	pf_swe_spread_the_faith = {
@@ -775,9 +1363,35 @@ pf_swe_5 = {
 		required_missions = { pf_swe_patronise_uppsala } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				calc_true_if = {
+					custom_trigger_tooltip = {
+						tooltip = pf_swe_force_convert_5_nations_tt
+						all_known_country = {
+							force_converted_by = ROOT
+							religion = ROOT
+						}
+					}
+					amount = 5
+				}
+				custom_trigger_tooltip = {
+					tooltip = pf_swe_convert_15_provinces_tt
+					check_variable = {
+						which = num_converted_religion
+						value = 15
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_adm_power = 50
+			add_country_modifier = {
+				name = "pf_swe_continuing_the_crusade"
+				duration = 9125
+			}
+		} 
 	}
 
 	pf_swe_enlightenment = {
@@ -785,9 +1399,24 @@ pf_swe_5 = {
 		position = 9
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			has_institution = enlightenment
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 10
+					has_building = university
+				}
+				innovativeness = 40.0
+			}
+		} 	
 
-		effect = {  } 
+		effect = {
+			add_absolutism = 10
+			add_country_modifier = {
+				name = "pf_swe_swedish_knowledge"
+				duration = 7300
+			}
+		} 
 	}
 
 	pf_swe_the_black_gold = {
@@ -796,8 +1425,51 @@ pf_swe_5 = {
 		required_missions = { pf_swe_enlightenment } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			coal = 1
+			num_of_owned_provinces_with = {
+				value = 25
+				has_manufactory_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = pf_swe_black_gold_tt
+			hidden_effect = {
+				random_owned_province = {
+					limit = { coal = 1 }
+					add_base_production = 3
+					add_province_modifier = {
+						name = "pf_swe_coal_production"
+						duration = -1
+					}
+				}
+			}
+			tooltip = {
+				add_base_production = 3
+				add_province_modifier = {
+					name = "pf_swe_coal_production"
+					duration = -1
+				}
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					has_institution = industrialization
+				}
+				custom_tooltip = pf_swe_if_industrialisation_1_tt
+				add_country_modifier = {
+					name = "pf_swe_goods_produced_wahoo"
+					duration = 9125
+				}
+			}
+			else = {
+				custom_tooltip = pf_swe_if_industrialisation_2_tt
+				add_country_modifier = {
+					name = "pf_swe_goods_produced_wahoo"
+					duration = 9125
+				}
+			}
+		} 
 	}
 }

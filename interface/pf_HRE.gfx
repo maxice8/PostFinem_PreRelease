@@ -44,6 +44,46 @@ spriteTypes = {
 		noOfFrames = 121
 		overlay_frames_per_row = 32
 		overlay_rows = 4
-
-   }
+   	}
+	# Federal Reforms
+	spriteType = {
+		name = "GFX_if_rex_terrenus"
+		texturefile = "gfx/interface/imperial_diet_reforms/if_rex_terrenus.dds"
+		loadType = "INGAME"
+  	}
+	spriteType = {
+		name = "GFX_if_princeps"
+		texturefile = "gfx/interface/imperial_diet_reforms/if_princeps.dds"
+		loadType = "INGAME"
+  	}
+	spriteType = {
+		name = "GFX_if_sociis_sub_aquila"
+		texturefile = "gfx/interface/imperial_diet_reforms/if_sociis_sub_aquila.dds"
+		loadType = "INGAME"
+  	}
+	spriteType = {
+		name = "GFX_if_collegium_deorum"
+		texturefile = "gfx/interface/imperial_diet_reforms/if_collegium_deorum.dds"
+		loadType = "INGAME"
+  	}
+	spriteType = {
+		name = "GFX_if_mare_nostrum"
+		texturefile = "gfx/interface/imperial_diet_reforms/if_mare_nostrum.dds"
+		loadType = "INGAME"
+  	}
+	spriteType = {
+		name = "GFX_if_regimen_via"
+		texturefile = "gfx/interface/imperial_diet_reforms/if_regimen_via.dds"
+		loadType = "INGAME"
+  	}
+	spriteType = {
+		name = "GFX_if_consiliario_tabula"
+		texturefile = "gfx/interface/imperial_diet_reforms/if_consiliario_tabula.dds"
+		loadType = "INGAME"
+  	}
+	spriteType = {
+		name = "GFX_if_foederati_pacem"
+		texturefile = "gfx/interface/imperial_diet_reforms/if_foederati_pacem.dds"
+		loadType = "INGAME"
+  	}
 }

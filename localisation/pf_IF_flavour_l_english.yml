@@ -1142,15 +1142,30 @@ deeds_adm_skill: "a great administrator and reformer"
 deeds_dip_skill: "a great negotiator and diplomat"
 deeds_no_skill: "a [Root.Monarch.GetWomanMan] of little skill"
 deeds_skill_issue: "a [Root.Monarch.GetWomanMan] with a serious skill issue"
+# bad
+bad_deeds_mil_skill: "a [Root.Monarch.GetWomanMan] used to stick fights and okay at murder"
+bad_deeds_adm_skill: "a [Root.Monarch.GetWomanMan] prone to shaking things up in an unnecessary manner"
+bad_deeds_dip_skill: "a [Root.Monarch.GetWomanMan] skilled at nattering on to people and boring them to death"
+bad_deeds_no_skill: "a [Root.Monarch.GetWomanMan] with a very smooth brain"
+bad_deeds_skill_issue: "a [Root.Monarch.GetWomanMan] who is truly a sight to behold"
 
 deeds_old: "an old"
 deeds_middle_aged: "a middle aged"
 deeds_young: "a young"
 deeds_child: "not yet a"
+# bad
+bad_deeds_old: "an ancient"
+bad_deeds_middle_aged: "a remarkably wrinkly"
+bad_deeds_young: "a smooth faced and ignorant"
+bad_deeds_child: "not yet a"
 
 deeds_warmonger: "a warmonger"
 deeds_opportunist: "an opportunistic attacker"
 deeds_peacemonger: "an avid proponent of peace and diplomacy"
+# bad
+bad_deeds_warmonger: "a naughty little [Root.Monarch.GetWomanMan]"
+bad_deeds_opportunist: "a successful defrauder and criminal"
+bad_deeds_peacemonger: "a lazy slob who has never touched grass"
 
 deeds_good_adirim: " A successful and effective Grand Adirim, [Root.Monarch.GetName] has pushed through many reforms to the structure of the Federation, much to its long term benefit. "
 deeds_okay_adirim: " [Root.Monarch.GetHerHisCap] reign as Grand Adirim has been uneventful, with few changes made to the Federation. "
@@ -1162,3 +1177,37 @@ deeds_adm_consort: "[Root.Monarch.GetHerHisCap] [Root.Consort.GetTitle] [Root.Co
 deeds_dip_consort: "[Root.Monarch.GetHerHisCap] [Root.Consort.GetTitle] [Root.Consort.GetName] has been loyal to the [Root.Monarch.GetTitle] for a long time now, giving [Root.Monarch.GetHerHim] comfort in times of distress and treating all our courtiers with the care and respect they deserve."
 deeds_bad_consort: "[Root.Monarch.GetHerHisCap] [Root.Consort.GetTitle] [Root.Consort.GetName] has shaped up to be little more than a consort, providing little tangible benefit to our realm."
 deeds_maidenless: "At this time, [Root.Monarch.GetName] is maidenless."
+
+# Federal Reforms
+
+if_rex_terrenus_title: "Rex Terrenus"
+if_rex_terrenus_desc: "Too much focus is placed on the spiritual and religious deeds of our rulers. Let us celebrate their worldly achievements too, and make sure they are recorded to future generations to marvel at."
+pf_if_rex_terrenus_effect_tt: "All members may commission epics."
+pf_if_rex_terrenus_off_effect_tt: "DISALLOWS all members from commission epics."
+
+if_princeps_title: "Princeps"
+if_princeps_desc: "The Adirim is not an emperor nor a tyrant - they are simply the first among equals, a brave subject of the Federation who has stepped up to guide it."
+
+if_sociis_sub_aquila_title: "Sociis Sub Aquila"
+if_sociis_sub_aquila_desc: "If we do not stand side by side in our times of need, the whole Federation will succumb to invaders. Despite our differences, we are all united under the eagle."
+pf_if_sociis_sub_aquila_effect_tt: "The Grand Adirim may call select members of the Federation into their wars."
+
+if_collegium_deorum_title: "Collegium Deorum"
+if_collegium_deorum_desc: "Our clergy have "
+pf_if_punic_monasteries_effect_tt: "All members may found Monasteries in their provinces."
+pf_if_swords_of_the_gods_effect_tt: "Enables the Swords of the Gods mercenary company."
+
+if_mare_nostrum_title: "Mare Nostrum"
+if_mare_nostrum_desc: ""
+
+if_regimen_via_title: "Regimen Via"
+if_regimen_via_desc: ""
+
+if_consiliario_tabula_title: "Consiliario Tabula"
+if_consiliario_tabula_desc: ""
+pf_if_reasons_for_advisor_petition_effect_tt: "Gain +10 reasons to accept Advisor Petitions."
+PETITION_CONSILIARIO_TABULA: "Consiliario Tabula"
+
+if_foederati_pacem_title: "Foederati Pacem"
+if_foederati_pacem_desc: ""
+pf_if_petition_for_war_effect_tt: "Enables the Petition for War."

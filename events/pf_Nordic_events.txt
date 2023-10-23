@@ -6,7 +6,18 @@ country_event = {		# Uppsala öd
 	desc = pf_nordic.1.d
 	picture = FARMING_WIFE_eventPicture
 
-	is_triggered_only = yes
+	trigger = {
+		tag = SWE
+		legitimacy = 90
+		stability = 1
+		owns = 1
+	}
+
+	mean_time_to_happen = {
+		months = 80
+	}
+
+	fire_only_once = yes
 
 	option = {
 		name = pf_nordic.1.a
@@ -18,7 +29,7 @@ country_event = {		# Uppsala öd
 	}
 	option = {
 		name = pf_nordic.1.b
-		add_years_of_income = 1
+		add_years_of_income = 2
 		add_legitimacy = -10
 		change_estate_land_share = {
 			estate = all
@@ -593,6 +604,89 @@ country_event = {		# Fleeing Civilians
 		add_army_tradition = 5
 		event_target:fleeing_prov = {
 			add_devastation = 30
+		}
+	}
+}
+country_event = {		# Child of Odin
+	id = pf_nordic.18
+	title = "pf_nordic.18.t"
+	desc = "pf_nordic.18.d"
+	picture = CONSORT_DOING_BADLY_eventPicture
+
+	trigger = {
+		is_female = yes
+		has_heir = no
+		religion = norse_pagan_reformed
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.5
+			has_personal_deity = odin
+		}
+		modifier = {
+			factor = 2
+			ruler_has_personality = infertile_personality
+		}
+	}
+
+	option = {		# By the gods!
+		name = "pf_nordic.18.a"
+		define_heir = {
+			claim = 100
+			dynasty = ROOT
+		}
+	}
+	option = {		# Spurn this invader
+		name = "pf_nordic.18.b"
+		add_prestige = -30
+		random_list = {
+			2 = {
+				kill_ruler = yes
+			}
+			1 = {
+			}
+		}
+	}
+	option = {		# Come her dearest
+		name = "pf_nordic.18.c"
+		trigger = {
+			ruler_has_personality = fertile_personality
+		}
+		highlight = yes
+		define_heir = {
+			adm = 6
+			dip = 6
+			mil = 6
+			claim = 100
+			dynasty = "Odinsson"
+		}
+	}
+}
+country_event = {		# The Way of Ancient Words
+	id = pf_nordic.19
+	title = "pf_nordic.19.t"
+	desc = "pf_nordic.19.d"
+	picture = indiangfx_CULTURE_eventPicture
+
+	trigger = {
+		NOT = { artist = 1 }
+		culture_group = scandinavian
+		legitimacy_equivalent = 80
+	}
+	
+	mean_time_to_happen = {
+		months = 1000
+	}
+
+	option = {
+		name = "pf_nordic.19.a"
+		add_adm_power = 50
+		define_advisor = {
+			type = artist
+			discount = yes
+			skill = 1
 		}
 	}
 }

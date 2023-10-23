@@ -1,8 +1,8 @@
 #405 - Tadmor
-capital = "Tadmuriyah"
-trade_goods = livestock
-base_tax = 2
-base_production = 1
+capital = "Palmyra"
+trade_goods = silk
+base_tax = 4
+base_production = 5
 base_manpower = 2
 is_city = yes
 discovered_by = east_african
@@ -15,3 +15,5 @@ owner = PMY
 controller = PMY
 discovered_by = eastern
 add_core = PMY
+
+center_of_trade = 1

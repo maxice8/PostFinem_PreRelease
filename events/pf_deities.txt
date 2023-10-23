@@ -112,8 +112,13 @@ country_event = {		# Consulting the Gods at Uppsala
 		}
 		set_country_flag = uppsala_gods_cooldown
 		adm_power_cost = 50
-		kill_advisor_by_category_effect = {
-			ADM = yes
+		if = {
+			limit = {
+				NOT = { has_country_flag = pf_free_sacrifices }
+			}
+			kill_advisor_by_category_effect = {
+				ADM = yes
+			}
 		}
 		add_country_modifier = {
 			name = "god_thor_sacrifice"
@@ -127,8 +132,13 @@ country_event = {		# Consulting the Gods at Uppsala
 		}
 		set_country_flag = uppsala_gods_cooldown
 		dip_power_cost = 50
-		kill_advisor_by_category_effect = {
-			DIP = yes
+		if = {
+			limit = {
+				NOT = { has_country_flag = pf_free_sacrifices }
+			}
+			kill_advisor_by_category_effect = {
+				DIP = yes
+			}
 		}
 		add_country_modifier = {
 			name = "god_freyr_sacrifice"
@@ -142,8 +152,13 @@ country_event = {		# Consulting the Gods at Uppsala
 		}
 		set_country_flag = uppsala_gods_cooldown
 		mil_power_cost = 50
-		kill_advisor_by_category_effect = {
-			MIL = yes
+		if = {
+			limit = {
+				NOT = { has_country_flag = pf_free_sacrifices }
+			}
+			kill_advisor_by_category_effect = {
+				MIL = yes
+			}
 		}
 		add_country_modifier = {
 			name = "god_odin_sacrifice"

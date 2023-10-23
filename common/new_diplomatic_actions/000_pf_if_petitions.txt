@@ -1154,5 +1154,15 @@ petition_for_advisor = {
 				value = 30
 			}
 		}
+		add_entry = {
+			name = PETITION_CONSILIARIO_TABULA
+			limit = {
+				ROOT = { has_country_flag = pf_if_reasons_for_advisor_petition }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 20
+			}
+		}
 	}
 }
