@@ -144,7 +144,7 @@ MAC_ideas = {
 GAU_ideas = {
 	start = {
 		diplomats = 1
-		global_tax_modifier = 0.1
+		global_tax_modifier = 0.15
 	}
 	
 	bonus = {
@@ -157,32 +157,78 @@ GAU_ideas = {
 	free = yes
 	#Gallic Legacy
 	GAU_ideas_1 = {
-		legitimacy = 1
+		war_exhaustion_cost = -0.15
 	}
 	#Loyaly to the Crown
 	GAU_ideas_2 = {
-		all_estate_influence_modifier = 0.1
+		all_estate_loyalty_equilibrium = 0.05
 	}
-	#A Quiet Realm
+	#Unification by the Riga
 	GAU_ideas_3 = {
-		stability_cost_modifier = -0.2
+		province_warscore_cost = -0.1
 	}
 	#Druidism Spreads
 	GAU_ideas_4 = {
 		global_missionary_strength = 0.02
-		can_chain_claim = yes
+		tolerance_own = 1
 	}
-	#The Druids Speak
+	#The Druidic Warriors
 	GAU_ideas_5 = {
-		institution_spread_from_true_faith = 0.25
+		shock_damage = 0.1
 	}
 	#Tame the Forests
 	GAU_ideas_6 = {
-		development_cost_modifier = -0.1
+		development_cost = -0.1
 	}
 	#Intelligent Investors
 	GAU_ideas_7 = {
 		merchants = 1
+	}
+}
+LUG_ideas = {
+	start = {
+		diplomats = 1
+		global_manpower_modifier = 0.10
+	}
+	
+	bonus = {
+		free_policy = 1	
+	}	
+
+	trigger = {
+		tag = LUG
+	}
+	free = yes
+	#Unity of the Parliament
+	LUG_ideas_1 = {
+		parliament_backing_chance = 0.15
+
+	}
+	#Galatai Raiders
+	LUG_ideas_2 = {
+		fire_damage = 0.10
+		infantry_power = 0.05
+	}
+	#
+	LUG_ideas_3 = {
+		province_warscore_cost = -0.1
+	}
+	#Power of the Druids
+	LUG_ideas_4 = {
+		global_missionary_strength = 0.02
+		yearly_patriarch_authority = 0.5
+	}
+	#Mediterranean Fleet
+	LUG_ideas_5 = {
+		galley_power = 0.20
+	}
+	#Expansion of the Heartland
+	LUG_ideas_6 = {
+		development_cost = -0.15
+	}
+	#College of Generals
+	LUG_ideas_7 = {
+		army_tradition = 1	
 	}
 }
 

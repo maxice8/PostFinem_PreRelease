@@ -65,6 +65,50 @@ pf_absolute_gallic_monarchy = {
 	}
 	
 }
+pf_gallic_parliament = {
+	icon = "gallic_king"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = { 
+			culture_group = gallic 
+			tag = GAU
+		}
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		is_elective = yes
+		custom_attributes = {
+			has_polish_election = yes
+			locked_government_type = yes
+		}
+	}
+	trigger = {
+		#has_country_flag = PF_political_two
+	}
+	government_abilities = {
+		gaul_confederation_mechanic
+	}
+	modifiers = {
+		yearly_absolutism = 0.5
+		yearly_corruption = -0.1	
+		diplomatic_upkeep = 1	
+	}
+	fixed_rank = 3
+	ai = {
+		factor = 0.5 #generic
+	}
+	
+}
 
 #Celtic Lordship
 

@@ -65,5 +65,20 @@ centralization_gaul = {
 	expand_administration_cost = -0.15
 }
 absolutism_spreads_GAU = {
+	max_absolutism_effect = 0.25
+}
+noble_absolutism_GAU = {
 	max_absolutism = 25
+}
+buffed_muskets_1 = {
+	manpower_recovery_speed = 0.10
+	land_maintenance_modifier = -0.15
+	reinforce_speed = 0.20
+	is_musketeer_modifier = yes	
+}
+buffed_muskets_2 = {
+	infantry_power = 0.10
+	movement_speed = 0.05
+	land_morale = 0.075	
+	is_musketeer_modifier = yes	
 }

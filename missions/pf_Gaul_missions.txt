@@ -806,15 +806,7 @@ PF_Gaul_4 = {
 				value = 50
 			}
 			estate_loyalty = {
-				estate = estate_burghers
-				loyalty = 60
-			}
-			estate_loyalty = {
-				estate = estate_nobles
-				loyalty = 60
-			}
-			estate_loyalty = {
-				estate = estate_church
+				estate = all
 				loyalty = 60
 			}
 		}
@@ -870,17 +862,15 @@ PF_Gaul_4 = {
 		}
 		trigger = {
 			OR = {
-				custom_trigger_tooltip = {
-					tooltip = carantus_counting_TT
-					check_variable = {
-						which = counting_carantus
-						value = 3
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = carantus_counting_TT
+						check_variable = {
+							which = counting_carantus
+							value = 3
+						}
 					}
-				}
-				has_government_power = {
-					mechanic_type = gaul_confederation_mechanic
-					power_type = gaul_confederation
-					value = 60
+					crown_land_share = 50
 				}
 				AND = {
 					NOT = {
@@ -889,14 +879,12 @@ PF_Gaul_4 = {
 					has_government_power = {
 						mechanic_type = gaul_confederation_mechanic
 						power_type = gaul_confederation
-						value = 75
+						value = 60
 					}
 				}
-			}
-			crown_land_share = 50
+			}	
 		}
 		effect = {
-			
 			custom_tooltip = pf_gaul_politics_1_TT
 			custom_tooltip = pf_gaul_politics_2_TT
 			hidden_effect = {
@@ -962,7 +950,7 @@ PF_Gaul_4_branching_a = {
 		has_country_flag = pf_gaul_politics_1
 	}
 	pf_gaul_court_4a = {
-		icon = mission_empire
+		icon = the_hundred_years_war
 		position = 4
 		required_missions = {
 			pf_gaul_court_3
@@ -978,17 +966,76 @@ PF_Gaul_4_branching_a = {
 		effect = {
 			set_country_flag = PF_political_one
 			add_government_reform = pf_absolute_gallic_monarchy
-			simple_dynamic_effect = {
-				first_custom_tooltip = gallic_hegemony_tt_1 #get 90 crownland
-				first_limit = "
-					crown_land_share = 90
-				"
-				first_effect = "
+			custom_tooltip = gallic_hegemony_tt_1
+			tooltip = {
+				add_country_modifier = {
+					name = absolutism_spreads_GAU
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						crown_land_share = 90
+					}
 					add_country_modifier = {
 						name = absolutism_spreads_GAU
 						duration = -1
 					}
-				"
+				}
+			}
+		}
+	}
+}
+PF_Gaul_4_branching_b = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GAU
+		has_country_flag = pf_gaul_politics_2
+	}
+	pf_gaul_court_4b = {
+		icon = dom_ara_remensa_war
+		position = 4
+		required_missions = {
+			pf_gaul_court_3
+		}
+		trigger = {
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 75
+			}
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+			government_reform_progress = 100
+			num_of_owned_provinces_with = {
+				has_courthouse_building_trigger = yes 
+				value = 10
+			}
+		}
+		effect = {
+			set_country_flag = PF_political_two
+			add_government_reform = pf_gallic_parliament
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							estate_influence = {
+								estate = estate_nobles
+								influence = 70
+							}
+						}
+						
+					}
+					add_country_modifier = {
+						name = noble_absolutism_GAU
+						duration = -1
+					}
+				}
 			}
 		}
 	}
@@ -1109,12 +1156,100 @@ PF_Gaul_5_branching = {
 	}
 }
 PF_Gaul_5a_branching = {
-	slot = 4
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GAU
+		has_country_flag = pf_gaul_politics_2
+	}
+	pf_gaul_court_8 = {
+		icon = mission_crusade_for_varna
+		position = 5
+		required_missions = {
+			pf_gaul_court_4b
+			pf_gaul_court_7
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 182
+				province_id = 192
+				province_id = 4386
+				province_id = 191
+			}
+			NOT = { num_of_times_improved_by_owner = 5 has_tax_building_trigger = yes has_manpower_building_trigger = yes }
+		}
+		trigger = {
+			182 = {
+				num_of_times_improved_by_owner = 5 has_tax_building_trigger = yes has_manpower_building_trigger = yes
+			}
+			192 = {
+				num_of_times_improved_by_owner = 5 has_tax_building_trigger = yes has_manpower_building_trigger = yes
+			}
+			4386 = {
+				num_of_times_improved_by_owner = 5 has_tax_building_trigger = yes has_manpower_building_trigger = yes
+			}
+			191 = {
+				num_of_times_improved_by_owner = 5 has_tax_building_trigger = yes has_manpower_building_trigger = yes
+			}
+			has_government_power = {
+				mechanic_type = gaul_confederation_mechanic
+				power_type = gaul_confederation
+				value = 90
+			}
+		}
+		effect = {
+			custom_tooltip = enable_lugundia_TT
+		}
+	}
+}
+PF_Gaul_5b_branching = {
+	slot = 5
 	generic = no
 	ai = yes
 	has_country_shield = yes
 	potential = {
 		tag = GAU
 		has_country_flag = pf_gaul_politics_1
+	}
+	pf_gaul_court_9 = {
+		icon = mission_crusade_for_varna
+		position = 5
+		required_missions = {
+			pf_gaul_court_4a
+			pf_gaul_court_7
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 373
+				province_id = 236
+				province_id = 182
+				province_id = 248
+			}
+			NOT = { num_of_times_improved_by_owner = 5 has_tax_building_trigger = yes has_manpower_building_trigger = yes }
+		}
+		trigger = {
+			373 = {
+				num_of_times_improved_by_owner = 5 
+				province_is_or_accepts_culture = yes
+			}
+			192 = {
+				num_of_times_improved_by_owner = 5 
+				province_is_or_accepts_culture = yes
+			}
+			4386 = {
+				num_of_times_improved_by_owner = 5 
+				province_is_or_accepts_culture = yes
+			}
+			191 = {
+				num_of_times_improved_by_owner = 5 
+				province_is_or_accepts_culture = yes
+			}
+			crown_land_share = 90
+		}
+		effect = {
+			custom_tooltip = enable_dual_celtica_TT
+		}
 	}
 }

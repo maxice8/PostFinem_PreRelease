@@ -16,7 +16,12 @@ centralization_gaul: "Centralization of Gaul"
 locked_mission_GAUL_1_title: "Locked Mission"
 locked_mission_GAUL_2_title: "Locked Mission"
 
+
 locked_mission_GAUL_1: "Locked Mission"
+pf_gaul_court_4a_title: "The Absolute Galatoria"
+pf_gaul_court_8_title: "Unify the Confederation"
+pf_gaul_court_4b_title: "The Gallic Constitution"
+pf_gaul_court_9_title: "The Nations of Celtica"
 
 #Mission Tooltips
 maybe_an_event_tt: "To do - maybe an event?\n"
@@ -49,6 +54,8 @@ furance_building_TT: "\nIf we complete this mission while having §YAdministrati
 carantus_counting_TT: "Secure a §YGallic Election§! with the §YCarantus§! dynasty at least 3 times. Current: §T[Root.counting_carantus.GetValue]§!."
 carantus_counting: "Carantus Succession"
 estate_nobles_mission_5_TT: "Have more Crownland than the Rixolar Estate"
+enable_lugundia_TT: "This will enable the Parliament Act §YPush for the Border Regions§!, which must be completed in order to enable the Act §YForge the Lugundian Era§!.\n\nThis will allow us to create the nation of @LUG §TLugundia§!"
+enable_dual_celtica_TT: "This will enable the decision to form the nation of @DCL §TDual Celticas§!."
 
 pf_gaul_politics_1_TT: "If we complete this mission §Ywith the Dynasty§! §TCarantus§!, it will enable the §YAbsolute Gallic Monarchy§! path.\nThis will also prevent §Yrebels from spawning§! when §YSeizing Land§!\n\n"
 pf_gaul_politics_2_TT: "If we complete this mission §Ywithout the Dynasty§! §TCarantus§!, it will enable the §YGallic Parliament§! path.\nThis will also Negate the Estate Loyalty penalty from §YSeizing Land§! by §Y10%§!\n"
@@ -93,8 +100,22 @@ estate_clergy_pf_gallic_wars_remnant: "Druidic Dominance"
 pf_absolute_gallic_monarchy: "Absolute Gallic Monarchy"
 pf_absolute_gallic_monarchy_desc: "The confederation, while still nominally present, has morphed into a centralized and powerful internal state. Under the rule of a single Galatoria, the nation is led to glory and success through their might and power!"
 
+pf_gallic_parliament: "Gallic Parliament"
+pf_gallic_parliament_desc: "The Gallic Confederation has morphed into the Parliament, where individual Touta can bring forth plans and grievances to the assembly to manage and administer the state."
+
 mechanic_buffed_advisors_GAU_yes: "Advisors Grant §G+0.02§! Scaled §YGallic Centralization§!"
 
-PF_political_one : "Absolutist Path"
+PF_political_one: "Absolutist Path"
+
+confederation_reform: "Reinforce Gallic Unity"
+power_the_gauls_GAU: "Extend Gaisatai Training"
+arm_the_gauls_GAU: "Expand Gaisatai Recruits"
+redistribute_GAU: "Redistribute Gallic Holdings"
+align_the_druids_GAU: "Allocate Ritual Funds"
+claim_lugundia_GAU: "Push for the Border Regions"
+unite_lugundia_GAU: "Forge the Lugundian Era"
+
+reduce_cost_druidic_ritual: "This will grant a one-time reduction of the cost for the decision §YOrganize Druidic Ritual§! by half."
+
 
 
