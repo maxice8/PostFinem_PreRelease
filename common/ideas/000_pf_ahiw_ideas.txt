@@ -714,3 +714,86 @@ JUT_ideas = {		# Jutland
 		global_prov_trade_power_modifier = 0.10
 	}
 }
+
+NOR_ideas = {
+	start = {
+		naval_maintenance_modifier = -0.10
+		heavy_ship_power = 0.15
+	}
+	
+	bonus = {
+		own_coast_naval_combat_bonus = 1.0
+	}
+	
+	trigger = {
+		tag = NOR
+		NOT = { has_country_flag = has_nor_evolved_ideas }
+	}
+	free = yes
+	
+	nor_legacy_of_ulrik = {
+		core_creation = -0.10
+		army_tradition_from_battle = 0.25
+	}
+	nor_call_to_the_sea = {
+		global_sailors_modifier = 0.25
+		range = 0.15
+	}
+	nor_north_sea_trades = {
+		trade_steering = 0.20
+	}
+	nor_crown_rule = {
+		global_autonomy = -0.05
+		estate_interaction_cooldown_modifier = -0.25
+	}
+	nor_master_seamen = {
+		naval_morale = 0.20
+	}
+	nor_fish_market = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	nor_royal_artillery = {
+		artillery_power = 0.10
+	}
+}
+NOR_ideas_evolved = {
+	start = {
+		naval_maintenance_modifier = -0.10
+		heavy_ship_power = 0.15
+	}
+	
+	bonus = {
+		own_coast_naval_combat_bonus = 1.0
+	}
+	
+	trigger = {
+		tag = NOR
+		has_country_flag = has_nor_evolved_ideas
+	}
+	free = yes
+	
+	nor_legacy_of_ulrik_evolved = {
+		core_creation = -0.15
+		army_tradition_from_battle = 0.50
+	}
+	nor_call_to_the_sea_evolved = {
+		global_sailors_modifier = 0.25
+		range = 0.15
+	}
+	nor_north_sea_trades_evolved = {
+		trade_steering = 0.20
+	}
+	nor_crown_rule_evolved = {
+		global_autonomy = -0.05
+		estate_interaction_cooldown_modifier = -0.25
+	}
+	nor_master_seamen_evolved = {
+		naval_morale = 0.20
+	}
+	nor_fish_market_evolved = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	nor_royal_artillery_evolved = {
+		artillery_power = 0.10
+	}
+}

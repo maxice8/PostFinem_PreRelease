@@ -668,7 +668,7 @@ country_event = {		# The Way of Ancient Words
 	id = pf_nordic.19
 	title = "pf_nordic.19.t"
 	desc = "pf_nordic.19.d"
-	picture = indiangfx_CULTURE_eventPicture
+	picture = CULTURE_eventPicture
 
 	trigger = {
 		NOT = { artist = 1 }
@@ -687,6 +687,200 @@ country_event = {		# The Way of Ancient Words
 			type = artist
 			discount = yes
 			skill = 1
+		}
+	}
+}
+country_event = {		# Sons of Ulrik
+	id = pf_nordic.20
+	title = "pf_nordic.20.t"
+	desc = "pf_nordic.20.d"
+	picture = 3_SONS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.20.a"
+		NRD = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_nor_ulrik_sons
+			}
+		}
+	}
+}
+country_event = {		# Brothers in Arms
+	id = pf_nordic.21
+	title = "pf_nordic.21.t"
+	desc = "pf_nordic.21.d"
+	picture = ITALIAN_wars_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.21.a"
+		add_country_modifier = {
+			name = "pf_nor_brothers_in_arms"
+			duration = -1
+		}
+		NRD = {
+			add_country_modifier = {
+				name = "pf_nor_brothers_in_arms"
+				duration = -1
+			}
+		}
+		custom_tooltip = pf_nor_brothers_in_arms_tt
+		add_manpower = 5
+		NRD = {
+			add_manpower = 5
+		}
+	}
+}
+country_event = {		# The Seas We Sail
+	id = pf_nordic.22
+	title = "pf_nordic.22.t"
+	desc = "pf_nordic.22.d"
+	picture = NORTH_SEA_MAPS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.22.a"
+		add_navy_tradition = 20
+		create_explorer = {
+			tradition = 50
+		}
+		add_country_modifier = {
+			name = "pf_nor_fires_of_exploration"
+			duration = 9125
+		}
+	}
+}
+country_event = {		# Remove brothers in arms
+	id = pf_nordic.23
+	title = "pf_nordic.23.t"
+	desc = "pf_nordic.23.d"
+	picture = NORTH_SEA_MAPS_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			was_tag = NOR
+			tag = NOR
+			was_tag = NRD
+			tag = NRD
+		}
+		has_country_modifier = pf_nor_brothers_in_arms
+		if = {
+			limit = {
+				OR = {
+					tag = NOR
+					was_tag = NOR
+				}
+			}
+			AND = {
+				NOT = { alliance_with = NRD }
+				NOT = { alliance_with = SKL }
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					tag = NRD
+					was_tag = NRD
+				}
+			}
+			AND = {
+				NOT = { alliance_with = NOR }
+				NOT = { alliance_with = NDH }
+			}
+		}
+	}
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "pf_nordic.23.a"
+		remove_country_modifier = pf_nor_brothers_in_arms
+	}
+}
+country_event = {		# The Lost Brother
+	id = pf_nordic.24
+	title = "pf_nordic.24.t"
+	desc = "pf_nordic.24.d"
+	picture = VIKING_KING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.24.a"
+		custom_tooltip = pf_nordic_lost_brother_tt
+		add_navy_tradition = 10
+	}
+}
+country_event = {		# King of the North
+	id = pf_nordic.25
+	title = "pf_nordic.25.t"
+	desc = "pf_nordic.25.d"
+	picture = AN_EMPIRE_FOR_A_GIRAFFE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.25.a"
+		restore_country_name = yes
+		override_country_name = NORVEGR
+		add_country_modifier = {
+			name = "pf_nor_king_of_the_north"
+			duration = -1
+		}
+	}
+	option = {
+		name = "pf_nordic.25.b"
+		add_country_modifier = {
+			name = "pf_nor_king_of_the_north"
+			duration = -1
+		}
+	}
+}
+country_event = {		# The Old Covenant
+	id = pf_nordic.26
+	title = "pf_nordic.26.t"
+	desc = "pf_nordic.26.d"
+	picture = RUNESTONE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.26.a"
+		change_government_reform_progress = 25
+		add_adm_power = 100
+		370 = {
+			add_local_autonomy = -25
+			add_devastation = -10
+		}
+		371 = {
+			add_local_autonomy = -25
+			add_devastation = -10
+		}
+	}
+}
+country_event = {		# A Strange New World
+	id = pf_nordic.27
+	title = "pf_nordic.27.t"
+	desc = "pf_nordic.27.d"
+	picture = COLONIZATION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.27.a"
+		add_prestige_or_monarch_power = {
+			amount = 30
 		}
 	}
 }

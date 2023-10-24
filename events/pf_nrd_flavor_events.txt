@@ -152,12 +152,20 @@ country_event = {
 	# }
 	# mean_time_to_happen = { months = 12 }
 
+	major = yes	# missing?
+
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = nrd_flavor_events.4.a
-		ai_chance = { factor = 1 }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				NOR = { mission_completed = pf_nor_bury_ulrik }		# Norway has done this mission
+			}
+		}
 		add_stability_or_adm_power = yes
 		custom_tooltip = empty_line_tt
 		NOR = { create_union = ROOT }

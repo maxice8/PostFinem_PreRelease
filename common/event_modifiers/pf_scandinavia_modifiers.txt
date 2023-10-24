@@ -203,3 +203,64 @@ pf_nordic_well_paid_men = {
 	discipline = 0.02
 	movement_speed = 0.02
 }
+
+# Norway
+
+pf_nor_brothers_in_arms = {
+	land_morale = 0.10
+}
+pf_nor_fires_of_exploration = {
+	movement_speed_in_fleet_modifier = 1
+	naval_attrition = -0.33
+}
+pf_nor_king_of_the_north = {
+	max_absolutism = 25
+	governing_capacity_modifier = 0.10
+}
+pf_nor_assemble_viking_army = {
+	movement_speed = 0.10
+	siege_ability = 0.15
+}
+pf_nor_triumph_over_sweden = {
+	land_morale = 0.20
+}
+pf_nor_brothers_forever = {
+	manpower_recovery_speed = 0.10
+	prestige_from_land = 0.50
+}
+pf_nor_integrating_highlands = {
+	local_autonomy = -0.05
+	local_years_of_nationalism = -10
+	local_manpower_modifier = 0.25
+}
+pf_nor_british_conquest = {
+	naval_morale = 0.10
+	global_sailors_modifier = 0.20
+}
+pf_nor_norse_settlement = {
+	local_tax_modifier = 0.33
+	local_manpower_modifier = 0.10
+	local_autonomy = -0.02
+	local_culture_conversion_cost = -0.25
+}
+pf_nor_burial_place_of_ulrik = {
+	local_fort_maintenance_modifier = -0.50
+	local_defensiveness = 0.10
+	prestige = 0.50
+	local_unrest = -2
+}
+pf_nor_warmer_climates = {
+	colony_cost_modifier = -0.25
+	colonist_placement_chance = 0.10
+}
+pf_nor_center_of_norwegian_colonialism = {
+	province_trade_power_value = 10
+}
+pf_nor_fire_damage = {
+	fire_damage = 0.10
+	infantry_fire = 0.1
+}
+pf_nor_ready_for_settlement = {
+	local_core_creation = -0.25
+	local_colonial_growth = 50
+}
