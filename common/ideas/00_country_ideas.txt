@@ -10740,42 +10740,6 @@ RSO_ideas = {
 	}
 }
 
-MVA_ideas = {
-	start = {
-		global_trade_goods_size_modifier = 0.1
-		global_manpower_modifier = 0.1
-	}
-	bonus = {
-		state_maintenance_modifier = -0.15
-	}
-	trigger = {
-		tag = MVA
-	}
-	free = yes
-	
-	mva_margraviate = {
-		diplomatic_reputation = 1
-	}
-	mva_religious_refuge = {
-		tolerance_own = 2
-	}
-	mva_cities_of_moravia = {
-		development_cost = -0.1
-	}
-	mva_land_of_vinyards = {
-		production_efficiency = 0.1
-	}
-	mva_german_quarters = {
-		num_accepted_cultures = 1
-	}
-	mva_jesuit_university = {
-		papal_influence = 1
-		adm_tech_cost_modifier = -0.1
-	}
-	mva_legacy_of_great_moravia = {
-		unjustified_demands = -0.25
-	}
-}
 
 EST_ideas = {
 	start = {
