@@ -207,13 +207,29 @@ ar_egypt_library = {
 	}
 
 	can_use_modifiers_trigger = {
-		culture_group = egyptian_greek
-		province_is_or_accepts_culture = yes
+		OR = {
+			AND = {
+				culture_group = egyptian_greek
+				province_is_or_accepts_culture = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = gain_access_to_great_library_custom_tt
+				has_country_flag = gain_access_to_great_library_flag
+			}
+		}
 	}
 
 	can_upgrade_trigger = {
-		culture_group = egyptian_greek
-		province_is_or_accepts_culture = yes
+		OR = {
+			AND = {
+				culture_group = egyptian_greek
+				province_is_or_accepts_culture = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = gain_access_to_great_library_custom_tt
+				has_country_flag = gain_access_to_great_library_flag
+			}
+		}
 	}
 
 	keep_trigger = {

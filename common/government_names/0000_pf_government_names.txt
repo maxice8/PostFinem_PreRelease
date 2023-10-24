@@ -227,6 +227,58 @@ pf_hierophant = {
 	}
 }
 
+
+satrapy = {
+	rank = {
+		1 = SATRAPY_RANK
+		2 = GREAT_SATRAPY_RANK
+		3 = GREAT_SATRAPY_RANK
+	}
+
+	ruler_male = {
+		1 = HYPARCHOS
+		2 = SATRAP
+		3 = SATRAP
+	}
+
+	ruler_female = {
+		1 = HYPARCHESA
+		2 = SATRAPIA
+		3 = SATRAPIA
+	}
+
+	consort_male = {
+		1 = HYPARCHONOS
+		2 = SATRAPENOS
+		3 = SATRAPENOS
+	}
+
+	consort_female = {
+		1 = HYPARCHESA
+		2 = SATRAPIA
+		3 = SATRAPIA
+	}
+	
+	heir_male = {
+		1 = HYPARCHION
+		2 = SATRAPZADA
+		3 = SATRAPZADA
+	}
+
+	heir_female = {
+		1 = HYPARCHIA
+		2 = SATRAPZADI
+		3 = SATRAPZADI
+	}
+
+	trigger = {
+		is_subject_of_type_with_overlord = {
+			who = PER
+			type = satrapy
+		}
+	}
+}
+
 #GENERIC
 
 pf_norse_rulers = {
@@ -449,14 +501,8 @@ rabim_qahal_adrim_in_power = {
 	}
 
 	trigger = {
-		has_government_mechanic = car_rabim_qahal
-		NOT = {
-			has_government_power = {
-				mechanic_type = car_rabim_qahal
-				power_type = adirim_vs_suffet
-				value = 0
-			}
-		}
+		has_government_mechanic = car_rabim_qahal		
+		has_ruler_flag = adirim_ruler_flag
 	}
 }
 
@@ -481,11 +527,30 @@ rabim_qahal_suffet_in_power = {
 
 	trigger = {
 		has_government_mechanic = car_rabim_qahal
-		has_government_power = {
-			mechanic_type = car_rabim_qahal
-			power_type = adirim_vs_suffet
-			value = 0
-		}
+		has_ruler_flag = suffet_ruler_flag
+	}
+}
+rabim_qahal_suffet_in_power_default = {
+	rank = {
+		1 = MEDINAT  
+		2 = HABURAT  
+		3 = RISHONAT 
+	}
+
+	ruler_male = {
+		1 = RAB_QART
+		2 = MELEK 
+		3 = RAB_MELEK 
+	}
+
+	ruler_female = {
+		1 = RABAT_QART
+		2 = MALKAT 
+		3 = RABAT_MALKAT 
+	}
+
+	trigger = {
+		has_government_mechanic = car_rabim_qahal
 	}
 }
 
@@ -716,56 +781,5 @@ pf_lagr_republic_names = {
 
 	trigger = {
 		has_reform = pf_lagr_republic
-	}
-}
-
-satrapy = {
-	rank = {
-		1 = SATRAPY_RANK
-		2 = GREAT_SATRAPY_RANK
-		3 = GREAT_SATRAPY_RANK
-	}
-
-	ruler_male = {
-		1 = HYPARCHOS
-		2 = SATRAP
-		3 = SATRAP
-	}
-
-	ruler_female = {
-		1 = HYPARCHESA
-		2 = SATRAPIA
-		3 = SATRAPIA
-	}
-
-	consort_male = {
-		1 = HYPARCHONOS
-		2 = SATRAPENOS
-		3 = SATRAPENOS
-	}
-
-	consort_female = {
-		1 = HYPARCHESA
-		2 = SATRAPIA
-		3 = SATRAPIA
-	}
-	
-	heir_male = {
-		1 = HYPARCHION
-		2 = SATRAPZADA
-		3 = SATRAPZADA
-	}
-
-	heir_female = {
-		1 = HYPARCHIA
-		2 = SATRAPZADI
-		3 = SATRAPZADI
-	}
-
-	trigger = {
-		is_subject_of_type_with_overlord = {
-			who = PER
-			type = satrapy
-		}
 	}
 }

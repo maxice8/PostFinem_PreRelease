@@ -311,10 +311,10 @@ pf_punic_festivals_reform = {
 	modifiers = {
 		stability_cost_modifier = -0.10
 		tolerance_own = 1
-		same_religion_advisor_cost = -0.15
+		same_religion_advisor_cost = -0.10
 	}
 	custom_attributes = {
-		ending_wars_gives_stability = yes
+		# ending_wars_gives_stability = yes
 	}
 	ai = {
 		factor = 1
