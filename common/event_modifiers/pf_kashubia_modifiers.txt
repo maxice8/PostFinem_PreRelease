@@ -103,3 +103,30 @@ ksb_siberian_frontier = {
 ksb_convert_mongols = {
 	global_heathen_missionary_strength = 0.03
 }
+
+ksb_military_industrial_complex = {
+	infantry_power = 0.1
+	infantry_cost = -0.15
+	trade_goods_size_modifier = 0.5
+}
+
+ksb_modern_state = {
+	innovativeness_gain = 0.5
+	max_absolutism_effect = 0.2
+}
+
+ksb_flocking_to_cities = {
+	build_cost = -0.2
+	build_time = -0.2
+}
+
+ksb_crimean_tradeport = {
+	province_trade_power_modifier = 0.5
+	ship_recruit_speed = -0.5
+	local_development_cost = -0.2
+}
+
+ksb_safe_shores = {
+	trade_steering = 0.1
+	ship_trade_power_modifier = 02.
+}

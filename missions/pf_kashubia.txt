@@ -642,14 +642,14 @@ ksb_5_slot = {
 				distribute_base_dev_to_provinces = {
 					num = 3
 					amount = 1
-					trigger = area = malopolska_area
+					trigger = "area = malopolska_area"
 					type = manpower
 					tooltip = PF_KSB_DEV_IN_MALOPOLSKA_TT
 				}
 				distribute_base_dev_to_provinces = {
 					num = 3
 					amount = 1
-					trigger = area = sandomierz_area
+					trigger = "area = sandomierz_area"
 					type = manpower
 					tooltip = PF_KSB_DEV_IN_SANDOMIERZ_TT
 				}
@@ -808,22 +808,66 @@ sevksb_1_branch = {
 	sev_gdansk = {
 		icon = mission_pol_embellish_gdansk
 		position = 8
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_id = 43
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			43 = {
+				grown_by_development = 20
+				province_has_current_tech_fort_trigger = yes
+				has_dock_building_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			define_advisor = {
+				type = trader
+				skill = 2
+				cost_multiplier = -0.66
+			}
+			43 = {
+				upgrade_center_of_trade = yes
+			}
+		} 
 	}
 
 	sev_protect_coast = {
 		icon = pf_fertile_crescent
 		position = 9
 		required_missions = { sev_gdansk } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			AND = {
+				OR = {
+					region = poland_region
+					region = baltic_region
+				}
+				has_port = yes
+				NOT = { has_coast_defense_building_trigger = yes }
+			}
+			owned_by = ROOT
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 8
+				OR = {
+					region = poland_region
+					region = baltic_region
+				}
+				has_port = yes
+				has_coast_defense_building_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			custom_tooltip = ksb_to_be_added_tt
+			#when norse raid wars get added block you from getting decced on
+			add_country_modifier = {
+				name = ksb_safe_shores
+				duration = 7300
+			}
+		} 
 	}
 
 	sev_baltic_monopolies = {
@@ -832,9 +876,20 @@ sevksb_1_branch = {
 		required_missions = { sev_protect_coast } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			trade_company_baltic_sea = {
+				is_strongest_trade_power = ROOT
+			}
+			num_ships_protecting_trade = 30
+		} 
 
-		effect = {  } 
+		effect = {  
+			create_units_of_type = {
+				amount = 10
+				province = 43
+				unit_type = carrack
+			}
+		} 
 	}
 }
 sevksb_2_branch = {
@@ -1275,25 +1330,77 @@ sevksb_5_branch = {
 	sev_krakow = {
 		icon = mission_pol_revival_krakow
 		position = 10
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_id = 262
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			262 = {
+				has_production_building_trigger = yes
+				has_tax_building_trigger = yes
+				has_manpower_building_trigger = yes
+				development = 30
+			}
+			trade_company_krakow = {
+				is_strongest_trade_power = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_years_of_trade_income = {
+				years = 2
+			}
+			262 = {
+				upgrade_center_of_trade = yes
+
+			}
+		} 
 	}
 
 	sev_endless_fields = {
 		icon = mission_pol_tend_east
 		position = 11
 		required_missions = { sev_krakow } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			NOT = {
+				AND = {
+					base_production = 8
+					OR = {
+						trade_goods = grain
+						trade_goods = livestock
+					}
+				}
+			}
+			owned_by = ROOT
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 20
+				base_production = 8
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			change_price = {
+				trade_goods = grain
+				key = "Slavic Grain"
+				value = 0.2
+				duration = 7300
+			}
+			change_price = {
+				trade_goods = livestock
+				key = "Slavic Livestock"
+				value = 0.2
+				duration = 7300
+			}
+		} 
 	}
 }
-
 slvksb_1_branch = {
 	slot = 1
 	generic = no
@@ -1310,14 +1417,37 @@ slvksb_1_branch = {
 		icon = crusader_fleet
 		position = 12
 		required_missions = { sev_baltic_monopolies } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			if = {
+				limit = {
+					1756 = {
+						NOT = {
+							has_dock_building_trigger = yes
+						}
+					}
+				}
+				province_id = 1756
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			navy_size_percentage = 1
+			num_of_admirals = 3
+			1756 = {
+				has_dock_building_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_navy_tradition = 30
+			define_advisor = {
+				type = naval_reformer
+				skill = 3
+				cost_multiplier = -0.75
+			}
+		} 
 	}
 }
-
 slvksb_2_branch = {
 	slot = 2
 	generic = no
@@ -1403,8 +1533,43 @@ slvksb_2_branch = {
 			}
 		}
 	}
-}
 
+	slv_crimean_ports = {
+		icon = mission_portuguese_malacca
+		position = 13
+		required_missions = { slv_2_seas_2_fleets } 
+		provinces_to_highlight = {  
+			area = crimea_area
+			NOT = {
+				AND = {
+					has_shipyard_building_trigger = yes
+					has_dock_building_trigger = yes
+				}
+			}
+		} 
+
+		trigger = {  
+			crimea_area = {
+				type = all
+				AND = {
+					has_shipyard_building_trigger = yes
+					has_dock_building_trigger = yes
+				}
+			}
+		} 
+
+		effect = {  
+			crimea_area = {
+				change_culture = ROOT
+				change_religion = ROOT
+				add_province_modifier = {
+					name = ksb_crimean_tradeport
+					duration = -1
+				}
+			}
+		} 
+	}
+}
 slvksb_3_branch = {
 	slot = 3
 	generic = no
@@ -1506,10 +1671,6 @@ slvksb_3_branch = {
 
 		trigger = {
 			is_hegemon = yes
-			development_in_provinces = {
-				value = 800
-				culture_group = pagan_slavic
-			}
 			prestige = 90
 		}
 
@@ -1524,6 +1685,35 @@ slvksb_3_branch = {
 				extend_golden_age = 360
 			}
 		}
+	}
+
+	slv_prosperous_land = {
+		icon = prosperity_for_all
+		position = 14
+		required_missions = {
+			slv_crimean_ports
+			slv_urbanization
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			development_in_provinces = {
+				value = 1000
+				culture_group = ROOT
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = "ksb_100_prosperity"
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = ROOT
+					}
+					add_prosperity = 100
+				}
+			}
+		} 
 	}
 }
 slvksb_4_branch = {
@@ -1575,8 +1765,6 @@ slvksb_4_branch = {
 		icon = mission_beyond_the_urals
 		position = 10
 		required_missions = {
-			slv_pontus_conquest
-			slv_kiev_recovered
 			sev_rusnok_lands
 		}
 		provinces_to_highlight = {
@@ -1619,6 +1807,43 @@ slvksb_4_branch = {
 			}
 		}
 	}
+
+	slv_urbanization = {
+		icon = promote_urbanization
+		position = 13
+		required_missions = { slv_silesian_mining } 
+		provinces_to_highlight = {  
+			NOT = {
+				AND = {
+					has_tax_building_trigger = yes
+					has_production_building_trigger = yes
+					has_manpower_building_trigger = yes
+					development = 20
+					culture_group = ROOT
+				}
+			}
+			owned_by = ROOT
+		} 
+
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 10
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes
+				has_manpower_building_trigger = yes
+				development = 20
+				culture_group = ROOT
+			}
+		} 
+
+		effect = {  
+			add_ruler_personality = great_engineer_personality
+			add_country_modifier = {
+				name = ksb_flocking_to_cities
+				duration = 10950
+			}
+		} 
+	}
 }
 slvksb_5_branch = {
 	slot = 5
@@ -1632,4 +1857,70 @@ slvksb_5_branch = {
 		}
 	}
 
+	slv_silesian_mining = {
+		icon = mission_jawal_silver_mine
+		position = 12
+		required_missions = { sev_endless_fields } 
+		provinces_to_highlight = {  
+			province_id = 263
+			province_id = 2966
+		} 
+
+		trigger = {  
+			2966 = {
+				has_manufactory_trigger = yes
+				development = 20
+			}
+			263 = {
+				has_manufactory_trigger = yes
+				development = 20
+			}
+		} 
+
+		effect = {  
+			2966 = {
+				add_province_modifier = {
+					name = ksb_military_industrial_complex
+					duration = -1
+				}
+			}
+			263 = {
+				change_trade_goods = coal
+				add_province_triggered_modifier = pf_ksb_early_coal
+			}
+		} 
+	}
+
+	slv_early_manufacturing = {
+		icon = saxon_manufacturing
+		position = 14
+		required_missions = { slv_urbanization } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			culture_group = ROOT
+			NOT = {
+				AND = {
+					has_manufactory_trigger = yes
+					development = 20
+				}
+			}
+		} 
+
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 20
+				has_manufactory_trigger = yes
+				development = 20
+				culture_group = ROOT
+			}
+		} 
+
+		effect = {  
+			add_years_of_income = 2
+			add_country_modifier = {
+				name = ksb_modern_state
+				duration = -1
+			}
+		} 
+	}
 }
