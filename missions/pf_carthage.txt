@@ -440,7 +440,10 @@ car_main_3 = {
 			hidden_effect = {
 				every_country = {
 					limit = {
-						capital_scope = { region = maghreb_region }
+						OR = {
+							capital_scope = { region = maghreb_region }
+							capital_scope = { region = mauretania_region }
+						}
 						NOT = { total_development = 50 }
 						NOT = { is_subject_of = ROOT }
 						is_subject = no
@@ -452,6 +455,7 @@ car_main_3 = {
 					}
 				}
 			}
+			custom_tooltip = empty_line_tt
 			upper_andalucia_area = {
 				add_permanent_claim = ROOT
 			}

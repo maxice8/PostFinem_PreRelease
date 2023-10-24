@@ -15,10 +15,11 @@ country_decisions = {
 			}
 			NOT = { tag = BRN }
 			NOT = { tag = CEL }
-			NOT = { tag = TRN }
+			NOT = { tag = ABN }
+			NOT = { tag = SKL }
 			NOT = { tag = ATH }
 			religion = druidic
-			culture_group = old_celtic
+			primary_culture = old_irish
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
