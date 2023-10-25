@@ -985,6 +985,7 @@ pf_per_2 = {
 				area = imereti_area
 				area = samtskhe_area
 				province_id = 331
+				province_id = 4303
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1004,6 +1005,7 @@ pf_per_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			331 = { country_or_non_sovereign_subject_holds = ROOT }
+			4303 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		# Satrapy there gets +5 FL, +20% manpower, +10% morale until the end of the game
