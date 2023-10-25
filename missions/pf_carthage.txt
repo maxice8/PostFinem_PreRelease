@@ -552,6 +552,7 @@ car_main_3 = {
 				area = languedoc_area
 				area = provence_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {  
@@ -672,8 +673,8 @@ car_main_4 = {
 			OR = {
 				AND = {
 					OR = {
-					province_id = 142
-					province_id = 4698
+						province_id = 142
+						province_id = 4698
 					}
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -761,6 +762,7 @@ car_main_4 = {
 				area = bahari_area
 				area = palestine_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {  
@@ -897,10 +899,14 @@ car_main_5 = {
 		}
 		provinces_to_highlight = {  
 			province_id = 341
-			NOT = {
-				has_great_project = {
-					type = great_cothon
-					tier = 2
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = {
+					has_great_project = {
+						type = great_cothon
+						tier = 2
+					}
 				}
 			}
 		} 
