@@ -98,6 +98,13 @@ on_startup = {
 	}
 	if = {
 		limit = {
+			tag = VIN
+			NOT = { is_year = 1445 }
+		}
+		country_event = { id = pf_nordic.28 }	# End of the vinland colony
+	}
+	if = {
+		limit = {
 			NOT = { has_country_flag = setup_raid_max }
 		}
 		set_variable = {

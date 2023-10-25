@@ -797,3 +797,43 @@ NOR_ideas_evolved = {
 		artillery_power = 0.10
 	}
 }
+VIN_ideas = {
+	start = {
+		hostile_attrition = 1.0
+		global_supply_limit_modifier = 0.20
+	}
+	
+	bonus = {
+		production_efficiency = 0.15
+	}
+	
+	trigger = {
+		tag = VIN
+	}
+	free = yes
+	
+	vin_isolated = {
+		stability_cost_modifier = -0.20
+	}
+	vin_songs_of_old_times = {
+		prestige = 1
+		monthly_splendor = 1
+	}
+	vin_skraeling_conflict = {
+		shock_damage = 0.10
+	}
+	vin_homesteads = {
+		build_cost = -0.10
+		global_colonial_growth = 15
+	}
+	vin_plenty = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	vin_adaptation = {
+		num_accepted_cultures = 2
+	}
+	vin_reestablish_trade_routes = {
+		global_ship_trade_power = 0.25
+		trade_range_modifier = 0.10
+	}
+}

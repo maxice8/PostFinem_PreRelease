@@ -513,3 +513,51 @@ pf_norse_jarldom = {
 		raiding_gives_extra_devastation = yes
 	}
 }
+pf_vinland_colony = {
+	icon = "vinland_colony"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = yes
+	potential = {
+		tag = VIN
+	}
+	modifiers = {
+		advisor_pool = -2
+		administrative_efficiency = -0.50
+		global_manpower_modifier = -0.33
+		can_not_declare_war = yes
+		colonists = -1
+		diplomats = -1
+		missionaries = -1
+		merchants = -1
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+	fixed_rank = 1
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+pf_vinland_althing = {
+	icon = "vinland_colony"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = yes
+	potential = {
+		tag = VIN
+		has_country_flag = pf_vinland_allowed_althing
+	}
+	modifiers = {
+		diplomatic_upkeep = -1
+		max_absolutism = -10
+		global_unrest = -1
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+	fixed_rank = 1
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}

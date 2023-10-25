@@ -17,6 +17,11 @@ pf_nor_british_conquest: "Conquest of Albion"
  pf_nor_north_sea_empire_title:0 "The Way North"
  pf_nor_north_sea_empire_desc:0 "Our country is named for its long streaking motion northward. With our conquests in the Celtic Isles and Scandinavia, our name looks ever more impressive on our maps. Soon, we will have hegemony over the whole North Sea, and no one will be able to withstand the wrath of [Root.GetName]!"
 
+ pf_nor_sudreyjar_title:0 "A Southern Home"
+ pf_nor_sudreyjar_desc:0 "Some time before the sosn of Ulrik set out, another man by the name of Eirik founded his own Norse kingdom in marshy frontiers of the Low Countries. These people have lived apart from their brothers for years now - let us extend our loving embrace over their country and add them to our growing pan-Norseman empire."
+pf_nor_happy_norse_men_tt: "Every province owned by us or a subject with the §YNorvegr§! culture gets the following effect:"
+pf_nor_happy_norse_men_modifier: "Rule by our Brothers"
+
  pf_nor_brotherly_ties_title:0 "Brotherly Ties"
  pf_nor_brotherly_ties_desc:0 "Ever since Knut set off to conquer a kingdom for himself, Ulrik has wallowed in his loneliness among the fjords. Let us rekindle our ties with the brother across the sea and create an alliance to last forever more."
 
@@ -28,6 +33,16 @@ pf_nor_british_conquest: "Conquest of Albion"
  pf_nor_challenge_sweden_desc:0 "The Swedes slew Ulrik the Great and left his empire shattered in the snows. With our strength regathered, the time has come to strike back against this foe and show them who is the strongest Nordic country after all."
  pf_nor_triumph_over_sweden: "Avenging Ulrik's Death"
 
+ pf_nor_merchants_oars_title:0 "The Merchant Fleet"
+ pf_nor_merchants_oars_desc:0 "Without a strong fleet to back them up, our merchants will be helplessly out-competed in the often brutal global theater of mercantile activities. We should expand our navy and make sure we know what our policy will be regarding the future of the Merchant Fleet."
+pf_nor_merchants_oars_nr_yes_tt: "£yes£ If we complete this mission while recruiting a §YNaval Reformer§!, we will gain the following effect:"
+pf_nor_merchants_oars_nr_no_tt: "£no£ If we complete this mission while recruiting a §YNaval Reformer§!, we will gain the following effect:"
+pf_nor_merchants_oars_t_yes_tt: "£yes£ If we complete this mission while recruiting a §YTrader§!, we will gain the following effect:"
+pf_nor_merchants_oars_t_no_tt: "£no£ If we complete this mission while recruiting a §YTrader§!, we will gain the following effect:"
+pf_nor_armed_merchants: "Armed Merchants"
+pf_nor_trading_merchants: "Norwegian Trading Power"
+pf_nor_mercantile_houses: "Local Mercantile Houses"
+
  pf_nor_bury_ulrik_title:0 "Sailing to Valhalla"
  pf_nor_bury_ulrik_desc:0 "Ulrik the Great certainly earned his epithet. No man was quite like him, nor will there ever be. Let us give him a fitting funeral at last, and send his soul off to the next world in style."
  pf_nor_empowers_idea_legacy_of_ulrik_tt: "Empowers our national idea §YLegacy of Ulrik the Great§! by an additional §G+25.0%§! Army Tradition from Battles and §G-5.0%§! Core Creation Cost."
@@ -36,6 +51,20 @@ pf_nor_nrd_more_likely_to_subject_tt: "@NRD §Y[NRD.GetName]§! will be more lik
 
  pf_nor_old_covenant_title:0 "The Old Covenant"
  pf_nor_old_covenant_desc:0 "The Icelanders have been governed by a Commonwealth, a form of direct democracy that while popular with the islanders has proven largely ineffective at subduing local conflicts and squabbles between the chiefs. Let us extend the arm of grace to them, and offer to resolve their troubles in exchange for vassalage."
+
+ pf_nor_bergen_port_title:0 "Expand Bergen"
+ pf_nor_bergen_port_desc:0 "Bergen has been a staple port for many centuries, providing safe harbour for ships coming from Iceland and beyond and serving as a stepping stone to the more pleasant port to the east. As the reach of our trade and warriors grows, it would only make sense to further patronise this harbour, and expand it to deal with the ever increasing loads of exotic goods and treasures that now arrive on our shores."
+pf_nor_bergen_port_modifier: "Growing Port of Bergen"
+
+ pf_nor_whaling_title:0 "Beasts of the Seas"
+ pf_nor_whaling_desc:0 "Whales are majestic creatures, but they are not just beautiful - they are potentially very valuable. Their fat burns better than any wood, and already many towns light their lamps and keep their people warm with this product. Similarly, the walruses of Greenland could provide us with an abundant source ivory. While southern Europe is satiated in its desires for ivory by the tusks of elephants, northern Europe remains an untapped market. Let us expand our operations in the north to claim these niches for ourselves."
+pf_nor_whaling_station: "Important Whaling Station"
+pf_nor_whaling_ships: "Encourage Atlantic Whalers"
+
+ pf_nor_riches_among_the_frost_title:0 "Among the Frost"
+ pf_nor_riches_among_the_frost_desc:0 "The north is a harsh place. For many months of the year, it is caught in a perpetual twilight, and for many others, the sun never slips below the horizon. Over the years we have lived here, we have learned to adapt to the climate, and eventually thrive in it."
+pf_nor_arctic_provinces_get_tt: "Every province owned by us or a subject with a §YSevere§! winter gets the following effect:"
+pf_nor_artic_building: "Arctic Constructions"
 
  pf_nor_build_a_navy_title:0 "Rebuild the Navy"
  pf_nor_build_a_navy_desc:0 "The navy commanded by Ulrik the Great was mighty and more than powerful enough to enforce our will abroad. Since his death however, this navy has degraded, with many of its sailors owing their personal allegiances to the dead king rather than to the crown. Let us rebuild it stronger than ever, and once more turn our gaze across the seas."
@@ -46,6 +75,10 @@ pf_nor_warmer_climates: "Warmer Climates"
 pf_nor_venture_southward_yes_tt: "£yes£ If we or a subject owns a province in the §YCaribbean§! region, a random province that fulfills these requirements will get the following effect:"
 pf_nor_venture_southward_no_tt: "£no£ If we or a subject owns a province in the §YCaribbean§! region, a random province that fulfills these requirements will get the following effect:"
 pf_nor_center_of_norwegian_colonialism: "Norwegian Caribbean Entrepot"
+
+ pf_nor_new_world_trade_title:0 "New World Trades"
+ pf_nor_new_world_trade_desc:0 "The colonies we manage in the New World are producing vast quantities of exciting new goods, all of which flow back across the increasingly charted routes of the northern Atlantic. We should ensure our control over these crucial nexuses of trade and reap the great wealth our exploits have brought us."
+pf_nor_center_of_global_trade: "Center of Global Trade"
 
  pf_nor_the_fires_within_title:0 "The Fires Within"
  pf_nor_the_fires_within_desc:0 "Ulrik has become known as Fire-Eyes for his sometimes explosive temper and outbursts, earning him a reputation of terror among our courtiers. If we can extend his righteous fury to our soldiers, then perhaps we will be able to enforce the will of [Root.GetName] ever more effectively."
@@ -60,4 +93,11 @@ pf_nor_ready_for_settlement: "Prepared for Norwegian Settlement"
  pf_nor_discover_vinland_title:0 "Discover Vinland"
  pf_nor_discover_vinland_desc:0 "Beyond the waves, we have found a bountiful new land, full of grapevines and opportunities. This land also holds secrets, secrets that may strike deep at the heart of any Ulriksson..."
 
+ pf_nor_conquer_vinland_title:0 "Western Conquest"
+ pf_nor_conquer_vinland_desc:0 "The lands of Vinland are valuable and remarkably fertile and habitable compared with many of our holdings even back home in Europe. We should take control of this prosperous region and make its blessings work for the good of Norwegian people rather than foreigners."
+pf_nor_new_lands_old_men: "New Lands, Old Men"
+pf_nor_vinland_plenty: "A Land of Plenty"
 
+ pf_nor_settle_east_america_title:0 "Settle the East Coast"
+ pf_nor_settle_east_america_desc:0 "Sweeping down across the east coast of the New World is a long series of islands and coves, perfect for burgeoning ports and dockyards. Around these sites will grow towns, and eventually whole colonies will spring up among the swamps and forests of Vestrjar."
+pf_nor_american_trade: "American Trades"

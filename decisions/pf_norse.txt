@@ -53,4 +53,30 @@ country_decisions = {
 			country_event = { id = pf_deities.2 }
 		}
 	}
+	pf_found_vinland_althing = {
+		major = yes
+		potential = {
+			tag = VIN
+			has_reform = pf_vinland_colony
+		}
+		provinces_to_highlight = {
+			province_id = 981
+		}
+		allow = {
+			has_reform = pf_vinland_colony
+			owns_core_province = 981
+			981 = {
+				has_tax_building_trigger = yes
+				development = 15
+			}
+			adm_power = 100
+			government_reform_progress = 25
+		}
+		effect = {
+			set_country_flag = pf_vinland_allowed_althing
+			add_adm_power = -100
+			change_government_reform_progress = -25
+			add_government_reform = pf_vinland_althing
+		}
+	}
 }

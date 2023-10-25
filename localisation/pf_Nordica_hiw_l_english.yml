@@ -32,6 +32,12 @@ pf_norse_jarldom_desc: ""
 mechanic_allows_viking_raids_yes: "Allows §YViking Raid§! wars."
 mechanic_raiding_gives_extra_devastation_yes: "Raiding provinces gives them an extra §R+10§! Devastation."
 
+pf_vinland_colony: "Disorganized Colony"
+pf_vinland_colony_desc: ""
+
+pf_vinland_althing: "Vinlandic Althing"
+pf_vinland_althing_desc: ""
+
 # Countries
 
 NDH: "Nordheim"
@@ -40,13 +46,24 @@ SKD: "Skåneland"
 SKD_ADJ: "Skånelander"
 NORVEGR: "Norvegr"
 NORVEGR_ADJ: "Norvegr"
+VIN: "Vinland"
+VIN_ADJ: "Vinlander"
+DAGSATRLAND: "Dagsátrland"
+DAGSATRLAND_ADJ: "Dagsátrland"
+
+# Colonial nations
+
+COLONIAL_EASTERN_AMERICA_Vestrjar: "Vestrjar"
 
 finnic: "Finnic"  # Culture group
+vinlandic: "Vinlandic"
 
 # Personalities
 
 viking_personality: "Viking"
 desc_viking_personality: "This general has made their name in raids and military expeditions abroad, searching for gold and glory, earning them a prideful place in our society."
+shieldmaiden_personality: "Shieldmaiden"
+desc_shieldmaiden_personality: "This ruler is a skilled warrior woman, trained from an early age to fight and a sight of terror for every person that sees them."
 
 # Great Projects
 
@@ -177,6 +194,25 @@ nor_fish_market_evolved: "Goods from Here and There"
 nor_fish_market_evolved_desc: "As our empire grows, so has the reach of our merchants. Now, ships sail into our harbours every day ladden with goods from every continent, bringing in spices and gemstones of such taste and quality our ancestors could only dream of."
 nor_royal_artillery_evolved: "Royal Artillery"
 nor_royal_artillery_evolved_desc: "Artillery is fast becoming the most important player on the battlefields of the modern world. We should invest in this emerging technology and found a new academy to encourage local innovation in firearms and cannoneering, so that we can always be two steps ahead of our neighbours."
+
+VIN_ideas: "Vinlander Ideas"
+VIN_ideas_start: "Vinlander Traditions"
+VIN_ideas_bonus: "Vinlander Ambition"
+
+vin_isolated: "A Home at the Edge of the World"
+vin_isolated_desc: ""
+vin_songs_of_old_times: "Songs of Times Gone By"
+vin_songs_of_old_times_desc: ""
+vin_skraeling_conflict: "The Skraeling Wars"
+vin_skraeling_conflict_desc: ""
+vin_homesteads: "Encourage Homesteading"
+vin_homesteads_desc: ""
+vin_plenty: "Land of Plenty"
+vin_plenty_desc: ""
+vin_adaptation: "Change to Conserve"
+vin_adaptation_desc: ""
+vin_reestablish_trade_routes: "Re-establish Oceanic Trade"
+vin_reestablish_trade_routes_desc: ""
 
 ##############
 # Events
@@ -361,8 +397,88 @@ pf_nordic.26.d: "The Icelandic Commonwealth has fared remarkably well for the ye
 pf_nordic.26.a: "Sign it."
 
 pf_nordic.27.t: "A Strange New World"
-pf_nordic.27.d: "Our explorers navigated across what they thought would be a boundless sea for weeks, until one day they spotted the white gleam of an ice sheet on the horizon. The discovery of this new land, known to the Icelanders as Greenland, has extended the frontiers of our knowledge greatly. Using their ports and supplies, our expedition was able to mount a second attempt west, pushing further and further across the wicked waves. They came to a land of forests, stretching as far as the eye can see and thicker than even those back home in Norway. Further south, the trees gave way to plentiful fields, and eventually, to recognisable settlements.\n\nLanding in the port there, our explorers and their men were nervous. There was no telling how savage the locals would be, and many feared for their lives if they left the boat. Nonetheless, a brave squad of sailors left and managed to engage the local chief in a conversation. To their surprise, he spoke Old Norse, albeit a heavily accented version. After much discussion, we have discovered that this colony, known as Vinland, was founded by Icelanders a few short centuries ago, but has remained isolated ever since. One detail stands out to us however - their mention of a man much like us passing through these waters just a few decades ago. From their description, he sounds like the long lost son of Ulrik the Great, Sven Ulriksson. According to the Vinlanders, he arrived upon their shores, and with his band of men, quickly established himself as the supreme powerbroker in the region. But alas, he is dead now. The chiefs take them to his tomb, and there they kneel and pray for a short while."
+pf_nordic.27.d: "Our explorers navigated across what they thought would be a boundless sea for weeks, until one day they spotted the white gleam of an ice sheet on the horizon. The discovery of this new land, known to the Icelanders as Greenland, has extended the frontiers of our knowledge greatly. Using their ports and supplies, our expedition was able to mount a second attempt west, pushing further and further across the wicked waves. They came to a land of forests, stretching as far as the eye can see and thicker than even those back home in Norway. Further south, the trees gave way to plentiful fields, and eventually, to recognisable settlements.\n\nLanding in the port there, our explorers and their men were nervous. There was no telling how savage the locals would be, and many feared for their lives if they left the boat. Nonetheless, a brave squad of sailors left and managed to engage the local chief in a conversation. To their surprise, he spoke Old Norse, albeit a heavily accented version. After much discussion, we have discovered that this colony, known as Vinland, was founded by Icelanders a few short centuries ago, but has remained isolated ever since. One detail stands out to us however - their mention of a man much like us passing through these waters just a few years ago. From their description, he sounds like the long lost son of Ulrik the Great, Sven Ulriksson. According to the Vinlanders, he arrived upon their shores, and with his band of men, settled down on a farmstead by the coast. But alas, he is dead now. The chiefs take them to his tomb, and there they kneel and pray for a short while."
 pf_nordic.27.a: "Sven, my beloved, may you rest in peace."
+
+pf_nordic.28.t: "Black Become the Sun's Beams..."
+pf_nordic.28.d: "Our ancestors first arrived on these shores some four centuries ago, their minds filled with hopes of warmer climates and plentiful food. Their wishes did come true at first; the land now known as Vinland was found to be covered in berries and vines, creating a most potent beverage unlike anything else back in Europe, and its shores were found bountiful in salmon and other fish; but in the years since, these supplies have only dwindled. The settlements here, mostly founded by Leif Eirikisson, were intended to be little more than temporary dwellings, where Norsemen would stay while gathering timber and supplies to take back to the more needy Greenland colonies. Trade with the north and across to Iceland was prosperous for some time, and somewhat regular contact was maintained between the people of Vinland and Europe despite the technical difficulties. From the beginning of the 14th century however, this would all change.\n\nThe climate worsened and the grape-vines died, almost as if the gods had begun to resent this once lush land. On the horizon, the ice sheets grew and the waters between us and Greenland became ever more treacherous due to an increasing amount of icebergs and winter storms. First, our links with Iceland went dark. The last group of Icelanders to arrive on these shores came some fifty years before the present, and departed as swiftly as they arrived upon seeing the state of the place. Then, the last ships from Greenland came. Even that desolate waste seemed more viable than the Vinland colonies, and in the years that followed, many of our people tried to sail back to Greenland's shores. Whether they were successful or not, we do not know, but perhaps half of the population of the colony, mostly the younger men, have tried to flee.\n\nAs the 15th century draws to its apex, things are looking dire for the people of Vinland. Of the remaining population, scarely no one even remembers the sight of a European face, and many have started to treat them as more legendary than true. Even the gods we have so dilligently performed sacrifices for seem to have abandoned us to the cold embrace of death. The future of the colony is certain - we will all die here, crumbling into the earth like the crooked shelters our ancestors built on these windswept hills."
+pf_nordic.28.a: "All hope is lost."
+pf_vin_uncertain_future: "The End of the Vinland Colony"
+
+pf_nordic.29.t: "The Expedition Sets Out"
+pf_nordic.29.d: "Times are tough for us Vinlanders. Just when the whole world seems to be turning against us, we have a chance to make a true home for ourselves out in this wilderness. Our seer has advised we make contact with the native Skraelings, and that we shall try to do. As the sun begins to rise, two dozen of the men of Vinland, including [Root.Monarch.GetTitle] [Root.Monarch.GetName], pack up their bags and food stocks and meet in the center of the place where Eirikisson landed all those years ago. This expedition marks a new era for our people and our nation."
+pf_nordic.29.a: "Into the wilderness we go..."
+pf_vin_in_expedition: "Expedition to find Skraelings"
+
+pf_nordic.30.t: "Expedition: Trails in the Snow"
+pf_nordic.30.d: "After a short boat ride across the wild seas, our expedition has landed on the southern slopes of that great forest we call Markland. Upon those desolate shores they found nothing notable, just driftwood and a few ominous skeletons of various birds and mammals. Turning inland, they began to make their way up the hillside, cutting through the thick foliage with their knives. More than once, they have had to fight off an aggressive lone wolf, scaring many of the men so much they have often begged [Root.Monarch.GetName] to turn back. We have come so far - there will be no going back home until our quest is complete.\n\nAs twilight falls over the epic scenery and the sun falls behind the mountains, the group begin to set up a rudimentary camp on the snowy hillside. While out foraging, one of the men stopped something - a set of footprints in the snow, crisp and fresh. Nervous, the men look around, gripping their axes and swords, as if they would protect them from whoever is out there. Though we do not know who, there are clearly other humans out here in this desolate place."
+pf_nordic.30.a: "Follow the trail!"
+
+pf_nordic.31.t: "Expedition: Smoke in the Distance"
+pf_nordic.31.d: "Our expedition party begin the long trek up the mountain side, following in the general direction of the trail of footprints found the previous evening. The journey is arduous, and a biting wind blows down on them constantly, like the gnawing of Fenrir upon Odin's neck. Eventually, they reach the summit, and can finally get a good view of their brutal yet majestic surroundings. To the east, the great ocean sits silently, as if tempting them to come back to sea. To the west, an endless emerald sea of trees stretches as far as the eye can see, dotted by rocks and outcrops. There seems to be nothing here - no sign of civilisation, or even animal life. Just as a deep sense of existential dread crawls over the men, one of them shouts that he has spotted something. Far to the south, on the slopes of the same mountain range they stand on but much further down, the men can just barely make out a plume of smoke. This can only mean one thing - somebody is out here."
+pf_nordic.31.a: "Quickly men, that way!"
+
+pf_nordic.32.t: "Expedition: The Bear"
+pf_nordic.32.d: "As they walked through the shadowy forest, the expedition members could not help but be afraid. They had every right to be - the darkness crept in from all sounds, and the silence was punctured by nothing but the howls of wolves, some distant, some disturbingly close. There was nothing but the light of their torches to show the way. Searching for a suitable place to make camp, [Root.Monarch.GetName] wanders off the path, squinting through the trees for even the slightest clearing. Suddenly, there is a rustling in the bushes, and a great black shape emerges behind him. With a roar, the beast plunges its whole weight on him, his shape instantly being swallowed up by the ground. The men rush over to help, but as they approach, they see the terrifying face of a black bear angrily staring back into the torch light. Beneath it, [Root.Monarch.GetName] lies motionless, his face half torn off and his body covered in bloody cuts. One of the men, enraged by the site of his close friend being killed, grabs his axe from his belt and rushes towards the bear. With one paw the beast takes him down, and the two struggle and writhe on the floor. At last, the other man gather their courage and stab and cut the bear repeatedly until it lets go of the poor man, and runs back off into the forest, disappearing from view. The men stand around, startled and shaking. While the brave man with the axe might survive, there is no hope for [Root.Monarch.GetName]. His life, much like the hopes of all Vinlanders, has been taken."
+pf_nordic.32.a: "Curse that foul beast!"
+pf_vin_bearslayer: "Bear Slayers"
+
+pf_nordic.33.t: "Expedition: Abandoned Campsite"
+pf_nordic.33.d: "After giving the previous expedition leader as proper a burial as could be done out in this wild land, the men continued on in the direction they had previously seen the smoke. In the daylight, the forest was still treacherous, but at least now the overhanging branches and dangerous roots could be more easily seen ahead of one's step. Some time after midday, the party come across a small clearing, with what are clearly the remains of a burned out fire and spots where animal-skin tents were recently pitched. Whoever was here cannot have been gone long. By the looks of the size of the site there are at least a dozen of them, probably more, perhaps a roving tribe moving through these desolate areas in search of better land. There are clues abound as the men survey the area, leaving no stone unturned or leaf floor undisturbed, despite how shaken up they all are."
+pf_nordic.33.a: "They must be close. Find them!"
+
+pf_nordic.34.t: "Expedition: The Skraelings"
+pf_nordic.34.d: "Not far from the campsite, the expedition finds exactly what they were looking for. A group of Skraelings, equal distrubutions men and women, young and old, walking across a snowy plain just at the edge of a frozen lake. Dressed in their thick seal skins and holding their pointed spears, they appear quite menacing to our men, but there is nothing that could stop them from fulfilling their mission now. After a rocky start, a mutual agreement of truce is reached, and using hand signals alone, our men communicate their need to the chief of this little band. The natives agree, though it is begrudgingly after our party traded over some of their metal tools and axes.\n\nBefore nightfall, our expedition party are in the audience of a local chief, a small but powerful looking old man, crouched with his family around a campfire much like the one we had seen earlier. Despite the difficulties in communication, they were able to get their message across, and agreed to our proposal in exchange for more metal tools. The Skraelings are even so generous as to offer them a safe place to sleep tonight. It appears our preconceptions of these people as violent savages is not completely the truth after all, and that together, we can make something of a life in this wilderness."
+pf_nordic.34.a: "Can there be peace between our two peoples?"
+pf_vin_treaty_with_skraeling: "Treaty with the Skraelings"
+
+pf_nordic.35.t: "The Expedition Returns"
+pf_nordic.35.d: "Our expedition has faced a great many threats and tragedies, but somehow, they have made it through it all, accomplishing their goal of establishing friendly relations with the local Skraelings. On their return, a great feast is held, and the whole population of Vinland come together to celebrate their survival and mourn the dead Chief. Perhaps, with cooperation between our people and the natives, we could learn to live better in this land, and survive through another winter. One day maybe our children's children will thrive amongst the snow. For now, however, we are no more saved than a salmon is saved when it is plucked from the sea by a Vinlandic fisherman - the struggle continues."
+pf_nordic.35.a: "Hooray!"
+
+pf_nordic.36.t: "Freydís, Shieldmaiden"
+pf_nordic.36.d: "From an early age Freydís had to learn to fight to survive. Without her wit and intellect however, she would have surely failed the harsh tests her father gave her. Despite the cruelty, he always maintained it was for her best interests. She never believed him, at least until he died. After Haldor was mauled to death by a bear out in the wilds of Markland, Freydís was left to succeed him as chieftess of the Vinlanders. They were initially hesitant to place a woman in such a position of power, but after she demonstrated her finely tuned fighting capabilities, there was no question as to whether she was the best candidate for the job. Some have begun calling her a 'Shieldmaiden', following in an old Norse tradition of warrior women. Despite her lack of specialist training in that field, many feel that her military skills should be recognised in some way. Others complain at her aggressive and tendancy to lash out at people who annoy her, fearing that her temper will get in the way of good relations with the local Skraelings."
+pf_nordic.36.a: "We need a warrior to lead us!"
+pf_nordic.36.b: "We need a chieftess, not a Shieldmaiden!"
+
+pf_nordic.37.t: "The Skraelings Arrive to Trade"
+pf_nordic.37.d: "As per the agreement made by our expedition party, the Skraelings have arrived at [Root.Capital.GetName] today, carrying huge sacks of food and furs on their backs. As they pile them up in the center of our town, they look around eagerly, anticipating their payment of metal tools we had promised them. One problem has arisen with this deal however - with no way to resupply on manufactured metals in nearly sixty years, we are running dangerously low ourselves, and cannot really afford to give them out to the natives. Nonetheless, they seem quite excited, and the food and clothes they are offering us might be the only way our colony survives in the long term."
+pf_nordic.37.a: "Accept their deal."
+pf_nordic.37.b: "Seize the food and send the Skraelings packing!"
+
+pf_nordic.38.t: "The Skraelings Settle Down"
+pf_nordic.38.d: "Some of the Skraeling traders who have frequented our settlement for many months now have begun to settle down here, constructing their own campsite near to our houses. The community there is growing, with news of our hospitality and metal tools spreading far and wide and drawing in Skraelings from across the region. What should we do with all these new settlers?"
+pf_nordic.38.a: "Allow them to live with us."
+pf_nordic.38.b: "Forbid them from settling so close."
+pf_vin_skraeling_campsite: "Skraeling Campsite"
+
+pf_nordic.39.t: "Norse-Skraeling Intermarriage"
+pf_nordic.39.d: "One of the biggest obstacles in the face of our colony's survival is the lack of women. Though there were women present on the merchant fleets that once carried our wood and vines back to Greenland, they were always in the minority, and especially after the last exodus from Vinland, the population is now some 80% male. This has led us to a mini demographic crisis, with the population dwindling and far too few children being born to sustain our town. Though not directly in response to this, a number of Norse men have fallen in love with Skraeling women, and some have even started families with them. Until now such relationships have been frowned upon, with society at large seeing such a marriage as stooping to the level of a savage. However, some in the leadership, especially those with native wives to lose, suggest that we should end such stigmatization and actively encourage this practice, aiming to increase the birthrate of our aging colony."
+pf_nordic.39.a: "You may marry whoever you want!"
+pf_nordic.39.b: "We shall not soil our Norse blood with that of savages."
+pf_vin_intermarriage: "Allowing Intermarriage with the Natives"
+
+pf_nordic.40.t: "Faith in the Gods"
+pf_nordic.40.d: "As the situation in Vinland grew ever more dire, many began to lose faith in the old Norse gods. We had been generous to them, and supplied them with regular sacrifices, prayed day and night, and praised them at every available moment. Even our seers did not know why the gods had abandoned us. But now, with things looking up and a bright future visible in the heads of many young Vinlanders, a renewed trust in the gods is sweeping over the land."
+pf_nordic.40.a: "Praise the gods!"
+pf_vin_restored_faith_in_the_gods: "Restored Faith in the Gods"
+
+pf_nordic.41.t: "Ways of the Vinlanders"
+pf_nordic.41.d: "In the years since our separation with our native Iceland, we have changed very little as a people. Our practices and traditions have remained mostly the same, with only a few adaptations to better suit exile on the colonial frontier. We have struggled together, oh how we have struggled. Through the fires of adveristy, new identities are forged. People born into this land no longer see themselves as Icelanders waiting to return home - they are now steadfast in being Vinlanders, and by the gods they are proud of it. Perhaps it is time to shake off the shackles of our motherland and seed the roots of a new and powerful culture among the rocks and forests."
+pf_nordic.41.a: "We stand united together."
+pf_vin_our_own_culture: "Vinlandic Pride"
+pf_change_to_vinlandic_tt: "Every owned province in the §YNorse§! culture group will change to §YVinlandic§! culture."
+
+pf_nordic.42.t: "Hunger Grips Vinland"
+pf_nordic.42.d: "Food is scarce in the best of times, but in these winter months our supplies could not be lower. We have already run out of everything stored from the last harvest, and people are turning to foraging for berries and eating leaves and bushes, being unable to fish due to the ocean freezing over. Hunger is starting to set in, and soon no one will be safe from the icey grip of death..."
+pf_nordic.42.a: "Our people fall like wheat before the scythe..."
+
+pf_nordic.43.t: "The Last Survivor"
+pf_nordic.43.d: "Ingvar Tuvesson was just an ordinary boy living in the Vinland colony. By day he forages and toiled the fields, and by night he slept and dreamed of a better life. He was just like everybody else. A native to Vinland, he had known no other existence, but had always been fascinated by the tales his parents would tell him. They spoke of places far away, where there were large groups of people organised into whole majestic cities, and where the snow never fell, even in the darkest winter days. To Ingvar, these seemed like fairytales, especially compared to the dire circumstances of his people.\n\nFor winter after winter, year after year, members of his town would drop dead from hunger and disease. Death was just an everyday occurance to him, an imaginary friend who came and whisked people away from this hell. When times got rough and the snow storms crawled in, he would bunker underneath the house with his family, surviving on a handful of berries for days on end while the blizzard raged. Ingvar had suffered so much in his life, that he would not know what comfort was even if he were to ever experience it. In those dark days, he did not even pray to the gods for salvation, believing like many Vinlanders that they had purposefully abandoned them to their horrible fate.\n\nFirst, his father died, his body seizing up while foraging, finally succumbing to prolonged starvation and exhaustion. Though it was certainly tragic, Ingvar did not shed a tear. Death was not to be feared. He lived among them every day. The next winter, his mother was taken too, and Ingvar was left an only child. Nearing the age of manhood, he was expected to perform the duties his parents had done by the community; foraging, hunting and defending against rogue Skraelings. Every other family had lost members too, and the few that were remaining had to become increasingly hardy and resourceful. By the next winter, the last old man had passed into the next world, his belly a gross rotten concave. Ingvar buried him without a sign on his face. The magnitude of his situation did not even occur to him - he was now the last Norseman left in the whole of Vinland. As he sat among the trees and awaited death, he did not worry or fret. This was right. He wanted this. With one last breath, Ingvar collapsed on the floor. The setting sun casted solemn rays across his corpse."
+pf_nordic.43.a: "And so our country falls to ash like a thousand before it..."
+pf_vin_ruins_of_norse_settlement: "Ruins of a Norse Settlement"
+desc_pf_vin_ruins_of_norse_settlement: "The remains of houses and farms built by the Norsemen of Vinland dot this province. The long lost colony here certainly thrived for a while, but it met a grisly fate before our explorers could reach it."
+pf_vin_end_game_tt: "§R[Root.Capital.GetName] will be decolonized, destroying our nation.§!"
 
 ###############
 # Decisions
@@ -376,6 +492,9 @@ show_raid_progress_title: "Raid"
 show_raid_progress_desc: "Shows the raid loot gathered, maximum raid loot capacity and grants the ability to instantly end raid wars."
 raid_loot_tooltip: "Current §YRaid Loot§! (§O[Root.RaidLoot.GetValue]§!) out of a maximum of (§M[Root.MaxRaidLoot.GetValue]§!)."
 white_peace_raid_tooltip: "Confirming this decision will cost us §R30§! £mil£ but bring an end instantly to the raid war, concluding with §Ywhite peace§!."
+
+pf_found_vinland_althing_title: "Found the Vinland Althing"
+pf_found_vinland_althing_desc: "We have been without proper government for too long. With the first institutions blosoming and our population growing, it is only right that we establish an interactive democratic government, under the guidance and leadership of the Chief of course."
 
 #############
 # Missions
