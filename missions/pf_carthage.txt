@@ -490,14 +490,16 @@ car_main_3 = {
 
 		effect = {  
 			if = {
-				limit = { SUE = { exists = yes } }
+				limit = { 
+					SUE = { exists = yes }
+				}
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					target = SUE
+					months = 120
+				}
+				custom_tooltip = empty_line_tt
 			}
-			add_casus_belli = {
-				type = cb_restore_personal_union
-				target = SUE
-				months = 120
-			}
-			custom_tooltip = empty_line_tt
 			iberia_region = {
 				add_permanent_claim = ROOT
 			}
