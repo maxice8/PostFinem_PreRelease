@@ -935,8 +935,6 @@ car_main_5 = {
 		required_missions = { pf_car_the_land_of_alexander } 
 		provinces_to_highlight = {  
 			province_id = 358
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
 		} 
 
 		trigger = {  
