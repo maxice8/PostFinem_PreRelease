@@ -16,6 +16,25 @@
  galleass_modifier:0 "Longboat Hired"
  HAVE_AT_LEAST_GALLEASS_THAN:0 "Have at least §Y$VALUE$§! Longboats.\n"
  MODIFIER_AMOUNT_OF_GALLEASS:0 "Longboat Force Limit"
+ galleass_ship: "Bonus from Longboat"
+
+# Quinquereme
+
+ MODIFIER_HAS_MAN_OF_WAR:0 "Country Allows Quinquereme Ships"
+ MAN_OF_WAR_NAME:0 "Quinquereme $NAME$"
+ MODIFIER_ALLOWED_MAN_OF_WAR_FRACTION:0 "Quinquereme Force Limit"
+ MODIFIER_LOCAL_HAS_MAN_OF_WAR:0 "Province Allows Quinquereme Ships"
+ MAN_OF_WAR_FORCELIMIT:0 "We can recruit up to $LIMIT|Y$ §GQuinquereme§! owing to:\n$FLAMOUNT|Y$ from $PERC|%Y$ of our naval force-limit of $FL$:\n"
+ MAN_OF_WAR_LIMIT_CULTURE:1 "$PROVINCE$ does not have a Dock or Shipyard, so you can not recruit Quinquereme Ships here."
+ ADD_MAN_OF_WAR_SUB_UNIT_EFFECT:0 "Get '§GQuinquereme§!' $UNIT$ in $WHERE|Y$."
+ MAN_OF_WAR_DESC:0 "Revamped quinqueremes sail the Mediterranean, seamlessly merging ancient design with contemporary advancements. Constructed with superior timber for added resilience, its structure incorporates the age's metallurgical improvements. The ship's sails, inspired by the lateen design, optimize wind navigation, while onboard, rudimentary astrolabes enhance navigational precision. This modernized quinquereme, while reminiscent of its classical predecessor, stands out as a testament to the era's ability to harmonize the old with the new, making it a distinguished presence in the shallow Mediterranean waters."
+ REGCAT_man_of_war:0 "Quinquereme"
+ MAN_OF_WAR_REGIMENT:0 "Quinquereme Ship\n$EFFECT$"
+ HAVE_LESS_MAN_OF_WAR_THAN:0 "Have less than §Y$VALUE$§! Quinqueremes.\n"
+ galleass_modifier:0 "Quinquereme Hired"
+ HAVE_AT_LEAST_MAN_OF_WAR_THAN:0 "Have at least §Y$VALUE$§! Quinqueremes.\n"
+ MODIFIER_AMOUNT_OF_MAN_OF_WAR:0 "Quinquereme Force Limit"
+ man_of_war_ship: "Bonus from Quinquereme"
 
 # War Elephants
 
