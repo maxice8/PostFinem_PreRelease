@@ -4533,9 +4533,12 @@ country_event = {
 		}
 	}
 
+	goto = pf_per_revolting_province
+
 	option = {
 		name = "pf_per_events_80_option"
 		ai_chance = { factor = 100 }
+		goto = pf_per_revolting_province
 
 		event_target:pf_per_revolting_province = {
 			# Spawn religious rebels of size 2
@@ -4672,9 +4675,12 @@ country_event = {
 		}
 	}
 
+	goto = pf_per_revolting_province
+
 	option = {
 		name = "pf_per_events_83_option_1"
 		ai_chance = { factor = 100 }
+		goto = pf_per_revolting_province
 
 		event_target:pf_per_revolting_province = {
 			add_province_modifier = {
@@ -4687,6 +4693,7 @@ country_event = {
 	option = {
 		name = "pf_per_events_83_option_2"
 		ai_chance = { factor = 100 }
+		goto = pf_per_revolting_province
 
 		event_target:pf_per_revolting_province = {
 			zoroastrian_rebels = 3
@@ -4716,6 +4723,8 @@ country_event = {
 			}
 		}
 	}
+
+	goto = pf_per_revolting_province
 
 	option = {
 		name = "pf_per_events_84_option_1"
@@ -4758,6 +4767,8 @@ country_event = {
 		}
 	}
 
+	goto = pf_per_revolting_province
+
 	option = {
 		name = "pf_per_events_85_option_1"
 		ai_chance = { factor = 100 }
@@ -4768,6 +4779,8 @@ country_event = {
 	option = {
 		name = "pf_per_events_85_option_1"
 		ai_chance = { factor = 100 }
+
+		goto = pf_per_revolting_province
 
 		random = {
 			chance = 50
