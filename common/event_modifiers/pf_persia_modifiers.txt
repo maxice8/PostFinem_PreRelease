@@ -366,3 +366,26 @@ pf_per_successful_inquisition = {
 	tolerance_heathen = -3
 	devotion = 1
 }
+
+pf_per_pushing_conversion = {
+	global_unrest = 2
+	tolerance_heathen = -5
+	global_missionary_strength = 0.02
+}
+
+pf_per_pausing_conversion = {
+	global_missionary_strength = -0.03
+	missionaries = -1
+	tolerance_heathen = 2
+}
+
+pf_per_suffering_inquisition = {
+	liberty_desire = 0.25
+	global_trade_goods_size_modifier = -0.2
+	global_manpower_modifier = -0.2
+}
+
+pf_per_satrapies_lose_trust = {
+	reduced_liberty_desire = -20
+	vassal_income = -0.1
+}

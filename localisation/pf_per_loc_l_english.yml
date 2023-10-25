@@ -92,6 +92,10 @@
  pf_per_aggressive_foreign_policy: "Aggressive Foreign Policy"
  pf_per_diplomatic_foreign_policy: "Diplomatic Foreign Policy"
  pf_per_successful_inquisition: "Successful Inquisition"
+ pf_per_pushing_conversion: "Aggressive Conversion"
+ pf_per_pausing_conversion: "Slowing Conversion"
+ pf_per_suffering_inquisition: "Suffering from the Inquisition"
+ pf_per_satrapies_lose_trust: "Distrustful Subjects"
 
 # Satrapy Revolt disaster
  pf_per_satrapy_revolt: "Satrapy Revolt"
@@ -107,7 +111,8 @@
  pf_per_has_less_3_toh: "Have less than §R-3§! Tolerance of Heathens"
  pf_per_has_less_5_toh: "Have less than §R-5§! Tolerance of Heathens"
  pf_per_has_less_7_toh: "Have less than §R-7§! Tolerance of Heathens"
- 
+ pf_per_every_heathen_revolts_tt: "§REvery heathen province owned by us or our subjects will have a §Y25%§! chance of revolting!§!"
+ pf_per_supporting_country_loses_manpower_tt: "[pf_per_supporting_country.GetName] loses §R-10000§! Manpower."
 
 # Events
  pf_per_events_0_title: "Crisis in Persia"
@@ -145,7 +150,7 @@
  pf_per_events_9_title: "End of the Satrapy Revolt"
  pf_per_events_9_desc_1: "After a long and bloody conflict, we have emerged victorious over the Satrapies. They have agreed to submit to our rule and accept their current privileges."
  pf_per_events_9_desc_2: "After a long and bloody conflict, [ROOT.Monarch.GetTitle] [ROOT.Monarch.GetName] has made the wise decision to grant new privileges to our Satrapies. They have accepted this compromise and agreed to continue being our subjects but our control over them is tenuous at best."
- pf_per_events_9_desc_3: "After a long and bloody conflict, we have been forced to concede defeat to the Satrapies. They are now all independant, and [ROOT.Monarch.GetTitle] [ROOT.Monarch.GetName] has been humiliated on the world stage."
+ pf_per_events_9_desc_3: "After a long and bloody conflict, we have been forced to concede defeat to the Satrapies. They are now all independant, and [Root.Monarch.GetTitle] [Root.Monarch.GetName] has been humiliated on the world stage."
  pf_per_events_9_option_1: "Ah, victory."
  pf_per_events_9_option_2: "A display of diplomatic excellence."
  pf_per_events_9_option_3: "[Root.GetName] may never recover."

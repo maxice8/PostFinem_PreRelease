@@ -1,7 +1,7 @@
 pf_per_inquisition = {
 	potential = {
 		tag = PER
-		has_country_flag = pf_per_started_persian_inquisition
+		has_country_flag = pf_per_allow_persian_inquisition
 	}
 
 	can_start = {
@@ -90,7 +90,6 @@ pf_per_inquisition = {
 	}
 
 	can_end = {
-		stability = 1
 		all_subject_country = {
 			NOT = {
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {

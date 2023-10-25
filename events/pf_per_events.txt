@@ -4427,6 +4427,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 
 		add_stability = -1
+		set_country_flag = pf_per_started_inquisition
 	}
 }
 
@@ -4451,6 +4452,8 @@ country_event = {
 		add_stability_or_adm_power = yes
 		add_prestige_or_monarch_power = { amount = 25 }
 		add_devotion = 20
+
+		clr_country_flag = pf_per_started_inquisition
 	}
 }
 
@@ -4464,17 +4467,9 @@ country_event = {
 
 	trigger = {
 		had_country_flag = {
-			flag = pf_per_started_persian_inquisition
-			days = 10950
+			flag = pf_per_started_inquisition
+			days = 3650
 		}
-		has_country_modifier = pf_per_persian_inquisition
-
-		NOT = { religious_unity = 0.8 }
-		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-			value = 40
-			NOT = { religion = zoroastrian }
-		}
-		average_unrest = 2
 	}
 
 	mean_time_to_happen = {
@@ -4484,6 +4479,7 @@ country_event = {
 	option = {
 		name = "pf_per_events_79_option_1"
 		ai_chance = { factor = 100 }
+		end_disaster = pf_per_inquisition
 		remove_country_modifier = pf_per_persian_inquisition
 		add_stability = -2
 
@@ -4496,11 +4492,17 @@ country_event = {
 	option = {
 		name = "pf_per_events_79_option_2"
 		ai_chance = { factor = 50 }
-		every_owned_province = {
-			limit = { NOT = { religion = zoroastrian } }
-			spawn_rebels = {
-				size = 1
-				type = heretic_rebels
+		custom_tooltip = pf_per_every_heathen_revolts_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = { NOT = { religion = zoroastrian } }
+				random = {
+					chance = 25
+					spawn_rebels = {
+						size = 1
+						type = heretic_rebels
+					}
+				}
 			}
 		}
 
@@ -4508,6 +4510,417 @@ country_event = {
 	}
 }
 
+# Persian Inquisition: Heathen Revolt
+country_event = {
+	id = pf_per_events.80
+	title = "pf_per_events_80_title"
+	desc = "pf_per_events_80_desc"
+	picture = ACCUSATION_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		random_province = {
+			limit = {
+				OR = {
+					owned_by = PER
+					owner = { is_subject_of = PER }
+				}
+				NOT = { religion = zoroastrian }
+			}
+			hidden_effect = {
+				save_event_target_as = pf_per_revolting_province
+			}
+		}
+	}
+
+	option = {
+		name = "pf_per_events_80_option"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_revolting_province = {
+			# Spawn religious rebels of size 2
+		} 
+	}
+}
+
+# Persian Inquisition: Neighboring Heathen Country supports rebels
+country_event = {
+	id = pf_per_events.81
+	title = "pf_per_events_81_title"
+	desc = "pf_per_events_81_desc"
+	picture = ACCUSATION_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		any_neighbor_country = {
+			NOT = { religion = zoroastrian }
+			NOT = {
+				has_opinion = {
+					who = PER
+					value = -100
+				}
+			}
+			manpower = 10
+		}
+	}
+
+	immediate = {
+		random_neighbor_country = {
+			limit = {
+				NOT = { religion = zoroastrian }
+				NOT = {
+					has_opinion = {
+						who = PER
+						value = -100
+					}
+				}
+			}
+			hidden_effect = {
+				save_event_target_as = pf_per_supporting_country
+			}
+		}
+	}
+
+	option = {
+		name = "pf_per_events_81_option"
+		ai_chance = { factor = 100 }
+
+		random_owned_province = {
+			anti_tax_rebels = 2
+		}
+
+		random_owned_province = {
+			anti_tax_rebels = 2
+		}
+
+		random_owned_province = {
+			anti_tax_rebels = 2
+		}
+
+		custom_tooltip = pf_per_supporting_country_loses_manpower_tt
+
+		hidden_effect = {
+			event_target:pf_per_supporting_country = {
+				add_manpower = -10
+			}
+		}
+	}
+}
+
+# Persian Inquisition: Missionary assassinated
+country_event = {
+	id = pf_per_events.82
+	title = "pf_per_events_82_title"
+	desc = "pf_per_events_82_desc"
+	picture = ACCUSATION_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_per_events_82_option_1"
+		ai_chance = { factor = 100 }
+
+		add_years_of_income = -0.2
+		add_country_modifier = {
+			name = pf_per_pushing_conversion
+			duration = 730
+		}
+	}
+
+	option = {
+		name = "pf_per_events_82_option_1"
+		ai_chance = { factor = 100 }
+
+		add_country_modifier = {
+			name = pf_per_pausing_conversion
+			duration = 365
+		}
+	}
+}
+
+# Persian Inquisition: Fanatics rise up
+country_event = {
+	id = pf_per_events.83
+	title = "pf_per_events_83_title"
+	desc = "pf_per_events_83_desc"
+	picture = ACCUSATION_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			OR = {
+				owned_by = PER
+				owner = { is_subject_of = PER }
+			}
+			NOT = { religion = zoroastrian }
+			owner = { religion = zoroastrian }
+		}
+	}
+
+	immediate = {
+		random_province = {
+			limit = {
+				OR = {
+					owned_by = PER
+					owner = { is_subject_of = PER }
+				}
+				NOT = { religion = zoroastrian }
+				owner = { religion = zoroastrian }
+			}
+			hidden_effect = {
+				save_event_target_as = pf_per_revolting_province
+			}
+		}
+	}
+
+	option = {
+		name = "pf_per_events_83_option_1"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_revolting_province = {
+			add_province_modifier = {
+				name = religious_massacre
+				duration = 3650
+			}
+		}
+	}
+
+	option = {
+		name = "pf_per_events_83_option_2"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_revolting_province = {
+			zoroastrian_rebels = 3
+		}
+	}
+}
+
+# Persian Inquisition: Heathens demand aid
+country_event = {
+	id = pf_per_events.84
+	title = "pf_per_events_84_title"
+	desc = "pf_per_events_84_desc"
+	picture = ACCUSATION_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		random_province = {
+			limit = {
+				OR = {
+					owned_by = PER
+					owner = { is_subject_of = PER }
+				}
+				NOT = { religion = zoroastrian }
+			}
+			hidden_effect = {
+				save_event_target_as = pf_per_revolting_province
+			}
+		}
+	}
+
+	option = {
+		name = "pf_per_events_84_option_1"
+		ai_chance = { factor = 100 }
+
+		add_years_of_income = -0.25
+		add_prestige = -10
+	}
+
+	option = {
+		name = "pf_per_events_84_option_2"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_revolting_province = {
+			# Spawn religious rebels of size 2
+		}
+	}
+}
+
+# Persian Inquisition: Suspected revolt planned
+country_event = {
+	id = pf_per_events.85
+	title = "pf_per_events_85_title"
+	desc = "pf_per_events_85_desc"
+	picture = ACCUSATION_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		random_province = {
+			limit = {
+				OR = {
+					owned_by = PER
+					owner = { is_subject_of = PER }
+				}
+				NOT = { religion = zoroastrian }
+			}
+			hidden_effect = {
+				save_event_target_as = pf_per_revolting_province
+			}
+		}
+	}
+
+	option = {
+		name = "pf_per_events_85_option_1"
+		ai_chance = { factor = 100 }
+
+		add_yearly_manpower = -0.5
+	}
+
+	option = {
+		name = "pf_per_events_85_option_1"
+		ai_chance = { factor = 100 }
+
+		random = {
+			chance = 50
+
+			event_target:pf_per_revolting_province = {
+				# Spawn religious rebels of size 3
+				random_neighbor_province = {
+					limit = {
+						OR = {
+							owned_by = PER
+							owner = { is_subject_of = PER }
+						}
+					}
+					# Spawn religious rebels of size 3
+				}
+			}
+		}
+	}
+}
+
+# Persian Inquisition: Satrapy destabilised
+country_event = {
+	id = pf_per_events.86
+	title = "pf_per_events_86_title"
+	desc = "pf_per_events_86_desc"
+	picture = ACCUSATION_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		any_subject_country = {
+			NOT = { religious_unity = 0.25 }
+		}
+	}
+
+	immediate = {
+		random_subject_country = {
+			limit = {
+				NOT = { religious_unity = 0.25 }
+			}
+			hidden_effect = {
+				save_event_target_as = pf_per_destabilised_satrapy
+			}
+		}
+	}
+
+	option = {
+		name = "pf_per_events_86_option"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_destabilised_satrapy = {
+			add_stability = -1
+			add_country_modifier = {
+				name = pf_per_suffering_inquisition
+				duration = -1
+				desc = pf_per_until_end_of_inquisition_tt
+			}
+		}
+	}
+}
+
+# Persian Inquisition: Satrapy joins the resistance
+country_event = {
+	id = pf_per_events.87
+	title = "pf_per_events_87_title"
+	desc = "pf_per_events_87_desc"
+	picture = ACCUSATION_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		any_subject_country = {
+			NOT = { religion = zoroastrian }
+		}
+	}
+
+	immediate = {
+		random_subject_country = {
+			limit = {
+				NOT = { religion = zoroastrian }
+			}
+			hidden_effect = {
+				save_event_target_as = pf_per_revolting_satrapy
+			}
+		}
+	}
+
+	option = {
+		name = "pf_per_events_87_option_1"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_revolting_satrapy = {
+			declare_war_with_cb = {
+				casus_belli = cb_independence_war
+				who = PER
+			}
+		}
+	}
+
+	option = {
+		name = "pf_per_events_87_option_2"
+		ai_chance = { factor = 100 }
+
+		event_target:pf_per_revolting_satrapy = {
+			grant_independence = yes
+		}
+
+		add_prestige = -20
+		add_stability = -1
+	}
+}
+
+# Persian Inquisition: Satrapy Capital falls
+country_event = {
+	id = pf_per_events.88
+	title = "pf_per_events_88_title"
+	desc = "pf_per_events_88_desc"
+	picture = ACCUSATION_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_per_events_88_option"
+		ai_chance = { factor = 100 }
+
+		add_prestige = -10
+		add_stability = -1
+
+		add_country_modifier = {
+			name = pf_per_satrapies_lose_trust
+			duration = 3650
+		}
+	}
+}
+
+# Persian Inquisition: Persian Capital falls
+country_event = {
+	id = pf_per_events.89
+	title = "pf_per_events_89_title"
+	desc = "pf_per_events_89_desc"
+	picture = ACCUSATION_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_per_events_89_option"
+		ai_chance = { factor = 100 }
+
+		add_stability = -2
+		add_prestige = -50
+
+		add_country_modifier = {
+			name = pf_per_satrapies_lose_trust
+			duration = 9125
+		}
+	}
+}
 # ---------------- Flavour Events ----------------
 
 # Dummy for copy + paste
@@ -5278,7 +5691,7 @@ country_event = {
 			desc = pf_per_until_end_of_inquisition_tt
 		}
 		custom_tooltip = pf_per_start_inquisition_ticking_tt
-		set_country_flag = pf_per_started_persian_inquisition
+		set_country_flag = pf_per_allow_persian_inquisition
 	}
 
 	option = {
@@ -5323,7 +5736,7 @@ country_event = {
 		}
 		add_stability = -1
 		custom_tooltip = pf_per_start_inquisition_ticking_tt
-		set_country_flag = pf_per_started_persian_inquisition
+		set_country_flag = pf_per_allow_persian_inquisition
 	}
 }
 
