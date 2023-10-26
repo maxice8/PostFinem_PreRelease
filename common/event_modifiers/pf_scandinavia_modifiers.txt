@@ -367,3 +367,81 @@ pf_vin_ruins_of_norse_settlement = {
 	local_build_cost = 0.10
 	local_development_cost_modifier = 0.05
 }
+pf_vin_native_ally_modifier = {
+	diplomatic_reputation = 1
+	production_efficiency = 0.10
+}
+pf_vin_love_in_vinland = {
+	local_development_cost_modifier = -0.15
+	local_tax_modifier = 0.25
+	local_manpower_modifier = 0.25
+}
+pf_vin_markland_forest = {
+	trade_goods_size = 2
+}
+pf_vin_timber_for_ships_modifier = {
+	naval_maintenance_modifier = -0.20
+	global_ship_cost = -0.10
+}
+pf_vin_well_fed_people = {
+	global_trade_goods_size_modifier = 0.10
+	global_unrest = -1
+}
+pf_vin_constructing_a_court = {
+	advisor_pool = 1
+	advisor_cost = -0.15
+}
+pf_vin_althing_place = {
+	local_governing_cost_increase = -10
+	tax_income = 12
+}
+pf_vin_more_settlers = {
+	global_colonial_growth = 30
+	colonist_placement_chance = 0.10
+}
+pf_vin_great_norse_city = {
+	trade_goods_size = 2
+	local_build_cost = -0.25
+	local_build_time = -0.50
+	local_governing_cost = -0.50
+}
+pf_vin_continue_expansion = {
+	global_colonial_growth = 15
+	core_creation = -0.1
+}
+pf_vin_booming_trades = {
+	global_own_trade_power = 0.15
+	trade_steering = 0.10
+}
+pf_vin_local_timber = {
+	local_build_cost = -0.20
+	local_build_time = -0.33
+}
+pf_vin_starting_army = {
+	land_maintenance_modifier = -0.20
+}
+pf_vin_vinlandic_grit = {
+	discipline = 0.05
+	fire_damage_received = -0.10
+}
+pf_vin_a_new_kingdom = {
+	all_power_cost = -0.05
+	province_warscore_cost = -0.15
+}
+pf_vin_beyond_the_sun_modifier = {
+	development_cost = -0.10
+	prestige = 1
+}
+pf_vin_making_our_way_home = {
+	naval_attrition = -0.50
+	transport_attrition = -0.50
+	range = 0.25
+}
+pf_vin_friends_and_countrymen = {
+	diplomats = 1
+	improve_relation_modifier = 0.33
+}
+pf_vin_exporter = {
+	global_foreign_trade_power = 0.10
+	trade_steering = 0.20
+}

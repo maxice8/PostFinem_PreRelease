@@ -1009,6 +1009,15 @@ country_event = {		# The Land the Gods Forgot
 			name = "pf_vin_uncertain_future"
 			duration = -1
 		}
+		capital_scope = {
+			add_province_triggered_modifier = vinland_colony_devastation
+			hidden_effect = {
+				add_institution_embracement = {
+					which = feudalism
+					value = 100
+				}
+			}
+		}
 	}
 }
 country_event = {		# Vinland Expedition #1
@@ -1178,6 +1187,9 @@ country_event = {		# Haldorsdottir, Shieldmaiden
 
 	option = {
 		name = "pf_nordic.36.a"
+		ai_chance = {
+			factor = 25
+		}
 		add_prestige = -10
 		add_army_tradition = 25
 		change_adm = 2
@@ -1187,6 +1199,9 @@ country_event = {		# Haldorsdottir, Shieldmaiden
 	}
 	option = {
 		name = "pf_nordic.36.b"
+		ai_chance = {
+			factor = 75
+		}
 		add_stability = 2
 		add_adm_power = 100
 		add_dip_power = 100
@@ -1211,11 +1226,17 @@ country_event = {		# Skraelings Arrive to Trade
 
 	option = {		# Give them metal tools
 		name = "pf_nordic.37.a"
+		ai_chance = {
+			factor = 90
+		}
 		add_mil_power = -60
 		add_treasury = 200
 	}
 	option = {		# Steal it 
 		name = "pf_nordic.37.b"
+		ai_chance = {
+			factor = 10
+		}
 		add_stability = -1
 		remove_country_modifier = pf_vin_treaty_with_skraeling
 		add_treasury = 200
@@ -1240,6 +1261,9 @@ country_event = {		# Skraelings Settle with Us
 
 	option = {		# Allow them
 		name = "pf_nordic.38.a"
+		ai_chance = {
+			factor = 75
+		}
 		capital_scope = {
 			add_base_tax = 1
 			add_base_manpower = 1
@@ -1251,6 +1275,9 @@ country_event = {		# Skraelings Settle with Us
 	}
 	option = {		# Refuse
 		name = "pf_nordic.38.b"
+		ai_chance = {
+			factor = 25
+		}
 		add_prestige = 10
 		add_mil_power = 50
 	}
@@ -1283,6 +1310,9 @@ country_event = {		# Norse-Skraeling Marriages
 
 	option = {		# Encourage the practice
 		name = "pf_nordic.39.a"
+		ai_chance = {
+			factor = 75
+		}
 		add_dip_power = -50
 		add_country_modifier = {
 			name = "pf_vin_intermarriage"
@@ -1291,6 +1321,9 @@ country_event = {		# Norse-Skraeling Marriages
 	}
 	option = {		# Refuse
 		name = "pf_nordic.39.b"
+		ai_chance = {
+			factor = 25
+		}
 		add_prestige = 10
 		add_legitimacy = 25
 	}
@@ -1348,14 +1381,13 @@ country_event = {		# Hunger Grips Vinland
 	trigger = {
 		tag = VIN
 		has_reform = pf_vinland_colony
-		is_month = 10
 	}
 
 	mean_time_to_happen = {
-		months = 800
+		months = 100
 		modifier = {
 			factor = 1.25
-			total_development = 10
+			total_development = 25
 		}
 		modifier = {
 			factor = 0.5
@@ -1368,7 +1400,7 @@ country_event = {		# Hunger Grips Vinland
 	option = {
 		name = "pf_nordic.42.a"
 		capital_scope = {
-			add_devastation = 40
+			add_devastation = 30
 		}
 	}
 }
@@ -1412,5 +1444,78 @@ country_event = {		# Vinland dies
 			}
 		}
 		custom_tooltip = pf_vin_end_game_tt
+	}
+}
+country_event = {		# Skraelings Attack!
+	id = pf_nordic.44
+	title = "pf_nordic.44.t"
+	desc = "pf_nordic.44.d"
+	picture = northamericagfx_BATTLE_eventPicture
+
+	trigger = {
+		tag = VIN
+		capital_scope = {
+			has_province_modifier = pf_vin_skraeling_campsite
+		}
+		has_reform = pf_vinland_colony
+	}
+
+	mean_time_to_happen = {
+		months = 180
+		modifier = {
+			factor = 1.5
+			has_country_modifier = pf_vin_intermarriage
+		}
+		modifier = {
+			factor = 0.75
+			capital_scope = {
+				unrest = 1
+			}
+		}
+		modifier = {
+			factor = 1.2
+			stability = 2
+		}
+		modifier = {
+			factor = 1.3
+			prestige = 30
+		}
+		modifier = {
+			factor = 2
+			capital_scope = {
+				development = 20
+			}
+		}
+	}
+	
+	fire_only_once = yes
+
+	option = {
+		name = "pf_nordic.44.a"
+		ai_chance = {
+			factor = 1
+		}
+		capital_scope = {
+			add_devastation = 5
+			spawn_rebels = {
+				type = totemism_rebels
+				size = 1
+			}
+		}
+	}
+	option = {
+		name = "pf_nordic.44.b"
+		ai_chance = {
+			factor = 0
+		}
+		add_mil_power = -50
+		capital_scope = {
+			add_devastation = 5
+			spawn_rebels = {
+				type = totemism_rebels
+				size = 2
+			}
+			remove_province_modifier = pf_vin_skraeling_campsite
+		}
 	}
 }

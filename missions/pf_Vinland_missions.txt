@@ -1,0 +1,867 @@
+pf_vin_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = VIN } 
+
+	pf_vin_restore_religion = {
+		icon = mission_pf_norse_gods
+		position = 2
+		provinces_to_highlight = {
+			is_capital_of = root
+			NOT = { has_tax_building_trigger = yes }
+		} 
+
+		trigger = {
+			prestige = 30
+			capital_scope = {
+				has_tax_building_trigger = yes
+			}
+		} 
+
+		effect = {
+			country_event = { id = pf_nordic.40 }
+		} 
+	}
+}
+pf_vin_2_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = VIN
+		has_country_flag = vin_stage_2_missions
+	} 
+
+	pf_vin_city_in_the_stars = {
+		icon = mission_norse_faith
+		position = 7
+		required_missions = { pf_vin_leifbuthir_town } 
+		provinces_to_highlight = {
+			province_id = 981	# Leifsbuthir
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { development = 40 }
+				NOT = { prosperity = 100 }
+			}
+		} 
+
+		trigger = {
+			981 = {
+				owned_by = root
+				development = 40
+				prosperity = 100
+			}
+		} 
+
+		effect = {
+			981 = {
+				add_province_modifier = {
+					name = "pf_vin_great_norse_city"
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	pf_vin_colonise_leifsland = {
+		icon = mission_pf_leifsland_map
+		position = 9
+		provinces_to_highlight = {
+			region = canada_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			owns_core_province = 981
+			owns_core_province = 4891
+			owns_core_province = 994
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 22
+				region = canada_region
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_vin_continue_expansion"
+				duration = 10950
+			}
+			4891 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+				upgrade_center_of_trade = yes
+				change_province_name = "Haldorsbuthir"
+			}
+			994 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+				upgrade_center_of_trade = yes
+				change_province_name = "Freydisburh"
+			}
+		} 
+	}
+}
+pf_vin_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = VIN } 
+
+	pf_vin_friends_and_enemies = {
+		icon = mission_diplomatic_relation
+		position = 2
+		required_missions = { pf_vin_start_expedition } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			has_advisor = yes
+			is_in_deficit = no
+			has_consort = yes
+			has_heir = yes
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_vin_constructing_a_court"
+				duration = 9125
+			}
+		} 
+	}
+
+	pf_vin_found_althing = {
+		icon = mission_noble_council
+		position = 3
+		required_missions = {
+			pf_vin_friends_and_enemies
+			pf_vin_restore_religion
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			has_reform = pf_vinland_althing
+		} 
+
+		effect = {
+			capital_scope = {
+				add_province_modifier = {
+					name = "pf_vin_althing_place"
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	pf_vin_grow_the_settlement = {
+		icon = defend_the_city
+		position = 4
+		required_missions = {
+			pf_vin_found_althing
+			pf_vin_frozen_love
+		}
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+			NOT = { development = 15 }
+		} 
+
+		trigger = {
+			capital_scope = {
+				development = 20
+			}
+		} 
+
+		effect = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		} 
+	}
+}
+pf_vin_2_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = VIN
+		has_country_flag = vin_stage_2_missions
+	}
+
+	pf_vin_leifbuthir_town = {
+		icon = mission_hanseatic_city
+		position = 6
+		required_missions = {
+			pf_vin_more_than_a_colony
+		}
+		provinces_to_highlight = {
+			province_id = 981
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_tax_building_trigger = yes }
+				NOT = { has_production_building_trigger = yes }
+				NOT = { has_trade_building_trigger = yes }
+			}
+		} 
+
+		trigger = {
+			owns_core_province = 981
+			981 = {
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+			}
+		} 
+
+		effect = {
+			add_adm_power = 100
+			add_country_modifier = {
+				name = "pf_vin_booming_trades"
+				duration = 9125
+			}
+			newfoundland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_vin_unite_vinland = {
+		icon = unite_the_realm
+		position = 7
+		required_missions = { pf_vin_leifbuthir_town } 
+		provinces_to_highlight = {
+			area = newfoundland_area
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = { is_city = yes }
+			}
+		} 
+
+		trigger = {
+			newfoundland_area = {
+				type = all
+				owned_by = root
+				is_core = ROOT
+				is_city= yes
+			}
+		} 
+
+		effect = {
+			980 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 1
+			}
+			2573 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 1
+			}
+			labrador_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_vin_colonise_markland = {
+		icon = mission_pf_forest
+		position = 8
+		required_missions = { pf_vin_unite_vinland } 
+		provinces_to_highlight = {
+			area = labrador_area
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = { is_city = yes }
+			}
+		} 
+
+		trigger = {
+			labrador_area = {
+				type = all
+				owned_by = root
+				is_core = ROOT
+				is_city= yes
+			}
+		} 
+
+		effect = {
+			labrador_area = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_province_modifier = {
+					name = "pf_vin_local_timber"
+					duration = 10950
+				}
+			}
+			canada_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+pf_vin_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = VIN } 
+
+	pf_vin_start_expedition = {
+		icon = mission_pf_vinland
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			years_of_income = 2
+			mil_power = 50
+			if = {
+				limit = { ai = no }
+				is_monarch_leader = yes
+			}
+		} 
+
+		effect = {
+			add_years_of_income = -2
+			add_mil_power = -50
+			create_conquistador = {
+				tradition = 30
+			}
+			country_event = {
+				id = pf_nordic.29
+			}
+		} 
+	}
+
+	pf_vin_ally_with_natives = {
+		icon = mission_protect_white_sea_trade
+		position = 2
+		required_missions = { pf_vin_start_expedition } 
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				government = native
+			}
+			has_discovered = ROOT
+		} 
+
+		trigger = {
+			any_known_country = {
+				government = native
+				has_opinion = {
+					who = root
+					value = 150
+				}
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_vin_native_ally_modifier"
+				duration = 7300
+			}
+		} 
+	}
+
+	pf_vin_frozen_love = {
+		icon = mission_che_the_beloved_woman
+		position = 3
+		required_missions = { pf_vin_ally_with_natives } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				has_country_modifier = pf_vin_treaty_with_skraeling
+				monthly_dip = 8
+			}
+			OR = {
+				has_country_modifier = pf_vin_intermarriage
+				capital_scope = {
+					development = 8
+				}
+			}
+		} 
+
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 30
+			}
+			capital_scope = {
+				add_province_modifier = {
+					name = "pf_vin_love_in_vinland"
+					duration = 9125
+				}
+			}
+		} 
+	}
+
+	pf_vin_more_than_a_colony = {
+		icon = mission_pf_viking_brothers
+		position = 5
+		required_missions = {
+			pf_vin_grow_the_settlement
+			pf_vin_gather_food
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			NOT = { has_reform = pf_vinland_colony }
+			monthly_adm = 7
+			monthly_dip = 7
+			monthly_mil = 7
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_vin_more_settlers"
+				duration = 18250
+			}
+			country_event = { id = pf_nordic.41 }
+			set_country_flag = vin_stage_2_missions
+			swap_non_generic_missions = yes
+		} 
+	}
+}
+pf_vin_2_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = VIN
+		has_country_flag = vin_stage_2_missions
+	} 
+
+	pf_vin_militia = {
+		icon = mission_mnd_dai_control_the_army
+		position = 6
+		provinces_to_highlight = {  } 
+		required_missions = {
+			pf_vin_more_than_a_colony
+		}
+		trigger = {
+			army_size_percentage = 1
+			num_of_generals = 1
+		} 
+
+		effect = {
+			add_manpower = 5
+			add_country_modifier = {
+				name = "pf_vin_starting_army"
+				duration = 9125
+			}
+		} 
+	}
+
+	pf_vin_professional_army = {
+		icon = mission_modern_knight_army
+		position = 7
+		required_missions = { pf_vin_militia } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_cavalry = 4
+			num_of_artillery = 6
+			army_professionalism = 0.33
+		} 
+
+		effect = {
+			add_army_tradition = 20
+			create_general = {
+				tradition = 100
+			}
+			add_country_modifier = {
+				name = "pf_vin_vinlandic_grit"
+				duration = 9125
+			}
+		} 
+	}
+
+	pf_vin_kingdom_of_frost = {
+		icon = mission_pf_icey_landscape
+		position = 9
+		required_missions = {
+			pf_vin_colonise_markland
+			pf_vin_smokey_isle
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			total_development = 200
+		} 
+
+		effect = {
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "pf_vin_a_new_kingdom"
+				duration = 9125
+			}
+		} 
+	}
+
+	pf_vin_beyond_the_sun = {
+		icon = mission_pf_sunrise
+		position = 10
+		required_missions = {
+			pf_vin_colonise_leifsland
+			pf_vin_renew_exports
+			pf_vin_kingdom_of_frost
+		}
+		provinces_to_highlight = {
+			owned_by = root
+			NOT = { development = 10 }
+		} 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 50
+				development = 10
+			}
+		} 
+
+		effect = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 50
+			}
+			restore_country_name = yes
+			override_country_name = DAGSATRLAND
+			add_country_modifier = {
+				name = "pf_vin_beyond_the_sun_modifier"
+				duration = -1
+			}
+		} 
+	}
+}
+pf_vin_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = VIN } 
+
+	pf_vin_map_markland = {
+		icon = mission_pf_map_table
+		position = 2
+		required_missions = { pf_vin_start_expedition } 
+		provinces_to_highlight = {
+			area = labrador_area
+			NOT = {
+				units_in_province = ROOT
+			}
+		} 
+
+		trigger = {
+			labrador_area = {
+				type = all
+				units_in_province = ROOT
+			}
+		} 
+
+		effect = {
+			add_dip_power = 100
+			labrador_area = {
+				add_permanent_province_modifier = {
+					name = "pf_vin_markland_forest"
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	pf_vin_timber_for_ships = {
+		icon = mission_rb_a_mighty_fleet
+		position = 3
+		required_missions = {
+			pf_vin_map_markland
+			pf_vin_restore_hope
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			navy_size = 10
+			num_of_admirals = 1
+			#naval_supplies = 1
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_vin_timber_for_ships_modifier"
+				duration = 9125
+			}
+		} 
+	}
+
+	pf_vin_gather_food = {
+		icon = mission_iroquois_food_surplus
+		position = 4
+		required_missions = {
+			pf_vin_frozen_love
+			pf_vin_timber_for_ships
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			if = {
+				limit = { ai = no }
+				treasury = 300
+			}
+			else = {
+				treasury = 100
+			}
+		} 
+
+		effect = {
+			capital_scope = {
+				add_devastation = -50
+				remove_province_triggered_modifier = vinland_colony_devastation
+			}
+			add_country_modifier = {
+				name = "pf_vin_well_fed_people"
+				duration = 10950
+			}
+		} 
+	}
+}
+pf_vin_2_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = VIN
+		has_country_flag = vin_stage_2_missions
+	}  
+
+	pf_vin_set_sail = {
+		icon = mission_pf_sunset_ship
+		position = 6
+		provinces_to_highlight = {  } 
+		required_missions = {
+			pf_vin_more_than_a_colony
+		}
+		trigger = {
+			1924 = {
+				has_discovered = ROOT
+			}
+			1482 = {
+				has_discovered = ROOT
+			}
+			num_of_light_ship = 15
+		} 
+
+		effect = {
+			add_navy_tradition = 20
+			greenland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_vin_find_greenland = {
+		icon = mission_rb_colonise_canada
+		position = 7
+		required_missions = { pf_vin_set_sail } 
+		provinces_to_highlight = {
+			area = greenland_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			greenland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {
+			define_advisor = {
+				type = naval_reformer
+				skill = 2
+				discount = yes
+			}
+			greenland_area = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			370 = {
+				add_permanent_claim = ROOT
+			}
+			371 = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_vin_smokey_isle = {
+		icon = mission_pf_iceland
+		position = 8
+		required_missions = { pf_vin_find_greenland } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 370
+				province_id = 371
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			370 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			371 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 15
+			}
+			add_adm_power = 100
+			add_country_modifier = {
+				name = "pf_vin_making_our_way_home"
+				duration = 9125
+			}
+			scandinavia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+pf_vin_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = VIN } 
+
+	pf_vin_restore_hope = {
+		icon = mission_pf_stock_exchange
+		position = 2
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			stability = 2
+			legitimacy_equivalent = 90
+			capital_scope = {
+				development = 5
+			}
+		} 
+
+		effect = {
+			remove_country_modifier = pf_vin_uncertain_future
+			add_adm_power = 100
+		} 
+	}
+}
+pf_vin_2_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = VIN
+		has_country_flag = vin_stage_2_missions
+	} 
+
+	pf_vin_european_contact = {
+		icon = mission_european_politics
+		position = 7
+		required_missions = { pf_vin_set_sail } 
+		provinces_to_highlight = {
+			continent = europe
+			has_discovered = ROOT
+		} 
+
+		trigger = {
+			europe = {
+				has_discovered = ROOT
+			}
+			any_known_country = {
+				capital_scope = {
+					continent = europe
+				}
+				has_opinion = {
+					who = root
+					value = 100
+				}
+			}
+		} 
+
+		effect = {
+			add_years_of_income = 0.5
+			add_country_modifier = {
+				name = "pf_vin_friends_and_countrymen"
+				duration = 9125
+			}
+		} 
+	}
+
+	pf_vin_renew_exports = {
+		icon = mission_pf_viking_trader
+		position = 9
+		provinces_to_highlight = {
+			province_id = 1490
+		} 
+
+		trigger = {
+			1490 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1490 = {
+				trade_node_value = 10
+			}
+			monthly_income = 25
+		} 
+
+		effect = {
+			add_dip_power = 100
+			change_dip = 2
+			add_ruler_personality = industrious_personality
+			add_country_modifier = {
+				name = "pf_vin_exporter"
+				duration = -1
+			}
+		} 
+	}
+}

@@ -91,3 +91,31 @@ punic_roma_adirim = {
 	}
 	
 }
+vinland_colony_devastation = {
+	potential = {
+		owner = { tag = VIN }
+	}
+	
+	#viewer = {
+	#}
+	
+	trigger = {
+		OR = {
+			is_month = 9
+			NOT = { is_month = 3 }
+		}
+	}
+
+	local_monthly_devastation = 4
+	attrition = 1
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+	
+}

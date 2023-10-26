@@ -36,12 +36,15 @@ show_superiority_raid = {
 		prestige_factor = 1
 		peace_cost_factor = 1
 		
+		allowed_provinces_are_eligible = yes
 		allowed_provinces = {
-			always = yes
-		}		
+			always = no
+		}
 		
 		peace_options = {
 			po_gold
+			po_concede_defeat
+			po_humiliate_rival
 		}
 	}
 	
