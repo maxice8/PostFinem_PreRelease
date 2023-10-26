@@ -86,12 +86,14 @@ car_main_1 = {
 			OR = {
 				AND = {
 					region = italy_region
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				AND = {
 					province_id = 121
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
 				}
 			}
 		} 
@@ -100,10 +102,12 @@ car_main_1 = {
 			owns_core_province = 121
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 20
+				region = italy_region
 			}
 		} 
 
-		effect = {  
+		effect = { 
+			add_prestige_or_monarch_power = { amount = 25 }
 			italy_region = {
 				add_permanent_claim = ROOT
 			}
@@ -120,22 +124,69 @@ car_main_1 = {
 			pf_car_italian_ambitions
 			pf_car_finish_the_punic_wars
 		}
+		provinces_to_highlight = {  
+			OR = {
+				AND = {
+					region = north_italy_region
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 104
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 104
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				region = north_italy_region
+			}
+		} 
+
+		effect = {  
+			104 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = car_conquest_of_italia
+				duration = -1
+			}
+		} 
+	}
+	pf_car_african_riches = {
+		icon = mission_african_trade_post
+		position = 9
+		required_missions = { pf_car_colonial_mindset } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+		} 
 
-		effect = {  } 
+		effect = {  
+			
+		} 
 	}
 
-	pf_car_winds_of_change = {
-		icon = mission_book_of_royal_degrees
-		position = 8
-		required_missions = { pf_car_thunder_of_war } 
+	pf_car_monopolize_the_trade = {
+		icon = mission_african_gold
+		position = 11
+		required_missions = { pf_car_african_riches pf_car_westward } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+		} 
 
-		effect = {  } 
+		effect = {  
+			
+		} 
 	}
 }
 car_main_2 = {
@@ -228,82 +279,135 @@ car_main_2 = {
 		} 
 	}
 
-	pf_car_iberia_reclaimed = {
-		icon = mission_plc_golden_liberty
+	pf_car_carthago_nova = {
+		icon = renaissance_city
 		position = 4
 		required_missions = { pf_car_into_iber } 
 		provinces_to_highlight = {  
-			region = iberia_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			province_id = 1750
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = { development = 25 }
+			}
 		} 
 
 		trigger = {  
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 45
-				region = iberia_region
-			}
+			owns_core_province = 1750
+			1750 = { development = 25 }
 		} 
 
 		effect = {  
-			custom_tooltip = unlock_gallic_wars_cb_tt
-			set_country_flag = unlock_gallic_wars_cb_flag
+			1750 = {
+				center_of_trade = 2
+			}
 			custom_tooltip = empty_line_tt
-			guyenne_area = {
-				add_permanent_claim = ROOT
+			1750 = {
+				add_base_tax = 1
+				add_base_production = 2
+				add_base_manpower = 1
 			}
-			pyrenees_area = {
-				add_permanent_claim = ROOT
-			}
-			languedoc_area = {
-				add_permanent_claim = ROOT
-			}
-			provence_area = {
-				add_permanent_claim = ROOT
+			custom_tooltip = empty_line_tt
+			1750 = {
+				change_trade_goods = paper
+				add_building = mills
 			}
 		} 
 	}
 
 	pf_car_finish_the_punic_wars = {
 		icon = mission_fall_of_third_rome
-		position = 1
+		position = 5
 		required_missions = { pf_car_italian_ambitions } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				AND = {
+					OR = {
+						region = italy_region
+						region = north_italy_region
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 118
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+			}
+		} 
 
-		trigger = {  } 
-
+		trigger = {  
+			owns_core_province = 118
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = italy_region
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = north_italy_region
+			}
+		} 
 		effect = {  } 
 	}
 
-	pf_car_thunder_of_war = {
-		icon = pf_war_elephants
+	pf_car_looking_to_the_waves = {
+		icon = mission_rb_scottish_north_sea_trade
 		position = 7
+		required_missions = {  } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			OR = {
+				full_idea_group = exploration_ideas
+				full_idea_group = expansion_ideas
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+
+		} 
 	}
 
-	pf_car_fire_of_cannons = {
-		icon = mission_guns_of_urban
-		position = 1
-		required_missions = { pf_car_thunder_of_war } 
+	pf_car_colonial_mindset = {
+		icon = mission_rb_grow_the_channel
+		position = 8
+		required_missions = { pf_car_looking_to_the_waves } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+		} 
 
-		effect = {  } 
+		effect = {  
+			
+		} 
 	}
 
-	pf_car_leading_from_the_front = {
-		icon = military_self_reliance
-		position = 1
-		required_missions = { pf_car_fire_of_cannons } 
+	pf_car_westward = {
+		icon = settle_north_america
+		position = 10
+		required_missions = { pf_car_colonial_mindset } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+		} 
 
-		effect = {  } 
+		effect = {  
+			
+		} 
+	}
+
+	pf_car_a_whole_new_world = {
+		icon = mission_colonize_the_caribbean
+		position = 11
+		required_missions = { pf_car_westward } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+		} 
+
+		effect = {  
+			
+		} 
 	}
 }
 car_main_3 = {
@@ -380,7 +484,10 @@ car_main_3 = {
 			hidden_effect = {
 				every_country = {
 					limit = {
-						capital_scope = { region = maghreb_region }
+						OR = {
+							capital_scope = { region = maghreb_region }
+							capital_scope = { region = mauretania_region }
+						}
 						NOT = { total_development = 50 }
 						NOT = { is_subject_of = ROOT }
 						is_subject = no
@@ -392,6 +499,7 @@ car_main_3 = {
 					}
 				}
 			}
+			custom_tooltip = empty_line_tt
 			upper_andalucia_area = {
 				add_permanent_claim = ROOT
 			}
@@ -426,63 +534,100 @@ car_main_3 = {
 
 		effect = {  
 			if = {
-				limit = { SUE = { exists = yes } }
+				limit = { 
+					SUE = { exists = yes }
+				}
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					target = SUE
+					months = 120
+				}
+				custom_tooltip = empty_line_tt
 			}
-			add_casus_belli = {
-				type = cb_restore_personal_union
-				target = SUE
-				months = 120
-			}
-			custom_tooltip = empty_line_tt
 			iberia_region = {
 				add_permanent_claim = ROOT
 			}
 		} 
 	}
 
-	pf_car_carthago_nova = {
-		icon = renaissance_city
+
+	pf_car_iberia_reclaimed = {
+		icon = mission_plc_golden_liberty
 		position = 4
 		required_missions = { pf_car_into_iber } 
 		provinces_to_highlight = {  
-			province_id = 1750
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
-			development = 25
+			region = iberia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {  
-			owns_core_province = 1750
-			1750 = { development = 25 }
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 45
+				region = iberia_region
+			}
 		} 
 
 		effect = {  
-			1750 = {
-				center_of_trade = 2
-			}
+			custom_tooltip = unlock_gallic_wars_cb_tt
+			set_country_flag = unlock_gallic_wars_cb_flag
 			custom_tooltip = empty_line_tt
-			1750 = {
-				add_base_tax = 1
-				add_base_production = 2
-				add_base_manpower = 1
+			guyenne_area = {
+				add_permanent_claim = ROOT
 			}
-			custom_tooltip = empty_line_tt
-			1750 = {
-				change_trade_goods = paper
-				add_building = mills
+			pyrenees_area = {
+				add_permanent_claim = ROOT
+			}
+			languedoc_area = {
+				add_permanent_claim = ROOT
+			}
+			provence_area = {
+				add_permanent_claim = ROOT
 			}
 		} 
 	}
-
 	pf_car_gallic_campaigns = {
 		icon = centralize_france
 		position = 5
 		required_missions = { pf_car_iberia_reclaimed } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				area = guyenne_area
+				area = pyrenees_area
+				area = languedoc_area
+				area = provence_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			guyenne_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			pyrenees_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			languedoc_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			provence_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
+			add_ruler_modifier = {
+				name = car_gallic_conqueror_modifier
+			}
+			france_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_car_worthy_successors_of_hannibal = {
@@ -493,11 +638,48 @@ car_main_3 = {
 			pf_car_finish_the_punic_wars
 			pf_car_phoenicia_our_home
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				region = france_region
+				region = north_italy_region
+				region = italy_region
+				region = iberia_region
+				region = mauretania_region
+				region = maghreb_region
+				region = egypt_region
+				region = mashriq_region
+				region = anatolia_region
+			}
+			NOT = { owned_by = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 250
+				OR = {
+					region = france_region
+					region = north_italy_region
+					region = italy_region
+					region = iberia_region
+					region = mauretania_region
+					region = maghreb_region
+					region = egypt_region
+					region = mashriq_region
+					region = anatolia_region
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_prestige_or_monarch_power = { amount = 100 }
+			custom_tooltip = empty_line_tt
+			override_country_name = BARCINE_EMPIRE
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = car_worthy_successors_of_hannibal_modifier
+				duration = -1
+			}
+		} 
 	}
 	pf_car_reclaimed_glory = {
 		icon = africa_proconsulare
@@ -513,6 +695,17 @@ car_main_3 = {
 		icon = mission_early_modern_university
 		position = 9
 		required_missions = { pf_car_reclaimed_glory } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_winds_of_change = {
+		icon = mission_book_of_royal_degrees
+		position = 10
+		required_missions = { pf_car_center_of_enlightenment } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -535,8 +728,8 @@ car_main_4 = {
 			OR = {
 				AND = {
 					OR = {
-					province_id = 142
-					province_id = 4698
+						province_id = 142
+						province_id = 4698
 					}
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -624,6 +817,7 @@ car_main_4 = {
 				area = bahari_area
 				area = palestine_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {  
@@ -651,11 +845,34 @@ car_main_4 = {
 		icon = mission_unite_home_region
 		position = 5
 		required_missions = { pf_car_the_motherland_beckons } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			region = mashriq_region
+			NOT = {  country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			owns_core_province = 1855
+			mashriq_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			1855 = {
+				add_or_upgrade_shipyard_building = yes
+			} 
+			custom_tooltip = empty_line_tt
+			1855 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			custom_tooltip = empty_line_tt
+			anatolia_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	pf_car_secure_ports = {
@@ -686,6 +903,16 @@ car_main_4 = {
 		icon = prosperity_for_all
 		position = 9
 		required_missions = { pf_car_productive_provinces } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+	pf_car_leading_from_the_front = {
+		icon = military_self_reliance
+		position = 11
+		required_missions = { pf_car_thunder_of_war } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -737,10 +964,14 @@ car_main_5 = {
 		}
 		provinces_to_highlight = {  
 			province_id = 341
-			NOT = {
-				has_great_project = {
-					type = great_cothon
-					tier = 2
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = {
+					has_great_project = {
+						type = great_cothon
+						tier = 2
+					}
 				}
 			}
 		} 
@@ -775,8 +1006,6 @@ car_main_5 = {
 		required_missions = { pf_car_the_land_of_alexander } 
 		provinces_to_highlight = {  
 			province_id = 358
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
 		} 
 
 		trigger = {  
@@ -808,35 +1037,12 @@ car_main_5 = {
 		icon = mission_metropolis_of_the_deccan
 		position = 5
 		required_missions = { pf_car_the_gateway_to_the_east } 
-		provinces_to_highlight = {  
-			OR = {
-				AND = {
-					OR = {
-						region = italy_region
-						region = north_italy_region
-					}
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
-				AND = {
-					province_id = 118
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-			}
-		} 
+		provinces_to_highlight = {
+			
+		}
+		trigger = {
 
-		trigger = {  
-			owns_core_province = 118
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 20
-				region = italy_region
-			}
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 10
-				region = north_italy_region
-			}
-		} 
-
+		}
 		effect = {  
 			118 = {
 				add_base_tax = 2
@@ -894,4 +1100,25 @@ car_main_5 = {
 
 		effect = {  } 
 	}
+	pf_car_thunder_of_war = {
+		icon = pf_war_elephants
+		position = 10
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_fire_of_cannons = {
+		icon = mission_guns_of_urban
+		position = 11
+		required_missions = { pf_car_thunder_of_war } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
 }
