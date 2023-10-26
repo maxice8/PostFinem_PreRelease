@@ -1,0 +1,45 @@
+cb_neapolitan_subjugation = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		mission_completed = pf_nap_ladys_ambition
+	}
+
+	prerequisites = {
+		FROM = {
+			ROOT = { mission_completed = pf_nap_italian_empire }
+			is_free_or_tributary_trigger = yes
+			OR = {
+				capital_scope = {
+					OR = {
+						area = calabria_area
+						area = apulia_area
+						area = naples_area
+						area = adriatic_italy_area
+					}
+				}
+				AND = {
+					ROOT = { mission_completed = pf_nap_secure_the_south }
+					OR = {
+						capital_scope = {
+							area = western_sicily_area
+						}
+						capital_scope = {
+							area = sicily_area
+						}
+					}
+				}
+				AND = {
+					ROOT = { mission_completed = pf_nap_subdue_sicily }
+					OR = {
+						capital_scope = {
+							region = italy_region
+						}
+					}
+				}
+			}
+		}
+	}
+
+	war_goal = take_capital_neapolitan_subjugation
+}

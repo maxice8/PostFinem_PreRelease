@@ -1982,6 +1982,22 @@ on_province_owner_change_estate_privileges_effect = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_burghers_pf_per_mountain_development
+			}
+		}
+		if = {
+			limit = {
+				has_terrain = mountain
+			}
+			add_province_modifier = {
+				name = pf_per_mountain_development
+				duration = -1
+			}
+		}
+	}
 }
 
 on_province_tax_building_built_estate_privileges_effect = {

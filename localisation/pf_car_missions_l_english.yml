@@ -8,11 +8,16 @@
  pf_car_italian_ambitions_title:0 "Italian Ambitions"
  pf_car_italian_ambitions_desc:0 "own at least 10 provinces in southern italy, own core naples / spawn imperial incident if IF is still a thing (talk to HiW about options) , otherwise claims on all of italy"
 
- pf_car_finish_the_punic_wars_title:0 "Finish the Punic Wars"
- pf_car_finish_the_punic_wars_desc:0 "own_core rome, at least 20 provinces in italia region / province modifier for roma, dev it, perm modifier for carthage"
+ pf_car_approach_the_alpes_title:0 "Approach the Alps"
+ pf_car_approach_the_alpes_desc:0 "own 10 provinces in northern italy area, own_core milano / buff milan, country_modifier: gov cap for rest of game"
+
+ pf_car_winds_of_change_title:0 "Winds of Change"
+ pf_car_winds_of_change_desc:0 "finish reforms, empire rank / unlock change govenrment type reforms and gain prestige"
 
  pf_car_reestablish_sardan_title:0 "Re-establish Sardan"
  pf_car_reestablish_sardan_desc:0 "conquer sardinia / claims on corsica (subjugation CB if they are in the IF)"
+ car_reestablish_sardan_1: "If Eyl is a pirate republic"
+ car_reestablish_sardan_2: "If Eyl has joined the Federation"
 
  pf_car_mediterranean_dominance_title:0 "Mediterranean Dominance"
  pf_car_mediterranean_dominance_desc:0 "own all 4 island areas / naval buff modifier, unlock yam diety (naval buffs)"
@@ -20,11 +25,24 @@
  pf_car_iberia_reclaimed_title:0 "Iberia Reclaimed!"
  pf_car_iberia_reclaimed_desc:0 "own at least 45 provinces in iberia / claims on southern gaul areas, special CB for 'gallic wars'"
 
+ pf_car_finish_the_punic_wars_title:0 "Finish the Punic Wars"
+ pf_car_finish_the_punic_wars_desc:0 "own_core rome, at least 20 provinces in italia region / province modifier for roma, dev it, perm modifier for carthage"
+
+ pf_car_thunder_of_war_title:0 "Thunder of War"
+ pf_car_thunder_of_war_desc:0 "have at least 20 cav and t5 unlocked / event for unlocking war elephants or mercs (change their cav to elephants) and if have quality or aristo you get extra buff (unlock event to buff cav fire in late game)"
+
+ pf_car_fire_of_cannons_title:0 "Fire of Cannons"
+ pf_car_fire_of_cannons_desc:0 "have 60k arty and 30k cav, have 70 innovativeness / modifier cav fire 1, permanent, if have firepower ideas give arty bonus vs forts +1"
+
+ pf_car_leading_from_the_front_title:0 "Leading From the Front"
+ pf_car_leading_from_the_front_desc:0 "250k forcelimit, at least 250k troops, three star general in charge of army, 40k cav / max general fire +1 and cav to infantry ratio +10% permanent, if biggest army in the world give ability to unlock mil hegemon at 500k instead of 1m"
+
  pf_car_integrate_the_tribes_title:0 "Integrate the Tribes"
  pf_car_integrate_the_tribes_desc:0 "own all 1444 cores OR have no subjects / claims on magreb and remove integrate subject modifier if applicable"
 
  pf_car_masters_of_mauretania_title:0 "Masters of Mauretania"
  pf_car_masters_of_mauretania_desc:0 "at least 20 provinces in Mauretania region (make it if not done yet) / subjugation CB on all 50 dev nations in region and claim on lower and upper andalusia"
+ car_masters_maghreb_tt: "You will receive a §YSubjugation§! casus belli on all independent nations with under §Y50§! development with their capital in the §YMauretania§! or §YCarthage§! regions."
 
  pf_car_into_iber_title:0 "Into Iber"
  pf_car_into_iber_desc:0 "own all of upper and lower andalusia / claims on iberia, PU cb on suebi"
@@ -36,7 +54,17 @@
  pf_car_gallic_campaigns_desc:0 "own all of southern gaul / perm claims on the rest and a leader modifier"
 
  pf_car_worthy_successors_of_hannibal_title:0 "Successors of Hannibal"
- pf_car_worthy_successors_of_hannibal_desc:0 "own all of north african regions, all of iberia, all of gaul, all of italy, egypt, anatolia, and phoenicia / perm 5% ae, rename to Barcine Empire, "
+ pf_car_worthy_successors_of_hannibal_desc:0 "own 150 provinces in the previous regions? might need balance / perm 5% ae, rename to Barcine Empire, "
+ BARCINE_EMPIRE: "Barcine Empire"
+
+ pf_car_thunder_of_war_title:0 "Thunder of War"
+ pf_car_thunder_of_war_desc:0 "have at least 20 cav and t5 unlocked / event for unlocking war elephants or mercs (change their cav to elephants) and if have quality or aristo you get extra buff (unlock event to buff cav fire in late game)"
+
+ pf_car_reclaimed_glory_title:0 "Reclaimed Glory"
+ pf_car_reclaimed_glory_desc:0 "own_core carthage, 25 dev, level 3 cot, cothon level 2 / upgrade cothon to level 3 and give country_modifier = prestige and naval bonus"
+
+ pf_car_center_of_enlightenment_title:0 "A Center of Enlightenment"
+ pf_car_center_of_enlightenment_desc:0 "university in carthage, at least 40 dev / 100 adm and 100 dip, modifier: tech cost for 20 years"
 
  pf_car_island_hopping_title:0 "Island Hopping"
  pf_car_island_hopping_desc:0 "own at least 3 islands from previous mission, own crete directly / buff crete, claims on bengazi area and delta"
@@ -46,6 +74,19 @@
 
  pf_car_the_motherland_beckons_title:0 "Motherland Beckons"
  pf_car_the_motherland_beckons_desc:0 "own bahari and palestine areas / prestige, claims on phoenicia and egypt"
+ gain_access_to_great_library_tt: "Gain access to §YThe Great Library§! great project in [358.GetName]"
+
+ pf_car_phoenicia_our_home_title:0 "Phoenicia Our Home"
+ pf_car_phoenicia_our_home_desc:0 "own all of phoenicia, claims on anatolia, rename Sayda to Tyre, buff province and give dev"
+
+ pf_car_secure_ports_title:0 "Securing Ports"
+ pf_car_secure_ports_desc:0 "own at least 15 ports, at least 10 dev each / modifier for navy"
+
+ pf_car_rivaling_roma_title:0 "Rivaling Roma"
+ pf_car_rivaling_roma_desc:0 "carthage more dev than roma, prosperity in carthage / give stab, dev carthage, modifier for prosperity growth and splendor"
+
+ pf_car_buns_for_the_people_title:0 "Buns for the People"
+ pf_car_buns_for_the_people_desc:0 "at least 10 provinces producing grain with a manufactory and at least 5 production dev / permanent fl modifier"
 
  pf_car_a_navy_worth_of_yam_title:0 "A Worthy Navy for Yam"
  pf_car_a_navy_worth_of_yam_desc:0 "be at naval fl, have adrmiral / claim on ionian islands and crete, buffs for galleys"
@@ -53,8 +94,20 @@
  pf_car_the_punic_admiralty_title:0 "The Punic Admiralty"
  pf_car_the_punic_admiralty_desc:0 "naval force limit 50, at least 50 ships, at least 5 heavies, t5 reform unlocked / give new t5 reform giving access to Quinquereme galley type"
 
- pf_car_phoenicia_our_home_title:0 "Phoenicia Our Home"
- pf_car_phoenicia_our_home_desc:0 "own all of phoenicia, claims on anatolia, rename Sayda to Tyre, buff province and give dev"
+ pf_car_the_gateway_to_the_east_title:0 "The Gateway to the East"
+ pf_car_the_gateway_to_the_east_desc:0 "own_core alexandria, at least 25 development, shipyard and marketplace / event: unlock library, dev province, change religion and culture, rename to Hannibalia"
+
+ pf_car_phoenician_strongholds_title:0 "Phoenician Strongholds"
+ pf_car_phoenician_strongholds_desc:0 "at least 4 20 dev punic culture provinces in egypy or phoenicia / up to 4 of those provinces receive perm modfiers and add_prestige"
+
+ pf_car_phoenician_trade_routes_title:0 "Phoenician Trade Routes"
+ pf_car_phoenician_trade_routes_desc:0 "at least 3 level 2 cot with a marketplace / upgrade all marketplaced on CoT and give dip mana"
+
+ pf_car_productive_provinces_title:0 "Productive Provinces"
+ pf_car_productive_provinces_desc:0 "num of manufactories at least 10 for grain, wool or iron / income from those three trade goods, trade steering modifier "
+
+ pf_car_clothe_the_citizens_title:0 "Clothe the Citizens"
+ pf_car_clothe_the_citizens_desc:0 "at least 10 cloth provinces with manufactory and at leat 6 dev / if at least 10 will be changed to silk, permanent modifier to goods produced"
 
 
  car_revive_lilybaeum_title:0 "Revive Lilybaeum"
@@ -67,30 +120,6 @@
  car_prepare_invasion_desc:0 "We set our sights across the sea to the isles previously controlled by our ancestors, with extravogant ideas of ports and harbors to drive toward Roma and beyond from there."
  car_dominate_north_africa_title:0 "Dominate North Africa"
  car_dominate_north_africa_desc:0 "A local power base is required to recruit strong warriors for the armies and navies. If we wish to reclaim the prestige of Carthage we must start at home."
- car_masters_maghreb_title:0 "Masters of the Maghreb"
- car_masters_maghreb_desc:0 "Domination of north Africa is sure to make a name for ourselves. Once we consolidate our region we will project strength abroad and strike fear in our enemies."
- car_masters_maghreb_tt:0 "You will receive a §YSubjugation§! casus belli on all nations with their capital in the Maghreb region."
- car_avenge_punic_wars_title:0 "Avenge the Punic Wars"
- car_avenge_punic_wars_desc:0 "From humble beginnings we have risen to go beyond what our ancestors were able to achieve, conquering the Eternal City, the jewel of the Romans, and puting ourselves firmly ahead of everyone else. Carthage shall reign supreme!"
- car_worthy_navy_title:0 "A Worthy Navy"
- car_worthy_navy_desc:0 "If we wish to cross the sea we must start with a navy, and getting the edge on the seas will be crucial for our expansion."
- car_estabish_carthago_nova_title:0 "Establish Carthago Nova"
- car_estabish_carthago_nova_desc:0 "New Carthage, the provincial capital of Iberia, must be reestablished to accomodate our growing reach. Local controls will allow for a more efficient government, economy, and military structure."
- car_establish_power_base_title:0 "Establish a Power Base"
- car_establish_power_base_desc:0 "We have reclaimed the legacy of Carthage, but now what? We are small, weak, and surrounded by enemies on all sides. Expansion is our only option, and expande we shall!"
- car_carthage_reborn_title:0 "Carthage Reborn"
- car_carthage_reborn_desc:0 "Carthage shall be a superpower again, clashing with our enemies and asserting our sovereignty and dominion over the seas and lands abroad!"
- car_productive_provinces_title:0 "Productive Provinces"
- car_productive_provinces_desc:0 "A productive economy is a healthy economy, and we must allow the goods to flow. After all, our Phoenician ancestors were merchants by trade, and we must make them proud!"
- car_productive_provinces_bizerte_tt:0 "If §Y[2455.GetName]§! also meets the requirements for the mission, the trade good of the province will change to §YPaper§! and a §YMill§! will replace the current manufactory."
- car_developing_nation_title:0 "Developing the Nation"
- car_developing_nation_desc:0 "Improving the quality of life and productivity of our citizens will be extremely beneficial in the short term but also long term. Expanding our cities and increasing our relative power will encourage others to join us in our cause."
- car_hegemon_of_the_seas_title:0 "Mare Nostrum"
- car_hegemon_of_the_seas_desc:0 "Long since the fall of the Romans, long since the fall of Carthage, one has risen again, and it shall be Carthage! The seas shall be dominated by us, and our future generations will revel in the glory that their forebearers brough to the land, live in the prosperity, and carry the torch of Carthage."
- car_next_chapter_title:0 "The Next Chapter"
- car_next_chapter_desc:0 "Upon conquesting Iberia, eliminating all opposition on the peninsula, we must set our sights to the north. We can only go up from here!"
- car_next_chapter_tt:0 "Every owned province in the §YIberia§! region will recieve a local modifier lowering the autonomy for §Y10§! years."
- car_cross_the_alps_title:0 "Crossing the Alps"
- car_cross_the_alps_desc:0 "Hannibal crossed the alps many hundreds of years ago, with war elephants in his company. Sadly, Hannibal was defeated and the nation crumbled, but this time around we will ensure that Carthage shall reign supreme, war elephants and all!"
+
  car_phoenician_trade_title:0 "Phoenician Trade Routes"
  car_phoenician_trade_desc:0 "The Phoenicians of antiquity dominated the trade routes of the seas, maximizing profit and ensuring the power of their nation. Capitalizing on the idea, we shall ensure our place as a dominant power in the region, and later, the world."

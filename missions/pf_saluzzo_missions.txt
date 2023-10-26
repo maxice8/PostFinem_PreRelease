@@ -1,0 +1,696 @@
+pf_szo_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SZO } 
+
+	pf_szo_beyond_the_walls = {
+		icon = mission_great_wall
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			is_at_war = yes
+			army_size_percentage = 1
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_szo_far_from_home_but_strong"
+				duration = 7300
+			}
+			piedmont_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_szo_seize_turin = {
+		icon = glory_to_turin
+		position = 2
+		required_missions = { pf_szo_beyond_the_walls } 
+		provinces_to_highlight = {
+			province_id = 103
+			NOT = { owned_by = ROOT }
+		} 
+
+		trigger = {
+			owns_core_province = 103	# Turin
+		} 
+
+		effect = {
+			add_adm_power = 100
+			103 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			savoy_dauphine_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			provence_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			liguria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_szo_secure_the_alps = {
+		icon = alpine_fortifications
+		position = 3
+		required_missions = { pf_szo_seize_turin } 
+		provinces_to_highlight = {
+			OR = {
+				area = piedmont_area
+				area = savoy_dauphine_area
+				area = provence_area
+				area = liguria_area
+			}
+		} 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 12
+				OR = {
+					area = piedmont_area
+					area = savoy_dauphine_area
+					area = provence_area
+					area = liguria_area
+				}
+			}
+		} 
+
+		effect = {
+			define_advisor = {
+				type = fortification_expert
+				skill = 2
+				cost_multiplier = 0.25
+			}
+			add_country_modifier = {
+				name = "pf_szo_alpine_fortifications"
+				duration = 7300
+			}
+			lombardy_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			romandie_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			switzerland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_szo_mountain_king = {
+		icon = italia_transalpina
+		position = 4
+		required_missions = { pf_szo_secure_the_alps } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			total_development = 200
+			legitimacy_equivalent = 100
+		} 
+
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 30
+			}
+			add_country_modifier = {
+				name = "pf_szo_mountain_king_modifier"
+				duration = -1
+			}
+			custom_tooltip = pf_szo_every_owned_province_gets_tt
+			hidden_effect = {
+				every_owned_province = {
+					add_local_autonomy = -50
+				}
+			}
+			tooltip = {
+				add_local_autonomy = -50
+			}
+			override_country_name = ALPINIA
+		} 
+	}
+}
+pf_szo_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SZO } 
+
+	pf_szo_the_watchtower = {
+		icon = mission_expand_great_wall
+		position = 2
+		required_missions = { pf_szo_expand_the_mines } 
+		provinces_to_highlight = {
+			province_id = 4727	# Saluzzo
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { base_manpower = 5 }
+				NOT = { has_manpower_building_trigger = yes }
+			}
+		} 
+
+		trigger = {
+			owns_core_province = 4727	# Saluzzo
+			4727 = {
+				base_manpower = 5
+			}
+			4727 = {
+				has_manpower_building_trigger = yes
+			}
+		} 
+
+		effect = {
+			add_yearly_manpower = 2
+			4727 = {
+				add_province_modifier = {
+					name = "pf_szo_all_along_the_watchtower"
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	pf_szo_spread_the_order = {
+		icon = support_the_orders
+		position = 3
+		required_missions = {
+			pf_szo_seize_turin
+			pf_szo_the_watchtower
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			local_autonomy = 10
+		} 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				NOT = { local_autonomy = 10 }
+			}
+			stability = 2
+			estate_loyalty = {
+				estate = all
+				loyalty = 60
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_szo_new_local_orders"
+				duration = 9125
+			}
+			distribute_base_dev_to_provinces = {
+				num = 5
+				amount = 1
+				trigger = "
+					NOT = { local_autonomy = 10 }
+				"
+				type = tax
+				tooltip = pf_szo_tax_to_low_autonomy_tt
+			}
+		} 
+	}
+
+	pf_szo_knife_crown = {
+		icon = mission_crown_of_norway
+		position = 5
+		required_missions = {
+			pf_szo_mountain_king
+			pf_szo_integrate_the_priests
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			monthly_mil = 12
+			OR = {
+				has_mil_advisor_3 = yes
+				mil = 6
+			}
+			OR = {
+				full_idea_group = spy_ideas
+				has_global_modifier_value = {
+					which = discipline
+					value = 0.15
+				}
+			}
+		} 
+
+		effect = {
+			custom_tooltip = pf_szo_if_absolutism_tt
+			hidden_effect = {
+				if = {
+					limit = { is_absolutism_active = yes }
+					add_absolutism = 10
+				}
+			}
+			tooltip = {
+				add_absolutism = 10
+			}
+			add_country_modifier = {
+				name = "pf_szo_knife_crown_modifier"
+				duration = -1
+			}
+		} 
+	}
+}
+pf_szo_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SZO } 
+
+	pf_szo_expand_the_mines = {
+		icon = reissue_the_mining_code
+		position = 1
+		provinces_to_highlight = {
+			province_id = 4727	# Saluzzo
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { base_production = 5 }
+			}
+		} 
+
+		trigger = {
+			owns_core_province = 4727
+			4727 = {
+				base_production = 5
+			}
+		} 
+
+		effect = {
+			add_years_of_income = 0.50
+			4727 = {
+				add_province_modifier = {
+					name = "pf_szo_iron_mines"
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	pf_szo_farmer_loyalty = {
+		icon = mission_rice_field
+		position = 2
+		required_missions = { pf_szo_expand_the_mines } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 60
+			}
+			NOT = { average_unrest = 1 }
+			all_owned_province = {
+				OR = {
+					NOT = { unrest = 1 }
+					num_of_times_improved_by_owner = 1
+				}
+			}
+		} 
+
+		effect = {
+			4727 = {
+				add_province_modifier = {
+					name = "pf_szo_happy_farmers"
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = "pf_szo_goats_and_blades"
+				duration = 9125
+			}
+		} 
+	}
+
+	pf_szo_integrate_the_priests = {
+		icon = mission_religious
+		position = 4
+		required_missions = {
+			pf_szo_spread_the_order
+			pf_szo_making_a_mark
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				num_of_estate_agendas_completed = {
+					estate = estate_church
+					value = 3
+				}
+				NOT = {
+					estate_influence = {
+						estate = estate_church
+						influence = 40
+					}
+				}
+			}
+			OR = {
+				theologian = 2
+				inquisitor = 2
+			}
+		} 
+
+		effect = {
+			add_stability_or_adm_power = yes
+			add_country_modifier = {
+				name = "pf_szo_priests_and_state"
+				duration = 9125
+			}
+		} 
+	}
+}
+pf_szo_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SZO } 
+
+	pf_szo_agents_of_chaos = {
+		icon = personal_diplomacy
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_diplomats = 2
+			any_country = {
+				has_spy_network_from = {
+					who = ROOT
+					value = 50
+				}
+			}
+			OR = {
+				statesman = 1
+				spymaster = 1
+			}
+		} 
+
+		effect = {
+			custom_tooltip = pf_szo_agents_of_chaos_1_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						calc_true_if = {
+							amount = 3
+							all_country = {
+								has_spy_network_from = {
+									who = ROOT
+									value = 25
+								}
+							}
+						}
+					}
+					add_dip_tech = 1
+				}
+				else = {
+					add_dip_power = 100
+				}
+			}
+			tooltip = {
+				add_dip_tech = 1
+			}
+			custom_tooltip = otherwise_tt
+			tooltip = {
+				add_dip_power = 100
+			}
+		} 
+	}
+
+	pf_szo_making_a_mark = {
+		icon = neapolitan_govenance
+		position = 3
+		required_missions = { pf_szo_agents_of_chaos } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				has_country_modifier = ep_subversion_modifier
+				has_country_modifier = ep_subterfuge_modifier
+				has_country_modifier = ep_infiltration_modifier
+			}
+			has_government_power = {
+				mechanic_type = espionage_policy_mechanic
+				power_type = pf_sneakiness
+				value = 90
+			}
+		} 
+
+		effect = {
+			add_adm_power = 75
+			add_dip_power = 75
+			add_country_modifier = {
+				name = "pf_szo_making_a_mark_modifier"
+				duration = 9125
+			}
+		} 
+	}
+
+	pf_szo_thrones_beneath_us = {
+		icon = mission_restore_faith_in_the_throne
+		position = 4
+		required_missions = { pf_szo_shadow_agents } 
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				is_subject_of = ROOT
+			}
+			owner = {
+				liberty_desire = 10
+			}
+		} 
+
+		trigger = {
+			OR = {
+				AND = {
+					num_of_subjects = 4
+					all_subject_country = {
+						NOT = { liberty_desire = 10 }
+					}
+				}
+				total_own_and_non_tributary_subject_development = 400
+				num_of_cities = 25
+			}
+		} 
+
+		effect = {
+			add_legitimacy_equivalent = {
+				amount = 20
+			}
+			add_country_modifier = {
+				name = "pf_szo_many_thrones"
+				duration = 9125
+			}
+		} 
+	}
+
+	pf_szo_industrial_power = {
+		icon = industrialized_rhineland
+		position = 5
+		required_missions = { pf_szo_thrones_beneath_us } 
+		provinces_to_highlight = {
+			owned_by = root
+			NOT = { has_manufactory_trigger = yes }
+		} 
+
+		trigger = {
+			production_efficiency = 1
+			num_of_owned_provinces_with = {
+				value = 8
+				has_manufactory_trigger = yes
+			}
+		} 
+
+		effect = {
+			define_advisor = {
+				type = natural_scientist
+				skill = 3
+				cost_multiplier = 0.25
+				name = "Lorenzo Cazaralvi"
+			}
+			capital_scope = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			random_owned_province = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_tax = 2
+			}
+			custom_tooltip = pf_szo_industrial_power_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_institution = manufactories
+					}
+					add_country_modifier = {
+						name = "pf_szo_industrial_power_modifier"
+						duration = 9125
+					}
+				}
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = "pf_szo_industrial_power_modifier"
+					duration = 9125
+				}
+			}
+		} 
+	}
+}
+pf_szo_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SZO } 
+
+	pf_szo_halls_of_power = {
+		icon = versailles_palace
+		position = 2
+		required_missions = { pf_szo_agents_of_chaos } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			calc_true_if = {
+				amount = 4
+				all_country = {
+					OR = {
+						has_opinion = {
+							who = root
+							value = 125
+						}
+						has_spy_network_from = {
+							who = root
+							value = 50
+						}
+					}
+				}
+			}
+			capital_scope = {
+				development = 25
+			}
+			crown_land_share = 40
+		} 
+
+		effect = {
+			add_splendor = 200
+			define_advisor = {
+				type = artist
+				skill = 2
+				discount = yes
+			}
+			add_dip_power = 100
+			custom_tooltip = may_bribe_rulers_tt
+			set_country_flag = may_bribe_rulers
+		} 
+	}
+
+	pf_szo_shadow_agents = {
+		icon = king_of_kings
+		position = 3
+		required_missions = { pf_szo_halls_of_power } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			army_professionalism = 0.5
+			num_of_owned_provinces_with = {
+				value = 5
+				has_fort_building_trigger = yes
+				development = 15
+			}
+		} 
+
+		effect = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 50
+			}
+		} 
+	}
+
+	pf_szo_universal_diplomacy = {
+		icon = king_of_the_franks
+		position = 5
+		required_missions = { pf_szo_thrones_beneath_us } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				ROOT = {
+					is_emperor = yes
+				}
+				NOT = { hre_size = 1 }
+			}
+			num_of_diplomats = 5
+			monthly_dip = 12
+			has_global_modifier_value = {
+				which = spy_offence
+				value = 1.5
+			}
+			OR = {
+				has_had_golden_age = yes
+				in_golden_age = yes
+			}
+		} 
+
+		effect = {
+			if = {
+				limit = { 
+					has_had_golden_age = yes
+				}
+				reset_golden_age = yes
+			}
+			else_if = {
+				limit = {
+					in_golden_age = yes
+				}
+				extend_golden_age = 600
+			}
+			else = {
+				custom_tooltip = pf_szo_universal_diplomacy_tt
+			}
+			add_country_modifier = {
+				name = "pf_szo_universal_influence"
+				duration = -1
+			}
+		} 
+	}
+}

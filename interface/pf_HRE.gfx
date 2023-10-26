@@ -24,4 +24,26 @@ spriteTypes = {
 		texturefile = "gfx/interface/imperial_incident_denial_of_request.dds"
 		loadType = "INGAME"
 	}
+	# Federation petitions diplo category
+	spriteType = {
+		name = "GFX_diplomacy_action_imperial_influence"
+		texturefile = "gfx//interface//icon_diplomacy_imperial_influence.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_italian_federation_icon"
+		texturefile = "gfx//interface//ideas_EU4//italian_federation_icon.dds"
+		loadType = "INGAME"
+	}
+	maskedShieldType = {
+		name = "GFX_if_adirim_shield"
+		textureFile1 = "gfx/interface/big_ass_flag.dds"
+		textureFile2 = "gfx/interface/big_ass_mask.dds"
+		effectFile = "gfx/FX/maskedflag.lua"
+		textureFile3 = "gfx//interface//client_state_symbols_large.dds"
+		noOfFrames = 121
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+
+   }
 }

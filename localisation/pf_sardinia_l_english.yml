@@ -3,6 +3,9 @@
 
 # A fresh start wahoo!
 
+PROV4943: "Carbonia"
+PROV_ADJ4943: "Carbonian"
+
 ################
 # Governments
 ################
@@ -10,7 +13,7 @@
 pf_sardinian_league_reform: "Sardinian League"
 pf_sardinian_league_reform_desc: "The Sardinian League is an alliance with city states and towns on the island of Sardinia, who have put aside their differences and created a common government for the good of all their peoples. With strong republican and nationalistic roots, the League seeks a strong and prosperous Sardinia."
 estate_burghers_pf_league_agreements: "Articles of the League"
-estate_burghers_pf_league_agreements_desc: ""
+estate_burghers_pf_league_agreements_desc: "The first draft of laws on governmental powers drawn up at the foundation of the League."
 
 ################
 # Ideas
@@ -49,3 +52,131 @@ pf_sar.2.d: "Near the southern town of Carbonia, a vast deposit of silver has be
 pf_sar.2.a: "Silver is the lifeblood of our economy."
 pf_sar_carbonia_silver_mines: "Silver Mines of Carbonia"
 desc_pf_sar_carbonia_silver_mines: "Vast deposits of silver have been found in the hillsides around Carbonia, supplying fresh bullion for both the locals and the state."
+
+pf_sar.3.t: "A Work of Art"
+pf_sar.3.d: "The new Parliament building is truly one of the greatest works of modern architecture, but it is still quite bare and insignificant inside. Many have suggested that we commission a new painting to be displayed in the halls of the representatives, following in the style of the decorations of many other European royal courts. This idea has picked up a lot of traction, and now the main question to be answered is how much we are willing to pay for it."
+pf_sar.3.a: "So long as it is completed, we do not mind who makes it."
+pf_sar.3.b: "Higher an artist to paint a family portrait."
+pf_sar.3.c: "Only the finest artist of the age will do!"
+
+################
+# Missions
+################
+
+ pf_sar_found_the_marines_title:0 "Found the Marines"
+ pf_sar_found_the_marines_desc:0 "Sardinia needs an active force trained to withstand the waves with which to spread our influence abroad. Establishing an elite corps of marines appears to be the most popular and effective way of achieving this."
+
+ pf_sar_upgrade_the_marines_title:0 "The Cagliari Corps"
+ pf_sar_upgrade_the_marines_desc:0 "The time has come to extent the general professionalisation of our army into the marine corps. Let us found a new corps to deal with all the new recruits, and shape them into a fierce fighting force capable of doing our bidding."
+
+ pf_sar_stormtroopers_title:0 "Over Waves and Storms"
+ pf_sar_stormtroopers_desc:0 "Our marines are the arm of the nation extending over the seas. With our military capabilities and technologies growing, the time has come to reform the marine corps once again, and create a whole new class of elite soldier."
+pf_sar_stormtrooper_marines: "Stormbreaker Marines"
+
+ pf_sar_rule_the_seas_title:0 "Rule the Seas"
+ pf_sar_rule_the_seas_desc:0 "There are many nations that would wish to have control over the Mediterranean. Only ours has succeeded. It is not simply a matter of prestige, but also one of military movement, control over trade, and access to lucrative fishing stocks. Our navy is the largest and most powerful in the region, and is more than capable of defending our interests in the often tumultuous waters."
+pf_sar_rules_the_waves: "Sardinia Rules the Waves"
+pf_sar_rule_the_seas_tt: "No country with a port on the §YMediterranean Sea§! has a §Ylarger navy§! than us."
+
+ pf_sar_invade_sicily_title:0 "Invade Sicily"
+ pf_sar_invade_sicily_desc:0 "Sicily is much like Sardinia, an island rich off of the trade routes that pass through it, settled firstly by the Carthaginians and Phoenicians. We share many similarities - but we are no way equals. Sicily is divided and often in conflict with itself, while Sardinia is strong and united by the League. Clearly the strongest will prevail, and rule over the Italian islands will be ours."
+pf_sar_conquest_of_sicily: "Conquest of Sicily"
+
+ pf_sar_italian_holdings_title:0 "Foothold in Italia"
+ pf_sar_italian_holdings_desc:0 "We have grand ambitions for dominance in the Federation, ambitions that do not merely involve diplomacy and charm. With force of arms, we will march onto the mainland and seize many a lucrative city, extending the influence of the League further and further inland!"
+pf_sar_conquest_of_italy: "Italian Campaigns"
+
+ pf_sar_the_red_fleet_title:0 "The Red Fleet"
+ pf_sar_the_red_fleet_desc:0 "Quality at sea is good, but having a fleet capable of actually enforcing our interests is vital. Let us construct a new fleet, decked out with state-of-the-art weaponry, unprecendented in size, and most importantly of all, flying the Sardinian red banner from its masts."
+pf_sar_the_red_fleet_modifier: "Launching the Red Fleet"
+
+ pf_sar_the_twelve_laws_title:0 "The Twelve Laws"
+ pf_sar_the_twelve_laws_desc:0 "The League is governed by the Articles, a set of agreements drawn up with the initial founding treaty detailing how government should be carried out. These articles were composed in a hurry, and are not very well reflective of the society we live in today. We should scrap the old ones, and reinstitute a more relevant law code in their place."
+pf_sar_the_twelve_laws_modifier: "The Twelve Laws"
+desc_pf_sar_the_twelve_laws_modifier: "The Reformed Law Code of the Sardinian Nation, known more widely as the 'Twelve Laws' was a law code formed from the previous Articles agreed at the date of confederation. They dictated the powers of the government, its division into three branches, and what constituted governmental overreach."
+
+ pf_sar_arm_the_people_title:0 "Arm the People"
+ pf_sar_arm_the_people_desc:0 "The time has come for the Sardinian League to expand. There are opportunities waiting for us across the seas - we only need a military strong enough to seize them."
+pf_sar_thirst_for_war: "Thirst for War"
+
+ pf_sar_conquer_baleares_title:0 "Capture the Baleares"
+ pf_sar_conquer_baleares_desc:0 "The Baleares have been infested with pirates since the fall of Carthaginian authority in the area. These pirates do nothing but plunder our shipments and scare our sailors, locking us out of an important corner of the Mediterranean. They must be cleared and the islands must be made safe for our traders."
+
+ pf_sar_mare_nostrum_title:0 "Mare Nostrum"
+ pf_sar_mare_nostrum_desc:0 "In ancient times, the Romans believed they controlled the sea. In their tongue, the 'mare nostrum' was simply an extension of Roman authority, surrounding the lands of all other lesser peoples. Their hubris got the better of them and their republic was shattered and scattered to the winds, and hegemon over the Mediterranean subsequently fell to Carthage. Carthage too, has felt the heat of the sun upon its wings. As that old city plumets towards the sea, the Sardinian age is only just beginning."
+pf_sar_mare_nostrum_tt: "Recruiting an §YAdmiral§! will grant us §G+2§! Naval Tradition."
+
+ pf_sar_unite_the_island_title:0 "Unite Sardinia"
+ pf_sar_unite_the_island_desc:0 "The Republic is still new, and it is yet to establish its full position. Let us secure our rule over the whole island, integrating all the old laws and justices into the new unified legal system."
+pf_sar_united_sardinia_development_tt: "§G5§! base tax will be distributed across the §YSardinia§! area."
+pf_sar_sardinian_unity: "Sardinian Unity"
+
+ pf_sar_found_parliament_title:0 "The People's Parliament"
+ pf_sar_found_parliament_desc:0 "As a republican government with the good of the people at our heart, it is important that we can hear their problems and disputes so that we can attempt to address and mediate them. A new Parliament shall be founded in our capital, so that the whole nation may hear a person's petition."
+pf_sar_a_common_theatre: "A Common Theatre for Justice"
+
+ pf_sar_promote_sardinian_merchants_title:0 "Promote the Merchants"
+ pf_sar_promote_sardinian_merchants_desc:0 "We owe the wealth of the nation to the merchants, who have continually worked for the best deals and sold Sardinian products for generations. Let us return the favour by patronising them, investing in their marketplaces and encouraging fair practices for all."
+pf_sar_powerful_merchants: "Powerful Merchants"
+
+ pf_sar_lord_of_the_islands_title:0 "Lord of the Islands"
+ pf_sar_lord_of_the_islands_desc:0 "The Mediterranean is our playground, and its islands are the great logs we jump between. Let us take full control of them, so that no other nation can challenge our mastery over the interior seas."
+pf_sar_power_projection_is_permanent_tt: "This Power Projection is §Ypermanent§!."
+
+ pf_sar_seize_corsica_title:0 "Seize Corsica"
+ pf_sar_seize_corsica_desc:0 "Corsica is an island with a terrible cancer - the cancer of piracy. Though there are hints they are changing their ways, they will never be anything but a menace to our League. We must extinguish the age of barbarism on Corsica and bring the principles of good government and morality to its untamed rocks."
+pf_sar_corsica_integration: "Integration of Corsica"
+pf_sar_recruiting_old_pirates: "Recruiting Old Pirates"
+
+ pf_sar_coastal_holdings_title:0 "Merchant's Waypoints"
+ pf_sar_coastal_holdings_desc:0 "The time has come for us to seize some of the wealthy ports of the Mediterranean, and venture onto the mainland. March, brave marines, for gold and glory!"
+pf_sar_ports_of_the_med: "Growing Ports of the Mediterranean"
+
+ pf_sar_sardinian_renaissance_title:0 "A Culture Reborn"
+ pf_sar_sardinian_renaissance_desc:0 "In times long since passed Sardinia was the center of a vibrant culture of art and sculpture. Many years later, our people still have a yearning for the creative, and the ongoing rebirth of such practices on the mainland has greatly inspired them. Let us fund a resurgence of Sardinian art, and commission a grand painting to be displayed in Chambers of Parliament!"
+pf_sar_art_will_require_money_tt: "We will commission a work of art from one of the nation's finest artist. This cost different amounts of ducats ¤ depending on the choices we make."
+pf_sar_art_1: "Commissioned Work of Art"
+pf_sar_art_2: "Commissioned Work of Art"
+pf_sar_art_3: "Commissioned Work of Art"
+
+ pf_sar_expand_the_electorate_title:0 "Expand the Vote"
+ pf_sar_expand_the_electorate_desc:0 "The right to vote is one which many Sardinians consider vital to civilian participation in the League. As such, why should we continue to exclude many capable citizens, just because of outdated assumptions about the nature of the sexes? Let us extend the right to vote to all adult citizens, regardless of their sex, religion, or beliefs."
+pf_sar_universal_suffrage: "Universal Suffrage"
+
+ pf_sar_shipwrights_title:0 "Promote the Shipwrights"
+ pf_sar_shipwrights_desc:0 "Over the years, the Sardinian people have become experts and navigating the seas, and now it seems we are becoming the best in the field of ship construction too. Combined with the knowledge of the once oppressed population of Corsica, we can create a whole business out of building ships and selling them to foreign countries."
+pf_sar_skilled_shipbuilders: "Skilled Shipwrights"
+
+ pf_sar_italian_bankers_title:0 "Banking in the Blood"
+ pf_sar_italian_bankers_desc:0 "There are a great many wealthy families in Italy, who use their riches to serve as bankers to peasants and kings alike. If we could forge closer ties with some of the cities of Italia, we may be able to secure a favourable relationship with one of these banking families and use their generosity to our advantage."
+pf_sar_italian_bankers_tt: "Any §YFree City§! with its capital in the §YItalia§! region has at least §G+180§! opinion of us."
+pf_sar_italian_finances: "Beneficial Loans from Italia"
+
+ pf_sar_find_silver_title:0 "Prospect for Riches"
+ pf_sar_find_silver_desc:0 "Rumours of precious ores buried under Sardinia have been abound for centuries, but as of yet only copper, once the lifeblood of civilisation, has been found. One area of interest is the hills near Carbonia - perhaps with a little state funding and support we could prospect in the region, and see what can be found."
+
+ pf_sar_noble_electorate_title:0 "A Noble Electorate"
+ pf_sar_noble_electorate_desc:0 "We were granted the position of electorate by the Grand Adirim to recognise the peoples of the Mediterranean islands and their contributions to the culture and maintainance of order on mainland Italia. It is a position that brings us great prestige, and ensures that we will be respected at foreign courts."
+pf_sar_politics: "A Place in Federal Politics"
+
+ pf_sar_federal_preference_title:0 "Federal Preference"
+ pf_sar_federal_preference_desc:0 "Our position in the Federation has only grown since our entry, and with great power, comes great privileges of course. Let us petition the leaders of the federal government for a special preference, whereby the concerns of our nation would be heard foremost, and our diplomats will be treated with the immediacy and respect expected of a mighty king."
+pf_sar_federal_preference_modifier: "Secured Federal Preference"
+
+ pf_sar_future_of_the_federation_title:0 "Federal Politics"
+ pf_sar_future_of_the_federation_desc:0 "The Federation is clearly in dire need of change. Through diplomacy or conquest, it is the duty of the League to bring about this reformation, and drag the people of Italia into the bright new dawn of a Sardinian day."
+pf_sar_above_the_federation: "Federal Ascension"
+
+ pf_sar_urbanise_the_island_title:0 "Urbanise the Island"
+ pf_sar_urbanise_the_island_desc:0 "Our prosperity and wealth has led to a population boom in Sardinia, and with more people, we need more housing and jobs. We must keep pace with this expansion by encouraging urbanisation, growing cities out of towns, and ensuring the safety and quality of new residences."
+pf_sar_prospering_times: "Prospering Times"
+pf_sar_urbanise_the_island_tt: "If we have completed either §YInfrastructure§! or §YEconomic§! ideas, we gain the following effect:"
+pf_sar_expanded_buildings: "Expanding Infrastructure"
+
+ pf_sar_invest_in_arborea_title:0 "Invest in Arborea"
+ pf_sar_invest_in_arborea_desc:0 "Arborea is the shining jewel at the heart of the League. Let us invest in the city and create a thriving hub of trade and culture out of what was once a simple port town."
+pf_sar_great_port_of_arborea: "Great Port of Arborea"
+
+ pf_sar_more_than_just_a_living_title:0 "More than Just a Living"
+ pf_sar_more_than_just_a_living_desc:0 "Some considered Sardinia a hilly backwater portion of the Federation just a few short decades ago. We have proven all our doubters wrong by forging a great sea-spanning kingdom, decked with rich cities and an efficient government, accomplishments few other states can boast of. Such is the wealth and stability of our island, many citizens are now able to make more than just a living, but a fortune."
+pf_sar_a_life_of_luxury: "A Life of Luxury"

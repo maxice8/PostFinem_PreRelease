@@ -18,4 +18,39 @@ country_decisions = {
 			}
 		}
 	}
+	consult_the_uppsala_gods = {
+		color = { 75 207 227 }
+		potential = {
+			religion = norse_pagan_reformed
+			1 = {
+				owned_by = ROOT
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 1
+		}
+		allow = {
+			religion = norse_pagan_reformed
+			owns = 1
+			1 = {
+				has_great_project = {
+					type = uppsala_temple
+					tier = 1
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = consult_the_uppsala_gods_tt
+				OR = {
+					NOT = { has_country_flag = uppsala_gods_cooldown }
+					had_country_flag = {
+						flag = uppsala_gods_cooldown
+						days = 9125
+					}
+				}
+			}
+		}
+		effect = {
+			country_event = { id = pf_deities.2 }
+		}
+	}
 }
