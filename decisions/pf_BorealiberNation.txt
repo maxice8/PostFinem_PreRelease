@@ -30,36 +30,36 @@ country_decisions = {
 			}
 		}
 
-			provinces_to_highlight = {
+		provinces_to_highlight = {
+			OR = {
+				province_id = 213 #Barcino Novum
+				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		
+		allow = {
+			NOT = { exists = BOR }
+			is_nomad = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_tribal = no
+			owns_core_province = 213 #Barcino Novum
+			num_of_owned_provinces_with = {
+				value = 15
 				OR = {
-					province_id = 213 #Barcino Novum
-					
-				}
-				OR = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
+					area = catalonia_area
+					area = aragon_area
+					area = basque_area
+					area = castille_area
+					area = valencia_area
+					area = asturias_area
+					area = baleares_area
 				}
 			}
-		
-			allow = {
-				NOT = { exists = BOR }
-				is_nomad = no
-				is_free_or_tributary_trigger = yes
-				is_at_war = no
-				is_tribal = no
-				owns_core_province = 213 #Barcino Novum
-				num_of_owned_provinces_with = {
-					value = 15
-					OR = {
-						area = catalonia_area
-						area = aragon_area
-						area = basque_area
-						area = castille_area
-						area = valencia_area
-						area = asturias_area
-						area = baleares_area
-					}
-				}
 		}
 		effect = {
 			change_tag = BOR
@@ -115,5 +115,5 @@ country_decisions = {
 			}
 			set_country_flag = formed_borealiber_flag
 		}
-}
+	}
 }

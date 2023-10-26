@@ -25,27 +25,27 @@ country_decisions = {
 				primary_culture = ilergi
 		}
 
-			provinces_to_highlight = {
-				OR = {
-					AND = {
+		provinces_to_highlight = {
+			OR = {
+				AND = {
 					region = iberia_region
-					culture = illergi
+					culture = ilergi
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
 			}
 		}
-			allow = {
-				NOT = { exists = ILG }
-				is_nomad = no
-				is_free_or_tributary_trigger = yes
-				is_at_war = no
-				is_tribal = no
-				owns_core_province = 219 #Tol-Tzaphon
-				num_of_owned_provinces_with = {
-					value = 6
-					culture = ilergi
-				}
+		allow = {
+			NOT = { exists = ILG }
+			is_nomad = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_tribal = no
+			owns_core_province = 219 #Tol-Tzaphon
+			num_of_owned_provinces_with = {
+				value = 6
+				culture = ilergi
+			}
 		}
 		effect = {
 			change_tag = ILG
