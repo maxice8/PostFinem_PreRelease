@@ -534,14 +534,16 @@ car_main_3 = {
 
 		effect = {  
 			if = {
-				limit = { SUE = { exists = yes } }
+				limit = { 
+					SUE = { exists = yes }
+				}
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					target = SUE
+					months = 120
+				}
+				custom_tooltip = empty_line_tt
 			}
-			add_casus_belli = {
-				type = cb_restore_personal_union
-				target = SUE
-				months = 120
-			}
-			custom_tooltip = empty_line_tt
 			iberia_region = {
 				add_permanent_claim = ROOT
 			}
@@ -594,6 +596,7 @@ car_main_3 = {
 				area = languedoc_area
 				area = provence_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {  
@@ -725,8 +728,8 @@ car_main_4 = {
 			OR = {
 				AND = {
 					OR = {
-					province_id = 142
-					province_id = 4698
+						province_id = 142
+						province_id = 4698
 					}
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -814,6 +817,7 @@ car_main_4 = {
 				area = bahari_area
 				area = palestine_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {  
@@ -960,10 +964,14 @@ car_main_5 = {
 		}
 		provinces_to_highlight = {  
 			province_id = 341
-			NOT = {
-				has_great_project = {
-					type = great_cothon
-					tier = 2
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = {
+					has_great_project = {
+						type = great_cothon
+						tier = 2
+					}
 				}
 			}
 		} 
@@ -998,8 +1006,6 @@ car_main_5 = {
 		required_missions = { pf_car_the_land_of_alexander } 
 		provinces_to_highlight = {  
 			province_id = 358
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
 		} 
 
 		trigger = {  
