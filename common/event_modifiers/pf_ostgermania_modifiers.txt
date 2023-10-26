@@ -121,3 +121,73 @@ walls_of_germania = {
 	local_manpower_modifier = 0.1
 	local_garrison_size = 0.25
 }
+
+####MORIA
+
+mva_markmann = {
+	production_efficiency = 0.1
+	manpower_recovery_speed = 0.1
+}
+
+mva_local_new_hope = {
+	local_development_cost = -0.1
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.75
+}
+
+mva_local_sudeten = {
+	local_development_cost = -0.15
+}
+
+mva_local_not_hope = {
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.75
+}
+
+sdt_our_people = {
+	development_cost_in_primary_culture = -0.1
+	manpower_in_true_faith_provinces = 0.1
+}
+
+sdt_project_fast = {
+	local_great_project_upgrade_time = -0.15
+	local_great_project_upgrade_cost = -0.25
+}
+
+sdt_develop_fast = {
+	local_development_cost = -0.15
+	local_tax_modifier = 0.33
+}
+
+sdt_gold_boy = {
+	local_gold_depletion_chance_modifier = -0.5
+	local_development_cost = 0.15
+}
+
+sdt_wild_hunt_1 = {
+	cavalry_cost = -0.1
+	cavalry_power = 0.1
+}
+
+sdt_wild_hunt_2 = {
+	cavalry_cost = 0.2
+	cavalry_power = 0.2
+}
+
+sdt_donovan_bounty = {
+	local_build_cost = -0.1
+	local_prosperity_growth = 0.1
+	local_development_cost = -0.1
+}
+
+sdt_sudeten_supreme = {
+	local_governing_cost_increase = -15
+	local_build_cost = -0.15
+	local_prosperity_growth = 0.1
+	local_development_cost = -0.15
+}
+
+sdt_triple_city = {
+	local_production_efficiency = 0.2
+	local_centralize_state_cost = -1
+}

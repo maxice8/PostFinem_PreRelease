@@ -1,0 +1,218 @@
+country_decisions = {
+
+	form_sudeten = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_sudeten_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = SDT }
+			NOT = { tag = MVA }
+			NOT = { tag = DNV }
+			culture = marcomanni
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = bohemia_area
+				area = erzgebirge_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no			
+			NOT = { exists = SDT }
+			capital_scope = {
+				OR = {
+					area = bohemia_area
+					area = erzgebirge_area
+				}
+			}
+			bohemia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			erzgebirge_area = {
+				type = all
+				owned_by = ROOT
+			}
+			development_in_provinces = {
+				value = 100
+				OR = {
+					area = bohemia_area
+					area = erzgebirge_area
+				}
+			}
+		}
+		effect = {
+			change_tag = SDT
+			change_primary_culture = sudeten
+			set_ruler_culture = sudeten
+			set_heir_culture = sudeten
+			capital_scope = {
+				change_culture = sudeten
+			}
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_sudeten_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_markland = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_markland_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = SDT }
+			NOT = { tag = MKM }
+			NOT = { tag = BAV }
+			NOT = { tag = MVA }
+			NOT = { tag = DNV }
+			culture = marcomanni
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			culture = marcomanni
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no			
+			NOT = { exists = MKM }
+			num_of_owned_provinces_with = {
+				value = 20
+				culture = marcomanni
+			}
+		}
+		effect = {
+			change_tag = MKM
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_markland_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	glass_of_bohemia = {
+		major = yes
+		potential = {
+			owns = 1771
+			1771 = {
+				NOT = {
+					trade_goods = glass
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 1771
+		}
+		allow = {
+			1771 = {
+				OR = {
+					AND = {
+						development = 10
+						dip_tech = 10
+					}
+					AND = {
+						development = 15
+						dip_tech = 8
+					}
+					AND = {
+						development = 17
+						dip_tech = 4
+					}
+				}
+				NOT = {
+					trade_goods = glass
+				}
+			}
+		}
+		effect = {
+			1771 = {
+				change_trade_goods = glass
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
