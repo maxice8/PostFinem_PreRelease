@@ -61,6 +61,9 @@ country_event = {
 			}
 			republican_tradition = 50
 		}
+		# pf [[[
+		NOT = { has_government_attribute = stratocratic_elections }
+		# ]]]
 	}
 
 	immediate = {
@@ -516,6 +519,7 @@ country_event = {
 		# pf [[[
 		NOT = { has_government_attribute = confederation_elections }
 		NOT = { has_reform = pf_rabim_qahal }
+		NOT = { has_government_attribute = stratocratic_elections }
 		# ]]]
 	}
 
