@@ -53,7 +53,7 @@ country_decisions = {
 					OR = {
 						area = catalonia_area
 						area = aragon_area
-						area = basque_country
+						area = basque_area
 						area = castille_area
 						area = valencia_area
 						area = asturias_area
@@ -89,7 +89,7 @@ country_decisions = {
 				}
 				add_permanent_claim = BOR
 			}
-			basque_country = {
+			basque_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
