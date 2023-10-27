@@ -517,8 +517,6 @@ ksb_5_slot = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			manpower = 2
-			treasury = 100
 			OR = {
 				AND = {
 					if = {
