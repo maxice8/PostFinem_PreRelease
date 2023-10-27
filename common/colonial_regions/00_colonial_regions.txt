@@ -149,7 +149,7 @@ colonial_canada = {
 				alliance_with = SCO
 			}
 		}
-		name = "COLONIAL_CANADA_Nouvelle_ cosse"
+		name = "COLONIAL_CANADA_Nouvelle_Écosse"
 	}
 	names = {
 		trigger = {
@@ -348,58 +348,43 @@ colonial_eastern_america = {
 
 	# Specific
 	names = {
-		trigger = {
-			OR = {
-				tag = GBR
-				tag = ENG
-			}
-		}
-		name = "COLONIAL_EASTERN_AMERICA_Thirteen_Colonies"
+		trigger = { tag = CAR }
+		name = "COLONIAL_EASTERN_AMERICA_Carthadium"
+	}
+	names = {
+		trigger = { tag = GAU }
+		name = "COLONIAL_EASTERN_AMERICA_Belgon"
+	}
+	names = {
+		trigger = { tag = CEL }
+		name = "COLONIAL_EASTERN_AMERICA_Celtan"
 	}
 	names = {
 		trigger = {
 			OR = {
-				tag = FRA
-				culture_group = french
+				culture_group = euro_punic
+				culture_group = north_african
 			}
-			owns = 90 # Vlaanderen
 		}
-		name = "COLONIAL_EASTERN_AMERICA_Nouvelle_Flandre"
+		name = "COLONIAL_EASTERN_AMERICA_Root_GetAdjective_Barcaland"
 	}
 	names = {
 		trigger = {
-			OR = {
-				tag = FRA
-				culture_group = french
-			}
+			culture_group = gallic
 		}
-		name = "COLONIAL_EASTERN_AMERICA_Floride"
-	}
-	names = {
-		trigger = {
-			OR = {
-				tag = SPA
-				tag = CAS
-				tag = ARA
-			}
-		}
-		name = "COLONIAL_EASTERN_AMERICA_Florida"
-	}
-	names = {
-		trigger = {
-			OR = {
-				tag = KOR
-				primary_culture = korean
-				primary_culture = korean_new
-			}
-		}
-		name = "COLONIAL_EASTERN_AMERICA_Miju"
+		name = "COLONIAL_EASTERN_AMERICA_Root_GetAdjective_Galatium"
 	}
 	names = {
 		trigger = {
 			culture_group = scandinavian
 		}
-		name = "COLONIAL_EASTERN_AMERICA_Vestrjar"
+		name = "COLONIAL_EASTERN_AMERICA_Root_GetAdjective_Vestland"
+	}
+	names = {
+		trigger = {
+			culture_group = old_celtic
+		}
+		name = "COLONIAL_EASTERN_AMERICA_Root_GetAdjective_Celtoria"
 	}
 	# Generic
 	names = {
@@ -846,64 +831,43 @@ colonial_the_carribean = {
 
 	# Specific
 	names = {
-		trigger = {
-			OR = {
-				tag = SPA
-				tag = CAS
-				tag = ARA
-			}
-			owns = 488 # Les Cayes
-			owns = 489 # Barahonas
-			owns = 490 # Tortuga
-		}
-		name = "COLONIAL_THE_CARRIBEAN_Hispaniola"
+		trigger = { tag = CAR }
+		name = "COLONIAL_CARIBBEAN_Chamsor"
+	}
+	names = {
+		trigger = { tag = GAU }
+		name = "COLONIAL_CARIBBEAN_Teporia"
+	}
+	names = {
+		trigger = { tag = CEL }
+		name = "COLONIAL_CARIBBEAN_Solmar"
 	}
 	names = {
 		trigger = {
 			OR = {
-				tag = SPA
-				tag = CAS
-				tag = ARA
-			}
-			owns = 484 # Havana
-			owns = 485 # Moron
-			owns = 486 # Guantanamo
-		}
-		name = "COLONIAL_THE_CARRIBEAN_Isla_Juana"
-	}
-	names = {
-		trigger = {
-			OR = {
-				tag = FRA
-				culture_group = french
+				culture_group = euro_punic
+				culture_group = north_african
 			}
 		}
-		name = "COLONIAL_THE_CARRIBEAN_Antilles"
+		name = "COLONIAL_CARIBBEAN_Root_GetAdjective_Chamsia"
 	}
 	names = {
 		trigger = {
-			OR = {
-				owns = 484 # Havana
-				owns = 485 # Moron
-				owns = 486 # Guantanamo
-				owns = 2656 # Camaguey
-				owns = 2655 # Bayamo
-				owns = 2654 # Baracoa
-			}
+			culture_group = gallic
 		}
-		name = "COLONIAL_THE_CARRIBEAN_Cuba"
+		name = "COLONIAL_CARIBBEAN_Root_GetAdjective_Tebora"
 	}
 	names = {
 		trigger = {
-			tag = POR
+			culture_group = scandinavian
 		}
-		name = "COLONIAL_THE_CARRIBEAN_Caraibas"
+		name = "COLONIAL_CARIBBEAN_Root_GetAdjective_Soland"
 	}
 	names = {
 		trigger = {
-			tag = POR
+			culture_group = old_celtic
 		}
-		name = "COLONIAL_THE_CARRIBEAN_Antilhas"
+		name = "COLONIAL_CARIBBEAN_Root_GetAdjective_Griania"
 	}
 	# Generic
 	names = {
@@ -1131,7 +1095,7 @@ colonial_la_plata = {
 		name = "COLONIAL_LA_PLATA_Root_Culture_GetName_Paraguay"
 	}
 	names = {
-		trigger = { # Am lioration la Pl iade
+		trigger = { # Amélioration la Pléiade
 			any_owned_province = {
 				OR = {
 					area = southern_chile_area
