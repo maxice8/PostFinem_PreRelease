@@ -4,7 +4,7 @@ pf_generic_italian_1 = {
 	ai = yes
 	has_country_shield = yes
 	potential = {
-		is_part_of_hre = yes
+		is_part_of_hre = yes NOT = { has_reform = free_city }
 	} 
 
 	pf_generic_italian_develop_nation = {

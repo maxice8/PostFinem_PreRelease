@@ -5,6 +5,15 @@
 on_startup = {
 	if = {
 		limit = {
+			NOT = { has_global_flag = punic_set_for_if_flag }
+		}
+		set_global_flag = punic_set_for_if_flag
+		set_hre_religion = punic_religion
+		# set_hre_religion_locked = yes
+		set_hre_heretic_religion = romana
+	}
+	if = {
+		limit = {
 			current_age = age_of_discovery
 		}
 		LXA = {
@@ -72,6 +81,13 @@ on_startup = {
 			NOT = { is_year = 1445 }
 		}
 		country_event = { id = pf_per_events.0 }
+	}
+	if = {
+		limit = {
+			tag = CLN
+			NOT = { is_year = 1445 }
+		}
+		country_event = { id = pf_if.16 }	# The travels of Conan
 	}
 	if = {
 		limit = {
@@ -398,6 +414,21 @@ on_war_won = {
 				id = polynesian.17
 			}
 		}
+	}
+
+	if = {
+		limit = {
+			tag = PER
+			has_estate_privilege = estate_nobles_pf_satrapy_expansion_plan
+		}
+		pf_per_release_satrapies_scripted_effect = yes
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = pf_per_et_province_to_conquer
+			tag = PER
+		}
+		country_event = { id = pf_per_events.72 }
 	}
 }
 
@@ -965,6 +996,7 @@ on_monarch_death = {
 		flavor_mal.11 # Mali pretenders
 		flavor_mal.47 # Pilgrimage ends prematurely
 		government_events.3	# Election of a new Ruler
+		pf_if.24	# Karthalis Succession
 	}
 }
 
@@ -1701,7 +1733,39 @@ on_adm_development = {
 				value = 1
 			}
 		}
-	}	
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = pf_per_et_province_to_tax_dev
+			owner = {
+				is_subject_of = PER
+			}
+			event_target:pf_per_et_province_to_tax_dev = { province_id = ROOT }
+		}
+		owner = {
+			overlord = {
+				country_event = { id = pf_per_events.68 }
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = { has_country_flag = pf_fc_expand_influence_developing_bonus_flag }
+			accepted_culture = ROOT
+		}
+		random_list = {
+			10 = { add_base_tax = 1 }
+			90 = { }
+		}
+	}
+	if = {
+		limit = {
+			province_id = 121	# Naples
+			owner = { has_country_flag = naples_gets_bonus_from_dev_flag }
+		}
+		add_prosperity = 1
+		owner = { add_corruption = -0.05 }
+	}
 }
 
 # province
@@ -1753,6 +1817,38 @@ on_dip_development = {
 			}
 		}
 	}	
+	if = {
+		limit = {
+			has_saved_global_event_target = pf_per_et_province_to_prod_dev
+			owner = {
+				is_subject_of = PER
+			}
+			event_target:pf_per_et_province_to_prod_dev = { province_id = ROOT }
+		}
+		owner = {
+			overlord = {
+				country_event = { id = pf_per_events.69 } # Nice
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = { has_country_flag = pf_fc_expand_influence_developing_bonus_flag }
+			accepted_culture = ROOT
+		}
+		random_list = {
+			10 = { add_base_tax = 1 }
+			90 = { }
+		}
+	}
+	if = {
+		limit = {
+			province_id = 121	# Naples
+			owner = { has_country_flag = naples_gets_bonus_from_dev_flag }
+		}
+		add_prosperity = 1
+		owner = { add_prestige = 0.5 }
+	}
 }
 
 # province
@@ -1804,6 +1900,38 @@ on_mil_development = {
 			}
 		}
 	}	
+	if = {
+		limit = {
+			has_saved_global_event_target = pf_per_et_province_to_mil_dev
+			owner = {
+				is_subject_of = PER
+			}
+			event_target:pf_per_et_province_to_mil_dev = { province_id = ROOT }
+		}
+		owner = {
+			overlord = {
+				country_event = { id = pf_per_events.70 }
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = { has_country_flag = pf_fc_expand_influence_developing_bonus_flag }
+			accepted_culture = ROOT
+		}
+		random_list = {
+			10 = { add_base_tax = 1 }
+			90 = { }
+		}
+	}
+	if = {
+		limit = {
+			province_id = 121	# Naples
+			owner = { has_country_flag = naples_gets_bonus_from_dev_flag }
+		}
+		add_prosperity = 1
+		owner = { add_manpower = 0.5 }
+	}
 }
 
 on_overextension_pulse = {
@@ -1852,8 +1980,53 @@ on_siberian_pulse = {
 
 # country random events
 on_monthly_pulse = {
+	random_events = {
+		100 = 0
+
+		#Feast time!
+		100 = pf_feast.2	# Nobles quarrel
+		100 = pf_feast.3	# Greedy priest
+		100 = pf_feast.4	# Diverted attention
+		100 = pf_feast.5	# Satifying meal
+		100 = pf_feast.6	# Game of old Ur
+		100 = pf_feast.7	# Inadequate food
+		100 = pf_feast.8	# Fighting at the dinner table
+		100 = pf_feast.9	# Having a good time
+		100 = pf_feast.11	# Pleasant conversation adm
+		100 = pf_feast.12	# Pleasant conversation	dip
+		100 = pf_feast.13	# Pleasant conversation mil
+		100 = pf_feast.14	# Valuable trinket
+		100 = pf_feast.15	# Fire gets out of control
+		100 = pf_feast.16	# Magnificent speech
+		100 = pf_feast.17	# Bard performance
+		100 = pf_feast.18	# Valuable coin (19-21)
+		100 = pf_feast.22	# Stuffed with food
+		100 = pf_feast.23	# Battle stories
+		100 = pf_feast.24	# Showing off art
+		100 = pf_feast.25	# Fair maiden
+		100 = pf_feast.26	# Running out of wine
+		100 = pf_feast.27	# Debate
+		100 = pf_feast.28	# Old stories about your dynasty
+		100 = pf_feast.29	# Great artist here
+		100 = pf_feast.30	# Minstrel seeks patronage
+		100 = pf_feast.31	# Good jester
+		100 = pf_feast.32	# Jester mocks you
+		100 = pf_feast.33	# Too drunk
+		100 = pf_feast.34	# General offers service
+		100 = pf_feast.35	# Showing off our glory
+	}
 }
 on_yearly_pulse = {
+	random_events = {
+		1 = 0
+
+		100 = pf_althingi.1
+		100 = pf_althingi.2
+		100 = pf_althingi.3
+		100 = pf_althingi.4
+		100 = pf_althingi.5
+		100 = pf_althingi.6
+	}
 }
 on_yearly_pulse_2 = {
 }
@@ -2809,7 +2982,21 @@ on_four_year_pulse = {
 
 on_four_year_pulse_2 = {
 	random_events = {
-		200 = 0
+		1000 = 0
+
+		# Italian Federation flavour events
+		100 = pf_if.1
+		100 = pf_if.2
+		100 = pf_if.3
+		100 = pf_if.4
+		100 = pf_if.5
+		100 = pf_if.6
+		100 = pf_if.7
+		100 = pf_if.8
+		100 = pf_if.10
+		100 = pf_if.11
+		100 = pf_if.12
+		100 = pf_if.13
 	}
 }
 
@@ -3970,6 +4157,21 @@ on_lose_great_power_status = {
 on_province_religion_converted = {
 	on_province_religion_changed_effect = yes
 	on_province_religion_converted_effect = yes
+
+	if = {
+		limit = {
+			has_saved_global_event_target = pf_per_et_province_to_convert
+			owner = {
+				is_subject_of = PER
+			}
+			event_target:pf_per_et_province_to_convert = { province_id = ROOT }
+		}
+		owner = {
+			overlord = {
+				country_event = { id = pf_per_events.71 }
+			}
+		}
+	}
 }
 
 on_province_religion_changed = {
@@ -4633,6 +4835,12 @@ on_admiral_recruited = {
 		limit = { has_country_flag = admirals_give_army_professionalism }
 		add_army_professionalism = 0.005
 	}
+	if = {
+		limit = {
+			has_country_flag = pf_sar_recruiting_admirals_gives_tradition
+		}
+		add_navy_tradition = 2
+	}
 }
 
 # country
@@ -4908,6 +5116,16 @@ on_dependency_lost = {
 		}
 	}
 	# pf
+	if = {
+		limit = {
+			FROM = { is_subject_of_type = satrapy }
+		}
+		add_casus_belli = {
+			target = FROM
+			type = cb_persian_subjugation_war
+			months = 240
+		}
+	}
 	if = {
 		limit = {
 			FROM = {
@@ -5257,6 +5475,20 @@ on_conquest = {
 		}
 		emperor = { 
 			add_imperial_influence = 1
+		}
+	}
+	#pf
+	if = {
+		limit = {
+			province_id = 146
+			country_or_non_sovereign_subject_holds = PER
+		}
+		PER = {
+			country_event = {
+				id = pf_per_events.104
+				days = 20
+				random = 40
+			}
 		}
 	}
 }
@@ -5656,7 +5888,13 @@ on_scorch_earth  = { #ROOT - scorching country, FROM - scorched province
 }
 
 on_war_ended = { #ROOT - Winer FROM - Loser
-	
+	if = {
+		limit = { has_government_attribute = ending_wars_gives_stability }
+		random = {
+			chance = 25
+			add_stability_or_adm_power = yes
+		}
+	}
 }
 
 on_alliance_broken = { #ROOT - Original alliance creator, FROM - Alliance accepter

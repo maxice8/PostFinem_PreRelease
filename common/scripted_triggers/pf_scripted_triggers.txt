@@ -172,3 +172,36 @@ pf_belongs_to_greek_culture_group = {
 	}
 
 }
+
+pf_rabim_qahal_adirim_control = {
+	NOT = {
+		has_government_power = {
+			mechanic_type = car_rabim_qahal
+			power_type = adirim_vs_suffet
+			value = 0
+		}
+	}
+}
+pf_rabim_qahal_adirim_dominant = {
+	NOT = {
+		has_government_power = {
+			mechanic_type = car_rabim_qahal
+			power_type = adirim_vs_suffet
+			value = -50
+		}
+	}
+}
+pf_rabim_qahal_suffet_control = {
+	has_government_power = {
+		mechanic_type = car_rabim_qahal
+		power_type = adirim_vs_suffet
+		value = 0
+	}
+}
+pf_rabim_qahal_suffet_dominant = {
+	has_government_power = {
+		mechanic_type = car_rabim_qahal
+		power_type = adirim_vs_suffet
+		value = 50
+	}
+}

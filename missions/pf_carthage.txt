@@ -1,0 +1,1124 @@
+car_main_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = CAR } 
+
+	pf_car_prepare_invasion_force = {
+		icon = mission_shipyards_of_gujarat
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			if = {
+				limit = {
+					ai = no
+				}
+				army_size_percentage = 1
+				manpower_percentage = 0.5
+			}
+			else = {
+				army_size_percentage = 0.75
+				manpower_percentage = 0.33
+			}
+			num_of_generals = 1
+		} 
+
+		effect = {  
+			add_mil_power = 100
+			custom_tooltip = empty_line_tt
+			baleares_area = {
+				add_permanent_claim = ROOT
+			}
+			corsica_sardinia_area = {
+				add_permanent_claim = ROOT
+			}
+			western_sicily_area = {
+				add_permanent_claim = ROOT
+			}
+			sicily_area = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_car_revive_lilybaeum = {
+		icon = mission_found_havana
+		position = 2
+		required_missions = { pf_car_prepare_invasion_force } 
+		provinces_to_highlight = {  
+			area = western_sicily_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		trigger = {  
+			western_sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4736 = { development = 15 }
+		} 
+
+		effect = {  
+			4736 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				custom_tooltip = empty_line_tt
+				add_or_upgrade_shipyard_building = yes
+			}
+			custom_tooltip = empty_line_tt
+			sicily_area = { add_permanent_claim = ROOT }
+			calabria_area = { add_permanent_claim = ROOT }
+			naples_area = { add_permanent_claim = ROOT }
+			apulia_area = { add_permanent_claim = ROOT }
+		} 
+	}
+
+	pf_car_italian_ambitions = {
+		icon = mission_rule_italy
+		position = 4
+		required_missions = { pf_car_revive_lilybaeum } 
+		provinces_to_highlight = {  
+			OR = {
+				AND = {
+					region = italy_region
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 121
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 121
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = italy_region
+			}
+		} 
+
+		effect = { 
+			add_prestige_or_monarch_power = { amount = 25 }
+			italy_region = {
+				add_permanent_claim = ROOT
+			}
+			north_italy_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_car_approach_the_alpes = {
+		icon = the_alpine_wall
+		position = 6
+		required_missions = {
+			pf_car_italian_ambitions
+			pf_car_finish_the_punic_wars
+		}
+		provinces_to_highlight = {  
+			OR = {
+				AND = {
+					region = north_italy_region
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 104
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 104
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				region = north_italy_region
+			}
+		} 
+
+		effect = {  
+			104 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = car_conquest_of_italia
+				duration = -1
+			}
+		} 
+	}
+	pf_car_african_riches = {
+		icon = mission_african_trade_post
+		position = 9
+		required_missions = { pf_car_colonial_mindset } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+		} 
+
+		effect = {  
+			
+		} 
+	}
+
+	pf_car_monopolize_the_trade = {
+		icon = mission_african_gold
+		position = 11
+		required_missions = { pf_car_african_riches pf_car_westward } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+		} 
+
+		effect = {  
+			
+		} 
+	}
+}
+car_main_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = CAR } 
+
+	pf_car_reestablish_sardan = {
+		icon = seize_sardinia
+		position = 2
+		required_missions = { pf_car_prepare_invasion_force } 
+		provinces_to_highlight = {  
+			area = corsica_sardinia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			corsica_sardinia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {  
+			simple_dynamic_effect = {
+				first_custom_tooltip = car_reestablish_sardan_2
+				first_limit = "
+					EYL = {
+						is_part_of_hre = yes
+					}
+				"
+				first_effect = "
+					add_casus_belli = {
+						type = cb_vassalize_mission
+						target = EYL
+						months = 120
+					}	
+				"
+				# second_custom_tooltip = car_reestablish_sardan_1
+				second_limit = "
+					EYL = {
+						is_part_of_hre = no
+					}
+				"
+				second_effect = "
+					corsica_area = { add_permanent_claim = ROOT }
+				"
+			}
+		} 
+	}
+
+	pf_car_mediterranean_dominance = {
+		icon = mission_naval_kingdom
+		position = 3
+		required_missions = {
+			pf_car_revive_lilybaeum
+			pf_car_reestablish_sardan
+		}
+		provinces_to_highlight = {  
+			OR = {
+				area = sicily_area
+				area = western_sicily_area
+				area = corsica_sardinia_area
+				area = corsica_area
+				area = baleares_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		trigger = {  
+			sicily_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			western_sicily_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			corsica_sardinia_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			corsica_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			baleares_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			custom_tooltip = car_unlock_yam_tt
+			set_country_flag = car_unlock_yam_flag
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = car_mediterranean_dominance_modifier
+				duration = 7300
+			}
+		} 
+	}
+
+	pf_car_carthago_nova = {
+		icon = renaissance_city
+		position = 4
+		required_missions = { pf_car_into_iber } 
+		provinces_to_highlight = {  
+			province_id = 1750
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = { development = 25 }
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 1750
+			1750 = { development = 25 }
+		} 
+
+		effect = {  
+			1750 = {
+				center_of_trade = 2
+			}
+			custom_tooltip = empty_line_tt
+			1750 = {
+				add_base_tax = 1
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+			custom_tooltip = empty_line_tt
+			1750 = {
+				change_trade_goods = paper
+				add_building = mills
+			}
+		} 
+	}
+
+	pf_car_finish_the_punic_wars = {
+		icon = mission_fall_of_third_rome
+		position = 5
+		required_missions = { pf_car_italian_ambitions } 
+		provinces_to_highlight = {  
+			OR = {
+				AND = {
+					OR = {
+						region = italy_region
+						region = north_italy_region
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 118
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 118
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = italy_region
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = north_italy_region
+			}
+		} 
+		effect = {  } 
+	}
+
+	pf_car_looking_to_the_waves = {
+		icon = mission_rb_scottish_north_sea_trade
+		position = 7
+		required_missions = {  } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = {
+				full_idea_group = exploration_ideas
+				full_idea_group = expansion_ideas
+			}
+		} 
+
+		effect = {  
+
+		} 
+	}
+
+	pf_car_colonial_mindset = {
+		icon = mission_rb_grow_the_channel
+		position = 8
+		required_missions = { pf_car_looking_to_the_waves } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+		} 
+
+		effect = {  
+			
+		} 
+	}
+
+	pf_car_westward = {
+		icon = settle_north_america
+		position = 10
+		required_missions = { pf_car_colonial_mindset } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+		} 
+
+		effect = {  
+			
+		} 
+	}
+
+	pf_car_a_whole_new_world = {
+		icon = mission_colonize_the_caribbean
+		position = 11
+		required_missions = { pf_car_westward } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+		} 
+
+		effect = {  
+			
+		} 
+	}
+}
+car_main_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = CAR } 
+
+	pf_car_integrate_the_tribes = {
+		icon = mission_turning_the_tables
+		position = 1
+		provinces_to_highlight = {  
+			owner = {
+				OR = {
+					tag = ALG
+					tag = NMD
+					tag = TRP
+				}
+				is_subject_of = ROOT
+			}
+		} 
+
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 25
+				region = maghreb_region
+			}
+			NOT = {
+				any_subject_country = {				
+					OR = {
+						tag = ALG
+						tag = NMD
+						tag = TRP
+					}
+				}
+			}
+		} 
+
+		effect = { 
+			add_stability_or_adm_power = yes 		
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					has_country_modifier = annexers_legacy
+				}
+				remove_country_modifier = annexers_legacy
+				custom_tooltip = empty_line_tt
+			}
+			mauretania_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_car_masters_of_mauretania = {
+		icon = mission_moroccan_ports
+		position = 2
+		required_missions = { pf_car_integrate_the_tribes } 
+		provinces_to_highlight = {  
+			region = mauretania_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = mauretania_region
+			}	
+		} 
+
+		effect = {  	
+			custom_tooltip = car_masters_maghreb_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						OR = {
+							capital_scope = { region = maghreb_region }
+							capital_scope = { region = mauretania_region }
+						}
+						NOT = { total_development = 50 }
+						NOT = { is_subject_of = ROOT }
+						is_subject = no
+					}
+					reverse_add_casus_belli = {
+						target = ROOT
+						type = cb_vassalize_mission 
+						months = 120
+					}
+				}
+			}
+			custom_tooltip = empty_line_tt
+			upper_andalucia_area = {
+				add_permanent_claim = ROOT
+			}
+			lower_andalucia_area = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_car_into_iber = {
+		icon = mission_reclaim_andalucia
+		position = 3
+		required_missions = { pf_car_masters_of_mauretania } 
+		provinces_to_highlight = {  
+			OR = {
+				area = upper_andalucia_area
+				area = lower_andalucia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			upper_andalucia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lower_andalucia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {  
+			if = {
+				limit = { 
+					SUE = { exists = yes }
+				}
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					target = SUE
+					months = 120
+				}
+				custom_tooltip = empty_line_tt
+			}
+			iberia_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+
+	pf_car_iberia_reclaimed = {
+		icon = mission_plc_golden_liberty
+		position = 4
+		required_missions = { pf_car_into_iber } 
+		provinces_to_highlight = {  
+			region = iberia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 45
+				region = iberia_region
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = unlock_gallic_wars_cb_tt
+			set_country_flag = unlock_gallic_wars_cb_flag
+			custom_tooltip = empty_line_tt
+			guyenne_area = {
+				add_permanent_claim = ROOT
+			}
+			pyrenees_area = {
+				add_permanent_claim = ROOT
+			}
+			languedoc_area = {
+				add_permanent_claim = ROOT
+			}
+			provence_area = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+	pf_car_gallic_campaigns = {
+		icon = centralize_france
+		position = 5
+		required_missions = { pf_car_iberia_reclaimed } 
+		provinces_to_highlight = {  
+			OR = {
+				area = guyenne_area
+				area = pyrenees_area
+				area = languedoc_area
+				area = provence_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			guyenne_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			pyrenees_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			languedoc_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			provence_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {  
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
+			add_ruler_modifier = {
+				name = car_gallic_conqueror_modifier
+			}
+			france_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_car_worthy_successors_of_hannibal = {
+		icon = pf_hannibal
+		position = 1
+		required_missions = {
+			pf_car_gallic_campaigns
+			pf_car_finish_the_punic_wars
+			pf_car_phoenicia_our_home
+		}
+		provinces_to_highlight = {  
+			OR = {
+				region = france_region
+				region = north_italy_region
+				region = italy_region
+				region = iberia_region
+				region = mauretania_region
+				region = maghreb_region
+				region = egypt_region
+				region = mashriq_region
+				region = anatolia_region
+			}
+			NOT = { owned_by = ROOT }
+		} 
+
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 250
+				OR = {
+					region = france_region
+					region = north_italy_region
+					region = italy_region
+					region = iberia_region
+					region = mauretania_region
+					region = maghreb_region
+					region = egypt_region
+					region = mashriq_region
+					region = anatolia_region
+				}
+			}
+		} 
+
+		effect = {  
+			add_prestige_or_monarch_power = { amount = 100 }
+			custom_tooltip = empty_line_tt
+			override_country_name = BARCINE_EMPIRE
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = car_worthy_successors_of_hannibal_modifier
+				duration = -1
+			}
+		} 
+	}
+	pf_car_reclaimed_glory = {
+		icon = africa_proconsulare
+		position = 7
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_center_of_enlightenment = {
+		icon = mission_early_modern_university
+		position = 9
+		required_missions = { pf_car_reclaimed_glory } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_winds_of_change = {
+		icon = mission_book_of_royal_degrees
+		position = 10
+		required_missions = { pf_car_center_of_enlightenment } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+car_main_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = CAR } 
+
+	pf_car_island_hopping = {
+		icon = mission_invade_island
+		position = 2
+		required_missions = { pf_car_a_navy_worth_of_yam } 
+		provinces_to_highlight = {  
+			OR = {
+				AND = {
+					OR = {
+						province_id = 142
+						province_id = 4698
+					}
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}			
+				AND = {
+					province_id = 163
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 163
+			142 = { country_or_non_sovereign_subject_holds = ROOT }
+			4698 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			163 = {
+				add_or_upgrade_shipyard_building = yes
+			}
+			custom_tooltip = empty_line_tt
+			163 = {
+				add_province_modifier = {
+					name = car_island_hopping_modifier
+					duration = -1
+				}
+			}
+			cyrenaica_area = {
+				add_permanent_claim = ROOT
+			}
+			delta_area = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_car_the_land_of_alexander = {
+		icon = mission_rb_seize_alexandria
+		position = 3
+		required_missions = { pf_car_island_hopping } 
+		provinces_to_highlight = {  
+			OR = {
+				area = cyrenaica_area
+				area = delta_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			cyrenaica_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}  
+			delta_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {  
+			add_prestige_or_monarch_power = { amount = 25 }
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = car_the_land_of_alexander_modifier
+				duration = 7300
+			}
+			bahari_area = {
+				add_permanent_claim = ROOT
+			}
+			palestine_area = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_car_the_motherland_beckons = {
+		icon = mission_control_the_barbary_coast
+		position = 1
+		required_missions = { pf_car_the_land_of_alexander } 
+		provinces_to_highlight = {  
+			OR = {
+				area = bahari_area
+				area = palestine_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			bahari_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}  
+			palestine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {  
+			egypt_region = {
+				add_permanent_claim = ROOT
+			}
+			mashriq_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_car_phoenicia_our_home = {
+		icon = mission_unite_home_region
+		position = 5
+		required_missions = { pf_car_the_motherland_beckons } 
+		provinces_to_highlight = {  
+			region = mashriq_region
+			NOT = {  country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			owns_core_province = 1855
+			mashriq_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {  
+			1855 = {
+				add_or_upgrade_shipyard_building = yes
+			} 
+			custom_tooltip = empty_line_tt
+			1855 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			custom_tooltip = empty_line_tt
+			anatolia_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_car_secure_ports = {
+		icon = mission_secure_hajj_ports
+		position = 7
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_rivaling_roma = {
+		icon = pf_fertile_crescent
+		position = 1
+		required_missions = {
+			pf_car_reclaimed_glory
+			pf_car_secure_ports
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_buns_for_the_people = {
+		icon = prosperity_for_all
+		position = 9
+		required_missions = { pf_car_productive_provinces } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+	pf_car_leading_from_the_front = {
+		icon = military_self_reliance
+		position = 11
+		required_missions = { pf_car_thunder_of_war } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+car_main_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = CAR } 
+
+	pf_car_a_navy_worth_of_yam = {
+		icon = mission_secure_hajj_ports
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			if = { 
+				limit = { ai = no } 
+				navy_size_percentage = 1
+			} 
+			else = {
+				navy_size_percentage = 0.75
+			}
+			num_of_galley = 10
+			num_of_admirals = 1
+		} 
+
+		effect = {  
+			add_country_modifier = {
+				name = car_navy_worthy_of_yam_modifier
+				duration = 3650
+			}
+			142 = { add_permanent_claim = ROOT }
+			4698 = { add_permanent_claim = ROOT }
+			163 = { add_permanent_claim = ROOT }
+		} 
+	}
+
+	pf_car_the_punic_admiralty = {
+		icon = mission_danish_navy
+		position = 3
+		required_missions = {
+			pf_car_a_navy_worth_of_yam
+			pf_car_island_hopping
+		}
+		provinces_to_highlight = {  
+			province_id = 341
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = {
+					has_great_project = {
+						type = great_cothon
+						tier = 2
+					}
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 341
+			341 = {				
+				has_great_project = {
+					type = great_cothon
+					tier = 2
+				}
+			}
+			naval_forcelimit = 50
+			navy_size = 50
+			num_of_heavy_ship = 5
+			has_reform_on_level = 5
+		} 
+
+		effect = {  
+			341 = {
+				set_great_project_tier_3 = { type = great_cothon }
+			}
+			custom_tooltip = empty_line_tt
+			set_country_flag = pf_quinquereme_allowed_flag
+			add_government_reform = pf_quinquereme_shipyards
+		} 
+	}
+
+	pf_car_the_gateway_to_the_east = {
+		icon = mission_conquer_alexandria
+		position = 4
+		required_missions = { pf_car_the_land_of_alexander } 
+		provinces_to_highlight = {  
+			province_id = 358
+		} 
+
+		trigger = {  
+			owns_core_province = 358
+			358 = { development = 25 }
+			358 = { has_shipyard_building_trigger = yes }
+			358 = { has_trade_building_trigger = yes }
+		} 
+
+		effect = {  
+			358 = { change_province_name = "Hannibalia" }
+			hidden_effect = { 
+				358 = { rename_capital = "Hannibalia" } 
+			}
+			custom_tooltip = empty_line_tt
+			358 = { 
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			custom_tooltip = empty_line_tt
+			country_event = {
+				id = pf_car.1
+			}
+		}
+	}
+
+	pf_car_phoenician_strongholds = {
+		icon = mission_metropolis_of_the_deccan
+		position = 5
+		required_missions = { pf_car_the_gateway_to_the_east } 
+		provinces_to_highlight = {
+			
+		}
+		trigger = {
+
+		}
+		effect = {  
+			118 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+			custom_tooltip = empty_line_tt
+			118 = {
+				add_province_modifier = {
+					name = car_roma_claimed_modifier
+					duration = -1
+				}
+			}
+			custom_tooltip = empty_line_tt
+			341 = {
+				add_province_modifier = {
+					name = car_eternal_punic_war_victor_modifier
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	pf_car_phoenician_trade_routes = {
+		icon = mission_early_game_buildings
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_productive_provinces = {
+		icon = mission_state_manufactories
+		position = 8
+		required_missions = {
+			pf_car_phoenician_trade_routes
+			pf_car_secure_ports
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_clothe_the_citizens = {
+		icon = mission_son_own_develop_clothes_and_salt
+		position = 9
+		required_missions = { pf_car_productive_provinces } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+	pf_car_thunder_of_war = {
+		icon = pf_war_elephants
+		position = 10
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_car_fire_of_cannons = {
+		icon = mission_guns_of_urban
+		position = 11
+		required_missions = { pf_car_thunder_of_war } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+}

@@ -1,0 +1,533 @@
+pf_nap_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NAP } 
+
+	pf_nap_build_the_navy = {
+		icon = mission_develop_nevas_port
+		position = 1
+		provinces_to_highlight = { } 
+
+		trigger = {
+			navy_size_percentage = 1
+			num_of_admirals_with_traits = 1
+			num_of_galley = 8
+		} 
+
+		effect = {
+			add_dip_power = 100
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_nap_new_navy"
+				duration = 7300
+			}
+		} 
+	}
+
+	pf_nap_develop_the_south = {
+		icon = mission_develop_the_scandes
+		position = 4
+		required_missions = { pf_nap_secure_the_south } 
+		provinces_to_highlight = {
+			OR = {
+				area = naples_area
+				area = calabria_area
+				area = apulia_area
+				area = adriatic_italy_area
+			}
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { development = 18 }
+			}
+		} 
+
+		trigger = {
+			naples_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 18
+			}
+			calabria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 18
+			}
+			apulia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 18
+			}
+			adriatic_italy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 18
+			}
+		}  
+
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_nap_rise_of_the_south"
+				duration = -1
+			}
+		} 
+	}
+}
+pf_nap_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NAP } 
+
+	pf_nap_seize_salerno = {
+		icon = control_the_church
+		position = 2
+		required_missions = {
+			pf_nap_ladys_ambition
+			pf_nap_build_the_navy
+		}
+		provinces_to_highlight = {
+			area = naples_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			naples_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {
+			2983 = {
+				add_base_tax = 1
+				add_devastation = -50
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					has_estate = estate_church
+				}
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 15
+				}
+			}
+			custom_tooltip = empty_line_tt
+			add_legitimacy = 20
+		} 
+	}
+
+	pf_nap_secure_the_south = {
+		icon = king_of_naples
+		position = 3
+		required_missions = { pf_nap_seize_salerno } 
+		provinces_to_highlight = {
+			OR = {
+				area = naples_area
+				area = calabria_area
+				area = apulia_area
+				area = adriatic_italy_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 12
+				OR = {
+					area = naples_area
+					area = calabria_area
+					area = apulia_area
+					area = adriatic_italy_area
+				}
+			}
+		} 
+
+		effect = {
+			custom_tooltip = pf_nap_subjugation_cb_expand_1_tt
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_nap_vassal_swarm"
+				duration = 9125
+			}
+		} 
+	}
+}
+pf_nap_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NAP } 
+
+	pf_nap_ladys_ambition = {
+		icon = kingdom_of_heaven
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			army_size_percentage = 1
+			stability = 1
+			OR = {
+				has_ruler = "Iulia"
+				dip = 5
+			}
+		} 
+
+		effect = {
+			custom_tooltip = pf_nap_unlocks_neapolitan_subjugation_tt
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_nap_neapolitan_ambitions"
+				duration = 9125
+			}
+		} 
+	}
+
+	pf_nap_expand_naples = {
+		icon = mission_hanseatic_city
+		position = 2
+		required_missions = { pf_nap_ladys_ambition } 
+		provinces_to_highlight = {
+			province_id = 121	# Naples
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { num_of_times_expanded_infrastructure = 2 }
+			}
+		} 
+
+		trigger = {
+			121 = {
+				owned_by = ROOT
+			}
+			121 = {
+				num_of_times_expanded_infrastructure = 2
+			}
+		} 
+
+		effect = {
+			121 = {
+				add_center_of_trade_level = 1
+				add_prosperity = 100
+			}
+			custom_tooltip = empty_line_tt
+			define_advisor = {
+				type = commandant
+				skill = 2
+				cost_multiplier = 0.25
+			}
+			custom_tooltip = empty_line_tt
+			add_estate_burghers_loyalty_effect = yes
+		} 
+	}
+
+	pf_nap_temple_of_eshmun = {
+		icon = mission_temple_patronage
+		position = 3
+		required_missions = { pf_nap_expand_naples } 
+		provinces_to_highlight = {
+			province_id = 121	# Naples
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_tax_building_trigger = yes }
+			}
+		} 
+
+		trigger = {
+			121 = {
+				owned_by = ROOT
+			}
+			121 = {
+				has_tax_building_trigger = yes
+			}
+		}
+
+		effect = {
+			121 = {
+				add_or_upgrade_tax_building = yes
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_nap_eshmuns_blessing"
+				duration = 9125
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_nap_temple_of_eshmun_tt
+			hidden_effect = {
+				if = {
+					limit = { has_personal_deity = eshmun }
+					every_owned_province = {
+						add_base_tax = 1
+					}
+				}
+			}
+			tooltip = {
+				add_base_tax = 1
+			}
+		} 
+	}
+
+	pf_nap_subdue_sicily = {
+		icon = king_of_sicily
+		position = 4
+		required_missions = { pf_nap_secure_the_south } 
+		provinces_to_highlight = {
+			OR = {
+				area = sicily_area
+				area = western_sicily_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					area = sicily_area
+					area = western_sicily_area
+				}
+			}
+		} 
+
+		effect = {
+			custom_tooltip = pf_nap_subjugation_cb_expand_2_tt
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_nap_every_subject_gains_bonus_tt
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						is_subject_of = ROOT
+					}
+					add_country_modifier = {
+						name = "pf_nap_subject_buff"
+						duration = -1
+					}
+				}
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = "pf_nap_subject_buff"
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	pf_nap_italian_empire = {
+		icon = mission_rule_italy
+		position = 5
+		required_missions = {
+			pf_nap_subdue_sicily
+			pf_nap_splendid_city
+		}
+		provinces_to_highlight = {
+			region = italy_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 45
+				region = italy_region
+			}
+		} 
+
+		effect = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 50
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_nap_italian_empire_modifier"
+				duration = -1
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_nap_subjugation_cb_expand_3_tt
+		} 
+	}
+}
+pf_nap_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NAP } 
+
+	pf_nap_playground_of_nobles = {
+		icon = develop_the_south
+		position = 2
+		required_missions = { pf_nap_ladys_ambition } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_estate_agendas_completed = {
+				estate = estate_nobles
+				value = 3
+			}
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 60
+			}
+			legitimacy_equivalent = 90
+		} 
+
+		effect = {
+			add_army_tradition = 20
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_nap_mobilising_the_nobles"
+				duration = 7300
+			}
+		} 
+	}
+
+	pf_nap_splendid_city = {
+		icon = develop_the_po_valley
+		position = 4
+		required_missions = {
+			pf_nap_temple_of_eshmun
+			pf_nap_patronise_great_artists
+		}
+		provinces_to_highlight = {
+			province_id = 121	# Naples
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { development = 50 }
+			}
+		} 
+
+		trigger = {
+			121 = {
+				owned_by = root
+			}
+			121 = {
+				development = 50
+			}
+			prestige = 80
+			OR = {
+				has_had_golden_age = yes
+				in_golden_age = yes
+			}
+		} 
+
+		effect = {
+			add_splendor = 400
+			custom_tooltip = empty_line_tt
+			define_advisor = {
+				type = artist
+				skill = 3
+				cost_multiplier = 0.1
+			}
+			custom_tooltip = empty_line_tt
+			121 = {
+				add_province_modifier = {
+					name = "pf_nap_naples_triumphant"
+					duration = -1
+				}
+			}
+		} 
+	}
+}
+pf_nap_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NAP } 
+
+	pf_nap_stable_court = {
+		icon = mission_lit_reform_magdeburg_laws
+		position = 2
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			stability = 3
+			has_adm_advisor = yes
+			has_dip_advisor = yes
+			has_mil_advisor = yes
+		} 
+
+		effect = {
+			add_adm_power = 100
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_nap_stable_court_modifier"
+				duration = 9125
+			}
+		} 
+	}
+
+	pf_nap_patronise_great_artists = {
+		icon = sponsor_the_arts
+		position = 3
+		required_missions = {
+			pf_nap_playground_of_nobles
+			pf_nap_stable_court
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			artist = 3
+			OR = {
+				has_global_modifier_value = {
+					which = global_tax_modifier
+					value = 0.70
+				}
+				treasury = 1000
+			}
+			monthly_adm = 10
+			has_estate_privilege = estate_burghers_patronage_of_the_arts
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_nap_patron_of_the_arts_modifier"
+				duration = 9125
+			}
+		} 
+	}
+
+	pf_nap_absolute_rule = {
+		icon = mission_english_absolutism
+		position = 5
+		required_missions = { pf_nap_splendid_city } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+			OR = {
+				absolutism = 70
+				revolutionary_zeal = 70
+			}
+			OR = {
+				army_size = 200
+				total_development = 1250
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_nap_naples_rules_the_world"
+				duration = -1
+			}
+		} 
+	}
+}

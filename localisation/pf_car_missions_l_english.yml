@@ -1,0 +1,133 @@
+﻿l_english:
+ pf_car_prepare_invasion_force_title:0 "Prepare The Invasion Force"
+ pf_car_prepare_invasion_force_desc:0 "build to land fl, have general / claims on sicily and sardinia and baleric isles"
+
+ pf_car_revive_lilybaeum_title:0 "Revive Lilybaeum"
+ pf_car_revive_lilybaeum_desc:0 "take western sicily / boost for westernmost province, build some galleys there, claims on southern italy"
+
+ pf_car_italian_ambitions_title:0 "Italian Ambitions"
+ pf_car_italian_ambitions_desc:0 "own at least 10 provinces in southern italy, own core naples / spawn imperial incident if IF is still a thing (talk to HiW about options) , otherwise claims on all of italy"
+
+ pf_car_approach_the_alpes_title:0 "Approach the Alps"
+ pf_car_approach_the_alpes_desc:0 "own 10 provinces in northern italy area, own_core milano / buff milan, country_modifier: gov cap for rest of game"
+
+ pf_car_winds_of_change_title:0 "Winds of Change"
+ pf_car_winds_of_change_desc:0 "finish reforms, empire rank / unlock change govenrment type reforms and gain prestige"
+
+ pf_car_reestablish_sardan_title:0 "Re-establish Sardan"
+ pf_car_reestablish_sardan_desc:0 "conquer sardinia / claims on corsica (subjugation CB if they are in the IF)"
+ car_reestablish_sardan_1: "If Eyl is a pirate republic"
+ car_reestablish_sardan_2: "If Eyl has joined the Federation"
+
+ pf_car_mediterranean_dominance_title:0 "Mediterranean Dominance"
+ pf_car_mediterranean_dominance_desc:0 "own all 4 island areas / naval buff modifier, unlock yam diety (naval buffs)"
+
+ pf_car_iberia_reclaimed_title:0 "Iberia Reclaimed!"
+ pf_car_iberia_reclaimed_desc:0 "own at least 45 provinces in iberia / claims on southern gaul areas, special CB for 'gallic wars'"
+
+ pf_car_finish_the_punic_wars_title:0 "Finish the Punic Wars"
+ pf_car_finish_the_punic_wars_desc:0 "own_core rome, at least 20 provinces in italia region / province modifier for roma, dev it, perm modifier for carthage"
+
+ pf_car_thunder_of_war_title:0 "Thunder of War"
+ pf_car_thunder_of_war_desc:0 "have at least 20 cav and t5 unlocked / event for unlocking war elephants or mercs (change their cav to elephants) and if have quality or aristo you get extra buff (unlock event to buff cav fire in late game)"
+
+ pf_car_fire_of_cannons_title:0 "Fire of Cannons"
+ pf_car_fire_of_cannons_desc:0 "have 60k arty and 30k cav, have 70 innovativeness / modifier cav fire 1, permanent, if have firepower ideas give arty bonus vs forts +1"
+
+ pf_car_leading_from_the_front_title:0 "Leading From the Front"
+ pf_car_leading_from_the_front_desc:0 "250k forcelimit, at least 250k troops, three star general in charge of army, 40k cav / max general fire +1 and cav to infantry ratio +10% permanent, if biggest army in the world give ability to unlock mil hegemon at 500k instead of 1m"
+
+ pf_car_integrate_the_tribes_title:0 "Integrate the Tribes"
+ pf_car_integrate_the_tribes_desc:0 "own all 1444 cores OR have no subjects / claims on magreb and remove integrate subject modifier if applicable"
+
+ pf_car_masters_of_mauretania_title:0 "Masters of Mauretania"
+ pf_car_masters_of_mauretania_desc:0 "at least 20 provinces in Mauretania region (make it if not done yet) / subjugation CB on all 50 dev nations in region and claim on lower and upper andalusia"
+ car_masters_maghreb_tt: "You will receive a §YSubjugation§! casus belli on all independent nations with under §Y50§! development with their capital in the §YMauretania§! or §YCarthage§! regions."
+
+ pf_car_into_iber_title:0 "Into Iber"
+ pf_car_into_iber_desc:0 "own all of upper and lower andalusia / claims on iberia, PU cb on suebi"
+
+ pf_car_carthago_nova_title:0 "Carthago Nova"
+ pf_car_carthago_nova_desc:0 "own_core alacante, 25 development / rename and build cot, dev the province"
+
+ pf_car_gallic_campaigns_title:0 "Gallic Campaigns"
+ pf_car_gallic_campaigns_desc:0 "own all of southern gaul / perm claims on the rest and a leader modifier"
+
+ pf_car_worthy_successors_of_hannibal_title:0 "Successors of Hannibal"
+ pf_car_worthy_successors_of_hannibal_desc:0 "own 150 provinces in the previous regions? might need balance / perm 5% ae, rename to Barcine Empire, "
+ BARCINE_EMPIRE: "Barcine Empire"
+
+ pf_car_thunder_of_war_title:0 "Thunder of War"
+ pf_car_thunder_of_war_desc:0 "have at least 20 cav and t5 unlocked / event for unlocking war elephants or mercs (change their cav to elephants) and if have quality or aristo you get extra buff (unlock event to buff cav fire in late game)"
+
+ pf_car_reclaimed_glory_title:0 "Reclaimed Glory"
+ pf_car_reclaimed_glory_desc:0 "own_core carthage, 25 dev, level 3 cot, cothon level 2 / upgrade cothon to level 3 and give country_modifier = prestige and naval bonus"
+
+ pf_car_center_of_enlightenment_title:0 "A Center of Enlightenment"
+ pf_car_center_of_enlightenment_desc:0 "university in carthage, at least 40 dev / 100 adm and 100 dip, modifier: tech cost for 20 years"
+
+ pf_car_island_hopping_title:0 "Island Hopping"
+ pf_car_island_hopping_desc:0 "own at least 3 islands from previous mission, own crete directly / buff crete, claims on bengazi area and delta"
+
+ pf_car_the_land_of_alexander_title:0 "The Lands of Alexander"
+ pf_car_the_land_of_alexander_desc:0 "own all the lands of cereneica and delta / claims on bahari and palestine"
+
+ pf_car_the_motherland_beckons_title:0 "Motherland Beckons"
+ pf_car_the_motherland_beckons_desc:0 "own bahari and palestine areas / prestige, claims on phoenicia and egypt"
+ gain_access_to_great_library_tt: "Gain access to §YThe Great Library§! great project in [358.GetName]"
+
+ pf_car_phoenicia_our_home_title:0 "Phoenicia Our Home"
+ pf_car_phoenicia_our_home_desc:0 "own all of phoenicia, claims on anatolia, rename Sayda to Tyre, buff province and give dev"
+
+ pf_car_secure_ports_title:0 "Securing Ports"
+ pf_car_secure_ports_desc:0 "own at least 15 ports, at least 10 dev each / modifier for navy"
+
+ pf_car_rivaling_roma_title:0 "Rivaling Roma"
+ pf_car_rivaling_roma_desc:0 "carthage more dev than roma, prosperity in carthage / give stab, dev carthage, modifier for prosperity growth and splendor"
+
+ pf_car_buns_for_the_people_title:0 "Buns for the People"
+ pf_car_buns_for_the_people_desc:0 "at least 10 provinces producing grain with a manufactory and at least 5 production dev / permanent fl modifier"
+
+ pf_car_a_navy_worth_of_yam_title:0 "A Worthy Navy for Yam"
+ pf_car_a_navy_worth_of_yam_desc:0 "be at naval fl, have adrmiral / claim on ionian islands and crete, buffs for galleys"
+
+ pf_car_the_punic_admiralty_title:0 "The Punic Admiralty"
+ pf_car_the_punic_admiralty_desc:0 "naval force limit 50, at least 50 ships, at least 5 heavies, t5 reform unlocked / give new t5 reform giving access to Quinquereme galley type"
+
+ pf_car_the_gateway_to_the_east_title:0 "The Gateway to the East"
+ pf_car_the_gateway_to_the_east_desc:0 "own_core alexandria, at least 25 development, shipyard and marketplace / event: unlock library, dev province, change religion and culture, rename to Hannibalia"
+
+ pf_car_phoenician_strongholds_title:0 "Phoenician Strongholds"
+ pf_car_phoenician_strongholds_desc:0 "at least 4 20 dev punic culture provinces in egypy or phoenicia / up to 4 of those provinces receive perm modfiers and add_prestige"
+
+ pf_car_phoenician_trade_routes_title:0 "Phoenician Trade Routes"
+ pf_car_phoenician_trade_routes_desc:0 "at least 3 level 2 cot with a marketplace / upgrade all marketplaced on CoT and give dip mana"
+
+ pf_car_productive_provinces_title:0 "Productive Provinces"
+ pf_car_productive_provinces_desc:0 "num of manufactories at least 10 for grain, wool or iron / income from those three trade goods, trade steering modifier "
+
+ pf_car_clothe_the_citizens_title:0 "Clothe the Citizens"
+ pf_car_clothe_the_citizens_desc:0 "at least 10 cloth provinces with manufactory and at leat 6 dev / if at least 10 will be changed to silk, permanent modifier to goods produced"
+
+
+
+ pf_car_african_riches_title: "African Riches"
+ pf_car_african_riches_desc: "REPLACE_ME"
+
+ pf_car_monopolize_the_trade_title: "Monopolize the Trade"
+ pf_car_monopolize_the_trade_desc: "REPLACE_ME"
+
+ pf_car_looking_to_the_waves_title: "Looking to the Waves"
+ pf_car_looking_to_the_waves_desc: "REPLACE_ME"
+
+ pf_car_colonial_mindset_title: "A Colonial Mindset"
+ pf_car_colonial_mindset_desc: "REPLACE_ME"
+
+ pf_car_westward_title: "Westward"
+ pf_car_westward_desc: "REPLACE_ME"
+
+ pf_car_a_whole_new_world_title: "A Whole New World"
+ pf_car_a_whole_new_world_desc: "REPLACE_ME"
+
+
+

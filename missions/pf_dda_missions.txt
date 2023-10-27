@@ -1,14 +1,76 @@
-pf_dda_5 = {
+pf_dda_2 = {
     generic = no
     has_country_shield = yes
     ai = yes
-    slot = 5
+    slot = 2
     potential = {
         tag = DDA
     }
-    pf_dda_become_blessed = {
-        position = 0
+    pf_dda_italian_diplomacy = {
+        position = 1
+        icon = mission_diplomatic_relation
+        provinces_to_highlight = {
+            owned_by = emperor
+        }
+        trigger = {
+            if = {
+                limit = {
+                    hre_size = 1
+                }
+                emperor = {
+                    has_opinion = {
+                        who = ROOT
+                        value = 75
+                    }
+                }
+                any_elector = {
+                    has_opinion = {
+                        who = ROOT
+                        value = 75
+                    }
+                }
+            }
+            else = {
+                any_known_country = {
+                    has_opinion = {
+                        who = ROOT
+                        value = 75
+                    }
+                    total_development = 100
+                }
+            }
+        }
+        effect = {
+            add_country_modifier = {
+                name = pf_dda_diplo_rep
+                duration = 365
+            }
+        }
+    }
+    pf_dda_connect_with_other_faiths = {
+        position = 3
         icon = mission_hands_praying
+        required_missions = {
+            pf_dda_italian_diplomacy
+        }
+        trigger = {
+            any_ally = {
+                NOT = {has_matching_religion = ROOT}
+            }
+        }
+        effect = {
+            add_country_modifier = {
+                name = pf_dda_tolerance
+                duration = 18250
+            }
+        }
+    }
+    pf_dda_the_hall_of_pantheons = {
+        position = 4
+        icon = mission_parthenon
+        required_missions = {
+            pf_dda_connect_with_other_faiths
+        }
         provinces_to_highlight = {
             has_great_project = {
                 type = hall_of_pantheons
@@ -16,7 +78,7 @@ pf_dda_5 = {
         }
         trigger = {
             custom_trigger_tooltip = {
-                tooltip = pf_dda_pf_dda_become_blessed_tt1
+                tooltip = pf_dda_pf_dda_the_hall_of_pantheons_tt1
                 any_owned_province = {
                     has_province_flag = pf_mon_hop_blessing_flag
                     NOT = {
@@ -29,33 +91,459 @@ pf_dda_5 = {
             }
         }
         effect = {
-            add_army_professionalism = 0.05
+            custom_tooltip = pf_dda_pf_dda_the_hall_of_pantheons_tt2
+            set_country_flag = pf_dda_blessing_money
         }
     }
-    pf_dda_a_deal_with_rome = {
+    pf_dda_a_holy_nation = {
+        position = 5
+        icon = holy_state
+        required_missions = {
+            pf_dda_the_hall_of_pantheons
+        }
+        trigger = {
+            custom_trigger_tooltip = {
+                tooltip = pf_dda_pf_dda_a_holy_nation_tt1
+                has_global_modifier_value = {
+                    which = tolerance_heathen
+                    value = 1
+                }
+            }
+            any_owned_province = {
+                has_owner_religion = no
+                has_missionary = no
+            }
+        }
+        effect = {
+            custom_tooltip = pf_dda_pf_dda_a_holy_nation_tt2
+            hidden_effect = {
+                set_variable = {
+                    which = temp
+                    value = 5
+                }
+                while = {
+                    limit = { 
+                        check_variable = {
+                            which = temp
+                            value = 1
+                        }
+                    }
+                    random_owned_province = {
+                        limit = { 
+                            NOT = {has_building = temple}
+                            NOT = {has_province_flag = target_unique_provinces_temp}
+                        }
+                        add_building_construction = {
+                            building = temple
+                            speed = 0.5
+                            cost = 0
+                        }
+                        set_province_flag = target_unique_provinces_temp
+                    }
+                    change_variable = {
+                        which = temp
+                        value = -1
+                    }
+                }
+                every_owned_province = {
+                    limit = {
+                        has_province_flag = target_unique_provinces_temp
+                    }
+                    clr_province_flag = target_unique_provinces_temp
+                }
+            }
+        }
+    }
+}
+pf_dda_3 = {
+    generic = no
+    has_country_shield = yes
+    ai = yes
+    slot = 3
+    potential = {
+        tag = DDA
+    }
+    pf_dda_train_our_army = {
         position = 1
-        icon = mission_alliances
+        icon = mission_cossack_cavalry
+        trigger = {
+            OR = {
+                mil_tech = 4
+                army_tradition = 40
+            }
+        }
+        effect = {
+            add_army_professionalism = 0.1
+        }
+    }
+    pf_dda_invade_illyria = {
+        position = 2
+        icon = mission_fire_of_london
+        required_missions = {
+            pf_dda_italian_diplomacy
+            pf_dda_train_our_army
+            pf_dda_increase_conscription
+        }
         provinces_to_highlight = {
-            owned_by = emperor
+            owned_by = ILY
         }
         trigger = {
             if = {
-                limit = {
-                    hre_size = 1
-                }
-                reverse_has_opinion = {
-                    who = emperor
-                    value = 75
+                limit = {exists = ILY}
+                is_in_war = {
+                    attacker_leader = ROOT
+                    defender_leader = ILY
                 }
             }
             else = {
-                total_development = 100
+                any_owned_province = {
+                    is_core = ILY
+                }
             }
         }
         effect = {
             add_country_modifier = {
-                name = pf_dda_diplo_rep
+                name = pf_dda_invade
                 duration = 365
+            }
+        }
+    }
+    pf_dda_lose_free_city_status = {
+        position = 3
+        icon = kingdom_of_lombardy
+        required_missions = {
+            pf_dda_invade_illyria
+        }
+        trigger = {
+            custom_trigger_tooltip = {
+                tooltip = pf_dda_pf_dda_lose_free_city_status_tt1
+                NOT = {
+                    has_government_attribute = free_city
+                }
+            }
+        }
+        effect = {
+            country_event_with_insight = {
+                id = pf_mon_events.2
+                insight_tooltip = pf_dda_pf_dda_lose_free_city_status_tt2
+            }
+        }
+    }
+    pf_dda_fortify_our_new_terriories = {
+        position = 4
+        icon = fortify_malta
+        required_missions = {
+            pf_dda_lose_free_city_status
+        }
+        provinces_to_highlight = {
+            owned_by = DDA
+            NOT = {fort_level = 2}
+        }
+        trigger = {
+            num_of_owned_provinces_with = {
+                value = 3
+                fort_level = 2
+            }
+        }
+        effect = {
+            add_adm_power = 100
+        }
+    }
+    pf_dda_a_stable_nation = {
+        position = 5
+        icon = mission_the_sudebnik
+        required_missions = {
+            pf_dda_fortify_our_new_terriories
+        }
+        trigger = {
+            is_at_war = no
+            stability = 3
+            all_owned_province = {
+                is_core = DDA
+            }
+            crown_land_share = 30
+        }
+        effect = {
+            illyria_region = {
+                add_permanent_claim = ROOT
+            }
+        }
+    }
+    pf_dda_a_sanctuary_for_all_faiths = {
+        position = 6
+        icon = mission_alliances
+        required_missions = {
+            pf_dda_a_holy_nation
+            pf_dda_a_stable_nation
+            pf_dda_a_powerful_nation
+            pf_dda_a_wealthy_nation
+        }
+        trigger = {
+            is_great_power = yes
+        }
+        effect = {
+            override_country_name = pf_dda_pf_dda_a_sanctuary_for_all_faiths_tt1
+            add_country_modifier = {
+                name = pf_dda_unite_all_religions
+                duration = -1
+            }
+        }
+    }
+    pf_dda_a_blessed_nation = {
+        position = 7
+        icon = mission_land_of_churches
+        required_missions = {
+            pf_dda_a_sanctuary_for_all_faiths
+        }
+        trigger = {
+            OR = {
+                AND = {
+                    any_owned_province = {religion = punic_religion}
+                    any_owned_province = {religion = hellenic}
+                    any_owned_province = {religion = romana}
+                    any_owned_province = {religion = norse_pagan_reformed}
+                }
+                num_of_cities = 500
+            }
+        }
+        effect = {
+            add_adm_tech = 1
+            add_dip_tech = 1
+            add_mil_tech = 1
+        }
+    }
+}
+pf_dda_4 = {
+    generic = no
+    has_country_shield = yes
+    ai = yes
+    slot = 4
+    potential = {
+        tag = DDA
+    }
+    pf_dda_increase_conscription = {
+        position = 1
+        icon = mission_assemble_an_army
+        trigger = {
+            army_size_percentage = 0.85
+        }
+        effect = {
+            add_country_modifier = {
+                name = pf_dda_willing_army
+                duration = 1825
+            }
+        }
+    }
+    pf_dda_turn_the_tide = {
+        position = 3
+        icon = mission_spoils_of_war
+        required_missions = {
+            pf_dda_invade_illyria
+        }
+        trigger = {
+            custom_trigger_tooltip = {
+                tooltip = pf_dda_pf_dda_turn_the_tide_tt1
+                any_owned_province = {
+                    is_core = ILY
+                    NOT = {is_core = DDA}
+                }
+            }
+        }
+        effect = {
+            custom_tooltip = pf_dda_pf_dda_turn_the_tide_tt2
+            hidden_effect = {
+                set_variable = {
+                    which = temp
+                    value = 5
+                }
+                while = {
+                    limit = { 
+                        check_variable = {
+                            which = temp
+                            value = 1
+                        }
+                    }
+                    random_owned_province = {
+                        limit = { 
+                            NOT = {has_owner_culture = yes}
+                            NOT = {has_province_flag = target_unique_provinces_temp}
+                        }
+                        add_culture_construction = {
+                            speed = 0.9
+                            cost = 0
+                        }
+                        set_province_flag = target_unique_provinces_temp
+                    }
+                    change_variable = {
+                        which = temp
+                        value = -1
+                    }
+                }
+                every_owned_province = {
+                    limit = {
+                        has_province_flag = target_unique_provinces_temp
+                    }
+                    clr_province_flag = target_unique_provinces_temp
+                }
+            }
+        }
+    }
+    pf_dda_naval_dominance = {
+        position = 4
+        icon = mission_russian_navy
+        required_missions = {
+            pf_dda_turn_the_tide
+        }
+        trigger = {
+            navy_size_percentage = 0.95
+            navy_size = 16
+        }
+        effect = {
+            add_mercantilism = 3
+        }
+    }
+    pf_dda_a_powerful_nation = {
+        position = 5
+        icon = mission_conquer_air
+        required_missions = {
+            pf_dda_naval_dominance
+        }
+        trigger = {
+            army_professionalism = 0.2
+            military_strength = {
+                who = ILY
+                value = 1.5
+            }
+            is_subject = no
+            num_of_allies = 2
+        }
+        effect = {
+            add_permanent_power_projection = {
+                type = 25_permanent_power_projection
+                amount = 25
+            }
+        }
+    }
+}
+pf_dda_5 = {
+    generic = no
+    has_country_shield = yes
+    ai = yes
+    slot = 5
+    potential = {
+        tag = DDA
+    }
+    pf_dda_develop_dardania = {
+        position = 1
+        icon = interest_of_holland
+        provinces_to_highlight = {
+            province_id = 4957
+        }
+        trigger = {
+            capital = 4957
+            capital_scope = {development = 16}
+        }
+        effect = {
+            capital_scope = {
+                if = {
+                    limit = {has_building = courthouse}
+                    add_base_tax = 2
+                    add_base_production = 2
+                    add_base_manpower = 2
+                }
+                else = {add_building = courthouse}
+            }
+        }
+    }
+    pf_dda_embrace_renaissance = {
+        position = 2
+        icon = mission_english_renaissance
+        required_missions = {
+            pf_dda_develop_dardania
+        }
+        trigger = {
+            has_institution = renaissance
+            prestige = 15
+        }
+        effect = {
+            change_innovativeness = 10
+        }
+    }
+    pf_dda_improve_trade = {
+        position = 3
+        icon = support_the_bulk_trades
+        required_missions = {
+            pf_dda_embrace_renaissance
+        }
+        trigger = {
+            light_ship_fraction = 0.3
+            navy_size = ILY
+            mercantilism = 14
+        }
+        effect = {
+            add_country_modifier = {
+                name = pf_dda_mercantile_strategy
+                duration = 5475
+            }
+        }
+    }
+    pf_dda_jewel_of_the_adriatic = {
+        position = 4
+        icon = mission_raid_christian_trade
+        required_missions = {
+            pf_dda_improve_trade
+        }
+        trigger = {
+            home_trade_node = {
+                trade_share = {
+                    country = ROOT
+                    share = 10
+                }
+            }
+        }
+        effect = {
+            capital_scope = {
+                center_of_trade = 1
+            }
+            every_owned_province = {
+                limit = {province_has_center_of_trade_of_level = 1}
+                add_center_of_trade_level = 1
+            }
+        }
+    }
+    pf_dda_a_wealthy_nation = {
+        position = 5
+        icon = mission_establish_mint_towns
+        required_missions = {
+            pf_dda_jewel_of_the_adriatic
+        }
+        trigger = {
+            treasury = 300
+            NOT = {num_of_loans = 1}
+            NOT = {corruption = 0.1}
+        }
+        effect = {
+            add_treasury = -300
+            custom_tooltip = pf_dda_pf_dda_a_wealthy_nation_tt1
+            custom_tooltip = pf_dda_pf_dda_a_wealthy_nation_tt2
+            custom_tooltip = pf_dda_pf_dda_a_wealthy_nation_tt3
+            distribute_base_dev_to_provinces = {
+                amount = 3
+                type = "tax"
+                num = 2
+                tooltip = ""
+            }
+            distribute_base_dev_to_provinces = {
+                amount = 3
+                type = "production"
+                num = 2
+                tooltip = ""
+            }
+            distribute_base_dev_to_provinces = {
+                amount = 3
+                type = "manpower"
+                num = 2
+                tooltip = ""
             }
         }
     }

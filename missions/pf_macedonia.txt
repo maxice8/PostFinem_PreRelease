@@ -196,7 +196,7 @@ mac_1 = {
 
 		trigger = {  
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 40
+				value = 35
 				region = anatolia_region
 			}
 		} 
@@ -408,9 +408,11 @@ mac_2 = {
 		effect = {  
 			add_mil_power = 100
 			custom_tooltip = empty_line_tt
-			rum_area = { add_permanent_claim = ROOT }
+			ankara_area = { add_permanent_claim = ROOT }
 			karaman_area = { add_permanent_claim = ROOT }
 			cukurova_area = { add_permanent_claim = ROOT }
+			rum_area = { add_permanent_claim = ROOT }
+			kastamonu_area = { add_permanent_claim = ROOT }
 		} 
 	}
 

@@ -69,3 +69,27 @@ pf_mnd_state_secrets_compromised = {
 	global_spy_defence = -0.25
 }
 
+pf_dda_invade = {
+	siege_ability = 0.25
+	war_exhaustion = -0.05
+	global_monthly_devastation = -0.5
+}
+
+pf_dda_tolerance = {
+	tolerance_heretic = 1
+	tolerance_heathen = 1
+}
+
+pf_dda_mercantile_strategy = {
+	placed_merchant_power_modifier = 0.5
+}
+
+pf_dda_willing_army = {
+	land_maintenance_modifier = -0.1
+}
+
+pf_dda_unite_all_religions = {
+	can_claim_states = yes
+	years_of_nationalism = -3
+}
+

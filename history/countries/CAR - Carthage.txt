@@ -3,9 +3,10 @@ technology_group = western
 primary_culture = punic_culture
 government = republic
 add_government_reform = pf_rabim_qahal
+religious_school = orthodox_school
 government_rank = 2
 capital = 341
-1444.11.11 = { 
+1444.10.10 = { 
 	monarch = { 
 		name = "Magal"
 		dynasty = "Dugurati"
@@ -16,3 +17,4 @@ capital = 341
 		death_date = 1445.01.01
 	}
 }
+set_ruler_flag = suffet_ruler_flag

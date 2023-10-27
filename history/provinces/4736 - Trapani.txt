@@ -1,6 +1,6 @@
 # - Syracusa
-base_tax = 4
-base_production = 4
+base_tax = 3
+base_production = 3
 trade_goods = fish
 base_manpower = 3
 capital = "Trapani"
@@ -15,5 +15,6 @@ add_core = CLN
 owner = CLN
 controller = CLN
 hre = yes
-center_of_trade = 1
+add_core = THS
+
 fort_15th = yes

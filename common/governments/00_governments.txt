@@ -193,6 +193,9 @@ monarchy = {
 				ottoman_provincial_government_system_reform
 				namestnik_reform
 				consulate_of_the_sea
+				# pf [[[
+				pf_ritualised_diplomacy_reform
+				# ]]]
 			}
 		}
 		state_and_religion = {
@@ -231,6 +234,9 @@ monarchy = {
 				head_of_the_patriarchy_reform
 				anglican_state_church_reform
 				english_conciliarism_reform
+				# pf [[[
+				pf_punic_festivals_reform
+				# ]]]
 			}
 		}
 		military_doctrines = {
@@ -239,6 +245,8 @@ monarchy = {
 				pf_integrated_phalanx
 				pf_catephract_focus
 				pf_militarised_druids_reform
+				pf_citizen_volunteers_reform
+				nordic_huskarl_recruitment_reform
 				# ]]]
 				organized_military_staff_reform
 				military_engineering_reform
@@ -343,6 +351,9 @@ monarchy = {
 				direct_royal_administration_reform
 				administration_of_the_parliament_reform
 				strengthened_parliament_reform
+				# pf [[[
+				pf_eager_councillors_reform
+				# ]]]
 			}
 		}
 		economical_matters = {
@@ -587,7 +598,9 @@ republic = {
 				# pf = [[[
 				pf_lagr_republic
 				pf_sardinian_league_reform
+				pf_syncretic_state
 				pf_rabim_qahal
+				icelandic_althingi_reform
 				# ]]]
 				oligarchy_reform
 				signoria_reform
@@ -671,13 +684,13 @@ republic = {
 				legislative_assembly_reform
 				national_constituent_reform
 				national_assembly_reform
+				# pf [[[
+				pf_ritualised_diplomacy_reform
+				# ]]]
 			}
 		}
 		republic_and_religion = {
 			reforms = {
-				# pf [[[
-				pf_lag_acts_of_toleration
-				# ]]]
 				papal_embassy_reform
 				lands_for_the_monasteries_reform
 				focus_of_the_patriarchy_reform
@@ -714,6 +727,10 @@ republic = {
 				head_of_the_patriarchy_reform
 				anglican_state_church_reform
 				english_conciliarism_reform
+				# pf [[[
+				pf_punic_festivals_reform
+				pf_lag_acts_of_toleration
+				# ]]]
 			}
 		}
 		military_doctrines = {
@@ -721,6 +738,8 @@ republic = {
 				# pf [[[
 				pf_lag_lowlander_naval_tradition_reform
 				pf_integrated_phalanx
+				pf_citizen_volunteers_reform
+				nordic_huskarl_recruitment_reform
 				# ]]]
 				organized_military_staff_reform
 				military_engineering_reform
@@ -808,6 +827,7 @@ republic = {
 			reforms = {
 				# pf [[[
 				pf_lag_provincial_things
+				pf_eager_councillors_reform
 				# ]]]
 				provincial_governments_reform
 				administrative_divisions_reform
@@ -1033,6 +1053,7 @@ tribal = {
 			reforms = {
 				# pf [[[
 				pf_longboat_focus
+				nordic_huskarl_recruitment_reform
 				# ]]]
 				organized_military_staff_reform
 				military_engineering_reform
@@ -1188,7 +1209,11 @@ theocracy = {
 			reforms = {
 				# pf [[[
 				pf_persian_satrapy
+				pf_collapsed_zoroastrian_theocracy
+				pf_centralized_zoroastrian_theocracy
+				pf_zoroastrian_theocracy_empire
 				pf_athens_archon
+				order_of_the_shadows_reform
 				# ]]]
 				# Vanilla
 				leading_clergy_reform
@@ -1239,6 +1264,9 @@ theocracy = {
 				education_of_the_advisors_reform
 				education_of_the_missionaries_reform
 				education_of_the_people_reform
+				# pf [[[
+				pf_ritualised_diplomacy_reform
+				# ]]]
 			}
 		}
 		religoius_doctrine = {
@@ -1271,12 +1299,18 @@ theocracy = {
 				strengthened_the_patriarchy_reform
 				head_of_the_patriarchy_reform
 				anglican_state_church_reform
+				# pf [[[
+				pf_persian_zealotry_reform
+				pf_punic_festivals_reform
+				# ]]]
 			}
 		}
 		military_doctrines = {
 			reforms = {
 				# pf [[[
 				pf_integrated_phalanx
+				pf_citizen_volunteers_reform
+				nordic_huskarl_recruitment_reform
 				# ]]]
 				organized_military_staff_reform
 				military_engineering_reform
@@ -1360,6 +1394,9 @@ theocracy = {
 				pious_merchants_reform
 				monastic_breweries_reform
 				warrior_monks_reform
+				# pf [[[
+				pf_eager_councillors_reform
+				# ]]]
 			}
 		}
 		economical_matters = {

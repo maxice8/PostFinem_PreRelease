@@ -1,0 +1,33 @@
+bribe_ruler_spy_action = {
+	category = covert
+
+	is_visible = {
+		has_country_flag = may_bribe_rulers		# from saluzzo missions
+	}
+	is_allowed = {
+		ROOT = {
+			has_spy_network_in = {
+				who = from
+				value = 40
+			}
+		}
+	}
+	on_accept = {
+		FROM = {
+			add_opinion = {
+				who = root
+				modifier = opinion_bribe_ruler_esp
+			}
+		}
+		add_spy_network_in = {
+			who = from
+			value = -40
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}

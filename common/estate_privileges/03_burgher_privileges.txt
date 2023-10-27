@@ -2371,6 +2371,7 @@ estate_burghers_economical_boost = {
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	is_valid = {
 		has_dlc = "Domination"
+		NOT = { has_country_flag = pf_per_unlocked_upgraded_trade_privilege }
 	}
 	can_select = {
 		if = {

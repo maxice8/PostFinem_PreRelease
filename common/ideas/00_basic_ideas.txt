@@ -1089,6 +1089,17 @@ exploration_ideas = {
 				tag = LAG
 			}
 		}
+		modifier = {
+			factor = 5
+			tag = CAR
+			num_of_owned_provinces_with = {
+				value = 20
+				OR = {
+					region = iberia_region
+					region = mauretania_region
+				}
+			}	
+		}
 	}
 }
 

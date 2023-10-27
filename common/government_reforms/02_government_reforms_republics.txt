@@ -2010,6 +2010,7 @@ nepotism_reform = {
 				has_reform = prussian_republic_reform
 				# pf
 				has_reform = pf_lagr_republic
+				has_reform = pf_rabim_qahal
 			}
 		}
 	}
@@ -2378,6 +2379,7 @@ lottery_reform = {
 				has_reform = prussian_republic_reform
 				# pf
 				has_reform = pf_lagr_republic
+				has_reform = pf_rabim_qahal
 			}
 		}
 	}
@@ -2402,6 +2404,7 @@ force_reelection_reform = {
 		OR = {
 			is_revolutionary = no
 			NOT = { has_dlc = "Emperor" }
+			NOT = { has_reform = pf_rabim_qahal }
 		}
 	}
 	trigger = {
@@ -2438,6 +2441,7 @@ devotee_to_the_people_reform = {
 			has_reform = prussian_republic_reform
 			# pf
 			has_reform = pf_lagr_republic
+			has_reform = pf_rabim_qahal
 		}
 	}
 	trigger = {
@@ -2452,6 +2456,7 @@ devotee_to_the_people_reform = {
 			has_reform = prussian_republic_reform
 			# pf
 			has_reform = pf_lagr_republic
+			has_reform = pf_rabim_qahal
 		}
 	}
 	modifiers = {

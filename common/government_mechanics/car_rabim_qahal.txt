@@ -8,18 +8,27 @@ car_rabim_qahal = {
 			gui = car_rabim_qahal_gov_mech
 			min = -100
 			max = 100
-			default = 0
+			default = 10
 			reset_on_new_ruler = no
 			base_monthly_growth = 0
 			range_modifier = {
 				start_value = -100
 				end_value = -1
-				modifier = { prestige = 1 }
+				modifier = { 
+					republican_tradition = 0.5
+					trade_efficiency = 0.1
+					development_cost = -0.1
+				}
 			}
 			range_modifier = {
 				start_value = 0
 				end_value = 100
-				modifier = { legitimacy = 1 }
+				modifier = { 
+					republican_tradition = -1
+					global_manpower_modifier = 0.1
+					core_creation = -0.1
+					diplomatic_reputation = 1
+				}
 			}
 			on_max_reached = {
 				

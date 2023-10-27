@@ -49,7 +49,7 @@ religious_center = {
 		# }
 		# else_if = {
 		# 	limit = {
-		# 		province_id = 385 # Mecca
+		# 		province_id = 4288 # Taiz
 		# 	}
 		# 	religion_group = muslim
 		# }
@@ -64,12 +64,6 @@ religious_center = {
 				province_id = 677
 			}
 			religion = vajrayana
-		}
-		else_if = {
-			limit = {
-				province_id = 146
-			}
-			religion = hellenic
 		}
 		else_if = {
 			limit = {
@@ -89,39 +83,39 @@ religious_center = {
 			}
 			religion = buddhism
 		}
-		else_if = {
-			limit = {
-				province_id = 2311
-			}
-			religion = shiite
-		}
-		else_if = {
-			limit = {
-				province_id = 2221
-			}
-			religion = shiite
-		}
+		# else_if = {
+		# 	limit = {
+		# 		province_id = 2311
+		# 	}
+		# 	religion = shiite
+		# }
+		# else_if = {
+		# 	limit = {
+		# 		province_id = 2221
+		# 	}
+		# 	religion = shiite
+		# }
 		else_if = {
 			limit = {
 				province_id = 4359
 			}
 			religion = shinto
 		}
-		else_if = {
-			limit = {
-				province_id = 4720
-			}
-			OR = {
-				religion = protestant
-				religion = reformed
-			}
-		}
-		else_if = {
-			limit = {
-				province_id = 266
-			}
-			religion = hussite
-		}
+		# else_if = {
+		# 	limit = {
+		# 		province_id = 4720
+		# 	}
+		# 	OR = {
+		# 		religion = protestant
+		# 		religion = reformed
+		# 	}
+		# }
+		# else_if = {
+		# 	limit = {
+		# 		province_id = 266
+		# 	}
+		# 	religion = hussite
+		# }
 		else_if = {
 			limit = {
 				province_id = 2140 # Yanzhou
@@ -140,6 +134,39 @@ religious_center = {
 				province_id = 146 # Athens
 			}
 			religion = hellenic
+		}
+		else_if = {
+			limit = {
+				province_id = 373 # Hill of Tara
+			}
+			religion = druidic
+		}
+		else_if = {
+			limit = {
+				province_id = 341 #Carthage
+			}
+			religion = punic_religion
+		}
+		else_if = {
+			limit = {
+				province_id = 104 #Milano
+			}
+			religion = romana
+		}
+		else_if = {
+			limit = {
+				province_id = 213 #Barcino
+			}
+			religion = punic_religion
+		}
+		else_if = {
+			limit = {
+				province_id = 4772 #Irminsul
+			}
+			OR = {
+				religion = germanic_religion
+				religion = south_germanic_religion
+			}
 		}
 	}
 
@@ -191,34 +218,34 @@ perpetual_diet = {
 
 #Coptic control of Alexandria
 
-coptic_alexandria = {
-	potential = {
-		normal_or_historical_nations = yes
-	}
+# coptic_alexandria = {
+# 	potential = {
+# 		normal_or_historical_nations = yes
+# 	}
 	
-	#viewer = {
-	#}
+# 	#viewer = {
+# 	#}
 	
-	trigger = {
-		owner = {
-			religion = coptic
-		}
-	}
+# 	trigger = {
+# 		owner = {
+# 			religion = coptic
+# 		}
+# 	}
 	
-	prestige = 0.5
-	missionaries = 1
-	tolerance_own = 1
+# 	prestige = 0.5
+# 	missionaries = 1
+# 	tolerance_own = 1
 	
-	#Province scope
-	on_activation = {
+# 	#Province scope
+# 	on_activation = {
 	
-	}
+# 	}
 	
-	on_deactivation = {
+# 	on_deactivation = {
 	
-	}
+# 	}
 	
-}
+# }
 
 #Therevada Control of sacred tooth
 
