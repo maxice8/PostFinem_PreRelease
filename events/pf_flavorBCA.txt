@@ -15,7 +15,7 @@ country_event = { #re-election
 	}
 
 	option = { #re-election option
-		name = pf_flavor_bca.a
+		name = pf_flavor_bca.1.a
 		if = {
 			limit = {
 				has_ruler_flag = pf_bca_general_ruler
@@ -49,7 +49,7 @@ country_event = { #re-election
 	}
 
 	option = { # elect a general
-		name = pf_flavor_bca.b 
+		name = pf_flavor_bca.1.b 
 		define_leader_to_ruler = {
 			type = general
 			mil = 2
@@ -63,7 +63,7 @@ country_event = { #re-election
 	}
 
 	option = { #elect an admiral
-		name = pf_flavor_bca.c 
+		name = pf_flavor_bca.1.c 
 		define_leader_to_ruler = {
 			type = admiral
 			dip = 2
