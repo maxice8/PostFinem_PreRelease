@@ -42,6 +42,25 @@ pf_rabim_qahal = {
 	}
 }
 
+pf_quinquereme_shipyards = {
+	icon = "war_ship"
+	potential = {
+		has_country_flag = pf_quinquereme_allowed_flag
+	}
+	modifiers = {
+		has_man_of_war = yes
+		allowed_man_of_war_fraction = 0.2
+		sailors_recovery_speed = 0.2
+	}
+	# custom_attributes = {
+	# 	buffed_strong_duchies = yes #+5% Loyalty
+	# }
+	
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+
 pf_syncretic_state = {
 	icon = "clergyman"
 	potential = {

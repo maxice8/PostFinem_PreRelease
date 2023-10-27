@@ -42,11 +42,15 @@ liberty_ideas = {
 			is_subject = yes
 		}	
 		modifier = {
-			factor = 1.25
-			num_of_cities = 20
+			factor = 1.1
+			num_of_cities = 30
 		}	
 		modifier = {
-			factor = 1.25
+			factor = 1.1
+			num_of_cities = 50
+		}	
+		modifier = {
+			factor = 1.1
 			government = republic
 		}	
 		modifier = {

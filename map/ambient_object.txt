@@ -33,7 +33,7 @@ type={
 		name="French_windmill"
 		hidden_on_start=no
 		position={
-			2841.000 0.100 1433.000 
+			2845.000 0.100 1380.000 
 		}
 		rotation={
 			0.000 -15.000 0.000 
@@ -83,7 +83,7 @@ type={
 		name="French_windmill"
 		hidden_on_start=no
 		position={
-			2853.000 0.100 1531.000 
+			2878.000 0.100 1547.000 
 		}
 		rotation={
 			0.000 -15.000 0.000 
@@ -93,7 +93,7 @@ type={
 		name="French_windmill"
 		hidden_on_start=no
 		position={
-			2831.000 0.100 1480.000 
+			2881.000 0.100 1406.000 
 		}
 		rotation={
 			0.000 -15.000 0.000 
@@ -123,7 +123,7 @@ type={
 		name="French_windmill"
 		hidden_on_start=no
 		position={
-			2893.000 0.100 1542.000 
+			2899.000 0.100 1575.000 
 		}
 		rotation={
 			0.000 -15.000 0.000 
@@ -2362,18 +2362,18 @@ type={
 	}
 }
 type={
-	type="nammi_cologne_cathedral_entity"
+	type="nammi2_himeji_castle_entity"
 	use_animation=no
-	scale=0.730000
+	scale=0.290000
 	time_duration=300.000000
 	object={
-		name="cologne"
+		name="himeji_castle"
 		hidden_on_start=no
 		position={
-			2908.300 0.350 1537.500 
+			4908.200 -0.300 1234.400 
 		}
 		rotation={
-			0.000 -90.000 0.000 
+			0.000 -25.000 0.000 
 		}
 	}
 }
@@ -2410,18 +2410,20 @@ type={
 	}
 }
 type={
-	type="nammi_notre_dame_cathedral_entity"
+	type="suez_canal"
 	use_animation=no
-	scale=0.580000
+	scale=0.800000
 	time_duration=300.000000
+	always_visible=yes
+	visible_in_all_map_modes=yes
 	object={
-		name="notre_dame"
-		hidden_on_start=no
+		name="suez_canal"
+		hidden_on_start=yes
 		position={
-			2843.600 0.200 1494.700 
+			3315.000 0.100 1149.000 
 		}
 		rotation={
-			0.000 20.000 0.000 
+			0.000 2.000 0.000 
 		}
 	}
 }
@@ -2460,18 +2462,20 @@ type={
 	}
 }
 type={
-	type="nammi_tower_of_london_entity"
+	type="kiel_canal"
 	use_animation=no
-	scale=0.300000
+	scale=1.200000
 	time_duration=300.000000
+	always_visible=yes
+	visible_in_all_map_modes=yes
 	object={
-		name="tower_of_london"
-		hidden_on_start=no
+		name="kiel_canal"
+		hidden_on_start=yes
 		position={
-			2802.350 0.200 1550.400 
+			2956.200 -0.100 1601.800 
 		}
 		rotation={
-			0.000 13.000 0.000 
+			0.000 -42.000 0.000 
 		}
 	}
 }
@@ -2644,7 +2648,7 @@ type={
 		name="stonehenge"
 		hidden_on_start=no
 		position={
-			2784.000 0.150 1541.000 
+			2781.000 0.150 1545.000 
 		}
 		rotation={
 			0.000 -0.800 0.000 
@@ -2680,58 +2684,6 @@ type={
 		}
 		rotation={
 			0.000 -30.000 0.000 
-		}
-	}
-}
-type={
-	type="nammi2_himeji_castle_entity"
-	use_animation=no
-	scale=0.290000
-	time_duration=300.000000
-	object={
-		name="himeji_castle"
-		hidden_on_start=no
-		position={
-			4908.200 -0.300 1234.400 
-		}
-		rotation={
-			0.000 -25.000 0.000 
-		}
-	}
-}
-type={
-	type="kiel_canal"
-	use_animation=no
-	scale=1.200000
-	time_duration=300.000000
-	always_visible=yes
-	visible_in_all_map_modes=yes
-	object={
-		name="kiel_canal"
-		hidden_on_start=yes
-		position={
-			2956.200 -0.100 1601.800 
-		}
-		rotation={
-			0.000 -42.000 0.000 
-		}
-	}
-}
-type={
-	type="suez_canal"
-	use_animation=no
-	scale=0.800000
-	time_duration=300.000000
-	always_visible=yes
-	visible_in_all_map_modes=yes
-	object={
-		name="suez_canal"
-		hidden_on_start=yes
-		position={
-			3315.000 0.100 1149.000 
-		}
-		rotation={
-			0.000 2.000 0.000 
 		}
 	}
 }

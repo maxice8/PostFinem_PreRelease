@@ -2404,6 +2404,7 @@ force_reelection_reform = {
 		OR = {
 			is_revolutionary = no
 			NOT = { has_dlc = "Emperor" }
+			NOT = { has_reform = pf_rabim_qahal }
 		}
 	}
 	trigger = {

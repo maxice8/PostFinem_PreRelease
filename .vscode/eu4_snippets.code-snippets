@@ -171,8 +171,13 @@
 		"body": ["£${1:mil}£$0"],
 		"description": "Adds the Pound symbols for an icon"
 	},
-	"Empty Line": {
-		"prefix": ["empty"],
+	"Empty Line No Space": {
+		"prefix": ["emp", "empty1"],
+		"body": ["custom_tooltip = empty_line_tt"],
+		"description": "Places and empty line in effect tooltips"
+	},
+	"Empty Line with new line": {
+		"prefix": ["empt", "empty2"],
 		"body": ["custom_tooltip = empty_line_tt\n"],
 		"description": "Places and empty line in effect tooltips"
 	},
@@ -217,11 +222,25 @@
 		"description": "Scripted effect to apply mutual relations"
 	},
 	"Add Perm Claims for ROOT": {
-		"prefix": ["add_permanent_claim"],
+		"prefix": ["ad", "add_permanent_claim"],
 		"body": [  			
 			"add_permanent_claim = ROOT"
 		],
 		"description": "Adds permanent claims for ROOT"
+	},
+	"Country or non soverign subject holds ROOT": {
+		"prefix": ["cou", "country_or_non_soverign"],
+		"body": [  			
+			"country_or_non_sovereign_subject_holds = ROOT"
+		],
+		"description": "Adds Country or non soverign subject holds ROOT"
+	},
+	"Add base dev ALL THREE": {
+		"prefix": ["add_b"],
+		"body": [  			
+			"add_base_tax = ${1:1}\nadd_base_production = ${2:1}\nadd_base_manpower = ${3:1}"
+		],
+		"description": "Add base dev ALL THREE"
 	},
 		
 }

@@ -79,3 +79,22 @@ cb_great_crusade = {
 
 	war_goal = superiority_great_crusade
 }
+# Gallic Wars
+cb_gallic_wars = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		is_revolutionary = no
+		has_country_flag = unlock_gallic_wars_cb_flag
+	}
+
+	prerequisites = {
+		FROM = {
+			any_owned_province = {			
+				region = france_region
+			}
+		} 
+	}
+
+	war_goal = superiority_gallic_wars
+}
