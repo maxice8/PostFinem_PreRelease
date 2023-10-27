@@ -507,8 +507,8 @@ country_event = {
 	}
 	option = {
 		name = pf_ksb_events.17a
-		add_manpower = -2
-		add_treasury = -150
+		add_manpower = -1
+		add_treasury = -100
 		set_country_flag = ksb_supported_lechia
 		POL = {
 			add_manpower = 2
@@ -522,8 +522,8 @@ country_event = {
 	}
 	option = {
 		name = pf_ksb_events.17b
-		add_manpower = -2
-		add_treasury = -150
+		add_manpower = -1
+		add_treasury = -100
 		set_country_flag = ksb_supported_krakow
 		KRA = {
 			add_manpower = 2

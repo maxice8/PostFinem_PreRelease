@@ -35,6 +35,9 @@ ksb_1_slot = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	ksb_restore_worship = {
@@ -86,6 +89,9 @@ ksb_2_slot = {
 		}
 
 		effect = { vorpommern_area = { add_nationalism = -15 }  } 
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	ksb_the_polabians = {
@@ -268,6 +274,9 @@ ksb_3_slot = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	ksb_lands_of_czech = {
@@ -353,6 +362,9 @@ ksb_4_slot = {
 			}
 			278 = { add_permanent_claim = ROOT } 
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	ksb_conquer_pinsk = {
@@ -414,6 +426,9 @@ ksb_4_slot = {
 				}
 				else = { add_accepted_culture_or_dip_power = { culture = slavic_galician }  } 
 			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 
@@ -490,6 +505,9 @@ ksb_4_slot = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 }
 ksb_5_slot = {
@@ -532,11 +550,33 @@ ksb_5_slot = {
 					}
 					else = { custom_trigger_tooltip = { tooltip = ksb_lechia_wars_averted_no }  } 
 				}
+				AND = {
+					if = {
+						limit = {
+							OR = {
+								war_with = POL
+								war_with = KRA
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = ksb_yes_war_with_lechia_tt
+						}
+					}
+					else = {
+						custom_trigger_tooltip = {
+							tooltip = ksb_no_war_with_lechia_tt
+						}
+					}
+				}
 			}
 			hidden_trigger = {
 				OR = {
 					has_global_flag = lechia_succession_wars
-					KRA = { NOT = { has_ruler_flag = kra_caspar_rules_flag }  } 
+					KRA = { NOT = { has_ruler_flag = kra_caspar_rules_flag }  }
+					OR = {
+						war_with = POL
+						war_with = KRA
+					}
 				}
 			}
 		}
@@ -558,6 +598,21 @@ ksb_5_slot = {
 				sandomierz_area = { add_permanent_claim = ROOT } 
 				malopolska_area = { add_permanent_claim = ROOT } 
 			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { 
+					OR = {
+						war_with = KRA
+						war_with = POL
+					}
+				} 
+				custom_tooltip = ksb_yes_war_with_lechia_tt
+			}
+			else = { custom_tooltip = ksb_no_war_with_lechia_tt } 
+			tooltip = {
+				sandomierz_area = { add_permanent_claim = ROOT } 
+				malopolska_area = { add_permanent_claim = ROOT } 
+			}
 			hidden_effect = {
 				if = {
 					limit = { has_global_flag = lechia_succession_wars } 
@@ -569,6 +624,11 @@ ksb_5_slot = {
 					sandomierz_area = { add_permanent_claim = ROOT } 
 					malopolska_area = { add_permanent_claim = ROOT } 
 					set_country_flag = ksb_averted_lechia_wars
+				}
+				else = {
+					sandomierz_area = { add_permanent_claim = ROOT } 
+					malopolska_area = { add_permanent_claim = ROOT } 
+					set_country_flag = ksb_attacked_lechia
 				}
 			}
 		}
