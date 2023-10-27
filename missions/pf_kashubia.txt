@@ -332,14 +332,25 @@ ksb_4_slot = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			army_size_percentage = 1
-			num_of_generals = 2
+			if = {
+				limit = {
+					ai = no
+				}
+				army_size_percentage = 1
+				num_of_generals = 2
+			}
+			else = {
+				army_size_percentage = 0.75
+			}
 		}
 
 		effect = {
 			silesia_area = { add_permanent_claim = ROOT } 
 			lusatia_area = { add_permanent_claim = ROOT } 
 			podlasie_area = { add_permanent_claim = ROOT } 
+			vorpommern_area = {
+				add_permanent_claim = ROOT
+			}
 			278 = { add_permanent_claim = ROOT } 
 		}
 	}

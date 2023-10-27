@@ -1,6 +1,6 @@
 namespace = pf_ksb_events
 
-#Kashubia intor event
+#Kashubia intro event
 country_event = {
 	id = pf_ksb_events.1
 	title = pf_ksb_events.1.t
@@ -14,6 +14,9 @@ country_event = {
 	option = {
 		name = pf_ksb_events.1a
 		4745 = {
+			add_core = ROOT
+		}
+		vorpommern_area = {
 			add_permanent_claim = ROOT
 		}
 		add_prestige = 5
@@ -36,7 +39,7 @@ country_event = {
 	option = {
 		name = pf_ksb_events.2a
 		4745 = {
-			add_core = ROOT
+			cede_province = ROOT
 		}
 		add_legitimacy = 20
 	}
