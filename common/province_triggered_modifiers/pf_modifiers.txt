@@ -119,3 +119,30 @@ vinland_colony_devastation = {
 	}
 	
 }
+oracle_of_delphi = {
+	potential = {
+		always = yes
+	}
+	
+	#viewer = {
+	#}
+	
+	trigger = {
+		religion = hellenic
+		owner = { religion = hellenic }
+	}
+
+	stability_cost_modifier = -0.05
+	prestige = 0.25
+	tolerance_own = 0.5
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+	
+}

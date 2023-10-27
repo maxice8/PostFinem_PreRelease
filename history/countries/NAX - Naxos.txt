@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = kretan
+religion = hellenic
+technology_group = eastern
+capital = 164	# Naxos
+fixed_capital = 164 # Cannot move capital away from this province & no power cost to move to it
+
+# Dukes of Naxos
+1444.1.1 = {
+	monarch = {
+		name = "Lukio II"
+		dynasty = "Padiathamis"
+		birth_date = 1430.2.14
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+	add_ruler_personality = strict_personality
+}

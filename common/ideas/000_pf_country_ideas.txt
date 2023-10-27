@@ -2476,52 +2476,6 @@ WAL_ideas = {
 		production_efficiency = 0.1
 	}
 }
-
-ATH_ideas = {
-	start = {
-		tolerance_own = 2
-		religious_unity = 0.25
-	}
-	
-	bonus = {
-		diplomatic_upkeep = 2
-	}	
-
-	trigger = {
-		tag = ATH
-	}
-	free = yes
-	
-	ATH_ideas_1 = {
-		technology_cost = -0.1
-	}
-
-	ATH_ideas_2 = {
-		missionaries = 1
-	}
-
-	ATH_ideas_3 = {
-		great_project_upgrade_cost = -0.25
-		build_cost = -0.1
-	}
-
-	ATH_ideas_4 = {
-		naval_forcelimit_modifier = 0.25
-		galley_power = 0.15
-	}
-
-	ATH_ideas_5 = {
-		global_tax_modifier = 0.2
-	}
-
-	ATH_ideas_6 = {
-		diplomatic_reputation = 1
-	}
-
-	ATH_ideas_7 = {
-		discipline = 0.05
-	}
-}
 CTH_ideas = {
 	start = {
 		naval_forcelimit_modifier = 0.2

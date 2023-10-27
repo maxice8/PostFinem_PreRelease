@@ -5825,46 +5825,6 @@ KIE_ideas = {
 	}
 }
 
-NAX_ideas = {
-	start = {
-		tolerance_heretic = 4
-		fabricate_claims_cost = -0.25
-	}
-	
-	bonus = {
-		diplomatic_annexation_cost = -0.15
-	}
-	
-	trigger = {
-		tag = NAX
-	}
-	free = yes
-	
-	maritime_state = {
-		galley_power = 0.1	
-		naval_forcelimit_modifier = 0.2
-	}
-	naxos_rules_the_waves = {
-		sunk_ship_morale_hit_recieved = -0.2
-	}
-	archipelago_of_opportunities = {
-		embargo_efficiency = 0.1	
-		privateer_efficiency = 0.25
-	}
-	legacy_of_crusaders = {
-		army_tradition = 0.5
-	}
-	archipelago_feudalism = {
-		global_unrest = -1		
-	}
-	latin_roots = {
-		technology_cost = -0.05
-	}	
-	naxian_ambitions = {
-		core_creation = -0.1
-	}
-}
-
 TUA_ideas = {
 	start = {
 		migration_cost = -0.2
