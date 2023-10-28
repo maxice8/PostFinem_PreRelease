@@ -414,28 +414,16 @@ country_event = {
 	immediate = {
 		random_owned_province = {
 			limit = {
-				OR = {
-					area = erzgebirge_area
-					area = bohemia_area
-				}
-				OR = {
-					culture_group = germanic_carpathian
-					culture_group = old_germanic
-				}
+				culture = marcomanni
+				religion = slavic_religion
 			}
 			save_event_target_as = culture_conversion_province
 		}
 	}
 	trigger = {
 		any_owned_province = {
-			OR = {
-				area = erzgebirge_area
-				area = bohemia_area
-			}
-			OR = {
-				culture_group = germanic_carpathian
-				culture_group = old_germanic
-			}
+			culture = marcomanni
+			religion = slavic_religion
 		}
 		has_country_flag = ksb_converting_ceci_flag
 	}
@@ -447,7 +435,7 @@ country_event = {
 		name = pf_ksb_events.14a
 		event_target:culture_conversion_province = {
 			change_culture = ceci
-		change_religion = slavic_religion
+		# change_religion = slavic_religion
 		}
 	}
 }
@@ -730,7 +718,7 @@ country_event = {
 		name = pf_ksb_events.22a
 		event_target:culture_conversion_province = {
 			change_culture = rus_new
-			change_religion = slavic_religion
+			# change_religion = slavic_religion
 		}
 	}
 }

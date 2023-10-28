@@ -22,10 +22,18 @@ ksb_1_slot = {
 		position = 1
 		provinces_to_highlight = {
 			province_id = 4745
-			NOT = { owned_by = root } 
+			OR = {
+				NOT = { owned_by = root } 
+				NOT = { is_core = root } 
+			}
 		}
 
-		trigger = { owns = 4745 } 
+		trigger = {
+			owns_core_province = 4745
+			4745 = {
+				development = 12
+			}
+		} 
 
 		effect = {
 			4745 = {
@@ -91,7 +99,11 @@ ksb_2_slot = {
 			47 = { owned_by = ROOT } 
 		}
 
-		effect = { vorpommern_area = { add_nationalism = -15 }  } 
+		effect = { 
+			add_prestige_or_monarch_power = { amount = 10 }
+			custom_tooltip = empty_line_tt
+			vorpommern_area = { add_nationalism = -10 }  
+		} 
 		ai_weight = {
 			factor = 500
 		}
@@ -309,13 +321,16 @@ ksb_3_slot = {
 		}
 
 		effect = {
+			set_country_flag = ksb_converting_ceci_flag
+			custom_tooltip = ksb_converting_to_czech_tt
+			custom_tooltip = empty_line_tt
 			266 = {
 				change_culture = ceci
 				change_religion = slavic_religion
+			}
+			266 = {
 				add_nationalism = -5
 			}
-			set_country_flag = ksb_converting_ceci_flag
-			custom_tooltip = ksb_converting_to_czech_tt
 		}
 	}
 }
@@ -359,10 +374,9 @@ ksb_4_slot = {
 		effect = {
 			silesia_area = { add_permanent_claim = ROOT } 
 			lusatia_area = { add_permanent_claim = ROOT } 
+			vorpommern_area = { add_permanent_claim = ROOT }
+			custom_tooltip = empty_line_tt
 			podlasie_area = { add_permanent_claim = ROOT } 
-			vorpommern_area = {
-				add_permanent_claim = ROOT
-			}
 			278 = { add_permanent_claim = ROOT } 
 		}
 		ai_weight = {
@@ -420,13 +434,6 @@ ksb_4_slot = {
 			else = {
 				custom_tooltip = ksb_otherwise_no
 				tooltip = { add_accepted_culture_or_dip_power = { culture = slavic_galician }  } 
-			}
-			custom_tooltip = empty_line_tt
-			lithuania_area = {
-				add_permanent_claim = ROOT
-			}
-			samogitia_area = {
-				add_permanent_claim = ROOT
 			}
 			hidden_effect = {
 				if = {
@@ -592,6 +599,8 @@ ksb_5_slot = {
 		}
 
 		effect = {
+			custom_tooltip = ksb_requirements_change
+			custom_tooltip = empty_line_tt
 			if = {
 				limit = { has_global_flag = lechia_succession_wars } 
 				custom_tooltip = ksb_if_lechia_civil_war_has_begun_yes_tt
@@ -640,6 +649,13 @@ ksb_5_slot = {
 					malopolska_area = { add_permanent_claim = ROOT } 
 					set_country_flag = ksb_attacked_lechia
 				}
+			}	
+			custom_tooltip = empty_line_tt
+			lithuania_area = {
+				add_permanent_claim = ROOT
+			}
+			samogitia_area = {
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -681,7 +697,6 @@ ksb_5_slot = {
 		}
 
 		trigger = {
-			custom_trigger_tooltip = { tooltip = ksb_requirements_change } 
 			if = {
 				limit = { has_country_flag = ksb_supported_lechia_wars } 
 				OR = {
@@ -718,6 +733,7 @@ ksb_5_slot = {
 				vassalize = POL
 			}
 			else = {
+				custom_tooltip = empty_line_tt
 				distribute_base_dev_to_provinces = {
 					num = 3
 					amount = 1
@@ -725,6 +741,7 @@ ksb_5_slot = {
 					type = manpower
 					tooltip = PF_KSB_DEV_IN_MALOPOLSKA_TT
 				}
+				custom_tooltip = empty_line_tt
 				distribute_base_dev_to_provinces = {
 					num = 3
 					amount = 1
@@ -739,7 +756,7 @@ ksb_5_slot = {
 	ksb_conquer_lithuania = {
 		icon = mission_conquer_lithuania
 		position = 3
-		required_missions = { ksb_conquer_pinsk } 
+		required_missions = { ksb_protect_lechia } 
 		provinces_to_highlight = {
 			OR = {
 				area = samogitia_area
@@ -786,13 +803,32 @@ ksb_5_slot = {
 		}
 
 		effect = { 
-			ZLT = { 
-				every_owned_province = { 
-					add_permanent_claim = ROOT 
+			define_advisor = {
+				type = governor
+				skill = 3
+				discount = yes
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = lords_of_baltic_tt
+			hidden_effect = {
+				ZLT = { 
+					every_owned_province = { 
+						add_permanent_claim = ROOT 
+					}  
 				}  
-			}  
-			4242 = {
-				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = { 
+					NOT = {
+						ZLT = {  
+							owns_core_province = 4242
+						}
+					}
+				} 
+				custom_tooltip = empty_line_tt
+				4242 = {
+					add_permanent_claim = ROOT
+				}
 			}
 		} 
 	}
@@ -813,6 +849,8 @@ ksb_5_slot = {
 		}
 
 		effect = {
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
 			white_ruthenia_area = { add_permanent_claim = ROOT } 
 			smolensk_area = { add_permanent_claim = ROOT } 
 			pskov_area = { add_permanent_claim = ROOT } 
