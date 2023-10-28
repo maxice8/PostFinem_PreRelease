@@ -537,88 +537,88 @@ country_event = {
 	}
 }
 
-#spread of Irminovci culture NORTH SLAVS
-country_event = {
-	id = pf_ksb_events.18
-	title = pf_ksb_events.18.t
-	desc = pf_ksb_events.18.d
-	picture = CZECH_NOBLES_eventPicture
-	immediate = {
-		hidden_effect = {
-			random_owned_province = {
-				limit = {
-					OR = {
-						region = north_german_region
-						region = south_german_region
-					}
-					culture_group = old_germanic
-					religion = slavic_religion
-				}
-				save_event_target_as = culture_conversion_province
-			}
-		}
-	}
-	trigger = {
-		any_owned_province = {
-			OR = {
-				region = north_german_region
-				region = south_german_region
-			}
-			culture_group = old_germanic
-			religion = slavic_religion
-		}
-		has_country_flag = ksb_irminovci_converting_flag
-	}
-	mean_time_to_happen = {
-		months = 120
-	}
+# #spread of Irminovci culture NORTH SLAVS
+# country_event = {
+# 	id = pf_ksb_events.18
+# 	title = pf_ksb_events.18.t
+# 	desc = pf_ksb_events.18.d
+# 	picture = CZECH_NOBLES_eventPicture
+# 	immediate = {
+# 		hidden_effect = {
+# 			random_owned_province = {
+# 				limit = {
+# 					OR = {
+# 						region = north_german_region
+# 						region = south_german_region
+# 					}
+# 					culture_group = old_germanic
+# 					religion = slavic_religion
+# 				}
+# 				save_event_target_as = culture_conversion_province
+# 			}
+# 		}
+# 	}
+# 	trigger = {
+# 		any_owned_province = {
+# 			OR = {
+# 				region = north_german_region
+# 				region = south_german_region
+# 			}
+# 			culture_group = old_germanic
+# 			religion = slavic_religion
+# 		}
+# 		has_country_flag = ksb_irminovci_converting_flag
+# 	}
+# 	mean_time_to_happen = {
+# 		months = 120
+# 	}
 	
-	option = {
-		name = pf_ksb_events.18a
-		event_target:culture_conversion_province = {
-			change_culture = irminovci
-			# change_religion = slavic_religion
-		}
-	}
-}
+# 	option = {
+# 		name = pf_ksb_events.18a
+# 		event_target:culture_conversion_province = {
+# 			change_culture = irminovci
+# 			# change_religion = slavic_religion
+# 		}
+# 	}
+# }
 #spread of Irminovci culture SOUTH SLAVS
-country_event = {
-	id = pf_ksb_events.180
-	title = pf_ksb_events.18.t
-	desc = pf_ksb_events.18.d
-	picture = CZECH_NOBLES_eventPicture
-	immediate = {
-		hidden_effect = {
-			random_owned_province = {
-				limit = {
-					region = carpathia_region
-					culture_group = germanic_carpathian
-					religion = slavic_religion
-				}
-				save_event_target_as = culture_conversion_province
-			}
-		}
-	}
-	trigger = {
-		any_owned_province = {
-			region = carpathia_region
-			culture_group = germanic_carpathian
-			religion = slavic_religion
-		}
-		has_country_flag = ksb_irminovci_converting_flag
-	}
-	mean_time_to_happen = {
-		months = 120
-	}
+# country_event = {
+# 	id = pf_ksb_events.180
+# 	title = pf_ksb_events.18.t
+# 	desc = pf_ksb_events.18.d
+# 	picture = CZECH_NOBLES_eventPicture
+# 	immediate = {
+# 		hidden_effect = {
+# 			random_owned_province = {
+# 				limit = {
+# 					region = carpathia_region
+# 					culture_group = germanic_carpathian
+# 					religion = slavic_religion
+# 				}
+# 				save_event_target_as = culture_conversion_province
+# 			}
+# 		}
+# 	}
+# 	trigger = {
+# 		any_owned_province = {
+# 			region = carpathia_region
+# 			culture_group = germanic_carpathian
+# 			religion = slavic_religion
+# 		}
+# 		has_country_flag = ksb_irminovci_converting_flag
+# 	}
+# 	mean_time_to_happen = {
+# 		months = 120
+# 	}
 	
-	option = {
-		name = pf_ksb_events.18.a
-		event_target:culture_conversion_province = {
-			change_culture = irminovci
-			# change_religion = slavic_religion
-		}
-	}
-}
+# 	option = {
+# 		name = pf_ksb_events.18.a
+# 		event_target:culture_conversion_province = {
+# 			change_culture = irminovci
+# 			# change_religion = slavic_religion
+# 		}
+# 	}
+# }
 
 #Volkhvate of Volyn event
 country_event = {
@@ -673,18 +673,20 @@ country_event = {
 	option = {
 		name = pf_ksb_events.21a
 		set_capital = 280
+		custom_tooltip = empty_line_tt
 		280 = {
-			add_base_manpower = 2
-			add_base_production = 2
+			add_base_manpower = 3
+			add_base_production = 3
 			add_base_tax = 3
 		}
 	}
 	option = {
 		name = pf_ksb_events.21b
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 25 }
+		custom_tooltip = empty_line_tt
 		capital_scope = {
-			add_base_manpower = 2
-			add_base_production = 2
+			add_base_manpower = 3
+			add_base_production = 3
 			add_base_tax = 3
 		}
 	}

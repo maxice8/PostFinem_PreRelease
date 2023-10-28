@@ -5,6 +5,7 @@ slv_uniting_slavia = {
 
 slv_convert_baltic = {
 	global_heretic_missionary_strength = 0.02
+	warscore_cost_vs_other_religion = -0.1
 }
 
 slv_worthy_capital = {
@@ -15,4 +16,8 @@ slv_worthy_capital = {
 slv_develop_slavic_lands_modifier = {
 	diplomatic_reputation = 1
 	governing_capacity_modifier = 0.1
+}
+conquer_germanic_modifier = {
+	missionaries = 1
+	global_missionary_strength = 0.02
 }

@@ -58,15 +58,15 @@ sev_1_branch = {
 		} 
 
 		effect = {  
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 25 }
 			custom_tooltip = empty_line_tt
 			custom_tooltip = ksb_can_form_severoslavia_tt
 			set_country_flag = can_form_severoslavia_earlier_flag
 			south_slavia_region = {
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 			north_german_region = {
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 		} 
 	}
@@ -106,18 +106,18 @@ sev_1_branch = {
 		} 
 
 		effect = {  
-			ruthenia_region = {
-				add_permanent_claim = ROOT
-			}
-			russia_region = {
-				add_permanent_claim = ROOT
-			}
-			baltic_region = {
-				add_permanent_claim = ROOT
-			}
 			add_country_modifier = {
 				name = ksb_lord_of_all_slavs
 				duration = -1
+			}
+			ruthenia_region = {
+				add_claim = ROOT
+			}
+			russia_region = {
+				add_claim = ROOT
+			}
+			baltic_region = {
+				add_claim = ROOT
 			}
 		} 
 	}
@@ -161,15 +161,17 @@ sev_1_branch = {
 			country_event = {
 				id = pf_ksb_events.21
 			}
+			custom_tooltip = empty_line_tt
 			280 = {
 				change_culture = rus_new
+				custom_tooltip = empty_line_tt
 				add_province_modifier = {
 					name = "ksb_rus_capital"
 					duration = -1
 				}
 			}
-			custom_tooltip = ksb_rus_culture_converting_tt
-			set_country_flag = ksb_converting_rus_flag
+			# custom_tooltip = ksb_rus_culture_converting_tt
+			# set_country_flag = ksb_converting_rus_flag
 		} 
 	}
 }
@@ -201,22 +203,18 @@ sev_2_branch = {
 
 		trigger = {  
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 10
+				value = 15
 				region = north_german_region
 			}
 		} 
 
 		effect = { 
-			random_province = {
-				limit = {
-					region = north_german_region
-					owned_by = ROOT
-				}
-				change_culture = irminovci
-			} 
+			add_prestige_or_monarch_power = { amount = 25 }
 			custom_tooltip = empty_line_tt
-			custom_tooltip = ksb_irminovci_converting_tt
-			set_country_flag = ksb_irminovci_converting_flag
+			add_country_modifier = {
+				name = conquer_germanic_modifier
+				duration = 7300
+			}
 		} 
 	}
 
@@ -362,9 +360,6 @@ jug_1_branch = {
 			ruthenia_region = {
 				add_permanent_claim = ROOT
 			}
-			russia_region = {
-				add_permanent_claim = ROOT
-			}
 			baltic_region = {
 				add_permanent_claim = ROOT
 			}
@@ -449,22 +444,18 @@ jug_2_branch = {
 
 		trigger = {  
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 10
+				value = 15
 				region = carpathia_region
 			}
 		} 
 
 		effect = { 
-			random_province = {
-				limit = {
-					region = carpathia_region
-					owned_by = ROOT
-				}
-				change_culture = irminovci
-			} 
+			add_prestige_or_monarch_power = { amount = 25 }
 			custom_tooltip = empty_line_tt
-			custom_tooltip = ksb_irminovci_converting_tt
-			set_country_flag = ksb_irminovci_converting_flag
+			add_country_modifier = {
+				name = conquer_germanic_modifier
+				duration = 7300
+			}
 		} 
 	}
 
@@ -495,6 +486,9 @@ jug_2_branch = {
 			add_country_modifier = {
 				name = slv_convert_baltic
 				duration = 10950
+			}
+			russia_region = {
+				add_permanent_claim = ROOT
 			}
 		} 
 	}
@@ -540,8 +534,8 @@ slv_5_branch = {
 		} 
 
 		trigger = {  
-			development_in_provinces = {
-				value = 20
+			num_of_owned_provinces_with = {
+				value = 20		
 				culture_group = ROOT
 				development = 20
 			}
