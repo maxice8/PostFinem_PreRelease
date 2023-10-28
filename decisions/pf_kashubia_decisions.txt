@@ -41,9 +41,7 @@ country_decisions = {
 				limit = {
 					religion = ROOT
 				}
-				spawn_province_religious_rebels = {
-					size = 2
-				}
+				noble_rebels = 2
 			}
 			set_country_flag = ksb_reformed_church
 		}
