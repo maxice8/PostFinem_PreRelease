@@ -172,24 +172,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				AND = {
-					region = poland_region
-					root = {
-						NOT = {
-							OR = {
-								num_of_owned_provinces_with = {
-									value = 25
-									region = poland_region
-									is_core = root
-								}
-							}
-						}
-						owns_core_province = 278
-						owns_core_province = 264
-						owns_core_province = 43
-						owns_core_province = 257
-					}
-				}
+				region = poland_region
 				province_id = 278
 				province_id = 264
 				province_id = 43
@@ -206,19 +189,31 @@ country_decisions = {
 			is_nomad = no			
 			NOT = { exists = SEV }
 			
-			AND = {
-				278 = {
-					country_or_non_sovereign_subject_holds = ROOT
+			if = {
+				limit = {
+					tag = KSB
+					mission_completed = ksb_united_severoslavia
 				}
-				264 = {
-					country_or_non_sovereign_subject_holds = ROOT
+				AND = {
+					278 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					264 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					43 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					257 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
-				43 = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-				257 = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
+			}
+			else = {
+				owns_core_province = 278
+				owns_core_province = 264
+				owns_core_province = 43
+				owns_core_province = 257
 			}
 			poland_region = {
 				type = all
@@ -307,25 +302,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				AND = {
-					region = south_slavia_region
-					root = {
-						NOT = {
-							OR = {
-								num_of_owned_provinces_with = {
-									value = 25
-									region = south_slavia_region
-									is_core = root
-								}
-							}
-						}
-						owns_core_province = 1756
-						owns_core_province = 157
-						owns_core_province = 279
-						owns_core_province = 262
-							
-					}
-				}
+				region = south_slavia_region	
 				province_id = 1756
 				province_id = 157
 				province_id = 279

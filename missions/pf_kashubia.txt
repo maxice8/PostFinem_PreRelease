@@ -775,7 +775,16 @@ ksb_5_slot = {
 			}
 		}
 
-		effect = { ZLT = { every_owned_province = { add_permanent_claim = ROOT }  }  } 
+		effect = { 
+			ZLT = { 
+				every_owned_province = { 
+					add_permanent_claim = ROOT 
+				}  
+			}  
+			4242 = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	ksb_end_zilant_raids = {
