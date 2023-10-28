@@ -95,7 +95,7 @@ sev_1_branch = {
 		} 
 	}
 
-	sev_lord_of_slavia = {
+	generic_sev_lord_of_slavia = {
 		icon = mission_empire
 		position = 4
 		required_missions = { sev_push_south } 
@@ -125,7 +125,7 @@ sev_1_branch = {
 	sev_conquer_rus = {
 		icon = mission_steppe_warriors
 		position = 5
-		required_missions = { sev_lord_of_slavia } 
+		required_missions = { generic_sev_lord_of_slavia } 
 		provinces_to_highlight = {  
 			OR ={
 				region = russia_region
@@ -221,7 +221,7 @@ sev_2_branch = {
 	sev_conquer_baltic = {
 		icon = mission_conquer_baltic_region
 		position = 5
-		required_missions = { sev_lord_of_slavia } 
+		required_missions = { generic_sev_lord_of_slavia } 
 		provinces_to_highlight = {  
 			region = baltic_region
 			NOT = {
