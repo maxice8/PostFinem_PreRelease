@@ -10,10 +10,20 @@ country_decisions = {
 		allow = {
 			adm_power = 200
 			owns = 4745
-			4745 = {
-				has_great_project = {
-					type = svetovids_temple
-					tier = 1
+			if = {
+				limit = {
+					ai = no
+				}
+				4745 = {
+					has_great_project = {
+						type = svetovids_temple
+						tier = 1
+					}
+				}
+			}
+			else = {
+				4745 = {
+					has_tax_building_trigger = yes
 				}
 			}
 		}
@@ -37,5 +47,6 @@ country_decisions = {
 			}
 			set_country_flag = ksb_reformed_church
 		}
+		ai_importance = 100
 	}
 }

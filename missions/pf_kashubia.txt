@@ -418,6 +418,13 @@ ksb_4_slot = {
 				custom_tooltip = ksb_otherwise_no
 				tooltip = { add_accepted_culture_or_dip_power = { culture = slavic_galician }  } 
 			}
+			custom_tooltip = empty_line_tt
+			lithuania_area = {
+				add_permanent_claim = ROOT
+			}
+			samogitia_area = {
+				add_permanent_claim = ROOT
+			}
 			hidden_effect = {
 				if = {
 					limit = { PNS = { alliance_with = ROOT }  } 
