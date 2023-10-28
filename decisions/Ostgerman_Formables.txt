@@ -190,15 +190,21 @@ country_decisions = {
 				OR = {
 					AND = {
 						development = 10
-						dip_tech = 10
+						owner = {
+							dip_tech = 10
+						}
 					}
 					AND = {
 						development = 15
-						dip_tech = 8
+						owner = {
+							dip_tech = 8
+						}
 					}
 					AND = {
 						development = 17
-						dip_tech = 4
+						owner = {
+							dip_tech = 4
+						}
 					}
 				}
 				NOT = {

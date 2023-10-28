@@ -283,9 +283,11 @@ pf_vld_3 = {
 				if = {
 					limit = { has_province_modifier = vld_the_wild_hunt } 
 					remove_province_modifier = vld_the_wild_hunt
-					add_country_modifier = {
-						name = "vld_the_wild_hunter"
-						duration = -1
+					owner = {
+						add_country_modifier = {
+							name = "vld_the_wild_hunter"
+							duration = -1
+						}
 					}
 				}
 			}
