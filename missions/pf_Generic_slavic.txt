@@ -309,6 +309,8 @@ jug_1_branch = {
 		effect = {  
 			add_prestige = 20
 			custom_tooltip = empty_line_tt
+			custom_tooltip = ksb_can_form_jugoslavia_tt
+			set_country_flag = can_form_jugoslavia_earlier_flag
 			poland_region = {
 				add_permanent_claim = ROOT
 			}

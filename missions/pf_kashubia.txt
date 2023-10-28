@@ -1217,7 +1217,7 @@ sevksb_1_branch = {
 			define_advisor = {
 				type = trader
 				skill = 3
-				cost_multiplier = -0.75
+				cost_multiplier = 0.25
 			}
 			custom_tooltip = empty_line_tt
 			43 = {
@@ -1513,19 +1513,28 @@ sevksb_3_branch = {
 			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 20
-				province_has_current_tech_fort_trigger = yes
+				religion = slavic_religion
 				region = south_german_region
 			}
 		}
 		effect = {
-			every_owned_province = {
-				limit = {
-					region = south_german_region
-					province_has_current_tech_fort_trigger = yes
-				}
+			custom_tooltip = lombardy_falls_tt
+			tooltip = {	
 				add_province_modifier = {
 					name = "ksb_mountain_bastions"
 					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = south_german_region
+						province_has_current_tech_fort_trigger = yes
+					}
+					add_province_modifier = {
+						name = "ksb_mountain_bastions"
+						duration = -1
+					}
 				}
 			}
 		}
@@ -1882,10 +1891,11 @@ slvksb_1_branch = {
 		}
 		effect = {
 			add_navy_tradition = 30
+			custom_tooltip = empty_line_tt
 			define_advisor = {
 				type = naval_reformer
 				skill = 3
-				cost_multiplier = -0.75
+				cost_multiplier = 0.25
 			}
 		}
 	}
@@ -1925,7 +1935,7 @@ slvksb_2_branch = {
 			add_army_tradition = 10
 			custom_tooltip = empty_line_tt
 			add_country_modifier = {
-				name = prepare_invasion_to_federation_modifier
+				name = prepare_invasion_into_federation_modifier
 				duration = 7300
 			}
 			illyria_region = {
