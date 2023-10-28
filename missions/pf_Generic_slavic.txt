@@ -1,0 +1,538 @@
+sev_1_branch = {
+	slot = 1
+	generic = yes
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			culture = slavic_galician
+			culture = polabian
+			culture = podlachian
+			culture = pomorian
+			culture = mazovian
+		}
+	} 
+
+	sev_rising_power = {
+		icon = mission_assemble_an_army
+		position = 1
+		provinces_to_highlight = {  
+			
+		} 
+
+		trigger = {  
+			if = {
+				limit = {
+					ai = no
+				}
+				army_size_percentage = 1
+			}
+			else = {
+				army_size_percentage = 0.6
+			}
+		} 
+
+		effect = {  
+			poland_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	sev_conquer_severoslavia = {
+		icon = mission_monarch_in_throne_room
+		position = 2
+		required_missions = { sev_rising_power } 
+		provinces_to_highlight = { 
+			region = poland_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		 } 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				region = poland_region
+			}
+		} 
+
+		effect = {  
+			south_slavia_region = {
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = ksb_can_form_severoslavia_tt
+			set_country_flag = can_form_severoslavia_earlier_flag
+		} 
+	}
+
+	sev_push_south = {
+		icon = danubian_power
+		position = 3
+		required_missions = { sev_conquer_severoslavia } 
+		provinces_to_highlight = {  
+			region = south_slavia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				region = south_slavia_region
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = {
+				name = slv_uniting_slavia
+				duration = 7300
+			}
+		} 
+	}
+
+	sev_lord_of_slavia = {
+		icon = mission_empire
+		position = 4
+		required_missions = { sev_push_south } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			tag = SLV
+		} 
+
+		effect = {  
+			ruthenia_region = {
+				add_permanent_claim = ROOT
+			}
+			russia_region = {
+				add_permanent_claim = ROOT
+			}
+			baltic_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	sev_conquer_rus = {
+		icon = mission_steppe_warriors
+		position = 5
+		required_missions = { sev_lord_of_slavia } 
+		provinces_to_highlight = {  
+			OR ={
+				region = russia_region
+				region = ruthenia_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				OR = {
+					region = ruthenia_region
+					region = russia_region
+				}
+			}
+			280 = {
+				owned_by = ROOT
+				if = {
+					limit = {
+						ROOT = {
+							ai = no
+						}
+					}
+					development = 20
+				}
+			}
+		} 
+
+		effect = {  
+			country_event = {
+				id = pf_ksb_events.21
+			}
+			280 = {
+				change_culture = rus_new
+				add_province_modifier = {
+					name = "ksb_rus_capital"
+					duration = -1
+				}
+			}
+			custom_tooltip = ksb_rus_culture_converting_tt
+			set_country_flag = ksb_converting_rus_flag
+		} 
+	}
+}
+sev_2_branch = {
+	slot = 2
+	generic = yes
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+		culture = slavic_galician
+		culture = polabian
+		culture = podlachian
+		culture = pomorian
+		culture = mazovian
+		} 
+	} 
+
+	sev_conquer_germanics = {
+		icon = interfere_in_germany
+		position = 3
+		required_missions = { sev_conquer_severoslavia } 
+		provinces_to_highlight = {  
+			region = north_german_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = north_german_region
+			}
+		} 
+
+		effect = { 
+			random_province = {
+				limit = {
+					region = north_german_region
+					owned_by = ROOT
+				}
+				change_culture = irminovci
+			} 
+			custom_tooltip = ksb_irminovci_converting_tt
+			set_country_flag = ksb_irminovci_converting_flag
+		} 
+	}
+
+	sev_conquer_baltic = {
+		icon = mission_conquer_baltic_region
+		position = 5
+		required_missions = { sev_lord_of_slavia } 
+		provinces_to_highlight = {  
+			region = baltic_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = baltic_region
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				region = baltic_region
+				religion = ROOT
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = {
+				name = slv_convert_baltic
+				duration = 10950
+			}
+		} 
+	}
+}
+jug_1_branch = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			culture = moldavian
+			culture = drakova
+			culture = bukovinian
+			culture = volhynian
+		}
+	} 
+
+	jug_rising_power = {
+		icon = mission_assemble_an_army
+		position = 1
+		provinces_to_highlight = {  } 
+
+		
+		trigger = {  
+			if = {
+				limit = {
+					ai = no
+				}
+				army_size_percentage = 1
+			}
+			else = {
+				army_size_percentage = 0.6
+			}
+		} 
+
+		effect = {  
+			poland_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	jug_conquer_jugoslavia = {
+		icon = mission_monarch_in_throne_room
+		position = 2
+		required_missions = { jug_rising_power } 
+		provinces_to_highlight = { 
+			region = south_slavia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		 } 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				region = south_slavia_region
+			}
+		} 
+
+		effect = {  
+			poland_region = {
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = ksb_can_form_jugoslavia_tt
+			set_country_flag = can_form_jugoslavia_earlier_flag
+		} 
+	}
+
+	jug_push_north = {
+		icon = mission_partition_poland
+		position = 3
+		required_missions = { jug_conquer_jugoslavia } 
+		provinces_to_highlight = {  
+			region = poland_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				region = poland_region
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = {
+				name = slv_uniting_slavia
+				duration = 7300
+			}
+		} 
+	}
+
+	jug_lord_of_slavia = {
+		icon = mission_empire
+		position = 4
+		required_missions = { jug_push_north } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			tag = SLV
+		} 
+
+		effect = {  
+			ruthenia_region = {
+				add_permanent_claim = ROOT
+			}
+			russia_region = {
+				add_permanent_claim = ROOT
+			}
+			baltic_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	jug_conquer_rus = {
+		icon = mission_steppe_warriors
+		position = 5
+		required_missions = { jug_lord_of_slavia } 
+		provinces_to_highlight = {  
+			OR ={
+				region = russia_region
+				region = ruthenia_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				OR = {
+					region = ruthenia_region
+					region = russia_region
+				}
+			}
+			280 = {
+				owned_by = ROOT
+				if = {
+					limit = {
+						ROOT = {
+							ai = no
+						}
+					}
+					development = 20
+				}
+			}
+		} 
+
+		effect = {  
+			country_event = {
+				id = pf_ksb_events.21
+			}
+			280 = {
+				change_culture = rus_new
+				add_province_modifier = {
+					name = "ksb_rus_capital"
+					duration = -1
+				}
+			}
+			custom_tooltip = ksb_rus_culture_converting_tt
+			set_country_flag = ksb_converting_rus_flag
+		} 
+	}
+}
+jug_2_branch = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			culture = moldavian
+			culture = drakova
+			culture = bukovinian
+			culture = volhynian
+		}
+	} 
+
+	jug_conquer_ostgermania = {
+		icon = mission_crusade_for_varna
+		position = 3
+		required_missions = { jug_conquer_jugoslavia } 
+		provinces_to_highlight = {  
+			region = carpathia_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = carpathia_region
+			}
+		} 
+
+		effect = { 
+			random_province = {
+				limit = {
+					region = carpathia_region
+					owned_by = ROOT
+				}
+				change_culture = irminovci
+			} 
+			custom_tooltip = ksb_irminovci_converting_tt
+			set_country_flag = ksb_irminovci_converting_flag
+		} 
+	}
+
+	jug_conquer_baltic = {
+		icon = mission_conquer_baltic_region
+		position = 5
+		required_missions = { jug_lord_of_slavia } 
+		provinces_to_highlight = {  
+			region = baltic_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = baltic_region
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				region = baltic_region
+				religion = ROOT
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = {
+				name = slv_convert_baltic
+				duration = 10950
+			}
+		} 
+	}
+}
+slv_5_branch = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { culture_group = pagan_slavic } 
+
+	slv_worthy_capital = {
+		icon = develop_our_capital
+		position = 2
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			capital_scope = {
+				development = 30
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes
+				has_manpower_building_trigger = yes
+				has_manufactory_trigger = yes
+			}
+		} 
+
+		effect = {  
+			capital_scope = {
+				add_province_modifier = {
+					name = slv_worthy_capital
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	slv_develop_slavic_lands = {
+		icon = mission_kon_repel_the_missionaries
+		position = 4
+		provinces_to_highlight = {  
+			
+		} 
+
+		trigger = {  
+			development_in_provinces = {
+				value = 700
+				culture_group = ROOT
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = "ksb_100_prosperity"
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = ROOT
+					}
+					add_prosperity = 100
+				}
+			}
+		} 
+	}
+}
