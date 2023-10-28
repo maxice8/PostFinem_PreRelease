@@ -44,18 +44,17 @@ ksb_break_the_lombards = {
 }
 
 ksb_spreading_slavic_culture = {
-	culture_conversion_cost = -0.33
+	culture_conversion_cost = -0.25
 }
 
 ksb_mountain_bastions = {
-	local_defensiveness = 0.5
+	local_hostile_attrition = 1
+	local_build_cost = -0.1
 }
 
 ksb_lord_of_germania = {
-	monthly_splendor = 1
-	prestige = 1
-	num_accepted_cultures = 3
-	army_tradition_decay = -0.01
+	monthly_splendor = 2
+	num_accepted_cultures = 2
 }
 
 ksb_great_march_south = {
@@ -71,8 +70,8 @@ ksb_mouth_of_the_danube = {
 }
 
 ksb_drakovan_defensiveness = {
-	defensiveness = 0.2
-	garrison_growth = 0.2
+	defensiveness = 0.1
+	garrison_growth = 0.1
 }
 
 ksb_lord_of_all_slavs = {

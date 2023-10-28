@@ -844,7 +844,7 @@ ksb_5_slot = {
 		}
 
 		trigger = {
-			ZLT = { exists = no } 
+			NOT = { ZLT = { exists = yes } }
 			4242 = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 
@@ -921,12 +921,19 @@ sevksb_1_branch = {
 		}
 
 		effect = {
-			add_government_power = {
-				mechanic_type = pf_svetovid_dedication_mechanic
-				power_type = pf_svetovid_dedication
-				value = 25
-			}
 			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { 
+					has_government_mechanic = pf_svetovid_dedication_mechanic 
+				}
+				add_government_power = {
+					mechanic_type = pf_svetovid_dedication_mechanic
+					power_type = pf_svetovid_dedication
+					value = 25
+				}
+				custom_tooltip = empty_line_tt
+			}
 			add_estate_church_loyalty_effect = yes
 		}
 	}
@@ -1082,10 +1089,19 @@ sevksb_2_branch = {
 			# 	}
 			# }
 			# custom_tooltip = ksb_5_provinces_irminovci_convert_tt
+			define_advisor = {
+				type = city_planner
+				skill = 3
+				discount = yes
+			}
+			custom_tooltip = empty_line_tt
+			add_ruler_modifier = {
+				name = conqueror_of_germania
+			}
 			add_country_modifier = {
 				name = "ksb_spreading_slavic_culture"
 				duration = 10950
-			}
+			} 
 		}
 	}
 
@@ -1110,7 +1126,7 @@ sevksb_2_branch = {
 
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 15
+				value = 20
 				culture_group = pagan_slavic
 				religion = slavic_religion
 				OR = {
@@ -1121,12 +1137,13 @@ sevksb_2_branch = {
 		}
 
 		effect = {
-			custom_tooltip = ksb_irminovci_converting_tt
-			set_country_flag = ksb_irminovci_converting_flag
+			# custom_tooltip = ksb_irminovci_converting_tt
+			# set_country_flag = ksb_irminovci_converting_flag
 			add_country_modifier = {
 				name = "ksb_lord_of_germania"
 				duration = -1
 			}
+			carpathia_region = { add_permanent_claim = ROOT }
 		}
 	}
 }
@@ -1187,11 +1204,11 @@ sevksb_3_branch = {
 		}
 
 		effect = {
-			south_german_region = { add_permanent_claim = ROOT } 
 			add_country_modifier = {
 				name = "ksb_break_the_lombards"
 				duration = 10950
 			}
+			south_german_region = { add_permanent_claim = ROOT } 
 		}
 	}
 
@@ -1210,7 +1227,7 @@ sevksb_3_branch = {
 				region = south_german_region
 			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 5
+				value = 20
 				province_has_current_tech_fort_trigger = yes
 				region = south_german_region
 			}
@@ -1364,12 +1381,8 @@ sevksb_4_branch = {
 				duration = -1
 			}
 			crimea_region = { add_permanent_claim = ROOT } 
-			carpathia_region = { add_permanent_claim = ROOT } 
-			280 = { add_core = ROOT } 
-			if = {
-				limit = { NOT = { mission_completed = sev_wild_frontier }  } 
-				ruthenia_region = { add_permanent_claim = ROOT } 
-			}
+			ruthenia_region = { add_permanent_claim = ROOT } 
+			# 280 = { add_core = ROOT } 
 		}
 	}
 }
@@ -1420,8 +1433,10 @@ sevksb_5_branch = {
 		}
 
 		effect = {
+			add_ruler_personality = conqueror_personality
+			custom_tooltip = empty_line_tt
 			russia_region = { add_permanent_claim = ROOT } 
-			ruthenia_region = { add_permanent_claim = ROOT } 
+			# ruthenia_region = { add_permanent_claim = ROOT } 
 		}
 	}
 
