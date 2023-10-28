@@ -1,0 +1,78 @@
+country_decisions = {
+
+	pf_iber = {
+		major = yes
+		color = {214 163 24}
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes 
+			NOT = { has_country_flag = formed_iber_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+				culture_group = euro_punic
+		}
+
+			provinces_to_highlight = {
+				OR = {
+					region = iberia_region
+				}
+				OR = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+			}
+		
+			allow = {
+				NOT = { exists = IBR }
+				is_nomad = no
+				is_free_or_tributary_trigger = yes
+				is_at_war = no
+				is_tribal = no
+				adm_tech = 10
+				owns_core_province = 219 #Tol-Tzaphon
+				num_of_owned_provinces_with = {
+					value = 40
+					region = iberia_region
+				}
+		}
+		effect = {
+			change_tag = IBR
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			add_prestige = 25
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 3650
+			}
+			set_capital = 219 #Tol-Tzaphon
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			iberia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = IBR
+			}
+			set_country_flag = formed_iber_flag
+		}
+}
+
+}

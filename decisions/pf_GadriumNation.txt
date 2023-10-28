@@ -1,0 +1,128 @@
+country_decisions = {
+
+	pf_gadrium = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes 
+			NOT = { has_country_flag = formed_gadrium_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			OR = {
+				primary_culture = bellican
+				primary_culture = tartessian
+				primary_culture = ilergi
+			}
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4548 #Huellia
+				province_id = 224 #sevilaris
+				province_id = 1749 #Gardirium
+				province_id = 226 #Calpe Gadir
+				province_id = 4546 #Malqartha
+				province_id = 223 #Granatum
+				province_id = 222 #Almoria
+				province_id = 225 #Cartuluba
+				province_id = 1748 #Janubium
+				province_id = 221 #Murcielum
+				province_id = 4547 #Alba-Set
+				province_id = 2754 #Manchel-Baal
+				province_id = 219 #Tol-Tzaphon
+				province_id = 218 #Badajoz
+				province_id = 1747 #Caceres
+				province_id = 4788 #Plasencia
+				province_id = 230 #Algarve
+				province_id = 229 #Beja
+				province_id = 4150 #Evora
+				province_id = 4787 #Ribatejo
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		
+		allow = {
+			NOT = { exists = GAD }
+			is_nomad = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_tribal = no
+			owns_core_province = 226 #Calpe Gadir
+			num_of_owned_provinces_with = {
+				value = 12
+				OR = {
+					area = upper_andalucia_area
+					area = lower_andalucia_area
+					area = toledo_area
+					area = extremadura_area
+					area = alentejo_area
+				}
+			}
+		}
+		effect = {
+			change_tag = GAD
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			add_prestige = 25
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 3650
+			}
+			set_capital = 226 #Calpe Gadir
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			lower_andalucia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GAD
+			}
+			upper_andalucia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GAD
+			}
+			toledo_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GAD
+			} 
+			extremadura_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GAD
+			}
+			alentejo_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GAD
+			}
+			set_country_flag = formed_gadrium_flag
+		}
+	}
+}
