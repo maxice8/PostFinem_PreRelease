@@ -14,7 +14,12 @@ pf_vin_1 = {
 		} 
 
 		trigger = {
-			prestige = 30
+			if = {
+				limit = {
+					ai = no
+				}
+				prestige = 30
+			}
 			capital_scope = {
 				has_tax_building_trigger = yes
 			}
@@ -121,7 +126,12 @@ pf_vin_2 = {
 
 		trigger = {
 			has_advisor = yes
-			is_in_deficit = no
+			if = {
+				limit = {
+					ai = no
+				}
+				is_in_deficit = no
+			}
 			has_consort = yes
 			has_heir = yes
 		} 
@@ -166,7 +176,7 @@ pf_vin_2 = {
 		}
 		provinces_to_highlight = {
 			is_capital_of = ROOT
-			NOT = { development = 15 }
+			NOT = { development = 20 }
 		} 
 
 		trigger = {
@@ -335,7 +345,15 @@ pf_vin_3 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			years_of_income = 2
+			if = {
+				limit = {
+					ai = no
+				}
+				years_of_income = 2
+			}
+			else = {
+				years_of_income = 1
+			}
 			mil_power = 50
 			if = {
 				limit = { ai = no }
@@ -344,7 +362,15 @@ pf_vin_3 = {
 		} 
 
 		effect = {
-			add_years_of_income = -2
+			if = {
+				limit = {
+					ai = no
+				}
+				add_years_of_income = -2
+			}
+			else = {
+				add_years_of_income = -1
+			}
 			add_mil_power = -50
 			create_conquistador = {
 				tradition = 30
@@ -368,11 +394,25 @@ pf_vin_3 = {
 		} 
 
 		trigger = {
-			any_known_country = {
-				government = native
-				has_opinion = {
-					who = root
-					value = 150
+			if = {
+				limit = {
+					ai = no
+				}
+				any_known_country = {
+					government = native
+					has_opinion = {
+						who = root
+						value = 150
+					}
+				}
+			}
+			else = {
+				any_known_country = {
+					government = native
+					has_opinion = {
+						who = root
+						value = 80
+					}
 				}
 			}
 		} 
@@ -579,9 +619,20 @@ pf_vin_4 = {
 		} 
 
 		trigger = {
-			labrador_area = {
-				type = all
-				units_in_province = ROOT
+			if = {
+				limit = {
+					ai = no
+				}
+				labrador_area = {
+					type = all
+					units_in_province = ROOT
+				}
+			}
+			else = {
+				labrador_area = {
+					type = all
+					has_discovered = ROOT
+				}
 			}
 		} 
 
@@ -606,7 +657,15 @@ pf_vin_4 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			navy_size = 10
+			if = {
+				limit = {
+					ai = no
+				}
+				navy_size = 15
+			}
+			else = {
+				navy_size = 10
+			}
 			num_of_admirals = 1
 			#naval_supplies = 1
 		} 
@@ -779,7 +838,15 @@ pf_vin_5 = {
 
 		trigger = {
 			stability = 2
-			legitimacy_equivalent = 90
+			if = {
+				limit = {
+					ai = no
+				}
+				legitimacy_equivalent = 90
+			}
+			else = {
+				legitimacy_equivalent = 60
+			}
 			capital_scope = {
 				development = 5
 			}
