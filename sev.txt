@@ -1,0 +1,10 @@
+if = {
+	limit = {
+		tag = KSB
+	}
+	change_tag = SEV
+}
+else = {
+	change_tag = SLV
+}
+swap_non_generic_missions = yes
