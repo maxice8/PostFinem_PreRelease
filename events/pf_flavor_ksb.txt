@@ -566,10 +566,8 @@ country_event = {
 				region = north_german_region
 				region = south_german_region
 			}
-			OR = {
-				culture_group = germanic_carpathian
-				culture_group = old_germanic
-			}
+			culture_group = old_germanic
+			religion = slavic_religion
 		}
 		has_country_flag = ksb_irminovci_converting_flag
 	}
@@ -581,7 +579,7 @@ country_event = {
 		name = pf_ksb_events.18a
 		event_target:culture_conversion_province = {
 			change_culture = irminovci
-			change_religion = slavic_religion
+			# change_religion = slavic_religion
 		}
 	}
 }
