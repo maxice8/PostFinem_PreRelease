@@ -1,0 +1,120 @@
+namespace = pf_ath
+
+country_event = {		# Library of Athens
+	id = pf_ath.1
+	title = pf_ath.1.t 
+	desc = pf_ath.1.d
+	picture = iberian_GREAT_BUILDING_eventPicture
+
+	is_triggered_only = yes
+
+	goto = 146
+
+	option = {
+		name = "pf_ath.1.a"
+		146 = {
+			add_base_tax = 1
+			add_province_modifier = {
+				name = "pf_ath_adm_library"
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = "pf_ath.1.b"
+		146 = {
+			add_base_production = 1
+			add_province_modifier = {
+				name = "pf_ath_dip_library"
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = "pf_ath.1.c"
+		146 = {
+			add_base_manpower = 1
+			add_province_modifier = {
+				name = "pf_ath_mil_library"
+				duration = -1
+			}
+		}
+	}
+}
+country_event = {		# The Athenian Press
+	id = pf_ath.2
+	title = pf_ath.2.t 
+	desc = pf_ath.2.d
+	picture = PRINTING_PRESS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_ath.2.a"
+		add_adm_power = 100
+		change_innovativeness = 2
+		add_country_modifier = {
+			name = "pf_ath_printed_declarations"
+			duration = 9125
+		}
+	}
+}
+country_event = {		# Ownership of Thessaly for Macedonia
+	id = pf_ath.3
+	title = pf_ath.3.t 
+	desc = pf_ath.3.d
+	picture = PRINTING_PRESS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_ath.3.a"
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				has_opinion = {
+					who = ATH
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 5
+				alliance_with = ATH
+			}
+		}
+		add_prestige_or_monarch_power = {
+			amount = 15
+		}
+		ATH = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_gave_thessaly
+			}
+		}
+		147 = {
+			cede_province = ATH
+			add_core = ATH
+			remove_core = MAC
+		}
+	}
+	option = {
+		name = "pf_ath.3.b"
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				NOT = { religion = hellenic }
+			}
+		}
+		ATH = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_refused_thessaly
+			}
+		}
+		147 = {
+			add_core = ATH
+		}
+	}
+}

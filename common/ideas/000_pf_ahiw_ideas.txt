@@ -840,7 +840,7 @@ VIN_ideas = {
 
 NAX_ideas = {
 	start = {
-		global_sailors_modifier = 0.15
+		prestige = 1
 		discipline = 0.05
 	}
 	
@@ -860,7 +860,7 @@ NAX_ideas = {
 	}
 	nax_body_guard_of_archon = {
 		tolerance_own = 2
-		papal_influence = 0.50
+		papal_influence = 1
 	}
 	nax_skilled_soldiers = {
 		infantry_power = 0.15

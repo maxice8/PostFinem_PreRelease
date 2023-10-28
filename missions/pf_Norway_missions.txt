@@ -672,10 +672,13 @@ pf_nor_4 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			navy_size_percentage = 1
 			if = {
 				limit = { ai = no } 
 				num_of_galley = 6
+				navy_size_percentage = 1
+			}
+			else = {
+				navy_size_percentage = 0.75
 			}
 			num_of_admirals = 1
 		}
@@ -806,9 +809,17 @@ pf_nor_5 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			army_size_percentage = 1
+			if = {
+				limit = {
+					ai = no
+				}
+				army_size_percentage = 1
+				has_mil_advisor = yes
+			}
+			else = {
+				army_size_percentage = 0.75
+			}
 			num_of_generals = 1
-			has_mil_advisor = yes
 		}
 
 		effect = {

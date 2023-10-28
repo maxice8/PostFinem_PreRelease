@@ -60,6 +60,14 @@ opinion_denying_archon = {
 	opinion = 50
 	yearly_decay = 1
 }
+opinion_gave_thessaly = {
+	opinion = 50
+	yearly_decay = 1
+}
+opinion_refused_thessaly = {
+	opinion = -50
+	yearly_decay = 1
+}
 
 # Persia
 
