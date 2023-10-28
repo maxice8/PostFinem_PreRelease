@@ -1,11 +1,11 @@
 country_decisions = {
 
-	pf_illerastrium = {
+	pf_ilastrium = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes 
-			NOT = { has_country_flag = formed_illerastrium_flag }
+			NOT = { has_country_flag = formed_ilastrium_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -73,7 +73,7 @@ country_decisions = {
 				}
 				add_permanent_claim = ILG
 			}
-			set_country_flag = formed_illerastrium_flag
+			set_country_flag = formed_ilastrium_flag
 		}
 	}
 }
