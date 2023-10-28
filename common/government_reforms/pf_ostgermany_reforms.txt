@@ -1,0 +1,21 @@
+# T1 - Ostholm unique
+pf_ostholm_crown = {
+	icon = "castle"
+	trigger = {
+		tag = OST
+	}
+	allow_normal_conversion = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		reverse_relation_with_same_religion = 25
+		nobles_influence_modifier = 0.05
+	}
+	custom_attributes = {
+		maintain_dynasty = yes
+		same_religion_subject_bonus = yes
+	}
+	ai = {
+		factor = 1
+	}
+}

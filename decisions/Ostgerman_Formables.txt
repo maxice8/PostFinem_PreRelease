@@ -71,21 +71,11 @@ country_decisions = {
 			capital_scope = {
 				change_culture = sudeten
 			}
+			add_accepted_culture = marcomanni
 			on_change_tag_effect = yes
 			restore_country_name = yes
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = {
-					NOT = { government_rank = 2 }
-				}
-				set_government_rank = 2
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
 			if = {
 				limit = {
 					has_custom_ideas = no
@@ -216,6 +206,45 @@ country_decisions = {
 			1771 = {
 				change_trade_goods = glass
 			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	sty_waldhart = {
+		major = yes
+		potential = {
+			NOT = {
+				is_march = yes
+			}
+			NOT = {
+				is_vassal = yes
+			}
+			is_free_or_tributary_trigger = yes
+			OR = {
+				culture_group = germanic_carpathian
+				culture = marcomanni
+			}
+			NOT = {
+				tag = STY
+			}
+			exists = STY
+		}
+		provinces_to_highlight = {
+			is_core = STY
+		}
+		allow = {
+			STY = {
+				is_at_war = no
+				has_opinion = {
+					who = ROOT
+					value = 180
+				}
+				is_free_or_tributary_trigger = yes
+			}
+		}
+		effect = {
+			create_march = STY
 		}
 		ai_will_do = {
 			factor = 1

@@ -1,5 +1,5 @@
 government = tribal
-add_government_reform = feudal_tribe
+add_government_reform = pf_ostholm_crown
 government_rank = 2
 technology_group = eastern
 religion = south_germanic_religion
@@ -20,7 +20,6 @@ add_accepted_culture = illyrian
 	}
 	capital = 134
 }
-
 1444.11.11 = { 
 	monarch = { 
 		name = "Theodoric"
@@ -31,6 +30,13 @@ add_accepted_culture = illyrian
 		birth_date = 1388.03.24
 		death_date = 1445.01.01
 	}
+	pf_add_opinion_both = {
+		who = VLD
+		modifier = ost_vld_rivalry
+	}
+	add_ruler_personality = well_advised_personality
+	add_ruler_personality = charismatic_negotiator_personality
+	add_ruler_personality = bold_fighter_personality
 }
 1444.11.11 = { 
 	heir = { 
@@ -41,5 +47,7 @@ add_accepted_culture = illyrian
 		mil = 2
 		birth_date = 1415.08.08
 		death_date = 1445.01.01
+		
 	}
+	add_heir_personality = conqueror_personality
 }

@@ -14,35 +14,44 @@
  BAV_ideas_4_desc: "The laws of the Gods are not for mortals to decide, but the gods can fail too."
  BAV_ideas_5_desc: "What goes on in the halls of the Mountain King?"
  BAV_ideas_6_desc: "All is fair in love and war, but to be more delicate and careful is always appreciated."
- BAV_ideas_7_desc: "There is nothing better than resting with your comrades to eat the daily rations, when they are bad."
+ BAV_ideas_7_desc: "There is nothing better than resting with your comrades to eat the daily rations, if they weren't so salty."
 
  MKM: "Markland"
  MKM_ADJ: "Markmann"
  MKM_ideas: "Markmann Ideas"
  MKM_ideas_start: "Markmann Traditions"
  MKM_ideas_bonus: "Markmann Ambition"
- MKM_ideas_1: "Surrounded by Defenses"
- MKM_ideas_2: "Jewel of Germania"
- MKM_ideas_3: "Wealth of Sudeten"
- MKM_ideas_4: "Progress Must Be Made"
- MKM_ideas_5: "Victory of Peace"
- MKM_ideas_6: "Keep the Torch Down"
- MKM_ideas_7: "First Banks of Germania"
- MKM_ideas_1_desc: "The Mountains are our Shield against those who wish to gain our riches and oppress our people."
- MKM_ideas_2_desc: "In the center of Germanic Europe, Sudeten stands above all else as the wealtiest nation."
- MKM_ideas_3_desc: "From the very earth we recieve unbound wealth and with it, we have risen to the heavens!"
- MKM_ideas_4_desc: "AS ideas spread and we remain trapped in the eye of the storm, we must march forward or be left behind."
- MKM_ideas_5_desc: "Witness to the horrors of war that happens all around us, we have learned not to waste our knowledge."
- MKM_ideas_6_desc: "Tolerance of religious difference is a pragmatic way of dealing with fools and zealots."
- MKM_ideas_7_desc: "The grand Bank of Marbod is the true jewel of Sudeten, standing as the absolute golden standard for banks in Central Europe."
+ MKM_ideas_1: "Lords of Central Germania"
+ MKM_ideas_2: "Markmann Intuition"
+ MKM_ideas_3: "The Mark of Man"
+ MKM_ideas_4: "Faithful Adaptation"
+ MKM_ideas_5: "Under the Colossus' Shadows"
+ MKM_ideas_6: "Always on Time"
+ MKM_ideas_7: "The Saline March"
+ MKM_ideas_1_desc: "As the undisputed Lord of the Land Between Nord and East Germania, my decrees are absolute and your knees bent."
+ MKM_ideas_2_desc: "Long have the Markmann been simple soldier and lived simple life, they will now strive for greater purposes."
+ MKM_ideas_3_desc: "We are one, united by our fortitude and the will of our people.\nWe will protect our borders and, if necessary, expand them."
+ MKM_ideas_4_desc: "My rule is divine and the Gods themselves will tremble in my wake."
+ MKM_ideas_5_desc: "The Ant cannot be concerned by the Giant's plans, for the Giant is a careful one."
+ MKM_ideas_6_desc: "The secret is to be the one most needed and show up whenever you want."
+ MKM_ideas_7_desc: "The pile of salt is a pile no matter how many specks you remove, so are the armies of Markland."
 
 #####CUSTOM
  CT_BAV_1:0 "If @MVA §YMoria §Wis your vassal, inherit it."
 #####MODIFIER 
  bav_wine_party:0 "Wine Parties"
+ bav_real_for_real:0 "The Gods Plan"
+
+
+ mkm_salty:0 "The Saline Fortress"
+ mkm_the_long_climb:0 "The Long Climb"
+ mkm_break_the_crown:0 "Breaker of Crowns"
 #####GOVERNMENT
 
 #####EVENTS
+ pf_ost.12.t:0 "Hillside Rebellion"
+ pf_ost.12.d:0 "The Quadi people of our eastern border never have respected the laws of our tribe, always schemes and preparing a daring rebellion.\nThe smoke alerted the guards and the small bands of rebellious peasants assaulted one of our fortifications, a declaration of open hostilities.\nCall the men, we will remind them of who commands in our borders."
+ pf_ost.12.a:0 "The will be over in a landslide."
 
 #####DECISIONS
  form_markland_title:0 "Form @MKM Markmand"

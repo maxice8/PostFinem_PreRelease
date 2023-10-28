@@ -10,7 +10,14 @@ pf_bav_1 = {
 		position = 1
 
 		trigger = {
-			army_size_percentage = 0.85
+			OR = {
+				army_size_percentage = 1
+				AND = {
+					ai = yes
+					army_size_percentage = 0.75
+					num_of_generals = 1
+				}
+			}
 		}
 
 		effect = {
@@ -111,10 +118,29 @@ pf_bav_3 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = BAV } 
+
+	bav_stable_country = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+
+		trigger = {
+			stability = 1
+			all_owned_province = {
+				religion = ROOT
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = bav_real_for_real
+				duration = 9125
+			}
+		}
+	}
 	bav_marklander = {
 		icon = mission_build_up_to_force_limit
 		position = 3
-		required_missions = { bav_moria } 
+		required_missions = { bav_moria bav_stable_country} 
 		provinces_to_highlight = {
 			OR = {
 				area = erzgebirge_area

@@ -10,7 +10,16 @@ pf_mva_1 = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = { army_size_percentage = 0.85 } 
+		trigger = { 
+			OR = {
+				army_size_percentage = 1
+				AND = {
+					ai = yes
+					army_size_percentage = 0.75
+					num_of_generals = 1
+				}
+			}
+		} 
 
 		effect = {
 			lower_bavaria_area = { add_permanent_claim = ROOT } 
@@ -174,7 +183,18 @@ pf_mva_3 = {
 			}
 		}
 
-		effect = { country_event = { id = pf_ost.7 }  } 
+		effect = { 
+			country_event = { id = pf_ost.7 }  
+			if = {
+				limit = {ai = yes}
+				erzgebirge_area = {
+					change_culture = sudeten
+				}
+				bohemia_area = {
+					change_culture = sudeten
+				}
+			}
+		} 
 	}
 }
 pf_mva_4 = {
@@ -229,6 +249,7 @@ pf_mva_4 = {
 				country_event = { id = ideagroups.1 } 
 			}
 			set_country_flag = formed_sudeten_flag
+			
 		}
 	}
 }
@@ -319,20 +340,20 @@ pf_mva_5 = {
 
 		effect = {
 			4724 = {
+				add_base_manpower = 2
 				if = {
 					limit = { owner = { culture = sudeten }  } 
 					change_culture = sudeten
 				}
 				else = { custom_tooltip = CT_MVA_1 } 
-				add_base_manpower = 2
 			}
 			4725 = {
+				add_base_manpower = 2
 				if = {
 					limit = { owner = { culture = sudeten }  } 
 					change_culture = sudeten
 				}
 				else = { custom_tooltip = CT_MVA_1 } 
-				add_base_manpower = 2
 			}
 		}
 	}

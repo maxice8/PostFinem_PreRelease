@@ -10,7 +10,7 @@ ost_diplomatic_pressure_2 = {
 
 ost_lords_of_ostgermania = {
 	core_creation = -0.1
-	monarch_military_power = 1
+	manpower_in_culture_group_provinces = 0.1
 }
 
 ost_realm_of_og = {
@@ -195,4 +195,25 @@ sdt_triple_city = {
 #SUTEHRWAELD
 bav_wine_party = {
 	global_unrest = -2
+}
+
+bav_real_for_real = {
+	advisor_cost = -0.1
+	fabricate_claims_cost = -0.2
+}
+
+mkm_salty = {
+	local_fort_maintenance_modifier = -0.2
+	local_garrison_size = 0.25
+	allowed_num_of_buildings = 1
+}
+
+mkm_the_long_climb = {
+	movement_speed = 0.1
+	land_attrition = -0.2
+}
+
+mkm_break_the_crown = {
+	legitimacy = 1
+	core_creation = -0.1
 }

@@ -10,7 +10,15 @@ pf_vld_1 = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = { army_size_percentage = 0.85 } 
+		trigger = { 
+			OR = {
+			army_size_percentage = 1
+			AND = {
+				ai = yes
+				army_size_percentage = 0.75
+				num_of_generals = 1
+			}
+		}} 
 
 		effect = {
 			slavonia_area = { add_permanent_claim = ROOT } 
@@ -352,7 +360,7 @@ pf_vld_5 = {
 
 		trigger = {
 			prestige = 10
-			num_of_generals = 2
+			num_of_generals = 1
 		}
 
 		effect = {

@@ -121,8 +121,14 @@ pf_ost_2 = {
 		icon = mission_unite_home_region
 		position = 1
 		trigger = {
-			army_size_percentage = 0.85
-			num_of_generals = 2
+			OR = {
+				army_size_percentage = 1
+				AND = {
+					ai = yes
+					army_size_percentage = 0.75
+					num_of_generals = 1
+				}
+			}
 		}
 
 		effect = {
