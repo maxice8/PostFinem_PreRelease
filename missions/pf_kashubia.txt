@@ -46,11 +46,14 @@ ksb_1_slot = {
 		required_missions = { ksb_retake_rujana } 
 		provinces_to_highlight = {  } 
 
-		trigger = { NOT = { has_estate_privilege = estate_church_pf_ksb_corrupt_church }  } 
+		trigger = {
+			NOT = { has_estate_privilege = estate_church_pf_ksb_corrupt_church }
+		} 
 
 		effect = {
-			custom_tooltip = ksb_reformed_the_church
-			set_country_flag = ksb_reformed_church
+			unlock_estate_privilege = {
+				estate_privilege = estate_church_pf_ksb_head_of_cult
+			}
 		}
 	}
 }

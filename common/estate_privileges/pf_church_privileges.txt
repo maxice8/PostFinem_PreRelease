@@ -32,7 +32,16 @@ estate_church_pf_ksb_head_of_cult = {
 		is_or_was_tag = {
 			tag = KSB
 		}
-		has_country_flag = ksb_reformed_church
+		has_mission = ksb_restore_worship
+	}
+
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = pf_unlocked_via_mission_estate_church_pf_ksb_head_of_cult
+			has_unlocked_estate_privilege = {
+				estate_privilege = estate_church_pf_ksb_head_of_cult
+			}
+		}
 	}
 	
 	can_revoke = {
