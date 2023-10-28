@@ -947,7 +947,7 @@ sevksb_1_branch = {
 
 		trigger = {  
 			43 = {
-				grown_by_development = 20
+				development = 30
 				province_has_current_tech_fort_trigger = yes
 				has_dock_building_trigger = yes
 			}
@@ -956,11 +956,12 @@ sevksb_1_branch = {
 		effect = {  
 			define_advisor = {
 				type = trader
-				skill = 2
-				cost_multiplier = -0.66
+				skill = 3
+				cost_multiplier = -0.75
 			}
+			custom_tooltip = empty_line_tt
 			43 = {
-				upgrade_center_of_trade = yes
+				set_center_level_3_center_of_trade = yes
 			}
 		} 
 	}
@@ -994,8 +995,9 @@ sevksb_1_branch = {
 		} 
 
 		effect = {  
-			custom_tooltip = ksb_to_be_added_tt
-			#when norse raid wars get added block you from getting decced on
+			
+			# custom_tooltip = ksb_to_be_added_tt
+			# #when norse raid wars get added block you from getting decced on
 			add_country_modifier = {
 				name = ksb_safe_shores
 				duration = 7300
@@ -1010,17 +1012,20 @@ sevksb_1_branch = {
 		provinces_to_highlight = {  } 
 
 		trigger = {  
-			trade_company_baltic_sea = {
+			1926 = {
 				is_strongest_trade_power = ROOT
 			}
 			num_ships_protecting_trade = 30
 		} 
 
 		effect = {  
-			create_units_of_type = {
-				amount = 10
-				province = 43
-				unit_type = carrack
+			capital_scope = {
+				add_unit_construction = {
+					type = light_ship
+					cost = 0
+					speed = 0
+					amount = 10
+				}
 			}
 		} 
 	}
@@ -1620,7 +1625,15 @@ slvksb_2_branch = {
 			}
 		}
 
-		effect = { illyria_region = { add_permanent_claim = ROOT }  } 
+		effect = { 
+			add_army_tradition = 10
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = prepare_invasion_to_federation_modifier
+				duration = 7300
+			}
+			illyria_region = { add_permanent_claim = ROOT }  
+		} 
 	}
 
 	slv_illyrian_conquest = {
@@ -1740,12 +1753,12 @@ slvksb_3_branch = {
 		}
 
 		effect = {
-			circassia_area = { add_permanent_claim = ROOT } 
-			dagestan_area = { add_permanent_claim = ROOT } 
 			add_country_modifier = {
 				name = "ksb_crimean_horsemen"
 				duration = -1
 			}
+			circassia_area = { add_permanent_claim = ROOT } 
+			dagestan_area = { add_permanent_claim = ROOT } 
 		}
 	}
 
@@ -1755,7 +1768,6 @@ slvksb_3_branch = {
 		required_missions = {
 			slv_pontus_conquest
 			slv_kiev_recovered
-			sev_rusnok_lands
 		}
 		provinces_to_highlight = {
 			AND = {
@@ -1891,14 +1903,18 @@ slvksb_4_branch = {
 		}
 
 		effect = {
+			country_event = { id = pf_ksb_events.21 } 
+			custom_tooltip = empty_line_tt
 			280 = {
 				change_culture = rus_new
+			}
+			custom_tooltip = empty_line_tt
+			280 = {			
 				add_province_modifier = {
 					name = "ksb_rus_capital"
 					duration = -1
 				}
 			}
-			country_event = { id = pf_ksb_events.21 } 
 		}
 	}
 

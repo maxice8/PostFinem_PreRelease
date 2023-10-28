@@ -81,8 +81,8 @@ ksb_lord_of_all_slavs = {
 }
 
 ksb_crimean_horsemen = {
-	cavalry_shock = 0.25
-	cavalry_cost = -0.25
+	cavalry_cost = -0.2
+	cav_to_inf_ratio = 0.25
 }
 
 ksb_rus_capital = {
@@ -114,8 +114,8 @@ ksb_modern_state = {
 }
 
 ksb_flocking_to_cities = {
-	build_cost = -0.2
-	build_time = -0.2
+	build_cost = -0.1
+	build_time = -0.25
 }
 
 ksb_crimean_tradeport = {
@@ -125,6 +125,11 @@ ksb_crimean_tradeport = {
 }
 
 ksb_safe_shores = {
-	trade_steering = 0.1
-	ship_trade_power_modifier = 02.
+	trade_steering = 0.25
+	ship_trade_power_modifier = 0.5
+}
+
+prepare_invasion_to_federation_modifier = {
+	manpower_recovery_speed = 0.2
+	army_tradition_decay = -0.1
 }
