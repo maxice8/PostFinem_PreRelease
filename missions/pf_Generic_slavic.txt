@@ -214,6 +214,7 @@ sev_2_branch = {
 				}
 				change_culture = irminovci
 			} 
+			custom_tooltip = empty_line_tt
 			custom_tooltip = ksb_irminovci_converting_tt
 			set_country_flag = ksb_irminovci_converting_flag
 		} 
@@ -354,6 +355,10 @@ jug_1_branch = {
 		} 
 
 		effect = {  
+			add_country_modifier = {
+				name = ksb_lord_of_all_slavs
+				duration = -1
+			}
 			ruthenia_region = {
 				add_permanent_claim = ROOT
 			}
@@ -362,10 +367,6 @@ jug_1_branch = {
 			}
 			baltic_region = {
 				add_permanent_claim = ROOT
-			}
-			add_country_modifier = {
-				name = ksb_lord_of_all_slavs
-				duration = -1
 			}
 		} 
 	}
@@ -461,6 +462,7 @@ jug_2_branch = {
 				}
 				change_culture = irminovci
 			} 
+			custom_tooltip = empty_line_tt
 			custom_tooltip = ksb_irminovci_converting_tt
 			set_country_flag = ksb_irminovci_converting_flag
 		} 
@@ -478,12 +480,12 @@ jug_2_branch = {
 		} 
 
 		trigger = {  
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 15
-				region = baltic_region
+			baltic_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 5
+				value = 15
 				region = baltic_region
 				religion = ROOT
 			}
