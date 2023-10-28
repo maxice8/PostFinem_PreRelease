@@ -37,6 +37,7 @@ country_decisions = {
 		}
 		allow = {
 			NOT = { exists = ILG }
+			adm_tech = 10
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
