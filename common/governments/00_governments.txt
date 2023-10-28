@@ -602,6 +602,7 @@ republic = {
 				pf_syncretic_state
 				pf_rabim_qahal
 				icelandic_althingi_reform
+				stratocratic_republic
 				# ]]]
 				oligarchy_reform
 				signoria_reform
@@ -668,6 +669,9 @@ republic = {
 				namestnik_reform
 				oprichnina_reform
 				consulate_of_the_sea
+				#iberia
+				citizen_soldier_initiative
+				republican_fleets
 			}
 		}
 		frequent_elections_vs_consolidation_of_power = {
@@ -692,6 +696,13 @@ republic = {
 		}
 		republic_and_religion = {
 			reforms = {
+				# pf [[[
+				pf_punic_festivals_reform
+				pf_lag_acts_of_toleration
+				divine_army_doctrine
+				council_of_theologies
+				blessed_fleets
+				# ]]]
 				papal_embassy_reform
 				lands_for_the_monasteries_reform
 				focus_of_the_patriarchy_reform
@@ -728,10 +739,6 @@ republic = {
 				head_of_the_patriarchy_reform
 				anglican_state_church_reform
 				english_conciliarism_reform
-				# pf [[[
-				pf_punic_festivals_reform
-				pf_lag_acts_of_toleration
-				# ]]]
 			}
 		}
 		military_doctrines = {
