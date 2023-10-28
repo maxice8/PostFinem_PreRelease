@@ -16,25 +16,26 @@ ksb_1_slot = {
 			tag = KSB
 		}
 	}
-
 	ksb_retake_rujana = {
 		icon = mission_norse_faith
 		position = 1
 		provinces_to_highlight = {
 			province_id = 4745
 			OR = {
-				NOT = { owned_by = root } 
-				NOT = { is_core = root } 
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					is_core = root
+				}
 			}
 		}
-
 		trigger = {
 			owns_core_province = 4745
 			4745 = {
 				development = 12
 			}
-		} 
-
+		}
 		effect = {
 			4745 = {
 				add_province_modifier = {
@@ -47,17 +48,19 @@ ksb_1_slot = {
 			factor = 500
 		}
 	}
-
 	ksb_restore_worship = {
 		icon = mission_hands_praying
 		position = 3
-		required_missions = { ksb_retake_rujana } 
-		provinces_to_highlight = {  } 
-
+		required_missions = {
+			ksb_retake_rujana
+		}
+		provinces_to_highlight = {
+		}
 		trigger = {
-			NOT = { has_estate_privilege = estate_church_pf_ksb_corrupt_church }
-		} 
-
+			NOT = {
+				has_estate_privilege = estate_church_pf_ksb_corrupt_church
+			}
+		}
 		effect = {
 			unlock_estate_privilege = {
 				estate_privilege = estate_church_pf_ksb_head_of_cult
@@ -65,6 +68,7 @@ ksb_1_slot = {
 		}
 	}
 }
+
 ksb_2_slot = {
 	slot = 2
 	generic = no
@@ -83,32 +87,42 @@ ksb_2_slot = {
 			tag = KSB
 		}
 	}
-
 	ksb_smash_the_saxons = {
 		icon = mission_conquer_5_states
 		position = 1
 		provinces_to_highlight = {
 			area = vorpommern_area
-			NOT = { owned_by = ROOT } 
-			NOT = { province_id = 4745 } 
+			NOT = {
+				owned_by = ROOT
+			}
+			NOT = {
+				province_id = 4745
+			}
 		}
-
 		trigger = {
-			1858 = { owned_by = ROOT } 
-			2994 = { owned_by = ROOT } 
-			47 = { owned_by = ROOT } 
+			1858 = {
+				owned_by = ROOT
+			}
+			2994 = {
+				owned_by = ROOT
+			}
+			47 = {
+				owned_by = ROOT
+			}
 		}
-
-		effect = { 
-			add_prestige_or_monarch_power = { amount = 10 }
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
 			custom_tooltip = empty_line_tt
-			vorpommern_area = { add_nationalism = -10 }  
-		} 
+			vorpommern_area = {
+				add_nationalism = -10
+			}
+		}
 		ai_weight = {
 			factor = 500
 		}
 	}
-
 	ksb_the_polabians = {
 		icon = mission_noble_council
 		position = 2
@@ -118,21 +132,28 @@ ksb_2_slot = {
 		}
 		provinces_to_highlight = {
 			culture = polabian
-			NOT = { owned_by = ROOT } 
+			NOT = {
+				owned_by = ROOT
+			}
 		}
-
 		trigger = {
-			owns_all_provinces = { culture = polabian } 
+			owns_all_provinces = {
+				culture = polabian
+			}
 			accepted_culture = polabian
 		}
-
-		effect = { country_event = { id = pf_ksb_events.12 }  } 
+		effect = {
+			country_event = {
+				id = pf_ksb_events.12
+			}
+		}
 	}
-
 	ksb_push_borderlands = {
 		icon = claim_the_borderlands
 		position = 4
-		required_missions = { ksb_the_polabians } 
+		required_missions = {
+			ksb_the_polabians
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = northern_saxony_area
@@ -140,9 +161,10 @@ ksb_2_slot = {
 				area = mittelmark_area
 				area = mecklenburg_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			mecklenburg_area = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -161,43 +183,83 @@ ksb_2_slot = {
 				type = all
 			}
 		}
-
 		effect = {
 			if = {
-				limit = { POB = { is_subject_of = ROOT }  } 
+				limit = {
+					POB = {
+						is_subject_of = ROOT
+					}
+				}
 				custom_tooltip = ksb_yes_polabia
 			}
-			else = { custom_tooltip = ksb_no_polabia } 
-			tooltip = { country_event = { id = pf_ksb_events.13 }  } 
+			else = {
+				custom_tooltip = ksb_no_polabia
+			}
+			tooltip = {
+				country_event = {
+					id = pf_ksb_events.13
+				}
+			}
 			custom_tooltip = empty_line_tt
 			if = {
-				limit = { NOT = { POB = { is_subject_of = ROOT }  }  } 
+				limit = {
+					NOT = {
+						POB = {
+							is_subject_of = ROOT
+						}
+					}
+				}
 				custom_tooltip = ksb_otherwise_yes
 			}
-			else = { custom_tooltip = ksb_otherwise_no } 
+			else = {
+				custom_tooltip = ksb_otherwise_no
+			}
 			tooltip = {
 				add_prestige = 25
-				mittelmark_area = { add_nationalism = -10 } 
-				south_saxony_area = { add_nationalism = -10 } 
-				northern_saxony_area = { add_nationalism = -10 } 
-				mecklenburg_area = { add_nationalism = -10 } 
+				mittelmark_area = {
+					add_nationalism = -10
+				}
+				south_saxony_area = {
+					add_nationalism = -10
+				}
+				northern_saxony_area = {
+					add_nationalism = -10
+				}
+				mecklenburg_area = {
+					add_nationalism = -10
+				}
 			}
 			hidden_effect = {
 				if = {
-					limit = { POB = { is_subject_of = ROOT }  } 
-					country_event = { id = pf_ksb_events.13 } 
+					limit = {
+						POB = {
+							is_subject_of = ROOT
+						}
+					}
+					country_event = {
+						id = pf_ksb_events.13
+					}
 				}
 				else = {
 					add_prestige = 25
-					mittelmark_area = { add_nationalism = -10 } 
-					south_saxony_area = { add_nationalism = -10 } 
-					northern_saxony_area = { add_nationalism = -10 } 
-					mecklenburg_area = { add_nationalism = -10 } 
+					mittelmark_area = {
+						add_nationalism = -10
+					}
+					south_saxony_area = {
+						add_nationalism = -10
+					}
+					northern_saxony_area = {
+						add_nationalism = -10
+					}
+					mecklenburg_area = {
+						add_nationalism = -10
+					}
 				}
 			}
 		}
 	}
 }
+
 ksb_3_slot = {
 	slot = 3
 	generic = no
@@ -216,20 +278,22 @@ ksb_3_slot = {
 			tag = KSB
 		}
 	}
-
 	ksb_rule_silesia = {
 		icon = mission_eastern_european_city
 		position = 2
-		required_missions = { ksb_new_slavic_power } 
+		required_missions = {
+			ksb_new_slavic_power
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = lusatia_area
 				area = silesia_area
 				owned_by = SIL
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			OR = {
 				AND = {
@@ -246,7 +310,9 @@ ksb_3_slot = {
 						country_or_non_sovereign_subject_holds = ROOT
 						type = all
 					}
-					SIL = { exists = no } 
+					SIL = {
+						exists = no
+					}
 				}
 			}
 			lusatia_area = {
@@ -254,31 +320,52 @@ ksb_3_slot = {
 				type = all
 			}
 		}
-
 		effect = {
 			if = {
-				limit = { SIL = { alliance_with = ROOT }  } 
+				limit = {
+					SIL = {
+						alliance_with = ROOT
+					}
+				}
 				custom_tooltip = ksb_yes_vassalize_sil
 			}
-			else = { custom_tooltip = ksb_no_vassalize_sil } 
+			else = {
+				custom_tooltip = ksb_no_vassalize_sil
+			}
 			custom_tooltip = empty_line_tt
 			if = {
-				limit = { SIL = { exists = no }  } 
+				limit = {
+					SIL = {
+						exists = no
+					}
+				}
 				custom_tooltip = ksb_otherwise_yes
 			}
-			else = { custom_tooltip = ksb_otherwise_no } 
+			else = {
+				custom_tooltip = ksb_otherwise_no
+			}
 			tooltip = {
 				add_country_modifier = {
 					name = "ksb_silesian_iron"
 					duration = 7300
 				}
 			}
-			erzgebirge_area = { add_permanent_claim = ROOT } 
-			bohemia_area = { add_permanent_claim = ROOT } 
+			erzgebirge_area = {
+				add_permanent_claim = ROOT
+			}
+			bohemia_area = {
+				add_permanent_claim = ROOT
+			}
 			hidden_effect = {
 				if = {
-					limit = { SIL = { alliance_with = ROOT }  } 
-					SIL = { set_country_flag = ksb_gonna_be_vassalized } 
+					limit = {
+						SIL = {
+							alliance_with = ROOT
+						}
+					}
+					SIL = {
+						set_country_flag = ksb_gonna_be_vassalized
+					}
 					set_country_flag = ksb_allied_sil
 				}
 				else = {
@@ -293,7 +380,6 @@ ksb_3_slot = {
 			factor = 500
 		}
 	}
-
 	ksb_lands_of_czech = {
 		icon = boh_humiliate_austria
 		position = 3
@@ -306,9 +392,10 @@ ksb_3_slot = {
 				area = bohemia_area
 				area = erzgebirge_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			bohemia_area = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -319,7 +406,6 @@ ksb_3_slot = {
 				type = all
 			}
 		}
-
 		effect = {
 			set_country_flag = ksb_converting_ceci_flag
 			custom_tooltip = ksb_converting_to_czech_tt
@@ -334,6 +420,7 @@ ksb_3_slot = {
 		}
 	}
 }
+
 ksb_4_slot = {
 	slot = 4
 	generic = no
@@ -352,12 +439,11 @@ ksb_4_slot = {
 			tag = KSB
 		}
 	}
-
 	ksb_new_slavic_power = {
 		icon = mission_the_polish_throne
 		position = 1
-		provinces_to_highlight = {  } 
-
+		provinces_to_highlight = {
+		}
 		trigger = {
 			if = {
 				limit = {
@@ -370,33 +456,44 @@ ksb_4_slot = {
 				army_size_percentage = 0.75
 			}
 		}
-
 		effect = {
-			silesia_area = { add_permanent_claim = ROOT } 
-			lusatia_area = { add_permanent_claim = ROOT } 
-			vorpommern_area = { add_permanent_claim = ROOT }
+			silesia_area = {
+				add_permanent_claim = ROOT
+			}
+			lusatia_area = {
+				add_permanent_claim = ROOT
+			}
+			vorpommern_area = {
+				add_permanent_claim = ROOT
+			}
 			custom_tooltip = empty_line_tt
-			podlasie_area = { add_permanent_claim = ROOT } 
-			278 = { add_permanent_claim = ROOT } 
+			podlasie_area = {
+				add_permanent_claim = ROOT
+			}
+			278 = {
+				add_permanent_claim = ROOT
+			}
 		}
 		ai_weight = {
 			factor = 500
 		}
 	}
-
 	ksb_conquer_pinsk = {
 		icon = mission_the_russian_tsardom
 		position = 2
-		required_missions = { ksb_new_slavic_power } 
+		required_missions = {
+			ksb_new_slavic_power
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = podlasie_area
 				province_id = 278
 				owned_by = PNS
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			OR = {
 				AND = {
@@ -414,41 +511,69 @@ ksb_4_slot = {
 						type = all
 					}
 					owns_or_non_sovereign_subject_of = 278
-					PNS = { exists = no } 
+					PNS = {
+						exists = no
+					}
 				}
 			}
 		}
-
 		effect = {
 			if = {
-				limit = { PNS = { alliance_with = ROOT }  } 
+				limit = {
+					PNS = {
+						alliance_with = ROOT
+					}
+				}
 				custom_tooltip = ksb_yes_vassalize_pns
 			}
-			else = { custom_tooltip = ksb_no_vassalize_pns } 
+			else = {
+				custom_tooltip = ksb_no_vassalize_pns
+			}
 			custom_tooltip = empty_line_tt
 			if = {
-				limit = { PNS = { exists = no }  } 
+				limit = {
+					PNS = {
+						exists = no
+					}
+				}
 				custom_tooltip = ksb_otherwise_yes
-				tooltip = { add_accepted_culture_or_dip_power = { culture = slavic_galician }  } 
+				tooltip = {
+					add_accepted_culture_or_dip_power = {
+						culture = slavic_galician
+					}
+				}
 			}
 			else = {
 				custom_tooltip = ksb_otherwise_no
-				tooltip = { add_accepted_culture_or_dip_power = { culture = slavic_galician }  } 
+				tooltip = {
+					add_accepted_culture_or_dip_power = {
+						culture = slavic_galician
+					}
+				}
 			}
 			hidden_effect = {
 				if = {
-					limit = { PNS = { alliance_with = ROOT }  } 
-					PNS = { set_country_flag = ksb_gonna_be_vassalized } 
+					limit = {
+						PNS = {
+							alliance_with = ROOT
+						}
+					}
+					PNS = {
+						set_country_flag = ksb_gonna_be_vassalized
+					}
 					set_country_flag = ksb_allied_pns
 				}
-				else = { add_accepted_culture_or_dip_power = { culture = slavic_galician }  } 
+				else = {
+					add_accepted_culture_or_dip_power = {
+						culture = slavic_galician
+					}
+				}
 			}
 		}
 		ai_weight = {
 			factor = 500
 		}
 	}
-
 	ksb_united_severoslavia = {
 		icon = mission_placeholder
 		position = 3
@@ -457,31 +582,41 @@ ksb_4_slot = {
 			ksb_conquer_pinsk
 			ksb_protect_lechia
 		}
-		provinces_to_highlight = {  } 
-
+		provinces_to_highlight = {
+		}
 		trigger = {
 			prestige = 50
-			custom_trigger_tooltip = { tooltip = ksb_requirements_change } 
+			custom_trigger_tooltip = {
+				tooltip = ksb_requirements_change
+			}
 			if = {
-				limit = { has_country_flag = ksb_allied_pns } 
+				limit = {
+					has_country_flag = ksb_allied_pns
+				}
 				alliance_with = PNS
 				PNS = {
 					has_opinion = {
 						who = ROOT
 						value = 190
 					}
-					all_core_province = { owned_by = PNS } 
+					all_core_province = {
+						owned_by = PNS
+					}
 				}
 			}
 			if = {
-				limit = { has_country_flag = ksb_allied_sil } 
+				limit = {
+					has_country_flag = ksb_allied_sil
+				}
 				alliance_with = SIL
 				SIL = {
 					has_opinion = {
 						who = ROOT
 						value = 190
 					}
-					all_core_province = { owned_by = SIL } 
+					all_core_province = {
+						owned_by = SIL
+					}
 				}
 			}
 			else = {
@@ -491,34 +626,67 @@ ksb_4_slot = {
 				}
 			}
 		}
-
 		effect = {
-			south_slavia_region = { add_permanent_claim = ROOT } 
+			south_slavia_region = {
+				add_permanent_claim = ROOT
+			}
 			custom_tooltip = empty_line_tt
 			if = {
-				limit = { has_country_flag = ksb_allied_sil } 
+				limit = {
+					has_country_flag = ksb_allied_sil
+				}
 				custom_tooltip = ksb_vassalize_silesia_yes_tt
 			}
-			else = { custom_tooltip = ksb_vassalize_pinsk_no_tt } 
-			tooltip = { PNS = { country_event = { id = pf_ksb_events.15 }  }  } 
+			else = {
+				custom_tooltip = ksb_vassalize_pinsk_no_tt
+			}
+			tooltip = {
+				PNS = {
+					country_event = {
+						id = pf_ksb_events.15
+					}
+				}
+			}
 			custom_tooltip = empty_line_tt
 			if = {
-				limit = { has_country_flag = ksb_allied_sil } 
+				limit = {
+					has_country_flag = ksb_allied_sil
+				}
 				custom_tooltip = ksb_vassalize_silesia_yes_tt
 			}
-			else = { custom_tooltip = ksb_vassalize_silesia_no_tt } 
-			tooltip = { SIL = { country_event = { id = pf_ksb_events.15 }  }  } 
+			else = {
+				custom_tooltip = ksb_vassalize_silesia_no_tt
+			}
+			tooltip = {
+				SIL = {
+					country_event = {
+						id = pf_ksb_events.15
+					}
+				}
+			}
 			custom_tooltip = empty_line_tt
 			custom_tooltip = ksb_can_form_severoslavia_tt
 			set_country_flag = can_form_severoslavia_earlier_flag
 			hidden_effect = {
 				if = {
-					limit = { has_country_flag = ksb_allied_sil } 
-					SIL = { country_event = { id = pf_ksb_events.15 }  } 
+					limit = {
+						has_country_flag = ksb_allied_sil
+					}
+					SIL = {
+						country_event = {
+							id = pf_ksb_events.15
+						}
+					}
 				}
 				if = {
-					limit = { has_country_flag = ksb_allied_sil } 
-					PNS = { country_event = { id = pf_ksb_events.15 }  } 
+					limit = {
+						has_country_flag = ksb_allied_sil
+					}
+					PNS = {
+						country_event = {
+							id = pf_ksb_events.15
+						}
+					}
 				}
 			}
 		}
@@ -527,6 +695,7 @@ ksb_4_slot = {
 		}
 	}
 }
+
 ksb_5_slot = {
 	slot = 5
 	generic = no
@@ -545,27 +714,46 @@ ksb_5_slot = {
 			tag = KSB
 		}
 	}
-
 	ksb_intervene_in_lechia = {
 		icon = mission_pol_wallachia
 		position = 1
-		provinces_to_highlight = {  } 
-
+		provinces_to_highlight = {
+		}
 		trigger = {
 			OR = {
 				AND = {
 					if = {
-						limit = { has_global_flag = lechia_succession_wars } 
-						custom_trigger_tooltip = { tooltip = ksb_lechia_wars_begun_yes } 
+						limit = {
+							has_global_flag = lechia_succession_wars
+						}
+						custom_trigger_tooltip = {
+							tooltip = ksb_lechia_wars_begun_yes
+						}
 					}
-					else = { custom_trigger_tooltip = { tooltip = ksb_lechia_wars_begun_no }  } 
+					else = {
+						custom_trigger_tooltip = {
+							tooltip = ksb_lechia_wars_begun_no
+						}
+					}
 				}
 				AND = {
 					if = {
-						limit = { KRA = { NOT = { has_ruler_flag = kra_caspar_rules_flag }  }  } 
-						custom_trigger_tooltip = { tooltip = ksb_lechia_wars_averted_yes } 
+						limit = {
+							KRA = {
+								NOT = {
+									has_ruler_flag = kra_caspar_rules_flag
+								}
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = ksb_lechia_wars_averted_yes
+						}
 					}
-					else = { custom_trigger_tooltip = { tooltip = ksb_lechia_wars_averted_no }  } 
+					else = {
+						custom_trigger_tooltip = {
+							tooltip = ksb_lechia_wars_averted_no
+						}
+					}
 				}
 				AND = {
 					if = {
@@ -589,7 +777,11 @@ ksb_5_slot = {
 			hidden_trigger = {
 				OR = {
 					has_global_flag = lechia_succession_wars
-					KRA = { NOT = { has_ruler_flag = kra_caspar_rules_flag }  }
+					KRA = {
+						NOT = {
+							has_ruler_flag = kra_caspar_rules_flag
+						}
+					}
 					OR = {
 						war_with = POL
 						war_with = KRA
@@ -597,59 +789,102 @@ ksb_5_slot = {
 				}
 			}
 		}
-
 		effect = {
 			custom_tooltip = ksb_requirements_change
 			custom_tooltip = empty_line_tt
 			if = {
-				limit = { has_global_flag = lechia_succession_wars } 
+				limit = {
+					has_global_flag = lechia_succession_wars
+				}
 				custom_tooltip = ksb_if_lechia_civil_war_has_begun_yes_tt
 			}
-			else = { custom_tooltip = ksb_if_lechia_civil_war_has_begun_no_tt } 
-			tooltip = { country_event = { id = pf_ksb_events.17 }  } 
+			else = {
+				custom_tooltip = ksb_if_lechia_civil_war_has_begun_no_tt
+			}
+			tooltip = {
+				country_event = {
+					id = pf_ksb_events.17
+				}
+			}
 			custom_tooltip = empty_line_tt
 			if = {
-				limit = { KRA = { NOT = { has_ruler_flag = kra_caspar_rules_flag }  }  } 
+				limit = {
+					KRA = {
+						NOT = {
+							has_ruler_flag = kra_caspar_rules_flag
+						}
+					}
+				}
 				custom_tooltip = ksb_if_lechia_civil_war_has_averted_yes_tt
 			}
-			else = { custom_tooltip = ksb_if_lechia_civil_war_has_averted_no_tt } 
+			else = {
+				custom_tooltip = ksb_if_lechia_civil_war_has_averted_no_tt
+			}
 			tooltip = {
-				sandomierz_area = { add_permanent_claim = ROOT } 
-				malopolska_area = { add_permanent_claim = ROOT } 
+				sandomierz_area = {
+					add_permanent_claim = ROOT
+				}
+				malopolska_area = {
+					add_permanent_claim = ROOT
+				}
 			}
 			custom_tooltip = empty_line_tt
 			if = {
-				limit = { 
+				limit = {
 					OR = {
 						war_with = KRA
 						war_with = POL
 					}
-				} 
+				}
 				custom_tooltip = ksb_yes_war_with_lechia_tt
 			}
-			else = { custom_tooltip = ksb_no_war_with_lechia_tt } 
+			else = {
+				custom_tooltip = ksb_no_war_with_lechia_tt
+			}
 			tooltip = {
-				sandomierz_area = { add_permanent_claim = ROOT } 
-				malopolska_area = { add_permanent_claim = ROOT } 
+				sandomierz_area = {
+					add_permanent_claim = ROOT
+				}
+				malopolska_area = {
+					add_permanent_claim = ROOT
+				}
 			}
 			hidden_effect = {
 				if = {
-					limit = { has_global_flag = lechia_succession_wars } 
-					country_event = { id = pf_ksb_events.17 } 
+					limit = {
+						has_global_flag = lechia_succession_wars
+					}
+					country_event = {
+						id = pf_ksb_events.17
+					}
 					set_country_flag = ksb_supported_lechia_wars
 				}
 				else_if = {
-					limit = { KRA = { NOT = { has_ruler_flag = kra_caspar_rules_flag }  }  } 
-					sandomierz_area = { add_permanent_claim = ROOT } 
-					malopolska_area = { add_permanent_claim = ROOT } 
+					limit = {
+						KRA = {
+							NOT = {
+								has_ruler_flag = kra_caspar_rules_flag
+							}
+						}
+					}
+					sandomierz_area = {
+						add_permanent_claim = ROOT
+					}
+					malopolska_area = {
+						add_permanent_claim = ROOT
+					}
 					set_country_flag = ksb_averted_lechia_wars
 				}
 				else = {
-					sandomierz_area = { add_permanent_claim = ROOT } 
-					malopolska_area = { add_permanent_claim = ROOT } 
+					sandomierz_area = {
+						add_permanent_claim = ROOT
+					}
+					malopolska_area = {
+						add_permanent_claim = ROOT
+					}
 					set_country_flag = ksb_attacked_lechia
 				}
-			}	
+			}
 			custom_tooltip = empty_line_tt
 			lithuania_area = {
 				add_permanent_claim = ROOT
@@ -659,11 +894,12 @@ ksb_5_slot = {
 			}
 		}
 	}
-
 	ksb_protect_lechia = {
 		icon = mission_pol_throne_bohemia
 		position = 2
-		required_missions = { ksb_intervene_in_lechia } 
+		required_missions = {
+			ksb_intervene_in_lechia
+		}
 		provinces_to_highlight = {
 			if = {
 				limit = {
@@ -693,12 +929,15 @@ ksb_5_slot = {
 					area = sandomierz_area
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			if = {
-				limit = { has_country_flag = ksb_supported_lechia_wars } 
+				limit = {
+					has_country_flag = ksb_supported_lechia_wars
+				}
 				OR = {
 					alliance_with = KRA
 					alliance_with = POL
@@ -715,20 +954,23 @@ ksb_5_slot = {
 				}
 			}
 		}
-
 		effect = {
 			custom_tooltip = pf_ksb_effects_change_tt
 			if = {
 				limit = {
 					has_country_flag = ksb_supported_lechia_wars
-					OR = { alliance_with = KRA } 
+					OR = {
+						alliance_with = KRA
+					}
 				}
 				vassalize = KRA
 			}
 			else_if = {
 				limit = {
 					has_country_flag = ksb_supported_lechia_wars
-					OR = { alliance_with = POL } 
+					OR = {
+						alliance_with = POL
+					}
 				}
 				vassalize = POL
 			}
@@ -752,19 +994,21 @@ ksb_5_slot = {
 			}
 		}
 	}
-
 	ksb_conquer_lithuania = {
 		icon = mission_conquer_lithuania
 		position = 3
-		required_missions = { ksb_protect_lechia } 
+		required_missions = {
+			ksb_protect_lechia
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = samogitia_area
 				area = lithuania_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			samogitia_area = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -778,19 +1022,24 @@ ksb_5_slot = {
 				type = all
 			}
 		}
-
-		effect = { baltic_region = { add_permanent_claim = ROOT }  } 
+		effect = {
+			baltic_region = {
+				add_permanent_claim = ROOT
+			}
+		}
 	}
-
 	ksb_lords_of_baltic = {
 		icon = mission_conquer_baltic_region
 		position = 4
-		required_missions = { ksb_conquer_lithuania } 
+		required_missions = {
+			ksb_conquer_lithuania
+		}
 		provinces_to_highlight = {
 			region = baltic_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			baltic_region = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -801,8 +1050,7 @@ ksb_5_slot = {
 				}
 			}
 		}
-
-		effect = { 
+		effect = {
 			define_advisor = {
 				type = governor
 				skill = 3
@@ -811,52 +1059,66 @@ ksb_5_slot = {
 			custom_tooltip = empty_line_tt
 			custom_tooltip = lords_of_baltic_tt
 			hidden_effect = {
-				ZLT = { 
-					every_owned_province = { 
-						add_permanent_claim = ROOT 
-					}  
-				}  
+				ZLT = {
+					every_owned_province = {
+						add_permanent_claim = ROOT
+					}
+				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					NOT = {
-						ZLT = {  
+						ZLT = {
 							owns_core_province = 4242
 						}
 					}
-				} 
+				}
 				custom_tooltip = empty_line_tt
 				4242 = {
 					add_permanent_claim = ROOT
 				}
 			}
-		} 
+		}
 	}
-
 	ksb_end_zilant_raids = {
 		icon = mjz_for_the_horde
 		position = 5
-		required_missions = { ksb_lords_of_baltic } 
+		required_missions = {
+			ksb_lords_of_baltic
+		}
 		provinces_to_highlight = {
 			owned_by = ZLT
 			province_id = 4242
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
-			NOT = { ZLT = { exists = yes } }
-			4242 = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				ZLT = {
+					exists = yes
+				}
+			}
+			4242 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		effect = {
 			add_stability_or_adm_power = yes
 			custom_tooltip = empty_line_tt
-			white_ruthenia_area = { add_permanent_claim = ROOT } 
-			smolensk_area = { add_permanent_claim = ROOT } 
-			pskov_area = { add_permanent_claim = ROOT } 
+			white_ruthenia_area = {
+				add_permanent_claim = ROOT
+			}
+			smolensk_area = {
+				add_permanent_claim = ROOT
+			}
+			pskov_area = {
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
+
 sevksb_1_branch = {
 	slot = 1
 	generic = no
@@ -874,13 +1136,14 @@ sevksb_1_branch = {
 			}
 		}
 	}
-
 	sev_svetovids_most_faithful = {
 		icon = mission_placeholder
 		position = 4
-		required_missions = { ksb_restore_worship } 
-		provinces_to_highlight = {  } 
-
+		required_missions = {
+			ksb_restore_worship
+		}
+		provinces_to_highlight = {
+		}
 		trigger = {
 			has_estate_privilege = estate_church_pf_ksb_head_of_cult
 			estate_loyalty = {
@@ -895,23 +1158,24 @@ sevksb_1_branch = {
 			}
 			legitimacy = 100
 		}
-
 		effect = {
 			change_government = theocracy
 			add_government_reform = pf_svetovid_theocracy
 		}
 	}
-
 	sev_convert_germania = {
 		icon = mission_placeholder
 		position = 5
-		required_missions = { sev_svetovids_most_faithful } 
+		required_missions = {
+			sev_svetovids_most_faithful
+		}
 		provinces_to_highlight = {
 			region = north_german_region
-			NOT = { religion = ROOT } 
+			NOT = {
+				religion = ROOT
+			}
 			owned_by = ROOT
 		}
-
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 20
@@ -919,13 +1183,12 @@ sevksb_1_branch = {
 				religion = slavic_religion
 			}
 		}
-
 		effect = {
 			add_stability_or_adm_power = yes
 			custom_tooltip = empty_line_tt
 			if = {
-				limit = { 
-					has_government_mechanic = pf_svetovid_dedication_mechanic 
+				limit = {
+					has_government_mechanic = pf_svetovid_dedication_mechanic
 				}
 				add_government_power = {
 					mechanic_type = pf_svetovid_dedication_mechanic
@@ -937,23 +1200,20 @@ sevksb_1_branch = {
 			add_estate_church_loyalty_effect = yes
 		}
 	}
-
 	sev_gdansk = {
 		icon = mission_pol_embellish_gdansk
 		position = 7
-		provinces_to_highlight = {  
+		provinces_to_highlight = {
 			province_id = 43
-		} 
-
-		trigger = {  
+		}
+		trigger = {
 			43 = {
 				development = 30
 				province_has_current_tech_fort_trigger = yes
 				has_dock_building_trigger = yes
 			}
-		} 
-
-		effect = {  
+		}
+		effect = {
 			define_advisor = {
 				type = trader
 				skill = 3
@@ -963,26 +1223,28 @@ sevksb_1_branch = {
 			43 = {
 				set_center_level_3_center_of_trade = yes
 			}
-		} 
+		}
 	}
-
 	sev_protect_coast = {
 		icon = pf_fertile_crescent
 		position = 8
-		required_missions = { sev_gdansk } 
-		provinces_to_highlight = {  
+		required_missions = {
+			sev_gdansk
+		}
+		provinces_to_highlight = {
 			AND = {
 				OR = {
 					region = poland_region
 					region = baltic_region
 				}
 				has_port = yes
-				NOT = { has_coast_defense_building_trigger = yes }
+				NOT = {
+					has_coast_defense_building_trigger = yes
+				}
 			}
 			owned_by = ROOT
-		} 
-
-		trigger = {  
+		}
+		trigger = {
 			num_of_owned_provinces_with = {
 				value = 8
 				OR = {
@@ -992,33 +1254,38 @@ sevksb_1_branch = {
 				has_port = yes
 				has_coast_defense_building_trigger = yes
 			}
-		} 
-
-		effect = {  
-			
+		}
+		effect = {
 			# custom_tooltip = ksb_to_be_added_tt
 			# #when norse raid wars get added block you from getting decced on
 			add_country_modifier = {
 				name = ksb_safe_shores
 				duration = 7300
 			}
-		} 
+		}
 	}
-
 	sev_baltic_monopolies = {
 		icon = mission_baltic_empire
 		position = 10
-		required_missions = { sev_protect_coast } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  
+		required_missions = {
+			sev_protect_coast
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
 			1926 = {
 				is_strongest_trade_power = ROOT
 			}
 			num_ships_protecting_trade = 30
-		} 
-
-		effect = {  
+		}
+		effect = {
+			add_years_of_income = 1
+			define_advisor = {
+				type = trader
+				skill = 2
+				discount = yes
+			}
+			custom_tooltip = empty_line_tt
 			capital_scope = {
 				add_unit_construction = {
 					type = light_ship
@@ -1027,9 +1294,10 @@ sevksb_1_branch = {
 					amount = 10
 				}
 			}
-		} 
+		}
 	}
 }
+
 sevksb_2_branch = {
 	slot = 2
 	generic = no
@@ -1047,24 +1315,27 @@ sevksb_2_branch = {
 			}
 		}
 	}
-
 	sev_to_the_rhine = {
 		icon = mission_se_along_the_river
 		position = 5
-		required_missions = { ksb_push_borderlands } 
+		required_missions = {
+			ksb_push_borderlands
+		}
 		provinces_to_highlight = {
 			region = north_german_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 45
 				region = north_german_region
 			}
-			north_rhine_area = { country_or_non_sovereign_subject_holds = ROOT } 
+			north_rhine_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		effect = {
 			# hidden_effect = {
 			# 	random_owned_province = {
@@ -1106,10 +1377,9 @@ sevksb_2_branch = {
 			add_country_modifier = {
 				name = "ksb_spreading_slavic_culture"
 				duration = 10950
-			} 
+			}
 		}
 	}
-
 	sev_lords_of_germania = {
 		icon = interfere_in_germany
 		position = 6
@@ -1124,11 +1394,14 @@ sevksb_2_branch = {
 					region = south_german_region
 					region = north_german_region
 				}
-				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 20
@@ -1140,7 +1413,6 @@ sevksb_2_branch = {
 				}
 			}
 		}
-
 		effect = {
 			# custom_tooltip = ksb_irminovci_converting_tt
 			# set_country_flag = ksb_irminovci_converting_flag
@@ -1148,10 +1420,13 @@ sevksb_2_branch = {
 				name = "ksb_lord_of_germania"
 				duration = -1
 			}
-			carpathia_region = { add_permanent_claim = ROOT }
+			carpathia_region = {
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
+
 sevksb_3_branch = {
 	slot = 3
 	generic = no
@@ -1169,11 +1444,12 @@ sevksb_3_branch = {
 			}
 		}
 	}
-
 	sev_conquer_south = {
 		icon = alpine_fortifications
 		position = 4
-		required_missions = { ksb_lands_of_czech } 
+		required_missions = {
+			ksb_lands_of_czech
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = upper_bavaria_area
@@ -1182,9 +1458,10 @@ sevksb_3_branch = {
 				area = upper_franconia_area
 				area = franconia_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			upper_bavaria_area = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1207,25 +1484,28 @@ sevksb_3_branch = {
 				type = all
 			}
 		}
-
 		effect = {
 			add_country_modifier = {
 				name = "ksb_break_the_lombards"
 				duration = 10950
 			}
-			south_german_region = { add_permanent_claim = ROOT } 
+			south_german_region = {
+				add_permanent_claim = ROOT
+			}
 		}
 	}
-
 	sev_lombardy_falls = {
 		icon = polish_diplomacy
 		position = 5
-		required_missions = { sev_conquer_south } 
+		required_missions = {
+			sev_conquer_south
+		}
 		provinces_to_highlight = {
 			region = south_german_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 30
@@ -1237,7 +1517,6 @@ sevksb_3_branch = {
 				region = south_german_region
 			}
 		}
-
 		effect = {
 			every_owned_province = {
 				limit = {
@@ -1251,23 +1530,24 @@ sevksb_3_branch = {
 			}
 		}
 	}
-
 	sev_mountain_crossing = {
 		icon = alpine_defenses
 		position = 6
-		required_missions = { sev_volhynian_conquest } 
+		required_missions = {
+			sev_volhynian_conquest
+		}
 		provinces_to_highlight = {
 			area = transylvania_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			transylvania_area = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
 			}
 		}
-
 		effect = {
 			add_country_modifier = {
 				name = "ksb_drakovan_defensiveness"
@@ -1276,6 +1556,7 @@ sevksb_3_branch = {
 		}
 	}
 }
+
 sevksb_4_branch = {
 	slot = 4
 	generic = no
@@ -1293,20 +1574,22 @@ sevksb_4_branch = {
 			}
 		}
 	}
-
 	sev_volhynian_conquest = {
 		icon = mission_advance_to_the_dnieper
 		position = 5
-		required_missions = { ksb_united_severoslavia } 
+		required_missions = {
+			ksb_united_severoslavia
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = red_ruthenia_area
 				area = volhynia_area
 				province_id = 281
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			red_ruthenia_area = {
 				country_or_non_sovereign_subject_holds = root
@@ -1318,7 +1601,6 @@ sevksb_4_branch = {
 			}
 			owns_or_non_sovereign_subject_of = 281
 		}
-
 		effect = {
 			add_country_modifier = {
 				name = "ksb_great_march_south"
@@ -1327,30 +1609,35 @@ sevksb_4_branch = {
 			custom_tooltip = ksb_claim_all_slavic_provinces
 			hidden_effect = {
 				every_province = {
-					limit = { culture_group = pagan_slavic } 
+					limit = {
+						culture_group = pagan_slavic
+					}
 					add_permanent_claim = ROOT
 				}
 			}
-			country_event = { id = pf_ksb_events.19 } 
+			country_event = {
+				id = pf_ksb_events.19
+			}
 		}
 	}
-
 	sev_between_seas = {
 		icon = mission_establish_high_seas_navy
 		position = 6
-		required_missions = { sev_volhynian_conquest } 
+		required_missions = {
+			sev_volhynian_conquest
+		}
 		provinces_to_highlight = {
 			area = moldavia_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			moldavia_area = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
 			}
 		}
-
 		effect = {
 			1756 = {
 				add_province_modifier = {
@@ -1360,7 +1647,6 @@ sevksb_4_branch = {
 			}
 		}
 	}
-
 	sev_lord_of_slavia = {
 		icon = mission_placeholder
 		position = 7
@@ -1370,27 +1656,32 @@ sevksb_4_branch = {
 		}
 		provinces_to_highlight = {
 			culture_group = pagan_slavic
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			all_province = {
 				culture_group = pagan_slavic
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-
 		effect = {
 			add_country_modifier = {
 				name = "ksb_lord_of_all_slavs"
 				duration = -1
 			}
-			crimea_region = { add_permanent_claim = ROOT } 
-			ruthenia_region = { add_permanent_claim = ROOT } 
+			crimea_region = {
+				add_permanent_claim = ROOT
+			}
+			ruthenia_region = {
+				add_permanent_claim = ROOT
+			}
 			# 280 = { add_core = ROOT } 
 		}
 	}
 }
+
 sevksb_5_branch = {
 	slot = 5
 	generic = no
@@ -1408,20 +1699,22 @@ sevksb_5_branch = {
 			}
 		}
 	}
-
 	sev_wild_frontier = {
 		icon = mission_the_caucasus_rus
 		position = 6
-		required_missions = { ksb_end_zilant_raids } 
+		required_missions = {
+			ksb_end_zilant_raids
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = smolensk_area
 				area = pskov_area
 				area = white_ruthenia_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			smolensk_area = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1436,15 +1729,15 @@ sevksb_5_branch = {
 				type = all
 			}
 		}
-
 		effect = {
 			add_ruler_personality = conqueror_personality
 			custom_tooltip = empty_line_tt
-			russia_region = { add_permanent_claim = ROOT } 
+			russia_region = {
+				add_permanent_claim = ROOT
+			}
 			# ruthenia_region = { add_permanent_claim = ROOT } 
 		}
 	}
-
 	sev_rusnok_lands = {
 		icon = mission_marwari_horses
 		position = 8
@@ -1454,63 +1747,68 @@ sevksb_5_branch = {
 		}
 		provinces_to_highlight = {
 			region = russia_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 50
 				region = russia_region
 			}
 		}
-
 		effect = {
-			ural_region = { add_permanent_claim = ROOT } 
 			add_country_modifier = {
 				name = "ksb_convert_mongols"
 				duration = 10950
 			}
+			ural_region = {
+				add_permanent_claim = ROOT
+			}
 		}
 	}
-
 	sev_krakow = {
 		icon = mission_pol_revival_krakow
 		position = 9
-		provinces_to_highlight = {  
+		provinces_to_highlight = {
 			province_id = 262
-		} 
-
-		trigger = {  
+		}
+		trigger = {
 			262 = {
-				has_production_building_trigger = yes
-				has_tax_building_trigger = yes
-				has_manpower_building_trigger = yes
 				development = 30
 			}
-			trade_company_krakow = {
-				is_strongest_trade_power = ROOT
-			}
-		} 
-
-		effect = {  
-			add_years_of_trade_income = {
-				years = 2
+			262 = {
+				has_tax_building_trigger = yes
 			}
 			262 = {
-				upgrade_center_of_trade = yes
-
+				has_production_building_trigger = yes
 			}
-		} 
+			262 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_years_of_income =  1.5
+			custom_tooltip = empty_line_tt
+			262 = {
+				change_trade_goods = silk
+			}
+			custom_tooltip = empty_line_tt
+			262 = {
+				set_center_level_3_center_of_trade = yes
+			}
+		}
 	}
-
 	sev_endless_fields = {
 		icon = mission_pol_tend_east
 		position = 10
-		required_missions = { sev_krakow } 
-		provinces_to_highlight = {  
+		required_missions = {
+			sev_krakow
+		}
+		provinces_to_highlight = {
 			NOT = {
 				AND = {
-					base_production = 8
+					base_production = 6
 					OR = {
 						trade_goods = grain
 						trade_goods = livestock
@@ -1518,35 +1816,34 @@ sevksb_5_branch = {
 				}
 			}
 			owned_by = ROOT
-		} 
-
-		trigger = {  
+		}
+		trigger = {
 			num_of_owned_provinces_with = {
-				value = 20
-				base_production = 8
+				value = 12
+				base_production = 6
 				OR = {
 					trade_goods = grain
 					trade_goods = livestock
 				}
 			}
-		} 
-
-		effect = {  
+		}
+		effect = {
 			change_price = {
 				trade_goods = grain
 				key = "Slavic Grain"
-				value = 0.2
-				duration = 7300
+				value = 0.25
+				duration = 18250
 			}
 			change_price = {
 				trade_goods = livestock
 				key = "Slavic Livestock"
-				value = 0.2
-				duration = 7300
+				value = 0.25
+				duration = 18250
 			}
-		} 
+		}
 	}
 }
+
 slvksb_1_branch = {
 	slot = 1
 	generic = no
@@ -1558,12 +1855,13 @@ slvksb_1_branch = {
 			tag = SLV
 		}
 	}
-
 	slv_2_seas_2_fleets = {
 		icon = crusader_fleet
 		position = 11
-		required_missions = { sev_baltic_monopolies } 
-		provinces_to_highlight = {  
+		required_missions = {
+			sev_baltic_monopolies
+		}
+		provinces_to_highlight = {
 			if = {
 				limit = {
 					1756 = {
@@ -1574,26 +1872,25 @@ slvksb_1_branch = {
 				}
 				province_id = 1756
 			}
-		} 
-
-		trigger = {  
+		}
+		trigger = {
 			navy_size_percentage = 1
 			num_of_admirals = 3
 			1756 = {
 				has_dock_building_trigger = yes
 			}
-		} 
-
-		effect = {  
+		}
+		effect = {
 			add_navy_tradition = 30
 			define_advisor = {
 				type = naval_reformer
 				skill = 3
 				cost_multiplier = -0.75
 			}
-		} 
+		}
 	}
 }
+
 slvksb_2_branch = {
 	slot = 2
 	generic = no
@@ -1605,7 +1902,6 @@ slvksb_2_branch = {
 			tag = SLV
 		}
 	}
-
 	slv_ostgermanic_invasion = {
 		icon = invade_poland
 		position = 8
@@ -1615,84 +1911,99 @@ slvksb_2_branch = {
 		}
 		provinces_to_highlight = {
 			region = carpathia_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 40
 				region = carpathia_region
 			}
 		}
-
-		effect = { 
+		effect = {
 			add_army_tradition = 10
 			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = prepare_invasion_to_federation_modifier
 				duration = 7300
 			}
-			illyria_region = { add_permanent_claim = ROOT }  
-		} 
+			illyria_region = {
+				add_permanent_claim = ROOT
+			}
+		}
 	}
-
 	slv_illyrian_conquest = {
 		icon = mission_balkan_conquest
 		position = 9
-		required_missions = { slv_ostgermanic_invasion } 
+		required_missions = {
+			slv_ostgermanic_invasion
+		}
 		provinces_to_highlight = {
 			region = illyria_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 30
 				region = illyria_region
 			}
 		}
-
-		effect = { balkan_region = { add_permanent_claim = ROOT }  } 
+		effect = {
+			balkan_region = {
+				add_permanent_claim = ROOT
+			}
+		}
 	}
-
 	slv_alexanders_lands = {
 		icon = pf_hellenic_temple_burning
 		position = 10
-		required_missions = { slv_illyrian_conquest } 
+		required_missions = {
+			slv_illyrian_conquest
+		}
 		provinces_to_highlight = {
 			region = balkan_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 40
+				value = 30
 				region = balkan_region
 			}
 			owns = 148
 			owns = 146
 		}
-
 		effect = {
-			country_event = { id = pf_ksb_events.20 } 
-			add_prestige_or_monarch_power = { amount = 25 } 
+			country_event = {
+				id = pf_ksb_events.20
+			}
+			custom_tooltip = empty_line_tt
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			custom_tooltip = empty_line_tt
 			146 = {
 				add_devastation = 60
-				destroy_great_project = { type = seat_of_the_archon } 
-				custom_tooltip = emp
-				add_great_project_tier = {
-					type = parthenon
-					tier = -4
+				destroy_great_project = {
+					type = seat_of_the_archon
 				}
 			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = slavs_in_the_parthenon_tt
+			set_country_flag = slavs_in_the_parthenon_flag
 		}
 	}
-
 	slv_crimean_ports = {
 		icon = mission_portuguese_malacca
 		position = 12
-		required_missions = { slv_2_seas_2_fleets } 
-		provinces_to_highlight = {  
+		required_missions = {
+			slv_2_seas_2_fleets
+		}
+		provinces_to_highlight = {
 			area = crimea_area
 			NOT = {
 				AND = {
@@ -1700,9 +2011,8 @@ slvksb_2_branch = {
 					has_dock_building_trigger = yes
 				}
 			}
-		} 
-
-		trigger = {  
+		}
+		trigger = {
 			crimea_area = {
 				type = all
 				AND = {
@@ -1710,9 +2020,8 @@ slvksb_2_branch = {
 					has_dock_building_trigger = yes
 				}
 			}
-		} 
-
-		effect = {  
+		}
+		effect = {
 			crimea_area = {
 				change_culture = ROOT
 				change_religion = ROOT
@@ -1721,9 +2030,10 @@ slvksb_2_branch = {
 					duration = -1
 				}
 			}
-		} 
+		}
 	}
 }
+
 slvksb_3_branch = {
 	slot = 3
 	generic = no
@@ -1735,33 +2045,37 @@ slvksb_3_branch = {
 			tag = SLV
 		}
 	}
-
 	slv_pontus_conquest = {
 		icon = the_russian_campaign
 		position = 8
-		required_missions = { sev_lord_of_slavia } 
+		required_missions = {
+			sev_lord_of_slavia
+		}
 		provinces_to_highlight = {
 			region = crimea_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			crimea_region = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
 			}
 		}
-
 		effect = {
 			add_country_modifier = {
 				name = "ksb_crimean_horsemen"
 				duration = -1
 			}
-			circassia_area = { add_permanent_claim = ROOT } 
-			dagestan_area = { add_permanent_claim = ROOT } 
+			circassia_area = {
+				add_permanent_claim = ROOT
+			}
+			dagestan_area = {
+				add_permanent_claim = ROOT
+			}
 		}
 	}
-
 	slv_restore_rus = {
 		icon = mission_restore_kiev
 		position = 9
@@ -1775,20 +2089,13 @@ slvksb_3_branch = {
 					region = ruthenia_region
 					region = russia_region
 				}
-				NOT = { culture_group = ROOT } 
+				NOT = {
+					culture_group = ROOT
+				}
 			}
 			country_or_non_sovereign_subject_holds = ROOT
 		}
-
 		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 6
-				culture = rus_new
-				OR = {
-					region = ruthenia_region
-					region = russia_region
-				}
-			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 30
 				religion = ROOT
@@ -1798,20 +2105,17 @@ slvksb_3_branch = {
 				}
 			}
 			280 = {
-				province_has_current_tech_fort_trigger = yes
-				has_trade_building_trigger = yes
+				development = 25
+			}
+			280 = {
 				has_tax_building_trigger = yes
-				has_production_building_trigger = yes
-				has_manufactory_trigger = yes
 			}
 		}
-
 		effect = {
 			custom_tooltip = ksb_rus_culture_converting_tt
 			set_country_flag = ksb_converting_rus_flag
 		}
 	}
-
 	slv_3rd_empire = {
 		icon = mission_placeholder
 		position = 11
@@ -1820,26 +2124,28 @@ slvksb_3_branch = {
 			slv_siberian_frontiers
 			slv_restore_rus
 		}
-		provinces_to_highlight = {  } 
-
+		provinces_to_highlight = {
+		}
 		trigger = {
 			is_hegemon = yes
 			prestige = 90
 		}
-
 		effect = {
 			custom_tooltip = pol_if_used_ge_rest_else_30_years_extension_tt
 			if = {
-				limit = { has_had_golden_age = yes } 
+				limit = {
+					has_had_golden_age = yes
+				}
 				reset_golden_age = yes
 			}
 			else_if = {
-				limit = { in_golden_age = yes } 
+				limit = {
+					in_golden_age = yes
+				}
 				extend_golden_age = 360
 			}
 		}
 	}
-
 	slv_prosperous_land = {
 		icon = prosperity_for_all
 		position = 13
@@ -1847,16 +2153,15 @@ slvksb_3_branch = {
 			slv_crimean_ports
 			slv_urbanization
 		}
-		provinces_to_highlight = {  } 
-
-		trigger = {  
+		provinces_to_highlight = {
+		}
+		trigger = {
 			development_in_provinces = {
 				value = 1000
 				culture_group = ROOT
 			}
-		} 
-
-		effect = {  
+		}
+		effect = {
 			custom_tooltip = "ksb_100_prosperity"
 			hidden_effect = {
 				every_owned_province = {
@@ -1866,9 +2171,10 @@ slvksb_3_branch = {
 					add_prosperity = 100
 				}
 			}
-		} 
+		}
 	}
 }
+
 slvksb_4_branch = {
 	slot = 4
 	generic = no
@@ -1880,16 +2186,18 @@ slvksb_4_branch = {
 			tag = SLV
 		}
 	}
-
 	slv_kiev_recovered = {
 		icon = mission_develop_kiev
 		position = 8
-		required_missions = { sev_lord_of_slavia } 
+		required_missions = {
+			sev_lord_of_slavia
+		}
 		provinces_to_highlight = {
 			region = ruthenia_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			ruthenia_region = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1901,15 +2209,16 @@ slvksb_4_branch = {
 				religion = slavic_religion
 			}
 		}
-
 		effect = {
-			country_event = { id = pf_ksb_events.21 } 
+			country_event = {
+				id = pf_ksb_events.21
+			}
 			custom_tooltip = empty_line_tt
 			280 = {
 				change_culture = rus_new
 			}
 			custom_tooltip = empty_line_tt
-			280 = {			
+			280 = {
 				add_province_modifier = {
 					name = "ksb_rus_capital"
 					duration = -1
@@ -1917,7 +2226,6 @@ slvksb_4_branch = {
 			}
 		}
 	}
-
 	slv_uralic_push = {
 		icon = mission_beyond_the_urals
 		position = 9
@@ -1929,9 +2237,10 @@ slvksb_4_branch = {
 				region = ural_region
 				is_city = yes
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 25
@@ -1939,24 +2248,25 @@ slvksb_4_branch = {
 				region = ural_region
 			}
 		}
-
 		effect = {
 			discover_province = 1780
 			1780 = {
 				create_colony_mission_reward_province = yes
-				add_colonysize = 100
+				# add_colonysize = 250
 			}
 		}
 	}
-
 	slv_siberian_frontiers = {
 		icon = mission_recruit_the_cossacks
 		position = 10
-		required_missions = { slv_uralic_push } 
-		provinces_to_highlight = {  } 
-
-		trigger = { owns = 1780 } 
-
+		required_missions = {
+			slv_uralic_push
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			owns = 1780
+		}
 		effect = {
 			add_country_modifier = {
 				name = "ksb_siberian_frontier"
@@ -1964,12 +2274,13 @@ slvksb_4_branch = {
 			}
 		}
 	}
-
 	slv_urbanization = {
 		icon = promote_urbanization
 		position = 12
-		required_missions = { slv_silesian_mining } 
-		provinces_to_highlight = {  
+		required_missions = {
+			slv_silesian_mining
+		}
+		provinces_to_highlight = {
 			NOT = {
 				AND = {
 					has_tax_building_trigger = yes
@@ -1980,9 +2291,8 @@ slvksb_4_branch = {
 				}
 			}
 			owned_by = ROOT
-		} 
-
-		trigger = {  
+		}
+		trigger = {
 			num_of_owned_provinces_with = {
 				value = 10
 				has_tax_building_trigger = yes
@@ -1991,17 +2301,17 @@ slvksb_4_branch = {
 				development = 20
 				culture_group = ROOT
 			}
-		} 
-
-		effect = {  
+		}
+		effect = {
 			add_ruler_personality = great_engineer_personality
 			add_country_modifier = {
 				name = ksb_flocking_to_cities
 				duration = 10950
 			}
-		} 
+		}
 	}
 }
+
 slvksb_5_branch = {
 	slot = 5
 	generic = no
@@ -2013,17 +2323,17 @@ slvksb_5_branch = {
 			tag = SLV
 		}
 	}
-
 	slv_silesian_mining = {
 		icon = mission_jawal_silver_mine
 		position = 11
-		required_missions = { sev_endless_fields } 
-		provinces_to_highlight = {  
+		required_missions = {
+			sev_endless_fields
+		}
+		provinces_to_highlight = {
 			province_id = 263
 			province_id = 2966
-		} 
-
-		trigger = {  
+		}
+		trigger = {
 			2966 = {
 				has_manufactory_trigger = yes
 				development = 20
@@ -2032,9 +2342,8 @@ slvksb_5_branch = {
 				has_manufactory_trigger = yes
 				development = 20
 			}
-		} 
-
-		effect = {  
+		}
+		effect = {
 			2966 = {
 				add_province_modifier = {
 					name = ksb_military_industrial_complex
@@ -2045,14 +2354,15 @@ slvksb_5_branch = {
 				change_trade_goods = coal
 				add_province_triggered_modifier = pf_ksb_early_coal
 			}
-		} 
+		}
 	}
-
 	slv_early_manufacturing = {
 		icon = saxon_manufacturing
 		position = 13
-		required_missions = { slv_urbanization } 
-		provinces_to_highlight = {  
+		required_missions = {
+			slv_urbanization
+		}
+		provinces_to_highlight = {
 			owned_by = ROOT
 			culture_group = ROOT
 			NOT = {
@@ -2061,23 +2371,21 @@ slvksb_5_branch = {
 					development = 20
 				}
 			}
-		} 
-
-		trigger = {  
+		}
+		trigger = {
 			num_of_owned_provinces_with = {
 				value = 20
 				has_manufactory_trigger = yes
 				development = 20
 				culture_group = ROOT
 			}
-		} 
-
-		effect = {  
+		}
+		effect = {
 			add_years_of_income = 2
 			add_country_modifier = {
 				name = ksb_modern_state
 				duration = -1
 			}
-		} 
+		}
 	}
 }

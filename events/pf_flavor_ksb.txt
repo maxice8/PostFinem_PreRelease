@@ -1,5 +1,4 @@
 namespace = pf_ksb_events
-
 #Kashubia intro event
 country_event = {
 	id = pf_ksb_events.1
@@ -111,7 +110,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = pf_ksb_events.6a
-	    restore_country_name = yes
+		restore_country_name = yes
 	}
 }
 
@@ -127,12 +126,16 @@ country_event = {
 		has_government_mechanic = pf_svetovid_dedication_mechanic
 		stability = 1
 		devotion = 80
-		NOT = { average_unrest = 0.5 }
-		NOT = { has_country_modifier =  ksb_prospering_fields } 
+		NOT = {
+			average_unrest = 0.5
+		}
+		NOT = {
+			has_country_modifier = ksb_prospering_fields
+		}
 	}
 	option = {
 		name = pf_ksb_events.7a
-	    add_government_power = {
+		add_government_power = {
 			mechanic_type = pf_svetovid_dedication_mechanic
 			power_type = pf_svetovid_dedication
 			value = 15
@@ -140,13 +143,14 @@ country_event = {
 	}
 	option = {
 		name = pf_ksb_events.7b
-	    add_years_of_income = 0.25
+		add_years_of_income = 0.25
 		add_country_modifier = {
 			name = ksb_prospering_fields
 			duration = 3650
 		}
 	}
 }
+
 #religious fundamentalists
 country_event = {
 	id = pf_ksb_events.8
@@ -164,14 +168,18 @@ country_event = {
 	}
 	trigger = {
 		has_government_mechanic = pf_svetovid_dedication_mechanic
-		NOT = { devotion = 60 }
+		NOT = {
+			devotion = 60
+		}
 		average_unrest = 1
-		NOT = { has_country_modifier =  ksb_losing_faith } 
+		NOT = {
+			has_country_modifier = ksb_losing_faith
+		}
 	}
 	option = {
 		name = pf_ksb_events.8a
 		goto = religious_revolt_province
-	    add_government_power = {
+		add_government_power = {
 			mechanic_type = pf_svetovid_dedication_mechanic
 			power_type = pf_svetovid_dedication
 			value = -15
@@ -186,13 +194,14 @@ country_event = {
 		event_target:religious_revolt_province = {
 			slavic_zealots = 2
 		}
-	    add_prestige = -15
+		add_prestige = -15
 		add_country_modifier = {
 			name = ksb_losing_faith
 			duration = 3650
 		}
 	}
 }
+
 #fighting alongside us
 country_event = {
 	id = pf_ksb_events.9
@@ -204,7 +213,9 @@ country_event = {
 		has_government_mechanic = pf_svetovid_dedication_mechanic
 		is_at_war = yes
 		war_exhaustion = 4
-		NOT = { has_country_modifier = ksb_alongside_us } 
+		NOT = {
+			has_country_modifier = ksb_alongside_us
+		}
 	}
 	option = {
 		name = pf_ksb_events.9a
@@ -224,6 +235,7 @@ country_event = {
 		}
 	}
 }
+
 #religious disagreements between local volkvs
 country_event = {
 	id = pf_ksb_events.10
@@ -233,9 +245,13 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		has_government_mechanic = pf_svetovid_dedication_mechanic
-		NOT = { stability = 1 } 
+		NOT = {
+			stability = 1
+		}
 		average_unrest = 1
-		NOT = { has_country_modifier = ksb_volkvs_disagree } 
+		NOT = {
+			has_country_modifier = ksb_volkvs_disagree
+		}
 	}
 	option = {
 		name = pf_ksb_events.11a
@@ -253,6 +269,7 @@ country_event = {
 		}
 	}
 }
+
 #uninspired soldiers
 country_event = {
 	id = pf_ksb_events.11
@@ -263,7 +280,9 @@ country_event = {
 	trigger = {
 		has_government_mechanic = pf_svetovid_dedication_mechanic
 		is_at_war = yes
-		NOT = { stability = 1 } 
+		NOT = {
+			stability = 1
+		}
 	}
 	option = {
 		name = pf_ksb_events.11a
@@ -290,8 +309,8 @@ country_event = {
 		}
 	}
 }
-#END OF PULSE EVENTS
 
+#END OF PULSE EVENTS
 #release polabia
 country_event = {
 	id = pf_ksb_events.12
@@ -328,7 +347,6 @@ country_event = {
 			add_permanent_claim = POB
 		}
 		add_dip_power = 100
-		
 	}
 	option = {
 		name = pf_ksb_events.12b
@@ -430,12 +448,11 @@ country_event = {
 	mean_time_to_happen = {
 		months = 120
 	}
-	
 	option = {
 		name = pf_ksb_events.14a
 		event_target:culture_conversion_province = {
 			change_culture = ceci
-		# change_religion = slavic_religion
+			# change_religion = slavic_religion
 		}
 	}
 }
@@ -476,7 +493,6 @@ country_event = {
 		change_government = theocracy
 		add_government_reform = pf_svetovid_theocracy
 	}
-	
 }
 
 #support a side Lechite civil war
@@ -560,7 +576,6 @@ country_event = {
 # 	mean_time_to_happen = {
 # 		months = 120
 # 	}
-	
 # 	option = {
 # 		name = pf_ksb_events.18a
 # 		event_target:culture_conversion_province = {
@@ -598,7 +613,6 @@ country_event = {
 # 	mean_time_to_happen = {
 # 		months = 120
 # 	}
-	
 # 	option = {
 # 		name = pf_ksb_events.18.a
 # 		event_target:culture_conversion_province = {
@@ -607,7 +621,6 @@ country_event = {
 # 		}
 # 	}
 # }
-
 #Volkhvate of Volyn event
 country_event = {
 	id = pf_ksb_events.19
@@ -640,8 +653,8 @@ country_event = {
 	}
 	option = {
 		name = pf_ksb_events.20a
-		event_target:papal_controller_targer = { 
-			set_papacy_active = no 
+		event_target:papal_controller_targer = {
+			set_papacy_active = no
 			add_prestige = -20
 			add_legitimacy_equivalent = {
 				amount = -50
@@ -670,7 +683,9 @@ country_event = {
 	}
 	option = {
 		name = pf_ksb_events.21b
-		add_prestige_or_monarch_power = { amount = 25 }
+		add_prestige_or_monarch_power = {
+			amount = 25
+		}
 		custom_tooltip = empty_line_tt
 		capital_scope = {
 			add_base_manpower = 3
@@ -681,44 +696,42 @@ country_event = {
 }
 
 #spread of Rus culture
-country_event = {
+province_event = {
 	id = pf_ksb_events.22
 	title = pf_ksb_events.22.t
 	desc = pf_ksb_events.22.d
 	picture = CZECH_NOBLES_eventPicture
-	immediate = {
-		hidden_effect = {
-			random_owned_province = {
-				limit = {
-					OR = {
-						region = ruthenia_region
-						region = russia_region
-					}
-					culture_group = west_mongol
-				}
-				save_event_target_as = culture_conversion_province
-			}
-		}
-	}
+	is_mtth_scaled_to_size = 1
 	trigger = {
-		any_owned_province = {
-			OR = {
-				region = ruthenia_region
-				region = russia_region
-			}
-			culture_group = west_mongol
+		region = ruthenia_region
+		culture_group = west_mongol
+		owner = {
+			has_country_flag = ksb_converting_rus_flag
 		}
-		has_country_flag = ksb_converting_rus_flag
 	}
 	mean_time_to_happen = {
-		months = 120
+		months = 1200
+		modifier = {
+			factor = 0.5
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			development = 25
+		}
+		modifier = {
+			factor = 0.5
+			development = 30
+		}
 	}
-	
 	option = {
 		name = pf_ksb_events.22a
-		event_target:culture_conversion_province = {
-			change_culture = rus_new
-			# change_religion = slavic_religion
+		owner = {
+			add_prestige_or_monarch_power = { amount = 5 }
 		}
+		change_culture = rus_new
+		custom_tooltip = empty_line_tt
+		add_base_tax = 1
+		# change_religion = slavic_religion
 	}
 }
