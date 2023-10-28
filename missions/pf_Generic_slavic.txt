@@ -495,10 +495,13 @@ jug_2_branch = {
 }
 slv_5_branch = {
 	slot = 5
-	generic = no
+	generic = yes
 	ai = yes
 	has_country_shield = yes
-	potential = { culture_group = pagan_slavic } 
+	potential = { 
+		culture_group = pagan_slavic 
+
+	} 
 
 	slv_worthy_capital = {
 		icon = develop_our_capital
