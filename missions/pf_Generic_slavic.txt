@@ -59,8 +59,12 @@ sev_1_branch = {
 			south_slavia_region = {
 				add_permanent_claim = ROOT
 			}
+			north_german_region = {
+				add_permanent_claim = ROOT
+			}
 			custom_tooltip = ksb_can_form_severoslavia_tt
 			set_country_flag = can_form_severoslavia_earlier_flag
+			add_prestige = 20
 		} 
 	}
 
@@ -107,6 +111,10 @@ sev_1_branch = {
 			}
 			baltic_region = {
 				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = ksb_lord_of_all_slavs
+				duration = -1
 			}
 		} 
 	}
@@ -272,7 +280,7 @@ jug_1_branch = {
 		} 
 
 		effect = {  
-			poland_region = {
+			south_slavia_region = {
 				add_permanent_claim = ROOT
 			}
 		} 
@@ -298,8 +306,12 @@ jug_1_branch = {
 			poland_region = {
 				add_permanent_claim = ROOT
 			}
+			carpathia_region = {
+				add_permanent_claim = ROOT
+			}
 			custom_tooltip = ksb_can_form_jugoslavia_tt
 			set_country_flag = can_form_jugoslavia_earlier_flag
+			add_prestige = 20
 		} 
 	}
 
@@ -346,6 +358,10 @@ jug_1_branch = {
 			}
 			baltic_region = {
 				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = ksb_lord_of_all_slavs
+				duration = -1
 			}
 		} 
 	}
