@@ -146,20 +146,16 @@ petition_for_ruler_support = {
 			limit = {
 				ROOT = { government_rank = 2 }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = -50
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -50 }
 		}
 		add_entry = {
 			name = PETITION_AT_WAR
 			limit = {
 				ROOT = { is_at_war = yes }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = -50
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -50 }
 		}
 		add_entry = {
 			name = PETITION_IMPERIAL_AUTHORITY
@@ -214,20 +210,16 @@ petition_for_ruler_support = {
 			limit = {
 				FROM = { alliance_with = ROOT }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 20
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 20}
 		}
 		add_entry = {
 			name = PETITION_BONUS_REASONS
 			limit = {
 				ROOT = { has_government_attribute = more_reasons_for_petition_acceptance }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 30
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 30 }
 		}
 	}
 }
@@ -377,20 +369,16 @@ petition_for_military_support = {
 			limit = {
 				ROOT = { government_rank = 2 }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = -50
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -50 }
 		}
 		add_entry = {
 			name = PETITION_AT_WAR
 			limit = {
 				ROOT = { is_at_war = yes }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = -50
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -50 }
 		}
 		add_entry = {
 			name = PETITION_IMPERIAL_AUTHORITY
@@ -445,20 +433,16 @@ petition_for_military_support = {
 			limit = {
 				FROM = { alliance_with = ROOT }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 20
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 20 }
 		}
 		add_entry = {
 			name = PETITION_BONUS_REASONS
 			limit = {
 				ROOT = { has_government_attribute = more_reasons_for_petition_acceptance }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 30
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 30 }
 		}
 	}
 }
@@ -608,20 +592,16 @@ petition_for_development_support = {
 			limit = {
 				ROOT = { government_rank = 2 }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = -50
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -50 }
 		}
 		add_entry = {
 			name = PETITION_AT_WAR
 			limit = {
 				ROOT = { is_at_war = yes }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = -50
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -50 }
 		}
 		add_entry = {
 			name = PETITION_IMPERIAL_AUTHORITY
@@ -676,20 +656,16 @@ petition_for_development_support = {
 			limit = {
 				FROM = { alliance_with = ROOT }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 20
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 20 }
 		}
 		add_entry = {
 			name = PETITION_BONUS_REASONS
 			limit = {
 				ROOT = { has_government_attribute = more_reasons_for_petition_acceptance }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 30
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 30 }
 		}
 	}
 }
@@ -839,20 +815,16 @@ petition_for_trade_support = {
 			limit = {
 				ROOT = { government_rank = 2 }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = -50
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -50 }
 		}
 		add_entry = {
 			name = PETITION_AT_WAR
 			limit = {
 				ROOT = { is_at_war = yes }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = -50
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -50 }
 		}
 		add_entry = {
 			name = PETITION_IMPERIAL_AUTHORITY
@@ -907,20 +879,16 @@ petition_for_trade_support = {
 			limit = {
 				FROM = { alliance_with = ROOT }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 20
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 20 }
 		}
 		add_entry = {
 			name = PETITION_BONUS_REASONS
 			limit = {
 				ROOT = { has_government_attribute = more_reasons_for_petition_acceptance }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 30
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 30 }
 		}
 	}
 }
@@ -1071,20 +1039,16 @@ petition_for_advisor = {
 			limit = {
 				ROOT = { government_rank = 2 }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = -50
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -50 }
 		}
 		add_entry = {
 			name = PETITION_AT_WAR
 			limit = {
 				ROOT = { is_at_war = yes }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = -50
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -50 }
 		}
 		add_entry = {
 			name = PETITION_IMPERIAL_AUTHORITY
@@ -1139,30 +1103,24 @@ petition_for_advisor = {
 			limit = {
 				FROM = { alliance_with = ROOT }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 20
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 20 }
 		}
 		add_entry = {
 			name = PETITION_BONUS_REASONS
 			limit = {
 				ROOT = { has_government_attribute = more_reasons_for_petition_acceptance }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 30
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 30 }
 		}
 		add_entry = {
 			name = PETITION_CONSILIARIO_TABULA
 			limit = {
 				ROOT = { has_country_flag = pf_if_reasons_for_advisor_petition }
 			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 20
-			}
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 20 }
 		}
 	}
 }
