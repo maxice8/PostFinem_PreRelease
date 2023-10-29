@@ -83,19 +83,19 @@ province_event = {
 # howard: any reason this event exists? it just tells you
 # something happened in the previous event, which tells you
 # what happened
-country_event = {
-	id = pf_ksb_events.4
-	title = pf_ksb_events.4.t
-	desc = pf_ksb_events.4.d
-	picture = RUNESTONE_eventPicture
+# country_event = {
+# 	id = pf_ksb_events.4
+# 	title = pf_ksb_events.4.t
+# 	desc = pf_ksb_events.4.d
+# 	picture = RUNESTONE_eventPicture
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 	
-	option = {
-		name = pf_ksb_events.4a
-		custom_tooltip = "ksb_polabians_again_tt"
-	}
-}
+# 	option = {
+# 		name = pf_ksb_events.4a
+# 		custom_tooltip = "ksb_polabians_again_tt"
+# 	}
+# }
 
 #slavia birth of republic
 country_event = {
@@ -533,20 +533,6 @@ country_event = {
 	}
 }
 
-# howard: what's this for?
-#debug event
-country_event = {
-	id = pf_ksb_events.16
-	title = pf_ksb_events.16.t
-	desc = pf_ksb_events.16.d
-	picture = CZECH_NOBLES_eventPicture
-	is_triggered_only = yes
-	option = {
-		name = pf_ksb_events.16a
-		change_government = theocracy
-		add_government_reform = pf_svetovid_theocracy
-	}
-}
 
 #support a side Lechite civil war
 country_event = {
