@@ -476,6 +476,7 @@ province_event = {
 	picture = CZECH_NOBLES_eventPicture
 	
 	is_mtth_scaled_to_size = 1
+	hidden = yes
 	
 	trigger = {
 		culture = marcomanni
@@ -767,6 +768,7 @@ province_event = {
 	picture = CZECH_NOBLES_eventPicture
 
 	is_mtth_scaled_to_size = 1
+	hidden = yes
 	
 	trigger = {
 		region = ruthenia_region
