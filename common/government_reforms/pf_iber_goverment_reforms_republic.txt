@@ -1,0 +1,117 @@
+#Bellica government 
+
+stratocratic_republic = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = no
+	potential = {
+		tag = BCA
+	}
+	modifiers = {
+		advisor_cost = -0.1
+		global_autonomy = -0.05
+		max_absolutism = 25
+		war_exhaustion = -0.02
+		republican_tradition = -0.05
+	}
+	government_abilities = {
+		stratocratic_republic_mechanic
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+	duration = 5
+	custom_attributes = {
+		locked_government_type = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		stratocratic_elections = yes
+	}
+	duration = 4
+	has_term_election = yes
+	heir = no
+}
+
+# Republican Virtues
+
+citizen_soldier_initiative = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = BCA
+			has_reform = stratocratic_republic
+		}
+	}
+	modifiers = {
+		manpower_recovery_speed = 0.05
+		global_manpower_modifier = 0.05
+		monthly_stratocratic_republic_slider = 0.08
+	}
+}
+
+republican_fleets = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = BCA
+			has_reform = stratocratic_republic
+		}
+	}
+	modifiers = {
+		ship_trade_power_modifier = 0.05
+		local_ship_repair = 0.15
+		monthly_stratocratic_republic_slider = -0.08
+	}
+}
+
+#religion within the republic
+divine_army_doctrine = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = BCA
+			has_reform = stratocratic_republic
+		}
+	}
+	modifiers = {
+		manpower_in_true_faith_provinces = 0.1
+		siege_ability = 0.05
+		monthly_stratocratic_republic_slider = 0.08
+	}
+}
+
+council_of_theologies = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = BCA
+			has_reform = stratocratic_republic
+		}
+	}
+	modifiers = {
+		republican_tradition = 1
+		tolerance_heathen = 1
+		tolerance_heretic = 1
+	}
+}
+
+blessed_fleets = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = BCA
+			has_reform = stratocratic_republic
+		}
+	}
+	modifiers = {
+		trade_steering = 0.1
+		global_heretic_missionary_strength = 0.01
+		monthly_stratocratic_republic_slider = -0.08
+	}
+}
