@@ -21,7 +21,7 @@ car_naval_doctrine = {
 	
 	country_modifier = {
 		own_coast_naval_combat_bonus = 1
-		heavy_ship_power = 0.1
+		movement_speed_in_fleet_modifier = 2 
 	}
 	effect = {}
 	removed_effect = {}
@@ -54,7 +54,7 @@ punic_iber_minor_naval_doctrine = {
 	
 	country_modifier = {
 		light_ship_cost = -0.2
-		light_ship_power = 0.2
+		light_ship_power = 0.15
 	}
 	effect = {}
 	removed_effect = {}
@@ -70,7 +70,23 @@ sue_naval_doctrine = {
 	
 	country_modifier = {
 		leader_naval_manuever = 1
-		heavy_ship_power = 0.1
+		sunk_ship_morale_hit_recieved = -0.1
+	}
+	effect = {}
+	removed_effect = {}
+	
+	button_gfx = 1
+}
+
+aeg_naval_doctrine = {
+	can_select = {
+		is_primitive = no
+		tag = AEG
+	}
+	
+	country_modifier = {
+		light_ship_power = 0.15
+		naval_tradition_from_trade = 0.5
 	}
 	effect = {}
 	removed_effect = {}
@@ -87,6 +103,23 @@ pirate_naval_doctrine = {
 	country_modifier = {
 		privateer_efficiency = 0.33
 		light_ship_cost = -0.25
+	}
+	effect = {}
+	removed_effect = {}
+	
+	button_gfx = 1
+}
+
+
+gau_naval_doctrine = {
+	can_select = {
+		is_primitive = no
+		mission_completed = pf_gaul_celtica_2
+	}
+	
+	country_modifier = {
+		allowed_marine_fraction = 0.1
+		disengagement_chance = 0.15
 	}
 	effect = {}
 	removed_effect = {}
