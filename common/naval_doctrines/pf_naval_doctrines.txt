@@ -1,11 +1,92 @@
 mac_naval_doctrine = {
 	can_select = {
+		is_primitive = no
 		has_country_flag = mac_naval_doctrine_flag
 	}
 	
 	country_modifier = {
 		galley_power = 0.2
 		global_ship_repair = 0.25
+	}
+	effect = {}
+	removed_effect = {}
+	
+	button_gfx = 1
+}
+car_naval_doctrine = {
+	can_select = {
+		is_primitive = no
+		tag = CAR
+	}
+	
+	country_modifier = {
+		own_coast_naval_combat_bonus = 1
+		heavy_ship_power = 0.1
+	}
+	effect = {}
+	removed_effect = {}
+	
+	button_gfx = 1
+}
+
+cel_naval_doctrine = {
+	can_select = {
+		is_primitive = no
+		tag = CEL
+	}
+	
+	country_modifier = {
+		naval_maintenance_modifier = -0.2
+		heavy_ship_power = 0.1
+	}
+	effect = {}
+	removed_effect = {}
+	
+	button_gfx = 1
+}
+
+punic_iber_minor_naval_doctrine = {
+	can_select = {
+		is_primitive = no
+		culture_group = euro_punic
+		NOT = { tag = CAR }
+	}
+	
+	country_modifier = {
+		light_ship_cost = -0.2
+		light_ship_power = 0.2
+	}
+	effect = {}
+	removed_effect = {}
+	
+	button_gfx = 1
+}
+
+sue_naval_doctrine = {
+	can_select = {
+		is_primitive = no
+		tag = SUE
+	}
+	
+	country_modifier = {
+		leader_naval_manuever = 1
+		heavy_ship_power = 0.1
+	}
+	effect = {}
+	removed_effect = {}
+	
+	button_gfx = 1
+}
+
+pirate_naval_doctrine = {
+	can_select = {
+		is_primitive = no
+		has_reform = pirate_republic
+	}
+	
+	country_modifier = {
+		privateer_efficiency = 0.33
+		light_ship_cost = -0.25
 	}
 	effect = {}
 	removed_effect = {}

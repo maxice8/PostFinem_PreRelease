@@ -216,15 +216,14 @@ dutch_trade_fleet = {
 norse_raid_fleet = {
 	can_select = {
 		is_primitive = no
-		NOT = { has_country_flag = unlock_norwegian_naval_doctrine } 
 		# pf
 		# primary_culture = norse
 		culture_group = scandinavian
 	}
 
 	country_modifier = {
-		privateer_efficiency = 0.33
-		movement_speed_in_fleet_modifier = 3
+		galley_power = 0.15
+		movement_speed_in_fleet_modifier = 2
 	}
 	effect = {}
 	removed_effect = {}
