@@ -1,0 +1,127 @@
+crown_authority_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 12
+	available = {
+	}
+	
+	interactions = {
+		increase_crown_authority = {
+			icon = GFX_increase_crown_authority
+			trigger = {
+				NOT = { has_country_modifier = crown_authority_5 }
+				adm_power_cost = 50
+				government_reform_progress = 25
+				stability = 1
+			}
+			effect = {
+				adm_power_cost = 50
+				change_government_reform_progress = -25
+				add_stability = -1
+				if = {
+					limit = {
+						has_country_modifier = crown_authority_1
+					}
+					remove_country_modifier = crown_authority_1
+					add_country_modifier = {
+						name = crown_authority_2
+						duration = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_modifier = crown_authority_2
+					}
+					remove_country_modifier = crown_authority_2
+					add_country_modifier = {
+						name = crown_authority_3
+						duration = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_modifier = crown_authority_3
+					}
+					remove_country_modifier = crown_authority_3
+					add_country_modifier = {
+						name = crown_authority_4
+						duration = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_modifier = crown_authority_4
+					}
+					remove_country_modifier = crown_authority_4
+					add_country_modifier = {
+						name = crown_authority_5
+						duration = -1
+					}
+				}
+			}
+			cooldown_years = 5
+			cooldown_token = crown_authority_mechanic
+			ai_chance = {
+				factor = 0
+			}
+		}
+		decrease_crown_authority = {
+			icon = GFX_decrease_crown_authority
+			trigger = {
+				NOT = { has_country_modifier = crown_authority_1 }
+				adm_power_cost = 50
+				government_reform_progress = 25
+				stability = 1
+			}
+			effect = {
+				adm_power_cost = 50
+				change_government_reform_progress = -25
+				add_stability = -1
+				if = {
+					limit = {
+						has_country_modifier = crown_authority_5
+					}
+					remove_country_modifier = crown_authority_5
+					add_country_modifier = {
+						name = crown_authority_4
+						duration = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_modifier = crown_authority_4
+					}
+					remove_country_modifier = crown_authority_4
+					add_country_modifier = {
+						name = crown_authority_3
+						duration = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_modifier = crown_authority_3
+					}
+					remove_country_modifier = crown_authority_3
+					add_country_modifier = {
+						name = crown_authority_2
+						duration = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_modifier = crown_authority_2
+					}
+					remove_country_modifier = crown_authority_2
+					add_country_modifier = {
+						name = crown_authority_1
+						duration = -1
+					}
+				}
+			}
+			cooldown_years = 5
+			cooldown_token = crown_authority_mechanic
+			ai_chance = {
+				factor = 0
+			}
+		}
+	}
+}

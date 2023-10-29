@@ -11,6 +11,7 @@ pf_bri_1 = {
 		}
 		NOT = { tag = TRN }
 		NOT = { was_tag = TRN }
+		NOT = { tag = CLN }
 	}
 
 	pf_bri_royal_court = {
@@ -288,6 +289,7 @@ pf_bri_1_briton = {
 		primary_culture = briton
 		NOT = { tag = TRN }
 		NOT = { was_tag = TRN }
+		NOT = { tag = CLN }
 	}
 
 	pf_bri_chiefs_house = {
@@ -373,6 +375,7 @@ pf_bri_2 = {
 		}
 		NOT = { tag = TRN }
 		NOT = { was_tag = TRN }
+		NOT = { tag = CLN }
 	}
 
 	pf_bri_great_feast = {
@@ -442,6 +445,7 @@ pf_bri_3 = {
 		}
 		NOT = { tag = TRN }
 		NOT = { was_tag = TRN }
+		NOT = { tag = CLN }
 	}
 
 	pf_bri_build_army = {
@@ -677,6 +681,7 @@ pf_bri_4 = {
 		}
 		NOT = { tag = TRN }
 		NOT = { was_tag = TRN }
+		NOT = { tag = CLN }
 	}
 
 	pf_bri_pacify_the_picts = {
@@ -815,6 +820,7 @@ pf_bri_5 = {
 		}
 		NOT = { tag = TRN }
 		NOT = { was_tag = TRN }
+		NOT = { tag = CLN }
 	}
 
 	pf_bri_coels_wall = {

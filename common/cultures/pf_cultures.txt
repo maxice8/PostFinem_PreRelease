@@ -16,6 +16,9 @@ scandinavian = { #Nordic
 	}
 	#country = { land_forcelimit_modifier = 0.25}
 	#province = { local_build_cost = -0.10 }
+	province = {
+		local_has_carolean = yes
+	}
 
 
 	swedish = {

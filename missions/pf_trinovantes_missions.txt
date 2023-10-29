@@ -732,7 +732,10 @@ pf_trn_3 = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-			NOT = { has_ruler = "Ricatus" }
+			custom_trigger_tooltip = {
+				tooltip = pf_trn_ricatus_legacy_requirements_tt
+				NOT = { has_ruler_flag = ricatus_flag }
+			}
 		}
 		effect = {
 			country_event = { id = pf_trn.8 } 	# Funeral for Ricatus
@@ -1224,16 +1227,16 @@ pf_trn_4 = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-			NOT = {
-				estate_influence = {
-					estate = estate_nobles
-					influence = 40
-				}
-			}
 			OR = {
+				NOT = {
+					estate_influence = {
+						estate = estate_nobles
+						influence = 40
+					}
+				}
 				estate_loyalty = {
 					estate = estate_nobles
-					loyalty = 60
+					loyalty = 70
 				}
 				NOT = {
 					num_of_estate_privileges = {

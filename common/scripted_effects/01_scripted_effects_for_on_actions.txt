@@ -2153,6 +2153,21 @@ on_war_declaration_effect = {
 		}
 		9 = {}
 	}
+	if = {
+		limit = {
+			OR = {
+				tag = PER
+				FROM = { tag = PER }
+			}
+		}
+		PER = {
+			country_event = {
+				id = pf_per_events.103
+				days = 30
+				random = 60
+			}
+		}
+	}
 }
 
 remove_all_age_of_discovery_modifiers = {

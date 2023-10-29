@@ -1,0 +1,39 @@
+car_navy_worthy_of_yam_modifier = { #Naval Recruitment Drive
+	galley_power = 0.1
+	global_sailors_modifier = 0.25
+}
+car_island_hopping_modifier = {
+	local_ship_repair = 0.25
+	naval_forcelimit = 4
+}
+car_mediterranean_dominance_modifier = {
+	own_coast_naval_combat_bonus = 1
+	leader_naval_fire = 1
+}
+car_the_land_of_alexander_modifier = {
+	prestige = 1
+	manpower_recovery_speed = 0.2
+}
+car_alexandria_lighthouse_modifier = {
+	prestige = 0.5
+	local_ship_repair = 0.5
+}
+car_roma_claimed_modifier = {
+	local_development_cost = -0.1
+	local_prosperity_growth = 1
+}
+car_eternal_punic_war_victor_modifier = {
+	stability_cost_modifier = -0.1
+	monthly_splendor = 2
+}
+car_gallic_conqueror_modifier = {
+	land_morale = 0.1
+	core_creation = -0.1
+}
+car_conquest_of_italia = {
+	governing_capacity_modifier = 0.05
+	trade_goods_size = 1
+}
+car_worthy_successors_of_hannibal_modifier = {
+	administrative_efficiency = 0.05
+}

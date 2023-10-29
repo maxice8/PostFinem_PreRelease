@@ -1,0 +1,55 @@
+namespace = pf_car
+
+
+#The Establishment of Magna Graecia
+country_event = {
+	id = pf_car.1
+	title = pf_car.1.t
+	desc = pf_car.1.d
+	picture = BIG_ARABIAN_CITY_eventPicture
+	
+	trigger = {  }
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	# mean_time_to_happen = {}
+
+	immediate = {  }
+
+	option = { #
+		name = pf_car.1.a
+		goto = 358
+		ai_chance = { factor = 1 }
+
+		set_country_flag = gain_access_to_great_library_flag
+		custom_tooltip = gain_access_to_great_library_tt
+		custom_tooltip = empty_line_tt
+		if = {
+			limit = {
+				358 = {
+					NOT = {
+						has_great_project = {
+							type = ar_egypt_library
+							tier = 3
+						}
+					}
+				}
+			}
+			358 = {
+				add_great_project_tier = {
+					type = ar_egypt_library
+					tier = 1
+				}
+			}
+			custom_tooltip = empty_line_tt
+		}
+		358 = {
+			add_province_modifier = {
+				name = car_alexandria_lighthouse_modifier
+				duration = -1
+			}
+		}
+	}
+
+}

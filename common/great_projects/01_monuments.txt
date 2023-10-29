@@ -6209,15 +6209,31 @@ kaaba = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		province_is_or_accepts_religion_group = {
-			religion_group = muslim
+		OR = {
+			province_is_or_accepts_religion_group = {
+				religion_group = muslim
+			}
+			AND = {
+				religion = arabic_religion
+				owner = {
+					religion = arabic_religion
+				}
+			}
 		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		province_is_or_accepts_religion_group = {
-			religion_group = muslim
+		OR = {
+			province_is_or_accepts_religion_group = {
+				religion_group = muslim
+			}
+			AND = {
+				religion = arabic_religion
+				owner = {
+					religion = arabic_religion
+				}
+			}
 		}
 	}
 
@@ -8880,218 +8896,7 @@ kilwa_city = {
 	}
 }
 
-krakow_cloth_hall = {
-	start = 262 #Krakow
-	date = 1250.01.01
-	time = { months = 0	}
-	build_cost = 0
-	can_be_moved = no
-	move_days_per_unit_distance = 10
-	starting_tier = 1
-	type = monument
 
-	build_trigger = {
-	}
-
-	on_built = {
-	}
-
-	on_destroyed = {
-	}
-
-	can_use_modifiers_trigger = {
-	}
-
-	can_upgrade_trigger = {
-	}
-
-	keep_trigger = {
-	}
-
-	tier_0 = {
-		upgrade_time = {
-			months = 0
-		}
-		cost_to_upgrade = {
-			factor = 0
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-		}
-		on_upgraded = {
-		}
-	}
-
-	tier_1 = {
-		upgrade_time = {
-			months = 120
-		}
-		cost_to_upgrade = {
-			factor = 1000
-		}
-		province_modifiers = {
-			trade_goods_size_modifier = 0.1
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-			merchants = 1
-		}
-		on_upgraded = {
-		}
-	}
-
-	tier_2 = {
-		upgrade_time = {
-			months = 240
-		}
-		cost_to_upgrade = {
-			factor = 2500
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-			trade_goods_size_modifier = 0.1
-		}
-		country_modifiers = {
-			merchants = 1
-			global_trade_power = 0.05
-		}
-		on_upgraded = {
-		}
-	}
-
-	tier_3 = {
-		upgrade_time = {
-			months = 480
-		}
-		cost_to_upgrade = {
-			factor = 5000
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-			trade_goods_size_modifier = 0.2
-		}
-		country_modifiers = {
-			merchants = 2
-			global_trade_power = 0.1
-		}
-		on_upgraded = {
-		}
-	}
-}
-
-malta_forts = {
-	start = 126 #Malta
-	date = 100.01.01	#Ancient fortresses existed way earlier
-	time = { months = 0	}
-	build_cost = 0
-	can_be_moved = no
-	move_days_per_unit_distance = 10
-	starting_tier = 1
-	type = monument
-
-	build_trigger = {
-	}
-
-	on_built = {
-	}
-
-	on_destroyed = {
-	}
-
-	can_use_modifiers_trigger = {
-	}
-
-	can_upgrade_trigger = {
-	}
-
-	keep_trigger = {
-	}
-
-	tier_0 = {
-		upgrade_time = {
-			months = 0
-		}
-		cost_to_upgrade = {
-			factor = 0
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-		}
-		on_upgraded = {
-		}
-	}
-
-	tier_1 = {
-		upgrade_time = {
-			months = 120
-		}
-		cost_to_upgrade = {
-			factor = 1000
-		}
-		province_modifiers = {
-			local_defensiveness = 0.15
-			hostile_disembark_speed = 0.5
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-			warscore_cost_vs_other_religion = -0.05
-		}
-		on_upgraded = {
-		}
-	}
-
-	tier_2 = {
-		upgrade_time = {
-			months = 240
-		}
-		cost_to_upgrade = {
-			factor = 2500
-		}
-		province_modifiers = {
-			local_defensiveness = 0.25
-			local_hostile_attrition = 0.5
-			hostile_disembark_speed = 1
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-			warscore_cost_vs_other_religion = -0.1
-		}
-		on_upgraded = {
-		}
-	}
-
-	tier_3 = {
-		upgrade_time = {
-			months = 480
-		}
-		cost_to_upgrade = {
-			factor = 5000
-		}
-		province_modifiers = {
-			local_defensiveness = 0.5
-			local_hostile_attrition = 1
-			hostile_disembark_speed = 2
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-			warscore_cost_vs_other_religion = -0.15
-		}
-		on_upgraded = {
-		}
-	}
-}
 
 mehrangarh_fort = {
 	start = 514 #Marwar
@@ -9549,110 +9354,6 @@ qhapaq_nam = {
 	}
 }
 
-royal_palace_caserta = {
-	start = 121 #Napoli
-	date = 1444.01.01	#1752.01.01
-	time = { months = 0	}
-	build_cost = 0
-	can_be_moved = no
-	move_days_per_unit_distance = 10
-	starting_tier = 0
-	type = monument
-
-	build_trigger = {
-	}
-
-	on_built = {
-	}
-
-	on_destroyed = {
-	}
-
-	can_use_modifiers_trigger = {
-	}
-
-	can_upgrade_trigger = {
-	}
-
-	keep_trigger = {
-	}
-
-	tier_0 = {
-		upgrade_time = {
-			months = 0
-		}
-		cost_to_upgrade = {
-			factor = 0
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-		}
-		on_upgraded = {
-		}
-	}
-
-	tier_1 = {
-		upgrade_time = {
-			months = 120
-		}
-		cost_to_upgrade = {
-			factor = 1000
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-			prestige = 0.25
-			reform_progress_growth = 0.05
-		}
-		on_upgraded = {
-		}
-	}
-
-	tier_2 = {
-		upgrade_time = {
-			months = 240
-		}
-		cost_to_upgrade = {
-			factor = 2500
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-			prestige = 0.5
-			reform_progress_growth = 0.1
-			governing_capacity = 50
-		}
-		on_upgraded = {
-		}
-	}
-
-	tier_3 = {
-		upgrade_time = {
-			months = 480
-		}
-		cost_to_upgrade = {
-			factor = 5000
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-			prestige = 1
-			reform_progress_growth = 0.15
-			governing_capacity = 100
-		}
-		on_upgraded = {
-		}
-	}
-}
 
 san_antonio_missions = {
 	start = 4627 #Tanu
@@ -10919,119 +10620,6 @@ falun_copper_mine = {
 	}
 }
 
-kronborg = {
-	start = 12 #Sjaelland
-	date = 1420.01.01
-	time = { months = 0	}
-	build_cost = 0
-	can_be_moved = no
-	move_days_per_unit_distance = 10
-	starting_tier = 1
-	type = monument
-
-	build_trigger = {
-	}
-
-	on_built = {
-	}
-
-	on_destroyed = {
-	}
-
-	can_use_modifiers_trigger = {
-	}
-
-	can_upgrade_trigger = {
-	}
-
-	keep_trigger = {
-	}
-
-	tier_0 = {
-		upgrade_time = {
-			months = 0
-		}
-		cost_to_upgrade = {
-			factor = 0
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-		}
-		on_upgraded = {
-		}
-	}
-
-	tier_1 = {
-		upgrade_time = {
-			months = 120
-		}
-		cost_to_upgrade = {
-			factor = 1000
-		}
-		province_modifiers = {
-			local_defensiveness = 0.15
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-			naval_tradition_from_trade = 0.25
-		}
-		on_upgraded = {
-			owner = {
-				add_mercantilism = 1
-			}
-		}
-	}
-
-	tier_2 = {
-		upgrade_time = {
-			months = 240
-		}
-		cost_to_upgrade = {
-			factor = 2500
-		}
-		province_modifiers = {
-			local_defensiveness = 0.25
-			local_own_coast_naval_combat_bonus = 1
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-			naval_tradition_from_trade = 0.5
-		}
-		on_upgraded = {
-			owner = {
-				add_mercantilism = 3
-			}
-		}
-	}
-
-	tier_3 = {
-		upgrade_time = {
-			months = 480
-		}
-		cost_to_upgrade = {
-			factor = 5000
-		}
-		province_modifiers = {
-			local_defensiveness = 0.33
-			local_own_coast_naval_combat_bonus = 2
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-			naval_tradition_from_trade = 1
-		}
-		on_upgraded = {
-			owner = {
-				add_mercantilism = 6
-			}
-		}
-	}
-}
 
 salvador_da_bahia = {
 	start = 756 #Bahia

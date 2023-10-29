@@ -1,0 +1,983 @@
+namespace = pf_if
+
+country_event = {		# Federal Dignitaries 
+	id = pf_if.1
+	title = pf_if.1.t 
+	desc = pf_if.1.d
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_at_war = no
+		capital_scope = {
+			NOT = { devastation = 10 }
+		}
+		is_part_of_hre = yes
+	}
+
+	option = {
+		name = "pf_if.1.a"
+		add_prestige = 5
+		add_splendor = 25
+	}
+}
+country_event = {		# Ambassador for [Root.GetName]
+	id = pf_if.2
+	title = pf_if.2.t 
+	desc = pf_if.2.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { statesman = 1 }
+		is_part_of_hre = yes
+	}
+
+	option = {
+		name = "pf_if.2.a"
+		if = {
+			limit = {
+				NOT = { monthly_income = 12 }
+			}
+			define_advisor = {
+				type = statesman
+				skill = 1
+				cost_multiplier = 0.75
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { monthly_income = 35 }
+			}
+			define_advisor = {
+				type = statesman
+				skill = 2
+				cost_multiplier = 0.75
+			}
+		}
+		else = {
+			define_advisor = {
+				type = statesman
+				skill = 3
+				cost_multiplier = 0.75
+			}
+		}
+	}
+	option = {
+		name = "pf_if.2.b"
+		trigger = {
+			ruler_has_personality = silver_tongue_personality
+		}
+		highlight = yes
+		add_dip_power = 30
+		define_advisor = {
+			type = diplomat
+			skill = 2
+			discount = yes
+		}
+	}
+}
+country_event = {		# Growth of a City
+	id = pf_if.3
+	title = pf_if.3.t 
+	desc = pf_if.3.d
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_owned_province = {
+			NOT = { development = 30 }
+		}
+		is_part_of_hre = yes
+	}
+
+	immediate = {
+		random_owned_province = {
+			limit = {
+				NOT = { development = 30 }
+			}
+			save_event_target_as = growth_province
+		}
+	}
+
+	goto = growth_province
+
+	option = {
+		name = "pf_if.3.a"
+		event_target:growth_province = {
+			add_base_tax = 1
+		}
+	}
+	option = {
+		name = "pf_if.3.b"
+		event_target:growth_province = {
+			add_base_production = 1
+		}
+	}
+	option = {
+		name = "pf_if.3.c"
+		event_target:growth_province = {
+			add_base_manpower = 1
+		}
+	}
+	option = {
+		name = "pf_if.3.e"
+		trigger = {
+			OR = {
+				ruler_has_personality = industrious_personality
+				ruler_has_personality = entrepreneur_personality
+				ruler_has_personality = architectural_visionary_personality
+			}
+		}
+		highlight = yes
+		event_target:growth_province = {
+			add_province_modifier = {
+				name = "pf_if_growth_of_a_city"
+				duration = 3650
+			}
+		}
+	}
+}
+country_event = {		# Federal Art
+	id = pf_if.4
+	title = pf_if.4.t 
+	desc = pf_if.4.d
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			adm = 4
+			prestige = 20
+		}
+		is_part_of_hre = yes
+		NOT = { has_country_modifier = pf_if_federal_art_style }
+	}
+
+	option = {
+		name = "pf_if.4.a"
+		add_years_of_income = -0.25
+		define_advisor = {
+			type = artist
+			skill = 2
+			discount = yes
+		}
+		add_country_modifier = {
+			name = "pf_if_federal_art_style"
+			duration = 9125
+		}
+	}
+	option = {
+		name = "pf_if.4.b"
+		add_prestige = -5
+	}
+}
+country_event = {		# Peace in our time
+	id = pf_if.5
+	title = pf_if.5.t 
+	desc = pf_if.5.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_part_of_hre = yes
+		is_at_war = no
+	}
+
+	option = {
+		name = "pf_if.5.a"
+		add_stability_or_adm_power = yes
+	}
+}
+country_event = {		# Federal Embargo
+	id = pf_if.6
+	title = pf_if.6.t 
+	desc = pf_if.6.d
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_part_of_hre = yes
+		num_of_merchants = 2
+	}
+
+	option = {
+		name = "pf_if.6.a"
+		add_mercantilism = 1
+		add_country_modifier = {
+			name = "pf_if_smuggling"
+			duration = 1825
+		}
+	}
+	option = {
+		name = "pf_if.6.b"
+		add_country_modifier = {
+			name = "pf_if_merchant_embargo"
+			duration = 1825
+		}
+	}
+}
+country_event = {		# Anti-Federation Sentiment
+	id = pf_if.7
+	title = pf_if.7.t 
+	desc = pf_if.7.d
+	picture = EMPEROR_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_part_of_hre = yes
+		NOT = { is_elector = yes }
+		NOT = { is_emperor = yes }
+	}
+
+	option = {
+		name = "pf_if.7.a"
+		capital_scope = {
+			particularist_rebels = 1
+		}
+	}
+	option = {
+		name = "pf_if.7.b"
+		every_neighbor_country = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			add_aggressive_expansion = {
+				who = ROOT
+				value = 10
+				apply_calc = no
+			}
+		}
+	}
+}
+country_event = {		# Good Advice
+	id = pf_if.8
+	title = pf_if.8.t 
+	desc = pf_if.8.d
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_part_of_hre = yes
+		has_advisor = yes
+	}
+
+	option = {
+		name = "pf_if.8.a"
+		add_adm_power = 25
+		add_dip_power = 25
+		add_mil_power = 25
+		add_prestige = -10
+	}
+	option = {
+		name = "pf_if.8.b"
+		add_legitimacy = 5
+		add_prestige = 5
+	}
+}
+country_event = {		# Adirim increases Federation exclusivity
+	id = pf_if.9
+	title = pf_if.9.t 
+	desc = pf_if.9.d
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_if.9.a"
+		add_mercantilism = 1
+	}
+}
+country_event = {		# Limits of Trade
+	id = pf_if.10
+	title = pf_if.10.t 
+	desc = pf_if.10.d
+	picture = MERCHANTS_ARGUING_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_part_of_hre = yes
+		NOT = { mercantilism = 100 }
+	}
+
+	option = {
+		name = "pf_if.10.a"
+		add_mercantilism = 1
+		if = {
+			limit = {
+				has_estate = estate_burghers
+			}
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = -5
+			}
+		}
+	}
+	option = {
+		name = "pf_if.10.b"
+		add_treasury = 10
+		if = {
+			limit = {
+				has_estate = estate_burghers
+			}
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 5
+			}
+		}
+	}
+}
+country_event = {		# Martial Desires
+	id = pf_if.11
+	title = pf_if.11.t 
+	desc = pf_if.11.d
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_part_of_hre = yes
+		OR = {
+			is_at_war = yes
+			mil = 4
+			has_mil_advisor = yes
+		}
+	}
+
+	option = {
+		name = "pf_if.11.a"
+		add_army_tradition = 10
+		add_dip_power = -25
+	}
+	option = {
+		name = "pf_if.11.b"
+		add_dip_power = 40
+	}
+}
+country_event = {		# Military Expenditure
+	id = pf_if.12
+	title = pf_if.12.t 
+	desc = pf_if.12.d
+	picture = OVEREXTENSION_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_part_of_hre = yes
+		army_size = 1
+		NOT = { has_country_modifier = pf_if_expensive_armies }
+	}
+
+	option = {
+		name = "pf_if.12.a"
+		add_country_modifier = {
+			name = "pf_if_expensive_armies"
+			duration = 3650
+		}
+	}
+	option = {
+		name = "pf_if.12.b"
+		add_years_of_income = -1
+	}
+}
+country_event = {		# Religious Festival
+	id = pf_if.13
+	title = pf_if.13.t 
+	desc = pf_if.13.d
+	picture = ICONS_IN_CHURCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_part_of_hre = yes
+		religion = punic_religion
+	}
+
+	option = {
+		name = "pf_if.13.a"
+		add_years_of_income = -0.10
+		random = {
+			chance = 50
+			add_stability = 1
+		}
+	}
+	option = {
+		name = "pf_if.13.b"
+		if = {
+			limit = {
+				has_estate = estate_church
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+		}
+	}
+}
+country_event = {		# Growth of the City
+	id = pf_if.14
+	title = pf_if.14.t 
+	desc = pf_if.14.d
+	picture = FREE_CITY_eventPicture
+
+	is_triggered_only = yes
+
+	goto = 121
+
+	option = {
+		name = "pf_if.14.a"
+		add_splendor = 100
+		custom_tooltip = empty_line_tt
+		set_country_flag = naples_gets_bonus_from_dev_flag
+		custom_tooltip = pf_if_naples_development_bonus_tt
+	}
+}
+country_event = {		# The Fatal Blade
+	id = pf_if.15
+	title = pf_if.15.t 
+	desc = pf_if.15.d
+	picture = ASSASSINATION_eventPicture
+
+	trigger = {
+		is_part_of_hre = yes
+		OR = {
+			NOT = { stability = -2 }
+			NOT = { legitimacy_equivalent = 20 }
+		}
+		NOT = { dip = 4 }
+		NOT = { has_country_modifier = pf_if_assassinated_ruler }
+	}
+
+	mean_time_to_happen = {
+		months = 800
+	}
+
+	option = {
+		name = "pf_if.15.a"
+		kill_ruler = yes
+		add_country_modifier = {
+			name = "pf_if_assassinated_ruler"
+			duration = 3650
+		}
+	}
+}
+country_event = {		# The Travels of Conan the Sicilian
+	id = pf_if.16
+	title = pf_if.16.t 
+	desc = pf_if.16.d
+	picture = BYZ_BYZANTINE_EMPEROR_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_heir = { allow_new_heir = no }
+		}
+	}
+
+	option = {
+		name = "pf_if.16.a"
+		add_ruler_modifier = {
+			name = "pf_cln_conans_travels"
+			duration = -1
+		}
+	}
+}
+country_event = {		# Assembly of the Marchers
+	id = pf_if.17
+	title = pf_if.17.t 
+	desc = pf_if.17.d
+	picture = NOBLE_ESTATE_TAKE_OVER_eventPicture
+
+	is_triggered_only = yes
+
+	option = {	# grant them privileges
+		name = "pf_if.17.a"
+		set_country_flag = pf_allowed_marcher_freedom_flag
+		set_estate_privilege = estate_nobles_pf_marcher_freedom
+		add_yearly_manpower = 5
+		add_country_modifier = {
+			name = "pf_ily_sponsoring_the_marchers"
+			duration = 9125
+		}
+	}
+	option = {	# power in the state
+		name = "pf_if.17.b"
+		set_country_flag = pf_allowed_marcher_freedom_flag
+		custom_tooltip = pf_allows_marcher_freedom
+		add_stability_or_adm_power = yes
+		add_prestige = 20
+	}
+}
+country_event = {		# Tales of Chivalry
+	id = pf_if.18
+	title = pf_if.18.t 
+	desc = pf_if.18.d
+	picture = TOURNAMENT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {	# grant them privileges
+		name = "pf_if.18.a"
+		add_splendor = 100
+		add_prestige_or_monarch_power = {
+			amount = 20
+		}
+		add_country_modifier = {
+			name = "pf_if_chivalric_duties"
+			duration = -1
+		}
+	}
+}
+country_event = {		# The Son Left Behind
+	id = pf_if.19
+	title = pf_if.19.t 
+	desc = pf_if.19.d
+	picture = EYALET_REBELLION_eventPicture
+
+	trigger = {
+		tag = ILY
+		has_heir = yes
+		heir_age = 15
+		exists = SER
+		is_at_war = no
+	}
+
+	mean_time_to_happen = {
+		months = 40
+		modifier = {
+			factor = 5
+			NOT = { stability = 0  }
+		}
+	}
+
+	immediate = {
+		random_owned_province = {
+			save_event_target_as = son_rebellion_prov
+		}
+	}
+
+	goto = son_rebellion_prov
+
+	fire_only_once = yes
+
+	after = {
+		set_country_flag = ily_had_sons_rebellion
+	}
+
+	option = {	# Meet him in the field of battle
+		name = "pf_if.19.a"
+		add_stability = -1
+		event_target:son_rebellion_prov = {
+			spawn_rebels = {
+				size = 2
+				type = pretender_rebels
+				leader = "Percus"
+				leader_dynasty = "Atargonid"
+			}
+		}
+	}
+	option = {
+		name = "pf_if.19.b"
+		add_stability = -1
+		kill_heir = { }
+		define_heir = {
+			name = "Percus"
+			dynasty = "Atargonid"
+			adm = 2
+			dip = 1
+			mil = 4
+			age = 20
+			claim = 30
+		}
+	}
+}
+country_event = {		# The Fate of the Jews
+	id = pf_if.20
+	title = pf_if.20.t 
+	desc = pf_if.20.d
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+
+	option = {	# Break their homeland
+		name = "pf_if.20.a"
+		add_stability = -1
+		albania_area = {
+			change_culture = ROOT
+			change_religion = ROOT
+			add_unrest = 10
+		}
+		add_country_modifier = {
+			name = "pf_ily_resettling_jews"
+			duration = 3650
+		}
+	}
+	option = {	# tolerate them
+		name = "pf_if.20.b"
+		add_dip_power = -100
+		albania_area = {
+			add_province_modifier = {
+				name = "pf_ily_tolerated_jews"
+				duration = 9125
+			}
+		}
+	}
+}
+country_event = {		# The Fall of Macedonia
+	id = pf_if.21
+	title = pf_if.21.t 
+	desc = pf_if.21.d
+	picture = SIEGE_PRAGUE_CASTLE_eventPicture
+
+	is_triggered_only = yes
+
+	goto = 148	# Macedonia
+
+	option = {	# Sack the city
+		name = "pf_if.21.a"
+		148 = {
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+		}
+		add_years_of_income = 1
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 50
+		}
+		add_legitimacy = 20
+		capital_scope = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	option = {	# tolerate them
+		name = "pf_if.21.b"
+		add_legitimacy = 20
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 30
+		}
+	}
+}
+country_event = {		# Start of the Colonial System
+	id = pf_if.22
+	title = pf_if.22.t 
+	desc = pf_if.22.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_if.22.a"
+		add_country_modifier = {
+			name = "pf_ily_colonial_system_modifier"
+			duration = -1
+		}
+		custom_tooltip = pf_ily_colonial_system_passive_tt
+	}
+}
+country_event = {		# Passive colonisation
+	id = pf_if.23
+	title = pf_if.23.t 
+	desc = pf_if.23.d
+	picture = CITY_VIEW_eventPicture
+
+	trigger = {
+		has_country_modifier = pf_ily_colonial_system_modifier
+		any_owned_province = {
+			NOT = { culture = illyrian }
+		}
+		NOT = { has_country_flag = end_passive_colonisation }
+	}
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.75
+			estate_influence = {
+				estate = estate_nobles
+				influence = 60
+			}
+		}
+		modifier = {
+			factor = 0.5
+			estate_influence = {
+				estate = estate_nobles
+				influence = 80
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 40
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 20
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_owned_province = {
+			limit = {
+				NOT = { culture = illyrian }
+			}
+			save_event_target_as = culture_prov
+		}
+	}
+
+	goto = culture_prov
+
+	option = {
+		name = "pf_if.23.a"
+		event_target:culture_prov = {
+			change_culture = ROOT
+			random_list = {
+				1 = { add_base_tax = 1 }
+				1 = { add_base_production = 1 }
+				1 = { add_base_manpower = 1 }
+			}
+		}
+	}
+}
+country_event = {		# The Karthalian Succession
+	id = pf_if.24
+	title = pf_if.24.t 
+	desc = pf_if.24.d
+	picture = DEATH_OF_HEIR_eventPicture
+
+	trigger = {
+		tag = CLI
+		NOT = { has_country_flag = had_karthalis_succession }
+	}
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = had_karthalis_succession
+	}
+
+	major = yes
+
+	option = {
+		name = "pf_if.24.a"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				total_development = 100
+			}
+		}
+		add_stability = -1
+		custom_tooltip = pf_if_karthalis_remains_independent_tt
+		emperor = {
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = PREV
+				months = 600
+			}
+		}
+		ILY = {
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = PREV
+				months = 600
+			}
+		}
+		ITY = {
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = PREV
+				months = 600
+			}
+		}
+	}
+	option = {
+		name = "pf_if.24.b"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 2
+				has_opinion = {
+					who = ITY
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 2
+				marriage_with = ITY
+			}
+		}
+		trigger = {
+			exists = ITY
+		}
+		ITY = {
+			create_union = CLI
+		}
+		emperor = {
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = PREV
+				months = 600
+			}
+		}
+		ILY = {
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = PREV
+				months = 600
+			}
+		}
+	}
+	option = {
+		name = "pf_if.24.c"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 2
+				has_opinion = {
+					who = ILY
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 2
+				marriage_with = ITY
+			}
+		}
+		trigger = {
+			exists = ILY
+		}
+		ILY = {
+			create_union = CLI
+		}
+		emperor = {
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = PREV
+				months = 600
+			}
+		}
+		ITY = {
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = PREV
+				months = 600
+			}
+		}
+	}
+	option = {
+		name = "pf_if.24.e"
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2
+				has_opinion = {
+					who = emperor
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 2
+				marriage_with = emperor
+			}
+		}
+		trigger = {
+			exists = emperor
+		}
+		emperor = {
+			create_union = CLI
+		}
+		ITY = {
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = PREV
+				months = 600
+			}
+		}
+		ILY = {
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = PREV
+				months = 600
+			}
+		}
+	}
+}
+country_event = {		# Beyond the Federation
+	id = pf_if.25
+	title = pf_if.25.t 
+	desc = pf_if.25.d
+	picture = NUSANTARA_THRONE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_if.25.a"
+		set_in_empire = no
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				set_in_empire = no
+			}
+		}
+		set_government_rank = 3
+		add_country_modifier = {
+			name = "pf_ily_a_new_future"
+			duration = 10950
+		}
+	}
+	option = {
+		name = "pf_if.25.b"
+		random_owned_province = {
+			limit = {
+				has_fort_building_trigger = yes
+			}
+			add_or_upgrade_fort_building = yes
+		}
+		add_country_modifier = {
+			name = "pf_ily_defender_of_the_empire"
+			duration = 10950
+		}
+		custom_tooltip = pf_if_24_gain_diplo_for_every_hre_state_tt
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				ROOT = { add_dip_power = 10 }
+			}
+		}
+	}
+}
