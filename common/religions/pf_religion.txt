@@ -1509,7 +1509,7 @@ balto_slavic_religion_group = {
 		}
 
 		province = {
-			local_missionary_strength = -0.01
+			local_missionary_strength = -0.02
 		}
 		
 		# personal_deity = yes
@@ -1523,7 +1523,7 @@ balto_slavic_religion_group = {
 		aspects_name = SLAVIC_ASPECTS
 
 		on_convert = {
-			change_religion = romuva
+			change_religion = slavic_religion
 			add_prestige = -100
 
 			add_country_modifier = {
