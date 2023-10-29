@@ -50,7 +50,7 @@ country_event = {
 }
 
 #slavs in vorpommern saxony
-province_event = {
+country_event = {
 	id = pf_ksb_events.3
 	title = pf_ksb_events.3.t
 	desc = pf_ksb_events.3.d
@@ -59,22 +59,14 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		ROOT = {
-			area = vorpommern_area
-			controlled_by = KSB
-		}
+		has_saved_event_target = sieged_polabian_province
 	}
 	
 	option = {
 		name = pf_ksb_events.3a
-		ROOT = {
+		event_target:sieged_polabian_province = {
 			change_culture = polabian
 			change_religion = slavic_religion
-		}
-		controller = {
-			country_event = {
-				id = pf_ksb_events.4
-			}
 		}
 	}
 }
