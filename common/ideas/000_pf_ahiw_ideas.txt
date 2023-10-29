@@ -924,3 +924,42 @@ ATH_ideas = {
 		global_trade_goods_size_modifier = 0.10
 	}
 }
+
+URK_ideas = {
+	start = {
+		same_culture_advisor_cost = -0.15
+		land_morale = 0.10
+	}
+	
+	bonus = {
+		global_autonomy = -0.05
+	}	
+
+	trigger = {
+		tag = URK
+	}
+	free = yes
+	
+	urk_ancient_kingdom = {
+		legitimacy = 1
+	}
+	urk_defend_the_cities = {
+		garrison_size = 0.15
+		defensiveness = 0.1
+	}
+	urk_syncretism = {
+		tolerance_heathen = 2
+	}
+	urk_the_two_rivers = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	urk_restore_akkadian_texts = {
+		global_institution_spread = 0.15
+	}
+	urk_restore_the_temples = {
+		church_loyalty_modifier = 0.10
+	}
+	urk_journeys_and_adventures = {
+		caravan_power = 0.25
+	}
+}
