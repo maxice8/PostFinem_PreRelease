@@ -1,0 +1,50 @@
+pf_svetovid_dedication_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 9
+	available = {
+		always = yes
+	}
+
+	powers = {
+		pf_svetovid_dedication = {
+			gui = svetovid_dedication_gov_mech
+			max = 100
+			min = -100
+			reset_on_new_ruler = no
+			base_monthly_growth = -0.5
+			is_good = yes
+			scaled_modifier = {
+				start_value = 0
+				modifier = {
+					tolerance_own = 2
+					missionary_maintenance_cost = -0.5
+					church_loyalty_modifier = 0.10
+					shock_damage = 0.1
+				}
+			}
+			scaled_modifier = {
+				start_value = 50
+				modifier = {
+					monthly_church_power = 0.5
+				}
+			}
+			reverse_scaled_modifier = {
+				end_value = 0
+				start_value = -100
+				modifier = {
+					tolerance_own = -3
+					church_loyalty_modifier = -0.15
+					global_missionary_strength = -0.05
+					shock_damage_received = 0.1
+				}
+			}
+			reverse_scaled_modifier = {
+				end_value = -50
+				start_value = -100
+				modifier = {
+					monthly_church_power = -0.5
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,106 @@
+#Country Name: Please see filename.
+graphical_culture = easterngfx
+
+color = { 87 99 148 }
+
+revolutionary_colors = { 15 8 5 }
+
+historical_idea_groups = { 
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	trade_ideas
+	diplomatic_ideas
+	economic_ideas
+	administrative_ideas
+	quality_ideas
+}
+
+historical_units = { 
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	ottoman_sekban
+	ottoman_reformed_spahi
+	ottoman_reformed_janissary
+	ottoman_toprakli_hit_and_run
+	ottoman_nizami_cedid
+	ottoman_toprakli_dragoon
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	ottoman_new_model
+	ottoman_lancer
+}
+monarch_names = { 
+	"Bogdan #0" = 20
+	"Miroslav #0" = 20
+	"Sviatoslav #0" = 20
+	"Vladimir #0" = 20
+	"Radovan #0" = 10
+	"Dragan #0" = 10
+	"Radoslav #0" = 10
+	"Zoran #0" = 10
+	"Viktor #0" = 10
+	"Mikhail #0" = 10
+	"Stanimir #0" = 10
+	"Ratimir #0" = 10
+	"Boris #0" = 10
+	"Jaroslav #0" = 10
+	"Zlatan #0" = 10
+	"Damir #0" = 10
+	"Igor #0" = 10
+	"Dobroslav #0" = 10
+	"Boleslav #0" = 10
+	"Vsevolod #0" = 10
+	"Radoslav #0" = 5
+	"Slavomir #0" = 5
+	"Dragomir #0" = 5
+	"Rostislav #0" = 5
+	"Vlastimir #0" = 5
+	"Stanislav #0" = 5
+	"Milivoj #0" = 5
+	"Bojan #0" = 5
+	"Velimir #0" = 5
+	"Zdravko #0" = 5
+	"Predrag #0" = 5
+	"Dusan #0" = 5
+	"Milenko #0" = 5
+	"Miroslav #0" = 5
+	"Dragoslav #0" = 5
+	"Milan #0" = 5
+	"Vasilije #0" = 5
+	"Vladislav #0" = 5
+	"Matej #0" = 5
+	"Bo�idar #0" = 5
+	"Strahimir #0" = 1
+	"Radoslav #0" = 1
+	"Zvonimir #0" = 1
+	"Zlatko #0" = 1
+	"Radomir #0" = 1
+
+	"Zora #0" = -1
+	"Vlasta #0" = -1
+	"Miroslava #0" = -1
+	"Bo�ena #0" = -1
+	"Dragana #0" = -1
+}
+leader_names = { 
+	Dazhbog Svarog Perun Veles Mokosh Lada Radegast Morana Jarilo Belobog Svetovid Zorya Lel Jutrzenka Marzanna Chernobog
+	Triglav Rozhanitsy Rodzanice Stribog Zirnitra Yarilo Siebog Simargl Dolya Devana Radunitsa Yarila Khors Mat Zemlya Chernava
+	Vesna Dziewanna Domovoi Leshy Baba Yaga Vodyanoy Rusalka Kikimora Bereginya Bereginia Mavka Navkolitsi Chuma Vihor Vileni Porewit Porenut Dinari
+}
+ship_names = { 
+	Rusalka "Veles' Breath" Perun's Fury "Mokosh's Pride" Svarog's Flame "Lada's Grace" Jarilo's Legacy "Morana's Shadow" "Zorya's Dawn" "Triglav's Might" "Yarilo's Breeze" "Dazhbog's Light" "Chernobog's Shadow"
+	"Stribog's Gale" "Radegast's Valor" "Vesna's Blossom" "Belobog's Radiance" "Lel's Song" "Baba Yaga's Roost" "Navkolitsi's Voyage" "Simargl's Fury" "Rozhanitsy's Fortune"
+	"Dolya's Destiny" "Jutrzenka's Glow" "Vileni's Whirl" "Bereginya's Blessing" "Svetovid's Gaze" "Yarila's Dance" "Vodyanoy's Tide" "Rarog's Thunder" "Kikimora's Veil" "Khors' Beam"
+	"Porewit's Oath" "Leshy's Whisper" "Marzanna's Shroud" "Zirnitra's Roar" "Bereginia's Embrace" "Vihor's Tempest" "Dinari's Quest" "Vilenica's Charm" "Mat's Legacy" "Dziewanna's Bloom"
+	"Chuma's Curse" "Ratibor's Triumph" "Perkun's Bolt" "Mavka's Melody" "Vepr's Fury" "Svarun's Spark" "Velez's Crest" "Boginya's Grace" "Domovoi's Haven" "Yarovit's Pride"
+}
+army_names = { 
+	"Armiya $PROVINCE$"
+}
+fleet_names = { 
+	"Flot $PROVINCE$"
+}

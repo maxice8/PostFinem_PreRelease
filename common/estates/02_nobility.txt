@@ -218,6 +218,12 @@ estate_nobles = {
 		}
 	}
 	custom_name = {
+		desc = estate_druids
+		trigger = {
+			religion = druidic
+		}
+	}
+	custom_name = {
 		desc = estate_evgenis
 		trigger = {
 			pf_belongs_to_greek_culture_group = yes
@@ -294,7 +300,24 @@ estate_nobles = {
 	custom_name = {
 		desc = estate_boyars
 		trigger = {
-			culture_group = pagan_slavic
+			OR = {
+				culture_group = east_slavic
+				primary_culture = bulgarian
+				primary_culture = romanian
+				culture_group = slavic
+				culture_group = pagan_slavic
+			}
+			NOT = { primary_culture = polish_new }
+		}
+	}
+	custom_name = {
+		desc = estate_szlachta
+		trigger = {
+			OR = {
+				primary_culture = polish
+				primary_culture = polish_new
+				primary_culture = lithuanian
+			}
 		}
 	}
 	custom_name = {

@@ -107,7 +107,7 @@ feudalism = {
 					technology_group = south_american
 					technology_group = sub_saharan
 					technology_group = aboriginal_tech
-					is_colonial_nation_of = ICE
+					# is_colonial_nation_of = ICE
 				}
 			}
 			AND = {
@@ -937,8 +937,8 @@ printing_press = {
 			AND = {
 				is_year = 1560
 				OR = {
-					religion = protestant
-					religion = reformed
+					# religion = protestant
+					# religion = reformed
 					region = italy_region
 					region = france_region
 				}
@@ -1124,28 +1124,28 @@ printing_press = {
 				custom_trigger_tooltip = {
 					tooltip = tooltip_owner_protestant
 					is_owned_by_trade_company = no
-					owner = {
-						OR = {
-							religion = protestant
-							religion = reformed
-							religion = anglican
-							religion = hussite
-						}
-					}
+					# owner = {
+					# 	OR = {
+					# 		religion = protestant
+					# 		religion = reformed
+					# 		religion = anglican
+					# 		religion = hussite
+					# 	}
+					#}
 				}
 			}
 			else = {
 				custom_trigger_tooltip = {
 					tooltip = tooltip_owner_protestant
-					is_owned_by_trade_company = no
-					owner = {
-						OR = {
-							religion = protestant
-							religion = reformed
-							religion = anglican
-							religion = hussite
-						}
-					}
+					# is_owned_by_trade_company = no
+					# owner = {
+					# 	OR = {
+					# 		religion = protestant
+					# 		religion = reformed
+					# 		religion = anglican
+					# 		religion = hussite
+					# 	}
+					# }
 				}
 			}
 		}

@@ -1,0 +1,767 @@
+namespace = pf_ksb_events
+#Kashubia intro event
+country_event = {
+	id = pf_ksb_events.1
+	title = pf_ksb_events.1.t
+	desc = pf_ksb_events.1.d
+	picture = FLAGSHIP_SUNK_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = KSB
+	}
+	
+	option = {
+		name = pf_ksb_events.1a
+		4745 = {
+			add_core = ROOT
+		}
+		vorpommern_area = {
+			add_permanent_claim = ROOT
+		}
+		add_prestige = 5
+		add_legitimacy = -20
+	}
+}
+
+#capture of rujana
+country_event = {
+	id = pf_ksb_events.2
+	title = pf_ksb_events.2.t
+	desc = pf_ksb_events.2.d
+	picture = RUNESTONE_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KSB
+	}
+	
+	option = {
+		name = pf_ksb_events.2a
+		4745 = {
+			cede_province = ROOT
+		}
+		add_legitimacy = 20
+	}
+}
+
+#slavs in vorpommern saxony
+country_event = {
+	id = pf_ksb_events.3
+	title = pf_ksb_events.3.t
+	desc = pf_ksb_events.3.d
+	picture = RUNESTONE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_saved_event_target = sieged_polabian_province
+	}
+	
+	option = {
+		name = pf_ksb_events.3a
+		goto = sieged_polabian_province
+		event_target:sieged_polabian_province = {
+			change_culture = polabian
+			change_religion = slavic_religion
+		}
+	}
+}
+
+#slavia birth of republic
+country_event = {
+	id = pf_ksb_events.5
+	title = pf_ksb_events.5.t
+	desc = pf_ksb_events.5.d
+	picture = east_slavic_ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = pf_ksb_events.5a
+		override_country_name = "RZECZPOSPOLITA"
+	}
+	
+	option = {
+		name = pf_ksb_events.5b
+		override_country_name = "RZECZPOSPOLITA"
+	}
+}
+
+#slavia end of republic
+country_event = {
+	id = pf_ksb_events.6
+	title = pf_ksb_events.6.t
+	desc = pf_ksb_events.6.d
+	picture = east_slavic_ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = pf_ksb_events.6a
+		restore_country_name = yes
+	}
+}
+
+#Kashubia on pulse for government [[[
+#prospering fields
+country_event = {
+	id = pf_ksb_events.7
+	title = pf_ksb_events.7.t
+	desc = pf_ksb_events.7.d
+	picture = FARMING_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_government_mechanic = pf_svetovid_dedication_mechanic
+		stability = 1
+		devotion = 80
+		NOT = {
+			average_unrest = 0.5
+		}
+		NOT = {
+			has_country_modifier = ksb_prospering_fields
+		}
+	}
+	
+	option = {
+		name = pf_ksb_events.7a
+		add_government_power = {
+			mechanic_type = pf_svetovid_dedication_mechanic
+			power_type = pf_svetovid_dedication
+			value = 15
+		}
+	}
+
+	option = {
+		name = pf_ksb_events.7b
+		add_years_of_income = 0.25
+		add_country_modifier = {
+			name = ksb_prospering_fields
+			duration = 3650
+		}
+	}
+}
+
+#religious fundamentalists
+country_event = {
+	id = pf_ksb_events.8
+	title = pf_ksb_events.8.t
+	desc = pf_ksb_events.8.d
+	picture = east_slavic_ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_province = {
+			limit = {
+				religion = ROOT
+			}
+			save_event_target_as = religious_revolt_province
+		}
+	}
+	
+	trigger = {
+		has_government_mechanic = pf_svetovid_dedication_mechanic
+		NOT = {
+			devotion = 60
+		}
+		average_unrest = 1
+		NOT = {
+			has_country_modifier = ksb_losing_faith
+		}
+	}
+	
+	option = {
+		name = pf_ksb_events.8a
+		goto = religious_revolt_province
+		add_government_power = {
+			mechanic_type = pf_svetovid_dedication_mechanic
+			power_type = pf_svetovid_dedication
+			value = -15
+		}
+		event_target:religious_revolt_province = {
+			slavic_zealots = 2
+		}
+	}
+	
+	option = {
+		name = pf_ksb_events.8b
+		goto = religious_revolt_province
+		event_target:religious_revolt_province = {
+			slavic_zealots = 2
+		}
+		add_prestige = -15
+		add_country_modifier = {
+			name = ksb_losing_faith
+			duration = 3650
+		}
+	}
+}
+
+#fighting alongside us
+country_event = {
+	id = pf_ksb_events.9
+	title = pf_ksb_events.9.t
+	desc = pf_ksb_events.9.d
+	picture = DISCIPLINED_SOLDIERS_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		has_government_mechanic = pf_svetovid_dedication_mechanic
+		is_at_war = yes
+		war_exhaustion = 4
+		NOT = {
+			has_country_modifier = ksb_alongside_us
+		}
+	}
+	
+	option = {
+		name = pf_ksb_events.9a
+		add_war_exhaustion = -4
+		add_government_power = {
+			mechanic_type = pf_svetovid_dedication_mechanic
+			power_type = pf_svetovid_dedication
+			value = 10
+		}
+	}
+	
+	option = {
+		name = pf_ksb_events.9b
+		add_war_exhaustion = -4
+		add_country_modifier = {
+			name = ksb_alongside_us
+			duration = 3650
+		}
+	}
+}
+
+#religious disagreements between local volkvs
+country_event = {
+	id = pf_ksb_events.10
+	title = pf_ksb_events.10.t
+	desc = pf_ksb_events.10.d
+	picture = MERCHANTS_ARGUING_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_government_mechanic = pf_svetovid_dedication_mechanic
+		NOT = {
+			stability = 1
+		}
+		average_unrest = 1
+		NOT = {
+			has_country_modifier = ksb_volkvs_disagree
+		}
+	}
+	
+	option = {
+		name = pf_ksb_events.11a
+		add_government_power = {
+			mechanic_type = pf_svetovid_dedication_mechanic
+			power_type = pf_svetovid_dedication
+			value = -10
+		}
+	}
+	
+	option = {
+		name = pf_ksb_events.11b
+		add_country_modifier = {
+			name = ksb_volkvs_disagree
+			duration = 3650
+		}
+	}
+}
+
+#uninspired soldiers
+country_event = {
+	id = pf_ksb_events.11
+	title = pf_ksb_events.11.t
+	desc = pf_ksb_events.11.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_government_mechanic = pf_svetovid_dedication_mechanic
+		is_at_war = yes
+		NOT = {
+			stability = 1
+		}
+	}
+	
+	option = {
+		name = pf_ksb_events.11a
+		add_government_power = {
+			mechanic_type = pf_svetovid_dedication_mechanic
+			power_type = pf_svetovid_dedication
+			value = -10
+		}
+	}
+	
+	option = {
+		name = pf_ksb_events.11b
+		add_years_of_income = -0.25
+		add_government_power = {
+			mechanic_type = pf_svetovid_dedication_mechanic
+			power_type = pf_svetovid_dedication
+			value = -5
+		}
+	}
+	
+	option = {
+		name = pf_ksb_events.11c
+		add_country_modifier = {
+			name = ksb_troops_losing_faith
+			duration = 3650
+		}
+	}
+}
+
+#END OF PULSE EVENTS
+#release polabia
+country_event = {
+	id = pf_ksb_events.12
+	title = pf_ksb_events.12.t
+	desc = pf_ksb_events.12.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = pf_ksb_events.12a
+		custom_tooltip = "ksb_release_polabia_tt"
+		hidden_effect = {
+			vorpommern_area = {
+				remove_core = ROOT
+				add_core = POB
+			}
+			release = POB
+			create_union = POB
+			4745 = {
+				cede_province = ROOT
+				add_core = ROOT
+			}
+		}
+		mittelmark_area = {
+			add_permanent_claim = POB
+		}
+		south_saxony_area = {
+			add_permanent_claim = POB
+		}
+		northern_saxony_area = {
+			add_permanent_claim = POB
+		}
+		mecklenburg_area = {
+			add_permanent_claim = POB
+		}
+		add_dip_power = 100
+	}
+
+	option = {
+		name = pf_ksb_events.12b
+		add_prestige = 25
+		mittelmark_area = {
+			add_permanent_claim = ROOT
+		}
+		south_saxony_area = {
+			add_permanent_claim = ROOT
+		}
+		northern_saxony_area = {
+			add_permanent_claim = ROOT
+		}
+		mecklenburg_area = {
+			add_permanent_claim = ROOT
+		}
+		add_dip_power = 100
+	}
+}
+
+#expand polabia
+country_event = {
+	id = pf_ksb_events.13
+	title = pf_ksb_events.13.t
+	desc = pf_ksb_events.13.d
+	picture = CZECH_NOBLES_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = pf_ksb_events.13a
+		mittelmark_area = {
+			remove_core = ROOT
+			add_core = POB
+			cede_province = POB
+		}
+		south_saxony_area = {
+			remove_core = ROOT
+			add_core = POB
+			cede_province = POB
+		}
+		northern_saxony_area = {
+			remove_core = ROOT
+			add_core = POB
+			cede_province = POB
+		}
+		mecklenburg_area = {
+			remove_core = ROOT
+			add_core = POB
+			cede_province = POB
+		}
+		POB = {
+			add_country_modifier = {
+				name = pob_loyal_march
+				duration = -1
+			}
+			set_country_flag = pob_spreading_culture
+		}
+	}
+
+	option = {
+		name = pf_ksb_events.13b
+		add_prestige = 25
+		mittelmark_area = {
+			add_nationalism = -10
+		}
+		south_saxony_area = {
+			add_nationalism = -10
+		}
+		northern_saxony_area = {
+			add_nationalism = -10
+		}
+		mecklenburg_area = {
+			add_nationalism = -10
+		}
+	}
+}
+
+#Czech Converting Cultures
+province_event = {
+	id = pf_ksb_events.14
+	title = pf_ksb_events.14.t
+	desc = pf_ksb_events.14.d
+	picture = CZECH_NOBLES_eventPicture
+	
+	is_mtth_scaled_to_size = 1
+	hidden = yes
+	
+	trigger = {
+		culture = marcomanni
+		religion = slavic_religion
+		owner = { has_country_flag = ksb_converting_ceci_flag }
+	}
+
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 0.5
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			development = 25
+		}
+		modifier = {
+			factor = 0.5
+			development = 30
+		}
+	}
+	
+	option = {
+		name = pf_ksb_events.14a
+		change_culture = ceci
+	}
+}
+
+#vassalize pinsk and Silesia
+country_event = {
+	id = pf_ksb_events.15
+	title = pf_ksb_events.15.t
+	desc = pf_ksb_events.15.d
+	picture = CZECH_NOBLES_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = pf_ksb_events.15a
+		KSB = {
+			vassalize = ROOT
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = pf_ksb_events.15b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#support a side Lechite civil war
+country_event = {
+	id = pf_ksb_events.17
+	title = pf_ksb_events.17.t
+	desc = pf_ksb_events.17.d
+	picture = ITALIAN_wars_eventPicture
+
+	is_triggered_only = yes
+	
+	major = yes
+	major_trigger = {
+		OR = {
+			tag = KRA
+			tag = POL
+		}
+	}
+	
+	option = {
+		name = pf_ksb_events.17a
+		add_manpower = -1
+		add_treasury = -100
+		set_country_flag = ksb_supported_lechia
+		POL = {
+			add_manpower = 2
+			add_treasury = 150
+			add_ruler_modifier = {
+				name = lechia_supported_by_kashubia
+				duration = 3650
+			}
+			set_country_flag = lechia_supported_by_kashubia
+		}
+	}
+	
+	option = {
+		name = pf_ksb_events.17b
+		add_manpower = -1
+		add_treasury = -100
+		set_country_flag = ksb_supported_krakow
+		KRA = {
+			add_manpower = 2
+			add_treasury = 150
+			add_ruler_modifier = {
+				name = lechia_supported_by_kashubia
+				duration = 3650
+			}
+			set_country_flag = lechia_supported_by_kashubia
+		}
+	}
+}
+
+# #spread of Irminovci culture NORTH SLAVS
+# country_event = {
+# 	id = pf_ksb_events.18
+# 	title = pf_ksb_events.18.t
+# 	desc = pf_ksb_events.18.d
+# 	picture = CZECH_NOBLES_eventPicture
+# 	immediate = {
+# 		hidden_effect = {
+# 			random_owned_province = {
+# 				limit = {
+# 					OR = {
+# 						region = north_german_region
+# 						region = south_german_region
+# 					}
+# 					culture_group = old_germanic
+# 					religion = slavic_religion
+# 				}
+# 				save_event_target_as = culture_conversion_province
+# 			}
+# 		}
+# 	}
+# 	trigger = {
+# 		any_owned_province = {
+# 			OR = {
+# 				region = north_german_region
+# 				region = south_german_region
+# 			}
+# 			culture_group = old_germanic
+# 			religion = slavic_religion
+# 		}
+# 		has_country_flag = ksb_irminovci_converting_flag
+# 	}
+# 	mean_time_to_happen = {
+# 		months = 120
+# 	}
+# 	option = {
+# 		name = pf_ksb_events.18a
+# 		event_target:culture_conversion_province = {
+# 			change_culture = irminovci
+# 			# change_religion = slavic_religion
+# 		}
+# 	}
+# }
+#spread of Irminovci culture SOUTH SLAVS
+# country_event = {
+# 	id = pf_ksb_events.180
+# 	title = pf_ksb_events.18.t
+# 	desc = pf_ksb_events.18.d
+# 	picture = CZECH_NOBLES_eventPicture
+# 	immediate = {
+# 		hidden_effect = {
+# 			random_owned_province = {
+# 				limit = {
+# 					region = carpathia_region
+# 					culture_group = germanic_carpathian
+# 					religion = slavic_religion
+# 				}
+# 				save_event_target_as = culture_conversion_province
+# 			}
+# 		}
+# 	}
+# 	trigger = {
+# 		any_owned_province = {
+# 			region = carpathia_region
+# 			culture_group = germanic_carpathian
+# 			religion = slavic_religion
+# 		}
+# 		has_country_flag = ksb_irminovci_converting_flag
+# 	}
+# 	mean_time_to_happen = {
+# 		months = 120
+# 	}
+# 	option = {
+# 		name = pf_ksb_events.18.a
+# 		event_target:culture_conversion_province = {
+# 			change_culture = irminovci
+# 			# change_religion = slavic_religion
+# 		}
+# 	}
+# }
+#Volkhvate of Volyn event
+country_event = {
+	id = pf_ksb_events.19
+	title = pf_ksb_events.19.t
+	desc = pf_ksb_events.19.d
+	picture = ANGRY_SHAMANS_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = pf_ksb_events.19a
+		custom_tooltip = ksb_to_be_added_tt
+		#Add stuff when religious mechanics get added
+	}
+}
+
+#Fall of Athens
+country_event = {
+	id = pf_ksb_events.20
+	title = pf_ksb_events.20.t
+	desc = pf_ksb_events.20.d
+	picture = VILLAGE_BURNING_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		hidden_effect = {
+			papal_controller = {
+				save_event_target_as = papal_controller_targer
+			}
+		}
+	}
+	
+	option = {
+		name = pf_ksb_events.20a
+		event_target:papal_controller_targer = {
+			set_papacy_active = no
+			add_prestige = -20
+			add_legitimacy_equivalent = {
+				amount = -50
+			}
+		}
+	}
+}
+
+#move the capital to Kiev?
+country_event = {
+	id = pf_ksb_events.21
+	title = pf_ksb_events.21.t
+	desc = pf_ksb_events.21.d
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = pf_ksb_events.21a
+		set_capital = 280
+		custom_tooltip = empty_line_tt
+		280 = {
+			add_base_manpower = 3
+			add_base_production = 3
+			add_base_tax = 3
+		}
+	}
+	
+	option = {
+		name = pf_ksb_events.21b
+		add_prestige_or_monarch_power = {
+			amount = 25
+		}
+		custom_tooltip = empty_line_tt
+		capital_scope = {
+			add_base_manpower = 3
+			add_base_production = 3
+			add_base_tax = 3
+		}
+	}
+}
+
+#spread of Rus culture
+province_event = {
+	id = pf_ksb_events.22
+	title = pf_ksb_events.22.t
+	desc = pf_ksb_events.22.d
+	picture = CZECH_NOBLES_eventPicture
+
+	is_mtth_scaled_to_size = 1
+	hidden = yes
+	
+	trigger = {
+		region = ruthenia_region
+		culture_group = west_mongol
+		owner = {
+			has_country_flag = ksb_converting_rus_flag
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 0.5
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			development = 25
+		}
+		modifier = {
+			factor = 0.5
+			development = 30
+		}
+	}
+	
+	option = {
+		name = pf_ksb_events.22a
+		owner = {
+			add_prestige_or_monarch_power = { amount = 5 }
+		}
+		change_culture = rus_new
+		custom_tooltip = empty_line_tt
+		add_base_tax = 1
+		# change_religion = slavic_religion
+	}
+}
