@@ -1040,6 +1040,67 @@ PF_Gaul_4_branching_b = {
 		}
 	}
 }
+PF_Gaul_4_C = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GAU
+	}
+
+	pf_gaul_celtica_1 = {
+		icon = xxx
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = wessex_area
+				area = home_counties_area
+				area = east_anglia_area
+			}
+			NOT = {
+				is_claim = ROOT
+			}
+		}
+
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					OR = {
+						area = wessex_area
+						area = home_counties_area
+						area = east_anglia_area
+					}
+					is_claim = ROOT
+				}
+				amount = 1
+			}
+		}
+
+		effect = {
+			wessex_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			home_counties_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_anglia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
 PF_Gaul_5 = {
 	slot = 5
 	generic = no
@@ -1234,21 +1295,23 @@ PF_Gaul_5b_branching = {
 				num_of_times_improved_by_owner = 5 
 				province_is_or_accepts_culture = yes
 			}
-			192 = {
+			236 = {
 				num_of_times_improved_by_owner = 5 
 				province_is_or_accepts_culture = yes
 			}
-			4386 = {
+			182 = {
 				num_of_times_improved_by_owner = 5 
 				province_is_or_accepts_culture = yes
 			}
-			191 = {
+			248 = {
 				num_of_times_improved_by_owner = 5 
 				province_is_or_accepts_culture = yes
 			}
 			crown_land_share = 90
 		}
 		effect = {
+			add_ruler_personality = confederation_leader_personality
+			custom_tooltip = enable_confederation_leader_personality_TT
 			custom_tooltip = enable_dual_celtica_TT
 		}
 	}

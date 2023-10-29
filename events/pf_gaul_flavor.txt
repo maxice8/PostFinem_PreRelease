@@ -47,9 +47,33 @@ country_event = {
 			power_type = gaul_confederation
 			value = -15
 		}
-		add_stability = -1
 		add_ruler_modifier = {
 			name = reclaimer_of_gaul
+			duration = -1
+		}
+	}
+	option = {
+		name = pf_gaul_events.1.b
+		kill_ruler = yes
+		define_ruler = {
+			adm = 2
+   			dip = 2
+   			mil = 2
+			max_random_adm = 5
+			max_random_dip = 5
+			max_random_mil = 5
+			culture = ROOT
+			religion = ROOT
+			dynasty = "Dosso"
+		}
+		kill_heir = { allow_new_heir = no }
+		add_government_power = {
+			mechanic_type = gaul_confederation_mechanic
+			power_type = gaul_confederation
+			value = 14
+		}
+		add_ruler_modifier = {
+			name = gallic_challenger
 			duration = -1
 		}
 	}

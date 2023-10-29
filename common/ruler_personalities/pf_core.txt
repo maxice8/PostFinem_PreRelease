@@ -1,0 +1,71 @@
+confederation_leader_personality = {
+	ruler_allow = {
+		allow = {
+			mission_completed = pf_gaul_court_9
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				is_monarch_leader = yes
+			}
+			modifier = {
+				factor = 1
+				MIL = 3
+			}
+			modifier = {
+				factor = 10
+				has_country_flag = gallic_training_flag
+			}
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			mission_completed = pf_gaul_court_9
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				is_heir_leader = yes
+			}
+			modifier = {
+				factor = 1
+				MIL = 3
+			}
+			modifier = {
+				factor = 10
+				has_country_flag = gallic_training_flag
+			}
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			mission_completed = pf_gaul_court_9
+			culture_group = gallic
+		}
+
+		chance = {
+			modifier = {
+				factor = 1
+				consort_MIL = 6
+			}
+		}
+	}
+
+	allow = {
+		mission_completed = pf_gaul_court_9
+	}
+	
+	chance = {
+
+	}
+	
+	easy_war_chance_multiplier = 1.4
+	
+	yearly_absolutism = 0.5
+	years_of_nationalism = -2.5
+	nation_designer_cost = 5
+} 

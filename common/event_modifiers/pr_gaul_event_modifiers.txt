@@ -54,6 +54,10 @@ reclaimer_of_gaul = {
 	global_autonomy = 0.05	
 	national_focus_years = -5
 }
+gallic_challenger = {
+	nobles_loyalty_modifier = 0.2
+	monthly_gaul_confederation = 0.15
+}
 restriction_of_nobles_GAU = {
 	nobles_influence_modifier = -0.20
 	nobles_loyalty_modifier = -0.10

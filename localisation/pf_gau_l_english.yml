@@ -74,12 +74,14 @@ cb_germanic_campaigns: "Germanic Campaigns"
 cb_germanic_campaigns_desc: "For far too long have the tribes remained a thorn in our side - we must ensure our survival through the defeat and conquest of their tribes!"
 
 SUBJUGATION_GER_WAR_NAME: "Subjugation of the $SECOND_NAME$"
+enable_confederation_leader_personality_TT: "This will enable the §YConfederation Leader§! Personality Trait, which will grant the following:\nYears of Separatism: §G-2.5§!\nYearly Absolutism: §G+0.5§!\n"
 
 NOT_HAS_DUBNORIX: "We no longer have our starting ruler of §YDubnorix Carantus§!"
 
 pf_gaul_events.1.t: "The Death of the Riga"
 pf_gaul_events.1.d: "When Dubnorix came to power in the year 1395, his domain was not the expansive one seen in the modern era. His was a small touta on the northern fringe of Europe, the land of the Parisii. In the Era of the Five Riga, the great houses of Carnutia, Senonia, Pictonia, Lingonia, and Parisia dueled one another for nearly a hundred years for dominance. War and famine plagued the land, and as many rulers tried and failed to unify the Rigdom, some assumed that Gaul would pass into the annals of history, just as many who had come before it.\n\nDubnorix, however, was a warrior unlike any other. He defeated armies nearly twice his size, sieged castles in just a few days, and led his cavalry into the thick of battle. His diplomacy left much to be desired, but his might and power overwhelmed and crushed all who stood before him. It was through his might that in 1413, he had united Gaul once more, subjugating the Pretender-Riga and once more declaring the Confederation united.\n\nSo, at the scene of his death, there was much to discuss. Dubnorix kept the state united, but not by law or faith, but fear. And now that he was gone, many nobles were seizing the chance to rise up once more; his heir, while a talented young man indeed, was not his father. With pretenders on the horizon, he would have to fill the shoes his father left him - for he had no other choice."
 pf_gaul_events.1.a: "We must hope for the best."
+pf_gaul_events.1.b: "We shall call upon a challenger!"
 
 DCL: "Dual Celticas"
 DCL_ADJ: "Celtic"
@@ -117,5 +119,8 @@ unite_lugundia_GAU: "Forge the Lugundian Era"
 
 reduce_cost_druidic_ritual: "This will grant a one-time reduction of the cost for the decision §YOrganize Druidic Ritual§! by half."
 
-
+#Personality Types
+confederation_leader_personality: "Confederation Leader"
+confederation_leader_personality_desc: "This Ruler is a Confederation Leader. They have united the Celtic peoples underneath their watchful eye, and seek to further solidify their rule. They shall challenge any threat, domestic or foreign, and bring their nation into the modern age."
+desc_confederation_leader_personality: "This Ruler is a Confederation Leader. They have united the Celtic peoples underneath their watchful eye, and seek to further solidify their rule. They shall challenge any threat, domestic or foreign, and bring their nation into the modern age."
 
