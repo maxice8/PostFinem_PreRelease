@@ -182,11 +182,11 @@ sev_2_branch = {
 	has_country_shield = yes
 	potential = { 
 		OR = {
-		culture = slavic_galician
-		culture = polabian
-		culture = podlachian
-		culture = pomorian
-		culture = mazovian
+			culture = slavic_galician
+			culture = polabian
+			culture = podlachian
+			culture = pomorian
+			culture = mazovian
 		} 
 	} 
 
@@ -508,12 +508,18 @@ slv_5_branch = {
 	slv_worthy_capital = {
 		icon = develop_our_capital
 		position = 2
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+		} 
 
 		trigger = {  
 			capital_scope = {
 				development = 30
+			}
+			capital_scope = {
 				has_tax_building_trigger = yes
+			}
+			capital_scope = {
 				has_production_building_trigger = yes
 			}
 		} 
@@ -532,7 +538,9 @@ slv_5_branch = {
 		icon = mission_kon_repel_the_missionaries
 		position = 4
 		provinces_to_highlight = {  
-			
+			owned_by = ROOT
+			culture_group = ROOT
+			NOT = { development = 20 }
 		} 
 
 		trigger = {  
