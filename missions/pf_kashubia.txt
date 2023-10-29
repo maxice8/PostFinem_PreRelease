@@ -1643,10 +1643,14 @@ sevksb_4_branch = {
 			}
 		}
 		trigger = {
-			# howard: what is this supposed to mean?
 			all_province = {
-				culture_group = pagan_slavic
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					NOT = { culture_group = pagan_slavic }
+					AND = {
+						culture_group = pagan_slavic
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
 		}
 		effect = {
