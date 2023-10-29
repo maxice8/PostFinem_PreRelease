@@ -1,0 +1,734 @@
+bca_sea = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = BCA
+			tag = GAD
+			tag = IBR
+		}
+	}  
+
+	the_future_of_warfare = {
+		icon = mission_arabian_ports
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	tactical_dispoistions = {
+		icon = support_the_bulk_trades
+		position = 2
+		required_missions = { the_future_of_warfare } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	the_punishment_due = {
+		icon = mission_secure_hajj_ports
+		position = 3
+		required_missions = { tactical_dispoistions } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+bca_expand2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = BCA
+			tag = GAD
+			tag = IBR
+		}
+	}
+
+	the_price_of_a_mile = {
+		icon = mission_city_of_the_world's_desire
+		position = 2
+		required_missions = { primo_victoria } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+	attero_dominatus = {
+		icon = mission_destroy_the_horde
+		position = 3
+		required_missions = { the_price_of_a_mile } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	glorious_lands = {
+		icon = mission_invade_island
+		position = 4
+		required_missions = { attero_dominatus } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+bca_expand3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = BCA
+			tag = GAD
+			tag = IBR
+		}
+		}
+
+	primo_victoria = {
+		icon = professional_army
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			army_size_percentage = 1
+			num_of_generals = 2
+		  } 
+
+		effect = {
+			add_country_modifier = {
+				name = pf_bellica_attack
+				duration = 3650
+			
+			}
+		  } 
+	}
+
+	dire_straits = {
+		icon = mission_portuguese_interference
+		position = 2
+		required_missions = { primo_victoria } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	Shophet_of_swing = {
+		icon = mission_the_sultan_of_morocco
+		position = 4
+		required_missions = { dire_straits } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+bca_expand4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = BCA
+			tag = GAD
+			tag = IBR
+		}
+		} 
+
+	a_lifetime_of_war = {
+		icon = mission_modern_knight_army
+		position = 2
+		required_missions = { primo_victoria } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	unbreakable = {
+		icon = army_reforms
+		position = 3
+		required_missions = { a_lifetime_of_war } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	tanit_immanu = {
+		icon = holy_state
+		position = 4
+		required_missions = { unbreakable } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	state_of_mind = {
+		icon = renaissance_city
+		position = 5
+		required_missions = {
+			Shophet_of_swing
+			tanit_immanu
+			heart_of_the_city
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+bca_expand5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = BCA
+			tag = GAD
+			tag = IBR
+		}
+		}	 
+
+	heart_of_the_city = {
+		icon = defend_the_city
+		position = 4
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+gad_expand1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		was_tag = BCA 
+		OR = {
+			tag = GAD
+			tag = IBR
+		}
+	} 
+
+	losing_my_religion = {
+		icon = mission_rb_control_state_religion
+		position = 5
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+gad_dummy = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		was_tag = BCA 
+		OR = {
+			tag = GAD
+			tag = IBR
+		}
+	} 
+
+	gad_dummy1 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { losing_my_religion } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	gad_dummy2 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = { gad_dummy1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+gad_expand2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		was_tag = BCA 
+		OR = {
+			tag = GAD
+			tag = IBR
+		}
+	} 
+
+	iber_dreamin = {
+		icon = expand_the_arsenal
+		position = 5
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	against_all_odds = {
+		icon = mng_thirteen_provinces
+		position = 6
+		required_missions = { iber_dreamin } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+gad_expand3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		was_tag = BCA 
+		OR = {
+			tag = GAD
+			tag = IBR
+		}
+	}  
+
+	come_sail_away = {
+		icon = mission_portuguese_malacca
+		position = 6
+		required_missions = { iber_dreamin } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	another_day_in_paradise = {
+		icon = austria_prospers
+		position = 7
+		required_missions = {
+			against_all_odds
+			come_sail_away
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+gad_expand4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		was_tag = BCA 
+		OR = {
+			tag = GAD
+			tag = IBR
+		}
+	} 
+
+	gad_dev = {
+		icon = mission_develop_cordoba
+		position = 6
+		required_missions = { state_of_mind } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+gad_expand5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		was_tag = BCA 
+		OR = {
+			tag = GAD
+			tag = IBR
+		}
+	} 
+
+	gad_dev2 = {
+		icon = mission_develop_the_scandes
+		position = 6
+		required_missions = { state_of_mind } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+iber_expansion3 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		was_tag = BCA 
+		tag = IBR
+	}  
+
+	crossing_the_strait = {
+		icon = mission_arabian_sea_trade
+		position = 8
+		required_missions = { brand_new_dawn } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	knock_at_the_door = {
+		icon = mission_conquer_tunisia
+		position = 10
+		required_missions = { crossing_the_strait } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	a_new_empire = {
+		icon = centralized_empire
+		position = 11
+		required_missions = {
+			secure_the_north
+			knock_at_the_door
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+iber_expansion = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		was_tag = BCA 
+		tag = IBR
+	}   
+
+	brand_new_dawn = {
+		icon = mission_restore_the_pagan_kingdom
+		position = 7
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	answer_gaul = {
+		icon = mission_gain_mana
+		position = 8
+		required_missions = { brand_new_dawn } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	secure_the_north = {
+		icon = mission_pf_map_table
+		position = 10
+		required_missions = { answer_gaul } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+iber_expansion2 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		was_tag = BCA 
+		tag = IBR
+	}     
+
+	roman_ambition = {
+		icon = answer_the_roman_question
+		position = 8
+		required_missions = { brand_new_dawn } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	roman_locked_mission1 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { roman_ambition } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	roman_locked_mission2 = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = { roman_locked_mission1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+iber_consoldate2 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		was_tag = BCA 
+		tag = IBR
+	}   
+
+	expand_the_manufactories = {
+		icon = mission_industrial_forging
+		position = 8
+		required_missions = { concentrate_the_holdings } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	production_of_wine = {
+		icon = mission_wine_monopolies
+		position = 9
+		required_missions = { expand_the_manufactories } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+iber_consoldation = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		was_tag = BCA 
+		tag = IBR
+	}   
+
+	concentrate_the_holdings = {
+		icon = fra_educational_reforms
+		position = 7
+		required_missions = {
+			gad_dev
+			gad_dev2
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	til_the_land = {
+		icon = mission_mal_subjugate_zaf
+		position = 8
+		required_missions = { concentrate_the_holdings } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	gratuitious_mountains = {
+		icon = mission_zambezi_gold
+		position = 10
+		required_missions = { til_the_land } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+iber_navy = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		was_tag = BCA 
+		tag = IBR
+	}  
+
+	navy_1 = {
+		icon = mission_establish_high_seas_navy
+		position = 11
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	navy_3 = {
+		icon = mission_indian_trade_company
+		position = 12
+		required_missions = { navy_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	navy_5 = {
+		icon = a_worthy_navy
+		position = 13
+		required_missions = {
+			navy_2
+			navy_3
+			navy_4
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+iber_navy2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		was_tag = BCA 
+		tag = IBR
+	}  
+
+	navy_2 = {
+		icon = imperial_navy
+		position = 12
+		required_missions = { navy_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+iber_navy3 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		was_tag = BCA 
+		tag = IBR
+	}   
+
+	navy_4 = {
+		icon = mission_seize_north_sea_trade
+		position = 12
+		required_missions = { navy_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+iber_colonize = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		was_tag = BCA 
+		tag = IBR
+	} 
+
+	iber_colonize_1 = {
+		icon = mission_colonize_the_west
+		position = 11
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	iber_colonize_2 = {
+		icon = mission_new_kingdom_of_granada
+		position = 12
+		required_missions = { iber_colonize_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}

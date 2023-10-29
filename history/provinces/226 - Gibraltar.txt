@@ -1,8 +1,8 @@
 #226 - Gibraltar
-base_tax = 2
-base_production = 3
-trade_goods = fish
-base_manpower = 2
+base_tax = 6
+base_production = 5
+trade_goods = naval_supplies
+base_manpower = 5
 capital = "Gibraltar"
 is_city = yes
 discovered_by = western
@@ -14,3 +14,4 @@ culture = bellican
 add_core = BCA
 owner = BCA
 controller = BCA
+center_of_trade = 2
