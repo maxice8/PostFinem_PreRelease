@@ -21,14 +21,6 @@ ksb_1_slot = {
 		position = 1
 		provinces_to_highlight = {
 			province_id = 4745
-			OR = {
-				NOT = {
-					owned_by = root
-				}
-				NOT = {
-					is_core = root
-				}
-			}
 		}
 		trigger = {
 			owns_core_province = 4745
@@ -186,9 +178,7 @@ ksb_2_slot = {
 		effect = {
 			if = {
 				limit = {
-					POB = {
-						is_subject_of = ROOT
-					}
+					overlord_of = POB
 				}
 				custom_tooltip = ksb_yes_polabia
 			}
@@ -204,9 +194,7 @@ ksb_2_slot = {
 			if = {
 				limit = {
 					NOT = {
-						POB = {
-							is_subject_of = ROOT
-						}
+						overlord_of = POB
 					}
 				}
 				custom_tooltip = ksb_otherwise_yes
@@ -232,9 +220,7 @@ ksb_2_slot = {
 			hidden_effect = {
 				if = {
 					limit = {
-						POB = {
-							is_subject_of = ROOT
-						}
+						overlord_of = POB
 					}
 					country_event = {
 						id = pf_ksb_events.13
@@ -297,12 +283,10 @@ ksb_3_slot = {
 		trigger = {
 			OR = {
 				AND = {
-					SIL = {
-						alliance_with = ROOT
-						has_opinion = {
-							who = ROOT
-							value = 190
-						}
+					alliance_with = SIL
+					reverse_has_opinion = {
+						who = SIL
+						value = 190
 					}
 				}
 				AND = {
@@ -310,9 +294,7 @@ ksb_3_slot = {
 						country_or_non_sovereign_subject_holds = ROOT
 						type = all
 					}
-					SIL = {
-						exists = no
-					}
+					NOT = { exists = SIL }
 				}
 			}
 			lusatia_area = {
@@ -323,9 +305,7 @@ ksb_3_slot = {
 		effect = {
 			if = {
 				limit = {
-					SIL = {
-						alliance_with = ROOT
-					}
+					alliance_with = SIL
 				}
 				custom_tooltip = ksb_yes_vassalize_sil
 			}
@@ -335,9 +315,7 @@ ksb_3_slot = {
 			custom_tooltip = empty_line_tt
 			if = {
 				limit = {
-					SIL = {
-						exists = no
-					}
+					NOT = { exists = SIL }
 				}
 				custom_tooltip = ksb_otherwise_yes
 			}
@@ -359,9 +337,7 @@ ksb_3_slot = {
 			hidden_effect = {
 				if = {
 					limit = {
-						SIL = {
-							alliance_with = ROOT
-						}
+						alliance_with = SIL
 					}
 					SIL = {
 						set_country_flag = ksb_gonna_be_vassalized
@@ -497,12 +473,10 @@ ksb_4_slot = {
 		trigger = {
 			OR = {
 				AND = {
-					PNS = {
-						alliance_with = ROOT
-						has_opinion = {
-							who = ROOT
-							value = 190
-						}
+					alliance_with = PNS
+					reverse_has_opinion = {
+						who = PNS
+						value = 190
 					}
 				}
 				AND = {
@@ -511,18 +485,14 @@ ksb_4_slot = {
 						type = all
 					}
 					owns_or_non_sovereign_subject_of = 278
-					PNS = {
-						exists = no
-					}
+					NOT = { exists = PNS }
 				}
 			}
 		}
 		effect = {
 			if = {
 				limit = {
-					PNS = {
-						alliance_with = ROOT
-					}
+					alliance_with = PNS
 				}
 				custom_tooltip = ksb_yes_vassalize_pns
 			}
@@ -532,9 +502,7 @@ ksb_4_slot = {
 			custom_tooltip = empty_line_tt
 			if = {
 				limit = {
-					PNS = {
-						exists = no
-					}
+					NOT = { exists = PNS }
 				}
 				custom_tooltip = ksb_otherwise_yes
 				tooltip = {
@@ -554,9 +522,7 @@ ksb_4_slot = {
 			hidden_effect = {
 				if = {
 					limit = {
-						PNS = {
-							alliance_with = ROOT
-						}
+						alliance_with = PNS
 					}
 					PNS = {
 						set_country_flag = ksb_gonna_be_vassalized
@@ -1044,6 +1010,8 @@ ksb_5_slot = {
 			baltic_region = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
+				# howard: don't think this works, will have to
+				# check later
 				calc_true_if = {
 					amount = 5
 					religion = ROOT
@@ -1180,12 +1148,15 @@ sevksb_1_branch = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 20
 				region = north_german_region
-				religion = slavic_religion
+				religion = ROOT
 			}
 		}
 		effect = {
 			add_stability_or_adm_power = yes
 			custom_tooltip = empty_line_tt
+			# howard: think the if is not required here, nothing will be shown
+			# in the tooltip if the mechanic is not available to who completes
+			# the mission
 			if = {
 				limit = {
 					has_government_mechanic = pf_svetovid_dedication_mechanic
@@ -1251,7 +1222,6 @@ sevksb_1_branch = {
 					region = poland_region
 					region = baltic_region
 				}
-				has_port = yes
 				has_coast_defense_building_trigger = yes
 			}
 		}
@@ -1271,6 +1241,7 @@ sevksb_1_branch = {
 			sev_protect_coast
 		}
 		provinces_to_highlight = {
+			province_id = 1926
 		}
 		trigger = {
 			1926 = {
@@ -1389,17 +1360,14 @@ sevksb_2_branch = {
 			sev_lombardy_falls
 		}
 		provinces_to_highlight = {
-			AND = {
-				OR = {
-					region = south_german_region
-					region = north_german_region
-				}
-				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
+			OR = {
+				region = north_german_region
+				region = south_german_region
 			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { culture_group = pagan_slavic }
+				NOT = { religion = slavic_religion }
 			}
 		}
 		trigger = {
@@ -1502,8 +1470,9 @@ sevksb_3_branch = {
 		}
 		provinces_to_highlight = {
 			region = south_german_region
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { religion = slavic_religion }
 			}
 		}
 		trigger = {
@@ -1674,6 +1643,7 @@ sevksb_4_branch = {
 			}
 		}
 		trigger = {
+			# howard: what is this supposed to mean?
 			all_province = {
 				culture_group = pagan_slavic
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1819,16 +1789,12 @@ sevksb_5_branch = {
 			sev_krakow
 		}
 		provinces_to_highlight = {
-			NOT = {
-				AND = {
-					base_production = 6
-					OR = {
-						trade_goods = grain
-						trade_goods = livestock
-					}
-				}
-			}
 			owned_by = ROOT
+			NOT = { base_production = 6 }
+			OR = {
+				trade_goods = grain
+				trade_goods = livestock
+			}
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -1875,16 +1841,8 @@ slvksb_1_branch = {
 			sev_baltic_monopolies
 		}
 		provinces_to_highlight = {
-			if = {
-				limit = {
-					1756 = {
-						NOT = {
-							has_dock_building_trigger = yes
-						}
-					}
-				}
-				province_id = 1756
-			}
+			province_id = 1756
+			has_dock_building_trigger = no
 		}
 		trigger = {
 			navy_size_percentage = 1
@@ -2110,16 +2068,27 @@ slvksb_3_branch = {
 			slv_kiev_recovered
 		}
 		provinces_to_highlight = {
-			AND = {
-				OR = {
-					region = ruthenia_region
-					region = russia_region
+			OR = {
+				AND = {
+					OR = {
+						region = ruthenia_region
+						region = russia_region
+					}
+					OR = {
+						NOT = { religion = ROOT }
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
 				}
-				NOT = {
-					culture_group = ROOT
+				AND = {
+					province_id = 280
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+						NOT = { development = 25 }
+						NOT = { has_tax_building_trigger = yes }
+					}
 				}
 			}
-			country_or_non_sovereign_subject_holds = ROOT
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -2130,6 +2099,7 @@ slvksb_3_branch = {
 					region = russia_region
 				}
 			}
+			owns_core_province = 280
 			280 = {
 				development = 25
 			}
@@ -2180,6 +2150,8 @@ slvksb_3_branch = {
 			slv_urbanization
 		}
 		provinces_to_highlight = {
+			owned_by = ROOT
+			culture_group = ROOT
 		}
 		trigger = {
 			development_in_provinces = {
@@ -2216,9 +2188,22 @@ slvksb_4_branch = {
 			sev_lord_of_slavia
 		}
 		provinces_to_highlight = {
-			region = ruthenia_region
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				AND = {
+					region = ruthenia_region
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				AND = {
+					province_id = 280
+					OR = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+						NOT = { development = 20 }
+						NOT = { religion = slavic_religion }
+					}
+				}
 			}
 		}
 		trigger = {
@@ -2226,9 +2211,11 @@ slvksb_4_branch = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
 			}
+			owns_core_province = 280
 			280 = {
-				is_core = ROOT
 				development = 20
+			}
+			280 = {
 				religion = slavic_religion
 			}
 		}
@@ -2256,12 +2243,10 @@ slvksb_4_branch = {
 			sev_rusnok_lands
 		}
 		provinces_to_highlight = {
-			AND = {
-				region = ural_region
-				is_city = yes
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+			region = ural_region
+			OR = {
+				is_city = no
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			}
 		}
 		trigger = {
@@ -2273,6 +2258,7 @@ slvksb_4_branch = {
 		}
 		effect = {
 			discover_province = 1780
+			# howard: probably check if nobody owns it beforehand
 			1780 = {
 				create_colony_mission_reward_province = yes
 				# add_colonysize = 250
@@ -2286,6 +2272,7 @@ slvksb_4_branch = {
 			slv_uralic_push
 		}
 		provinces_to_highlight = {
+			province_id = 1780
 		}
 		trigger = {
 			owns = 1780
@@ -2357,10 +2344,14 @@ slvksb_5_branch = {
 		trigger = {
 			2966 = {
 				has_manufactory_trigger = yes
+			}
+			2966 = {
 				development = 20
 			}
 			263 = {
 				has_manufactory_trigger = yes
+			}
+			263 = {
 				development = 20
 			}
 		}
@@ -2385,18 +2376,16 @@ slvksb_5_branch = {
 		}
 		provinces_to_highlight = {
 			owned_by = ROOT
-			NOT = {
-				AND = {
-					has_manufactory_trigger = yes
-					development = 25
-				}
+			OR = {
+				has_manufactory_trigger = no
+				NOT = { development = 25 }
 			}
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 25
 				has_manufactory_trigger = yes
-				development = 2
+				development = 25 # howard: seems a little too high (that is 625 total dev)
 			}
 		}
 		effect = {
