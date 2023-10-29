@@ -61,12 +61,7 @@ on_startup = {
 		}
 		country_event = { id = pf_romuva_events.1 }
 	}
-	if = {
-		limit = {
-			tag = KSB
-		}
-		country_event = { id = pf_ksb_events.1 }
-	}
+	country_event = { id = pf_ksb_events.1 }
 	if = {
 		limit = {
 			OR = {
@@ -758,6 +753,7 @@ on_siege_won_country = {
 	if = {
 		limit = {
 			tag = KSB
+			FROM = { province_id = 4745 }
 		}
 		country_event = { id = pf_ksb_events.2 }
 	}

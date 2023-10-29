@@ -9,13 +9,8 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	immediate = {
-		set_country_flag = pf_ksb_had_intro_event
-	}
-	
 	trigger = {
 		tag = KSB
-		has_country_flag = pf_ksb_had_intro_event
 	}
 	
 	option = {
@@ -37,12 +32,14 @@ country_event = {
 	title = pf_ksb_events.2.t
 	desc = pf_ksb_events.2.d
 	picture = RUNESTONE_eventPicture
+
 	is_triggered_only = yes
 	fire_only_once = yes
+	
 	trigger = {
 		tag = KSB
-		controls = 4745
 	}
+	
 	option = {
 		name = pf_ksb_events.2a
 		4745 = {
@@ -58,20 +55,23 @@ province_event = {
 	title = pf_ksb_events.3.t
 	desc = pf_ksb_events.3.d
 	picture = RUNESTONE_eventPicture
+
 	is_triggered_only = yes
+	
 	trigger = {
-		root = {
+		ROOT = {
 			area = vorpommern_area
 			controlled_by = KSB
 		}
 	}
+	
 	option = {
 		name = pf_ksb_events.3a
-		root = {
+		ROOT = {
 			change_culture = polabian
 			change_religion = slavic_religion
 		}
-		KSB = {
+		controller = {
 			country_event = {
 				id = pf_ksb_events.4
 			}
@@ -80,12 +80,17 @@ province_event = {
 }
 
 #slavs in vorpommern kashubia
+# howard: any reason this event exists? it just tells you
+# something happened in the previous event, which tells you
+# what happened
 country_event = {
 	id = pf_ksb_events.4
 	title = pf_ksb_events.4.t
 	desc = pf_ksb_events.4.d
 	picture = RUNESTONE_eventPicture
+
 	is_triggered_only = yes
+	
 	option = {
 		name = pf_ksb_events.4a
 		custom_tooltip = "ksb_polabians_again_tt"
@@ -98,11 +103,14 @@ country_event = {
 	title = pf_ksb_events.5.t
 	desc = pf_ksb_events.5.d
 	picture = east_slavic_ANGRY_MOB_eventPicture
+
 	is_triggered_only = yes
+	
 	option = {
 		name = pf_ksb_events.5a
 		override_country_name = "RZECZPOSPOLITA"
 	}
+	
 	option = {
 		name = pf_ksb_events.5b
 		override_country_name = "RZECZPOSPOLITA"
@@ -115,7 +123,9 @@ country_event = {
 	title = pf_ksb_events.6.t
 	desc = pf_ksb_events.6.d
 	picture = east_slavic_ANGRY_MOB_eventPicture
+
 	is_triggered_only = yes
+	
 	option = {
 		name = pf_ksb_events.6a
 		restore_country_name = yes
@@ -129,7 +139,9 @@ country_event = {
 	title = pf_ksb_events.7.t
 	desc = pf_ksb_events.7.d
 	picture = FARMING_eventPicture
+
 	is_triggered_only = yes
+	
 	trigger = {
 		has_government_mechanic = pf_svetovid_dedication_mechanic
 		stability = 1
@@ -141,6 +153,7 @@ country_event = {
 			has_country_modifier = ksb_prospering_fields
 		}
 	}
+	
 	option = {
 		name = pf_ksb_events.7a
 		add_government_power = {
@@ -149,6 +162,7 @@ country_event = {
 			value = 15
 		}
 	}
+
 	option = {
 		name = pf_ksb_events.7b
 		add_years_of_income = 0.25
@@ -165,7 +179,9 @@ country_event = {
 	title = pf_ksb_events.8.t
 	desc = pf_ksb_events.8.d
 	picture = east_slavic_ANGRY_MOB_eventPicture
+
 	is_triggered_only = yes
+	
 	immediate = {
 		random_owned_province = {
 			limit = {
@@ -174,6 +190,7 @@ country_event = {
 			save_event_target_as = religious_revolt_province
 		}
 	}
+	
 	trigger = {
 		has_government_mechanic = pf_svetovid_dedication_mechanic
 		NOT = {
@@ -184,6 +201,7 @@ country_event = {
 			has_country_modifier = ksb_losing_faith
 		}
 	}
+	
 	option = {
 		name = pf_ksb_events.8a
 		goto = religious_revolt_province
@@ -196,6 +214,7 @@ country_event = {
 			slavic_zealots = 2
 		}
 	}
+	
 	option = {
 		name = pf_ksb_events.8b
 		goto = religious_revolt_province
@@ -217,6 +236,7 @@ country_event = {
 	desc = pf_ksb_events.9.d
 	picture = DISCIPLINED_SOLDIERS_eventPicture
 	is_triggered_only = yes
+
 	trigger = {
 		has_government_mechanic = pf_svetovid_dedication_mechanic
 		is_at_war = yes
@@ -225,6 +245,7 @@ country_event = {
 			has_country_modifier = ksb_alongside_us
 		}
 	}
+	
 	option = {
 		name = pf_ksb_events.9a
 		add_war_exhaustion = -4
@@ -234,6 +255,7 @@ country_event = {
 			value = 10
 		}
 	}
+	
 	option = {
 		name = pf_ksb_events.9b
 		add_war_exhaustion = -4
@@ -250,7 +272,9 @@ country_event = {
 	title = pf_ksb_events.10.t
 	desc = pf_ksb_events.10.d
 	picture = MERCHANTS_ARGUING_eventPicture
+
 	is_triggered_only = yes
+	
 	trigger = {
 		has_government_mechanic = pf_svetovid_dedication_mechanic
 		NOT = {
@@ -261,6 +285,7 @@ country_event = {
 			has_country_modifier = ksb_volkvs_disagree
 		}
 	}
+	
 	option = {
 		name = pf_ksb_events.11a
 		add_government_power = {
@@ -269,6 +294,7 @@ country_event = {
 			value = -10
 		}
 	}
+	
 	option = {
 		name = pf_ksb_events.11b
 		add_country_modifier = {
@@ -284,7 +310,9 @@ country_event = {
 	title = pf_ksb_events.11.t
 	desc = pf_ksb_events.11.d
 	picture = WOUNDED_SOLDIERS_eventPicture
+
 	is_triggered_only = yes
+	
 	trigger = {
 		has_government_mechanic = pf_svetovid_dedication_mechanic
 		is_at_war = yes
@@ -292,6 +320,7 @@ country_event = {
 			stability = 1
 		}
 	}
+	
 	option = {
 		name = pf_ksb_events.11a
 		add_government_power = {
@@ -300,6 +329,7 @@ country_event = {
 			value = -10
 		}
 	}
+	
 	option = {
 		name = pf_ksb_events.11b
 		add_years_of_income = -0.25
@@ -309,6 +339,7 @@ country_event = {
 			value = -5
 		}
 	}
+	
 	option = {
 		name = pf_ksb_events.11c
 		add_country_modifier = {
@@ -325,8 +356,10 @@ country_event = {
 	title = pf_ksb_events.12.t
 	desc = pf_ksb_events.12.d
 	picture = WOUNDED_SOLDIERS_eventPicture
+
 	is_triggered_only = yes
 	fire_only_once = yes
+	
 	option = {
 		name = pf_ksb_events.12a
 		custom_tooltip = "ksb_release_polabia_tt"
@@ -356,6 +389,7 @@ country_event = {
 		}
 		add_dip_power = 100
 	}
+
 	option = {
 		name = pf_ksb_events.12b
 		add_prestige = 25
@@ -381,8 +415,10 @@ country_event = {
 	title = pf_ksb_events.13.t
 	desc = pf_ksb_events.13.d
 	picture = CZECH_NOBLES_eventPicture
+
 	is_triggered_only = yes
 	fire_only_once = yes
+	
 	option = {
 		name = pf_ksb_events.13a
 		mittelmark_area = {
@@ -413,6 +449,7 @@ country_event = {
 			set_country_flag = pob_spreading_culture
 		}
 	}
+
 	option = {
 		name = pf_ksb_events.13b
 		add_prestige = 25
@@ -432,36 +469,39 @@ country_event = {
 }
 
 #Czech Converting Cultures
-country_event = {
+province_event = {
 	id = pf_ksb_events.14
 	title = pf_ksb_events.14.t
 	desc = pf_ksb_events.14.d
 	picture = CZECH_NOBLES_eventPicture
-	immediate = {
-		random_owned_province = {
-			limit = {
-				culture = marcomanni
-				religion = slavic_religion
-			}
-			save_event_target_as = culture_conversion_province
-		}
-	}
+	
+	is_mtth_scaled_to_size = 1
+	
 	trigger = {
-		any_owned_province = {
-			culture = marcomanni
-			religion = slavic_religion
-		}
-		has_country_flag = ksb_converting_ceci_flag
+		culture = marcomanni
+		religion = slavic_religion
+		owner = { has_country_flag = ksb_converting_ceci_flag }
 	}
+
 	mean_time_to_happen = {
-		months = 120
+		months = 1200
+		modifier = {
+			factor = 0.5
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			development = 25
+		}
+		modifier = {
+			factor = 0.5
+			development = 30
+		}
 	}
+	
 	option = {
 		name = pf_ksb_events.14a
-		event_target:culture_conversion_province = {
-			change_culture = ceci
-			# change_religion = slavic_religion
-		}
+		change_culture = ceci
 	}
 }
 
@@ -471,7 +511,9 @@ country_event = {
 	title = pf_ksb_events.15.t
 	desc = pf_ksb_events.15.d
 	picture = CZECH_NOBLES_eventPicture
+
 	is_triggered_only = yes
+	
 	option = {
 		name = pf_ksb_events.15a
 		KSB = {
@@ -481,6 +523,7 @@ country_event = {
 			factor = 100
 		}
 	}
+	
 	option = {
 		name = pf_ksb_events.15b
 		ai_chance = {
@@ -489,6 +532,7 @@ country_event = {
 	}
 }
 
+# howard: what's this for?
 #debug event
 country_event = {
 	id = pf_ksb_events.16
@@ -509,7 +553,9 @@ country_event = {
 	title = pf_ksb_events.17.t
 	desc = pf_ksb_events.17.d
 	picture = ITALIAN_wars_eventPicture
+
 	is_triggered_only = yes
+	
 	major = yes
 	major_trigger = {
 		OR = {
@@ -517,6 +563,7 @@ country_event = {
 			tag = POL
 		}
 	}
+	
 	option = {
 		name = pf_ksb_events.17a
 		add_manpower = -1
@@ -532,6 +579,7 @@ country_event = {
 			set_country_flag = lechia_supported_by_kashubia
 		}
 	}
+	
 	option = {
 		name = pf_ksb_events.17b
 		add_manpower = -1
@@ -635,8 +683,10 @@ country_event = {
 	title = pf_ksb_events.19.t
 	desc = pf_ksb_events.19.d
 	picture = ANGRY_SHAMANS_eventPicture
+
 	is_triggered_only = yes
 	fire_only_once = yes
+	
 	option = {
 		name = pf_ksb_events.19a
 		custom_tooltip = ksb_to_be_added_tt
@@ -650,8 +700,10 @@ country_event = {
 	title = pf_ksb_events.20.t
 	desc = pf_ksb_events.20.d
 	picture = VILLAGE_BURNING_eventPicture
+
 	is_triggered_only = yes
 	fire_only_once = yes
+	
 	immediate = {
 		hidden_effect = {
 			papal_controller = {
@@ -659,6 +711,7 @@ country_event = {
 			}
 		}
 	}
+	
 	option = {
 		name = pf_ksb_events.20a
 		event_target:papal_controller_targer = {
@@ -677,8 +730,10 @@ country_event = {
 	title = pf_ksb_events.21.t
 	desc = pf_ksb_events.21.d
 	picture = CITY_VIEW_eventPicture
+
 	is_triggered_only = yes
 	fire_only_once = yes
+	
 	option = {
 		name = pf_ksb_events.21a
 		set_capital = 280
@@ -689,6 +744,7 @@ country_event = {
 			add_base_tax = 3
 		}
 	}
+	
 	option = {
 		name = pf_ksb_events.21b
 		add_prestige_or_monarch_power = {
@@ -709,7 +765,9 @@ province_event = {
 	title = pf_ksb_events.22.t
 	desc = pf_ksb_events.22.d
 	picture = CZECH_NOBLES_eventPicture
+
 	is_mtth_scaled_to_size = 1
+	
 	trigger = {
 		region = ruthenia_region
 		culture_group = west_mongol
@@ -717,6 +775,7 @@ province_event = {
 			has_country_flag = ksb_converting_rus_flag
 		}
 	}
+	
 	mean_time_to_happen = {
 		months = 1200
 		modifier = {
@@ -732,6 +791,7 @@ province_event = {
 			development = 30
 		}
 	}
+	
 	option = {
 		name = pf_ksb_events.22a
 		owner = {
