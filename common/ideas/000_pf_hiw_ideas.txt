@@ -634,8 +634,8 @@ NDH_ideas = {		# Nordheim
 }
 SLV_ideas = {
 	start = {
-		manpower_in_culture_group_provinces = 0.33
-		monthly_splendor = 1
+		manpower_in_culture_group_provinces = 0.25
+		tolerance_own = 3
 	}
 	
 	bonus = {
@@ -651,17 +651,17 @@ SLV_ideas = {
 		legitimacy = 1
 		republican_tradition = 0.6
 		horde_unity = 1
-		prestige = 1
+		devotion = 1
 	}
 	slv_unbreakable_faith = {
-		morale_damage_received = -0.1
-		defensiveness = 0.2
+		fire_damage_received = -0.1
 	}
 	slv_granaries_of_slavia = {
-		production_efficiency = 0.2
+		global_trade_goods_size_modifier = 0.1
 	}
 	slv_one_true_faith = {
 		global_missionary_strength = 0.03
+		prestige = 1
 	}
 	slv_great_conquests = {
 		core_creation = -0.25
@@ -670,8 +670,7 @@ SLV_ideas = {
 		land_morale = 0.2
 	}
 	slv_develop_slavia = {
-		development_cost = -0.15
-		global_trade_goods_size_modifier = 0.1
+		development_cost = -0.1
 	}
 }
 
@@ -682,7 +681,7 @@ SEV_ideas = {
 	}
 	
 	bonus = {
-		production_efficiency = 0.15
+		production_efficiency = 0.1
 	}	
 
 	trigger = {
@@ -697,13 +696,13 @@ SEV_ideas = {
 		trade_efficiency = 0.1
 	}
 	sev_protect_from_pirates = {
-		build_cost = -0.15
+		build_cost = -0.1
 	}
 	sev_cult_of_svetovid = {
 		tolerance_own = 2
 	}
 	sev_pacify_germans = {
-		culture_conversion_cost = -0.25
+		culture_conversion_cost = -0.1
 		culture_conversion_time = -0.25
 	}
 	sev_end_mongol_raids = {
@@ -734,7 +733,8 @@ JUG_ideas = {
 	}
 	jug_mountain_lands = {
 		hostile_attrition = 1
-		max_hostile_attrition = 1
+		defensiveness = 0.25
+		# max_hostile_attrition = 1
 	}
 	jug_ostgermanic_invasion = {
 		core_creation = -0.1
@@ -749,6 +749,6 @@ JUG_ideas = {
 		cavalry_power = 0.2
 	}
 	jug_melting_pot = {
-		num_accepted_cultures = 3
+		num_accepted_cultures = 2
 	}
 }
