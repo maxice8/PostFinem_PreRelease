@@ -64,28 +64,11 @@ country_event = {
 	
 	option = {
 		name = pf_ksb_events.3a
+		goto = sieged_polabian_province
 		event_target:sieged_polabian_province = {
 			change_culture = polabian
 			change_religion = slavic_religion
 		}
-	}
-}
-
-#slavs in vorpommern kashubia
-# howard: any reason this event exists? it just tells you
-# something happened in the previous event, which tells you
-# what happened
-country_event = {
-	id = pf_ksb_events.4
-	title = pf_ksb_events.4.t
-	desc = pf_ksb_events.4.d
-	picture = RUNESTONE_eventPicture
-
-	is_triggered_only = yes
-	
-	option = {
-		name = pf_ksb_events.4a
-		custom_tooltip = "ksb_polabians_again_tt"
 	}
 }
 
