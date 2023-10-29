@@ -378,6 +378,15 @@ pf_vin_3 = {
 			country_event = {
 				id = pf_nordic.29
 			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				add_country_modifier = {
+					name = "pf_vin_ai_help_maintenance"
+					duration = 9125
+				}
+			}
 		} 
 	}
 
@@ -406,13 +415,13 @@ pf_vin_3 = {
 					}
 				}
 			}
-			else = {
+			else = {		# ai just has to discover a native?
 				any_known_country = {
 					government = native
-					has_opinion = {
-						who = root
-						value = 80
-					}
+					#has_opinion = {
+					#	who = root
+					#	value = 80
+					#}
 				}
 			}
 		} 
