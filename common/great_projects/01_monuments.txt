@@ -211,15 +211,15 @@ parthenon = {
 	build_trigger = {
 		OR = {
 			province_is_or_accepts_religion_group = {
-				religion_group = pagan
+				religion_group = hellenic
 			}
 			AND = {
-				culture = greek
+				culture_group = macedonian_greek
 				province_is_or_accepts_culture = yes
 			}
-			AND = {
-				culture = athenian
-				province_is_or_accepts_culture = yes
+			custom_trigger_tooltip = {
+				tooltip = slavs_allowed_in_the_parthenon_tt
+				owner = { has_country_flag = slavs_in_the_parthenon_flag }
 			}
 		}	
 	}
@@ -247,15 +247,15 @@ parthenon = {
 	can_use_modifiers_trigger = {
 		OR = {
 			province_is_or_accepts_religion_group = {
-				religion_group = pagan
+				religion_group = hellenic
 			}
 			AND = {
-				culture = greek
+				culture_group = macedonian_greek
 				province_is_or_accepts_culture = yes
 			}
-			AND = {
-				culture = athenian
-				province_is_or_accepts_culture = yes
+			custom_trigger_tooltip = {
+				tooltip = slavs_allowed_in_the_parthenon_tt
+				owner = { has_country_flag = slavs_in_the_parthenon_flag }
 			}
 		}
 	}
@@ -264,15 +264,15 @@ parthenon = {
 	can_upgrade_trigger = {
 		OR = {
 			province_is_or_accepts_religion_group = {
-				religion_group = pagan
+				religion_group = hellenic
 			}
 			AND = {
-				culture = greek
+				culture_group = macedonian_greek
 				province_is_or_accepts_culture = yes
 			}
-			AND = {
-				culture = athenian
-				province_is_or_accepts_culture = yes
+			custom_trigger_tooltip = {
+				tooltip = slavs_allowed_in_the_parthenon_tt
+				owner = { has_country_flag = slavs_in_the_parthenon_flag }
 			}
 		}
 	}

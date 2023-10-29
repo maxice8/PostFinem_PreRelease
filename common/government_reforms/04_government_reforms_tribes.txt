@@ -814,6 +814,14 @@ tribe_becomes_republic_reform = {
 			}
 			add_government_reform = peasants_republic
 		}
+		if = {
+			limit = { tag = SLV }
+			hidden_effect = {
+				country_event = {
+					id = pf_ksb_events.5
+				}
+			}
+		}
 	}
 	ai = {
 		factor = 1

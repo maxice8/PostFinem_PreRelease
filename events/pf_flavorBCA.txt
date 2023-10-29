@@ -1,0 +1,78 @@
+namespace = pf_flavor_bca
+
+#stratocratic republic events
+
+country_event = { #re-election
+	id = pf_flavor_bca.1
+	title = pf_flavor_bca.1.t
+	desc = pf_flavor_bca.1.d
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_government_attribute = stratocratic_elections
+	}
+
+	option = { #re-election option
+		name = pf_flavor_bca.1.a
+		if = {
+			limit = {
+				has_ruler_flag = pf_bca_general_ruler
+			}
+			change_ruler_stat = {
+				stat = mil
+				amount = 1
+			}
+			custom_tooltip = empty_line_tt
+			add_government_power = {
+				mechanic_type = stratocratic_republic_mechanic
+				power_type = stratocratic_republic_slider
+				value = 10
+			}
+		}
+		if = {
+			limit = {
+				has_ruler_flag = pf_bca_admiral_ruler
+			}
+			change_ruler_stat = {
+				stat = dip
+				amount = 1
+			}
+			custom_tooltip = empty_line_tt
+			add_government_power = {
+				mechanic_type = stratocratic_republic_mechanic
+				power_type = stratocratic_republic_slider
+				value = -10
+			}
+		}
+	}
+
+	option = { # elect a general
+		name = pf_flavor_bca.1.b 
+		define_leader_to_ruler = {
+			type = general
+			mil = 2
+		}
+		add_government_power = {
+			mechanic_type = stratocratic_republic_mechanic
+			power_type = stratocratic_republic_slider
+			value = 10
+		}
+		set_ruler_flag = pf_bca_general_ruler
+	}
+
+	option = { #elect an admiral
+		name = pf_flavor_bca.1.c 
+		define_leader_to_ruler = {
+			type = admiral
+			dip = 2
+		}
+		add_government_power = {
+			mechanic_type = stratocratic_republic_mechanic
+			power_type = stratocratic_republic_slider
+			value = -10
+		}
+		set_ruler_flag = pf_bca_admiral_ruler
+	}
+}

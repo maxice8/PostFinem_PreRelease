@@ -1,0 +1,44 @@
+﻿l_english:
+#intro event - be wary
+ pf_pol_events.1.t: "A Kingdom in Twain"
+ pf_pol_events.1.d: "The Kingdom of Lechia was once a great power in the center of Europe, with its cities prosperous and it's politics stable. However, after the reign of Miroslav Lazarevic in the 13th century, that fell apart. The kingdom entered a steady decline, until the succession of Ignacij Lazarevic in 1431. His brother, Caspar, was wanting for the throne their entire life, and on that day he took it. In the chaos and civil war that ensued Caspar was exiled to the west, seizing some land in the region around Krakow and ruling there until this day, slowly plotting his return"
+ pf_pol_events.1a: "We must be wary"
+ pol_be_wary_tt:0 "§RCaspar may attempt to seize the throne when Ignacij dies§!"
+ kra_be_wary_tt:0 "§RWe can make a bid for the throne when Ignacij dies§!"
+
+#caspar dies before ignacij - KRA side
+ pf_pol_events.2.t: "Caspar of Krakow Dies"
+ pf_pol_events.2.d: "REPLACE_ME" #caspar dies first
+ pf_pol_events.2a: "An unfortunate turn of events"
+ kra_giving_up_claim:0 "§RWe will lose our claim to the Kingdom of Lechia§!"
+
+ #caspar dies before ignacij - POL side
+ pf_pol_events.3.t: "Caspar of Krakow Dies"
+ pf_pol_events.3.d: "REPLACE_ME" #yipee the pretender is dead his nation is defunct
+ pf_pol_events.3a: "A great success for our nation!"
+
+  #ignacij dies - POL
+ pf_pol_events.4.t: "Death of Ignacij Lazarevic"
+ pf_pol_events.4.d: "REPLACE_ME" #ohno krakow will claim our throne
+ pf_pol_events.4a: "Dire times are ahead"
+ pol_succession_wars_tt:0 "Krakow will likely seize the throne through war"
+
+  #ignacij dies - KRA
+ pf_pol_events.5.t: "Death of Ignacij Lazarevic"
+ pf_pol_events.5.d: "REPLACE_ME" #let's claim the polish throne
+ pf_pol_events.5a: "A great opportunity!"
+ pf_pol_events.5b: "This is not the path"
+
+#restoring order
+ pf_pol_events.6.t: "Restoring Order"
+ pf_pol_events.6.d: "REPLACE_ME" #Lechia won and is dismantling the pretender state
+ pf_pol_events.6a: "Don't forget to loot the treasury!"
+ pf_pol_events.6b: "We will keep fighting"
+
+ #Caspar's triumph
+ pf_pol_events.7.t: "Caspar's Triumph"
+ pf_pol_events.7.d: "REPLACE_ME" #Krakow wins and proclaims a new lechia
+ pf_pol_events.7a: "We have a new king in Lechia!"
+ 
+
+

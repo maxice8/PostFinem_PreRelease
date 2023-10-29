@@ -1,0 +1,120 @@
+country_decisions = {
+
+	pf_borealiber = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes 
+			NOT = { has_country_flag = formed_borealiber_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			OR = {
+				primary_culture = ausontes
+				primary_culture = carventian
+				primary_culture = ilergi
+				primary_culture = volcaran
+			}
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 213 #Barcino Novum
+				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		
+		allow = {
+			NOT = { exists = BOR }
+			adm_tech = 10
+			is_nomad = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_tribal = no
+			owns_core_province = 213 #Barcino Novum
+			num_of_owned_provinces_with = {
+				value = 15
+				OR = {
+					area = catalonia_area
+					area = aragon_area
+					area = basque_area
+					area = castille_area
+					area = valencia_area
+					area = asturias_area
+					area = baleares_area
+				}
+			}
+		}
+		effect = {
+			change_tag = BOR
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			add_prestige = 25
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 3650
+			}
+			set_capital = 213 #Barcino Novum
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			catalonia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BOR
+			}
+			aragon_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BOR
+			}
+			basque_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BOR
+			} 
+			castille_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BOR
+			}
+			valencia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BOR
+			}
+			baleares_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BOR
+			}
+			set_country_flag = formed_borealiber_flag
+		}
+	}
+}
