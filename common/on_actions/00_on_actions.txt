@@ -1070,6 +1070,7 @@ on_death_election = {
 		# pf
 		# hm i wonder hehe
 		pf_trn.1				# Election for Brittonic Confederation
+		pf_flavor_bca.1
 	}
 }
 
@@ -1080,8 +1081,10 @@ on_death_foreign_slave_ruler = {
 # country
 on_replace_governor = {
 	events = {
+		elections.707
 		# hm i wonder hehe
-		pf_trn.1				# Election for Brittonic Confederationctions.707
+		pf_trn.1				# Election for Brittonic Confederation 
+		pf_flavor_bca.1
 	}
 }
 
