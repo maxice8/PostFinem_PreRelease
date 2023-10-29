@@ -1010,10 +1010,11 @@ ksb_5_slot = {
 			baltic_region = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
-				# howard: don't think this works, will have to
-				# check later
-				calc_true_if = {
-					amount = 5
+			}
+			calc_true_if = {
+				amount = 5
+				baltic_region = {
+					type = all
 					religion = ROOT
 				}
 			}
