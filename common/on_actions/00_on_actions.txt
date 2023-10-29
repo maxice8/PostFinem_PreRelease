@@ -64,7 +64,6 @@ on_startup = {
 	if = {
 		limit = {
 			tag = KSB
-			NOT = { is_year = 1445 }
 		}
 		country_event = { id = pf_ksb_events.1 }
 	}

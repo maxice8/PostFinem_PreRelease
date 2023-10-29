@@ -5,11 +5,19 @@ country_event = {
 	title = pf_ksb_events.1.t
 	desc = pf_ksb_events.1.d
 	picture = FLAGSHIP_SUNK_eventPicture
+
 	is_triggered_only = yes
 	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = pf_ksb_had_intro_event
+	}
+	
 	trigger = {
 		tag = KSB
+		has_country_flag = pf_ksb_had_intro_event
 	}
+	
 	option = {
 		name = pf_ksb_events.1a
 		4745 = {
