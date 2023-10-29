@@ -76,6 +76,9 @@ car_main_1 = {
 			naples_area = { add_permanent_claim = ROOT }
 			apulia_area = { add_permanent_claim = ROOT }
 		} 
+		ai_weight = {
+			factor = 500
+		} 
 	}
 
 	pf_car_italian_ambitions = {
@@ -114,6 +117,9 @@ car_main_1 = {
 			north_italy_region = {
 				add_permanent_claim = ROOT
 			}
+		} 
+		ai_weight = {
+			factor = 500
 		} 
 	}
 
@@ -159,6 +165,9 @@ car_main_1 = {
 				name = car_conquest_of_italia
 				duration = -1
 			}
+		} 
+		ai_weight = {
+			factor = 500
 		} 
 	}
 	pf_car_african_riches = {
@@ -460,7 +469,7 @@ car_main_3 = {
 			mauretania_region = {
 				add_permanent_claim = ROOT
 			}
-		} 
+		}
 	}
 
 	pf_car_masters_of_mauretania = {
@@ -507,6 +516,9 @@ car_main_3 = {
 				add_permanent_claim = ROOT
 			}
 		} 
+		ai_weight = {
+			factor = 500
+		} 
 	}
 
 	pf_car_into_iber = {
@@ -548,6 +560,9 @@ car_main_3 = {
 				add_permanent_claim = ROOT
 			}
 		} 
+		ai_weight = {
+			factor = 500
+		} 
 	}
 
 
@@ -583,6 +598,9 @@ car_main_3 = {
 			provence_area = {
 				add_permanent_claim = ROOT
 			}
+		} 
+		ai_weight = {
+			factor = 500
 		} 
 	}
 	pf_car_gallic_campaigns = {
@@ -627,7 +645,10 @@ car_main_3 = {
 			france_region = {
 				add_permanent_claim = ROOT
 			}
-		} 
+		}
+		ai_weight = {
+			factor = 500
+		}  
 	}
 
 	pf_car_worthy_successors_of_hannibal = {
@@ -766,6 +787,9 @@ car_main_4 = {
 			delta_area = {
 				add_permanent_claim = ROOT
 			}
+		} 
+		ai_weight = {
+			factor = 500
 		} 
 	}
 
