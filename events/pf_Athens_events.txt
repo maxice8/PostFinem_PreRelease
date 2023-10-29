@@ -47,7 +47,18 @@ country_event = {		# The Athenian Press
 	desc = pf_ath.2.d
 	picture = PRINTING_PRESS_eventPicture
 
-	is_triggered_only = yes
+	trigger = {
+		tag = ATH
+		has_institution = printing_press
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	fire_only_once = yes
+
+	# may make this a mission event
 
 	option = {
 		name = "pf_ath.2.a"
