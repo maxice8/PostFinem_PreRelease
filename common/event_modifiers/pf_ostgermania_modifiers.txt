@@ -217,3 +217,22 @@ mkm_break_the_crown = {
 	legitimacy = 1
 	core_creation = -0.1
 }
+
+mkm_ostgermanic_culture = {
+	num_accepted_cultures = 2
+}
+
+mkm_ostgermanic_culture_2 = {
+	num_accepted_cultures = 2
+	manpower_in_accepted_culture_provinces = 0.2	
+}
+
+mkm_borderpatrol_mod = {
+	defensiveness = 0.1
+	land_morale = 0.1
+}
+
+mkm_the_king_word = {
+	all_estate_loyalty_equilibrium = 0.05
+	max_absolutism = 10
+}

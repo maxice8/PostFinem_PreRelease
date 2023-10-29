@@ -6,8 +6,9 @@ pf_bav_1 = {
 	potential = { tag = BAV } 
 
 	bav_southern_lords = {
-		icon = establish_oktoberfest
+		icon = mission_have_two_subjects
 		position = 1
+		provinces_to_highlight = {  } 
 
 		trigger = {
 			OR = {
@@ -21,19 +22,18 @@ pf_bav_1 = {
 		}
 
 		effect = {
-			upper_bavaria_area = { add_permanent_claim = ROOT	}
-			upper_swabia_area = { add_permanent_claim = ROOT	}
-			tirol_area = { add_permanent_claim = ROOT }
+			upper_bavaria_area = { add_permanent_claim = ROOT } 
+			upper_swabia_area = { add_permanent_claim = ROOT } 
+			tirol_area = { add_permanent_claim = ROOT } 
 		}
 	}
 
 	bav_capital = {
-		icon = establish_oktoberfest
+		icon = mission_high_income
 		position = 3
 		required_missions = { bav_southern_lords } 
-		provinces_to_highlight = {
-			province_id = 64
-		}
+		provinces_to_highlight = { province_id = 64 } 
+
 		trigger = {
 			64 = {
 				owned_by = ROOT
@@ -44,28 +44,25 @@ pf_bav_1 = {
 		effect = {
 			64 = {
 				if = {
-					limit = {
-						has_building = courthouse
-					}
+					limit = { has_building = courthouse } 
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-				}else = {
-					add_building = courthouse
 				}
+				else = { add_building = courthouse } 
 			}
 		}
 	}
 }
-
 pf_bav_2 = {
 	slot = 2
 	generic = no
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = BAV } 
+
 	bav_middle = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_luther_theses
 		position = 2
 		required_missions = { bav_southern_lords } 
 		provinces_to_highlight = {
@@ -111,7 +108,6 @@ pf_bav_2 = {
 		}
 	}
 }
-
 pf_bav_3 = {
 	slot = 3
 	generic = no
@@ -122,25 +118,28 @@ pf_bav_3 = {
 	bav_stable_country = {
 		icon = mission_build_up_to_force_limit
 		position = 1
+		provinces_to_highlight = {  } 
 
 		trigger = {
 			stability = 1
-			all_owned_province = {
-				religion = ROOT
-			}
+			all_owned_province = { religion = ROOT } 
 		}
 
 		effect = {
 			add_country_modifier = {
-				name = bav_real_for_real
+				name = "bav_real_for_real"
 				duration = 9125
 			}
 		}
 	}
+
 	bav_marklander = {
-		icon = mission_build_up_to_force_limit
+		icon = the_imperial_border
 		position = 3
-		required_missions = { bav_moria bav_stable_country} 
+		required_missions = {
+			bav_moria
+			bav_stable_country
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = erzgebirge_area
@@ -160,47 +159,38 @@ pf_bav_3 = {
 						is_core = ROOT
 					}
 				}
-				MVA = {
-					is_subject_of = ROOT
-				}
+				MVA = { is_subject_of = ROOT } 
 			}
 		}
 
 		effect = {
 			if = {
-				limit = {
-					MVA = {
-						is_subject_of = ROOT
-					}
-				}
+				limit = { MVA = { is_subject_of = ROOT }  } 
 				inherit = MVA
-			}else = {
-				custom_tooltip = CT_BAV_1
 			}
+			else = { custom_tooltip = CT_BAV_1 } 
 			change_tag = MKM
 			on_change_tag_effect = yes
-			restore_country_name = yes
+			restore_country_name = "yes"
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = {
-					has_custom_ideas = no
-				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				limit = { has_custom_ideas = no } 
+				country_event = { id = ideagroups.1 } 
 			}
 			set_country_flag = formed_markland_flag
 		}
 	}
 }
-
 pf_bav_4 = {
 	slot = 4
 	generic = no
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = BAV } 
+
 	bav_moria = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_alliances
 		position = 2
 		required_missions = { bav_markomanni } 
 		provinces_to_highlight = {
@@ -237,7 +227,6 @@ pf_bav_4 = {
 		}
 	}
 }
-
 pf_bav_5 = {
 	slot = 5
 	generic = no
@@ -248,6 +237,7 @@ pf_bav_5 = {
 	bav_markomanni = {
 		icon = establish_oktoberfest
 		position = 1
+		provinces_to_highlight = {  } 
 
 		trigger = {
 			prestige = 10
@@ -255,8 +245,8 @@ pf_bav_5 = {
 		}
 
 		effect = {
-			erzgebirge_area = {add_permanent_claim = ROOT	}
-			bohemia_area = { add_permanent_claim = ROOT	}
+			erzgebirge_area = { add_permanent_claim = ROOT } 
+			bohemia_area = { add_permanent_claim = ROOT } 
 			add_casus_belli = {
 				type = cb_vassalize_mission
 				target = MVA
@@ -264,33 +254,25 @@ pf_bav_5 = {
 			}
 		}
 	}
+
 	bav_styria = {
-		icon = mission_build_up_to_force_limit
+		icon = bohemian_crystal
 		position = 3
 		required_missions = { bav_moria } 
-		provinces_to_highlight = {
-			is_core = STY
-		}
+		provinces_to_highlight = { is_core = STY } 
 
 		trigger = {
 			OR = {
-				STY = {
-					is_subject_of = ROOT
-				}
-				STY = {
-					all_core_province = {
-						owned_by = ROOT
-					}
-				}
+				STY = { is_subject_of = ROOT } 
+				STY = { all_core_province = { owned_by = ROOT }  } 
 			}
 		}
 
 		effect = {
 			add_country_modifier = {
-				name = bav_wine_party
+				name = "bav_wine_party"
 				duration = 9125
 			}
 		}
 	}
-	
 }

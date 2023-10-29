@@ -6,18 +6,15 @@ pf_mkm_1 = {
 	potential = { tag = MKM } 
 
 	mkm_bordermania = {
-		icon = establish_oktoberfest
+		icon = mission_colonial
 		position = 1
-		provinces_to_highlight = {
-			culture = marcomanni
-		}
+		provinces_to_highlight = { culture = marcomanni } 
+
 		trigger = {
 			owns = 64
-			64 = {
-				development = 10
-			}
+			64 = { development = 10 } 
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 8
 				culture = marcomanni
 				development = 10
 			}
@@ -26,26 +23,22 @@ pf_mkm_1 = {
 		effect = {
 			64 = {
 				if = {
-					limit = {
-						province_has_center_of_trade_of_level = 1
-					}
+					limit = { province_has_center_of_trade_of_level = 1 } 
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-				}else = {
-					center_of_trade = 1 
 				}
+				else = { center_of_trade = 1 } 
 			}
 		}
 	}
 
 	mkm_home_sweet_home = {
-		icon = establish_oktoberfest
+		icon = mission_conquer_50_development
 		position = 3
 		required_missions = { mkm_bordermania } 
-		provinces_to_highlight = {
-			province_id = 64
-		}
+		provinces_to_highlight = { province_id = 64 } 
+
 		trigger = {
 			64 = {
 				owned_by = ROOT
@@ -57,14 +50,13 @@ pf_mkm_1 = {
 		effect = {
 			64 = {
 				add_province_modifier = {
-					name = mkm_salty
+					name = "mkm_salty"
 					duration = -1
 				}
 			}
 		}
 	}
 }
-
 pf_mkm_2 = {
 	slot = 2
 	generic = no
@@ -73,7 +65,7 @@ pf_mkm_2 = {
 	potential = { tag = MKM } 
 
 	mkm_ostholm = {
-		icon = establish_oktoberfest
+		icon = a.e.i.o.u.
 		position = 2
 		required_missions = { mkm_map_painter } 
 		provinces_to_highlight = {
@@ -93,36 +85,60 @@ pf_mkm_2 = {
 			}
 		}
 
+		effect = { add_ruler_modifier = { name = "mkm_break_the_crown" }  } 
+	}
+
+	mkm_trademaster = {
+		icon = mission_entrepot_of_india
+		position = 4
+		required_missions = { mkm_home_sweet_home } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			can_build = marketplace
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				has_trade_building_trigger = yes
+				base_production = 5
+			}
+		}
+
 		effect = {
-			add_ruler_modifier = {
-				name = mkm_break_the_crown
+			add_years_of_owned_provinces_production_income = {
+				years = 5
+				trigger = { has_trade_building_trigger = yes } 
+				custom_tooltip = CT_MKM_3
 			}
 		}
 	}
 }
-
 pf_mkm_3 = {
-	slot = 3 
+	slot = 3
 	generic = no
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = MKM } 
 
 	mkm_map_painter = {
-		icon = establish_oktoberfest
+		icon = foothold_in_greece
 		position = 1
+		provinces_to_highlight = {  } 
 
-		trigger = {
-			army_size = 20
-		}
+		trigger = { army_size = 20 } 
 
 		effect = {
-			carpathia_region = {add_permanent_claim = ROOT}
+			add_country_modifier = {
+				name = "mkm_ostgermanic_culture"
+				duration = -1
+			}
+			carpathia_region = { add_permanent_claim = ROOT } 
 		}
 	}
 
 	mkm_bergaland = {
-		icon = establish_oktoberfest
+		icon = mission_rb_unite_the_clans
 		position = 2
 		required_missions = { mkm_map_painter } 
 		provinces_to_highlight = {
@@ -144,13 +160,81 @@ pf_mkm_3 = {
 
 		effect = {
 			add_country_modifier = {
-				name = mkm_the_long_climb
+				name = "mkm_the_long_climb"
 				duration = 9125
 			}
 		}
 	}
-}
 
+	mkm_brotherhood = {
+		icon = unite_the_realm
+		position = 3
+		required_missions = {
+			mkm_ostholm
+			mkm_bergaland
+			mkm_vindheim
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			accepted_culture = fyrnir
+			accepted_culture = quadi
+			accepted_culture = eldrun
+			OR = {
+				accepted_culture = haldyr
+				dip_power = 100
+			}
+		}
+
+		effect = {
+			if = { limit = { accepted_culture = haldyr }  } 
+			else = { add_dip_power = -100 } 
+			if = {
+				limit = { has_country_modifier = mkm_ostgermanic_culture } 
+				remove_country_modifier = mkm_ostgermanic_culture
+			}
+			else = { custom_tooltip = CT_MKM_1 } 
+			add_country_modifier = {
+				name = "mkm_ostgermanic_culture_2"
+				duration = -1
+			}
+		}
+	}
+
+	mkm_ost_germania = {
+		icon = a_real_roman_empire
+		position = 5
+		required_missions = { mkm_brotherhood } 
+		provinces_to_highlight = { region = carpathia_region } 
+
+		trigger = {
+			carpathia_region = {
+				type = all
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
+			}
+		}
+
+		effect = {
+			change_tag = DNV
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			set_government_rank = 2
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no } 
+				country_event = { id = ideagroups.1 } 
+			}
+		}
+	}
+}
 pf_mkm_4 = {
 	slot = 4
 	generic = no
@@ -159,7 +243,7 @@ pf_mkm_4 = {
 	potential = { tag = MKM } 
 
 	mkm_vindheim = {
-		icon = mission_rb_unite_the_clans
+		icon = pf_carnyx_horn
 		position = 2
 		required_missions = { mkm_map_painter } 
 		provinces_to_highlight = {
@@ -179,7 +263,7 @@ pf_mkm_4 = {
 			}
 		}
 
-		effect = { 
+		effect = {
 			add_mil_power = 100
 			define_general = {
 				shock = 6
@@ -188,10 +272,28 @@ pf_mkm_4 = {
 				siege = 1
 				trait = born_to_the_saddle_personality
 			}
-		 } 
+		}
+	}
+
+	mkm_more_borders = {
+		icon = pf_hannibal
+		position = 4
+		required_missions = { mkm_marktheborder } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			stability = 2
+			crown_land_share = 55
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "mkm_the_king_word"
+				duration = -1
+			}
+		}
 	}
 }
-
 pf_mkm_5 = {
 	slot = 5
 	generic = no
@@ -199,5 +301,46 @@ pf_mkm_5 = {
 	has_country_shield = yes
 	potential = { tag = MKM } 
 
-	
+	mkm_borderpatrol = {
+		icon = mission_chinese_general_riding
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = { years_of_income = 1 } 
+
+		effect = {
+			add_years_of_income = -1
+			add_country_modifier = {
+				name = "mkm_borderpatrol_mod"
+				duration = 9125
+			}
+		}
+	}
+
+	mkm_marktheborder = {
+		icon = mission_conquer_5_states
+		position = 3
+		required_missions = { mkm_borderpatrol } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { all_neighbor_province = { owned_by = ROOT }  } 
+		}
+
+		trigger = {
+			years_of_income = 1.5
+			mil_power = 200
+		}
+
+		effect = {
+			add_years_of_income = -1.5
+			add_mil_power = -200
+			custom_tooltip = CT_MKM_2
+			hidden_effect = {
+				every_owned_province = {
+					limit = { NOT = { all_neighbor_province = { owned_by = ROOT }  }  } 
+					add_base_manpower = 1
+				}
+			}
+		}
+	}
 }
