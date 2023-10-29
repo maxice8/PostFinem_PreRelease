@@ -64,9 +64,8 @@ ksb_great_march_south = {
 }
 
 ksb_mouth_of_the_danube = {
-	local_center_of_trade_upgrade_cost = -0.5
-	caravan_power = 0.2
-	province_trade_power_value = 20
+	trade_value_modifier = 0.2
+	local_ship_repair = 0.25
 }
 
 ksb_drakovan_defensiveness = {
@@ -104,14 +103,14 @@ ksb_convert_mongols = {
 }
 
 ksb_military_industrial_complex = {
-	infantry_power = 0.1
-	infantry_cost = -0.15
+	global_regiment_cost = -0.05
+	fire_damage = 0.05
 	trade_goods_size_modifier = 0.5
 }
 
 ksb_modern_state = {
-	innovativeness_gain = 0.5
-	max_absolutism_effect = 0.2
+	governing_capacity_modifier = 0.1
+	production_efficiency = 0.1
 }
 
 ksb_flocking_to_cities = {
@@ -133,4 +132,16 @@ ksb_safe_shores = {
 prepare_invasion_into_federation_modifier = {
 	manpower_recovery_speed = 0.2
 	army_tradition_decay = -0.1
+}
+
+
+slv_into_macedonia_modifier = {
+	discipline = 0.05
+	drill_gain_modifier = 0.5
+}
+
+
+slavia_on_top_modifier = {
+	administrative_efficiency = 0.05
+	max_absolutism_effect = 0.1
 }

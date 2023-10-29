@@ -1649,6 +1649,10 @@ sevksb_4_branch = {
 		}
 		effect = {
 			1756 = {
+				add_or_upgrade_dock_building = yes
+			}
+			custom_tooltip = empty_line_tt
+			1756 = {
 				add_province_modifier = {
 					name = "ksb_mouth_of_the_danube"
 					duration = -1
@@ -1962,6 +1966,12 @@ slvksb_2_branch = {
 			}
 		}
 		effect = {
+			add_army_professionalism = 0.1
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = slv_into_macedonia_modifier
+				duration = 3650
+			}
 			balkan_region = {
 				add_permanent_claim = ROOT
 			}
@@ -2034,7 +2044,13 @@ slvksb_2_branch = {
 		effect = {
 			crimea_area = {
 				change_culture = ROOT
+			}
+			custom_tooltip = empty_line_tt
+			crimea_area = {
 				change_religion = ROOT
+			}
+			custom_tooltip = empty_line_tt
+			crimea_area = {
 				add_province_modifier = {
 					name = ksb_crimean_tradeport
 					duration = -1
@@ -2141,7 +2157,7 @@ slvksb_3_branch = {
 			prestige = 90
 		}
 		effect = {
-			custom_tooltip = pol_if_used_ge_rest_else_30_years_extension_tt
+			custom_tooltip = pol_if_used_ge_rest_else_50_years_extension_tt
 			if = {
 				limit = {
 					has_had_golden_age = yes
@@ -2152,7 +2168,7 @@ slvksb_3_branch = {
 				limit = {
 					in_golden_age = yes
 				}
-				extend_golden_age = 360
+				extend_golden_age = 600
 			}
 		}
 	}
@@ -2172,14 +2188,11 @@ slvksb_3_branch = {
 			}
 		}
 		effect = {
-			custom_tooltip = "ksb_100_prosperity"
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						culture_group = ROOT
-					}
-					add_prosperity = 100
-				}
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = slavia_on_top_modifier
+				duration = -1
 			}
 		}
 	}
@@ -2291,29 +2304,27 @@ slvksb_4_branch = {
 			slv_silesian_mining
 		}
 		provinces_to_highlight = {
-			NOT = {
-				AND = {
-					has_tax_building_trigger = yes
-					has_production_building_trigger = yes
-					has_manpower_building_trigger = yes
-					development = 20
-					culture_group = ROOT
-				}
-			}
+			NOT = { development = 25 }
 			owned_by = ROOT
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 10
-				has_tax_building_trigger = yes
-				has_production_building_trigger = yes
-				has_manpower_building_trigger = yes
-				development = 20
-				culture_group = ROOT
+				development = 25
 			}
 		}
 		effect = {
 			add_ruler_personality = great_engineer_personality
+			custom_tooltip = empty_line_tt
+			change_ruler_stat = {
+				stat = adm
+				amount = 1
+			}
+			change_ruler_stat = {
+				stat = dip
+				amount = 1
+			}
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = ksb_flocking_to_cities
 				duration = 10950
@@ -2374,24 +2385,23 @@ slvksb_5_branch = {
 		}
 		provinces_to_highlight = {
 			owned_by = ROOT
-			culture_group = ROOT
 			NOT = {
 				AND = {
 					has_manufactory_trigger = yes
-					development = 20
+					development = 25
 				}
 			}
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 20
+				value = 25
 				has_manufactory_trigger = yes
-				development = 20
-				culture_group = ROOT
+				development = 2
 			}
 		}
 		effect = {
-			add_years_of_income = 2
+			add_years_of_income = 5
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = ksb_modern_state
 				duration = -1

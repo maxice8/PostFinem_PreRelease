@@ -71,7 +71,7 @@
 
  sev_lombardy_falls_title:0 "Fall of Lombardy"
  sev_lombardy_falls_desc:0 ""
- lombardy_falls_tt: "Every owned province in the §YSudwaldia§! region will receive:"
+ lombardy_falls_tt: "Every owned province in the §YSudwaldia§! region:"
 
  sev_mountain_crossing_title:0 "Mountain Crossing"
  sev_mountain_crossing_desc:0 ""
@@ -122,8 +122,9 @@
 
  slv_3rd_empire_title:0 "The Third Empire"
  slv_3rd_empire_desc:0 ""
+ pol_if_used_ge_rest_else_50_years_extension_tt: "If you have already experienced a §YGolden Age§!, gain an additional one. Otherwise extend the current one by §G50§! years"
 
- slv_prosperous_land_title:0 "Prosperity in [Root.GetName]"
+ slv_prosperous_land_title:0 "[Root.GetName] on Top"
  slv_prosperous_land_desc:0 ""
 
  slv_kiev_recovered_title:0 "Kiev Recovered"
@@ -157,8 +158,8 @@
  ksb_converting_to_czech_tt:0 "Owned Slavic provinces of §YMarcomanni§! culture will begin shifting to §YCzeci§! culture"
  ksb_yes_vassalize_pns:0 "£yes£ If we are allied to @PNS §Y[PNS.GetName]§! we will vassalise them in the §YUnited Severoslavia§! mission"
  ksb_no_vassalize_pns:0 "£no£ If we are allied to @PNS §Y[PNS.GetName]§! we will vassalise them in the §YUnited Severoslavia§! mission"
- ksb_can_form_severoslavia_tt:0 "Unlock the decision to form @SEV§Y[SEV.GetName]§!\n"
- ksb_can_form_jugoslavia_tt:0 "Unlock the decision to form @JUG§Y[JUG.GetName]§!\n"
+ ksb_can_form_severoslavia_tt:0 "Removes the §YAdministrative Technology§! requirement for the decision §YForm [SEV.GetName]§!\n"
+ ksb_can_form_jugoslavia_tt:0 "Removes the §YAdministrative Technology§! requirement for the decision §YForm [JUG.GetName]§!\n"
  ksb_requirements_change:0 "The requirements of the §YProtect Lechia§! mission will change based on how we complete this one"
  ksb_vassalize_silesia_yes_tt:0 "£yes£ If we are allied to @SIL §Y[SIL.GetName]§! we will vassalise them"
  ksb_vassalize_silesia_no_tt:0 "£no£ If we are allied to @SIL §Y[SIL.GetName]§! we will vassalise them"
