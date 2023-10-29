@@ -2263,10 +2263,10 @@ slvksb_4_branch = {
 		}
 		effect = {
 			discover_province = 1780
-			# howard: probably check if nobody owns it beforehand
 			1780 = {
-				create_colony_mission_reward_province = yes
-				# add_colonysize = 250
+				create_colony_mission_reward_province = {
+					country = ROOT
+				}
 			}
 		}
 	}
