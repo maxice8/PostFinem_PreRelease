@@ -533,21 +533,6 @@ country_event = {
 	}
 }
 
-# howard: what's this for?
-#debug event
-country_event = {
-	id = pf_ksb_events.16
-	title = pf_ksb_events.16.t
-	desc = pf_ksb_events.16.d
-	picture = CZECH_NOBLES_eventPicture
-	is_triggered_only = yes
-	option = {
-		name = pf_ksb_events.16a
-		change_government = theocracy
-		add_government_reform = pf_svetovid_theocracy
-	}
-}
-
 #support a side Lechite civil war
 country_event = {
 	id = pf_ksb_events.17
