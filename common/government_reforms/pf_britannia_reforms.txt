@@ -560,5 +560,10 @@ pf_vinland_althing = {
 	custom_attributes = {
 		locked_government_type = yes
 	}
-	has_parliament = yes
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
 }
