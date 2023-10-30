@@ -61,13 +61,7 @@ on_startup = {
 		}
 		country_event = { id = pf_romuva_events.1 }
 	}
-	if = {
-		limit = {
-			tag = KSB
-			NOT = { is_year = 1445 }
-		}
-		country_event = { id = pf_ksb_events.1 }
-	}
+	country_event = { id = pf_ksb_events.1 }
 	if = {
 		limit = {
 			OR = {
@@ -105,6 +99,16 @@ on_startup = {
 			NOT = { is_year = 1445 }
 		}
 		country_event = { id = pf_if.16 }	# The travels of Conan
+	}
+	if = {
+		limit = {
+			tag = POL
+		}
+		country_event = {
+			id = pf_pol_events.100
+			days = 1877
+			random = 1825
+		}
 	}
 }	
 
@@ -759,6 +763,7 @@ on_siege_won_country = {
 	if = {
 		limit = {
 			tag = KSB
+			FROM = { province_id = 4745 }
 		}
 		country_event = { id = pf_ksb_events.2 }
 	}
@@ -869,8 +874,11 @@ on_siege_won_province = {
 			controlled_by = KSB
 			area = vorpommern_area
 		}
-		province_event = {
-			id = pf_ksb_events.3
+		save_event_target_as = sieged_polabian_province
+		controller = {
+			country_event = {
+				id = pf_ksb_events.3
+			}
 		}
 	}
 }
