@@ -85,7 +85,7 @@ estate_nobles = {
 	influence_modifier = {
 		desc = EST_VAL_EASTERN_TECH
 		trigger = {
-			technology_group = eastern
+			pf_eastern_tech_group = yes
 		}	
 		influence = 5
 	}
