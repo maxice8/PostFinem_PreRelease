@@ -1,14 +1,13 @@
 government = tribal
 add_government_reform = feudal_tribe
 government_rank = 1
-technology_group = eastern
+technology_group = euro_pagan_tech
 religion = animism
 primary_culture = finnish
 add_accepted_culture = swedish
 capital = 28
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Armas"
 		dynasty = "Armfelt"
 		adm = 3
@@ -18,9 +17,8 @@ capital = 28
 		death_date = 1445.01.01
 	}
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Seppo"
 		dynasty = "Armfelt"
 		adm = 2

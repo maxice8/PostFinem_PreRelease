@@ -1,7 +1,7 @@
 government_rank = 1
 government = tribal
 add_government_reform = feudal_tribe
-technology_group = eastern
+technology_group = euro_pagan_tech
 religion = germanic_religion
 primary_culture = alemanni
 capital = 4710#Bregenz
@@ -47,9 +47,8 @@ add_accepted_culture = old_lombard
 	}
 }
 #Sold to Austria for a while
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Sigeberht"
 		dynasty = "Eadricingas"
 		adm = 5
@@ -59,9 +58,8 @@ add_accepted_culture = old_lombard
 		death_date = 1445.01.01
 	}
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Ecgfrith"
 		dynasty = "Eadricingas"
 		adm = 5

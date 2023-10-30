@@ -1,13 +1,12 @@
 government = tribal
 add_government_reform = feudal_tribe
 government_rank = 1
-technology_group = eastern
+technology_group = euro_pagan_tech
 primary_culture = semnones
 religion = germanic_religion
 capital = 60# Oberlausitz
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Wulfric"
 		dynasty = "Hildingas"
 		adm = 4
@@ -17,9 +16,8 @@ capital = 60# Oberlausitz
 		death_date = 1445.01.01
 	}
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Egbert"
 		dynasty = "Hildingas"
 		adm = 5

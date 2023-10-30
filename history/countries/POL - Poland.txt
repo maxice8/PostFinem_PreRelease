@@ -2,18 +2,17 @@ government = tribal
 add_government_reform = feudal_tribe
 primary_culture = mazovian
 religion = slavic_religion
-technology_group = eastern
+technology_group = euro_pagan_tech
 historical_rival = KRA
-capital = 260 #Lublin
+capital = 260#Lublin
 add_truce_with = KRA
-add_ruler_modifier = {
+add_ruler_modifier = { 
 	name = pol_plot_ruler_dies
 	hidden = yes
 }
 government_rank = 1
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Ignacij"
 		dynasty = "Lazarevic"
 		adm = 4
@@ -24,9 +23,8 @@ government_rank = 1
 	}
 	set_ruler_flag = pol_ignacij_rules_flag
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Janko"
 		dynasty = "Lazarevic"
 		adm = 3

@@ -1,14 +1,13 @@
 government = theocracy
 add_government_reform = feudal_tribe
 government_rank = 1
-technology_group = eastern
+technology_group = euro_pagan_tech
 religion = slavic_religion
 primary_culture = bukovinian
 capital = 2962# Chernigov
 fixed_capital = 289
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Darko"
 		dynasty = "Vukasin"
 		adm = 3
@@ -18,9 +17,8 @@ fixed_capital = 289
 		death_date = 1445.01.01
 	}
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Igor"
 		dynasty = "Vukasin"
 		adm = 3
