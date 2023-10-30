@@ -1187,6 +1187,7 @@ pf_if_rex_terrenus_off_effect_tt: "DISALLOWS all members from commission epics."
 
 if_princeps_title: "Princeps"
 if_princeps_desc: "The Adirim is not an emperor nor a tyrant - they are simply the first among equals, a brave subject of the Federation who has stepped up to guide it."
+if_princeps_emperor:0 "REPLACE_ME"
 
 if_sociis_sub_aquila_title: "Sociis Sub Aquila"
 if_sociis_sub_aquila_desc: "If we do not stand side by side in our times of need, the whole Federation will succumb to invaders. Despite our differences, we are all united under the eagle."
@@ -1199,15 +1200,20 @@ pf_if_swords_of_the_gods_effect_tt: "Enables the Swords of the Gods mercenary co
 
 if_mare_nostrum_title: "Mare Nostrum"
 if_mare_nostrum_desc: ""
+if_mare_nostrum_emperor_per_prince:0 "REPLACE_ME"
 
 if_regimen_via_title: "Regimen Via"
 if_regimen_via_desc: ""
+if_regimen_via_emperor:0 "REPLACE_ME"
 
 if_consiliario_tabula_title: "Consiliario Tabula"
 if_consiliario_tabula_desc: ""
 pf_if_reasons_for_advisor_petition_effect_tt: "Gain +10 reasons to accept Advisor Petitions."
 PETITION_CONSILIARIO_TABULA: "Consiliario Tabula"
+if_consiliario_tabula_elector:0 "REPLACE_ME"
+if_consiliario_tabula_emperor:0 "REPLACE_ME"
 
 if_foederati_pacem_title: "Foederati Pacem"
 if_foederati_pacem_desc: ""
 pf_if_petition_for_war_effect_tt: "Enables the Petition for War."
+if_foederati_pacem:0 "REPLACE_ME"
