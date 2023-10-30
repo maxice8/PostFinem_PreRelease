@@ -9,11 +9,7 @@ appoint_grand_marshal_action = {
 			limit = {
 				has_saved_global_event_target = grand_marshal_officer
 			}
-			NOT = {
-				event_target:grand_marshal_officer = {
-					exists = yes
-				}
-			}
+			event_target:grand_marshal_officer = { exists = no }
 		}
 		FROM = { is_part_of_hre = yes }
 	}
@@ -54,11 +50,7 @@ appoint_high_priest_action = {
 			limit = {
 				has_saved_global_event_target = high_priest_officer
 			}
-			NOT = {
-				event_target:high_priest_officer = {
-					exists = yes
-				}
-			}
+			event_target:high_priest_officer = { exists = no }
 		}
 		FROM = { is_part_of_hre = yes }
 	}
@@ -99,11 +91,7 @@ appoint_grand_steward_action = {
 			limit = {
 				has_saved_global_event_target = grand_steward_officer
 			}
-			NOT = {
-				event_target:grand_steward_officer = {
-					exists = yes
-				}
-			}
+			event_target:grand_steward_officer = { exists = no }
 		}
 		FROM = { is_part_of_hre = yes }
 	}
