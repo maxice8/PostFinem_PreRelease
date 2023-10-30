@@ -50,7 +50,7 @@ country_event = {
 }
 
 #slavs in vorpommern saxony
-province_event = {
+country_event = {
 	id = pf_ksb_events.3
 	title = pf_ksb_events.3.t
 	desc = pf_ksb_events.3.d
@@ -59,43 +59,18 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		ROOT = {
-			area = vorpommern_area
-			controlled_by = KSB
-		}
+		has_saved_event_target = sieged_polabian_province
 	}
 	
 	option = {
 		name = pf_ksb_events.3a
-		ROOT = {
+		goto = sieged_polabian_province
+		event_target:sieged_polabian_province = {
 			change_culture = polabian
 			change_religion = slavic_religion
 		}
-		controller = {
-			country_event = {
-				id = pf_ksb_events.4
-			}
-		}
 	}
 }
-
-#slavs in vorpommern kashubia
-# howard: any reason this event exists? it just tells you
-# something happened in the previous event, which tells you
-# what happened
-# country_event = {
-# 	id = pf_ksb_events.4
-# 	title = pf_ksb_events.4.t
-# 	desc = pf_ksb_events.4.d
-# 	picture = RUNESTONE_eventPicture
-
-# 	is_triggered_only = yes
-	
-# 	option = {
-# 		name = pf_ksb_events.4a
-# 		custom_tooltip = "ksb_polabians_again_tt"
-# 	}
-# }
 
 #slavia birth of republic
 country_event = {
@@ -676,8 +651,7 @@ country_event = {
 	
 	option = {
 		name = pf_ksb_events.19a
-		custom_tooltip = ksb_to_be_added_tt
-		#Add stuff when religious mechanics get added
+		set_global_flag = end_of_perun_cult_flag
 	}
 }
 

@@ -100,6 +100,16 @@ on_startup = {
 		}
 		country_event = { id = pf_if.16 }	# The travels of Conan
 	}
+	if = {
+		limit = {
+			tag = POL
+		}
+		country_event = {
+			id = pf_pol_events.100
+			days = 1877
+			random = 1825
+		}
+	}
 }	
 
 # country
@@ -864,8 +874,11 @@ on_siege_won_province = {
 			controlled_by = KSB
 			area = vorpommern_area
 		}
-		province_event = {
-			id = pf_ksb_events.3
+		save_event_target_as = sieged_polabian_province
+		controller = {
+			country_event = {
+				id = pf_ksb_events.3
+			}
 		}
 	}
 }
