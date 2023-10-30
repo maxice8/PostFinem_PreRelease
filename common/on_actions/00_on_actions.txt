@@ -90,17 +90,11 @@ on_startup = {
 		country_event = { id = pf_if.16 }	# The travels of Conan
 	}
 	if = {
-		limit = {
-			tag = NOR
-			NOT = { is_year = 1445 }
-		}
+		limit = { tag = NOR }
 		country_event = { id = pf_nordic.20 }	# Sons of Ulrik
 	}
 	if = {
-		limit = {
-			tag = VIN
-			NOT = { is_year = 1445 }
-		}
+		limit = { tag = VIN }
 		country_event = { id = pf_nordic.28 }	# End of the vinland colony
 	}
 	if = {

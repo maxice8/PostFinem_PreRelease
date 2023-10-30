@@ -697,6 +697,7 @@ country_event = {		# Sons of Ulrik
 	picture = 3_SONS_eventPicture
 
 	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = "pf_nordic.20.a"
@@ -891,6 +892,7 @@ country_event = {		# The Land the Gods Forgot
 	picture = FROZEN_VILLAGE_eventPicture
 
 	is_triggered_only = yes
+	fire_only_once = yes
 
 	immediate = {
 		hidden_effect = {
