@@ -508,6 +508,7 @@ country_event = {
 	}
 }
 
+
 #support a side Lechite civil war
 country_event = {
 	id = pf_ksb_events.17
@@ -650,8 +651,7 @@ country_event = {
 	
 	option = {
 		name = pf_ksb_events.19a
-		custom_tooltip = ksb_to_be_added_tt
-		#Add stuff when religious mechanics get added
+		set_global_flag = end_of_perun_cult_flag
 	}
 }
 

@@ -2388,9 +2388,9 @@ slvksb_5_branch = {
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 25
+				value = 20
 				has_manufactory_trigger = yes
-				development = 25 # howard: seems a little too high (that is 625 total dev)
+				development = 20 
 			}
 		}
 		effect = {
