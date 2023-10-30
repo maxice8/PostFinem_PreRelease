@@ -7,8 +7,6 @@ cb_neapolitan_subjugation = {
 
 	prerequisites = {
 		FROM = {
-			ROOT = { mission_completed = pf_nap_italian_empire }
-			is_free_or_tributary_trigger = yes
 			OR = {
 				capital_scope = {
 					OR = {
@@ -35,6 +33,10 @@ cb_neapolitan_subjugation = {
 							region = north_italy_region
 						}
 					}
+				}
+				AND = {
+					ROOT = { mission_completed = pf_nap_italian_empire }
+					is_free_or_tributary_trigger = yes
 				}
 			}
 		}
