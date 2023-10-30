@@ -1,0 +1,141 @@
+svetovid_aspect = {
+	cost = 100
+	trigger = {
+		OR = {
+			OR = {
+				culture = polabian
+				culture = podlachian
+				culture = mazovian
+				culture = pomorian
+				culture = ceci
+			}
+			has_global_flag = end_of_perun_cult_flag
+		}
+		NOT = {
+			has_global_flag = end_of_svetovid_cult_flag
+		}
+	}
+	modifier = {
+		land_morale = 0.1
+	}
+}
+
+perun_aspect ={
+	cost = 100
+	trigger = {
+		OR = {
+			OR = {
+				culture = slavic_galician
+				culture = bukovinian
+				culture = moldavian
+				culture = drakova
+				culture = rus_new
+				culture = volhynian
+			}
+			has_global_flag = end_of_svetovid_cult_flag
+		}
+		NOT = {
+			has_global_flag = end_of_perun_cult_flag
+		}
+	}
+	modifier = {
+		country_admin_power = 1
+	}
+}
+
+mokosh_aspect = {
+	cost = 100
+	trigger = {
+		is_female = yes
+	}
+	modifier = {
+		trade_goods_size_modifier = 0.075
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+rod_aspect = {
+	cost = 100
+	trigger = {
+		NOT = {
+			has_country_flag = abandoned_cult_of_rod_flag
+		}
+	}
+	modifier = {
+		stability_cost_modifier = -0.2
+	}
+}
+
+moon_aspect = {
+	cost = 100
+	trigger = {
+	}
+	modifier = {
+		monarch_lifespan = 0.25
+	}
+}
+
+domovoy_aspect = {
+	cost = 100
+	trigger = {
+	}
+	modifier = {
+		global_tax_modifier = 0.15
+	}
+}
+
+polyovyk_aspect = {
+	cost = 100
+	trigger = {
+	}
+	modifier = {
+		production_efficiency = 0.1
+	}
+}
+
+lisovyk_aspect = {
+	cost = 100
+	trigger = {
+	}
+	modifier = {
+		build_cost = -0.1
+	}
+}
+
+rusalka_aspect = {
+	cost = 100
+	trigger = {
+	}
+	modifier = {
+		ship_durability = 0.05
+	}
+}
+
+chernobog_aspect = {
+	cost = 100
+	trigger = {
+	}
+	modifier = {
+		ae_impact = -0.1
+	}
+}
+
+belobog_aspect = {
+	cost = 100
+	trigger = {
+	}
+	modifier = {
+		monthly_splendor = 1
+	}
+}
+
+ancestors_aspect = {
+	cost = 100
+	trigger = {
+	}
+	modifier = {
+		prestige = 1
+	}
+}

@@ -1518,7 +1518,18 @@ balto_slavic_religion_group = {
 
 		uses_church_power = yes				# Uses church power/aspect mechanics
 		aspects = {
-			mother_tongue_aspect
+			svetovid_aspect
+			perun_aspect
+			mokosh_aspect
+			rod_aspect
+			moon_aspect
+			domovoy_aspect
+			polyovyk_aspect
+			lisovyk_aspect
+			rusalka_aspect
+			chernobog_aspect
+			belobog_aspect
+			ancestors_aspect
 		}
 		aspects_name = SLAVIC_ASPECTS
 
