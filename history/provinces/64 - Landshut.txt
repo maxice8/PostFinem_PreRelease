@@ -6,7 +6,9 @@ base_manpower = 2
 capital = "Landshut"
 is_city = yes
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 discovered_by = western
+discovered_by = celtic_tech
 discovered_by = muslim
 discovered_by = ottoman
 #Last of the Landshuter Wittelsbachs dies, Bavaria reunited
@@ -15,4 +17,4 @@ religion = south_germanic_religion
 add_core = BAV
 owner = BAV
 controller = BAV
-discovered_by = celtic_tech
+ 

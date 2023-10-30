@@ -6,7 +6,9 @@ base_manpower = 2
 capital = "Meran"
 is_city = yes
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 discovered_by = western
+discovered_by = celtic_tech
 discovered_by = muslim
 discovered_by = ottoman
 culture = old_lombard
@@ -14,4 +16,4 @@ religion = romana
 add_core = TIR
 owner = TIR
 controller = TIR
-discovered_by = celtic_tech
+

@@ -6,9 +6,11 @@ base_manpower = 3
 capital = "Edinburgh"
 is_city = yes
 discovered_by = western
+discovered_by = celtic_tech
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 extra_cost = 16
 add_core = NRD
 owner = NRD
@@ -18,4 +20,4 @@ religion = norse_pagan_reformed
 add_core = CEL
 center_of_trade = 2
 add_core = GDD
-discovered_by = celtic_tech
+

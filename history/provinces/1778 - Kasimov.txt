@@ -6,7 +6,9 @@ base_manpower = 2
 capital = "Novy Nizovoy"
 is_city = yes
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 discovered_by = western
+discovered_by = celtic_tech
 discovered_by = nomad_group
 1444.1.1 = { capital = "Kasimov" }
 religion = tengri_pagan_reformed
@@ -15,4 +17,4 @@ add_core = BUL
 owner = BUL
 controller = BUL
 discovered_by = ottoman
-discovered_by = celtic_tech
+

@@ -6,7 +6,9 @@ base_manpower = 2
 capital = "Mahon"
 is_city = yes
 discovered_by = western
+discovered_by = celtic_tech
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 discovered_by = muslim
 discovered_by = ottoman
 owner = KLI
@@ -14,4 +16,4 @@ controller = KLI
 add_core = KLI
 religion = punic_religion
 culture = carventian
-discovered_by = celtic_tech
+

@@ -6,7 +6,9 @@ base_manpower = 3
 capital = "Sassari"
 is_city = yes
 discovered_by = western
+discovered_by = celtic_tech
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 discovered_by = muslim
 discovered_by = ottoman
 add_core = SAR
@@ -15,4 +17,4 @@ controller = SAR
 culture = sardii
 religion = punic_religion
 hre = yes
-discovered_by = celtic_tech
+

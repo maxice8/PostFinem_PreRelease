@@ -10,13 +10,15 @@ base_manpower = 2
 capital = "Derby"
 is_city = yes
 discovered_by = western
+discovered_by = celtic_tech
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 add_core = BGT
 owner = BGT
 controller = BGT
 culture = briton
 religion = druidic
 add_core = ELM
-discovered_by = celtic_tech
+
