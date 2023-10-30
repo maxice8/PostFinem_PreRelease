@@ -307,6 +307,122 @@ country_event = {
 	}
 }
 
+#unite against an outside power
+country_event = {
+	id = pf_pol_events.9
+	title = pf_pol_events.9.t
+	desc = pf_pol_events.9.d
+	picture = ITALIAN_wars_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = pf_pol_events.9a
+		trigger = {
+			ai = no
+		}
+		set_country_flag = truced_to_fight_outsider_flag
+		if = {
+			limit = {
+				tag = KRA
+				POL = {
+					has_country_flag = lechia_working_together_flag
+				}
+			}
+			white_peace = POL
+			join_all_defensive_wars_of = POL
+			set_country_flag = truced_to_fight_outsider_flag
+		}
+		else_if = {
+			limit = {
+				tag = POL
+				KRA = {
+					has_country_flag = lechia_working_together_flag
+				}
+			}
+			white_peace = KRA
+			join_all_defensive_wars_of = KRA
+			set_country_flag = truced_to_fight_outsider_flag
+		}
+		else = {
+			add_ruler_modifier = {
+				name = pol_defend_against_interloper
+				duration = 3650
+			}
+		}
+	}
+	option = {
+		name = pf_pol_events.9b
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				army_strength = {
+					who = POL
+					value = 0.5
+				}
+			}
+		}
+	}
+	#ai stuff
+	option = {
+		name = pf_pol_events.9b
+		trigger = {
+			ai = yes
+		}
+		set_country_flag = lechia_working_together_flag
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				army_strength = {
+					who = POL
+					value = 1.5
+				}
+			}
+		}
+	}
+}
+
+#Back to war
+country_event = {
+	id = pf_pol_events.10
+	title = pf_pol_events.10.t
+	desc = pf_pol_events.10.d
+	picture = ITALIAN_wars_eventPicture
+	trigger = {
+		has_country_flag = truced_to_fight_outsider_flag
+		NOT = { 
+			OR ={
+				war_with = KRA
+				war_with = POL
+			}
+		} 
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	major = yes
+	major_trigger = {
+		culture_group = pagan_slavic
+	}
+	option = {
+		name = pf_pol_events.10a
+		clr_country_flag = truced_to_fight_outsider_flag
+		KRA = {
+			declare_war_with_cb = {
+				casus_belli = cb_restore_personal_union
+				who = POL
+			}
+		}
+	}
+	option = {
+		name = pf_pol_events.10b
+		add_prestige = -10
+	}
+}
+
 #Kill ignacij in 1450
 country_event = {
 	id = pf_pol_events.100
