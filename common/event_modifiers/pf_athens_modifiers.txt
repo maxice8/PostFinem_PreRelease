@@ -47,10 +47,12 @@ pf_ath_lords_of_aegean = {
 pf_ath_support_of_archon = {
 	papal_influence = 2
 	church_loyalty_modifier = 0.10
+	religion = yes
 }
 pf_ath_holy_order_from_archon = {
 	development_cost = -0.10
 	global_missionary_strength = 0.02
+	religion = yes
 }
 pf_ath_demiarchons_cheap = {
 	same_religion_advisor_cost = -0.25
@@ -60,6 +62,7 @@ pf_ath_loyalism = {
 	global_religious_conversion_resistance = 0.25
 	papal_influence = 0.5
 	tolerance_heretic = -1
+	religion = yes
 }
 pf_ath_delphi_modifier = {
 	local_unrest = -3
