@@ -44,30 +44,26 @@ cb_neapolitan_subjugation = {
 }
 # Raid CB for Vikings and tribes
 cb_raid = {
-	prerequisites = {
+	prerequisites_self = {
 		is_subject = no
 		has_government_attribute = allows_viking_raids
-		FROM = {
-			OR = {
-				OR = {
-					is_neighbor_of = ROOT
-					NOT = {
-						border_distance = {
-							who = ROOT
-							distance = 125
-						}
-					}
+	}
+
+	prerequisites = {
+		OR = {
+			is_neighbor_of = FROM
+			NOT = {
+				border_distance = {
+					who = FROM
+					distance = 125
 				}
-				AND = {
-					ROOT = { mission_completed = pf_drk_terror_of_the_north }
-					OR = {
-						is_neighbor_of = ROOT
-						NOT = {
-							border_distance = {
-								who = ROOT
-								distance = 187
-							}
-						}
+			}
+			AND = {
+				mission_completed = pf_drk_terror_of_the_north
+				NOT = {
+					border_distance = {
+						who = FROM
+						distance = 187
 					}
 				}
 			}
