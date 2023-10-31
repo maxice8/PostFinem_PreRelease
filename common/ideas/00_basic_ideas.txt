@@ -1090,10 +1090,10 @@ exploration_ideas = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			tag = CAR
 			num_of_owned_provinces_with = {
-				value = 20
+				value = 15
 				OR = {
 					region = iberia_region
 					region = mauretania_region
@@ -1446,8 +1446,8 @@ expansion_ideas = {
 		modifier = {
 			factor = 0.1
 			NOT = {
-				technology_group = western
-				technology_group = eastern
+				pf_western_tech_group = yes
+				pf_eastern_tech_group = yes
 				technology_group = muslim
 			}
 		}

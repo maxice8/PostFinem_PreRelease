@@ -1,0 +1,32 @@
+slv_uniting_slavia = {
+	core_creation = -0.1
+	manpower_recovery_speed = 0.2
+}
+
+slv_convert_baltic = {
+	global_heretic_missionary_strength = 0.02
+	warscore_cost_vs_other_religion = -0.1
+}
+
+slv_worthy_capital = {
+	allowed_num_of_buildings = 2
+	local_tax_modifier = 0.2
+	state_governing_cost = -0.1
+}
+slv_develop_slavic_lands_modifier = {
+	diplomatic_reputation = 1
+	governing_capacity_modifier = 0.1
+}
+conquer_germanic_modifier = {
+	missionaries = 1
+	global_missionary_strength = 0.02
+}
+conqueror_of_germania = {
+	years_of_nationalism = -5
+	fire_damage = 0.1
+}
+
+abandoned_cult_of_rod = {
+	technology_cost = -0.05
+	church_influence_modifier = 0.05
+}

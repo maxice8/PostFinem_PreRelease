@@ -1,0 +1,446 @@
+namespace = pf_pol_events
+
+#intro event
+country_event = {
+	id = pf_pol_events.1
+	title = pf_pol_events.1.t
+	desc = pf_pol_events.1.d
+	picture = LIBERUM_VETO_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = pf_pol_events.1a
+		if = {
+			limit = {
+				tag = KRA
+			}
+			custom_tooltip = "kra_be_wary_tt"
+		}
+		else_if = {
+			limit = { tag = POL }
+			custom_tooltip = "pol_be_wary_tt"
+		} 
+		add_legitimacy = -10
+	}
+}
+
+#caspar dies before ignacij - KRA side
+country_event = {
+	id = pf_pol_events.2
+	title = pf_pol_events.2.t
+	desc = pf_pol_events.2.d
+	picture = KING_SICK_IN_BED_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		AND = {
+			NOT = { has_ruler = "Caspar Lazarevic" }
+			NOT = { has_ruler_flag = kra_caspar_rules_flag }
+			NOT = { has_country_flag = kra_gave_up_pol_claim_flag } 
+		}
+		POL = {
+			has_ruler_flag = pol_ignacij_rules_flag
+		}
+	}
+	major = yes
+	major_trigger = {
+		culture_group = pagan_slavic
+	}
+	option = {
+		name = pf_pol_events.2a
+		add_legitimacy = -30
+		hidden_effect = {
+			POL = {
+				country_event = {
+					id = pf_pol_events.3
+				}
+			}
+		}
+		custom_tooltip = "kra_giving_up_claim"
+		set_country_flag = kra_gave_up_pol_claim_flag
+	}
+}
+
+#caspar dies before ignacij - POL side
+country_event = {
+	id = pf_pol_events.3
+	title = pf_pol_events.3.t
+	desc = pf_pol_events.3.d
+	picture = KING_SICK_IN_BED_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		KRA = {
+			AND = {
+				NOT = { has_ruler = "Caspar Lazarevic" }
+				NOT = { has_ruler_flag = kra_caspar_rules_flag }
+				NOT = { has_country_flag = kra_gave_up_pol_claim_flag } 
+			}
+		}
+		POL = {
+			has_ruler_flag = pol_ignacij_rules_flag
+		}
+	}
+	option = {
+		name = pf_pol_events.3a
+		add_legitimacy = 30
+		set_country_flag = pol_supremacy_over_kra_flag
+		every_province = {
+			limit = {
+				is_core = KRA
+			}
+			add_core = POL
+		}
+	}
+}
+
+#Ignacij dies - POL
+country_event = {
+	id = pf_pol_events.4
+	title = pf_pol_events.4.t
+	desc = pf_pol_events.4.d
+	picture = KING_SICK_IN_BED_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		AND = {
+			NOT = { has_ruler = "Ignacij Lazarevic" }
+			NOT = { has_ruler_flag = pol_ignacij_rules_flag }
+		}
+		KRA = {
+			has_ruler_flag = kra_caspar_rules_flag
+		}
+	}
+	option = {
+		name = pf_pol_events.4a
+		add_legitimacy = -30
+		custom_tooltip = "pol_succession_wars_tt"
+		set_global_flag = lechia_succession_wars
+		hidden_effect = {
+			KRA = {
+				country_event = {
+					id = pf_pol_events.5
+				}
+			}
+		}
+	}
+}
+
+#Ignacij dies KRA
+country_event = {
+	id = pf_pol_events.5
+	title = pf_pol_events.5.t
+	desc = pf_pol_events.5.d
+	picture = KING_SICK_IN_BED_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		POL ={
+			AND = {
+				NOT = { has_ruler = "Ignacij Lazarevic" }
+				NOT = { has_ruler_flag = pol_ignacij_rules_flag }
+			}
+		}
+		has_ruler_flag = kra_caspar_rules_flag
+	}
+	major = yes
+	major_trigger = {
+		culture_group = pagan_slavic
+	}
+	option = {
+		name = pf_pol_events.5a
+		add_prestige = 10
+		declare_war_with_cb = {
+			casus_belli = cb_restore_personal_union
+			who = POL
+		}
+		POL = {
+			add_country_modifier = {
+				name = pol_in_civil_war
+				duration = -1
+			}
+		}
+		KRA = {
+			add_country_modifier = {
+				name = pol_in_civil_war
+				duration = -1
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = pf_pol_events.5b
+		add_prestige = -10
+		clr_global_flag = lechia_succession_wars
+		set_country_flag = kra_gave_up_pol_claim_flag
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#POL restore order
+country_event = {
+	id = pf_pol_events.6
+	title = pf_pol_events.6.t
+	desc = pf_pol_events.6.d
+	picture = KING_SICK_IN_BED_eventPicture
+	fire_only_once = yes
+	trigger = {
+		KRA = {
+			all_owned_province = {
+				controlled_by = POL
+			}
+		}
+		has_global_flag = lechia_succession_wars
+		tag = POL
+	}
+	major = yes
+	major_trigger = {
+		culture_group = pagan_slavic
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = pf_pol_events.6a
+		white_peace = KRA
+		inherit = KRA
+		clr_global_flag = lechia_succession_wars
+		add_treasury = 100
+		set_government_rank = 2
+		ai_chance = {
+			factor = 100
+		}
+		POL = {
+			remove_country_modifier = pol_in_civil_war
+		}
+		KRA = {
+			remove_country_modifier = pol_in_civil_war
+		}
+		set_country_flag = lechia_kingdom_flag
+		add_government_reform = pf_lechite_kingdom
+	}
+}
+
+#Caspar wins
+country_event = {
+	id = pf_pol_events.7
+	title = pf_pol_events.7.t
+	desc = pf_pol_events.7.d
+	picture = KING_SICK_IN_BED_eventPicture
+	fire_only_once = yes
+	trigger = {
+		has_global_flag = lechia_succession_wars
+		senior_union_with = POL
+	}
+	major = yes
+	major_trigger = {
+		culture_group = pagan_slavic
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = pf_pol_events.7a
+		inherit = POL
+		set_government_rank = 2
+		clr_global_flag = lechia_succession_wars
+		override_country_name = "LECHIA"
+		POL = {
+			remove_country_modifier = pol_in_civil_war
+		}
+		KRA = {
+			remove_country_modifier = pol_in_civil_war
+		}
+		set_country_flag = lechia_kingdom_flag
+		add_government_reform = pf_lechite_kingdom
+	}
+}
+
+#intervention by an outside power
+country_event = {
+	id = pf_pol_events.8
+	title = pf_pol_events.8.t
+	desc = pf_pol_events.8.d
+	picture = KING_SICK_IN_BED_eventPicture
+	trigger = {
+		has_global_flag = lechia_succession_wars
+		NOT = {
+			OR = {
+				tag = POL
+				tag = KRA
+			}
+		}
+		OR = {
+			is_in_war = {
+				defenders = KRA
+			}
+			is_in_war = {
+				defenders = POL
+			}
+		}
+		NOT = { has_country_flag = intervening_in_lechia_civil_war } 
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = pf_pol_events.8a
+		set_country_flag = intervening_in_lechia_civil_war
+		POL = {
+			country_event = {
+				id = pf_pol_events.9
+			}
+		}
+		KRA = {
+			country_event = {
+				id = pf_pol_events.9
+			}
+		}
+	}
+	option = {
+		name = pf_pol_events.8b
+		white_peace = KRA
+		white_peace = POL
+	}
+}
+
+#unite against an outside power
+country_event = {
+	id = pf_pol_events.9
+	title = pf_pol_events.9.t
+	desc = pf_pol_events.9.d
+	picture = ITALIAN_wars_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = pf_pol_events.9a
+		trigger = {
+			ai = no
+		}
+		set_country_flag = truced_to_fight_outsider_flag
+		if = {
+			limit = {
+				tag = KRA
+				POL = {
+					has_country_flag = lechia_working_together_flag
+				}
+			}
+			white_peace = POL
+			join_all_defensive_wars_of = POL
+			set_country_flag = truced_to_fight_outsider_flag
+		}
+		else_if = {
+			limit = {
+				tag = POL
+				KRA = {
+					has_country_flag = lechia_working_together_flag
+				}
+			}
+			white_peace = KRA
+			join_all_defensive_wars_of = KRA
+			set_country_flag = truced_to_fight_outsider_flag
+		}
+		else = {
+			add_ruler_modifier = {
+				name = pol_defend_against_interloper
+				duration = 3650
+			}
+		}
+	}
+	option = {
+		name = pf_pol_events.9b
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				army_strength = {
+					who = POL
+					value = 0.5
+				}
+			}
+		}
+	}
+	#ai stuff
+	option = {
+		name = pf_pol_events.9b
+		trigger = {
+			ai = yes
+		}
+		set_country_flag = lechia_working_together_flag
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				army_strength = {
+					who = POL
+					value = 1.5
+				}
+			}
+		}
+	}
+}
+
+#Back to war
+country_event = {
+	id = pf_pol_events.10
+	title = pf_pol_events.10.t
+	desc = pf_pol_events.10.d
+	picture = ITALIAN_wars_eventPicture
+	trigger = {
+		has_country_flag = truced_to_fight_outsider_flag
+		NOT = { 
+			OR ={
+				war_with = KRA
+				war_with = POL
+			}
+		} 
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	major = yes
+	major_trigger = {
+		culture_group = pagan_slavic
+	}
+	option = {
+		name = pf_pol_events.10a
+		clr_country_flag = truced_to_fight_outsider_flag
+		KRA = {
+			declare_war_with_cb = {
+				casus_belli = cb_restore_personal_union
+				who = POL
+			}
+		}
+	}
+	option = {
+		name = pf_pol_events.10b
+		add_prestige = -10
+	}
+}
+
+#Kill ignacij in 1450
+country_event = {
+	id = pf_pol_events.100
+	title = pf_pol_events.100.t
+	desc = pf_pol_events.100.d
+	picture = KING_SICK_IN_BED_eventPicture
+
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_ruler_flag = pol_ignacij_rules_flag
+		tag = POL
+	}
+
+	option = {
+		name = pf_pol_events.8a
+		kill_ruler = yes
+	}
+}

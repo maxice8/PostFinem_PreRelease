@@ -155,43 +155,43 @@ danish_admirality = {
 	button_gfx = 9
 }
 
-norwegian_sailors = {
-	can_select = {
-		is_primitive = no
-		OR = {
-			has_country_flag = unlock_norwegian_naval_doctrine
-			primary_culture = norwegian
-		}
-		NOT = { has_country_flag = nor_upgraded_norwegian_sailors_doctrine }
-	}
+# norwegian_sailors = {
+# 	can_select = {
+# 		is_primitive = no
+# 		OR = {
+# 			has_country_flag = unlock_norwegian_naval_doctrine
+# 			primary_culture = norwegian
+# 		}
+# 		NOT = { has_country_flag = nor_upgraded_norwegian_sailors_doctrine }
+# 	}
 
-	country_modifier = {
-		allowed_marine_fraction = 0.15
-		movement_speed_in_fleet_modifier = 1
-	}
-	effect = {}
-	removed_effect = {}
+# 	country_modifier = {
+# 		allowed_marine_fraction = 0.15
+# 		movement_speed_in_fleet_modifier = 1
+# 	}
+# 	effect = {}
+# 	removed_effect = {}
 	
-	button_gfx = 10
-}
+# 	button_gfx = 10
+# }
 
-norwegian_sailors_upgraded = {
-	can_select = {
-		is_primitive = no
-		primary_culture = norwegian
-		has_country_flag = nor_upgraded_norwegian_sailors_doctrine
-	}
+# norwegian_sailors_upgraded = {
+# 	can_select = {
+# 		is_primitive = no
+# 		primary_culture = norwegian
+# 		has_country_flag = nor_upgraded_norwegian_sailors_doctrine
+# 	}
 
-	country_modifier = {
-		allowed_marine_fraction = 0.15
-		sailors_recovery_speed = 0.25
-		movement_speed_in_fleet_modifier = 2
-	}
-	effect = {}
-	removed_effect = {}
+# 	country_modifier = {
+# 		allowed_marine_fraction = 0.15
+# 		sailors_recovery_speed = 0.25
+# 		movement_speed_in_fleet_modifier = 2
+# 	}
+# 	effect = {}
+# 	removed_effect = {}
 	
-	button_gfx = 11
-}
+# 	button_gfx = 11
+# }
 
 dutch_trade_fleet = {
 	can_select = {
@@ -216,15 +216,14 @@ dutch_trade_fleet = {
 norse_raid_fleet = {
 	can_select = {
 		is_primitive = no
-		NOT = { has_country_flag = unlock_norwegian_naval_doctrine } 
 		# pf
 		# primary_culture = norse
 		culture_group = scandinavian
 	}
 
 	country_modifier = {
-		privateer_efficiency = 0.33
-		movement_speed_in_fleet_modifier = 3
+		galley_power = 0.15
+		movement_speed_in_fleet_modifier = 2
 	}
 	effect = {}
 	removed_effect = {}
@@ -265,7 +264,6 @@ korean_panokseon = {
 	}
 	effect = {}
 	removed_effect = {}
-	
 	button_gfx = 15
 }
 

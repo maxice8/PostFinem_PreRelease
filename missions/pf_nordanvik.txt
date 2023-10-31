@@ -1245,7 +1245,12 @@ pf_nrd_5 = {
 
 		trigger = {  
 			religion = norse_pagan_reformed
-			is_defender_of_faith = yes
+			if = {
+				limit = {
+					ai = no
+				}				
+				is_defender_of_faith = yes
+			}
 			british_isles_region = {
 				type = all
 				religion = norse_pagan_reformed

@@ -1646,8 +1646,18 @@ mac_eco_3 = {
 		} 
 
 		trigger = {  
-			capital_scope = {
-				development = 30
+			if = {
+				limit = {
+					ai = no
+				}
+				capital_scope = {
+					development = 30
+				}
+			}
+			else = {				
+				capital_scope = {
+					development = 20
+				}
 			}
 			capital_scope = {
 				province_has_center_of_trade_of_level = 3
@@ -1842,11 +1852,27 @@ mac_culture_4 = {
 		} 
 
 		trigger = { 
-			num_of_owned_provinces_with = {
-				value = 5
-				culture_group = ROOT
-				development = 30
+			if = {
+				limit = {
+					ai = no
+				}
+				num_of_owned_provinces_with = {
+					value = 5
+					culture_group = ROOT
+					development = 30
+				}
 			}
+			else_if = {
+				limit = {
+					num_of_owned_provinces_with = {
+						value = 5
+						culture_group = ROOT
+						development = 25
+					}
+				}
+				
+			}
+			
 		} 
 
 		effect = {  

@@ -76,6 +76,9 @@ car_main_1 = {
 			naples_area = { add_permanent_claim = ROOT }
 			apulia_area = { add_permanent_claim = ROOT }
 		} 
+		ai_weight = {
+			factor = 500
+		} 
 	}
 
 	pf_car_italian_ambitions = {
@@ -114,6 +117,9 @@ car_main_1 = {
 			north_italy_region = {
 				add_permanent_claim = ROOT
 			}
+		} 
+		ai_weight = {
+			factor = 500
 		} 
 	}
 
@@ -159,6 +165,9 @@ car_main_1 = {
 				name = car_conquest_of_italia
 				duration = -1
 			}
+		} 
+		ai_weight = {
+			factor = 500
 		} 
 	}
 	pf_car_african_riches = {
@@ -294,7 +303,15 @@ car_main_2 = {
 
 		trigger = {  
 			owns_core_province = 1750
-			1750 = { development = 25 }
+			if = {
+				limit = {
+					ai = no
+				}			
+				1750 = { development = 25 }
+			}
+			else = {				
+				1750 = { development = 15 }
+			}
 		} 
 
 		effect = {  
@@ -460,7 +477,7 @@ car_main_3 = {
 			mauretania_region = {
 				add_permanent_claim = ROOT
 			}
-		} 
+		}
 	}
 
 	pf_car_masters_of_mauretania = {
@@ -507,6 +524,9 @@ car_main_3 = {
 				add_permanent_claim = ROOT
 			}
 		} 
+		ai_weight = {
+			factor = 500
+		} 
 	}
 
 	pf_car_into_iber = {
@@ -548,6 +568,9 @@ car_main_3 = {
 				add_permanent_claim = ROOT
 			}
 		} 
+		ai_weight = {
+			factor = 500
+		} 
 	}
 
 
@@ -583,6 +606,9 @@ car_main_3 = {
 			provence_area = {
 				add_permanent_claim = ROOT
 			}
+		} 
+		ai_weight = {
+			factor = 500
 		} 
 	}
 	pf_car_gallic_campaigns = {
@@ -627,7 +653,10 @@ car_main_3 = {
 			france_region = {
 				add_permanent_claim = ROOT
 			}
-		} 
+		}
+		ai_weight = {
+			factor = 500
+		}  
 	}
 
 	pf_car_worthy_successors_of_hannibal = {
@@ -766,6 +795,9 @@ car_main_4 = {
 			delta_area = {
 				add_permanent_claim = ROOT
 			}
+		} 
+		ai_weight = {
+			factor = 500
 		} 
 	}
 
@@ -1010,7 +1042,15 @@ car_main_5 = {
 
 		trigger = {  
 			owns_core_province = 358
-			358 = { development = 25 }
+			if = {
+				limit = {
+					ai = no
+				}	
+				358 = { development = 25 }
+			}
+			else = {				
+				358 = { development = 20 }
+			}
 			358 = { has_shipyard_building_trigger = yes }
 			358 = { has_trade_building_trigger = yes }
 		} 

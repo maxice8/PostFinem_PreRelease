@@ -1,22 +1,26 @@
 #Country Name: Please see filename.
 graphical_culture = easterngfx
-color = { 136 157 23 }
+
+color = { 237 221 38 }
+
 revolutionary_colors = { 15 8 5 }
+
 historical_idea_groups = { 
-	defensive_ideas
+	humanist_ideas
 	offensive_ideas
-	spy_ideas
 	trade_ideas
-	diplomatic_ideas
-	economic_ideas
 	administrative_ideas
+	maritime_ideas
+	diplomatic_ideas
 	quality_ideas
+	aristocracy_ideas
 }
 historical_units = { 
 	eastern_medieval_infantry
 	eastern_knights
 	slavic_stradioti
 	eastern_militia
+	ottoman_spahi
 	ottoman_sekban
 	ottoman_reformed_spahi
 	ottoman_reformed_janissary
@@ -69,7 +73,7 @@ monarch_names = {
 	"Vasilije #0" = 5
 	"Vladislav #0" = 5
 	"Matej #0" = 5
-	"Boûidar #0" = 5
+	"Bo≈æidar #0" = 5
 	"Strahimir #0" = 1
 	"Radoslav #0" = 1
 	"Zvonimir #0" = 1
@@ -79,7 +83,7 @@ monarch_names = {
 	"Zora #0" = -1
 	"Vlasta #0" = -1
 	"Miroslava #0" = -1
-	"Boûena #0" = -1
+	"Bo≈æena #0" = -1
 	"Dragana #0" = -1
 }
 leader_names = { 
@@ -94,9 +98,9 @@ ship_names = {
 	"Porewit's Oath" "Leshy's Whisper" "Marzanna's Shroud" "Zirnitra's Roar" "Bereginia's Embrace" "Vihor's Tempest" "Dinari's Quest" "Vilenica's Charm" "Mat's Legacy" "Dziewanna's Bloom"
 	"Chuma's Curse" "Ratibor's Triumph" "Perkun's Bolt" "Mavka's Melody" "Vepr's Fury" "Svarun's Spark" "Velez's Crest" "Boginya's Grace" "Domovoi's Haven" "Yarovit's Pride"
 }
-fleet_names = { 
+army_names = { 
 	"Armiya $PROVINCE$"
 }
-army_names = { 
+fleet_names = { 
 	"Flot $PROVINCE$"
 }

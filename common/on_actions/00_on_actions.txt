@@ -14,6 +14,21 @@ on_startup = {
 	}
 	if = {
 		limit = {
+			NOT = { has_global_flag = pagan_penalty_flag }
+		}
+		every_country = {
+			limit = {
+				technology_group = euro_pagan_tech
+			}
+			add_country_modifier = {
+				name = euro_pagan_tech_penalty_modifier
+				duration = -1
+			}
+			set_global_flag = pagan_penalty_flag
+		}
+	}
+	if = {
+		limit = {
 			current_age = age_of_discovery
 		}
 		LXA = {
@@ -60,6 +75,17 @@ on_startup = {
 			religion = romuva
 		}
 		country_event = { id = pf_romuva_events.1 }
+	}
+	country_event = { id = pf_ksb_events.1 }
+	if = {
+		limit = {
+			OR = {
+				tag = KRA
+				tag = POL
+			}
+			NOT = { is_year = 1445 }
+		}
+		country_event = { id = pf_pol_events.1 } 
 	}
 	#if = {
 	#	limit = {
@@ -112,6 +138,16 @@ on_startup = {
 			value = 200
 		}
 		set_country_flag = setup_raid_max
+	}
+	if = {
+		limit = {
+			tag = POL
+		}
+		country_event = {
+			id = pf_pol_events.100
+			days = 1877
+			random = 1825
+		}
 	}
 }	
 
@@ -425,7 +461,16 @@ on_war_won = {
 			}
 		}
 	}
-
+	if = {
+		limit = {
+			has_government_mechanic = pf_svetovid_dedication_mechanic
+		}
+		add_government_power = {
+			mechanic_type = pf_svetovid_dedication_mechanic
+			power_type = pf_svetovid_dedication
+			value = 10
+		}
+	}
 	if = {
 		limit = {
 			tag = PER
@@ -472,6 +517,18 @@ on_war_lost = {
 		name = just_lost_war_timer
 		duration = 10
 		hidden = yes
+	}
+	if = {
+		limit = {
+			has_government_mechanic = pf_svetovid_dedication_mechanic
+		}
+		
+			add_government_power = {
+				mechanic_type = pf_svetovid_dedication_mechanic
+				power_type = pf_svetovid_dedication
+				value = -10
+			}
+		
 	}
 }
 on_main_war_lost = {
@@ -713,6 +770,20 @@ on_battle_won_unit = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			unit_owner = {
+				has_government_mechanic = pf_svetovid_dedication_mechanic
+			}
+		}
+		unit_owner ={
+		add_government_power = {
+			mechanic_type = pf_svetovid_dedication_mechanic
+			power_type = pf_svetovid_dedication
+			value = 1
+		}
+		}
+	}
 }
 
 # #Unit Scope OnAction for Battle Lost
@@ -735,6 +806,20 @@ on_battle_lost_unit = {
             country_event = { id = flavor_oir.2 }
         }
     }
+	if = {
+		limit = {
+			unit_owner = {
+			has_government_mechanic = pf_svetovid_dedication_mechanic
+			}
+		}
+		unit_owner = {
+			add_government_power = {
+				mechanic_type = pf_svetovid_dedication_mechanic
+				power_type = pf_svetovid_dedication
+				value = -1
+			}
+		}
+	}
 }
 
 # province
@@ -800,6 +885,13 @@ on_siege_won_country = {
 		ROOT = {
 			add_church_power = 5
 		}
+	}
+	if = {
+		limit = {
+			tag = KSB
+			FROM = { province_id = 4745 }
+		}
+		country_event = { id = pf_ksb_events.2 }
 	}
 	grant_manpower_from_besieging_fort = yes
 	events = {
@@ -976,6 +1068,18 @@ on_siege_won_province = {
 			remove_province_modifier = pf_bby_babylon_nice
 		}
 	}
+	if = {
+		limit = {
+			controlled_by = KSB
+			area = vorpommern_area
+		}
+		save_event_target_as = sieged_polabian_province
+		controller = {
+			country_event = {
+				id = pf_ksb_events.3
+			}
+		}
+	}
 }
 
 # province
@@ -1065,6 +1169,26 @@ on_monarch_death = {
 		}
 		clr_country_flag = knut_ulriksson_maidenless_flag
 		country_event = { id = nrd_flavor_events.4 }
+	}
+	if = {
+		limit = {
+			tag = KRA
+			AND = {
+				NOT = { has_ruler = "Caspar Lazarevic" }
+				NOT = { has_ruler_flag = kra_caspar_rules_flag }
+			}
+		}
+		country_event = { id = pf_pol_events.2 }
+	}
+	if = {
+		limit = {
+			tag = POL
+			AND = {
+				NOT = { has_ruler = "Ignacij Lazarevic" }
+				NOT = { has_ruler_flag = pol_ignacij_rules_flag }
+			}
+		}
+		country_event = { id = pf_pol_events.4 }
 	}
 	if = {
 		limit = { has_country_modifier = sought_after_bachelor }
@@ -1833,6 +1957,19 @@ on_adm_development = {
 	}
 	if = {
 		limit = {
+			owner = { has_government_mechanic = pf_svetovid_dedication_mechanic }
+			religion = ROOT
+		}
+		owner = {
+			add_government_power = {
+				mechanic_type = pf_svetovid_dedication_mechanic
+				power_type = pf_svetovid_dedication
+				value = 0.25
+			}
+		}
+	}
+	if = {
+		limit = {
 			has_saved_global_event_target = pf_per_et_province_to_tax_dev
 			owner = {
 				is_subject_of = PER
@@ -1897,6 +2034,19 @@ on_dip_development = {
 	}
 	if = {
 		limit = {
+			owner = { has_government_mechanic = pf_svetovid_dedication_mechanic }
+			religion = ROOT
+		}
+		owner = {
+			add_government_power = {
+				mechanic_type = pf_svetovid_dedication_mechanic
+				power_type = pf_svetovid_dedication
+				value = 0.25
+			}
+		}
+	}
+	if = {
+		limit = {
 			has_saved_global_event_target = pf_per_et_province_to_prod_dev
 			owner = {
 				is_subject_of = PER
@@ -1955,6 +2105,19 @@ on_mil_development = {
 			add_government_power = {
 				mechanic_type = gaul_confederation_mechanic
 				power_type = gaul_confederation
+				value = 0.25
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = { has_government_mechanic = pf_svetovid_dedication_mechanic }
+			religion = ROOT
+		}
+		owner = {
+			add_government_power = {
+				mechanic_type = pf_svetovid_dedication_mechanic
+				power_type = pf_svetovid_dedication
 				value = 0.25
 			}
 		}
@@ -2085,6 +2248,7 @@ on_yearly_pulse = {
 		100 = pf_althingi.4
 		100 = pf_althingi.5
 		100 = pf_althingi.6
+		
 	}
 }
 on_yearly_pulse_2 = {
@@ -3049,6 +3213,12 @@ on_four_year_pulse = {
 		100 = pf_trn.4
 		100 = pf_trn.5
 		100 = pf_trn.27
+
+		#PF Svetovid Dedication events
+		100 = pf_ksb_events.7
+		100 = pf_ksb_events.8
+		100 = pf_ksb_events.9
+		100 = pf_ksb_events.10
 
 		1000 = 0
 	}

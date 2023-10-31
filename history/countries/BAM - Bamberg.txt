@@ -1,7 +1,7 @@
 government = tribal
 add_government_reform = feudal_tribe
 government_rank = 1
-technology_group = eastern
+technology_group = euro_pagan_tech
 primary_culture = chatti
 religion = germanic_religion
 capital = 66# Würzburg
@@ -15,9 +15,8 @@ fixed_capital = 66# Cannot move capital away from this province & no power cost 
 		mil = 2
 	}
 }
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Aelfric"
 		dynasty = "Sweynlingas"
 		adm = 6
@@ -27,9 +26,8 @@ fixed_capital = 66# Cannot move capital away from this province & no power cost 
 		death_date = 1445.01.01
 	}
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Cenric"
 		dynasty = "Sweynlingas"
 		adm = 2

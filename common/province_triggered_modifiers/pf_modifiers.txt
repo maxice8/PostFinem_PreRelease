@@ -146,3 +146,13 @@ oracle_of_delphi = {
 	}
 	
 }
+
+pf_ksb_early_coal = {
+	potential = {
+		enlightenment = 100
+	}
+	trigger = {
+		enlightenment = 100
+	}
+	trade_goods_size_modifier = -0.5
+}

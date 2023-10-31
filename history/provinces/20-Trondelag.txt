@@ -6,7 +6,9 @@ base_manpower = 3
 capital = "Trondheim"
 is_city = yes
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 discovered_by = western
+discovered_by = celtic_tech
 extra_cost = 8
 add_core = NOR
 owner = NOR
@@ -23,4 +25,5 @@ discovered_by = ASH
 discovered_by = ASG
 discovered_by = BRT
 center_of_trade = 2
+ 
 fort_15th = yes

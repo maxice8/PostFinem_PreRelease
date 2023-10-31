@@ -3,11 +3,10 @@ add_government_reform = feudal_tribe
 government_rank = 1
 primary_culture = chatti
 religion = germanic_religion
-technology_group = eastern
+technology_group = euro_pagan_tech
 capital = 4743# Weimar
-
-1430.11.11 = {
-	monarch = {
+1430.11.11 = { 
+	monarch = { 
 		name = "Anselm"
 		dynasty = "Yngvingas"
 		adm = 3
@@ -17,9 +16,8 @@ capital = 4743# Weimar
 		death_date = 1445.01.01
 	}
 }
-
-1430.11.11 = {
-	heir = {
+1430.11.11 = { 
+	heir = { 
 		name = "Deormod"
 		dynasty = "Yngvingas"
 		adm = 2

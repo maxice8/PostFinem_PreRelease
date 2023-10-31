@@ -1,5 +1,8 @@
 ﻿l_english:
 
+#Technology
+ eastern: "Greek"
+
 #Italian Federation 
 gen_hre_relations_with_emperor_title: "Strengthen Federal Ties"
 gen_hre_relations_with_emperor_title: "Strengthen Federal Ties"
@@ -23,6 +26,10 @@ gen_hre_relations_with_emperor_title: "Strengthen Federal Ties"
 HRE_RELIGIOUS_WAR_DESC:0 "The Italian Federation is in a state of Religious War between the Punic and Romana faiths. During a Religious War, the Punic and Romana Leagues are available to be joined. The League that does not follow the dominant faith in the Empire may declare war on the Adirim to attempt to change the Federations's dominant faith."
 HRE_RELIGIOUS_PEACE_DESC:0 "A treaty of permanent religious peace has been established in the Federation. The Princes of the Federation are free to choose their own faith, and the Adirim may be of any faith."
  HRE_OFFICIAL_RELIGION_DESC:0 "The §Y$RELIGION$§! religion is the dominant faith of the Italian Federation. Only §Y$RELIGION$§! rulers are eligible to become Adirim."
+ ALLOW_TO_DISSMANTLE:0 "You can now dismantle the Italian Federation, as it is under your control."
+ JOIN_EMPIRE:0 "Join the Federation"
+ CANNOT_JOIN_EMPIRE:0 "You cannot join the Federation:\n$REASONS$"
+ JOIN_EMPIRE_CONFIRM_DESC:0 "Are you sure you want to join the Federation?"
  HRE_PERMANENT_RELIGION_DESC:0 "The §Y$RELIGION$§! religion is the official faith of the Italian Federation. Only §Y$RELIGION$§! rulers are eligible to become Adirim and all Electors must be §Y$RELIGION$§! as well. The Adirim may use the Enforce Religious Unity diplomatic action on member states of a different faith."
  HRE_LEAGUES_ENABLED:0 "The §YPunic§! and §YRomana§! Leagues are enabled."
  HRE_LEAGUES_DISABLED:0 "The §YPunic§! and §YRomana§! Leagues are NOT enabled."
@@ -268,6 +275,14 @@ IS_HRE_HERETIC_RELIGION:0 "§Y$RELIGION$§! is the opposition faith of the Itali
  NOT_DISCOVERED_HRE:0 "§R- We have not discovered the Italian Federation!§!"
  HRE_ON_OTHER_CONTINENT:0 "§R- We cannot join a League if our capital is on a different continent than the Italian Federation.§!"
 
+#Modifiers
+ MODIFIER_MAY_SIBERIAN_FRONTIER:0 "Ability to establish Colonial Frontiers"
+ establish_new_siberian_frontier:0 "Extend Colonial Frontiers"
+ NOT_SIB_TO_BE_SEI:0 "Colonial Frontiers cannot be seized like normal colonies."
+
+
+
+ scandinavian_flag_officers: "Norse Flag Officers"
 
 #Government Names
     #FE
@@ -380,6 +395,28 @@ ELECTOR_PROCONSULA: "Proconsula-Elector"
 #Provinces
  PROV1247: "Ajaccio"
  PROV_ADJ1247: "Ajaccio"
+ PROV48: "Kolobrzeg"
+ PROV_ADJ48: "Kolobrzeg"
+ PROV2995: "Slupsk"
+ PROV_ADJ2995: "Slupsk"
+ PROV4746: "Stargard"
+ PROV_ADJ4746: "Stargard"
+ PROV40: "Klajpeda"
+ PROV_ADJ40: "Klajpeda"
+ PROV41: "Tvansczcy"
+ PROV_ADJ41: "Tvansczcy"
+ PROV42: "Olsztyn"
+ PROV_ADJ42: "Olsztyn"
+ PROV767: "Szcytno"
+ PROV_ADJ767: "Szcytno"
+ PROV2958: "Ostroda"
+ PROV_ADJ2958: "Ostroda"
+ PROV43: "Gdansk"
+ PROV_ADJ43: "Gdansk"
+ PROV1841: "Malbork"
+ PROV_ADJ1841: "Malbork"
+ PROV2997: "Tuchola"
+ PROV_ADJ2997: "Tuchola"
  
 #TAGS AND ADJS  
  CAR: "Carthage"
@@ -393,8 +430,8 @@ ELECTOR_PROCONSULA: "Proconsula-Elector"
  MDA_ADJ: "Yathribi"
  MVA: "Moria"
  MVA_ADJ: "Morian"
- SOR: "Sorbia"
- SOR_ADJ: "Sorbian"
+ SOR: "Lusatia"
+ SOR_ADJ: "Lusatian"
  BAV: "Suthernweald"
  BAV_ADJ: "Suthern"
  MBZ: "Middenweald"
@@ -425,6 +462,8 @@ ELECTOR_PROCONSULA: "Proconsula-Elector"
  TAB_ADJ: "Tabaristani"
  STY: "Waldhart"
  STY_ADJ: "Waldharten"
+ POL: "Lechia"
+ POL_ADJ: "Lechite"
  SER: "Orisdeme"
  SER_ADJ: "Orisdemer"
  PROV151: "Byzantion"
@@ -525,9 +564,9 @@ ELECTOR_PROCONSULA: "Proconsula-Elector"
  KRA_ideas_bonus: "Krakowian Ambition"
  KRA_ideas: "Krakowian Ideas"
  
- POL_ideas_start: "Polish Traditions"
- POL_ideas_bonus: "Polish Ambition"
- POL_ideas: "Polish Ideas"
+ POL_ideas_start: "Lechite Traditions"
+ POL_ideas_bonus: "Lechite Ambition"
+ POL_ideas: "Lechite Ideas"
  
  MOL_ideas_start: "Moldavian Traditions"
  MOL_ideas_bonus: "Moldavian Ambition"

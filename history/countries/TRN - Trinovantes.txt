@@ -1,12 +1,12 @@
 government = monarchy
-add_government_reform = brittonic_confederation_reform	# confederation
+add_government_reform = brittonic_confederation_reform# confederation
 government_rank = 1
-technology_group = western
+technology_group = celtic_tech
 capital = 238
 primary_culture = briton
 religion = druidic
 1444.11.11 = { 
-	add_opinion = {
+	add_opinion = { 
 		who = CEL
 		modifier = trinovantes_rejects_celtica
 	}

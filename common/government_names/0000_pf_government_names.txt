@@ -831,3 +831,168 @@ mesopotamian_rulers_monarchy = {
 		government = monarchy
 	}
 }
+
+satrapy = {
+	rank = {
+		1 = SATRAPY_RANK
+		2 = GREAT_SATRAPY_RANK
+		3 = GREAT_SATRAPY_RANK
+	}
+
+	ruler_male = {
+		1 = HYPARCHOS
+		2 = SATRAP
+		3 = SATRAP
+	}
+
+	ruler_female = {
+		1 = HYPARCHESA
+		2 = SATRAPIA
+		3 = SATRAPIA
+	}
+
+	consort_male = {
+		1 = HYPARCHONOS
+		2 = SATRAPENOS
+		3 = SATRAPENOS
+	}
+
+	consort_female = {
+		1 = HYPARCHESA
+		2 = SATRAPIA
+		3 = SATRAPIA
+	}
+	
+	heir_male = {
+		1 = HYPARCHION
+		2 = SATRAPZADA
+		3 = SATRAPZADA
+	}
+
+	heir_female = {
+		1 = HYPARCHIA
+		2 = SATRAPZADI
+		3 = SATRAPZADI
+	}
+
+	trigger = {
+		is_subject_of_type_with_overlord = {
+			who = PER
+			type = satrapy
+		}
+	}
+}
+
+slavic_rulers = {
+	rank = {
+		1 = KNYAZHESTWO
+		2 = KROLESTWO
+		3 = VELIKOZEMLJE
+	}
+
+	ruler_male = {
+		1 = KNYAZ
+		2 = KROL
+		3 = VELIKOKNYAZ
+	}
+
+	ruler_female = {
+		1 = KNYAGINA
+		2 = KROLOVA
+		3 = VELIKOKNYAGINA
+	}
+
+	consort_female = {
+		1 = KNYAGINA
+		2 = KROLOVA
+		3 = VELIKOKNYAGINA
+	}
+
+	consort_male = {
+		1 = KNYAZ
+		2 = KROL
+		3 = VELIKOKNYAZ
+	}
+
+	heir_male = {
+		1 = KNYAZHICH
+		2 = KNYAZHICH
+		3 = KNYAZHICH
+	}
+	heir_female = {
+		1 = KNYAZHINA
+		2 = KNYAZHINA
+		3 = KNYAZHINA
+	}
+
+	trigger = {
+		culture_group = pagan_slavic
+		OR = {
+			government = monarchy
+			government = tribal
+		}
+	}
+
+}
+
+slavic_theocratic_rulers = {
+	rank = {
+		1 = VOLKVATE
+		2 = GREAT_VOLKVATE
+		3 = SUPREME_VOLKVATE
+	}
+
+	ruler_male = {
+		1 = VOLKV
+		2 = GREAT_VOLKV
+		3 = SUPREME_VOLKV
+	}
+
+	ruler_female = {
+		1 = VOLKVA
+		2 = GREAT_VOLKVA
+		3 = SUPREME_VOLKVA
+	}
+
+	heir_male = {
+		1 = KNYAZHICH
+		2 = KNYAZHICH
+		3 = KNYAZHICH
+	}
+	heir_female = {
+		1 = KNYAZHINA
+		2 = KNYAZHINA
+		3 = KNYAZHINA
+	}
+
+	trigger = {
+		culture_group = pagan_slavic
+		government = theocracy
+	}
+
+}
+
+slavic_republic_rulers = {
+	rank = {
+		1 = VOIVODESHIP
+		2 = GREAT_VOIVODESHIP
+		3 = RZECZPOSPOLITA_GOV
+	}
+
+	ruler_male = {
+		1 = VOIVODE
+		2 = KNYAZ
+		3 = KNYAZ
+	}
+
+	ruler_female = {
+		1 = VOIVODE
+		2 = KNYAGINA
+		3 = KNYAGINA
+	}
+	trigger = {
+		culture_group = pagan_slavic
+		government = republic
+	}
+
+}
