@@ -218,7 +218,10 @@ pf_ath_2 = {
 		icon = mission_mediterranean_islands
 		position = 3
 		provinces_to_highlight = {
-			is_capital_of = NAX
+			OR = {
+				province_id = 164
+				is_capital_of = NAX
+			}
 		} 
 
 		trigger = {
@@ -267,7 +270,7 @@ pf_ath_2 = {
 		position = 4
 		required_missions = { pf_ath_relations_with_naxos } 
 		provinces_to_highlight = {
-			owned_by = root
+			owned_by = ROOT
 			NOT = { has_forcelimit_building_trigger = yes }
 		} 
 
@@ -333,7 +336,6 @@ pf_ath_3 = {
 		required_missions = { pf_ath_young_men_of_athens } 
 		provinces_to_highlight = {
 			province_id = 163	# Kriti
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {
@@ -399,13 +401,12 @@ pf_ath_4 = {
 
 		trigger = {
 			calc_true_if = {
-				all_country = {
+				all_ally = {
 					religion = hellenic
 					has_opinion = {
 						who = ROOT
 						value = 125
 					}
-					alliance_with = ROOT
 				}
 				amount = 3
 			}
@@ -499,7 +500,7 @@ pf_ath_4 = {
 		icon = nagyszombat_university
 		position = 5
 		required_missions = { pf_ath_patronise_delphi } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { } 
 
 		trigger = {
 			reform_level = 5
@@ -690,17 +691,16 @@ pf_ath_5 = {
 		position = 4
 		provinces_to_highlight = {
 			province_id = 146
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { has_tax_building_trigger = yes }
-				NOT = { prosperity = 100 }
-			}
 		} 
 
 		trigger = {
 			146 = {
-				owned_by = root
+				owned_by = ROOT
+			}
+			146 = {
 				has_tax_building_trigger = yes
+			}
+			146 = {
 				prosperity = 100
 			}
 		} 
@@ -726,11 +726,15 @@ pf_ath_5 = {
 		icon = pontifical_universities
 		position = 5
 		required_missions = { pf_ath_patronise_delphi } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			province_id = 146
+		} 
 
 		trigger = {
 			146 = {
 				development = 30
+			}
+			146 = {
 				has_courthouse_building_trigger = yes
 			}
 		} 
