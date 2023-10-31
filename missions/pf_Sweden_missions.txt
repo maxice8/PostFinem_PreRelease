@@ -10,10 +10,7 @@ pf_swe_1 = {
 		position = 2
 		required_missions = { pf_swe_build_up_army } 
 		provinces_to_highlight = {
-			OR = {
-				culture = danish
-				area = skaneland_area
-			}
+			owned_by = DRK
 		}
 
 		trigger = {
@@ -307,10 +304,11 @@ pf_swe_2 = {
 		}
 
 		effect = {
+			#NOTE(howard): use :yes:/:no: tooltips
 			custom_tooltip = pf_swe_conquer_norway_1_tt
 			hidden_effect = {
 				if = {
-					limit = { NOR = { is_subject_of = ROOT }  } 
+					limit = { overlord_of = NOR } 
 					add_yearly_sailors = 4
 					add_country_modifier = {
 						name = "pf_swe_king_of_norway"
@@ -328,7 +326,7 @@ pf_swe_2 = {
 			custom_tooltip = pf_swe_conquer_norway_2_tt
 			hidden_effect = {
 				if = {
-					limit = { NOR = { NOT = { is_subject_of = ROOT }  }  } 
+					limit = { NOT = { overlord_of = NOR } }
 					add_legitimacy = 20
 					country_event = { id = pf_nordic.3 } 
 					add_accepted_culture_or_dip_power = { culture = norwegian } 
@@ -427,6 +425,7 @@ pf_swe_2 = {
 				region = ruthenia_region
 				region = crimea_region
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {
@@ -480,27 +479,31 @@ pf_swe_2 = {
 		required_missions = { pf_swe_support_the_towns } 
 		provinces_to_highlight = {
 			is_capital_of = ROOT
-			OR = {
-				NOT = { development = 40 }
-				NOT = { has_tax_building_trigger = yes }
-				NOT = { has_production_building_trigger = yes }
-				NOT = { has_trade_building_trigger = yes }
-				NOT = { has_courthouse_building_trigger = yes }
-				NOT = { has_manpower_building_trigger = yes }
-				NOT = { has_fort_building_trigger = yes }
-				NOT = { prosperity = 100 }
-			}
 		} 
 
 		trigger = {
 			capital_scope = {
 				development = 40
+			}
+			capital_scope = {
 				has_tax_building_trigger = yes
+			}
+			capital_scope = {
 				has_production_building_trigger = yes
+			}
+			capital_scope = {
 				has_trade_building_trigger = yes
+			}
+			capital_scope = {
 				has_courthouse_building_trigger = yes
+			}
+			capital_scope = {
 				has_manpower_building_trigger = yes
+			}
+			capital_scope = {
 				has_fort_building_trigger = yes
+			}
+			capital_scope = {
 				prosperity = 100
 			}
 		} 
@@ -721,6 +724,7 @@ pf_swe_3 = {
 		} 
 
 		effect = {
+			#EFFECTLESS? :maidleness:
 		} 
 	}
 
@@ -786,9 +790,22 @@ pf_swe_3 = {
 		position = 8
 		required_missions = { pf_swe_support_the_towns } 
 		provinces_to_highlight = {
-			trade_goods = fish
-			owned_by = ROOT
-			NOT = { has_production_building_trigger = yes }
+			OR = {
+				AND = {
+					province_id = 6
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				AND = {
+					trade_goods = fish
+					NOT = { owned_by = ROOT }
+				}
+				AND = {
+					owned_by = ROOT
+					trade_goods = fish
+					NOT = { has_production_building_trigger = yes }
+				}
+			}
 		} 
 
 		trigger = {
@@ -1319,20 +1336,17 @@ pf_swe_5 = {
 		required_missions = { pf_swe_the_old_ways } 
 		provinces_to_highlight = {
 			province_id = 1
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { has_tax_building_trigger = yes }
-				NOT = { has_production_building_trigger = yes }
-				NOT = { has_manpower_building_trigger = yes }
-				NOT = { num_of_times_expanded_infrastructure = 1 }
-			}
 		} 
 
 		trigger = {
 			owns_core_province = 1
 			1 = {
 				has_tax_building_trigger = yes
+			}
+			1 = {
 				has_production_building_trigger = yes
+			}
+			1 = {
 				has_manpower_building_trigger = yes
 			}
 			1 = {
@@ -1423,7 +1437,10 @@ pf_swe_5 = {
 		icon = mission_rb_prospect_for_coal
 		position = 10
 		required_missions = { pf_swe_enlightenment } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_manufactory_trigger = yes }
+		} 
 
 		trigger = {
 			coal = 1
