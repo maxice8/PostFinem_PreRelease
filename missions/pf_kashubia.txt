@@ -24,8 +24,11 @@ ksb_1_slot = {
 		}
 		trigger = {
 			owns_core_province = 4745
-			4745 = {
-				development = 12
+			if = {
+				limit = { ai = no }
+				4745 = {
+					development = 12
+				}
 			}
 		}
 		effect = {
