@@ -1,11 +1,13 @@
 # 4765 - Mulhouse. Primary city: Mülhausen
 capital = "Mülhausen"
 base_tax = 2
-base_production = 1
+base_production = 3
 trade_goods = grain
 base_manpower = 2
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 discovered_by = western
+discovered_by = celtic_tech
 discovered_by = muslim
 discovered_by = ottoman
 culture = alemanni
@@ -13,3 +15,4 @@ religion = germanic_religion
 add_core = ALM
 owner = ALM
 controller = ALM
+is_city = no

@@ -1,11 +1,13 @@
 #77 - Heidelberg
 capital = "Heidelberg"
 trade_goods = wine
-base_tax = 1
-base_production = 2
-base_manpower = 2
+base_tax = 2
+base_production = 3
+base_manpower = 1
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 discovered_by = western
+discovered_by = celtic_tech
 discovered_by = muslim
 culture = alemanni
 religion = germanic_religion
@@ -13,3 +15,4 @@ add_core = ALM
 owner = ALM
 controller = ALM
 discovered_by = ottoman
+is_city = no

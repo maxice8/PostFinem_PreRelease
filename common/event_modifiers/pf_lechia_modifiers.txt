@@ -6,3 +6,8 @@ pol_in_civil_war = {
 	can_not_declare_war = yes
 	legitimacy = -1
 }
+
+pol_defend_against_interloper = {
+	defensiveness = 0.2
+	morale_damage = 0.1
+}

@@ -303,7 +303,15 @@ car_main_2 = {
 
 		trigger = {  
 			owns_core_province = 1750
-			1750 = { development = 25 }
+			if = {
+				limit = {
+					ai = no
+				}			
+				1750 = { development = 25 }
+			}
+			else = {				
+				1750 = { development = 15 }
+			}
 		} 
 
 		effect = {  
@@ -1034,7 +1042,15 @@ car_main_5 = {
 
 		trigger = {  
 			owns_core_province = 358
-			358 = { development = 25 }
+			if = {
+				limit = {
+					ai = no
+				}	
+				358 = { development = 25 }
+			}
+			else = {				
+				358 = { development = 20 }
+			}
 			358 = { has_shipyard_building_trigger = yes }
 			358 = { has_trade_building_trigger = yes }
 		} 

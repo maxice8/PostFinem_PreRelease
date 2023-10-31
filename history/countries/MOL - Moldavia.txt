@@ -3,7 +3,7 @@ add_government_reform = feudal_tribe
 government_rank = 1
 primary_culture = moldavian
 religion = slavic_religion
-technology_group = eastern
+technology_group = euro_pagan_tech
 capital = 1756# Suceava
 1399.1.1 = { 
 	monarch = { 
@@ -82,9 +82,8 @@ capital = 1756# Suceava
 #		mil = 1
 #	}
 #}
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Budimir"
 		dynasty = "Vukanovic"
 		adm = 3
@@ -94,9 +93,8 @@ capital = 1756# Suceava
 		death_date = 1445.01.01
 	}
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Toma"
 		dynasty = "Vukanovic"
 		adm = 6

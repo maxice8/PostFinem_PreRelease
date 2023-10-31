@@ -11,7 +11,7 @@ country_event = {
 		is_year = 1600
 		NOT = { has_idea_group = exploration_ideas  }
 		NOT = { colony = 1 }
-		technology_group = western
+		pf_western_tech_group = yes
 		NOT = { has_country_flag = had_national_decline_event }		
 		NOT = { has_country_modifier = cut_military_investments }
 		NOT = { has_country_modifier = cut_trade_investments }

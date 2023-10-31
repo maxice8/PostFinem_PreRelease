@@ -1,5 +1,8 @@
 ﻿l_english:
 
+#Technology
+ eastern: "Greek"
+
 #Italian Federation 
 gen_hre_relations_with_emperor_title: "Strengthen Federal Ties"
 gen_hre_relations_with_emperor_title: "Strengthen Federal Ties"
@@ -23,6 +26,10 @@ gen_hre_relations_with_emperor_title: "Strengthen Federal Ties"
 HRE_RELIGIOUS_WAR_DESC:0 "The Italian Federation is in a state of Religious War between the Punic and Romana faiths. During a Religious War, the Punic and Romana Leagues are available to be joined. The League that does not follow the dominant faith in the Empire may declare war on the Adirim to attempt to change the Federations's dominant faith."
 HRE_RELIGIOUS_PEACE_DESC:0 "A treaty of permanent religious peace has been established in the Federation. The Princes of the Federation are free to choose their own faith, and the Adirim may be of any faith."
  HRE_OFFICIAL_RELIGION_DESC:0 "The §Y$RELIGION$§! religion is the dominant faith of the Italian Federation. Only §Y$RELIGION$§! rulers are eligible to become Adirim."
+ ALLOW_TO_DISSMANTLE:0 "You can now dismantle the Italian Federation, as it is under your control."
+ JOIN_EMPIRE:0 "Join the Federation"
+ CANNOT_JOIN_EMPIRE:0 "You cannot join the Federation:\n$REASONS$"
+ JOIN_EMPIRE_CONFIRM_DESC:0 "Are you sure you want to join the Federation?"
  HRE_PERMANENT_RELIGION_DESC:0 "The §Y$RELIGION$§! religion is the official faith of the Italian Federation. Only §Y$RELIGION$§! rulers are eligible to become Adirim and all Electors must be §Y$RELIGION$§! as well. The Adirim may use the Enforce Religious Unity diplomatic action on member states of a different faith."
  HRE_LEAGUES_ENABLED:0 "The §YPunic§! and §YRomana§! Leagues are enabled."
  HRE_LEAGUES_DISABLED:0 "The §YPunic§! and §YRomana§! Leagues are NOT enabled."

@@ -6,9 +6,11 @@ base_manpower = 3
 capital = "York"
 is_city = yes
 discovered_by = western
+discovered_by = celtic_tech
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 extra_cost = 8
 add_core = BGT
 owner = BGT
@@ -17,4 +19,5 @@ culture = briton
 religion = druidic
 center_of_trade = 1
 add_core = ELM
+
 fort_15th = yes

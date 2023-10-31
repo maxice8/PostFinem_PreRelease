@@ -1,13 +1,12 @@
 government = tribal
 add_government_reform = pf_drakovan_tribes
 government_rank = 1
-technology_group = eastern
+technology_group = euro_pagan_tech
 primary_culture = drakova
 religion = slavic_religion
 capital = 157# Alba Iulia
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Ratimir"
 		dynasty = "Petrovic"
 		adm = 1
@@ -17,9 +16,8 @@ capital = 157# Alba Iulia
 		death_date = 1445.01.01
 	}
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Vukan"
 		dynasty = "Petrovic"
 		adm = 4

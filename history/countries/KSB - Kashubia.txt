@@ -2,7 +2,7 @@ capital = 43
 government = tribal
 add_government_reform = pf_semi_feudal_tribe
 government_rank = 2
-technology_group = eastern
+technology_group = euro_pagan_tech
 primary_culture = pomorian
 religion = slavic_religion
 add_accepted_culture = mazovian
@@ -21,7 +21,7 @@ add_truce_with = KRA
 		death_date = 1445.01.01
 	}
 	set_estate_privilege = estate_church_pf_ksb_corrupt_church
-	change_estate_land_share = {
+	change_estate_land_share = { 
 		estate = estate_church
 		share = 10
 	}

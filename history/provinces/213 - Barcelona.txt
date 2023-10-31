@@ -6,7 +6,9 @@ base_manpower = 4
 capital = "Barcelona"
 is_city = yes
 discovered_by = western
+discovered_by = celtic_tech
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 discovered_by = muslim
 discovered_by = ottoman
 add_core = ORA
@@ -17,3 +19,4 @@ culture = carventian
 center_of_trade = 2
 add_core = CVA
 add_province_triggered_modifier = religious_center
+

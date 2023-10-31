@@ -1,7 +1,7 @@
 government = tribal
 add_government_reform = feudal_tribe
 government_rank = 1
-technology_group = eastern
+technology_group = euro_pagan_tech
 primary_culture = podlachian
 religion = slavic_religion
 capital = 263# Dukes of Olawa/Lubin
@@ -85,9 +85,8 @@ capital = 263# Dukes of Olawa/Lubin
 	}
 }
 # Dukes of Liegnitz/Legnica
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Ladislav"
 		dynasty = "Lackovic"
 		adm = 3
@@ -97,9 +96,8 @@ capital = 263# Dukes of Olawa/Lubin
 		death_date = 1445.01.01
 	}
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Ivan"
 		dynasty = "Lackovic"
 		adm = 2

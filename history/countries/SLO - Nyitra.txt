@@ -2,12 +2,11 @@ government = tribal
 add_government_reform = tribal_kingdom
 primary_culture = eldrun
 religion = south_germanic_religion
-technology_group = eastern
+technology_group = euro_pagan_tech
 capital = 154# Nitra
 government_rank = 1
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Leodwald"
 		dynasty = "Ynglingas"
 		adm = 4
@@ -17,9 +16,8 @@ government_rank = 1
 		death_date = 1445.01.01
 	}
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Sweyn"
 		dynasty = "Ynglingas"
 		adm = 6
