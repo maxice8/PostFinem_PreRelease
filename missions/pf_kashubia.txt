@@ -552,9 +552,6 @@ ksb_4_slot = {
 		}
 		trigger = {
 			prestige = 50
-			custom_trigger_tooltip = {
-				tooltip = ksb_requirements_change
-			}
 			if = {
 				limit = {
 					has_country_flag = ksb_allied_pns
@@ -606,13 +603,13 @@ ksb_4_slot = {
 			else = {
 				custom_tooltip = ksb_vassalize_pinsk_no_tt
 			}
-			tooltip = {
-				PNS = {
-					country_event = {
-						id = pf_ksb_events.15
-					}
-				}
-			}
+			# tooltip = {
+			# 	PNS = {
+			# 		country_event = {
+			# 			id = pf_ksb_events.15
+			# 		}
+			# 	}
+			# }
 			custom_tooltip = empty_line_tt
 			if = {
 				limit = {
@@ -623,13 +620,13 @@ ksb_4_slot = {
 			else = {
 				custom_tooltip = ksb_vassalize_silesia_no_tt
 			}
-			tooltip = {
-				SIL = {
-					country_event = {
-						id = pf_ksb_events.15
-					}
-				}
-			}
+			# tooltip = {
+			# 	SIL = {
+			# 		country_event = {
+			# 			id = pf_ksb_events.15
+			# 		}
+			# 	}
+			# }
 			custom_tooltip = empty_line_tt
 			custom_tooltip = ksb_can_form_severoslavia_tt
 			set_country_flag = can_form_severoslavia_earlier_flag

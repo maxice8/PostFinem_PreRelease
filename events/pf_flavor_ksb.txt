@@ -492,18 +492,115 @@ country_event = {
 	
 	option = {
 		name = pf_ksb_events.15a
+		add_stability_or_adm_power = yes
+		custom_tooltip = empty_line_tt
 		KSB = {
 			vassalize = ROOT
 		}
 		ai_chance = {
-			factor = 100
+			factor = 5
+			modifier = {
+				factor = 1.1
+				has_opinion = {
+					who = KSB
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.1
+				has_opinion = {
+					who = KSB
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 1.1
+				has_opinion = {
+					who = KSB
+					value = 200
+				}
+			}
+			modifier = {
+				factor = 1.1
+				trust = {
+					who = KSB
+					value = 60
+				}
+			}
+			modifier = {
+				factor = 1.1
+				trust = {
+					who = KSB
+					value = 70
+				}
+			}
+			modifier = {
+				factor = 1.1
+				trust = {
+					who = KSB
+					value = 80
+				}
+			}
 		}
 	}
 	
 	option = {
 		name = pf_ksb_events.15b
+		add_prestige_or_monarch_power = { amount = 10 }
+		custom_tooltip = empty_line_tt
+		KSB = {
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = ROOT
+			}
+		}
 		ai_chance = {
-			factor = 0
+			factor = 5
+			modifier = {
+				factor = 2
+				NOT = {
+					has_opinion = {
+						who = KSB
+						value = 100
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					has_opinion = {
+						who = KSB
+						value = 50
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {
+					trust = {
+						who = KSB
+						value = 50
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {
+					trust = {
+						who = KSB
+						value = 40
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				NOT = {
+					trust = {
+						who = KSB
+						value = 30
+					}
+				}
+			}
 		}
 	}
 }
