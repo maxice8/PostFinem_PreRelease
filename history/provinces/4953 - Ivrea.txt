@@ -11,7 +11,9 @@ trade_goods = wine
 base_manpower = 4
 is_city = yes
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 discovered_by = western
+discovered_by = celtic_tech
 discovered_by = muslim
 discovered_by = ottoman
 hre = yes
@@ -20,3 +22,4 @@ religion = punic_religion
 add_core = KTM
 owner = KTM
 controller = KTM
+

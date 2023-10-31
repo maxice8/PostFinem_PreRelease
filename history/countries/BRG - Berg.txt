@@ -3,9 +3,9 @@ add_government_reform = feudalism_reform
 government_rank = 1
 primary_culture = nervian
 religion = druidic
-technology_group = western
+technology_group = celtic_tech
 add_accepted_culture = old_frisian
-capital = 1744 # Berg
+capital = 1744# Berg
 1423.6.25 = { 
 	monarch = { 
 		name = "Adolf VII"
@@ -42,9 +42,8 @@ capital = 1744 # Berg
 	}
 	clear_scripted_personalities = yes
 }
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Talor"
 		dynasty = "Belunos"
 		adm = 3
@@ -54,9 +53,8 @@ capital = 1744 # Berg
 		death_date = 1445.01.01
 	}
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Irix"
 		dynasty = "Belunos"
 		adm = 6

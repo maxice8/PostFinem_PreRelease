@@ -6,7 +6,9 @@ base_manpower = 5
 capital = "Genova"
 is_city = yes
 discovered_by = western
+discovered_by = celtic_tech
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 discovered_by = muslim
 discovered_by = ottoman
 extra_cost = 24
@@ -16,5 +18,6 @@ owner = GEN
 controller = GEN
 culture = ligurii
 religion = romana
-fort_15th = yes
 center_of_trade = 1
+
+fort_15th = yes

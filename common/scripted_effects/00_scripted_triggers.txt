@@ -2164,7 +2164,7 @@ has_better_tech_than_westerns = {
 		NOT = {
 			any_country = {
 				tech_difference = 1
-				technology_group = western
+				pf_western_tech_group = yes
 				NOT = { tag = ROOT }
 			}
 		}
@@ -2181,7 +2181,7 @@ has_more_institutions_than_westerns = {
 						who = ROOT
 						value = 1
 					}
-					technology_group = western
+					pf_western_tech_group = yes
 					NOT = { tag = ROOT }
 				}
 				amount = 1

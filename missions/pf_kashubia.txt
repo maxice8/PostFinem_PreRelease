@@ -2247,7 +2247,7 @@ slvksb_4_branch = {
 		provinces_to_highlight = {
 			region = ural_region
 			OR = {
-				is_city = no
+				 
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			}
 		}

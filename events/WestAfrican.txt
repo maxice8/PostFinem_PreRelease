@@ -722,7 +722,7 @@ country_event = {
 		technology_group = sub_saharan
 		NOT = { mil_tech = 12 }
 		any_neighbor_country = {
-			technology_group = western
+			pf_western_tech_group = yes
 			mil_tech = 12
 		}
 	}

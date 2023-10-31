@@ -205,3 +205,16 @@ pf_rabim_qahal_suffet_dominant = {
 		value = 50
 	}
 }
+
+pf_western_tech_group = {
+	OR = {
+		technology_group = western
+		technology_group = celtic_tech
+	}
+}
+pf_eastern_tech_group = {
+	OR = {
+		technology_group = eastern
+		technology_group = euro_pagan_tech
+	}
+}
