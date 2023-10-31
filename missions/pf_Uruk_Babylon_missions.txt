@@ -1,0 +1,142 @@
+pf_bby_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = URK
+			tag = BBY
+		}
+	}
+
+	pf_bby_conquer_basra = {
+		icon = mission_develop_visby
+		position = 2
+		required_missions = { pf_bby_expand_the_garrisons } 
+		provinces_to_highlight = {
+			area = basra_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			basra_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			custom_tooltip = empty_line_tt
+			408 = {
+				upgrade_center_of_trade = yes
+			}
+			custom_tooltip = empty_line_tt
+			add_area_perma_claim = {
+				area = khuzestan_area
+			}
+			add_area_perma_claim = {
+				area = luristan_area
+			}
+		}
+	}
+}
+
+
+pf_bby_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = URK
+			tag = BBY
+		}
+	}
+
+	pf_bby_expand_the_garrisons = {
+		icon = mission_modern_knight_army
+		position = 1
+		required_missions = { } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			army_size_percentage = 1
+			OR = {
+				num_of_generals = 1
+				manpower_percentage = 0.5
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_bby_rising"
+				duration = 9125
+			}
+			capital_scope = {
+				add_province_modifier = {
+					name = "pf_bby_bigger_garrison"
+					duration = 9125
+				}
+			}
+			add_area_perma_claim = {
+				area = basra_area
+			}
+			add_area_perma_claim = {
+				area = iraq_arabi_area
+			}
+			add_area_perma_claim = {
+				area = al_jazira_area
+			}
+		}
+	}
+	pf_bby_invade_seleucia = {
+		icon = mission_plc_lifetime_of_war
+		position = 2
+		required_missions = { pf_bby_expand_the_garrisons } 
+		provinces_to_highlight = {
+			owned_by = SLC
+		}
+		trigger = {
+			OR = {
+				NOT = { exists = SLC }
+				SLC = {
+					war_with = ROOT
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_bby_great_campaign"
+				duration = 3650
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					410 = {
+						NOT = { owned_by = ROOT }
+						OR = {
+							infantry_in_province = ROOT
+							cavalry_in_province = ROOT
+						}
+						has_siege = yes
+						sieged_by = ROOT
+					}
+				}
+				custom_tooltip = pf_bby_get_siege_progress_on_babylon_tt
+				hidden_effect = {
+					410 = {
+						change_siege = 10
+					}
+				}
+			}
+			else = {
+				custom_tooltip = pf_bby_get_siege_progress_on_babylon_no_tt
+				#tooltip = {
+				#	410 = {
+				#		change_siege = 10
+				#	}
+				#}
+			}
+		}
+	}
+}

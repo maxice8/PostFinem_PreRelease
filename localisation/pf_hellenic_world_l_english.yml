@@ -120,3 +120,38 @@ bby_restoration_of_religion: "Restore the Position of the Temples"
 bby_restoration_of_religion_desc: "The temple was once the center of the communities that dotted the region. Priests served as both mediators with the gods and as administrators and diplomats. Those days are gone forever, and the era of formal governance and rapidly growing infrastructure is upon us. However, we will not abandon our communalist instincts so easily - we should restore the position of the temples and their priests, ensuring that the next generation grows up under firm religious guidance, surrounded by family and friends."
 bby_stories_of_old: "Land of Epics"
 bby_stories_of_old_desc: "A great many tales have been told throughout our long and storied history. Perhaps the most well known of these, the Epic of Gilgamesh, has continued in circulation since its creation some time in the distant past. With the growth of the printing industry and a rekindled fascination in old stories, these epics are once more spreading across the land, including far beyond our borders, with new translated and edited editions coming out every year."
+
+
+################
+# Events
+################
+
+pf_bby.1.t: "The Reclamation of Babylon"
+pf_bby.1.d: "Babylon has been the seat of emperors and kings for centuries. Since the Hellenic conquest of the region however, the city has fallen into disrepair, and is now a shadow of its former self. Our glorious reconquest of Babylon has however offered us a unique chance to pool the combined labour of our people to rebuild it and renovate its temples, helping the once mighty city to be reborn once more."
+pf_bby.1.a: "Oh Babylon, we shall let no army defile you!"
+pf_bby_babylon_nice: "Babylon Returned"
+pf_bby_babylon_nice_tt: "§RIf §Y[410.GetName]§! is ever successfully sieged by ANY enemy army, we will permanently lose this province modifier.§!"
+
+pf_bby.2.t: "Prosperity in Mesopotamia"
+pf_bby.2.d: "Our conquest of Mesopotamia has brought peace and stability to an area that is all too often torn apart by wars and internal strife. The people feel safe under our governance, and for the first time in generations, the bountiful harvests the region is famous for are being reaped in full once more. Truly, this is a new golden age of Mesopotamian civilisation."
+pf_bby.2.a: "Make hay while the sun shines..."
+
+################
+# Missions
+################
+
+pf_bby_conquer_basra_title: "Seize Basra"
+pf_bby_conquer_basra_desc: "The ports of Basra are our gateway to the sea, and control the outflow of goods from Mesopotamia. If possible, it would be wise to seize these lands for ourselves."
+
+#
+
+pf_bby_expand_the_garrisons_title: "Expand the Garrisons"
+pf_bby_expand_the_garrisons_desc: "The freedom we now enjoy is constantly under threat - to the north, the enraged Seleucids eye our lands as part of their ambitious reconquest, while in the east the burgeoning Persian Empire crawls ever close to our borders. We must be ready to face all these threats and more."
+pf_bby_rising: "Babylonian Ambitions"
+pf_bby_bigger_garrison: "Strengthen the Garrisons"
+
+pf_bby_invade_seleucia_title: "Invade the Seleucids"
+pf_bby_invade_seleucia_desc: "The vile Seleucids rule much of the core of Mesopotamia, forcing many of our countrymen into hiding. In recent years, they have been faltering, and it looks like this ancient state may fade from the earth entirely. We must strike them while they are at their weakest, and retake Babylon."
+pf_bby_get_siege_progress_on_babylon_tt: "£yes£ If we are currently sieging §Y[410.GetName]§!, we will gain §G+10§! Siege Progress."
+pf_bby_get_siege_progress_on_babylon_no_tt: "£no£ If we are currently sieging §Y[410.GetName]§!, we will gain §G+10§! Siege Progress."
+pf_bby_great_campaign: "The Great Campaign"

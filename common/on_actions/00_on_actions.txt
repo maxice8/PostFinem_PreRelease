@@ -962,6 +962,20 @@ on_siege_won_province = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			ROOT = {
+				province_id = 410
+				has_province_modifier = pf_bby_babylon_nice
+				controller = {
+					NOT = { owns = ROOT }
+				}
+			}
+		}
+		ROOT = {
+			remove_province_modifier = pf_bby_babylon_nice
+		}
+	}
 }
 
 # province
