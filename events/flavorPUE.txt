@@ -40,7 +40,7 @@ country_event = {
 		is_year = 1680
 		NOT = { is_year = 1692 }
 		any_known_country = {
-			technology_group = western
+			pf_western_tech_group = yes
 			NOT = { alliance_with = ROOT }
 			OR = {
 				NOT = {
@@ -103,7 +103,7 @@ country_event = {
 		primary_culture = pueblo
 		has_country_flag = pue_pueblo_revolt
 		any_known_country = {
-			technology_group = western
+			pf_western_tech_group = yes
 			war_with = ROOT
 		}
 	}
@@ -139,7 +139,7 @@ country_event = {
 		name = flavor_pue.3.c
 		trigger = {
 			any_known_country = {
-				technology_group = western
+				pf_western_tech_group = yes
 				alliance_with = ROOT
 			}
 		}

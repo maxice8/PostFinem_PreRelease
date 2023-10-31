@@ -698,7 +698,7 @@ oceania_missions_slot5 = {
 						type = all
 						NOT = {
 							owner = {
-								technology_group = western
+								pf_western_tech_group = yes
 							}
 						}
 					}

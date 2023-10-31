@@ -68,8 +68,8 @@ ikko_ikki_rebels = {
 		modifier = {
 			factor = 0.1
 			owner = {
-				NOT = { pf_western_tech_group }
-				NOT = { pf_eastern_tech_group }
+				NOT = { pf_western_tech_group = yes }
+				NOT = { pf_eastern_tech_group = yes }
 			}
 		}
 	}

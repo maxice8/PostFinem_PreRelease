@@ -362,8 +362,8 @@ mnd_dai_2 = {
 						continent = europe
 					}
 					OR = {
-						technology_group = western
-						technology_group = eastern
+						pf_western_tech_group = yes
+						pf_eastern_tech_group = yes
 						technology_group = ottoman
 					}
 					any_owned_province = {

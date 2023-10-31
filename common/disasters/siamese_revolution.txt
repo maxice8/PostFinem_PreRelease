@@ -28,7 +28,7 @@ siamese_revolution = {
 					value = 100
 				}
 			}
-			pf_western_tech_group # this is primarily to exclude Russia
+			pf_western_tech_group = yes# this is primarily to exclude Russia
 			custom_trigger_tooltip = {
 				tooltip = siamese_revolution_religion_tt
 				NOT = { religion = ROOT }
@@ -56,7 +56,7 @@ siamese_revolution = {
 		modifier = {
 			factor = 5
 			any_known_country = {
-				pf_western_tech_group
+				pf_western_tech_group = yes
 				custom_trigger_tooltip = {
 					tooltip = siamese_revolution_religion_tt
 					NOT = { religion = ROOT }

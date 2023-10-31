@@ -252,7 +252,7 @@ sioux_1 = {
 		
 		trigger = {
 			any_known_country = {
-				technology_group = western
+				pf_western_tech_group = yes
 				OR = {
 					alliance_with = ROOT
 					has_opinion = {

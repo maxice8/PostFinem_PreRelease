@@ -87,8 +87,8 @@ country_decisions = {
 			if = {
 				limit = {
 					OR = {
-						technology_group = western
-						technology_group = eastern
+						pf_western_tech_group = yes
+						pf_eastern_tech_group = yes
 					}
 				}
 				apply_sprite_pack = dlc098_nss_sprite_pack

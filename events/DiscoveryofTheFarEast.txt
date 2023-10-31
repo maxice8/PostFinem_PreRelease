@@ -7,7 +7,7 @@ country_event = {
 	
 	trigger = {
 		NOT = { has_global_flag = japan_has_encountered_the_west }
-		technology_group = western
+		pf_western_tech_group = yes
 		OR = {
 			religion = reformed
 			religion = catholic
@@ -39,7 +39,7 @@ country_event = {
 	picture = MERCHANTS_TALKING_eventPicture
 	
 	trigger = {
-		technology_group = western
+		pf_western_tech_group = yes
 		NOT = { 1020 = { has_discovered = ROOT } }
 		NOT = { has_country_flag = japan_discovered }
 		japan_region = {
@@ -71,7 +71,7 @@ country_event = {
 		has_reform = daimyo
 		has_global_flag = japan_has_encountered_the_west
 		any_known_country = {
-			technology_group = western
+			pf_western_tech_group = yes
 			religion_group = christian
 		}
 		NOT = { has_country_flag = jap_christian_pater_flag }
@@ -403,7 +403,7 @@ country_event = {
 		every_country = {
 			limit = {
 				has_country_flag = japan_discovered
-				technology_group = western
+				pf_western_tech_group = yes
 			}
 			add_opinion = { who = ROOT modifier = opinion_japan_discovered }
 		}
@@ -520,7 +520,7 @@ country_event = {
 		has_global_flag = japan_has_encountered_the_west
 		NOT = { has_global_flag = japan_is_closed }
 		any_known_country = {
-			technology_group = western
+			pf_western_tech_group = yes
 		}
 		NOT = { has_country_modifier = a_batch_of_western_muskets }
 	}
@@ -1248,7 +1248,7 @@ country_event = {
 		has_reform = daimyo
 		has_global_flag = japan_has_encountered_the_west
 		any_known_country = {
-			technology_group = western
+			pf_western_tech_group = yes
 			religion_group = christian
 		}
 		NOT = { has_global_flag = japan_is_closed }

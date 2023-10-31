@@ -1857,7 +1857,7 @@ country_event = {
 
 	option = {
 		name = flavor_eth.48.a
-		change_technology_group = western
+		change_pf_western_tech_group = yes
 		change_unit_type = western
 		add_country_modifier = {
 			name = eth_modernized_army

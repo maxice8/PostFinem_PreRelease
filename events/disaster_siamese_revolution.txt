@@ -27,7 +27,7 @@ country_event = {
 					capital_scope = {
 						continent = europe
 					}
-					technology_group = western # this is primarily to exclude Russia
+					pf_western_tech_group = yes # this is primarily to exclude Russia
 					any_owned_province = {
 						superregion = east_indies_superregion
 					}
@@ -97,7 +97,7 @@ country_event = {
 			}
 			every_known_country = {
 				limit = {
-					technology_group = western
+					pf_western_tech_group = yes
 					any_owned_province = {
 						superregion = east_indies_superregion
 					}
@@ -132,7 +132,7 @@ country_event = {
 			capital_scope = {
 				continent = europe
 			}
-			technology_group = western # this is primarily to exclude Russia
+			pf_western_tech_group = yes # this is primarily to exclude Russia
 		}
 		any_owned_province = {
 			has_port = yes
@@ -156,7 +156,7 @@ country_event = {
 					capital_scope = {
 						continent = europe
 					}
-					technology_group = western # this is primarily to exclude Russia
+					pf_western_tech_group = yes # this is primarily to exclude Russia
 					any_owned_province = {
 						superregion = east_indies_superregion
 					}
@@ -333,7 +333,7 @@ country_event = {
 			capital_scope = {
 				continent = europe
 			}
-			technology_group = western # this is primarily to exclude Russia
+			pf_western_tech_group = yes # this is primarily to exclude Russia
 			NOT = {
 				has_opinion_modifier = {
 					who = ROOT
@@ -356,7 +356,7 @@ country_event = {
 					capital_scope = {
 						continent = europe
 					}
-					technology_group = western # this is primarily to exclude Russia
+					pf_western_tech_group = yes # this is primarily to exclude Russia
 					any_owned_province = {
 						superregion = east_indies_superregion
 					}
@@ -445,7 +445,7 @@ country_event = {
 			capital_scope = {
 				continent = europe
 			}
-			technology_group = western # this is primarily to exclude Russia
+			pf_western_tech_group = yes # this is primarily to exclude Russia
 		}
 	}
 	
@@ -461,7 +461,7 @@ country_event = {
 					capital_scope = {
 						continent = europe
 					}
-					technology_group = western # this is primarily to exclude Russia
+					pf_western_tech_group = yes # this is primarily to exclude Russia
 					any_owned_province = {
 						superregion = east_indies_superregion
 					}
@@ -547,7 +547,7 @@ country_event = {
 		}
 		every_known_country = {
 			limit = {
-				technology_group = western
+				pf_western_tech_group = yes
 				any_owned_province = {
 					superregion = east_indies_superregion
 				}
@@ -591,7 +591,7 @@ country_event = {
 					capital_scope = {
 						continent = europe
 					}
-					technology_group = western # this is primarily to exclude Russia
+					pf_western_tech_group = yes # this is primarily to exclude Russia
 					any_owned_province = {
 						superregion = east_indies_superregion
 					}
@@ -615,7 +615,7 @@ country_event = {
 					capital_scope = {
 						continent = europe
 					}
-					technology_group = western # this is primarily to exclude Russia
+					pf_western_tech_group = yes # this is primarily to exclude Russia
 					any_owned_province = {
 						superregion = east_indies_superregion
 					}
@@ -639,7 +639,7 @@ country_event = {
 					capital_scope = {
 						continent = europe
 					}
-					technology_group = western # this is primarily to exclude Russia
+					pf_western_tech_group = yes # this is primarily to exclude Russia
 					any_owned_province = {
 						superregion = east_indies_superregion
 					}
@@ -663,7 +663,7 @@ country_event = {
 					capital_scope = {
 						continent = europe
 					}
-					technology_group = western # this is primarily to exclude Russia
+					pf_western_tech_group = yes # this is primarily to exclude Russia
 					any_owned_province = {
 						superregion = east_indies_superregion
 					}
@@ -687,7 +687,7 @@ country_event = {
 					capital_scope = {
 						continent = europe
 					}
-					technology_group = western # this is primarily to exclude Russia
+					pf_western_tech_group = yes # this is primarily to exclude Russia
 					any_owned_province = {
 						superregion = east_indies_superregion
 					}
@@ -711,7 +711,7 @@ country_event = {
 					capital_scope = {
 						continent = europe
 					}
-					technology_group = western # this is primarily to exclude Russia
+					pf_western_tech_group = yes # this is primarily to exclude Russia
 					any_owned_province = {
 						superregion = east_indies_superregion
 					}
@@ -754,7 +754,7 @@ country_event = {
 			capital_scope = {
 				continent = europe
 			}
-			technology_group = western # this is primarily to exclude Russia
+			pf_western_tech_group = yes # this is primarily to exclude Russia
 			any_owned_province = {
 				superregion = east_indies_superregion
 			}
@@ -768,7 +768,7 @@ country_event = {
 					capital_scope = {
 						continent = europe
 					}
-					technology_group = western # this is primarily to exclude Russia
+					pf_western_tech_group = yes # this is primarily to exclude Russia
 					any_owned_province = {
 						superregion = east_indies_superregion
 					}

@@ -67,7 +67,7 @@ african_missions = {
 			is_tribal = no
 			NOT = { has_reform = iqta }
 			any_neighbor_country = {
-				technology_group = western
+				pf_western_tech_group = yes
 				NOT = {
 					tech_difference = 1
 				}

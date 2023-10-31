@@ -5,7 +5,7 @@ country_decisions = {
 			NOT = { has_country_flag = librium_veto }
 			NOT = { colony = 1 }
 			religion_group = christian
-			technology_group = eastern
+			pf_eastern_tech_group = yes
 			government = monarchy
 		}
 		allow = {
