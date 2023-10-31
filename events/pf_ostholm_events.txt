@@ -40,7 +40,14 @@ country_event = {		#ask Vildheim to PU
 				capital_scope = {
 					spawn_rebels = {
 						type = pretender_rebels
-						size = 8
+						size = 5
+						friend = OST
+						leader = "Theodoric"
+						leader_dynasty = "Ostholm"
+					}
+					spawn_rebels = {
+						type = pretender_rebels
+						size = 2
 						friend = OST
 						leader = "Theodoric"
 						leader_dynasty = "Ostholm"
@@ -100,6 +107,9 @@ country_event = {		#ask Vildheim to PU answers
 		name = "pf_ost.2.a"
 		OST = {
 			create_union = VLD
+		}
+		VLD = {
+			add_liberty_desire = -30
 		}
 	}
 }
@@ -191,12 +201,12 @@ country_event = {		#Illyrian Settlers
 		}
 		1767 = {
 			add_local_autonomy = 50
-			add_base_manpower = 1
+			add_base_manpower = 2
 			add_next_institution_embracement = 40
 		}
 		4756 = {
 			add_local_autonomy = 50
-			add_base_manpower = 1
+			add_base_manpower = 2
 			add_next_institution_embracement = 40
 		}
 	}
@@ -237,7 +247,7 @@ country_event = {		#right hand
 		define_advisor = {
 			type = city_planner 
 			name = "Saul Damaris"
-			skill = 3
+			skill = 1
 			culture = hebren
 			religion = jewish
 			discount = yes
@@ -463,5 +473,42 @@ country_event = {		#hillside rebellion sutherweald
 				culture = quadi
 			}
 		}
+	}
+}
+
+
+province_event = {		#get that development god damn
+	id = pf_ost.13
+	title = pf_ost.13.t 
+	desc = pf_ost.13.d
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		religion = south_germanic_religion
+		NOT = {
+			development = 10
+		}
+		region = carpathia_region
+	}
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	option = {
+		name = "pf_ost.13.a"
+		ai_chance = {
+			factor = 80
+		}
+		add_base_tax = 2
+		add_local_autonomy = 30
+	}
+	option = {
+		name = "pf_ost.13.b"
+		ai_chance = {
+			factor = 20
+		}
+		add_base_tax = 1
+		add_local_autonomy = 10
 	}
 }

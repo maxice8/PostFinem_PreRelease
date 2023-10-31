@@ -273,6 +273,7 @@ pf_vld_3 = {
 
 		effect = {
 			change_tag = DNV
+			set_country_flag = formed_donova_flag 
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes

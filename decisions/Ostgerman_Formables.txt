@@ -214,13 +214,9 @@ country_decisions = {
 	sty_waldhart = {
 		major = yes
 		potential = {
-			NOT = {
-				is_march = yes
+			STY = {
+				is_free_or_tributary_trigger = yes
 			}
-			NOT = {
-				is_vassal = yes
-			}
-			is_free_or_tributary_trigger = yes
 			OR = {
 				culture_group = germanic_carpathian
 				culture = marcomanni

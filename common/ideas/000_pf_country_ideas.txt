@@ -3525,8 +3525,8 @@ OST_ideas = {
 
 VLD_ideas = {
 	start = {
-		cavalry_cost = -0.1
-		nobles_loyalty_modifier = 0.05
+		cavalry_cost = -0.15
+		cavalry_shock = 0.2
 	}
 	
 	bonus = {
@@ -3541,6 +3541,7 @@ VLD_ideas = {
 	#a taxing task
 	VLD_ideas_1 = {
 		global_tax_modifier = 0.33
+		nobles_loyalty_modifier = 0.05
 	}
 
 	#the reach of Germanic Faith
@@ -3556,7 +3557,7 @@ VLD_ideas = {
 
 	#donovan hussars
 	VLD_ideas_4 = {
-		cavalry_power = 0.15
+		cav_to_inf_ratio = 0.33
 		cavalry_flanking = 0.33
 	}
 

@@ -205,6 +205,7 @@ pf_ost_2 = {
 
 		effect = {
 			change_tag = DNV
+			set_country_flag = formed_donova_flag 
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
@@ -228,8 +229,8 @@ pf_ost_2 = {
 
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 5
-				base_manpower = 6
+				value = 3
+				base_manpower = 5
 			}
 		}
 
@@ -338,7 +339,7 @@ pf_ost_3 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			army_tradition = 70
+			army_tradition = 60
 			army_size = 50
 		}
 
@@ -412,7 +413,7 @@ pf_ost_4 = {
 			years_of_income = 3
 			OR = {
 				dip_power = 300
-				full_idea_group = trade_ideas
+				has_idea = shrewd_commerce_practise 
 			}
 			owns = 128
 			owns = 134
@@ -433,7 +434,7 @@ pf_ost_4 = {
 		position = 5
 		provinces_to_highlight = {  } 
 
-		trigger = { army_size = 30 } 
+		trigger = { army_size = 25 } 
 
 		effect = {
 			add_country_modifier = {
