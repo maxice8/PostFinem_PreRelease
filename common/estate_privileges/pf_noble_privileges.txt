@@ -331,7 +331,7 @@ estate_nobles_seal_of_approval = {
 estate_nobles_allow_hereditary_titles = {
 	icon = privilege_placeholder
 	land_share = 5
-	max_absolutism = -5
+	max_absolutism = -10
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = 0.1
 	is_valid = {
@@ -354,19 +354,35 @@ estate_nobles_allow_hereditary_titles = {
 		trigger = {
 			estate_loyalty = {
 				estate = estate_nobles
-				loyalty = 30
+				loyalty = 20
 			}
 		}
 		modifier = {
-			global_tax_modifier = 0.2
+			global_tax_modifier = 0.3
 			global_unrest = -2
 		}
 	}
 	ai_will_do = {
 		factor = 10
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { stability = 3 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { stability = 2 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { stability = 0 }
 		}
 	}
 }
@@ -437,6 +453,7 @@ estate_nobles_pf_gallic_wars_remnant = {
 		min_autonomy = 15
 	}
 }
+
 estate_nobles_pf_marcher_freedom = {
 	icon = privilege_army_tradition
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }

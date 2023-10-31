@@ -3,7 +3,7 @@ add_government_reform = feudal_tribe
 government_rank = 1
 primary_culture = old_frisian
 religion = germanic_religion
-technology_group = eastern
+technology_group = euro_pagan_tech
 capital = 2973# Groningen
 add_accepted_culture = cherusci
 1399.1.1 = { 
@@ -15,9 +15,8 @@ add_accepted_culture = cherusci
 		regent = yes
 	}
 }
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Cynewulf"
 		dynasty = "Scylfingas"
 		adm = 4

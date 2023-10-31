@@ -1,14 +1,13 @@
 government_rank = 1
 mercantilism = 25
-technology_group = eastern
+technology_group = euro_pagan_tech
 religion = germanic_religion
 primary_culture = bructeri
 government = tribal
 add_government_reform = feudal_tribe
 capital = 1878# Aachen
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Deorlaf"
 		dynasty = "Eormenricingas"
 		adm = 3
@@ -18,9 +17,8 @@ capital = 1878# Aachen
 		death_date = 1445.01.01
 	}
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Athelstan"
 		dynasty = "Eormenricingas"
 		adm = 5

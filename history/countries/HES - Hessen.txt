@@ -3,11 +3,10 @@ add_government_reform = feudal_tribe
 government_rank = 1
 primary_culture = chatti
 religion = germanic_religion
-technology_group = eastern
+technology_group = euro_pagan_tech
 capital = 1762# Kassel
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Beornred"
 		dynasty = "Wyrhtingas"
 		adm = 1
@@ -17,9 +16,8 @@ capital = 1762# Kassel
 		death_date = 1445.01.01
 	}
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Hildebrand"
 		dynasty = "Wyrhtingas"
 		adm = 6

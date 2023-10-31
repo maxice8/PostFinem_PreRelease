@@ -504,7 +504,7 @@ country_event = {
 			}
 		}
 		has_discovered = 1460 # Cape of Good Hope
-		technology_group = western
+		pf_western_tech_group = yes
 		any_active_trade_node = {
 			has_merchant = PREV
 			OR = {

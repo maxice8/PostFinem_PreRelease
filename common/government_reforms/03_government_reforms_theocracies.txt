@@ -1390,6 +1390,14 @@ proclaim_republic_reform = {
 		#		}
 		#	}
 		#}
+		if = {
+			limit = { tag = SLV }
+			hidden_effect = {
+				country_event = {
+					id = pf_ksb_events.5
+				}
+			}
+		}
 	}
 	ai = {
 		factor = 0
@@ -1525,14 +1533,14 @@ theocratic_democracy_reform = {
 		factor = 1
 		modifier = {
 			factor = 0.5
-			NOT = { technology_group = western }
+			NOT = { pf_western_tech_group = yes }
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { technology_group = western }
+			NOT = { pf_western_tech_group = yes }
 			NOT = {
 				any_neighbor_country = {
-					technology_group = western
+					pf_western_tech_group = yes
 				}
 			}
 		}
@@ -1612,14 +1620,14 @@ regionally_elected_commanders = {
 		factor = 1
 		modifier = {
 			factor = 0.5
-			NOT = { technology_group = western }
+			NOT = { pf_western_tech_group = yes }
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { technology_group = western }
+			NOT = { pf_western_tech_group = yes }
 			NOT = {
 				any_neighbor_country = {
-					technology_group = western
+					pf_western_tech_group = yes
 				}
 			}
 		}

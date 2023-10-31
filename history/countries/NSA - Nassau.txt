@@ -3,7 +3,7 @@ add_government_reform = feudal_tribe
 government_rank = 1
 primary_culture = bructeri
 religion = germanic_religion
-technology_group = eastern
+technology_group = euro_pagan_tech
 capital = 83# Nassau
 fixed_capital = 83# Cannot move capital away from this province & no power cost to move to it
 1429.1.1 = { 
@@ -18,9 +18,8 @@ fixed_capital = 83# Cannot move capital away from this province & no power cost 
 	clear_scripted_personalities = yes
 	add_ruler_personality = fierce_negotiator_personality
 }
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Edric"
 		dynasty = "Wulfgaringas"
 		adm = 2
@@ -30,9 +29,8 @@ fixed_capital = 83# Cannot move capital away from this province & no power cost 
 		death_date = 1445.01.01
 	}
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Godric"
 		dynasty = "Wulfgaringas"
 		adm = 4

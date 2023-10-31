@@ -6,7 +6,9 @@ base_production = 5
 trade_goods = wine
 base_manpower = 4
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 discovered_by = western
+discovered_by = celtic_tech
 discovered_by = muslim
 discovered_by = ottoman
 extra_cost = 10
@@ -20,4 +22,5 @@ culture = celtipunian
 add_core = PCM
 owner = PCM
 controller = PCM
+ 
 fort_15th = yes

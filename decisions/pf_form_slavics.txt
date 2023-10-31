@@ -1,0 +1,391 @@
+country_decisions = {
+	form_slavia = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_slavia_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			culture_group = pagan_slavic
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					region = south_slavia_region
+					region = poland_region
+					culture_group = pagan_slavic
+					root = {
+						NOT = {
+							AND = {
+								num_of_owned_provinces_with = {
+									value = 25
+									region = south_slavia_region
+									is_core = root
+								}
+								num_of_owned_provinces_with = {
+									value = 25
+									region = poland_region
+									is_core = root
+								}
+								culture_group = pagan_slavic
+							}
+						}
+						owns_core_province = 1756
+						owns_core_province = 157
+						owns_core_province = 279
+						owns_core_province = 262
+						owns_core_province = 278
+						owns_core_province = 264
+						owns_core_province = 43
+						owns_core_province = 257
+					}
+				}
+				province_id = 1756
+				province_id = 157
+				province_id = 279
+				province_id = 262
+				province_id = 278
+				province_id = 264
+				province_id = 43
+				province_id = 257
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no
+			NOT = {
+				exists = SLV
+			}
+			OR = {
+				tag = JUG
+				tag = SEV
+			}
+			adm_tech = 15
+			AND = {
+				owns_core_province = 1756
+				owns_core_province = 157
+				owns_core_province = 279
+				owns_core_province = 262
+				owns_core_province = 278
+				owns_core_province = 264
+				owns_core_province = 43
+				owns_core_province = 257
+			}
+			num_of_owned_provinces_with = {
+				value = 25
+				region = south_slavia_region
+				is_core = root
+			}
+			num_of_owned_provinces_with = {
+				value = 30
+				region = poland_region
+				is_core = root
+			}
+			# owns_all_provinces = { #Redundant and limiting
+			# 	culture_group = pagan_slavic
+			# }
+		}
+		effect = {
+			change_tag = SLV
+			custom_tooltip = empty_line_tt
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			custom_tooltip = empty_line_tt
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 3
+					}
+				}
+				set_government_rank = 3
+				custom_tooltip = empty_line_tt
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige_or_monarch_power = { amount = 50 }
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}				#Swap Ideas
+			}
+			set_country_flag = formed_slavia_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_severoslavia = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_severoslavia_flag
+			}
+			NOT = {
+				OR = {
+					tag = SEV
+					tag = JUG
+					tag = SLV
+				}
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+				culture = mazovian
+				culture = podlachian
+				culture = pomorian
+				culture = slavic_galician
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = poland_region
+				province_id = 278
+				province_id = 264
+				province_id = 43
+				province_id = 257
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no
+			NOT = {
+				exists = SEV
+			}
+			owns_core_province = 278
+			owns_core_province = 264
+			owns_core_province = 43
+			owns_core_province = 257
+			num_of_owned_provinces_with = {
+				value = 30
+				region = poland_region
+			}
+			custom_trigger_tooltip = {
+				tooltip = adm_tech_10_or_unlock_via_mission_tt
+				OR = {
+					adm_tech = 10
+					has_country_flag = can_form_severoslavia_earlier_flag
+				}
+			}
+			# else = { # FO FREE
+			# 	adm_tech = 7
+			# }
+		}
+		effect = {
+			change_tag = SEV
+			custom_tooltip = empty_line_tt
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			custom_tooltip = empty_line_tt
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
+				set_government_rank = 2
+				custom_tooltip = empty_line_tt
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					government = tribal
+				}
+				change_government = monarchy
+			}
+			add_prestige = 25
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}				#Swap Ideas
+			}
+			set_country_flag = formed_severoslavia_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_jugoslavia = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_jugoslavia_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+				culture = moldavian
+				culture = drakova
+				culture = volhynian
+				culture = bukovinian
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = south_slavia_region
+				province_id = 1756
+				province_id = 157
+				province_id = 279
+				province_id = 262
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no
+			NOT = {
+				exists = JUG
+			}
+			AND = {
+				owns_core_province = 1756
+				owns_core_province = 157
+				owns_core_province = 279
+				owns_core_province = 262
+			}
+			num_of_owned_provinces_with = {
+				value = 25
+				region = south_slavia_region
+			}
+			custom_trigger_tooltip = {
+				tooltip = adm_tech_10_or_unlock_via_mission_tt
+				OR = {
+					adm_tech = 10
+					has_country_flag = can_form_jugoslavia_earlier_flag
+				}
+			}
+			# else = { # ALSO FO FREE
+			# 	adm_tech = 7
+			# }
+		}
+		effect = {
+			change_tag = JUG
+			custom_tooltip = empty_line_tt
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			custom_tooltip = empty_line_tt
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
+				set_government_rank = 2
+				custom_tooltip = empty_line_tt
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					government = tribal
+				}
+				change_government = monarchy
+			}
+			add_prestige = 25
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}				#Swap Ideas
+			}
+			set_country_flag = formed_jugoslavia_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

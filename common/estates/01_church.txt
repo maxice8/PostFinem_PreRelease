@@ -201,6 +201,12 @@ estate_church = {
 		}
 	}
 	custom_name = {
+		desc = estate_volkhvs
+		trigger = {
+			religion = slavic_religion
+		}
+	}
+	custom_name = {
 		desc = estate_klirikoi
 		trigger = {
 			pf_belongs_to_greek_culture_group = yes
@@ -447,10 +453,12 @@ estate_church = {
 		estate_church_institutionalized_clergy
 		estate_church_donation_right
 		#
+		estate_church_pf_ksb_corrupt_church
 		estate_church_increase_divine_tributes
 		estate_church_religious_festivities
 		estate_church_prime_office_of_the_faith
 		estate_church_enforced_social_conformity
+		estate_church_pf_ksb_head_of_cult
 		estate_clergy_pf_gallic_wars_remnant
 	}
 

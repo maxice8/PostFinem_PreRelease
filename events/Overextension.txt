@@ -228,7 +228,7 @@ country_event = {
 		picture = ROYAL_STRESS_eventPicture
 		trigger = {
 			has_dlc = "Lions of the North"
-			technology_group = western
+			pf_western_tech_group = yes
 		}
 	}
 	picture = {
@@ -236,7 +236,7 @@ country_event = {
 		trigger = {
 			OR = {
 				NOT = { has_dlc = "Lions of the North" }
-				NOT = { technology_group = western }
+				NOT = { pf_western_tech_group = yes }
 			}
 		}
 	}

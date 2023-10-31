@@ -1,9 +1,8 @@
 capital = 182
 government_rank = 2
 government = monarchy
-add_government_reform = pf_gallic_hierarchy #pf_gallic_hierarchy
-
-technology_group = western
+add_government_reform = pf_gallic_hierarchy
+technology_group = celtic_tech
 primary_culture = parisian
 add_accepted_culture = carnute
 add_accepted_culture = pictonian
@@ -34,7 +33,7 @@ add_historical_rival = CEL
 		birth_date = 1410.7.4
 		death_date = 1445.1.1
 	}
-	add_government_power = {
+	add_government_power = { 
 		mechanic_type = gaul_confederation_mechanic
 		power_type = gaul_confederation
 		value = 50

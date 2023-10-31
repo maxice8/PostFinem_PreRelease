@@ -1,0 +1,147 @@
+ksb_prospering_fields = {
+	global_trade_goods_size_modifier = 0.1
+}
+
+ksb_losing_faith = {
+	tolerance_own = -2
+}
+
+ksb_alongside_us = {
+	land_morale = 0.1
+}
+
+ksb_volkvs_disagree = {
+	global_unrest = 3
+}
+
+ksb_troops_losing_faith = {
+	land_morale = -0.1
+	morale_damage_received = 0.05
+}
+
+ksb_upgrade_temple = {
+	local_great_project_upgrade_cost = -0.75
+}
+
+pob_loyal_march = {
+	liberty_desire = -75
+	discipline = 0.05
+	defensiveness = 0.25
+	global_unrest = -2
+}
+
+ksb_silesian_iron = {
+	infantry_power = 0.15
+}
+
+lechia_supported_by_kashubia = {
+	discipline = 0.05
+	siege_ability = 0.2
+}
+
+ksb_break_the_lombards = {
+	siege_ability = 0.2
+}
+
+ksb_spreading_slavic_culture = {
+	culture_conversion_cost = -0.25
+}
+
+ksb_mountain_bastions = {
+	local_hostile_attrition = 1
+	local_build_cost = -0.1
+}
+
+ksb_lord_of_germania = {
+	monthly_splendor = 2
+	num_accepted_cultures = 2
+}
+
+ksb_great_march_south = {
+	land_morale = 0.1
+	movement_speed = 0.1
+
+}
+
+ksb_mouth_of_the_danube = {
+	trade_value_modifier = 0.2
+	local_ship_repair = 0.25
+}
+
+ksb_drakovan_defensiveness = {
+	defensiveness = 0.1
+	garrison_growth = 0.1
+}
+
+ksb_lord_of_all_slavs = {
+	governing_capacity_modifier = 0.1
+	development_cost_in_primary_culture = -0.1
+	manpower_in_culture_group_provinces = 0.2
+}
+
+ksb_crimean_horsemen = {
+	cavalry_cost = -0.2
+	cav_to_inf_ratio = 0.25
+}
+
+ksb_rus_capital = {
+	governing_capacity = 50
+	prestige = 1
+	local_autonomy = -0.5
+	allowed_num_of_buildings = 3
+	local_development_cost = -0.2
+}
+
+ksb_siberian_frontier = {
+	may_establish_frontier = yes
+	auto_explore_adjacent_to_colony = yes
+}
+
+ksb_convert_mongols = {
+	missionaries = 1
+	global_heathen_missionary_strength = 0.02
+}
+
+ksb_military_industrial_complex = {
+	global_regiment_cost = -0.05
+	fire_damage = 0.05
+	trade_goods_size_modifier = 0.5
+}
+
+ksb_modern_state = {
+	governing_capacity_modifier = 0.1
+	production_efficiency = 0.1
+}
+
+ksb_flocking_to_cities = {
+	build_cost = -0.1
+	build_time = -0.25
+}
+
+ksb_crimean_tradeport = {
+	province_trade_power_modifier = 0.5
+	ship_recruit_speed = -0.5
+	local_development_cost = -0.2
+}
+
+ksb_safe_shores = {
+	trade_steering = 0.25
+	ship_trade_power_modifier = 0.5
+}
+
+prepare_invasion_into_federation_modifier = {
+	manpower_recovery_speed = 0.2
+	army_tradition_decay = -0.1
+}
+
+
+slv_into_macedonia_modifier = {
+	discipline = 0.05
+	drill_gain_modifier = 0.5
+}
+
+
+slavia_on_top_modifier = {
+	administrative_efficiency = 0.05
+	max_absolutism_effect = 0.1
+}

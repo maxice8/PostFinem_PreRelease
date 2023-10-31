@@ -6,7 +6,9 @@ base_manpower = 6
 capital = "Chambéry"
 is_city = yes
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 discovered_by = western
+discovered_by = celtic_tech
 discovered_by = muslim
 discovered_by = ottoman
 culture = ligurii
@@ -14,4 +16,5 @@ religion = punic_religion
 add_core = KTM
 owner = KTM
 controller = KTM
+
 fort_15th = yes

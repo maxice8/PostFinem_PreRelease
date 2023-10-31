@@ -32,6 +32,14 @@ technology = {
 	
 	fort_15th = yes
 	
+	enable = 1_inf_celt
+	enable = 1_inf_celt2
+	enable = 1_cav_celt
+	enable = 1_cav_celt2
+	enable = 1_inf_euro
+	enable = 1_inf_euro2
+	enable = 1_cav_euro
+	enable = 1_cav_euro2
 	enable = south_american_spearmen		
 	enable = native_indian_archer
 	enable = native_clubmen
@@ -126,6 +134,10 @@ technology = {
 	infantry_shock		= 	0.15
 	cavalry_shock		= 	0.2
 
+	enable = 2_inf_celt
+	enable = 2_inf_celt2
+	enable = 2_inf_euro
+	enable = 2_inf_euro2
 	enable = western_men_at_arms	
 	enable = western_longbow	
 	enable = gaelic_galloglaigh				
@@ -175,6 +187,8 @@ technology = {
 	barracks = yes
 
 
+	enable = 2_cav_celt
+	enable = 2_cav_euro
 	enable = african_somali_cavalry
 	enable = african_tuareg_cavalry
 	enable = slavic_stradioti	
@@ -237,6 +251,12 @@ technology = {
 	
 	#Ditch
 	
+	enable = 3_inf_celt
+	enable = 3_inf_celt2
+	enable = 3_inf_celt3
+	enable = 3_inf_euro
+	enable = 3_inf_euro2
+	enable = 3_inf_euro3
 	enable = south_indian_musketeer	
 	enable = mughal_musketeer		
 	enable = ottoman_janissary	
@@ -264,6 +284,8 @@ technology = {
 	#Reiter
 	maneuver_value 		= 	0.25
 
+	enable = 3_cav_celt
+	enable = 3_cav_euro
 	enable = hungarian_hussar
 	enable = ottoman_spahi		
 	enable = culverin		
@@ -325,6 +347,10 @@ technology = {
 	supply_limit 		= 	0.5
 	military_tactics	=	0.25
 
+	enable = 4_inf_celt
+	enable = 4_inf_celt2
+	enable = 4_inf_euro
+	enable = 4_inf_euro2
 	enable = tofongchis_musketeer		
 	enable = ottoman_sekban		
 	enable = rajput_musketeer	
@@ -374,6 +400,8 @@ technology = {
 	fort_16th = yes
 	infantry_fire		=	0.3
 	
+	enable = 4_cav_celt
+	enable = 4_cav_euro
 	enable = african_hussar
 	enable = french_caracolle 
 	enable = huron_arquebusier	 
@@ -418,6 +446,10 @@ technology = {
 	
 
 	
+	enable = 5_inf_celt
+	enable = 5_inf_celt2
+	enable = 5_inf_euro
+	enable = 5_inf_euro2
 	enable = irish_charge 
 	enable = dutch_maurician	
 	enable = afsharid_reformed_infantry	
@@ -488,6 +520,8 @@ technology = {
 	maneuver_value 		= 	0.25
 
 		
+	enable = 5_cav_celt
+	enable = 5_cav_euro
 	enable = swedish_gallop	
 	enable = sikh_hit_and_run
 	enable = bhonsle_infantry	
@@ -522,6 +556,10 @@ technology = {
 	fort_17th = yes
 
 	
+	enable = 6_inf_celt
+	enable = 6_inf_celt2
+	enable = 6_inf_euro
+	enable = 6_inf_euro2
 	enable = austrian_tercio   
 	enable = swedish_gustavian		
 	enable = scottish_highlander	
@@ -629,6 +667,18 @@ technology = {
 	military_tactics 	= 	0.25
 	maneuver_value 		= 	0.5
 
+	enable = 6_cav_celt
+	enable = 6_cav_celt2
+	enable = 6_cav_celt3
+	enable = 7_inf_celt
+	enable = 7_inf_celt2
+	enable = 7_inf_celt3
+	enable = 6_cav_euro
+	enable = 6_cav_euro2
+	enable = 6_cav_euro3
+	enable = 7_inf_euro
+	enable = 7_inf_euro2
+	enable = 7_inf_euro3
 	enable = swedish_arme_blanche	
 	enable = french_dragoon		
 	enable = austrian_hussar	
@@ -717,6 +767,18 @@ technology = {
 
 	land_morale			=	1.0
 
+	enable = 7_cav_celt
+	enable = 7_cav_celt2
+	enable = 7_cav_celt3
+	enable = 8_inf_celt
+	enable = 8_inf_celt2
+	enable = 8_inf_celt3
+	enable = 7_cav_euro
+	enable = 7_cav_euro2
+	enable = 7_cav_euro3
+	enable = 8_inf_euro
+	enable = 8_inf_euro2
+	enable = 8_inf_euro3
 	enable = austrian_white_coat	
 	enable = french_bluecoat	
 	enable = british_redcoat	
@@ -786,6 +848,16 @@ technology = {
 	maneuver_value 		= 	0.25
 	infantry_shock		=	0.5	
 	
+	enable = 8_cav_celt
+	enable = 8_cav_celt2
+	enable = 8_cav_celt3
+	enable = 9_inf_celt
+	enable = 9_inf_celt2
+	enable = 8_cav_euro
+	enable = 8_cav_euro2
+	enable = 8_cav_euro3
+	enable = 9_inf_euro
+	enable = 9_inf_euro2
 	enable = african_cuirassier
 	enable = russian_cuirassier	
 	enable = russian_cossack
@@ -846,6 +918,14 @@ technology = {
 	land_morale			=	1.0
 	maneuver_value = 0.25
 	
+	enable = 10_inf_celt
+	enable = 10_inf_celt2
+	enable = 10_inf_celt3
+	enable = 10_inf_celt4
+	enable = 10_inf_euro
+	enable = 10_inf_euro2
+	enable = 10_inf_euro3
+	enable = 10_inf_euro4
 	enable = russian_mass
 	enable = mixed_order_infantry	
 	enable = prussian_drill		
