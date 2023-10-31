@@ -118,7 +118,15 @@ pf_per_inquisition = {
 	on_monthly = {
 		events = {}
 		random_events = {
-
+			150 = 0
+			6 = pf_per_events.80
+			1 = pf_per_events.81
+			2 = pf_per_events.82
+			4 = pf_per_events.83
+			3 = pf_per_events.84
+			2 = pf_per_events.85
+			2 = pf_per_events.86
+			2 = pf_per_events.87
 		}
 	}
 }

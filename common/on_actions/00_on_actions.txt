@@ -747,6 +747,8 @@ on_siege_lost_country = {
 on_siege_won_province = {
 	events = {
 		synthetic_dawn.4
+		pf_per_events.88
+		pf_per_events.89
 	}
 	if = {
 		limit = {

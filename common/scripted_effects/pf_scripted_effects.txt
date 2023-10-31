@@ -847,3 +847,51 @@ upgrade_center_of_trade = {
 		add_base_manpower = 1
 	}
 }
+
+#Province effect
+pf_spawn_province_religious_rebels = {
+	trigger_switch = {
+		on_trigger = religion
+		
+		arabic_religion =       { spawn_rebels = { type = arabic_zealots size = $size$ } }
+		#kemetic =              { spawn_rebels = { type = kemetic_rebels size = $size$ } }
+		norse_pagan_reformed =  { spawn_rebels = { type = norse_pagan_reformed_rebels size = $size$ } }
+		germanic_religion =     { spawn_rebels = { type = north_germanic_zealots size = $size$ } }
+		south_germanic_religion = { spawn_rebels = { type = south_germanic_zealots size = $size$ } }
+		punic_religion =        { spawn_rebels = { type = punic_zealots size = $size$ } }
+		romana =                { spawn_rebels = { type = romana_zealots size = $size$ } }
+		hellenic =              { spawn_rebels = { type = hellenic_zealots size = $size$ } }
+		#neterist =             { spawn_rebels = { type = neterist_rebels size = $size$ } }
+		#paradosi =             { spawn_rebels = { type = paradosi_rebels size = $size$ } }
+		slavic_religion =       { spawn_rebels = { type = slavic_zealots size = $size$ } }
+		druidic =               { spawn_rebels = { type = druidic_zealots size = $size$ } }
+		romuva =                { spawn_rebels = { type = romuva_zealots size = $size$ } }
+
+		animism =               { spawn_rebels = { type = animism_rebels size = $size$ } }
+		shamanism =             { spawn_rebels = { type = shamanism_rebels size = $size$ } }
+		totemism =              { spawn_rebels = { type = totemism_rebels size = $size$ } }
+		inti =                  { spawn_rebels = { type = inti_rebels size = $size$ } }
+		nahuatl =               { spawn_rebels = { type = nahuatl_rebels size = $size$ } }
+		mesoamerican_religion = { spawn_rebels = { type = maya_rebels size = $size$ } }
+		tengri_pagan_reformed = { spawn_rebels = { type = tengri_pagan_reformed_rebels size = $size$ } }
+		dreamtime =             { spawn_rebels = { type = dreamtime_rebels size = $size$ } }
+		buddhism =              { spawn_rebels = { type = buddhism_rebels size = $size$ } }
+		catholic =              { spawn_rebels = { type = catholic_rebels size = $size$ } }
+		confucianism =          { spawn_rebels = { type = confucianism_rebels size = $size$ } }
+		coptic =                { spawn_rebels = { type = coptic_rebels size = $size$ } }
+		hinduism =              { spawn_rebels = { type = hinduism_rebels size = $size$ } }
+		ibadi =                 { spawn_rebels = { type = ibadi_rebels size = $size$ } }
+		jewish =                { spawn_rebels = { type = jewish_rebels size = $size$ } }
+		mahayana =              { spawn_rebels = { type = mahayana_rebels size = $size$ } }
+		orthodox =              { spawn_rebels = { type = orthodox_rebels size = $size$ } }
+		protestant =            { spawn_rebels = { type = protestant_rebels size = $size$ } }
+		reformed =              { spawn_rebels = { type = reformed_rebels size = $size$ } }
+		shiite =                { spawn_rebels = { type = shiite_rebels size = $size$ } }
+		shinto =                { spawn_rebels = { type = shinto_rebels size = $size$ } }
+		sikhism =               { spawn_rebels = { type = sikhism_rebels size = $size$ } }
+		sunni =                 { spawn_rebels = { type = sunni_rebels size = $size$ } }
+		vajrayana =             { spawn_rebels = { type = vajrayana_rebels size = $size$ } }
+		zoroastrian =           { spawn_rebels = { type = zoroastrian_rebels size = $size$ } }
+		
+	}
+}

@@ -4428,6 +4428,25 @@ country_event = {
 
 		add_stability = -1
 		set_country_flag = pf_per_started_inquisition
+
+		random_owned_province = {
+			limit = {
+				NOT = { religion = zoroastrian }
+			}
+			pf_spawn_province_religious_rebels = { size = 3 }
+		}
+
+		every_subject_country = {
+			limit = {
+				any_owned_province = {
+					NOT = { religion = zoroastrian }
+				}
+			}
+			random_owned_province = {
+				limit = { NOT = { religion = zoroastrian } }
+				pf_spawn_province_religious_rebels = { size = 3 }
+			}
+		}
 	}
 }
 
@@ -4466,6 +4485,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		tag = PER
 		had_country_flag = {
 			flag = pf_per_started_inquisition
 			days = 3650
@@ -4498,10 +4518,7 @@ country_event = {
 				limit = { NOT = { religion = zoroastrian } }
 				random = {
 					chance = 25
-					spawn_rebels = {
-						size = 1
-						type = heretic_rebels
-					}
+					pf_spawn_province_religious_rebels = { size = 1 }
 				}
 			}
 		}
@@ -4515,7 +4532,7 @@ country_event = {
 	id = pf_per_events.80
 	title = "pf_per_events_80_title"
 	desc = "pf_per_events_80_desc"
-	picture = ACCUSATION_eventPicture
+	picture = ANGRY_MOB_eventPicture
 	is_triggered_only = yes
 
 	immediate = {
@@ -4541,7 +4558,7 @@ country_event = {
 		goto = pf_per_revolting_province
 
 		event_target:pf_per_revolting_province = {
-			# Spawn religious rebels of size 2
+			pf_spawn_province_religious_rebels = { size = 2 }
 		} 
 	}
 }
@@ -4551,7 +4568,7 @@ country_event = {
 	id = pf_per_events.81
 	title = "pf_per_events_81_title"
 	desc = "pf_per_events_81_desc"
-	picture = ACCUSATION_eventPicture
+	picture = ANGRY_MOB_eventPicture
 	is_triggered_only = yes
 
 	trigger = {
@@ -4589,15 +4606,15 @@ country_event = {
 		ai_chance = { factor = 100 }
 
 		random_owned_province = {
-			anti_tax_rebels = 2
+			pf_spawn_province_religious_rebels = { size = 2 }
 		}
 
 		random_owned_province = {
-			anti_tax_rebels = 2
+			pf_spawn_province_religious_rebels = { size = 2 }
 		}
 
 		random_owned_province = {
-			anti_tax_rebels = 2
+			pf_spawn_province_religious_rebels = { size = 2 }
 		}
 
 		custom_tooltip = pf_per_supporting_country_loses_manpower_tt
@@ -4615,7 +4632,7 @@ country_event = {
 	id = pf_per_events.82
 	title = "pf_per_events_82_title"
 	desc = "pf_per_events_82_desc"
-	picture = ACCUSATION_eventPicture
+	picture = ASSASSINATION_eventPicture
 	is_triggered_only = yes
 
 	option = {
@@ -4645,7 +4662,7 @@ country_event = {
 	id = pf_per_events.83
 	title = "pf_per_events_83_title"
 	desc = "pf_per_events_83_desc"
-	picture = ACCUSATION_eventPicture
+	picture = ANGRY_MOB_eventPicture
 	is_triggered_only = yes
 
 	trigger = {
@@ -4706,7 +4723,7 @@ country_event = {
 	id = pf_per_events.84
 	title = "pf_per_events_84_title"
 	desc = "pf_per_events_84_desc"
-	picture = ACCUSATION_eventPicture
+	picture = ANGRY_MOB_eventPicture
 	is_triggered_only = yes
 
 	immediate = {
@@ -4739,7 +4756,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 
 		event_target:pf_per_revolting_province = {
-			# Spawn religious rebels of size 2
+			pf_spawn_province_religious_rebels = { size = 2 }
 		}
 	}
 }
@@ -4749,7 +4766,7 @@ country_event = {
 	id = pf_per_events.85
 	title = "pf_per_events_85_title"
 	desc = "pf_per_events_85_desc"
-	picture = ACCUSATION_eventPicture
+	picture = SPY_eventPicture
 	is_triggered_only = yes
 
 	immediate = {
@@ -4794,7 +4811,7 @@ country_event = {
 							owner = { is_subject_of = PER }
 						}
 					}
-					# Spawn religious rebels of size 3
+					pf_spawn_province_religious_rebels = { size = 3 }
 				}
 			}
 		}
@@ -4806,7 +4823,7 @@ country_event = {
 	id = pf_per_events.86
 	title = "pf_per_events_86_title"
 	desc = "pf_per_events_86_desc"
-	picture = ACCUSATION_eventPicture
+	picture = COUNTRY_COLLAPSE_eventPicture
 	is_triggered_only = yes
 
 	trigger = {
@@ -4846,7 +4863,7 @@ country_event = {
 	id = pf_per_events.87
 	title = "pf_per_events_87_title"
 	desc = "pf_per_events_87_desc"
-	picture = ACCUSATION_eventPicture
+	picture = CIVIL_WAR_eventPicture
 	is_triggered_only = yes
 
 	trigger = {
@@ -4892,17 +4909,39 @@ country_event = {
 }
 
 # Persian Inquisition: Satrapy Capital falls
-country_event = {
+province_event = {
 	id = pf_per_events.88
 	title = "pf_per_events_88_title"
 	desc = "pf_per_events_88_desc"
-	picture = ACCUSATION_eventPicture
+	picture = COUNTRY_COLLAPSE_eventPicture
 	is_triggered_only = yes
+
+	trigger = {
+		owner = { is_subject_of = PER }
+		is_capital = yes
+		controlled_by = REB
+	}
 
 	option = {
 		name = "pf_per_events_88_option"
 		ai_chance = { factor = 100 }
+		PER = {
+			country_event = { id = pf_per_events.89 }
+		}
+	}
+}
 
+country_event = {
+	id = pf_per_events.89
+	title = "pf_per_events_89_title"
+	desc = "pf_per_events_89_desc"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = "pf_per_events_89_option"
+		ai_chance = { factor = 100 }
 		add_prestige = -10
 		add_stability = -1
 
@@ -4914,23 +4953,30 @@ country_event = {
 }
 
 # Persian Inquisition: Persian Capital falls
-country_event = {
-	id = pf_per_events.89
-	title = "pf_per_events_89_title"
-	desc = "pf_per_events_89_desc"
-	picture = ACCUSATION_eventPicture
+province_event = {
+	id = pf_per_events.90
+	title = "pf_per_events_90_title"
+	desc = "pf_per_events_90_desc"
+	picture = COUNTRY_COLLAPSE_eventPicture
 	is_triggered_only = yes
 
+	trigger = {
+		is_capital_of = PER
+		controlled_by = REB
+	}
+
 	option = {
-		name = "pf_per_events_89_option"
+		name = "pf_per_events_90_option"
 		ai_chance = { factor = 100 }
 
-		add_stability = -2
-		add_prestige = -50
+		owner = {
+			add_stability = -2
+			add_prestige = -50
 
-		add_country_modifier = {
-			name = pf_per_satrapies_lose_trust
-			duration = 9125
+			add_country_modifier = {
+				name = pf_per_satrapies_lose_trust
+				duration = 9125
+			}
 		}
 	}
 }
