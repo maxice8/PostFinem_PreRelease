@@ -899,6 +899,18 @@ ksb_5_slot = {
 		trigger = {
 			if = {
 				limit = {
+					POL = { exists = yes }
+				}
+				POL = { is_at_war = no }
+			}
+			if = {
+				limit = {
+					KRA = { exists = yes }
+				}
+				KRA = { is_at_war = no }
+			}
+			if = {
+				limit = {
 					has_country_flag = ksb_supported_lechia_wars
 				}
 				OR = {
@@ -922,18 +934,12 @@ ksb_5_slot = {
 			if = {
 				limit = {
 					has_country_flag = ksb_supported_lechia_wars
-					OR = {
-						alliance_with = KRA
-					}
 				}
 				vassalize = KRA
 			}
 			else_if = {
 				limit = {
 					has_country_flag = ksb_supported_lechia_wars
-					OR = {
-						alliance_with = POL
-					}
 				}
 				vassalize = POL
 			}
