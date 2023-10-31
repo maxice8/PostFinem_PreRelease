@@ -1036,7 +1036,6 @@ petition_for_ruler_support_desc: "Request support for our regime from the Grand 
 petition_for_ruler_support_tooltip: "Request support for our regime from the Grand Adirim."
 petition_for_ruler_support_alert_tooltip: "§YPetition§!: Request for Ruler Support"
 petition_for_ruler_support_dialog: "§Y[Root.GetName]§! has issued a petition to the [From.Monarch.GetTitle], requesting support for their regime. \n\nIf we accept, §Y[Root.Monarch.GetTitle] [Root.Monarch.GetName]§! gets §G+1§! yearly legitimacy, §G-20.0%§! stability cost, and §G+10.0%§! all estates loyalty for §Y25 years§!, at the cost of §R-100§! of our opinion of them.\n\nGranting this request will cost us §R-10§! legitimacy and §R-50§! Administrative Power £adm£, but gain us §G+1§! Federal Authority.\n\nDeclining will cost us §R-1§! Federal Authority.\n\nDo you want to accept?"
-pf_if_petition_cooldown_tt: "Has not applied for any §YPetition§! in the last §Y25 years§!."
 opinion_used_petition: "Accepted Petition"
 pf_petition_1_modifier: "Petition: Federal Ruler Support"
 PETITION_OPINION: "Opinion of us"
@@ -1049,6 +1048,10 @@ PETITION_AT_WAR: "We are at war"
 PETITION_IMPERIAL_AUTHORITY: "Federal Authority"
 PETITION_ALLIANCE: "Alliance between us"
 PETITION_BONUS_REASONS: "Reform: Eager Councillors"
+#potentials
+PETITIONS_MUST_BE_EMPEROR: "§R- §Y[From.GetName]§! is not the Grand Adirim"
+PETITIONS_MUST_HAVE_RELATIONS: "§R- We do not have at least 150 opinion with §Y[emperor.GetName]§!"
+pf_if_petition_cooldown_tt: "§R- Used a Petition in the last 25 years§!"
 
 petition_for_military_support: "£italian_federation_icon£ Petition for Military Support"
 petition_for_military_support_title: "Petition for Military Support"

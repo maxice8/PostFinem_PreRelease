@@ -14,11 +14,17 @@ petition_for_ruler_support = {
 		FROM = { is_emperor = yes }
 	}
 	is_allowed = {
-		FROM = { is_emperor = yes }
-		emperor = {
-			has_opinion = {
-				who = ROOT
-				value = 50
+		custom_trigger_tooltip = {
+			tooltip = PETITIONS_MUST_BE_EMPEROR
+			FROM = { is_emperor = yes }
+		}
+		custom_trigger_tooltip = {
+			tooltip = PETITIONS_MUST_HAVE_RELATIONS
+			emperor = {
+				has_opinion = { 
+					who = ROOT
+					value = 50
+				}
 			}
 		}
 		custom_trigger_tooltip = {
@@ -237,11 +243,17 @@ petition_for_military_support = {
 		FROM = { is_emperor = yes }
 	}
 	is_allowed = {
-		FROM = { is_emperor = yes }
-		emperor = {
-			has_opinion = {
-				who = ROOT
-				value = 50
+		custom_trigger_tooltip = {
+			tooltip = PETITIONS_MUST_BE_EMPEROR
+			FROM = { is_emperor = yes }
+		}
+		custom_trigger_tooltip = {
+			tooltip = PETITIONS_MUST_HAVE_RELATIONS
+			emperor = {
+				has_opinion = { 
+					who = ROOT
+					value = 50
+				}
 			}
 		}
 		custom_trigger_tooltip = {
@@ -460,11 +472,17 @@ petition_for_development_support = {
 		FROM = { is_emperor = yes }
 	}
 	is_allowed = {
-		FROM = { is_emperor = yes }
-		emperor = {
-			has_opinion = {
-				who = ROOT
-				value = 50
+		custom_trigger_tooltip = {
+			tooltip = PETITIONS_MUST_BE_EMPEROR
+			FROM = { is_emperor = yes }
+		}
+		custom_trigger_tooltip = {
+			tooltip = PETITIONS_MUST_HAVE_RELATIONS
+			emperor = {
+				has_opinion = { 
+					who = ROOT
+					value = 50
+				}
 			}
 		}
 		custom_trigger_tooltip = {
@@ -683,11 +701,17 @@ petition_for_trade_support = {
 		FROM = { is_emperor = yes }
 	}
 	is_allowed = {
-		FROM = { is_emperor = yes }
-		emperor = {
-			has_opinion = {
-				who = ROOT
-				value = 50
+		custom_trigger_tooltip = {
+			tooltip = PETITIONS_MUST_BE_EMPEROR
+			FROM = { is_emperor = yes }
+		}
+		custom_trigger_tooltip = {
+			tooltip = PETITIONS_MUST_HAVE_RELATIONS
+			emperor = {
+				has_opinion = { 
+					who = ROOT
+					value = 50
+				}
 			}
 		}
 		custom_trigger_tooltip = {
@@ -907,11 +931,17 @@ petition_for_advisor = {
 		FROM = { is_emperor = yes }
 	}
 	is_allowed = {
-		FROM = { is_emperor = yes }
-		emperor = {
-			has_opinion = {
-				who = ROOT
-				value = 50
+		custom_trigger_tooltip = {
+			tooltip = PETITIONS_MUST_BE_EMPEROR
+			FROM = { is_emperor = yes }
+		}
+		custom_trigger_tooltip = {
+			tooltip = PETITIONS_MUST_HAVE_RELATIONS
+			emperor = {
+				has_opinion = { 
+					who = ROOT
+					value = 50
+				}
 			}
 		}
 		custom_trigger_tooltip = {

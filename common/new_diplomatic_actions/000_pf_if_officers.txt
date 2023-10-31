@@ -81,7 +81,7 @@ appoint_high_priest_action = {
 			custom_trigger_tooltip = {
 				tooltip = FROM_HAS_REGENCY_TT
 				FROM = { has_regency = no }
-			}
+			} 
 		}
 		if = {
 			limit = {
