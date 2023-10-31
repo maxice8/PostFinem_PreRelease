@@ -188,13 +188,13 @@ car_main_1 = {
 		icon = mission_african_gold
 		position = 11
 		required_missions = { pf_car_african_riches pf_car_westward } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+		} 
 
-		trigger = {  
+		trigger = {
 		} 
 
 		effect = {  
-			
 		} 
 	}
 }
@@ -381,7 +381,14 @@ car_main_2 = {
 		} 
 
 		effect = {  
-
+			add_country_modifier = {
+				name = car_looking_to_the_waves_modifier
+				duration = 12775
+			}
+			367 = { add_permanent_claim = ROOT }
+			368 = { add_permanent_claim = ROOT }
+			366 = { add_permanent_claim = ROOT }
+			4564 = { add_permanent_claim = ROOT }
 		} 
 	}
 
@@ -392,10 +399,36 @@ car_main_2 = {
 		provinces_to_highlight = {  } 
 
 		trigger = { 
+			if = {
+				limit = {
+					ai = no
+				}				
+				num_of_heavy_ship = 20
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				OR = {
+					colonial_region = colonial_canada
+					colonial_region = colonial_eastern_america
+					colonial_region = colonial_the_carribean
+					colonial_region = colonial_colombia
+					colonial_region = colonial_brazil
+					region = guinea_region
+				}
+			}
 		} 
 
 		effect = {  
-			
+			add_country_modifier = {
+				name = car_colonial_mindset_modfier
+				duration = 7300
+			}
+			colonial_eastern_america = {
+				add_permanent_claim = ROOT
+			}
+			guinea_region = {
+				add_permanent_claim = ROOT
+			}
 		} 
 	}
 
@@ -713,11 +746,94 @@ car_main_3 = {
 	pf_car_reclaimed_glory = {
 		icon = africa_proconsulare
 		position = 7
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_id = 341
+			OR = {
+				NOT = { development = 25 }
+				NOT = { province_has_center_of_trade_of_level = 3 }
+				NOT = { 
+					has_great_project = {
+						type = great_cothon
+						tier = 2
+					}	
+				} 
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			if = {
+				limit = {
+					ai = no
+				}
+				341 = { development = 25 }
+			}
+			else = {
+				341 = { development = 20 }
+			}
+			341 = {
+				province_has_center_of_trade_of_level = 3
+			}
+			OR = {
+				341 = {			 
+					has_great_project = {
+						type = great_cothon
+						tier = 2
+					}	
+				}
+				341 = {			 
+					has_great_project = {
+						type = great_cothon
+						tier = 3
+					}	
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			simple_dynamic_effect = {
+				first_custom_tooltip = car_cothon_2_tt
+				first_limit = "
+					341 = {			 
+						has_great_project = {
+							type = great_cothon
+							tier = 2
+						}
+					}
+				"
+				first_effect = "
+					341 = {
+						add_great_project_tier = {
+							type = great_cothon
+							tier = 1
+						}
+					}
+				"
+				second_custom_tooltip = car_cothon_3_tt
+				second_limit = "
+					341 = {			 
+						has_great_project = {
+							type = great_cothon
+							tier = 3
+						}	
+					}
+				"
+				second_effect = "
+					add_adm_power = 100
+					add_treasury = 2500
+				"
+			}
+			custom_tooltip = empty_line_tt
+			341 = {
+				add_province_modifier = {
+					name = car_glory_reclaimed_modifier
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = car_glory_reclaimed_country_modifier
+				duration = 7300
+			}
+		} 
 	}
 
 	pf_car_center_of_enlightenment = {
@@ -774,8 +890,10 @@ car_main_4 = {
 
 		trigger = {  
 			owns_core_province = 163
-			142 = { country_or_non_sovereign_subject_holds = ROOT }
-			4698 = { country_or_non_sovereign_subject_holds = ROOT }
+			OR = {
+				142 = { country_or_non_sovereign_subject_holds = ROOT }
+				4698 = { country_or_non_sovereign_subject_holds = ROOT }
+			}
 		} 
 
 		effect = {  
@@ -910,11 +1028,45 @@ car_main_4 = {
 	pf_car_secure_ports = {
 		icon = mission_secure_hajj_ports
 		position = 7
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			has_port = yes
+			NOT = { development = 10 }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			if = {
+				limit = {
+					ai = no
+				}
+				num_of_owned_provinces_with = {
+					value = 15
+					development = 10
+					has_port = yes
+				}
+			}
+			else = {
+				num_of_owned_provinces_with = {
+					value = 15
+					development = 8
+					has_port = yes
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_yearly_sailors = 4
+			custom_tooltip = empty_line_tt
+			distribute_base_dev_to_provinces = {
+				num = 10
+				amount = 1
+				trigger = "
+					has_port = yes
+				"
+				type = production
+				tooltip = car_port_dev_tt
+			}
+		} 
 	}
 
 	pf_car_rivaling_roma = {
@@ -924,11 +1076,65 @@ car_main_4 = {
 			pf_car_reclaimed_glory
 			pf_car_secure_ports
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				AND = {
+					area = tunisia_area
+					OR = {		
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+						ROOT = { 
+							NOT = {
+								development_in_provinces = {
+									value = 100
+									area = tunisia_area
+								} 
+							}
+						}
+					}
+				}
+				AND = {
+					province_id = 341
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+						NOT = { higher_development_than = 118 }
+						NOT = { is_prosperous = yes }
+					}
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			development_in_provinces = {
+				value = 100
+				area = tunisia_area
+			} 
+			owns_core_province = 341
+			341 = { higher_development_than = 118 }
+			341 = { is_prosperous = yes }
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
+			341 = {
+				add_base_tax = 3
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			custom_tooltip = empty_line_tt
+			341 = {
+				add_province_modifier = {
+					name = car_surpass_roma_modifier
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = car_surpass_roma_modifier_2
+				duration = 7300
+			}
+		} 
 	}
 
 	pf_car_buns_for_the_people = {
@@ -1109,11 +1315,41 @@ car_main_5 = {
 	pf_car_phoenician_trade_routes = {
 		icon = mission_early_game_buildings
 		position = 6
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			OR = {
+				province_has_center_of_trade_of_level = 1
+			}
+			NOT = { province_has_center_of_trade_of_level = 2 }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 3
+				province_has_center_of_trade_of_level = 2
+				has_trade_building_trigger = yes
+			}  
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_dip_power = 100
+			custom_tooltip = empty_line_tt
+			custom_tooltip = car_phoenician_trade_routes_tt
+			tooltip = {				
+				add_base_production = 1
+				add_or_upgrade_trade_building = yes
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						province_has_center_of_trade_of_level = 2
+						has_trade_building_trigger = yes
+					}
+					add_base_production = 1
+					add_or_upgrade_trade_building = yes
+				}
+			}
+		} 
 	}
 
 	pf_car_productive_provinces = {
@@ -1123,11 +1359,41 @@ car_main_5 = {
 			pf_car_phoenician_trade_routes
 			pf_car_secure_ports
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			OR = {
+				trade_goods = iron
+				trade_goods = wool
+				trade_goods = grain
+			}
+			NOT = { has_manufactory_trigger = yes }
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 10
+				has_manufactory_trigger = yes
+				OR = {
+					trade_goods = iron
+					trade_goods = wool
+					trade_goods = grain
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_years_of_owned_provinces_production_income = {
+				years = 3
+				custom_tooltip = car_productive_provinces_tt
+				trigger = {
+					OR = {
+						trade_goods = iron
+						trade_goods = wool
+						trade_goods = grain
+					}
+				}
+			}
+		} 
 	}
 
 	pf_car_clothe_the_citizens = {
