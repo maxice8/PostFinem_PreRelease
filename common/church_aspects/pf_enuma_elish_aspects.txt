@@ -1,0 +1,68 @@
+marduk_aspect = {	# god of babylon + head of pantheon
+	cost = 100
+	trigger = {
+	}
+	modifier = {
+		yearly_absolutism = 0.5
+		global_autonomy = -0.05
+	}
+}
+ashur_aspect = {		# god of assyria + war
+	cost = 100
+	trigger = {
+	}
+	modifier = {
+		land_morale = 0.10
+		defensiveness = 0.10
+	}
+}
+shamash_aspect = {		# god of the sun
+	cost = 100
+	trigger = {
+	}
+	modifier = {
+		stability_cost_modifier = -0.15
+		advisor_cost = -0.10
+	}
+}
+ishtar_aspect = {		# pretty epic
+	cost = 100
+	trigger = {
+	}
+	modifier = {
+		global_trade_goods_size_modifier = 0.05
+		shock_damage = 0.10
+	}
+}
+ninhursag_aspect = {		# goddess of fertility and mountains
+	cost = 100
+	trigger = {
+	}
+	modifier = {
+		diplomatic_reputation = 1
+		development_cost_in_primary_culture = -0.10
+	}
+}
+ereshkigal_aspect = {		# queen of the underworld
+	cost = 100
+	trigger = {
+	}
+	modifier = {
+		global_unrest = -1
+		monarch_lifespan = 0.20
+	}
+}
+# Special ones
+gilgamesh_aspect = {		# hero from the epic of gilgamesh, king of uruk
+	cost = 100
+	trigger = {
+		# going to be a mission completed trigger
+	}
+	modifier = {
+		morale_damage = 0.10
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		republican_tradition = 0.3
+	}
+}

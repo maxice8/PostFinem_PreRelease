@@ -963,3 +963,42 @@ URK_ideas = {
 		caravan_power = 0.25
 	}
 }
+BBY_ideas = {			# Babylonia (NOT the satrapy one)
+	start = {
+		global_institution_spread = 0.25
+		global_autonomy = -0.05
+	}
+	
+	bonus = {
+		administrative_efficiency = 0.05
+	}	
+
+	trigger = {
+		tag = BBY
+	}
+	free = yes
+	
+	bby_babylon_the_great = {
+		core_creation = -0.20
+	}
+	bby_astronomy = {	# and maths
+		technology_cost = -0.1
+	}
+	bby_restored_legacy = {
+		prestige = 1
+		monthly_splendor = 1
+	}
+	bby_agriculture = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	bby_imperial_commanders = {
+		land_morale = 0.15
+	}
+	bby_restoration_of_religion = {
+		missionaries = 1
+	}
+	bby_stories_of_old = {
+		army_tradition = 0.5
+		army_tradition_from_battle = 0.50
+	}
+}

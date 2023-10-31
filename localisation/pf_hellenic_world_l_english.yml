@@ -17,11 +17,67 @@ SHARRU_CONSORT: "Sharru-Consort"
 LUGAL_CONSORT: "Lugal-Consort"
 ERIBU: "Eribu"
 
-URK:0 "Uruk"
-URK_ADJ:0 "Uruk"
+pf_babylonian_empire: "Babylonian Empire"
+pf_babylonian_empire_desc: "Our state represents the restoration of a centuries old empire and set of traditions. We have taken up the mantle of Babylon and raised it even higher than it ever was before."
+
+pf_warriors_of_shamash: "Warriors of Shamash"
+pf_warriors_of_shamash_desc: "Shamash is the god of the sun, and the bringer of justice to all. Let us raise our banners, decorated with his symbolic star, and march into battle with the sword of righteousness in our hands. Traitors and enemies of all kind will be judged!"
+
+# Culture
 
 mesopotamian: "Mesopotamian"
 babylonian: "Babylonian"
+
+# Countries
+
+URK:0 "Uruk"
+URK_ADJ:0 "Uruk"
+BBY:0 "Babylonia"
+BBY_ADJ:0 "Babylonian"
+
+# Religion
+
+mesopotamian_religion_group: "Mesopotamian"
+enuma_elish: "Enuma Elish"
+enuma_elish_religion_desc: "The Mesopotamian gods have been worshipped for thousands of years, but have seen different forms and structures over that time period. The current form, known as Enuma Elish after the first lines of the Babylonian creation story, is the result of the compilation of ancient texts and ritual practices by scholars during the Hellenistic period, and thus is not exactly the same faith worshipped by our ancestors. Nevertheless, it retains the strong cultural ties that are essentially to our identity, but places the gods of old into a more modern and relatable context."
+marduk_aspect: "Marduk"
+desc_marduk_aspect: "Marduk is the primary god of the Babylonians, and has by this time usurped Enlil's role as the head of the Mesopotamian pantheon."
+ashur_aspect: "Ashur"
+desc_ashur_aspect: "Ashur is the primary god of the Assyrians, often associated with the warfare and brutality his empire is well known for."
+shamash_aspect: "Shamash"
+desc_shamash_aspect: "Shamash is the god of the sun and justice. It is said he sees every action as he passes across the sky, and will use this wisdom to judge every soul after they die."
+ishtar_aspect: "Ishtar"
+desc_ishtar_aspect: "Ishtar is a goddess associated with righteous conflict, passion, and lust. Known for her jealousy and antics, she is often appealed too to defend her cities."
+ninhursag_aspect: "Ninhursag"
+desc_ninhursag_aspect: "Ninhursag is the goddess of fertility. Prayer and sacrifices made to her will ensure our children grow strong and our bellies are full."
+ereshkigal_aspect: "Ereshkigal"
+desc_ereshkigal_aspect: "Ereshkigal is the queen of the underworld. Worshipping her helps us to make peace with death, and rest easy in our knowledge of what is to come."
+gilgamesh_aspect: "Gilgamesh"
+desc_gilgamesh_aspect: "Gilgamesh was an ancient king of Uruk, known for his search for immortality in the Epic of Gilgamesh, and who subsequently was elevated to godhood by later generations."
+OLD_GODS: "Old Gods"
+ENUMA_ELISH_ASPECTS: "Deities"
+ENUMA_ELISH_ASPECTS_SHORT: "Deity"
+ENUMA_ELISH_ASPECTS_LONG: "Deities to Patronise"
+ENUMA_ELISH_ASPECTS_POWER_NAME: "Divine Patronage"
+
+###############
+# Decisions
+###############
+
+form_babylonia_title: "Reform Babylonia"
+form_babylonia_desc: "The ancient empire of Babylon was truly a sight to behold, a great hegemon of the known world that has influenced every aspect of the world we know today. With our hearts strong and our head full of the stories of our ancestors, the time has come to proudly proclaim the restoration of this empire, and bring forward its old customs into modern times."
+
+ee_invoke_the_gods_title: "Invoke the Gods"
+ee_invoke_the_gods_desc: "Summon our highest priests to perform a sacrifice to our patron gods, ensuring their favour and bringing great blessings upon the land.\n\n§GWe will gain an additional bonus for each deity that we have selected as an active church aspect.§!"
+ee_invoke_the_gods_cooldown_tt: "This action can only be taken §Yonce§! in a ruler's lifetime."
+pf_invoke_marduk_tt: "§MInvoking Marduk will give us the following effect:§!\nEvery owned province with at least §Y5§! Autonomy gets the following effect:"
+pf_invoke_ashur_tt: "§MInvoking Ashur will give us the following effect:§!"
+pf_invoke_shamash_tt: "§MInvoking Shamash will give us the following effect:§!"
+pf_invoke_ishtar_tt: "§MInvoking Ishtar will give us the following effect:§!"
+pf_invoke_ishtar_income_tt: "from §Y3§! years of production income in owned provinces with §Yfood§! trade goods."
+pf_invoke_ninhursag_tt: "§MInvoking Ninhursag will give us the following effect:§!"
+pf_invoke_ninhursag_effect_tt: "Distribute §Y5§! £mil£ development to random owned provinces."
+pf_invoke_gilgamesh_tt: "§MInvoking Gilgamesh will give us the following effect:§!"
 
 ############## 
 # Ideas
@@ -45,3 +101,22 @@ urk_restore_the_temples: "Restore the Temples"
 urk_restore_the_temples_desc: "Every city in Mesopotamia had its own patron god prior to Hellenisation, with a grand temple within each citadel dedicated to them. Here, personal offerings and sacrifices could be made, and every citizen could feel like they had a personal connection with the divine. Despite such idolatry becoming increasingly shunned by the tyrannical Archon, we should revive this old practice in our territories."
 urk_journeys_and_adventures: "Adventurers and Journeymen"
 urk_journeys_and_adventures_desc: "Inspired by the tales of our ancestors and their conquests, as well as stories of heroes like the demi-god Gilgamesh, a number of our countrymen have journeyed out to the farthest corners of the world, seeking peril and glory. It just so happens that along the way, they learn vital information about the terrain and potential trade routes through these wild lands, leading to many adventurers being hired as a sort of vanguard for powerful mercant guilds."
+
+BBY_ideas: "Babylonian Ideas"
+BBY_ideas_start: "Babylonian Traditions"
+BBY_ideas_bonus: "Babylonian Ambition"
+
+bby_babylon_the_great: "Babylon the Great"
+bby_babylon_the_great_desc: "Old Babylonia was a behemoth, a great power unlike anything else the world had yet seen. Its impact on the cultures around it is undeniable - many peoples trembled in fear upon the mention of the city's name, even using it as an epithet of sorts to describe later hegemonic cities like Carthage. This conception of 'Babylon the Great' is still present in many different customs, and with the restoration of our glorious empire the fears of our neighbours are certain to rapidly rise."
+bby_astronomy: "Astronomy and Mathematics"
+bby_astronomy_desc: "In ancient times Babylonia was a hub of astronomy and mathematics, a place ahead of its time. While many of the techniques and discoveries made by our ancestors have since been rediscovered in the Hellenic world and beyond, there is still room for more work to be done. Let us restore our country as a hub for scholars and the sciences more broadly, ensuring that we are always on the forefront of new knowledge."
+bby_restored_legacy: "An Empire Reborn"
+bby_restored_legacy_desc: "Babylon once controlled the largest empire in the history of the world, and while our state may be modest at the moment, we are sure that one day it will reach the same lofty heights. The world is ours for the taking, and our legitimate claims to vast swathes of territory are known to all. Let the reconquest begin!"
+bby_agriculture: "Mesopotamian Hegemon"
+bby_agriculture_desc: "The land between the two rivers, Mesopotamia, is as famously fertile and populated now just as it was thousands of years ago. Controlling it means we have a monopoly over its vast food production, and can thus control the export of our goods to foreign merchants. Once we have had our share, it would be wise to impose some hefty tariffs on our exported grain and foodstuffs, so that people all over know we are the empire that provides."
+bby_imperial_commanders: "Imperial Commanders"
+bby_imperial_commanders_desc: "Our predecessor empires fell in Mesopotamia fell apart due to the incompetence of their government, tribal invasions, but most significantly, sabotage from within. Even the mightiest state will crumble to ashes if its generals and important governors revolt. Let us be sure to keep the loyalty of the men we elevate to high power, picking them from a hand-selected group of capable noble sons, and granting them great gifts and praise when their tasks are completed well."
+bby_restoration_of_religion: "Restore the Position of the Temples"
+bby_restoration_of_religion_desc: "The temple was once the center of the communities that dotted the region. Priests served as both mediators with the gods and as administrators and diplomats. Those days are gone forever, and the era of formal governance and rapidly growing infrastructure is upon us. However, we will not abandon our communalist instincts so easily - we should restore the position of the temples and their priests, ensuring that the next generation grows up under firm religious guidance, surrounded by family and friends."
+bby_stories_of_old: "Land of Epics"
+bby_stories_of_old_desc: "A great many tales have been told throughout our long and storied history. Perhaps the most well known of these, the Epic of Gilgamesh, has continued in circulation since its creation some time in the distant past. With the growth of the printing industry and a rekindled fascination in old stories, these epics are once more spreading across the land, including far beyond our borders, with new translated and edited editions coming out every year."
