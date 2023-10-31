@@ -7,7 +7,7 @@ PF_Gaul_1 = {
 		tag = GAU
 	}
 	pf_gaul_mainland_4 = {
-		icon = xxx
+		icon = mission_early_game_buildings
 		position = 3
 		required_missions = {
 			pf_gaul_mainland_2
@@ -54,7 +54,7 @@ PF_Gaul_1 = {
 		}
 	}
 	pf_gaul_mainland_5 = {
-		icon = xxx
+		icon = mission_end_the_sound_toll
 		position = 5
 		required_missions = {
 			pf_gaul_mainland_3
@@ -120,7 +120,7 @@ PF_Gaul_1 = {
 		}
 	}
 	pf_gaul_german_4 = {
-		icon = xxx
+		icon = mission_pol_develop_countryside
 		position = 7
 		required_missions = {
 			pf_gaul_mainland_8
@@ -235,7 +235,7 @@ PF_Gaul_1 = {
 		}
 	}
 	pf_gaul_german_5 = {
-		icon = xxx
+		icon = mission_have_manufactories
 		position = 8
 		required_missions = {
 			pf_gaul_german_4
@@ -320,7 +320,7 @@ PF_Gaul_2 = {
 		tag = GAU
 	}
 	pf_gaul_mainland_1 = {
-		icon = xxx
+		icon = mission_modernized_vikings
 		position = 1
 		required_missions = { }
 		provinces_to_highlight = { }
@@ -358,7 +358,7 @@ PF_Gaul_2 = {
 		}
 	}
 	pf_gaul_mainland_2 = {
-		icon = xxx
+		icon = mission_the_hakkapeliitta 
 		position = 2
 		required_missions = {
 			pf_gaul_mainland_1
@@ -409,7 +409,7 @@ PF_Gaul_2 = {
 		}
 	}
 	pf_gaul_mainland_3 = {
-		icon = xxx
+		icon = mission_develop_visby
 		position = 4
 		required_missions = {
 			pf_gaul_mainland_2
@@ -437,7 +437,7 @@ PF_Gaul_2 = {
 		}
 	}
 	pf_gaul_mainland_8 = {
-		icon = xxx
+		icon = mission_expand_into_the_forest
 		position = 6
 		required_missions = { 
 			pf_gaul_mainland_3
@@ -476,7 +476,7 @@ PF_Gaul_2 = {
 		}
 	}
 	pf_gaul_german_1 = {
-		icon = xxx
+		icon = mission_conquer_50_development
 		position = 7
 		required_missions = {
 			pf_gaul_mainland_8
@@ -581,7 +581,7 @@ PF_Gaul_3 = {
 		tag = GAU
 	}
 	pf_gaul_court_5 = {
-		icon = xxx
+		icon = mission_noble_council
 		position = 2
 		required_missions = {
 			pf_gaul_court_1
@@ -607,7 +607,7 @@ PF_Gaul_3 = {
 		}
 	}
 	pf_gaul_mainland_6 = {
-		icon = xxx
+		icon = mission_the_varangians
 		position = 3
 		required_missions = {
 				pf_gaul_mainland_2
@@ -653,7 +653,7 @@ PF_Gaul_3 = {
 		}
 	}
 	pf_gaul_mainland_7 = {
-		icon = xxx
+		icon = mission_fire_of_london
 		position = 5
 		required_missions = {
 			pf_gaul_mainland_6
@@ -700,8 +700,36 @@ PF_Gaul_3 = {
 			}
 		}
 	}
+	pf_gaul_celtica_2 = {
+		icon = imperial_navy
+		position = 6
+		required_missions = {
+			pf_gaul_celtica_1
+		}
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = gau_counting_TT
+				check_variable = {
+					which = gau_naval_battle_won
+					value = 25
+				}
+			}
+			naval_reformer = 2
+			OR = {
+				full_idea_group = naval_ideas
+				navy_tradition = 50
+				num_of_heavy_ship = 35
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = rule_the_waves_GAU
+				duration = -1
+			}
+		}
+	}
 	pf_gaul_german_2 = {
-		icon = xxx
+		icon = consolidate_switzerland
 		required_missions = {
 			pf_gaul_mainland_8
 		}
@@ -737,7 +765,7 @@ PF_Gaul_3 = {
 		}
 	}
 	pf_gaul_german_3 = {
-		icon = xxx
+		icon = fortress_switzerland
 		required_missions = {
 			pf_gaul_german_2
 		}
@@ -795,23 +823,25 @@ PF_Gaul_4 = {
 		tag = GAU
 	}
 	pf_gaul_court_1 = {
-		icon = xxx
+		icon = mission_rb_conquer_the_highlands
 		position = 1
 		required_missions = {
 		}
 		trigger = {
-			has_government_power = {
-				mechanic_type = gaul_confederation_mechanic
-				power_type = gaul_confederation
-				value = 50
-			}
-			estate_loyalty = {
-				estate = all
-				loyalty = 60
+			OR = {
+				has_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 60
+				}
+				estate_loyalty = {
+					estate = all
+					loyalty = 60
+				}
 			}
 		}
 		effect = {
-			add_heir_support = 15
+			add_heir_support = 5
 			add_ruler_modifier = {
 				name = gaul_confederative_leader
 				duration = -1
@@ -819,7 +849,7 @@ PF_Gaul_4 = {
 		}
 	}
 	pf_gaul_court_2 = {
-		icon = xxx
+		icon = the_hungarian_succession
 		position = 2
 		required_missions = {
 			pf_gaul_court_1
@@ -1050,7 +1080,7 @@ PF_Gaul_4_C = {
 	}
 
 	pf_gaul_celtica_1 = {
-		icon = xxx
+		icon = mission_rb_conquer_the_isles 
 		position = 5
 		provinces_to_highlight = {
 			OR = {
@@ -1064,20 +1094,86 @@ PF_Gaul_4_C = {
 		}
 
 		trigger = {
-			calc_true_if = {
-				all_province = {
-					OR = {
-						area = wessex_area
-						area = home_counties_area
-						area = east_anglia_area
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = claim_in_region_GAU
+					calc_true_if = {
+						all_province = {
+							OR = {
+								area = wessex_area
+								area = home_counties_area
+								area = east_anglia_area
+							}
+							is_claim = ROOT
+						}
+						amount = 3
 					}
-					is_claim = ROOT
 				}
-				amount = 1
+				custom_trigger_tooltip = {
+					tooltip = province_in_region_GAU
+					calc_true_if = {
+						all_province = {
+							OR = {
+								area = wessex_area
+								area = home_counties_area
+								area = east_anglia_area
+							}
+							country_or_non_sovereign_subject_holds =  ROOT
+						}
+						amount = 1
+					}
+				}
+				
 			}
+
 		}
 
 		effect = {
+			custom_tooltip = claimed_by_GAU_TT
+			tooltip = {
+				add_province_modifier = {
+					name = claimed_by_GAU
+					duration = 3650
+				}
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						is_claim = ROOT
+						OR = {
+							area = wessex_area
+							area = home_counties_area
+							area = east_anglia_area
+						}
+					}
+					add_province_modifier = {
+						name = claimed_by_GAU
+						duration = 3650
+					}
+				}
+			}
+			custom_tooltip = owned_by_GAU_TT
+			tooltip = {
+				add_province_modifier = {
+					name = staging_grounds
+					duration = 3650
+				}
+			}
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						OR = {
+							area = wessex_area
+							area = home_counties_area
+							area = east_anglia_area
+						}
+					}
+					add_province_modifier = {
+						name = staging_grounds
+						duration = 3650
+					}
+				}
+			}
 			wessex_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -1101,6 +1197,156 @@ PF_Gaul_4_C = {
 			}
 		}
 	}
+	pf_gaul_celtica_3 = {
+		icon = mission_control_the_channel
+		position = 6
+		required_missions = {
+			pf_gaul_celtica_1
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = wessex_area
+				area = home_counties_area
+				area = east_anglia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			wessex_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			home_counties_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_anglia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			1285 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 10
+					key = CONTROLLED_CHANNEL_CEL
+				}
+			}
+			west_midlands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_midlands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			yorkshire_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	pf_gaul_celtica_4 = {
+		icon = mission_rb_scottish_the_darien_scheme
+		position = 7
+		required_missions = {
+			pf_gaul_celtica_3
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = west_midlands_area
+				area = east_midlands_area
+				area = yorkshire_area
+			}
+			NOT = { 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			west_midlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_midlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			yorkshire_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			wales_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			scottish_marches_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = the_druidic_support_TT
+			tooltip = {
+				add_province_modifier = {
+					name = druidic_traditions
+					duration = -1 
+				}
+			}
+		}
+	}
+	pf_gaul_celtica_7 = {
+		icon = mission_rb_unite_the_clans 
+		position = 9
+		required_missions = {
+			pf_gaul_celtica_4
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = wales_area
+				area = scottish_marches_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			wales_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			scottish_marches_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			british_isles_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = will_enable_culture_shifts
+		}
+	}
 }
 PF_Gaul_5 = {
 	slot = 5
@@ -1111,7 +1357,7 @@ PF_Gaul_5 = {
 		tag = GAU
 	}
 	pf_gaul_court_6 = {
-		icon = xxx
+		icon = mission_gain_mana
 		position = 2
 		required_missions = {
 			pf_gaul_court_1
@@ -1314,6 +1560,126 @@ PF_Gaul_5b_branching = {
 			add_ruler_personality = confederation_leader_personality
 			custom_tooltip = enable_confederation_leader_personality_TT
 			custom_tooltip = enable_dual_celtica_TT
+		}
+	}
+}
+PF_Gaul_5C_branching = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GAU
+	}
+
+	pf_gaul_celtica_5 = {
+		icon = mission_rb_conquer_wales
+		position = 7
+		required_missions = {
+			pf_gaul_celtica_3
+		}
+		provinces_to_highlight = {
+			province_id = 234
+			NOT = {
+				OR = {
+					AND = {
+						has_tax_building_trigger = yes
+						base_tax = 10
+					}
+					AND = {
+						fort_level = 2
+						base_manpower = 5
+					}
+				}
+			}
+		}
+		trigger = {
+			234 = {
+				OR = {
+					AND = {
+						has_tax_building_trigger = yes
+						base_tax = 10
+					}
+					AND = {
+						fort_level = 2
+						base_manpower = 5
+					}
+				}
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			OR = {
+				234 = {
+					prosperity = 25
+					has_state_edict = edict_centralization_effort
+				}
+			}
+		}
+		effect = {
+			234 = {
+				change_culture = ROOT
+				change_province_name = "Meinia"
+				add_great_project_tier = {
+					type = stonehenge
+					tier = 1
+				}
+				add_province_modifier = {
+					name = rulers_in_prydain
+					duration = -1
+				}
+			}
+		}
+	}
+	pf_gaul_celtica_6 = {
+		icon = mission_rb_central_belt_coal_mining
+		required_missions = {
+			pf_gaul_celtica_5
+		}
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1861
+				province_id = 4785
+				province_id = 4372
+			}
+			NOT = {
+				has_manufactory_trigger = yes
+				base_production = 8
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			1861 = {
+				has_manufactory_trigger = yes
+				base_production = 8
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4785 = {
+				has_manufactory_trigger = yes
+				base_production = 8
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4372 = {
+				has_manufactory_trigger = yes
+				base_production = 8
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_years_of_owned_provinces_production_income = {
+				years = 5
+				trigger = {
+					OR = {
+						province_id = 1861
+						province_id = 4785
+						province_id = 4372
+					}
+				}
+				custom_tooltip = pf_gaul_celtica_6_tt
+			}
+			add_country_modifier = {
+				name = cheap_soldiers_iron
+				duration = 9125
+			}
 		}
 	}
 }

@@ -86,3 +86,25 @@ buffed_muskets_2 = {
 	land_morale = 0.075	
 	is_musketeer_modifier = yes	
 }
+claimed_by_GAU = {
+	local_warscore_cost_modifier = -0.25
+}
+staging_grounds = {
+	local_defensiveness = 0.25
+	local_defender_dice_roll_bonus = 1
+}
+rule_the_waves_GAU = {
+	max_flagships = 1	
+	flagship_cost = -0.25
+}
+druidic_traditions = {
+	local_manpower_modifier = 0.05
+}
+rulers_in_prydain = {
+	num_accepted_cultures = 1	
+	local_production_efficiency = 0.05
+}
+cheap_soldiers_iron = {
+	infantry_cost = -0.25
+	land_maintenance_modifier = -0.05
+}

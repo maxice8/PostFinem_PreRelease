@@ -7,6 +7,37 @@
 pf_gaul_court_3_title: "Centralizing the Touta"
 pf_gaul_court_3_desc: "Gaul has been divided between toute lines for centuries now, while weak Rigas fail to unify and control their roudy populace. A strong line must take charge and unfiy the country against all internal threats!"
 pf_gaul_court_7_title: "Patriarchs of Gaul"
+pf_gaul_celtica_5_title: "Rigas of the Britons"
+locked_mission_GAUL_1: "Locked Mission"
+pf_gaul_court_4a_title: "The Absolute Galatoria"
+pf_gaul_court_8_title: "Unify the Confederation"
+pf_gaul_court_4b_title: "The Gallic Constitution"
+pf_gaul_court_9_title: "The Nations of Celtica"
+pf_gaul_celtica_2_title: "A Galatorian Navy"
+pf_gaul_mainland_1_title: "Rebuild the Army"
+pf_gaul_mainland_2_title: "Rout the Belgica"
+pf_gaul_mainland_3_title: "The Raiders of Gravenhag"
+pf_gaul_mainland_4_title: "Managing the Nervii"
+pf_gaul_mainland_5_title: "Rebirth of the Frisii"
+pf_gaul_mainland_6_title: "Raid on the Alemanni"
+pf_gaul_mainland_7_title: "Control the Rhine"
+pf_gaul_mainland_8_title: "Our Natural Borders"
+pf_gaul_german_1_title: "The Conquest of the Tribes"
+pf_gaul_german_2_title: "Dominating the Alps"
+pf_gaul_german_3_title: "Return of the Helvetii"
+pf_gaul_german_4_title: "The Mines of Germania"
+pf_gaul_german_5_title: "Burgeoning Industry"
+pf_gaul_court_1_title: "The Gallic League"
+pf_gaul_court_2_title: "The Passing of Dubnorix"
+pf_gaul_court_5_title: "Restrain the Rixolar"
+pf_gaul_court_6_title: "Align the Druids"
+pf_gaul_celtica_1_title: "Across the Pond"
+pf_gaul_celtica_3_title: "Lord of the Celtic Channel"
+pf_gaul_celtica_4_title: "Defeat of the Britons"
+pf_gaul_celtica_6_title: "Iron of Prydain"
+pf_gaul_celtica_7_title: "The Twin Celticas"
+
+
 
 #Mission Modifiers
 end_the_raids_GAU: "End the Raids"
@@ -15,13 +46,12 @@ rebuilding_helvetica: "Rebuilding of Helvetia"
 centralization_gaul: "Centralization of Gaul"
 locked_mission_GAUL_1_title: "Locked Mission"
 locked_mission_GAUL_2_title: "Locked Mission"
+rule_the_waves_GAU: "Rule the Waves"
+druidic_traditions: "Druidic Traditions"
+rulers_in_prydain: "New Seat of Power"
 
 
-locked_mission_GAUL_1: "Locked Mission"
-pf_gaul_court_4a_title: "The Absolute Galatoria"
-pf_gaul_court_8_title: "Unify the Confederation"
-pf_gaul_court_4b_title: "The Gallic Constitution"
-pf_gaul_court_9_title: "The Nations of Celtica"
+
 
 #Mission Tooltips
 maybe_an_event_tt: "To do - maybe an event?\n"
@@ -37,13 +67,17 @@ enable_icon_lugus_TT:  "We will gain access to the Icon the §YRite of Lugus§!,
 tolerance_gaul_TT: "If we complete this mission by having a Tolerance of Heathens of 3"
 sacred_spaces_gaul_TT: "§YTemples§! and §YCathedrals§! in Heathen or Heretic Provinces will now grant §Y-100%§! Religious Unity Contribution."
 tolerance_3_higher_TT: "§YGaul§! has a Tolerance of Heathens of §Y3§!."
-
+claim_in_region_GAU: "Have at least §Y3§! Province Claims in the §YOghrann§!, §YMordeyrn§!, or §YGwlyptir§! Area\n"
+province_in_region_GAU: "Have at least §Y1§! Owned Province in the §YOghrann§!, §YMordeyrn§!, or §YGwlyptir§! Area"
+owned_by_GAU_TT: "If we own a province in the §YOghrann§!, §YMordeyrn§!, or §YGwlyptir§! Area, it will gain the following:"
+claimed_by_GAU_TT: "All claimed provinces in the §YOghrann§!, §YMordeyrn§!, or §YGwlyptir§! Areas will gain the following:"
+the_druidic_support_TT: "\nUpon Completing this mission, §YDedicating Land§! will also grant the following modifier:"
 allemania_mercenary_TT: "We shall enslave the warriors of §YAlemannia§! and gain access to the §YAlemannian Thralls§! Mercenary Company\n\n"
 merc_alemannian_war_slaves: "Alemannian Thralls"
 enable_the_germanic_wars: "This will enable the §YGermanic Campaigns§! Casus Belli."
+pf_gaul_celtica_6_tt: "from §Y5§! Years of §YIron§! produced in §Y[4372.GetName]§!, §Y[1861.GetName]§!, and §Y[4785.GetName]§!."
+will_enable_culture_shifts: "This will enable decisions to shift the cultures within the Celtic group to the Gallic group."
 
-pf_germanic_vassal: "Germanic Vassal"
-pf_germanic_vassal_desc: "We have been conquered by the mighty Gallic Empire. We cannot to resist them, only rule underneath their thumb."
 
 own_germany_yourself_TT: "If we complete this mission while §Ydirectly owning 28§! provinces in the §YNorth Germania§! Region or the §YSudwaldia§! Region, we will gain the following:"
 
@@ -52,10 +86,12 @@ iron_mines_TT: "\nIf we complete this mission by improving Iron provinces, we wi
 natural_scientist_TT: "\n§YNatural Scientists§! will grant us a scaled modifier of §G-2%§! Technology Cost."
 furance_building_TT: "\nIf we complete this mission while having §YAdministrative Technology§! level §Y21§!, these provinces will also gain §YFurnaces§!."
 carantus_counting_TT: "Secure a §YGallic Election§! with the §YCarantus§! dynasty at least 3 times. Current: §T[Root.counting_carantus.GetValue]§!."
+gau_counting_TT: "Win at least 25 §YNaval Battles§!. Current: §T[Root.gau_naval_battle_won.GetValue]§!"
 carantus_counting: "Carantus Succession"
 estate_nobles_mission_5_TT: "Have more Crownland than the Rixolar Estate"
 enable_lugundia_TT: "This will enable the Parliament Act §YPush for the Border Regions§!, which must be completed in order to enable the Act §YForge the Lugundian Era§!.\n\nThis will allow us to create the nation of @LUG §TLugundia§!"
 enable_dual_celtica_TT: "This will enable the decision to form the nation of @DCL §TDual Celticas§!."
+CONTROLLED_CHANNEL_CEL: "Controlling the Channel"
 
 pf_gaul_politics_1_TT: "If we complete this mission §Ywith the Dynasty§! §TCarantus§!, it will enable the §YAbsolute Gallic Monarchy§! path.\nThis will also prevent §Yrebels from spawning§! when §YSeizing Land§!\n\n"
 pf_gaul_politics_2_TT: "If we complete this mission §Ywithout the Dynasty§! §TCarantus§!, it will enable the §YGallic Parliament§! path.\nThis will also Negate the Estate Loyalty penalty from §YSeizing Land§! by §Y10%§!\n"
@@ -89,6 +125,15 @@ DCL_ADJ: "Celtic"
 LUG: "Lugundia"
 LUG_ADJ: "Lugundian"
 
+#Cultures
+
+gallo_briton: "Gallo-Briton"
+gallo_welsh: "Gallo-Welsh"
+gallo_irish: "Gallo-Hibernian"
+gallo_cornish: "Gallo-Cornish"
+gallo_highlander: "Gallo-Highlander"
+gallo_pictish: "Gallo-Pict"
+
 helvetii: "Helvetii"
 helvetii_adj: "Helvetiian"
 
@@ -107,6 +152,10 @@ pf_gallic_parliament_desc: "The Gallic Confederation has morphed into the Parlia
 
 mechanic_buffed_advisors_GAU_yes: "Advisors Grant §G+0.02§! Scaled §YGallic Centralization§!"
 
+pf_germanic_vassal: "Germanic Vassal"
+pf_germanic_vassal_desc: "We have been conquered by the mighty Gallic Empire. We cannot to resist them, only rule underneath their thumb."
+
+
 PF_political_one: "Absolutist Path"
 
 confederation_reform: "Reinforce Gallic Unity"
@@ -124,3 +173,27 @@ confederation_leader_personality: "Confederation Leader"
 confederation_leader_personality_desc: "This Ruler is a Confederation Leader. They have united the Celtic peoples underneath their watchful eye, and seek to further solidify their rule. They shall challenge any threat, domestic or foreign, and bring their nation into the modern age."
 desc_confederation_leader_personality: "This Ruler is a Confederation Leader. They have united the Celtic peoples underneath their watchful eye, and seek to further solidify their rule. They shall challenge any threat, domestic or foreign, and bring their nation into the modern age."
 
+#Estates
+briton_gallic_decision_title: "Integrate the Britons"
+briton_gallic_decision_desc: "The Britons, while distant, are related to us through a shared Celtic heritage. We must bring them into out empire!"
+irish_gallic_decision_title: "Integrate the Irish"
+highlander_gallic_decision_title: "Integrate the Highlanders"
+cornish_gallic_decision_title: "Integrate the Cornish"
+pictish_gallic_decision_title: "Integrate the Picts"
+welsh_gallic_decision_title: "Integrate the Welsh"
+
+own_and_core_all_briton_TT: "Own and Core all §YBriton§! Provinces"
+own_and_core_all_pictish_TT: "Own and Core all §YPictish§! Provinces"
+own_and_core_all_welsh_TT: "Own and Core all §YWelsh§! Provinces"
+own_and_core_all_cornish_TT: "Own and Core all §YCornish§! Provinces"
+own_and_core_all_highland_TT: "Own and Core all §YHighlander§! Provinces"
+own_and_core_all_irish_TT: "Own and Core all §YIrish§! Provinces"
+
+
+
+gallo_briton_TT: "This will move the §YBriton§! culture into the §YGallic§! Group. All owned §YBriton§! provinces will become §YGallo-Briton§!."
+gallo_old_welsh_TT: "This will move the §YWelsh§! culture into the §YGallic§! Group. All owned §YWelsh§! provinces will become §YGallo-Welsh§!."
+gallo_pictish_TT: "This will move the §YPictish§! culture into the §YGallic§! Group. All owned §YPictish§! provinces will become §YGallo-Pict§!."
+gallo_cornish_TT: "This will move the §YCornish§! culture into the §YGallic§! Group. All owned §YCornish§! provinces will become §YGallo-Cornish§!."
+gallo_highlander_TT: "This will move the §YHighlander§! culture into the §YGallic§! Group. All owned §YHighlander§! provinces will become §YGallo-Highlander§!."
+gallo_irish_TT: "This will move the §YIrish§! culture into the §YGallic§! Group. All owned §YIrish§! provinces will become §YGallo-Hibernian§!."

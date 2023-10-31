@@ -1,0 +1,338 @@
+country_decisions = {
+	
+	briton_gallic_decision = {
+		major = yes
+		potential = {
+			NOT = {
+				has_global_flag = briton_gallic_flag
+			}
+			mission_completed = pf_gaul_celtica_7
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = own_and_core_all_briton_TT
+				NOT = {
+					any_province = {
+						culture = briton
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+				}
+			}
+			accepted_culture = briton
+			245 = {
+				has_great_project = {
+					type = cadarnle_coel
+					tier = 1
+				}
+				development = 15
+			}
+		}
+		effect = {
+			custom_tooltip = gallo_briton_TT
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = briton
+					}
+					change_culture = gallo_briton
+				}
+				remove_accepted_culture = briton
+			}
+			if = {
+				limit = {
+					government_rank = 3
+				}
+				add_prestige_or_monarch_power = yes
+			}
+			else = {
+				add_accepted_culture = gallo_briton
+			}
+			set_global_flag = briton_gallic_flag
+		}
+	}
+	
+	welsh_gallic_decision = {
+		major = yes
+		potential = {
+			NOT = {
+				has_global_flag = welsh_gallic_flag
+			}
+			mission_completed = pf_gaul_celtica_7
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = own_and_core_all_welsh_TT
+				NOT = {
+					any_province = {
+						culture = old_welsh
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+				}
+			}
+			accepted_culture = old_welsh
+			calc_true_if = {
+				all_province = {
+					culture = old_welsh
+					development = 15
+				}
+				amount = 5
+			}
+		}
+		effect = {
+			custom_tooltip = gallo_old_welsh_TT
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = old_welsh
+					}
+					change_culture = gallo_welsh
+				}
+				remove_accepted_culture = old_welsh
+			}
+			if = {
+				limit = {
+					government_rank = 3
+				}
+				add_prestige_or_monarch_power = yes
+			}
+			else = {
+				add_accepted_culture = gallo_welsh
+			}
+			set_global_flag = welsh_gallic_flag
+		}
+	}
+
+	pictish_gallic_decision = {
+		major = yes
+		potential = {
+			NOT = {
+				has_global_flag = pictish_gallic_flag
+			}
+			mission_completed = pf_gaul_celtica_7
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = own_and_core_all_pictish_TT
+				NOT = {
+					any_province = {
+						culture = pictish
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+				}
+			}
+			accepted_culture = pictish
+			248 = {
+				religion = ROOT
+				has_courthouse_building_trigger = yes
+				fort_level = 2
+				has_manpower_building_trigger = yes
+				development = 20
+			}
+		}
+		effect = {
+			custom_tooltip = gallo_pictish_TT
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = pictish
+					}
+					change_culture = gallo_pictish
+				}
+				remove_accepted_culture = pictish
+			}
+			if = {
+				limit = {
+					government_rank = 3
+				}
+				add_prestige_or_monarch_power = yes
+			}
+			else = {
+				add_accepted_culture = gallo_pictish
+			}
+			set_global_flag = pictish_gallic_flag
+		}
+	}
+
+	highlander_gallic_decision = {
+		major = yes
+		potential = {
+			NOT = {
+				has_global_flag = highland_gallic_flag
+			}
+			mission_completed = pf_gaul_celtica_7
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = own_and_core_all_highland_TT
+				NOT = {
+					any_province = {
+						culture = old_highland_scottish 
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+				}
+			}
+			accepted_culture = old_highland_scottish 
+			4365 = {
+				religion = ROOT
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+				development = 20
+			}
+		}
+		effect = {
+			custom_tooltip = gallo_highlander_TT
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = old_highland_scottish 
+					}
+					change_culture = gallo_highlander
+				}
+				remove_accepted_culture = old_highland_scottish 
+			}
+			if = {
+				limit = {
+					government_rank = 3
+				}
+				add_prestige_or_monarch_power = yes
+			}
+			else = {
+				add_accepted_culture = gallo_highlander
+			}
+			set_global_flag = highland_gallic_flag
+		}
+	}
+
+	irish_gallic_decision = {
+		major = yes
+		potential = {
+			NOT = {
+				has_global_flag = irish_gallic_flag
+			}
+			mission_completed = pf_gaul_celtica_7
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = own_and_core_all_irish_TT
+				NOT = {
+					any_province = {
+						culture = old_irish
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+				}
+			}
+			accepted_culture = old_irish 
+			373 = {
+				religion = ROOT
+				has_great_project = {
+					type = lia_fail
+					tier = 1
+				}
+				development = 15
+			}
+		}
+		effect = {
+			custom_tooltip = gallo_irish_TT
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = old_irish
+					}
+					change_culture = gallo_irish
+				}
+				remove_accepted_culture = old_irish
+			}
+			if = {
+				limit = {
+					government_rank = 3
+				}
+				add_prestige_or_monarch_power = yes
+			}
+			else = {
+				add_accepted_culture = gallo_irish
+			}
+			set_global_flag = irish_gallic_flag
+		}
+	}
+	cornish_gallic_decision = {
+		major = yes
+		potential = {
+			NOT = {
+				has_global_flag = cornish_gallic_flag
+			}
+			mission_completed = pf_gaul_celtica_7
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = own_and_core_all_cornish_TT
+				NOT = {
+					any_province = {
+						culture = old_cornish 
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+				}
+			}
+			accepted_culture = old_cornish  
+			233 = {
+				religion = ROOT
+				development = 15
+			}
+			4373 = {
+				religion = ROOT
+				development = 15
+			}
+		}
+		effect = {
+			custom_tooltip = gallo_irish_TT
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = old_cornish 
+					}
+					change_culture = gallo_cornish
+				}
+				remove_accepted_culture = old_cornish 
+			}
+			if = {
+				limit = {
+					government_rank = 3
+				}
+				add_prestige_or_monarch_power = yes
+			}
+			else = {
+				add_accepted_culture = gallo_cornish
+			}
+			set_global_flag = cornish_gallic_flag
+		}
+	}
+}

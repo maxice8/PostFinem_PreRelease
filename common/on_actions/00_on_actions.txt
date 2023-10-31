@@ -103,6 +103,22 @@ on_startup = {
 		}
 		set_country_flag = begin_counting_carantus
 	}
+	if = {
+		limit = {
+			tag = GAU
+			NOT = {
+				mission_completed = pf_gaul_celtica_2
+			}
+			NOT = {
+				has_country_flag = begin_counting_naval_GAU
+			}
+		}
+		set_variable = {
+			which = gau_naval_battle_won
+			value = 0
+		}
+		set_country_flag = begin_counting_naval_GAU
+	}
 }	
 
 # country
@@ -480,14 +496,14 @@ on_battle_won_country = {
 	on_battle_won_country_effect = yes
 	if = {
 		limit = {	
-			owner = { has_government_mechanic = gaul_confederation_mechanic } 
+			ROOT = { has_government_mechanic = gaul_confederation_mechanic } 
 		}
 		add_government_power = {
 			mechanic_type = gaul_confederation_mechanic
 			power_type = gaul_confederation
-			value = 0.1
+			value = 0.5
 		}
-	}
+	}	
 }
 
 # country
@@ -495,16 +511,6 @@ on_battle_won_country = {
 on_battle_lost_country = {
 	on_battle_ended_effect = yes
 	battle_cult_spreading_effect = yes #Scripted effect for fetishist cult mechanics.
-	if = {
-		limit = {	
-			owner = { has_government_mechanic = gaul_confederation_mechanic } 
-		}
-		add_government_power = {
-			mechanic_type = gaul_confederation_mechanic
-			power_type = gaul_confederation
-			value = -0.1
-		}
-	}
 	random_events = {
 		90 = 0
 		10 = friendship_events.1 #Historical Friendship Broken
@@ -632,6 +638,27 @@ on_battle_won_unit = {
 		unit_owner = {
 			change_variable = {
 				which = jean_bureau_battles_won 
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			unit_owner = {
+				OR = {
+					tag = GAU
+					tag = LUG
+					tag = DLC
+				}
+				NOT = { mission_completed = pf_gaul_celtica_2 }	
+			}
+			location = {
+				is_sea = yes
+			}	
+		}
+		unit_owner = {
+			change_variable = {
+				which = gau_naval_battle_won
 				value = 1
 			}
 		}
@@ -4783,6 +4810,19 @@ on_consecrate_patriarch = {
 			limit = { has_state_patriach = yes }
 			add_province_modifier = {
 				name = consecrated_ground
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = { mission_completed = pf_gaul_celtica_4 }
+		}
+		every_province_in_state = {
+			limit = { has_state_patriach = yes }
+			add_province_modifier = {
+				name = druidic_traditions
 				duration = -1
 				hidden = yes
 			}
