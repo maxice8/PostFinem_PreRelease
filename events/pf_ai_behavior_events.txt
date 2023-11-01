@@ -27,14 +27,24 @@ country_event = {
 	immediate = {
 		every_country = {
 			limit = {
-				reverse_has_opinion_modifier = {
-					who = PREV
-					modifier = ai_wants_land
+				OR = {
+					reverse_has_opinion_modifier = {
+						who = PREV
+						modifier = ai_wants_land
+					}
+					reverse_has_opinion_modifier = {
+						who = PREV
+						modifier = ai_REALLY_wants_land
+					}
 				}
 			}
 			reverse_remove_opinion = {
 				who = PREV
 				modifier = ai_wants_land
+			}
+			reverse_remove_opinion = {
+				who = PREV
+				modifier = ai_REALLY_wants_land
 			}
 		}
 		every_neighbor_country = {
@@ -55,6 +65,18 @@ country_event = {
 				}
 				reverse_add_opinion = {
 					who = PREV
+					modifier = ai_REALLY_wants_land
+				}
+			}
+			if = {
+				limit = {
+					num_of_owned_provinces_with = {
+						value = 6
+						is_permanent_claim = ROOT
+					}
+				}
+				reverse_add_opinion = {
+					who = PREV
 					modifier = ai_wants_land
 					multiplier = 4
 				}
@@ -62,7 +84,7 @@ country_event = {
 			else_if = {
 				limit = {
 					num_of_owned_provinces_with = {
-						value = 6
+						value = 4
 						is_permanent_claim = ROOT
 					}
 				}
@@ -76,7 +98,7 @@ country_event = {
 			else_if = {
 				limit = {
 					num_of_owned_provinces_with = {
-						value = 4
+						value = 3
 						is_permanent_claim = ROOT
 					}
 				}
