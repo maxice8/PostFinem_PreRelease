@@ -11,7 +11,10 @@ estate_church_pf_ksb_corrupt_church = {
 	}
 	
 	can_revoke = {
-		always = no
+		custom_trigger_tooltip = {
+			tooltip = ksb_corrupt_church_decision_tt
+			always = no
+		}
 	}
 	
 	benefits = {
