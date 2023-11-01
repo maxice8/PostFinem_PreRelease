@@ -22,6 +22,9 @@ pf_nrd_1 = {
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
+		ai_weight = {
+			factor = 500
+		}
 
 		trigger = {
 			lowlands_area = {
@@ -53,6 +56,9 @@ pf_nrd_1 = {
 		icon = mission_che_the_cave_country
 		position = 4
 		required_missions = { pf_nrd_welsh_domain } 
+		ai_weight = {
+			factor = 800
+		}
 		provinces_to_highlight = { 
 			OR = {
 				AND = {
@@ -539,6 +545,9 @@ pf_nrd_3 = {
 			pf_nrd_raise_host
 			pf_nrd_brothers
 		}
+		ai_weight = {
+			factor = 500
+		}
 		provinces_to_highlight = {
 			area = scottish_marches_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
@@ -567,6 +576,9 @@ pf_nrd_3 = {
 		icon = mission_rb_into_england
 		position = 3
 		required_missions = { pf_nrd_expand_southward } 
+		ai_weight = {
+			factor = 800
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = yorkshire_area
@@ -611,6 +623,9 @@ pf_nrd_3 = {
 	pf_nrd_celtic_isles = {
 		icon = mission_rb_rule_britannia_irish_version
 		position = 4
+		ai_weight = {
+			factor = 1000
+		}
 		required_missions = {
 			pf_nrd_welsh_domain
 			pf_nrd_king_of_the_who
@@ -817,6 +832,9 @@ pf_nrd_4 = {
 		required_missions = {
 			pf_nrd_galleys_with_good_oars
 			pf_nrd_expand_southward
+		}
+		ai_weight = {
+			factor = 500
 		}
 		provinces_to_highlight = {
 			OR = {
