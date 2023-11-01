@@ -274,6 +274,11 @@ IS_HRE_HERETIC_RELIGION:0 "§Y$RELIGION$§! is the opposition faith of the Itali
  EMPEROR_CANNOT_JOIN_LEAGUE:0 "§R- The Adririm cannot join or leave a League.§!"
  NOT_DISCOVERED_HRE:0 "§R- We have not discovered the Italian Federation!§!"
  HRE_ON_OTHER_CONTINENT:0 "§R- We cannot join a League if our capital is on a different continent than the Italian Federation.§!"
+ BAN_WAR_NAME:0 "$ORDER$Federal Reclamation of $PROVINCE$"
+ CONFORMANCE_WAR_NAME:0 "$ORDER$Federal-$SECOND$ War of Conformance"
+ HRE_DEFENSE_WAR_NAME:0 "$ORDER$Federal Intervention"
+ EXCOM_WAR_NAME:0 "$ORDER$$FIRST$-$SECOND$ Ostracization War"
+ cb_liberate_elector_desc:0 "They have vassalized an Elector of the Italian Federation."
 
 #Modifiers
  MODIFIER_MAY_SIBERIAN_FRONTIER:0 "Ability to establish Colonial Frontiers"

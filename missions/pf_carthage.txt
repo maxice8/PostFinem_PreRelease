@@ -244,6 +244,9 @@ car_main_2 = {
 			}
 			corsica_area = { add_permanent_claim = ROOT }
 		} 
+		ai_weight = {
+			factor = 500
+		} 
 	}
 
 	pf_car_mediterranean_dominance = {
@@ -282,6 +285,9 @@ car_main_2 = {
 				name = car_mediterranean_dominance_modifier
 				duration = 7300
 			}
+		} 
+		ai_weight = {
+			factor = 500
 		} 
 	}
 
@@ -555,7 +561,7 @@ car_main_3 = {
 			}
 		} 
 		ai_weight = {
-			factor = 500
+			factor = 800
 		} 
 	}
 
@@ -599,7 +605,7 @@ car_main_3 = {
 			}
 		} 
 		ai_weight = {
-			factor = 500
+			factor = 800
 		} 
 	}
 
@@ -638,7 +644,7 @@ car_main_3 = {
 			}
 		} 
 		ai_weight = {
-			factor = 500
+			factor = 800
 		} 
 	}
 	pf_car_gallic_campaigns = {
@@ -685,7 +691,7 @@ car_main_3 = {
 			}
 		}
 		ai_weight = {
-			factor = 500
+			factor = 800
 		}  
 	}
 
@@ -950,7 +956,7 @@ car_main_4 = {
 			}
 		} 
 		ai_weight = {
-			factor = 500
+			factor = 800
 		} 
 	}
 
@@ -991,6 +997,9 @@ car_main_4 = {
 				add_permanent_claim = ROOT
 			}
 		} 
+		ai_weight = {
+			factor = 500
+		} 
 	}
 
 	pf_car_the_motherland_beckons = {
@@ -1023,6 +1032,9 @@ car_main_4 = {
 			mashriq_region = {
 				add_permanent_claim = ROOT
 			}
+		} 
+		ai_weight = {
+			factor = 500
 		} 
 	}
 
@@ -1331,6 +1343,9 @@ car_main_5 = {
 				id = pf_car.1
 			}
 		}
+		ai_weight = {
+			factor = 500
+		} 
 	}
 
 	pf_car_phoenician_strongholds = {
@@ -1363,6 +1378,9 @@ car_main_5 = {
 					duration = -1
 				}
 			}
+		} 
+		ai_weight = {
+			factor = 500
 		} 
 	}
 
