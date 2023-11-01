@@ -9,6 +9,7 @@ country_decisions = {
 		}
 
 		allow = {
+			has_institution = feudalism
 			OR = {
 				AND = {
 					adm_tech = 7
