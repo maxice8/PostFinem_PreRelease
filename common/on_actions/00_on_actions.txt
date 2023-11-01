@@ -2077,6 +2077,12 @@ on_dip_development = {
 		add_prosperity = 1
 		owner = { add_prestige = 0.5 }
 	}
+	if = {
+		limit = {
+			owner = { has_country_modifier = pf_bby_prod_bonus_timer }
+		}
+		add_base_production = 1
+	}
 }
 
 # province

@@ -46,7 +46,7 @@ archon_philosophy_skepticism = {
         cardinals_spread_institution
     }
     modifier = {
-        global_institution_spread = 0.25
+        global_institution_spread = 0.10
         embracement_cost = -0.10
     }
 	potential = {
@@ -60,6 +60,9 @@ archon_philosophy_skepticism = {
 }
 
 archon_philosophy_stoicism = {
+    mechanics = {
+        crusades_after_age_limit
+    }
     modifier = {
         morale_damage_received = -0.10
     }
@@ -75,8 +78,7 @@ archon_philosophy_stoicism = {
 
 archon_philosophy_archonism = {
     modifier = {
-        all_estate_influence_modifier = -0.05
-        global_autonomy = -0.05
+        development_cost = -0.05
     }
 	potential = {
 	}

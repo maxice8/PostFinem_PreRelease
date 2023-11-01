@@ -609,3 +609,33 @@ pf_warriors_of_shamash = {
 		factor = 0.5 #generic
 	}
 }
+pf_kudurru_reform = {
+	icon = "kudurru"
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = pf_unlocked_kudurru
+	}
+	modifiers = {
+		production_efficiency = 0.10
+		diplomatic_annexation_cost = -0.10
+		nobles_loyalty_modifier = 0.05
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+pf_nepustu_tax = { 	# Nēpeštu tax
+	icon = "pf_merchant_virtues"
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = pf_unlocked_nepustu_tax
+	}
+	modifiers = {
+		build_cost = -0.10
+		build_time = -0.15
+		expand_infrastructure_cost_modifier = -0.50
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}

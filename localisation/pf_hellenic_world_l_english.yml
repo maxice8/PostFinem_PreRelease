@@ -23,6 +23,12 @@ pf_babylonian_empire_desc: "Our state represents the restoration of a centuries 
 pf_warriors_of_shamash: "Warriors of Shamash"
 pf_warriors_of_shamash_desc: "Shamash is the god of the sun, and the bringer of justice to all. Let us raise our banners, decorated with his symbolic star, and march into battle with the sword of righteousness in our hands. Traitors and enemies of all kind will be judged!"
 
+pf_kudurru_reform: "Kudurru System"
+pf_kudurru_reform_desc: "Kudurru are great stone monoliths used to officiate land grants from the crown to its subjects. The proper implimentation of this system ensures the loyalty of our nobles and vassals alike."
+
+pf_nepustu_tax: "Nepeštu Tax"
+pf_nepustu_tax_desc: "The output of our nation is huge, from the most lowly farmer to most skilled craftsman. Instead of taxing raw goods, we could gain more money by focusing on the completed product, as well as encourage further industrial innovation."
+
 # Culture
 
 mesopotamian: "Mesopotamian"
@@ -121,6 +127,43 @@ bby_restoration_of_religion_desc: "The temple was once the center of the communi
 bby_stories_of_old: "Land of Epics"
 bby_stories_of_old_desc: "A great many tales have been told throughout our long and storied history. Perhaps the most well known of these, the Epic of Gilgamesh, has continued in circulation since its creation some time in the distant past. With the growth of the printing industry and a rekindled fascination in old stories, these epics are once more spreading across the land, including far beyond our borders, with new translated and edited editions coming out every year."
 
+PMY_ideas: "Palmyrene Ideas"
+PMY_ideas_start: "Palmyrene Traditions"
+PMY_ideas_bonus: "Palmyrene Ambition"
+
+pmy_on_trade_routes: "Between Nowhere and Somewhere"
+pmy_on_trade_routes_desc: "Palmyra was founded as a city on a trade route, and that trade has continued to comprise much of the local economy ever since. While our town is remote and often tricky to get to, it is a tranquil piece of shade in a vast and unforgiving desert. Let us use this prime position to attract merchants from all corners of the world to stop and use our services."
+pmy_desert_terrain: "Amongst the Sand"
+pmy_desert_terrain_desc: "The sand is everywhere. The sand is eternal. No matter where you look, there is sand. Sand on that dune, sand on the horizon. Coarse, rough, sand. We never really liked sand."
+pmy_camel_riders: "Palmyrene Camel Riders"
+pmy_camel_riders_desc: "Our town has been under attack many different times over the centuries, but most of them were fended off my our ferocious camel riders. Enemy armies, often on horseback, turn and flee at the sight of our finely trained beasts. Not only are they scary looking to foreigners, they are also expert desert navigators and survivors."
+pmy_silk_road: "Silk Road Entrepot"
+pmy_silk_road_desc: "The Silk Road runs from the far-off land of China all the way to Carthage, and carries with it goods of all kinds from silk to silver. Palmyra was built as a station along this route, serving wearing travellers and merchants with a place to rest and a fresh flask of water. During their stays here, we can often tempt these merchants to part with some of these goods, bringing great riches to our town."
+pmy_soldier_rations: "Managed Soldier Rations"
+pmy_soldier_rations_desc: "The long journeys across the desert to reach neighbouring towns drain both our spirits and our food reserves. If we wish to properly manage our armies in this tough climate, we must learn from the local tribal people who move through it every day with ease. A new way of rationing and storing our food must be implimented."
+pmy_oases: "An Island of Prosperity"
+pmy_oases_desc: "Our oasis is the lifeblood of our city. Without the comforting embrace of the lush greenery and the cool water, life in the desert would be practically impossible."
+pmy_dreams_of_empire: "Dreams of Empire"
+pmy_dreams_of_empire_desc: "Many people have reported having strange dreams. The story is often similar, and involves a respected figure showing them around what seems to be some kind of parallel version of our world. In that universe, Palmyra created a great empire, encompassing much of the eastern Mediterranean, and its rulers were known to historians even thousands of years later. While we may not reach such imaginary grandeur, we can certainly hold close to our hearts the united spirit we all share."
+
+AVR_ideas: "Avarian Ideas"
+AVR_ideas_start: "Avarian Traditions"
+AVR_ideas_bonus: "Avarian Ambition"
+
+avr_avar_kingdom: "The Avar Kingdom"
+avr_avar_kingdom_desc: ""
+avr_servants_of_empires: "Servants of Empires"
+avr_servants_of_empires_desc: ""
+avr_grazing_land: "Claim the Steppes"
+avr_grazing_land_desc: ""
+avr_warriors: "Warrior's Life"
+avr_warriors_desc: ""
+avr_caucasian_fortresses: "Caucasian Fortifications"
+avr_caucasian_fortresses_desc: ""
+avr_hellenic_literature: "Import Hellenic Literature"
+avr_hellenic_literature_desc: ""
+avr_modernising: "Reform the Administration"
+avr_modernising_desc: ""
 
 ################
 # Events
@@ -136,12 +179,23 @@ pf_bby.2.t: "Prosperity in Mesopotamia"
 pf_bby.2.d: "Our conquest of Mesopotamia has brought peace and stability to an area that is all too often torn apart by wars and internal strife. The people feel safe under our governance, and for the first time in generations, the bountiful harvests the region is famous for are being reaped in full once more. Truly, this is a new golden age of Mesopotamian civilisation."
 pf_bby.2.a: "Make hay while the sun shines..."
 
+pf_bby.3.t: "Many Gods, Many Choices"
+pf_bby.3.d: "Ours is a land of many different faiths and creeds. Before the Hellenic conquest, there were even more pagan religions present here, but most of them have now faded into obscurity, occupying only the minds of academics. The Archon has reigned supreme over our temples and the practices of our people for centuries now, and many have become complacent in that. Some fringe nationalists argue that our continued obedience to the Greek ways is humiliating, and that the thing that would be best for our country would be to turn to the works of those crusty scholars who have translated the texts of the old Mesopotamian faith, and attempt to rejuvinate that. This is clearly a ridiculous idea, but it is gaining some support both within the court and on the streets..."
+pf_bby.3.a: "The Archon has never failed us."
+pf_bby.3.b: "Let us revive the Old Gods!"
+pf_bby_retained_hellenic: "Loyalty to the Archon"
+pf_bby_new_religion: "Reintroducing the Works of the Ancestors"
+
 ################
 # Missions
 ################
 
 pf_bby_conquer_basra_title: "Seize Basra"
 pf_bby_conquer_basra_desc: "The ports of Basra are our gateway to the sea, and control the outflow of goods from Mesopotamia. If possible, it would be wise to seize these lands for ourselves."
+
+pf_bby_unite_the_rivers_title: "Unite the Rivers"
+pf_bby_unite_the_rivers_desc: ""
+pf_bby_united_mesopotamia: "United Mesopotamia"
 
 #
 
@@ -150,8 +204,68 @@ pf_bby_expand_the_garrisons_desc: "The freedom we now enjoy is constantly under 
 pf_bby_rising: "Babylonian Ambitions"
 pf_bby_bigger_garrison: "Strengthen the Garrisons"
 
-pf_bby_invade_seleucia_title: "Invade the Seleucids"
+pf_bby_invade_seleucia_title: "Sons of Seleucis"
 pf_bby_invade_seleucia_desc: "The vile Seleucids rule much of the core of Mesopotamia, forcing many of our countrymen into hiding. In recent years, they have been faltering, and it looks like this ancient state may fade from the earth entirely. We must strike them while they are at their weakest, and retake Babylon."
 pf_bby_get_siege_progress_on_babylon_tt: "£yes£ If we are currently sieging §Y[410.GetName]§!, we will gain §G+10§! Siege Progress."
 pf_bby_get_siege_progress_on_babylon_no_tt: "£no£ If we are currently sieging §Y[410.GetName]§!, we will gain §G+10§! Siege Progress."
 pf_bby_great_campaign: "The Great Campaign"
+
+pf_bby_reclaim_babylon_title: "Reclaim the Blue City"
+pf_bby_reclaim_babylon_desc: ""
+
+#
+
+pf_bby_patronise_the_temples_title: "Patronise the Temples"
+pf_bby_patronise_the_temples_desc: ""
+pf_bby_seats_of_the_gods: "Seats of the Gods"
+pf_bby_if_archon_then_yes_tt: "£yes£ If we are currently the §YArchon Controller§!, we will gain the following effect:"
+pf_bby_if_archon_then_no_tt: "£no£ If we are currently the §YArchon Controller§!, we will gain the following effect:"
+
+pf_bby_ancient_texts_title: "Words of Our Ancestors"
+pf_bby_ancient_texts_desc: ""
+
+pf_bby_religion_locked_path_1_title: "Locked Mission"
+pf_bby_religion_locked_path_1_desc: "This mission requires a prior choice to be made before being unlocked."
+bby_religion_locked_tt: "This mission is locked."
+
+pf_bby_religion_locked_path_2_title: "Locked Mission"
+pf_bby_religion_locked_path_2_desc: "This mission requires a prior choice to be made before being unlocked."
+
+pf_bby_production_growth_title: "Institute Nepeštu Tax"
+pf_bby_production_growth_desc: "Our current tax institutions, while reformed, are still ineffective at producing the maximum amount of revinue the modern world affords us. Using the skills of our manufacturers, our state income will soar and our people will be more prosperous than ever."
+pf_bby_unlock_nepustu_reform_tt: "Unlocks the §YNepeštu Tax§! Government Reform."
+
+#
+
+pf_bby_improve_economy_title: "Reform the Tax System"
+pf_bby_improve_economy_desc: ""
+pf_bby_investment_in_economy: "Investment in the Economy"
+
+pf_bby_improve_irrigation_title: "Dilutu Tablittu"
+pf_bby_improve_irrigation_desc: "In the days of old, every city in Mesopotamia had its own magnificent irrigation system, keeping the fields quenched and the people fed even as the desert encroached further and further towards the river banks. If we want the land to prosper as it once did, we must rebuild the infrastructure necessary for our modern needs."
+pf_bby_irrigation_modifier_tt: "Every owned province in the §YMesopotamia§! region gains the following effect:"
+pf_bby_irrigation_restored: "Restored Local Irrigation"
+
+pf_bby_build_hanging_gardens_title: "A Piece of Paradise"
+pf_bby_build_hanging_gardens_desc: "At the center of Babylon lies the ruins of a great garden complex, built many centuries ago by a loving king for his wife. The ancients tell us it was beautiful, a shining beacon in a world of turmoil and death. Let us rebuild these gardens in our own style, and once again bring colour to the world."
+pf_bby_beautiful_life: "It's a Wonderful Life!"
+
+#
+
+pf_bby_imperial_administration_title: "Nexus of Empire"
+pf_bby_imperial_administration_desc: ""
+pf_bby_administrative_centers: "Designated Administrative Centers"
+
+pf_bby_kudurru_title: "Royal Grants"
+pf_bby_kudurru_desc: ""
+pf_bby_unlock_kudurru_reform_tt: "Unlocks the §YKudurru System§! Government Reform."
+
+pf_bby_the_great_constructions_title: "The Great Constructions"
+pf_bby_the_great_constructions_desc: ""
+pf_bby_the_great_constructions_modifier: "Great Constructions"
+pf_bby_constructions_has_architect_yes_tt: "£yes£ If we have a hired §YArchitect§! or §YCity Planner§! advisor, we will gain the following effect:"
+pf_bby_constructions_has_architect_no_tt: "£no£ If we have a hired §YArchitect§! or §YCity Planner§! advisor, we will gain the following effect:"
+
+pf_bby_survey_the_fields_title: "Survey the Fields"
+pf_bby_survey_the_fields_desc: "Agricultural is the lifeblood of our people and economy. We must ensure that no field or farm is hidden from our administrative record, so that all production can be effectively taxed and distributed."
+pf_bby_devving_production_bonus_tt: "Developing provinces for §YBase Production§! £dip£ will yield twice the benefit for §Y20 years§!."
