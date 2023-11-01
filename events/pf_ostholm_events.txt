@@ -476,39 +476,712 @@ country_event = {		#hillside rebellion sutherweald
 	}
 }
 
+#DONOVA
 
-province_event = {		#get that development god damn
+country_event = {		#dnv ostholm crown question
 	id = pf_ost.13
 	title = pf_ost.13.t 
 	desc = pf_ost.13.d
 	picture = ADVISOR_eventPicture
 
-	trigger = {
-		religion = south_germanic_religion
-		NOT = {
-			development = 10
-		}
-		region = carpathia_region
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
-	mean_time_to_happen = {
-		months = 240
-	}
 
 	option = {
 		name = "pf_ost.13.a"
-		ai_chance = {
-			factor = 80
+		highlight = yes
+		trigger = {
+			was_tag = VLD
 		}
-		add_base_tax = 2
-		add_local_autonomy = 30
+		add_prestige = 25
+		custom_tooltip = DNV_CT_1a
+		set_country_flag = dnv_destroy_ostholm
 	}
 	option = {
 		name = "pf_ost.13.b"
-		ai_chance = {
-			factor = 20
+		highlight = yes
+		trigger = {
+			was_tag = OST
 		}
-		add_base_tax = 1
-		add_local_autonomy = 10
+		add_prestige = 25
+		custom_tooltip = DNV_CT_1b
+	}
+	option = {
+		name = "pf_ost.13.c"
+		highlight = yes
+		trigger = {
+			was_tag = OST
+		}
+		add_prestige = -25
+		custom_tooltip = DNV_CT_1a
+		set_country_flag = dnv_destroy_ostholm
+	}
+	option = {
+		name = "pf_ost.13.e"
+		trigger = {
+			NOT = {
+				was_tag = OST
+			}
+			NOT = {
+				was_tag = VLD
+			}
+		}
+		add_prestige = -10
+		custom_tooltip = DNV_CT_1a
+		set_country_flag = dnv_destroy_ostholm
+	}
+	option = {
+		name = "pf_ost.13.f"
+		trigger = {
+			NOT = {
+				was_tag = OST
+			}
+		}
+		add_prestige = 15
+		custom_tooltip = DNV_CT_1b
+	}
+}
+country_event = {		#dnv markland laws question
+	id = pf_ost.14
+	title = pf_ost.14.t 
+	desc = pf_ost.14.d
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "pf_ost.14.a"
+		highlight = yes
+		trigger = {
+			was_tag = SDT
+		}
+		add_prestige = -10
+		custom_tooltip = DNV_CT_2c
+		set_country_flag = dnv_new_sudeti_law
+	}
+	option = {
+		name = "pf_ost.14.b"
+		highlight = yes
+		trigger = {
+			was_tag = MKM
+		}
+		add_prestige = 25
+		custom_tooltip = DNV_CT_2b
+		set_country_flag = dnv_keep_south_law
+	}
+
+	option = {
+		name = "pf_ost.14.c"
+		trigger = {
+			NOT = {
+				was_tag = MKM
+			}
+		}
+		add_prestige = 10
+		custom_tooltip = DNV_CT_2b
+		set_country_flag = dnv_keep_south_law
+	}
+	option = {
+		name = "pf_ost.14.e"
+		trigger = {
+			NOT = {
+				was_tag = MKM
+			}
+		}
+		add_prestige = 10
+		custom_tooltip = DNV_CT_2a
+	}
+}
+
+country_event = {		#dnv bergaland money question
+	id = pf_ost.15
+	title = pf_ost.15.t 
+	desc = pf_ost.15.d
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "pf_ost.15.a"
+		highlight = yes
+		trigger = {
+			was_tag = SLO
+		}
+		add_dip_power = 100
+		add_years_of_income = 2
+	}
+
+	option = {
+		name = "pf_ost.15.b"
+		trigger = {
+			NOT = {
+				was_tag = SLO
+			}
+		}
+		add_estate_influence_modifier = {
+			estate = estate_burghers
+			desc = "Bergan Influential Merchants: 15.0%"
+			influence = 15
+			duration = 9125
+		}
+		add_dip_power = 100
+		add_years_of_income = 2
+	}
+	option = {
+		name = "pf_ost.15.c"
+		add_years_of_income = 0.5
+	}
+}
+
+country_event = {		#dnv vinlander hunters
+	id = pf_ost.16
+	title = pf_ost.16.t 
+	desc = pf_ost.16.d
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "pf_ost.16.a"
+		highlight = yes
+		trigger = {
+			was_tag = OST
+		}
+		add_country_modifier = {
+			name = dnv_suppress_vildheim
+			duration = 9125
+		}
+		custom_tooltip = DNV_CT_3a
+	}
+
+	option = {
+		name = "pf_ost.16.b"
+		trigger = {
+			NOT = {
+				was_tag = OST
+			}
+			NOT = {
+				was_tag = VLD
+			}
+		}
+		add_country_modifier = {
+			name = dnv_allow_vildheim
+			duration = 9125
+		}
+		custom_tooltip = DNV_CT_3b
+		set_country_flag = dnv_respect_vild
+	}
+	option = {
+		name = "pf_ost.16.c"
+		add_country_modifier = {
+			name = dnv_block_vildheim
+			duration = 9125
+		}
+		custom_tooltip = DNV_CT_3a
+	}
+	option = {
+		name = "pf_ost.16.e"
+		highlight = yes
+		trigger = {
+			was_tag = VLD
+		}
+		add_stability_or_adm_power = yes
+		custom_tooltip = DNV_CT_3b
+		set_country_flag = dnv_respect_vild
+	}
+}
+
+country_event = {		#dnv capital decision
+	id = pf_ost.17
+	title = pf_ost.17.t 
+	desc = pf_ost.17.d
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "pf_ost.17.a"
+		set_capital = 64
+		64 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	option = {
+		name = "pf_ost.17.b"
+		set_capital = 134
+		134 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	option = {
+		name = "pf_ost.17.c"
+		set_capital = 153
+		153 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	option = {
+		name = "pf_ost.17.e"
+		set_capital = 154
+		154 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	option = {
+		name = "pf_ost.17.f"
+		set_capital = 266
+		266 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+country_event = {		#dnv reforming now
+	id = pf_ost.18
+	title = pf_ost.18.t 
+	desc = pf_ost.18.d
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "pf_ost.18.a"
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 5
+		}
+		country_event = {
+			id = pf_ost.19
+			days = 1
+		}
+	}
+	option = {
+		name = "pf_ost.18.b"
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 10
+		}
+		country_event = {
+			id = pf_ost.19
+			days = 1
+		}
+	}
+	option = {
+		name = "pf_ost.18.c"
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = -10
+		}
+		country_event = {
+			id = pf_ost.19
+			days = 1
+		}
+	}
+	option = {
+		name = "pf_ost.18.e"
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 5
+		}
+		country_event = {
+			id = pf_ost.19
+			days = 1
+		}
+	}
+}
+
+country_event = {		#dnv more reforms nobility
+	id = pf_ost.19
+	title = pf_ost.19.t 
+	desc = pf_ost.19.d
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "pf_ost.19.a"
+		if = {
+			limit = {
+				has_country_flag = dnv_destroy_ostholm
+			}
+			if = {
+				limit = {
+					has_country_flag = dnv_keep_south_law
+				}
+				add_yearly_manpower = -1
+				add_estate_influence_modifier = {
+					estate = estate_nobles
+					desc = "Broken Tribal Hierachies: 15.0%"
+					influence = 15
+					duration = 9125
+				}
+			}else = {
+				add_yearly_manpower = -4
+				add_estate_influence_modifier = {
+					estate = estate_burghers
+					desc = "New Tribal Hierarchies: 35.0%"
+					influence = 35
+					duration = 9125
+				}
+			}
+		}else = {
+			if = {
+				limit = {
+					has_country_flag = dnv_keep_south_law
+				}
+				add_yearly_manpower = -0.5
+				add_estate_influence_modifier = {
+					estate = estate_nobles
+					desc = "Broken Tribal Hierachies: 5.0%"
+					influence = 5
+					duration = 9125
+				}
+			}else = {
+				add_yearly_manpower = -1
+				add_estate_influence_modifier = {
+					estate = estate_burghers
+					desc = "New Tribal Hierarchies: 15.0%"
+					influence = 15
+					duration = 9125
+				}
+			}
+		}
+
+		country_event = {
+			id = pf_ost.20
+			days = 1
+		}
+	}
+}
+
+country_event = {		#dnv more reforms economic
+	id = pf_ost.20
+	title = pf_ost.20.t 
+	desc = pf_ost.20.d
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "pf_ost.20.a"
+		if = {
+			limit = {
+				has_country_flag = dnv_new_sudeti_law
+			}
+			if = {
+				limit = {
+					has_country_flag = dnv_respect_vild
+				}
+				add_years_of_income = -0.4
+				add_estate_influence_modifier = {
+					estate = estate_burghers
+					desc = "Protected Economy: 5.0%"
+					influence = 5
+					duration = 9125
+				}
+			}else = {
+				add_years_of_income = -0.6
+				add_estate_influence_modifier = {
+					estate = estate_burghers
+					desc = "Clashing Interests: 25.0%"
+					influence = 25
+					duration = 9125
+				}
+			}
+		}else = {
+			if = {
+				limit = {
+					has_country_flag = dnv_respect_vild
+				}
+				add_years_of_income = -1
+				add_estate_influence_modifier = {
+					estate = estate_nobles
+					desc = "Clashing Interests: 15.0%"
+					influence = 15
+					duration = 9125
+				}
+			}else = {
+				add_years_of_income = -2
+				add_estate_influence_modifier = {
+					estate = estate_burghers
+					desc = "Brigands and Thievery Epidemic: 35.0%"
+					influence = 35
+					duration = 9125
+				}
+			}
+		}
+		country_event = {
+			id = pf_ost.21
+			days = 1
+		}
+	}
+}
+
+country_event = {		#dnv more reforms religios
+	id = pf_ost.21
+	title = pf_ost.21.t 
+	desc = pf_ost.21.d
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "pf_ost.21.a"
+		add_stability_or_adm_power = yes
+
+		country_event = {
+			id = pf_ost.22
+			days = 1
+		}
+	}
+	option = {
+		name = "pf_ost.21.b"
+		add_stability = -5
+		change_religion = hellenic
+		capital_scope = {
+			spawn_rebels = {
+				size = 4
+				type = south_germanic_zealots
+			}
+		}
+		random_owned_area = {
+			spawn_rebels = {
+				size = 1
+				type = south_germanic_zealots
+			}
+		}
+		random_owned_area = {
+			spawn_rebels = {
+				size = 1
+				type = south_germanic_zealots
+			}
+		}
+		country_event = {
+			id = pf_ost.22
+			days = 1
+		}
+	}
+	option = {
+		name = "pf_ost.21.c"
+		add_stability = -5
+		change_religion = punic_religion
+		capital_scope = {
+			spawn_rebels = {
+				size = 5
+				type = south_germanic_zealots
+			}
+		}
+		random_owned_area = {
+			spawn_rebels = {
+				size = 2
+				type = south_germanic_zealots
+			}
+		}
+		random_owned_area = {
+			spawn_rebels = {
+				size = 2
+				type = south_germanic_zealots
+			}
+		}
+		country_event = {
+			id = pf_ost.22
+			days = 1
+		}
+	}
+}
+
+country_event = {		#dnv final refomrs
+	id = pf_ost.22
+	title = pf_ost.22.t 
+	desc = pf_ost.22.d
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "pf_ost.22.a"
+		trigger = {
+			NOT = {
+				has_country_flag = dnv_destroy_ostholm
+			}
+		}
+		if = {
+			limit = {
+				was_tag = VLD
+			}
+			add_estate_influence_modifier = {
+				estate = estate_nobles
+				desc = "Ostholmer Influence: 15.0%"
+				influence = 15
+				duration = 9125
+			}
+		}
+		if = {
+			limit = {
+				dynasty = "Ostholm"
+			}
+		}else = {
+			kill_ruler = yes
+			kill_heir = {
+				allow_new_heir = no
+			}
+		}
+		change_government_to_monarchy = yes
+		add_government_reform = pf_ostholm_crown_monarchy
+		clr_country_flag = dnv_keep_south_law
+		clr_country_flag = dnv_destroy_ostholm
+		clr_country_flag = dnv_new_sudeti_law
+		clr_country_flag = dnv_respect_vild
+		hidden_effect = {
+			set_country_flag = dnv_feudalized
+			swap_non_generic_missions = yes
+		}
+	}
+	option = {
+		name = "pf_ost.22.b"
+		trigger = {
+			NOT = {
+				was_tag = OST
+			}
+		}
+		change_government_to_monarchy = yes
+		add_government_reform = pf_donova_crown
+		clr_country_flag = dnv_keep_south_law
+		clr_country_flag = dnv_destroy_ostholm
+		clr_country_flag = dnv_new_sudeti_law
+		clr_country_flag = dnv_respect_vild
+		hidden_effect = {
+			set_country_flag = dnv_feudalized
+			swap_non_generic_missions = yes
+		}
+	}
+	option = {
+		name = "pf_ost.22.c"
+		trigger = {
+			has_country_flag = dnv_respect_vild
+		}
+		change_government_to_monarchy = yes
+		add_government_reform = pf_donova_crown_vld
+		clr_country_flag = dnv_keep_south_law
+		clr_country_flag = dnv_destroy_ostholm
+		clr_country_flag = dnv_new_sudeti_law
+		clr_country_flag = dnv_respect_vild
+		hidden_effect = {
+			set_country_flag = dnv_feudalized
+			swap_non_generic_missions = yes
+		}
+	}
+	option = {
+		name = "pf_ost.22.e"
+
+		kill_ruler = yes
+		kill_heir = {
+			allow_new_heir = no
+		}
+		if = {
+			limit = {
+				has_country_flag = dnv_new_sudeti_law
+			}
+			add_country_modifier = {
+				name = dnv_sudeten_trial
+				duration = 9125
+			}
+		}
+		change_government_to_republic = yes
+		add_government_reform = pf_donova_republic
+		clr_country_flag = dnv_keep_south_law
+		clr_country_flag = dnv_destroy_ostholm
+		clr_country_flag = dnv_new_sudeti_law
+		clr_country_flag = dnv_respect_vild
+		hidden_effect = {
+			set_country_flag = dnv_feudalized
+			swap_non_generic_missions = yes
+		}
+	}
+	option = {
+		name = "pf_ost.22.f"
+		trigger = {
+			has_country_flag = dnv_keep_south_law
+		}
+		kill_ruler = yes
+		kill_heir = {
+			allow_new_heir = no
+		}
+		change_government_to_republic = yes
+		add_government_reform = pf_donova_republic_mark
+		clr_country_flag = dnv_keep_south_law
+		clr_country_flag = dnv_destroy_ostholm
+		clr_country_flag = dnv_new_sudeti_law
+		clr_country_flag = dnv_respect_vild
+		hidden_effect = {
+			set_country_flag = dnv_feudalized
+			swap_non_generic_missions = yes
+		}
+	}
+	option = {
+		name = "pf_ost.22.g"
+		trigger = {
+			has_country_flag = dnv_not_feudal_flag
+		}
+		add_government_reform = pf_donova_horde
+		clr_country_flag = dnv_keep_south_law
+		clr_country_flag = dnv_destroy_ostholm
+		clr_country_flag = dnv_new_sudeti_law
+		clr_country_flag = dnv_respect_vild
+		hidden_effect = {
+			set_country_flag = dnv_feudalized
+			swap_non_generic_missions = yes
+		}
 	}
 }

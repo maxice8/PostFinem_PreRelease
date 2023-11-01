@@ -43,19 +43,139 @@
  sty_waldhart_title:0 "Waldharten Drinking March"
  sty_waldhart_desc:0 "The small chiefdom of Waldhart is renowned for their wine and their festivities, but also their willingness to pick up arms for even the smallest of reasons."
 #####CUSTOM
-
+ DNV_CT_1a:0 "Cripple the Legacy of Old Ostholm."
+ DNV_CT_1b:0 "Conserve the Legacy of Old Ostholm."
+ DNV_CT_2a:0 "Abolish the Laws of the Marcomanni."
+ DNV_CT_2b:0 "Conserve the Laws of the Marcomanni."
+ DNV_CT_2c:0 "Reform the Laws of the Marcomanni."
+ DNV_CT_3a:0 "Suppress the Vildheimer Tradition."
+ DNV_CT_3b:0 "Allow the Vildheimer Tradition."
 #####MODIFIER
+ dnv_grand_city:0 "Grand City of Donova"
+ dnv_suppress_vildheim:0 "Suppressing the Vild Hunters"
+ dnv_allow_vildheim:0 "Allowing the Vild Hunt"
+ dnv_block_vildheim:0 "Blocking the Vild Hunters"
+ dnv_sudeten_trial:0 "The Sudeten Legacy"
 
 #####GOVERNMENT
-
+ pf_ostholm_crown_monarchy:0 "Crown of the Ost"
+ pf_ostholm_crown_monarchy_desc:0 "A recall of Old Ostholm, this monarchy is led by a single family dynasty and the dynasty serves the nation and viceversa."
+ pf_donova_crown:0 "Crown of the East"
+ pf_donova_crown_desc:0 "The new United Kingdom of Donova stands taller than the southern kingdoms that proclaim their wanted superiority."
+ pf_donova_crown_vld:0 "Crown of the Wild"
+ pf_donova_crown_vld_desc:0 "The greatest leaders of the nation become her kings and the strenght of the nation is the strenght of the king."
+ pf_donova_republic:0 "Germanic Republic"
+ pf_donova_republic_desc:0 "The first Germanic Republic is entirely based on the nation that no king should rule over so many people and real power comes from your own personale wealth."  
+ pf_donova_republic_mark:0 "Republic of the Mark"
+ pf_donova_republic_mark_desc:0 "To defend the nation is the greates honor a man can aquire.\nThe republic ensures any man can achieve that honor."
+ pf_donova_horde:0 "Tribe of the Donova"
+ pf_donova_horde_desc:0 "United the great Tribes of East Germania now stand to crush all who call them 'uncivilized'."
 
 #####EVENTS
- pf_ost.13.t:0 "Laws. What are they good for?"
- pf_ost.13.d:0 "REPLACE_ME"
- pf_ost.13.a:0 "Local ruler for local management."
- pf_ost.13.b:0 "The taxes go to ME!"
 
+ pf_ost.13.t:0 "Legacy of Old Ostholm"
+ pf_ost.13.d:0 "REPLACE_ME"
+ pf_ost.13.a:0 "Light the fire!"
+ pf_ost.13.b:0 "My Ancestors smile upon me!"
+ pf_ost.13.c:0 "As we forge a new path to the future!"
+ pf_ost.13.e:0 "They tried but they failed."
+ pf_ost.13.f:0 "They tried and the effort was appreciated."
+
+ pf_ost.14.t:0 "The Laws of the Southern Woods"
+ pf_ost.14.d:0 "REPLACE_ME"
+ pf_ost.14.a:0 "Keep the Laws, change the words."
+ pf_ost.14.b:0 "Write them and distribute them."
+ pf_ost.14.c:0 "As long as they are written down."
+ pf_ost.14.e:0 "We have our own laws."
+
+ pf_ost.15.t:0 "The Merchant's Creed"
+ pf_ost.15.d:0 "REPLACE_ME"
+ pf_ost.15.a:0 "We already know what their deal is."
+ pf_ost.15.b:0 "Interesting. How's the interest on it?"
+ pf_ost.15.c:0 "No Deal."
+
+ pf_ost.16.t:0 "Born to Be Wild"
+ pf_ost.16.d:0 "REPLACE_ME"
+ pf_ost.16.a:0 "Keep these Beasts down."
+ pf_ost.16.b:0 "As long as no one is hurt."
+ pf_ost.16.c:0 "Let the old traditions die."
+ pf_ost.16.e:0 "Long live the Vild Hunt."
+
+ pf_ost.17.t:0 "The Capital Question"
+ pf_ost.17.d:0 "REPLACE_ME"
+ pf_ost.17.a:0 "The City of Three Helmets."
+ pf_ost.17.b:0 "The City of Old Ostholm."
+ pf_ost.17.c:0 "The City of Great River."
+ pf_ost.17.e:0 "The City of Unbroken Fortitude."
+ pf_ost.17.f:0 "The City of Grand Wealth."
+
+ pf_ost.18.t:0 "Reforming Society"
+ pf_ost.18.d:0 "REPLACE_ME"
+ pf_ost.18.a:0 "Lessen the Faith's Power."
+ pf_ost.18.b:0 "Lessen the Noble's Power."
+ pf_ost.18.c:0 "Lessen the Merchant's Power."
+ pf_ost.18.e:0 "Equal distribution of Power."
+
+ pf_ost.19.t:0 "The Noble's Cause"
+ pf_ost.19.d:0 "REPLACE_ME"
+ pf_ost.19.a:0 "A Noble Lesson."
+
+ pf_ost.20.t:0 "The Economical Foundation"
+ pf_ost.20.d:0 "REPLACE_ME"
+ pf_ost.20.a:0 "The Key is the Coin."
+
+ pf_ost.21.t:0 "The Good Gods"
+ pf_ost.21.d:0 "REPLACE_ME"
+ pf_ost.21.a:0 "Don't stray the beaten path."
+ pf_ost.21.b:0 "The Hellens make a compelling argument."
+ pf_ost.21.c:0 "The Punics make a compeling argument."
+
+ pf_ost.22.t:0 "The Final Act"
+ pf_ost.22.d:0 "REPLACE_ME"
+ pf_ost.22.a:0 "To Greater Ostholm."
+ pf_ost.22.b:0 "The new Donovan Kingdom."
+ pf_ost.22.c:0 "To Greater Vildheim."
+ pf_ost.22.e:0 "The Republic of the Donova."
+ pf_ost.22.f:0 "The Marching Donovan Republic."
+ pf_ost.22.g:0 "The Great Donovan Tribe."
 #####MONUMENTS
   giant_tower_german:0 "Riesger Turm"
 #####MISSIONS
- 
+ dnv_markland_title:0 "Markmann Laws"
+ dnv_markland_desc:0 "The Laws of the South are mostly handed down from vocal traditions, rules and requirements that the old Marcomanni stipualted to be able to survive in the region."
+
+ dnv_three_elms_title:0 "Three Helms"
+ dnv_three_elms_desc:0 "REPLACE_ME"
+
+ dnv_ostholm_title:0 "Ostholm, the Old"
+ dnv_ostholm_desc:0 "The man known as Ostholm, the first, is the legendary leader that created from disparate tribes the Old Kingdom of Ostholm."
+
+ dnv_ostola_title:0 "Ostola's Tower"
+ dnv_ostola_desc:0 "REPLACE_ME"
+
+ dnv_feudal_question_title:0 "Fight or Feud"
+ dnv_feudal_question_desc:0 "The lessons that we've learned from the world outside our petty feuds have reached us not too late."
+
+ dnv_capital_question_title:0 "Capital Choice"
+ dnv_capital_question_desc:0 "It's extremely important that the position of our capital be not a point of contesion between the various factions of this new nation."
+
+ dnv_marbod_title:0 "Marbod, the Learned"
+ dnv_marbod_desc:0 "REPLACE_ME"
+
+ dnv_reforms_title:0 "Last Reform"
+ dnv_reforms_desc:0 ""
+
+ dnv_berganland_title:0 "Bargain in Bergaland"
+ dnv_berganland_desc:0 "Gold flows in the vein of every single Eldrun person, or so they say."
+
+ dnv_berganfurt_title:0 "Golden Walls"
+ dnv_berganfurt_desc:0 "REPLACE_ME"
+
+ dnv_vindheim_title:0 "Tame the Wilds"
+ dnv_vindheim_desc:0 "The wild nature of the inhabitants of Vildheim helped them survive many invasion and cause much trouble for any would be foreign conqueror."
+
+ dnv_biegnfluss_title:0 "River Queen"
+ dnv_biegnfluss_desc:0 "REPLACE_ME"
+
+ dnv_sudeten_title:0 "Sudeten Freedom"
+ dnv_sudeten_desc:0 "REPLACE_ME"

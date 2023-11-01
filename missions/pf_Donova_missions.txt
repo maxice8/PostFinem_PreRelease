@@ -3,47 +3,457 @@ pf_dnv_1 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = DNV NOT = { has_country_flag = dnv_feudalized}	} 
+	potential = {
+		tag = DNV
+		NOT = { has_country_flag = dnv_feudalized } 
+	}
 
+	dnv_markland = {
+		icon = mission_pf_astronomer
+		position = 2
+		required_missions = { dnv_feudal_question } 
+		provinces_to_highlight = {
+			OR = {
+				area = lower_bavaria_area
+				area = east_bavaria_area
+			}
+		}
 
+		trigger = {
+			lower_bavaria_area = {
+				type = all
+				owned_by = ROOT
+				feudalism = 100
+				is_prosperous = yes
+			}
+			east_bavaria_area = {
+				type = all
+				owned_by = ROOT
+				feudalism = 100
+				is_prosperous = yes
+			}
+		}
+
+		effect = {
+			country_event = { id = pf_ost.14 } 
+			lower_bavaria_area = { add_nationalism = -20 } 
+			east_bavaria_area = { add_nationalism = -20 } 
+		}
+	}
+
+	dnv_three_elms = {
+		icon = pf_surpassing_history
+		position = 4
+		required_missions = { dnv_capital_question } 
+		provinces_to_highlight = { province_id = 64 } 
+
+		trigger = {
+			owns = 64
+			64 = {
+				NOT = { local_autonomy = 5 } 
+				num_of_buildings_in_province = 4
+			}
+		}
+
+		effect = {
+			64 = {
+				if = {
+					limit = { NOT = { province_has_center_of_trade_of_level = 1 }  } 
+					center_of_trade = 1
+				}
+				if = {
+					limit = { is_capital_of = ROOT } 
+					add_province_modifier = {
+						name = "dnv_grand_city"
+						duration = 18250
+					}
+				}
+				else = {
+					add_province_modifier = {
+						name = "dnv_grand_city"
+						duration = 9125
+					}
+				}
+			}
+		}
+	}
 }
-
 pf_dnv_2 = {
 	slot = 2
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = DNV NOT = { has_country_flag = dnv_feudalized}	} 
+	potential = {
+		tag = DNV
+		NOT = { has_country_flag = dnv_feudalized } 
+	}
 
+	dnv_ostholm = {
+		icon = carolingian_empire
+		position = 2
+		required_missions = { dnv_feudal_question } 
+		provinces_to_highlight = {
+			OR = {
+				area = inner_austria_area
+				area = austria_proper_area
+			}
+		}
 
+		trigger = {
+			inner_austria_area = {
+				type = all
+				owned_by = ROOT
+				feudalism = 100
+				is_prosperous = yes
+			}
+			austria_proper_area = {
+				type = all
+				owned_by = ROOT
+				feudalism = 100
+				is_prosperous = yes
+			}
+		}
+
+		effect = {
+			country_event = { id = pf_ost.13 } 
+			inner_austria_area = { add_nationalism = -20 } 
+			austria_proper_area = { add_nationalism = -20 } 
+		}
+	}
+
+	dnv_ostola = {
+		icon = mission_hands_praying
+		position = 4
+		required_missions = { dnv_capital_question } 
+		provinces_to_highlight = { province_id = 134 } 
+
+		trigger = {
+			owns = 134
+			134 = {
+				NOT = { local_autonomy = 5 } 
+				num_of_buildings_in_province = 4
+			}
+		}
+
+		effect = {
+			134 = {
+				if = {
+					limit = { NOT = { province_has_center_of_trade_of_level = 1 }  } 
+					center_of_trade = 1
+				}
+				if = {
+					limit = { is_capital_of = ROOT } 
+					add_province_modifier = {
+						name = "dnv_grand_city"
+						duration = 18250
+					}
+				}
+				else = {
+					add_province_modifier = {
+						name = "dnv_grand_city"
+						duration = 9125
+					}
+				}
+			}
+		}
+	}
 }
-
 pf_dnv_3 = {
 	slot = 3
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = DNV NOT = { has_country_flag = dnv_feudalized}	} 
+	potential = {
+		tag = DNV
+		NOT = { has_country_flag = dnv_feudalized } 
+	}
 
+	dnv_feudal_question = {
+		icon = mission_cossack_cavalry
+		position = 1
+		provinces_to_highlight = { region = carpathia_region } 
 
+		trigger = {
+			carpathia_region = {
+				type = all
+				owned_by = ROOT
+			}
+			OR = {
+				has_institution = feudalism
+				NOT = { has_institution = feudalism } 
+			}
+		}
+
+		effect = {
+			if = {
+				limit = { NOT = { has_institution = feudalism }  } 
+				set_country_flag = dnv_not_feudal_flag
+			}
+			carpathia_region = {
+				add_unrest = -2
+				add_local_autonomy = -10
+			}
+		}
+	}
+	dnv_sudeten = {
+		icon = all_bases_covered
+		position = 2
+		required_missions = { dnv_feudal_question } 
+		provinces_to_highlight = {
+			OR = {
+				area = bohemia_area
+				area = erzgebirge_area
+			}
+		}
+
+		trigger = {
+			bohemia_area = {
+				type = all
+				owned_by = ROOT
+				feudalism = 100
+				is_prosperous = yes
+			}
+			erzgebirge_area = {
+				type = all
+				owned_by = ROOT
+				feudalism = 100
+				is_prosperous = yes
+			}
+		}
+
+		effect = {
+			add_stability = 1
+			bohemia_area = { add_nationalism = -20 } 
+			erzgebirge_area = { add_nationalism = -20 } 
+		}
+	}
+	dnv_capital_question = {
+		icon = mission_mosque
+		position = 3
+		required_missions = { dnv_berganland dnv_markland dnv_ostholm dnv_sudeten dnv_vindheim } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			is_at_war = no
+			is_great_power = yes
+			stability = 3
+		}
+
+		effect = { country_event = { id = pf_ost.17 }  } 
+	}
+
+	dnv_marbod = {
+		icon = pf_crow
+		position = 4
+		required_missions = { dnv_capital_question } 
+		provinces_to_highlight = { province_id = 266 } 
+
+		trigger = {
+			owns = 266
+			266 = {
+				NOT = { local_autonomy = 5 } 
+				num_of_buildings_in_province = 4
+			}
+		}
+
+		effect = {
+			266 = {
+				if = {
+					limit = { NOT = { province_has_center_of_trade_of_level = 1 }  } 
+					center_of_trade = 1
+				}
+				if = {
+					limit = { is_capital_of = ROOT } 
+					add_province_modifier = {
+						name = "dnv_grand_city"
+						duration = 18250
+					}
+				}
+				else = {
+					add_province_modifier = {
+						name = "dnv_grand_city"
+						duration = 9125
+					}
+				}
+			}
+		}
+	}
+
+	dnv_reforms = {
+		icon = mission_the_sudebnik
+		position = 5
+		required_missions = {
+			dnv_marbod
+			dnv_berganfurt
+			dnv_biegnfluss
+			dnv_ostola
+			dnv_three_elms
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			is_at_war = no
+			is_great_power = yes
+			stability = 3
+		}
+
+		effect = { country_event = { id = pf_ost.18 }  } 
+	}
 }
-
 pf_dnv_4 = {
 	slot = 4
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = DNV NOT = { has_country_flag = dnv_feudalized}	} 
+	potential = {
+		tag = DNV
+		NOT = { has_country_flag = dnv_feudalized } 
+	}
 
+	dnv_berganland = {
+		icon = mission_pf_stock_exchange
+		position = 2
+		required_missions = { dnv_feudal_question } 
+		provinces_to_highlight = {
+			OR = {
+				area = moravia_area
+				area = slovakia_area
+			}
+		}
 
+		trigger = {
+			moravia_area = {
+				type = all
+				owned_by = ROOT
+				feudalism = 100
+				is_prosperous = yes
+			}
+			slovakia_area = {
+				type = all
+				owned_by = ROOT
+				feudalism = 100
+				is_prosperous = yes
+			}
+		}
+
+		effect = {
+			country_event = { id = pf_ost.15 } 
+			moravia_area = { add_nationalism = -20 } 
+			slovakia_area = { add_nationalism = -20 } 
+		}
+	}
+
+	dnv_berganfurt = {
+		icon = mission_war_chest
+		position = 4
+		required_missions = { dnv_capital_question } 
+		provinces_to_highlight = { province_id = 154 } 
+
+		trigger = {
+			owns = 154
+			154 = {
+				NOT = { local_autonomy = 5 } 
+				num_of_buildings_in_province = 4
+			}
+		}
+
+		effect = {
+			154 = {
+				if = {
+					limit = { NOT = { province_has_center_of_trade_of_level = 1 }  } 
+					center_of_trade = 1
+				}
+				if = {
+					limit = { is_capital_of = ROOT } 
+					add_province_modifier = {
+						name = "dnv_grand_city"
+						duration = 18250
+					}
+				}
+				else = {
+					add_province_modifier = {
+						name = "dnv_grand_city"
+						duration = 9125
+					}
+				}
+			}
+		}
+	}
 }
-
 pf_dnv_5 = {
 	slot = 5
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = DNV NOT = { has_country_flag = dnv_feudalized}	} 
+	potential = {
+		tag = DNV
+		NOT = { has_country_flag = dnv_feudalized } 
+	}
 
+	dnv_vindheim = {
+		icon = sav_union_with_naples
+		position = 2
+		required_missions = { dnv_feudal_question } 
+		provinces_to_highlight = {
+			OR = {
+				area = alfold_area
+				area = transdanubia_area
+			}
+		}
 
+		trigger = {
+			alfold_area = {
+				type = all
+				owned_by = ROOT
+				feudalism = 100
+				is_prosperous = yes
+			}
+			transdanubia_area = {
+				type = all
+				owned_by = ROOT
+				feudalism = 100
+				is_prosperous = yes
+			}
+		}
+
+		effect = {
+			country_event = { id = pf_ost.16 } 
+			alfold_area = { add_nationalism = -20 } 
+			transdanubia_area = { add_nationalism = -20 } 
+		}
+	}
+
+	dnv_biegnfluss = {
+		icon = mission_se_along_the_river
+		position = 4
+		required_missions = { dnv_capital_question } 
+		provinces_to_highlight = { province_id = 153 } 
+
+		trigger = {
+			owns = 153
+			153 = {
+				NOT = { local_autonomy = 5 } 
+				num_of_buildings_in_province = 4
+			}
+		}
+
+		effect = {
+			153 = {
+				if = {
+					limit = { is_capital_of = ROOT } 
+					add_province_modifier = {
+						name = "dnv_grand_city"
+						duration = 18250
+					}
+				}
+				else = {
+					add_province_modifier = {
+						name = "dnv_grand_city"
+						duration = 9125
+					}
+				}
+			}
+		}
+	}
 }
+
