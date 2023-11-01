@@ -9,7 +9,7 @@ pf_vin_1 = {
 		icon = mission_pf_norse_gods
 		position = 2
 		provinces_to_highlight = {
-			is_capital_of = root
+			is_capital_of = ROOT
 			NOT = { has_tax_building_trigger = yes }
 		} 
 
@@ -45,18 +45,17 @@ pf_vin_2_1 = {
 		position = 7
 		required_missions = { pf_vin_leifbuthir_town } 
 		provinces_to_highlight = {
-			province_id = 981	# Leifsbuthir
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { development = 40 }
-				NOT = { prosperity = 100 }
-			}
+			province_id = 981
 		} 
 
 		trigger = {
 			981 = {
-				owned_by = root
+				owned_by = ROOT
+			}
+			981 = {
 				development = 40
+			}
+			981 = {
 				prosperity = 100
 			}
 		} 
@@ -176,7 +175,6 @@ pf_vin_2 = {
 		}
 		provinces_to_highlight = {
 			is_capital_of = ROOT
-			NOT = { development = 20 }
 		} 
 
 		trigger = {
@@ -215,19 +213,17 @@ pf_vin_2_2 = {
 		}
 		provinces_to_highlight = {
 			province_id = 981
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { has_tax_building_trigger = yes }
-				NOT = { has_production_building_trigger = yes }
-				NOT = { has_trade_building_trigger = yes }
-			}
 		} 
 
 		trigger = {
 			owns_core_province = 981
 			981 = {
 				has_tax_building_trigger = yes
+			}
+			981 = {
 				has_production_building_trigger = yes
+			}
+			981 = {
 				has_trade_building_trigger = yes
 			}
 		} 
@@ -266,7 +262,7 @@ pf_vin_2_2 = {
 				type = all
 				owned_by = root
 				is_core = ROOT
-				is_city= yes
+				is_city = yes
 			}
 		} 
 
@@ -309,7 +305,7 @@ pf_vin_2_2 = {
 				type = all
 				owned_by = root
 				is_core = ROOT
-				is_city= yes
+				is_city = yes
 			}
 		} 
 
@@ -584,7 +580,7 @@ pf_vin_2_3 = {
 			pf_vin_kingdom_of_frost
 		}
 		provinces_to_highlight = {
-			owned_by = root
+			owned_by = ROOT
 			NOT = { development = 10 }
 		} 
 
