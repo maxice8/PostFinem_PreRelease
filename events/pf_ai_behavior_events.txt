@@ -68,6 +68,19 @@ country_event = {
 					modifier = ai_REALLY_wants_land
 				}
 			}
+			else_if = {
+				limit = {
+					num_of_cities = 1
+					NOT = { num_of_cities = 7 }
+					capital_scope = {
+						is_permanent_claim = ROOT
+					}
+				}
+				reverse_add_opinion = {
+					who = PREV
+					modifier = ai_REALLY_wants_land
+				}
+			}
 			if = {
 				limit = {
 					num_of_owned_provinces_with = {
