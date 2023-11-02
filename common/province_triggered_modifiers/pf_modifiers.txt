@@ -62,6 +62,91 @@ non_hellenic_athens = {
 	
 }
 
+punic_roma_adirim = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	
+	#viewer = {
+	#}
+	
+	trigger = {
+		owner = {
+			religion_group = punic_group
+			is_part_of_hre = yes
+		}
+		is_part_of_hre = yes
+	}
+
+	reasons_to_elect = 10
+	legitimate_subject_elector = 25
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+	
+}
+vinland_colony_devastation = {
+	potential = {
+		owner = { tag = VIN }
+	}
+	
+	#viewer = {
+	#}
+	
+	trigger = {
+		OR = {
+			is_month = 9
+			NOT = { is_month = 3 }
+		}
+	}
+
+	local_monthly_devastation = 4
+	attrition = 1
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+	
+}
+oracle_of_delphi = {
+	potential = {
+		always = yes
+	}
+	
+	#viewer = {
+	#}
+	
+	trigger = {
+		religion = hellenic
+		owner = { religion = hellenic }
+	}
+
+	stability_cost_modifier = -0.05
+	prestige = 0.25
+	tolerance_own = 0.5
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+	
+}
+
 pf_ksb_early_coal = {
 	potential = {
 		enlightenment = 100

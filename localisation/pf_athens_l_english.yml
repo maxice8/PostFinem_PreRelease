@@ -11,6 +11,154 @@
  desc_non_hellenic_athens:0 "The ancient city of Athens, seat of the Archon, head of the Hellenic Church, is a fine target for conquest."
 
  HIEROPHANTATE:0 "Hierophantate"
- ARCHONTIC_HIEROPHANTATE:0 "Archontic Hierophantate"
+ ARCHONTIC_HIEROPHANTATE:0 "Archonic Hierophantate"
  HIEROPHANT:0 "Hierophant"
  ARCHON_HIEROPHANT:0 "Archon"
+ oracle_of_delphi: "The Oracle of Delphi"
+ desc_oracle_of_delphi: "Seated here since the times of the ancients, the Oracle of Delphi is said to issue cryptic prophecies and advice Hellenes on important decisions in their lives. Now she lies under the jurisdiction and direction of the Archon, but much of her tradition role and aura has been maintained through the years.\n\n§MHellenic nations may consult the Oracle of Delphi if this modifier is active.§!"
+
+URK:0 "Uruk"
+URK_ADJ:0 "Uruk"
+
+mesopotamian: "Mesopotamian"
+babylonian: "Babylonian"
+
+# Golden Bull
+
+archon_philosophy_socratic: "Socraticism"
+archon_philosophy_socratic_DESC: ""
+archon_philosophy_cynicism: "Cynicism"
+archon_philosophy_cynicism_DESC: ""
+archon_philosophy_epicureanism: "Epicureanism"
+archon_philosophy_epicureanism_DESC: ""
+archon_philosophy_skepticism: "Skepticism"
+archon_philosophy_skepticism_DESC: ""
+archon_philosophy_stoicism: "Stoicism"
+archon_philosophy_stoicism_DESC: ""
+archon_philosophy_archonism: "Archonism"
+archon_philosophy_archonism_DESC: ""
+
+# Ideas
+
+NAX_ideas: "Naxos Ideas"
+NAX_ideas_start: "Naxos Traditions"
+NAX_ideas_bonus: "Naxos Ambition"
+
+nax_island_government: "Autonomous Islands"
+nax_island_government_desc: ""
+nax_ship_patrols: "Establish the Coast Guard"
+nax_ship_patrols_desc: ""
+nax_body_guard_of_archon: "Body Guards of the Archon"
+nax_body_guard_of_archon_desc: ""
+nax_skilled_soldiers: "Naxosian Lancers"
+nax_skilled_soldiers_desc: ""
+nax_regular_pay: "Regular Pay"
+nax_regular_pay_desc: ""
+nax_fishing: "Reliance on Fishing"
+nax_fishing_desc: ""
+nax_archipelago: "Lords of the Archipelago"
+nax_archipelago_desc: ""
+
+ATH_ideas: "Athenian Ideas"
+ATH_ideas_start: "Athenian Traditions"
+ATH_ideas_bonus: "Athenian Ambition"
+
+ath_voice_of_the_gods: "The Voice of the Gods"
+ath_voice_of_the_gods_desc: ""
+ath_keepers_of_the_temples: "Keepers of the Temples"
+ath_keepers_of_the_temples_desc: ""
+ath_naxos_guards: "Archonic Naxosian Guard"
+ath_naxos_guards_desc: ""
+ath_old_traditions: "Ancient Traditions"
+ath_old_traditions_desc: ""
+ath_center_of_learning: "A Home for Knowledge and Inquiry"
+ath_center_of_learning_desc: ""
+ath_temporal_archon: "The Temporal Fight"
+ath_temporal_archon_desc: ""
+ath_donations_and_indulgence: "Donations and Indulgences"
+ath_donations_and_indulgence_desc: ""
+
+####################
+# Events
+####################
+
+pf_ath.1.t: "The Library of Athens"
+pf_ath.1.d: "Athens has been a center of learning for thousands of years. Seeking to enhance this reputation, we have decided to commission the construction of a new grand library at its heart, to serve as a repository for all our knowledge and an excellent way for young students to learn our history and ways. The question is - what type of texts shall this library focus on?"
+pf_ath.1.a: "Focus on the philosophies and politics."
+pf_ath.1.b: "The new arts like sculpture and music must be included."
+pf_ath.1.c: "Strategies for warfare are the most important."
+pf_ath_adm_library: "Library of Athens"
+pf_ath_dip_library: "Library of Athens"
+pf_ath_mil_library: "Library of Athens"
+
+pf_ath.2.t: "The Athenian Press"
+pf_ath.2.d: "The traditional way of reproducing documents was for a dedicated scribe to copy it out manually, a very tiresome and tricky process. Inspired by recent developments elsewhere on the continent, the learned men of Athens have produced a new 'Athenian Press', which allows our administration and clergy alike to mass produce documents quicker than ever before. Let us all rejoice in the ingenuity of Athenian inventors!"
+pf_ath.2.a: "Wonderful!"
+pf_ath_printed_declarations: "Printed Archonic Declarations"
+
+pf_ath.3.t: "Ownership of Thessaly"
+pf_ath.3.d: "Thessaly is a vital border region between us and the threatening Macedonian kingdom. If we can sweet talk them enough, perhaps they would cede this area to us, so that we can fortify it and use it as a bulwark to prevent any future attacks against Athens."
+pf_ath.3.a: "Cede the province to the Archon."
+pf_ath.3.b: "This is outrageous!"
+opinion_gave_thessaly: "Ceded Thessaly"
+opinion_refused_thessaly: "Refused to give Thessaly"
+
+pf_reform_desire.1.t: "Donations for the Gods"
+pf_reform_desire.1.d: "Many high priests and demiarchons have been collecting donations from the general populace, claiming to be using them to support the upkeep of the temples and the wellbeing of the gods. Many however accuse these clergymen of corruption, asserting that they keep all these funds for themselves and use more of it in brothels and bars than shrines."
+pf_reform_desire.1.a: "Collect the donations."
+pf_reform_desire.1.b: "Only the Archon can perform this service."
+
+pf_reform_desire.2.t: "Selling of Indulgences"
+pf_reform_desire.2.d: "Sin is rampant in our society. Many people fear punishments for their misdoings, especially in the afterlife, but the church has always had an answer for that in prayer and offerings. Increasingly however, certain clergymen have been selling 'indulgences', tickets that forgive your sin and let you pass cleanly into the better sections of the underworld."
+pf_reform_desire.2.a: "Let us be forgiven for our sins."
+pf_reform_desire.2.b: "The indulgence itself is a sin!"
+
+pf_reform_desire.3.t: "Worship of Icons and Statues"
+pf_reform_desire.3.d: "In many eastern religions, gods are thought to physically inhabit the statues we put up for them in our temples. Some even go as far as saying that icons or drawings of a particular god can conjure their spirit too. The Archon in Athens is clearly upset by these developments, and seeks to keep his monopoly over people's interactions with the gods, and has thus issued an order that we stop this practice in our provinces."
+pf_reform_desire.3.a: "Comply with his demands."
+pf_reform_desire.3.b: "Let our people worship however they wish."
+
+pf_reform_desire.4.t: "Veneration of the Philosophers"
+pf_reform_desire.4.d: "The Hellenic world is full of stories of great philosophers and inventors, all as deserving of praise as the next. The problem comes when the practice of praising these individuals intersects with our faith. Some people are beginning to form cults around certain figures, and the church is growing upset at the lack of action we are taking to crush them."
+pf_reform_desire.4.a: "The Archon knows what is best for us."
+pf_reform_desire.4.b: "The philosophers are learned men as worthy of praise as the heroes of old!"
+
+pf_reform_desire.5.t: "Heresy in [unrest_province.GetName]!"
+pf_reform_desire.5.d: "Reports of wild heresies circulating in [unrest_province.GetName] have greatly upset the Archon. He demands that we immediately step in and punish these traitors!"
+pf_reform_desire.5.a: "Crack down on the heretics."
+pf_reform_desire.5.b: "Ignore the Archon."
+
+pf_reform_desire.6.t: "A New Profession of Faith"
+pf_reform_desire.6.d: "The Archon has introduced a new profession of faith, to be recited by new converts and children being brought into our religion."
+pf_reform_desire.6.a: "Tamper with it to fit our needs."
+pf_reform_desire.6.b: "Follow the Archon's instructions exactly."
+
+pf_reform_desire.7.t: "A Promise of Safe Passage"
+pf_reform_desire.7.d: "There are many different holy sites for people of our faith, distributed across the Hellenic world and beyond. Many people choose to go on long pilgrimages to reach these sites, often targeting ones associated with particular gods or cultic figures they have questions for or need help from. However, the roads that lead to these places are often dangerous and covered with rogue highwaymen and other vile criminals."
+pf_reform_desire.7.a: "The state should step in to protect these roads."
+pf_reform_desire.7.b: "Let their faith in the gods defend them from wrongdoers."
+
+pf_reform_desire.8.t: "To Wage War"
+pf_reform_desire.8.d: "Hellenic teachings often discourage warfare, but even the Archon will admit that it is sometimes necessary. The nation urges for war - how will the clergy respond?"
+pf_reform_desire.8.a: "War it is!"
+pf_reform_desire.8.b: "Maybe we can just talk this one out?"
+
+pf_reform_desire.9.t: "Hellenic Traditions"
+pf_reform_desire.9.d: "Hellenic people have for thousands of years been great thinkers, innovators and orators. Many fear that these great expectations are slipping in the modern world however, and voice their concerns that we will soon be no more noble or gifted than any other people. How should we address these concerns?"
+pf_reform_desire.9.a: "Hellenes will always be superior."
+pf_reform_desire.9.b: "We need more funding for this dream to be made a reality!"
+
+pf_reform_desire.10.t: "Development of the Temples"
+pf_reform_desire.10.d: "Our temples are the centers of our religion, the seats of our gods and the shining beacons the common man looks up to when he lies in bed at night. It is therefore important that they are designed well and look the best they can do."
+pf_reform_desire.10.a: "Our temples must be renowned the world over!"
+pf_reform_desire.10.b: "So long as they are functional, they are well built."
+
+pf_reform_desire.11.t: "Pride in our Roots"
+pf_reform_desire.11.d: "We are truly a great and noble people, and that is down to..."
+pf_reform_desire.11.a: "...the keen and ambitious spirit of ever Hellene."
+pf_reform_desire.11.b: "...our glorious gods and church."
+
+pf_reform_desire.12.t: "Importing Religious Artefacts"
+pf_reform_desire.12.d: "The world is full of precious metals and artefacts that would be very welcome in any of our temples. A huge trade in such ancient pieces of art and treasure has grown up around the frontiers of the Hellenic world, and now with it becoming increasingly profitable, prices are rising and a number of priests are becoming discontented with its commercial aspects."
+pf_reform_desire.12.a: "Place restrictions on the trade."
+pf_reform_desire.12.b: "Things are fine as they are."

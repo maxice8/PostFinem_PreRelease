@@ -7,8 +7,6 @@ cb_neapolitan_subjugation = {
 
 	prerequisites = {
 		FROM = {
-			ROOT = { mission_completed = pf_nap_italian_empire }
-			is_free_or_tributary_trigger = yes
 			OR = {
 				capital_scope = {
 					OR = {
@@ -20,26 +18,60 @@ cb_neapolitan_subjugation = {
 				}
 				AND = {
 					ROOT = { mission_completed = pf_nap_secure_the_south }
-					OR = {
-						capital_scope = {
+					capital_scope = {
+						OR = {
 							area = western_sicily_area
-						}
-						capital_scope = {
 							area = sicily_area
 						}
 					}
 				}
 				AND = {
 					ROOT = { mission_completed = pf_nap_subdue_sicily }
-					OR = {
-						capital_scope = {
+					capital_scope = {
+						OR = {
 							region = italy_region
+							region = north_italy_region
 						}
 					}
+				}
+				AND = {
+					ROOT = { mission_completed = pf_nap_italian_empire }
+					is_free_or_tributary_trigger = yes
 				}
 			}
 		}
 	}
 
 	war_goal = take_capital_neapolitan_subjugation
+}
+# Raid CB for Vikings and tribes
+cb_raid = {
+	prerequisites_self = {
+		is_subject = no
+		has_government_attribute = allows_viking_raids
+	}
+
+	prerequisites = {
+		OR = {
+			is_neighbor_of = FROM
+			NOT = {
+				border_distance = {
+					who = FROM
+					distance = 125
+				}
+			}
+			AND = {
+				mission_completed = pf_drk_terror_of_the_north
+				NOT = {
+					border_distance = {
+						who = FROM
+						distance = 187
+					}
+				}
+			}
+		}
+	}
+	war_goal = show_superiority_raid
+
+	valid_for_subject = no
 }

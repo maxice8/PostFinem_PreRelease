@@ -28,3 +28,41 @@ take_capital_neapolitan_subjugation = {
 
 	war_name = NEAPOLITAN_SUBJUGATION_WAR_NAME
 }
+show_superiority_raid = {
+	type = superiority
+
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		
+		allowed_provinces_are_eligible = yes
+		allowed_provinces = {
+			always = no
+		}
+		
+		peace_options = {
+			po_gold
+			po_concede_defeat
+			po_humiliate_rival
+		}
+	}
+	
+	defender = {	
+		badboy_factor = 0.75
+		prestige_factor = 1.25
+		peace_cost_factor = 1
+		
+		peace_options = {
+			po_demand_provinces
+			po_concede_defeat
+			po_gold
+			po_release_vassals
+			po_release_annexed
+			po_return_cores
+			po_revoke_cores
+		}
+	}
+	
+	war_name = RAID_WAR_NAME
+}

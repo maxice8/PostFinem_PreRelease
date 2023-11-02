@@ -590,3 +590,21 @@ pf_anc_christian_zealotry = {
 	warscore_cost_vs_other_religion = -0.10
 	manpower_in_true_faith_provinces = 0.15
 }
+
+# Federal Officers
+
+grand_marshal_officer_modifier = {
+	country_military_power = 1
+	global_manpower_modifier = 0.20
+	land_maintenance_modifier = -0.20
+}
+high_priest_officer_modifier = {
+	country_diplomatic_power = 1
+	global_missionary_strength = 0.03
+	missionaries = 1
+}
+grand_steward_officer_modifier = {
+	country_admin_power = 1
+	development_cost = -0.10
+	global_tax_modifier = 0.20
+}

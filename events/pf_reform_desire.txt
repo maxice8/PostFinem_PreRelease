@@ -25,7 +25,7 @@ country_event = {
 		ai_chance = {
 			factor = 10
 		}
-		add_years_of_income = 0.5
+		add_years_of_income = 0.2
 		add_reform_desire = 0.005
 	}
 	option = {
@@ -34,7 +34,7 @@ country_event = {
 			factor = 1
 		}
 		add_papal_influence = 10
-		add_devotion = 1
+		add_devotion = 5
 	}
 }
 
@@ -78,7 +78,7 @@ country_event = {
 				is_rival = ATH
 			}
 		}
-		add_years_of_income = -1
+		add_years_of_income = -0.5
 		if = {
 			limit = { NOT = { num_of_cities = 6 } }
 			add_curia_treasur_small_effect = yes
@@ -123,7 +123,7 @@ country_event = {
 		NOT = { is_religion_enabled = paradosi }
 		NOT = { tag = ATH }
 		any_owned_province = {
-			religion = catholic
+			religion = hellenic
 		}
 		# is_year = 1490
 		NOT = {
@@ -152,7 +152,9 @@ country_event = {
 			factor = 10
 		}
 		add_papal_influence = 2
-		add_reform_desire = 0.005
+		event_target:unrest_province = {
+			add_unrest = 5
+		}
 	}
 	option = {
 		name = pf_reform_desire.3.b
@@ -160,9 +162,9 @@ country_event = {
 		ai_chance = {
 			factor = 10
 		}
-		event_target:unrest_province = {
-			add_unrest = 5
-		}
+		add_prestige = 10
+		add_papal_influence = -5
+		add_reform_desire = 0.005
 	}
 }
 
@@ -193,6 +195,7 @@ country_event = {
 	}
 	option = {
 		name = pf_reform_desire.4.b
+		change_innovativeness = 1
 		ATH = {
 			add_opinion = {
 				who = root
@@ -238,6 +241,7 @@ country_event = {
 		ai_chance = {
 			factor = 5
 		}
+		add_dip_power = -50
 		add_papal_influence = 5
 		add_reform_desire = 0.007
 	}
@@ -247,8 +251,9 @@ country_event = {
 			factor = 1
 		}
 		goto = unrest_province
+		add_stability = -1
 		event_target:unrest_province = {
-			add_unrest = 5
+			add_unrest = 10
 		}
 		add_reform_desire = -0.01
 	}
@@ -288,7 +293,7 @@ country_event = {
 			factor = 1
 		}
 		add_papal_influence = 10
-		add_devotion = 1
+		add_devotion = 5
 		add_reform_desire = 0.005
 	}
 }
@@ -319,6 +324,7 @@ country_event = {
 		ai_chance = {
 			factor = 5
 		}
+		add_years_of_income = -0.33
 		add_dip_power = 100
 		add_reform_desire = 0.01
 	}
@@ -327,8 +333,8 @@ country_event = {
 		ai_chance = {
 			factor = 1
 		}
-		add_papal_influence = 15
-		add_devotion = 1
+		add_papal_influence = 20
+		add_devotion = 10
 		add_reform_desire = 0.007
 	}
 }
@@ -392,13 +398,13 @@ country_event = {
 	option = {
 		name = pf_reform_desire.9.a
 		ai_chance = { factor = 5 }
-		add_years_of_income = -0.5
+		add_stability_or_adm_power = yes
 		add_reform_desire = 0.007
 	}
 	option = {
 		name = pf_reform_desire.9.b
 		ai_chance = { factor = 1 }
-		add_papal_influence = 10
+		add_years_of_income = -0.25
 		add_reform_desire = -0.005
 	}
 }
@@ -503,13 +509,13 @@ country_event = {
 	option = {
 		name = pf_reform_desire.12.a
 		ai_chance = { factor = 5 }
-		add_stability_or_adm_power = yes
+		add_mercantilism = 2
 		add_reform_desire = 0.01
 	}
 	option = {
 		name = pf_reform_desire.12.b
 		ai_chance = { factor = 1 }
-		add_papal_influence = 25
+		add_papal_influence = 20
 		add_reform_desire = -0.01
 	}
 }
