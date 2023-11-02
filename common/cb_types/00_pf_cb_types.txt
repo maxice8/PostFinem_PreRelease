@@ -49,6 +49,13 @@ cb_raid = {
 	prerequisites_self = {
 		is_subject = no
 		has_government_attribute = allows_viking_raids
+		# Only allow raiding one country at a time
+		NOT = {
+			is_in_war = {
+				attacker_leader = ROOT
+				casus_belli = cb_raid	
+			}
+		}
 	}
 
 	prerequisites = {
