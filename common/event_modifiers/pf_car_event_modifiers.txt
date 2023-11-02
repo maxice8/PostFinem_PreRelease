@@ -31,8 +31,8 @@ car_gallic_conqueror_modifier = {
 	core_creation = -0.1
 }
 car_conquest_of_italia = {
-	governing_capacity_modifier = 0.05
-	trade_goods_size = 1
+	governing_capacity_modifier = 0.1
+	monthly_splendor = 1
 }
 car_worthy_successors_of_hannibal_modifier = {
 	administrative_efficiency = 0.05
@@ -81,4 +81,23 @@ car_elephant_cannons_modifier = {
 }
 car_elephant_cannons_firepower = {
 	artillery_levels_available_vs_fort = 1
+}
+car_italian_capital_roma_modifier = {
+	statewide_governing_cost = -0.75
+	local_tax_modifier = 0.5
+}
+car_italian_subject_modifier= {
+	prestige = 1
+	diplomatic_reputation = 1
+}
+car_trade_investments_modifier = {
+	trade_company_investment_cost = -0.1
+	province_trade_power_modifier = 0.05
+}
+car_whole_new_world_modifier = {
+	trade_efficiency = 0.1
+	colony_development_boost = 1
+}
+car_extra_general_fire_modifier = {
+	max_general_fire = 1
 }

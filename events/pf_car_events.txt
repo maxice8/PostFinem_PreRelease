@@ -53,3 +53,48 @@ country_event = {
 	}
 
 }
+
+
+#ELEPHANTS! Ivory province in Iol
+country_event = { 
+	id = pf_car.2
+	title = pf_car.2.t
+	desc = pf_car.2.d
+	picture = TRADEGOODS_eventPicture
+	fire_only_once = yes
+	trigger = { 
+		tag = CAR
+		338 = { owned_by = ROOT }
+		338 = { development = 20 }
+	}
+	
+	mean_time_to_happen = { 
+		months = 120
+		modifier = {
+			factor = 0.75
+			has_idea_group = quality_ideas
+		}
+		modifier = {
+			factor = 0.75
+			has_idea_group = trade_ideas
+		}
+
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = car_elephants_enabled
+		}
+	}
+	option = {
+		name = pf_car.2.a
+		ai_chance = { factor = 1 }
+		338 = { 
+			add_center_of_trade_level = 1
+			custom_tooltip = empty_line_tt
+			add_base_production = 2
+			custom_tooltip = empty_line_tt
+			change_trade_goods = ivory
+			add_building = tradecompany
+		}
+	}
+}

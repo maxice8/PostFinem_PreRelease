@@ -111,6 +111,7 @@ car_main_1 = {
 
 		effect = { 
 			add_prestige_or_monarch_power = { amount = 25 }
+			custom_tooltip = empty_line_tt
 			italy_region = {
 				add_permanent_claim = ROOT
 			}
@@ -200,13 +201,39 @@ car_main_1 = {
 		position = 11
 		required_missions = { pf_car_african_riches pf_car_westward } 
 		provinces_to_highlight = {  
+			OR = {
+				province_id = 1293
+				province_id = 4979
+				province_id = 1466
+				province_id = 341
+			}
+			NOT = {
+				has_most_province_trade_power = ROOT
+			}
 		} 
 
 		trigger = {
+			341 = { highest_value_trade_node = yes }
+			341 = { has_most_province_trade_power = ROOT }
+			1293 = { has_most_province_trade_power = ROOT }
+			4979 = { has_most_province_trade_power = ROOT }
+			1466 = { has_most_province_trade_power = ROOT }
 		} 
 
 		effect = {
-			
+			define_advisor = {
+				type = trader
+				cost_multiplier = 0.25
+				skill = 3
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = traders_give_trade_steering_tt
+			set_country_flag = traders_give_trade_steering_flag
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = car_trade_investments_modifier
+				duration = -1
+			}
 		} 
 	}
 }
@@ -318,6 +345,13 @@ car_main_2 = {
 		} 
 
 		effect = {  
+			define_advisor = {
+				type = bureaucrat
+				discount = yes
+				skill = 3
+				name = "Mago Tulliashon Kiker"
+			}
+			custom_tooltip = empty_line_tt
 			1750 = {
 				center_of_trade = 2
 			}
@@ -367,7 +401,26 @@ car_main_2 = {
 				region = north_italy_region
 			}
 		} 
-		effect = {  } 
+		effect = {  
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
+			118 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			custom_tooltip = empty_line_tt
+			118 = {
+				add_province_modifier = {
+					name = car_italian_capital_roma_modifier
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = car_italian_subject_modifier
+				duration = 7300
+			}
+		} 
 	}
 
 	pf_car_looking_to_the_waves = {
@@ -377,6 +430,7 @@ car_main_2 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {  
+			has_institution = new_world_i
 			OR = {
 				full_idea_group = exploration_ideas
 				full_idea_group = expansion_ideas
@@ -384,6 +438,22 @@ car_main_2 = {
 		} 
 
 		effect = {  
+			if = {
+				limit = { 
+					capital_scope = {
+						has_port = yes
+					}
+				}
+				capital_scope = {
+					add_unit_construction = {
+						type = heavy_ship
+						cost = 0
+						speed = 0.1
+						amount = 5
+					}
+				}
+				custom_tooltip = empty_line_tt
+			}
 			add_country_modifier = {
 				name = car_looking_to_the_waves_modifier
 				duration = 12775
@@ -439,13 +509,45 @@ car_main_2 = {
 		icon = settle_north_america
 		position = 10
 		required_missions = { pf_car_colonial_mindset } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				colonial_region = colonial_eastern_america
+				colonial_region = colonial_the_carribean
+			}
+		} 
 
 		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 60		
+				OR = {
+					colonial_region = colonial_eastern_america
+					colonial_region = colonial_the_carribean
+				}
+			}
 		} 
 
 		effect = {  
-			
+			1500 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 100
+					key = car_big_trade_modifier
+				}
+			}
+			custom_tooltip = empty_line_tt
+			1516 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 100
+					key = car_big_trade_modifier
+				}
+			}
+			custom_tooltip = empty_line_tt
+			northeast_america_region = { add_permanent_claim = ROOT }
+			southeast_america_region = { add_permanent_claim = ROOT }
+			carribeans_region = { add_permanent_claim = ROOT }
 		} 
 	}
 
@@ -453,13 +555,33 @@ car_main_2 = {
 		icon = mission_colonize_the_caribbean
 		position = 11
 		required_missions = { pf_car_westward } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		trigger = {  
+		trigger = { 
+			 num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 200
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+			 }
 		} 
 
 		effect = {  
-			
+			add_prestige_or_monarch_power = { amount = 50 }
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = car_whole_new_world_modifier
+				duration = -1
+			}
 		} 
 	}
 }
@@ -596,7 +718,7 @@ car_main_3 = {
 				add_casus_belli = {
 					type = cb_restore_personal_union
 					target = SUE
-					months = 120
+					months = 240
 				}
 				custom_tooltip = empty_line_tt
 			}
@@ -776,18 +898,45 @@ car_main_3 = {
 			341 = {
 				province_has_center_of_trade_of_level = 3
 			}
-			OR = {
-				341 = {			 
-					has_great_project = {
-						type = great_cothon
-						tier = 2
-					}	
+			if = {
+				limit = {
+					ai = no
+				}				
+				OR = {
+					341 = {			 
+						has_great_project = {
+							type = great_cothon
+							tier = 1
+						}	
+					}
+					341 = {			 
+						has_great_project = {
+							type = great_cothon
+							tier = 2
+						}	
+					}
+					341 = {			 
+						has_great_project = {
+							type = great_cothon
+							tier = 3
+						}	
+					}
 				}
-				341 = {			 
-					has_great_project = {
-						type = great_cothon
-						tier = 3
-					}	
+			}
+			else = {
+				OR = {
+					341 = {			 
+						has_great_project = {
+							type = great_cothon
+							tier = 2
+						}	
+					}
+					341 = {			 
+						has_great_project = {
+							type = great_cothon
+							tier = 3
+						}	
+					}
 				}
 			}
 		} 
@@ -1219,9 +1368,23 @@ car_main_4 = {
 		required_missions = { pf_car_thunder_of_war } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			land_forcelimit = 250
+			has_commanding_three_star = yes
+			num_of_cavalry = 40
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_army_professionalism = 0.1
+			custom_tooltip = empty_line_tt
+			custom_tooltip = unlock_mil_hegemon_early_tt
+			set_country_flag = unlock_mil_hegemon_early_flag
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = car_extra_general_fire_modifier
+				duration = -1
+			}
+		} 
 	}
 }
 car_main_5 = {
@@ -1249,6 +1412,12 @@ car_main_5 = {
 		} 
 
 		effect = {  
+			define_admiral = {
+				shock = 4
+				fire = 3
+				manuever = 4
+				name = "Gnaeus Pumayyaton"
+			}
 			add_country_modifier = {
 				name = car_navy_worthy_of_yam_modifier
 				duration = 3650
@@ -1371,7 +1540,6 @@ car_main_5 = {
 					duration = -1
 				}
 			}
-			custom_tooltip = empty_line_tt
 			341 = {
 				add_province_modifier = {
 					name = car_eternal_punic_war_victor_modifier
@@ -1504,13 +1672,13 @@ car_main_5 = {
 					trade_goods = cloth
 				}
 			}
+			custom_tooltip = empty_line_tt
 			custom_tooltip = car_clothe_the_citizens_tt
 			hidden_effect = {
 				swap_trade_good_for_max_provinces = {
 					max = 5
 					original = cloth
 					new = silk
-					tooltip = car_clothe_the_citizens_effect_tt
 					trigger = "
 						has_manufactory_trigger = yes
 						base_production = 10
