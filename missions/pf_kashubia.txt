@@ -933,35 +933,53 @@ ksb_5_slot = {
 			}
 		}
 		effect = {
-			custom_tooltip = pf_ksb_effects_change_tt
-			if = {
-				limit = {
-					has_country_flag = ksb_supported_lechia_wars
+			custom_tooltip = ksb_supported_country_won_tt
+			custom_tooltip = empty_line_tt
+			custom_tooltip = ksb_supported_country_lost_tt
+			hidden_effect = {
+				if = { 
+					limit = {
+						any_country = { 
+							has_country_flag = lechia_kingdom_flag 
+						} 
+					}
 				}
-				vassalize = KRA
-			}
-			else_if = {
-				limit = {
-					has_country_flag = ksb_supported_lechia_wars
+				random_country = {
+					limit = { has_country_flag = lechia_kingdom_flag }
+					if = {
+						limit = {
+							has_country_flag = lechia_supported_by_kashubia
+						}
+						vassalize = PREV
+					}
+					else = {
+						add_casus_belli = {
+							type = cb_vassalize_mission
+							target = PREV
+						}
+					}
 				}
-				vassalize = POL
 			}
+			custom_tooltip = else_tt
+			custom_tooltip = PF_KSB_DEV_IN_MALOPOLSKA_TT
+			custom_tooltip = empty_line_tt
+			custom_tooltip = PF_KSB_DEV_IN_SANDOMIERZ_TT
 			else = {
-				custom_tooltip = empty_line_tt
-				distribute_base_dev_to_provinces = {
-					num = 3
-					amount = 1
-					trigger = "area = malopolska_area"
-					type = manpower
-					tooltip = PF_KSB_DEV_IN_MALOPOLSKA_TT
-				}
-				custom_tooltip = empty_line_tt
-				distribute_base_dev_to_provinces = {
-					num = 3
-					amount = 1
-					trigger = "area = sandomierz_area"
-					type = manpower
-					tooltip = PF_KSB_DEV_IN_SANDOMIERZ_TT
+				hidden_effect = {
+					distribute_base_dev_to_provinces = {
+						num = 3
+						amount = 1
+						trigger = "area = malopolska_area"
+						type = manpower
+						tooltip = PF_KSB_DEV_IN_MALOPOLSKA_TT
+					}
+					distribute_base_dev_to_provinces = {
+						num = 3
+						amount = 1
+						trigger =  "area = sandomierz_area"
+						type = manpower
+						tooltip = PF_KSB_DEV_IN_SANDOMIERZ_TT
+					}
 				}
 			}
 		}

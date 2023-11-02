@@ -2118,10 +2118,10 @@ voc_indiamen_ship = {
 
 
 cossacks_regiment = {
-	shock_damage = 0.25
-	shock_damage_received = -0.25
-	land_attrition = 0.50
+	shock_damage = 0.5
+	cavalry_flanking = 1
 	land_maintenance_modifier = 1
+	reinforce_cost_modifier = 1
 }
 
 carolean_regiment = {	# Huskarls
