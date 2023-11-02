@@ -981,3 +981,16 @@ country_event = {		# Beyond the Federation
 		}
 	}
 }
+country_event = {		# The Deeds of MONARCH
+	id = pf_if.26
+	title = pf_if.26.t 
+	desc = pf_if.26.d
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_if.26.a"
+		add_splendor = 100
+	}
+}

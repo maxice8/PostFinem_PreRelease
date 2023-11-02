@@ -173,6 +173,30 @@ pf_belongs_to_greek_culture_group = {
 
 }
 
+province_is_part_of_raid_war = {
+	custom_trigger_tooltip = {
+		tooltip = province_is_part_of_raid_war_tt
+		controller = {
+			is_in_war = {
+				casus_belli = cb_raid
+				attacker_leader = THIS
+			}
+			ROOT = {
+				NOT = { owned_by = PREV }
+			}
+		}
+	}
+}
+country_is_part_of_raid_war = {
+	custom_trigger_tooltip = {
+		tooltip = country_is_part_of_raid_war_tt
+		is_in_war = {
+			casus_belli = cb_raid
+			attacker_leader = THIS
+		}
+	}
+}
+
 pf_rabim_qahal_adirim_control = {
 	NOT = {
 		has_government_power = {

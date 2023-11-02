@@ -847,3 +847,102 @@ upgrade_center_of_trade = {
 		add_base_manpower = 1
 	}
 }
+
+#####################
+# Raid Loot
+#####################
+
+# add_loot = {
+#	 amount = X
+# }
+
+add_loot = {
+	change_variable = {
+		which = RaidLoot
+		value = $amount$
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = RaidLoot
+				which = MaxRaidLoot
+			}
+		}
+		set_variable = {
+			which = RaidLoot
+			which = MaxRaidLoot
+		}
+	}
+}
+lose_loot = {
+	subtract_variable = {
+		which = RaidLoot
+		value = $amount$
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = RaidLoot
+					value = 0
+				}
+			}
+		}
+		set_variable = {
+			which = RaidLoot
+			value = 0
+		}
+	}
+}
+
+add_loot_small = {
+	custom_tooltip = add_loot_small_tt
+	hidden_effect = {
+		add_loot = {
+			amount = 10
+		}
+	}
+}
+add_loot_medium = {
+	custom_tooltip = add_loot_medium_tt
+	hidden_effect = {
+		add_loot = {
+			amount = 25
+		}
+	}
+}
+add_loot_large = {
+	custom_tooltip = add_loot_large_tt
+	hidden_effect = {
+		add_loot = {
+			amount = 50
+		}
+	}
+}
+
+# IF reforms
+
+enable_ruler_biographies = {
+	custom_tooltip = pf_if_rex_terrenus_effect_tt
+	set_country_flag = pf_if_allow_ruler_biographies
+}
+enable_adirim_call_to_war = {
+	custom_tooltip = pf_if_sociis_sub_aquila_effect_tt
+	set_country_flag = pf_if_allow_adirim_call_to_war
+}
+enable_punic_monasteries = {
+	custom_tooltip = pf_if_punic_monasteries_effect_tt
+	set_country_flag = pf_if_allow_punic_monasteries
+}
+enable_swords_of_the_gods = {
+	custom_tooltip = pf_if_swords_of_the_gods_effect_tt
+	set_country_flag = pf_if_allow_swords_of_the_gods
+}
+enables_extra_reasons_for_advisor_petition = {
+	custom_tooltip = pf_if_reasons_for_advisor_petition_effect_tt
+	set_country_flag = pf_if_reasons_for_advisor_petition
+}
+enables_petition_for_war = {
+	custom_tooltip = pf_if_petition_for_war_effect_tt
+	set_country_flag = pf_if_petition_for_war
+}

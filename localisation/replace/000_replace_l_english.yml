@@ -286,6 +286,9 @@ IS_HRE_HERETIC_RELIGION:0 "§Y$RELIGION$§! is the opposition faith of the Itali
  NOT_SIB_TO_BE_SEI:0 "Colonial Frontiers cannot be seized like normal colonies."
 
 
+ CHURCH_POWER:1 "Religious Power: $POWER|Y$"
+ CHURCH_OF:0 "Temple of $COUNTRY$"
+ CHURCH_POWER_MONTHLY:1 "Religious Power changes by $DIFF$ each month due to the following effects:\nBase: §Y$SKILL$§! monarch power * §Y$SCALE$§!"
 
  scandinavian_flag_officers: "Norse Flag Officers"
 

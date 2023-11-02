@@ -1888,7 +1888,7 @@ has_any_colonist_idea = {
 		has_idea = colonial_ventures
 		has_idea = additional_colonists
 		has_idea = general_colonization_law
-		has_idea = pioneer_spirit
+		#has_idea = pioneer_spirit
 		has_idea = manifest_destiny
 		has_idea = settling_the_interior
 		has_idea = cab_carib_seafaring
@@ -2600,7 +2600,7 @@ province_is_or_accepts_religion = {
 
 has_not_any_exploration_ideas = {
 	NOT = { has_idea = quest_for_the_new_world }
-	NOT = { has_idea = call_of_our_forefathers }
+	#NOT = { has_idea = call_of_our_forefathers }
 	NOT = { has_idea = tonga_oceanic_empire }
 	NOT = { has_idea = samoa_trade }
 	NOT = { has_idea = legendary_voyagers }
@@ -2610,7 +2610,7 @@ has_not_any_exploration_ideas = {
 has_any_exploration_idea = {
 	OR = {
 		has_idea = quest_for_the_new_world
-		has_idea = call_of_our_forefathers
+		#has_idea = call_of_our_forefathers
 		has_idea = tonga_oceanic_empire
 		has_idea = samoa_trade
 		has_idea = legendary_voyagers
