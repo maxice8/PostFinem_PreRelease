@@ -23,15 +23,61 @@ nordic_monarchy_reform_desc: "Our country has crawled out of the dark ages of tr
 nordic_huskarl_recruitment_reform: "Expand Huskarl Recruitment"
 nordic_huskarl_recruitment_reform_desc: "The Huskarls are traditionally taken from the gentry, but in our recruitment we are missing a potentially big audience. Many nobles have wayward second and third sons, who stand little chance of inheritance and mope around wasting money on life's luxuries instead of doing anything useful for their families. If we offer service to these sons, we would be able to greatly expand the breadth of Huskarl recruitment, as well as remove a nuisance to many a local community."
 
+nordic_entrenched_raids_reform: "Merciless Raiders"
+nordic_entrenched_raids_reform_desc: "Our ancestors have been raiding and pillaging for centuries - in a poor land such as ours, it was the only real way to make a living. Now, such raiding has become more of a sport and a show of martial prowess, but it is nonetheless a core part of our culture. Our attacks are so impactful that many of the peoples we target have begun calling us by a new name - not 'Northmen', but 'vikings', literally pirates. Instead of cowering, we should embrace this new identity, and make sure that everyone knows we are the terror of the land and the seas."
+mechanic_raids_give_money_from_temples_yes: "Sieging provinces in §Yraid wars§! with §YTemples§! or §YCathedrals§! grants us §G5§!¤ and §G10§!¤ §MLoot§! respectively."
+
+pf_norse_jarldom: "Norse Jarldom"
+pf_norse_jarldom_desc: "The many tribes and clans that once occupied this area have unified into one Jarldom, led by a fierce viking warlord."
+mechanic_allows_viking_raids_yes: "Allows §YViking Raid§! wars."
+mechanic_raiding_gives_extra_devastation_yes: "Raiding provinces gives them an extra §R+10§! Devastation."
+
+pf_vinland_colony: "Disorganized Colony"
+pf_vinland_colony_desc: "Vinland was founded as, and continues to function as, little more than a colony. Our infrastructure is designed around exports and temporary habitation, both of which are luxuries we cannot afford in these dire times."
+
+pf_vinland_althing: "Vinlandic Althing"
+pf_vinland_althing_desc: "At last, we have overcome our colonial past, and established a proto-democracy in the Althing."
+
 # Countries
 
 NDH: "Nordheim"
 NDH_ADJ: "Nordheimer"
+SKD: "Skåneland"
+SKD_ADJ: "Skånelander"
+NORVEGR: "Norvegr"
+NORVEGR_ADJ: "Norvegr"
+VIN: "Vinland"
+VIN_ADJ: "Vinlander"
+DAGSATRLAND: "Dagsátrland"
+DAGSATRLAND_ADJ: "Dagsátrland"
+
+# Colonial nations
+
+COLONIAL_EASTERN_AMERICA_Vestrjar: "Vestrjar"
+
+finnic: "Finnic"  # Culture group
+vinlandic: "Vinlandic"
 
 # Personalities
 
 viking_personality: "Viking"
 desc_viking_personality: "This general has made their name in raids and military expeditions abroad, searching for gold and glory, earning them a prideful place in our society."
+viking_personality_die_desc:0 "REPLACE_ME"
+shieldmaiden_personality: "Shieldmaiden"
+desc_shieldmaiden_personality: "This ruler is a skilled warrior woman, trained from an early age to fight and a sight of terror for every person that sees them."
+shieldmaiden_personality_die_desc:0 "REPLACE_ME"
+
+# Great Projects
+
+danavirki: "Danavirki"
+
+# CBs
+
+cb_raid: "Viking Raid"
+cb_raid_desc: "We can attack other nations for slaves and plunder!"
+show_superiority_raid: "Show Superiority"
+show_superiority_raid_desc: "Gain warscore by defeating enemy armies in battle."
+RAID_WAR_NAME: "$ORDER$$FIRST$ Raid against $SECOND$"
 
 ##############
 # Ideas
@@ -74,6 +120,101 @@ ndh_northern_resilience: "Northern Resilience"
 ndh_northern_resilience_desc: "REPLACE_ME"
 ndh_urbanisation: "Stórrboer"
 ndh_urbanisation_desc: "REPLACE_ME"
+
+DRK_ideas: "Danish Ideas"
+DRK_ideas_start: "Danish Traditions"
+DRK_ideas_bonus: "Danish Ambition"
+
+drk_the_two_denmarks: "The Three Danmarks"
+drk_the_two_denmarks_desc: "Long ago, the Danish people lived in peace and harmony across the lands of southern Scandinavia. A mighty kingdom ruled there, forged by the keen axe-work of Erik Bloodaxe, the ancestor of many present noble and royal families throughout the region. In 1388, upon the death of the Jarl Ivar, the realm was split in two - a western province, ruled by the brash and unruly younger son, and the core islands and Skaneland, ruled by the capable Thornarr Thunderfist. While the descendents of the worse brother went on in relative peace and isolation, protected from the menacing Saxons by the great Danavirki, our realm suffered great traumas during the first half of the 15th century. Constant attacks from the unchained Jutes and Angles and even raids from the sons of Ulrik of Norway plagued our fortunes, until the greatest blow of all was dealt - the Swedish invasion. We stood little chance at defending against the newly reorganised armies of the Jarl, and all our fears proved to be true. The Swedes swept from village to village, massacring the peaceful Danes and eventuall establishing their rule over all of Skaneland. Our claims are many, but thusfar our chances have been few. One day, the Danes will rule from sea to shining sea once more, and our beautiful realm, now smashed like a vase on the floor, will be carefully pieced back together."
+drk_sigurdsson_rule: "Rule of the Sigurdssons"
+drk_sigurdsson_rule_desc: "Jarl Sigurd was the the king of the Danes looked back on fondly by many. Living in a realm just beyond the borders of living memory, Sigurd ruled a united Danmark and ruled it well, instituting a number of administrative reforms, personally leading a great many raids into the Baltics and Albion, and refurbishing the western flank of the Danavirki. If it were not for his choice of heir, the foolish Ivar who cleaved our country in half, we could reasonably claim him the greatest king. His legacy is so strong and ever present in the minds of kings and commoners alike today that the rulers of Danmark and Jutland still cling on to his heritage, titling themselves not sons of their fathers but sons of Sigurd the Mighty. His name carries weight among all peoples; even those living across vast seas from us tell their children stories at night about the raids of the terrifying 'Sigurd', the Butcherer of the Night. Stressed our inheritance from this great man will only serve to further reinforce our legitimacy in the eyes of all who remember his might and deeds."
+drk_the_isles: "Kingdom of the Isles"
+drk_the_isles_desc: "The Isles of Danmark are some of the most populated and well developed parts of Scandinavia, rivalled only by the esteemed citadel of Uppsala in their majesty and craftsmanship. Through the power of our fleet, we control all the isles of the Baltic, and all their rich ports and harbours, including the skilled seaman and warriors who reside there. Our common culture and heritage rings true in the hearts of all who call themselves Danes, and as a result they will gladly throw their lives down before a foreign sword in service of their homeland. We may have strong ties to the mainland, but at our core, we are a kingdom of islands."
+drk_danavirki: "Danish Investiture"
+drk_danavirki_desc: "Investiture is a practice long performed by the warrior-kings of Scandinavia. Living in times of great stress and disorder, these rulers had little choice but to give land to their soldiers and subordinates in exchange for their service, overwise none of the inspirational feats we hear of from the sagas and bardic poems would have happened. Nonetheless, investiture has proven problematic in many places. In the kingdom of the Swedes for example, the actual estate the Jarl himself controls is limited to a small portion of countryside surrounding the capital, supposedly an inheritance directly from Freyr himself, while the rest of the country is in reality ruled by whosoever can hit hardest with an axe. In Danmark, we are careful with the power we place in the hands of our landed classes - they must never gain any delusion that the crown works in their service and not the other way around. We will make them rely on us, pray for us, and beg us for land - anything else will be punished with a sharp blade of steel."
+drk_blood_eagle: "Blood for the Gods!"
+drk_blood_eagle_desc: "Our gods are a bloodthirsty group who regularly demand sacrifices to continue their struggles against the dark forces that threaten Midgard every day. We cannot hope to understand the true nature of their efforts - all we can do is accept their supremacy and submit ourselves to their service. If they desire that our game animals be sacrificed, so be it, let their will be done. Likewise, if our soothsayers indicate that any god has a taste for flesh of the human variety, we will not hesitate to provide this to them. Many in the south see us as savages, cannibals even, and look down upon our rituals and practices with a strong hatred. They simply do not understand what our gods demand of us, and probably never will. If they will not take the actions necessary to save the world, then we must take up that mantle ourselves."
+drk_raiders: "Pillaging Heritage"
+drk_raiders_desc: "Our ancestors have been a menace to the so-called civilised peoples of northern Europe for centuries. There is no town or city which they have not raided, and in fact many of these sites have become frequent stops for ambitious fortune-seeking vikings to make a relatively easy hoard of wealth. Raiding and looting are truly in our blood, and are practiced with the same heart and ferocity today as they were eight-hundred years ago when our ancestors first began to set sail. Things are changing however, in the way that our targets approach us. Discontented with having their wares stolen every few years, many towns have rallied together and formed defensive alliances, forged local militias and even funded defensive fleets in the hopes of holding us off. We will show them that their efforts and money have been spent for nothing, and that there is only one thing that can stop a Norseman - the command of the gods themselves."
+drk_dark_storm_ahead: "A Storm Upon the Seas"
+drk_dark_storm_ahead_desc: "The clouds are descending from the skies all around us - as the scene goes dark and the rain starts to trickle down, our enemies look ahead, desperately searching the fog for the source of the ominous chanting they can hear. Then, like the first break of dawn, they see our ship cut through into the light, the Danish flag flying above, and a hundred of our nation's finest warriors abound. There is no way they can escape - they have heard the tales of the speed and manueverability of viking ships. In their hearts, they know they have no choice but to stay and fight. Nonetheless, their captain attempts to turn around, and head away from our waters. Alas, it is for nothing, and from out of the fog another two splendid vessels emerge, cornering the enemy boat. Like a noose tied around the neck of a criminal, we tighted our grip until we can see those desperate men shivering in fear from our decks. Their time one earth will soon be over, and their booty will be ours."
+
+JUT_ideas: "Jutish Ideas"
+JUT_ideas_start: "Jutish Traditions"
+JUT_ideas_bonus: "Jutish Ambition"
+
+jut_anglian_heritage: "Anglian Heritage"
+jut_anglian_heritage_desc: "Our ancestors have lived in this region for a thousand years, and throughout that time have developed traditions and festivals that we still perform to this day."
+jut_saxon_wars: "Legacy of the Saxon Wars"
+jut_saxon_wars_desc: "Long ago, the Angles attempted an invasion of Albion, but were repulsed by the slimy British commander Coel. Despite our failure, we learned a great many lessons about how to mount naval invasions and pacify local tribes."
+jut_jutnish_cavaliers: "Jutnish Cavaliers"
+jut_jutnish_cavaliers_desc: "Much of our land is not fit for cavalry, but the central strip running down the middle of the country is remarkably well suited. The Jutnish cavaliers form a regiment tasked with rallying men and transmitting messages fast across the whole nation."
+jut_german_tax: "Suðrgjald"
+jut_german_tax_desc: "The Saxons to our south are an ever present threat. It is well known that they desire our lands, but through the power of the Danavirki fortifications we have been able to hold them off. To pay for these defences, we shall have to raise a special tax on all landowners protected by them."
+jut_open_ideas: "Open Minded Policy"
+jut_open_ideas_desc: "If we wish to adapt to the modern world, we need to keep an open mind. Be it in matters of religion or science, we cannot afford to spurn any man solely for his creed."
+jut_serpent: "The Flaming Serpent"
+jut_serpent_desc: "Perhaps the greatest of the Jutnish leaders was Thorvald Flame-Touched, a man of tall stature and the heart of a lion. He led our nation through tough times, facing invasion by the Saxons and constant raids from the Swedes and Danes, but came out triumphant despite the odds. Thorvald claimed to be inspired by and have immense powers gifted to him by a 'flaming serpent' - perhaps there is something to this claim?"
+jut_migration: "Jutnish Migration"
+jut_migration_desc: "Many times in the past, our people have tried to move to a new home, but rarely have they succeeded. Despite their best efforts, this peninsular is clearly supposed to be their home. We should not be deterred however - Jutnish language and ways can still spread across the lands we conquer and beyond."
+
+NOR_ideas: "Norwegian Ideas"
+NOR_ideas_start: "Norwegian Traditions"
+NOR_ideas_bonus: "Norwegian Ambition"
+
+nor_legacy_of_ulrik: "Legacy of Ulrik the Great"
+nor_legacy_of_ulrik_desc: "Ulrik was a great viking king who brought Norway into a golden age, conquering vast territories in Scandinavia and making sure our name brought fear to the minds of men and women across Europe. Alas, now he is gone, but his sons are left behind to continue his legacy. Let us try to match his ambitions, and one day, maybe even best them."
+nor_call_to_the_sea: "Call to the Sea"
+nor_call_to_the_sea_desc: "For centuries, our people have lived and died by the sea. Sailing is practically mandatory for the inhabitants of the western costs, where there are no roads or paths out of the highlands to carry goods or people. Clearly, our destiny lies upon the waves."
+nor_north_sea_trades: "Control the North Sea"
+nor_north_sea_trades_desc: "The North Sea is a center for trades from across the northern reaches of Europe, though it has fallen far from its glory days. Let us clear the pirates and renovate the entrepots that once dotted its shores, and reignite the thriving industries that exploded out from these seas to the world."
+nor_crown_rule: "Crown Rule"
+nor_crown_rule_desc: "Every policy action undertaken in Norway is done under the assumption of 'Crown Rule' - the Jarl will have ultimate say in all matters. This gives our monarch and unprecendented control over everything from the military to the everyday lives of our citizens, ensuring that we can exploit our lands smoothly."
+nor_master_seamen: "Natural Seamen"
+nor_master_seamen_desc: "Our skills on the seas have only improved with time, and as a result it only seems natural to establish an official naval division of our military. This new Royal Navy will recruit only the finest sailors, and deck its ships with only the most state-of-the-art technologies."
+nor_fish_market: "Goods from Here and There"
+nor_fish_market_desc: "As our empire grows, so has the reach of our merchants. Now, ships sail into our harbours every day ladden with goods from every continent, bringing in spices and gemstones of such taste and quality our ancestors could only dream of."
+nor_royal_artillery: "Royal Artillery"
+nor_royal_artillery_desc: "Artillery is fast becoming the most important player on the battlefields of the modern world. We should invest in this emerging technology and found a new academy to encourage local innovation in firearms and cannoneering, so that we can always be two steps ahead of our neighbours."
+
+NOR_ideas_evolved: "Norwegian Ideas"
+NOR_ideas_evolved_start: "Norwegian Traditions"
+NOR_ideas_evolved_bonus: "Norwegian Ambition"
+
+nor_legacy_of_ulrik_evolved: "Legacy of Ulrik the Great"
+nor_legacy_of_ulrik_evolved_desc: "Ulrik was a great viking king who brought Norway into a golden age, conquering vast territories in Scandinavia and making sure our name brought fear to the minds of men and women across Europe. Alas, now he is gone, but his sons are left behind to continue his legacy. Let us try to match his ambitions, and one day, maybe even best them."
+nor_call_to_the_sea_evolved: "Call to the Sea"
+nor_call_to_the_sea_evolved_desc: "For centuries, our people have lived and died by the sea. Sailing is practically mandatory for the inhabitants of the western costs, where there are no roads or paths out of the highlands to carry goods or people. Clearly, our destiny lies upon the waves."
+nor_north_sea_trades_evolved: "Control the North Sea"
+nor_north_sea_trades_evolved_desc: "The North Sea is a center for trades from across the northern reaches of Europe, though it has fallen far from its glory days. Let us clear the pirates and renovate the entrepots that once dotted its shores, and reignite the thriving industries that exploded out from these seas to the world."
+nor_crown_rule_evolved: "Crown Rule"
+nor_crown_rule_evolved_desc: "Every policy action undertaken in Norway is done under the assumption of 'Crown Rule' - the Jarl will have ultimate say in all matters. This gives our monarch and unprecendented control over everything from the military to the everyday lives of our citizens, ensuring that we can exploit our lands smoothly."
+nor_master_seamen_evolved: "Natural Seamen"
+nor_master_seamen_evolved_desc: "Our skills on the seas have only improved with time, and as a result it only seems natural to establish an official naval division of our military. This new Royal Navy will recruit only the finest sailors, and deck its ships with only the most state-of-the-art technologies."
+nor_fish_market_evolved: "Goods from Here and There"
+nor_fish_market_evolved_desc: "As our empire grows, so has the reach of our merchants. Now, ships sail into our harbours every day ladden with goods from every continent, bringing in spices and gemstones of such taste and quality our ancestors could only dream of."
+nor_royal_artillery_evolved: "Royal Artillery"
+nor_royal_artillery_evolved_desc: "Artillery is fast becoming the most important player on the battlefields of the modern world. We should invest in this emerging technology and found a new academy to encourage local innovation in firearms and cannoneering, so that we can always be two steps ahead of our neighbours."
+
+VIN_ideas: "Vinlander Ideas"
+VIN_ideas_start: "Vinlander Traditions"
+VIN_ideas_bonus: "Vinlander Ambition"
+
+vin_isolated: "A Home at the Edge of the World"
+vin_isolated_desc: "REPLACE_ME"
+vin_songs_of_old_times: "Songs of Times Gone By"
+vin_songs_of_old_times_desc: "REPLACE_ME"
+vin_skraeling_conflict: "The Skraeling Wars"
+vin_skraeling_conflict_desc: "REPLACE_ME"
+vin_homesteads: "Encourage Homesteading"
+vin_homesteads_desc: "REPLACE_ME"
+vin_plenty: "Land of Plenty"
+vin_plenty_desc: "REPLACE_ME"
+vin_adaptation: "Change to Conserve"
+vin_adaptation_desc: "REPLACE_ME"
+vin_reestablish_trade_routes: "Re-establish Oceanic Trade"
+vin_reestablish_trade_routes_desc: "REPLACE_ME"
 
 ##############
 # Events
@@ -166,6 +307,188 @@ pf_nordic.9.d: "Our soldiers need rallying before a battle, otherwise their mora
 pf_nordic.9.a: "Óðinn á yðr Alla!"
 pf_nordic_odin_owns_you_all: "Óðinn á yðr Alla!"
 
+pf_nordic.10.t: "The Submission of Norway"
+pf_nordic.10.d: "REPLACE_ME"
+pf_nordic.10.a: "Demand they kneel!"
+pf_nordic.10.b: "We will conquer them later."
+
+pf_nordic.11.t: "Sweden demands our Submission"
+pf_nordic.11.d: "REPLACE_ME"
+pf_nordic.11.a: "We will never surrender!"
+pf_nordic.11.b: "Swear fealty to the rightful king."
+opinion_refused_submission_nor: "Refused Submission"
+
+pf_nordic.12.t: "The Skaneland Revolution"
+pf_nordic.12.d: "REPLACE_ME"
+pf_nordic.12.a: "They have our full support. To battle!"
+pf_nordic_scanian_revolution: "Scanian Revolution"
+
+pf_nordic.13.t: "Raiding Party Returns"
+pf_nordic.13.d: "After many months far from our shores, our band of brave raiders has returned. Many are wounded and some have acquired great fortunes - the one thing that yet binds them is the continued thirst for adventure. The success of this raid is bound to inspire the next generation of young men and women to cross the waves in search of their own fortunes."
+pf_nordic.13.a: "Let's see what booty you brought back..."
+gain_x_loot_tooltip: "Gain §G[Root.RaidLoot.GetValue]§!¤ from our §YRaid Loot§!."
+RaidLoot: "Raid Loot"
+MaxRaidLoot: "Raid Loot Capacity"
+
+pf_nordic.14.t: "Valuable Hostages"
+pf_nordic.14.d: "A recent raid upon one of the enemy towns we have targeted has resulted in the capture of a whole family of local nobles. Since their seizure, they have done nothing but beg for their freedom, offering up great riches before the [Root.Monarch.GetTitle] in exchange for it. What should we do with these hostages?"
+pf_nordic.14.a: "That price seems fair enough for freedom."
+pf_nordic.14.b: "Let them go without a cost."
+pf_nordic.14.c: "Surely you have more money than just that?"
+province_is_part_of_raid_war_tt: "This province is sieged as part of a §YRaid War§!."
+country_is_part_of_raid_war_tt: "This country is the attacker in a §YRaid War§!."
+add_loot_small_tt: "Add §G10§!¤ §YLoot§!"
+add_loot_medium_tt: "Add §G25§!¤ §YLoot§!"
+add_loot_large_tt: "Add §G50§!¤ §YLoot§!"
+
+pf_nordic.15.t: "Wealthy Treasure Seized"
+pf_nordic.15.d: "One of our raiding parties has encountered a partially buried hoard of treasures, presumably the result of a failed attempt by some local lord or dignitary to hide their precious items from us. Upon digging it out, even the chiefs of our parties were astounded at the magnitude of the treasury and the value it contained."
+pf_nordic.15.a: "The gods are truly on our side!"
+pf_nordic.15.b: "Distribute the riches among our men."
+pf_nordic_well_paid_men: "Well Paid Warriors"
+
+pf_nordic.16.t: "Dinner Time"
+pf_nordic.16.d: "In one of the houses our plunderers entered, they found a full roast dinner set out upon the kitchen table. By the looks of it, the family that lived there was just about to tuck into a delicious meal when they heard news of our arrival and fled. Luckily for us, the food is still warm, and is plenty enough to fill the stomachs of our brave warriors."
+pf_nordic.16.a: "Yum!"
+
+pf_nordic.17.t: "Fleeing Civilians"
+pf_nordic.17.d: "We know all to well that upon hearing that we are coming many communities flee into the forests and hills to try and save their lives from our bloodthirsty warriors, but on this occassion we have caught them in the act. What should we do with these wretched people?"
+pf_nordic.17.a: "Force them to pay for their freedom."
+pf_nordic.17.b: "Let them flee."
+pf_nordic.17.c: "Slaughter every last one of them!"
+
+pf_nordic.18.t: "Odin Comes"
+pf_nordic.18.d: "As you begin your slow walk to bad, the shadows begin to morph and grow surround you. In your tired stupor, you do not notice the moon fade behind the clouds, ushering in a great wall of darkness across the realm. Ahead of you, there is a figure. Sturdy and bearded, the man steps out towards you into the illumination of your candle. "My lady", he begins, his voice as rough as the walls of the fjords, "I have heard many tales of your beauty and intellect, and I had to see you for myself." He leans in close, his face almost touching yours. "Grant me but a night of your time, my lady, and I will make sure you will not regret it." The man backs off and then walks swiftly into your bedroom, beckoning you to follow."
+pf_nordic.18.a: "Oh Odin!"
+pf_nordic.18.b: "No man shall touch me, be they god or mortal!"
+pf_nordic.18.c: "Let us have a night of pomp and pleasure!"
+
+pf_nordic.19.t: "The Way of Ancient Words"
+pf_nordic.19.d: "Many evenings have been filled with the blissful sounds of the skald and his tales. Ranging from mythological sagas to recountings of the deeds of present rulers, the skald clearly knows a great many things about this world. Now, sitting with your courtiers in front of the fire, you begin to wonder whether you could get the skald to stay longer."
+pf_nordic.19.a: "Your songs are my nectar!"
+
+pf_nordic.20.t: "Sons of Ulrik"
+pf_nordic.20.d: "Every good son remembers the last words of his father. In the mind of Ulrik, [Root.Monarch.GetTitle] of the Norwegians, those sounds have never ceased in his head. There on that dismal battlefield, while the rain fell and the sun slipped behind the horizon, he sat slumped in the mud beside his father. Ulrik the Great, that mighty and capable [Root.Monarch.GetTitle], had at last found defeat. Even now, Ulrik remembers the look on his father's face when he turned to the heavens, clutching the gash across his side, and mumbled those fateful few words.\n\n"Avenge me, son."\n\nUpon his death, he had left his kingdom to his favourite son, Ulrik of Norway. His two younger sons, Knut and Sven, were left with little but a modest hoard of treasure and a homestead on the fjords each, much to their disatisfaction. While they squabbled and complained about their lackluster inheritance, Ulrik thought of his father. While they gathered their men and prepared to make their own fortunes, Ulrik sat alone getting angrier and angrier. When at last his brothers departed, Ulrik knelt in the forest for days, his body trembling like the waves that lap these shores. He did not hold any hatred for his brothers. In fact, he did nothing but help them, equiping Sven with an admirable fleet and assistin Knut in his ambitious conquest of Pictland and beyond.\n\nDespite his good deeds, one think stuck in his mind. The Swedes, the bastards, had struck back against his father Ulrik's dominion, and in the chaos, cut down the man himself. From that day on, Ulrik the younger was only waiting for an opportunity to do the same to them - to uproot every dirty Swede and slice them up like herrings. While his brothers are campaigning abroad, it is his job to ensure that his father's will is enforced."
+pf_nordic.20.a: "Time will tell what happens to the Sons."
+opinion_nor_ulrik_sons: "Sons of Ulrik"
+
+pf_nordic.21.t: "Brothers in Arms"
+pf_nordic.21.d: "When Knut set off to conquer a kingdom for himself in Albion, his brother Ulrik was all to happy to offer assistance for his journey. Three-hundred ships and a hundred score men were offered to him, and off he went, sailing into the sunset. With assistance from his homeland, Knut was successful in his mission, and finally ended the long independence of the Pictish people. His achievements are also ours, and the people of Norway celebrate every one of his victories as much as they would if Ulrik himself had won it. Linked by our common blood, our families will be inseperable even long after the brothers themselves have returned to the earth."
+pf_nordic.21.a: "Water's sweet, but blood is thicker!"
+pf_nor_brothers_in_arms_tt: "As long as we remain allied with @NRD §Y[NRD.GetName]§!, both of our countries will retain this modifier."
+pf_nor_brothers_in_arms: "Brothers in Arms"
+
+pf_nordic.22.t: "The Seas We Sail"
+pf_nordic.22.d: "The seas upon which we sail contain many mysteries. From tales of sea monsters and vanishing islands, sailors have always had plenty to talk about on their all-to-often boring voyages. The knowledge they gather on these expeditions is vital to us however, as it is only through the shrewd eyes of a cabin boy that the frontiers of our world are known even in their hazy detail. Long ago, our ancestors knew the seas better than we, and sailed great distances across continents and oceans to reach places that seem to us to be certainly fictional, including lands with fields overflowing with grapes and other fruits, vast mud pyramids built beside a blistered desert, and even the crumbling remains of a once great marble wall at the edge of the steppes. Many still wonder if these places are out there, just waiting for us to go and explore them again. Perhaps it is time that we get to know the seas we sail on better, to understand the waves, and feel the boundaries of the vast waters on our skin."
+pf_nordic.22.a: "There is only one way to go - forward!"
+pf_nor_fires_of_exploration: "Reigniting the Fires of Exploration"
+
+pf_nordic.24.t: "The Lost Brother"
+pf_nordic.24.d: "While Ulrik and Knut have carved out kingdoms for themselves, always sticking by each others' sides, their youngest brother, Sven, proved himself quite the hermit. Initially living in the remote mountains or northern Norway, farming and foraging like a humble peasant, Sven eventually grew tired of his home country altogether and gathered an expedition comprised of his few friends, setting off into the seas. Though unknown to his brothers as they waved him goodbye, he never intended to return. Instead, Sven invisioned an escape from his life in some exotic foreign land, some paradise they could never find him.\n\nWeeks passed, and then months. Now it has been years, and there is still no sign of him. Everyone presumes him to be dead, but no one will usher that belief for fear of confirming its truth. We can only pray that the gods allowed him a merciful death, and that he awaits us in Valhalla with love in his heart."
+pf_nordic.24.a: "We will meet again."
+pf_nordic_lost_brother_tt: "Rumours circulate that §YSven's§! voyage was more successful than usually believed..."
+
+pf_nordic.25.t: "The King of the North"
+pf_nordic.25.d: "Our complete dominion has been established across the northern lands of Europe, creating what many are terming a 'North Sea Empire' or the 'Northern Realm'. This new empire is mighty, but efforts must be made to secure it for our sons and their sons after them, so that the glory of the Norwegian people will never fade."
+pf_nordic.25.a: "Travellers must know where they are going - the way north."
+pf_nordic.25.b: "May this empire last forever more!"
+pf_nor_king_of_the_north: "King of the North"
+
+pf_nordic.26.t: "The Old Covenant"
+pf_nordic.26.d: "The Icelandic Commonwealth has fared remarkably well for the years it has been in place for our lawless and chaotic it ought to be. This era of freedom and prosperity has fallen away however, and a new one of darkness and strife has emerged. In their times of trouble, the most powerful Icelandic chiefs gathered to invite the [Root.Monarch.GetTitle] of Norway to assume rulership over the island, and bring their petty squabbles to an end. This agreement, known as the Old Covenant, is the basis of our legitimate government in Iceland."
+pf_nordic.26.a: "Sign it."
+
+pf_nordic.27.t: "A Strange New World"
+pf_nordic.27.d: "Our explorers navigated across what they thought would be a boundless sea for weeks, until one day they spotted the white gleam of an ice sheet on the horizon. The discovery of this new land, known to the Icelanders as Greenland, has extended the frontiers of our knowledge greatly. Using their ports and supplies, our expedition was able to mount a second attempt west, pushing further and further across the wicked waves. They came to a land of forests, stretching as far as the eye can see and thicker than even those back home in Norway. Further south, the trees gave way to plentiful fields, and eventually, to recognisable settlements.\n\nLanding in the port there, our explorers and their men were nervous. There was no telling how savage the locals would be, and many feared for their lives if they left the boat. Nonetheless, a brave squad of sailors left and managed to engage the local chief in a conversation. To their surprise, he spoke Old Norse, albeit a heavily accented version. After much discussion, we have discovered that this colony, known as Vinland, was founded by Icelanders a few short centuries ago, but has remained isolated ever since. One detail stands out to us however - their mention of a man much like us passing through these waters just a few years ago. From their description, he sounds like the long lost son of Ulrik the Great, Sven Ulriksson. According to the Vinlanders, he arrived upon their shores, and with his band of men, settled down on a farmstead by the coast. But alas, he is dead now. The chiefs take them to his tomb, and there they kneel and pray for a short while."
+pf_nordic.27.a: "Sven, my beloved, may you rest in peace."
+
+pf_nordic.28.t: "Black Become the Sun's Beams..."
+pf_nordic.28.d: "Our ancestors first arrived on these shores some four centuries ago, their minds filled with hopes of warmer climates and plentiful food. Their wishes did come true at first; the land now known as Vinland was found to be covered in berries and vines, creating a most potent beverage unlike anything else back in Europe, and its shores were found bountiful in salmon and other fish; but in the years since, these supplies have only dwindled. The settlements here, mostly founded by Leif Eirikisson, were intended to be little more than temporary dwellings, where Norsemen would stay while gathering timber and supplies to take back to the more needy Greenland colonies. Trade with the north and across to Iceland was prosperous for some time, and somewhat regular contact was maintained between the people of Vinland and Europe despite the technical difficulties. From the beginning of the 14th century however, this would all change.\n\nThe climate worsened and the grape-vines died, almost as if the gods had begun to resent this once lush land. On the horizon, the ice sheets grew and the waters between us and Greenland became ever more treacherous due to an increasing amount of icebergs and winter storms. First, our links with Iceland went dark. The last group of Icelanders to arrive on these shores came some fifty years before the present, and departed as swiftly as they arrived upon seeing the state of the place. Then, the last ships from Greenland came. Even that desolate waste seemed more viable than the Vinland colonies, and in the years that followed, many of our people tried to sail back to Greenland's shores. Whether they were successful or not, we do not know, but perhaps half of the population of the colony, mostly the younger men, have tried to flee.\n\nAs the 15th century draws to its apex, things are looking dire for the people of Vinland. Of the remaining population, scarely no one even remembers the sight of a European face, and many have started to treat them as more legendary than true. Even the gods we have so dilligently performed sacrifices for seem to have abandoned us to the cold embrace of death. The future of the colony is certain - we will all die here, crumbling into the earth like the crooked shelters our ancestors built on these windswept hills."
+pf_nordic.28.a: "All hope is lost."
+pf_vin_uncertain_future: "The End of the Vinland Colony"
+vinland_colony_devastation: "The Death-Grip of Winter"
+desc_vinland_colony_devastation: "Over the winter months, our food supplies run dry and foraging becomes increasingly hard, leading to many of our people starving to death."
+
+pf_nordic.29.t: "The Expedition Sets Out"
+pf_nordic.29.d: "Times are tough for us Vinlanders. Just when the whole world seems to be turning against us, we have a chance to make a true home for ourselves out in this wilderness. Our seer has advised we make contact with the native Skraelings, and that we shall try to do. As the sun begins to rise, two dozen of the men of Vinland, including [Root.Monarch.GetTitle] [Root.Monarch.GetName], pack up their bags and food stocks and meet in the center of the place where Eirikisson landed all those years ago. This expedition marks a new era for our people and our nation."
+pf_nordic.29.a: "Into the wilderness we go..."
+pf_vin_in_expedition: "Expedition to find Skraelings"
+
+pf_nordic.30.t: "Expedition: Trails in the Snow"
+pf_nordic.30.d: "After a short boat ride across the wild seas, our expedition has landed on the southern slopes of that great forest we call Markland. Upon those desolate shores they found nothing notable, just driftwood and a few ominous skeletons of various birds and mammals. Turning inland, they began to make their way up the hillside, cutting through the thick foliage with their knives. More than once, they have had to fight off an aggressive lone wolf, scaring many of the men so much they have often begged [Root.Monarch.GetName] to turn back. We have come so far - there will be no going back home until our quest is complete.\n\nAs twilight falls over the epic scenery and the sun falls behind the mountains, the group begin to set up a rudimentary camp on the snowy hillside. While out foraging, one of the men stopped something - a set of footprints in the snow, crisp and fresh. Nervous, the men look around, gripping their axes and swords, as if they would protect them from whoever is out there. Though we do not know who, there are clearly other humans out here in this desolate place."
+pf_nordic.30.a: "Follow the trail!"
+
+pf_nordic.31.t: "Expedition: Smoke in the Distance"
+pf_nordic.31.d: "Our expedition party begin the long trek up the mountain side, following in the general direction of the trail of footprints found the previous evening. The journey is arduous, and a biting wind blows down on them constantly, like the gnawing of Fenrir upon Odin's neck. Eventually, they reach the summit, and can finally get a good view of their brutal yet majestic surroundings. To the east, the great ocean sits silently, as if tempting them to come back to sea. To the west, an endless emerald sea of trees stretches as far as the eye can see, dotted by rocks and outcrops. There seems to be nothing here - no sign of civilisation, or even animal life. Just as a deep sense of existential dread crawls over the men, one of them shouts that he has spotted something. Far to the south, on the slopes of the same mountain range they stand on but much further down, the men can just barely make out a plume of smoke. This can only mean one thing - somebody is out here."
+pf_nordic.31.a: "Quickly men, that way!"
+
+pf_nordic.32.t: "Expedition: The Bear"
+pf_nordic.32.d: "As they walked through the shadowy forest, the expedition members could not help but be afraid. They had every right to be - the darkness crept in from all sounds, and the silence was punctured by nothing but the howls of wolves, some distant, some disturbingly close. There was nothing but the light of their torches to show the way. Searching for a suitable place to make camp, [Root.Monarch.GetName] wanders off the path, squinting through the trees for even the slightest clearing. Suddenly, there is a rustling in the bushes, and a great black shape emerges behind him. With a roar, the beast plunges its whole weight on him, his shape instantly being swallowed up by the ground. The men rush over to help, but as they approach, they see the terrifying face of a black bear angrily staring back into the torch light. Beneath it, [Root.Monarch.GetName] lies motionless, his face half torn off and his body covered in bloody cuts. One of the men, enraged by the site of his close friend being killed, grabs his axe from his belt and rushes towards the bear. With one paw the beast takes him down, and the two struggle and writhe on the floor. At last, the other man gather their courage and stab and cut the bear repeatedly until it lets go of the poor man, and runs back off into the forest, disappearing from view. The men stand around, startled and shaking. While the brave man with the axe might survive, there is no hope for [Root.Monarch.GetName]. His life, much like the hopes of all Vinlanders, has been taken."
+pf_nordic.32.a: "Curse that foul beast!"
+pf_vin_bearslayer: "Bear Slayers"
+
+pf_nordic.33.t: "Expedition: Abandoned Campsite"
+pf_nordic.33.d: "After giving the previous expedition leader as proper a burial as could be done out in this wild land, the men continued on in the direction they had previously seen the smoke. In the daylight, the forest was still treacherous, but at least now the overhanging branches and dangerous roots could be more easily seen ahead of one's step. Some time after midday, the party come across a small clearing, with what are clearly the remains of a burned out fire and spots where animal-skin tents were recently pitched. Whoever was here cannot have been gone long. By the looks of the size of the site there are at least a dozen of them, probably more, perhaps a roving tribe moving through these desolate areas in search of better land. There are clues abound as the men survey the area, leaving no stone unturned or leaf floor undisturbed, despite how shaken up they all are."
+pf_nordic.33.a: "They must be close. Find them!"
+
+pf_nordic.34.t: "Expedition: The Skraelings"
+pf_nordic.34.d: "Not far from the campsite, the expedition finds exactly what they were looking for. A group of Skraelings, equal distrubutions men and women, young and old, walking across a snowy plain just at the edge of a frozen lake. Dressed in their thick seal skins and holding their pointed spears, they appear quite menacing to our men, but there is nothing that could stop them from fulfilling their mission now. After a rocky start, a mutual agreement of truce is reached, and using hand signals alone, our men communicate their need to the chief of this little band. The natives agree, though it is begrudgingly after our party traded over some of their metal tools and axes.\n\nBefore nightfall, our expedition party are in the audience of a local chief, a small but powerful looking old man, crouched with his family around a campfire much like the one we had seen earlier. Despite the difficulties in communication, they were able to get their message across, and agreed to our proposal in exchange for more metal tools. The Skraelings are even so generous as to offer them a safe place to sleep tonight. It appears our preconceptions of these people as violent savages is not completely the truth after all, and that together, we can make something of a life in this wilderness."
+pf_nordic.34.a: "Can there be peace between our two peoples?"
+pf_vin_treaty_with_skraeling: "Treaty with the Skraelings"
+
+pf_nordic.35.t: "The Expedition Returns"
+pf_nordic.35.d: "Our expedition has faced a great many threats and tragedies, but somehow, they have made it through it all, accomplishing their goal of establishing friendly relations with the local Skraelings. On their return, a great feast is held, and the whole population of Vinland come together to celebrate their survival and mourn the dead Chief. Perhaps, with cooperation between our people and the natives, we could learn to live better in this land, and survive through another winter. One day maybe our children's children will thrive amongst the snow. For now, however, we are no more saved than a salmon is saved when it is plucked from the sea by a Vinlandic fisherman - the struggle continues."
+pf_nordic.35.a: "Hooray!"
+
+pf_nordic.36.t: "Freydís, Shieldmaiden"
+pf_nordic.36.d: "From an early age Freydís had to learn to fight to survive. Without her wit and intellect however, she would have surely failed the harsh tests her father gave her. Despite the cruelty, he always maintained it was for her best interests. She never believed him, at least until he died. After Haldor was mauled to death by a bear out in the wilds of Markland, Freydís was left to succeed him as chieftess of the Vinlanders. They were initially hesitant to place a woman in such a position of power, but after she demonstrated her finely tuned fighting capabilities, there was no question as to whether she was the best candidate for the job. Some have begun calling her a 'Shieldmaiden', following in an old Norse tradition of warrior women. Despite her lack of specialist training in that field, many feel that her military skills should be recognised in some way. Others complain at her aggressive and tendancy to lash out at people who annoy her, fearing that her temper will get in the way of good relations with the local Skraelings."
+pf_nordic.36.a: "We need a warrior to lead us!"
+pf_nordic.36.b: "We need a chieftess, not a Shieldmaiden!"
+
+pf_nordic.37.t: "The Skraelings Arrive to Trade"
+pf_nordic.37.d: "As per the agreement made by our expedition party, the Skraelings have arrived at [Root.Capital.GetName] today, carrying huge sacks of food and furs on their backs. As they pile them up in the center of our town, they look around eagerly, anticipating their payment of metal tools we had promised them. One problem has arisen with this deal however - with no way to resupply on manufactured metals in nearly sixty years, we are running dangerously low ourselves, and cannot really afford to give them out to the natives. Nonetheless, they seem quite excited, and the food and clothes they are offering us might be the only way our colony survives in the long term."
+pf_nordic.37.a: "Accept their deal."
+pf_nordic.37.b: "Seize the food and send the Skraelings packing!"
+
+pf_nordic.38.t: "The Skraelings Settle Down"
+pf_nordic.38.d: "Some of the Skraeling traders who have frequented our settlement for many months now have begun to settle down here, constructing their own campsite near to our houses. The community there is growing, with news of our hospitality and metal tools spreading far and wide and drawing in Skraelings from across the region. What should we do with all these new settlers?"
+pf_nordic.38.a: "Allow them to live with us."
+pf_nordic.38.b: "Forbid them from settling so close."
+pf_vin_skraeling_campsite: "Skraeling Campsite"
+
+pf_nordic.39.t: "Norse-Skraeling Intermarriage"
+pf_nordic.39.d: "One of the biggest obstacles in the face of our colony's survival is the lack of women. Though there were women present on the merchant fleets that once carried our wood and vines back to Greenland, they were always in the minority, and especially after the last exodus from Vinland, the population is now some 80% male. This has led us to a mini demographic crisis, with the population dwindling and far too few children being born to sustain our town. Though not directly in response to this, a number of Norse men have fallen in love with Skraeling women, and some have even started families with them. Until now such relationships have been frowned upon, with society at large seeing such a marriage as stooping to the level of a savage. However, some in the leadership, especially those with native wives to lose, suggest that we should end such stigmatization and actively encourage this practice, aiming to increase the birthrate of our aging colony."
+pf_nordic.39.a: "You may marry whoever you want!"
+pf_nordic.39.b: "We shall not soil our Norse blood with that of savages."
+pf_vin_intermarriage: "Allowing Intermarriage with the Natives"
+
+pf_nordic.40.t: "Faith in the Gods"
+pf_nordic.40.d: "As the situation in Vinland grew ever more dire, many began to lose faith in the old Norse gods. We had been generous to them, and supplied them with regular sacrifices, prayed day and night, and praised them at every available moment. Even our seers did not know why the gods had abandoned us. But now, with things looking up and a bright future visible in the heads of many young Vinlanders, a renewed trust in the gods is sweeping over the land."
+pf_nordic.40.a: "Praise the gods!"
+pf_vin_restored_faith_in_the_gods: "Restored Faith in the Gods"
+
+pf_nordic.41.t: "Ways of the Vinlanders"
+pf_nordic.41.d: "In the years since our separation with our native Iceland, we have changed very little as a people. Our practices and traditions have remained mostly the same, with only a few adaptations to better suit exile on the colonial frontier. We have struggled together, oh how we have struggled. Through the fires of adveristy, new identities are forged. People born into this land no longer see themselves as Icelanders waiting to return home - they are now steadfast in being Vinlanders, and by the gods they are proud of it. Perhaps it is time to shake off the shackles of our motherland and seed the roots of a new and powerful culture among the rocks and forests."
+pf_nordic.41.a: "We stand united together."
+pf_vin_our_own_culture: "Vinlandic Pride"
+pf_change_to_vinlandic_tt: "Every owned province in the §YNorse§! culture group will change to §YVinlandic§! culture."
+
+pf_nordic.42.t: "Hunger Grips Vinland"
+pf_nordic.42.d: "Food is scarce in the best of times, but in these winter months our supplies could not be lower. We have already run out of everything stored from the last harvest, and people are turning to foraging for berries and eating leaves and bushes, being unable to fish due to the ocean freezing over. Hunger is starting to set in, and soon no one will be safe from the icey grip of death..."
+pf_nordic.42.a: "Our people fall like wheat before the scythe..."
+
+pf_nordic.43.t: "The Last Survivor"
+pf_nordic.43.d: "Ingvar Tuvesson was just an ordinary boy living in the Vinland colony. By day he forages and toiled the fields, and by night he slept and dreamed of a better life. He was just like everybody else. A native to Vinland, he had known no other existence, but had always been fascinated by the tales his parents would tell him. They spoke of places far away, where there were large groups of people organised into whole majestic cities, and where the snow never fell, even in the darkest winter days. To Ingvar, these seemed like fairytales, especially compared to the dire circumstances of his people.\n\nFor winter after winter, year after year, members of his town would drop dead from hunger and disease. Death was just an everyday occurance to him, an imaginary friend who came and whisked people away from this hell. When times got rough and the snow storms crawled in, he would bunker underneath the house with his family, surviving on a handful of berries for days on end while the blizzard raged. Ingvar had suffered so much in his life, that he would not know what comfort was even if he were to ever experience it. In those dark days, he did not even pray to the gods for salvation, believing like many Vinlanders that they had purposefully abandoned them to their horrible fate.\n\nFirst, his father died, his body seizing up while foraging, finally succumbing to prolonged starvation and exhaustion. Though it was certainly tragic, Ingvar did not shed a tear. Death was not to be feared. He lived among them every day. The next winter, his mother was taken too, and Ingvar was left an only child. Nearing the age of manhood, he was expected to perform the duties his parents had done by the community; foraging, hunting and defending against rogue Skraelings. Every other family had lost members too, and the few that were remaining had to become increasingly hardy and resourceful. By the next winter, the last old man had passed into the next world, his belly a gross rotten concave. Ingvar buried him without a sign on his face. The magnitude of his situation did not even occur to him - he was now the last Norseman left in the whole of Vinland. As he sat among the trees and awaited death, he did not worry or fret. This was right. He wanted this. With one last breath, Ingvar collapsed on the floor. The setting sun casted solemn rays across his corpse."
+pf_nordic.43.a: "And so our country falls to ash like a thousand before it..."
+pf_vin_ruins_of_norse_settlement: "Ruins of a Norse Settlement"
+desc_pf_vin_ruins_of_norse_settlement: "The remains of houses and farms built by the Norsemen of Vinland dot this province. The long lost colony here certainly thrived for a while, but it met a grisly fate before our explorers could reach it."
+pf_vin_end_game_tt: "§R[Root.Capital.GetName] will be decolonized, destroying our nation.§!"
+
+pf_nordic.44.t: "Skraelings Attack!"
+pf_nordic.44.d: "As dawn rose over our dismall camp, everyone was woken up with a start by the horrifying sound of a Skraeling war horn. Soon, the natives were rushing into our town from all sides, grabbing everything they could and killing anyone who tried to resist them. They appeared to be using their campsite nearby as a forward base to rally their warriors."
+pf_nordic.44.a: "These damn natives!"
+pf_nordic.44.b: "Clear them out and expell them from Vinland!"
+
 ###############
 # Decisions
 ###############
@@ -173,3 +496,72 @@ pf_nordic_odin_owns_you_all: "Óðinn á yðr Alla!"
 consult_the_uppsala_gods_title: "Consult the Gods of the Uppsala Temple"
 consult_the_uppsala_gods_desc: "At the Temple of Uppsala, there are different statues of gods to which sacrifices are made in times of need."
 consult_the_uppsala_gods_tt: "This decision can only be used once every §Y25 years§!."
+
+show_raid_progress_title: "Raid"
+show_raid_progress_desc: "Shows the raid loot gathered, maximum raid loot capacity and grants the ability to instantly end raid wars."
+raid_loot_tooltip: "Current §YRaid Loot§! (§O[Root.RaidLoot.GetValue]§!) out of a maximum of (§M[Root.MaxRaidLoot.GetValue]§!)."
+white_peace_raid_tooltip: "Confirming this decision will cost us §R30§! £mil£ but bring an end instantly to the raid war, concluding with §Ywhite peace§!."
+
+pf_found_vinland_althing_title: "Found the Vinland Althing"
+pf_found_vinland_althing_desc: "We have been without proper government for too long. With the first institutions blosoming and our population growing, it is only right that we establish an interactive democratic government, under the guidance and leadership of the Chief of course."
+
+#############
+# Missions
+#############
+
+pf_swe_deal_with_the_danish_title: "Deal with the Danish"
+pf_swe_deal_with_the_danish_desc: "We have subjugated the Danish people of Skaneland for a long time now, but they are still reluctant to switch to our ways. They cling on to their old national identity and insist that there will come a day when they will be free again, much to the enjoyment of we hearty Swedes. We must put them in their place and finally establish full control over our southern provinces."
+pf_swe_deal_with_the_danish_1_tt: "§MIf we have §Yaccepted the Danish culture§!, the following effect will happen:§!"
+pf_swe_deal_with_the_danish_2_tt: "\n§MElse, the following effect will happen:§!"
+pf_nordic_converting_scania: "Converting Skania"
+
+pf_swe_deal_conquer_sjaelland_title: "Secure the Straits"
+pf_swe_deal_conquer_sjaelland_desc: "The Straits of Denmark are a vital channel connecting the Baltics to the North Sea. Both our navies and our merchants depend on the safety of this route, for without it we would be very much cut off from the world. We should send a military expedition in to secure the Straits and ensure safe passage for all Swedish-aligned ships."
+pf_swe_danish_conquest: "Danish Conquest"
+
+#
+
+pf_swe_norwegian_fealty_title: "Demand Norwegian Fealty"
+pf_swe_norwegian_fealty_desc: "The Kingdom of Norway is our only realm rival in the race to dominate Scandinavia. Since our realm is so much stronger than theirs, it would be only right of us to demand their submission first, and if they refuse, to ravage their kingdom justly and thoroughly."
+
+pf_swe_conquer_norway_title: "The Northern Path"
+pf_swe_conquer_norway_desc: "After many years of struggle between our two powers, at least the realms of Norway and Sweden are united. Let us rejoice in our victory relax at the thought of those two glistering crowns sitting side by side."
+pf_swe_conquer_norway_1_tt: "§MIf §YNorway§! is our subject, the following effect will happen:§!"
+pf_swe_conquer_norway_2_tt: "§MElse, the following effect will happen:§!"
+pf_swe_king_of_norway: "King of Norway"
+
+pf_swe_unite_scandinavia_title: "Unite the Northmen"
+pf_swe_unite_scandinavia_desc: "Scandinavia is a divided and warlike part of the world, but despite that it is our home. There is truly no place we would rather rule than these desolate forests and windswept mountains. At last, our goals of complete conquest seem nearly at an end, and one day soon the sun will rise over a united Scandinavia."
+
+#
+
+pf_swe_build_up_army_title: "A Winter Night's Dream"
+pf_swe_build_up_army_desc: "We have great ambitions for our country. Already, we have succeeded in putting Norrland on the backfoot, and driven Danish rule out of Scania. Our state is clearly on the rise, and there is no force that can stem the tide of Swedish nationalism."
+pf_swe_brave_men_of_sweden: "Brave Men of Sweden"
+
+pf_swe_conquer_norrland_title: "Conquer Norrland"
+pf_swe_conquer_norrland_desc: "The people of Norrland are similar to us in many ways, but different in one important aspect - they do not accept the rule of the Swedish Jarl. Let us right this wrong and extend our benevolent rule up into the northern forests."
+
+pf_swe_seize_finland_title: "Subjugate the Finns"
+pf_swe_seize_finland_desc: "The Finns are a dangerous people, but their lands are potentially advantageous to us. Through their land connection to the former lands of the Rus', we can expand our empire eastward and seize ever more territory. The only problem will be dealing with the rebellious and souless inhabitants of Finland..."
+
+#
+
+pf_swe_adopt_feudal_ways_title: "Adopt Feudal Ways"
+pf_swe_adopt_feudal_ways_desc: "REPLACE_ME"
+pf_swe_feudal_management: "Feudal Management"
+
+pf_swe_swedish_monarchy_title: "A Swedish Monarchy"
+pf_swe_swedish_monarchy_desc: "REPLACE_ME"
+
+#
+
+pf_swe_band_of_warriors_title: "Band of Warriors"
+pf_swe_band_of_warriors_desc: "We rely on bands of warriors and common soldiers to expand our influence via conquest. Many of these men gain experience in raiding expeditions, earning reputations as fierce vikings, before joining the king's regiments."
+pf_swe_looting_modifier: "Looting Expeditions"
+
+pf_swe_establish_the_huskarls_title: "Establish the Huskarls"
+pf_swe_establish_the_huskarls_desc: "The Huskarls started as just an elite bodyguard for the king, but they have grown far beyond that in the years since. Now, they are a core part of our army, and are often the decisive influence in the battles we fight. Let us continue to patronise them and continue to push them further and further."
+
+pf_swe_swedish_militarism_title: "The Swedish Spirit"
+pf_swe_swedish_militarism_desc: "Beneath the skin of every Swede is a firey spirit. Our will to triumph will never fade, no matter how many defeats we endure, how many times we are divided, or how many times we see our comrades die before us. There is no heart as confidence and iron-clad as a Swedish one."

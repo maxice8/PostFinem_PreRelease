@@ -7,6 +7,7 @@ pf_norse_warlord = {
 	allow_force_tributary = yes
 	potential = {
 		religion = norse_pagan_reformed
+		NOT = { has_reform = pf_norse_jarldom }
 	}
 	modifiers = {
 		may_perform_slave_raid = yes
@@ -21,6 +22,8 @@ pf_norse_warlord = {
 	}
 	custom_attributes = {
 		locked_government_type = yes
+		allows_viking_raids = yes
+		raiding_gives_extra_devastation = yes
 	}
 }
 

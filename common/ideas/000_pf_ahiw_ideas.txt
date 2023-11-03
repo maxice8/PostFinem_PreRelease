@@ -607,7 +607,7 @@ NDH_ideas = {		# Nordheim
 	free = yes
 	
 	ndh_great_power = {
-		diplomatic_upkeep = 1
+		administrative_efficiency = 0.05
 	}
 	ndh_legacy_of_warriors = {
 		land_morale = 0.20
@@ -632,123 +632,295 @@ NDH_ideas = {		# Nordheim
 		global_allowed_num_of_buildings = 1
 	}
 }
-SLV_ideas = {
+DRK_ideas = {		# Danmark
 	start = {
-		manpower_in_culture_group_provinces = 0.25
-		tolerance_own = 3
+		prestige_from_land = 0.50
+		infantry_power = 0.10
 	}
 	
 	bonus = {
-		governing_capacity_modifier = 0.25
+		global_trade_goods_size_modifier = 0.10
 	}	
 
 	trigger = {
-		tag = SLV
+		tag = DRK
 	}
 	free = yes
 	
-	slv_third_empire = {
+	drk_the_two_denmarks = {
+		core_creation = -0.10
+		fabricate_claims_cost = -0.20
+	}
+	drk_sigurdsson_rule = {
 		legitimacy = 1
-		republican_tradition = 0.6
-		horde_unity = 1
-		devotion = 1
+		monthly_heir_claim_increase_modifier = 0.25
 	}
-	slv_unbreakable_faith = {
-		fire_damage_received = -0.1
+	drk_the_isles = {
+		global_manpower_modifier = 0.15
+		global_sailors_modifier = 0.15
 	}
-	slv_granaries_of_slavia = {
-		global_trade_goods_size_modifier = 0.1
+	drk_danavirki = {
+		development_cost = -0.10
+		build_cost = -0.05
 	}
-	slv_one_true_faith = {
-		global_missionary_strength = 0.03
-		prestige = 1
+	drk_blood_eagle = {
+		morale_damage_received = -0.10
 	}
-	slv_great_conquests = {
-		core_creation = -0.25
+	drk_raiders = {
+		loot_amount = 0.25
+		movement_speed = 0.10
 	}
-	slv_europe_trembles = {
-		land_morale = 0.2
-	}
-	slv_develop_slavia = {
-		development_cost = -0.1
+	drk_dark_storm_ahead = {
+		movement_speed_in_fleet_modifier = 1
+		naval_morale = 0.10
 	}
 }
-
-SEV_ideas = {
+JUT_ideas = {		# Jutland
 	start = {
-		defensiveness = 0.2
-		land_morale = 0.1
+		fire_damage_received = -0.10
+		diplomatic_reputation = 1
 	}
 	
 	bonus = {
-		production_efficiency = 0.1
+		morale_damage = 0.10
 	}	
 
 	trigger = {
-		tag = SEV
+		tag = JUT
 	}
 	free = yes
 	
-	sev_lechia_descendants = {
-		prestige = 1
+	jut_anglian_heritage = {
+		army_tradition_decay = -0.01
 	}
-	sev_baltic_trade = {
-		trade_efficiency = 0.1
+	jut_saxon_wars = {
+		ae_impact = -0.15
 	}
-	sev_protect_from_pirates = {
-		build_cost = -0.1
+	jut_jutnish_cavaliers = {
+		cavalry_power = 0.10
 	}
-	sev_cult_of_svetovid = {
-		tolerance_own = 2
+	jut_german_tax = {
+		global_tax_modifier = 0.10
 	}
-	sev_pacify_germans = {
-		culture_conversion_cost = -0.1
-		culture_conversion_time = -0.25
+	jut_open_ideas = {
+		idea_cost = -0.10
+		global_institution_spread = 0.15
 	}
-	sev_end_mongol_raids = {
-		hostile_attrition = 1
+	jut_serpent = {
+		leader_land_fire = 1
+		fire_damage = 0.10
 	}
-	sev_efficient_governance = {
-		monthly_reform_progress_modifier = 0.2
+	jut_migration = {
+		culture_conversion_cost = -0.15
 	}
 }
 
-JUG_ideas = {
+NOR_ideas = {
 	start = {
-		church_loyalty_modifier = 0.1
-		global_tax_modifier = 0.15
+		naval_maintenance_modifier = -0.10
+		heavy_ship_power = 0.15
 	}
 	
 	bonus = {
-		development_cost = -0.1
-	}	
-
+		own_coast_naval_combat_bonus = 1.0
+	}
+	
 	trigger = {
-		tag = JUG
+		tag = NOR
+		NOT = { has_country_flag = has_nor_evolved_ideas }
 	}
 	free = yes
 	
-	jug_land_of_faith = {
+	nor_legacy_of_ulrik = {
+		core_creation = -0.10
+		army_tradition_from_battle = 0.25
+	}
+	nor_call_to_the_sea = {
+		global_sailors_modifier = 0.25
+		range = 0.15
+	}
+	nor_north_sea_trades = {
+		trade_steering = 0.20
+	}
+	nor_crown_rule = {
+		global_autonomy = -0.05
+		estate_interaction_cooldown_modifier = -0.25
+	}
+	nor_master_seamen = {
+		naval_morale = 0.20
+	}
+	nor_fish_market = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	nor_royal_artillery = {
+		artillery_power = 0.10
+	}
+}
+NOR_ideas_evolved = {
+	start = {
+		naval_maintenance_modifier = -0.10
+		heavy_ship_power = 0.15
+	}
+	
+	bonus = {
+		own_coast_naval_combat_bonus = 1.0
+	}
+	
+	trigger = {
+		tag = NOR
+		has_country_flag = has_nor_evolved_ideas
+	}
+	free = yes
+	
+	nor_legacy_of_ulrik_evolved = {
+		core_creation = -0.15
+		army_tradition_from_battle = 0.50
+	}
+	nor_call_to_the_sea_evolved = {
+		global_sailors_modifier = 0.25
+		range = 0.15
+	}
+	nor_north_sea_trades_evolved = {
+		trade_steering = 0.20
+	}
+	nor_crown_rule_evolved = {
+		global_autonomy = -0.05
+		estate_interaction_cooldown_modifier = -0.25
+	}
+	nor_master_seamen_evolved = {
+		naval_morale = 0.20
+	}
+	nor_fish_market_evolved = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	nor_royal_artillery_evolved = {
+		artillery_power = 0.10
+	}
+}
+VIN_ideas = {
+	start = {
+		hostile_attrition = 1.0
+		global_supply_limit_modifier = 0.20
+	}
+	
+	bonus = {
+		production_efficiency = 0.15
+	}
+	
+	trigger = {
+		tag = VIN
+	}
+	free = yes
+	
+	vin_isolated = {
+		stability_cost_modifier = -0.20
+	}
+	vin_songs_of_old_times = {
+		prestige = 1
+		monthly_splendor = 1
+	}
+	vin_skraeling_conflict = {
+		shock_damage = 0.10
+	}
+	vin_homesteads = {
+		build_cost = -0.10
+		global_colonial_growth = 15
+	}
+	vin_plenty = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	vin_adaptation = {
+		num_accepted_cultures = 2
+	}
+	vin_reestablish_trade_routes = {
+		global_ship_trade_power = 0.25
+		trade_range_modifier = 0.10
+	}
+}
+
+NAX_ideas = {
+	start = {
+		prestige = 1
+		discipline = 0.05
+	}
+	
+	bonus = {
+		yearly_army_professionalism = 0.50
+	}
+	
+	trigger = {
+		tag = NAX
+	}
+	free = yes
+	
+	
+	nax_ship_patrols = {
+		naval_forcelimit_modifier = 0.20
+		movement_speed_in_fleet_modifier = 1
+	}
+	nax_body_guard_of_archon = {
 		tolerance_own = 2
+		papal_influence = 1
 	}
-	jug_mountain_lands = {
-		hostile_attrition = 1
-		defensiveness = 0.25
-		# max_hostile_attrition = 1
+	nax_skilled_soldiers = {
+		infantry_power = 0.15
 	}
-	jug_ostgermanic_invasion = {
+	nax_regular_pay = {
+		land_maintenance_modifier = -0.10
+		merc_maintenance_modifier = -0.10
+	}
+	nax_fishing = {
+		global_prov_trade_power_modifier = 0.15
+	}	
+	nax_island_government = {
+		governing_capacity_modifier = 0.10
+	}
+	nax_archipelago = {
 		core_creation = -0.1
 	}
-	jug_cult_of_perun = {
-		shock_damage_received = -0.1
+}
+ATH_ideas = {
+	start = {
+		tolerance_own = 2
+		advisor_cost = -0.10
 	}
-	jug_warriors_of_faith = {
-		land_morale = 0.1
+	
+	bonus = {
+		diplomatic_upkeep = 1
+	}	
+
+	trigger = {
+		tag = ATH
 	}
-	jug_mongol_mercenaries = {
-		cavalry_power = 0.2
+	free = yes
+	
+	ath_voice_of_the_gods = {
+		diplomatic_reputation = 1
+		global_missionary_strength = 0.02
 	}
-	jug_melting_pot = {
-		num_accepted_cultures = 2
+
+	ath_keepers_of_the_temples = {
+		build_cost = -0.10
+	}
+
+	ath_naxos_guards = {
+		discipline = 0.05
+	}
+
+	ath_old_traditions = {
+		monthly_splendor = 2
+	}
+
+	ath_center_of_learning = {
+		technology_cost = -0.10
+	}
+
+	ath_temporal_archon = {
+		manpower_in_true_faith_provinces = 0.15
+		enforce_religion_cost = -0.25
+	}
+
+	ath_donations_and_indulgence = {
+		global_trade_goods_size_modifier = 0.10
 	}
 }

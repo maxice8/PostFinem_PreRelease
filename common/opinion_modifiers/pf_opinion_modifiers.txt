@@ -60,6 +60,14 @@ opinion_denying_archon = {
 	opinion = 50
 	yearly_decay = 1
 }
+opinion_gave_thessaly = {
+	opinion = 50
+	yearly_decay = 1
+}
+opinion_refused_thessaly = {
+	opinion = -50
+	yearly_decay = 1
+}
 
 # Persia
 
@@ -82,4 +90,20 @@ opinion_used_petition = {
 opinion_bribe_ruler_esp = {
 	opinion = 50
 	yearly_decay = 2
+}
+
+opinion_if_gave_office = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+# Nordic
+
+opinion_refused_submission_nor = {
+	opinion = -100
+	yearly_decay = 2
+}
+opinion_nor_ulrik_sons = {
+	opinion = 25
+	yearly_decay = 1
 }

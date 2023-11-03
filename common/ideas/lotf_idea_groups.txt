@@ -111,8 +111,16 @@ assimilation_ideas = {
 			has_idea_group = expansion_ideas
 		}	
 		modifier = {
+			factor = 0.5
+			NOT = { num_of_cities = 20 }
+		}	
+		modifier = {
+			factor = 0.25
+			NOT = { num_of_cities = 15 }
+		}	
+		modifier = {
 			factor = 0.0
-			NOT = { num_of_cities = 5 }
+			NOT = { num_of_cities = 10 }
 		}	
 	}
 }
@@ -163,6 +171,10 @@ firepower_ideas = {
 			num_of_artillery = 30
 		}	
 		modifier = {
+			factor = 1.5
+			num_of_artillery = 50
+		}	
+		modifier = {
 			factor = 1.25
 			current_age = age_of_absolutism
 		}	
@@ -173,6 +185,10 @@ firepower_ideas = {
 		modifier = {
 			factor = 0
 			NOT = { mil_tech = 7 }
+		}	
+		modifier = {
+			factor = 0.25
+			NOT = { mil_tech = 13 }
 		}	
 	}
 }

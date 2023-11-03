@@ -1,0 +1,751 @@
+pf_ath_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ATH } 
+
+	pf_ath_lords_of_morea = {
+		icon = foothold_in_greece
+		position = 2
+		required_missions = { pf_ath_young_men_of_athens } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 145
+				province_id = 1773
+				province_id = 4701
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			145 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1773 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4701 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {
+			add_army_tradition = 15
+			custom_tooltip = empty_line_tt
+			145 = {
+				add_province_modifier = {
+					name = "pf_ath_integration"
+					duration = 9125
+				}
+			}
+			1773 = {
+				add_province_modifier = {
+					name = "pf_ath_integration"
+					duration = 9125
+				}
+			}
+			4701 = {
+				add_province_modifier = {
+					name = "pf_ath_integration"
+					duration = 9125
+				}
+			}
+		} 
+	}
+
+	pf_ath_unite_greece = {
+		icon = english_alliance
+		position = 3
+		required_missions = {
+			pf_ath_lords_of_morea
+			pf_ath_northern_greece
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = morea_area
+				area = northern_greece_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			northern_greece_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_ath_union_of_greece"
+				duration = 9125
+			}
+			if = {
+				limit = {
+					is_great_power = yes
+				}
+				custom_tooltip = pf_ath_great_power_yes_tt
+				add_power_projection = {
+					type = mission_rewards_power_projection
+					amount = 25
+				}
+			}
+			else = {
+				custom_tooltip = pf_ath_great_power_no_tt
+				tooltip = {
+					add_power_projection = {
+						type = mission_rewards_power_projection
+						amount = 25
+					}
+				}
+			}
+		} 
+	}
+}
+pf_ath_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ATH } 
+
+	pf_ath_young_men_of_athens = {
+		icon = fra_military_reform
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				army_size_percentage = 1
+				AND = {
+					manpower_percentage = 0.50
+					army_size_percentage = 0.75
+				}
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_ath_army_prepared"
+				duration = 7300
+			}
+			custom_tooltip = pf_ath_get_manpower_from_hellenes_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						religion = hellenic
+					}
+					ROOT = {
+						add_manpower = 0.1
+					}
+				}
+			}
+			custom_tooltip = empty_line_tt
+			morea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_greece_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_ath_northern_greece = {
+		icon = mission_great_power_from_the_east
+		position = 2
+		required_missions = { pf_ath_young_men_of_athens } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 144
+				province_id = 4698
+				province_id = 4699
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			144 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4698 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4699 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {
+			create_general = {
+				tradition = 50
+			}
+			custom_tooltip = empty_line_tt
+			144 = {
+				add_province_modifier = {
+					name = "pf_ath_integration"
+					duration = 9125
+				}
+			}
+			4698 = {
+				add_province_modifier = {
+					name = "pf_ath_integration"
+					duration = 9125
+				}
+			}
+			4699 = {
+				add_province_modifier = {
+					name = "pf_ath_integration"
+					duration = 9125
+				}
+			}
+		} 
+	}
+
+	pf_ath_relations_with_naxos = {
+		icon = mission_mediterranean_islands
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 164
+				is_capital_of = NAX
+			}
+		} 
+
+		trigger = {
+			OR = {
+				owns_core_province = 164
+				NAX = {
+					has_opinion = {
+						who = ROOT
+						value = 200
+					}
+				}
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_ath_ties_with_the_guard"
+				duration = 9125
+			}
+			if = {
+				limit = {
+					num_of_mercenaries = 4
+				}
+				custom_tooltip = pf_ath_naxos_yes_tt
+				add_army_professionalism = 0.05
+			}
+			else = {
+				custom_tooltip = pf_ath_naxos_no_tt
+				tooltip = {
+					add_army_professionalism = 0.05
+				}
+			}
+			custom_tooltip = empty_line_tt
+			aegean_archipelago_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	pf_ath_strengthen_the_guard = {
+		icon = expand_the_swiss_guard
+		position = 4
+		required_missions = { pf_ath_relations_with_naxos } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_forcelimit_building_trigger = yes }
+		} 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 4
+				has_forcelimit_building_trigger = yes
+			}
+			has_mil_advisor_2 = yes
+			army_professionalism = 0.20
+		} 
+
+		effect = {
+			add_mil_power = 100
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_ath_permanent_guard"
+				duration = 10950
+			}
+		} 
+	}
+
+	pf_ath_military_reliance = {
+		icon = army_reforms
+		position = 5
+		required_missions = { pf_ath_strengthen_the_guard } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_artillery = 10
+			has_commanding_three_star = yes
+			OR = {
+				army_tradition = 70
+				army_professionalism = 0.40
+			}
+		} 
+
+		effect = {
+			change_innovativeness = 2
+			custom_tooltip = empty_line_tt
+			define_advisor = {
+				type = cannoneer
+				skill = 3
+				cost_multiplier = 0.25
+			}
+			custom_tooltip = empty_line_tt
+			capital_scope = {
+				add_base_manpower = 2
+			}
+		} 
+	}
+}
+pf_ath_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ATH } 
+
+	pf_ath_defeat_pirates = {
+		icon = mission_eric_the_pirate
+		position = 2
+		required_missions = { pf_ath_young_men_of_athens } 
+		provinces_to_highlight = {
+			province_id = 163	# Kriti
+		} 
+
+		trigger = {
+			163 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {
+			163 = {
+				add_or_upgrade_shipyard_building = yes
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_ath_safe_trading"
+				duration = 9125
+			}
+		} 
+	}
+
+	pf_ath_unite_agean = {
+		icon = mission_invade_island
+		position = 4
+		required_missions = {
+			pf_ath_relations_with_naxos
+			pf_ath_defeat_pirates
+		}
+		provinces_to_highlight = {
+			area = aegean_archipelago_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			aegean_archipelago_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_ath_lords_of_aegean"
+				duration = -1
+			}
+		} 
+	}
+}
+pf_ath_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ATH } 
+
+	pf_ath_hellenic_allies = {
+		icon = mission_alliances
+		position = 2
+		required_missions = { pf_ath_macedonian_relations } 
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = { religion = hellenic }
+		} 
+
+		trigger = {
+			calc_true_if = {
+				all_ally = {
+					religion = hellenic
+					has_opinion = {
+						who = ROOT
+						value = 125
+					}
+				}
+				amount = 3
+			}
+		} 
+
+		effect = {
+			custom_tooltip = pf_ath_allies_tt
+			hidden_effect = {
+				every_ally = {
+					limit = {
+						religion = hellenic
+						has_opinion = {
+							who = ROOT
+							value = 125
+						}
+					}
+					ROOT = {
+						add_dip_power = 50
+					}
+				}
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_ath_every_ally_gets_tt
+			hidden_effect = {
+				every_ally = {
+					limit = {
+						religion = hellenic
+						has_opinion = {
+							who = ROOT
+							value = 125
+						}
+					}
+					add_country_modifier = {
+						name = "pf_ath_support_of_archon"
+						duration = 9125
+					}
+				}
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = "pf_ath_support_of_archon"
+					duration = 9125
+				}
+			}
+		} 
+	}
+
+	pf_ath_support_the_orders = {
+		icon = support_the_orders
+		position = 3
+		required_missions = { pf_ath_hellenic_allies } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 70
+			}
+			OR = {
+				theologian = 2
+				inquisitor = 2
+			}
+			monthly_adm = 10
+		} 
+
+		effect = {
+			add_adm_power = 100
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_ath_every_hellene_gets_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						religion = hellenic
+					}
+					add_country_modifier = {
+						name = "pf_ath_holy_order_from_archon"
+						duration = 10950
+					}
+				}
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = "pf_ath_holy_order_from_archon"
+					duration = 10950
+				}
+			}
+		} 
+	}
+
+	pf_ath_college_of_demiarchons = {
+		icon = nagyszombat_university
+		position = 5
+		required_missions = { pf_ath_patronise_delphi } 
+		provinces_to_highlight = { } 
+
+		trigger = {
+			reform_level = 5
+			calc_true_if = {
+				amount = 25
+				all_province = {
+					has_cardinal = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pf_ath_every_culture_group_has_demiarchon
+				any_province = {
+					culture_group = anatolian_greek
+					has_cardinal = yes
+				}
+				any_province = {
+					culture_group = levantine_greek
+					has_cardinal = yes
+				}
+				any_province = {
+					culture_group = egyptian_greek
+					has_cardinal = yes
+				}
+				any_province = {
+					culture_group = macedonian_greek
+					has_cardinal = yes
+				}
+			}
+		} 
+
+		effect = {
+			change_government_reform_progress = 50
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_ath_demiarchons_cheap"
+				duration = 10950
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					current_age = age_of_reformation
+				}
+				custom_tooltip = pf_ath_if_reformation_gets_tt
+				hidden_effect = {
+					every_country = {
+						limit = {
+							religion = hellenic
+						}
+						add_country_modifier = {
+							name = "pf_ath_loyalism"
+							duration = 10950
+						}
+					}	
+				}
+			}
+			else = {
+				custom_tooltip = pf_ath_if_reformation_gets_no_tt
+				tooltip = {
+					add_country_modifier = {
+						name = "pf_ath_loyalism"
+						duration = 10950
+					}
+				}
+			}
+		} 
+	}
+}
+pf_ath_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ATH } 
+
+	pf_ath_macedonian_relations = {
+		icon = mission_diplomatic_relation
+		position = 1
+		provinces_to_highlight = {
+			is_capital_of = MAC
+		} 
+
+		trigger = {
+			if = {
+				limit = {
+					ai = no
+				}
+				has_dip_advisor = yes
+			}
+			OR = {
+				NOT = { exists = MAC }
+				MAC = {
+					has_opinion = {
+						who = ROOT
+						value = 50
+					}
+				}
+			}
+		} 
+
+		effect = {
+			define_advisor = {
+				type = diplomat
+				skill = 1
+				discount = yes
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					MAC = { ai = yes }
+				}
+				custom_tooltip = pf_ath_mac_change_relation_yes_tt
+				MAC = {
+					set_ai_attitude = {
+						attitude = attitude_friendly
+						who = ROOT
+					}
+				}
+			}
+			else = {
+				custom_tooltip = pf_ath_mac_change_relation_no_tt
+				tooltip = {
+					MAC = {
+						set_ai_attitude = {
+							attitude = attitude_friendly
+							who = ROOT
+						}
+					}
+				}
+			}
+		} 
+	}
+
+	pf_ath_negotiate_for_thessaly = {
+		icon = mission_guilds_of_barcelona
+		position = 2
+		required_missions = { pf_ath_macedonian_relations } 
+		provinces_to_highlight = {
+			province_id = 147
+		} 
+
+		trigger = {
+			OR = {
+				diplomatic_reputation = 3
+				monthly_dip = 8
+			}
+			OR = {
+				owns_core_province = 147	# Thessaly
+				147 = {
+					owner = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+			}
+		} 
+
+		effect = {
+			custom_tooltip = pf_ath_ask_for_thessaly_tt
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					MAC = { exists = yes }
+				}
+				custom_tooltip = pf_ath_mac_get_thessaly_yes_tt
+				MAC = {
+					country_event = {
+						id = pf_ath.3
+					}
+				}
+			}
+			else = {
+				custom_tooltip = pf_ath_mac_get_thessaly_no_tt
+				tooltip = {
+					MAC = {
+						country_event = {
+							id = pf_ath.3
+						}
+					}
+				}
+			}
+		} 
+	}
+
+	pf_ath_patronise_delphi = {
+		icon = take_the_bishoprics
+		position = 4
+		provinces_to_highlight = {
+			province_id = 146
+		} 
+
+		trigger = {
+			146 = {
+				owned_by = ROOT
+			}
+			146 = {
+				has_tax_building_trigger = yes
+			}
+			146 = {
+				prosperity = 100
+			}
+		} 
+
+		effect = {
+			define_advisor = {
+				type = theologian
+				skill = 1
+				discount = yes
+				female = yes
+			}
+			custom_tooltip = empty_line_tt
+			146 = {
+				add_province_modifier = {
+					name = "pf_ath_delphi_modifier"
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	pf_ath_archonic_universities = {
+		icon = pontifical_universities
+		position = 5
+		required_missions = { pf_ath_patronise_delphi } 
+		provinces_to_highlight = {
+			province_id = 146
+		} 
+
+		trigger = {
+			146 = {
+				development = 30
+			}
+			146 = {
+				has_courthouse_building_trigger = yes
+			}
+		} 
+
+		effect = {
+			146 = {
+				add_or_upgrade_university_building = yes
+			}
+			country_event = {
+				id = pf_ath.1
+			}
+		} 
+	}
+}

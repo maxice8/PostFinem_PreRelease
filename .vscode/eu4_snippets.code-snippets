@@ -24,13 +24,13 @@
 		],
 		"description": "Makes green text for loc"
 	},
-	"Cyan Loc": {
+	"Teal Loc": {
 		"scope": "eu4,yaml",
-		"prefix": "cc",
+		"prefix": "tt",
 		"body": [
-			"§C${1:TEXT}§! $0"
+			"§T${1:TEXT}§! $0"
 		],
-		"description": "Makes cyan text for loc"
+		"description": "Teal cyan text for loc"
 	},
 	"Red Loc": {
 		"scope": "eu4,yaml",

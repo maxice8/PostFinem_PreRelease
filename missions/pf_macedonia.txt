@@ -45,7 +45,9 @@ mac_1 = {
 			area = albania_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
-
+		ai_weight = {
+			factor = 800
+		}
 		trigger = {  
 			OR = {
 				albania_area = {
@@ -209,6 +211,9 @@ mac_1 = {
 			al_jazira_area = { add_permanent_claim = ROOT } 
 			shahrizor_area = { add_permanent_claim = ROOT } 
 		} 
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	pf_mac_follow_silk_road = {
@@ -461,6 +466,9 @@ mac_2 = {
 			syria_area = { add_permanent_claim = ROOT }
 			aleppo_area = { add_permanent_claim = ROOT }
 		} 
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	pf_mac_phoenician_coast = {
@@ -514,6 +522,9 @@ mac_2 = {
 			custom_tooltip = empty_line_tt
 			mashriq_region = { add_permanent_claim = ROOT }
 		} 
+		ai_weight = {
+			factor = 800
+		}
 	}
 
 	pf_mac_macedonian_silk = {
@@ -703,6 +714,9 @@ mac_3 = {
 			east_adriatic_coast_area = { add_permanent_claim = ROOT }
 			croatia_area = { add_permanent_claim = ROOT }
 		} 
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	pf_mac_illyrian_marches = {
@@ -772,6 +786,9 @@ mac_3 = {
 				}
 			}
 		} 
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	pf_mac_southern_brothers = {
@@ -809,6 +826,9 @@ mac_3 = {
 				id = pf_mac_events.4
 			}
 		} 
+		ai_weight = {
+			factor = 800
+		}
 	}
 
 	pf_mac_hellenic_hegemon = {
@@ -1646,8 +1666,18 @@ mac_eco_3 = {
 		} 
 
 		trigger = {  
-			capital_scope = {
-				development = 30
+			if = {
+				limit = {
+					ai = no
+				}
+				capital_scope = {
+					development = 30
+				}
+			}
+			else = {				
+				capital_scope = {
+					development = 20
+				}
 			}
 			capital_scope = {
 				province_has_center_of_trade_of_level = 3
@@ -1842,11 +1872,27 @@ mac_culture_4 = {
 		} 
 
 		trigger = { 
-			num_of_owned_provinces_with = {
-				value = 5
-				culture_group = ROOT
-				development = 30
+			if = {
+				limit = {
+					ai = no
+				}
+				num_of_owned_provinces_with = {
+					value = 5
+					culture_group = ROOT
+					development = 30
+				}
 			}
+			else_if = {
+				limit = {
+					num_of_owned_provinces_with = {
+						value = 5
+						culture_group = ROOT
+						development = 25
+					}
+				}
+				
+			}
+			
 		} 
 
 		effect = {  

@@ -209,14 +209,20 @@ pf_sar_1 = {
 		position = 8
 		required_missions = { pf_sar_invade_sicily } 
 		provinces_to_highlight = {
-			region = italy_region
+			OR = {
+				region = italy_region
+				region = north_italy_region
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 15
-				region = italy_region
+				OR = {
+					region = italy_region
+					region = north_italy_region
+				}
 			}
 		} 
 
@@ -228,6 +234,13 @@ pf_sar_1 = {
 				duration = 9125
 			}
 			italy_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_italy_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -793,19 +806,34 @@ pf_sar_4 = {
 			owner = {
 				has_reform = free_city
 			}
-			region = italy_region
+			OR = {
+				region = italy_region
+				region = north_italy_region
+			}
 		} 
 
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = pf_sar_italian_bankers_tt
-				italy_region = {
-					is_capital = yes
-					owner = {
-						has_reform = free_city
-						has_opinion = {
-							who = ROOT
-							value = 180
+				OR = {
+					italy_region = {
+						is_capital = yes
+						owner = {
+							has_reform = free_city
+							has_opinion = {
+								who = ROOT
+								value = 180
+							}
+						}
+					}
+					north_italy_region = {
+						is_capital = yes
+						owner = {
+							has_reform = free_city
+							has_opinion = {
+								who = ROOT
+								value = 180
+							}
 						}
 					}
 				}

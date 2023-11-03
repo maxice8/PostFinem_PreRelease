@@ -1,0 +1,15 @@
+shieldmaiden_personality = {
+	
+	allow = { always = no }
+	morale_damage = 0.10
+	discipline = 0.025
+	may_recruit_female_generals = yes
+	nation_designer_cost = 30
+	
+	easy_war_chance_multiplier = 3
+	war_chance_multiplier = 2.5
+	wants_land = yes
+	
+	chance = {	
+	}
+}
