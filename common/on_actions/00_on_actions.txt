@@ -2237,6 +2237,9 @@ on_monthly_pulse = {
 	}
 }
 on_yearly_pulse = {
+	events = {
+		pf_ai_behavior.1
+	}
 	random_events = {
 		1 = 0
 
