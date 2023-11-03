@@ -25,7 +25,7 @@ pf_nor_1 = {
 
 		trigger = {
 			OR = {
-				NRD = { is_subject_of = ROOT } 
+				overlord_of = NRD 
 				AND = {
 					lowlands_area = {
 						type = all
@@ -42,7 +42,7 @@ pf_nor_1 = {
 		effect = {
 			add_mil_power = 100
 			if = {
-				limit = { NRD = { is_subject_of = ROOT }  } 
+				limit = { overlord_of = NRD } 
 				custom_tooltip = pf_nor_claim_nordanvik_yes_tt
 				add_country_modifier = {
 					name = "pf_nor_brothers_forever"
@@ -299,6 +299,7 @@ pf_nor_2 = {
 		}
 
 		trigger = {
+			#NOTE(howard): probably check if they do not exist, but it seems to be an early mission
 			alliance_with = NRD
 			NRD = {
 				has_opinion = {
@@ -347,7 +348,10 @@ pf_nor_2 = {
 	pf_nor_challenge_sweden = {
 		icon = mission_conquer_sweden
 		position = 4
-		provinces_to_highlight = { culture = swedish } 
+		provinces_to_highlight = {
+			culture = swedish
+			NOT = { owned_by = ROOT }
+		} 
 
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -405,7 +409,7 @@ pf_nor_2 = {
 		position = 7
 		required_missions = { pf_nor_whaling } 
 		provinces_to_highlight = {
-			owned_by = root
+			owned_by = ROOT
 			NOT = { has_shipyard_building_trigger = yes }
 		} 
 
@@ -531,11 +535,6 @@ pf_nor_3 = {
 		position = 5
 		provinces_to_highlight = {
 			province_id = 23	# Bergen
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { has_trade_building_trigger = yes }
-				NOT = { has_dock_building_trigger = yes }
-			}
 		}
 
 		trigger = {
@@ -576,7 +575,7 @@ pf_nor_3 = {
 			}
 			OR = {
 				NOT = {
-					owned_by = root
+					owned_by = ROOT
 				}
 				NOT = { has_trade_building_trigger = yes }
 			}
@@ -622,7 +621,10 @@ pf_nor_3 = {
 		icon = mission_protect_white_sea_trade
 		position = 7
 		required_missions = { pf_nor_whaling } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_winter = severe_winter
+		} 
 
 		trigger = {
 			share_of_starting_income = 5
@@ -698,10 +700,12 @@ pf_nor_4 = {
 		required_missions = { pf_nor_further_beyond } 
 		provinces_to_highlight = {
 			region = carribeans_region
-			has_discovered = ROOT
+			NOT = { has_discovered = ROOT }
 		}
 
-		trigger = { carribeans_region = { has_discovered = ROOT }  } 
+		trigger = {
+			carribeans_region = { has_discovered = ROOT }
+		} 
 
 		effect = {
 			add_country_modifier = {
@@ -765,13 +769,13 @@ pf_nor_4 = {
 			}
 			1266 = {
 				trade_share = {
-					country = root
+					country = ROOT
 					share = 66
 				}
 			}
 			1490 = {
 				trade_share = {
-					country = root
+					country = ROOT
 					share = 50
 				}
 			}
@@ -873,7 +877,7 @@ pf_nor_5 = {
 				province_id = 1104
 				province_id = 1105
 			}
-			has_discovered = ROOT
+			NOT = { has_discovered = ROOT }
 		}
 
 		trigger = {
@@ -910,7 +914,7 @@ pf_nor_5 = {
 				area = labrador_area
 				area = cote_nord_area
 			}
-			has_discovered = ROOT
+			NOT = { has_discovered = ROOT }
 		}
 
 		trigger = {

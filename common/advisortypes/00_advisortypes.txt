@@ -885,6 +885,17 @@ trader = {
 			mercantilism_cost = -0.05 
 		}
 	}
+	
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_country_flag = traders_give_trade_steering_flag 
+			}
+		}
+		modifier = { 
+			trade_steering = 0.05 
+		}
+	}
 	skill_scaled_modifier = {
 		trigger = {
 			owner = { 

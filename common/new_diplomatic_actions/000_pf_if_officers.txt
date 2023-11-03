@@ -5,19 +5,36 @@ appoint_grand_marshal_action = {
 
 	is_visible = {
 		is_emperor = yes
-		NOT = {
-			event_target:grand_marshal_officer = {
-				exists = yes
-			}
-		}
 		FROM = { is_part_of_hre = yes }
 	}
 	is_allowed = {
-		FROM = {
-			is_at_war = no
+		if = {
+			limit = {
+				FROM = { is_at_war = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_AT_WAR_TT
+				FROM = { is_at_war = no }
+			}
 		}
-		FROM = {
-			has_regency = no
+		if = {
+			limit = {
+				FROM = { has_regency = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_HAS_REGENCY_TT
+				FROM = { has_regency = no }
+			}
+		}
+		if = {
+			limit = {
+				has_saved_global_event_target = grand_marshal_officer
+				event_target:grand_marshal_officer = { exists = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_ALREADY_APPOINTED_AS_GRAND_MARSHAL_TT
+				event_target:grand_marshal_officer = { exists = no }
+			}
 		}
 	}
 	on_accept = {
@@ -45,19 +62,36 @@ appoint_high_priest_action = {
 
 	is_visible = {
 		is_emperor = yes
-		NOT = {
-			event_target:high_priest_officer = {
-				exists = yes
-			}
-		}
 		FROM = { is_part_of_hre = yes }
 	}
 	is_allowed = {
-		FROM = {
-			is_at_war = no
+		if = {
+			limit = {
+				FROM = { is_at_war = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_AT_WAR_TT
+				FROM = { is_at_war = no }
+			}
 		}
-		FROM = {
-			has_regency = no
+		if = {
+			limit = {
+				FROM = { has_regency = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_HAS_REGENCY_TT
+				FROM = { has_regency = no }
+			} 
+		}
+		if = {
+			limit = {
+				has_saved_global_event_target = high_priest_officer
+				event_target:high_priest_officer = { exists = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_ALREADY_APPOINTED_AS_HIGH_PRIEST_TT
+				event_target:high_priest_officer = { exists = no }
+			}
 		}
 	}
 	on_accept = {
@@ -85,19 +119,36 @@ appoint_grand_steward_action = {
 
 	is_visible = {
 		is_emperor = yes
-		NOT = {
-			event_target:grand_steward_officer = {
-				exists = yes
-			}
-		}
 		FROM = { is_part_of_hre = yes }
 	}
 	is_allowed = {
-		FROM = {
-			is_at_war = no
+		if = {
+			limit = {
+				FROM = { is_at_war = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_AT_WAR_TT
+				FROM = { is_at_war = no }
+			}
 		}
-		FROM = {
-			has_regency = no
+		if = {
+			limit = {
+				FROM = { has_regency = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_HAS_REGENCY_TT
+				FROM = { has_regency = no }
+			}
+		}
+		if = {
+			limit = {
+				has_saved_global_event_target = grand_steward_officer
+				event_target:grand_steward_officer = { exists = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_ALREADY_APPOINTED_AS_GRAND_STEWARD_TT
+				event_target:grand_steward_officer = { exists = no }
+			}
 		}
 	}
 	on_accept = {

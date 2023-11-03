@@ -29,21 +29,27 @@ country_decisions = {
 		}
 
 		effect = {
-			remove_estate_privilege = estate_church_pf_ksb_corrupt_church
-			custom_tooltip = empty_line_tt
 			add_adm_power = -200
-			add_corruption = -2
+			custom_tooltip = empty_line_tt
+			remove_estate_privilege = estate_church_pf_ksb_corrupt_church
 			change_estate_land_share = {
 				estate = estate_church
 				share = -10
 			}
+			set_country_flag = ksb_reformed_church
+			custom_tooltip = empty_line_tt
+			add_corruption = -2
+			custom_tooltip = empty_line_tt
 			random_owned_province = {
 				limit = {
 					religion = ROOT
 				}
-				noble_rebels = 2
+				slavic_zealots = 2
 			}
 		}
-		ai_importance = 100
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 100	
 	}
 }

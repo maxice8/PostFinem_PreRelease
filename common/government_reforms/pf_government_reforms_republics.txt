@@ -91,3 +91,21 @@ pf_syncretic_state = {
 		 factor = 100
 	}
 }
+
+
+#War Elephant T5 for Carthage
+pf_war_elephant_stables = {
+	icon = "war_elephants"
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = allowed_war_elephants_flag
+	}
+	modifiers = {
+		can_recruit_cossacks = yes
+		allowed_cossack_fraction = 0.1
+		shock_damage = 0.1
+	}
+	ai = {
+		factor = 5
+	}
+}

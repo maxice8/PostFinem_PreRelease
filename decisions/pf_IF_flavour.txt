@@ -164,22 +164,4 @@ country_decisions = {
 			factor = 1
 		}
 	}
-	pf_if_show_officers = {
-		major = yes
-		potential = {
-			is_emperor = yes
-			hre_size = 2
-		}
-
-		allow = {
-			always = no
-		}
-
-		effect = {
-			custom_tooltip = pf_if_show_officers_tt
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 }

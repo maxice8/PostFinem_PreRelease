@@ -654,6 +654,7 @@ negative_stability = {
 	monthly_trn_cohesion = 0.5
 	monthly_mac_war_cabinet_organization = 0.03
 	monthly_pf_sneakiness = 0.25
+	monthly_pf_svetovid_dedication = 0.25
 }
 
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
@@ -2118,10 +2119,10 @@ voc_indiamen_ship = {
 
 
 cossacks_regiment = {
-	shock_damage = 0.25
-	shock_damage_received = -0.25
-	land_attrition = 0.50
+	shock_damage = 0.5
+	cavalry_flanking = 1
 	land_maintenance_modifier = 1
+	reinforce_cost_modifier = 1
 }
 
 carolean_regiment = {	# Huskarls
