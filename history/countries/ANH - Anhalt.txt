@@ -1,7 +1,7 @@
 government = tribal
 add_government_reform = feudal_tribe
 government_rank = 1
-technology_group = eastern
+technology_group = euro_pagan_tech
 primary_culture = cherusci
 religion = germanic_religion
 capital = 58# Dessau
@@ -43,9 +43,8 @@ fixed_capital = 58# Cannot move capital away from this province & no power cost 
 	add_ruler_personality = benevolent_personality
 	add_ruler_personality = charismatic_negotiator_personality
 }
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Wulfgar"
 		dynasty = "Wuffingas"
 		adm = 1
@@ -55,9 +54,8 @@ fixed_capital = 58# Cannot move capital away from this province & no power cost 
 		death_date = 1445.01.01
 	}
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Wystan"
 		dynasty = "Wuffingas"
 		adm = 4

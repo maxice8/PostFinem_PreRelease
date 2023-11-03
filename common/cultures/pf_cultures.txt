@@ -38,48 +38,12 @@ scandinavian = { #Nordic
 	karnutir = { 
 
 	}
-	
-	finnish = {
-		primary = FIN
-		dynasty_names = {
-			Bielke Horn Tott Fleming Paijkull Bonde Wrede Soop
-			Mannerheim Furuhjelm Aminoff Armfelt Carpelan Rehbinder Schulman
-		}
-		male_names = {
-			Eerikki Niklas  Aato Fredrik Jani Aleksanteri Edvard Jaakko Juha Aapeli Alpertti Antero 
-			Eino Erno Heikki Jooseppi Jyri Kaarle Kristian Lauri Mainio Mikael Onni Otso Paavo Petteri Ransu 
-			Samuli Taavi Tauno Tuomas Valto Veli Vieno Vilhelmi Voitto Reino
-			Aatos Ahma Aimo Armas Arvo Asikko Ensio Haapa Hannu Havu Hintsa Ihanti Into Jalo Jurva 
-			Kalevi Kettu Kolli Lalli Lauri Laurence Lemetti Kaleva
-			Mielitty Miemo Mikko Michael Oiva Onni Otso Pyry  Pentti Reko Sampo Satajalka 
-			Seppo Susi Tapani Terho Toivo Ukko Uoti Urho  Satatieto
-			Valta Valto Veli Vesa Voitto Erkki Erik Kaarle Charles Johannes John Risto Christopher 
-			Olaf Petri Peter Henri Henry  George Olavi
-			Valteri Walter Riku Richard Matti Matthew Jaakoppi Jacob Taisto Paavo Paul Aatso Adam Ahvo 
-			Artur Asko Tuokko David Rieti Frederick Aarto
-			Kauro Gabriel Kuuti Knut Pekko Soini Sven Tuure Turo Tommo Tohmas Thomas
-		}
-		female_names = {
-			Tarja Aina Jaana
-			Aamu Aino  Helmi Ilta Kaarina Catherine Kielo Kukka Lauha Lempi Mahla Maija 
-			Metta Pihla Pilvi Rauha Sisko Suoma Marja Mesi 
-			Taimi Terhi Titti Tuija Tuovi Tuuli Tuulikki Tyyne Tyyni Vanamo Venla Mielikki Hertta 
-			Inkeri Ilmatar Irene Irene Ilona Helen Kristiina Christina Loviisa
-			Elisabet Elisabeth Sohvi Sofia Auni Agnes Liekko Helen Kivutar Lemmikki Lyylikki Salme 
-			Tuulitar Talvikki
-		}
-	}
-	sapmi = {
-		primary = SMI
-	}
-	karelian = {
-		primary = KRL
-
-	}
 	icelandic = {
 		primary = ICE
 	}
-
+	vinlandic = {
+		primary = VIN
+	}
 	
 	angle = {
 		primary = JUT
@@ -137,6 +101,47 @@ scandinavian = { #Nordic
 		Lundqvist Malmgren Nilsson Olofsson Pettersson Qvarnström Rundqvist
 		Sjögren Tuvesson Ulriksson Vinterstrand Wiberg Åkerman Östberg
 		Ängström Börjesson Cedergren Dahlström Ericsson Falkström
+	}
+}
+
+finnic = {
+	graphical_culture = easterngfx
+
+	finnish = {
+		primary = FIN
+	}
+	sapmi = {
+		primary = SMI
+	}
+	karelian = {
+		primary = KRL
+	}
+	dynasty_names = {
+		Bielke Horn Tott Fleming Paijkull Bonde Wrede Soop
+		Mannerheim Furuhjelm Aminoff Armfelt Carpelan Rehbinder Schulman
+	}
+	male_names = {
+		Eerikki Niklas  Aato Fredrik Jani Aleksanteri Edvard Jaakko Juha Aapeli Alpertti Antero 
+		Eino Erno Heikki Jooseppi Jyri Kaarle Kristian Lauri Mainio Mikael Onni Otso Paavo Petteri Ransu 
+		Samuli Taavi Tauno Tuomas Valto Veli Vieno Vilhelmi Voitto Reino
+		Aatos Ahma Aimo Armas Arvo Asikko Ensio Haapa Hannu Havu Hintsa Ihanti Into Jalo Jurva 
+		Kalevi Kettu Kolli Lalli Lauri Laurence Lemetti Kaleva
+		Mielitty Miemo Mikko Michael Oiva Onni Otso Pyry  Pentti Reko Sampo Satajalka 
+		Seppo Susi Tapani Terho Toivo Ukko Uoti Urho  Satatieto
+		Valta Valto Veli Vesa Voitto Erkki Erik Kaarle Charles Johannes John Risto Christopher 
+		Olaf Petri Peter Henri Henry  George Olavi
+		Valteri Walter Riku Richard Matti Matthew Jaakoppi Jacob Taisto Paavo Paul Aatso Adam Ahvo 
+		Artur Asko Tuokko David Rieti Frederick Aarto
+		Kauro Gabriel Kuuti Knut Pekko Soini Sven Tuure Turo Tommo Tohmas Thomas
+	}
+	female_names = {
+		Tarja Aina Jaana
+		Aamu Aino  Helmi Ilta Kaarina Catherine Kielo Kukka Lauha Lempi Mahla Maija 
+		Metta Pihla Pilvi Rauha Sisko Suoma Marja Mesi 
+		Taimi Terhi Titti Tuija Tuovi Tuuli Tuulikki Tyyne Tyyni Vanamo Venla Mielikki Hertta 
+		Inkeri Ilmatar Irene Irene Ilona Helen Kristiina Christina Loviisa
+		Elisabet Elisabeth Sohvi Sofia Auni Agnes Liekko Helen Kivutar Lemmikki Lyylikki Salme 
+		Tuulitar Talvikki
 	}
 }
 
@@ -1415,6 +1420,18 @@ pagan_slavic = {
 		primary = TRA
 		
 	}
+	polabian = {
+		primary = POB
+	}
+	ceci = {
+		primary = BOH
+	}
+	# irminovci = {
+	# 	primary = POB
+	# }
+	rus_new = {
+		# primary = PNS
+	}
 }
 
 suebian = {
@@ -1951,5 +1968,20 @@ kemetic = {
 		Aamina Abella Amata Amina Anatu Aqeela Araha Arahuna Arwia Asiah Baila Benan Canfeda Damrina Derya Dilara Elif Elina Elmas Emmita Ettu Fatma Gula Haala Haamida 
 		Hasibe Ia Iltani Jannat Kamelya Kishar Kullaa Leja Lubna Mardina Mudam Musheera Nadide Nahrina Nardina Nesrin Ninsunu Nuriye Nusaiba Nuzha Omara Pari Qamara 
 		Rahma Saba Sabahat Samra Semiha Seyma Sireen Ura Yamima Yamina Zakiti Zeyni
+	}
+}
+mesopotamian = {
+	graphical_culture = muslimgfx
+	babylonian = {
+		primary = URK
+	}
+	male_names = {
+		"Ku-Enlila" "Nasha" "Ishme-Ea" "Ea-Nasir" "Lipit-Enlil" "Lipit-Tishpak" "Ishme-Karab" "Ishullana" "Tuge" "En-Men-Gal-Ana" "Sin-Kashid" "Assur-Susuli" "Sargon" "Sharrugi" "Shubnalu" "Xisuthros" "Sabum" "Sin-Mushtal" "Ninazu" "Anbu" "Yashub-Yahad" "Samuqan" "Nabi-Sin" "Gudea" "Damqi-Ilishu" "Lu-Nanna" "Belshunu" "Iddin-Dagan" "Meskalam-Dug" "Meli-Shipak" "Ur-Zababa" "Lugal-Zage-Si" "Enshakushanna" "Nergal-Erish" "Adad-Nairi" "Ashur-Dan" "Shamash-Risha-Usur" "Ninurta-Kudurri-Usur" Naplanum Emisum Samium Zabaia Gungunum Abisare Sumuel "Nur-Adad" "Sin-Iddinam" "Sin-Eribam" "Sin-Iqisham" "Silli-Adad" "Warad-Sin" "Rim-Sin" Hammurabi "Samsu-iluna" "Su-abu" "Sumu-la-El" "Sabum" "Apil-Sin" "Sin-muballit" Abieshu "Ammi-ditana" "Samsu-Ditana" Ammisaduqa Gandas Agum Kastiliasu "Abi-Rattas" Hurbazum Ulamburiash Karaindash "Enlil-nadin-ahi" Gulkishar
+	}
+	female_names = {
+		Aea Antum Nindukugga "Nin-Imma" Nisaba Puabi Aruru Belessunu Eulli Delondra Ninshuel Ninlil Ashusikildigir Ninsun Nana Allatu Belit Zirrabanit Tiamat
+	}
+	dynasty_names = {
+		"Shamash-shuma-ukin" Sharru Karduniash Nineveh Hatra Assur Nuzi Palmyra Mari Sippar Ur Kish Babilim Nippur Isin Lagash Uruk Susa Akkad Kish
 	}
 }

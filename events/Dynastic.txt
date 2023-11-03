@@ -490,7 +490,7 @@ country_event = {
 			has_country_flag = last_jousting_tournament_held
 		}
 		army_tradition =  20
-		technology_group = western
+		pf_western_tech_group = yes
 	}
 	
 	mean_time_to_happen = {
@@ -1659,7 +1659,7 @@ country_event = {
 		picture = ROYAL_STRESS_eventPicture
 		trigger = {
 			has_dlc = "Lions of the North"
-			technology_group = western
+			pf_western_tech_group = yes
 		}
 	}
 	picture = {
@@ -1667,7 +1667,7 @@ country_event = {
 		trigger = {
 			OR = {
 				NOT = { has_dlc = "Lions of the North" }
-				NOT = { technology_group = western }
+				NOT = { pf_western_tech_group = yes }
 			}
 		}
 	}

@@ -90,14 +90,14 @@ parliamentary_reform = {
 		factor = 1
 		modifier = {
 			factor = 0.5
-			NOT = { technology_group = western }
+			NOT = { pf_western_tech_group = yes }
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { technology_group = western }
+			NOT = { pf_western_tech_group = yes }
 			NOT = {
 				any_neighbor_country = {
-					technology_group = western
+					pf_western_tech_group = yes
 				}
 			}
 		}

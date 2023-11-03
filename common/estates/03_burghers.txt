@@ -216,6 +216,12 @@ estate_burghers = {
 		}
 	}
 	custom_name = {
+		desc = estate_kupcy
+		trigger = {
+			culture_group = pagan_slavic
+		}
+	}
+	custom_name = {
 		desc = estate_dimotes
 		trigger = {
 			pf_belongs_to_greek_culture_group = yes

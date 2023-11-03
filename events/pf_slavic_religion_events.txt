@@ -1,0 +1,34 @@
+#Slavic Religion Events
+
+namespace = pf_slavic_events
+
+country_event = {
+	id = pf_slavic_events.1
+	title = pf_slavic_events.1.t
+	desc = pf_slavic_events.1.d
+	picture = "NORSE_TEMPLE_eventPicture"
+
+	trigger = {
+		NOT = {
+			current_age = age_of_discovery
+		}
+		religion = slavic_religion
+	}
+
+	option = {
+		name = pf_slavic_events.1a
+		set_country_flag = abandoned_cult_of_rod_flag
+		add_country_modifier = {
+			name = abandoned_cult_of_rod
+			duration = -1
+		}
+		remove_church_aspect = rod_aspect
+		custom_tooltip = "no_more_rod_tt"
+	}
+	option = {
+		name = pf_slavic_events.1b
+		add_prestige_or_monarch_power = {
+			amount = 20
+		}
+	}
+}

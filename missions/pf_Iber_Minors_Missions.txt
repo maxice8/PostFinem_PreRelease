@@ -1,0 +1,297 @@
+#iber_expansion3 = {
+#	slot = 1
+#	generic = no
+#	ai = yes
+#	has_country_shield = yes
+#	potential = { tag = { NOT = { BCA } } }
+#
+#	crossing_the_strait = {
+#		icon = mission_arabian_sea_trade
+#		position = 2
+#		required_missions = { brand_new_dawn } 
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#
+#	knock_at_the_door = {
+#		icon = mission_conquer_tunisia
+#		position = 4
+#		required_missions = { crossing_the_strait } 
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#
+#	a_new_empire = {
+#		icon = centralized_empire
+#		position = 5
+#		required_missions = {
+#			secure_the_north
+#			knock_at_the_door
+#		}
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#}
+#iber_expansion = {
+#	slot = 2
+#	generic = no
+#	ai = yes
+#	has_country_shield = yes
+#	potential = { tag = { NOT = { BCA } } }
+#
+#	brand_new_dawn = {
+#		icon = mission_restore_the_pagan_kingdom
+#		position = 1
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#
+#	answer_gaul = {
+#		icon = mission_gain_mana
+#		position = 2
+#		required_missions = { brand_new_dawn } 
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#
+#	secure_the_north = {
+#		icon = mission_pf_map_table
+#		position = 4
+#		required_missions = { answer_gaul } 
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#}
+#iber_expansion2 = {
+#	slot = 3
+#	generic = no
+#	ai = yes
+#	has_country_shield = yes
+#	potential = { tag = { NOT = { BCA } } } 
+#
+#	roman_ambition = {
+#		icon = answer_the_roman_question
+#		position = 2
+#		required_missions = { brand_new_dawn } 
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#
+#	roman_locked_mission1 = {
+#		icon = mission_unknown_mission
+#		position = 3
+#		required_missions = { roman_ambition } 
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#
+#	roman_locked_mission2 = {
+#		icon = mission_unknown_mission
+#		position = 4
+#		required_missions = { roman_locked_mission1 } 
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#}
+#iber_consoldate2 = {
+#	slot = 4
+#	generic = no
+#	ai = yes
+#	has_country_shield = yes
+#	potential = { tag = { NOT = { BCA } } } 
+#
+#	expand_the_manufactories = {
+#		icon = mission_industrial_forging
+#		position = 2
+#		required_missions = { concentrate_the_holdings } 
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#
+#	production_of_wine = {
+#		icon = mission_wine_monopolies
+#		position = 3
+#		required_missions = { expand_the_manufactories } 
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#}
+#iber_consoldation = {
+#	slot = 5
+#	generic = no
+#	ai = yes
+#	has_country_shield = yes
+#	potential = { tag = { NOT = { BCA } } } 
+#
+#	concentrate_the_holdings = {
+#		icon = fra_educational_reforms
+#		position = 1
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#
+#	til_the_land = {
+#		icon = mission_mal_subjugate_zaf
+#		position = 2
+#		required_missions = { concentrate_the_holdings } 
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#
+#	gratuitious_mountains = {
+#		icon = mission_zambezi_gold
+#		position = 4
+#		required_missions = { til_the_land } 
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#}
+#iber_navy = {
+#	slot = 3
+#	generic = no
+#	ai = yes
+#	has_country_shield = yes
+#	potential = { tag = { NOT = { BCA } } }
+#
+#	navy_1 = {
+#		icon = mission_establish_high_seas_navy
+#		position = 5
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#
+#	navy_3 = {
+#		icon = mission_indian_trade_company
+#		position = 6
+#		required_missions = { navy_1 } 
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#
+#	navy_5 = {
+#		icon = a_worthy_navy
+#		position = 7
+#		required_missions = {
+#			navy_2
+#			navy_3
+#			navy_4
+#		}
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#}
+#iber_navy2 = {
+#	slot = 2
+#	generic = no
+#	ai = yes
+#	has_country_shield = yes
+#	potential = { tag = BCA } 
+#
+#	navy_2 = {
+#		icon = imperial_navy
+#		position = 6
+#		required_missions = { navy_1 } 
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#}
+#iber_navy3 = {
+#	slot = 4
+#	generic = no
+#	ai = yes
+#	has_country_shield = yes
+#	potential = { tag = BCA } 
+#
+#	navy_4 = {
+#		icon = mission_seize_north_sea_trade
+#		position = 6
+#		required_missions = { navy_1 } 
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#}
+#iber_colonize = {
+#	slot = 5
+#	generic = no
+#	ai = yes
+#	has_country_shield = yes
+#	potential = { tag = BCA } 
+#
+#	iber_colonize_1 = {
+#		icon = mission_colonize_the_west
+#		position = 5
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#
+#	iber_colonize_2 = {
+#		icon = mission_new_kingdom_of_granada
+#		position = 6
+#		required_missions = { iber_colonize_1 } 
+#		provinces_to_highlight = {  } 
+#
+#		trigger = {  } 
+#
+#		effect = {  } 
+#	}
+#}

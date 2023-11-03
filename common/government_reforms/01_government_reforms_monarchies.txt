@@ -398,7 +398,7 @@ absolutist_france_reform = {
 	nation_designer_cost = 50
 	nation_designer_trigger = {
 		culture_group = french
-		technology_group = western
+		pf_western_tech_group = yes
 		capital_scope = { region = france_region }
 	}
 	lock_level_when_selected = yes
@@ -6195,6 +6195,14 @@ become_a_republic_reform = {
 		#		}
 		#	}
 		#}
+		if = {
+			limit = { tag = SLV }
+			hidden_effect = {
+				country_event = {
+					id = pf_ksb_events.5
+				}
+			}
+		}
 	}
 	ai = {
 		factor = 0

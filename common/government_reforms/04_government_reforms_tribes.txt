@@ -642,7 +642,7 @@ tribe_becomes_monarchy_reform = {
 				technology_group = nomad_group
 				religion_group = christian
 			}
-			change_technology_group = eastern
+			pf_eastern_tech_group = yes
 			change_unit_type = eastern
 		}
 		if = {
@@ -742,7 +742,7 @@ tribe_becomes_republic_reform = {
 				technology_group = nomad_group
 				religion_group = christian
 			}
-			change_technology_group = eastern
+			change_technology_group = western
 			change_unit_type = eastern
 		}
 		if = {
@@ -814,6 +814,14 @@ tribe_becomes_republic_reform = {
 			}
 			add_government_reform = peasants_republic
 		}
+		if = {
+			limit = { tag = SLV }
+			hidden_effect = {
+				country_event = {
+					id = pf_ksb_events.5
+				}
+			}
+		}
 	}
 	ai = {
 		factor = 1
@@ -868,7 +876,7 @@ tribe_becomes_theocracy_reform = {
 				technology_group = nomad_group
 				religion_group = christian
 			}
-			change_technology_group = eastern
+			 change_technology_group = eastern
 			change_unit_type = eastern
 		}
 		if = {

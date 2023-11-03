@@ -1,0 +1,86 @@
+#Vinland
+graphical_culture = westerngfx
+color = { 50 0 170 }
+historical_idea_groups = { 
+	aristocracy_ideas
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	economic_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	maritime_ideas
+}
+monarch_names = { 
+	"Ragnar #0" = 20
+	"Þórbj?rn #0" = 20
+	"Haraldur #0" = 20
+	"Sigurðr #0" = 20
+	"Björn #0" = 10
+	"Ivar #0" = 10
+	"Óláfr #0" = 10
+	"Rögnvaldr #0" = 10
+	"Eirikr #0" = 10
+	"Leifur #0" = 10
+	"Þorsteinn #0" = 10
+	"Sveinn #0" = 10
+	"Gunnar #0" = 10
+	"Æirikr #0" = 5
+	"Hákon #0" = 5
+	"Rölfur #0" = 5
+	"Freyr #0" = 5
+	"Úlfur #0" = 5
+	"Geirr #0" = 5
+	"Viggo #0" = 5
+	"Jarl #0" = 5
+	"Njörðr #0" = 5
+	"Þorkell #0" = 5
+	"Háraldr #0" = 5
+	"Eiríkur #0" = 5
+	"Knutr #0" = 5
+	"Ivarr #0" = 5
+	"Sigurðr #0" = 1
+	"Ragnarr #0" = 1
+	"Steinn #0" = 1
+	"Víkarr #0" = 1
+	"Úlfr #0" = 1
+	"Óskar #0" = 1
+	"Brúnn #0" = 1
+	"Þorvaldr #0" = 1
+	"Valdamarr #0" = 1
+	"Oddr #0" = 1
+	"Snorri #0" = 1
+	"Kári #0" = 1
+	"Hjalmar #0" = 1
+
+	"Freya #0" = -1
+	"Ingridr #0" = -1
+	"Rúna #0" = -1
+	"Sigríðr #0" = -1
+	"Hildr #0" = -1
+}
+leader_names = { 
+	Ragnar Thor Odinn Freyr Bjorn Ivar Harald Erik Leif Gunnar
+	Sigurd Haldor Vidar Njord Einar Halfdan Frode Rolf Egil Sven
+	Ingvar Olaf Hjalmar Hakon Ulf Geir Valdemar Knut Asbjorn Torstein Hrafn Oddvar
+	Magnus Kjell Gudmund Eirikur Gorm Bjarte Tryggve Bjarne Erlend Ingolf
+}
+ship_names = { 
+	"Bjorn Ironside" "Freydis Eiriksson" "Gunnar Hámundarson" "Helgi Haddingjarl" "Ingvar the Far-Travelled" "Leif the Lucky" "Olaf Tryggvason"
+	"Ragnald the Mighty" "Sigurd the Volsung" "Sweyn Forkbeard" "Thorkell the Tall" "Valhalla" "Vidar the Silent" "Harald Bluetooth" "Gudrid Thorbjarnardóttir"
+	"Lagertha" "Rollo the Walker" "Knut the Great" "Yngvi-Freyr" "Beowulf" "Geirmund Heljarskinn" "Starkad the Old" "Egil Skallagrimsson" "Víga-Hrappr" "Hogni the White"
+	"Hrafnkel Frey's Friend" "Hjalmar the Viking" "Skagul" "Toste the Proud" "Jormungandr" "Njord the Seafarer" "Huginn and Muninn" "Balder the Beautiful" "Freyr the Fair"
+	"Heimdallr the Watcher" "Njord the Wealthy" "Odin the Allfather" "Thor the Thunderer" "Tyr the Brave"
+	"Astrild" "Vindfamne" "Dellingr" "Sjofn" "Dagr" "Skathi" "Sindri" "Sleipnir" "Slepnir" "Sigyn" "Skogul" "Sol" "Sigrun" "Snotra" "Syn" "Sigrid" "Hlin" "Bragi" "Eir"
+	"Eirikr" "Fjorgyn" "Frigg" "Fjolsvinn" "Idunn" "Jotunheim" "Lofn" "Frøya" "Gerd" "Gudrun" "Hlif" "Hnoss" "Gjallarhorn" "Gnipahellir" "Hvergelmir" "Jotunheimr" "Surt"
+	"Urðarbrunnr" "Yggdrasil" "Mjolnir" "Draupnir" "Gungnir" "Gullinbursti" "Skidbladnir"
+	"Hoddmimir's Holt" "Naglfar" "Dromi" "Logi" "Ratatoskr" "Andhrimnir" "Audhumla" "Fenrir" "Geri and Freki" "Hati Hati" "Huginn and Muninn"
+	"Mardoll" "Nidhogg" "Ratatoskr" "Hrimfaxi" "Skinfaxi" "Sleipnir" "Alfheim" "Muspelheim" "Midgard" "Vanaheimr" "Niflheimr" "Helheim" "Jotunheimr"
+	"Álfheimr" "Nidavellir" "Svartalfheim" "Asgard" "Utgard" "Yggdrasil"
+}
+army_names = { 
+	"Odins Krigare" "Den Store Hæren" "Armé av $PROVINCE$"
+}
+fleet_names = { 
+	"Atlanterhavsflåten" "Stor Flåte" "Marin av $PROVINCE$"
+}

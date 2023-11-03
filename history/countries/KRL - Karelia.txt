@@ -1,13 +1,12 @@
 government = tribal
 add_government_reform = tribal_kingdom
 government_rank = 1
-technology_group = eastern
+technology_group = euro_pagan_tech
 religion = animism
 primary_culture = karelian
 capital = 32
-
-1444.11.11 = {
-	monarch = {
+1444.11.11 = { 
+	monarch = { 
 		name = "Eino"
 		dynasty = "Tott"
 		adm = 1
@@ -17,9 +16,8 @@ capital = 32
 		death_date = 1445.01.01
 	}
 }
-
-1444.11.11 = {
-	heir = {
+1444.11.11 = { 
+	heir = { 
 		name = "Olavi"
 		dynasty = "Tott"
 		adm = 3

@@ -74,18 +74,21 @@ country_decisions = {
 					}
 				}
 				num_of_owned_provinces_with = {
-					value = 35
+					value = 30
 					region = british_isles_region
 					is_core = root
 				}
 				custom_trigger_tooltip = {
 					tooltip = pf_trn_allowed_to_form_via_mission_tt
-					has_country_flag = may_form_albion
+					OR = {
+						adm_tech = 10
+						has_country_flag = may_form_albion
+					}
 				}
 			}
 			else = {
 				num_of_owned_provinces_with = {
-					value = 40
+					value = 35
 					region = british_isles_region
 					is_core = root
 				}

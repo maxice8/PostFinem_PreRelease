@@ -1,9 +1,9 @@
 #405 - Tadmor
-capital = "Tadmuriyah"
-trade_goods = livestock
+capital = "Palmyra"
+trade_goods = silk
 base_tax = 2
-base_production = 1
-base_manpower = 2
+base_production = 3
+base_manpower = 1
 is_city = yes
 discovered_by = east_african
 discovered_by = muslim
@@ -14,4 +14,6 @@ religion = hellenic
 owner = PMY
 controller = PMY
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 add_core = PMY
+center_of_trade = 1

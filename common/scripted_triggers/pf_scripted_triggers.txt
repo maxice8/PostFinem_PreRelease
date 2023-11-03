@@ -2,7 +2,7 @@ has_colonial_nation_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = $tooltip$
 		#you have to type a tooltip because PDX scripted effects sucks
-		#ex: "Own or have a colonial subject own at least §Y PROVINCES §! provinces in §Y COLONIAL_REGION §!"
+		#ex: "Own or have a colonial subject own at least ï¿½Y PROVINCES ï¿½! provinces in ï¿½Y COLONIAL_REGION ï¿½!"
 		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 			value = $provinces$
 			owner = {
@@ -173,6 +173,30 @@ pf_belongs_to_greek_culture_group = {
 
 }
 
+province_is_part_of_raid_war = {
+	custom_trigger_tooltip = {
+		tooltip = province_is_part_of_raid_war_tt
+		controller = {
+			is_in_war = {
+				casus_belli = cb_raid
+				attacker_leader = THIS
+			}
+			ROOT = {
+				NOT = { owned_by = PREV }
+			}
+		}
+	}
+}
+country_is_part_of_raid_war = {
+	custom_trigger_tooltip = {
+		tooltip = country_is_part_of_raid_war_tt
+		is_in_war = {
+			casus_belli = cb_raid
+			attacker_leader = THIS
+		}
+	}
+}
+
 pf_rabim_qahal_adirim_control = {
 	NOT = {
 		has_government_power = {
@@ -203,5 +227,18 @@ pf_rabim_qahal_suffet_dominant = {
 		mechanic_type = car_rabim_qahal
 		power_type = adirim_vs_suffet
 		value = 50
+	}
+}
+
+pf_western_tech_group = {
+	OR = {
+		technology_group = western
+		technology_group = celtic_tech
+	}
+}
+pf_eastern_tech_group = {
+	OR = {
+		technology_group = eastern
+		technology_group = euro_pagan_tech
 	}
 }

@@ -1,0 +1,55 @@
+country_decisions = {
+
+	pf_remove_pagan_debuff_decision = {
+		major = yes
+		# color = {  }
+		
+		potential = {
+			has_country_modifier = euro_pagan_tech_penalty_modifier
+		}
+
+		allow = {
+			has_institution = feudalism
+			OR = {
+				AND = {
+					adm_tech = 7
+					adm_power = 100
+				}
+				AND = {
+					total_development = 400
+					adm_power = 300
+				}
+			}
+		}
+
+		provinces_to_highlight = {
+		}
+
+		effect = { 
+			simple_dynamic_effect = {
+				first_custom_tooltip = adm_tech_7_tt
+				first_limit = "
+					adm_tech = 7
+					adm_power = 100
+				"
+				first_effect = "
+					add_adm_power = -100
+				"
+				second_custom_tooltip = 40_cities_tt
+				second_limit = "
+					total_development = 400
+					adm_power = 300
+				"
+				second_effect = "
+					add_adm_power = -300
+				"
+			}
+			custom_tooltip = empty_line_tt
+			remove_country_modifier = euro_pagan_tech_penalty_modifier
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

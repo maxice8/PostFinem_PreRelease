@@ -6,7 +6,18 @@ country_event = {		# Uppsala öd
 	desc = pf_nordic.1.d
 	picture = FARMING_WIFE_eventPicture
 
-	is_triggered_only = yes
+	trigger = {
+		tag = SWE
+		legitimacy = 90
+		stability = 1
+		owns = 1
+	}
+
+	mean_time_to_happen = {
+		months = 80
+	}
+
+	fire_only_once = yes
 
 	option = {
 		name = pf_nordic.1.a
@@ -18,7 +29,7 @@ country_event = {		# Uppsala öd
 	}
 	option = {
 		name = pf_nordic.1.b
-		add_years_of_income = 1
+		add_years_of_income = 2
 		add_legitimacy = -10
 		change_estate_land_share = {
 			estate = all
@@ -51,6 +62,7 @@ country_event = {		# The Future of Kingship
 		ai_chance = {
 			factor = 0
 		}
+		add_stability_or_adm_power = yes
 		add_estate_loyalty = {
 			estate = all
 			loyalty = 10
@@ -74,6 +86,14 @@ country_event = {		# Execute the king of norway
 		add_ruler_modifier = {
 			name = "pf_nordic_reign_of_terror"
 			duration = -1
+		}
+		if = {
+			limit = {
+				exists = NOR
+			}
+			NOR = {
+				kill_ruler = yes
+			}
 		}
 	}
 }
@@ -239,6 +259,1265 @@ country_event = {		# Battle Cry of the Swedes
 		add_country_modifier = {
 			name = "pf_nordic_odin_owns_you_all"
 			duration = -1
+		}
+	}
+}
+country_event = {		# Demand Norway's submission
+	id = pf_nordic.10
+	title = pf_nordic.10.t
+	desc = pf_nordic.10.d
+	picture = CONSPIRACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {	# They will kneel!
+		name = pf_nordic.10.a
+		trigger = {
+			exists = NOR
+		}
+		NOR = {
+			country_event = {
+				id = pf_nordic.11
+			}
+		}
+	}
+	option = {	# We will conquer them later
+		name = pf_nordic.10.b
+		eastern_norway = {
+			add_claim = ROOT
+		}
+		western_norway = {
+			add_claim = root
+		}
+		northern_norway = {
+			add_claim = root
+		}
+	}
+}
+country_event = {		# Demand Norway's submission (Norway)
+	id = pf_nordic.11
+	title = pf_nordic.11.t
+	desc = pf_nordic.11.d
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes
+
+	major = yes
+
+	major_trigger = {
+		culture_group = scandinavian
+	}
+
+	option = {
+		name = pf_nordic.11.a
+		ai_chance = {
+			factor = 99
+		}
+		add_mil_power = 50
+		FROM = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_refused_submission_nor
+			}
+			eastern_norway = {
+				add_permanent_claim = ROOT
+			}
+			western_norway = {
+				add_permanent_claim = ROOT
+			}
+			northern_norway = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	option = {
+		name = pf_nordic.11.b
+		ai_chance = {
+			factor = 1
+		}
+		add_prestige = -10
+		FROM = {
+			vassalize = ROOT
+		}
+	}
+}
+
+country_event = {		# The Skaneland Rising
+	id = pf_nordic.12
+	title = pf_nordic.12.t
+	desc = pf_nordic.12.d
+	picture = EYALET_REBELLION_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		6 = {
+			owner = {
+				save_event_target_as = scania_owner
+			}
+		}
+	}
+
+	major = yes
+
+	option = {
+		name = pf_nordic.12.a
+		event_target:scania_owner = {
+			release = SKD
+		}
+		SKD = {
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.8
+					cavalry = 0.2
+				}
+			}
+			add_country_modifier = {
+				name = "pf_nordic_scanian_revolution"
+				duration = 9125
+			}
+			declare_war_with_cb = {
+				casus_belli = cb_independence_war
+				who = event_target:scania_owner
+			}
+		}
+		create_alliance = SKD
+		join_all_offensive_wars_of = SKD
+		join_all_defensive_wars_of = SKD
+		add_country_modifier = {
+			name = "pf_nordic_scanian_revolution"
+			duration = 9125
+		}
+	}
+}
+
+# Raiding Party Return
+country_event = {
+	id = pf_nordic.13
+	title = "pf_nordic.13.t"
+	desc = "pf_nordic.13.d"
+	picture = BATTLE_eventPicture
+
+	trigger = {
+		check_variable = {
+			which = RaidLoot
+			value = 1
+		}
+		NOT = {
+			is_in_war = {
+				casus_belli = cb_raid
+				attacker_leader = ROOT
+			}
+		}
+		NOT = {
+			any_province = {
+				NOT = {
+					OR = {
+						owned_by = ROOT
+						owner = { is_subject_of = ROOT }
+					}
+				}
+				OR = {
+					infantry_in_province = ROOT
+					cavalry_in_province = ROOT
+					artillery_in_province = ROOT
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		set_country_flag = in_raid_event
+	}
+
+	after = {
+		clr_country_flag = in_raid_event
+	}
+	option = {		# Collect the loot
+		name = "pf_nordic.13.a"
+		custom_tooltip = gain_x_loot_tooltip
+		hidden_effect = {
+			while = {
+				limit = {
+					check_variable = {
+						which = RaidLoot
+						value = 1
+					}
+				}
+				subtract_variable = {
+					which = RaidLoot
+					value = 1
+				}
+				add_treasury = 1
+			}
+		}
+	}
+}
+
+country_event = {		# Valuable Hostages
+	id = pf_nordic.14
+	title = "pf_nordic.14.t"
+	desc = "pf_nordic.14.d"
+	picture = LORD_OF_GOTLAND_eventPicture
+
+	trigger = {
+		country_is_part_of_raid_war = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {		# No mercy
+		name = "pf_nordic.14.a"
+		add_army_tradition = -5
+		add_loot_medium = yes
+	}
+	option = {		# Let them go
+		name = "pf_nordic.14.b"
+		add_prestige_or_monarch_power = {
+			amount = 5
+		}
+	}
+	option = {		# Surely you have more money than just that?
+		name = "pf_nordic.14.c"
+		trigger = {
+			OR = {
+				ruler_has_personality = cruel_personality
+				ruler_has_personality = embezzler_personality
+			}
+		}
+		add_loot_large = yes
+	}
+}
+country_event = {		# Wealthy Treasure Seized
+	id = pf_nordic.15
+	title = "pf_nordic.15.t"
+	desc = "pf_nordic.15.d"
+	picture = FAILED_REVOLUTION_eventPicture
+
+	trigger = {
+		country_is_part_of_raid_war = yes
+		NOT = { has_country_modifier = pf_nordic_well_paid_men }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {		# Take it
+		name = "pf_nordic.15.a"
+		add_loot_medium = yes
+	}
+	option = {		# Distribute it among the men
+		name = "pf_nordic.15.b"
+		add_country_modifier = {
+			name = "pf_nordic_well_paid_men"
+			duration = 1825
+		}
+	}
+}
+country_event = {		# Dinner Time
+	id = pf_nordic.16
+	title = "pf_nordic.16.t"
+	desc = "pf_nordic.16.d"
+	picture = BATTLE_eventPicture
+
+	trigger = {
+		country_is_part_of_raid_war = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {		# Yum
+		name = "pf_nordic.16.a"
+		add_loot_small = yes
+	}
+}
+country_event = {		# Fleeing Civilians
+	id = pf_nordic.17
+	title = "pf_nordic.17.t"
+	desc = "pf_nordic.17.d"
+	picture = BATTLE_eventPicture
+
+	trigger = {
+		country_is_part_of_raid_war = yes
+		any_province = {
+			NOT = { owned_by = ROOT }
+			controlled_by = ROOT
+			owner = {
+				is_in_war = {
+					casus_belli = cb_raid
+					defenders = THIS
+				}
+			}
+			base_tax = 2
+		}
+	}
+
+	immediate = {
+		random_province = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				controlled_by = ROOT
+				owner = {
+					is_in_war = {
+						casus_belli = cb_raid
+						defenders = THIS
+					}
+				}
+				base_tax = 2
+			}
+			save_event_target_as = fleeing_prov
+		}
+	}
+
+	goto = fleeing_prov
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {		# gather them and force them to ransom
+		name = "pf_nordic.17.a"
+		add_adm_power = -10
+		add_mil_power = -20
+		add_loot_medium = yes
+	}
+	option = {		# let them leave
+		name = "pf_nordic.17.b"
+		event_target:fleeing_prov = {
+			random = {
+				chance = 20
+				add_base_tax = -1
+			}
+		}
+	}
+	option = {		# kill them all
+		name = "pf_nordic.17.c"
+		add_army_tradition = 5
+		event_target:fleeing_prov = {
+			add_devastation = 30
+		}
+	}
+}
+country_event = {		# Child of Odin
+	id = pf_nordic.18
+	title = "pf_nordic.18.t"
+	desc = "pf_nordic.18.d"
+	picture = CONSORT_DOING_BADLY_eventPicture
+
+	trigger = {
+		is_female = yes
+		has_heir = no
+		religion = norse_pagan_reformed
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.5
+			has_personal_deity = odin
+		}
+		modifier = {
+			factor = 2
+			ruler_has_personality = infertile_personality
+		}
+	}
+
+	option = {		# By the gods!
+		name = "pf_nordic.18.a"
+		define_heir = {
+			claim = 100
+			dynasty = ROOT
+		}
+	}
+	option = {		# Spurn this invader
+		name = "pf_nordic.18.b"
+		add_prestige = -30
+		random_list = {
+			2 = {
+				kill_ruler = yes
+			}
+			1 = {
+			}
+		}
+	}
+	option = {		# Come her dearest
+		name = "pf_nordic.18.c"
+		trigger = {
+			ruler_has_personality = fertile_personality
+		}
+		highlight = yes
+		define_heir = {
+			adm = 6
+			dip = 6
+			mil = 6
+			claim = 100
+			dynasty = "Odinsson"
+		}
+	}
+}
+country_event = {		# The Way of Ancient Words
+	id = pf_nordic.19
+	title = "pf_nordic.19.t"
+	desc = "pf_nordic.19.d"
+	picture = CULTURE_eventPicture
+
+	trigger = {
+		NOT = { artist = 1 }
+		culture_group = scandinavian
+		legitimacy_equivalent = 80
+	}
+	
+	mean_time_to_happen = {
+		months = 1000
+	}
+
+	option = {
+		name = "pf_nordic.19.a"
+		add_adm_power = 50
+		define_advisor = {
+			type = artist
+			discount = yes
+			skill = 1
+		}
+	}
+}
+country_event = {		# Sons of Ulrik
+	id = pf_nordic.20
+	title = "pf_nordic.20.t"
+	desc = "pf_nordic.20.d"
+	picture = 3_SONS_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "pf_nordic.20.a"
+		NRD = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_nor_ulrik_sons
+			}
+		}
+	}
+}
+country_event = {		# Brothers in Arms
+	id = pf_nordic.21
+	title = "pf_nordic.21.t"
+	desc = "pf_nordic.21.d"
+	picture = ITALIAN_wars_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.21.a"
+		add_country_modifier = {
+			name = "pf_nor_brothers_in_arms"
+			duration = -1
+		}
+		NRD = {
+			add_country_modifier = {
+				name = "pf_nor_brothers_in_arms"
+				duration = -1
+			}
+		}
+		custom_tooltip = pf_nor_brothers_in_arms_tt
+		add_manpower = 5
+		NRD = {
+			add_manpower = 5
+		}
+	}
+}
+country_event = {		# The Seas We Sail
+	id = pf_nordic.22
+	title = "pf_nordic.22.t"
+	desc = "pf_nordic.22.d"
+	picture = NORTH_SEA_MAPS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.22.a"
+		add_navy_tradition = 20
+		create_explorer = {
+			tradition = 50
+		}
+		add_country_modifier = {
+			name = "pf_nor_fires_of_exploration"
+			duration = 9125
+		}
+	}
+}
+country_event = {		# Remove brothers in arms
+	id = pf_nordic.23
+	title = "pf_nordic.23.t"
+	desc = "pf_nordic.23.d"
+	picture = NORTH_SEA_MAPS_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			was_tag = NOR
+			tag = NOR
+			was_tag = NRD
+			tag = NRD
+		}
+		has_country_modifier = pf_nor_brothers_in_arms
+		if = {
+			limit = {
+				OR = {
+					tag = NOR
+					was_tag = NOR
+				}
+			}
+			AND = {
+				NOT = { alliance_with = NRD }
+				NOT = { alliance_with = SKL }
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					tag = NRD
+					was_tag = NRD
+				}
+			}
+			AND = {
+				NOT = { alliance_with = NOR }
+				NOT = { alliance_with = NDH }
+			}
+		}
+	}
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "pf_nordic.23.a"
+		remove_country_modifier = pf_nor_brothers_in_arms
+	}
+}
+country_event = {		# The Lost Brother
+	id = pf_nordic.24
+	title = "pf_nordic.24.t"
+	desc = "pf_nordic.24.d"
+	picture = VIKING_KING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.24.a"
+		custom_tooltip = pf_nordic_lost_brother_tt
+		add_navy_tradition = 25
+	}
+}
+country_event = {		# King of the North
+	id = pf_nordic.25
+	title = "pf_nordic.25.t"
+	desc = "pf_nordic.25.d"
+	picture = AN_EMPIRE_FOR_A_GIRAFFE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.25.a"
+		restore_country_name = yes
+		override_country_name = NORVEGR
+		add_country_modifier = {
+			name = "pf_nor_king_of_the_north"
+			duration = -1
+		}
+	}
+	option = {
+		name = "pf_nordic.25.b"
+		add_country_modifier = {
+			name = "pf_nor_king_of_the_north"
+			duration = -1
+		}
+	}
+}
+country_event = {		# The Old Covenant
+	id = pf_nordic.26
+	title = "pf_nordic.26.t"
+	desc = "pf_nordic.26.d"
+	picture = RUNESTONE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.26.a"
+		change_government_reform_progress = 25
+		add_adm_power = 100
+		370 = {
+			add_local_autonomy = -25
+			add_devastation = -10
+		}
+		371 = {
+			add_local_autonomy = -25
+			add_devastation = -10
+		}
+	}
+}
+country_event = {		# A Strange New World
+	id = pf_nordic.27
+	title = "pf_nordic.27.t"
+	desc = "pf_nordic.27.d"
+	picture = COLONIZATION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.27.a"
+		add_prestige_or_monarch_power = {
+			amount = 30
+		}
+	}
+}
+country_event = {		# The Land the Gods Forgot
+	id = pf_nordic.28
+	title = "pf_nordic.28.t"
+	desc = "pf_nordic.28.d"
+	picture = FROZEN_VILLAGE_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			denmark_strait_area = {
+				undiscover_country = ROOT
+			}
+			north_atlantic_area = {
+				undiscover_country = ROOT
+			}
+			west_african_coast_sea_area = {
+				undiscover_country = ROOT
+			}
+			bay_of_biscay_area = {
+				undiscover_country = root
+			}
+			celtic_sea_area = {
+				undiscover_country = ROOT
+			}
+			english_channel_area = {
+				undiscover_country = root
+			}
+			north_sea_area = {
+				undiscover_country = ROOT
+			}
+			norwegian_sea_area = {
+				undiscover_country = root
+			}
+			white_sea_area = {
+				undiscover_country = ROOT
+			}
+			baltic_sea_region = {
+				undiscover_country = ROOT
+			}
+			mediterrenean_region = {
+				undiscover_country = ROOT
+			}
+			europe = {
+				undiscover_country = root
+			}
+			africa = {
+				undiscover_country = root
+			}
+			asia = {
+				undiscover_country = ROOT
+			}
+			1889 = {
+				undiscover_country = ROOT
+			}
+			1890 = {
+				undiscover_country = ROOT
+			}
+			1325 = {
+				undiscover_country = ROOT
+			}
+			4235 = {
+				undiscover_country = ROOT
+			}
+			1250 = {
+				undiscover_country = ROOT
+			}
+			1251 = {
+				undiscover_country = ROOT
+			}
+			2953 = {
+				undiscover_country = ROOT
+			}
+			1977 = {
+				undiscover_country = ROOT
+			}
+			1887 = {
+				undiscover_country = ROOT
+			}
+			1886 = {
+				undiscover_country = ROOT
+			}
+			1883 = {
+				undiscover_country = ROOT
+			}
+			1884 = {
+				undiscover_country = ROOT
+			}
+			1885 = {
+				undiscover_country = ROOT
+			}
+			4139 = {
+				undiscover_country = ROOT
+			}
+			1260 = {
+				undiscover_country = ROOT
+			}
+			1261 = {
+				undiscover_country = ROOT
+			}
+			1262 = {
+				undiscover_country = ROOT
+			}
+			1891 = {
+				undiscover_country = ROOT
+			}
+			1892 = {
+				undiscover_country = ROOT
+			}
+			1894 = {
+				undiscover_country = ROOT
+			}
+			4140 = {
+				undiscover_country = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = "pf_nordic.28.a"
+		add_stability = -1
+		add_country_modifier = {
+			name = "pf_vin_uncertain_future"
+			duration = -1
+		}
+		capital_scope = {
+			add_province_triggered_modifier = vinland_colony_devastation
+			hidden_effect = {
+				add_institution_embracement = {
+					which = feudalism
+					value = 100
+				}
+			}
+		}
+	}
+}
+country_event = {		# Vinland Expedition #1
+	id = pf_nordic.29
+	title = "pf_nordic.29.t"
+	desc = "pf_nordic.29.d"
+	picture = EXPLORERS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.29.a"
+		add_country_modifier = {
+			name = "pf_vin_in_expedition"
+			duration = -1
+			desc = "until the end of the expedition"
+		}
+		hidden_effect = {
+			country_event = {
+				id = pf_nordic.30
+				days = 30
+				random = 20
+			}
+		}
+	}
+}
+country_event = {		# Vinland Expedition #2
+	id = pf_nordic.30
+	title = "pf_nordic.30.t"
+	desc = "pf_nordic.30.d"
+	picture = EXPLORERS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.30.a"
+		add_prestige = 1
+		hidden_effect = {
+			country_event = {
+				id = pf_nordic.31
+				days = 30
+				random = 20
+			}
+		}
+	}
+}
+country_event = {		# Vinland Expedition #3
+	id = pf_nordic.31
+	title = "pf_nordic.31.t"
+	desc = "pf_nordic.31.d"
+	picture = EXPLORERS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.31.a"
+		add_prestige = 2
+		hidden_effect = {
+			country_event = {
+				id = pf_nordic.32
+				days = 30
+				random = 20
+			}
+		}
+	}
+}
+country_event = {		# Vinland Expedition #4
+	id = pf_nordic.32
+	title = "pf_nordic.32.t"
+	desc = "pf_nordic.32.d"
+	picture = EXPLORERS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.32.a"
+		kill_ruler = yes
+		add_country_modifier = {
+			name = "pf_vin_bearslayer"
+			duration = 1825
+		}
+		hidden_effect = {
+			country_event = {
+				id = pf_nordic.33
+				days = 30
+				random = 20
+			}
+		}
+	}
+}
+country_event = {		# Vinland Expedition #5
+	id = pf_nordic.33
+	title = "pf_nordic.33.t"
+	desc = "pf_nordic.33.d"
+	picture = EXPLORERS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.33.a"
+		add_prestige = 3
+		hidden_effect = {
+			country_event = {
+				id = pf_nordic.34
+				days = 30
+				random = 20
+			}
+		}
+	}
+}
+country_event = {		# Vinland Expedition #6
+	id = pf_nordic.34
+	title = "pf_nordic.34.t"
+	desc = "pf_nordic.34.d"
+	picture = NATIVES_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.34.a"
+		add_prestige = 4
+		add_country_modifier = {
+			name = "pf_vin_treaty_with_skraeling"
+			duration = -1
+		}
+		hidden_effect = {
+			country_event = {
+				id = pf_nordic.35
+				days = 90
+				random = 20
+			}
+		}
+	}
+}
+country_event = {		# Vinland Expedition #7
+	id = pf_nordic.35
+	title = "pf_nordic.35.t"
+	desc = "pf_nordic.35.d"
+	picture = FEAST_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.35.a"
+		add_prestige_or_monarch_power = {
+			amount = 20
+		}
+		remove_country_modifier = pf_vin_in_expedition
+	}
+}
+country_event = {		# Haldorsdottir, Shieldmaiden
+	id = pf_nordic.36
+	title = "pf_nordic.36.t"
+	desc = "pf_nordic.36.d"
+	picture = wihgfx_FEMALE_GENERAL_eventPicture
+
+	trigger = {
+		dynasty = "Haldorsdottir"
+		mil = 3
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = "pf_nordic.36.a"
+		ai_chance = {
+			factor = 25
+		}
+		add_prestige = -10
+		add_army_tradition = 25
+		change_adm = 2
+		change_dip = 2
+		change_mil = 2
+		add_ruler_personality = shieldmaiden_personality
+	}
+	option = {
+		name = "pf_nordic.36.b"
+		ai_chance = {
+			factor = 75
+		}
+		add_stability = 2
+		add_adm_power = 100
+		add_dip_power = 100
+	}
+}
+country_event = {		# Skraelings Arrive to Trade
+	id = pf_nordic.37
+	title = "pf_nordic.37.t"
+	desc = "pf_nordic.37.d"
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+	trigger = {
+		has_country_modifier = pf_vin_treaty_with_skraeling
+		has_reform = pf_vinland_colony
+	}
+
+	mean_time_to_happen = {
+		months = 30
+	}
+
+	fire_only_once = yes
+
+	option = {		# Give them metal tools
+		name = "pf_nordic.37.a"
+		ai_chance = {
+			factor = 90
+		}
+		add_mil_power = -60
+		add_treasury = 200
+	}
+	option = {		# Steal it 
+		name = "pf_nordic.37.b"
+		ai_chance = {
+			factor = 10
+		}
+		add_stability = -1
+		remove_country_modifier = pf_vin_treaty_with_skraeling
+		add_treasury = 200
+	}
+}
+country_event = {		# Skraelings Settle with Us
+	id = pf_nordic.38
+	title = "pf_nordic.38.t"
+	desc = "pf_nordic.38.d"
+	picture = northamericagfx_CITY_VIEW_eventPicture
+
+	trigger = {
+		has_country_modifier = pf_vin_treaty_with_skraeling
+		has_reform = pf_vinland_colony
+	}
+
+	mean_time_to_happen = {
+		months = 70
+	}
+
+	fire_only_once = yes
+
+	option = {		# Allow them
+		name = "pf_nordic.38.a"
+		ai_chance = {
+			factor = 75
+		}
+		capital_scope = {
+			add_base_tax = 1
+			add_base_manpower = 1
+			add_province_modifier = {
+				name = "pf_vin_skraeling_campsite"
+				duration = -1
+			}
+		}
+	}
+	option = {		# Refuse
+		name = "pf_nordic.38.b"
+		ai_chance = {
+			factor = 25
+		}
+		add_prestige = 10
+		add_mil_power = 50
+	}
+}
+country_event = {		# Norse-Skraeling Marriages
+	id = pf_nordic.39
+	title = "pf_nordic.39.t"
+	desc = "pf_nordic.39.d"
+	picture = northamericagfx_NEW_HEIR_eventPicture
+
+	trigger = {
+		has_country_modifier = pf_vin_treaty_with_skraeling
+		has_reform = pf_vinland_colony
+		capital_scope = {
+			base_tax = 2
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 220
+		modifier = {
+			factor = 0.25
+			capital_scope = {
+				has_province_modifier = pf_vin_skraeling_campsite
+			}
+		}
+	}
+
+	fire_only_once = yes
+
+	option = {		# Encourage the practice
+		name = "pf_nordic.39.a"
+		ai_chance = {
+			factor = 75
+		}
+		add_dip_power = -50
+		add_country_modifier = {
+			name = "pf_vin_intermarriage"
+			duration = -1
+		}
+	}
+	option = {		# Refuse
+		name = "pf_nordic.39.b"
+		ai_chance = {
+			factor = 25
+		}
+		add_prestige = 10
+		add_legitimacy = 25
+	}
+}
+
+country_event = {		# Faith in the Gods
+	id = pf_nordic.40
+	title = "pf_nordic.40.t"
+	desc = "pf_nordic.40.d"
+	picture = MESOAMERICAN_GODS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.40.a"
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = "pf_vin_restored_faith_in_the_gods"
+			duration = 9125
+		}
+	}
+}
+country_event = {		# The Birth of Vinlandic Culture
+	id = pf_nordic.41
+	title = "pf_nordic.41.t"
+	desc = "pf_nordic.41.d"
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_nordic.41.a"
+		change_primary_culture = vinlandic
+		custom_tooltip = pf_change_to_vinlandic_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = scandinavian
+				}
+				change_culture = vinlandic
+			}
+		}
+		add_country_modifier = {
+			name = "pf_vin_our_own_culture"
+			duration = 9125
+		}
+	}
+}
+country_event = {		# Hunger Grips Vinland
+	id = pf_nordic.42
+	title = "pf_nordic.42.t"
+	desc = "pf_nordic.42.d"
+	picture = PEASANTS_BARTERING_eventPicture
+
+	trigger = {
+		tag = VIN
+		has_reform = pf_vinland_colony
+	}
+
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 1.25
+			total_development = 25
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = {
+				devastation = 10
+			}
+		}
+	}
+
+	option = {
+		name = "pf_nordic.42.a"
+		capital_scope = {
+			add_devastation = 30
+		}
+	}
+}
+country_event = {		# Vinland dies
+	id = pf_nordic.43
+	title = "pf_nordic.43.t"
+	desc = "pf_nordic.43.d"
+	picture = east_slavic_FAMINE_eventPicture
+
+	trigger = {
+		tag = VIN
+		capital_scope = {
+			OR = {
+				AND = {
+					NOT = { base_tax = 1 }
+					NOT = { base_production = 1 }
+					NOT = { base_manpower = 1 }
+				}
+				devastation = 99
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	fire_only_once = yes
+
+	option = {
+		name = "pf_nordic.43.a"
+		capital_scope = {
+			add_permanent_province_modifier = {
+				name = "pf_vin_ruins_of_norse_settlement"
+				duration = -1
+			}
+			cede_province = ---		# null, as in decolonise
+			hidden_effect = {
+				change_culture = innu
+				change_religion = totemism
+			}
+		}
+		custom_tooltip = pf_vin_end_game_tt
+	}
+}
+country_event = {		# Skraelings Attack!
+	id = pf_nordic.44
+	title = "pf_nordic.44.t"
+	desc = "pf_nordic.44.d"
+	picture = northamericagfx_BATTLE_eventPicture
+
+	trigger = {
+		tag = VIN
+		capital_scope = {
+			has_province_modifier = pf_vin_skraeling_campsite
+		}
+		has_reform = pf_vinland_colony
+	}
+
+	mean_time_to_happen = {
+		months = 180
+		modifier = {
+			factor = 1.5
+			has_country_modifier = pf_vin_intermarriage
+		}
+		modifier = {
+			factor = 0.75
+			capital_scope = {
+				unrest = 1
+			}
+		}
+		modifier = {
+			factor = 1.2
+			stability = 2
+		}
+		modifier = {
+			factor = 1.3
+			prestige = 30
+		}
+		modifier = {
+			factor = 2
+			capital_scope = {
+				development = 20
+			}
+		}
+	}
+	
+	fire_only_once = yes
+
+	option = {
+		name = "pf_nordic.44.a"
+		ai_chance = {
+			factor = 1
+		}
+		capital_scope = {
+			add_devastation = 5
+			spawn_rebels = {
+				type = totemism_rebels
+				size = 1
+			}
+		}
+	}
+	option = {
+		name = "pf_nordic.44.b"
+		ai_chance = {
+			factor = 0
+		}
+		add_mil_power = -50
+		capital_scope = {
+			add_devastation = 5
+			spawn_rebels = {
+				type = totemism_rebels
+				size = 2
+			}
+			remove_province_modifier = pf_vin_skraeling_campsite
 		}
 	}
 }

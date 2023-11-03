@@ -1,11 +1,13 @@
 #Dalaskogen, northwesten part of Dalarna, including Mora and entire Siljan area.
-base_tax = 2
-base_production = 2
+base_tax = 3
+base_production = 3
 trade_goods = copper
 base_manpower = 2
 capital = "Mora"
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 discovered_by = western
+discovered_by = celtic_tech
 add_core = SWE
 owner = SWE
 controller = SWE
@@ -20,3 +22,5 @@ discovered_by = ASH
 discovered_by = ASG
 discovered_by = BRT
 discovered_by = ottoman
+ 
+ 

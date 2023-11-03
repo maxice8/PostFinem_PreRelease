@@ -2408,6 +2408,7 @@ force_reelection_reform = {
 		}
 	}
 	trigger = {
+		NOT = { has_reform = pf_rabim_qahal }
 		custom_trigger_tooltip = {
 			tooltip = "NEEDS_REGULAR_ELECTIONS"
 			has_government_attribute = has_term_election
@@ -3783,6 +3784,14 @@ seize_executive_power_reform = {
 			country_event = { id = dutch_republic.33 }
 			clr_country_flag = had_states_general_mechanic
 		}
+		if = {
+			limit = { tag = SLV }
+			hidden_effect = {
+				country_event = {
+					id = pf_ksb_events.6
+				}
+			}
+		}
 	}
 	ai = {
 		factor = 0
@@ -3812,6 +3821,14 @@ proclaim_divine_guidance_reform = {
 		#		}
 		#	}
 		#}
+		if = {
+			limit = { tag = SLV }
+			hidden_effect = {
+				country_event = {
+					id = pf_ksb_events.6
+				}
+			}
+		}
 	}
 	ai = {
 		factor = 0

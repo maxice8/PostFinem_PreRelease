@@ -1,0 +1,187 @@
+pf_semi_feudal_tribe = {
+	icon = "boyar"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = yes
+	potential = {
+		tag = KSB
+	}
+	modifiers = {
+		church_influence_modifier = 0.1
+		nobles_influence_modifier = 0.1
+		vassal_income = 0.25
+		same_culture_advisor_cost = -0.1
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+
+pf_svetovid_theocracy = {
+	icon = "stone_tablet"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = yes
+	potential = {
+		OR = {
+			has_reform = pf_svetovid_theocracy
+			have_had_reform = pf_svetovid_theocracy
+		}
+	}
+	modifiers = {
+		manpower_in_true_faith_provinces = 0.25
+		church_influence_modifier = 0.2
+		devotion = -0.75
+		global_missionary_strength = 0.02
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+	government_abilities = {
+		pf_svetovid_dedication_mechanic
+	}
+}
+
+pf_slavic_theocracy = {
+	potential = {
+		religion = slavic_religion
+	}
+	modifiers = {
+		tolerance_own = 1
+		same_religion_advisor_cost = -0.1
+		relation_with_same_religion = 10
+	}
+	
+	icon = "peasants"
+	allow_normal_conversion = yes
+	
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+pf_drakovan_tribes = {
+	potential = {
+		culture = drakova
+	}
+	modifiers = {
+		defensiveness = 0.2
+		shock_damage_received = -0.05
+		diplomatic_reputation = -1
+	}
+	icon = "king_mountains"
+	allow_normal_conversion = yes
+	removed_effect = {
+		if = {
+			# Monarchs seize power
+			limit = { government = monarchy }
+			country_event = { id = dutch_republic.33 }
+		}
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+
+		states_general_mechanic = {
+			isolationists = {
+				stability_cost_modifier = -0.25
+				development_cost_in_primary_culture = -0.1
+				global_own_trade_power = -0.15
+			}
+			expansionists = {
+				ae_impact = -0.1
+				stability_cost_modifier = 0.25
+				core_creation = -0.1
+			}
+		}
+	}
+}
+
+pf_drakovan_kingdom = {
+	potential = {
+		culture = drakova
+	}
+	modifiers = {
+		defensiveness = 0.2
+		shock_damage_received = -0.05
+		diplomatic_reputation = -1
+	}
+	icon = "king_mountains"
+	allow_normal_conversion = yes
+	removed_effect = {
+		if = {
+			# Monarchs seize power
+			limit = { government = monarchy }
+			country_event = { id = dutch_republic.33 }
+		}
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+
+		states_general_mechanic = {
+			isolationists = {
+				stability_cost_modifier = -0.25
+				development_cost_in_primary_culture = -0.1
+				global_own_trade_power = -0.15
+			}
+			expansionists = {
+				ae_impact = -0.1
+				stability_cost_modifier = 0.25
+				core_creation = -0.1
+			}
+		}
+	}
+}
+
+pf_rus_successor = {
+	potential = {
+		tag = PNS
+	}
+	modifiers = {
+		army_tradition_from_battle = 0.5
+		nobles_influence_modifier = 0.1
+		improve_relation_modifier = 0.2
+	}
+	icon = "ruthenia_tsardom"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+}
+
+pf_lechite_kingdom = {
+	potential = {
+		OR = {
+			tag = KRA
+			tag = POL
+		}
+	}
+	modifiers = {
+		monthly_splendor = 1
+		improve_relation_modifier = 0.25
+		army_tradition_decay = -0.01
+	}
+	fixed_rank = 2
+	icon = "king"
+	lock_level_when_selected = yes
+}
+
+pf_reformed_lechite_kingdom = {
+	potential = {
+		OR = {
+			tag = KRA
+			tag = POL
+		}
+		has_country_flag = lechia_kingdom_flag
+	}
+	modifiers = {
+		monthly_splendor = 1
+		diplomatic_reputation = 2
+		army_tradition_decay = -0.01
+		can_claim_states = yes
+	}
+	fixed_rank = 3
+	icon = "legislative_sejm_reform"
+	lock_level_when_selected = yes
+}

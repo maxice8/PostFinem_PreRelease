@@ -1,12 +1,14 @@
 #213 - Barcelona
-base_tax = 5
-base_production = 4
+base_tax = 7
+base_production = 6
 trade_goods = glass
-base_manpower = 3
+base_manpower = 4
 capital = "Barcelona"
 is_city = yes
 discovered_by = western
+discovered_by = celtic_tech
 discovered_by = eastern
+discovered_by = euro_pagan_tech
 discovered_by = muslim
 discovered_by = ottoman
 add_core = ORA
@@ -15,4 +17,6 @@ controller = ORA
 religion = punic_religion
 culture = carventian
 center_of_trade = 2
+add_core = CVA
 add_province_triggered_modifier = religious_center
+

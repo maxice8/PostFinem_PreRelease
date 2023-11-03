@@ -74,6 +74,11 @@ pf_if_mantua_clothiers: "Home of the Mantuan Clothiers"
 estate_nobles_pf_marcher_freedom: "Freedom of the Marchers"
 estate_nobles_pf_marcher_freedom_desc: "We shall not interefere with the internal affairs of the Marcher Lords, granting them near complete autonomy over their territories so long as they swear to uphold their duties to the country."
 
+# PTM
+
+punic_roma_adirim: "Seat of the Adirim"
+desc_punic_roma_adirim: "Roma is the rightful and natural seat of the Grand Adirim, being the most important site in the Federation and a place steeped in both Italian and Punic history."
+
 ################
 # Mercenaries
 ################
@@ -500,7 +505,7 @@ pf_feast.18.a: "Oh shiny!"
 pf_feast.18.b: "Is this anyones?"
 
 pf_feast.19.t: "A Stray Coin: Value Beyond the Face"
-pf_feast.19.d: "As you show the coin you picked up to your treasurer, his face lights up with glee. "My liege!" he exclaims, jumping on the spot with excitement. "I have not seen one of these beauties in many years!""
+pf_feast.19.d: "As you show the coin you picked up to your treasurer, his face lights up with glee. "My liege!" he exclaims, jumping on the spot with excitement. "I have not seen one of these beauties in many years!"REPLACE_ME"
 pf_feast.19.a: "Excellent!"
 
 pf_feast.20.t: "A Stray Coin: Cursed!"
@@ -638,6 +643,10 @@ pf_feast.35.a: "[Root.GetName] is truly the best."
 pf_feast.35.b: "What a wonderful time to live."
 pf_feast.35.c: "Muhahah, now they will fear us!"
 
+pf_if.26.t: "The Deeds of [Root.Monarch.GetName]"
+pf_if.26.d: "This is a work dedicated to the life and works of [Root.Monarch.GetTitle] [Root.Monarch.GetName] [Root.GetDeedsEpithet], [Root.GetDeedsMonarchSkill]. Now [Root.GetDeedsYoungOld] [Root.Monarch.GetWomanMan], the time has come to put to parchment the stories of [Root.Monarch.GetHerHis] reign and all the wondrous feats achieved within it. Known for being [Root.GetDeedsWarmonger], [Root.Monarch.GetSheHe] contributed greatly to the managment and perpetuation of the realm.[Root.GetDeedsAdirim][Root.GetDeedsConsortSkill]"
+pf_if.26.a: "Ah brilliant!"
+
 ################
 # Decisions
 ################
@@ -653,9 +662,14 @@ pf_if_union_of_southern_italy: "Union of Southern Italia"
 
 pf_if_host_a_feast_title: "Host a Feast"
 pf_if_host_a_feast_desc: "The time has come to host a magnificent feast! The quality and length of the feast will depend on the amount of money we put into it. During a feast, various events can fire, involving interactions within the royal family, estates, leaders of foreign countries, advisors, and the Federation. The more expensive the feast, the better the events will be!\n\n'Light the fires and roast the hogs, for tonight we're gonna party!'"
+pf_if_25_year_cooldown_tt: "We can only enact this §Yonce every twenty-five years§!."
 
 form_trinacria_title: "@SIC Kingdom of Trinacria"
 form_trinacria_desc: "The island of Sicily, formally known by its more ancient name Trinacria, has been divided for too long. Under threat from Carthage, foreign invaders, and trapped under the boot of the Federation, our people have had little room to breathe. This era must come to an end, and a new Golden Age must begin."
+
+pf_if_show_officers_title: "Show the Officers of the Federation"
+pf_if_show_officers_desc: "The effect tooltip will display the names of our Federation Officers."
+pf_if_show_officers_tt: "£adm£ Grand Marshal: §Y[grand_marshal_officer.GetName]§!\n£dip£ High Priest: §Y[high_priest_officer.GetName]§!\n£mil£ Grand Steward: §Y[grand_steward_officer.GetName]§!"
 
 ################
 # Casus Belli
@@ -719,63 +733,63 @@ pf_fc_expand_influence_developing_bonus_tt: "Developing provinces with §Yaccept
 # Naples
 
  pf_nap_build_the_navy_title:0 "Naval Prowess"
- pf_nap_build_the_navy_desc:0 ""
+ pf_nap_build_the_navy_desc:0 "REPLACE_ME"
 pf_nap_new_navy: "Birth of a New Navy"
 
  pf_nap_develop_the_south_title:0 "The South Rises"
- pf_nap_develop_the_south_desc:0 ""
+ pf_nap_develop_the_south_desc:0 "REPLACE_ME"
 pf_nap_rise_of_the_south: "Rise of the South"
 
  pf_nap_seize_salerno_title:0 "Defeat the Priesthood"
- pf_nap_seize_salerno_desc:0 ""
+ pf_nap_seize_salerno_desc:0 "REPLACE_ME"
 
  pf_nap_secure_the_south_title:0 "Secure the South"
- pf_nap_secure_the_south_desc:0 ""
+ pf_nap_secure_the_south_desc:0 "REPLACE_ME"
 pf_nap_subjugation_cb_expand_1_tt: "Expands the §YNeapolitan Subjugation§! Casus Belli to include countries with their capitals in §YSicily§!."
 pf_nap_vassal_swarm: "Firm Control over the South"
 
  pf_nap_ladys_ambition_title:0 "The Lady's Ambition"
- pf_nap_ladys_ambition_desc:0 ""
+ pf_nap_ladys_ambition_desc:0 "REPLACE_ME"
 pf_nap_unlocks_neapolitan_subjugation_tt: "Unlocks the §YNeapolitan Subjugation§! Casus Belli on all countries in §YSouth Italia§! except §YSicily§!."
 pf_nap_neapolitan_ambitions: "Neapolitan Ambition"
 
  pf_nap_expand_naples_title:0 "Public Investment"
- pf_nap_expand_naples_desc:0 ""
+ pf_nap_expand_naples_desc:0 "REPLACE_ME"
 
  pf_nap_temple_of_eshmun_title:0 "Temple of Eshmun"
- pf_nap_temple_of_eshmun_desc:0 ""
+ pf_nap_temple_of_eshmun_desc:0 "REPLACE_ME"
 pf_nap_eshmuns_blessing: "Eshmun's Blessing"
 pf_nap_temple_of_eshmun_tt: "If we complete this mission while §YEshmun§! is our personal deity, §Yevery owned province§! will gain the following effect:"
 
  pf_nap_subdue_sicily_title:0 "Subdue Sicily"
  pf_nap_subdue_sicily_desc:0 "The island of Sicily is an important stepping stone between Italia and the rest of the Mediterranean. It is not just an important staging ground for our merchants and our navies however, it is also prestigious. Conquest of Sicily grants security to the rest of our possessions in the South, and further protects our prized capital from any country that would threaten us."
-pf_nap_subjugation_cb_expand_2_tt: "Expands the §YNeapolitan Subjugation§! Casus Belli to include countries with their capitals in §YItalia§!."
+pf_nap_subjugation_cb_expand_2_tt: "Expands the §YNeapolitan Subjugation§! Casus Belli to include countries with their capitals in north and south §YItalia§!."
 pf_nap_every_subject_gains_bonus_tt: "All of our §Ysubject countries§! will gain the following effect:"
 pf_nap_subject_buff: "Sons and Daughters of Naples"
 
  pf_nap_italian_empire_title:0 "Italian Empire"
- pf_nap_italian_empire_desc:0 ""
+ pf_nap_italian_empire_desc:0 "REPLACE_ME"
 pf_nap_italian_empire_modifier: "Birth of an Italian Empire"
 pf_nap_subjugation_cb_expand_3_tt: "Expands the §YNeapolitan Subjugation§! Casus Belli to all non-subject countries."
 
  pf_nap_playground_of_nobles_title:0 "Playground of Nobles"
- pf_nap_playground_of_nobles_desc:0 ""
+ pf_nap_playground_of_nobles_desc:0 "REPLACE_ME"
 pf_nap_mobilising_the_nobles: "Mobilising the Nobility"
 
  pf_nap_splendid_city_title:0 "The Splendid City"
- pf_nap_splendid_city_desc:0 ""
+ pf_nap_splendid_city_desc:0 "REPLACE_ME"
 pf_nap_naples_triumphant: "Naples, Triumphant"
 
  pf_nap_stable_court_title:0 "Stabilize the Court"
- pf_nap_stable_court_desc:0 ""
+ pf_nap_stable_court_desc:0 "REPLACE_ME"
 pf_nap_stable_court_modifier: "A Stable Court"
 
  pf_nap_patronise_great_artists_title:0 "Patronize Great Artists"
- pf_nap_patronise_great_artists_desc:0 ""
+ pf_nap_patronise_great_artists_desc:0 "REPLACE_ME"
 pf_nap_patron_of_the_arts_modifier: "Patron of the Arts"
 
  pf_nap_absolute_rule_title:0 "Absolute Rule"
- pf_nap_absolute_rule_desc:0 ""
+ pf_nap_absolute_rule_desc:0 "REPLACE_ME"
 pf_nap_naples_rules_the_world: "Naples Can Rule the World!"
 
 # saluzzo
@@ -785,72 +799,72 @@ pf_nap_naples_rules_the_world: "Naples Can Rule the World!"
 pf_szo_far_from_home_but_strong: "Far from Home, but still Strong"
 
  pf_szo_seize_turin_title:0 "Seize Turin"
- pf_szo_seize_turin_desc:0 ""
+ pf_szo_seize_turin_desc:0 "REPLACE_ME"
 
  pf_szo_secure_the_alps_title:0 "Secure the Alps"
- pf_szo_secure_the_alps_desc:0 ""
+ pf_szo_secure_the_alps_desc:0 "REPLACE_ME"
 pf_szo_alpine_fortifications: "Alpine Fortifications"
 
  pf_szo_mountain_king_title:0 "The Mountain King"
- pf_szo_mountain_king_desc:0 ""
+ pf_szo_mountain_king_desc:0 "REPLACE_ME"
 pf_szo_mountain_king_modifier: "The Mountain King"
 pf_szo_every_owned_province_gets_tt: "Every owned province gets the following effect:"
 
  pf_szo_the_watchtower_title:0 "The Watchtower"
- pf_szo_the_watchtower_desc:0 ""
+ pf_szo_the_watchtower_desc:0 "REPLACE_ME"
 pf_szo_all_along_the_watchtower: "All Along the Watchtower"
 
  pf_szo_spread_the_order_title:0 "Spread the Order"
- pf_szo_spread_the_order_desc:0 ""
+ pf_szo_spread_the_order_desc:0 "REPLACE_ME"
 pf_szo_new_local_orders: "New Local Orders"
 pf_szo_tax_to_low_autonomy_tt: "§G5§! Base Tax will be distributed amongst our provinces with less than §Y10 local autonomy§!."
 
  pf_szo_knife_crown_title:0 "The Knife Crown"
- pf_szo_knife_crown_desc:0 ""
+ pf_szo_knife_crown_desc:0 "REPLACE_ME"
 pf_szo_knife_crown_modifier: "Wearing the Knife Crown"
 pf_szo_if_absolutism_tt: "If §YAbsolutism§! is unlocked, we will gain the following effect:\nAdd §G10§! Absolutism."
 
  pf_szo_expand_the_mines_title:0 "Expand the Mines"
- pf_szo_expand_the_mines_desc:0 ""
+ pf_szo_expand_the_mines_desc:0 "REPLACE_ME"
 pf_szo_iron_mines: "Iron Mines of Saluzzo"
 
  pf_szo_farmer_loyalty_title:0 "Loyalty of the Farmers"
- pf_szo_farmer_loyalty_desc:0 ""
+ pf_szo_farmer_loyalty_desc:0 "REPLACE_ME"
 pf_szo_happy_farmers: "Cooperation with the Farmers"
 pf_szo_goats_and_blades: "Goats and Blades"
 
  pf_szo_integrate_the_priests_title:0 "Integrate the Priests"
- pf_szo_integrate_the_priests_desc:0 ""
+ pf_szo_integrate_the_priests_desc:0 "REPLACE_ME"
 pf_szo_priests_and_state: "A Question of Priests and the State"
 
  pf_szo_agents_of_chaos_title:0 "Agents of Chaos"
- pf_szo_agents_of_chaos_desc:0 ""
+ pf_szo_agents_of_chaos_desc:0 "REPLACE_ME"
 pf_szo_agents_of_chaos_1_tt: "If we complete this mission while we have at least §Y25§! Spy Network in §Y3§! different countries, we will gain the following effect:"
 otherwise_tt: "Otherwise:"
 
  pf_szo_making_a_mark_title:0 "Making a Mark"
- pf_szo_making_a_mark_desc:0 ""
+ pf_szo_making_a_mark_desc:0 "REPLACE_ME"
 pf_szo_making_a_mark_modifier: "A Shadow without Form"
 
  pf_szo_thrones_beneath_us_title:0 "The Thrones Beneath Us"
- pf_szo_thrones_beneath_us_desc:0 ""
+ pf_szo_thrones_beneath_us_desc:0 "REPLACE_ME"
 pf_szo_many_thrones: "Pulling the Strings of Many Thrones"
 
  pf_szo_industrial_power_title:0 "Steam and Smoke"
- pf_szo_industrial_power_desc:0 ""
+ pf_szo_industrial_power_desc:0 "REPLACE_ME"
 pf_szo_industrial_power_tt: "If we complete this mission while we have embraced the §YManufactories§! institution, we will gain the following effect:"
 pf_szo_industrial_power_modifier: "Industrial Power"
 
  pf_szo_halls_of_power_title:0 "In the Halls of Power"
- pf_szo_halls_of_power_desc:0 ""
+ pf_szo_halls_of_power_desc:0 "REPLACE_ME"
 may_bribe_rulers_tt: "Unlocks the espionage diplomatic action §YInfluence Politics§!, allowing us to increase a country's opinion of us using spy network."
 
  pf_szo_shadow_agents_title:0 "An Agent in Every Shadow"
- pf_szo_shadow_agents_desc:0 ""
+ pf_szo_shadow_agents_desc:0 "REPLACE_ME"
 may_assassinate_rulers_tt: "Unlocks the espionage diplomatic action §YAssassinate Ruler§!."
 
  pf_szo_universal_diplomacy_title:0 "Universal Diplomacy"
- pf_szo_universal_diplomacy_desc:0 ""
+ pf_szo_universal_diplomacy_desc:0 "REPLACE_ME"
 pf_szo_universal_diplomacy_tt: "If we have finished our §Ygolden age§!, we will be able to proclaim another. If we are still in our §Ygolden age§!, it will be extended for another §Yfifty years§!."
 pf_szo_universal_influence: "Universal Influence"
 
@@ -1022,7 +1036,6 @@ petition_for_ruler_support_desc: "Request support for our regime from the Grand 
 petition_for_ruler_support_tooltip: "Request support for our regime from the Grand Adirim."
 petition_for_ruler_support_alert_tooltip: "§YPetition§!: Request for Ruler Support"
 petition_for_ruler_support_dialog: "§Y[Root.GetName]§! has issued a petition to the [From.Monarch.GetTitle], requesting support for their regime. \n\nIf we accept, §Y[Root.Monarch.GetTitle] [Root.Monarch.GetName]§! gets §G+1§! yearly legitimacy, §G-20.0%§! stability cost, and §G+10.0%§! all estates loyalty for §Y25 years§!, at the cost of §R-100§! of our opinion of them.\n\nGranting this request will cost us §R-10§! legitimacy and §R-50§! Administrative Power £adm£, but gain us §G+1§! Federal Authority.\n\nDeclining will cost us §R-1§! Federal Authority.\n\nDo you want to accept?"
-pf_if_petition_cooldown_tt: "Has not applied for any §YPetition§! in the last §Y25 years§!."
 opinion_used_petition: "Accepted Petition"
 pf_petition_1_modifier: "Petition: Federal Ruler Support"
 PETITION_OPINION: "Opinion of us"
@@ -1035,6 +1048,10 @@ PETITION_AT_WAR: "We are at war"
 PETITION_IMPERIAL_AUTHORITY: "Federal Authority"
 PETITION_ALLIANCE: "Alliance between us"
 PETITION_BONUS_REASONS: "Reform: Eager Councillors"
+#potentials
+PETITIONS_MUST_BE_EMPEROR: "§R- §Y[From.GetName]§! is not the Grand Adirim"
+PETITIONS_MUST_HAVE_RELATIONS: "§R- We do not have at least 150 opinion with §Y[emperor.GetName]§!"
+pf_if_petition_cooldown_tt: "§R- Used a Petition in the last 25 years§!"
 
 petition_for_military_support: "£italian_federation_icon£ Petition for Military Support"
 petition_for_military_support_title: "Petition for Military Support"
@@ -1073,3 +1090,141 @@ petition_for_advisor_tooltip: "Request an advisor from the Grand Adirim."
 petition_for_advisor_alert_tooltip: "§YPetition§!: Request for Advisor"
 petition_for_advisor_dialog: "§Y[Root.GetName]§! has issued a petition to the [From.Monarch.GetTitle], requesting a specialist advisor. \n\nIf we accept, §Y[Root.GetName]§! a random advisor will be created for our court at §G15.0%§! cost, at the cost of §R-100§! of our opinion of them.\n\nGranting this request will cost us §R-10§! legitimacy and §R-50§! Diplomatic Power £dip£, but gain us §G+1§! Federal Authority.\n\nDeclining will cost us §R-1§! Federal Authority.\n\nDo you want to accept?"
 pf_grant_random_advisor_tt: "A random advisor will be created of skill $level$ and discount of $discount$."
+
+# Federal Officers
+
+appoint_grand_marshal_action: "Appoint Grand Marshal"
+appoint_grand_marshal_action_title: "Appoint Grand Marshal"
+appoint_grand_marshal_action_desc: "Appoint §Y[From.GetName]§! as the Grand Marshal of the Italian Federation. This position will grant them substantial military bonuses in exchange for protecting the borders of the Federation from incursion.\n\nGranting this position to §Y[From.GetName]§! increases their opinion of us by §G+50§!.\nOnly one country can be appointed to each §MOfficer§! position at one time, but the position can be moved if the previous §MOfficer§! is annexed."
+appoint_grand_marshal_action_tooltip: "Appoint them as Grand Marshal of the Federation."
+opinion_if_gave_office: "Gifted a Federal Office by the Adirim"
+grand_marshal_officer_modifier: "§MOfficer of the Federation:§! §OGrand Marshal§!"
+desc_grand_marshal_officer_modifier:0 "REPLACE_ME"
+
+appoint_high_priest_action: "Appoint High Priest"
+appoint_high_priest_action_title: "Appoint High Priest"
+appoint_high_priest_action_desc: "Appoint §Y[From.GetName]§! as the High Priest of the Italian Federation. This position will grant them substantial religious bonuses in exchange for responsibility over the souls of the people of the Federation.\n\nGranting this position to §Y[From.GetName]§! increases their opinion of us by §G+50§!.\nOnly one country can be appointed to each §MOfficer§! position at one time, but the position can be moved if the previous §MOfficer§! is annexed."
+appoint_high_priest_action_tooltip: "Appoint them as High Priest of the Federation."
+high_priest_officer_modifier: "§MOfficer of the Federation:§! §YHigh Priest§!"
+desc_high_priest_officer_modifier:0 "REPLACE_ME"
+
+appoint_grand_steward_action: "Appoint Grand Steward"
+appoint_grand_steward_action_title: "Appoint Grand Steward"
+appoint_grand_steward_action_desc: "Appoint §Y[From.GetName]§! as the Grand Steward of the Italian Federation. This position will grant them substantial economic bonuses in exchange for command over investment and trade within the Federation.\n\nGranting this position to §Y[From.GetName]§! increases their opinion of us by §G+50§!.\nOnly one country can be appointed to each §MOfficer§! position at one time, but the position can be moved if the previous §MOfficer§! is annexed."
+appoint_grand_steward_action_tooltip: "Appoint them as Grand Steward of the Federation."
+grand_steward_officer_modifier: "§MOfficer of the Federation:§! §GGrand Steward§!"
+desc_grand_steward_officer_modifier:0 "REPLACE_ME"
+
+# DEEDS Custom Localisation
+
+deeds_epithet_bold: "the Bold"
+deeds_epithet_brave: "the Brave"
+deeds_epithet_hard: "the Hard"
+deeds_epithet_conqueror: "the Conqueror"
+deeds_epithet_knight: "the Knight"
+deeds_epithet_pious: "the Pious"
+deeds_epithet_kind: "the Kind"
+deeds_epithet_just: "the Just"
+deeds_epithet_noble: "the Noble"
+deeds_epithet_lustful: "the Lustful"
+deeds_epithet_generous: "the Generous"
+deeds_epithet_barren: "the Barren"
+deeds_epithet_nothing_much: "the Do-Nothing"
+deeds_epithet_coward: "the Coward"
+deeds_epithet_cruel: "the Cruel"
+deeds_epithet_good: "the Good"
+deeds_epithet_timid: "the Timid"
+deeds_epithet_drunkard: "the Drunkard"
+deeds_epithet_otherworldly: "the Otherworldly"
+deeds_epithet_learned: "the Learned"
+deeds_epithet_mean: "the Mean"
+deeds_epithet_open_minded: "the Open-Minded"
+deeds_epithet_benevolent: "the Benevolent"
+deeds_epithet_conan_astarte: "the Chosen Warrior of Astarte"
+deeds_epithet_ricatus: "the Saviour of Albion"
+
+deeds_mil_skill: "a great warrior and military leader"
+deeds_adm_skill: "a great administrator and reformer"
+deeds_dip_skill: "a great negotiator and diplomat"
+deeds_no_skill: "a [Root.Monarch.GetWomanMan] of little skill"
+deeds_skill_issue: "a [Root.Monarch.GetWomanMan] with a serious skill issue"
+# bad
+bad_deeds_mil_skill: "a [Root.Monarch.GetWomanMan] used to stick fights and okay at murder"
+bad_deeds_adm_skill: "a [Root.Monarch.GetWomanMan] prone to shaking things up in an unnecessary manner"
+bad_deeds_dip_skill: "a [Root.Monarch.GetWomanMan] skilled at nattering on to people and boring them to death"
+bad_deeds_no_skill: "a [Root.Monarch.GetWomanMan] with a very smooth brain"
+bad_deeds_skill_issue: "a [Root.Monarch.GetWomanMan] who is truly a sight to behold"
+
+deeds_old: "an old"
+deeds_middle_aged: "a middle aged"
+deeds_young: "a young"
+deeds_child: "not yet a"
+# bad
+bad_deeds_old: "an ancient"
+bad_deeds_middle_aged: "a remarkably wrinkly"
+bad_deeds_young: "a smooth faced and ignorant"
+bad_deeds_child: "not yet a"
+
+deeds_warmonger: "a warmonger"
+deeds_opportunist: "an opportunistic attacker"
+deeds_peacemonger: "an avid proponent of peace and diplomacy"
+# bad
+bad_deeds_warmonger: "a naughty little [Root.Monarch.GetWomanMan]"
+bad_deeds_opportunist: "a successful defrauder and criminal"
+bad_deeds_peacemonger: "a lazy slob who has never touched grass"
+
+deeds_good_adirim: " A successful and effective Grand Adirim, [Root.Monarch.GetName] has pushed through many reforms to the structure of the Federation, much to its long term benefit. "
+deeds_okay_adirim: " [Root.Monarch.GetHerHisCap] reign as Grand Adirim has been uneventful, with few changes made to the Federation. "
+deeds_bad_adirim: " Compared by many to a pillow, for [Root.Monarch.GetSheHe] spends more of [Root.Monarch.GetHerHis] time on a chair than doing any actual policy making, [Root.Monarch.GetName] has been a true detriment to the Federation, and the member states cannot wait until [Root.Monarch.GetSheHe] is dead. "
+deeds_not_adirim: ""
+
+deeds_mil_consort: "[Root.Monarch.GetHerHisCap] [Root.Consort.GetTitle] [Root.Consort.GetName] is famous for [Root.Consort.GetHerHis] bossy attitude and control of the room, frightening our advisors and emissaries into silence."
+deeds_adm_consort: "[Root.Monarch.GetHerHisCap] [Root.Consort.GetTitle] [Root.Consort.GetName] is known for [Root.Consort.GetHerHis] good advice and sensible approach to times of crisis, providing a well-needed balance to the boisterous influence of [Root.Monarch.GetName]."
+deeds_dip_consort: "[Root.Monarch.GetHerHisCap] [Root.Consort.GetTitle] [Root.Consort.GetName] has been loyal to the [Root.Monarch.GetTitle] for a long time now, giving [Root.Monarch.GetHerHim] comfort in times of distress and treating all our courtiers with the care and respect they deserve."
+deeds_bad_consort: "[Root.Monarch.GetHerHisCap] [Root.Consort.GetTitle] [Root.Consort.GetName] has shaped up to be little more than a consort, providing little tangible benefit to our realm."
+deeds_maidenless: "At this time, [Root.Monarch.GetName] is maidenless."
+
+# Federal Reforms
+
+if_rex_terrenus_title: "Rex Terrenus"
+if_rex_terrenus_desc: "Too much focus is placed on the spiritual and religious deeds of our rulers. Let us celebrate their worldly achievements too, and make sure they are recorded to future generations to marvel at."
+pf_if_rex_terrenus_effect_tt: "All members may commission epics."
+pf_if_rex_terrenus_off_effect_tt: "DISALLOWS all members from commission epics."
+
+if_princeps_title: "Princeps"
+if_princeps_desc: "The Adirim is not an emperor nor a tyrant - they are simply the first among equals, a brave subject of the Federation who has stepped up to guide it."
+if_princeps_emperor:0 "REPLACE_ME"
+
+if_sociis_sub_aquila_title: "Sociis Sub Aquila"
+if_sociis_sub_aquila_desc: "If we do not stand side by side in our times of need, the whole Federation will succumb to invaders. Despite our differences, we are all united under the eagle."
+pf_if_sociis_sub_aquila_effect_tt: "The Grand Adirim may call select members of the Federation into their wars."
+
+if_collegium_deorum_title: "Collegium Deorum"
+if_collegium_deorum_desc: "Our clergy have "
+pf_if_punic_monasteries_effect_tt: "All members may found Monasteries in their provinces."
+pf_if_swords_of_the_gods_effect_tt: "Enables the Swords of the Gods mercenary company."
+
+if_mare_nostrum_title: "Mare Nostrum"
+if_mare_nostrum_desc: ""
+if_mare_nostrum_emperor_per_prince:0 "REPLACE_ME"
+
+if_regimen_via_title: "Regimen Via"
+if_regimen_via_desc: ""
+if_regimen_via_emperor:0 "REPLACE_ME"
+
+if_consiliario_tabula_title: "Consiliario Tabula"
+if_consiliario_tabula_desc: ""
+pf_if_reasons_for_advisor_petition_effect_tt: "Gain +10 reasons to accept Advisor Petitions."
+PETITION_CONSILIARIO_TABULA: "Consiliario Tabula"
+if_consiliario_tabula_elector:0 "REPLACE_ME"
+if_consiliario_tabula_emperor:0 "REPLACE_ME"
+
+if_foederati_pacem_title: "Foederati Pacem"
+if_foederati_pacem_desc: ""
+pf_if_petition_for_war_effect_tt: "Enables the Petition for War."
+if_foederati_pacem:0 "REPLACE_ME"
+
+FROM_HAS_REGENCY_TT:0 "§R- §Y[From.GetName]§! has a regent.§!"
+FROM_ALREADY_APPOINTED_AS_GRAND_MARSHAL_TT:0 "§R- §Y[grand_marshal_officer.GetName]§! is the current Grand Marshal"
+FROM_ALREADY_APPOINTED_AS_HIGH_PRIEST_TT:0 "§R- §Y[high_priest_officer.GetName]§! is the current High Priest"
+FROM_ALREADY_APPOINTED_AS_GRAND_STEWARD_TT:0 "§R- §Y[grand_steward_officer.GetName]§! is the current Grand Steward"
