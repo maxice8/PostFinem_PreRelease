@@ -69,6 +69,8 @@ country_event = {		# Pick religious path
 			name = "pf_bby_retained_hellenic"
 			duration = -1
 		}
+		set_country_flag = pf_bby_religion_hellenist
+		swap_non_generic_missions = yes
 	}
 	option = {		# Enuma Elish
 		name = "pf_bby.3.b"
@@ -81,5 +83,7 @@ country_event = {		# Pick religious path
 			name = "pf_bby_new_religion"
 			duration = 7300
 		}
+		set_country_flag = pf_bby_religion_enuma_elish
+		swap_non_generic_missions = yes
 	}
 }

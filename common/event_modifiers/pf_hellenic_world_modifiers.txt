@@ -56,3 +56,19 @@ pf_bby_beautiful_life = {
 	reform_progress_growth = 0.15
 	advisor_cost = -0.10
 }
+pf_bby_blessed_ruler = {
+	country_admin_power = 1
+	tolerance_own = 2
+	papal_influence = 1
+}
+pf_bby_triumph_of_the_faith = {
+	tolerance_own = 1
+	stability_cost_modifier = -0.20
+}
+pf_bby_reawakening = {
+	culture_conversion_cost = -0.25
+	culture_conversion_time = -0.50
+}
+pf_bby_stories_of_old = {
+	army_tradition = 0.5
+}

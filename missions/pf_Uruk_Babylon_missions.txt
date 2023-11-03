@@ -73,6 +73,43 @@ pf_bby_1 = {
 			}
 		}
 	}
+	pf_bby_a_new_empire = {
+		icon = holy_state
+		position = 5
+		required_missions = { pf_bby_unite_the_rivers } 
+		provinces_to_highlight = {
+			region = mesopotamia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			mesopotamia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 50
+			}
+			custom_tooltip = empty_line_tt
+			add_area_perma_claim = {
+				area = mashriq_region
+			}
+			add_area_perma_claim = {
+				area = persian_gulf_coast
+			}
+			add_area_perma_claim = {
+				area = farsistan_area
+			}
+			add_area_perma_claim = {
+				area = bahrain_area
+			}
+			add_area_perma_claim = {
+				area = pirate_coast_area
+			}
+		}
+	}
 }
 
 
@@ -185,6 +222,34 @@ pf_bby_2 = {
 		}
 		effect = {
 			country_event = { id = pf_bby.1 }
+		}
+	}
+
+	pf_bby_imperial_army = {
+		icon = professional_army
+		position = 5
+		required_missions = { pf_bby_unite_the_rivers } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_manpower_building_trigger = yes }
+		}
+		trigger = {
+			army_size_percentage = 0.85
+			artillery_fraction = 0.20
+			army_reformer = 2
+			num_of_owned_provinces_with = {
+				value = 14
+				has_manpower_building_trigger = yes
+			}
+		}
+		effect = {
+			add_army_professionalism = 0.10
+			custom_tooltip = empty_line_tt
+			define_advisor = {
+				type = commandant
+				skill = 3
+				cost_multiplier = 0.25
+			}
 		}
 	}
 }
@@ -317,6 +382,181 @@ pf_bby_3_rel_1 = {
 			custom_tooltip = mission_not_unlocked_tt
 		}
 	}
+}
+pf_bby_3_rel_2 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = URK
+			tag = BBY
+		}
+		has_country_flag = pf_bby_religion_hellenist
+	}
+	pf_bby_relations_with_archon = {
+		icon = catholic_volunteers
+		position = 3
+		required_missions = { pf_bby_ancient_texts } 
+		provinces_to_highlight = {
+			is_capital_of = ATH
+		}
+		trigger = {
+			if = {
+				limit = {
+					exists = ATH
+				}
+				ATH = { 
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+			}
+			else = {
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 70
+				}
+			}
+			OR = {
+				is_papal_controller = yes
+				invested_papal_influence = 50
+				NOT = { religion = hellenic }
+			}
+		}
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			custom_tooltip = empty_line_tt
+			add_ruler_modifier = {
+				name = "pf_bby_blessed_ruler"
+				duration = -1
+			}
+			define_advisor = {
+				type = theologian
+				skill = 2
+				cost_multiplier = 0.25
+			}
+		}
+	}
+	pf_bby_weather_the_reformation = {
+		icon = counter_reformation
+		position = 4
+		required_missions = { pf_bby_relations_with_archon } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			religious_unity = 1
+			NOT = { current_age = age_of_discovery }
+			NOT = { current_age = age_of_reformation }
+			OR = {
+				inquisitor = 2
+				full_idea_group = religious_ideas
+				full_idea_group = humanist_ideas
+			}
+		}
+		effect = {
+			add_adm_power = 150
+			add_country_modifier = {
+				name = "pf_bby_triumph_of_the_faith"
+				duration = -1
+			}
+		}
+	}
+}
+pf_bby_3_rel_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = URK
+			tag = BBY
+		}
+		has_country_flag = pf_bby_religion_enuma_elish
+	}
+	pf_bby_spread_our_culture = {
+		icon = found_the_vatican_library
+		position = 3
+		required_missions = { pf_bby_ancient_texts } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { culture = babylonian }
+		}
+		trigger = {
+			410 = {
+				owned_by = ROOT
+				culture = babylonian
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				culture = babylonian
+				religion = enuma_elish
+			}
+		}
+		effect = {
+			add_church_power = 50
+			custom_tooltip = empty_line_tt
+			410 = {
+				add_base_tax = 2
+				add_base_production = 3
+				add_base_manpower = 2
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_bby_reawakening"
+				duration = 10950
+			}
+		}
+	}
+	pf_bby_temple_cities = {
+		icon = end_the_schism
+		position = 4
+		required_missions = { pf_bby_spread_our_culture } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				NOT = { development = 20 }
+				NOT = { has_tax_building_trigger = yes }
+				NOT = { base_tax = 8 }
+				NOT = { religion = enuma_elish }
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				development = 20
+				has_tax_building_trigger = yes
+				base_tax = 8
+				religion = enuma_elish
+			}
+		}
+		effect = {
+			custom_tooltip = pf_bby_unlock_gilgamesh_tt
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_bby_stories_of_old"
+				duration = -1
+			}
+		}
+	}
+}
+pf_bby_3_bas_1 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = URK
+			tag = BBY
+		}
+	}
+
 	pf_bby_production_growth = {
 		icon = mission_pf_taxman
 		position = 5

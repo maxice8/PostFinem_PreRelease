@@ -49,8 +49,8 @@ ereshkigal_aspect = {		# queen of the underworld
 # Special ones
 gilgamesh_aspect = {		# hero from the epic of gilgamesh, king of uruk
 	cost = 100
-	trigger = {
-		# going to be a mission completed trigger
+	potential = {
+		mission_completed = pf_bby_temple_cities
 	}
 	modifier = {
 		morale_damage = 0.10

@@ -570,7 +570,7 @@ pf_babylonian_kingdom = {
 		culture_group = mesopotamian
 	}
 	modifiers = {
-		state_maintenance_modifier = -0.25
+		state_maintenance_modifier = -0.10
 		global_prosperity_growth = 0.5
 		all_estate_influence_modifier = 0.05
 	}
@@ -586,8 +586,10 @@ pf_babylonian_empire = {
 		tag = BBY
 	}
 	modifiers = {
-		state_maintenance_modifier = -0.33
-		governing_capacity = 150
+		state_maintenance_modifier = -0.25
+		culture_conversion_cost = -0.10
+		culture_conversion_time = -0.10
+		governing_capacity = 100
 		max_absolutism = 10
 	}
 	ai = {
@@ -631,8 +633,8 @@ pf_nepustu_tax = { 	# Nēpeštu tax
 		has_country_flag = pf_unlocked_nepustu_tax
 	}
 	modifiers = {
-		build_cost = -0.10
-		build_time = -0.15
+		global_trade_goods_size_modifier = 0.10
+		build_time = -0.20
 		expand_infrastructure_cost_modifier = -0.50
 	}
 	ai = {
