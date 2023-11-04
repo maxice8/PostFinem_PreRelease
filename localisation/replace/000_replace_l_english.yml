@@ -4,6 +4,14 @@
  eastern: "Greek"
 
 #Italian Federation 
+
+ BENEFIT_FOR_EMPEROR:1 "Adirim gets:\n$MODIFIER$"
+ BENEFIT_FOR_EMPEROR_PER_PRINCE:1 "The Adirim gets (depends on number of princes):\n$MODIFIER$"
+ ENACT_DECREE_NOT_EMPEROR:0 "Only the Adirim can enact Decrees."
+ CAN_NOT_ENACT_REFORM_NOT_EMPEROR:0 "Only the Adirim can enact reforms in the Federation."
+ CAN_NOT_ENACT_REFORM_LEAGUES:0 "Cannot enact reforms during religious conflict in the Federation."
+ BENEFIT_FOR_MEMBER:3 "All members except the Adirim get:\n$MODIFIER$"
+ BENEFIT_FOR_EVERYONE:1 "All members of the Federation get:\n$MODIFIER$"
 gen_hre_relations_with_emperor_title: "Strengthen Federal Ties"
 gen_hre_relations_with_emperor_title: "Strengthen Federal Ties"
  HRE_DISMANTLE:0 "Dismantle IF"
@@ -286,6 +294,9 @@ IS_HRE_HERETIC_RELIGION:0 "§Y$RELIGION$§! is the opposition faith of the Itali
  NOT_SIB_TO_BE_SEI:0 "Colonial Frontiers cannot be seized like normal colonies."
 
 
+ CHURCH_POWER:1 "Religious Power: $POWER|Y$"
+ CHURCH_OF:0 "Temple of $COUNTRY$"
+ CHURCH_POWER_MONTHLY:1 "Religious Power changes by $DIFF$ each month due to the following effects:\nBase: §Y$SKILL$§! monarch power * §Y$SCALE$§!"
 
  scandinavian_flag_officers: "Norse Flag Officers"
 

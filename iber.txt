@@ -1,4 +1,14 @@
-change_tag = GAD #ILG BOR 
-SUE = { change_tag = ILG }
-CEL = { change_tag = BOR }
-SWE = { change_tag = IBR }
+iberia_region = {
+	add_permanent_claim = ROOT
+}
+
+# SUE = {
+# 	every_owned_province = {
+# 		remove_permanent_claim = OVA
+# 	}
+# }
+# BCA = {
+# 	every_owned_province = {
+# 		remove_permanent_claim = OVA
+# 	}
+# }

@@ -1,6 +1,6 @@
 pf_fc_1 = {
 	slot = 1
-	generic = no
+	generic = yes
 	ai = yes
 	has_country_shield = yes
 	potential = { has_reform = free_city NOT = { tag = DDA } } 
@@ -90,7 +90,7 @@ pf_fc_1 = {
 }
 pf_fc_2 = {
 	slot = 2
-	generic = no
+	generic = yes
 	ai = yes
 	has_country_shield = yes
 	potential = { has_reform = free_city NOT = { tag = DDA } } 
@@ -170,7 +170,7 @@ pf_fc_2 = {
 }
 pf_fc_3 = {
 	slot = 3
-	generic = no
+	generic = yes
 	ai = yes
 	has_country_shield = yes
 	potential = { has_reform = free_city NOT = { tag = DDA } } 
@@ -244,7 +244,7 @@ pf_fc_3 = {
 }
 pf_fc_4 = {
 	slot = 4
-	generic = no
+	generic = yes
 	ai = yes
 	has_country_shield = yes
 	potential = { has_reform = free_city NOT = { tag = DDA } } 

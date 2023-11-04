@@ -1,8 +1,8 @@
 #146 - Athens
 capital = "Athens"
 trade_goods = grain
-base_tax = 5
-base_production = 6
+base_tax = 7
+base_production = 7
 base_manpower = 3
 is_city = yes
 discovered_by = muslim
@@ -21,4 +21,4 @@ center_of_trade = 2
 add_province_triggered_modifier = religious_center
 add_province_triggered_modifier = hellenic_athens
 add_province_triggered_modifier = non_hellenic_athens
- 
+add_province_triggered_modifier = oracle_of_delphi

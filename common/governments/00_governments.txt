@@ -28,6 +28,8 @@ monarchy = {
 				pf_ostholm_crown_monarchy
 				pf_donova_crown
 				pf_donova_crown_vld
+				pf_babylonian_kingdom
+				pf_babylonian_empire
 				# ]]]
 
 				#Vanilla
@@ -171,6 +173,7 @@ monarchy = {
 				# pf [[[
 				pf_guidance_of_the_elders_reform
 				pf_regional_tribal_nobility_reform
+				pf_kudurru_reform
 				# ]]]
 			}
 		}
@@ -252,6 +255,7 @@ monarchy = {
 				pf_militarised_druids_reform
 				pf_citizen_volunteers_reform
 				nordic_huskarl_recruitment_reform
+				pf_warriors_of_shamash
 				# ]]]
 				organized_military_staff_reform
 				military_engineering_reform
@@ -380,6 +384,9 @@ monarchy = {
 				thalassocracy_reform
 				royal_charters_reform
 				commercial_trade_empire_reform
+				# pf [[[
+				pf_nepustu_tax
+				# ]]]
 			}
 		}
 		legitimation_of_power = {
@@ -1030,6 +1037,9 @@ tribal = {
 				pf_semi_feudal_tribe
 				pf_drakovan_tribes
 				pf_lechite_kingdom
+				pf_norse_jarldom
+				pf_vinland_colony
+				pf_vinland_althing
 				# ]]]
 				steppe_horde
 				tribal_federation
@@ -1072,6 +1082,7 @@ tribal = {
 				# pf [[[
 				pf_longboat_focus
 				nordic_huskarl_recruitment_reform
+				nordic_entrenched_raids_reform
 				# ]]]
 				organized_military_staff_reform
 				military_engineering_reform

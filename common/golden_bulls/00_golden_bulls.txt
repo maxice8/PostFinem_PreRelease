@@ -1,0 +1,91 @@
+archon_philosophy_socratic = {
+	modifier = {
+		technology_cost = -0.05
+	}
+	potential = {
+	}
+    trigger = {
+        is_papal_controller = yes
+    }
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+archon_philosophy_cynicism = {
+    modifier = {
+        global_trade_goods_size_modifier = 0.05
+    }
+	potential = {
+	}
+    trigger = {
+        is_papal_controller = yes
+    }
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+archon_philosophy_epicureanism = {
+    modifier = {
+		prestige = 0.5
+        monthly_splendor = 1
+    }
+	potential = {
+	}
+    trigger = {
+        is_papal_controller = yes
+    }
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+archon_philosophy_skepticism = {
+    mechanics = {
+        cardinals_spread_institution
+    }
+    modifier = {
+        global_institution_spread = 0.10
+        embracement_cost = -0.10
+    }
+	potential = {
+	}
+    trigger = {
+        is_papal_controller = yes
+    }
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+archon_philosophy_stoicism = {
+    mechanics = {
+        crusades_after_age_limit
+    }
+    modifier = {
+        morale_damage_received = -0.10
+    }
+	potential = {
+	}
+    trigger = {
+        is_papal_controller = yes
+    }
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+archon_philosophy_archonism = {
+    modifier = {
+        development_cost = -0.05
+    }
+	potential = {
+	}
+    trigger = {
+        is_papal_controller = yes
+    }
+    ai_will_do = {
+        factor = 1
+    }
+}

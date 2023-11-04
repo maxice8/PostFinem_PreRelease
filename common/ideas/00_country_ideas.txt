@@ -352,46 +352,6 @@ DAN_ideas = {
 	}
 }
 
-NOR_ideas = {
-	start = {
-		global_sailors_modifier = 0.25
-		ship_durability = 0.10
-	}
-	
-	bonus = {
-		trade_steering = 0.20
-	}
-	
-	trigger = {
-		tag = NOR
-	}
-	free = yes
-	
-	call_of_our_forefathers = {
-		range = 0.33
-		may_explore = yes
-	}
-	pioneer_spirit = {
-		colonists = 1
-	}
-	natural_seamanship = {
-		naval_morale = 0.20		
-	}
-	nor_shipbuilding = {
-		global_ship_cost = -0.1
-	}
-	seize_the_opportunity = {
- 		global_trade_power = 0.1
-	}
-	nor_fishing = {
-		production_efficiency = 0.1
-	}
-	write_new_sagas = {
-		prestige = 1
-		discipline = 0.025
-	}
-}
-
 FIN_ideas = {
 	start = {
 		discipline = 0.05
@@ -5862,46 +5822,6 @@ KIE_ideas = {
 	}
 	centralized_rule = {
 		global_tax_modifier = 0.1
-	}
-}
-
-NAX_ideas = {
-	start = {
-		tolerance_heretic = 4
-		fabricate_claims_cost = -0.25
-	}
-	
-	bonus = {
-		diplomatic_annexation_cost = -0.15
-	}
-	
-	trigger = {
-		tag = NAX
-	}
-	free = yes
-	
-	maritime_state = {
-		galley_power = 0.1	
-		naval_forcelimit_modifier = 0.2
-	}
-	naxos_rules_the_waves = {
-		sunk_ship_morale_hit_recieved = -0.2
-	}
-	archipelago_of_opportunities = {
-		embargo_efficiency = 0.1	
-		privateer_efficiency = 0.25
-	}
-	legacy_of_crusaders = {
-		army_tradition = 0.5
-	}
-	archipelago_feudalism = {
-		global_unrest = -1		
-	}
-	latin_roots = {
-		technology_cost = -0.05
-	}	
-	naxian_ambitions = {
-		core_creation = -0.1
 	}
 }
 

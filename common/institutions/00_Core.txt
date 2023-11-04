@@ -402,8 +402,10 @@ renaissance = {
 			}
 		}
 		is_state = yes
-		NOT = { province_id = 126 }
 		is_island = no
+		owner = { 
+			NOT = { has_reform = pirate_republic }
+		}
 		OR = {
 			development = 20
 			is_capital = yes

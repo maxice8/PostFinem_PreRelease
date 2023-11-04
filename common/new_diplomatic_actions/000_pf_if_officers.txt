@@ -1,0 +1,173 @@
+# does this work?
+
+appoint_grand_marshal_action = {
+	category = imperial_influence
+
+	is_visible = {
+		is_emperor = yes
+		FROM = { is_part_of_hre = yes }
+	}
+	is_allowed = {
+		if = {
+			limit = {
+				FROM = { is_at_war = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_AT_WAR_TT
+				FROM = { is_at_war = no }
+			}
+		}
+		if = {
+			limit = {
+				FROM = { has_regency = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_HAS_REGENCY_TT
+				FROM = { has_regency = no }
+			}
+		}
+		if = {
+			limit = {
+				has_saved_global_event_target = grand_marshal_officer
+				event_target:grand_marshal_officer = { exists = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_ALREADY_APPOINTED_AS_GRAND_MARSHAL_TT
+				event_target:grand_marshal_officer = { exists = no }
+			}
+		}
+	}
+	on_accept = {
+		FROM = {
+			add_opinion = {
+				who = root
+				modifier = opinion_if_gave_office
+			}
+			add_country_modifier = {
+				name = "grand_marshal_officer_modifier"
+				duration = -1
+			}
+			save_global_event_target_as = grand_marshal_officer
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = {
+		always = no		# done when logic comes in
+	}
+}
+appoint_high_priest_action = {
+	category = imperial_influence
+
+	is_visible = {
+		is_emperor = yes
+		FROM = { is_part_of_hre = yes }
+	}
+	is_allowed = {
+		if = {
+			limit = {
+				FROM = { is_at_war = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_AT_WAR_TT
+				FROM = { is_at_war = no }
+			}
+		}
+		if = {
+			limit = {
+				FROM = { has_regency = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_HAS_REGENCY_TT
+				FROM = { has_regency = no }
+			} 
+		}
+		if = {
+			limit = {
+				has_saved_global_event_target = high_priest_officer
+				event_target:high_priest_officer = { exists = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_ALREADY_APPOINTED_AS_HIGH_PRIEST_TT
+				event_target:high_priest_officer = { exists = no }
+			}
+		}
+	}
+	on_accept = {
+		FROM = {
+			add_opinion = {
+				who = root
+				modifier = opinion_if_gave_office
+			}
+			add_country_modifier = {
+				name = "high_priest_officer_modifier"
+				duration = -1
+			}
+			save_global_event_target_as = high_priest_officer
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = {
+		always = no		# done when logic comes in
+	}
+}
+appoint_grand_steward_action = {
+	category = imperial_influence
+
+	is_visible = {
+		is_emperor = yes
+		FROM = { is_part_of_hre = yes }
+	}
+	is_allowed = {
+		if = {
+			limit = {
+				FROM = { is_at_war = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_AT_WAR_TT
+				FROM = { is_at_war = no }
+			}
+		}
+		if = {
+			limit = {
+				FROM = { has_regency = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_HAS_REGENCY_TT
+				FROM = { has_regency = no }
+			}
+		}
+		if = {
+			limit = {
+				has_saved_global_event_target = grand_steward_officer
+				event_target:grand_steward_officer = { exists = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_ALREADY_APPOINTED_AS_GRAND_STEWARD_TT
+				event_target:grand_steward_officer = { exists = no }
+			}
+		}
+	}
+	on_accept = {
+		FROM = {
+			add_opinion = {
+				who = root
+				modifier = opinion_if_gave_office
+			}
+			add_country_modifier = {
+				name = "grand_steward_officer_modifier"
+				duration = -1
+			}
+			save_global_event_target_as = grand_steward_officer
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = {
+		always = no		# done when logic comes in
+	}
+}
