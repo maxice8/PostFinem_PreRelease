@@ -482,7 +482,7 @@ country_event = {		#dnv ostholm crown question
 	id = pf_ost.13
 	title = pf_ost.13.t 
 	desc = pf_ost.13.d
-	picture = ADVISOR_eventPicture
+	picture = BAD_WITH_MONARCH_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -545,7 +545,7 @@ country_event = {		#dnv markland laws question
 	id = pf_ost.14
 	title = pf_ost.14.t 
 	desc = pf_ost.14.d
-	picture = ADVISOR_eventPicture
+	picture = BORDER_TENSION_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -598,7 +598,7 @@ country_event = {		#dnv bergaland money question
 	id = pf_ost.15
 	title = pf_ost.15.t 
 	desc = pf_ost.15.d
-	picture = ADVISOR_eventPicture
+	picture = CORRUPTION_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -639,7 +639,7 @@ country_event = {		#dnv vinlander hunters
 	id = pf_ost.16
 	title = pf_ost.16.t 
 	desc = pf_ost.16.d
-	picture = ADVISOR_eventPicture
+	picture = ANGRY_MOB_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -698,7 +698,7 @@ country_event = {		#dnv capital decision
 	id = pf_ost.17
 	title = pf_ost.17.t 
 	desc = pf_ost.17.d
-	picture = ADVISOR_eventPicture
+	picture = CITY_VIEW_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -841,7 +841,7 @@ country_event = {		#dnv more reforms nobility
 	id = pf_ost.19
 	title = pf_ost.19.t 
 	desc = pf_ost.19.d
-	picture = ADVISOR_eventPicture
+	picture = CONQUEST_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -906,7 +906,7 @@ country_event = {		#dnv more reforms economic
 	id = pf_ost.20
 	title = pf_ost.20.t 
 	desc = pf_ost.20.d
-	picture = ADVISOR_eventPicture
+	picture = ECONOMY_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -921,7 +921,7 @@ country_event = {		#dnv more reforms economic
 				limit = {
 					has_country_flag = dnv_respect_vild
 				}
-				add_years_of_income = -0.4
+				add_years_of_income = -0.3
 				add_estate_influence_modifier = {
 					estate = estate_burghers
 					desc = "Protected Economy: 5.0%"
@@ -929,7 +929,7 @@ country_event = {		#dnv more reforms economic
 					duration = 9125
 				}
 			}else = {
-				add_years_of_income = -0.6
+				add_years_of_income = -0.5
 				add_estate_influence_modifier = {
 					estate = estate_burghers
 					desc = "Clashing Interests: 25.0%"
@@ -942,7 +942,7 @@ country_event = {		#dnv more reforms economic
 				limit = {
 					has_country_flag = dnv_respect_vild
 				}
-				add_years_of_income = -1
+				add_years_of_income = -0.7
 				add_estate_influence_modifier = {
 					estate = estate_nobles
 					desc = "Clashing Interests: 15.0%"
@@ -950,7 +950,7 @@ country_event = {		#dnv more reforms economic
 					duration = 9125
 				}
 			}else = {
-				add_years_of_income = -2
+				add_years_of_income = -1
 				add_estate_influence_modifier = {
 					estate = estate_burghers
 					desc = "Brigands and Thievery Epidemic: 35.0%"
@@ -970,7 +970,7 @@ country_event = {		#dnv more reforms religios
 	id = pf_ost.21
 	title = pf_ost.21.t 
 	desc = pf_ost.21.d
-	picture = ADVISOR_eventPicture
+	picture = ORTHODOX_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -978,7 +978,8 @@ country_event = {		#dnv more reforms religios
 	option = {
 		name = "pf_ost.21.a"
 		add_stability_or_adm_power = yes
-
+		custom_tooltip = DNV_ORDER
+		set_country_flag = dnv_ost_germanic_orders
 		country_event = {
 			id = pf_ost.22
 			days = 1
@@ -1044,7 +1045,7 @@ country_event = {		#dnv final refomrs
 	id = pf_ost.22
 	title = pf_ost.22.t 
 	desc = pf_ost.22.d
-	picture = ADVISOR_eventPicture
+	picture = REFORM_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1080,7 +1081,6 @@ country_event = {		#dnv final refomrs
 		change_government_to_monarchy = yes
 		add_government_reform = pf_ostholm_crown_monarchy
 		clr_country_flag = dnv_keep_south_law
-		clr_country_flag = dnv_destroy_ostholm
 		clr_country_flag = dnv_new_sudeti_law
 		clr_country_flag = dnv_respect_vild
 		hidden_effect = {
@@ -1098,7 +1098,6 @@ country_event = {		#dnv final refomrs
 		change_government_to_monarchy = yes
 		add_government_reform = pf_donova_crown
 		clr_country_flag = dnv_keep_south_law
-		clr_country_flag = dnv_destroy_ostholm
 		clr_country_flag = dnv_new_sudeti_law
 		clr_country_flag = dnv_respect_vild
 		hidden_effect = {
@@ -1114,9 +1113,7 @@ country_event = {		#dnv final refomrs
 		change_government_to_monarchy = yes
 		add_government_reform = pf_donova_crown_vld
 		clr_country_flag = dnv_keep_south_law
-		clr_country_flag = dnv_destroy_ostholm
 		clr_country_flag = dnv_new_sudeti_law
-		clr_country_flag = dnv_respect_vild
 		hidden_effect = {
 			set_country_flag = dnv_feudalized
 			swap_non_generic_missions = yes
@@ -1160,7 +1157,6 @@ country_event = {		#dnv final refomrs
 		}
 		change_government_to_republic = yes
 		add_government_reform = pf_donova_republic_mark
-		clr_country_flag = dnv_keep_south_law
 		clr_country_flag = dnv_destroy_ostholm
 		clr_country_flag = dnv_new_sudeti_law
 		clr_country_flag = dnv_respect_vild
@@ -1184,4 +1180,125 @@ country_event = {		#dnv final refomrs
 			swap_non_generic_missions = yes
 		}
 	}
+}
+
+country_event = {		#dnv strigidol drokavan drokish
+	id = pf_ost.23
+	title = pf_ost.23.t 
+	desc = pf_ost.23.d
+	picture = ORTHODOX_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "pf_ost.23.a"
+		every_owned_province = {
+			limit = {
+				culture = drakova
+			}
+			change_culture = drakovik
+		}
+	}
+	option = {
+		name = "pf_ost.23.b"
+		add_accepted_culture = drakova
+		every_owned_province = {
+			limit = {
+				culture = drakova
+			}
+			add_unrest = -5
+			change_religion = ROOT
+		}
+	}
+}
+
+country_event = {		#dnv employing good advisor sudeten
+	id = pf_ost.24
+	title = pf_ost.24.t 
+	desc = pf_ost.24.d
+	picture = ORTHODOX_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "pf_ost.24.a"
+		trigger = {
+			employed_advisor = {
+				category = ADM
+				culture = sudeten
+			}
+		}
+		random_owned_area = {
+			limit = {
+				is_capital_of = ROOT
+			}
+			add_base_tax = 2
+		}
+	}
+	option = {
+		name = "pf_ost.24.b"
+		trigger = {
+			employed_advisor = {
+				category = DIP
+				culture = sudeten
+			}
+		}
+		random_owned_area = {
+			limit = {
+				is_capital_of = ROOT
+			}
+			add_base_production = 2
+		}
+	}
+	option = {
+		name = "pf_ost.24.c"
+		trigger = {
+			employed_advisor = {
+				category = MIL
+				culture = sudeten
+			}
+		}
+		random_owned_area = {
+			limit = {
+				is_capital_of = ROOT
+			}
+			add_base_manpower = 2
+		}
+	}
+}
+
+country_event = {		#TESTING
+	id = pf_ost.100
+	title = pf_ost.100.t 
+	desc = pf_ost.100.d
+	picture = ORTHODOX_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "pf_ost.24.a"
+		carpathia_region = {
+			cede_province = ROOT
+			add_core = ROOT
+		}
+		change_tag = DNV
+		set_country_flag = formed_donova_flag 
+		on_change_tag_effect = yes
+		swap_non_generic_missions = yes
+		remove_non_electors_emperors_from_empire_effect = yes
+		set_government_rank = 2
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		add_prestige = 25
+		if = {
+			limit = { has_custom_ideas = no }
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+	}
+	
 }

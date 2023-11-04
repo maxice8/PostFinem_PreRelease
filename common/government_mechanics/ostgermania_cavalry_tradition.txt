@@ -1,0 +1,87 @@
+creed_of_the_steed_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 11
+	available = {
+
+	}
+
+	powers = {
+		cavalry_tradition = {
+			max = 100
+			min = 0
+			reset_on_new_ruler = no
+			development_scaled_monthly_growth = 0
+			scaled_modifier = {
+				trigger = {
+					cavalry_fraction = 0.3
+				}
+				modifier = {
+					cavalry_fire = 0.2
+					cavalry_shock = 0.6
+					cavalry_cost = 0.2
+					movement_speed = 0.10
+					morale_damage_received = -0.1
+					production_efficiency = -0.2
+				}
+			}
+			base_monthly_growth = -0.25
+			is_good = yes
+		}
+	}
+	
+	interactions = {
+		aquire_cav_tradition = {
+			gui = hessian_militarization_gov_mech
+			cost_type = cavalry_tradition
+			center = no
+			trigger = {
+				years_of_income = 0.1
+				any_owned_province = {
+					OR = {
+						trade_goods = grain
+						trade_goods = livestock
+					}
+					base_production = 5
+				}
+				cavalry_fraction = 0.1
+			}
+			effect = {
+				add_years_of_income = -0.1
+				random_owned_province = {
+					limit = {
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+						}
+						base_production = 5
+					}
+					add_base_production = -1
+				}
+				add_government_power = {
+					mechanic_type = creed_of_the_steed_mechanic
+					power_type = cavalry_tradition
+					value = 5
+				}
+			}
+			ai_chance = {
+				factor = 50
+				modifier = {
+					factor = 0
+					is_at_war = no
+				}
+				modifier = {
+					factor = 0
+					is_in_deficit = yes
+				}
+				modifier = {
+					factor = 0
+					num_of_loans = 3
+				}
+				modifier = {
+					factor = 0
+					NOT = { years_of_income = 0.25 }
+				}
+			}
+		}
+	}
+}

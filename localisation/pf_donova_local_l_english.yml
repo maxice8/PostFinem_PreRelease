@@ -42,7 +42,19 @@
 #####DECISION
  sty_waldhart_title:0 "Waldharten Drinking March"
  sty_waldhart_desc:0 "The small chiefdom of Waldhart is renowned for their wine and their festivities, but also their willingness to pick up arms for even the smallest of reasons."
+#####CULTURE
+ drakovik:0 "Drakovik"
+ donovan:0 "Donuvian"
 #####CUSTOM
+ dnv_big_stables:0 "Magusanus Stables"
+ pf_flussbahn_ostgermania:0 "§YDonava§!"
+
+ DNV_GERMANIA:0 "Germania"
+ DNV_GERMANIA_ADJ: "German"
+ DNV_GERMANIA_ideas: "German Ideas"
+ DNV_GERMANIA_ideas_start: "German Traditions"
+ DNV_GERMANIA_ideas_bonus: "German Ambition"
+
  DNV_CT_1a:0 "Cripple the Legacy of Old Ostholm."
  DNV_CT_1b:0 "Conserve the Legacy of Old Ostholm."
  DNV_CT_2a:0 "Abolish the Laws of the Marcomanni."
@@ -50,12 +62,32 @@
  DNV_CT_2c:0 "Reform the Laws of the Marcomanni."
  DNV_CT_3a:0 "Suppress the Vildheimer Tradition."
  DNV_CT_3b:0 "Allow the Vildheimer Tradition."
+ DNV_CUSTOM_TRIGGER:0 "Is employing a §YSudeten §Wculture Advisor with at least Skill §Y3"
+ DNV_ORDER:0 "Enable the Ostgermanic Faith Orders."
+ DNV_SET_ORDERS:0 "Empower the Ostgermanic Faith Orders."
+ DNV_PREV_MOD:0 "Previous required mission's rewards will be fused in the following modifier:"
+
 #####MODIFIER
+ dnv_proclamation_of_union:0 "Donovan Unity"
  dnv_grand_city:0 "Grand City of Donova"
  dnv_suppress_vildheim:0 "Suppressing the Vild Hunters"
  dnv_allow_vildheim:0 "Allowing the Vild Hunt"
  dnv_block_vildheim:0 "Blocking the Vild Hunters"
  dnv_sudeten_trial:0 "The Sudeten Legacy"
+ dnv_donova_port:0 "True Port of Donova"
+ dnv_macedonia_salad:0 "Eating Macedonia"
+ dnv_south_illy:0 "Illyrian Background"
+ dnv_north_illy:0 "Illyrian Campaigns"
+ dnv_illyrian_lessons:0 "Illyrian Lessons"
+ dnv_italian_domination:0 "Italian Dominion"
+ dnv_lords_of_sudwaldia:0 "Lords of the Southern Forest"
+ dnv_lord_of_germania:0 "Lords of Deutschland"
+ dnv_germanic_union:0 "Union of German People"
+ dnv_flussbahn:0 "River Road"
+ dnv_flussbahn_2:0 "Flussbahn"
+ dnv_order_1:0 "Extra Taxes"
+ dnv_order_2:0 "Extra Production"
+ dnv_order_3:0 "Extra Recruitment"
 
 #####GOVERNMENT
  pf_ostholm_crown_monarchy:0 "Crown of the Ost"
@@ -70,7 +102,19 @@
  pf_donova_republic_mark_desc:0 "To defend the nation is the greates honor a man can aquire.\nThe republic ensures any man can achieve that honor."
  pf_donova_horde:0 "Tribe of the Donova"
  pf_donova_horde_desc:0 "United the great Tribes of East Germania now stand to crush all who call them 'uncivilized'."
+ pf_vild_hunters:0 "The Hunt Legacy"
+ pf_vild_hunters_desc:0 "The measure of a Soldier is both how much he takes care for those he protects and how much he cares for those he rides with.\n\n§Y30% §Wof the army forcelimit must be§Y £cavalry_icon_small£Cavalry Units.§W"
+ ability_creed_of_the_steed_mechanic:0 "Creed of the Steed"
+ cavalry_tradition:0 "§YCavalry Tradition§W"
 
+
+####HOLY ORDERS
+ ost_1_order:0 "Bards of Ostholm"
+ ost_2_order:0 "Eagles of Berga"
+ ost_3_order:0 "Hunters of the Wild"
+ ost_1_order_desc:0 "These wisemen assemble the faithful and tell the tales of gods and mortals, healing ailments and ensuring our people remember how to defend themselves."
+ ost_2_order_desc:0 "Renowned throughout the lands of Germania and Slavia, the Eagles of Berga are professional problem solvers and occassional bankers."
+ ost_3_order_desc:0 "The Order of the Vild is feared all over the nation as the most brutal and terrifing martial force of the known world."
 #####EVENTS
 
  pf_ost.13.t:0 "Legacy of Old Ostholm"
@@ -138,6 +182,19 @@
  pf_ost.22.e:0 "The Republic of the Donova."
  pf_ost.22.f:0 "The Marching Donovan Republic."
  pf_ost.22.g:0 "The Great Donovan Tribe."
+
+ pf_ost.23.t:0 "Hunting the Drakon"
+ pf_ost.23.d:0 "REPLACE_ME"
+ pf_ost.23.a:0 "The Dragon has been slain."
+ pf_ost.23.b:0 "The Dragon has been tamed."
+
+ pf_ost.24.t:0 "The Sudeten Deal"
+ pf_ost.24.d:0 "REPLACE_ME"
+ pf_ost.24.a:0 "A book on Taxes?"
+ pf_ost.24.b:0 "A book on Produce?"
+ pf_ost.24.c:0 "A book on Soldiers?"
+
+
 #####MONUMENTS
   giant_tower_german:0 "Riesger Turm"
 #####MISSIONS

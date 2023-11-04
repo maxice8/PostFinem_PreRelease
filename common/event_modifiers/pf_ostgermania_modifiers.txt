@@ -239,6 +239,11 @@ mkm_the_king_word = {
 
 #DONOVA
 
+dnv_proclamation_of_union = {
+	local_prosperity_growth = 0.1
+	local_unrest = -2
+}
+
 dnv_suppress_vildheim = {
 	cavalry_power = -0.1
 	cavalry_cost = 0.1
@@ -259,11 +264,84 @@ dnv_block_vildheim = {
 
 dnv_grand_city = {
 	local_development_cost = -0.15
-	local_prosperity_growth = 0.1
+	local_center_of_trade_upgrade_cost = -0.5
 	local_manpower_modifier = 0.15
 }
 
 dnv_sudeten_trial = {
 	republican_tradition = 0.2
 	reform_progress_growth = 0.1
+}
+
+dnv_donova_port = {
+	local_development_cost_modifier = -0.25
+	local_ship_cost = -0.25
+	local_center_of_trade_upgrade_cost = -0.2
+	local_sailors = 1000
+}
+
+dnv_macedonia_salad = {
+	core_creation = -0.1
+	infantry_power = 0.1
+}
+
+dnv_south_illy = {
+	imperial_authority = 0.1
+	diplomatic_reputation = 1
+	adm_tech_cost_modifier = -0.15
+}
+
+dnv_north_illy = {
+	imperial_authority = 0.1
+	general_cost = -0.15
+	mil_tech_cost_modifier = -0.15
+}
+
+dnv_illyrian_lessons = {
+	leader_land_shock = 1
+}
+
+dnv_italian_domination = {
+	trade_efficiency = 0.1
+	technology_cost = -0.1
+}
+
+dnv_lords_of_sudwaldia = {
+	num_accepted_cultures = 2
+	manpower_in_accepted_culture_provinces = 0.1
+}
+
+dnv_lord_of_germania = {
+	global_manpower_modifier = 0.1
+	liberty_desire_from_subject_development = -0.5
+}
+
+dnv_germanic_union = {
+	num_accepted_cultures = 4
+	global_manpower_modifier = 0.15
+	manpower_in_accepted_culture_provinces = 0.25
+}
+
+dnv_flussbahn = {
+	local_friendly_movement_speed = 0.1
+	local_defensiveness = 0.1
+}
+
+dnv_flussbahn_2 = {
+	local_governing_cost_increase = -10
+	local_friendly_movement_speed = 0.2
+	local_production_efficiency = 0.05
+	local_defensiveness = 0.1
+}
+
+dnv_order_1 = {
+	local_tax_modifier = 0.33
+}
+
+dnv_order_2 = {
+	local_production_efficiency = 0.15
+}
+
+dnv_order_3 = {
+	local_manpower_modifier = 0.15
 }

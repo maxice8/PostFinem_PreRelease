@@ -3825,8 +3825,8 @@ DNV_ideas = {
 
 	#donovan hussars
 	DNV_ideas_3 = {
-		cavalry_flanking = 0.5
-		cavalry_power = 0.2
+		cavalry_flanking = 0.2
+		cavalry_power = 0.15
 	}
 
 	#germanic guerrilla
@@ -3843,7 +3843,7 @@ DNV_ideas = {
 	#wealth of Ost germania
 	DNV_ideas_6 = {
 		production_efficiency = 0.1
-		global_manpower_modifier = 0.15
+		trade_steering = 0.25
 	}
 
 	#anubian defenders

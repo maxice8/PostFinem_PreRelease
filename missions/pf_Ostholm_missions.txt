@@ -543,10 +543,7 @@ pf_ost_5 = {
 			custom_tooltip = OST_CT_2
 			random_owned_province = {
 				limit = {
-					OR = {
-						has_building = barracks
-						has_building = training_fields
-					}
+					has_building = barracks
 				}
 				if = {
 					limit = { has_building = barracks } 
@@ -557,10 +554,7 @@ pf_ost_5 = {
 			}
 			random_owned_province = {
 				limit = {
-					OR = {
-						has_building = barracks
-						has_building = training_fields
-					}
+					has_building = barracks
 				}
 				if = {
 					limit = { has_building = barracks } 
@@ -571,10 +565,7 @@ pf_ost_5 = {
 			}
 			random_owned_province = {
 				limit = {
-					OR = {
-						has_building = barracks
-						has_building = training_fields
-					}
+					has_building = barracks
 				}
 				if = {
 					limit = { has_building = barracks } 
@@ -585,10 +576,7 @@ pf_ost_5 = {
 			}
 			random_owned_province = {
 				limit = {
-					OR = {
-						has_building = barracks
-						has_building = training_fields
-					}
+					has_building = barracks
 				}
 				if = {
 					limit = { has_building = barracks } 
@@ -599,10 +587,7 @@ pf_ost_5 = {
 			}
 			random_owned_province = {
 				limit = {
-					OR = {
-						has_building = barracks
-						has_building = training_fields
-					}
+					has_building = barracks
 				}
 				if = {
 					limit = { has_building = barracks } 

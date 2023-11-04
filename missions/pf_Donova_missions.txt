@@ -190,8 +190,20 @@ pf_dnv_3 = {
 				set_country_flag = dnv_not_feudal_flag
 			}
 			carpathia_region = {
-				add_unrest = -2
-				add_local_autonomy = -10
+				add_province_modifier = {
+					name = dnv_proclamation_of_union
+					duration = 9125
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = markmann_union_flag
+					}
+				}
+				custom_tooltip = CT_SDT_1
+				add_accepted_culture = marcomanni
+				set_country_flag = markmann_union_flag
 			}
 		}
 	}

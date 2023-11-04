@@ -1,6 +1,6 @@
 # T1 - Ostholm unique
 pf_ostholm_crown = {
-	icon = "castle"
+	icon = "crown"
 	potential = {
 		OR = {
 			tag = OST
@@ -24,7 +24,7 @@ pf_ostholm_crown = {
 }
 
 pf_ostholm_crown_monarchy = {
-	icon = "castle"
+	icon = "austrian_archduchy_reform"
 	potential = {
 		tag = DNV
 		NOT = {
@@ -50,7 +50,7 @@ pf_ostholm_crown_monarchy = {
 }
 
 pf_donova_crown = {
-	icon = "castle"
+	icon = "feudal_france_reform"
 	potential = {
 		tag = DNV
 		NOT = {
@@ -74,7 +74,7 @@ pf_donova_crown = {
 }
 
 pf_donova_crown_vld = {
-	icon = "castle"
+	icon = "soldiers"
 	potential = {
 		tag = DNV
 		has_country_flag = dnv_respect_vild
@@ -94,7 +94,7 @@ pf_donova_crown_vld = {
 	}
 }
 pf_donova_republic = {
-	icon = "castle"
+	icon = "politician"
 	potential = {
 		tag = DNV
 	}
@@ -119,7 +119,7 @@ pf_donova_republic = {
 }
 
 pf_donova_republic_mark = {
-	icon = "castle"
+	icon = "nobleman"
 	potential = {
 		tag = DNV
 		has_country_flag = dnv_keep_south_law
@@ -144,7 +144,7 @@ pf_donova_republic_mark = {
 }
 
 pf_donova_horde = {
-	icon = "castle"
+	icon = "horde_riding_highlighted"
 	potential = {
 		has_country_flag = dnv_not_feudal_flag
 	}
@@ -160,6 +160,28 @@ pf_donova_horde = {
 	custom_attributes = {
 		winning_battles_increases_legitimacy = yes
 		winning_war_increases_legitimacy = yes
+	}
+	government_abilities = {
+		creed_of_the_steed_mechanic
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+pf_vild_hunters = {
+	icon = "horde_riding_highlighted"
+	potential = {
+		OR = {
+			culture_group = germanic_carpathian
+			accepted_culture = fyrnir
+		}
+	}
+	allow_normal_conversion = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	government_abilities = {
+		creed_of_the_steed_mechanic
 	}
 	ai = {
 		factor = 1
