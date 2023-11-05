@@ -261,7 +261,7 @@ country_event = {		#choose between Sudeten or not
 	id = pf_ost.7
 	title = pf_ost.7.t 
 	desc = pf_ost.7.d
-	picture = ADVISOR_eventPicture
+	picture = HRE_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -294,7 +294,7 @@ country_event = {		#ostholm reward
 	id = pf_ost.8
 	title = pf_ost.8.t 
 	desc = pf_ost.8.d
-	picture = ADVISOR_eventPicture
+	picture = CITY_DEVELOPMENT_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -333,7 +333,7 @@ country_event = {		#bergnaland reward
 	id = pf_ost.9
 	title = pf_ost.9.t 
 	desc = pf_ost.9.d
-	picture = ADVISOR_eventPicture
+	picture = CITY_VIEW_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -374,7 +374,7 @@ country_event = {		#vindheim reward
 	id = pf_ost.10
 	title = pf_ost.10.t 
 	desc = pf_ost.10.d
-	picture = ADVISOR_eventPicture
+	picture = TOURNAMENT_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -406,7 +406,7 @@ country_event = {		#donova reward
 	id = pf_ost.11
 	title = pf_ost.11.t 
 	desc = pf_ost.11.d
-	picture = ADVISOR_eventPicture
+	picture = WAR_OF_THE_ROSES_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -450,7 +450,7 @@ country_event = {		#hillside rebellion sutherweald
 	id = pf_ost.12
 	title = pf_ost.12.t 
 	desc = pf_ost.12.d
-	picture = ADVISOR_eventPicture
+	picture = ANGRY_MOB_eventPicture
 	trigger = {
 		tag = BAV
 		is_year = 1453
@@ -1122,9 +1122,15 @@ country_event = {		#dnv final refomrs
 	option = {
 		name = "pf_ost.22.e"
 
-		kill_ruler = yes
-		kill_heir = {
-			allow_new_heir = no
+		if = {
+			limit = {
+				was_tag = SDT
+			}
+		}else = {
+			kill_ruler = yes
+			kill_heir = {
+				allow_new_heir = no
+			}
 		}
 		if = {
 			limit = {
@@ -1269,6 +1275,8 @@ country_event = {		#dnv employing good advisor sudeten
 	}
 }
 
+
+
 country_event = {		#TESTING
 	id = pf_ost.100
 	title = pf_ost.100.t 
@@ -1298,6 +1306,28 @@ country_event = {		#TESTING
 		if = {
 			limit = { has_custom_ideas = no }
 			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+	}
+}
+
+country_event = {		#TESTING
+	id = pf_ost.101
+	title = pf_ost.101.t 
+	desc = pf_ost.101.d
+	picture = ORTHODOX_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "pf_ost.24.a"
+		south_german_region = {
+			cede_province = ROOT
+			add_core = ROOT
+		}
+		north_german_region = {
+			cede_province = ROOT
+			add_core = ROOT
 		}
 	}
 	

@@ -5,6 +5,7 @@ pf_ostholm_crown = {
 		OR = {
 			tag = OST
 			was_tag = OST
+			have_had_reform = pf_ostholm_crown
 		}
 	}
 	allow_normal_conversion = no
@@ -26,7 +27,10 @@ pf_ostholm_crown = {
 pf_ostholm_crown_monarchy = {
 	icon = "austrian_archduchy_reform"
 	potential = {
-		tag = DNV
+		OR = {
+			tag = DNV
+			have_had_reform = pf_ostholm_crown_monarchy
+		}
 		NOT = {
 			has_country_flag = dnv_destroy_ostholm
 		}
@@ -52,7 +56,10 @@ pf_ostholm_crown_monarchy = {
 pf_donova_crown = {
 	icon = "feudal_france_reform"
 	potential = {
-		tag = DNV
+		OR = {
+			tag = DNV
+			have_had_reform = pf_donova_crown
+		}
 		NOT = {
 			was_tag = OST
 		}
@@ -76,7 +83,10 @@ pf_donova_crown = {
 pf_donova_crown_vld = {
 	icon = "soldiers"
 	potential = {
-		tag = DNV
+		OR = {
+			tag = DNV
+			have_had_reform = pf_donova_crown_vld
+		}
 		has_country_flag = dnv_respect_vild
 	}
 	allow_normal_conversion = no
@@ -96,7 +106,10 @@ pf_donova_crown_vld = {
 pf_donova_republic = {
 	icon = "politician"
 	potential = {
-		tag = DNV
+		OR = {
+			tag = DNV
+			have_had_reform = pf_donova_republic
+		}
 	}
 	duration = 7
 	allow_normal_conversion = no
@@ -121,7 +134,10 @@ pf_donova_republic = {
 pf_donova_republic_mark = {
 	icon = "nobleman"
 	potential = {
-		tag = DNV
+		OR = {
+			tag = DNV
+			have_had_reform = pf_donova_republic_mark
+		}
 		has_country_flag = dnv_keep_south_law
 	}
 	generals_become_rulers = yes
@@ -146,6 +162,10 @@ pf_donova_republic_mark = {
 pf_donova_horde = {
 	icon = "horde_riding_highlighted"
 	potential = {
+		OR = {
+			tag = DNV
+			have_had_reform = pf_donova_horde
+		}
 		has_country_flag = dnv_not_feudal_flag
 	}
 	allow_normal_conversion = no

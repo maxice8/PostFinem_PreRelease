@@ -7,16 +7,16 @@ pf_dnv_f_1 = {
 		tag = DNV
 		has_country_flag = dnv_feudalized
 	}
+
 	dnv_first_steps = {
-		icon = mission_pf_stock_exchange
+		icon = protect_against_austria
 		position = 1
-		trigger = {
-			army_size = 50
-		}
+		provinces_to_highlight = {  } 
+
+		trigger = { army_size = 50 } 
+
 		effect = {
-			transylvania_area = {
-				add_permanent_claim = ROOT
-			}
+			transylvania_area = { add_permanent_claim = ROOT } 
 			add_casus_belli = {
 				type = cb_vassalize_mission
 				target = TRA
@@ -24,19 +24,17 @@ pf_dnv_f_1 = {
 			}
 		}
 	}
+
 	dnv_manpowers = {
-		icon = mission_pf_stock_exchange
+		icon = balance_of_power
 		position = 3
-		required_missions = {
-			dnv_first_steps
-		}
-		trigger = {
-			manpower_percentage = 0.85
-		}
+		required_missions = { dnv_first_steps } 
+		provinces_to_highlight = {  } 
+
+		trigger = { manpower_percentage = 0.85 } 
+
 		effect = {
-			illyria_region = {
-				add_claim = ROOT
-			}
+			illyria_region = { add_claim = ROOT } 
 			add_casus_belli = {
 				type = cb_vassalize_mission
 				target = ILY
@@ -44,15 +42,13 @@ pf_dnv_f_1 = {
 			}
 		}
 	}
+
 	dnv_illiria = {
-		icon = mission_pf_stock_exchange
+		icon = mission_balkan_conquest
 		position = 4
-		required_missions = {
-			dnv_manpowers
-		}
-		provinces_to_highlight = {
-			is_capital_of = ILY
-		}
+		required_missions = { dnv_manpowers } 
+		provinces_to_highlight = { is_capital_of = ILY } 
+
 		trigger = {
 			ILY = {
 				OR = {
@@ -61,29 +57,21 @@ pf_dnv_f_1 = {
 				}
 			}
 		}
+
 		effect = {
 			add_adm_power = 100
 			if = {
-				limit = {
-					ILY = {
-						is_subject_of = ROOT
-					}
-				}
-				ILY = {
-					add_liberty_desire = -20
-				}
+				limit = { ILY = { is_subject_of = ROOT }  } 
+				ILY = { add_liberty_desire = -20 } 
 			}
-			illyria_region = {
-				add_permanent_claim = ROOT
-			}
+			illyria_region = { add_permanent_claim = ROOT } 
 		}
 	}
+
 	dnv_n_illiria = {
-		icon = mission_pf_stock_exchange
+		icon = promote_the_carnevale
 		position = 5
-		required_missions = {
-			dnv_illiria
-		}
+		required_missions = { dnv_illiria } 
 		provinces_to_highlight = {
 			OR = {
 				area = slavonia_area
@@ -92,6 +80,7 @@ pf_dnv_f_1 = {
 				area = east_adriatic_coast_area
 			}
 		}
+
 		trigger = {
 			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 17
@@ -103,70 +92,67 @@ pf_dnv_f_1 = {
 				}
 			}
 		}
+
 		effect = {
 			add_country_modifier = {
-				name = dnv_north_illy
+				name = "dnv_north_illy"
 				duration = 9125
 			}
 		}
 	}
+
 	dnv_full_illiria = {
-		icon = mission_pf_stock_exchange
+		icon = mission_conquer_5_states
 		position = 6
 		required_missions = {
 			dnv_n_illiria
 			dnv_s_illiria
 		}
-		provinces_to_highlight = {
-			region = illyria_region
-		}
+		provinces_to_highlight = { region = illyria_region } 
+
 		trigger = {
 			illyria_region = {
 				type = all
 				owned_by = ROOT
 			}
 		}
+
 		effect = {
 			add_country_modifier = {
-				name = dnv_illyrian_lessons
+				name = "dnv_illyrian_lessons"
 				duration = -1
 			}
-			north_italy_region = {
-				add_permanent_claim = ROOT
-			}
+			north_italy_region = { add_permanent_claim = ROOT } 
 		}
 	}
+
 	dnv_italia = {
-		icon = mission_pf_stock_exchange
+		icon = italian_riches
 		position = 7
-		required_missions = {
-			dnv_full_illiria
-		}
-		provinces_to_highlight = {
-			region = north_italy_region
-		}
+		required_missions = { dnv_full_illiria } 
+		provinces_to_highlight = { region = north_italy_region } 
+
 		trigger = {
 			north_italy_region = {
 				type = all
 				owned_by = ROOT
 			}
 		}
+
 		effect = {
 			add_country_modifier = {
-				name = dnv_italian_domination
+				name = "dnv_italian_domination"
 				duration = -1
 			}
 		}
 	}
+
 	dnv_more_horses = {
-		icon = mission_pf_stock_exchange
+		icon = mission_holy_horde
 		position = 9
-		required_missions = {
-			dnv_stables
-		}
-		provinces_to_highlight = {
-			province_id = 153
-		}
+		required_missions = { dnv_stables } 
+		provinces_to_highlight = { province_id = 153 } 
+
 		trigger = {
 			153 = {
 				cavalry_in_province = 30
@@ -176,6 +162,7 @@ pf_dnv_f_1 = {
 				}
 			}
 		}
+
 		effect = {
 			153 = {
 				kill_units = {
@@ -191,7 +178,6 @@ pf_dnv_f_1 = {
 		}
 	}
 }
-
 pf_dnv_f_2 = {
 	slot = 2
 	generic = no
@@ -201,15 +187,13 @@ pf_dnv_f_2 = {
 		tag = DNV
 		has_country_flag = dnv_feudalized
 	}
+
 	dnv_conquerors = {
 		icon = mission_pf_stock_exchange
 		position = 2
-		required_missions = {
-			dnv_first_steps
-		}
-		provinces_to_highlight = {
-			area = transylvania_area
-		}
+		required_missions = { dnv_first_steps } 
+		provinces_to_highlight = { area = transylvania_area } 
+
 		trigger = {
 			transylvania_area = {
 				type = all
@@ -217,18 +201,14 @@ pf_dnv_f_2 = {
 				is_core = ROOT
 			}
 		}
-		effect = {
-			country_event = {
-				id = pf_ost.23
-			}
-		}
+
+		effect = { country_event = { id = pf_ost.23 }  } 
 	}
+
 	dnv_s_illiria = {
-		icon = mission_pf_stock_exchange
+		icon = defeat_the_serbs
 		position = 5
-		required_missions = {
-			dnv_illiria
-		}
+		required_missions = { dnv_illiria } 
 		provinces_to_highlight = {
 			OR = {
 				area = bosnia_area
@@ -237,6 +217,7 @@ pf_dnv_f_2 = {
 				area = east_adriatic_coast_area
 			}
 		}
+
 		trigger = {
 			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 17
@@ -248,22 +229,21 @@ pf_dnv_f_2 = {
 				}
 			}
 		}
+
 		effect = {
 			add_country_modifier = {
-				name = dnv_south_illy
+				name = "dnv_south_illy"
 				duration = 9125
 			}
 		}
 	}
+
 	dnv_stables = {
-		icon = mission_pf_stock_exchange
+		icon = mission_marwari_horses
 		position = 8
-		required_missions = {
-			dnv_riverpath
-		}
-		provinces_to_highlight = {
-			province_id = 153
-		}
+		required_missions = { dnv_riverpath } 
+		provinces_to_highlight = { province_id = 153 } 
+
 		trigger = {
 			153 = {
 				has_great_project = {
@@ -272,6 +252,7 @@ pf_dnv_f_2 = {
 				}
 			}
 		}
+
 		effect = {
 			define_general = {
 				shock = 6
@@ -282,7 +263,6 @@ pf_dnv_f_2 = {
 		}
 	}
 }
-
 pf_dnv_f_3 = {
 	slot = 3
 	generic = no
@@ -292,9 +272,12 @@ pf_dnv_f_3 = {
 		tag = DNV
 		has_country_flag = dnv_feudalized
 	}
+
 	dnv_sudeti_land = {
-		icon = mission_pf_stock_exchange
+		icon = mission_the_sudebnik
 		position = 1
+		provinces_to_highlight = {  } 
+
 		trigger = {
 			OR = {
 				was_tag = SDT
@@ -310,32 +293,28 @@ pf_dnv_f_3 = {
 				}
 			}
 		}
+
 		effect = {
 			if = {
-				limit = {
-					was_tag = SDT
-				}
+				limit = { was_tag = SDT } 
 				add_adm_power = 150
 				add_dip_power = 150
 				add_mil_power = 150
 				add_stability = 1
 			}
 			else = {
-				erzgebirge_area = {
-					change_culture = sudeten
-				}
-				bohemia_area = {
-					change_culture = sudeten
-				}
+				erzgebirge_area = { change_culture = sudeten } 
+				bohemia_area = { change_culture = sudeten } 
 			}
 		}
 	}
+
 	dnv_bohemia = {
-		icon = mission_pf_stock_exchange
+		icon = mission_high_income
 		position = 2
-		required_missions = {
-			dnv_sudeti_land
-		}
+		required_missions = { dnv_sudeti_land } 
+		provinces_to_highlight = {  } 
+
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = DNV_CUSTOM_TRIGGER
@@ -364,29 +343,24 @@ pf_dnv_f_3 = {
 				}
 			}
 		}
-		effect = {
-			country_event = {
-				id = pf_ost.24
-			}
-		}
+
+		effect = { country_event = { id = pf_ost.24 }  } 
 	}
+
 	dnv_donava = {
-		icon = mission_pf_stock_exchange
+		icon = alpine_defenses
 		position = 3
 		required_missions = {
 			dnv_conquerors
 			dnv_danubia
 		}
-		trigger = {
-			total_development = 500
-		}
+		provinces_to_highlight = {  } 
+
+		trigger = { total_development = 500 } 
+
 		effect = {
-			261 = {
-				add_permanent_claim = ROOT
-			}
-			moldavia_area = {
-				add_permanent_claim = ROOT
-			}
+			261 = { add_permanent_claim = ROOT } 
+			moldavia_area = { add_permanent_claim = ROOT } 
 			add_casus_belli = {
 				type = cb_vassalize_mission
 				target = MOL
@@ -394,15 +368,13 @@ pf_dnv_f_3 = {
 			}
 		}
 	}
+
 	dnv_sea = {
-		icon = mission_pf_stock_exchange
+		icon = mission_pf_brugges
 		position = 3
-		required_missions = {
-			dnv_donava
-		}
-		provinces_to_highlight = {
-			area = moldavia_area
-		}
+		required_missions = { dnv_donava } 
+		provinces_to_highlight = { area = moldavia_area } 
+
 		trigger = {
 			owns = 1756
 			moldavia_area = {
@@ -413,28 +385,27 @@ pf_dnv_f_3 = {
 				}
 			}
 		}
+
 		effect = {
-			yedisan_area = {
-				add_permanent_claim = ROOT
-			}
+			yedisan_area = { add_permanent_claim = ROOT } 
 			1756 = {
 				change_culture = ROOT
+				change_province_name = "Aigisos"
+				rename_capital = "Aigisos"
 				add_province_modifier = {
-					name = dnv_donova_port
+					name = "dnv_donova_port"
 					duration = -1
 				}
 			}
 		}
 	}
+
 	dnv_riverroad = {
-		icon = mission_pf_stock_exchange
+		icon = danubian_power
 		position = 6
-		required_missions = {
-			dnv_germania_west
-		}
-		provinces_to_highlight = {
-			province_group = pf_flussbahn_ostgermania
-		}
+		required_missions = { dnv_germania_west } 
+		provinces_to_highlight = { province_group = pf_flussbahn_ostgermania } 
+
 		trigger = {
 			years_of_income = 2.5
 			pf_flussbahn_ostgermania = {
@@ -446,25 +417,24 @@ pf_dnv_f_3 = {
 				}
 			}
 		}
+
 		effect = {
 			add_years_of_income = -2.5
 			pf_flussbahn_ostgermania = {
 				add_province_modifier = {
-					name = dnv_flussbahn
+					name = "dnv_flussbahn"
 					duration = -1
 				}
 			}
 		}
 	}
+
 	dnv_riverpath = {
-		icon = mission_pf_stock_exchange
+		icon = mission_pf_two_rivers
 		position = 7
-		required_missions = {
-			dnv_riverroad
-		}
-		provinces_to_highlight = {
-			province_group = pf_flussbahn_ostgermania
-		}
+		required_missions = { dnv_riverroad } 
+		provinces_to_highlight = { province_group = pf_flussbahn_ostgermania } 
+
 		trigger = {
 			years_of_income = 2.5
 			pf_flussbahn_ostgermania = {
@@ -477,26 +447,25 @@ pf_dnv_f_3 = {
 				development = 20
 			}
 		}
+
 		effect = {
 			add_years_of_income = -2.5
 			pf_flussbahn_ostgermania = {
 				remove_province_modifier = dnv_flussbahn
 				add_province_modifier = {
-					name = dnv_flussbahn_2
+					name = "dnv_flussbahn_2"
 					duration = -1
 				}
 			}
 		}
 	}
+
 	dnv_great_tower = {
-		icon = mission_pf_stock_exchange
+		icon = mission_pf_sunrise
 		position = 9
-		required_missions = {
-			dnv_riverpath
-		}
-		provinces_to_highlight = {
-			province_id = 134
-		}
+		required_missions = { dnv_riverpath } 
+		provinces_to_highlight = { province_id = 134 } 
+
 		trigger = {
 			OR = {
 				134 = {
@@ -505,18 +474,13 @@ pf_dnv_f_3 = {
 						tier = 3
 					}
 				}
-				NOT = {
-					religion = south_germanic_religion
-				}
+				NOT = { religion = south_germanic_religion } 
 			}
 		}
+
 		effect = {
 			if = {
-				limit = {
-					NOT = {
-						religion = south_germanic_religion
-					}
-				}
+				limit = { NOT = { religion = south_germanic_religion }  } 
 				add_stability = 2
 			}
 			else = {
@@ -526,7 +490,6 @@ pf_dnv_f_3 = {
 		}
 	}
 }
-
 pf_dnv_f_4 = {
 	slot = 4
 	generic = no
@@ -536,15 +499,13 @@ pf_dnv_f_4 = {
 		tag = DNV
 		has_country_flag = dnv_feudalized
 	}
+
 	dnv_danubia = {
-		icon = mission_pf_stock_exchange
+		icon = push_on_to_bulgaria
 		position = 2
-		required_missions = {
-			dnv_first_wars
-		}
-		provinces_to_highlight = {
-			area = wallachia_area
-		}
+		required_missions = { dnv_first_wars } 
+		provinces_to_highlight = { area = wallachia_area } 
+
 		trigger = {
 			wallachia_area = {
 				type = all
@@ -554,31 +515,24 @@ pf_dnv_f_4 = {
 				}
 			}
 		}
+
 		effect = {
 			if = {
-				limit = {
-					WAL = {
-						is_subject_of = ROOT
-					}
-				}
-				WAL = {
-					change_primary_culture = donovan
-				}
+				limit = { WAL = { is_subject_of = ROOT }  } 
+				WAL = { change_primary_culture = donovan } 
 			}
-			wallachia_area = {
-				change_culture = donovan
-			}
-			silistria_area = {
-				add_permanent_claim = ROOT
-			}
+			wallachia_area = { change_culture = donovan } 
+			silistria_area = { add_permanent_claim = ROOT } 
 		}
 	}
+
 	dnv_germania_west = {
-		icon = mission_pf_stock_exchange
+		icon = pf_hellenic_temple_burning
 		position = 5
-		trigger = {
-			religious_unity = 0.9
-		}
+		provinces_to_highlight = {  } 
+
+		trigger = { religious_unity = 0.9 } 
+
 		effect = {
 			define_advisor = {
 				type = theologian
@@ -586,59 +540,49 @@ pf_dnv_f_4 = {
 				discount = yes
 				culture = marcomanni
 			}
-			south_german_region = {
-				add_permanent_claim = ROOT
-			}
+			south_german_region = { add_permanent_claim = ROOT } 
 		}
 	}
+
 	dnv_germania_north = {
-		icon = mission_pf_stock_exchange
+		icon = consolidate_switzerland
 		position = 6
-		required_missions = {
-			dnv_germania_west
-		}
-		provinces_to_highlight = {
-			region = south_german_region
-		}
+		required_missions = { dnv_germania_west } 
+		provinces_to_highlight = { region = south_german_region } 
+
 		trigger = {
 			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 13
 				region = south_german_region
 			}
 		}
+
 		effect = {
 			add_adm_power = 100
 			every_known_country = {
-				limit = {
-					capital_scope = {
-						region = south_german_region
-					}
-				}
+				limit = { capital_scope = { region = south_german_region }  } 
 				reverse_add_casus_belli = {
 					type = cb_vassalize_mission
 					target = ROOT
 				}
 			}
-			north_german_region = {
-				add_permanent_claim = ROOT
-			}
+			north_german_region = { add_permanent_claim = ROOT } 
 		}
 	}
+
 	dnv_saxonia = {
-		icon = mission_pf_stock_exchange
+		icon = encroach_on_the_germans
 		position = 7
-		required_missions = {
-			dnv_germania_north
-		}
-		provinces_to_highlight = {
-			region = north_german_region
-		}
+		required_missions = { dnv_germania_north } 
+		provinces_to_highlight = { region = north_german_region } 
+
 		trigger = {
 			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 13
 				region = north_german_region
 			}
 		}
+
 		effect = {
 			add_power_projection = {
 				type = 10_permanent_power_projection
@@ -650,15 +594,13 @@ pf_dnv_f_4 = {
 			}
 		}
 	}
+
 	dnv_germanic_north = {
-		icon = mission_pf_stock_exchange
+		icon = mission_hessian_jaeger_corps
 		position = 8
-		required_missions = {
-			dnv_saxonia
-		}
-		provinces_to_highlight = {
-			region = north_german_region
-		}
+		required_missions = { dnv_saxonia } 
+		provinces_to_highlight = { region = north_german_region } 
+
 		trigger = {
 			north_german_region = {
 				type = all
@@ -668,15 +610,15 @@ pf_dnv_f_4 = {
 				}
 			}
 		}
+
 		effect = {
 			add_country_modifier = {
-				name = dnv_lord_of_germania
+				name = "dnv_lord_of_germania"
 				duration = -1
 			}
 		}
 	}
 }
-
 pf_dnv_f_5 = {
 	slot = 5
 	generic = no
@@ -686,18 +628,16 @@ pf_dnv_f_5 = {
 		tag = DNV
 		has_country_flag = dnv_feudalized
 	}
+
 	dnv_first_wars = {
-		icon = mission_pf_stock_exchange
+		icon = mission_se_along_the_river
 		position = 1
-		trigger = {
-			has_leader_with = {
-				total_pips = 12
-			}
-		}
+		provinces_to_highlight = {  } 
+
+		trigger = { has_leader_with = { total_pips = 12 }  } 
+
 		effect = {
-			wallachia_area = {
-				add_permanent_claim = ROOT
-			}
+			wallachia_area = { add_permanent_claim = ROOT } 
 			add_casus_belli = {
 				type = cb_vassalize_mission
 				target = WAL
@@ -705,15 +645,13 @@ pf_dnv_f_5 = {
 			}
 		}
 	}
+
 	dnv_black_sea = {
-		icon = mission_pf_stock_exchange
+		icon = mission_pf_sunset_ship
 		position = 3
-		required_missions = {
-			dnv_danubia
-		}
-		provinces_to_highlight = {
-			area = silistria_area
-		}
+		required_missions = { dnv_danubia } 
+		provinces_to_highlight = { area = silistria_area } 
+
 		trigger = {
 			silistria_area = {
 				type = all
@@ -723,28 +661,25 @@ pf_dnv_f_5 = {
 				}
 			}
 		}
+
 		effect = {
 			add_army_tradition = 15
-			bulgaria_area = {
-				add_permanent_claim = ROOT
-			}
-			thrace_area = {
-				add_permanent_claim = ROOT
-			}
+			bulgaria_area = { add_permanent_claim = ROOT } 
+			thrace_area = { add_permanent_claim = ROOT } 
 		}
 	}
+
 	dnv_byzantion = {
-		icon = mission_pf_stock_exchange
+		icon = mission_defy_the_dragon
 		position = 4
-		required_missions = {
-			dnv_black_sea
-		}
+		required_missions = { dnv_black_sea } 
 		provinces_to_highlight = {
 			OR = {
 				area = bulgaria_area
 				area = thrace_area
 			}
 		}
+
 		trigger = {
 			bulgaria_area = {
 				type = all
@@ -761,31 +696,26 @@ pf_dnv_f_5 = {
 				}
 			}
 		}
+
 		effect = {
-			macedonia_area = {
-				add_permanent_claim = ROOT
-			}
+			macedonia_area = { add_permanent_claim = ROOT } 
 			add_prestige = 25
 			add_country_modifier = {
-				name = dnv_macedonia_salad
+				name = "dnv_macedonia_salad"
 				duration = 9125
 			}
 		}
 	}
+
 	dnv_break_macedonia = {
-		icon = mission_pf_stock_exchange
+		icon = mission_empire
 		position = 5
-		required_missions = {
-			dnv_byzantion
-		}
-		provinces_to_highlight = {
-			is_capital_of = MAC
-		}
+		required_missions = { dnv_byzantion } 
+		provinces_to_highlight = { is_capital_of = MAC } 
+
 		trigger = {
 			OR = {
-				NOT = {
-					exists = MAC
-				}
+				NOT = { exists = MAC } 
 				MAC = {
 					NOT = {
 						army_strength = {
@@ -801,26 +731,23 @@ pf_dnv_f_5 = {
 				religion = ROOT
 			}
 		}
+
 		effect = {
 			if = {
-				limit = {
-					religion = hellenic
-				}
+				limit = { religion = hellenic } 
 				add_papal_influence = 100
 			}
 			add_stability_or_adm_power = yes
 			set_government_rank = 3
 		}
 	}
+
 	dnv_sudwaldia = {
-		icon = mission_pf_stock_exchange
+		icon = fortress_switzerland
 		position = 7
-		required_missions = {
-			dnv_germania_north
-		}
-		provinces_to_highlight = {
-			region = south_german_region
-		}
+		required_missions = { dnv_germania_north } 
+		provinces_to_highlight = { region = south_german_region } 
+
 		trigger = {
 			south_german_region = {
 				type = all
@@ -830,15 +757,17 @@ pf_dnv_f_5 = {
 				}
 			}
 		}
+
 		effect = {
 			add_country_modifier = {
-				name = dnv_lords_of_sudwaldia
+				name = "dnv_lords_of_sudwaldia"
 				duration = -1
 			}
 		}
 	}
+
 	dnv_germania_united = {
-		icon = mission_pf_stock_exchange
+		icon = ger_kaiserreich
 		position = 9
 		required_missions = {
 			dnv_germanic_north
@@ -851,6 +780,7 @@ pf_dnv_f_5 = {
 				region = carpathia_region
 			}
 		}
+
 		trigger = {
 			north_german_region = {
 				type = all
@@ -865,6 +795,7 @@ pf_dnv_f_5 = {
 				owned_by = ROOT
 			}
 		}
+
 		effect = {
 			if = {
 				limit = {
@@ -873,14 +804,13 @@ pf_dnv_f_5 = {
 				}
 				remove_country_modifier = dnv_lord_of_germania
 				remove_country_modifier = dnv_lords_of_sudwaldia
-			}else = {
-				custom_tooltip = DNV_PREV_MOD
 			}
+			else = { custom_tooltip = DNV_PREV_MOD } 
 			add_country_modifier = {
-				name = dnv_germanic_union
+				name = "dnv_germanic_union"
 				duration = -1
 			}
-			override_country_name = DNV_GERMANIA
+			change_tag = GMN
 		}
 	}
 }
