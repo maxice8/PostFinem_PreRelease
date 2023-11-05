@@ -72,3 +72,29 @@ pf_bby_reawakening = {
 pf_bby_stories_of_old = {
 	army_tradition = 0.5
 }
+
+# Syria
+
+pf_callimachus_rule_modifier = {
+	monthly_syrian_power = 1
+	syrian_power_gain_modifier = 0.25
+}
+pf_syr_drylands_development = {
+	local_development_cost = -0.10
+}
+pf_silk_road_renovated_modifier = {
+	province_trade_power_modifier = 0.25
+	trade_goods_size_modifier = 0.10
+	local_friendly_movement_speed = 0.33
+	allowed_num_of_buildings = 1
+	picture = "silk_road_renovated"
+}
+pf_silk_road_merchant_bonus_africa = {
+	merchants = 1
+}
+pf_silk_road_merchant_bonus_syria = {
+	merchants = 1
+}
+pf_silk_road_merchant_bonus_persia = {
+	merchants = 1
+}

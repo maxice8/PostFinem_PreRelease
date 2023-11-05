@@ -29,6 +29,16 @@ pf_kudurru_reform_desc: "Kudurru are great stone monoliths used to officiate lan
 pf_nepustu_tax: "Nepeshtu Tax"
 pf_nepustu_tax_desc: "The output of our nation is huge, from the most lowly farmer to most skilled craftsman. Instead of taxing raw goods, we could gain more money by focusing on the completed product, as well as encourage further industrial innovation."
 
+pf_gavrasian_kingdom: "Gavrasian Kingdom"
+pf_gavrasian_kingdom_desc: "The Gavrasian princes have been the most successful monarchs Damascus has ever seen. The prodigal son, Callimachus IV, has carved a Syrian Kingdom out of the myriad of states that occupied the area before, and consolidated his power over a vast area. With the consent and support of the powerful merchants of Phoenicia, our state is strong and stable."
+ability_syrian_rule_mechanic: "Syrian Rule"
+syrian_power: "Syrian Power"
+syrian_power_desc: "Syrial Rule represents the power contained in the crown and the loyalty and obedience of its vassals.\n\nIt is §Gincreased§! by the following:\n- Ruler Skills\n- Mercantilism\n\nIt is §Rlowered§! by:\n- Corruption\n- Bankruptcy\n- Negative Stability\n- High Average Autonomy\n- Integrating subjects\n "
+monthly_syrian_power: "Monthly Syrian Power"
+syrian_power_gain_modifier: "Syrian Power Gain Modifier"
+pf_callimachus_rule_modifier: "Rule of Callimachus"
+SYR_NEEDS_SYRIAN_POWER_TO_INTEGRATE: "§RYou need at least §Y70§! Syrian Power to annex a subject§!"
+
 # Culture
 
 mesopotamian: "Mesopotamian"
@@ -40,6 +50,12 @@ URK:0 "Uruk"
 URK_ADJ:0 "Uruk"
 BBY:0 "Babylonia"
 BBY_ADJ:0 "Babylonian"
+PTY:0 "Tyre"
+PTY_ADJ:0 "Tyrian"
+PSI:0 "Sidon"
+PSI_ADJ:0 "Sidonian"
+HMA:0 "Hamat"
+HMA_ADJ:0 "Hamathian"
 
 # Religion
 
@@ -66,6 +82,26 @@ ENUMA_ELISH_ASPECTS_SHORT: "Deity"
 ENUMA_ELISH_ASPECTS_LONG: "Deities to Patronise"
 ENUMA_ELISH_ASPECTS_POWER_NAME: "Divine Patronage"
 
+# Estate
+
+estate_burghers_pf_silk_road_merchants: "[Root.GetBurghersName] of the Silk Road"
+estate_burghers_pf_silk_road_merchants_desc: "We must strengthen our control over this portion of the Silk Road and ensure our merchants have the protections and privileges to dominate it."
+allowed_silk_road_merchants: "Allowed Merchants of the Silk Road"
+allowed_drylands_development: "Allowed Dryland Irrigation"
+
+estate_burghers_pf_syr_drylands_development: "Private Dryland Irrigation"
+estate_burghers_pf_syr_drylands_development_desc: "Extend the privileges of the [Root.GetBurghersName] to include the right to construct, own, and operate irrigation facilities in the drylands of our country, helping increase local prosperity and reduce the burden on the state."
+pf_syr_drylands_development: "Dryland Irrigation"
+estate_burghers_pf_syr_drylands_development_tt: "Every owned province with §YDrylands§! terrain gains the following effect:"
+estate_burghers_pf_syr_drylands_development_rt: "The following modifier will be removed from every §YDrylands§! terrain province:"
+
+pf_silk_road_syrian_way: "Syrian Way"
+pf_silk_road_persian_way: "Persian Way"
+pf_silk_road_african_way: "African Way"
+
+estate_burghers_pf_phoenician_merchants: "Phoenician Merchants"
+estate_burghers_pf_phoenician_merchants_desc: "The merchants of Phoenicia have always held a special place in our society. Let us protect their privileges so that their success will bring all of us prosperity."
+
 ###############
 # Decisions
 ###############
@@ -84,6 +120,22 @@ pf_invoke_ishtar_income_tt: "from §Y3§! years of production income in owned pr
 pf_invoke_ninhursag_tt: "§MInvoking Ninhursag will give us the following effect:§!"
 pf_invoke_ninhursag_effect_tt: "Distribute §Y5§! £mil£ development to random owned provinces."
 pf_invoke_gilgamesh_tt: "§MInvoking Gilgamesh will give us the following effect:§!"
+
+renovate_silk_road_africa_title: "¤ Renovate the Silk Road: The African Way"
+renovate_silk_road_africa_desc: "The section of the Silk Road that passes through Africa has fallen into disrepair. If we want to keep our merchants safe and the flow of exotic goods steady, we must invest in renovating the infrastructure that surrounds its major routes."
+pf_silk_road_renovated_modifier: "§MRenovated Silk Road§!"
+desc_pf_silk_road_renovated_modifier: "Through extensive investment and careful management, this section of the Silk Road has been renovated and made safe for travelling merchants."
+pf_silk_road_province_get_tt: "Every province in this section of the §YSilk Road§! gets the following effect:"
+pf_silk_road_merchant_bonus_tt: "As long as we control every province in this section of the §YSilk Road§!, we will gain the following effect:"
+pf_silk_road_merchant_bonus_africa: "Control of the African Way"
+
+renovate_silk_road_syria_title: "¤ Renovate the Silk Road: The Syrian Way"
+renovate_silk_road_syria_desc: "The section of the Silk Road that passes through Syria has fallen into disrepair. If we want to keep our merchants safe and the flow of exotic goods steady, we must invest in renovating the infrastructure that surrounds its major routes."
+pf_silk_road_merchant_bonus_syria: "Control of the Syrian Way"
+
+renovate_silk_road_persia_title: "¤ Renovate the Silk Road: The Persia Way"
+renovate_silk_road_persia_desc: "The section of the Silk Road that passes through Persia has fallen into disrepair. If we want to keep our merchants safe and the flow of exotic goods steady, we must invest in renovating the infrastructure that surrounds its major routes."
+pf_silk_road_merchant_bonus_persia: "Control of the Persian Way"
 
 ############## 
 # Ideas
@@ -164,6 +216,44 @@ avr_hellenic_literature: "Import Hellenic Literature"
 avr_hellenic_literature_desc: "REPLACE_ME"
 avr_modernising: "Reform the Administration"
 avr_modernising_desc: "REPLACE_ME"
+
+SYR_ideas: "Syrian Ideas"
+SYR_ideas_start: "Syrian Traditions"
+SYR_ideas_bonus: "Syrian Ambition"
+
+syr_gavras_conquests: "Gavrasian Conquest"
+syr_gavras_conquests_desc: "As a boy, Callimachus dreamed of something more. Raised on the stories of Alexander and his men, the young prince was determined that his minor lordship in Damascus should expand to become a proper kingdom. After he succeeded his father to the throne, he spent every effort to realise this dream, and now we live in a time where a united Syria reigns supreme over the region, where hundreds of minor kings crowd into Callimachus' palace to give tribute, and where his authority as king is no longer questioned."
+syr_trade_entrepot: "Merchants of Syria"
+syr_trade_entrepot_desc: "The men of Syria are famous across the known world for their shrewd practices and negotiation skills, making them some of the finest merchants the world has ever known. They say that you can find a Syrian merchant in every mapped entrepot. While this may not be entirely truly, it is certainly testament to our widespread dominance and mercantile ambition."
+syr_damascus_steel: "Damascus Steel"
+syr_damascus_steel_desc: "Iron imported from the far east is treated and shaped by the skilled smiths of Damascus, and forged into a unique type of steel in local workshops. This steel is much stronger than anything produced by our competitors, and as such has been used to great success in producing swords and other pieces of military equipment. As long as we keep the secret to its strength to ourselves, our monopoly over Damascus steel will provide us with unparalleled strength."
+syr_silk_road: "The Silk Road"
+syr_silk_road_desc: "The Silk Road is a prestigious trade route that stretches from Carthage to China, and along the way passes through our lands. The settlements of Damascus and Palmyra function as major stop off points for merchants travelling along the road, leading to many luxurious items being traded off there, greatly enriching our own local merchants."
+syr_decree_of_subordinance: "Decree of Subordinance"
+syr_decree_of_subordinance_desc: "The conquests that won us this kingdom also resulted in the subjugation of a number of minor kings and princes, who now operate autonomously along our frontiers. While they provide somewhat regular tribute and profess their loyalty to us when needed, it is clear that their hearts are not entirely on our side. Let us introduce a new decree to be read to all our subject kings - we will not tolerate any disobedience, and all actions taken by these kings will be done with our consent."
+syr_phoenician_trades: "Gateway to the World"
+syr_phoenician_trades_desc: "Phoenicia has been a hub for merchants and wealth for thousands of years, and although it has fallen far since its heyday, it is still a force to be reckoned with. Under our dominion, the Phoenician cities are sharing some of their vast riches with us, leading to our profits soaring and exotic goods flooding into the country."
+syr_well_watered_land: "One Syria, One Memory"
+syr_well_watered_land_desc: "Out of what was once a minor principality in Damascus, we have forged a mighty kingdom. We must never forget our roots however - our heritage is just as important as the prosperity we know enjoy. Every Syrian must keep this knowledge in their hearts, else our humility will crack and the pride we embody will fail."
+
+phoenician_ideas: "Phoenician Ideas"
+phoenician_ideas_start: "Phoenician Traditions"
+phoenician_ideas_bonus: "Phoenician Ambition"
+
+phoenician_bankers: "Invest in the Banking Sector"
+phoenician_bankers_desc: "Many of the wealthy families in Phoenicia have turned to banking as a way to perpetuate their wealth down the generations. Our shared heritage and friendship with some of the families can secure us some favourable loans and advice from these financial experts."
+phoenician_timber: "Cedar Forests"
+phoenician_timber_desc: "Since antiquity, Phoenicia has been the best source of timber in the region. While new markets have opened up across the world, their quality will never match that of the trees that grow on our slopes."
+phoenician_trades: "Phoenician Mercantile Prowess"
+phoenician_trades_desc: "Phoenicia has always been home to powerful merchants and influential city states. Goods from pass through our ports into the hands of people all across the world, and as a result, our merchants have some of the best maps and use some of the most efficient trade routes known to man."
+phoenician_cities: "Autonomous City States"
+phoenician_cities_desc: "This land has always been divided up into its cities, chiefly the three jewels of Sidon, Tyre, and Byblos. Come what may, each city will make a stand to protect their independence, ensuring that our democracies stay intact and no foreign power can dictate the will of a Phoenician merchant."
+phoenician_urbanisation: "Public Investment"
+phoenician_urbanisation_desc: "The state exists for the purpose of serving and protecting the people, and thus it is only right if we use the vast reserves of wealth we have accumulated from our successful trading enterprises to invest in our cities' public infrastructure. Our cities will be the best places to live in, and the envy of the world."
+phoenician_dye: "Tyrian Purple"
+phoenician_dye_desc: "Produced solely from the sea snails that live off the coast of Tyre, Tyrian purple is a unique luxury dye that is still produced to this day by the dilligent craftspeople of our country. Over the years, it has become associated with royalty and particularly imperial rule, bringing the cities that export it great prestige and fame."
+phoenician_goods: "The Factory System"
+phoenician_goods_desc: "As economies across the world develop into extensions of the state, we must work to ensure that the will of our private citizens is never infringed upon by this process. Industrialisation must be done by the hard working men and women of Phoenicia by their own merit, and through this freedom, prosperity will be brought to the whole land."
 
 ################
 # Events

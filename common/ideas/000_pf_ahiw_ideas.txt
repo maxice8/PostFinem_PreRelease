@@ -1081,3 +1081,86 @@ AVR_ideas = {			# Avaria
 		adm_tech_cost_modifier = -0.10
 	}
 }
+SYR_ideas = {
+	start = {
+		trade_range_modifier = 0.35
+		vassal_income = 0.25
+	}
+
+	bonus = {
+		merchants = 1
+	}
+
+	trigger = {
+		 tag = SYR		# Syria, the state of 
+	}
+	free = yes
+
+	syr_gavras_conquests = {
+		shock_damage = 0.10
+		fabricate_claims_cost = -0.20
+	}
+	syr_trade_entrepot = {
+		global_prov_trade_power_modifier = 0.25
+	}
+	syr_damascus_steel = {
+		discipline = 0.05
+	}
+	syr_silk_road = {
+		caravan_power = 0.25
+	}
+	syr_decree_of_subordinance = {
+		diplomatic_upkeep = 1
+	}
+	syr_phoenician_trades = {
+		global_trade_goods_size_modifier = 0.10
+		prestige_decay = -0.01
+	}
+	syr_well_watered_land = {
+		global_unrest = -2
+	}
+}
+phoenician_ideas = {
+	start = {
+		global_trade_goods_size_modifier = 0.10
+		naval_forcelimit_modifier = 0.50
+	}
+
+	bonus = {
+		global_ship_trade_power = 0.33
+	}
+
+	trigger = {
+		OR = {
+			tag = PTY
+			tag = PSI
+		}
+	}
+	free = yes
+
+	phoenician_bankers = {
+		interest = -0.50
+		inflation_action_cost = -0.25
+	}
+	phoenician_timber = {
+		global_ship_cost = -0.10
+	}
+	phoenician_trades = {
+		global_trade_power = 0.10
+		placed_merchant_power = 5
+	}
+	phoenician_cities = {
+		development_cost = -0.10
+	}
+	phoenician_urbanisation = {
+		build_cost = -0.10
+		build_time = -0.15
+	}
+	phoenician_dye = {
+		prestige = 1
+	}
+	phoenician_goods = {
+		global_trade_goods_size = 0.10
+		global_prov_trade_power_modifier = 0.10
+	}
+}

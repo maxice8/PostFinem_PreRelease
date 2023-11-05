@@ -1,32 +1,47 @@
 government = monarchy
-add_government_reform = autocracy_reform
+add_government_reform = pf_gavrasian_kingdom
 primary_culture = heliodori
 religion = hellenic
 technology_group = eastern
-capital = 382# Damascus
+capital = 382 # Damascus
 religious_school = shafii_school
 government_rank = 1
 
 1444.11.11 = {
 	monarch = {
-		name = "Ioustinos"
+		name = "Callimachus IV"
 		dynasty = "Gavras"
-		adm = 3
-		dip = 5
+		adm = 4
+		dip = 2
 		mil = 5
 		birth_date = 1422.05.30
 		death_date = 1445.01.01
+		leader = { 
+			name = "Callimachus the Unifier"
+			type = general
+			fire = 2
+			shock = 4
+			manuever = 3
+			siege = 0
+		}
 	}
+	add_ruler_modifier = {
+		name = "pf_callimachus_rule_modifier"
+		duration = -1
+	}
+	add_ruler_personality = benevolent_personality
+	add_ruler_personality = conqueror_personality
 }
 
 1444.11.11 = {
 	heir = {
-		name = "Diogenes"
+		name = "Eurydice"
+		monarch_name = "Eurydice I"
 		dynasty = "Gavras"
 		adm = 1
 		dip = 3
 		mil = 3
-		birth_date = 1423.02.11
+		birth_date = 1443.02.11
 		death_date = 1445.01.01
 	}
 }
