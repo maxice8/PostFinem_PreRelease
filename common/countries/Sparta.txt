@@ -2,7 +2,7 @@
 
 graphical_culture = easterngfx
 
-color = { 168  121  129 }
+color = { 71 5 0 }
 revolutionary_colors = { 4 8 4 }
 
 historical_idea_groups = {
@@ -35,45 +35,54 @@ historical_units = {
 	ottoman_lancer
 }
 monarch_names = { 
-	"Alexander #0" = 40
-	"Philip #0" = 39
-	"Aristotle #0" = 38
-	"Ptolemy #0" = 37
-	"Cassander #0" = 36
-	"Perdiccas #0" = 35
-	"Lysimachus #0" = 34
-	"Antigonus #0" = 33
-	"Demetrius #0" = 32
-	"Seleucus #0" = 31
-	"Parmenion #0" = 30
-	"Hephaestion #0" = 29
-	"Olympias #0" = 28
-	"Hercules #0" = 27
-	"Leonidas #0" = 26
-	"Craterus #0" = 25
-	"Peithon #0" = 24
-	"Nearchus #0" = 23
-	"Ptolemy Soter #0" = 22
-	"Ptolemy Philadelphus #0" = 21
-	"Cleitus #0" = 20
-	"Demosthenes #0" = 19
-	"Amyntas #0" = 18
-	"Eumenes #0" = 17
-	"Menelaus #0" = 16
-	"Orestes #0" = 15
-	"Craterus #0" = 14
-	"Antipater #0" = 13
-	"Cleon #0" = 12
-	"Peucestas #0" = 11
-	"Meleager #0" = 10
-	"Polyperchon #0" = 9
-	"Cimon #0" = 8
+	"Leonidas #0" = 2
+	"Cleitus #0" = 2
+	"Daxos #0" = 2
+	"Achilles #0" = 2
+	"Alpheus #0" = 2
+	"Ares #0" = 2
+	"Aurus #0" = 2
+	"Herakles #0" = 2
+	"Orpheus #0" = 2
+	"Perseus #0" = 2
+	"Lysander #0" = 2
+	"Agis #0" = 2
+	"Philip #0" = 2
+	"Aristotle #0" = 1
+	"Ptolemy #0" = 1
+	"Cassander #0" = 1
+	"Perdiccas #0" = 1
+	"Lysimachus #0" = 1
+	"Antigonus #0" = 1
+	"Demetrius #0" = 1
+	"Seleucus #0" = 1
+	"Parmenion #0" = 1
+	"Hephaestion #0" = 1
+	"Olympias #0" = 1
+	"Hercules #0" = 1
+	"Craterus #0" = 1
+	"Peithon #0" = 1
+	"Nearchus #0" = 1
+	"Cleitus #0" = 1
+	"Demosthenes #0" = 1
+	"Amyntas #0" = 1
+	"Eumenes #0" = 1
+	"Menelaus #0" = 1
+	"Orestes #0" = 1
+	"Craterus #0" = 1
+	"Antipater #0" = 1
+	"Cleon #0" = 1
+	"Peucestas #0" = 1
+	"Meleager #0" = 1
+	"Polyperchon #0" = 1
+	"Cimon #0" = 1
 
-	"Olympias #0" = -1
-	"Roxana #0" = -1
+	"Gorgo #0" = -5
+	"Olympias #0" = -3
+	"Roxana #0" = -3
+	"Antigone #0" = -3
 	"Eurydice #0" = -1
 	"Thessalonike #0" = -1
-	"Antigone #0" = -1
 }
 leader_names = { 
 	Anina Angelopoulos Androutsos Aulakos Botsaris Bouboulis Chatzeris Christianopoulos Chatzimoschos Dalianis
@@ -84,7 +93,10 @@ leader_names = {
 	Notaras Pegas Patelaros Pelekasis Petrovas Panourgias Pappas Papatsonis Papazafiropoulos Psalidas
 	Papanikolis Pinotsis Ratzikotsikas Serpetzoglou Skoufas Sachtouris Skourtis Stamatelopoulos Soumalis Triantaphyllos
 	Tsakalov Tsokris Tombazis Vokos Verousis Vasileiou Voulgaris Xanthos Xiros Ypsilantis
-	Yiannouzas Zalykis Zeras 
+	Yiannouzas Zalykis Zeras Leonidas Cleitus Daxos Achilles Alpheus Ares Aurus Herakles Orpheus Perseus Lysander Agis Philip
+	Aristotle Ptolemy Cassander Perdiccas Lysimachus Antigonus Demetrius Seleucus Parmenion Hephaestion
+	Olympias Hercules Craterus Peithon Nearchus Cleitus Demosthenes Amyntas Eumenes Menelaus Orestes Craterus
+	Antipater Cleon Peucestas Meleager Polyperchon Cimon 
 }
 ship_names = { 
 	Ydra Lesvos Limnos Mikonos Salamis Samos Themistoklis Evripidis Aischylos Aristofanis
