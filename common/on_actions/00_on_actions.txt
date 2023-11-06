@@ -70,79 +70,6 @@ on_startup = {
 			set_country_flag = ayu_monarch_flag
 		}
 	}
-	if = {
-		limit = {
-			religion = romuva
-		}
-		country_event = { id = pf_romuva_events.1 }
-	}
-	country_event = { id = pf_ksb_events.1 }
-	if = {
-		limit = {
-			OR = {
-				tag = KRA
-				tag = POL
-			}
-			NOT = { is_year = 1445 }
-		}
-		country_event = { id = pf_pol_events.1 } 
-	}
-	#if = {
-	#	limit = {
-	#		OR = {
-	#			primary_culture = norse
-	#			AND = {
-	#				culture_group = scandinavian
-	#				religion = norse_pagan_reformed
-	#			}
-	#		}
-	#		NOT = { has_idea_group = norse_ideas }
-	#		is_playing_custom_nation = no
-	#	}
-	#	country_event = { id = ideagroups.1 } #Swap Ideas
-	#}
-	if = {
-		limit = {
-			tag = PER
-			NOT = { is_year = 1445 }
-		}
-		country_event = { id = pf_per_events.0 }
-	}
-	if = {
-		limit = {
-			tag = CLN
-			NOT = { is_year = 1445 }
-		}
-		country_event = { id = pf_if.16 }	# The travels of Conan
-	}
-	if = {
-		limit = { tag = NOR }
-		country_event = { id = pf_nordic.20 }	# Sons of Ulrik
-	}
-	if = {
-		limit = { tag = VIN }
-		country_event = { id = pf_nordic.28 }	# End of the vinland colony
-	}
-	if = {
-		limit = {
-			NOT = { has_country_flag = setup_raid_max }
-		}
-		set_variable = {
-			which = MaxRaidLoot
-			value = 200
-		}
-		set_country_flag = setup_raid_max
-	}
-	if = {
-		limit = {
-			tag = POL
-		}
-		country_event = {
-			id = pf_pol_events.100
-			days = 1877
-			random = 1825
-		}
-	}
 }	
 
 # country
@@ -455,30 +382,6 @@ on_war_won = {
 			}
 		}
 	}
-	if = {
-		limit = {
-			has_government_mechanic = pf_svetovid_dedication_mechanic
-		}
-		add_government_power = {
-			mechanic_type = pf_svetovid_dedication_mechanic
-			power_type = pf_svetovid_dedication
-			value = 10
-		}
-	}
-	if = {
-		limit = {
-			tag = PER
-			has_estate_privilege = estate_nobles_pf_satrapy_expansion_plan
-		}
-		pf_per_release_satrapies_scripted_effect = yes
-	}
-	if = {
-		limit = {
-			has_saved_global_event_target = pf_per_et_province_to_conquer
-			tag = PER
-		}
-		country_event = { id = pf_per_events.72 }
-	}
 }
 
 # country
@@ -512,18 +415,6 @@ on_war_lost = {
 		duration = 10
 		hidden = yes
 	}
-	if = {
-		limit = {
-			has_government_mechanic = pf_svetovid_dedication_mechanic
-		}
-		
-			add_government_power = {
-				mechanic_type = pf_svetovid_dedication_mechanic
-				power_type = pf_svetovid_dedication
-				value = -10
-			}
-		
-	}
 }
 on_main_war_lost = {
 	events = {
@@ -539,44 +430,6 @@ on_separate_war_lost = {
 on_battle_won_country = {
 	on_battle_ended_effect = yes
 	on_battle_won_country_effect = yes
-	if = {
-		limit = {
-			ROOT = {
-				has_country_flag = pf_killing_troops_gives_ducats
-			}
-		}
-		ROOT = {
-			FROM = {
-				set_variable = {
-					which = land_units_killed_for_ducat
-					which = land_units_killed
-				}
-				divide_variable = {
-					which = land_units_killed_for_ducat
-					value = 1000
-				}
-			}
-			while = {
-				limit = {
-					FROM = {
-						check_variable = {
-							which = land_units_killed_for_ducat
-							value = 1
-						}
-					}
-				}
-				FROM = {
-					subtract_variable = {
-						which = land_units_killed_for_ducat
-						value = 1
-					}
-				}
-				ROOT = {
-					add_treasury = 1
-				}
-			}
-		}
-	}
 }
 
 # country
@@ -584,41 +437,6 @@ on_battle_won_country = {
 on_battle_lost_country = {
 	on_battle_ended_effect = yes
 	battle_cult_spreading_effect = yes #Scripted effect for fetishist cult mechanics.
-	if = {
-		limit = {
-			ROOT = {
-				is_in_war = {
-					casus_belli = cb_raid
-					attacker_leader = ROOT
-				}
-			}
-		}
-		ROOT = {
-			set_variable = {
-				which = land_units_killed_for_loot
-				which = land_units_killed
-			}
-			divide_variable = {
-				which = land_units_killed_for_loot
-				value = 100
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = land_units_killed_for_loot
-						value = 1
-					}
-				}
-				subtract_variable = {
-					which = land_units_killed_for_loot
-					value = 1
-				}
-				lose_loot = {
-					amount = 1
-				}
-			}
-		}
-	}
 	random_events = {
 		90 = 0
 		10 = friendship_events.1 #Historical Friendship Broken
@@ -753,20 +571,6 @@ on_battle_won_unit = {
 			}
 		}
 	}
-	if = {
-		limit = {
-			unit_owner = {
-				has_government_mechanic = pf_svetovid_dedication_mechanic
-			}
-		}
-		unit_owner ={
-		add_government_power = {
-			mechanic_type = pf_svetovid_dedication_mechanic
-			power_type = pf_svetovid_dedication
-			value = 1
-		}
-		}
-	}
 }
 
 # #Unit Scope OnAction for Battle Lost
@@ -789,20 +593,6 @@ on_battle_lost_unit = {
             country_event = { id = flavor_oir.2 }
         }
     }
-	if = {
-		limit = {
-			unit_owner = {
-			has_government_mechanic = pf_svetovid_dedication_mechanic
-			}
-		}
-		unit_owner = {
-			add_government_power = {
-				mechanic_type = pf_svetovid_dedication_mechanic
-				power_type = pf_svetovid_dedication
-				value = -1
-			}
-		}
-	}
 }
 
 # province
@@ -869,13 +659,6 @@ on_siege_won_country = {
 			add_church_power = 5
 		}
 	}
-	if = {
-		limit = {
-			tag = KSB
-			FROM = { province_id = 4745 }
-		}
-		country_event = { id = pf_ksb_events.2 }
-	}
 	grant_manpower_from_besieging_fort = yes
 	events = {
 		flavor_oir.5 # Oirats capture Beijing
@@ -900,31 +683,6 @@ on_siege_lost_country = {
 			FROM = { has_province_modifier = fin_viipurin_linna_modifier }
 		}
 		FROM = { remove_province_modifier = fin_viipurin_linna_modifier } 
-	}
-	# pf
-	# If we are Lagrlond, check if we failed the rebellion
-	if = {
-		limit = {
-			tag = LAG
-		}
-		country_event = {
-			id = pf_lag_trinovantian_rebels.6
-		}
-	}
-	if = {
-		limit = {
-			has_government_mechanic = gaul_confederation_mechanic
-			FROM = {
-				controller = {
-					tag = REB
-				}
-			}
-		}
-		add_government_power = {
-			mechanic_type = gaul_confederation_mechanic
-			power_type = gaul_confederation
-			value = -2
-		}
 	}
 }
 
@@ -975,72 +733,6 @@ on_siege_won_province = {
 			if = {
 				limit = { is_claim = ROOT}
 				remove_claim = ROOT
-			}
-		}
-	}
-	if = {
-		limit = {
-			controller = {
-				is_in_war = {
-					casus_belli = cb_raid
-					attacker_leader = THIS
-				}
-			}
-		}
-		ROOT = {
-			export_to_variable = {
-				which = RaidFromProv
-				value = development
-				who = ROOT
-			}
-			# space for modifiers
-			while = {
-				limit = {
-					check_variable = {
-						which = RaidFromProv
-						value = 1
-					}
-				}
-				subtract_variable = {
-					which = RaidFromProv
-					value = 1
-				}
-				controller = {
-					add_loot = {
-						amount = 1
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_tax_building_trigger = yes
-					controller = {
-						has_government_attribute = raids_give_money_from_temples
-					}
-				}
-				if = {
-					limit = { has_building = temple }
-					controller = {
-						add_loot = {
-							amount = 5
-						}
-					}
-				}
-				else_if = {
-					limit = { has_building = cathedral }
-					controller = {
-						add_loot = {
-							amount = 10
-						}
-					}
-				}
-			controlled_by = KSB
-			area = vorpommern_area
-		}
-		save_event_target_as = sieged_polabian_province
-		controller = {
-			country_event = {
-				id = pf_ksb_events.3
 			}
 		}
 	}
@@ -1148,16 +840,6 @@ on_monarch_death = {
 		remove_country_modifier = sought_after_bachelor
 	}
 	if = {
-		limit = {
-			tag = POL
-			AND = {
-				NOT = { has_ruler = "Ignacij Lazarevic" }
-				NOT = { has_ruler_flag = pol_ignacij_rules_flag }
-			}
-		}
-		country_event = { id = pf_pol_events.4 }
-	}
-	if = {
 		limit = { has_country_modifier = sought_after_bachelor }
 		remove_country_modifier = sought_after_bachelor
 	}
@@ -1176,12 +858,6 @@ on_monarch_death = {
 	if = {
 		limit = { has_government_attribute = no_stability_loss_on_monarch_death }
 		add_stability = 1
-	}
-	if = {
-		limit = {
-			religion = romuva
-		}
-		country_event = { id = pf_romuva_events.1 }
 	}
 	set_variable = {
 		which = YearsAtWar
@@ -1877,260 +1553,18 @@ on_adm_development = {
 			}
 		}
 	}
-	# pf
-	if = {
-		limit = {
-			OR = {
-				owner = { has_country_modifier = pf_lag_urbanisation }
-				has_country_modifier = nld_industralize_cities
-			}
-		}
-		random_list = {
-			5 = { add_base_tax = 1 }
-			95 = { }
-		}
-	}
-	if = {
-		limit = {
-			owner = { has_government_mechanic = gaul_confederation_mechanic }
-			accepted_culture = ROOT 
-			culture = root
-		}
-		owner = {
-			add_government_power = {
-				mechanic_type = gaul_confederation_mechanic
-				power_type = gaul_confederation
-				value = 0.25
-			}
-		}
-	}
-	if = {
-		limit = {
-			owner = { has_government_mechanic = pf_svetovid_dedication_mechanic }
-			religion = ROOT
-		}
-		owner = {
-			add_government_power = {
-				mechanic_type = pf_svetovid_dedication_mechanic
-				power_type = pf_svetovid_dedication
-				value = 0.25
-			}
-		}
-	}
-	if = {
-		limit = {
-			has_saved_global_event_target = pf_per_et_province_to_tax_dev
-			owner = {
-				is_subject_of = PER
-			}
-			event_target:pf_per_et_province_to_tax_dev = { province_id = ROOT }
-		}
-		owner = {
-			overlord = {
-				country_event = { id = pf_per_events.68 }
-			}
-		}
-	}
-	if = {
-		limit = {
-			owner = { has_country_flag = pf_fc_expand_influence_developing_bonus_flag }
-			accepted_culture = ROOT
-		}
-		random_list = {
-			10 = { add_base_tax = 1 }
-			90 = { }
-		}
-	}
-	if = {
-		limit = {
-			province_id = 121	# Naples
-			owner = { has_country_flag = naples_gets_bonus_from_dev_flag }
-		}
-		add_prosperity = 1
-		owner = { add_corruption = -0.05 }
-	}
 }
 
 # province
 on_dip_development = {
 	on_dip_development_effect = yes
 	on_development_effect = yes
-	# pf
-	if = {
-		limit = {
-			has_building = university
-			owner = { has_country_flag = university_extra_dev_flag }
-		}
-		random_list = {
-			1 = { add_base_production = 1 }
-			3 = {  }
-		}
-	}
-	if = {
-		limit = {
-			OR = {
-				has_country_modifier = pf_lag_urbanisation
-				has_country_modifier = nld_industralize_cities
-			}
-		}
-		random_list = {
-			5 = { add_base_production = 1 }
-			95 = { }
-		}
-	}
-	if = {
-		limit = {
-			owner = { has_government_mechanic = gaul_confederation_mechanic }
-			accepted_culture = ROOT 
-			culture = root
-		}
-		owner = {
-			add_government_power = {
-				mechanic_type = gaul_confederation_mechanic
-				power_type = gaul_confederation
-				value = 0.25
-			}
-		}
-	}
-	if = {
-		limit = {
-			owner = { has_government_mechanic = pf_svetovid_dedication_mechanic }
-			religion = ROOT
-		}
-		owner = {
-			add_government_power = {
-				mechanic_type = pf_svetovid_dedication_mechanic
-				power_type = pf_svetovid_dedication
-				value = 0.25
-			}
-		}
-	}
-	if = {
-		limit = {
-			has_saved_global_event_target = pf_per_et_province_to_prod_dev
-			owner = {
-				is_subject_of = PER
-			}
-			event_target:pf_per_et_province_to_prod_dev = { province_id = ROOT }
-		}
-		owner = {
-			overlord = {
-				country_event = { id = pf_per_events.69 } # Nice
-			}
-		}
-	}
-	if = {
-		limit = {
-			owner = { has_country_flag = pf_fc_expand_influence_developing_bonus_flag }
-			accepted_culture = ROOT
-		}
-		random_list = {
-			10 = { add_base_tax = 1 }
-			90 = { }
-		}
-	}
-	if = {
-		limit = {
-			province_id = 121	# Naples
-			owner = { has_country_flag = naples_gets_bonus_from_dev_flag }
-		}
-		add_prosperity = 1
-		owner = { add_prestige = 0.5 }
-	}
-	if = {
-		limit = {
-			owner = { has_country_modifier = pf_bby_prod_bonus_timer }
-		}
-		add_base_production = 1
-	}
 }
 
 # province
 on_mil_development = {
 	on_mil_development_effect = yes
 	on_development_effect = yes
-	# pf
-	if = {
-		limit = {
-			has_building = university
-			owner = { has_country_flag = university_extra_dev_flag }
-		}
-		random_list = {
-			1 = { add_base_manpower = 1 }
-			3 = {  }
-		}
-	}
-	if = {
-		limit = {
-			OR = {
-				has_country_modifier = pf_lag_urbanisation
-				has_country_modifier = nld_industralize_cities
-			}
-		}
-		random_list = {
-			5 = { add_base_manpower = 1 }
-			95 = { }
-		}
-	}
-	if = {
-		limit = {
-			owner = { has_government_mechanic = gaul_confederation_mechanic }
-			accepted_culture = ROOT 
-			culture = root
-		}
-		owner = {
-			add_government_power = {
-				mechanic_type = gaul_confederation_mechanic
-				power_type = gaul_confederation
-				value = 0.25
-			}
-		}
-	}
-	if = {
-		limit = {
-			owner = { has_government_mechanic = pf_svetovid_dedication_mechanic }
-			religion = ROOT
-		}
-		owner = {
-			add_government_power = {
-				mechanic_type = pf_svetovid_dedication_mechanic
-				power_type = pf_svetovid_dedication
-				value = 0.25
-			}
-		}
-	}
-	if = {
-		limit = {
-			has_saved_global_event_target = pf_per_et_province_to_mil_dev
-			owner = {
-				is_subject_of = PER
-			}
-			event_target:pf_per_et_province_to_mil_dev = { province_id = ROOT }
-		}
-		owner = {
-			overlord = {
-				country_event = { id = pf_per_events.70 }
-			}
-		}
-	}
-	if = {
-		limit = {
-			owner = { has_country_flag = pf_fc_expand_influence_developing_bonus_flag }
-			accepted_culture = ROOT
-		}
-		random_list = {
-			10 = { add_base_tax = 1 }
-			90 = { }
-		}
-	}
-	if = {
-		limit = {
-			province_id = 121	# Naples
-			owner = { has_country_flag = naples_gets_bonus_from_dev_flag }
-		}
-		add_prosperity = 1
-		owner = { add_manpower = 0.5 }
-	}
 }
 
 on_overextension_pulse = {
@@ -4387,21 +3821,6 @@ on_lose_great_power_status = {
 on_province_religion_converted = {
 	on_province_religion_changed_effect = yes
 	on_province_religion_converted_effect = yes
-
-	if = {
-		limit = {
-			has_saved_global_event_target = pf_per_et_province_to_convert
-			owner = {
-				is_subject_of = PER
-			}
-			event_target:pf_per_et_province_to_convert = { province_id = ROOT }
-		}
-		owner = {
-			overlord = {
-				country_event = { id = pf_per_events.71 }
-			}
-		}
-	}
 }
 
 on_province_religion_changed = {
@@ -4414,135 +3833,6 @@ on_province_culture_converted = {
 	judaism_on_province_culture_converted_effect = yes
 	imperial_modifiers_on_province_change_culture_or_change_owner_effect = yes
 	on_province_culture_change_effect = yes
-
-	if = {
-		limit = {
-			owner = {
-				OR = {
-					has_country_flag = pf_sami_herding_flag
-					AND = {
-						colonial_parent = {
-							has_country_flag = pf_sami_herding_flag
-							mission_completed = pf_nld_northern_colonies
-						}
-						capital_scope = {
-							colonial_region = colonial_alaska
-						}
-					}
-					AND = {
-						colonial_parent = {
-							has_country_flag = pf_sami_herding_flag
-							mission_completed = pf_nld_a_bit_of_truth_in_legends
-						}
-						capital_scope = {
-							colonial_region = colonial_canada
-						}
-					}
-					AND = {
-						colonial_parent = {
-							has_country_flag = pf_sami_herding_flag
-							mission_completed = pf_nld_spread_westwards
-						}
-						capital_scope = {
-							colonial_region = colonial_louisiana
-						}
-					}
-					AND = {
-						colonial_parent = {
-							has_country_flag = pf_sami_herding_flag
-							mission_completed = pf_nld_new_sweden
-						}
-						capital_scope = {
-							colonial_region = colonial_eastern_america
-						}
-					}
-				}
-			}
-			culture = sapmi
-			trade_goods = fur
-		}
-		add_province_modifier = {
-			name = sami_herding
-			duration = -1
-		}
-	}
-	else_if = {
-		limit = {
-			has_province_modifier = sami_herding
-		}
-		remove_province_modifier = sami_herding
-	}
-
-	if = {
-		limit = {
-			owner = {
-				has_reform = enlightened_norse_kingdom
-			}
-			has_owner_accepted_culture = no
-			has_owner_culture = no
-			culture_group = owner
-		}
-		add_province_modifier = {
-			name = nld_tolerant_culture_group
-			duration = -1
-		}
-	}
-	 else_if = {
-		limit = {
-			owner = {
-				has_reform = enlightened_norse_kingdom
-			}
-			has_owner_accepted_culture = no
-			has_owner_culture = no
-			NOT = {
-				culture_group = owner
-			}
-		}
-		add_province_modifier = {
-			name = nld_tolerant_culture
-			duration = -1
-		}
-	}
-
-	if = {
-		limit = {
-			has_province_modifier = nld_tolerant_culture_group
-			NOT = {
-				OR = {
-				AND = {
-					has_owner_accepted_culture = no
-					has_owner_culture = no
-					culture_group = owner
-				}
-				owner = {
-					has_reform = enlightened_norse_kingdom
-				}
-			}
-			}
-			
-		}
-		remove_province_modifier = nld_tolerant_culture_group
-	}
-	else_if = {
-		limit = { 
-			has_province_modifier = nld_tolerant_culture
-			NOT = {
-				OR = {
-				AND = {
-					has_owner_accepted_culture = no
-					has_owner_culture = no
-					NOT = {
-						culture_group = owner
-					}
-				}
-				owner = {
-					has_reform = enlightened_norse_kingdom
-				}
-				}
-			}
-		}
-		remove_province_modifier = nld_tolerant_culture
-	}
 }
 
 # province, general conversion through effects
@@ -4551,77 +3841,6 @@ on_province_culture_changed = {
 	judaism_on_province_culture_converted_effect = yes
 	imperial_modifiers_on_province_change_culture_or_change_owner_effect = yes
 	on_province_culture_change_effect = yes
-
-	if = {
-		limit = {
-			owner = {
-				has_reform = enlightened_norse_kingdom
-			}
-			has_owner_accepted_culture = no
-			has_owner_culture = no
-			culture_group = owner
-		}
-		add_province_modifier = {
-			name = nld_tolerant_culture_group
-			duration = -1
-		}
-	}
-	 else_if = {
-		limit = {
-			owner = {
-				has_reform = enlightened_norse_kingdom
-			}
-			has_owner_accepted_culture = no
-			has_owner_culture = no
-			NOT = {
-				culture_group = owner
-			}
-		}
-		add_province_modifier = {
-			name = nld_tolerant_culture
-			duration = -1
-		}
-	}
-
-	if = {
-		limit = {
-			has_province_modifier = nld_tolerant_culture_group
-			NOT = {
-				OR = {
-				AND = {
-					has_owner_accepted_culture = no
-					has_owner_culture = no
-					culture_group = owner
-				}
-				owner = {
-					has_reform = enlightened_norse_kingdom
-				}
-			}
-			}
-			
-		}
-		remove_province_modifier = nld_tolerant_culture_group
-	}
-	else_if = {
-		limit = { 
-			has_province_modifier = nld_tolerant_culture
-			NOT = {
-				OR = {
-				AND = {
-					has_owner_accepted_culture = no
-					has_owner_culture = no
-					NOT = {
-						culture_group = owner
-					}
-				}
-				owner = {
-					has_reform = enlightened_norse_kingdom
-				}
-				}
-			}
-		}
-		remove_province_modifier = nld_tolerant_culture
-	}
 }
 
 # THIS = Province, FROM = Country who Propogated
@@ -4662,140 +3881,6 @@ on_province_owner_change = {
 		japan.1			#Fall of the current Shogun
 	}
 	on_province_owner_change_government_effect = yes
-
-	if = {
-		limit = {
-			owner = {
-				OR = {
-					has_country_flag = pf_sami_herding_flag
-					AND = {
-						colonial_parent = {
-							has_country_flag = pf_sami_herding_flag
-							mission_completed = pf_nld_northern_colonies
-						}
-						capital_scope = {
-							colonial_region = colonial_alaska
-						}
-					}
-					AND = {
-						colonial_parent = {
-							has_country_flag = pf_sami_herding_flag
-							mission_completed = pf_nld_a_bit_of_truth_in_legends
-						}
-						capital_scope = {
-							colonial_region = colonial_canada
-						}
-					}
-					AND = {
-						colonial_parent = {
-							has_country_flag = pf_sami_herding_flag
-							mission_completed = pf_nld_spread_westwards
-						}
-						capital_scope = {
-							colonial_region = colonial_louisiana
-						}
-					}
-					AND = {
-						colonial_parent = {
-							has_country_flag = pf_sami_herding_flag
-							mission_completed = pf_nld_new_sweden
-						}
-						capital_scope = {
-							colonial_region = colonial_eastern_america
-						}
-					}
-				}
-			}
-			culture = sapmi
-			trade_goods = fur
-		}
-		add_province_modifier = {
-			name = sami_herding
-			duration = -1
-		}
-	}
-	else_if = {
-		limit = {
-			has_province_modifier = sami_herding
-		}
-		remove_province_modifier = sami_herding
-	}
-
-	if = {
-		limit = {
-			owner = {
-				OR = {
-					has_country_flag = pf_sami_herding_flag
-					AND = {
-						colonial_parent = {
-							has_country_flag = pf_sami_herding_flag
-							mission_completed = pf_nld_northern_colonies
-						}
-						capital_scope = {
-							colonial_region = colonial_alaska
-						}
-					}
-					AND = {
-						colonial_parent = {
-							has_country_flag = pf_sami_herding_flag
-							mission_completed = pf_nld_a_bit_of_truth_in_legends
-						}
-						capital_scope = {
-							colonial_region = colonial_canada
-						}
-					}
-				}
-			}
-			has_climate = arctic
-		}
-		add_province_modifier = {
-			name = swe_arctic_expansion
-			duration = -1
-		}
-	}
-
-	if = {
-		limit = {
-			owner = {
-				NOT = {
-					has_country_flag = pf_arctic_expansion_flag
-				}
-			}
-			has_province_modifier = swe_arctic_expansion
-		}
-		remove_province_modifier = swe_arctic_expansion
-	}
-
-	if = {
-		limit = {
-			owner = {
-				has_reform = enlightened_norse_kingdom
-			}
-			has_owner_accepted_culture = no
-			has_owner_culture = no
-			culture_group = owner
-		}
-		add_province_modifier = {
-			name = nld_tolerant_culture_group
-			duration = -1
-		}
-	}
-	 if = {
-		limit = {
-			owner = {
-				has_reform = enlightened_norse_kingdom
-			}
-			has_owner_accepted_culture = no
-			has_owner_culture = no
-			NOT = {
-				culture_group = owner
-			}
-		}
-		add_province_modifier = {
-			name = nld_tolerant_culture
-			duration = -1
-		}
-	}
 
 	if = {
 		limit = {
@@ -5078,12 +4163,6 @@ on_admiral_recruited = {
 		limit = { has_country_flag = admirals_give_army_professionalism }
 		add_army_professionalism = 0.005
 	}
-	if = {
-		limit = {
-			has_country_flag = pf_sar_recruiting_admirals_gives_tradition
-		}
-		add_navy_tradition = 2
-	}
 }
 
 # country
@@ -5359,38 +4438,6 @@ on_dependency_lost = {
 			remove_country_modifier = revoked_war_rights
 		}
 	}
-	# pf
-	if = {
-		limit = {
-			FROM = { is_subject_of_type = satrapy }
-		}
-		add_casus_belli = {
-			target = FROM
-			type = cb_persian_subjugation_war
-			months = 240
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				tag = MNG
-			}
-		}
-		if = {
-			limit = {
-				has_country_modifier = pf_mac_events_1_modifier_dip
-			}
-			remove_country_modifier = pf_mac_events_1_modifier_dip
-		}
-		FROM = {
-			if = {
-				limit = {
-					has_country_modifier = pf_mac_events_1_modifier_subj
-				}
-				remove_country_modifier = pf_mac_events_1_modifier_subj
-			}
-		}
-	}
 }
 
 # ROOT = New vassal, FROM = Overlord
@@ -5419,16 +4466,6 @@ on_create_vassal = {
 	if = {
 		limit = { NOT = { is_year = 1445 } }
 		set_country_flag = released_in_1444
-	}
-	# pf
-	if = {
-		limit = {
-			tag = ATH
-		}
-		change_government = theocracy
-		change_religion = hellenic
-		add_government_reform = pf_athens_archon
-		adopt_reform_progress = FROM
 	}
 }
 
@@ -5543,16 +4580,6 @@ on_country_released = {
 		limit = { NOT = { is_year = 1445 } }
 		set_country_flag = released_in_1444
 	}
-	# pf
-	if = {
-		limit = {
-			tag = ATH
-		}
-		change_government = theocracy
-		change_religion = hellenic
-		add_government_reform = pf_athens_archon
-		adopt_reform_progress = FROM
-	}
 }
 
 # ROOT = province, FROM = country
@@ -5572,64 +4599,6 @@ on_trade_good_changed = {
 			add_base_production = -1 
 			# ]]]
 		}
-	}
-
-	if = {
-		limit = {
-			owner = {
-				OR = {
-					has_country_flag = pf_sami_herding_flag
-					AND = {
-						colonial_parent = {
-							has_country_flag = pf_sami_herding_flag
-							mission_completed = pf_nld_northern_colonies
-						}
-						capital_scope = {
-							colonial_region = colonial_alaska
-						}
-					}
-					AND = {
-						colonial_parent = {
-							has_country_flag = pf_sami_herding_flag
-							mission_completed = pf_nld_a_bit_of_truth_in_legends
-						}
-						capital_scope = {
-							colonial_region = colonial_canada
-						}
-					}
-					AND = {
-						colonial_parent = {
-							has_country_flag = pf_sami_herding_flag
-							mission_completed = pf_nld_spread_westwards
-						}
-						capital_scope = {
-							colonial_region = colonial_louisiana
-						}
-					}
-					AND = {
-						colonial_parent = {
-							has_country_flag = pf_sami_herding_flag
-							mission_completed = pf_nld_new_sweden
-						}
-						capital_scope = {
-							colonial_region = colonial_eastern_america
-						}
-					}
-				}
-			}
-			culture = sapmi
-			trade_goods = fur
-		}
-		add_province_modifier = {
-			name = sami_herding
-			duration = -1
-		}
-	}
-	else_if = {
-		limit = {
-			has_province_modifier = sami_herding
-		}
-		remove_province_modifier = sami_herding
 	}
 }
 
@@ -5738,20 +4707,6 @@ on_conquest = {
 			add_imperial_influence = 1
 		}
 	}
-	#pf
-	if = {
-		limit = {
-			province_id = 146
-			country_or_non_sovereign_subject_holds = PER
-		}
-		PER = {
-			country_event = {
-				id = pf_per_events.104
-				days = 20
-				random = 40
-			}
-		}
-	}
 }
 
 on_country_creation = {
@@ -5773,15 +4728,6 @@ on_country_creation = {
 		change_religion = catholic
 		change_government = theocracy
 		add_government_reform = papacy_reform
-	}
-	# pf
-	if = {
-		limit = {
-			tag = ATH
-		}
-		change_government = theocracy
-		change_religion = hellenic
-		add_government_reform = pf_athens_archon
 	}
 }
 
