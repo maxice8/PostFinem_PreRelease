@@ -237,6 +237,7 @@ pf_ost_2 = {
 		provinces_to_highlight = { owned_by = ROOT } 
 
 		trigger = {
+			manpower_percentage = 0.5
 			num_of_owned_provinces_with = {
 				value = 3
 				base_manpower = 5
@@ -244,8 +245,16 @@ pf_ost_2 = {
 		}
 
 		effect = {
-			add_manpower = 3
+			add_yearly_manpower = 3
+			custom_tooltip = empty_line_tt
 			add_mil_power = 100
+			custom_tooltip = empty_line_tt		
+			define_advisor = {
+				type = drill_sergeant
+				skill = 2
+				discount = yes
+				name = "Aric Gerwig"
+			}
 		}
 	}
 }
@@ -434,20 +443,14 @@ pf_ost_4 = {
 
 		trigger = {
 			years_of_income = 3
-			OR = {
-				dip_power = 200
-				full_idea_group = trade_ideas
-			}
+			dip_power = 200
 			owns = 128
 			owns = 134
 			owns = 1863
 		}
 
 		effect = {
-			if = {
-				limit = { NOT = { full_idea_group = trade_ideas }  } 
-				add_dip_power = -200
-			}
+			add_dip_power = -200
 			custom_tooltip = empty_line_tt
 			country_event = { id = pf_ost.4 } 
 		}
@@ -458,9 +461,19 @@ pf_ost_4 = {
 		position = 5
 		provinces_to_highlight = {  } 
 
-		trigger = { army_size = 25 } 
+		trigger = { 
+			land_forcelimit = 25
+			army_size = 25
+		} 
 
 		effect = {
+			define_advisor = {
+				type = drill_sergeant
+				skill = 2
+				cost_multiplier = 0.25
+				name = "Gundric Hardwin"
+			}
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = "ost_army_grand"
 				duration = 9125
