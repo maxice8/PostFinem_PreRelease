@@ -214,6 +214,10 @@ estate_church_religious_state = {
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = -0.05
 	can_select = {
+		can_select_monarch_power_privilege = {
+			estate = estate_church
+			type = adm
+		}
 	}
 	on_granted = {
 	}
@@ -2780,5 +2784,59 @@ estate_church_donation_right = {
 			factor = 0.1
 			is_absolutism_active = yes
 		}
+	}
+}
+estate_church_muslim_integration = {
+	icon = privilege_send_emissary_to_pope
+	loyalty = 0
+	influence = 0.05
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	is_valid = {
+		has_unlocked_estate_privilege = { estate_privilege = estate_church_muslim_integration }
+		any_owned_province = {
+			religion_group = muslim
+		}
+		NOT = { religion_group = muslim }
+	}
+	on_granted = {
+		custom_tooltip = estate_church_muslim_integration_gt
+		tooltip = {
+			add_province_modifier = {
+				name = estate_church_muslim_integration_mod
+				duration = -1
+				desc = UNTIL_REVOKED
+			}
+		}
+	}
+	on_granted_province = {
+		if = {
+			limit = { religion_group = muslim }
+			add_province_modifier = {
+				name = estate_church_muslim_integration_mod
+				duration = -1
+				desc = UNTIL_REVOKED
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_church_muslim_integration_rt
+	}
+	on_revoked_province = {
+		remove_province_modifier = estate_church_muslim_integration_mod
+	}
+	on_invalid = {
+		custom_tooltip = estate_church_muslim_integration_rt
+	}
+	on_invalid_province = {
+		remove_province_modifier = estate_church_muslim_integration_mod
+	}
+	benefits = {
+		church_privilege_slots = 1
+	}
+	penalties = {
+	}
+	ai_will_do = {
+		factor = 0
 	}
 }
