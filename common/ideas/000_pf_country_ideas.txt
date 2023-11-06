@@ -825,6 +825,63 @@ ASG_ideas = {
 	}
 }
 
+#Formables
+
+SPT_ideas = {
+	start = {
+		army_tradition = 1
+		infantry_power = 0.2
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}	
+
+	trigger = {
+		tag = SPT
+	}
+	free = yes
+	
+	#Way of the Warrior
+	SPT_ideas_1 = {
+		land_morale = 0.2
+	}
+
+	#Culture of Soldiers
+	SPT_ideas_2 = {
+		army_tradition_decay = -0.01
+		nobles_loyalty_modifier = 0.1
+	}
+
+	#State Serves the Military
+	SPT_ideas_3 = {
+		stability_cost_modifier = -0.1
+		tolerance_own = 1
+	}
+
+	#Every Boy Serves
+	SPT_ideas_4 = {
+		global_manpower_modifier = 0.25
+		regiment_recruit_speed = -0.1
+	}
+
+	#Spartan Metropolises
+	SPT_ideas_5 = {
+		development_cost = -0.1
+	}
+
+	#Prepared for War
+	SPT_ideas_6 = {
+		global_regiment_cost = -0.1
+	}
+
+	#Spartan Absolutism
+	SPT_ideas_7 = {
+		max_absolutism_effect = 0.1
+		max_absolutism = 10
+	}
+}
+
 #Europunic Minors
 ORA_ideas = {
 	start = {

@@ -1,10 +1,10 @@
 country_decisions = {
 
-	reform_macedonia = {
+	form_sparta = {
 		major = yes
 		potential = {
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = reformed_macedonia_flag }
+			NOT = { has_country_flag = formed_sparta_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -13,16 +13,13 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
+			NOT = { tag = MAC }
 			NOT = { tag = AEG }
 			NOT = { tag = SLC }
 			NOT = { tag = ATH }
-			is_nomad = no		
-			OR = {
-				religion = hellenic
-				religion = paradosi
-			}
-			culture_group = macedonian_greek
+			primary_culture = peloponnesian
 			is_colonial_nation = no
+			is_nomad = no			
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -33,24 +30,9 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				AND = {
-					region = balkan_region
-					root = {
-						NOT = {
-							num_of_owned_provinces_with = {
-								value = 15
-								region = balkan_region
-								is_core = root
-							}
-						}
-						owns_core_province = 148
-						owns_core_province = 1853
-						owns_core_province = 151
-					}
-				}
-				province_id = 148
-				province_id = 1853
-				province_id = 151
+				province_id = 4701
+				province_id = 146
+				province_id = 145
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -58,26 +40,28 @@ country_decisions = {
 			}
 		}
 		allow = {
-			is_at_war = no
-			is_subject = no	
-			NOT = { exists = MAC }
-			owns_core_province = 148
-			owns_core_province = 1853
-			owns_core_province = 151
-			148 = { 					#  Macedonia
+			NOT = { exists = SPT }
+			adm_tech = 10
+			NOT = { num_of_cities = 7 }
+			145 = { 					#  Sparta
 			 is_state_core = ROOT
 			}
-			num_of_owned_provinces_with = {
-				value = 15
-				region = balkan_region
-				is_core = root
-			}
+			religion = paradosi
+			# is_subject = no
+			primary_culture = peloponnesian
+			owns_core_province = 4701
+			owns_core_province = 146
+			owns_core_province = 145
+			is_at_war = no
 		}
 		effect = {
-			148 = { 					#  Macedonia
-				move_capital_effect = yes
+			145 = { move_capital_effect = yes }
+			145 = { change_province_name = "Sparta" }
+			hidden_effect = {
+				145 = { rename_capital = "Sparta" }
 			}
-			change_tag = MAC
+			custom_tooltip = empty_line_tt
+			change_tag = SPT
 			on_change_tag_effect = yes
 			hidden_effect = {
 				restore_country_name = yes
@@ -87,6 +71,7 @@ country_decisions = {
 			if = {
 				limit = {
 					has_custom_ideas = no
+					NOT = { has_idea_group = SPT_ideas }
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 				custom_tooltip = empty_line_tt
@@ -106,7 +91,13 @@ country_decisions = {
 					NOT = { government = theocracy }
 				}
 				change_government = monarchy
-				add_government_reform = pf_alexanders_crown
+				add_government_reform = pf_spartan_stratokratoria
+			}
+			if = {
+				limit = {
+					has_reform = states_general_reform
+				}
+				remove_government_reform = states_general_reform
 			}
 			custom_tooltip = empty_line_tt
 			add_country_modifier = {
@@ -114,7 +105,7 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige_or_monarch_power = { amount = 25 }
-			set_country_flag = reformed_macedonia_flag
+			set_country_flag = formed_sparta_flag
 		}
 		ai_will_do = {
 			factor = 1

@@ -5664,6 +5664,7 @@ states_general_reform = {
 	}
 	trigger = {
 		NOT = { is_lesser_in_union = yes }
+		NOT = { has_reform = pf_spartan_stratokratoria }
 		is_emperor = no
 	}
 
