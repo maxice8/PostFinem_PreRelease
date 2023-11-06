@@ -1,0 +1,151 @@
+on_main_war_won = {
+	if = {
+		limit = {
+			FROM = {
+				NOT = {
+					is_in_war = {
+						attacker_leader = FROM
+						casus_belli = cb_raid
+					}
+				}
+				variable_arithmetic_trigger = {
+					check_variable = {
+						which = MaxRaidLoot
+						value = 1
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = {
+				id = pf_nordic.13
+			}
+		}
+	}
+}
+
+on_main_war_lost = {
+	if = {
+		limit = {
+			FROM = {
+				NOT = {
+					is_in_war = {
+						attacker_leader = FROM
+						casus_belli = cb_raid
+					}
+				}
+				variable_arithmetic_trigger = {
+					check_variable = {
+						which = MaxRaidLoot
+						value = 1
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = {
+				id = pf_nordic.13
+			}
+		}
+	}
+}
+
+on_siege_won_province = {
+	if = {
+		limit = {
+			controller = {
+				is_in_war = {
+					casus_belli = cb_raid
+					attacker_leader = THIS
+				}
+			}
+		}
+		ROOT = {
+			export_to_variable = {
+				which = RaidFromProv
+				value = development
+				who = ROOT
+			}
+			# space for modifiers
+			while = {
+				limit = {
+					check_variable = {
+						which = RaidFromProv
+						value = 1
+					}
+				}
+				subtract_variable = {
+					which = RaidFromProv
+					value = 1
+				}
+				controller = {
+					add_loot = {
+						amount = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_tax_building_trigger = yes
+					controller = {
+						has_government_attribute = raids_give_money_from_temples
+					}
+				}
+				if = {
+					limit = { has_building = temple }
+					controller = {
+						add_loot = {
+							amount = 5
+						}
+					}
+				}
+				else_if = {
+					limit = { has_building = cathedral }
+					controller = {
+						add_loot = {
+							amount = 10
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+on_battle_lost_country = {
+	if = {
+		limit = {
+			ROOT = {
+				is_in_war = {
+					casus_belli = cb_raid
+					attacker_leader = ROOT
+				}
+			}
+		}
+		ROOT = {
+			set_variable = {
+				which = land_units_killed_for_loot
+				which = land_units_killed
+			}
+			divide_variable = {
+				which = land_units_killed_for_loot
+				value = 100
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = land_units_killed_for_loot
+						value = 1
+					}
+				}
+				subtract_variable = {
+					which = land_units_killed_for_loot
+					value = 1
+				}
+				lose_loot = {
+					amount = 1
+				}
+			}
+		}
+	}
+}

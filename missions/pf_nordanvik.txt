@@ -653,7 +653,12 @@ pf_nrd_3 = {
 				every_subject_country = {
 					limit = {
 						capital_scope = { region = british_isles_region } 
-						NOT = { total_development = 100 } 
+						NOT = { total_development = 51 } 
+						has_opinion = {
+							who = ROOT
+							value = 190
+						} 
+						NOT = { liberty_desire = 50 }
 					}
 					every_owned_province = {
 						cede_province = ROOT
