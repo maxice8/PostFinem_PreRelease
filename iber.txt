@@ -1,14 +1,3 @@
-iberia_region = {
-	add_permanent_claim = ROOT
-}
-
-# SUE = {
-# 	every_owned_province = {
-# 		remove_permanent_claim = OVA
-# 	}
-# }
-# BCA = {
-# 	every_owned_province = {
-# 		remove_permanent_claim = OVA
-# 	}
-# }
+british_isles_region = { cede_province = ROOT add_core = ROOT }
+change_tag = SKL
+swap_non_generic_missions = yes
