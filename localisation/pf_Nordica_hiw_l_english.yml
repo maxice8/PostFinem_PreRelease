@@ -79,6 +79,10 @@ show_superiority_raid: "Show Superiority"
 show_superiority_raid_desc: "Gain warscore by defeating enemy armies in battle."
 RAID_WAR_NAME: "$ORDER$$FIRST$ Raid against $SECOND$"
 
+raid_button_tooltip: "[Root.GetRaidTooltip]\n\nOccupying provinces in Raid Wars will give an amount of §YLoot§! ¤ equal to the development of the province, as well as counting other raid loot bonuses. Loot decreases when we take casualties in battles we lose.\n\nAfter the war, once all our troops are back in home provinces, we will receive the total remaining Loot as ducats in our treasury."
+raid_tooltip_is_in_raid_war_tt: "§R£mil£ We are currently in a Raid War! £mil£§!\n\nCurrent §YRaid Loot§! is (§G[Root.RaidLoot.GetValue]§!¤) out of a maximum of (§M[Root.MaxRaidLoot.GetValue]§!)."
+raid_tooltip_is_not_in_raid_war_tt: "§OWe are not the attacker in a Raid War.§!"
+
 ##############
 # Ideas
 ##############
