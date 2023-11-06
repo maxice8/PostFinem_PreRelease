@@ -1290,15 +1290,21 @@ guiTypes = {
 				}
 
 				listboxType = {
-					name ="enabled_dlc_list"
-					position = { x = 291 y = 40 }
-					backGround=""
-					size = { x=50 y =500 }
-					Orientation = "UPPER_LEFT"
+					name = "enabled_dlc_list_1"
+					position = { x = 300 y = 60 }
+					size = { x = 50 y = 500 }
+					orientation = "UPPER_LEFT"
 					horizontal = 0
-					spacing = 0
 					scrollbartype = "standardlistbox_slider"
-					borderSize = {x = 0 y = 0}
+				}
+
+				listboxType = {
+					name = "enabled_dlc_list_0"
+					position = { x = 291 y = 40 }
+					size = { x = 40 y = 500 }
+					orientation = "UPPER_LEFT"
+					horizontal = 0
+					scrollbartype = "standardlistbox_slider"
 				}
 
 				### SAVE GAMES
@@ -3021,20 +3027,13 @@ guiTypes = {
 
 	### DLC entry
 	windowType = {
-		name = "enabled_dlc_entry_odd"
-		backGround=""
-		position = { x=0 y=0 }
-		size = { x=50 y= 25 }
+		name = "enabled_dlc_entry_0"
+		size = { x = 50 y = 40 }
 		moveable = 0
-		dontRender = ""
-		horizontalBorder= ""
-		verticalBorder= ""
-		fullScreen = no
 
 		iconType = {
 			name = "dlc_icon_bg"
 			spriteType = "GFX_dlc_icon_bg"
-			position = { x = 0 y = 0 }
 			alwaystransparent = yes
 		}
 
@@ -3052,15 +3051,9 @@ guiTypes = {
 	}
 
 	windowType = {
-		name = "enabled_dlc_entry_even"
-		backGround=""
-		position = { x=0 y=0 }
-		size = { x=50 y= 25 }
+		name = "enabled_dlc_entry_1"
+		size = { x = 50 y = 40 }
 		moveable = 0
-		dontRender = ""
-		horizontalBorder= ""
-		verticalBorder= ""
-		fullScreen = no
 
 		iconType = {
 			name = "dlc_icon_bg"
@@ -3836,6 +3829,48 @@ guiTypes = {
 			quadTextureSprite ="button_type_7"
 			buttonText = "IRONMAN_START"
 			buttonFont = "vic_18"
+		}
+	}
+
+	windowType={
+		name = "lesson_channel_entry"
+		size = { x = 256 y = 44 }
+
+		guiButtonType = {
+			name = "Background"	
+			quadTextureSprite = "GFX_lesson_channel_bg"
+		}
+		
+		instantTextboxType = {
+			name = "label"
+			position = { x = 0 y = 11 }
+			font = "vic_22"
+			maxWidth = 256
+			maxHeight = 20
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+	}
+
+	windowType = {
+		name = "lesson_entry"
+		size = { x = 256 y = 44 }
+
+		guiButtonType = {
+			name = "Background"	
+			quadTextureSprite = "GFX_lesson_bg"
+		}
+
+		instantTextboxType = {
+			name = "label"
+			position = { x = 0 y = 11 }
+			font = "vic_22"
+			maxWidth = 256
+			maxHeight = 20
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
 		}
 	}
 }
