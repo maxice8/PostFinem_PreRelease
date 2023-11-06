@@ -1,0 +1,51 @@
+on_main_war_won = {
+	if = {
+		limit = {
+			FROM = {
+				NOT = {
+					is_in_war = {
+						attacker_leader = FROM
+						casus_belli = cb_raid
+					}
+				}
+				variable_arithmetic_trigger = {
+					check_variable = {
+						which = MaxRaidLoot
+						value = 1
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = {
+				id = pf_nordic.13
+			}
+		}
+	}
+}
+
+on_main_war_lost = {
+	if = {
+		limit = {
+			FROM = {
+				NOT = {
+					is_in_war = {
+						attacker_leader = FROM
+						casus_belli = cb_raid
+					}
+				}
+				variable_arithmetic_trigger = {
+					check_variable = {
+						which = MaxRaidLoot
+						value = 1
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = {
+				id = pf_nordic.13
+			}
+		}
+	}
+}
