@@ -370,7 +370,7 @@ pf_skl_4 = {
 		trigger = {  
 			OR = {
 				custom_trigger_tooltip = {
-					tooltip = skl_a_new_target
+					tooltip = skl_a_new_target_tt
 					has_country_flag = skl_a_new_target_flag
 				}
 				AND = {
