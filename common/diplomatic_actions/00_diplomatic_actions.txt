@@ -157,22 +157,32 @@ declarewar = {
 	}
 	effect = {
 		on_war_declaration_effect = yes
-		# pf 
+		#pf
 		if = {
 			limit = {
+				NOT = {
+					check_variable = {
+						which = MaxRaidLoot
+						value = 1
+					}
+				}
 				is_in_war = {
 					attacker_leader = ROOT
 					casus_belli = cb_raid
 				}
-				
 			}
-			# Reset variable
+			# Set up the maximum loot of the raid, we can check for modifiers
+			# and anything else (like Government Reforms) that increase
+			# the Maximum Loot of a Raid and increase it here with
+			# change_variable
 			set_variable = {
 				which = MaxRaidLoot
 				value = 200
 			}
-			# Do any other additions here
-		}
+			set_variable = {
+				which = RaidLoot
+				value = 0
+			}
 	}
 }
 
