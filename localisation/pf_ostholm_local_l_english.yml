@@ -24,9 +24,9 @@
 
 #####CUSTOM
  ost_vld_rivalry:0 "Old Ostholm Rivalry"
- OST_CT_1:0 "If @VLD §YVildheim §Wis your subject, inherit it."
+ OST_CT_1:0 "If  @VLD§YVildheim §Wis a subject, they will be inherited.\n"
  OST_CT_2:0 "§G5 §Wprovinces with a §YBarracks Building §Wwill have it §Gupgraded §Wto a §YTraining Field§W, if already a §YTraining Field§W, add §G2 §Ybase Manpower§W."
- OST_CT_3:0 "§G5 §Wprovinces with §YWine §Wwill recieve the following modifier:"
+ OST_CT_3:0 "Up to §Y5§! random owned Wine producing provinces will receive the following modifier:"
 #####MODIFIER
  ost_diplomatic_pressure:0 "Royal Envoys"
  ost_diplomatic_pressure_2:0 "Effortless Diplomacy"
@@ -126,6 +126,8 @@
 
  ost_good_harvest_title:0 "Prepare for the Harvest"
  ost_good_harvest_desc:0 "REPLACE_ME"
+ ost_adm_advisor_tt: "If employing an §YAdministrative§! advisor"
+ ost_dip_advisor_tt: "If employing a §YDiplomatic§! advisor"
 
  ost_good_wine_title:0 "Of Wine And Mead"
  ost_good_wine_desc:0 "REPLACE_ME"

@@ -9,21 +9,22 @@ pf_ost_1 = {
 		icon = mission_have_two_subjects
 		position = 2
 		required_missions = { ost_old_expanse } 
-		provinces_to_highlight = { area = austria_proper_area } 
+		provinces_to_highlight = { 
+			area = austria_proper_area 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
 		trigger = {
 			austria_proper_area = {
 				type = all
-				OR = {
-					owned_by = ROOT
-					owned_by_subject_of = ROOT
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
 		effect = {
 			add_army_tradition = 10
-			add_manpower = 5
+			add_yearly_manpower = 3
+			custom_tooltip = empty_line_tt
 			bohemia_area = { add_permanent_claim = ROOT } 
 			east_bavaria_area = { add_permanent_claim = ROOT } 
 		}
@@ -38,16 +39,13 @@ pf_ost_1 = {
 		}
 		provinces_to_highlight = {
 			region = carpathia_region
-			NOT = { owned_by = ROOT } 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 
 		trigger = {
 			carpathia_region = {
 				type = all
-				OR = {
-					owned_by = ROOT
-					owned_by_subject_of = ROOT
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
@@ -121,17 +119,24 @@ pf_ost_2 = {
 		icon = mission_unite_home_region
 		position = 1
 		trigger = {
-			OR = {
-				army_size_percentage = 1
-				AND = {
-					ai = yes
-					army_size_percentage = 0.75
-					num_of_generals = 1
-				}
+			if = {
+				limit = {
+					ai = no
+				}				
+				army_size_percentage = 0.9
+				manpower_percentage = 0.5
+				num_of_generals = 1
+			}
+			else = {
+				ai = yes
+				army_size_percentage = 0.75
+				num_of_generals = 1
 			}
 		}
 
 		effect = {
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
 			transdanubia_area = { add_permanent_claim = ROOT } 
 			austria_proper_area = { add_permanent_claim = ROOT } 
 			slavonia_area = { add_permanent_claim = ROOT } 
@@ -149,41 +154,38 @@ pf_ost_2 = {
 				area = moravia_area
 				area = slovakia_area
 			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 
 		trigger = {
 			slavonia_area = {
 				type = all
-				OR = {
-					owned_by = ROOT
-					owned_by_subject_of = ROOT
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			transdanubia_area = {
 				type = all
-				OR = {
-					owned_by = ROOT
-					owned_by_subject_of = ROOT
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			moravia_area = {
 				type = all
-				OR = {
-					owned_by = ROOT
-					owned_by_subject_of = ROOT
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			slovakia_area = {
 				type = all
-				OR = {
-					owned_by = ROOT
-					owned_by_subject_of = ROOT
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
 		effect = {
-			add_adm_power = 150
+			create_general = {
+				tradition = 75
+			}
+			custom_tooltip = empty_line_tt
+			add_ruler_modifier = {
+				name = ost_lord_of_ostgermania_modifier
+			}
 			transylvania_area = { add_permanent_claim = ROOT } 
 			carpathia_region = { add_permanent_claim = ROOT } 
 		}
@@ -205,19 +207,26 @@ pf_ost_2 = {
 
 		effect = {
 			change_tag = DNV
-			set_country_flag = formed_donova_flag 
-			on_change_tag_effect = yes
-			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
-			set_government_rank = 2
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
 			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			swap_non_generic_missions = yes
+			custom_tooltip = empty_line_tt
+			set_country_flag = formed_donova_flag 
+			on_change_tag_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}			
+				set_government_rank = 2
+				custom_tooltip = empty_line_tt
+			}
+			add_prestige_or_monarch_power = { amount = 25 }
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
 			}
 		} 
 	}
@@ -256,13 +265,19 @@ pf_ost_3 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = { has_mil_advisor_2 = yes } 
+		trigger = {
+			mil_tech = 4
+			monthly_mil = 10
+		} 
 
 		effect = {
+			add_yearly_manpower = 1
+			custom_tooltip = empty_line_tt
 			add_estate_loyalty = {
 				estate = estate_nobles
 				loyalty = 10
 			}
+			custom_tooltip = empty_line_tt
 			moravia_area = { add_permanent_claim = ROOT } 
 			slovakia_area = { add_permanent_claim = ROOT } 
 		}
@@ -289,6 +304,11 @@ pf_ost_3 = {
 
 		effect = {
 			add_years_of_income = 3
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = ost_conquests_of_ostgermania_modifier
+				duration = 7300
+			}
 			carpathia_region = {
 				add_province_modifier = {
 					name = "ost_realm_of_og"
@@ -389,6 +409,7 @@ pf_ost_4 = {
 
 		trigger = {
 			prestige = 30
+			legitimacy_equivalent = 100
 			OR = {
 				grown_by_development = 50
 				personal_union = 1
@@ -396,6 +417,8 @@ pf_ost_4 = {
 		}
 
 		effect = {
+			add_prestige_or_monarch_power = { amount = 10 }
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = "ost_diplomatic_pressure_2"
 				duration = 18250
@@ -412,8 +435,8 @@ pf_ost_4 = {
 		trigger = {
 			years_of_income = 3
 			OR = {
-				dip_power = 300
-				has_idea = shrewd_commerce_practise 
+				dip_power = 200
+				full_idea_group = trade_ideas
 			}
 			owns = 128
 			owns = 134
@@ -423,8 +446,9 @@ pf_ost_4 = {
 		effect = {
 			if = {
 				limit = { NOT = { full_idea_group = trade_ideas }  } 
-				add_dip_power = -300
+				add_dip_power = -200
 			}
+			custom_tooltip = empty_line_tt
 			country_event = { id = pf_ost.4 } 
 		}
 	}
@@ -455,36 +479,66 @@ pf_ost_5 = {
 		icon = mission_rice_field
 		position = 2
 		required_missions = { ost_diplomacy } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {				
+				province_id = 134
+				province_id = 135
+				province_id = 1863
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		} 
 
 		trigger = {
+			owns_core_province = 134
+			owns_core_province = 135
+			owns_core_province = 1863
 			OR = {
 				has_adm_advisor_2 = yes
 				has_dip_advisor_2 = yes
 			}
-			owns = 134
-			owns = 135
-			owns = 1863
 		}
 
 		effect = {
-			if = {
-				limit = { has_adm_advisor_2 = yes } 
-				add_estate_loyalty = {
-					estate = estate_church
-					loyalty = 10
-				}
+			simple_dynamic_effect = {
+				first_custom_tooltip = ost_adm_advisor_tt
+				first_limit = "
+					has_adm_advisor_2 = yes
+				"
+				first_effect = "
+					add_estate_loyalty = {
+						estate = estate_church
+						loyalty = 10
+					}
+				"
+				second_custom_tooltip = ost_dip_advisor_tt
+				second_limit = "
+					has_dip_advisor_2 = yes
+				"
+				second_effect = "
+					add_estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 10
+					}
+				"
 			}
-			if = {
-				limit = { has_dip_advisor_2 = yes } 
-				add_estate_loyalty = {
-					estate = estate_burghers
-					loyalty = 10
-				}
-			}
+			custom_tooltip = empty_line_tt
 			134 = { add_base_production = 1 } 
+			134 = { 
+				add_or_upgrade_production_building = yes
+			} 
+			custom_tooltip = empty_line_tt
 			135 = { add_base_production = 1 } 
+			135 = {
+				add_or_upgrade_production_building = yes
+			} 
+			custom_tooltip = empty_line_tt
 			1863 = { add_base_production = 1 } 
+			1863 = { 
+				add_or_upgrade_production_building = yes
+			} 
 		}
 	}
 
@@ -495,28 +549,47 @@ pf_ost_5 = {
 		provinces_to_highlight = {
 			continent = europe
 			trade_goods = wine
+			NOT = {
+				owned_by = ROOT
+			}
 		}
 
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 5
 				trade_goods = wine
+				base_production = 5
 			}
 		}
 
 		effect = {
+			add_years_of_owned_provinces_production_income = {
+				years = 8
+				trigger = { trade_goods = wine } 
+				custom_tooltip = MONOPOLY_INCOME_WINE_DESC
+			}
+			custom_tooltip = empty_line_tt
 			custom_tooltip = OST_CT_3
-			every_owned_province = {
-				limit = { trade_goods = wine } 
+			tooltip = {				
 				add_province_modifier = {
 					name = "ost_wine"
 					duration = 9125
 				}
 			}
-			add_years_of_owned_provinces_production_income = {
-				years = 8
-				trigger = { trade_goods = wine } 
-				custom_tooltip = MONOPOLY_INCOME_WINE_DESC
+			hidden_effect = {
+				for = {
+					amount = 5
+					effect = "	
+						random_owned_province = {
+							limit = {
+							NOT = { has_country_modifier = ost_wine }		
+							add_province_modifier = {
+								name = "ost_wine"
+								duration = 9125
+							}
+						}						
+					"
+				}
 			}
 		}
 	}

@@ -9,7 +9,7 @@ ost_diplomatic_pressure_2 = {
 }
 
 ost_lords_of_ostgermania = {
-	core_creation = -0.1
+	development_cost_in_primary_culture = 0.1
 	manpower_in_culture_group_provinces = 0.1
 }
 
@@ -345,4 +345,12 @@ dnv_order_2 = {
 
 dnv_order_3 = {
 	local_manpower_modifier = 0.15
+}
+
+ost_lord_of_ostgermania_modifier = {
+	prestige = 1
+	province_warscore_cost = -0.1
+}
+ost_conquests_of_ostgermania_modifier = {
+	cb_on_religious_enemies = yes
 }

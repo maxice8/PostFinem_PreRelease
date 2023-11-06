@@ -155,17 +155,32 @@ country_event = {		#get a tradecenter
 		1863 = {
 			center_of_trade = 2
 		}
+		1863 = {
+			add_base_tax = 2
+			add_base_production = 3
+			add_base_manpower = 2
+		}
 	}
 	option = {
 		name = "pf_ost.4.b"
 		134 = {
 			center_of_trade = 2
 		}
+		134 = {
+			add_base_tax = 2
+			add_base_production = 3
+			add_base_manpower = 2
+		}
 	}
 	option = {
 		name = "pf_ost.4.c"
 		128 = {
 			center_of_trade = 2
+		}
+		128 = {
+			add_base_tax = 2
+			add_base_production = 3
+			add_base_manpower = 2
 		}
 	}
 	option = {
@@ -175,6 +190,11 @@ country_event = {		#get a tradecenter
 		}
 		capital_scope = {
 			center_of_trade = 2
+		}
+		capital_scope = {
+			add_base_tax = 2
+			add_base_production = 3
+			add_base_manpower = 2
 		}
 	}
 }
