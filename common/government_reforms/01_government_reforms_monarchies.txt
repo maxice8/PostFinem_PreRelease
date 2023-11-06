@@ -4,6 +4,7 @@ monarchy_mechanic = {
 	heir = yes
 	queen = yes
 	basic_reform = yes # = invisible/does not take up a slot
+	is_eligible_for_hre_emperor = yes
 	valid_for_nation_designer = no
 	custom_attributes = {
 		enables_aristocratic_idea_group = yes
@@ -1508,6 +1509,7 @@ persian_government_reform = {
 		enables_divine_idea_group = yes
 		enables_aristocratic_idea_group = no
 	}
+	maintain_dynasty = yes
 	conditional = {
 		allow = { has_dlc = "Cradle of Civilization" }
 		government_abilities = {
@@ -1679,6 +1681,7 @@ stadthalter_monarchy_reform = {
 		heir = no
 		duration = 4
 		has_term_election = yes
+		is_eligible_for_hre_emperor = no
 		states_general_mechanic = {
 			statists = {
 				naval_forcelimit_modifier = 0.10
@@ -2820,6 +2823,7 @@ revolutionary_empire_reform = {
 	valid_for_new_country = no
 	uses_revolutionary_zeal = yes
 	revolutionary = yes
+	is_eligible_for_hre_emperor = no
 	fixed_rank = 3
 	modifiers = {
 		global_manpower_modifier = 0.25
@@ -2828,6 +2832,7 @@ revolutionary_empire_reform = {
 		governing_capacity = 150
 		max_revolutionary_zeal = 50
 		papal_influence = -100
+		allowed_rev_guard_fraction = 0.2
 	}
 
 	custom_attributes = {
@@ -3620,6 +3625,7 @@ livonian_naval_monarchy = {
 		heir = no
 		duration = 4
 		has_term_election = yes
+		is_eligible_for_hre_emperor = no
 		states_general_mechanic = {
 			statists = {
 				global_colonial_growth = 10
@@ -5499,7 +5505,10 @@ zabt_reform = {
 	icon = "general_eastern_administrative"
 	allow_normal_conversion = yes
 	potential = {
-		has_dlc = "Dharma"
+		OR = {
+			has_dlc = "Dharma"
+			has_dlc = "King of Kings"
+		}
 		tag = MUG
 	}
 	modifiers = {
@@ -5687,6 +5696,7 @@ states_general_reform = {
 		heir = no
 		duration = 4
 		has_term_election = yes
+		is_eligible_for_hre_emperor = no
 		states_general_mechanic = {
 			statists = {
 				diplomatic_reputation = 1
@@ -6138,7 +6148,7 @@ political_absolutism_reform = {
 	}
 	modifiers = {
 		administrative_efficiency = 0.025
-		max_absolutism_effect = 0.15
+		max_absolutism = 10
 	}
 	ai = {
 		factor = 1.5
@@ -6513,8 +6523,8 @@ land_christian_sun_reform = {
 	nation_designer_trigger = {
 		capital_scope = { region = japan_region } 
 	}
+	heir = no
 	fixed_rank = 3
-	maintain_dynasty = yes
 	modifiers = {
 		manpower_recovery_speed = 0.15
 		cb_on_religious_enemies = yes 
@@ -6606,5 +6616,28 @@ courts_of_navarra = {
 			}
 		}
 		has_parliament = yes
+	}
+}
+
+cawa_auxiliary_forces = {
+	icon = "cawa_auxiliary_forces"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			have_had_reform = cawa_auxiliary_forces
+			has_country_flag = allow_cawa_auxiliary_forces_flag
+		}
+	}
+
+	modifiers = {
+		manpower_in_accepted_culture_provinces = 0.10
+		may_return_manpower_on_disband = yes
+	}
+
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		allow_cawa = yes
 	}
 }

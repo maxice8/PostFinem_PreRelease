@@ -568,6 +568,11 @@ monarchy = {
 		decentralize_reform
 	}
 
+	exclusive_reforms = {
+		states_general_reform
+		land_christian_sun_reform
+	}
+
 	color = { 179 25 25 }
 }
 
@@ -658,7 +663,6 @@ republic = {
 				parliamentary_republic_reform
 				absolute_shogunate_reform
 				japanese_divine_empire
-				land_christian_sun_reform
 			}
 		}
 		republican_virtues = {
@@ -1093,9 +1097,7 @@ tribal = {
 				cavalry_warfare_reform
 				mercenary_leadership_reform
 				#Visible but locked
-				amphibious_specialization_reform
 				royal_marines_reform
-				maritime_military_reform
 				professional_navy_reform
 				doppelsoldner_reform
 				#Invisible until unlocked
@@ -1250,6 +1252,7 @@ theocracy = {
 				# Vanilla
 				leading_clergy_reform
 				monastic_order_reform
+				feudal_theocracy
 				crusading_kingdom_reform
 				papacy_reform
 				holy_state_reform
@@ -1274,7 +1277,6 @@ theocracy = {
 				absolute_shogunate_reform
 				japanese_divine_empire
 				sisterhood_of_jeanne_darc_reform
-				land_christian_sun_reform
 			}
 		}
 		internal_vs_external_mission = {

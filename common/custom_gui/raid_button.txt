@@ -1,0 +1,20 @@
+custom_icon = {
+   name = raid_button_core_icon #Must match a scripted iconType in a .gui file
+   potential = { 
+		ai = no
+		has_government_attribute = allows_viking_raids
+	} #Determines when the icon is visible
+   tooltip = raid_button_tooltip #Can use customizable localisation
+	frame = {
+		number = 1
+		trigger = { 
+			country_is_part_of_raid_war = yes
+		}
+	}
+	frame = {
+		number = 2
+		trigger = { 
+			always = yes
+		}
+	}
+}
