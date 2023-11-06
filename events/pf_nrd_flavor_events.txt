@@ -17,16 +17,18 @@ country_event = {
 	is_triggered_only = yes
 	# mean_time_to_happen = {}
 	immediate = {
-		random_owned_province = {
-			limit = {
-				OR = {
-					area = lowlands_area
-					area = highlands_area
-					area = kingdom_of_the_isles_area
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = lowlands_area
+						area = highlands_area
+						area = kingdom_of_the_isles_area
+					}
+					is_capital = no
 				}
-				is_capital = no
+				save_event_target_as = norse_settlers_coming
 			}
-			save_event_target_as = norse_settlers_coming
 		}
 	}
 	option = {

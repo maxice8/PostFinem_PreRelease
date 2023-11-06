@@ -1216,6 +1216,10 @@ country_event = {
 		trigger = {
 			has_estate = estate_church
 			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_church } }
+			estate_territory = {
+				estate = estate_church
+				territory = 5
+			}
 		}
 		seize_land_estate_effect = { estate = estate_church }
 		ai_chance = {
@@ -1229,6 +1233,10 @@ country_event = {
 		trigger = {
 			has_estate = estate_burghers
 			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_burghers } }
+			estate_territory = {
+				estate = estate_burghers
+				territory = 5
+			}
 		}
 		seize_land_estate_effect = { estate = estate_burghers }
 		ai_chance = {
@@ -1242,6 +1250,10 @@ country_event = {
 		trigger = {
 			has_estate = estate_nobles
 			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_nobles } }
+			estate_territory = {
+				estate = estate_nobles
+				territory = 5
+			}
 		}
 		seize_land_estate_effect = { estate = estate_nobles }
 		ai_chance = {
@@ -1255,6 +1267,10 @@ country_event = {
 		trigger = {
 			has_estate = estate_dhimmi
 			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_dhimmi } }
+			estate_territory = {
+				estate = estate_dhimmi
+				territory = 5
+			}
 		}
 		seize_land_estate_effect = { estate = estate_dhimmi }
 		ai_chance = {
@@ -1268,6 +1284,10 @@ country_event = {
 		trigger = {
 			has_estate = estate_cossacks
 			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_cossacks } }
+			estate_territory = {
+				estate = estate_cossacks
+				territory = 5
+			}
 		}
 		seize_land_estate_effect = { estate = estate_cossacks }
 		ai_chance = {
@@ -1281,6 +1301,10 @@ country_event = {
 		trigger = {
 			has_estate = estate_nomadic_tribes
 			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_nomadic_tribes } }
+			estate_territory = {
+				estate = estate_nomadic_tribes
+				territory = 5
+			}
 		}
 		seize_land_estate_effect = { estate = estate_nomadic_tribes }
 		ai_chance = {
@@ -1294,6 +1318,10 @@ country_event = {
 		trigger = {
 			has_estate = estate_brahmins
 			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_brahmins } }
+			estate_territory = {
+				estate = estate_brahmins
+				territory = 5
+			}
 		}
 		seize_land_estate_effect = { estate = estate_brahmins }
 		ai_chance = {
@@ -1307,6 +1335,10 @@ country_event = {
 		trigger = {
 			has_estate = estate_rajput
 			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_rajput } }
+			estate_territory = {
+				estate = estate_rajput
+				territory = 5
+			}
 		}
 		seize_land_estate_effect = { estate = estate_rajput }
 		ai_chance = {
@@ -1320,6 +1352,10 @@ country_event = {
 		trigger = {
 			has_estate = estate_maratha
 			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_maratha } }
+			estate_territory = {
+				estate = estate_maratha
+				territory = 5
+			}
 		}
 		seize_land_estate_effect = { estate = estate_maratha }
 		ai_chance = {
@@ -1333,6 +1369,10 @@ country_event = {
 		trigger = {
 			has_estate = estate_vaisyas
 			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_vaisyas } }
+			estate_territory = {
+				estate = estate_vaisyas
+				territory = 5
+			}
 		}
 		seize_land_estate_effect = { estate = estate_vaisyas }
 		ai_chance = {
@@ -1346,6 +1386,10 @@ country_event = {
 		trigger = {
 			has_estate = estate_jains
 			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_jains } }
+			estate_territory = {
+				estate = estate_jains
+				territory = 5
+			}
 		}
 		seize_land_estate_effect = { estate = estate_jains }
 		ai_chance = {
@@ -1359,6 +1403,10 @@ country_event = {
 		trigger = {
 			has_estate = estate_janissaries
 			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_janissaries } }
+			estate_territory = {
+				estate = estate_janissaries
+				territory = 5
+			}
 		}
 		seize_land_estate_effect = { estate = estate_janissaries }
 		ai_chance = {
@@ -1372,6 +1420,10 @@ country_event = {
 		trigger = {
 			has_estate = estate_eunuchs
 			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_eunuchs } }
+			estate_territory = {
+				estate = estate_eunuchs
+				territory = 5
+			}
 		}
 		seize_land_estate_effect = { estate = estate_eunuchs }
 		ai_chance = {

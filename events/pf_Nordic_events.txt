@@ -398,9 +398,11 @@ country_event = {
 	desc = "pf_nordic.13.d"
 	picture = BATTLE_eventPicture
 
+	is_triggered_only = yes
+
 	trigger = {
 		check_variable = {
-			which = RaidLoot
+			which = MaxRaidLoot
 			value = 1
 		}
 		NOT = {
@@ -409,50 +411,27 @@ country_event = {
 				attacker_leader = ROOT
 			}
 		}
-		NOT = {
-			any_province = {
-				NOT = {
-					OR = {
-						owned_by = ROOT
-						owner = { is_subject_of = ROOT }
-					}
-				}
-				OR = {
-					infantry_in_province = ROOT
-					cavalry_in_province = ROOT
-					artillery_in_province = ROOT
-				}
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	immediate = {
-		set_country_flag = in_raid_event
 	}
 
 	after = {
-		clr_country_flag = in_raid_event
+		# Cleanup the MaxRaidLoot and RaidLoot
+		set_variable = {
+			which = MaxRaidLoot
+			value = 0
+		}
+		set_variable = {
+			which = RaidLoot
+			value = 0
+		}
 	}
+
 	option = {		# Collect the loot
 		name = "pf_nordic.13.a"
 		custom_tooltip = gain_x_loot_tooltip
 		hidden_effect = {
-			while = {
-				limit = {
-					check_variable = {
-						which = RaidLoot
-						value = 1
-					}
-				}
-				subtract_variable = {
-					which = RaidLoot
-					value = 1
-				}
-				add_treasury = 1
+			for_variable_amount = {
+				variable = RaidLoot
+				effect = "add_treasury = 1"
 			}
 		}
 	}
@@ -485,6 +464,7 @@ country_event = {		# Valuable Hostages
 	}
 	option = {		# Surely you have more money than just that?
 		name = "pf_nordic.14.c"
+		highlight = yes
 		trigger = {
 			OR = {
 				ruler_has_personality = cruel_personality

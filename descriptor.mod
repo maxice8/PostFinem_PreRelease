@@ -17,5 +17,5 @@ dependencies={
 	"UI a la Sulfuris"
 }
 name="Post Finem"
-supported_version="1.35.*"
+supported_version="1.36.*"
 

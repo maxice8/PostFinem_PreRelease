@@ -41,6 +41,7 @@ norse_ideas = {
 	norse_ideas_leifs_legacy = {
 		may_explore = yes
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
 	norse_ideas_ancestral_faith = {
 		tolerance_own = 2
@@ -665,6 +666,7 @@ SPA_ideas = {
 	inter_caetera = {
 		idea_claim_colonies = yes
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
 	salamanca_scholars = {
 		global_institution_spread = 0.1
@@ -713,6 +715,7 @@ CAS_ideas = {
 	inter_caetera = {
 		idea_claim_colonies = yes
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
 	infantas = {
 		diplomatic_reputation = 1
@@ -831,11 +834,10 @@ FRA_ideas_2 = {
 
 	trigger = {
 		tag = FRA
-		if = {
-			limit = { has_dlc = "Emperor" }
-			is_revolution_target = yes 
-		}
-		else = { is_revolutionary = yes } 
+		OR = {
+			is_revolution_target = yes
+			is_revolutionary = yes 
+		} 
 	}
 	free = yes		#will be added at load.
 	
@@ -1872,7 +1874,7 @@ SCO_Ideas = {
 HUN_ideas = {
 	start = {
 		cavalry_power = 0.20
-		recover_army_morale_speed = 0.05
+		recover_army_morale_speed = 0.10
 	}
 	
 	bonus = {
@@ -3445,6 +3447,7 @@ USA_ideas = {
 	}
 	manifest_destiny = {
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
 	lessons_of_valley_forge = {
 		land_morale = 0.10
@@ -4707,7 +4710,7 @@ AJU_ideas = {
 RYA_ideas = {
 	start = {
 		global_unrest = -1
-		recover_army_morale_speed = 0.05
+		recover_army_morale_speed = 0.10
 	}
 	
 	bonus = {
@@ -4840,7 +4843,7 @@ PSK_ideas = {
 		advisor_pool = 1
 	}
 	legacy_of_daumantas = {
-		recover_army_morale_speed = 0.05
+		recover_army_morale_speed = 0.10
 	}
 	balt_mercenaries = {
 		merc_maintenance_modifier = -0.1
@@ -5079,7 +5082,7 @@ mossi_ideas = {
 
 fulani_jihad_ideas = {
 	start = {
-		recover_army_morale_speed = 0.05
+		recover_army_morale_speed = 0.10
 		cavalry_cost = -0.10
 	}
 	
@@ -5946,7 +5949,7 @@ KAZ_ideas = {
 ARM_ideas = {
 	start = {
 		war_exhaustion = -0.02
-		recover_army_morale_speed = 0.05
+		recover_army_morale_speed = 0.10
 	}
 
 	bonus = {
@@ -6589,6 +6592,7 @@ CAN_ideas = {
 	}
     settling_the_interior = {
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
 	the_maritimes = {
 		navy_tradition = 1
@@ -6914,6 +6918,7 @@ CAB_ideas = {
 	}
 	cab_carib_seafaring = {
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
 	cab_religious_syncretism = {
 		tolerance_heathen = 2
@@ -7927,6 +7932,7 @@ LON_ideas = {
 	}
 	lon_conquistadores = {
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
 	lon_school_of_salamanca = {
 		idea_cost = -0.10
@@ -8013,6 +8019,7 @@ NZH_ideas = {
 	}
 	nzh_expand_to_the_east = {
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
 	nzh_open_up_the_river_trade = {
 		trade_efficiency = 0.10
@@ -11986,6 +11993,7 @@ HDR_ideas = {
 	}
 	bonus = {
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
 	trigger = {
 		tag = HDR
@@ -14040,6 +14048,7 @@ AUS_ideas = {
 	free = yes
 	AUS_outback_stations = {
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
 	AUS_land_down_under = {
 		land_attrition = -0.1
@@ -14071,6 +14080,7 @@ NZL_ideas = {
 	}
 	bonus = {
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
 	trigger = {
 		tag = NZL
@@ -14185,6 +14195,7 @@ WSI_ideas = {
 	}
 	bonus = {
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
 	trigger = {
 		tag = WSI
@@ -14314,6 +14325,7 @@ ASU_ideas = {
 	}
 	asu_colonialism = {
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
 	asu_millenarian_revival = {
 		global_missionary_strength = 0.02
@@ -14360,6 +14372,7 @@ ADU_ideas = {
 	}
 	adu_expeditionary_sentiment = {
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
 	adu_al_awasim = {
 		defensiveness = 0.1
@@ -15272,6 +15285,7 @@ MAJ_ideas = {
 	}
 	maj_nusa_tenggara = {
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
 	maj_gajah_madas_oath = {
 		land_morale = 0.1
