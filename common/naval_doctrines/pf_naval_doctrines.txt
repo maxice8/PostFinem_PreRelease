@@ -126,3 +126,18 @@ gau_naval_doctrine = {
 	
 	button_gfx = 29
 }
+pho_sea_silk_road = {
+	can_select = {
+		is_primitive = no
+		mission_completed = pf_pho_prestigious_goods
+	}
+	
+	country_modifier = {
+		global_ship_trade_power = 0.50
+		light_ship_cost = -0.20
+	}
+	effect = {}
+	removed_effect = {}
+	
+	button_gfx = 19
+}

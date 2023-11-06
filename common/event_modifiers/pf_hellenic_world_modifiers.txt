@@ -98,3 +98,57 @@ pf_silk_road_merchant_bonus_syria = {
 pf_silk_road_merchant_bonus_persia = {
 	merchants = 1
 }
+
+# Phoenicia
+
+pf_pho_guild_power = {
+	global_trade_goods_size_modifier = 0.10
+	burghers_loyalty_modifier = 0.05
+}
+pf_pho_revived_phoenician_power = {
+	global_institution_spread = 0.25
+	trade_efficiency = 0.15
+}
+pf_pho_city_walls = {
+	local_defensiveness = 0.25
+	local_fort_maintenance_modifier = -0.50
+}
+pf_pho_ruling_inland = {
+	land_maintenance_modifier = -0.10
+	state_maintenance_modifier = -0.15
+}
+pf_pho_egypt_trades = {
+	trade_steering = 0.20
+	trade_company_investment_cost = -0.10
+}
+pf_pho_glorious_soldiers = {
+	prestige_from_land = 0.50
+	army_tradition_from_battle = 0.50
+}
+pf_pho_independent_phoenicia = {
+	stability_cost_modifier = -0.10
+	republican_tradition = 0.50
+}
+pf_pho_far_colonies = {
+	global_own_trade_power = 0.15
+	center_of_trade_upgrade_cost = -0.25
+}
+pf_pho_carthage_reconquered = {
+	merchants = 1
+}
+pf_pho_revived_dye_industry = {
+	trade_goods_size = 1
+	trade_value_modifier = 0.50
+}
+pf_pho_dye_dominance = {
+	prestige = 1
+	production_efficiency = 0.20
+}
+pf_pho_local_timber = {
+	local_ship_cost = -0.20
+	local_build_cost = -0.10
+}
+pf_pho_local_timber_ex = {
+	province_trade_power_modifier = 0.10
+	trade_goods_size_modifier = 0.10
+}
