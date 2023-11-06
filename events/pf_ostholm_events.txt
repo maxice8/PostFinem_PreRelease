@@ -188,6 +188,11 @@ country_event = {		#get a tradecenter
 		ai_chance = {
 			factor = 100
 		}
+		trigger = {
+			NOT = { capital = 1863 } 
+			NOT = { capital = 134 } 
+			NOT = { capital = 128 } 
+		}
 		capital_scope = {
 			center_of_trade = 2
 		}

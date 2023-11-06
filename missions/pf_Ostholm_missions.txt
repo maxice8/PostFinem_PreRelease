@@ -72,12 +72,16 @@ pf_ost_1 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			mil_power = 100
-			has_leader_with = { total_pips = 10 } 
+			OR = {
+				army_tradition = 50
+				army_professionalism = 0.3
+			}
+			num_of_generals = 2
 		}
 
 		effect = {
-			add_mil_power = -100
+			add_mil_power = 100
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = "ost_fire_of_war"
 				duration = 9125
@@ -88,16 +92,22 @@ pf_ost_1 = {
 		icon = mission_cannons_firing
 		position = 7
 		required_missions = { ost_warrior_valors } 
-		provinces_to_highlight = { province_id = 134 } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+			NOT = { development = 25 }
+		} 
 
 		trigger = {
-			owns = 134
-			134 = { development = 25 } 
-			num_of_artillery = 10
+			capital_scope = {
+				development = 25
+			}
+			num_of_artillery = 15
 		}
 
 		effect = {
-			134 = {
+			custom_tooltip = ost_estate_nobles_officer_corp_fire_damage_tt
+			set_country_flag = estate_nobles_officer_corp_fire_damage_flag
+			capital_scope = {
 				add_province_modifier = {
 					name = "ost_cannons_of_wien"
 					duration = -1
@@ -237,6 +247,7 @@ pf_ost_2 = {
 		provinces_to_highlight = { owned_by = ROOT } 
 
 		trigger = {
+			manpower_percentage = 0.5
 			num_of_owned_provinces_with = {
 				value = 3
 				base_manpower = 5
@@ -244,8 +255,16 @@ pf_ost_2 = {
 		}
 
 		effect = {
-			add_manpower = 3
+			add_yearly_manpower = 3
+			custom_tooltip = empty_line_tt
 			add_mil_power = 100
+			custom_tooltip = empty_line_tt		
+			define_advisor = {
+				type = army_reformer
+				skill = 2
+				discount = yes
+				name = "Aric Gerwig"
+			}
 		}
 	}
 }
@@ -340,11 +359,12 @@ pf_ost_3 = {
 		}
 
 		effect = {
-			add_army_tradition = 10
+			add_army_tradition_or_mil_power = { amount = 15 }
+			custom_tooltip = empty_line_tt
 			define_general = {
 				shock = 4
-				fire = 3
-				manuever = 5
+				fire = 4
+				manuever = 4
 				siege = 2
 			}
 		}
@@ -359,14 +379,22 @@ pf_ost_3 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			army_tradition = 60
+			OR = {
+				army_tradition = 75
+				army_professionalism = 0.5
+			}
+			land_forcelimit = 50
 			army_size = 50
 		}
 
 		effect = {
+			capital_scope = {
+				add_base_manpower = 3
+			}
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = "ost_powerhouse"
-				duration = 14600
+				duration = 18250
 			}
 		}
 	}
@@ -434,20 +462,14 @@ pf_ost_4 = {
 
 		trigger = {
 			years_of_income = 3
-			OR = {
-				dip_power = 200
-				full_idea_group = trade_ideas
-			}
+			dip_power = 200
 			owns = 128
 			owns = 134
 			owns = 1863
 		}
 
 		effect = {
-			if = {
-				limit = { NOT = { full_idea_group = trade_ideas }  } 
-				add_dip_power = -200
-			}
+			add_dip_power = -200
 			custom_tooltip = empty_line_tt
 			country_event = { id = pf_ost.4 } 
 		}
@@ -458,9 +480,19 @@ pf_ost_4 = {
 		position = 5
 		provinces_to_highlight = {  } 
 
-		trigger = { army_size = 25 } 
+		trigger = { 
+			land_forcelimit = 25
+			army_size = 25
+		} 
 
 		effect = {
+			define_advisor = {
+				type = drill_sergeant
+				skill = 2
+				cost_multiplier = 0.25
+				name = "Gundric Hardwin"
+			}
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = "ost_army_grand"
 				duration = 9125
@@ -600,74 +632,34 @@ pf_ost_5 = {
 		required_missions = { ost_grand_army } 
 		provinces_to_highlight = {
 			owned_by = ROOT
-			can_build = barracks
+			NOT = { has_manpower_building_trigger = yes }
 		}
 
 		trigger = {
-			manpower = 5
-			OR = {
-				barracks = 5
-				training_fields = 5
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 60
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				has_manpower_building_trigger = yes
 			}
 		}
 
 		effect = {
-			add_manpower = -5
+			take_estate_land_share_large = { estate = all }
+			custom_tooltip = empty_line_tt
 			custom_tooltip = OST_CT_2
-			random_owned_province = {
-				limit = {
-					has_building = barracks
-				}
-				if = {
-					limit = { has_building = barracks } 
-					remove_building = barracks
-					add_building = training_fields
-				}
-				else = { add_base_manpower = 2 } 
-			}
-			random_owned_province = {
-				limit = {
-					has_building = barracks
-				}
-				if = {
-					limit = { has_building = barracks } 
-					remove_building = barracks
-					add_building = training_fields
-				}
-				else = { add_base_manpower = 2 } 
-			}
-			random_owned_province = {
-				limit = {
-					has_building = barracks
-				}
-				if = {
-					limit = { has_building = barracks } 
-					remove_building = barracks
-					add_building = training_fields
-				}
-				else = { add_base_manpower = 2 } 
-			}
-			random_owned_province = {
-				limit = {
-					has_building = barracks
-				}
-				if = {
-					limit = { has_building = barracks } 
-					remove_building = barracks
-					add_building = training_fields
-				}
-				else = { add_base_manpower = 2 } 
-			}
-			random_owned_province = {
-				limit = {
-					has_building = barracks
-				}
-				if = {
-					limit = { has_building = barracks } 
-					remove_building = barracks
-					add_building = training_fields
-				}
-				else = { add_base_manpower = 2 } 
+			for = {
+				amount = 5
+				effect = "				
+					random_owned_province = {
+						limit = {
+							has_manpower_building_trigger = yes
+						}						
+					add_or_upgrade_manpower_building = yes
+					}
+				"
 			}
 		}
 	}
