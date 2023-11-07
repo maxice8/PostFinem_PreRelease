@@ -555,7 +555,7 @@ estate_burghers_pf_silk_road_merchants = {
 	loyalty = 0.10
 	influence = 0.10
 	is_valid = {
-		tag = SYR
+		technology_group = eastern
 	}
 	can_select = {
 		has_country_flag = allowed_silk_road_merchants
