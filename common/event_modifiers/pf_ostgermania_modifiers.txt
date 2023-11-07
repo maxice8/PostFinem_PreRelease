@@ -69,7 +69,7 @@ vld_the_wild_hunter = {
 
 slo_bergan_defense = {
 	defensiveness = 0.1
-	garrison_damage = 0.5
+	shock_damage_received = -0.1
 }
 
 slo_bergan_faith = {
@@ -88,8 +88,8 @@ slo_homeofgold = {
 }
 
 slo_defense_in_depth = {
-	local_garrison_size = 0.15
-	attrition = 2
+	local_garrison_size = 0.25
+	hostile_attrition = 1
 }
 
 slo_the_grand_fort = {
@@ -97,14 +97,11 @@ slo_the_grand_fort = {
 }
 
 slo_the_grand_fort_2 = {
-	fort_level = 1
-	supply_limit_modifier = 0.5
 	local_garrison_size = 0.25
-	local_garrison_damage = 1
 	allowed_num_of_buildings = 1
 	allowed_num_of_manufactories = 1
-	local_gold_depletion_chance_modifier = -1
-	local_fort_maintenance_modifier = 1
+	local_gold_depletion_chance_modifier = -0.75
+	local_fort_maintenance_modifier = -0.5
 }
 
 slo_the_grand_effort = {

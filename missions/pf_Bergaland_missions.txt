@@ -12,13 +12,17 @@ pf_slo_1 = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-			OR = {
-				army_size_percentage = 1
-				AND = {
-					ai = yes
-					army_size_percentage = 0.75
-					num_of_generals = 1
-				}
+			if = {
+				limit = {
+					ai = no
+				}			
+				army_size_percentage = 0.9
+				num_of_generals = 1
+				manpower_percentage = 0.5
+			}
+			else = {
+				army_size_percentage = 0.75
+				num_of_generals = 1
 			}
 		}
 		effect = {
@@ -41,25 +45,55 @@ pf_slo_1 = {
 			slo_home_defense
 		}
 		provinces_to_highlight = {
-			province_id = 154
+			OR = {
+				AND = {
+					province_id = 154
+					NOT = { province_has_current_tech_fort_trigger = yes }
+					NOT = { num_of_times_improved_by_owner = 5 }
+				}
+				AND = {
+					owned_by = ROOT
+					province_has_current_tech_fort_trigger = yes
+					NOT = { base_manpower = 5 }
+				}
+			}
 		}
 		trigger = {
-			has_idea = battlefield_commisions
+			# has_idea = battlefield_commisions
 			owns = 154
 			154 = {
-				fort_level = 2
+				province_has_current_tech_fort_trigger = yes
+			}
+			154 = { num_of_times_improved_by_owner = 5 }
+			num_of_owned_provinces_with = {
+				value = 2
+				province_has_current_tech_fort_trigger = yes
+				base_manpower = 5
 			}
 		}
 		effect = {
 			custom_tooltip = SLO_CT_4
-			every_owned_province = {
-				limit = {
-					fort_level = 1
-				}
+			tooltip = {			
 				add_province_modifier = {
 					name = "slo_defense_in_depth"
 					duration = 9125
 				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						fort_level = 1
+					}
+					add_province_modifier = {
+						name = "slo_defense_in_depth"
+						duration = 9125
+					}
+				}
+			}
+			custom_tooltip = slo_grand_fort_defensive_bonus_tt
+			if = {
+				limit = { has_idea = battlefield_commisions }	
+				set_country_flag = unlock_wulfrittar_mercs_flag
 			}
 		}
 	}
@@ -71,28 +105,51 @@ pf_slo_1 = {
 		}
 		provinces_to_highlight = {
 			province_id = 154
+			NOT = { province_has_current_tech_fort_trigger = yes }
+			NOT = { has_building = ramparts }
 		}
 		trigger = {
 			owns = 154
-			154 = {
-				has_fort_building_trigger = yes
-			}
-			treasury = 100
-			mil_power = 100
-			full_idea_group = defensive_ideas
+			154 = { province_has_current_tech_fort_trigger = yes }
+			154 = { has_building = ramparts }
 		}
 		effect = {
-			add_treasury = -100
-			add_mil_power = -100
+			154 = {
+				add_base_manpower = 2
+			}
 			154 = {
 				add_province_modifier = {
 					name = "slo_the_grand_fort"
 					duration = -1
 				}
-				add_province_modifier = {
-					name = "slo_the_grand_effort"
-					duration = 9125
+			}
+			custom_tooltip = slo_defensive_finished_bonus_tt
+			tooltip = {				
+				154 = {
+					add_or_upgrade_fort_building = yes
 				}
+				custom_tooltip = empty_line_tt
+				154 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						full_idea_group = defensive_ideas
+					}				
+					154 = {
+						add_or_upgrade_fort_building = yes
+					}
+					custom_tooltip = empty_line_tt
+					154 = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}				
 			}
 		}
 	}
@@ -109,17 +166,23 @@ pf_slo_1 = {
 			owns = 154
 			154 = {
 				has_province_modifier = slo_homeofgold
-				has_fort_building_trigger = yes
 			}
-			full_idea_group = offensive_ideas
+			154 = {
+				base_production = 8
+			}
 		}
 		effect = {
-			154 = {
-				remove_province_modifier = slo_homeofgold
-				remove_province_modifier = slo_the_grand_fort
-				add_permanent_province_modifier = {
-					name = "slo_the_grand_fort_2"
-					duration = -1
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
+			custom_tooltip = slo_replace_gold_modifier_tt
+			hidden_effect = {
+				154 = {
+					remove_province_modifier = slo_homeofgold
+					remove_province_modifier = slo_the_grand_fort
+					add_permanent_province_modifier = {
+						name = "slo_the_grand_fort_2"
+						duration = -1
+					}
 				}
 			}
 		}
@@ -145,6 +208,7 @@ pf_slo_2 = {
 				area = bohemia_area
 				area = moravia_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			bohemia_area = {
