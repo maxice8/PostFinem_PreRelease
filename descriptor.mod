@@ -18,4 +18,4 @@ dependencies={
 }
 name="Post Finem"
 supported_version="1.36.*"
-
+path="mod/PostFinem_PreRelease"
