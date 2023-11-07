@@ -217,14 +217,14 @@ pf_ost_2 = {
 
 		effect = {
 			change_tag = DNV
+			swap_non_generic_missions = yes
+			on_change_tag_effect = yes
 			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-			swap_non_generic_missions = yes
 			custom_tooltip = empty_line_tt
 			set_country_flag = formed_donova_flag 
-			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { government_rank = 2 }

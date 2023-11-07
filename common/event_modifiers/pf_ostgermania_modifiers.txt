@@ -49,16 +49,14 @@ ost_wine = {
 #VILDHEIM
 
 vld_the_wild_hunt = {
-	cav_to_inf_ratio = 0.33
+	cav_to_inf_ratio = 0.25
 	siege_ability = 0.1
 	cavalry_power = 0.1
 }
 
 vld_costly_army = {
-	global_unrest = 2
-	province_warscore_cost = -0.5
-	stability_cost_modifier = 0.3
-	land_maintenance_modifier = -0.5
+	province_warscore_cost = -0.1
+	land_maintenance_modifier = -0.2
 }
 
 vld_the_wild_hunter = {
@@ -275,7 +273,7 @@ dnv_sudeten_trial = {
 }
 
 dnv_donova_port = {
-	local_development_cost_modifier = -0.25
+	local_development_cost = -0.20
 	local_ship_cost = -0.25
 	local_center_of_trade_upgrade_cost = -0.2
 	local_sailors = 1000
@@ -353,4 +351,13 @@ ost_lord_of_ostgermania_modifier = {
 }
 ost_conquests_of_ostgermania_modifier = {
 	cb_on_religious_enemies = yes
+}
+
+vld_horse_buff_modifier = {
+	cavalry_cost = -0.25
+}
+
+vld_slayer_of_the_slavs_modifier = {
+	cb_on_religious_enemies = yes
+	warscore_cost_vs_other_religion = -0.1
 }
