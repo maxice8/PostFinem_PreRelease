@@ -125,72 +125,13 @@ on_siege_lost_country = {
 on_siege_won_province = {
 	if = {
 		limit = {
-			controller = {
-				is_in_war = {
-					casus_belli = cb_raid
-					attacker_leader = THIS
-				}
-			}
+			controlled_by = KSB
+			area = vorpommern_area
 		}
-		ROOT = {
-			export_to_variable = {
-				which = RaidFromProv
-				value = development
-				who = ROOT
-			}
-			# space for modifiers
-			while = {
-				limit = {
-					check_variable = {
-						which = RaidFromProv
-						value = 1
-					}
-				}
-				subtract_variable = {
-					which = RaidFromProv
-					value = 1
-				}
-				controller = {
-					add_loot = {
-						amount = 1
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_tax_building_trigger = yes
-					controller = {
-						has_government_attribute = raids_give_money_from_temples
-					}
-				}
-				if = {
-					limit = { has_building = temple }
-					controller = {
-						add_loot = {
-							amount = 5
-						}
-					}
-				}
-				else_if = {
-					limit = { has_building = cathedral }
-					controller = {
-						add_loot = {
-							amount = 10
-						}
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				controlled_by = KSB
-				area = vorpommern_area
-			}
-			save_event_target_as = sieged_polabian_province
-			controller = {
-				country_event = {
-					id = pf_ksb_events.3
-				}
+		save_event_target_as = sieged_polabian_province
+		controller = {
+			country_event = {
+				id = pf_ksb_events.3
 			}
 		}
 	}
@@ -648,41 +589,6 @@ on_battle_won_country = {
 }
 
 on_battle_lost_country = {
-	if = {
-		limit = {
-			ROOT = {
-				is_in_war = {
-					casus_belli = cb_raid
-					attacker_leader = ROOT
-				}
-			}
-		}
-		ROOT = {
-			set_variable = {
-				which = land_units_killed_for_loot
-				which = land_units_killed
-			}
-			divide_variable = {
-				which = land_units_killed_for_loot
-				value = 100
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = land_units_killed_for_loot
-						value = 1
-					}
-				}
-				subtract_variable = {
-					which = land_units_killed_for_loot
-					value = 1
-				}
-				lose_loot = {
-					amount = 1
-				}
-			}
-		}
-	}
 }
 
 on_battle_won_unit = {

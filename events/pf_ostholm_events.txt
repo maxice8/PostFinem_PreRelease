@@ -6,20 +6,8 @@ country_event = {		#ask Vildheim to PU
 	desc = pf_ost.1.d
 	picture = CIVIL_WAR_eventPicture
 
-	trigger = {
-		tag = OST
-		is_year = 1450
-		dynasty = "Ostholm"
-		is_at_war = no
-		VLD = {
-			is_at_war = no
-			exists = yes
-		}
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
-	mean_time_to_happen = {
-		months = 12
-	}
 
 	option = {
 		name = "pf_ost.1.a"
@@ -1300,60 +1288,73 @@ country_event = {		#dnv employing good advisor sudeten
 	}
 }
 
-
-
-country_event = {		#TESTING
-	id = pf_ost.100
-	title = pf_ost.100.t 
-	desc = pf_ost.100.d
-	picture = ORTHODOX_eventPicture
+country_event = {		#Vildheim story flavor
+	id = pf_ost.25
+	title = pf_ost.25.t 
+	desc = pf_ost.25.d
+	picture = CIVIL_WAR_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
-
-	option = {
-		name = "pf_ost.24.a"
-		carpathia_region = {
-			cede_province = ROOT
-			add_core = ROOT
-		}
-		change_tag = DNV
-		set_country_flag = formed_donova_flag 
-		on_change_tag_effect = yes
-		swap_non_generic_missions = yes
-		remove_non_electors_emperors_from_empire_effect = yes
-		set_government_rank = 2
-		add_country_modifier = {
-			name = "centralization_modifier"
-			duration = 7300
-		}
-		add_prestige = 25
-		if = {
-			limit = { has_custom_ideas = no }
-			country_event = { id = ideagroups.1 } #Swap Ideas
+	immediate = {
+		hidden_effect = {
+			OST = {
+				country_event = { id = pf_ost.1}
+			}
 		}
 	}
-}
-
-country_event = {		#TESTING
-	id = pf_ost.101
-	title = pf_ost.101.t 
-	desc = pf_ost.101.d
-	picture = ORTHODOX_eventPicture
-
-	is_triggered_only = yes
-	fire_only_once = yes
-
 	option = {
-		name = "pf_ost.24.a"
-		south_german_region = {
-			cede_province = ROOT
-			add_core = ROOT
+		name = "pf_ost.25.a"
+		ai_chance = {
+			factor = 70
 		}
-		north_german_region = {
-			cede_province = ROOT
-			add_core = ROOT
+		add_stability_or_adm_power = yes
+	}
+	option = {
+		name = "pf_ost.25.b"
+		ai_chance = {
+			factor = 20
+		}
+		define_heir = {
+			name = "Thora"
+			dynasty = "Herelingas"
+			adm = 3
+			dip = 5
+			mil = 5
+			birth_date = 1429.09.06
+			female = yes
+		}
+		hidden_effect = {
+			add_stability = 1
+			kill_ruler = yes
+		}
+		add_ruler_modifier = {
+			name = vld_twins_basil
 		}
 	}
-	
+	option = {
+		name = "pf_ost.25.c"
+		ai_chance = {
+			factor = 10
+		}
+		define_heir = {
+			name = "Freya"
+			dynasty = "Herelingas"
+			adm = 1
+			dip = 3
+			mil = 6
+			birth_date = 1430.09.06
+			female = yes
+		}
+		define_heir_to_general = {
+			fire = 6
+			shock = 5
+			manuever = 3
+			siege = 3
+		}
+		hidden_effect = {
+			add_stability = 1
+			kill_ruler = yes
+		}
+	}
 }
