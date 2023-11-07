@@ -1,0 +1,13 @@
+# This file is here before every country started using
+# their own on_actions files, if you are making a new
+# country use a file named pf_<tag>_on_actions.txt for
+# your own stuff
+
+on_monarch_death = {
+	if = {
+		limit = {
+			tag = VLD
+		}
+		country_event = { id = pf_ost.25}
+	}
+}
