@@ -1164,3 +1164,46 @@ phoenician_ideas = {
 		global_prov_trade_power_modifier = 0.10
 	}
 }
+KAR_ideas = {
+	start = {
+		tolerance_own = 2
+		defensiveness = 0.20
+	}
+
+	bonus = {
+		global_ship_trade_power = 0.33
+	}
+
+	trigger = {
+		OR = {
+			tag = PTY
+			tag = PSI
+		}
+	}
+	free = yes
+
+	kar_order_of_dionysus = {
+		army_tradition = 0.50
+		recover_army_morale_speed = 0.05
+	}
+	kar_dionysus_eleutherios = {
+		global_unrest = -2
+	}
+	kar_wine = {
+		production_efficiency = 0.10
+	}
+	kar_spirited = {
+		manpower_recovery_speed = 0.10
+	}
+	kar_advisor_to_the_archon = {
+		advisor_cost = -0.10
+		papal_influence = 1
+	}
+	kar_mountain_strongholds = {
+		hostile_attrition = 1.0
+	}
+	kar_careless_and_carefree = {
+		stability_cost_modifier = -0.10
+		promote_culture_cost = -0.25
+	}
+}

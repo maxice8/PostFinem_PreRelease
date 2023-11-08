@@ -152,3 +152,10 @@ pf_pho_local_timber_ex = {
 	province_trade_power_modifier = 0.10
 	trade_goods_size_modifier = 0.10
 }
+
+# Hellenic decisions
+
+pf_hellenic_philosopher_king_modifier = {
+	tolerance_own = 1
+	technology_cost = -0.05
+}

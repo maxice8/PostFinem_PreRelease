@@ -102,6 +102,18 @@ pf_silk_road_african_way: "African Way"
 estate_burghers_pf_phoenician_merchants: "Phoenician Merchants"
 estate_burghers_pf_phoenician_merchants_desc: "The merchants of Phoenicia have always held a special place in our society. Let us protect their privileges so that their success will bring all of us prosperity."
 
+# Holy Orders
+
+pf_order_of_dionysus: "Order of Dionysus"
+pf_order_of_dionysus_desc: "Devoted to the cult of Dionysus, the joyful followers of the Order travel from village to village spreading their message of peace and pleasure."
+pf_dionysus_wine_bonus_tooltip: "Every province in the state with the §Ywine§! trade good gets an additional §G2§! Base Production."
+pf_archonic_guard: "Archonic Guard"
+pf_archonic_guard_desc: "Originating in Naxos, the bodyguard of the Archon has establish outposts across the Hellenic world, and offered its protective services to an array of rulers."
+pf_archonic_papal_influence_bonus_tooltip: "Gain §G+1§! Athenaean Influence for every province assigned to this Order."
+pf_isadorians: "Isadorian Order"
+pf_isadorians_desc: "Named after Isadora of Edessa, this Order seeks to proliferate the power of the state, enforcing the divine right of kings as custodians of the gods."
+pf_isadorian_autonomy_tooltip: "Every province in this state loses §G-25.0%§! Local Autonomy."
+
 ###############
 # Decisions
 ###############
@@ -136,6 +148,10 @@ pf_silk_road_merchant_bonus_syria: "Control of the Syrian Way"
 renovate_silk_road_persia_title: "¤ Renovate the Silk Road: The Persia Way"
 renovate_silk_road_persia_desc: "The section of the Silk Road that passes through Persia has fallen into disrepair. If we want to keep our merchants safe and the flow of exotic goods steady, we must invest in renovating the infrastructure that surrounds its major routes."
 pf_silk_road_merchant_bonus_persia: "Control of the Persian Way"
+
+pf_hellenic_philosopher_king_title: "A Philosopher [Root.Monarch.GetTitle]"
+pf_hellenic_philosopher_king_desc: "Our ruler is learned in the ancient philosophies and the arts, patronising other likeminded scholars and using their position of power to forward the interests of the field."
+pf_hellenic_philosopher_king_modifier: "Philosopher King"
 
 ############## 
 # Ideas
@@ -273,6 +289,21 @@ greek_minor_ideas_6: "The Eastern Trades"
 greek_minor_ideas_6_desc: "Our holdings in the east are the gateway for many exotic and luxury goods to come flooding into the Mediterranean via the Silk Road. With a few careful tariffs and investment in trade infrastructure, we will be able to squeeze the traders that pass through our lands down to their last pennies."
 greek_minor_ideas_7: "Pan-Hellenism"
 greek_minor_ideas_7_desc: "No matter our wars and arguments, we are all Hellenes, and Hellenes should stand together even in the most dire of times."
+
+kar_order_of_dionysus: "Order of Dionysus"
+kar_order_of_dionysus_desc: "REPLACE_ME"
+kar_dionysus_eleutherios: "Dionysus Eleutherios"
+kar_dionysus_eleutherios_desc: "REPLACE_ME"
+kar_wine: "Vinyards of the Taurus"
+kar_wine_desc: "REPLACE_ME"
+kar_spirited: "Delphian Courage"
+kar_spirited_desc: "REPLACE_ME"
+ar_advisor_to_the_archon: "Left Ear of the Archon"
+ar_advisor_to_the_archon_desc: "REPLACE_ME"
+kar_mountain_strongholds: "Reinforce the Strongholds"
+kar_mountain_strongholds_desc: "REPLACE_ME"
+kar_careless_and_carefree: "Careless and Carefree"
+kar_careless_and_carefree_desc: "REPLACE_ME"
 
 ################
 # Events

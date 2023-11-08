@@ -1,0 +1,20 @@
+country_decisions = {
+	pf_hellenic_philosopher_king = {
+		potential = {
+			religion = hellenic
+			NOT = { has_ruler_modifier = pf_hellenic_philosopher_king_modifier }
+		}
+		allow = {
+			religion = hellenic
+			has_regency = no
+			adm = 5
+		}
+		effect = {
+			add_papal_influence = 10
+			add_ruler_modifier = {
+				name = "pf_hellenic_philosopher_king_modifier"
+				duration = -1
+			}
+		}
+	}
+}
