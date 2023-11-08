@@ -156,3 +156,57 @@ pf_ksb_early_coal = {
 	}
 	trade_goods_size_modifier = -0.5
 }
+
+# Hellenic orders
+
+order_of_dionysus_home_modifier = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		religion = hellenic
+		owner = { religion = hellenic }
+	}
+	tolerance_own = 0.5
+	production_efficiency = 0.05
+
+	local_unrest = -3
+	local_autonomy = 0.10
+	province_trade_power_value = 5
+	
+	picture = "order_dionysus_icon"
+}
+archonic_guard_home_modifier = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		religion = hellenic
+		owner = { religion = hellenic }
+	}
+	tolerance_own = 0.5
+	mercenary_discipline = 0.05
+
+	local_manpower_modifier = 0.25
+	local_autonomy = 0.10
+	province_trade_power_value = 5
+	
+	picture = "order_archonic_icon"
+}
+isadorian_order_home_modifier = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		religion = hellenic
+		owner = { religion = hellenic }
+	}
+	tolerance_own = 0.5
+	build_cost = -0.05
+	
+	local_prosperity_growth = 0.5
+	local_autonomy = 0.10
+	province_trade_power_value = 5
+	
+	picture = "order_isadorian_icon"
+}
