@@ -13,6 +13,27 @@ country_event = {		#ask Vildheim to PU
 		name = "pf_ost.1.a"
 		ai_chance = {
 			factor = 80
+			modifier = {
+				factor = 2
+				ai_attitude = {
+					who = VLD
+					attitude = attitude_hostile
+				}
+			}
+			modifier = {
+				factor = 5
+				ai_attitude = {
+					who = VLD
+					attitude = attitude_domineering
+				}
+			}
+			modifier = {
+				factor = 3
+				ai_attitude = {
+					who = VLD
+					attitude = attitude_rivalry
+				}
+			} 
 		}
 		add_casus_belli = {
 			target = VLD
@@ -23,33 +44,13 @@ country_event = {		#ask Vildheim to PU
 			country_event = {
 				id = pf_ost.3
 			}
-			if = {
-				limit = {	VLD = {ai = yes}	}
-				capital_scope = {
-					spawn_rebels = {
-						type = pretender_rebels
-						size = 5
-						friend = OST
-						leader = "Theodoric"
-						leader_dynasty = "Ostholm"
-					}
-					spawn_rebels = {
-						type = pretender_rebels
-						size = 2
-						friend = OST
-						leader = "Theodoric"
-						leader_dynasty = "Ostholm"
-					}
-				}
-			}else = {
-				capital_scope = {
-					spawn_rebels = {
-						type = pretender_rebels
-						size = 5
-						friend = OST
-						leader = "Theodoric"
-						leader_dynasty = "Ostholm"
-					}
+			capital_scope = {
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 3
+					friend = OST
+					leader = "Theodoric"
+					leader_dynasty = "Ostholm"
 				}
 			}
 		}
@@ -58,6 +59,27 @@ country_event = {		#ask Vildheim to PU
 		name = "pf_ost.1.b"
 		ai_chance = {
 			factor = 20
+			modifier = {
+				factor = 1000
+				ai_attitude = {
+					who = VLD
+					attitude = attitude_allied
+				}
+			}
+			modifier = {
+				factor = 50
+				ai_attitude = {
+					who = VLD
+					attitude = attitude_friendly
+				}
+			}
+			modifier = {
+				factor = 5
+				ai_attitude = {
+					who = VLD
+					attitude = attitude_protective
+				}
+			}
 		}
 		VLD = {
 			add_trust = {
@@ -285,13 +307,17 @@ country_event = {		#choose between Sudeten or not
 		ai_chance = {
 			factor = 80
 		}
+		add_dip_power = 100
+		custom_tooltip = empty_line_tt
 		change_primary_culture = sudeten
 		set_ruler_culture = sudeten
 		set_heir_culture = sudeten
-		add_accepted_culture = marcomanni
-		2967 = {
+		custom_tooltip = empty_line_tt
+		capital_scope = {
 			change_culture = sudeten
 		}
+		custom_tooltip = empty_line_tt
+		add_accepted_culture_or_dip_power = { culture = marcomanni }
 		
 	}
 	option = {
@@ -300,6 +326,11 @@ country_event = {		#choose between Sudeten or not
 			factor = 20
 		}
 		add_stability_or_adm_power = yes
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = pf_marcomanni_culture_stay_modifier
+			duration = 7300
+		}
 	}
 }
 
@@ -316,8 +347,9 @@ country_event = {		#ostholm reward
 	option = {
 		name = "pf_ost.8.a"
 		ai_chance = {
-			factor = 80
+			factor = 2
 		}
+		add_prestige_or_monarch_power = { amount = 10 }
 		134 = {
 			add_core = ROOT
 			add_province_modifier = {
@@ -330,8 +362,9 @@ country_event = {		#ostholm reward
 	option = {
 		name = "pf_ost.8.b"
 		ai_chance = {
-			factor = 20
+			factor = 8
 		}
+		add_prestige_or_monarch_power = { amount = 10 }
 		134 = {
 			add_core = ROOT
 			add_province_modifier = {
@@ -408,6 +441,8 @@ country_event = {		#vindheim reward
 		ai_chance = {
 			factor = 20
 		}
+		add_years_of_income = -1
+		custom_tooltip = empty_line_tt
 		add_country_modifier = {
 			name = sdt_wild_hunt_2
 			duration = 9125
@@ -644,7 +679,16 @@ country_event = {		#dnv bergaland money question
 	}
 	option = {
 		name = "pf_ost.15.c"
-		add_years_of_income = 0.5
+		add_adm_power = 100
+		add_legitimacy_equivalent = {
+			amount = 20
+		}
+		add_estate_influence_modifier = {
+			estate = estate_burghers
+			desc = "Bergan Spurned Merchants: -10.0%"
+			influence = -10
+			duration = 9125
+		}
 	}
 }
 
@@ -718,6 +762,9 @@ country_event = {		#dnv capital decision
 
 	option = {
 		name = "pf_ost.17.a"
+		trigger = {
+			NOT = { capital = 64 }
+		}
 		set_capital = 64
 		64 = {
 			add_base_tax = 1
@@ -727,6 +774,9 @@ country_event = {		#dnv capital decision
 	}
 	option = {
 		name = "pf_ost.17.b"
+		trigger = {
+			NOT = { capital = 134 }
+		}
 		set_capital = 134
 		134 = {
 			add_base_tax = 1
@@ -736,6 +786,9 @@ country_event = {		#dnv capital decision
 	}
 	option = {
 		name = "pf_ost.17.c"
+		trigger = {
+			NOT = { capital = 153 }
+		}
 		set_capital = 153
 		153 = {
 			add_base_tax = 1
@@ -745,6 +798,9 @@ country_event = {		#dnv capital decision
 	}
 	option = {
 		name = "pf_ost.17.e"
+		trigger = {
+			NOT = { capital = 154 }
+		}
 		set_capital = 154
 		154 = {
 			add_base_tax = 1
@@ -754,6 +810,9 @@ country_event = {		#dnv capital decision
 	}
 	option = {
 		name = "pf_ost.17.f"
+		trigger = {
+			NOT = { capital = 266 }
+		}
 		set_capital = 266
 		266 = {
 			add_base_tax = 1
@@ -876,7 +935,8 @@ country_event = {		#dnv more reforms nobility
 					influence = 15
 					duration = 9125
 				}
-			}else = {
+			}
+			else = {
 				add_yearly_manpower = -4
 				add_estate_influence_modifier = {
 					estate = estate_burghers
@@ -885,7 +945,8 @@ country_event = {		#dnv more reforms nobility
 					duration = 9125
 				}
 			}
-		}else = {
+		}
+		else = {
 			if = {
 				limit = {
 					has_country_flag = dnv_keep_south_law
@@ -897,7 +958,8 @@ country_event = {		#dnv more reforms nobility
 					influence = 5
 					duration = 9125
 				}
-			}else = {
+			}
+			else = {
 				add_yearly_manpower = -1
 				add_estate_influence_modifier = {
 					estate = estate_burghers
@@ -941,7 +1003,8 @@ country_event = {		#dnv more reforms economic
 					influence = 5
 					duration = 9125
 				}
-			}else = {
+			}
+			else = {
 				add_years_of_income = -0.5
 				add_estate_influence_modifier = {
 					estate = estate_burghers
@@ -950,7 +1013,8 @@ country_event = {		#dnv more reforms economic
 					duration = 9125
 				}
 			}
-		}else = {
+		}
+		else = {
 			if = {
 				limit = {
 					has_country_flag = dnv_respect_vild
@@ -962,7 +1026,8 @@ country_event = {		#dnv more reforms economic
 					influence = 15
 					duration = 9125
 				}
-			}else = {
+			}
+			else = {
 				add_years_of_income = -1
 				add_estate_influence_modifier = {
 					estate = estate_burghers
@@ -990,6 +1055,7 @@ country_event = {		#dnv more reforms religios
 
 	option = {
 		name = "pf_ost.21.a"
+		ai_chance = { factor = 1 }
 		add_stability_or_adm_power = yes
 		custom_tooltip = DNV_ORDER
 		set_country_flag = dnv_ost_germanic_orders
@@ -1000,11 +1066,12 @@ country_event = {		#dnv more reforms religios
 	}
 	option = {
 		name = "pf_ost.21.b"
+		ai_chance = { factor = 0 }
 		add_stability = -5
 		change_religion = hellenic
 		capital_scope = {
 			spawn_rebels = {
-				size = 4
+				size = 3
 				type = south_germanic_zealots
 			}
 		}
@@ -1027,11 +1094,50 @@ country_event = {		#dnv more reforms religios
 	}
 	option = {
 		name = "pf_ost.21.c"
+		ai_chance = { factor = 0 }
 		add_stability = -5
 		change_religion = punic_religion
 		capital_scope = {
 			spawn_rebels = {
-				size = 5
+				size = 3
+				type = south_germanic_zealots
+			}
+		}
+		random_owned_area = {
+			spawn_rebels = {
+				size = 2
+				type = south_germanic_zealots
+			}
+		}
+		random_owned_area = {
+			spawn_rebels = {
+				size = 2
+				type = south_germanic_zealots
+			}
+		}
+		country_event = {
+			id = pf_ost.22
+			days = 1
+		}
+	}
+	option = {
+		name = "pf_ost.21.e"
+		ai_chance = { factor = 0 }
+		trigger = {
+			OR = {
+				employed_advisor = {
+					religion = jewish
+				}
+				any_ally = {
+					religion = jewish
+				}
+			}
+		}
+		add_stability = -6
+		change_religion = jewish
+		capital_scope = {
+			spawn_rebels = {
+				size = 3
 				type = south_germanic_zealots
 			}
 		}
@@ -1085,7 +1191,8 @@ country_event = {		#dnv final refomrs
 			limit = {
 				dynasty = "Ostholm"
 			}
-		}else = {
+		}
+		else = {
 			kill_ruler = yes
 			kill_heir = {
 				allow_new_heir = no
@@ -1134,12 +1241,12 @@ country_event = {		#dnv final refomrs
 	}
 	option = {
 		name = "pf_ost.22.e"
-
 		if = {
 			limit = {
 				was_tag = SDT
 			}
-		}else = {
+		}
+		else = {
 			kill_ruler = yes
 			kill_heir = {
 				allow_new_heir = no
@@ -1315,21 +1422,17 @@ country_event = {		#Vildheim story flavor
 		ai_chance = {
 			factor = 20
 		}
-		define_heir = {
+		define_ruler = {
 			name = "Thora"
 			dynasty = "Herelingas"
 			adm = 3
 			dip = 5
 			mil = 5
-			birth_date = 1429.09.06
 			female = yes
-		}
-		hidden_effect = {
-			add_stability = 1
-			kill_ruler = yes
 		}
 		add_ruler_modifier = {
 			name = vld_twins_basil
+			duration = -1
 		}
 	}
 	option = {
@@ -1337,24 +1440,19 @@ country_event = {		#Vildheim story flavor
 		ai_chance = {
 			factor = 10
 		}
-		define_heir = {
+		define_ruler = {
 			name = "Freya"
 			dynasty = "Herelingas"
 			adm = 2
 			dip = 2
 			mil = 6
-			birth_date = 1430.09.06
 			female = yes
 		}
-		define_heir_to_general = {
+		define_ruler_to_general = {
 			fire = 4
 			shock = 4
 			manuever = 3
 			siege = 1
-		}
-		hidden_effect = {
-			add_stability = 1
-			kill_ruler = yes
 		}
 	}
 }

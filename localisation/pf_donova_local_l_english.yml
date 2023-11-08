@@ -119,7 +119,7 @@
 #####EVENTS
 
  pf_ost.13.t:0 "Legacy of Old Ostholm"
- pf_ost.13.d:0 "Ostholm.\nA single man founded a single city.\nHis family ruled over much of OstGermania for better or worse depending on how far from Ostola you lived.\nIt's now the time to unshackle Donova from this old legacy and forge a new path for a new nation.\nIt is not necessary to completely destroy the history that created our foundations but the influence of the Ostholm family has permeated all institutions and noble houses.\nTo renounce them would leave a power vacuum which will likely followed by instability and chaos."
+ pf_ost.13.d:0 "Ostholm. A single man founded a single city. His family ruled over much of Ostgermania for better or worse depending on how far from Ostola you lived. Now it is the time to unshackle Donova from this old legacy and forge a new path for a new nation. It is not necessary to completely destroy the history that shaped our foundations but the influence of the Ostholm family has permeated all institutions and noble houses. To renounce them would leave a power vacuum which will likely followed by instability and chaos."
  pf_ost.13.a:0 "Light the fire!"
  pf_ost.13.b:0 "My Ancestors smile upon me!"
  pf_ost.13.c:0 "As we forge a new path to the future!"
@@ -127,27 +127,27 @@
  pf_ost.13.f:0 "They tried and the effort was appreciated."
 
  pf_ost.14.t:0 "The Laws of the Southern Woods"
- pf_ost.14.d:0 "The Marcomanni followed the same creed as the rest of OstGermania despite their much closer relationship with the other western germans.\nThe cause of their belief came from their laws being copied by the Old Ostholm system, changed and adapted for their needs.\nLaws that for many seem much better suited for such a large country as ours, making sweeping changes to the relation between nobles and king, peasants and soldiers.\nThe Sudeti nobility have changed these laws even further, but their reach is bound by their land."
+ pf_ost.14.d:0 "The Marcomanni followed the same creed as the rest of Ostgermania despite their much closer relationship with the other western germans. The cause of their belief came from their laws being copied by the Old Ostholm system, changed and adapted for their needs. Laws that for many seem much better suited for such a large country as ours, making sweeping changes to the relation between nobles and king, peasants and soldiers. The Sudeti nobility have changed these laws even further, but their reach is bound by their land."
  pf_ost.14.a:0 "Keep the Laws, change the words."
  pf_ost.14.b:0 "Write them and distribute them."
  pf_ost.14.c:0 "As long as they are written down."
  pf_ost.14.e:0 "We have our own laws."
 
  pf_ost.15.t:0 "The Merchant's Creed"
- pf_ost.15.d:0 "Morian and Bergan Merchants pester and demand Donova-wide institutions to better handle matters of trade and goods.\nBy their own initiative, they have formulated a deal and planned in particular details what they need and what the $MONARCHTITLE$ will have to give.\nAll that remains to do is sign here, here and here."
+ pf_ost.15.d:0 "Morian and Bergan Merchants pester and demand Donova-wide institutions to better handle matters of trade and goods. By their own initiative, they have formulated a deal and planned in particular details what they need and what the [Root.Monarch.GetTitle] will have to give. All that remains to do is sign here, here and here."
  pf_ost.15.a:0 "We already know what their deal is."
  pf_ost.15.b:0 "Interesting. How's the interest on it?"
  pf_ost.15.c:0 "No Deal."
 
  pf_ost.16.t:0 "Born to Be Wild"
- pf_ost.16.d:0 "As Donova works to consolidate its grasps on its own people, many traditions find their way to obscurity.\nOne tradition that refuses to go quietly in the dark night are the Vild Hunters, who are culturally bound to Vildheimer own noble guards.\nHowever many other nobles find these guard too bruttish and crude to properly protect them, so they are petitioning the $MONARCHTITLE$ to put a stop to these Hunters."
+ pf_ost.16.d:0 "As Donova works to consolidate its grasps on its own people, many traditions find their way to obscurity. One tradition that refuses to go quietly in the dark night are the Vild Hunters, who are culturally bound to Vildheimer own noble guards. However many other nobles find these guard too bruttish and crude to properly protect them, so they are petitioning the [Root.Monarch.GetTitle] to put a stop to these Hunters."
  pf_ost.16.a:0 "Keep these Beasts down."
  pf_ost.16.b:0 "As long as no one is hurt."
  pf_ost.16.c:0 "Let the old traditions die."
  pf_ost.16.e:0 "Long live the Vild Hunt."
 
  pf_ost.17.t:0 "The Capital Question"
- pf_ost.17.d:0 "Many cities in Donova could hold the title of Capital.\nThe $MONARCHTITLE$ has to find the city that best represent our people and will begin building the infrastructure for the new governing bosy."
+ pf_ost.17.d:0 "Many cities in Donova could hold the title of Capital. The [Root.Monarch.GetTitle] has to find the city that best represent our people and will begin building the infrastructure for the new governing bosy."
  pf_ost.17.a:0 "The City of Three Helmets."
  pf_ost.17.b:0 "The City of Old Ostholm."
  pf_ost.17.c:0 "The City of Great River."
@@ -155,28 +155,29 @@
  pf_ost.17.f:0 "The City of Grand Wealth."
 
  pf_ost.18.t:0 "Reforming Society"
- pf_ost.18.d:0 "The gradual winds of change are sweeping through our nation and many find that their wooden housing can no longer withstand them.\nMany are demanding great changes and grand ideological modifications, they will find that asking too much will only lead to be the one to gain nothing."
- pf_ost.18.a:0 "Lessen the Faith's Power."
+ pf_ost.18.d:0 "The gradual winds of change are sweeping through our nation and many find that their wooden housing can no longer withstand them. Many are demanding great changes and grand ideological modifications, they will find that asking too much will only lead to be the one to gain nothing."
+ pf_ost.18.a:0 "Lessen the Clergy's Power."
  pf_ost.18.b:0 "Lessen the Noble's Power."
  pf_ost.18.c:0 "Lessen the Merchant's Power."
  pf_ost.18.e:0 "Equal distribution of Power."
 
  pf_ost.19.t:0 "The Noble's Cause"
- pf_ost.19.d:0 "The Nobility of Old, New and recently bought are the backbone of the military and the creation of arts.\nWhat will they bring in this new founded nation and what problems they will cause will only strenghten our people resolve."
+ pf_ost.19.d:0 "The Nobility of Old, New and recently bought are the backbone of the military and the creation of arts. What will they bring in this new founded nation and what problems they will cause will only strenghten our people resolve."
  pf_ost.19.a:0 "A Noble Lesson."
 
  pf_ost.20.t:0 "The Economical Foundation"
- pf_ost.20.d:0 "The Merchants stand on their piles of gold and protected wealth but without the stability of coinage and state, they would find themselves cold and lost.\nThe economy of a nation can only be stable if the people and institution believe in it."
+ pf_ost.20.d:0 "The Merchants stand on their piles of gold and protected wealth but without the stability of coinage and state, they would find themselves cold and lost. The economy of a nation can only be stable if the people and institution believe in it."
  pf_ost.20.a:0 "The Key is the Coin."
 
  pf_ost.21.t:0 "The Good Gods"
- pf_ost.21.d:0 "The Ostgermanic faith has brought us together and it holds us united.\nBut the more our nation expands, the more new ideas and faiths we meet along the way.\nThese faiths are being sponsored by foreign rulers to put pressure on us to change our ways which could be considerable to better oue relationship."
- pf_ost.21.a:0 "Don't stray the beaten path."
- pf_ost.21.b:0 "The Hellens make a compelling argument."
- pf_ost.21.c:0 "The Punics make a compeling argument."
+ pf_ost.21.d:0 "The Ostgermanic faith has brought us together and it holds us united. But the more our nation expands, the more new ideas and faiths we meet along the way. These faiths are being sponsored by foreign rulers to put pressure on us to change our ways which could considerably improve our relations with them."
+ pf_ost.21.a:0 "Don't stray from the beaten path."
+ pf_ost.21.b:0 "The ways of the Hellenes are most compelling."
+ pf_ost.21.c:0 "Perhaps the Punic gods would treat us best."
+ pf_ost.21.e:0 "We are God's chosen people!"
 
  pf_ost.22.t:0 "The Final Act"
- pf_ost.22.d:0 "The proper methods of governing a state have been carefully lead out in the previous days of hard work and dedication to a functioning society.\nAny mistake now and all the good that has been done can be unravalled easily and spiral the nation into chaos.\nThe last act to be achieved is the foreign recognition of our nation by those that are more powerful or prestigious than us.\nTo let them know our people and our country and where they stand under the Sun.\nConcessions will be made to those inside and outside to safely transition to a more civilized state."
+ pf_ost.22.d:0 "The proper methods of governing a state have been carefully lead out in the previous days of hard work and dedication to a functioning society. Any mistake now and all the good that has been done can be unravalled easily and spiral the nation into chaos. The last act to be achieved is the foreign recognition of our nation by those that are more powerful or prestigious than us. To let them know our people and our country and where they stand under the Sun. Concessions will be made to those inside and outside to safely transition to a more civilized state."
  pf_ost.22.a:0 "To Greater Ostholm."
  pf_ost.22.b:0 "The new Donovan Kingdom."
  pf_ost.22.c:0 "To Greater Vildheim."
@@ -185,14 +186,14 @@
  pf_ost.22.g:0 "The Great Donovan Tribe."
 
  pf_ost.23.t:0 "Hunting the Drakon"
- pf_ost.23.d:0 "The people of the Strigodol tribes stood against the power of Old Ostholm and maintained their slavic faith and traditions.\nThat ended the moment our banner flew over the Huszczc Castle, and the faithful have begun to convert to our religion.\nDemands have been made to the surviving nobles to speak our language or adopt our faith teachings into their tounge." 
+ pf_ost.23.d:0 "The people of the Strigodol tribes stood against the power of Old Ostholm and maintained their slavic faith and traditions. That ended the moment our banner flew over the Huszczc Castle, and the faithful have begun to convert to our religion. Demands have been made to the surviving nobles to speak our language or adopt our faith teachings into their toungue." 
  pf_ost.23.a:0 "The Dragon has been slain."
  pf_ost.23.b:0 "The Dragon has been tamed."
 
  pf_ost.24.t:0 "The Sudeten Deal"
- pf_ost.24.d:0 "Our new Advisor has brought to our attention that some areas around the capital require major renovations to properly represent our best to foreign diplomats.\nMany are the suggestions the court has thought about and then discarded, but our advisors are slowly creating a new set of laws to be written in a book to standardise the regional bureaucracy over the capital region."
+ pf_ost.24.d:0 "Our new Advisor has brought to our attention that some areas around the capital require major renovations to properly represent our best to foreign diplomats. Many are the suggestions the court has thought about and then discarded, but our advisors are slowly creating a new set of laws to be written in a book to standardise the regional bureaucracy over the capital region."
  pf_ost.24.a:0 "A book on Taxes?"
- pf_ost.24.b:0 "A book on Produce?"
+ pf_ost.24.b:0 "A book on Production?"
  pf_ost.24.c:0 "A book on Soldiers?"
 
 
@@ -200,7 +201,7 @@
  giant_tower_german:0 "Riesger Turm"
  dnv_big_stables:0 "Magusanus Stables"
 #####MISSIONS
- dnv_markland_title:0 "Markmann Laws"
+ dnv_markland_title:0 "Marklander Laws"
  dnv_markland_desc:0 "The Laws of the South are mostly handed down from vocal traditions, rules and requirements that the old Marcomanni stipualted to be able to survive in the region."
 
  dnv_three_elms_title:0 "Three Helms"

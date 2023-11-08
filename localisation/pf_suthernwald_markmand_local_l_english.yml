@@ -17,19 +17,19 @@
  BAV_ideas_7_desc: "There is nothing better than resting with your comrades to eat the daily rations, if they weren't so salty."
 
  MKM: "Markland"
- MKM_ADJ: "Markmann"
- MKM_ideas: "Markmann Ideas"
- MKM_ideas_start: "Markmann Traditions"
- MKM_ideas_bonus: "Markmann Ambition"
+ MKM_ADJ: "Marklander"
+ MKM_ideas: "Marklander Ideas"
+ MKM_ideas_start: "Marklander Traditions"
+ MKM_ideas_bonus: "Marklander Ambition"
  MKM_ideas_1: "Lords of Central Germania"
- MKM_ideas_2: "Markmann Intuition"
+ MKM_ideas_2: "Marklander Intuition"
  MKM_ideas_3: "The Mark of Man"
  MKM_ideas_4: "Faithful Adaptation"
  MKM_ideas_5: "Under the Colossus' Shadows"
  MKM_ideas_6: "Always on Time"
  MKM_ideas_7: "The Saline March"
  MKM_ideas_1_desc: "As the undisputed Lord of the Land Between Nord and East Germania, my decrees are absolute and your knees bent."
- MKM_ideas_2_desc: "Long have the Markmann been simple soldier and lived simple life, they will now strive for greater purposes."
+ MKM_ideas_2_desc: "Long have the Marklanders been simple soldier and lived simple life, they will now strive for greater purposes."
  MKM_ideas_3_desc: "We are one, united by our fortitude and the will of our people.\nWe will protect our borders and, if necessary, expand them."
  MKM_ideas_4_desc: "My rule is divine and the Gods themselves will tremble in my wake."
  MKM_ideas_5_desc: "The Ant cannot be concerned by the Giant's plans, for the Giant is a careful one."
@@ -37,14 +37,14 @@
  MKM_ideas_7_desc: "The pile of salt is a pile no matter how many specks you remove, so are the armies of Markland."
 
 #####CUSTOM
- CT_BAV_1:0 "If @MVA §YMoria §Wis your vassal, inherit it."
+ CT_BAV_1:0 "If @MVA §YMoria §Wis a vassal with under §Y100§! development, they will be inherited."
 
  CT_MKM_1:0 "§YOstgermanic Brotherhood§W will removed from Markland."
- CT_MKM_2:0 "Every province that borders another country gains§G 1§W Base Manpower.\n§TClick the '?' to check the provinces§W."
- CT_MKM_3:0 "from Marketplace Provinces."
+ CT_MKM_2:0 "Every province that fulfills the trigger will receive:"
+ CT_MKM_3:0 "from provinces with production buildings."
 #####MODIFIER 
  bav_wine_party:0 "Wine Parties"
- bav_real_for_real:0 "The Gods Plan"
+ bav_real_for_real:0 "The Gods' Plan"
 
 
  mkm_salty:0 "The Saline Fortress"
@@ -58,11 +58,11 @@
 
 #####EVENTS
  pf_ost.12.t:0 "Hillside Rebellion"
- pf_ost.12.d:0 "The Quadi people of our eastern border never have respected the laws of our tribe, always schemes and preparing a daring rebellion.\nThe smoke alerted the guards and the small bands of rebellious peasants assaulted one of our fortifications, a declaration of open hostilities.\nCall the men, we will remind them of who commands in our borders."
+ pf_ost.12.d:0 "The Quadi people of our eastern border never have respected the laws of our tribe, always schemes and preparing a daring rebellion. The smoke alerted the guards and the small bands of rebellious peasants assaulted one of our fortifications, a declaration of open hostilities. Call the men, we will remind them of who commands in our borders."
  pf_ost.12.a:0 "It will be over in a landslide."
 
 #####DECISIONS
- form_markland_title:0 "Form @MKM Markmand"
+ form_markland_title:0 "@MKM Unite the Marcomanni Tribes"
  form_markland_desc:0 "The union of all Marcomanni people will strike fear in the heart of our enemies and reach greatness."
 
 
@@ -80,11 +80,11 @@
  mkm_map_painter_desc:0 "REPLACE_ME"
  mkm_bergaland_title:0 "Break Bergaland"
  mkm_bergaland_desc:0 "REPLACE_ME"
- mkm_brotherhood_title:0 "OstGermania United"
+ mkm_brotherhood_title:0 "Ostgermania United"
  mkm_brotherhood_desc:0 "REPLACE_ME"
  mkm_ost_germania_title:0 "Donova Rising!"
  mkm_ost_germania_desc:0 "REPLACE_ME"
- mkm_vindheim_title:0 "Violence Over Vindheim"
+ mkm_vindheim_title:0 "Violence in Vildheim"
  mkm_vindheim_desc:0 "REPLACE_ME"
  mkm_more_borders_title:0 "The King's Decree"
  mkm_more_borders_desc:0 "REPLACE_ME"
@@ -100,13 +100,14 @@
  bav_capital_desc:0 "REPLACE_ME"
  bav_middle_title:0 "Cover the Middle"
  bav_middle_desc:0 "REPLACE_ME"
- bav_stable_country_title:0 "Godly Stability"
+ bav_stable_country_title:0 "Unity in the Faith"
  bav_stable_country_desc:0 "REPLACE_ME"
  bav_marklander_title:0 "For Markland!"
  bav_marklander_desc:0 "REPLACE_ME"
- bav_moria_title:0 "Markmann Brothers"
+ bav_moria_title:0 "Marklander Brothers"
  bav_moria_desc:0 "REPLACE_ME"
  bav_markomanni_title:0 "The Land of  the Mark"
  bav_markomanni_desc:0 "REPLACE_ME"
- bav_styria_title:0 "Up to Party"
+ bav_styria_title:0 "Land of Wine and Honey"
  bav_styria_desc:0 "REPLACE_ME"
+ bav_styria_wine_dev_tt: "All §YWine§! producing provinces owned by us or our vassals will receive:"

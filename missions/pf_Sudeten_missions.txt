@@ -14,6 +14,10 @@ pf_sdt_1 = {
 				area = bohemia_area
 				area = erzgebirge_area
 			}
+			NOT = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				culture = sudeten
+			}
 		}
 
 		trigger = {
@@ -30,6 +34,8 @@ pf_sdt_1 = {
 		}
 
 		effect = {
+			add_dip_power = 100
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = "sdt_our_people"
 				duration = 9125
@@ -42,24 +48,18 @@ pf_sdt_1 = {
 		position = 4
 		required_missions = { sdt_sudeti_people } 
 		provinces_to_highlight = {
-			OR = {
-				area = bohemia_area
-				area = erzgebirge_area
-			}
 		}
 
 		trigger = {
 			development_in_provinces = {
 				value = 200
-				OR = {
-					area = bohemia_area
-					area = erzgebirge_area
-				}
+				culture = sudeten
 			}
 		}
 
 		effect = {
-			add_stability = 1
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
 			define_general = {
 				shock = 5
 				fire = 4
@@ -85,6 +85,7 @@ pf_sdt_2 = {
 				area = bohemia_area
 				area = erzgebirge_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
@@ -101,7 +102,13 @@ pf_sdt_2 = {
 		}
 
 		effect = {
-			set_capital = 266
+			if = {
+				limit = {
+					NOT = { capital = 266 }
+				}
+				266 = { move_capital_effect = yes }
+			}
+			
 			every_owned_province = {
 				limit = {
 					OR = {
@@ -109,18 +116,9 @@ pf_sdt_2 = {
 						area = erzgebirge_area
 					}
 				}
-				if = {
-					limit = { culture = sudeten } 
-					add_province_modifier = {
-						name = "mva_local_sudeten"
-						duration = 9125
-					}
-				}
-				else = {
-					add_province_modifier = {
-						name = "mva_local_not_hope"
-						duration = 9125
-					}
+				add_province_modifier = {
+					name = "mva_local_sudeten"
+					duration = 9125
 				}
 			}
 		}
@@ -132,29 +130,37 @@ pf_sdt_2 = {
 		required_missions = { sdt_expansion } 
 		provinces_to_highlight = {
 			OR = {
-				area = austria_proper_area
-				area = inner_austria_area
+				AND = {
+					OR = {
+						area = austria_proper_area
+						area = inner_austria_area
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				province_id = 134
+				OR = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
 			}
 		}
 
 		trigger = {
+			owns_core_province = 134
 			austria_proper_area = {
 				type = all
-				OR = {
-					owned_by = ROOT
-					owned_by_subject_of = ROOT
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			inner_austria_area = {
 				type = all
-				OR = {
-					owned_by = ROOT
-					owned_by_subject_of = ROOT
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
-		effect = { country_event = { id = pf_ost.8 }  } 
+		effect = { 
+			change_ruler_stat = { type = dip amount = 1 }
+			country_event = { id = pf_ost.8 }  
+		} 
 	}
 }
 pf_sdt_3 = {
@@ -173,9 +179,13 @@ pf_sdt_3 = {
 				area = bohemia_area
 				area = erzgebirge_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
+			stability = 1
+			land_forcelimit = 30
+			army_size = 30
 			development_in_provinces = {
 				value = 100
 				OR = {
@@ -186,7 +196,8 @@ pf_sdt_3 = {
 		}
 
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
+			custom_tooltip = empty_line_tt
 			carpathia_region = { add_permanent_claim = ROOT } 
 		}
 	}
@@ -200,22 +211,17 @@ pf_sdt_3 = {
 				area = transdanubia_area
 				area = alfold_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
 			transdanubia_area = {
 				type = all
-				OR = {
-					owned_by = ROOT
-					owned_by_subject_of = ROOT
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			alfold_area = {
 				type = all
-				OR = {
-					owned_by = ROOT
-					owned_by_subject_of = ROOT
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
@@ -230,15 +236,15 @@ pf_sdt_3 = {
 			sdt_berganland
 			sdt_vindheim
 		}
-		provinces_to_highlight = { region = carpathia_region } 
+		provinces_to_highlight = { 
+			region = carpathia_region 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
 		trigger = {
 			carpathia_region = {
 				type = all
-				OR = {
-					owned_by = ROOT
-					owned_by_subject_of = ROOT
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
@@ -253,26 +259,33 @@ pf_sdt_3 = {
 
 		trigger = {
 			development_in_provinces = {
-				value = 350
+				value = 400
 				region = carpathia_region
 			}
 		}
 
 		effect = {
 			change_tag = DNV
-			set_country_flag = formed_donova_flag 
-			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
-			set_government_rank = 2
+			on_change_tag_effect = yes
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			custom_tooltip = empty_line_tt
+			set_country_flag = formed_donova_flag 
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}			
+				set_government_rank = 2
+				custom_tooltip = empty_line_tt
+			}
+			add_prestige_or_monarch_power = { amount = 25 }
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
-			}
-			add_prestige = 25
-			if = {
-				limit = { has_custom_ideas = no } 
-				country_event = { id = ideagroups.1 } 
 			}
 		}
 	}
@@ -293,22 +306,17 @@ pf_sdt_4 = {
 				area = moravia_area
 				area = slovakia_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
 			moravia_area = {
 				type = all
-				OR = {
-					owned_by = ROOT
-					owned_by_subject_of = ROOT
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			slovakia_area = {
 				type = all
-				OR = {
-					owned_by = ROOT
-					owned_by_subject_of = ROOT
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
@@ -322,50 +330,69 @@ pf_sdt_5 = {
 	has_country_shield = yes
 	potential = { tag = SDT } 
 
-	sdt_markmand = {
+	sdt_markland = {
 		icon = bavarian_cultural_dominance
 		position = 1
-		provinces_to_highlight = { culture = marcomanni } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			NOT = {				
+				OR = {
+					culture = sudeten
+					culture = marcomanni
+				}
+				development = 10
+			}
+		} 
 
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
-				NOT = { area = erzgebirge_area } 
-				NOT = { area = bohemia_area } 
-				culture = marcomanni
+				value = 15
+				OR = {
+					culture = sudeten
+					culture = marcomanni
+				}
+				development = 10
 			}
 		}
 
 		effect = {
-			custom_tooltip = CT_SDT_1
-			add_accepted_culture = marcomanni
-			set_country_flag = markmann_union_flag
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = sdt_united_peoples_modifier
+				duration = 7300
+			}
 		}
 	}
 
 	sdt_friends = {
 		icon = the_alpine_wall
 		position = 2
-		required_missions = { sdt_markmand } 
-		provinces_to_highlight = { province_id = 64 } 
+		required_missions = { sdt_Markland } 
+		provinces_to_highlight = { 
+			province_id = 64 
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = { development = 20 }
+			}
+		} 
 
 		trigger = {
 			64 = {
 				owned_by = ROOT
-				development = 15
+				development = 20
 			}
 		}
 
 		effect = {
-			if = {
-				limit = { 64 = { province_has_center_of_trade_of_level = 1 }  } 
-				64 = {
-					add_base_tax = 1
-					add_base_production = 1
-					add_base_manpower = 1
-				}
+			64 = { upgrade_center_of_trade = yes }
+			custom_tooltip = empty_line_tt
+			64 = { 
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
 			}
-			else = { 64 = { center_of_trade = 1 }  } 
 		}
 	}
 
@@ -379,20 +406,21 @@ pf_sdt_5 = {
 				province_id = 134
 				province_id = 266
 			}
+			NOT = { development = 25 }
 		}
 
 		trigger = {
 			64 = {
 				owned_by = ROOT
-				development = 20
+				development = 25
 			}
 			134 = {
 				owned_by = ROOT
-				development = 20
+				development = 25
 			}
 			266 = {
 				owned_by = ROOT
-				development = 20
+				development = 25
 			}
 		}
 

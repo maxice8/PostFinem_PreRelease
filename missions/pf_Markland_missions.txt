@@ -8,27 +8,42 @@ pf_mkm_1 = {
 	mkm_bordermania = {
 		icon = mission_colonial
 		position = 1
-		provinces_to_highlight = { culture = marcomanni } 
+		provinces_to_highlight = { 
+			OR = {
+				AND = {
+					province_id = 64
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+						NOT = { development = 20 }
+					}
+				}
+				AND = {
+					owned_by = ROOT
+					culture = ROOT
+					NOT = { development = 10 }
+				}
+			}
+		} 
 
 		trigger = {
-			owns = 64
-			64 = { development = 10 } 
+			owns_core_province = 64
+			64 = { development = 20 } 
 			num_of_owned_provinces_with = {
 				value = 8
-				culture = marcomanni
+				culture = ROOT
 				development = 10
 			}
 		}
 
 		effect = {
 			64 = {
-				if = {
-					limit = { province_has_center_of_trade_of_level = 1 } 
-					add_base_tax = 1
-					add_base_production = 1
-					add_base_manpower = 1
-				}
-				else = { center_of_trade = 1 } 
+				upgrade_center_of_trade = yes
+			}
+			64 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
 			}
 		}
 	}
@@ -37,17 +52,28 @@ pf_mkm_1 = {
 		icon = mission_conquer_50_development
 		position = 3
 		required_missions = { mkm_bordermania } 
-		provinces_to_highlight = { province_id = 64 } 
+		provinces_to_highlight = { 
+			province_id = 64 
+			NOT = {			
+				owned_by = ROOT
+				development = 25
+				province_has_current_tech_fort_trigger = yes
+			}
+		} 
 
 		trigger = {
 			64 = {
 				owned_by = ROOT
-				development = 15
-				province_has_center_of_trade_of_level = 2
+				development = 25
+				province_has_current_tech_fort_trigger = yes
 			}
 		}
 
 		effect = {
+			64 = {
+				add_or_upgrade_fort_building = yes
+			}
+			custom_tooltip = empty_line_tt
 			64 = {
 				add_province_modifier = {
 					name = "mkm_salty"
@@ -73,10 +99,11 @@ pf_mkm_2 = {
 				area = austria_proper_area
 				area = inner_austria_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
-			num_of_provinces_owned_or_owned_by_subjects_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 8
 				OR = {
 					area = austria_proper_area
@@ -85,7 +112,13 @@ pf_mkm_2 = {
 			}
 		}
 
-		effect = { add_ruler_modifier = { name = "mkm_break_the_crown" }  } 
+		effect = { 
+			add_prestige_or_monarch_power = { amount = 15 }
+			custom_tooltip = empty_line_tt
+			add_ruler_modifier = { 
+				name = "mkm_break_the_crown" 
+			}  
+		} 
 	}
 
 	mkm_trademaster = {
@@ -94,13 +127,16 @@ pf_mkm_2 = {
 		required_missions = { mkm_home_sweet_home } 
 		provinces_to_highlight = {
 			owned_by = ROOT
-			can_build = marketplace
+			NOT = { 
+				has_production_building_trigger = yes 
+				base_production = 5
+			}
 		}
 
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 10
-				has_trade_building_trigger = yes
+				has_production_building_trigger = yes
 				base_production = 5
 			}
 		}
@@ -108,8 +144,13 @@ pf_mkm_2 = {
 		effect = {
 			add_years_of_owned_provinces_production_income = {
 				years = 5
-				trigger = { has_trade_building_trigger = yes } 
+				trigger = { has_production_building_trigger = yes } 
 				custom_tooltip = CT_MKM_3
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = mkm_productive_peoples_modifier
+				duration = -1
 			}
 		}
 	}
@@ -126,7 +167,10 @@ pf_mkm_3 = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = { army_size = 20 } 
+		trigger = { 
+			land_forcelimit = 25
+			army_size = 25
+		} 
 
 		effect = {
 			add_country_modifier = {
@@ -146,11 +190,12 @@ pf_mkm_3 = {
 				area = moravia_area
 				area = slovakia_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
-			num_of_provinces_owned_or_owned_by_subjects_with = {
-				value = 8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 6
 				OR = {
 					area = moravia_area
 					area = slovakia_area
@@ -159,6 +204,12 @@ pf_mkm_3 = {
 		}
 
 		effect = {
+			define_advisor = {
+				type = governor
+				skill = 2
+				discount = yes
+			}
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = "mkm_the_long_climb"
 				duration = 9125
@@ -174,21 +225,28 @@ pf_mkm_3 = {
 			mkm_bergaland
 			mkm_vindheim
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				culture = eldrun
+				culture = quadi
+				culture = fyrnir
+			}
+			NOT = {  
+				province_is_or_accepts_culture = yes
+			}
+		} 
 
 		trigger = {
-			accepted_culture = fyrnir
-			accepted_culture = quadi
-			accepted_culture = eldrun
-			OR = {
-				accepted_culture = haldyr
-				dip_power = 100
+			AND = {
+				accepted_culture = eldrun
+				accepted_culture = quadi
+				accepted_culture = fyrnir
 			}
 		}
 
 		effect = {
-			if = { limit = { accepted_culture = haldyr }  } 
-			else = { add_dip_power = -100 } 
+			add_dip_power = 100
+			custom_tooltip = empty_line_tt
 			if = {
 				limit = { has_country_modifier = mkm_ostgermanic_culture } 
 				remove_country_modifier = mkm_ostgermanic_culture
@@ -219,19 +277,26 @@ pf_mkm_3 = {
 
 		effect = {
 			change_tag = DNV
-			set_country_flag = formed_donova_flag 
-			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
-			set_government_rank = 2
+			on_change_tag_effect = yes
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			custom_tooltip = empty_line_tt
+			set_country_flag = formed_donova_flag 
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}			
+				set_government_rank = 2
+				custom_tooltip = empty_line_tt
+			}
+			add_prestige_or_monarch_power = { amount = 25 }
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
-			}
-			add_prestige = 25
-			if = {
-				limit = { has_custom_ideas = no } 
-				country_event = { id = ideagroups.1 } 
 			}
 		}
 	}
@@ -252,10 +317,11 @@ pf_mkm_4 = {
 				area = transdanubia_area
 				area = alfold_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
-			num_of_provinces_owned_or_owned_by_subjects_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 8
 				OR = {
 					area = transdanubia_area
@@ -265,12 +331,13 @@ pf_mkm_4 = {
 		}
 
 		effect = {
-			add_mil_power = 100
+			add_army_tradition_or_mil_power = { amount = 20 }
+			custom_tooltip = empty_line_tt
 			define_general = {
-				shock = 6
-				fire = 3
-				manuever = 6
-				siege = 1
+				shock = 5
+				fire = 2
+				manuever = 5
+				siege = 2
 				trait = born_to_the_saddle_personality
 			}
 		}
@@ -284,10 +351,16 @@ pf_mkm_4 = {
 
 		trigger = {
 			stability = 2
-			crown_land_share = 55
+			crown_land_share = 50
 		}
 
 		effect = {
+			define_advisor = {
+				type = statesman
+				skill = 2
+				cost_multiplier = 0.25
+			}
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = "mkm_the_king_word"
 				duration = -1
@@ -313,7 +386,7 @@ pf_mkm_5 = {
 			add_years_of_income = -1
 			add_country_modifier = {
 				name = "mkm_borderpatrol_mod"
-				duration = 9125
+				duration = 7300
 			}
 		}
 	}
@@ -324,22 +397,35 @@ pf_mkm_5 = {
 		required_missions = { mkm_borderpatrol } 
 		provinces_to_highlight = {
 			owned_by = ROOT
-			NOT = { all_neighbor_province = { owned_by = ROOT }  } 
+			any_neighbor_province = {
+				NOT = { owned_by = ROOT }
+			}
+			NOT = { has_fort_building_trigger = yes }
 		}
 
 		trigger = {
-			years_of_income = 1.5
-			mil_power = 200
+			num_of_owned_provinces_with = {
+				value = 4
+				has_fort_building_trigger = yes
+			}
 		}
 
 		effect = {
-			add_years_of_income = -1.5
-			add_mil_power = -200
 			custom_tooltip = CT_MKM_2
+			tooltip = {
+				add_base_manpower = 2
+				add_building = ramparts
+			}
 			hidden_effect = {
 				every_owned_province = {
-					limit = { NOT = { all_neighbor_province = { owned_by = ROOT }  }  } 
-					add_base_manpower = 1
+					limit = {						
+						any_neighbor_province = {
+							NOT = { owned_by = ROOT }
+						}
+						has_fort_building_trigger = yes
+					}					
+					add_base_manpower = 2
+					add_building = ramparts
 				}
 			}
 		}
