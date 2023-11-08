@@ -13,6 +13,27 @@ country_event = {		#ask Vildheim to PU
 		name = "pf_ost.1.a"
 		ai_chance = {
 			factor = 80
+			modifier = {
+				factor = 2
+				ai_attitude = {
+					who = VLD
+					attitude = attitude_hostile
+				}
+			}
+			modifier = {
+				factor = 5
+				ai_attitude = {
+					who = VLD
+					attitude = attitude_domineering
+				}
+			}
+			modifier = {
+				factor = 3
+				ai_attitude = {
+					who = VLD
+					attitude = attitude_rivalry
+				}
+			} 
 		}
 		add_casus_belli = {
 			target = VLD
@@ -24,7 +45,9 @@ country_event = {		#ask Vildheim to PU
 				id = pf_ost.3
 			}
 			if = {
-				limit = {	VLD = {ai = yes}	}
+				limit = {
+					VLD = { ai = yes }
+				}
 				capital_scope = {
 					spawn_rebels = {
 						type = pretender_rebels
@@ -41,7 +64,8 @@ country_event = {		#ask Vildheim to PU
 						leader_dynasty = "Ostholm"
 					}
 				}
-			}else = {
+			}
+			else = {
 				capital_scope = {
 					spawn_rebels = {
 						type = pretender_rebels
@@ -58,6 +82,27 @@ country_event = {		#ask Vildheim to PU
 		name = "pf_ost.1.b"
 		ai_chance = {
 			factor = 20
+			modifier = {
+				factor = 1000
+				ai_attitude = {
+					who = VLD
+					attitude = attitude_allied
+				}
+			}
+			modifier = {
+				factor = 50
+				ai_attitude = {
+					who = VLD
+					attitude = attitude_friendly
+				}
+			}
+			modifier = {
+				factor = 5
+				ai_attitude = {
+					who = VLD
+					attitude = attitude_protective
+				}
+			}
 		}
 		VLD = {
 			add_trust = {
@@ -285,6 +330,7 @@ country_event = {		#choose between Sudeten or not
 		ai_chance = {
 			factor = 80
 		}
+		add_dip_power = 50
 		change_primary_culture = sudeten
 		set_ruler_culture = sudeten
 		set_heir_culture = sudeten

@@ -153,7 +153,7 @@ sdt_project_fast = {
 }
 
 sdt_develop_fast = {
-	local_development_cost = -0.15
+	local_development_cost = -0.10
 	local_tax_modifier = 0.33
 }
 
@@ -163,8 +163,7 @@ sdt_gold_boy = {
 }
 
 sdt_wild_hunt_1 = {
-	cavalry_cost = -0.1
-	cavalry_power = 0.1
+	cavalry_power = 0.10
 }
 
 sdt_wild_hunt_2 = {
@@ -173,21 +172,21 @@ sdt_wild_hunt_2 = {
 }
 
 sdt_donovan_bounty = {
-	local_build_cost = -0.1
-	local_prosperity_growth = 0.1
-	local_development_cost = -0.1
+	local_build_cost = -0.05
+	local_prosperity_growth = 0.25
+	local_development_cost = -0.05
 }
 
 sdt_sudeten_supreme = {
 	local_governing_cost_increase = -15
-	local_build_cost = -0.15
-	local_prosperity_growth = 0.1
-	local_development_cost = -0.15
+	local_build_cost = -0.10
+	local_prosperity_growth = 0.5
+	local_development_cost = -0.10
 }
 
 sdt_triple_city = {
 	local_production_efficiency = 0.2
-	local_centralize_state_cost = -1
+	local_centralize_state_cost = -0.75
 }
 
 #SUTEHRWAELD
