@@ -44,36 +44,13 @@ country_event = {		#ask Vildheim to PU
 			country_event = {
 				id = pf_ost.3
 			}
-			if = {
-				limit = {
-					VLD = { ai = yes }
-				}
-				capital_scope = {
-					spawn_rebels = {
-						type = pretender_rebels
-						size = 5
-						friend = OST
-						leader = "Theodoric"
-						leader_dynasty = "Ostholm"
-					}
-					spawn_rebels = {
-						type = pretender_rebels
-						size = 2
-						friend = OST
-						leader = "Theodoric"
-						leader_dynasty = "Ostholm"
-					}
-				}
-			}
-			else = {
-				capital_scope = {
-					spawn_rebels = {
-						type = pretender_rebels
-						size = 5
-						friend = OST
-						leader = "Theodoric"
-						leader_dynasty = "Ostholm"
-					}
+			capital_scope = {
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 3
+					friend = OST
+					leader = "Theodoric"
+					leader_dynasty = "Ostholm"
 				}
 			}
 		}
@@ -690,7 +667,16 @@ country_event = {		#dnv bergaland money question
 	}
 	option = {
 		name = "pf_ost.15.c"
-		add_years_of_income = 0.5
+		add_adm_power = 100
+		add_legitimacy_equivalent = {
+			amount = 20
+		}
+		add_estate_influence_modifier = {
+			estate = estate_burghers
+			desc = "Bergan Spurned Merchants: -10.0%"
+			influence = -10
+			duration = 9125
+		}
 	}
 }
 
@@ -764,6 +750,9 @@ country_event = {		#dnv capital decision
 
 	option = {
 		name = "pf_ost.17.a"
+		trigger = {
+			NOT = { capital = 64 }
+		}
 		set_capital = 64
 		64 = {
 			add_base_tax = 1
@@ -773,6 +762,9 @@ country_event = {		#dnv capital decision
 	}
 	option = {
 		name = "pf_ost.17.b"
+		trigger = {
+			NOT = { capital = 134 }
+		}
 		set_capital = 134
 		134 = {
 			add_base_tax = 1
@@ -782,6 +774,9 @@ country_event = {		#dnv capital decision
 	}
 	option = {
 		name = "pf_ost.17.c"
+		trigger = {
+			NOT = { capital = 153 }
+		}
 		set_capital = 153
 		153 = {
 			add_base_tax = 1
@@ -791,6 +786,9 @@ country_event = {		#dnv capital decision
 	}
 	option = {
 		name = "pf_ost.17.e"
+		trigger = {
+			NOT = { capital = 154 }
+		}
 		set_capital = 154
 		154 = {
 			add_base_tax = 1
@@ -800,6 +798,9 @@ country_event = {		#dnv capital decision
 	}
 	option = {
 		name = "pf_ost.17.f"
+		trigger = {
+			NOT = { capital = 266 }
+		}
 		set_capital = 266
 		266 = {
 			add_base_tax = 1
@@ -922,7 +923,8 @@ country_event = {		#dnv more reforms nobility
 					influence = 15
 					duration = 9125
 				}
-			}else = {
+			}
+			else = {
 				add_yearly_manpower = -4
 				add_estate_influence_modifier = {
 					estate = estate_burghers
@@ -931,7 +933,8 @@ country_event = {		#dnv more reforms nobility
 					duration = 9125
 				}
 			}
-		}else = {
+		}
+		else = {
 			if = {
 				limit = {
 					has_country_flag = dnv_keep_south_law
@@ -943,7 +946,8 @@ country_event = {		#dnv more reforms nobility
 					influence = 5
 					duration = 9125
 				}
-			}else = {
+			}
+			else = {
 				add_yearly_manpower = -1
 				add_estate_influence_modifier = {
 					estate = estate_burghers
@@ -987,7 +991,8 @@ country_event = {		#dnv more reforms economic
 					influence = 5
 					duration = 9125
 				}
-			}else = {
+			}
+			else = {
 				add_years_of_income = -0.5
 				add_estate_influence_modifier = {
 					estate = estate_burghers
@@ -996,7 +1001,8 @@ country_event = {		#dnv more reforms economic
 					duration = 9125
 				}
 			}
-		}else = {
+		}
+		else = {
 			if = {
 				limit = {
 					has_country_flag = dnv_respect_vild
@@ -1008,7 +1014,8 @@ country_event = {		#dnv more reforms economic
 					influence = 15
 					duration = 9125
 				}
-			}else = {
+			}
+			else = {
 				add_years_of_income = -1
 				add_estate_influence_modifier = {
 					estate = estate_burghers
@@ -1050,7 +1057,7 @@ country_event = {		#dnv more reforms religios
 		change_religion = hellenic
 		capital_scope = {
 			spawn_rebels = {
-				size = 4
+				size = 3
 				type = south_germanic_zealots
 			}
 		}
@@ -1077,7 +1084,7 @@ country_event = {		#dnv more reforms religios
 		change_religion = punic_religion
 		capital_scope = {
 			spawn_rebels = {
-				size = 5
+				size = 3
 				type = south_germanic_zealots
 			}
 		}
@@ -1131,7 +1138,8 @@ country_event = {		#dnv final refomrs
 			limit = {
 				dynasty = "Ostholm"
 			}
-		}else = {
+		}
+		else = {
 			kill_ruler = yes
 			kill_heir = {
 				allow_new_heir = no
@@ -1180,12 +1188,12 @@ country_event = {		#dnv final refomrs
 	}
 	option = {
 		name = "pf_ost.22.e"
-
 		if = {
 			limit = {
 				was_tag = SDT
 			}
-		}else = {
+		}
+		else = {
 			kill_ruler = yes
 			kill_heir = {
 				allow_new_heir = no
@@ -1361,21 +1369,17 @@ country_event = {		#Vildheim story flavor
 		ai_chance = {
 			factor = 20
 		}
-		define_heir = {
+		define_ruler = {
 			name = "Thora"
 			dynasty = "Herelingas"
 			adm = 3
 			dip = 5
 			mil = 5
-			birth_date = 1429.09.06
 			female = yes
-		}
-		hidden_effect = {
-			add_stability = 1
-			kill_ruler = yes
 		}
 		add_ruler_modifier = {
 			name = vld_twins_basil
+			duration = -1
 		}
 	}
 	option = {
@@ -1383,24 +1387,19 @@ country_event = {		#Vildheim story flavor
 		ai_chance = {
 			factor = 10
 		}
-		define_heir = {
+		define_ruler = {
 			name = "Freya"
 			dynasty = "Herelingas"
 			adm = 2
 			dip = 2
 			mil = 6
-			birth_date = 1430.09.06
 			female = yes
 		}
-		define_heir_to_general = {
+		define_ruler_to_general = {
 			fire = 4
 			shock = 4
 			manuever = 3
 			siege = 1
-		}
-		hidden_effect = {
-			add_stability = 1
-			kill_ruler = yes
 		}
 	}
 }
