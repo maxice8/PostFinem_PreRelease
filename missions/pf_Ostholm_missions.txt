@@ -617,7 +617,7 @@ pf_ost_5 = {
 								NOT = { 
 									has_country_modifier = ost_wine
 								}	
-								trade_goods = wine
+								trade_goods = wine`
 							}	
 							add_province_modifier = {
 								name = "ost_wine"
