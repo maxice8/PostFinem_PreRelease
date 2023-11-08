@@ -249,6 +249,7 @@ zoroastrian_group = {
 
 germanic_group = {
 	defender_of_faith = yes
+	can_form_personal_unions = yes
 	flag_emblem_index_range = { 110 110 }
 
 	norse_pagan_reformed = {
@@ -1661,7 +1662,7 @@ druidic_group = {
 			}
 
 			icon_meditation = {
-				development_cost_modifier = -0.1
+				development_cost = -0.1
 				production_efficiency = 0.2
 				
 				allow = {

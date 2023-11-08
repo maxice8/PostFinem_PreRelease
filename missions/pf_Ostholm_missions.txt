@@ -1,0 +1,666 @@
+pf_ost_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = OST } 
+
+	ost_eastern_push = {
+		icon = mission_have_two_subjects
+		position = 2
+		required_missions = { ost_old_expanse } 
+		provinces_to_highlight = { 
+			area = austria_proper_area 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			austria_proper_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			add_army_tradition = 10
+			add_yearly_manpower = 3
+			custom_tooltip = empty_line_tt
+			bohemia_area = { add_permanent_claim = ROOT } 
+			east_bavaria_area = { add_permanent_claim = ROOT } 
+		}
+	}
+
+	ost_ost_ostgermania = {
+		icon = mission_crusade_for_varna
+		position = 3
+		required_missions = {
+			ost_ostgermania
+			ost_eastern_push
+		}
+		provinces_to_highlight = {
+			region = carpathia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			carpathia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			custom_tooltip = OST_CT_1
+			if = {
+				limit = {
+					VLD = {
+						is_subject_of = ROOT
+					}
+				}
+				inherit = VLD
+			}
+			add_country_modifier = {
+				name = "ost_lords_of_ostgermania"
+				duration = -1
+			}
+		}
+	}
+	ost_warrior_valors = {
+		icon = mission_steppe_warriors
+		position = 6
+		required_missions = { ost_warrior_manpower } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				army_tradition = 50
+				army_professionalism = 0.3
+			}
+			num_of_generals = 2
+		}
+
+		effect = {
+			add_mil_power = 100
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "ost_fire_of_war"
+				duration = 9125
+			}
+		}
+	}
+	ost_warrior_weapons = {
+		icon = mission_cannons_firing
+		position = 7
+		required_missions = { ost_warrior_valors } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+			NOT = { development = 25 }
+		} 
+
+		trigger = {
+			capital_scope = {
+				development = 25
+			}
+			num_of_artillery = 15
+		}
+
+		effect = {
+			custom_tooltip = ost_estate_nobles_officer_corp_fire_damage_tt
+			set_country_flag = estate_nobles_officer_corp_fire_damage_flag
+			capital_scope = {
+				add_province_modifier = {
+					name = "ost_cannons_of_wien"
+					duration = -1
+				}
+			}
+		}
+	}
+
+
+}
+pf_ost_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = OST } 
+
+	ost_old_expanse = {
+		icon = mission_unite_home_region
+		position = 1
+		trigger = {
+			if = {
+				limit = {
+					ai = no
+				}				
+				army_size_percentage = 0.9
+				manpower_percentage = 0.5
+				num_of_generals = 1
+			}
+			else = {
+				ai = yes
+				army_size_percentage = 0.75
+				num_of_generals = 1
+			}
+		}
+
+		effect = {
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
+			transdanubia_area = { add_permanent_claim = ROOT } 
+			austria_proper_area = { add_permanent_claim = ROOT } 
+			slavonia_area = { add_permanent_claim = ROOT } 
+		}
+	}
+
+	ost_ostgermania = {
+		icon = mission_luther_theses
+		position = 2
+		required_missions = { ost_old_expanse } 
+		provinces_to_highlight = {
+			OR = {
+				area = slavonia_area
+				area = transdanubia_area
+				area = moravia_area
+				area = slovakia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		trigger = {
+			slavonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			transdanubia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			moravia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			slovakia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			create_general = {
+				tradition = 75
+			}
+			custom_tooltip = empty_line_tt
+			add_ruler_modifier = {
+				name = ost_lord_of_ostgermania_modifier
+			}
+			transylvania_area = { add_permanent_claim = ROOT } 
+			carpathia_region = { add_permanent_claim = ROOT } 
+		}
+	}
+
+	ost_regional_power = {
+		icon = mission_empire
+		position = 4
+		required_missions = {
+			ost_germanic_faith
+			ost_ost_ostgermania
+		}
+		provinces_to_highlight = { region = carpathia_region } 
+
+		trigger = {
+			stability = 3
+			total_development = 350
+		}
+
+		effect = {
+			change_tag = DNV
+			swap_non_generic_missions = yes
+			on_change_tag_effect = yes
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			custom_tooltip = empty_line_tt
+			set_country_flag = formed_donova_flag 
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}			
+				set_government_rank = 2
+				custom_tooltip = empty_line_tt
+			}
+			add_prestige_or_monarch_power = { amount = 25 }
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+		} 
+	}
+
+	ost_warrior_manpower = {
+		icon = mission_italian_condottiere
+		position = 5
+		provinces_to_highlight = { owned_by = ROOT } 
+
+		trigger = {
+			manpower_percentage = 0.5
+			num_of_owned_provinces_with = {
+				value = 3
+				base_manpower = 5
+			}
+		}
+
+		effect = {
+			add_yearly_manpower = 3
+			custom_tooltip = empty_line_tt
+			add_mil_power = 100
+			custom_tooltip = empty_line_tt		
+			define_advisor = {
+				type = army_reformer
+				skill = 2
+				discount = yes
+				name = "Aric Gerwig"
+			}
+		}
+	}
+}
+pf_ost_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = OST } 
+
+	ost_northern_push = {
+		icon = mission_non-western_soldiers
+		position = 2
+		required_missions = {
+			ost_diplomacy
+			ost_old_expanse
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			mil_tech = 4
+			monthly_mil = 10
+		} 
+
+		effect = {
+			add_yearly_manpower = 1
+			custom_tooltip = empty_line_tt
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 10
+			}
+			custom_tooltip = empty_line_tt
+			moravia_area = { add_permanent_claim = ROOT } 
+			slovakia_area = { add_permanent_claim = ROOT } 
+		}
+	}
+
+	ost_germanic_faith = {
+		icon = mission_hands_praying
+		position = 3
+		required_missions = {
+			ost_ostgermania
+			ost_big_boys
+		}
+		provinces_to_highlight = {
+			region = carpathia_region
+			NOT = { religion = south_germanic_religion } 
+		}
+
+		trigger = {
+			carpathia_region = {
+				type = all
+				religion = south_germanic_religion
+			}
+		}
+
+		effect = {
+			add_years_of_income = 3
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = ost_conquests_of_ostgermania_modifier
+				duration = 7300
+			}
+			carpathia_region = {
+				add_province_modifier = {
+					name = "ost_realm_of_og"
+					duration = 18250
+				}
+			}
+		}
+	}
+	ost_warrior_ideas = {
+		icon = pf_hannibal
+		position = 6
+		required_missions = {
+			ost_warrior_manpower
+			ost_grand_army
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				full_idea_group = aristocracy_ideas
+				full_idea_group = offensive_ideas
+				full_idea_group = defensive_ideas
+				full_idea_group = quality_ideas
+				full_idea_group = quantity_ideas
+				full_idea_group = mercenary_ideas
+				full_idea_group = firepower_ideas
+				full_idea_group = naval_ideas
+			}
+		}
+
+		effect = {
+			add_army_tradition_or_mil_power = { amount = 15 }
+			custom_tooltip = empty_line_tt
+			define_general = {
+				shock = 4
+				fire = 4
+				manuever = 4
+				siege = 2
+			}
+		}
+	}
+	ost_warrior_power = {
+		icon = mission_teutonic_knights
+		position = 7
+		required_missions = {
+			ost_warrior_ideas
+			ost_warrior_valors
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				army_tradition = 75
+				army_professionalism = 0.5
+			}
+			land_forcelimit = 50
+			army_size = 50
+		}
+
+		effect = {
+			capital_scope = {
+				add_base_manpower = 3
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "ost_powerhouse"
+				duration = 18250
+			}
+		}
+	}
+
+}
+pf_ost_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = OST } 
+
+	ost_diplomacy = {
+		icon = mission_alliances
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			prestige = 10
+			OR = {
+				has_adm_advisor = yes
+				has_dip_advisor = yes
+				has_mil_advisor = yes
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "ost_diplomatic_pressure"
+				duration = 9125
+			}
+		}
+	}
+
+	ost_big_boys = {
+		icon = mission_monarch_in_throne_room
+		position = 2
+		required_missions = { ost_diplomacy } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			prestige = 30
+			legitimacy_equivalent = 100
+			OR = {
+				grown_by_development = 50
+				personal_union = 1
+			}
+		}
+
+		effect = {
+			add_prestige_or_monarch_power = { amount = 10 }
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "ost_diplomatic_pressure_2"
+				duration = 18250
+			}
+		}
+	}
+
+	ost_trade_empire = {
+		icon = the_alpine_wall
+		position = 4
+		required_missions = { ost_big_boys } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			years_of_income = 3
+			dip_power = 200
+			owns = 128
+			owns = 134
+			owns = 1863
+		}
+
+		effect = {
+			add_dip_power = -200
+			custom_tooltip = empty_line_tt
+			country_event = { id = pf_ost.4 } 
+		}
+	}
+
+	ost_grand_army = {
+		icon = mission_assemble_an_army
+		position = 5
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			land_forcelimit = 25
+			army_size = 25
+		} 
+
+		effect = {
+			define_advisor = {
+				type = drill_sergeant
+				skill = 2
+				cost_multiplier = 0.25
+				name = "Gundric Hardwin"
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "ost_army_grand"
+				duration = 9125
+			}
+		}
+	}
+}
+pf_ost_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = OST } 
+
+	ost_good_harvest = {
+		icon = mission_rice_field
+		position = 2
+		required_missions = { ost_diplomacy } 
+		provinces_to_highlight = {  
+			OR = {				
+				province_id = 134
+				province_id = 135
+				province_id = 1863
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		} 
+
+		trigger = {
+			owns_core_province = 134
+			owns_core_province = 135
+			owns_core_province = 1863
+			OR = {
+				has_adm_advisor_2 = yes
+				has_dip_advisor_2 = yes
+			}
+		}
+
+		effect = {
+			simple_dynamic_effect = {
+				first_custom_tooltip = ost_adm_advisor_tt
+				first_limit = "
+					has_adm_advisor_2 = yes
+				"
+				first_effect = "
+					add_estate_loyalty = {
+						estate = estate_church
+						loyalty = 10
+					}
+				"
+				second_custom_tooltip = ost_dip_advisor_tt
+				second_limit = "
+					has_dip_advisor_2 = yes
+				"
+				second_effect = "
+					add_estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 10
+					}
+				"
+			}
+			custom_tooltip = empty_line_tt
+			134 = { add_base_production = 1 } 
+			134 = { 
+				add_or_upgrade_production_building = yes
+			} 
+			custom_tooltip = empty_line_tt
+			135 = { add_base_production = 1 } 
+			135 = {
+				add_or_upgrade_production_building = yes
+			} 
+			custom_tooltip = empty_line_tt
+			1863 = { add_base_production = 1 } 
+			1863 = { 
+				add_or_upgrade_production_building = yes
+			} 
+		}
+	}
+
+	ost_good_wine = {
+		icon = mission_dominate_home_trade_node
+		position = 3
+		required_missions = { ost_good_harvest } 
+		provinces_to_highlight = {
+			continent = europe
+			trade_goods = wine
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				trade_goods = wine
+				base_production = 5
+			}
+		}
+
+		effect = {
+			add_years_of_owned_provinces_production_income = {
+				years = 8
+				trigger = { trade_goods = wine } 
+				custom_tooltip = MONOPOLY_INCOME_WINE_DESC
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = OST_CT_3
+			tooltip = {				
+				add_province_modifier = {
+					name = "ost_wine"
+					duration = 9125
+				}
+			}
+			hidden_effect = {
+				for = {
+					amount = 5
+					effect = "	
+						random_owned_province = {
+							limit = {
+							NOT = { has_country_modifier = ost_wine }		
+							add_province_modifier = {
+								name = "ost_wine"
+								duration = 9125
+							}
+						}						
+					"
+				}
+			}
+		}
+	}
+
+	ost_warrior_sleep = {
+		icon = mission_conquer_50_development
+		position = 6
+		required_missions = { ost_grand_army } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_manpower_building_trigger = yes }
+		}
+
+		trigger = {
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 60
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				has_manpower_building_trigger = yes
+			}
+		}
+
+		effect = {
+			take_estate_land_share_large = { estate = all }
+			custom_tooltip = empty_line_tt
+			custom_tooltip = OST_CT_2
+			for = {
+				amount = 5
+				effect = "				
+					random_owned_province = {
+						limit = {
+							has_manpower_building_trigger = yes
+						}						
+					add_or_upgrade_manpower_building = yes
+					}
+				"
+			}
+		}
+	}
+}

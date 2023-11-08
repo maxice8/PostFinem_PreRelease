@@ -296,6 +296,12 @@ estate_nobles_officer_corp = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }
 		modifier = { monthly_russian_modernization = -0.05 }
 	}
+	loyalty_scaled_conditional_modifier = {
+		trigger = { has_country_flag = estate_nobles_officer_corp_fire_damage_flag }
+		modifier = { 
+			fire_damage = 0.15
+		}
+	}
 	#conditional_modifier = {
 	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
 	#	modifier = { monthly_ottoman_decadence = 0.02 }

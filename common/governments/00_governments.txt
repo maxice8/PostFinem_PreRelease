@@ -25,6 +25,9 @@ monarchy = {
 				astartean_adventurer_reform
 				illyrian_kingdom_reform
 				nordic_monarchy_reform
+				pf_ostholm_crown_monarchy
+				pf_donova_crown
+				pf_donova_crown_vld
 				pf_babylonian_kingdom
 				pf_babylonian_empire
 				pf_gavrasian_kingdom
@@ -248,6 +251,7 @@ monarchy = {
 		military_doctrines = {
 			reforms = {
 				# pf [[[
+				pf_vild_hunters
 				pf_integrated_phalanx
 				pf_catephract_focus
 				pf_militarised_druids_reform
@@ -617,6 +621,8 @@ republic = {
 				pf_rabim_qahal
 				icelandic_althingi_reform
 				stratocratic_republic
+				pf_donova_republic
+				pf_donova_republic_mark
 				# ]]]
 				oligarchy_reform
 				signoria_reform
@@ -1032,6 +1038,8 @@ tribal = {
 			reforms = {
 				# pf [[[
 				pf_norse_warlord
+				pf_ostholm_crown
+				pf_donova_horde
 				pf_semi_feudal_tribe
 				pf_drakovan_tribes
 				pf_lechite_kingdom

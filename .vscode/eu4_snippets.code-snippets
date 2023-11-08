@@ -242,5 +242,12 @@
 		],
 		"description": "Add base dev ALL THREE"
 	},
+	"OR owned by - is core ROOT": {
+		"prefix": ["own","is_"],
+		"body": [  			
+			"OR = {\n\tNOT = { owned_by = ROOT }\n\tNOT = { is_core = ROOT }\n}"
+		],
+		"description": "For provinces to highlight"
+	},
 		
 }

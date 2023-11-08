@@ -4,15 +4,17 @@ spriteTypes = {
         name = "GFX_icon_religion"
         texturefile = "gfx//interface//icon_religion.dds"
         noOfFrames = 41
+        noOfFrames = 41
     }    
     spriteType = {
         name = "GFX_country_icon_religion"
         texturefile = "gfx//interface//country_icon_religion.dds"
-        noOfFrames = 41    
+        noOfFrames = 41     
     }
     spriteType = {
         name = "GFX_icon_religion_small"
         texturefile = "gfx//interface//icon_religion_small.dds"
+        noOfFrames = 41
         noOfFrames = 41
         loadType = "INGAME"
     }
@@ -20,6 +22,7 @@ spriteTypes = {
         name = "GFX_religion_icon_strip"
         texturefile = "gfx\\interface\\icon_religion_small.dds"
         transparencecheck = yes
+        noOfFrames = 41
         noOfFrames = 41
     }
     spriteType = {

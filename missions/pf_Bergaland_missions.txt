@@ -1,0 +1,611 @@
+pf_slo_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SLO
+	}
+	slo_home_defense = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			if = {
+				limit = {
+					ai = no
+				}			
+				army_size_percentage = 0.9
+				num_of_generals = 1
+				manpower_percentage = 0.5
+			}
+			else = {
+				army_size_percentage = 0.75
+				num_of_generals = 1
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "slo_bergan_defense"
+				duration = 9125
+			}
+			bohemia_area = {
+				add_permanent_claim = ROOT
+			}
+			moravia_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	slo_grand_fort = {
+		icon = mission_luther_theses
+		position = 3
+		required_missions = {
+			slo_home_defense
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 154
+					NOT = { province_has_current_tech_fort_trigger = yes }
+					NOT = { num_of_times_improved_by_owner = 5 }
+				}
+				AND = {
+					owned_by = ROOT
+					province_has_current_tech_fort_trigger = yes
+					NOT = { base_manpower = 5 }
+				}
+			}
+		}
+		trigger = {
+			# has_idea = battlefield_commisions
+			owns = 154
+			154 = {
+				province_has_current_tech_fort_trigger = yes
+			}
+			154 = { num_of_times_improved_by_owner = 5 }
+			num_of_owned_provinces_with = {
+				value = 2
+				province_has_current_tech_fort_trigger = yes
+				base_manpower = 5
+			}
+		}
+		effect = {
+			custom_tooltip = SLO_CT_4
+			tooltip = {			
+				add_province_modifier = {
+					name = "slo_defense_in_depth"
+					duration = 9125
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						fort_level = 1
+					}
+					add_province_modifier = {
+						name = "slo_defense_in_depth"
+						duration = 9125
+					}
+				}
+			}
+			custom_tooltip = slo_grand_fort_defensive_bonus_tt
+			if = {
+				limit = { has_idea = battlefield_commisions }	
+				set_country_flag = unlock_wulfrittar_mercs_flag
+			}
+		}
+	}
+	slo_fortify = {
+		icon = mission_colonial
+		position = 4
+		required_missions = {
+			slo_grand_fort
+		}
+		provinces_to_highlight = {
+			province_id = 154
+			NOT = { province_has_current_tech_fort_trigger = yes }
+			NOT = { has_building = ramparts }
+		}
+		trigger = {
+			owns = 154
+			154 = { province_has_current_tech_fort_trigger = yes }
+			154 = { has_building = ramparts }
+		}
+		effect = {
+			154 = {
+				add_base_manpower = 2
+			}
+			154 = {
+				add_province_modifier = {
+					name = "slo_the_grand_fort"
+					duration = -1
+				}
+			}
+			custom_tooltip = slo_defensive_finished_bonus_tt
+			tooltip = {				
+				154 = {
+					add_or_upgrade_fort_building = yes
+				}
+				custom_tooltip = empty_line_tt
+				154 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						full_idea_group = defensive_ideas
+					}				
+					154 = {
+						add_or_upgrade_fort_building = yes
+					}
+					custom_tooltip = empty_line_tt
+					154 = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}				
+			}
+		}
+	}
+	slo_unbroken = {
+		icon = mission_great_wall
+		position = 5
+		required_missions = {
+			slo_fortify
+		}
+		provinces_to_highlight = {
+			province_id = 154
+		}
+		trigger = {
+			owns = 154
+			154 = {
+				has_province_modifier = slo_homeofgold
+			}
+			154 = {
+				base_production = 8
+			}
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
+			custom_tooltip = slo_replace_gold_modifier_tt
+			tooltip = {
+				154 = {
+					add_permanent_province_modifier = {
+						name = "slo_the_grand_fort_2"
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				154 = {
+					remove_province_modifier = slo_homeofgold
+					add_province_modifier = {
+						name = "slo_the_grand_fort_2"
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+pf_slo_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SLO
+	}
+	slo_home_offense = {
+		icon = mission_monarch_in_throne_room
+		position = 2
+		required_missions = {
+			slo_home_defense
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = bohemia_area
+				area = moravia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			bohemia_area = {
+				type = all
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
+			}
+			moravia_area = {
+				type = all
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
+			}
+		}
+		effect = {
+			add_army_tradition_or_mil_power = { amount = 10 }
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "slo_morian_builds"
+				duration = 9125
+			}
+			austria_proper_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+pf_slo_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SLO
+	}
+	slo_home_land = {
+		icon = mission_hands_praying
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				inquisitor = 1
+				slovakia_area = {
+					has_state_edict = edict_religion_enforced
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "slo_bergan_faith"
+				duration = 9125
+			}
+			transylvania_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	slo_drakovan = {
+		icon = mission_mosque
+		position = 2
+		required_missions = {
+			slo_home_land
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			culture = drakova
+			NOT = {
+				religion = ROOT
+			}
+		}
+		trigger = {
+			OR = {
+				accepted_culture = drakova
+				transylvania_area = {
+					type = all
+					religion = ROOT
+					owned_by = ROOT
+				}
+			}
+		}
+		effect = {
+			add_yearly_manpower = 2
+			custom_tooltip = empty_line_tt
+			change_ruler_stat = { type = dip amount = 1 }
+			custom_tooltip = empty_line_tt
+			add_accepted_culture_or_dip_power = { culture = drakova }
+		}
+	}
+	slo_ostgermania = {
+		icon = mission_golden_century
+		position = 3
+		required_missions = {
+			slo_home_offense
+			slo_ostholm
+		}
+		provinces_to_highlight = {
+			region = carpathia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 154
+			154 = {
+				development = 20
+			}
+			num_of_owned_provinces_with = {
+				value = 20
+				region = carpathia_region
+			}
+		}
+		effect = {
+			define_advisor = {
+				type = governor
+				skill = 3
+				cost_multiplier = 0.25
+				name = "Ivor Alaricson"
+			}
+			custom_tooltip = empty_line_tt
+			154 = {
+				add_permanent_province_modifier = {
+					name = "slo_homeofgold"
+					duration = -1
+				}
+			}
+			carpathia_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	slo_ostgermania_dominion = {
+		icon = mission_cossack_cavalry
+		position = 5
+		required_missions = {
+			slo_ostgermania
+		}
+		provinces_to_highlight = {
+			region = carpathia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 40
+				region = carpathia_region
+			}
+		}
+		effect = {
+			change_tag = DNV
+			swap_non_generic_missions = yes
+			on_change_tag_effect = yes
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			custom_tooltip = empty_line_tt
+			set_country_flag = formed_donova_flag 
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}			
+				set_government_rank = 2
+				custom_tooltip = empty_line_tt
+			}
+			add_prestige_or_monarch_power = { amount = 25 }
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+		}
+	}
+}
+
+pf_slo_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SLO
+	}
+	slo_ostholm = {
+		icon = mission_impaled_soldies
+		position = 2
+		required_missions = {
+			slo_vildheim
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = alfold_area
+				area = transdanubia_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 8
+				OR = {
+					area = alfold_area
+					area = transdanubia_area
+				}
+			}
+		}
+		effect = {
+			add_mil_power = 100
+			custom_tooltip = empty_line_tt
+			define_general = {
+				shock = 3
+				fire = 3
+				manuever = 4
+				siege = 2
+			}
+			custom_tooltip = empty_line_tt
+			austria_proper_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	slo_grains = {
+		icon = mission_rice_field
+		position = 4
+		required_missions = {
+			slo_metal
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			trade_goods = grain
+			NOT = { base_production = 8 }
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				trade_goods = grain
+				base_production = 8
+				has_production_building_trigger = yes
+			}
+		}
+		effect = {
+			add_yearly_manpower = 3
+			custom_tooltip = empty_line_tt
+			custom_tooltip = slo_grains_manpower_tt
+			tooltip = {			
+				add_base_production = 2
+				add_building = farm_estate
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {						
+						trade_goods = grain
+						base_production = 8
+						has_production_building_trigger = yes
+					}
+					add_base_production = 2
+					add_building = farm_estate
+				}
+			}
+		}
+	}
+}
+
+pf_slo_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SLO
+	}
+	slo_vildheim = {
+		icon = mission_non-western_cavalry_raid
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			total_development = 75
+		}
+		effect = {
+			add_army_professionalism = 0.05
+			custom_tooltip = empty_line_tt
+			alfold_area = {
+				add_permanent_claim = ROOT
+			}
+			transdanubia_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	slo_metal = {
+		icon = mission_iron_and_copper
+		position = 3
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				trade_goods = iron
+				trade_goods = copper
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 2
+				OR = {
+					trade_goods = iron
+					trade_goods = copper
+				}
+				base_production = 8
+			}
+		}
+		effect = {
+			add_years_of_income = 4
+		}
+	}
+	slo_metal_2 = {
+		icon = a_center_of_religion
+		position = 4
+		required_missions = {
+			slo_metal
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				trade_goods = iron
+				trade_goods = copper
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 2
+				OR = {
+					trade_goods = iron
+					trade_goods = copper
+				}
+				has_manufactory_trigger = yes
+				base_production = 10
+			}
+		}
+		effect = {
+			define_advisor = {
+				type = army_organiser
+				skill = 3
+				discount = yes
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "slo_men_at_arms"
+				duration = 9125
+			}
+		}
+	}
+	slo_wealth = {
+		icon = mission_african_gold
+		position = 5
+		required_missions = {
+			slo_grains
+			slo_metal_2
+		}
+		provinces_to_highlight = {
+			
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				development = 20
+			}
+		}
+		effect = {
+			add_prestige_or_monarch_power = { amount = 25 }
+			custom_tooltip = empty_line_tt
+			change_ruler_stat = { type = adm amount = 1 }
+			custom_tooltip = empty_line_tt
+			custom_tooltip = slo_cities_tt
+			tooltip = {		
+				add_province_modifier = {
+					name = "walls_of_germania"
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = { 
+						development = 20
+					}
+					add_province_modifier = {
+						name = "walls_of_germania"
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}

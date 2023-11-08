@@ -1,0 +1,17 @@
+ostgermanic_wulfrittar_mercs = {
+	regiments_per_development = 0.02
+	# mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	cavalry_weight = 0.2
+	artillery_weight = 0.0
+	cavalry_cap = 2
+	home_province = 154 #Burganfurt
+	sprites = { dlc103_swi_sprite_pack easterngfx_sprite_pack }
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		has_country_flag = unlock_wulfrittar_mercs_flag
+	}
+	modifier = {
+		shock_damage_received = -0.1
+		recover_army_morale_speed = 0.1
+	}
+}

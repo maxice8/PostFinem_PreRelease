@@ -1,0 +1,116 @@
+#Country Name: Please see filename.
+graphical_culture = westerngfx
+color = { 222 222 222 }
+revolutionary_colors = { 0 14 0 }
+historical_score = 350
+historical_idea_groups = { 
+	administrative_ideas
+	defensive_ideas
+	diplomatic_ideas
+	offensive_ideas
+	economic_ideas
+	trade_ideas
+	innovativeness_ideas
+	quantity_ideas
+}
+historical_units = { 
+	halberd_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+monarch_names = { 
+	"Wolfhard #0" = 20
+	"Berthold #0" = 20
+	"Ernst #0" = 20
+	"Friedrich #0" = 20
+	"Gebhard #0" = 20
+	"Hartmut #0" = 10
+	"Ingram #0" = 10
+	"Karlmann #0" = 10
+	"Ludwig #0" = 10
+	"Otto #0" = 10
+	"Roderich #0" = 10
+	"Sigurd #0" = 10
+	"Ulrich #0" = 10
+	"Wilhelm #0" = 10
+	"Albrecht #0" = 10
+	"Bruno #0" = 10
+	"Dieter #0" = 10
+	"Eberhard #0" = 10
+	"Frithjof #0" = 10
+	"Gerhard #0" = 10
+	"Hermann #0" = 5
+	"Ingo #0" = 5
+	"Kuno #0" = 5
+	"Luitger #0" = 5
+	"Odo #0" = 5
+	"Radulf #0" = 5
+	"Siegfried #0" = 5
+	"Ulfric #0" = 5
+	"Walther #0" = 5
+	"Arnulf #0" = 5
+	"Brandolf #0" = 5
+	"Dietrich #0" = 5
+	"Erik #0" = 5
+	"Fridulf #0" = 5
+	"Gerolf #0" = 5
+	"Henrik #0" = 5
+	"Ingolf #0" = 5
+	"Karl #0" = 5
+	"Leopold #0" = 5
+	"Rudolf #0" = 5
+	"Sven #0" = 1
+	"Ulrik #0" = 1
+	"Walter #0" = 1
+	"Adalbert #0" = 1
+	"Bernhard #0" = 1
+	"Christian #0" = 1
+	"Dagobert #0" = 1
+	"Emmerich #0" = 1
+	"Frederick #0" = 1
+	"Gottfried #0" = 1
+	"Adelheid #0" = -1
+	"Bertha #0" = -1
+	"Gertrude #0" = -1
+	"Hilda #0" = -1
+	"Matilda #0" = -1
+}
+leader_names = { 
+	Achim Adalbrand Adelhard Aethelstan Agilbert Alberic Alfgar Alric Alwin Arnulf
+	Baldemar Baldric Bardolf Berthold Bertram Cedric Cuthred Cynhelm Diederich Eadmer
+	Eadred Eberhart Eckhard Edmar Edric Egbert Egilwig Eldric Elmar Engelbert
+	Erich Ethelbert Everhard Falko Faramund Finnegan Folker Garbrandt Gerhard Gisilbert
+	Godfrey Godwin Gottfried Grimwald Guntram Hademar Hagen Haldor Halvdan Hartwig
+	Hildebrandt Hrothwulf Ingmar Isolfr Jarnulf Jocelyn Leifric Leopold Liutbert Ludolf
+	Magnus Marwin Odilo Odo Odwin Oswald Radmar Roderic Sigbald Sigebert
+	Sigfrid Sigmar Sigmund Sigwald Swanhild Theobald Thorkild Ulmar Waldemar Walter
+	Wiglaf Willard Wulfric Yngvar Yorick 
+}
+ship_names = { 
+	"Sea Wolf" "Raven's Wing" "Serpent's Fang" "Thunderbolt" "Stormrider" "Odin's Fury" "Saxon Pride" "Dragon's Breath" "Warrior's Honor" "Valkyrie's Grace"
+	"Longship" "Sea Stallion" "Sea Serpent" "Shieldmaiden" "Frostfire" "Battlehammer" "Wolfsbane" "Norseman" "Saxon Thunder" "Wyvern's Fury"
+	"Swordmaiden" "Spearhead" "Runeblade" "Viking's Legacy" "Dragon's Roar" "Bloodhawk" "Njord's Blessing" "Thor's Hammer" "Seaflame" "Valkyrie's Call"
+	"Berserker's Fury" "Ironclad" "Dragonfire" "Mighty Oak" "Stormbringer" "Hel's Embrace" "Sea Strider" "Saxon Legacy" "Swordbreaker" "Ravensail"
+	"Frostfang" "Warrior's Spirit" "Viking's Valor" "Norse Pride" "Saxon Glory" "Dragon's Breath" "Stormrider" "Serpent's Fang" "Thunderbolt" "Odin's Fury"
+	"Sea Wolf" "Raven's Wing" "Saxon Thunder" "Dragon's Roar" "Viking's Legacy" "Longship" "Sea Stallion" "Sea Serpent" "Shieldmaiden" "Frostfire"
+	"Battlehammer" "Wolfsbane" "Norseman" "Wyvern's Fury" "Swordmaiden" "Spearhead" "Runeblade" "Bloodhawk" "Njord's Blessing" "Thor's Hammer"
+	"Seaflame" "Valkyrie's Call" "Berserker's Fury" "Ironclad" "Dragonfire" "Mighty Oak" "Stormbringer" "Hel's Embrace" "Sea Strider" "Saxon Legacy"
+	"Swordbreaker" "Ravensail" "Frostfang" "Warrior's Spirit" "Viking's Valor" "Norse Pride" "Saxon Glory" 
+}
+fleet_names = { 
+	"Flotu $PROVINCE$" 
+}
+army_names = { 
+	"Haeþina $PROVINCE$"
+}

@@ -18,9 +18,9 @@
 
 #####CUSTOM
  SLO_CT_1:0 "If §YDrakovan §Wculture is accepted, gain§G 200 §WAdministrative Power."
- SLO_CT_2:0 "§WIf §YDrakova §Warea is owned by you, all provinces in §YDrakova §Warea will gain §G1 §W Base Tax."
- SLO_CT_3:0 "§WIf §YDrakova §Warea has your religion, gain§G 300¤ §Yducats. §W"
- SLO_CT_4:0 "Every owned province with a Fort will recieve the following modifier:"
+ SLO_CT_2:0 "If§Y [4127.GetAreaName] §Wis owned by you, all provinces in§Y [4127.GetAreaName] §Wwill gain §G1 §WBase Tax."
+ SLO_CT_3:0 "If§Y [4127.GetAreaName] §Whas your religion, gain§G 300¤ §Yducats. §W"
+ SLO_CT_4:0 "Every owned province with a §YFort§! (including a capital fort) that has at least §Y5§! Base Manpower will recieve the following modifier:"
  SLO_CT_5:0 "The §YCapital Province§W and §Y3 §Wother random provinces with §G20 §YDevelopment §Wwill recieve the following modifier:"
 #####MODIFIER
  slo_bergan_defense:0 "Unbroken Skies"
@@ -43,17 +43,21 @@
 
 #####MISSIONS
 
-slo_home_defense_title:0 "Home Defense"
+slo_home_defense_title:0 "Homefront Defense"
  slo_home_defense_desc:0 "REPLACE_ME"
 
- slo_grand_fort_title:0 "That's Defensive!"
+ slo_grand_fort_title:0 "Fortify the Highlands"
  slo_grand_fort_desc:0 "REPLACE_ME"
+ slo_grand_fort_defensive_bonus_tt: "If at least §Y1§! idea from §YDefensive Ideas§! have been unlocked, additionally unlock the §YWulfrittar§! mercinary company"
+ ostgermanic_wulfrittar_mercs: "Wulfrittars"
 
- slo_fortify_title:0 "Fortify and Fortify"
+ slo_fortify_title:0 "Grand Walls of [Root.Capital.GetName]"
  slo_fortify_desc:0 "REPLACE_ME"
+ slo_defensive_finished_bonus_tt: "If §YDefensive Ideas§! are fully unlocked, additionally receive:"
 
- slo_unbroken_title:0 "The Sky's\nThe Limit"
+ slo_unbroken_title:0 "The Sky is the Limit"
  slo_unbroken_desc:0 "REPLACE_ME"
+ slo_replace_gold_modifier_tt: "The §YGolden Home§! modifier in [154.GetName] will be replaced with:"
 
  slo_home_offense_title:0 "Greater Bergaland"
  slo_home_offense_desc:0 "REPLACE_ME"
@@ -75,6 +79,7 @@ slo_home_defense_title:0 "Home Defense"
 
  slo_grains_title:0 "Tools for Harvests"
  slo_grains_desc:0 "REPLACE_ME"
+ slo_grains_manpower_tt: "Every owned province that meets the mission trigger will receive:"
 
  slo_vildheim_title:0 "Wild No Longer"
  slo_vildheim_desc:0 "REPLACE_ME"
@@ -87,3 +92,4 @@ slo_home_defense_title:0 "Home Defense"
 
  slo_wealth_title:0 "Wealth of Bergaland"
  slo_wealth_desc:0 "REPLACE_ME"
+ slo_cities_tt: "Every owned province with at least §Y20§! development will receive:"
