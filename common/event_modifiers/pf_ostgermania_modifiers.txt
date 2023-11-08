@@ -124,13 +124,12 @@ walls_of_germania = {
 
 mva_markmann = {
 	production_efficiency = 0.1
-	manpower_recovery_speed = 0.1
 }
 
 mva_local_new_hope = {
 	local_development_cost = -0.1
 	local_culture_conversion_cost = -0.25
-	local_culture_conversion_time = -0.75
+	local_culture_conversion_time = -0.25
 }
 
 mva_local_sudeten = {
@@ -358,4 +357,13 @@ vld_horse_buff_modifier = {
 vld_slayer_of_the_slavs_modifier = {
 	cb_on_religious_enemies = yes
 	warscore_cost_vs_other_religion = -0.1
+}
+
+pf_marcomanni_culture_stay_modifier = {
+	prestige = 1
+	culture_conversion_cost = -0.25
+}
+
+mva_into_eldrun_modifier = {
+	diplomatic_reputation = 1
 }

@@ -322,7 +322,7 @@ pf_sdt_5 = {
 	has_country_shield = yes
 	potential = { tag = SDT } 
 
-	sdt_markmand = {
+	sdt_Markland = {
 		icon = bavarian_cultural_dominance
 		position = 1
 		provinces_to_highlight = { culture = marcomanni } 
@@ -346,7 +346,7 @@ pf_sdt_5 = {
 	sdt_friends = {
 		icon = the_alpine_wall
 		position = 2
-		required_missions = { sdt_markmand } 
+		required_missions = { sdt_Markland } 
 		provinces_to_highlight = { province_id = 64 } 
 
 		trigger = {
