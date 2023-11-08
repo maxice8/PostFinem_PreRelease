@@ -347,8 +347,9 @@ country_event = {		#ostholm reward
 	option = {
 		name = "pf_ost.8.a"
 		ai_chance = {
-			factor = 80
+			factor = 2
 		}
+		add_prestige_or_monarch_power = { amount = 10 }
 		134 = {
 			add_core = ROOT
 			add_province_modifier = {
@@ -361,8 +362,9 @@ country_event = {		#ostholm reward
 	option = {
 		name = "pf_ost.8.b"
 		ai_chance = {
-			factor = 20
+			factor = 8
 		}
+		add_prestige_or_monarch_power = { amount = 10 }
 		134 = {
 			add_core = ROOT
 			add_province_modifier = {
@@ -439,6 +441,8 @@ country_event = {		#vindheim reward
 		ai_chance = {
 			factor = 20
 		}
+		add_years_of_income = -1
+		custom_tooltip = empty_line_tt
 		add_country_modifier = {
 			name = sdt_wild_hunt_2
 			duration = 9125

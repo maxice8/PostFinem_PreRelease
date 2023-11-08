@@ -82,7 +82,7 @@ pf_dnv_f_1 = {
 		}
 
 		trigger = {
-			num_of_provinces_owned_or_owned_by_subjects_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 17
 				OR = {
 					area = slavonia_area
@@ -219,7 +219,7 @@ pf_dnv_f_2 = {
 		}
 
 		trigger = {
-			num_of_provinces_owned_or_owned_by_subjects_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 17
 				OR = {
 					area = bosnia_area
@@ -551,7 +551,7 @@ pf_dnv_f_4 = {
 		provinces_to_highlight = { region = south_german_region } 
 
 		trigger = {
-			num_of_provinces_owned_or_owned_by_subjects_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 13
 				region = south_german_region
 			}
@@ -577,7 +577,7 @@ pf_dnv_f_4 = {
 		provinces_to_highlight = { region = north_german_region } 
 
 		trigger = {
-			num_of_provinces_owned_or_owned_by_subjects_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 13
 				region = north_german_region
 			}
