@@ -2999,62 +2999,6 @@ CPD_ideas = {
 		 diplomatic_reputation = 1
 	}
 }
-
-KAR_ideas = {
-	start = {
-		 global_missionary_strength = 0.02
-		 tolerance_own = 1
-	}
-
-	bonus = {
-		 prestige = 1
-	}
-
-	trigger = {
-		 tag = KAR
-	}
-	free = yes
-
-	# Pious Rulers
-	KAR_ideas_1 = {
-		 devotion = 1
-		 legitimacy = 1
-		 republican_tradition = 0.3
-		 horde_unity = 1
-	}
-
-	# Religious Tolerance
-	KAR_ideas_2 = {
-		 tolerance_heretic = 2
-	}
-
-	# Effective Clergy
-	KAR_ideas_3 = {
-		 church_loyalty_modifier = 0.10
-		 global_tax_modifier = 0.1
-	}
-
-	# Strong Economy
-	KAR_ideas_4 = {
-		 inflation_reduction = 0.1
-	}
-
-	# Military Tradition
-	KAR_ideas_5 = {
-		 army_tradition_decay = -0.01
-	}
-
-	# Encourage Trade
-	KAR_ideas_6 = {
-		 global_trade_power = 0.10
-	}
-
-	# Diplomatic Alliances
-	KAR_ideas_7 = {
-		 diplomatic_upkeep = 1
-	}
-}
-
 CMG_ideas = {
 	start = {
 		trade_efficiency = 0.10
