@@ -950,12 +950,12 @@ ksb_5_slot = {
 						limit = {
 							has_country_flag = lechia_supported_by_kashubia
 						}
-						vassalize = PREV
+						vassalize = THIS
 					}
 					else = {
 						add_casus_belli = {
 							type = cb_vassalize_mission
-							target = PREV
+							target = THIS
 						}
 					}
 				}
