@@ -1055,6 +1055,7 @@ country_event = {		#dnv more reforms religios
 
 	option = {
 		name = "pf_ost.21.a"
+		ai_chance = { factor = 1 }
 		add_stability_or_adm_power = yes
 		custom_tooltip = DNV_ORDER
 		set_country_flag = dnv_ost_germanic_orders
@@ -1065,6 +1066,7 @@ country_event = {		#dnv more reforms religios
 	}
 	option = {
 		name = "pf_ost.21.b"
+		ai_chance = { factor = 0 }
 		add_stability = -5
 		change_religion = hellenic
 		capital_scope = {
@@ -1092,6 +1094,7 @@ country_event = {		#dnv more reforms religios
 	}
 	option = {
 		name = "pf_ost.21.c"
+		ai_chance = { factor = 0 }
 		add_stability = -5
 		change_religion = punic_religion
 		capital_scope = {
@@ -1119,12 +1122,15 @@ country_event = {		#dnv more reforms religios
 	}
 	option = {
 		name = "pf_ost.21.e"
+		ai_chance = { factor = 0 }
 		trigger = {
-			employed_advisor = {
-				religion = jewish
-			}
-			any_ally = {
-				religion = jewish
+			OR = {
+				employed_advisor = {
+					religion = jewish
+				}
+				any_ally = {
+					religion = jewish
+				}
 			}
 		}
 		add_stability = -6
