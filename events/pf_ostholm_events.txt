@@ -1117,6 +1117,41 @@ country_event = {		#dnv more reforms religios
 			days = 1
 		}
 	}
+	option = {
+		name = "pf_ost.21.e"
+		trigger = {
+			employed_advisor = {
+				religion = jewish
+			}
+			any_ally = {
+				religion = jewish
+			}
+		}
+		add_stability = -6
+		change_religion = jewish
+		capital_scope = {
+			spawn_rebels = {
+				size = 3
+				type = south_germanic_zealots
+			}
+		}
+		random_owned_area = {
+			spawn_rebels = {
+				size = 2
+				type = south_germanic_zealots
+			}
+		}
+		random_owned_area = {
+			spawn_rebels = {
+				size = 2
+				type = south_germanic_zealots
+			}
+		}
+		country_event = {
+			id = pf_ost.22
+			days = 1
+		}
+	}
 }
 
 country_event = {		#dnv final refomrs

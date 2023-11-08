@@ -3484,7 +3484,7 @@ OST_ideas = {
 	}
 	
 	bonus = {
-		discipline = 0.05
+		army_tradition_decay = -0.01
 	}	
 
 	trigger = {
@@ -3494,7 +3494,7 @@ OST_ideas = {
 	
 	#mountain_warfare
 	OST_ideas_1 = {
-		army_tradition_from_battle = 0.33
+		army_tradition_from_battle = 0.25
 		land_attrition = -0.1
 	}
 
@@ -3506,25 +3506,22 @@ OST_ideas = {
 	#ostgermanic unity
 	OST_ideas_3 = {
 		diplomats = 1
-		same_culture_advisor_cost = -0.1
 	}
 
 	#ostgermanic faith
 	OST_ideas_4 = {
-		global_missionary_strength = 0.02
-		manpower_in_true_faith_provinces = 0.1
+		manpower_in_true_faith_provinces = 0.15
 	}
 
 	#pen stronger than sword
 	OST_ideas_5 = {
-		embracement_cost = -0.2
-		institution_spread_from_true_faith = 0.5
+		embracement_cost = -0.15
+		institution_spread_from_true_faith = 0.1
 	}
 
 	#wealth of Ost germania
 	OST_ideas_6 = {
 		build_cost = -0.1
-		development_cost = -0.1
 	}
 
 	#legacy of Ostholm
@@ -3536,12 +3533,12 @@ OST_ideas = {
 
 VLD_ideas = {
 	start = {
-		cavalry_cost = -0.15
+		cavalry_cost = -0.10
 		cavalry_shock = 0.2
 	}
 	
 	bonus = {
-		discipline = 0.05
+		leader_land_shock = 1
 	}	
 
 	trigger = {
@@ -3551,25 +3548,23 @@ VLD_ideas = {
 	
 	#a taxing task
 	VLD_ideas_1 = {
-		global_tax_modifier = 0.33
+		global_tax_modifier = 0.10
 		nobles_loyalty_modifier = 0.05
 	}
 
 	#the reach of Germanic Faith
 	VLD_ideas_2 = {
 		missionaries = 1
-		stability_cost_modifier = -0.1
 	}
 
 	#foreign military advices
 	VLD_ideas_3 = {
-		mil_advisor_cost = -0.25
+		mil_tech_cost_modifier = -0.10
 	}
 
 	#donovan hussars
 	VLD_ideas_4 = {
-		cav_to_inf_ratio = 0.33
-		cavalry_flanking = 0.33
+		cavalry_flanking = 0.50
 	}
 
 	#hellenic ideals
@@ -3579,14 +3574,13 @@ VLD_ideas = {
 
 	#wealth of Ost germania
 	VLD_ideas_6 = {
-		build_cost = -0.05
-		trade_efficiency = 0.1
+		production_efficiency = 0.10
 	}
 
 	#Vildheimer Tactics
 	VLD_ideas_7 = {
 		shock_damage = 0.1
-		shock_damage_received = -0.05
+		cav_to_inf_ratio = 0.25
 	}
 }
 
@@ -3597,7 +3591,7 @@ SLO_ideas = {
 	}
 	
 	bonus = {
-		discipline = 0.05
+		shock_damage_received = -0.10
 	}	
 
 	trigger = {
@@ -3635,12 +3629,13 @@ SLO_ideas = {
 
 	#wealth of Ost germania
 	SLO_ideas_6 = {
-		development_cost = -0.15
+		development_cost = -0.10
 	}
 
 	#make one to break one
 	SLO_ideas_7 = {
-		siege_ability = 0.15
+		siege_ability = 0.10
+		artillery_barrage_cost = -0.25
 	}
 }
 MVA_ideas = {
@@ -3676,26 +3671,24 @@ MVA_ideas = {
 
 	#saxon pressure
 	MVA_ideas_4 = {
-		defensiveness = 0.1
-		build_cost = -0.1
+		defensiveness = 0.10
+		build_cost = -0.05
 	}
 
 	#germanic struggles
 	MVA_ideas_5 = {
-		land_attrition = -0.10
 		army_tradition = 0.5
 	}
 
 	#faiths
 	MVA_ideas_6 = {
 		global_unrest = -1
-		tolerance_heathen = 2
 	}
 
 	#banks
 	MVA_ideas_7 = {
-		inflation_action_cost = -0.1
-		interest = -1
+		inflation_reduction = 0.10
+		global_tax_modifier = 0.10
 	}
 }
 BAV_ideas = {
@@ -3715,42 +3708,37 @@ BAV_ideas = {
 	
 	#lord of the south
 	BAV_ideas_1 = {
-		all_estate_influence_modifier = -0.1
+		global_autonomy = -0.05
 	}
 
 	#lombard virtues
 	BAV_ideas_2 = {
-		idea_cost = -0.05
+		global_institution_spread = 0.15
 	}
 
 	#Man of the Mark
 	BAV_ideas_3 = {
-		culture_conversion_cost = -0.2
-		development_cost_in_primary_culture = -0.05
+		hostile_attrition = 1.0
 	}
 
 	#new faith
 	BAV_ideas_4 = {
-		global_missionary_strength = 0.02
 		tolerance_own = 1
 	}
 
 	#control from the shadows
 	BAV_ideas_5 = {
-		spy_offence = 0.25
-		global_spy_defence = 0.15
+		spy_offence = 0.15
 	}
 
 	#late to the party
 	BAV_ideas_6 = {
-		diplomatic_annexation_cost = -0.2
-		unjustified_demands = -0.2
+		unjustified_demands = -0.15
 	}
 
 	#land of salt
 	BAV_ideas_7 = {
-		production_efficiency = 0.05
-		manpower_recovery_speed = 0.15
+		manpower_recovery_speed = 0.10
 	}
 }
 STY_ideas = {
@@ -3760,7 +3748,7 @@ STY_ideas = {
 	}
 	
 	bonus = {
-		infantry_power = 0.1
+		global_trade_goods_size_modifier = 0.10
 	}	
 
 	trigger = {
@@ -3770,12 +3758,11 @@ STY_ideas = {
 	
 	#clear minds
 	STY_ideas_1 = {
-		idea_cost = -0.1
+		innovativeness_gain = 0.50
 	}
 
 	#drunken stupor
 	STY_ideas_2 = {
-		reserves_organisation = 0.10
 		morale_damage_received = -0.1
 	}
 
@@ -3787,24 +3774,24 @@ STY_ideas = {
 
 	#feasts of the gods
 	STY_ideas_4 = {
-		church_loyalty_modifier = 0.15
+		church_loyalty_modifier = 0.10
 	}
 
 	#merry mens
 	STY_ideas_5 = {
-		no_religion_penalty = yes
+		tolerance_heretic = 2
+		tolerance_heathen = 2
 	}
 
 	#i forgor
 	STY_ideas_6 = {
 		harsh_treatment_cost = -0.2
-		no_stability_loss_on_monarch_death = yes
+		stability_cost_modifier = -0.10
 	}
 
 	#behind closed doors
 	STY_ideas_7 = {
 		spy_offence = 0.33
-		rebel_support_efficiency = 1
 	}
 }
 DNV_ideas = {
@@ -3814,7 +3801,7 @@ DNV_ideas = {
 	}
 	
 	bonus = {
-		core_creation = -0.2
+		core_creation = -0.15
 	}	
 
 	trigger = {
@@ -3824,42 +3811,44 @@ DNV_ideas = {
 	
 	#faithful bunch
 	DNV_ideas_1 = {
-		stability_cost_modifier = -0.2
-		global_missionary_strength = 0.03
+		tolerance_own = 1
+		global_missionary_strength = 0.02
 	}
 
 	#legacy of ostholm
 	DNV_ideas_2 = {
-		development_cost = -0.1
-		adm_advisor_cost = -0.1
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		republican_tradition = 0.3
+		monthly_splendor = 1
 	}
 
 	#donovan hussars
-	DNV_ideas_3 = {
-		cavalry_flanking = 0.2
+	DNV_ideas_3 = {	
 		cavalry_power = 0.15
 	}
 
 	#germanic guerrilla
 	DNV_ideas_4 = {
 		hostile_attrition = 1
-		land_attrition = -0.15
 	}
 
 	#crossroad of worlds
 	DNV_ideas_5 = {
-		technology_cost = -0.1
+		technology_cost = -0.05
+		global_institution_spread = 0.15
 	}
 
 	#wealth of Ost germania
 	DNV_ideas_6 = {
 		production_efficiency = 0.1
-		trade_steering = 0.25
+		trade_steering = 0.10
 	}
 
 	#anubian defenders
 	DNV_ideas_7 = {
-		land_forcelimit_modifier = 0.15
+		land_forcelimit_modifier = 0.20
 	}
 }
 SDT_ideas = {
@@ -3879,48 +3868,45 @@ SDT_ideas = {
 	
 	#sudeten defenses
 	SDT_ideas_1 = {
-		land_attrition = -0.10
-		land_forcelimit_modifier = 0.10
+		hostile_attrition = 1.0
 	}
 
 	#grand_buildings
 	SDT_ideas_2 = {
+		prestige = 1
 		expand_infrastructure_cost_modifier = -0.25
-		governing_capacity_modifier = 0.1
 	}
 
 	#sudeten wealth
 	SDT_ideas_3 = {
-		production_efficiency = 0.1
 		global_trade_power = 0.1
 	}
 
 	#progress must be made
 	SDT_ideas_4 = {
-		all_estate_loyalty_equilibrium = 0.05
-		monthly_reform_progress_modifier = 0.2
+		reform_progress_growth = 0.15
 	}
 
 	#germanic struggles
 	SDT_ideas_5 = {
-		army_tradition = 1
+		army_tradition = 0.5
 	}
 
 	#be cool
 	SDT_ideas_6 = {
-		global_unrest = -2
+		tolerance_heretic = 2
 	}
 
 	#banks
 	SDT_ideas_7 = {
 		inflation_action_cost = -0.15
-		interest = -2
+		interest = -0.5
 	}
 }
 MKM_ideas = {
 	start = {
-		prestige = 1
-		yearly_corruption = -0.1
+		all_estate_loyalty_equilibrium = 0.10
+		global_trade_goods_size_modifier = 0.10
 	}
 	
 	bonus = {
@@ -3934,43 +3920,39 @@ MKM_ideas = {
 	
 	#lord of the center
 	MKM_ideas_1 = {
-		all_estate_influence_modifier = -0.1
-		estate_interaction_cooldown_modifier = -0.2
+		prestige = 1
 	}
 
 	#markmann intuition
 	MKM_ideas_2 = {
-		idea_cost = -0.05
-		free_policy = 1
+		idea_cost = -0.10
 	}
 
 	#Man of the Mark
 	MKM_ideas_3 = {
-		culture_conversion_cost = -0.2
-		development_cost_in_primary_culture = -0.05
+		same_culture_advisor_cost = -0.15
+		defensiveness = 0.10
 	}
 
 	#new faith
 	MKM_ideas_4 = {
-		global_missionary_strength = 0.02
-		tolerance_own = 2
+		tolerance_own = 1
+		tolerance_heretic = 1
 	}
 
 	#control from the shadows
 	MKM_ideas_5 = {
-		spy_offence = 0.25
-		global_spy_defence = 0.25
+		ae_impact = -0.10
 	}
 
 	#late to the party
 	MKM_ideas_6 = {
-		diplomatic_annexation_cost = -0.2
-		unjustified_demands = -0.2
+		diplomatic_upkeep = 1
+		unjustified_demands = -0.15
 	}
 
 	#land of salt
 	MKM_ideas_7 = {
-		production_efficiency = 0.1
 		manpower_recovery_speed = 0.15
 	}
 }
