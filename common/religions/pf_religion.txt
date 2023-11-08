@@ -1680,6 +1680,47 @@ druidic_group = {
 					}
 				}
 			}
+
+			icon_lugus = {
+				missionaries = 1
+				legitimacy = 1
+				
+				allow = {
+					has_country_flag = lugus_icon
+				}
+
+				visible = {
+					always = yes
+				}
+
+				ai_will_do = {
+					factor = 1
+				}
+			}
+
+			icon_samhain = {
+				manpower_recovery_speed = 0.15
+				infantry_power = 0.10
+
+				allow = {
+					OR = {
+						mission_completed = pf_gaul_celtica_8
+						tag = CEL
+					}
+				}
+
+				visible = {
+					always = yes
+				}
+
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 2
+						is_at_war = yes
+					}
+				}
+			}
 		}
 	
 	}

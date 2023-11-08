@@ -36,6 +36,15 @@ pf_gaul_celtica_3_title: "Lord of the Celtic Channel"
 pf_gaul_celtica_4_title: "Defeat of the Britons"
 pf_gaul_celtica_6_title: "Iron of Prydain"
 pf_gaul_celtica_7_title: "The Twin Celticas"
+pf_gaul_celtica_8_title: "Descend Upon Celtica"
+pf_gaul_tall_1_title: "The Gallic Treasury"
+pf_gaul_tall_2_title: "Taming the Forests"
+pf_gaul_tall_3_title: "Urbanizing the Gauls"
+pf_gaul_tall_4_title: "The Cortoro Corridor"
+pf_gaul_tall_5_title: "The Pictonian Coast"
+pf_gaul_tall_6_title: "Growth of Vinyards"
+pf_gaul_tall_7_title: "A New Industry"
+pf_gaul_tall_8_title: "The Golden Century"
 
 
 
@@ -49,6 +58,7 @@ locked_mission_GAUL_2_title: "Locked Mission"
 rule_the_waves_GAU: "Rule the Waves"
 druidic_traditions: "Druidic Traditions"
 rulers_in_prydain: "New Seat of Power"
+hub_of_dublin: "The New Lords of Celtica"
 
 
 
@@ -76,11 +86,14 @@ allemania_mercenary_TT: "We shall enslave the warriors of §YAlemannia§! and ga
 merc_alemannian_war_slaves: "Alemannian Thralls"
 enable_the_germanic_wars: "This will enable the §YGermanic Campaigns§! Casus Belli."
 pf_gaul_celtica_6_tt: "from §Y5§! Years of §YIron§! produced in §Y[4372.GetName]§!, §Y[1861.GetName]§!, and §Y[4785.GetName]§!."
-will_enable_culture_shifts: "This will enable decisions to shift the cultures within the Celtic group to the Gallic group."
-
-
+will_enable_culture_shifts: "\nThis will enable decisions to shift the cultures within the §YCeltic§! group to the §YGallic§! group."
+own_174_TT: "\nIf we complete this mission while owning §Y[174.GetName]§!, §Y[174.GetName]§! will gain one §YCenter of Trade§! level."
+CONTROLLED_FLOW_CEL: "Flow of Trade Managed"
+vinyard_effect: "\nEvery owned province with the §YWine§! Trade Good, §Y5§! Tax Development, §Y5§! Trade Development, and a §YManufactory§! Building in the §YGaul§! Region will gain the following:"
+wool_to_cloth_TT: "Every owned province with the §YWool§! Trade Good, §Y12§! Production Development, and a §YManufactory§! Building in the §YGaul§! Region will change their trade good to §YCloth§!"
+producer_of_silk_TT: "\nIf we were the lead producer of §YWool§!, we will gain the following:"
 own_germany_yourself_TT: "If we complete this mission while §Ydirectly owning 28§! provinces in the §YNorth Germania§! Region or the §YSudwaldia§! Region, we will gain the following:"
-
+double_development_TT: "For the next §Y35 Years§!, developing a province in the §YGaul§! region will have a §Y50%§! Chance of adding an §Yadditional point§! of development."
 salt_mines_TT: "\nIf we complete this mission by improving Salt provinces, we will gain the following:"
 iron_mines_TT: "\nIf we complete this mission by improving Iron provinces, we will gain the following:"
 natural_scientist_TT: "\n§YNatural Scientists§! will grant us a scaled modifier of §G-2%§! Technology Cost."
@@ -92,11 +105,15 @@ estate_nobles_mission_5_TT: "Have more Crownland than the Rixolar Estate"
 enable_lugundia_TT: "This will enable the Parliament Act §YPush for the Border Regions§!, which must be completed in order to enable the Act §YForge the Lugundian Era§!.\n\nThis will allow us to create the nation of @LUG §TLugundia§!"
 enable_dual_celtica_TT: "This will enable the decision to form the nation of @DCL §TDual Celticas§!."
 CONTROLLED_CHANNEL_CEL: "Controlling the Channel"
-
 pf_gaul_politics_1_TT: "If we complete this mission §Ywith the Dynasty§! §TCarantus§!, it will enable the §YAbsolute Gallic Monarchy§! path.\nThis will also prevent §Yrebels from spawning§! when §YSeizing Land§!\n\n"
 pf_gaul_politics_2_TT: "If we complete this mission §Ywithout the Dynasty§! §TCarantus§!, it will enable the §YGallic Parliament§! path.\nThis will also Negate the Estate Loyalty penalty from §YSeizing Land§! by §Y10%§!\n"
-
+enable_woodland_edict: "This will enable the §YWoodland Expansion§! Civitrix estate privilege, granting all §YWoods§! and §YForest§! provinces reduced Development Cost.\n"
+improve_woodland_expansion_tt: "This will improve the §YWoodland Expansion§! estate privilege by granting §G+5%§! Goods Produced Modifier.\n"
+woodland_expansion_tt: "Every owned §YWoods§! province with §Y15§! Development and a §YProduction§! Building in the §YGaul§! Region will gain the following:"
+pictonia_province_TT: "§YProvince(s)§! is in the §YPictonia§! trade node."
 gallic_hegemony_tt_1: "If we complete this mission while having §Y90§! Crownland, we will gain the following:"
+unlock_samhain_TT: "\nThis will unlock the §YSamhain Festival§! Icon, granting:\nManpower Recovery Speed: §G+15%§!\nInfantry Combat Ability: §G+10%§!"
+
 
 own_germany_SUB_TT: "\nIf we complete this mission while having §YSubjects that own 28§! provinces in the §YNorth Germania§! Region or the §YSudwaldia§! Region, all Germanic Subject Nations will gain the following:"
 
@@ -113,6 +130,9 @@ SUBJUGATION_GER_WAR_NAME: "Subjugation of the $SECOND_NAME$"
 enable_confederation_leader_personality_TT: "This will enable the §YConfederation Leader§! Personality Trait, which will grant the following:\nYears of Separatism: §G-2.5§!\nYearly Absolutism: §G+0.5§!\n"
 
 NOT_HAS_DUBNORIX: "We no longer have our starting ruler of §YDubnorix Carantus§!"
+
+
+#Events
 
 pf_gaul_events.1.t: "The Death of the Riga"
 pf_gaul_events.1.d: "When Dubnorix came to power in the year 1395, his domain was not the expansive one seen in the modern era. His was a small touta on the northern fringe of Europe, the land of the Parisii. In the Era of the Five Riga, the great houses of Carnutia, Senonia, Pictonia, Lingonia, and Parisia dueled one another for nearly a hundred years for dominance. War and famine plagued the land, and as many rulers tried and failed to unify the Rigdom, some assumed that Gaul would pass into the annals of history, just as many who had come before it.\n\nDubnorix, however, was a warrior unlike any other. He defeated armies nearly twice his size, sieged castles in just a few days, and led his cavalry into the thick of battle. His diplomacy left much to be desired, but his might and power overwhelmed and crushed all who stood before him. It was through his might that in 1413, he had united Gaul once more, subjugating the Pretender-Riga and once more declaring the Confederation united.\n\nSo, at the scene of his death, there was much to discuss. Dubnorix kept the state united, but not by law or faith, but fear. And now that he was gone, many nobles were seizing the chance to rise up once more; his heir, while a talented young man indeed, was not his father. With pretenders on the horizon, he would have to fill the shoes his father left him - for he had no other choice."
@@ -141,6 +161,7 @@ helvetii_adj: "Helvetiian"
 
 estate_nobles_pf_gallic_wars_remnant: "Touta Dominance"
 estate_clergy_pf_gallic_wars_remnant: "Druidic Dominance"
+estate_burghers_gaul_forest_expansion: "Woodland Expansion"
 
 #Government Reforms
 
@@ -197,3 +218,27 @@ gallo_pictish_TT: "This will move the §YPictish§! culture into the §YGallic§
 gallo_cornish_TT: "This will move the §YCornish§! culture into the §YGallic§! Group. All owned §YCornish§! provinces will become §YGallo-Cornish§!."
 gallo_highlander_TT: "This will move the §YHighlander§! culture into the §YGallic§! Group. All owned §YHighlander§! provinces will become §YGallo-Highlander§!."
 gallo_irish_TT: "This will move the §YIrish§! culture into the §YGallic§! Group. All owned §YIrish§! provinces will become §YGallo-Hibernian§!."
+
+#Ideas
+
+LUG_ideas: "Lugundian Ideas"
+LUG_ideas_start: "Lugundian Traditions"
+LUG_ideas_bonus: "Lugundian Ambition"
+LUG_ideas_1: "Strength of the Parliament"
+LUG_ideas_2: "Galatai Raiders"
+LUG_ideas_3: "Ruin of the Carthage"
+LUG_ideas_4: "Power of the Druids"
+LUG_ideas_5: "Mediterranean Fleet"
+LUG_ideas_6: "Expansion of the Heartland"
+LUG_ideas_7: "College of Generals"
+
+DCL_ideas: "Celtic ideas"
+DCL_ideas_start: "Celtic Traditions"
+DCL_ideas_bonus: "Celtic Ambition"
+DCL_ideas_1: "The Twin Crowns"
+DCL_ideas_2: "Building the New World"
+DCL_ideas_3: "Sciences of the Britons"
+DCL_ideas_4: "Druidism of the Irish"
+DCL_ideas_5: "Atlantic Fleet"
+DCL_ideas_6: "Urbanization of the Celts"
+DCL_ideas_7: "The Greencoat Infantry"

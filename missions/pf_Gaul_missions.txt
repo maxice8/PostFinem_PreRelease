@@ -310,6 +310,101 @@ PF_Gaul_1 = {
 			}
 		}
 	}
+	pf_gaul_tall_4 = {
+		icon = mission_rb_monopolize_the_channel
+		position = 9
+		required_missions = {
+			pf_gaul_tall_1
+		}
+		provinces_to_highlight = {
+			area = champagne_area
+			NOT = {
+				has_trade_building_trigger = yes
+				AND = {
+					province_id = 186
+					base_production = 8
+				}
+			}
+		}
+		trigger = {
+			champagne_area = {
+				type = all
+				has_trade_building_trigger = yes
+			}
+			186 = {
+				base_production = 8
+			}
+		}
+		effect = {
+			186 = {
+				center_of_trade = 2
+				add_prosperity = 100
+			}
+		}
+	}
+	pf_gaul_tall_5 = {
+		icon = mission_rb_conquer_brittany
+		position = 11
+		required_missions = {
+			pf_gaul_tall_4
+		}
+		provinces_to_highlight = {
+			trade_company_region = trade_company_bordeaux
+			NOT = {
+				has_trade_building_trigger = yes
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					tooltip = pictonia_province_TT
+					trade_company_region = trade_company_bordeaux
+				}
+				has_trade_building_trigger = yes
+				base_production = 8
+				value = 10
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = trade_steering_for_GAUL
+				duration = 9125
+			}
+			1276 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 9125
+					power = 10
+					key = CONTROLLED_FLOW_CEL
+				}
+			}
+			1876 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 9125
+					power = 10
+					key = CONTROLLED_FLOW_CEL
+				}
+			}
+			custom_tooltip = own_174_TT
+			hidden_effect = {
+				if = {
+					limit = {
+						174 = {
+							owned_by = ROOT
+							NOT = { center_of_trade = 3 }
+						}
+					}
+					174 = {
+						add_center_of_trade_level = 1
+					}
+				}
+				else = {
+					add_adm_power = 100
+				}
+			}
+		}
+	}
 }
 PF_Gaul_2 = {
 	slot = 2
@@ -320,14 +415,13 @@ PF_Gaul_2 = {
 		tag = GAU
 	}
 	pf_gaul_mainland_1 = {
-		icon = mission_modernized_vikings
+		icon = pf_carnyx_horn
 		position = 1
 		required_missions = { }
 		provinces_to_highlight = { }
 		trigger = {	
 			manpower_percentage = 0.75
 			employed_advisor = { category = MIL }
-			current_income_balance = 1
 		}
 		effect = {
 			add_government_power = {
@@ -569,6 +663,138 @@ PF_Gaul_2 = {
 					add_permanent_claim = ROOT
 				}
 			}
+		}
+	}
+	pf_gaul_tall_1 = {
+		icon = dominant_economy
+		position = 8
+		provinces_to_highlight = {
+		}
+		trigger = {
+			current_income_balance = 1
+			has_adm_advisor_2 = yes
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = gaul_confederation_mechanic
+				power_type = gaul_confederation
+				value = 15
+			}
+			add_country_modifier = {
+				name = tax_growth_GAU
+				duration = 3650
+			}
+		}
+	}
+	pf_gaul_tall_2 = {
+		icon = mission_castle_construction
+		required_missions = {
+			pf_gaul_tall_1
+		}
+		position = 9
+		provinces_to_highlight = {
+			has_terrain = woods
+			region = france_region
+			owned_by = ROOT
+			NOT = {
+				development = 10
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				region = france_region
+				has_terrain = woods
+				development = 10
+				value = 5
+			}
+		}
+		effect = {
+			custom_tooltip = enable_woodland_edict
+			define_advisor = {
+				type = logistician
+				skill = 2
+				discount = yes
+			}
+		}
+	}
+	pf_gaul_tall_3 = {
+		icon = mission_settlers_north_america
+		required_missions = {
+			pf_gaul_tall_2
+		}
+		position = 10
+		provinces_to_highlight = {
+			has_terrain = woods
+			region = france_region
+			owned_by = ROOT
+			NOT = {
+				development = 15
+				has_production_building_trigger = yes
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				region = france_region
+				has_terrain = woods
+				development = 15
+				has_production_building_trigger = yes
+				value = 10
+			}
+		}
+		effect = {
+			custom_tooltip = improve_woodland_expansion_tt
+			custom_tooltip = woodland_expansion_tt
+			tooltip = {
+				add_province_modifier = {
+					name = urbanizing_gaul_forest
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = france_region
+						has_terrain = woods
+						development = 15
+						has_production_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = urbanizing_gaul_forest
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	pf_gaul_tall_8 = {
+		icon = centralize_france
+		required_missions = {
+			pf_gaul_tall_3
+			pf_gaul_tall_7
+		}
+		provinces_to_highlight = {
+			region = france_region
+			NOT = {
+				development = 20
+				num_of_buildings_in_province = 2
+			}
+		}
+		trigger = {
+			france_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 20
+				num_of_buildings_in_province = 2
+			}
+		}
+		effect = {
+			france_region = {
+				add_province_modifier = {
+					name = radical_industrialism
+					duration = 12775
+				}
+			}
+			custom_tooltip = double_development_TT
 		}
 	}
 }
@@ -813,6 +1039,133 @@ PF_Gaul_3 = {
 			}
 		}
 	}
+	pf_gaul_tall_6 = {
+		icon = mission_rb_the_education_acts
+		position = 8
+		required_missions = {
+			pf_gaul_tall_1
+		}
+		provinces_to_highlight = {
+			trade_goods = wine
+			region = france_region
+			NOT = {
+				base_tax = 5
+				base_manpower = 5
+				has_manufactory_trigger = yes
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				base_tax = 5
+				base_manpower = 5
+				trade_goods = wine
+				has_manufactory_trigger = yes
+				region = france_region
+				value = 7
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					184 = {
+						owned_by = ROOT
+					}
+				}
+				184 = {
+					change_trade_goods = wine
+					add_province_modifier = {
+						name = growth_of_vineyard_culture
+						duration = -1
+					}
+				}
+			}
+			change_price = {
+				trade_goods = wine
+				key = growth_of_gallic_vineyards
+				value = 0.25
+				duration = -1
+			}
+			custom_tooltip = vinyard_effect
+			tooltip = {
+				add_province_modifier = {
+					name = vinyard_legitimacy
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						base_tax = 5
+						base_manpower = 5
+						trade_goods = wine
+						has_manufactory_trigger = yes
+					}
+					add_province_modifier = {
+						name = vinyard_legitimacy
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	pf_gaul_tall_7 = {
+		icon = mission_rb_build_furnaces
+		position = 10
+		required_missions = {
+			pf_gaul_tall_6
+		}
+		provinces_to_highlight = {
+			trade_goods = wool
+			region = france_region
+			NOT = {
+				base_production = 12
+				has_manufactory_trigger = yes
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				region = france_region
+				trade_goods = wool
+				has_manufactory_trigger = yes
+				base_production = 12
+				value = 5
+			}
+		}
+		effect = {
+			custom_tooltip = wool_to_cloth_TT
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = france_region
+						trade_goods = wool
+						has_manufactory_trigger = yes
+						base_production = 12
+					}
+					change_trade_goods = cloth
+				}
+			}
+			custom_tooltip = producer_of_silk_TT
+			tooltip = {
+				add_ruler_modifier = {
+					name = golden_age_of_gaul
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				if = {	
+					limit = {
+						production_leader = {
+							trade_goods = wool
+						}
+					}
+					add_ruler_modifier = {
+						name = golden_age_of_gaul
+						duration = -1
+					}
+				}
+			}
+		}
+	}
 }
 PF_Gaul_4 = {
 	slot = 4
@@ -889,6 +1242,8 @@ PF_Gaul_4 = {
 		position = 3
 		required_missions = {
 			pf_gaul_court_2
+			pf_gaul_court_6
+			pf_gaul_court_5
 		}
 		trigger = {
 			OR = {
@@ -1344,7 +1699,58 @@ PF_Gaul_4_C = {
 				}
 				add_permanent_claim = ROOT
 			}
+			add_power_projection = {
+				type = 25_permanent_power_projection
+				amount = 25
+			}
 			custom_tooltip = will_enable_culture_shifts
+		}
+	}
+
+	pf_gaul_celtica_8 = {
+		icon = pf_crow
+		position = 10
+		required_missions = {
+			pf_gaul_celtica_7
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = ulster_area
+				area = leinster_area
+				area = munster_area
+				area = connacht_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			ulster_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			munster_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			leinster_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			connacht_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			373 = {
+				change_trade_goods = slaves
+				add_province_modifier = {
+					name = hub_of_dublin
+					duration = -1
+				}
+			}
+			custom_tooltip = unlock_samhain_TT
 		}
 	}
 }
@@ -1371,7 +1777,7 @@ PF_Gaul_5 = {
 			capital_scope = {
 				has_state_patriach = yes
 			}
-			patriarch_authority = 0.25
+			patriarch_authority = 0.15
 		}
 		effect = {
 			add_government_power = {
@@ -1421,6 +1827,7 @@ PF_Gaul_5 = {
 				"
 				first_effect = "
 					custom_tooltip = enable_icon_lugus_TT
+					set_country_flag = lugus_icon
 				"
 				second_custom_tooltip = tolerance_gaul_TT #Go Religious
 				second_limit = "
@@ -1432,6 +1839,7 @@ PF_Gaul_5 = {
 				"
 				second_effect = "
 					custom_tooltip = sacred_spaces_gaul_TT
+					set_country_flag = sacred_spaces_flag
 				"
 			}
 		}

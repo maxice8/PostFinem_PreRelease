@@ -209,14 +209,14 @@ LUG_ideas = {
 		fire_damage = 0.10
 		infantry_power = 0.05
 	}
-	#
+	#Ruin of the Carthage
 	LUG_ideas_3 = {
 		province_warscore_cost = -0.1
 	}
 	#Power of the Druids
 	LUG_ideas_4 = {
 		global_missionary_strength = 0.02
-		yearly_patriarch_authority = 0.5
+		yearly_patriarch_authority = 0.05
 	}
 	#Mediterranean Fleet
 	LUG_ideas_5 = {
@@ -231,7 +231,52 @@ LUG_ideas = {
 		army_tradition = 1	
 	}
 }
+DCL_ideas = {
+	start = {
+		diplomats = 1
+		trade_efficiency = 0.1
+	}
+	
+	bonus = {
+		land_morale = 0.10
+	}	
 
+	trigger = {
+		tag = DCL
+	}
+	free = yes
+	#The Twin Crowns
+	DCL_ideas_1 = {
+		improve_relation_modifier = 0.1
+		ae_impact = -0.1
+	}
+	#Building the New World
+	DCL_ideas_2 = {
+		colonists = 1
+	}
+	#Sciences of the Britons
+	DCL_ideas_3 = {
+		technology_cost = -0.1
+	}
+	#Druidism Solidifying
+	DCL_ideas_4 = {
+		global_missionary_strength = 0.03
+		missionary_maintenance_cost = -0.33	
+	}
+	#Atlantic Fleet
+	DCL_ideas_5 = {
+		heavy_ship_power = 0.1
+		heavy_ship_cost = -0.05
+	}
+	#Expansion of the Heartland
+	DCL_ideas_6 = {
+		development_cost = -0.15
+	}
+	#The Galatai Corps
+	DCL_ideas_7 = {
+		discipline = 0.05
+	}
+}
 RMA_ideas = {
 	start = {
 		diplomatic_reputation = 1

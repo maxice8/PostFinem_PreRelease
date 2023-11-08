@@ -2059,6 +2059,13 @@ on_adm_development = {
 		}
 	}
 	if = {
+		limit = { has_province_modifier = radical_industrialism }
+		random_list = {
+			50 = { add_base_tax = 1 }
+			50 = { }
+		}
+	}
+	if = {
 		limit = {
 			owner = { has_government_mechanic = pf_svetovid_dedication_mechanic }
 			religion = ROOT
@@ -2209,6 +2216,13 @@ on_dip_development = {
 		add_prosperity = 1
 		owner = { add_prestige = 0.5 }
 	}
+	if = {
+		limit = { has_province_modifier = radical_industrialism }
+		random_list = {
+			50 = { add_base_tax = 1 }
+			50 = { }
+		}
+	}
 }
 
 # province
@@ -2314,6 +2328,13 @@ on_mil_development = {
 		}
 		add_prosperity = 1
 		owner = { add_manpower = 0.5 }
+	}
+	if = {
+		limit = { has_province_modifier = radical_industrialism }
+		random_list = {
+			50 = { add_base_tax = 1 }
+			50 = { }
+		}
 	}
 }
 

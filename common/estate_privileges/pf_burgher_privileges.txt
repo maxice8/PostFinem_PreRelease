@@ -549,3 +549,86 @@ estate_burghers_pf_per_mountain_development = {
 		factor = 100
 	}
 }
+estate_burghers_gaul_forest_expansion = {
+	icon = privilege_dev_cost_forest
+	max_absolutism = -10
+	conditional_modifier = {
+		trigger = { has_government_mechanic = gaul_confederation_mechanic }
+		modifier = { monthly_gaul_confederation = 0.05 }
+	}
+	conditional_modifier = {
+		trigger = { mission_completed = pf_gaul_tall_3 }
+		modifier = { global_trade_goods_size_modifier = 0.05 }
+	}
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		mission_completed = pf_gaul_tall_2
+	}
+	can_select = {
+		mission_completed = pf_gaul_tall_2
+	}
+	can_select = {
+		any_owned_province = {
+			OR = {
+				has_terrain = forest
+				has_terrain = woods
+			}
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_forest_expansion_gt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_terrain = forest
+				}
+				add_province_modifier = {
+					name = estate_burghers_forest_expansion_forest
+					duration = -1
+				}
+			}
+			every_owned_province = {
+				limit = {
+					has_terrain = woods
+				}
+				add_province_modifier = {
+					name = estate_burghers_forest_expansion_woods
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_forest_expansion_rt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_province_modifier = estate_burghers_forest_expansion_forest
+						has_province_modifier = estate_burghers_forest_expansion_woods
+					}
+				}
+				remove_province_modifier = estate_burghers_forest_expansion_forest
+				remove_province_modifier = estate_burghers_forest_expansion_woods
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				OR = {
+					has_terrain = woods
+					has_terrain = forest
+				}
+				value = 8
+			}
+		}
+	}
+}
