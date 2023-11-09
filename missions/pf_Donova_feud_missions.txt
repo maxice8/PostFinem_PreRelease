@@ -407,7 +407,7 @@ pf_dnv_f_3 = {
 		provinces_to_highlight = { province_group = pf_flussbahn_ostgermania } 
 
 		trigger = {
-			years_of_income = 2.5
+			years_of_income = 1
 			pf_flussbahn_ostgermania = {
 				type = all
 				owned_by = ROOT
@@ -419,7 +419,8 @@ pf_dnv_f_3 = {
 		}
 
 		effect = {
-			add_years_of_income = -2.5
+			add_years_of_income = -1
+			custom_tooltip = empty_line_tt
 			pf_flussbahn_ostgermania = {
 				add_province_modifier = {
 					name = "dnv_flussbahn"
