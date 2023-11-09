@@ -784,6 +784,54 @@ pf_lagr_republic_names = {
 	}
 }
 
+mesopotamian_rulers_monarchy = {
+	rank = {
+		1 = ALU
+		2 = MAT
+		3 = GULA_MAT
+	}
+
+	ruler_male = {
+		1 = ENSI
+		2 = SHARRU
+		3 = LUGAL
+	}
+
+	ruler_female = {
+		1 = ENSI
+		2 = SHARRU
+		3 = LUGAL
+	}
+
+	consort_female = {
+		1 = ENSI_CONSORT
+		2 = SHARRU_CONSORT
+		3 = LUGAL_CONSORT
+	}
+
+	consort_male = {
+		1 = ENSI_CONSORT
+		2 = SHARRU_CONSORT
+		3 = LUGAL_CONSORT
+	}
+
+	heir_male = {
+		1 = ERIBU
+		2 = ERIBU
+		3 = ERIBU
+	}
+	heir_female = {
+		1 = ERIBU
+		2 = ERIBU
+		3 = ERIBU
+	}
+
+	trigger = {
+		culture_group = mesopotamian
+		government = monarchy
+	}
+}
+
 satrapy = {
 	rank = {
 		1 = SATRAPY_RANK

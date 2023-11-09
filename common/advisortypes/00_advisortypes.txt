@@ -15,6 +15,10 @@
 ######################################################
 philosopher = {
 	monarch_power = ADM
+	skill_scaled_modifier = {
+		trigger = { owner = {  has_country_modifier = mam_adm_advisors_generate_idea_cost_modifier  } }
+		modifier = { idea_cost = -0.01 }
+	}
 	
 	# Bonus
 	prestige = 1
@@ -120,6 +124,16 @@ philosopher = {
 ######################################################
 natural_scientist = {
 	monarch_power = ADM
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	production_efficiency = 0.10
@@ -221,6 +235,16 @@ natural_scientist = {
 ######################################################
 artist = {
 	monarch_power = ADM
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	stability_cost_modifier = -0.10
@@ -342,6 +366,16 @@ artist = {
 ######################################################
 treasurer = {
 	monarch_power = ADM
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	global_tax_modifier = 0.1
@@ -439,6 +473,16 @@ treasurer = {
 ######################################################
 theologian = {
 	monarch_power = ADM
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	global_unrest = -2
@@ -545,6 +589,16 @@ theologian = {
 ######################################################
 master_of_mint = {
 	monarch_power = ADM
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	inflation_reduction = 0.10
@@ -560,6 +614,16 @@ master_of_mint = {
 		}
 		modifier = {
 			governing_capacity_modifier = 0.05
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				mission_completed = YEM_eastern_hub
+			}
+		}
+		modifier = {
+			global_foreign_trade_power = 0.05
 		}
 	}
 
@@ -647,6 +711,16 @@ master_of_mint = {
 inquisitor = {
 	monarch_power = ADM
 	allow_only_owner_religion = yes
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	global_missionary_strength = 0.02
@@ -772,6 +846,16 @@ inquisitor = {
 ######################################################
 statesman = {
 	monarch_power = DIP
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	diplomatic_reputation = 1
@@ -918,6 +1002,16 @@ naval_reformer = {
 ######################################################
 trader = {
 	monarch_power = DIP
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	trade_efficiency = 0.10
@@ -941,6 +1035,17 @@ trader = {
 		}
 		modifier = { 
 			mercantilism_cost = -0.05 
+		}
+	}
+	
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_country_flag = traders_give_trade_steering_flag 
+			}
+		}
+		modifier = { 
+			trade_steering = 0.05 
 		}
 	}
 	skill_scaled_modifier = {
@@ -1001,6 +1106,16 @@ trader = {
 ######################################################
 spymaster = {
 	monarch_power = DIP
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	spy_offence = 0.25
@@ -1070,6 +1185,16 @@ spymaster = {
 ######################################################
 colonial_governor = {
 	monarch_power = DIP
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	global_tariffs = 0.10
@@ -1147,6 +1272,16 @@ colonial_governor = {
 ######################################################
 diplomat = {
 	monarch_power = DIP
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	improve_relation_modifier = 0.2
@@ -1222,10 +1357,12 @@ navigator = {
 	
 	skill_scaled_modifier = {
 		trigger = {
-			owner = { has_country_flag = pf_lag_extra_settlers }
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
 		}
-		modifier = { 
-			global_colonial_growth = 5
+		modifier = {
+			yearly_innovativeness = 0.02 
 		}
 	}
 	skill_scaled_modifier = {
@@ -1330,14 +1467,6 @@ army_reformer = {
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
-				is_emperor_of_china = yes 
-			}
-		}
-		modifier = { meritocracy = 0.25 }
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
 				has_government_mechanic = mac_war_cabinet_mechanic
 			}
 		}
@@ -1355,6 +1484,16 @@ army_reformer = {
 		}
 		modifier = {
 			monthly_althingi_mil_power = 0.25
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
 		}
 	}
 
@@ -1393,6 +1532,13 @@ army_organiser = {
 		}
 		modifier = { meritocracy = 0.25 }
 	}
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.8
+	}
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -1415,6 +1561,16 @@ army_organiser = {
 			monthly_althingi_mil_power = 0.25
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 
 	chance = {
 		factor = 1
@@ -1428,6 +1584,16 @@ army_organiser = {
 ######################################################
 commandant = {
 	monarch_power = MIL
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	discipline = 0.05
@@ -1494,6 +1660,16 @@ commandant = {
 ######################################################
 quartermaster = {
 	monarch_power = MIL
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	reinforce_speed = 0.33
@@ -1556,6 +1732,16 @@ quartermaster = {
 ######################################################
 recruitmaster = {
 	monarch_power = MIL
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	global_manpower_modifier = 0.10
@@ -1618,6 +1804,16 @@ recruitmaster = {
 ######################################################
 fortification_expert = {
 	monarch_power = MIL
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	defensiveness = 0.2
@@ -1677,6 +1873,16 @@ fortification_expert = {
 ######################################################
 grand_captain = {
 	monarch_power = MIL
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	land_maintenance_modifier = -0.10

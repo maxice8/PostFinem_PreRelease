@@ -1,0 +1,126 @@
+country_decisions = {
+	form_nordheim = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_nordheim_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			culture_group = scandinavian
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			NOT = { tag = NDH }
+			NOT = { tag = ATH }
+		}
+		provinces_to_highlight = {
+			culture_group = scandinavian
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no			
+			NOT = { exists = NDH }
+			num_of_owned_provinces_with = {
+				value = 30
+				culture_group = scandinavian
+			}
+			OR = {
+				NOT = { government = tribal }
+				government_rank = 2
+			}
+			adm_tech = 10
+		}
+		effect = {
+			change_tag = NDH
+			custom_tooltip = empty_line_tt
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			custom_tooltip = empty_line_tt
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+				custom_tooltip = empty_line_tt
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_nordheim_flag
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_ndh_bonus_from_culture_tt
+			if = {
+				limit = {
+					primary_culture = swedish
+				}
+				add_country_modifier = {
+					name = "pf_ndh_swedish"
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					primary_culture = danish
+				}
+				add_country_modifier = {
+					name = "pf_ndh_danish"
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					primary_culture = angle
+				}
+				add_country_modifier = {
+					name = "pf_ndh_angle"
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					primary_culture = norwegian
+				}
+				add_country_modifier = {
+					name = "pf_ndh_norwegian"
+					duration = -1
+				}
+			}
+			else = {		# shouldn't happen but hey ho
+				add_country_modifier = {
+					name = "pf_ndh_fallback"
+					duration = -1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

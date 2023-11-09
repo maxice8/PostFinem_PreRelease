@@ -1,0 +1,294 @@
+﻿l_english:
+
+#############
+# Governments
+#############
+
+pf_babylonian_kingdom: "Babylonian Kingdom"
+pf_babylonian_kingdom_desc: "Our monarchy retains some of the traditions of old Mesopotamian monarchies, but with a heavy Hellenic influence."
+ALU: "Alu"
+MAT: "Mat"
+GULA_MAT: "Gula Mat"
+ENSI: "Ensi"
+SHARRU: "Sharru"
+LUGAL: "Lugal"
+ENSI_CONSORT: "Ensi-Consort"
+SHARRU_CONSORT: "Sharru-Consort"
+LUGAL_CONSORT: "Lugal-Consort"
+ERIBU: "Eribu"
+
+pf_babylonian_empire: "Babylonian Empire"
+pf_babylonian_empire_desc: "Our state represents the restoration of a centuries old empire and set of traditions. We have taken up the mantle of Babylon and raised it even higher than it ever was before."
+
+pf_warriors_of_shamash: "Warriors of Shamash"
+pf_warriors_of_shamash_desc: "Shamash is the god of the sun, and the bringer of justice to all. Let us raise our banners, decorated with his symbolic star, and march into battle with the sword of righteousness in our hands. Traitors and enemies of all kind will be judged!"
+
+pf_kudurru_reform: "Kudurru System"
+pf_kudurru_reform_desc: "Kudurru are great stone monoliths used to officiate land grants from the crown to its subjects. The proper implimentation of this system ensures the loyalty of our nobles and vassals alike."
+
+pf_nepustu_tax: "Nepeshtu Tax"
+pf_nepustu_tax_desc: "The output of our nation is huge, from the most lowly farmer to most skilled craftsman. Instead of taxing raw goods, we could gain more money by focusing on the completed product, as well as encourage further industrial innovation."
+
+# Culture
+
+mesopotamian: "Mesopotamian"
+babylonian: "Babylonian"
+
+# Countries
+
+URK:0 "Uruk"
+URK_ADJ:0 "Uruk"
+BBY:0 "Babylonia"
+BBY_ADJ:0 "Babylonian"
+
+# Religion
+
+mesopotamian_religion_group: "Mesopotamian"
+enuma_elish: "Enuma Elish"
+enuma_elish_religion_desc: "The Mesopotamian gods have been worshipped for thousands of years, but have seen different forms and structures over that time period. The current form, known as Enuma Elish after the first lines of the Babylonian creation story, is the result of the compilation of ancient texts and ritual practices by scholars during the Hellenistic period, and thus is not exactly the same faith worshipped by our ancestors. Nevertheless, it retains the strong cultural ties that are essentially to our identity, but places the gods of old into a more modern and relatable context."
+marduk_aspect: "Marduk"
+desc_marduk_aspect: "Marduk is the primary god of the Babylonians, and has by this time usurped Enlil's role as the head of the Mesopotamian pantheon."
+ashur_aspect: "Ashur"
+desc_ashur_aspect: "Ashur is the primary god of the Assyrians, often associated with the warfare and brutality his empire is well known for."
+shamash_aspect: "Shamash"
+desc_shamash_aspect: "Shamash is the god of the sun and justice. It is said he sees every action as he passes across the sky, and will use this wisdom to judge every soul after they die."
+ishtar_aspect: "Ishtar"
+desc_ishtar_aspect: "Ishtar is a goddess associated with righteous conflict, passion, and lust. Known for her jealousy and antics, she is often appealed too to defend her cities."
+ninhursag_aspect: "Ninhursag"
+desc_ninhursag_aspect: "Ninhursag is the goddess of fertility. Prayer and sacrifices made to her will ensure our children grow strong and our bellies are full."
+ereshkigal_aspect: "Ereshkigal"
+desc_ereshkigal_aspect: "Ereshkigal is the queen of the underworld. Worshipping her helps us to make peace with death, and rest easy in our knowledge of what is to come."
+gilgamesh_aspect: "Gilgamesh"
+desc_gilgamesh_aspect: "Gilgamesh was an ancient king of Uruk, known for his search for immortality in the Epic of Gilgamesh, and who subsequently was elevated to godhood by later generations."
+OLD_GODS: "Old Gods"
+ENUMA_ELISH_ASPECTS: "Deities"
+ENUMA_ELISH_ASPECTS_SHORT: "Deity"
+ENUMA_ELISH_ASPECTS_LONG: "Deities to Patronise"
+ENUMA_ELISH_ASPECTS_POWER_NAME: "Divine Patronage"
+
+###############
+# Decisions
+###############
+
+form_babylonia_title: "Reform Babylonia"
+form_babylonia_desc: "The ancient empire of Babylon was truly a sight to behold, a great hegemon of the known world that has influenced every aspect of the world we know today. With our hearts strong and our head full of the stories of our ancestors, the time has come to proudly proclaim the restoration of this empire, and bring forward its old customs into modern times."
+
+ee_invoke_the_gods_title: "Invoke the Gods"
+ee_invoke_the_gods_desc: "Summon our highest priests to perform a sacrifice to our patron gods, ensuring their favour and bringing great blessings upon the land.\n\n§GWe will gain an additional bonus for each deity that we have selected as an active church aspect.§!"
+ee_invoke_the_gods_cooldown_tt: "This action can only be taken §Yonce§! in a ruler's lifetime."
+pf_invoke_marduk_tt: "§MInvoking Marduk will give us the following effect:§!\nEvery owned province with at least §Y5§! Autonomy gets the following effect:"
+pf_invoke_ashur_tt: "§MInvoking Ashur will give us the following effect:§!"
+pf_invoke_shamash_tt: "§MInvoking Shamash will give us the following effect:§!"
+pf_invoke_ishtar_tt: "§MInvoking Ishtar will give us the following effect:§!"
+pf_invoke_ishtar_income_tt: "from §Y3§! years of production income in owned provinces with §Yfood§! trade goods."
+pf_invoke_ninhursag_tt: "§MInvoking Ninhursag will give us the following effect:§!"
+pf_invoke_ninhursag_effect_tt: "Distribute §Y5§! £mil£ development to random owned provinces."
+pf_invoke_gilgamesh_tt: "§MInvoking Gilgamesh will give us the following effect:§!"
+
+############## 
+# Ideas
+##############
+
+URK_ideas: "Uruk Ideas"
+URK_ideas_start: "Uruk Traditions"
+URK_ideas_bonus: "Uruk Ambition"
+
+urk_ancient_kingdom: "Legacy of Ancient Empires"
+urk_ancient_kingdom_desc: "Our state is the successor to the great empires of old, the Babylonian, the Assyrian, and all those that arose from Mesopotamia before them. In coronation ceremonies our kings read out some of the many texts preserved from the reigns of past kings, ensuring that their memory remains fresh in the minds of all our people."
+urk_defend_the_cities: "Defend the Cities"
+urk_defend_the_cities_desc: "The cities we control our vulnerable, situated on vast flat plains and accessable from every angle. If we wish to retain our independence from our hungry neighbours, we must ensure our walls and fortifications are properly garrisoned at all times."
+urk_syncretism: "Hellenic Syncretism"
+urk_syncretism_desc: "When Alexander swept through these regions, he brought with him the Hellenic faith, which is still the dominant faith in this part of the world to the present day. Many of the peoples that made up his empire adopted this religion, but took it as syncretic with their pre-existing gods and traditions, creating a vibrant and new form of this old faith in every town in Mesopotamia."
+urk_the_two_rivers: "The Two Rivers"
+urk_the_two_rivers_desc: "Mesopotamia has always been the beating heart of civilisation, the golden core at the center of a hundred different empires. While it has faded into obscurity behind the now prosperous Mediterranean region, it has not however lost its agricultural supremacy. Between the Tigris and Euphrates lie some of the most abundant fertile soils in the world, producing massive quantities of high quality food goods to be exported far beyond our measly borders."
+urk_restore_akkadian_texts: "Restore Academic Akkadian"
+urk_restore_akkadian_texts_desc: "Long ago, the lingua franca of discourse and politics was Akkadian. Though it is now an extinct language, we retain it in many of our more ceremonial customs, in much the same way as the Italians still cling onto their vague memories of Latin. Our country should be an intellectual giant, and it is perhaps through promoting the Akkadian language as the medium of such invention and discussion that this can be achieved."
+urk_restore_the_temples: "Restore the Temples"
+urk_restore_the_temples_desc: "Every city in Mesopotamia had its own patron god prior to Hellenisation, with a grand temple within each citadel dedicated to them. Here, personal offerings and sacrifices could be made, and every citizen could feel like they had a personal connection with the divine. Despite such idolatry becoming increasingly shunned by the tyrannical Archon, we should revive this old practice in our territories."
+urk_journeys_and_adventures: "Adventurers and Journeymen"
+urk_journeys_and_adventures_desc: "Inspired by the tales of our ancestors and their conquests, as well as stories of heroes like the demi-god Gilgamesh, a number of our countrymen have journeyed out to the farthest corners of the world, seeking peril and glory. It just so happens that along the way, they learn vital information about the terrain and potential trade routes through these wild lands, leading to many adventurers being hired as a sort of vanguard for powerful mercant guilds."
+
+BBY_ideas: "Babylonian Ideas"
+BBY_ideas_start: "Babylonian Traditions"
+BBY_ideas_bonus: "Babylonian Ambition"
+
+bby_babylon_the_great: "Babylon the Great"
+bby_babylon_the_great_desc: "Old Babylonia was a behemoth, a great power unlike anything else the world had yet seen. Its impact on the cultures around it is undeniable - many peoples trembled in fear upon the mention of the city's name, even using it as an epithet of sorts to describe later hegemonic cities like Carthage. This conception of 'Babylon the Great' is still present in many different customs, and with the restoration of our glorious empire the fears of our neighbours are certain to rapidly rise."
+bby_astronomy: "Astronomy and Mathematics"
+bby_astronomy_desc: "In ancient times Babylonia was a hub of astronomy and mathematics, a place ahead of its time. While many of the techniques and discoveries made by our ancestors have since been rediscovered in the Hellenic world and beyond, there is still room for more work to be done. Let us restore our country as a hub for scholars and the sciences more broadly, ensuring that we are always on the forefront of new knowledge."
+bby_restored_legacy: "An Empire Reborn"
+bby_restored_legacy_desc: "Babylon once controlled the largest empire in the history of the world, and while our state may be modest at the moment, we are sure that one day it will reach the same lofty heights. The world is ours for the taking, and our legitimate claims to vast swathes of territory are known to all. Let the reconquest begin!"
+bby_agriculture: "Mesopotamian Hegemon"
+bby_agriculture_desc: "The land between the two rivers, Mesopotamia, is as famously fertile and populated now just as it was thousands of years ago. Controlling it means we have a monopoly over its vast food production, and can thus control the export of our goods to foreign merchants. Once we have had our share, it would be wise to impose some hefty tariffs on our exported grain and foodstuffs, so that people all over know we are the empire that provides."
+bby_imperial_commanders: "Imperial Commanders"
+bby_imperial_commanders_desc: "Our predecessor empires fell in Mesopotamia fell apart due to the incompetence of their government, tribal invasions, but most significantly, sabotage from within. Even the mightiest state will crumble to ashes if its generals and important governors revolt. Let us be sure to keep the loyalty of the men we elevate to high power, picking them from a hand-selected group of capable noble sons, and granting them great gifts and praise when their tasks are completed well."
+bby_restoration_of_religion: "Restore the Position of the Temples"
+bby_restoration_of_religion_desc: "The temple was once the center of the communities that dotted the region. Priests served as both mediators with the gods and as administrators and diplomats. Those days are gone forever, and the era of formal governance and rapidly growing infrastructure is upon us. However, we will not abandon our communalist instincts so easily - we should restore the position of the temples and their priests, ensuring that the next generation grows up under firm religious guidance, surrounded by family and friends."
+bby_stories_of_old: "Land of Epics"
+bby_stories_of_old_desc: "A great many tales have been told throughout our long and storied history. Perhaps the most well known of these, the Epic of Gilgamesh, has continued in circulation since its creation some time in the distant past. With the growth of the printing industry and a rekindled fascination in old stories, these epics are once more spreading across the land, including far beyond our borders, with new translated and edited editions coming out every year."
+
+PMY_ideas: "Palmyrene Ideas"
+PMY_ideas_start: "Palmyrene Traditions"
+PMY_ideas_bonus: "Palmyrene Ambition"
+
+pmy_on_trade_routes: "Between Nowhere and Somewhere"
+pmy_on_trade_routes_desc: "Palmyra was founded as a city on a trade route, and that trade has continued to comprise much of the local economy ever since. While our town is remote and often tricky to get to, it is a tranquil piece of shade in a vast and unforgiving desert. Let us use this prime position to attract merchants from all corners of the world to stop and use our services."
+pmy_desert_terrain: "Amongst the Sand"
+pmy_desert_terrain_desc: "The sand is everywhere. The sand is eternal. No matter where you look, there is sand. Sand on that dune, sand on the horizon. Coarse, rough, sand. We never really liked sand."
+pmy_camel_riders: "Palmyrene Camel Riders"
+pmy_camel_riders_desc: "Our town has been under attack many different times over the centuries, but most of them were fended off my our ferocious camel riders. Enemy armies, often on horseback, turn and flee at the sight of our finely trained beasts. Not only are they scary looking to foreigners, they are also expert desert navigators and survivors."
+pmy_silk_road: "Silk Road Entrepot"
+pmy_silk_road_desc: "The Silk Road runs from the far-off land of China all the way to Carthage, and carries with it goods of all kinds from silk to silver. Palmyra was built as a station along this route, serving wearing travellers and merchants with a place to rest and a fresh flask of water. During their stays here, we can often tempt these merchants to part with some of these goods, bringing great riches to our town."
+pmy_soldier_rations: "Managed Soldier Rations"
+pmy_soldier_rations_desc: "The long journeys across the desert to reach neighbouring towns drain both our spirits and our food reserves. If we wish to properly manage our armies in this tough climate, we must learn from the local tribal people who move through it every day with ease. A new way of rationing and storing our food must be implimented."
+pmy_oases: "An Island of Prosperity"
+pmy_oases_desc: "Our oasis is the lifeblood of our city. Without the comforting embrace of the lush greenery and the cool water, life in the desert would be practically impossible."
+pmy_dreams_of_empire: "Dreams of Empire"
+pmy_dreams_of_empire_desc: "Many people have reported having strange dreams. The story is often similar, and involves a respected figure showing them around what seems to be some kind of parallel version of our world. In that universe, Palmyra created a great empire, encompassing much of the eastern Mediterranean, and its rulers were known to historians even thousands of years later. While we may not reach such imaginary grandeur, we can certainly hold close to our hearts the united spirit we all share."
+
+AVR_ideas: "Avarian Ideas"
+AVR_ideas_start: "Avarian Traditions"
+AVR_ideas_bonus: "Avarian Ambition"
+
+avr_avar_kingdom: "The Avar Kingdom"
+avr_avar_kingdom_desc: "REPLACE_ME"
+avr_servants_of_empires: "Servants of Empires"
+avr_servants_of_empires_desc: "REPLACE_ME"
+avr_grazing_land: "Claim the Steppes"
+avr_grazing_land_desc: "REPLACE_ME"
+avr_warriors: "Warrior's Life"
+avr_warriors_desc: "REPLACE_ME"
+avr_caucasian_fortresses: "Caucasian Fortifications"
+avr_caucasian_fortresses_desc: "REPLACE_ME"
+avr_hellenic_literature: "Import Hellenic Literature"
+avr_hellenic_literature_desc: "REPLACE_ME"
+avr_modernising: "Reform the Administration"
+avr_modernising_desc: "REPLACE_ME"
+
+################
+# Events
+################
+
+pf_bby.1.t: "The Reclamation of Babylon"
+pf_bby.1.d: "Babylon has been the seat of emperors and kings for centuries. Since the Hellenic conquest of the region however, the city has fallen into disrepair, and is now a shadow of its former self. Our glorious reconquest of Babylon has however offered us a unique chance to pool the combined labour of our people to rebuild it and renovate its temples, helping the once mighty city to be reborn once more."
+pf_bby.1.a: "Oh Babylon, we shall let no army defile you!"
+pf_bby_babylon_nice: "Babylon Returned"
+pf_bby_babylon_nice_tt: "§RIf §Y[410.GetName]§! is ever successfully sieged by ANY enemy army, we will permanently lose this province modifier.§!"
+
+pf_bby.2.t: "Prosperity in Mesopotamia"
+pf_bby.2.d: "Our conquest of Mesopotamia has brought peace and stability to an area that is all too often torn apart by wars and internal strife. The people feel safe under our governance, and for the first time in generations, the bountiful harvests the region is famous for are being reaped in full once more. Truly, this is a new golden age of Mesopotamian civilisation."
+pf_bby.2.a: "Make hay while the sun shines..."
+
+pf_bby.3.t: "Many Gods, Many Choices"
+pf_bby.3.d: "Ours is a land of many different faiths and creeds. Before the Hellenic conquest, there were even more pagan religions present here, but most of them have now faded into obscurity, occupying only the minds of academics. The Archon has reigned supreme over our temples and the practices of our people for centuries now, and many have become complacent in that. Some fringe nationalists argue that our continued obedience to the Greek ways is humiliating, and that the thing that would be best for our country would be to turn to the works of those crusty scholars who have translated the texts of the old Mesopotamian faith, and attempt to rejuvinate that. This is clearly a ridiculous idea, but it is gaining some support both within the court and on the streets..."
+pf_bby.3.a: "The Archon has never failed us."
+pf_bby.3.b: "Let us revive the Old Gods!"
+pf_bby_retained_hellenic: "Loyalty to the Archon"
+pf_bby_new_religion: "Reintroducing the Works of the Ancestors"
+
+################
+# Missions
+################
+
+pf_bby_conquer_basra_title: "Seize Basra"
+pf_bby_conquer_basra_desc: "The ports of Basra are our gateway to the sea, and control the outflow of goods from Mesopotamia. If possible, it would be wise to seize these lands for ourselves."
+
+pf_bby_unite_the_rivers_title: "Unite the Rivers"
+pf_bby_unite_the_rivers_desc: "Mesopotamia is a land between two mighty rivers, the Tigris and the Euphrates. While our state is still consolidating, we could use this fertile region as natural borders within which to concentrate our expansion."
+pf_bby_united_mesopotamia: "United Mesopotamia"
+
+pf_bby_a_new_empire_title: "Rise of Babylonia"
+pf_bby_a_new_empire_desc: "The time has come to expand beyond the borders of Mesopotamia - the empire of our ancestors, we are owed a huge expanse of land spanning across the region."
+
+#
+
+pf_bby_expand_the_garrisons_title: "Expand the Garrisons"
+pf_bby_expand_the_garrisons_desc: "The freedom we now enjoy is constantly under threat - to the north, the enraged Seleucids eye our lands as part of their ambitious reconquest, while in the east the burgeoning Persian Empire crawls ever close to our borders. We must be ready to face all these threats and more."
+pf_bby_rising: "Babylonian Ambitions"
+pf_bby_bigger_garrison: "Strengthen the Garrisons"
+
+pf_bby_invade_seleucia_title: "Sons of Seleucis"
+pf_bby_invade_seleucia_desc: "The vile Seleucids rule much of the core of Mesopotamia, forcing many of our countrymen into hiding. In recent years, they have been faltering, and it looks like this ancient state may fade from the earth entirely. We must strike them while they are at their weakest, and retake Babylon."
+pf_bby_get_siege_progress_on_babylon_tt: "£yes£ If we are currently sieging §Y[410.GetName]§!, we will gain §G+10§! Siege Progress."
+pf_bby_get_siege_progress_on_babylon_no_tt: "£no£ If we are currently sieging §Y[410.GetName]§!, we will gain §G+10§! Siege Progress."
+pf_bby_great_campaign: "The Great Campaign"
+
+pf_bby_reclaim_babylon_title: "Reclaim the Blue City"
+pf_bby_reclaim_babylon_desc: "Babylon is crowned by its magnificent blue gates, which despite the ravages of countless armies and the progression of even more years, still stand to this day. Let us lead our armies there and reclaim this city for Mesopotamian natives, throw out the old Seleucid government and institute a new, truly blessed one."
+
+pf_bby_imperial_army_title: "New Imperial Army"
+pf_bby_imperial_army_desc: "We must construct for ourselves a capable and professional body of men to enforce our interests at home and abroad. Without a powerful army, would Babylon have created its first empire, let alone this one? By swords and muskets, we will prevail."
+
+#
+
+pf_bby_patronise_the_temples_title: "Patronise the Temples"
+pf_bby_patronise_the_temples_desc: "The temples are the core of our society, and we should treat them as such. The state should patronise their praising and sacrifices to the gods as much as they need, for if there is one thing we all fear more than empty pockets it is divine wrath."
+pf_bby_seats_of_the_gods: "Seats of the Gods"
+pf_bby_if_archon_then_yes_tt: "£yes£ If we are currently the §YArchon Controller§!, we will gain the following effect:"
+pf_bby_if_archon_then_no_tt: "£no£ If we are currently the §YArchon Controller§!, we will gain the following effect:"
+
+pf_bby_ancient_texts_title: "Words of Our Ancestors"
+pf_bby_ancient_texts_desc: "The people that came before us were great writers and arists. Some of the best preserved remnants of ancient Mesopotamian civilisation that survives to the present day is their tablets, mostly meticulous records of transcations of grain and other goods. A few of them, however, peak the interest of our scholars. These tablets describe various ancient myths and stories, dictating the deeds of gods and men, from the enigmatic Ishtar to the tyrant king Gilgamesh. Perhaps we should take a closer look at these documents?"
+
+pf_bby_religion_locked_path_1_title: "Locked Mission"
+pf_bby_religion_locked_path_1_desc: "This mission requires a prior choice to be made before being unlocked."
+bby_religion_locked_tt: "This mission is locked."
+
+pf_bby_religion_locked_path_2_title: "Locked Mission"
+pf_bby_religion_locked_path_2_desc: "This mission requires a prior choice to be made before being unlocked."
+
+pf_bby_production_growth_title: "Institute Nepeštu Tax"
+pf_bby_production_growth_desc: "Our current tax institutions, while reformed, are still ineffective at producing the maximum amount of revinue the modern world affords us. Using the skills of our manufacturers, our state income will soar and our people will be more prosperous than ever."
+pf_bby_unlock_nepustu_reform_tt: "Unlocks the §YNepeshtu Tax§! Government Reform."
+
+pf_bby_relations_with_archon_title: "Connect with the Archon"
+pf_bby_relations_with_archon_desc: "The Archon is the center of the lives of millions of Hellenes. If we wish to become closer to our faith, then establishing close connections to the Archon would be the best step towards doing that."
+pf_bby_blessed_ruler: "A Blessed Ruler"
+
+pf_bby_weather_the_reformation_title: "Weather the Reformation"
+pf_bby_weather_the_reformation_desc: "Dangerous extremists seek to destabilise our religion and bring unwanted change to the world. We must keep strong in these times of turmoil, and weather this storm."
+pf_bby_triumph_of_the_faith: "Triumph of the Faith"
+
+pf_bby_spread_our_culture_title: "Awaken the Babylonians"
+pf_bby_spread_our_culture_desc: "There are many people who profess to the same faith and traditions as we do, but live under foreign Hellenic influence and as such hide their true colours. Let us liberate these people from their silence, and welcome them into the warm embrace of Babylonian brotherhood."
+pf_bby_reawakening: "Reawakening"
+
+pf_bby_temple_cities_title: "Establish Temple Cities"
+pf_bby_temple_cities_desc: "In olden days, temples were the centers of their local communities. Let us revive this practice and build great temples and ziggurats in the middle of our growing cities."
+pf_bby_unlock_gilgamesh_tt: "Unlocks the §MGilgamesh§! Church Aspect."
+pf_bby_stories_of_old: "Reviving the Stories of Old"
+
+#
+
+pf_bby_improve_economy_title: "A Glut of Gold"
+pf_bby_improve_economy_desc: "If we cannot effectively levy our tax base, then the state has no chance at maintaining a strong enough army and presence in the cities to previal in the long term. Let us invest in the countryside and streamline our administration until our income is stable and sufficient."
+pf_bby_investment_in_economy: "Investment in the Economy"
+
+pf_bby_improve_irrigation_title: "Dilutu Tablittu"
+pf_bby_improve_irrigation_desc: "In the days of old, every city in Mesopotamia had its own magnificent irrigation system, keeping the fields quenched and the people fed even as the desert encroached further and further towards the river banks. If we want the land to prosper as it once did, we must rebuild the infrastructure necessary for our modern needs."
+pf_bby_irrigation_modifier_tt: "Every owned province in the §YMesopotamia§! region gains the following effect:"
+pf_bby_irrigation_restored: "Restored Local Irrigation"
+
+pf_bby_build_hanging_gardens_title: "A Piece of Paradise"
+pf_bby_build_hanging_gardens_desc: "At the center of Babylon lies the ruins of a great garden complex, built many centuries ago by a loving king for his wife. The ancients tell us it was beautiful, a shining beacon in a world of turmoil and death. Let us rebuild these gardens in our own style, and once again bring colour to the world."
+pf_bby_beautiful_life: "It's a Wonderful Life!"
+
+#
+
+pf_bby_imperial_administration_title: "Nexus of Empire"
+pf_bby_imperial_administration_desc: "Mesopotamia was once home to great cities and even greater kings. Let us restore the seats of power of centuries gone by, and proclaim our intention to create a new Babylonian empire."
+pf_bby_administrative_centers: "Designated Administrative Centers"
+
+pf_bby_kudurru_title: "Royal Grants"
+pf_bby_kudurru_desc: "The lands we rule are vast, and often they are difficult to govern. It would be best if we appointed regional governors, who operate only at the behest of the central government, to rule our far-off provinces with a more benevolent and local touch than we would otherwise."
+pf_bby_unlock_kudurru_reform_tt: "Unlocks the §YKudurru System§! Government Reform."
+
+pf_bby_the_great_constructions_title: "The Great Constructions"
+pf_bby_the_great_constructions_desc: "The kings of old made their names by building mighty temples and palaces. Throughout the years, the technology available to us has increased massively, and as such now there are a great many potential projects and heightened expectations on kings to this most ancient act of service to their domain."
+pf_bby_the_great_constructions_modifier: "Great Constructions"
+pf_bby_constructions_has_architect_yes_tt: "£yes£ If we have a hired §YArchitect§! or §YCity Planner§! advisor, we will gain the following effect:"
+pf_bby_constructions_has_architect_no_tt: "£no£ If we have a hired §YArchitect§! or §YCity Planner§! advisor, we will gain the following effect:"
+
+pf_bby_survey_the_fields_title: "Survey the Fields"
+pf_bby_survey_the_fields_desc: "Agricultural is the lifeblood of our people and economy. We must ensure that no field or farm is hidden from our administrative record, so that all production can be effectively taxed and distributed."
+pf_bby_devving_production_bonus_tt: "Developing provinces for §YBase Production§! £dip£ will yield twice the benefit for §Y20 years§!."

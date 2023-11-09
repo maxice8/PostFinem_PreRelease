@@ -483,3 +483,39 @@ pf_catephract_focus = {
 		factor = 1
 	}
 }
+
+pf_spartan_stratokratoria = {
+	icon = "spartan"
+	allow_normal_conversion = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	nation_designer_trigger = {
+		primary_culture =  peloponnesian
+	}
+	potential = {
+		tag = SPT
+		religion = paradosi
+	}
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		government_abilities = {
+			militarization_mechanic
+		}
+	}	
+	custom_attributes = {
+		generals_become_rulers = yes
+		locked_government_type = yes
+	}
+	modifiers = {
+		war_exhaustion = -0.02
+		max_absolutism = 10
+		global_autonomy = -0.075
+		monarch_military_power = 3
+		governing_capacity_modifier = -0.5
+
+	}
+	ai = {
+		factor = 1
+	}
+}

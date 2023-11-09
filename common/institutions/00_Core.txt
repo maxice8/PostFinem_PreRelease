@@ -22,6 +22,7 @@ feudalism = {
 
 	trade_company_efficiency = 0.2
 
+	#effect = { } # When a country embraces it
 
 	history = {
 		is_year = 1000
@@ -402,8 +403,10 @@ renaissance = {
 			}
 		}
 		is_state = yes
-		NOT = { province_id = 126 }
 		is_island = no
+		owner = { 
+			NOT = { has_reform = pirate_republic }
+		}
 		OR = {
 			development = 20
 			is_capital = yes

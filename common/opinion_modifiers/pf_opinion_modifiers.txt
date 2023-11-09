@@ -97,6 +97,7 @@ opinion_if_gave_office = {
 	yearly_decay = 1
 }
 
+
 # Nordic
 
 opinion_refused_submission_nor = {
@@ -106,4 +107,13 @@ opinion_refused_submission_nor = {
 opinion_nor_ulrik_sons = {
 	opinion = 25
 	yearly_decay = 1
+}
+
+#AI
+ai_wants_land = {
+	opinion = -50
+}
+
+ai_REALLY_wants_land = { #Basically will forse AI to break relations if they have allies with 10+ perm claims
+	opinion = -200
 }

@@ -1,0 +1,861 @@
+pf_bby_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = URK
+			tag = BBY
+		}
+	}
+	
+	pf_bby_conquer_basra = {
+		icon = mission_develop_visby
+		position = 2
+		required_missions = { pf_bby_expand_the_garrisons } 
+		provinces_to_highlight = {
+			area = basra_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			basra_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			custom_tooltip = empty_line_tt
+			408 = {
+				upgrade_center_of_trade = yes
+			}
+			custom_tooltip = empty_line_tt
+			add_area_perma_claim = {
+				area = khuzestan_area
+			}
+			add_area_perma_claim = {
+				area = luristan_area
+			}
+		}
+	}
+	pf_bby_unite_the_rivers = {
+		icon = mission_pf_two_rivers
+		position = 4
+		required_missions = { pf_bby_conquer_basra pf_bby_reclaim_babylon } 
+		provinces_to_highlight = {
+			OR = {
+				area = basra_area
+				area = iraq_arabi_area
+				area = al_jazira_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 11
+				OR = {
+					area = basra_area
+					area = iraq_arabi_area
+					area = al_jazira_area
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_bby_united_mesopotamia"
+				duration = 9125
+			}
+			country_event = { id = pf_bby.2 }
+			custom_tooltip = empty_line_tt
+			add_area_perma_claim = {
+				area = mesopotamia_region
+			}
+		}
+	}
+	pf_bby_a_new_empire = {
+		icon = holy_state
+		position = 5
+		required_missions = { pf_bby_unite_the_rivers } 
+		provinces_to_highlight = {
+			region = mesopotamia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			mesopotamia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 50
+			}
+			custom_tooltip = empty_line_tt
+			add_area_perma_claim = {
+				area = mashriq_region
+			}
+			add_area_perma_claim = {
+				area = persian_gulf_coast
+			}
+			add_area_perma_claim = {
+				area = farsistan_area
+			}
+			add_area_perma_claim = {
+				area = bahrain_area
+			}
+			add_area_perma_claim = {
+				area = pirate_coast_area
+			}
+		}
+	}
+}
+
+
+pf_bby_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = URK
+			tag = BBY
+		}
+	}
+
+	pf_bby_expand_the_garrisons = {
+		icon = mission_modern_knight_army
+		position = 1
+		required_missions = { } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			army_size_percentage = 1
+			OR = {
+				num_of_generals = 1
+				manpower_percentage = 0.5
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_bby_rising"
+				duration = 9125
+			}
+			capital_scope = {
+				add_province_modifier = {
+					name = "pf_bby_bigger_garrison"
+					duration = 9125
+				}
+			}
+			add_area_perma_claim = {
+				area = basra_area
+			}
+			add_area_perma_claim = {
+				area = iraq_arabi_area
+			}
+			add_area_perma_claim = {
+				area = al_jazira_area
+			}
+		}
+	}
+	pf_bby_invade_seleucia = {
+		icon = mission_plc_lifetime_of_war
+		position = 2
+		required_missions = { pf_bby_expand_the_garrisons } 
+		provinces_to_highlight = {
+			owned_by = SLC
+		}
+		trigger = {
+			OR = {
+				NOT = { exists = SLC }
+				SLC = {
+					war_with = ROOT
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_bby_great_campaign"
+				duration = 3650
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					410 = {
+						NOT = { owned_by = ROOT }
+						OR = {
+							infantry_in_province = ROOT
+							cavalry_in_province = ROOT
+						}
+						has_siege = yes
+						sieged_by = ROOT
+					}
+				}
+				custom_tooltip = pf_bby_get_siege_progress_on_babylon_tt
+				hidden_effect = {
+					410 = {
+						change_siege = 10
+					}
+				}
+			}
+			else = {
+				custom_tooltip = pf_bby_get_siege_progress_on_babylon_no_tt
+				#tooltip = {
+				#	410 = {
+				#		change_siege = 10
+				#	}
+				#}
+			}
+		}
+	}
+	pf_bby_reclaim_babylon = {
+		icon = mission_pf_blue_gates
+		position = 3
+		required_missions = { pf_bby_invade_seleucia } 
+		provinces_to_highlight = {
+			province_id = 410
+		}
+		trigger = {
+			owns_core_province = 410
+		}
+		effect = {
+			country_event = { id = pf_bby.1 }
+		}
+	}
+
+	pf_bby_imperial_army = {
+		icon = professional_army
+		position = 5
+		required_missions = { pf_bby_unite_the_rivers } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_manpower_building_trigger = yes }
+		}
+		trigger = {
+			army_size_percentage = 0.85
+			artillery_fraction = 0.20
+			army_reformer = 2
+			num_of_owned_provinces_with = {
+				value = 14
+				has_manpower_building_trigger = yes
+			}
+		}
+		effect = {
+			add_army_professionalism = 0.10
+			custom_tooltip = empty_line_tt
+			define_advisor = {
+				type = commandant
+				skill = 3
+				cost_multiplier = 0.25
+			}
+		}
+	}
+}
+pf_bby_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = URK
+			tag = BBY
+		}
+	}
+
+	pf_bby_patronise_the_temples = {
+		icon = mission_pf_old_temple
+		position = 1
+		required_missions = { } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			if = {
+				limit = { has_estate = estate_church }
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 4
+				has_tax_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_bby_seats_of_the_gods"
+				duration = 7300
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					is_papal_controller = yes
+				}
+				custom_tooltip = pf_bby_if_archon_then_yes_tt
+				add_adm_power = 50
+				add_dip_power = 50
+				add_mil_power = 50
+			}
+			else = {
+				custom_tooltip = pf_bby_if_archon_then_no_tt
+				tooltip = {
+					add_adm_power = 50
+					add_dip_power = 50
+					add_mil_power = 50
+				}			
+			}
+		}
+	}
+	pf_bby_ancient_texts = {
+		icon = mission_pf_cuneiform
+		position = 2
+		required_missions = { pf_bby_patronise_the_temples } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			monthly_adm = 10
+			prestige = 60
+			OR = {
+				num_of_estate_agendas_completed = {
+					estate = estate_church
+					value = 3
+				}
+				num_of_estate_agendas_completed = {
+					estate = estate_nobles
+					value = 3
+				}
+			}
+			NOT = { current_age = age_of_discovery }
+		}
+		effect = {
+			country_event = {
+				id = pf_bby.3
+			}
+		}
+	}
+}
+pf_bby_3_rel_1 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = URK
+			tag = BBY
+		}
+		NOT = { has_country_flag = pf_bby_religion_hellenist }
+		NOT = { has_country_flag = pf_bby_religion_enuma_elish }
+	}
+	pf_bby_religion_locked_path_1 = {
+		icon = mission_locked_mission
+		position = 3
+		required_missions = { pf_bby_ancient_texts } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = bby_religion_locked_tt
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mission_not_unlocked_tt
+		}
+	}
+	pf_bby_religion_locked_path_2 = {
+		icon = mission_locked_mission
+		position = 4
+		required_missions = { pf_bby_religion_locked_path_1 } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = bby_religion_locked_tt
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mission_not_unlocked_tt
+		}
+	}
+}
+pf_bby_3_rel_2 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = URK
+			tag = BBY
+		}
+		has_country_flag = pf_bby_religion_hellenist
+	}
+	pf_bby_relations_with_archon = {
+		icon = catholic_volunteers
+		position = 3
+		required_missions = { pf_bby_ancient_texts } 
+		provinces_to_highlight = {
+			is_capital_of = ATH
+		}
+		trigger = {
+			if = {
+				limit = {
+					exists = ATH
+				}
+				ATH = { 
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+			}
+			else = {
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 70
+				}
+			}
+			OR = {
+				is_papal_controller = yes
+				invested_papal_influence = 50
+				NOT = { religion = hellenic }
+			}
+		}
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			custom_tooltip = empty_line_tt
+			add_ruler_modifier = {
+				name = "pf_bby_blessed_ruler"
+				duration = -1
+			}
+			define_advisor = {
+				type = theologian
+				skill = 2
+				cost_multiplier = 0.25
+			}
+		}
+	}
+	pf_bby_weather_the_reformation = {
+		icon = counter_reformation
+		position = 4
+		required_missions = { pf_bby_relations_with_archon } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			religious_unity = 1
+			NOT = { current_age = age_of_discovery }
+			NOT = { current_age = age_of_reformation }
+			OR = {
+				inquisitor = 2
+				full_idea_group = religious_ideas
+				full_idea_group = humanist_ideas
+			}
+		}
+		effect = {
+			add_adm_power = 150
+			add_country_modifier = {
+				name = "pf_bby_triumph_of_the_faith"
+				duration = -1
+			}
+		}
+	}
+}
+pf_bby_3_rel_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = URK
+			tag = BBY
+		}
+		has_country_flag = pf_bby_religion_enuma_elish
+	}
+	pf_bby_spread_our_culture = {
+		icon = found_the_vatican_library
+		position = 3
+		required_missions = { pf_bby_ancient_texts } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { culture = babylonian }
+		}
+		trigger = {
+			410 = {
+				owned_by = ROOT
+				culture = babylonian
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				culture = babylonian
+				religion = enuma_elish
+			}
+		}
+		effect = {
+			add_church_power = 50
+			custom_tooltip = empty_line_tt
+			410 = {
+				add_base_tax = 2
+				add_base_production = 3
+				add_base_manpower = 2
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_bby_reawakening"
+				duration = 10950
+			}
+		}
+	}
+	pf_bby_temple_cities = {
+		icon = end_the_schism
+		position = 4
+		required_missions = { pf_bby_spread_our_culture } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				NOT = { development = 20 }
+				NOT = { has_tax_building_trigger = yes }
+				NOT = { base_tax = 8 }
+				NOT = { religion = enuma_elish }
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				development = 20
+				has_tax_building_trigger = yes
+				base_tax = 8
+				religion = enuma_elish
+			}
+		}
+		effect = {
+			custom_tooltip = pf_bby_unlock_gilgamesh_tt
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_bby_stories_of_old"
+				duration = -1
+			}
+		}
+	}
+}
+pf_bby_3_bas_1 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = URK
+			tag = BBY
+		}
+	}
+
+	pf_bby_production_growth = {
+		icon = mission_pf_taxman
+		position = 5
+		required_missions = { pf_bby_improve_irrigation } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			total_base_tax = 250
+			OR = {
+				adm = 5
+				ruler_has_personality = architectural_visionary_personality
+				has_institution = manufactories
+			}
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 60
+			}
+			reform_level = 7
+		}
+		effect = {
+			set_country_flag = pf_unlocked_nepustu_tax
+			custom_tooltip = pf_bby_unlock_nepustu_reform_tt
+			custom_tooltip = empty_line_tt
+			add_government_reform = pf_nepustu_tax
+		}
+	}
+}
+pf_bby_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = URK
+			tag = BBY
+		}
+	}
+
+	pf_bby_improve_economy = {
+		icon = mission_peasantry
+		position = 2
+		required_missions = { pf_bby_patronise_the_temples pf_bby_imperial_administration } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			share_of_starting_income = 2.5
+			OR = {
+				treasurer = 1
+				master_of_mint = 1
+			}
+			NOT = { num_of_loans = 1 }
+			NOT = { inflation = 1 }
+		}
+		effect = {
+			add_adm_power = 100
+			custom_tooltip = empty_line_tt
+			add_ruler_personality = midas_touched_personality
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_bby_investment_in_economy"
+				duration = 9125
+			}
+		}
+	}
+	pf_bby_improve_irrigation = {
+		icon = mission_pf_mesopotamian_irrigation
+		position = 4
+		required_missions = { pf_bby_the_great_constructions } 
+		provinces_to_highlight = {
+			region = mesopotamia_region
+			NOT = { has_production_building_trigger = yes }
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				region = mesopotamia_region
+				has_production_building_trigger = yes
+				value = 20
+			}
+		}
+		effect = {
+			custom_tooltip = pf_bby_irrigation_modifier_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = mesopotamia_region
+					}
+					add_province_modifier = {
+						name = "pf_bby_irrigation_restored"
+						duration = -1
+					}
+				}
+			}
+			tooltip = {
+				add_province_modifier = {
+					name = "pf_bby_irrigation_restored"
+					duration = -1
+				}
+			}
+		}
+	}
+	pf_bby_build_hanging_gardens = {
+		icon = mission_pf_hanging_gardens
+		position = 5
+		required_missions = { pf_bby_improve_irrigation pf_bby_survey_the_fields } 
+		provinces_to_highlight = {
+			province_id = 410
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = {
+					has_great_project = {
+						type = hanging_gardens
+						tier = 2
+					}
+				}
+			}
+		}
+		trigger = {
+			owns_core_province = 410
+			410 = {
+				OR = {
+					has_great_project = {
+						type = hanging_gardens
+						tier = 2
+					}
+					has_great_project = {
+						type = hanging_gardens
+						tier = 3
+					}
+				}
+			}
+			OR = {
+				in_golden_age = yes
+				has_had_golden_age = yes
+				prestige = 100
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_bby_beautiful_life"
+				duration = 36500
+			}
+		}
+	}
+}
+pf_bby_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = URK
+			tag = BBY
+		}
+	}
+
+	pf_bby_imperial_administration = {
+		icon = mission_pol_deal_mazovia
+		position = 1
+		required_missions = { } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 410
+				province_id = 411
+				province_id = 2311
+				province_id = 5000
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { num_of_times_improved_by_owner = 5 }
+			}
+		}
+		trigger = {
+			410 = {
+				owned_by = ROOT
+				num_of_times_improved_by_owner = 5
+			}
+			411 = {
+				owned_by = ROOT
+				num_of_times_improved_by_owner = 5
+			}
+			2311 = {
+				owned_by = ROOT
+				num_of_times_improved_by_owner = 5
+			}
+			5000 = {
+				owned_by = ROOT
+				num_of_times_improved_by_owner = 5
+			}
+		}
+		effect = {
+			change_government_reform_progress = 50
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_bby_administrative_centers"
+				duration = 10950
+			}
+		}
+	}
+	pf_bby_kudurru = {
+		icon = mission_plc_edict_education
+		position = 2
+		required_missions = { pf_bby_imperial_administration } 
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				is_subject_of = ROOT
+				liberty_desire = 10
+			}
+		}
+		trigger = {
+			estate_loyalty = {
+				estate = all
+				loyalty = 55
+			}
+			crown_land_share = 50
+			all_subject_country = {
+				NOT = { liberty_desire = 10 }
+			}
+		}
+		effect = {
+			set_country_flag = pf_unlocked_kudurru
+			custom_tooltip = pf_bby_unlock_kudurru_reform_tt
+			custom_tooltip = empty_line_tt
+			add_government_reform = pf_kudurru_reform
+		}
+	}
+	pf_bby_the_great_constructions = {
+		icon = mission_industrial_forging
+		position = 3
+		required_missions = { pf_bby_improve_economy pf_bby_kudurru } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { num_of_buildings_in_province = 2 }
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 4
+				has_fort_building_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				num_of_buildings_in_province = 2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pf_bby_the_great_constructions_modifier"
+				duration = 10950
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					OR = {
+						city_planner = 1
+						architect = 1
+					}
+				}
+				custom_tooltip = pf_bby_constructions_has_architect_yes_tt
+				capital_scope = {
+					add_or_upgrade_tax_building = yes
+					add_or_upgrade_production_building = yes
+				}
+			}
+			else = {
+				custom_tooltip = pf_bby_constructions_has_architect_no_tt
+				tooltip = {
+					capital_scope = {
+						add_or_upgrade_tax_building = yes
+						add_or_upgrade_production_building = yes
+					}
+				}
+			}
+		}
+	}
+	pf_bby_survey_the_fields = {
+		icon = mission_pol_breadbasket_europe
+		position = 4
+		required_missions = { } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_manufactory_trigger = yes }
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 6
+				has_manufactory_trigger = yes
+			}
+		}
+		effect = {
+			custom_tooltip = pf_bby_devving_production_bonus_tt
+			hidden_effect = {
+				add_country_modifier = {
+					name = "pf_bby_prod_bonus_timer"
+					duration = 7300
+					hidden = yes
+				}
+			}
+		}
+	}
+}

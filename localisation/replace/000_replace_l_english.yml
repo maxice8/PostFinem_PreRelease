@@ -4,6 +4,14 @@
  eastern: "Greek"
 
 #Italian Federation 
+
+ BENEFIT_FOR_EMPEROR:1 "Adirim gets:\n$MODIFIER$"
+ BENEFIT_FOR_EMPEROR_PER_PRINCE:1 "The Adirim gets (depends on number of princes):\n$MODIFIER$"
+ ENACT_DECREE_NOT_EMPEROR:0 "Only the Adirim can enact Decrees."
+ CAN_NOT_ENACT_REFORM_NOT_EMPEROR:0 "Only the Adirim can enact reforms in the Federation."
+ CAN_NOT_ENACT_REFORM_LEAGUES:0 "Cannot enact reforms during religious conflict in the Federation."
+ BENEFIT_FOR_MEMBER:3 "All members except the Adirim get:\n$MODIFIER$"
+ BENEFIT_FOR_EVERYONE:1 "All members of the Federation get:\n$MODIFIER$"
 gen_hre_relations_with_emperor_title: "Strengthen Federal Ties"
 gen_hre_relations_with_emperor_title: "Strengthen Federal Ties"
  HRE_DISMANTLE:0 "Dismantle IF"
@@ -614,6 +622,22 @@ ELECTOR_PROCONSULA: "Proconsula-Elector"
 
  SYR_ideas_start: "Syrian Traditions"
  SYR_ideas_bonus: "Syrian Ambition" SYR_ideas: "Syrian Ideas"
+
+ BAV_ideas_start: "Suthern Traditions"
+ BAV_ideas_bonus: "Suthern Ambition"
+ BAV_ideas: "Suthern Ideas"
+
+ MVA_ideas_start: "Morian Traditions"
+ MVA_ideas_bonus: "Morian Ambition"
+ MVA_ideas: "Morian Ideas"
+
+ SLO_ideas: "Bergan Ideas"
+ SLO_ideas_start: "Bergan Traditions"
+ SLO_ideas_bonus: "Bergan Ambition"
+
+ STY_ideas: "Waldharten Ideas"
+ STY_ideas_start: "Waldharten Traditions"
+ STY_ideas_bonus: "Waldharten Ambition"
 
  mechanic_has_polish_election_yes:0 "Has §YGallic Election§!"
  

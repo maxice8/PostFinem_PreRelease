@@ -567,3 +567,82 @@ pf_vinland_althing = {
 		has_parliament = yes
 	}
 }
+pf_babylonian_kingdom = {
+	icon = "babylonian_kingdom"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		culture_group = mesopotamian
+	}
+	modifiers = {
+		state_maintenance_modifier = -0.10
+		global_prosperity_growth = 0.5
+		all_estate_influence_modifier = 0.05
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+pf_babylonian_empire = {
+	icon = "babylonian_empire"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		tag = BBY
+	}
+	modifiers = {
+		state_maintenance_modifier = -0.25
+		culture_conversion_cost = -0.10
+		culture_conversion_time = -0.10
+		governing_capacity = 100
+		max_absolutism = 10
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+pf_warriors_of_shamash = {
+	icon = "king_mountains"
+	allow_normal_conversion = yes
+	potential = {
+		religion = enuma_elish
+	}
+	modifiers = {
+		land_morale = 0.10
+		recover_army_morale_speed = 0.05
+		war_exhaustion_cost = -0.20
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+pf_kudurru_reform = {
+	icon = "kudurru"
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = pf_unlocked_kudurru
+	}
+	modifiers = {
+		production_efficiency = 0.10
+		diplomatic_annexation_cost = -0.10
+		nobles_loyalty_modifier = 0.05
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+pf_nepustu_tax = { 	# Nēpeštu tax
+	icon = "pf_merchant_virtues"
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = pf_unlocked_nepustu_tax
+	}
+	modifiers = {
+		global_trade_goods_size_modifier = 0.10
+		build_time = -0.20
+		expand_infrastructure_cost_modifier = -0.50
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}

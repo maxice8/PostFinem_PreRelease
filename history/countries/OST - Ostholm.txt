@@ -1,5 +1,5 @@
 government = tribal
-add_government_reform = feudal_tribe
+add_government_reform = pf_ostholm_crown
 government_rank = 2
 technology_group = euro_pagan_tech
 religion = south_germanic_religion
@@ -7,25 +7,47 @@ capital = 1863
 primary_culture = quadi
 add_accepted_culture = fyrnir
 add_accepted_culture = illyrian
+
+1356.11.11 = { 
+	monarch = { 
+		name = "Odor"
+		dynasty = "Ostholm"
+		adm = 5
+		dip = 5
+		mil = 4
+		birth_date = 1343.01.14
+		death_date = 1394.02.23
+	}
+	capital = 134
+}
 1444.11.11 = { 
 	monarch = { 
 		name = "Theodoric"
-		dynasty = "Thorkillingas"
+		dynasty = "Ostholm"
 		adm = 3
 		dip = 1
 		mil = 4
 		birth_date = 1388.03.24
 		death_date = 1445.01.01
 	}
+	pf_add_opinion_both = {
+		who = VLD
+		modifier = ost_vld_rivalry
+	}
+	add_ruler_personality = well_advised_personality
+	add_ruler_personality = charismatic_negotiator_personality
+	add_ruler_personality = bold_fighter_personality
 }
 1444.11.11 = { 
 	heir = { 
 		name = "Theobald"
-		dynasty = "Thorkillingas"
+		dynasty = "Ostholm"
 		adm = 4
 		dip = 2
 		mil = 2
 		birth_date = 1415.08.08
 		death_date = 1445.01.01
+		
 	}
+	add_heir_personality = conqueror_personality
 }

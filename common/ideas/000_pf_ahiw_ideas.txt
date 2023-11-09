@@ -924,3 +924,160 @@ ATH_ideas = {
 		global_trade_goods_size_modifier = 0.10
 	}
 }
+
+URK_ideas = {
+	start = {
+		same_culture_advisor_cost = -0.15
+		land_morale = 0.10
+	}
+	
+	bonus = {
+		global_autonomy = -0.05
+	}	
+
+	trigger = {
+		tag = URK
+	}
+	free = yes
+	
+	urk_ancient_kingdom = {
+		legitimacy = 1
+	}
+	urk_defend_the_cities = {
+		garrison_size = 0.15
+		defensiveness = 0.1
+	}
+	urk_syncretism = {
+		tolerance_heathen = 2
+	}
+	urk_the_two_rivers = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	urk_restore_akkadian_texts = {
+		global_institution_spread = 0.15
+	}
+	urk_restore_the_temples = {
+		church_loyalty_modifier = 0.10
+	}
+	urk_journeys_and_adventures = {
+		caravan_power = 0.25
+	}
+}
+BBY_ideas = {			# Babylonia (NOT the satrapy one)
+	start = {
+		global_institution_spread = 0.25
+		global_autonomy = -0.05
+	}
+	
+	bonus = {
+		administrative_efficiency = 0.05
+	}	
+
+	trigger = {
+		tag = BBY
+	}
+	free = yes
+	
+	bby_babylon_the_great = {
+		core_creation = -0.20
+	}
+	bby_astronomy = {	# and maths
+		technology_cost = -0.1
+	}
+	bby_restored_legacy = {
+		prestige = 1
+		monthly_splendor = 1
+	}
+	bby_agriculture = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	bby_imperial_commanders = {
+		land_morale = 0.15
+	}
+	bby_restoration_of_religion = {
+		missionaries = 1
+	}
+	bby_stories_of_old = {
+		army_tradition = 0.5
+		army_tradition_from_battle = 0.50
+	}
+}
+PMY_ideas = {			# Palmyra
+	start = {
+		caravan_power = 0.20
+		cavalry_cost = -0.15
+	}
+	
+	bonus = {
+		cavalry_shock = 1
+	}	
+
+	trigger = {
+		tag = PMY
+	}
+	free = yes
+	
+	pmy_on_trade_routes = {
+		trade_efficiency = 0.10
+	}
+	pmy_desert_terrain = {
+		hostile_attrition = 1.0
+	}
+	pmy_camel_riders = {
+		cavalry_power = 0.20
+	}
+	pmy_silk_road = {
+		merchants = 1
+	}
+	pmy_soldier_rations = {
+		movement_speed = 0.10
+		land_attrition = -0.15
+	}
+	pmy_oases = {
+		development_cost = -0.10
+	}
+	pmy_dreams_of_empire = {
+		fabricate_claims_cost = -0.25
+	}
+}
+AVR_ideas = {			# Avaria
+	start = {
+		leader_land_manuever = 1
+		tolerance_own = 1
+	}
+	
+	bonus = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		horde_unity = 1
+	}	
+
+	trigger = {
+		tag = AVR
+	}
+	free = yes
+	
+	avr_avar_kingdom = {
+		stability_cost_modifier = -0.10
+	}
+	avr_servants_of_empires = {
+		discipline = 0.05
+	}
+	avr_grazing_land = {
+		cavalry_flanking = 0.50
+		cavalry_cost = -0.10
+	}
+	avr_warriors = {
+		reinforce_cost_modifier = -0.25
+	}
+	avr_caucasian_fortresses = {
+		defensiveness = 0.20
+	}
+	avr_hellenic_literature = {
+		global_institution_spread = 0.15
+	}
+	avr_modernising = {
+		adm_tech_cost_modifier = -0.10
+	}
+}

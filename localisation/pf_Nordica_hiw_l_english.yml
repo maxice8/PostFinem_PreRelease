@@ -25,7 +25,7 @@ nordic_huskarl_recruitment_reform_desc: "The Huskarls are traditionally taken fr
 
 nordic_entrenched_raids_reform: "Merciless Raiders"
 nordic_entrenched_raids_reform_desc: "Our ancestors have been raiding and pillaging for centuries - in a poor land such as ours, it was the only real way to make a living. Now, such raiding has become more of a sport and a show of martial prowess, but it is nonetheless a core part of our culture. Our attacks are so impactful that many of the peoples we target have begun calling us by a new name - not 'Northmen', but 'vikings', literally pirates. Instead of cowering, we should embrace this new identity, and make sure that everyone knows we are the terror of the land and the seas."
-mechanic_raids_give_money_from_temples_yes: "Sieging provinces in §Yraid wars§! with §YTemples§! or §YCathedrals§! grants us §G5§!¤ and §G10§!¤ §MLoot§! respectively."
+mechanic_raids_give_money_from_temples_yes: "Sieging provinces in §YRaid Wars§! with §YTemples§! or §YCathedrals§! grants us §G5§!¤ and §G10§!¤ §MLoot§! respectively."
 
 pf_norse_jarldom: "Norse Jarldom"
 pf_norse_jarldom_desc: "The many tribes and clans that once occupied this area have unified into one Jarldom, led by a fierce viking warlord."
@@ -78,6 +78,10 @@ cb_raid_desc: "We can attack other nations for slaves and plunder!"
 show_superiority_raid: "Show Superiority"
 show_superiority_raid_desc: "Gain warscore by defeating enemy armies in battle."
 RAID_WAR_NAME: "$ORDER$$FIRST$ Raid against $SECOND$"
+
+raid_button_tooltip: "[Root.GetRaidTooltip]\n\nOccupying provinces in Raid Wars will give an amount of §YLoot§! ¤ equal to the development of the province, as well as counting other raid loot bonuses. Loot decreases when we take casualties in battles we lose.\n\nAfter the war, once all our troops are back in home provinces, we will receive the total remaining Loot as ducats in our treasury."
+raid_tooltip_is_in_raid_war_tt: "§R£mil£ We are currently in a Raid War! £mil£§!\n\nCurrent §YRaid Loot§! is (§G[Root.RaidLoot.GetValue]§!¤) out of a maximum of (§M[Root.MaxRaidLoot.GetValue]§!)."
+raid_tooltip_is_not_in_raid_war_tt: "§OWe are not the attacker in a Raid War.§!"
 
 ##############
 # Ideas
@@ -504,6 +508,15 @@ white_peace_raid_tooltip: "Confirming this decision will cost us §R30§! £mil�
 
 pf_found_vinland_althing_title: "Found the Vinland Althing"
 pf_found_vinland_althing_desc: "We have been without proper government for too long. With the first institutions blosoming and our population growing, it is only right that we establish an interactive democratic government, under the guidance and leadership of the Chief of course."
+
+form_nordheim_title: "The Northern Realm"
+form_nordheim_desc: "Scandinavia is a wild land, but it is not inhospitable. Our people have learned to live here and some have even learned to prosper. Next to the graves of our ancestors, we will construct a bright new modern future for our people, and bring the North into the global theatre."
+pf_ndh_bonus_from_culture_tt: "§MWe will gain an additional permanent modifier based on our primary culture:§!"
+pf_ndh_swedish: "Swedish Legacy"
+pf_ndh_danish: "Danish Legacy"
+pf_ndh_angle: "Anglian Legacy"
+pf_ndh_norwegian: "Norwegian Legacy"
+pf_ndh_fallback: "A Bright New Future"
 
 #############
 # Missions

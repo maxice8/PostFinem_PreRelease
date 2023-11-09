@@ -1,0 +1,29 @@
+government = tribal
+add_government_reform = feudal_tribe
+technology_group = eastern
+primary_culture = marcomanni
+religion = south_germanic_religion
+capital = 64# München!
+government_rank = 1
+1444.11.11 = { 
+	monarch = { 
+		name = "Edric"
+		dynasty = "Saexneatingas"
+		adm = 2
+		dip = 5
+		mil = 3
+		birth_date = 1398.05.10
+		death_date = 1445.01.01
+	}
+}
+1444.11.11 = { 
+	heir = { 
+		name = "Aldred"
+		dynasty = "Saexneatingas"
+		adm = 6
+		dip = 3
+		mil = 2
+		birth_date = 1423.08.25
+		death_date = 1445.01.01
+	}
+}

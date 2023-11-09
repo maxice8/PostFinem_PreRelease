@@ -1,0 +1,89 @@
+namespace = pf_bby
+
+country_event = {		# Reclamation of Babylon
+	id = pf_bby.1
+	title = pf_bby.1.t 
+	desc = pf_bby.1.d
+	picture = GOLDEN_CITY_eventPicture
+
+	is_triggered_only = yes
+
+	goto = 410
+
+	option = {
+		name = "pf_bby.1.a"
+		add_prestige_or_monarch_power = {
+			amount = 30
+		}
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 25
+		}
+		410 = {
+			add_devastation = -50
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			add_province_modifier = {
+				name = "pf_bby_babylon_nice"
+				duration = -1
+			}
+		}
+		custom_tooltip = pf_bby_babylon_nice_tt
+	}
+}
+country_event = {		# Prosperity in Mesopotamia
+	id = pf_bby.2
+	title = pf_bby.2.t 
+	desc = pf_bby.2.d
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_bby.2.a"
+		add_stability_or_adm_power = yes
+		iraq_arabi_area = {
+			add_prosperity = 100
+		}
+		al_jazira_area = {
+			add_prosperity = 100
+		}
+		basra_area = {
+			add_prosperity = 100
+		}
+	}
+}
+country_event = {		# Pick religious path
+	id = pf_bby.3
+	title = pf_bby.3.t 
+	desc = pf_bby.3.d
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {		# Hellenic
+		name = "pf_bby.3.a"
+		add_papal_influence = 50
+		add_country_modifier = {
+			name = "pf_bby_retained_hellenic"
+			duration = -1
+		}
+		set_country_flag = pf_bby_religion_hellenist
+		swap_non_generic_missions = yes
+	}
+	option = {		# Enuma Elish
+		name = "pf_bby.3.b"
+		add_years_of_income = -1
+		change_religion = enuma_elish
+		hidden_effect = {
+			add_prestige = 100
+		}
+		add_country_modifier = {
+			name = "pf_bby_new_religion"
+			duration = 7300
+		}
+		set_country_flag = pf_bby_religion_enuma_elish
+		swap_non_generic_missions = yes
+	}
+}

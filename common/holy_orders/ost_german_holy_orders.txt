@@ -1,0 +1,137 @@
+
+ost_1_order = {
+    localization = holy_order
+    icon = GFX_holy_order_aissawa
+    trigger = {
+        religion = south_germanic_religion
+        has_country_flag = dnv_ost_germanic_orders
+    }
+    cost = 50
+    cost_type = adm_power
+    per_province_effect = {
+        add_base_tax = 1
+        if = {
+            limit = {
+               owner = {
+                    has_country_flag = dnv_power_germanic_orders
+               }
+            }
+            add_province_modifier = {
+                name = dnv_order_1
+                duration = 9125
+            }
+        }
+    }
+    per_province_abandon_effect = {
+        add_base_tax = -1
+        remove_province_modifier = dnv_order_1
+    }
+    modifier = {
+        local_hostile_movement_speed = -0.2
+        local_monthly_devastation = -0.5
+    }
+    ai_priority = {
+        factor = 2
+        modifier = {
+            factor = 0
+            owner = {
+                is_at_war = no
+            }
+        }
+    }
+    color = {
+        5 100 5
+    }
+}
+
+ost_2_order = {
+    localization = holy_order
+    icon = GFX_holy_order_alcantara
+    trigger = {
+        religion = south_germanic_religion
+        has_country_flag = dnv_ost_germanic_orders
+    }
+    cost = 50
+    cost_type = dip_power
+    per_province_effect = {
+        add_base_production = 1
+        if = {
+            limit = {
+               owner = {
+                    has_country_flag = dnv_power_germanic_orders
+               }
+            }
+            add_province_modifier = {
+                name = dnv_order_2
+                duration = 9125
+            }
+        }
+    }
+    per_province_abandon_effect = {
+        add_base_production = -1
+        remove_province_modifier = dnv_order_2
+    }
+    modifier = {
+        local_governing_cost = -0.1
+        trade_value_modifier = 0.1
+    }
+    ai_priority = {
+        factor = 1
+        modifier = {
+            factor = 5.0
+            owner = {
+                governing_capacity_percentage = 0.9
+            }
+        }
+    }
+    color = {
+        100 5 100
+    }
+}
+
+ost_3_order = {
+    localization = holy_order
+    icon = GFX_holy_order_santiago
+    trigger = {
+        religion = south_germanic_religion
+        has_country_flag = dnv_ost_germanic_orders
+    }
+    cost = 50
+    cost_type = mil_power
+    per_province_effect = {
+        add_base_manpower = 1
+        if = {
+            limit = {
+               owner = {
+                    has_country_flag = dnv_power_germanic_orders
+               }
+            }
+            add_province_modifier = {
+                name = dnv_order_3
+                duration = 9125
+            }
+        }
+    }
+    per_province_abandon_effect = {
+        add_base_manpower = -1
+        remove_province_modifier = dnv_order_3
+    }
+    modifier = {
+        local_autonomy = -0.05
+        local_years_of_nationalism = -5
+    }
+    ai_priority = {
+        factor = 1
+        modifier = {
+            factor = 1.5
+            local_autonomy = 90
+        }
+        modifier = {
+            factor = 1.5
+            local_autonomy = 80
+        }
+    }
+    color = {
+        100 5 5
+    }
+}

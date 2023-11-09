@@ -66,3 +66,21 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {		# Raid button loc
+	name = GetRaidTooltip
+	random = no
+
+	text = {
+		localisation_key = raid_tooltip_is_in_raid_war_tt
+		trigger = {
+			country_is_part_of_raid_war = yes
+		}
+	}
+	text = {
+		localisation_key = raid_tooltip_is_not_in_raid_war_tt
+		trigger = {
+			NOT = { country_is_part_of_raid_war = yes }
+		}
+	}
+}

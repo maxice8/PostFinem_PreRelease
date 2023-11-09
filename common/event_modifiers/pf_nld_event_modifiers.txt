@@ -110,7 +110,7 @@ nld_lulea_modifier = {
 	local_production_efficiency = 0.15
 	province_trade_power_modifier = 0.5
 	allowed_num_of_buildings = 1
-	development_cost_modifier = -0.10
+	development_cost = -0.10
 }
 
 nld_industralize_cities = {
@@ -120,7 +120,7 @@ nld_industralize_cities = {
 
 nld_appease_burghers = {
 	merchants = 1
-	development_cost_modifier = -0.5
+	development_cost = -0.05
 }
 
 nld_seafaring_traders = {

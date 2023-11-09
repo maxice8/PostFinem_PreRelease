@@ -80,7 +80,10 @@ country_decisions = {
 				}
 				custom_trigger_tooltip = {
 					tooltip = pf_trn_allowed_to_form_via_mission_tt
-					has_country_flag = may_form_albion
+					OR = {
+						adm_tech = 10
+						has_country_flag = may_form_albion
+					}
 				}
 			}
 			else = {

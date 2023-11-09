@@ -1,0 +1,159 @@
+﻿l_english:
+#####NAT_IDEAS
+
+ MVA_ideas_1: "Morian Wolf"
+ MVA_ideas_2: "Of Lands Between"
+ MVA_ideas_3: "Wealth of Sudeten"
+ MVA_ideas_4: "Saxon Pressure"
+ MVA_ideas_5: "Lost Wars"
+ MVA_ideas_6: "Godly Guidance"
+ MVA_ideas_7: "First Banks of Germania"
+ MVA_ideas_1_desc: "The wolf of Moria is our symbol to represent the ferocity of our army and our people."
+ MVA_ideas_2_desc: "As the center of Germanic Europe lays our small nation, to survive we need as many friends as possible."
+ MVA_ideas_3_desc: "From the very earth we recieve unbound wealth and with it, we will rise to heavens!"
+ MVA_ideas_4_desc: "From the north, the Saxons dominion expands and this expansion will soon arrive to our lands, we must build."
+ MVA_ideas_5_desc: "Written word is a powerful tool, some may say even a pen can be stronger than a sword."
+ MVA_ideas_6_desc: "Tolerance of religious difference is a pragmatic way of dealing with fools and zealots."
+ MVA_ideas_7_desc: "The first proper office of transation with usage of paper money in german lands was located near the city of Marbod."
+
+ sudeten: "Sudeti"
+ SDT: "Sudeten"
+ SDT_ADJ: "Sudeti"
+ SDT_ideas: "Sudeti Ideas"
+ SDT_ideas_start: "Sudeti Traditions"
+ SDT_ideas_bonus: "Sudeti Ambition"
+ SDT_ideas_1: "Surrounded by Defenses"
+ SDT_ideas_2: "Jewel of Germania"
+ SDT_ideas_3: "Wealth of Sudeten"
+ SDT_ideas_4: "Progress Must Be Made"
+ SDT_ideas_5: "Victory of Peace"
+ SDT_ideas_6: "Keep the Torch Down"
+ SDT_ideas_7: "First Banks of Germania"
+ SDT_ideas_1_desc: "The Mountains are our Shield against those who wish to gain our riches and oppress our people."
+ SDT_ideas_2_desc: "In the center of Germanic Europe, Sudeten stands above all else as the wealtiest nation."
+ SDT_ideas_3_desc: "From the very earth we recieve unbound wealth and with it, we have risen to the heavens!"
+ SDT_ideas_4_desc: "AS ideas spread and we remain trapped in the eye of the storm, we must march forward or be left behind."
+ SDT_ideas_5_desc: "Witness to the horrors of war that happens all around us, we have learned not to waste our knowledge."
+ SDT_ideas_6_desc: "Tolerance of religious difference is a pragmatic way of dealing with fools and zealots."
+ SDT_ideas_7_desc: "The grand Bank of Marbod is the true jewel of Sudeten, standing as the absolute golden standard for banks in Central Europe."
+
+#####CUSTOM
+ 
+ CT_MVA_1:0 "If your primary culture is §YSudeti§W, §Y[267.GetName]§! and §Y[2968.GetName]§! will have their culture changed to §YSudeti§! if not already."
+ CT_SDT_1:0 "As long as §YMarcomanni §Wculture is accepted, it will be a free accepted culture."
+
+#####MODIFIER
+ mva_markmann:0 "The Marklander Bounty"
+ mva_local_new_hope:0 "A New Hope"
+
+ markmann_sudeten_union:0 "Marklander-Sudeten Union"
+ mva_local_sudeten:0 "Sudeten Growth"
+ mva_local_not_hope:0 "Sudeten Expansion"
+ sdt_our_people:0 "The Sudeten Boon"
+ sdt_gold_boy:0 "Our Golden Boy"
+ sdt_project_fast:0 "Prospecting Projecting"
+ sdt_develop_fast:0 "The Climb of Faith"
+ sdt_wild_hunt_1:0 "Hunters of the Wilds"
+ sdt_wild_hunt_2:0 "Join the Wild Hunt"
+ sdt_donovan_bounty:0 "Donova's Bounty"
+ sdt_sudeten_supreme:0 "Sudeten Supreme"
+ sdt_triple_city:0 "Triplets Cities"
+#####GOVERNMENT
+
+#####EVENTS
+ pf_ost.7.t:0 "Sudeten Proclamation"
+ pf_ost.7.d:0 "Between mountains and hills the Marcomanni of the Sudeten live different lives to those outside them. New traditions and laws are shaping the culture to more resemble its eastern brethren, spurred on by differences in faith and bruttish Saxonic pressures. There are nobles who call for a new face to represent their new found culture and many are already calling themselves Sudeti. Some old houses still hold their Marcomanni traditions high, but without help from the Chief, they will eventually die out."
+ pf_ost.7.a:0 "We are the Sudeti, proud and tall."
+ pf_ost.7.b:0 "Our Markomann Brotherhood will hold strong."
+
+ pf_ost.8.t:0 "The Tower of Tuisco"
+ pf_ost.8.d:0 "Among the faithful, the mighty tower of Ostola, the Riesger Turm, built by Otto Ostholm in 784, stands as the greatest gift mortals can offer to the gods. Tuisco, grandfather of Ymir, created from the union of Earth and Sky, is the most venerated deity of our people. While divine spirits and faith are immortal and untouchable, the tower is in evident state of decay and the recent conquest of the city has not yet helped its chances of being repaired."
+ pf_ost.8.a:0 "Renovated the Great Tower."
+ pf_ost.8.b:0 "Renovated the city."
+
+ pf_ost.9.t:0 "The Golden Ratio"
+ pf_ost.9.d:0 "The mountains of Bergaland contain many metals that Sudeten also exports, and now that both lands are under the same state we can better coordinate how the mines operate. Gold is the lifeline of any country's economy and to ensure our coins are worth their own weight, we must secure gold mining never runs out. Expanding in Bergaland will make our newly conquered banks operate much more smoothly but will make the Sudeti gold mines less worth in the short run."
+ pf_ost.9.a:0 "Fund more gold mines."
+ pf_ost.9.b:0 "Ensure Sudeten golden exports."
+
+ pf_ost.10.t:0 "Born to Be Wild"
+ pf_ost.10.d:0 "The Vild Hunters are the most qualified and skilled horseman of all Ostgermania, but they are also extremely proud of being Vildheimer and do not pay any respect to new conquerors. The tradition of the Wild Hunt started all the way back to the founding of Biegenfluss, when one cadet branch of the Ostholm dynasty founded their cavalry regiments. The practice has been deemed an effective way to create sturdier knights and stronger horses, it could be made less cruel and more available to others."
+ pf_ost.10.a:0 "Tame the Wild Hunters."
+ pf_ost.10.b:0 "Allow the Wild Hunt to continue."
+
+ pf_ost.11.t:0 "The Donovan Sublime Infrastructure"
+ pf_ost.11.d:0 "The home of all Ostgermanic people is now fully under one singular banner, but the people are still separated by the natural boundaries of the world.Roads need to be built and cities connected, an effort that will be rewarded in the grand future that await us. However, the funds could be used to better the Sudeti homeland, leaving our conquered cities to rot."
+ pf_ost.11.a:0 "We are Donovan."
+ pf_ost.11.b:0 "We are Sudeti."
+
+#####DECISIONS
+ form_sudeten_title:0 "@SDT Establish Sudeten Identity"
+ form_sudeten_desc:0 "The people around the Sudeten Mountains have embraced the differences that makes them unique."
+ glass_of_bohemia_title:0 "The Crystal of [1771.GetName]"
+ glass_of_bohemia_desc:0 "The secret of clear glass is in our hands and they will pay a high price to see through it."
+
+
+#####MISSIONS
+
+#MORIA
+ mva_bavaria_title:0 "Marcomanni Brotherhood"
+ mva_bavaria_desc:0 "REPLACE_ME"
+ mva_markland_title:0 "Markland Proper"
+ mva_markland_desc:0 "REPLACE_ME"
+ mva_marcomanni_title:0 "Markland's Trades"
+ mva_marcomanni_desc:0 "REPLACE_ME"
+ mva_saxony_title:0 "Shield Against The Saxon"
+ mva_saxony_desc:0 "REPLACE_ME"
+ mva_choice_m_title:0 "Marklander Destiny"
+ mva_choice_m_desc:0 "REPLACE_ME"
+ mva_religion_title:0 "Lay of the Land"
+ mva_religion_desc:0 "REPLACE_ME"
+ mva_moria_title:0 "Unity of the East"
+ mva_moria_desc:0 "REPLACE_ME"
+ mva_moravia_title:0 "Gather the Faithful"
+ mva_moravia_desc:0 "REPLACE_ME"
+ mva_choice_s_title:0 "The Sudeti Fate"
+ mva_choice_s_desc:0 "REPLACE_ME"
+ mva_developing_title:0 "Artisan's Quality"
+ mva_developing_desc:0 "REPLACE_ME"
+ mva_higher_title:0 "Land of Opportunity"
+ mva_higher_desc:0 "REPLACE_ME"
+ mva_sudeti_title:0 "Sudeten's Miracle"
+ mva_sudeti_desc:0 "REPLACE_ME"
+#SUDETEN
+
+ sdt_sudeti_people_title:0 "Sudeti People"
+ sdt_sudeti_people_desc:0 "REPLACE_ME"
+
+ sdt_sudeti_power_title:0 "Mythical Defender"
+ sdt_sudeti_power_desc:0 "REPLACE_ME"
+
+ sdt_moria_title:0 "Sudeten Proclamation"
+ sdt_moria_desc:0 "REPLACE_ME"
+
+ sdt_ostholm_title:0 "Path to Ostholm"
+ sdt_ostholm_desc:0 "REPLACE_ME"
+
+ sdt_expansion_title:0 "Golden Roads"
+ sdt_expansion_desc:0 "REPLACE_ME"
+
+ sdt_vindheim_title:0 "Path to Vildheim"
+ sdt_vindheim_desc:0 "REPLACE_ME"
+
+ sdt_donovan_glory_title:0 "Paths of Donova"
+ sdt_donovan_glory_desc:0 "REPLACE_ME"
+
+ sdt_donovan_nation_title:0 "Sublime Donova"
+ sdt_donovan_nation_desc:0 "REPLACE_ME"
+
+ sdt_berganland_title:0 "Path to Bergaland"
+ sdt_berganland_desc:0 "REPLACE_ME"
+
+ sdt_markland_title:0 "Marklander Brotherhood"
+ sdt_markmand_desc:0 "REPLACE_ME"
+
+ sdt_friends_title:0 "Alpine Toll"
+ sdt_friends_desc:0 "REPLACE_ME"
+
+ sdt_trade_title:0 "The Triangle Dominion"
+ sdt_trade_desc:0 "REPLACE_ME"

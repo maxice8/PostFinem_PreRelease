@@ -345,6 +345,14 @@ innovativeness_ideas = {
 			NOT = { monthly_adm = 8 }
 		}
 		modifier = {
+			factor = 0.5
+			is_year = 1550
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 1600
+		}
+		modifier = {
 			factor = 1.25
 			innovativeness = 40
 			NOT = { is_year = 1650 }
@@ -870,22 +878,22 @@ economic_ideas = {
 	national_bank = {
 		inflation_reduction = 0.1
 	}
-	smithian_economics = { 
-		#Mechanic: +1/-1 Dev from Manufactories		#Note for modders; the two mechanics introduced in 1.35   
-		production_efficiency = 0.1 				#for eco ideas are done so via on_actions 
- 	}												#for the loans and via the buildings file for the dev from manufactories! happy modding 
+	merchant_passes = {
+		merchants = 1
+	}
 	efficient_mining = {
 		gold_depletion_chance_modifier = -0.25
-	}
-	nationalistic_enthusiasm = {
-		land_maintenance_modifier = -0.05
 	}
 	debt_and_loans = {
 		interest = -0.5
 	}
-	merchant_passes = {
-		merchants = 1
+	nationalistic_enthusiasm = {
+		land_maintenance_modifier = -0.05
 	}
+	smithian_economics = { 
+		#Mechanic: +1/-1 Dev from Manufactories		#Note for modders; the two mechanics introduced in 1.35   
+		production_efficiency = 0.1					#for eco ideas are done so via on_actions 
+ 	}	
 
 	ai_will_do = {
 		factor = 0.35
@@ -946,6 +954,7 @@ exploration_ideas = {
 	}
 	colonial_ventures = {
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
 	overseas_exploration = {
 		range = 0.5
@@ -1406,6 +1415,7 @@ expansion_ideas = {
 
 	additional_colonists = {
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
 	additional_merchants = {
 		merchants = 1
@@ -1424,6 +1434,7 @@ expansion_ideas = {
 	general_colonization_law  = {
 		colonists = 1
 		colonist_placement_chance = 0.05
+		effect = { remove_temporary_colonist = yes }
 	}
 	competetive_merchants  = {
 		global_trade_power = 0.2
@@ -1761,6 +1772,7 @@ court_ideas = {
 	
 	long_echo = {
 		power_projection_from_insults = 1
+		diplomatic_reputation = 1
 	}
 	recognize_hierarchy = {
 		all_estate_loyalty_equilibrium = 0.1

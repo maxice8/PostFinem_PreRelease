@@ -1,0 +1,212 @@
+country_decisions = {
+	form_babylonia = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_babylonia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			culture_group = mesopotamian
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 410		# Babylon
+				province_id = 411		# Nineveh
+				province_id = 2311		# Uruk
+				province_id = 5000		# Dur-Kurigalzu (important center in Kassite Bablyon)
+				province_id = 408		# Basrah
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no			
+			NOT = { exists = BBY }
+			owns_core_province = 410
+			owns_core_province = 411
+			owns_core_province = 2311
+			owns_core_province = 5000
+			owns_core_province = 408
+			410 = { 					#  Babylon
+				is_state = yes
+			}
+		}
+		effect = {
+			410 = { 					#  Babylon
+				move_capital_effect = yes
+			}
+			change_tag = BBY
+			custom_tooltip = empty_line_tt
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			custom_tooltip = empty_line_tt
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+				custom_tooltip = empty_line_tt
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_babylonia_flag
+			add_government_reform = pf_babylonian_empire
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ee_invoke_the_gods = {
+		potential = {
+			religion = enuma_elish
+		}
+		provinces_to_highlight = {
+		}
+		allow = {
+			religion = enuma_elish
+			OR = {
+				inquisitor = 1
+				theologian = 1
+				full_idea_group = religious_ideas
+			}
+			NOT = { stability = 3 }
+			NOT = { prestige = 95 }
+			custom_trigger_tooltip = {
+				tooltip = ee_invoke_the_gods_cooldown_tt
+				NOT = { has_ruler_flag = done_ee_invoke_the_gods }
+			}
+			adm_power_cost = 50
+			dip_power_cost = 50
+			mil_power_cost = 50
+		}
+		effect = {
+			adm_power_cost = -50
+			dip_power_cost = -50
+			mil_power_cost = -50
+			add_prestige = 10
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
+			# bonus effects from gods chosen
+			if = {
+				limit = {
+					has_church_aspect = marduk_aspect
+				}
+				custom_tooltip = pf_invoke_marduk_tt
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							local_autonomy = 5
+						}
+						add_local_autonomy = -10
+					}
+				}
+				tooltip = {
+					add_local_autonomy = -10
+				}
+			}
+			if = {
+				limit = {
+					has_church_aspect = ashur_aspect
+				}
+				custom_tooltip = pf_invoke_ashur_tt
+				add_army_tradition = 10
+			}
+			if = {
+				limit = {
+					has_church_aspect = shamash_aspect
+				}
+				custom_tooltip = pf_invoke_shamash_tt
+				add_rebel_progress = {
+					value = -30
+				}
+			}
+			if = {
+				limit = {
+					has_church_aspect = ishtar_aspect
+				}
+				custom_tooltip = pf_invoke_ishtar_tt
+				add_years_of_owned_provinces_production_income = {
+					years = 2
+					trigger = {
+						OR = {
+							trade_goods = grain
+							trade_goods = fish
+							trade_goods = wine
+							trade_goods = livestock
+							trade_goods = spices
+						}
+					}
+					custom_tooltip = pf_invoke_ishtar_income_tt
+				}
+			}
+			if = {
+				limit = {
+					has_church_aspect = ninhursag_aspect
+				}
+				custom_tooltip = pf_invoke_ninhursag_tt
+				distribute_base_dev_to_provinces = {
+					num = 5
+					amount = 1
+					type = manpower
+					tooltip = pf_invoke_ninhursag_effect_tt
+				}
+			}
+			if = {
+				limit = {
+					has_church_aspect = ereshkigal_aspect
+				}
+				custom_tooltip = pf_invoke_ereshkigal_tt
+				random_owned_province = {
+					limit = {
+						is_core = ROOT
+					}
+					add_base_manpower = 1
+				}
+			}
+			if = {
+				limit = {
+					has_church_aspect = gilgamesh_aspect
+				}
+				custom_tooltip = pf_invoke_gilgamesh_tt
+				add_legitimacy_equivalent = {
+					amount = 5
+				}
+				add_army_professionalism = 0.01
+			}
+			set_ruler_flag = done_ee_invoke_the_gods
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
