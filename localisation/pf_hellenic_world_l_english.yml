@@ -121,6 +121,12 @@ order_of_dionysus_home_modifier: "Home of the Order of Dionysus"
 isadorian_order_home_modifier: "Home of the Isadorian Order"
 archonic_guard_home_modifier: "Home of the Archonic Guard"
 
+# Custom buttons
+
+hellenic_monastery_button_tt: "If you're seeing this, it freaking worked!"
+pf_hellenic_monastery_prov: "Hellenic Monastery"
+desc_pf_hellenic_monastery_prov: "This province is home to a dedicated and state funded monastery, housing priests and clerics in isolation to study and worship the gods."
+
 ###############
 # Decisions
 ###############
@@ -312,6 +318,21 @@ kar_mountain_strongholds_desc: "REPLACE_ME"
 kar_careless_and_carefree: "Careless and Carefree"
 kar_careless_and_carefree_desc: "REPLACE_ME"
 
+arm_azatavrear: "Azatavrear"
+arm_azatavrear_desc: "The Armenian cavalry have for centuries been made up of the Azatavrear, an elite body of riders drawn from the nobility, often made up of the second and third sons of powerful landowners who stand to get little inheritance. Their tactics and terror are second to none, and the sight of one of our cavalry charges down the mountainside has been enough to make many enemy armies turns and flee."
+arm_border_patrols: "Permanent Border Patrols"
+arm_border_patrols_desc: "In times of peace, we must still be vigilant. Our country is surrounded by enemies, predators who would take every chance to cripple us and finally break our hold over southern Caucasia. We must thus always be ready for war. When they are not engaged in other duties, our army should patrol the borders and frontiers of our nation, protecting us from foreign threats and keeping the peace in the most vulnerable regions."
+arm_home_of_the_reformation: "Home of the Reformation"
+arm_home_of_the_reformation_desc: "Armenia has followed the Hellenic faith for a long time now, but its tenets and doctrines have never been completely satisfactory for us. Now that calls for a return to the pastoral, more decentralised traditional version of the religion are growing, many of our countrymen have found themselves drawn towards dissent. The concept of Armenian identity and pride are quickly being linked with adherence to reformist views, which promise to unite and reform our nation like nothing before it."
+arm_memory_of_empire: "Memories of Empire"
+arm_memory_of_empire_desc: "We once commanded a great empire, stretching from Persia to Jerusalem. While our state has shrunk greatly over the years, we still remember that golden age fondly, and many of our folk tales and legends are set there. With enough courage and patience, one day we will have an empire once more."
+arm_strife: "Internal Stability"
+arm_strife_desc: "Many rebellions and wars have plagued the Armenian homeland for generations, but it is only now that we are finally reaching a place of peace. A balance between the power of the king and the power of the estates must be achieved to bring lastin stability to the nation."
+arm_nationalism: "Armenian Nationalism"
+arm_nationalism_desc: "Our people are proud and our nation is glorious. Let us never forget both the power and suffering of our ancestors, and let our hearts swell with spirit and our minds remain humble."
+arm_governors: "Establish the Governorship"
+arm_governors_desc: "The kingdom is vast and unmanageable by one central government, and always has been. To combat this, previous rulers partitioned their lands between different governors to ease the burden of administration, but oftentimes these governorships created little more than hotbeds for rebellion and unrest. Let us reform this system, and ensure only the most skilled, worthy, and loyal people are appointed as governors, subject to regular checks by the king."
+
 ################
 # Events
 ################
@@ -345,6 +366,11 @@ pf_pho.2.d: "Tyrian purple has been made in the city for thousands of years, and
 pf_pho.2.a: "We should take pride in our dyes!"
 pf_pho.2.b: "We are so much more than just our colour!"
 pf_pho_change_colour_to_purple_tt: "Our country will change its map colour to §PTyrian Purple§!."
+
+pf_arm.1.t: "The Fall of the Kingdom of Armenia"
+pf_arm.1.d: "Armenia has been home to a great kingdom for nearly two-thousand years. Throughout all that time, while our borders have certainly had their ebs and flows, no one ever thought to question whether the nation would remain intact. Recent decades have brought dark decades for Armenia however - the old incompetent king Tigranes XII still clings on desperately to both his life and his throne, squandering away the royal treasury on concubines and booze. In every province, the local governors are pushing for more and more autonomy and influence, sensing the great weakness at the heart of government and intending to exploit it fully.\n\nThe ambitions of one David, a noble by birth and originally governor of Tbilisi, have grown like a cancer within the realm, and now threaten to kill it entirely. Using his growing fame and power, he has gradually acquired territories across the north of our country, and has even begun styling himself as 'lord of the Georgians', a call back to a long-forgotten people and heritage that used to preside in that region. David's careful friendship with Tigranes has given his treason legitimacy and recognition, but all the other advisors to the court see what it really is. All we can do is buy time before he rebels fully against the crown, and even the gods cannot tell us what will happen then.\n\nThe eastern flank of Armenia defected long ago, and is now ruled by the upstart kingdom of Alarion. It may be a distant dream, but reunion with these lands would certainly go far in restoring the prestige of our kingdom. To the south, the Vanite vassals are growing increasing distant from affairs in Yerevan, and seem to be aligning themselves more and more with our rivals in Babylon than their legitimate lieges. Predators surround us from all sides, and yet the king does little but sit idly drinking away his days. These are dire times..."
+pf_arm.1.a: "Perhaps this is the end of days?"
+pf_arm_will_get_disaster_tt: "The disaster §YThe Fall of Armenia§! will start progressing."
 
 ################
 # Missions

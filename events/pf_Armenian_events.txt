@@ -1,0 +1,17 @@
+namespace = pf_arm
+
+country_event = {		# Armenian introduction
+	id = pf_arm.1
+	title = pf_arm.1.t
+	desc = pf_arm.1.d
+	picture = easterngfx_COUNTRY_COLLAPSE_eventPicture
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "pf_arm.1.a"
+		custom_tooltip = pf_arm_will_get_disaster_tt
+	}
+}

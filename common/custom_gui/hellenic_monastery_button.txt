@@ -1,0 +1,36 @@
+custom_button = {
+    name = hellenic_monastery_button #Must match a scripted guiButtonType in a .gui file
+	potential = {	#Determines when the button is visible
+		religion = hellenic
+		FROM = { religion = hellenic }
+	} 
+    trigger = {  	#Determines when the button is clickable
+		NOT = { has_province_modifier = pf_hellenic_monastery_prov }
+		owner = {
+			adm_power = 50
+		}
+		owned_by = FROM
+	}
+    effect = {
+		owner = {
+			add_adm_power = -50
+		}
+		add_province_modifier = {
+			name = pf_hellenic_monastery_prov
+			duration = -1
+		}
+	}
+    tooltip = hellenic_monastery_button_tt
+    frame = {	# on
+        number = 1 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+        trigger = {
+			NOT = { has_province_modifier = pf_hellenic_monastery_prov }
+			owner = {
+				adm_power = 50
+				religion = hellenic
+			}
+			religion = hellenic
+			owned_by = FROM
+		} #First matched frame clause will be used.
+    }
+}
