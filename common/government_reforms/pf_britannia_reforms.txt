@@ -314,7 +314,7 @@ pf_punic_festivals_reform = {
 		same_religion_advisor_cost = -0.10
 	}
 	custom_attributes = {
-		# ending_wars_gives_stability = yes
+		ending_wars_gives_stability = yes
 	}
 	ai = {
 		factor = 1
@@ -333,13 +333,14 @@ astartean_adventurer_reform = {
 		tag = CLN
 	}
 	modifiers = {
-		years_of_nationalism = -5
-		loot_amount = 0.20
-		max_absolutism = -30
+		manpower_recovery_speed = 0.10
+		core_creation = -0.05
+		leader_land_fire = 1
+		max_absolutism = -20
 	}
-	#government_abilities = {
-	#	trinovantes_cohesion_mechanic
-	#}
+	government_abilities = {
+		chivalry_mechanic
+	}
 	ai = {
 		factor = 5
 	}

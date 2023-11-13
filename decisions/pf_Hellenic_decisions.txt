@@ -17,4 +17,27 @@ country_decisions = {
 			}
 		}
 	}
+	pf_consult_the_oracle = {
+		potential = {
+			religion = hellenic
+		}
+		allow = {
+			religion = hellenic
+			146 = {
+				religion = hellenic
+				owner = { religion = hellenic }
+			}
+			custom_trigger_tooltip = {
+				tooltip = pf_oracle_cooldown_tt
+				NOT = { has_ruler_flag = used_oracle }
+			}
+		}
+		effect = {
+			set_ruler_flag = used_oracle
+			add_ruler_modifier = {
+				name = "pf_hellenic_philosopher_king_modifier"
+				duration = -1
+			}
+		}
+	}
 }

@@ -166,6 +166,9 @@ pf_hellenic_philosopher_king_title: "A Philosopher [Root.Monarch.GetTitle]"
 pf_hellenic_philosopher_king_desc: "Our ruler is learned in the ancient philosophies and the arts, patronising other likeminded scholars and using their position of power to forward the interests of the field."
 pf_hellenic_philosopher_king_modifier: "Philosopher King"
 
+pf_consult_the_oracle_title: "Consult the Oracle"
+pf_consult_the_oracle_desc: "Our ruler has consult the Oracle in Delphi, seeking a fortunate prophecy from her."
+
 ############## 
 # Ideas
 ##############
@@ -311,8 +314,8 @@ kar_wine: "Vinyards of the Taurus"
 kar_wine_desc: "REPLACE_ME"
 kar_spirited: "Delphian Courage"
 kar_spirited_desc: "REPLACE_ME"
-ar_advisor_to_the_archon: "Left Ear of the Archon"
-ar_advisor_to_the_archon_desc: "REPLACE_ME"
+kar_advisor_to_the_archon: "Left Ear of the Archon"
+kar_advisor_to_the_archon_desc: "REPLACE_ME"
 kar_mountain_strongholds: "Reinforce the Strongholds"
 kar_mountain_strongholds_desc: "REPLACE_ME"
 kar_careless_and_carefree: "Careless and Carefree"
@@ -332,6 +335,21 @@ arm_nationalism: "Armenian Nationalism"
 arm_nationalism_desc: "Our people are proud and our nation is glorious. Let us never forget both the power and suffering of our ancestors, and let our hearts swell with spirit and our minds remain humble."
 arm_governors: "Establish the Governorship"
 arm_governors_desc: "The kingdom is vast and unmanageable by one central government, and always has been. To combat this, previous rulers partitioned their lands between different governors to ease the burden of administration, but oftentimes these governorships created little more than hotbeds for rebellion and unrest. Let us reform this system, and ensure only the most skilled, worthy, and loyal people are appointed as governors, subject to regular checks by the king."
+
+cpd_agapian_revolution: "The Agapian Revolution"
+cpd_agapian_revolution_desc: "The wicked republican government of Adana was overthrown in 1421 by a popular uprising, leading to a power vacuum that was easily exploited by our enemies. We lost territory in the east, the important city of Antioch, and perhaps the biggest blow of all, Cyprus. In the chaos, the young Telemachus Agapian seized power, presenting himself as the embodiment of providence and destiny, and promising to bring stability to the realm."
+cpd_witches_familiar: "Witches' Familiar"
+cpd_witches_familiar_desc: "Rumours constantly circulate about Telemachus' heritage, particularly about his relationship with his mother. The woman was a known witch, living in seclusion in a cave on Cyprus, and was often condemned for her forbidden brews and magic. It has been suggested that as a boy Telemachus was educated in these arts by her, and may retain some of that knowledge to this day."
+cpd_free_ports: "Free Ports"
+cpd_free_ports_desc: "Many consider our country unstable and potentially dangerous, and are therefore often reluctant to do any business with us. If we designate some select port towns along our coasts as 'free ports', where no tariffs or taxes can be collected, we can attempt to lure back the lucrative trade we once enjoyed."
+cpd_city_state_governance: "Governance of the City"
+cpd_city_state_governance_desc: "The old government of Adana, while corrupt and in dire need of reformation, was certainly a wealthy and impressive one. Festivals and feasts would be provided with more food than could be eaten by the city in a year, while the streets ran red with the finest Babylonian cloth, decorated with intricate patterns shaped from Indian gold. Every citizen wants to live in such luxury again - but some serious changes will have to be made to prevent the city from slipping back into its well-accustomed decadence"
+cpd_leaders_of_the_revolution: "Righteous Reconquest"
+cpd_leaders_of_the_revolution_desc: "We once controlled an expansive realm, stretching from sea to sea. But times have changed, and many new kingdoms and empires have risen and taken parts of what is rightfully ours. With a reformed military behind us, we will attract the finest generals from across the world to come and serve in our resurrection."
+cpd_temples_above_all: "Theocracy"
+cpd_temples_above_all_desc: "The gods are above all, always have been, always will be. The old government of Adana did not respect that - they saw themselves as their own gods, wealthy, powerful, and removed from the petty troubles of the mortals below them. It is time that our state restored the supremacy of the gods, and let their policies and guidance once again take the helm."
+cpd_seize_the_day: "Seize the Day"
+cpd_seize_the_day_desc: "Every moment is an opportunity, if you have the will to seize it. Let us never be idle and grow comfortable with our success - we must always push for more, expanding our horizons, scoring yet more victories. The only day we can rest is that holy one when our caskets are lowered into the ground, and at last the story of our deeds is over."
 
 ################
 # Events
@@ -371,6 +389,22 @@ pf_arm.1.t: "The Fall of the Kingdom of Armenia"
 pf_arm.1.d: "Armenia has been home to a great kingdom for nearly two-thousand years. Throughout all that time, while our borders have certainly had their ebs and flows, no one ever thought to question whether the nation would remain intact. Recent decades have brought dark decades for Armenia however - the old incompetent king Tigranes XII still clings on desperately to both his life and his throne, squandering away the royal treasury on concubines and booze. In every province, the local governors are pushing for more and more autonomy and influence, sensing the great weakness at the heart of government and intending to exploit it fully.\n\nThe ambitions of one David, a noble by birth and originally governor of Tbilisi, have grown like a cancer within the realm, and now threaten to kill it entirely. Using his growing fame and power, he has gradually acquired territories across the north of our country, and has even begun styling himself as 'lord of the Georgians', a call back to a long-forgotten people and heritage that used to preside in that region. David's careful friendship with Tigranes has given his treason legitimacy and recognition, but all the other advisors to the court see what it really is. All we can do is buy time before he rebels fully against the crown, and even the gods cannot tell us what will happen then.\n\nThe eastern flank of Armenia defected long ago, and is now ruled by the upstart kingdom of Alarion. It may be a distant dream, but reunion with these lands would certainly go far in restoring the prestige of our kingdom. To the south, the Vanite vassals are growing increasing distant from affairs in Yerevan, and seem to be aligning themselves more and more with our rivals in Babylon than their legitimate lieges. Predators surround us from all sides, and yet the king does little but sit idly drinking away his days. These are dire times..."
 pf_arm.1.a: "Perhaps this is the end of days?"
 pf_arm_will_get_disaster_tt: "The disaster §YThe Fall of Armenia§! will start progressing."
+
+pf_ath.4.t: "Kicking the Archon up the Arse"
+pf_ath.4.d: "How it started is quite ridiculous - what began as a friendly game of darts in a tavern between the Bishop of [bishop_province.GetName] and a local priest has become a challenge of almighty proportions. After losing a series of matches, the Bishop has been forced by his own integrity to accept the forfeit - he was to kick the Archon up the arse. Fortunately for him, the Archon was visiting [Root.GetName] that very week, providing ample time for the deed to be done. After a lengthy discussion about the gods, the Bishop took his shot as the Archon bent over to tie his shoe. Word has reached the [Root.Monarch.GetTitle] quickly, and now it seems it is up to us to take charge of the situation."
+pf_ath.4.a: "Try to convince the Archon the Bishop couldn't have done it."
+pf_ath.4.b: "Force the Bishop to apologise for this impious act."
+pf_ath.4.c: "Execute this Bishop for his crime!"
+pf_ath.4.e: "I would quite like to boot him up the arse as well..."
+opinion_kicked_up_arse: "Kicked the Archon up the Arse"
+opinion_kicked_up_arse_apologised: "Apologised for kicking the Archon up the Arse"
+opinion_insult_avenged: "Avenged an insult to the Archon"
+pf_ath_4_archon_dip_challenge_tt: "The results of this challenge will depend on the §YArchon's§! £dip£ skill."
+
+pf_ath.5.t: "Consult the Oracle"
+pf_ath.5.d: ""
+pf_ath.5.a: "We shall see what she says..."
+pf_ath_consult_oracle_tt: ""
 
 ################
 # Missions

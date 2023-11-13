@@ -27,6 +27,10 @@ mechanic_ending_wars_gives_stability_yes: "Ending a war has a §Y+10.0%§! chanc
 
 astartean_adventurer_reform: "Adventurers of Astarte"
 astartean_adventurer_reform_desc: "The goddess Astarte came to Conan and commanded him to launch a holy war to reclaim Phoenicia, leading him and his followers on a years-long adventure from the shores of windy Albion towards the Purple Cities."
+ability_chivalry_mechanic: "Chivalry"
+chivalry: "Chivalry"
+chivalry_gain_modifier: "Chivalry Gain Modifier"
+monthly_chivalry: "Monthly Chivalry"
 
 order_of_the_shadows_reform: "Order of the Shadows"
 order_of_the_shadows_reform_desc: "The Order is made up of like-minded freedom fighters and rebels without a home, living in isolation away from the reaches of tyrannical governments. Every member subscribes to the Codex and adheres to the strict commands of the Grandmaster."
@@ -58,6 +62,8 @@ crown_authority_2: "Crown Authority Level 2"
 crown_authority_3: "Crown Authority Level 3"
 crown_authority_4: "Crown Authority Level 4"
 crown_authority_5: "Crown Authority Level 5"
+
+
 
 MERIDIA: "Meridia"
 MERIDIA_ADJ: "Meridian"
@@ -339,7 +345,7 @@ pf_if_smuggling: "Encouraging Smugglers"
 pf_if_merchant_embargo: "Embargo on our Merchant"
 
 pf_if.7.t: "Anti-Federation Sentiment"
-pf_if.7.d: "There is a small faction within the elite of [Root.GetName] that distrusts the authority of the Federation, and continually campaigns for '[Root.GetAdjective] Independence. Their pretensions that we are forced to act at the whim of the Federal government is clearly nonsense, and we benefit immeasurably from their funding. Despite this, the protestors are getting increasingly uppity, and we will have to deal with them."
+pf_if.7.d: "There is a small faction within the elite of [Root.GetName] that distrusts the authority of the Federation, and continually campaigns for '[Root.GetAdjective] Independence'. Their pretensions that we are forced to act at the whim of the Federal government is clearly nonsense, and we benefit immeasurably from their funding. Despite this, the protestors are getting increasingly uppity, and we will have to deal with them."
 pf_if.7.a: "Let the police handle them."
 pf_if.7.b: "Maybe they have some points..."
 
@@ -646,6 +652,10 @@ pf_feast.35.c: "Muhahah, now they will fear us!"
 pf_if.26.t: "The Deeds of [Root.Monarch.GetName]"
 pf_if.26.d: "This is a work dedicated to the life and works of [Root.Monarch.GetTitle] [Root.Monarch.GetName] [Root.GetDeedsEpithet], [Root.GetDeedsMonarchSkill]. Now [Root.GetDeedsYoungOld] [Root.Monarch.GetWomanMan], the time has come to put to parchment the stories of [Root.Monarch.GetHerHis] reign and all the wondrous feats achieved within it. Known for being [Root.GetDeedsWarmonger], [Root.Monarch.GetSheHe] contributed greatly to the managment and perpetuation of the realm.[Root.GetDeedsAdirim][Root.GetDeedsConsortSkill]"
 pf_if.26.a: "Ah brilliant!"
+
+pf_if.27.t: "The Battle of Trapani"
+pf_if.27.d: "Conan's conquest of Sicily was remarkable both for the speed of his campaign but also its astounding success. Landing near the settlement of Favignana under the cover of darkness, the brave knight and his followers made their preparations and began to lay siege to Trapani the very next day. Before the sun had even begun tickle the horizon, Conan mounted the walls and thoroghly routed the garrison, leaving him in sole control of the city.\n\nThe battle for Trapani is a tale that is told by men across the Mediterranean now, both within our circle and beyond it, each person adding their own flairs and variation. While his story seems to be already transforming into legend, it is clear that Conan's fame has never been higher."
+pf_if.27.a: "Conan's victories are heard from Celtica to Cathay!"
 
 ################
 # Decisions

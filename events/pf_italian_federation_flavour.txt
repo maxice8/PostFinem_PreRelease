@@ -994,3 +994,31 @@ country_event = {		# The Deeds of MONARCH
 		add_splendor = 100
 	}
 }
+country_event = {		#The Battle of Trapani
+	id = pf_if.27
+	title = pf_if.27.t 
+	desc = pf_if.27.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+
+	trigger = {
+		has_reform = astartean_adventurer_reform
+		has_government_mechanic = chivalry_mechanic
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = "pf_if.27.a"
+		add_army_tradition = 25
+		add_government_power = {
+			mechanic_type = chivalry_mechanic
+			power_type = chivalry
+			value = 10
+			scaled_with_gain_modifier = yes
+		}
+	}
+}
