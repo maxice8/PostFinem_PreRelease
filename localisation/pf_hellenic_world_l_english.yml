@@ -56,6 +56,10 @@ PSI:0 "Sidon"
 PSI_ADJ:0 "Sidonian"
 HMA:0 "Hamat"
 HMA_ADJ:0 "Hamathian"
+LSB:0 "Lesbos"
+LSB_ADJ:0 "Lesbian"
+LYD:0 "Lydia"
+LYD_ADJ:0 "Lydian"
 
 # Religion
 
@@ -170,6 +174,9 @@ pf_consult_the_oracle_title: "Consult the Oracle"
 pf_consult_the_oracle_desc: "Our ruler has consult the Oracle in Delphi, seeking a fortunate prophecy from her."
 pf_oracle_cooldown_tt: "The Oracle can only be consulted once per ruler lifetime."
 pf_ath_oracle_cooldown_tt: "§RThe Oracle can only be consulted once per ruler lifetime.§!"
+
+form_lydia_title: "An Ancient Dream Reawakened"
+form_lydia_desc: "Lydia was a great empire that ruled much of modern Anatolia, before it was brutally dismembered by the archers of Cyrus the Persian. In the years since its destruction, it has become a sort of unifying symbol for all Anatolian Greeks to fall behind, a rally point from which to preserve their independence. Now we have forged a great kingdom of our own, it would be fitting to take on the name of our common inspiration."
 
 ############## 
 # Ideas
@@ -352,6 +359,44 @@ cpd_temples_above_all: "Theocracy"
 cpd_temples_above_all_desc: "The gods are above all, always have been, always will be. The old government of Adana did not respect that - they saw themselves as their own gods, wealthy, powerful, and removed from the petty troubles of the mortals below them. It is time that our state restored the supremacy of the gods, and let their policies and guidance once again take the helm."
 cpd_seize_the_day: "Seize the Day"
 cpd_seize_the_day_desc: "Every moment is an opportunity, if you have the will to seize it. Let us never be idle and grow comfortable with our success - we must always push for more, expanding our horizons, scoring yet more victories. The only day we can rest is that holy one when our caskets are lowered into the ground, and at last the story of our deeds is over."
+
+CAI_ideas: "Carian Ideas"
+CAI_ideas_start: "Carian Traditions"
+CAI_ideas_bonus: "Carian Ambition"
+
+cai_hexapolis: "Hexapolis"
+cai_hexapolis_desc: "The region controlled by our country today was in antiquity the domain of the Doric hexapolis, the six powerful trading colonies the Greeks set up on our shores. These important sites are still regularly visited by traders to this day."
+cai_macedonian_yoke: "The Macedonian Yoke"
+cai_macedonian_yoke_desc: "Caria, like much of Anatolia, fell remarkably quickly to the forces of Macedon. Our lands proved too wild and unruly to properly control however, and hence our lords were granted an unprecedented amount of autonomy. No prince nor noble likes the Macedonian yoke, and our opposition to it has helped us put our differences aside and unite against our common enemy."
+cai_wild_men: "Men of Stone"
+cai_wild_men_desc: "The rugged nature of our homeland and the ferocity with which our warriors fight has earned us the somewhat praising title of 'men of stone'. We shall use this reputation to enforce our will at home and abroad!"
+cai_carian_hills: "Tribal Independence"
+cai_carian_hills_desc: "Despite the sophistication and wealth of our coastal cities, much of the interior of Caria and Anatolia as a whole is still ruled by tribal peoples. In exchange for being allowed to continue their way of life, we require they send us tribute in the form of their famous warriors."
+cai_prodonius_reforms: "Reforms of Prodonius"
+cai_prodonius_reforms_desc: "Prodonius was a prince of Caria in the 13th century, known for both his fine taste in women and in food. Under his jurisdiction, a new code was introduced to our ports, mandating a certain quality for all goods that entered. This helped ensure our reputation was high abroad, as well as appeased the prince's keen sense of smell."
+cai_anatolian_blood: "Anatolian Blood"
+cai_anatolian_blood_desc: "Many of our nobles are Greeks, our overlords are Greek, and many of our towns were founded by Greeks, but nonetheless, we are still Anatolian to our core. We will fight and die beside our wilder brothers and sisters the moment they call upon us."
+cai_working_together: "Adopting the Polis System"
+cai_working_together_desc: "The Greek city states were self-governing, managed by a collection of citizens who engaged in a remarkable form of direct democracy. Our cities are powerful and rich much like those of the ancients, and many have suggested that modelling our administration on that of our ancestors would serve us well in the future."
+
+LSB_ideas: "Lesbian Ideas"
+LSB_ideas_start: "Lesbian Traditions"
+LSB_ideas_bonus: "Lesbian Ambition"
+
+lsb_common_rule: "Common Governance"
+lsb_common_rule_desc: "Since antiquity Lesbos has been ruled by a council made up of the elites of the island, ensuring that all policies are well thought through and have the consent of all the most knowledgable islanders."
+lsb_aegean_fleet: "Aegean Dominance"
+lsb_aegean_fleet_desc: "The fleet of Lesbos has been known throughout the Aegean and beyond for a long time, and we have often used it to crush pirate strongholds and protect our traders. The time has come to strengthen it, however, in the face of the growing armadas of Macedonia and Aegyptos, to ensure we retain our power there."
+lsb_mother_of_the_island: "Mother of the Island"
+lsb_mother_of_the_island_desc: "Our leader is affectionately given the title of 'mother of the island', a position which unites us all in one common love and ensures a natural and respected hierarchy stands."
+lsb_pottery: "Lesbian Pottery"
+lsb_pottery_desc: "Lesbos has become a regional center of the pottery industry, controlling the process from extraction and shaping all the way up to the painting. Our vases and pots are used by people across the Mediterranean to store their food and drink."
+lsb_poetry: "Women of Words"
+lsb_poetry_desc: "In the spirit of our ancestors, including the famous writer Sapho, many of the women of Lesbos are educated in the classics and literature. Men from foreign lands often remark on their insecurity in the face of our learned 'women of words'."
+lsb_bishop_of_mytilene: "Bishop of Mytilene"
+lsb_bishop_of_mytilene_desc: "Ever since the Archon seized control of the Hellenic faith, our local bishops have been strong voices within the halls of Athens, advocating for the people and privileges of Lesbos. Our faith in their deeds has secured our loyalty to the Archon over the centuries."
+lsb_settlers: "Island Expansion"
+lsb_settlers_desc: "As our population grows, we are rapidly running out of fertile land off of which people can live. The time has come to invest in ambitious land reclaimation projects around our shores, and seek easy targets on other islands, and perhaps even beyond the Aegean."
 
 ################
 # Events
@@ -544,3 +589,17 @@ pf_bby_constructions_has_architect_no_tt: "£no£ If we have a hired §YArchitec
 pf_bby_survey_the_fields_title: "Survey the Fields"
 pf_bby_survey_the_fields_desc: "Agricultural is the lifeblood of our people and economy. We must ensure that no field or farm is hidden from our administrative record, so that all production can be effectively taxed and distributed."
 pf_bby_devving_production_bonus_tt: "Developing provinces for §YBase Production§! £dip£ will yield twice the benefit for §Y20 years§!."
+
+
+########### Caria
+
+pf_cai_get_independence_title: "Secure our Independence"
+pf_cai_get_independence_desc: "We have suffered under the rule of Macedonia for too long. If we can secure enough powerful allies and build up our native forces, we just might be able to throw off their yoke and once again restore our independence."
+pf_cai_independent_modifier: "Independence at Last"
+
+pf_cai_conquer_ionia_title: "Conquest of Ionia"
+pf_cai_conquer_ionia_desc: "Ionia is a region with a long, storied history. Populated by powerful Greek cities, it is wealthy in both gold and prestige, and would make a fine piece in our collection of territories."
+
+pf_cai_assuwa_league_title: "A Kingdom of Fire"
+pf_cai_assuwa_league_desc: "We have struggled against the powers that seek to oppress us and remarkably come out on top. Let us celebrate this victory by proclaiming a new union of the peoples of western Anatolia, rekindling our heritage and looking back on the ancient polities that ruled here before us, among them the Assuwa League and the great Lydian empire."
+pf_cai_reunited_assuwa: "United Western Anatolia"

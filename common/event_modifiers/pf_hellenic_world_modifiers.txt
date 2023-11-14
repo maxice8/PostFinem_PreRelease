@@ -210,3 +210,14 @@ pf_arm_perma_mil = {
 	monarch_military_power = 1
 	army_tradition = 0.50
 }
+
+# Caria
+
+pf_cai_independent_modifier = {
+	infantry_power = 0.10
+	shock_damage = 0.10
+}
+pf_cai_reunited_assuwa = {
+	global_unrest = -1
+	core_creation = -0.10
+}
