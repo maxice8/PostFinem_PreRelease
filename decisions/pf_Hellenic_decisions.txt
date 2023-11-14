@@ -27,17 +27,16 @@ country_decisions = {
 				religion = hellenic
 				owner = { religion = hellenic }
 			}
+			papal_influence = 25
 			custom_trigger_tooltip = {
 				tooltip = pf_oracle_cooldown_tt
 				NOT = { has_ruler_flag = used_oracle }
 			}
 		}
 		effect = {
+			add_papal_influence = -25
 			set_ruler_flag = used_oracle
-			add_ruler_modifier = {
-				name = "pf_hellenic_philosopher_king_modifier"
-				duration = -1
-			}
+			country_event = { id = pf_ath.5 }
 		}
 	}
 }

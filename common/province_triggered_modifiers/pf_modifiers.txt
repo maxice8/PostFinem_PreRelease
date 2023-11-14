@@ -146,6 +146,48 @@ oracle_of_delphi = {
 	}
 	
 }
+oracle_of_delphi_random = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		always = yes
+	}
+	local_autonomy = -0.01
+	#Province scope
+	on_activation = {
+		hidden_effect = {
+			random_list = {		# one day delay
+				# good
+				15 = {
+					owner = { country_event = { id = pf_ath.6 days = 6 } }
+				}
+				15 = {
+					owner = { country_event = { id = pf_ath.7 days = 6 } }
+				}
+				15 = {
+					owner = { country_event = { id = pf_ath.8 days = 6 } }
+				}
+				15 = {
+					owner = { country_event = { id = pf_ath.9 days = 6 } }
+				}
+				# bad
+				15 = {
+					owner = { country_event = { id = pf_ath.10 days = 6 } }
+				}
+				15 = {
+					owner = { country_event = { id = pf_ath.11 days = 6 } }
+				}
+			}
+			remove_province_triggered_modifier = oracle_of_delphi_random
+		}
+	}
+	
+	on_deactivation = {
+	
+	}
+	
+}
 
 pf_ksb_early_coal = {
 	potential = {

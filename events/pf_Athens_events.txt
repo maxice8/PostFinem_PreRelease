@@ -266,6 +266,142 @@ country_event = {		# The Oracle
 
 	option = {
 		name = "pf_ath.5.a"
-		custom_tooltip = pf_ath_consult_oracle_tt
+		tooltip = {
+			country_event = {
+				id = pf_ath.6
+				days = 7
+			}
+		}
+		hidden_effect = {
+			capital_scope = {
+				add_province_triggered_modifier = oracle_of_delphi_random
+			}
+		}
+	}
+}
+country_event = {		# The Oracle's Answer
+	id = pf_ath.6
+	title = pf_ath.6.t 
+	desc = pf_ath.6.d
+	picture = MYSTIC_IN_PRAYER_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_ath.6.a"
+		custom_tooltip = pf_ath_oracle_cooldown_tt
+		custom_tooltip = empty_line_tt
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		add_ruler_modifier = {
+			name = "pf_oracle_prosperity"
+			duration = -1
+		}
+	}
+}
+country_event = {		# The Oracle's Answer
+	id = pf_ath.7
+	title = pf_ath.7.t 
+	desc = pf_ath.7.d
+	picture = MYSTIC_IN_PRAYER_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_ath.7.a"
+		custom_tooltip = pf_ath_oracle_cooldown_tt
+		custom_tooltip = empty_line_tt
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		add_ruler_modifier = {
+			name = "pf_oracle_victory"
+			duration = -1
+		}
+	}
+}
+country_event = {		# The Oracle's Answer
+	id = pf_ath.8
+	title = pf_ath.8.t 
+	desc = pf_ath.8.d
+	picture = MYSTIC_IN_PRAYER_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_ath.8.a"
+		custom_tooltip = pf_ath_oracle_cooldown_tt
+		custom_tooltip = empty_line_tt
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		add_ruler_modifier = {
+			name = "pf_oracle_friendship"
+			duration = -1
+		}
+	}
+}
+country_event = {		# The Oracle's Answer
+	id = pf_ath.9
+	title = pf_ath.9.t 
+	desc = pf_ath.9.d
+	picture = MYSTIC_IN_PRAYER_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_ath.9.a"
+		custom_tooltip = pf_ath_oracle_cooldown_tt
+		custom_tooltip = empty_line_tt
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		add_ruler_modifier = {
+			name = "pf_oracle_peace"
+			duration = -1
+		}
+	}
+}
+country_event = {		# The Oracle's Answer
+	id = pf_ath.10
+	title = pf_ath.10.t 
+	desc = pf_ath.10.d
+	picture = MYSTIC_IN_PRAYER_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_ath.10.a"
+		custom_tooltip = pf_ath_oracle_cooldown_tt
+		custom_tooltip = empty_line_tt
+		add_legitimacy = -10
+		add_republican_tradition = -5
+		add_devotion = -10
+		add_ruler_modifier = {
+			name = "pf_oracle_chaos"
+			duration = -1
+		}
+	}
+}
+country_event = {		# The Oracle's Answer
+	id = pf_ath.11
+	title = pf_ath.11.t 
+	desc = pf_ath.11.d
+	picture = MYSTIC_IN_PRAYER_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_ath.11.a"
+		custom_tooltip = pf_ath_oracle_cooldown_tt
+		custom_tooltip = empty_line_tt
+		add_legitimacy = -10
+		add_republican_tradition = -5
+		add_devotion = -10
+		add_ruler_modifier = {
+			name = "pf_oracle_defeat"
+			duration = -1
+		}
 	}
 }

@@ -168,6 +168,8 @@ pf_hellenic_philosopher_king_modifier: "Philosopher King"
 
 pf_consult_the_oracle_title: "Consult the Oracle"
 pf_consult_the_oracle_desc: "Our ruler has consult the Oracle in Delphi, seeking a fortunate prophecy from her."
+pf_oracle_cooldown_tt: "The Oracle can only be consulted once per ruler lifetime."
+pf_ath_oracle_cooldown_tt: "§RThe Oracle can only be consulted once per ruler lifetime.§!"
 
 ############## 
 # Ideas
@@ -401,10 +403,40 @@ opinion_kicked_up_arse_apologised: "Apologised for kicking the Archon up the Ars
 opinion_insult_avenged: "Avenged an insult to the Archon"
 pf_ath_4_archon_dip_challenge_tt: "The results of this challenge will depend on the §YArchon's§! £dip£ skill."
 
-pf_ath.5.t: "Consult the Oracle"
-pf_ath.5.d: ""
+pf_ath.5.t: "Consulting the Oracle"
+pf_ath.5.d: "Seeking answers about our often tumultuous future, the [Root.Monarch.GetTitle] has today arrived at Delphi to inquire the Oracle there for the answers. The Oracle has been a respected bastion of the truth for thousands of years now, and many from peasants to kings still seek her advice routinely. Once you walk past the gift shops and menacing Archonic Guard members standing outside the gates, the shrine of the Oracle is quite something to behold, arousing a feeling unlike anything else one could experience on earth in the viewer. But the [Root.Monarch.GetTitle] is not here to feel good - [Root.Monarch.GetSheHe] is here to know what will come..."
 pf_ath.5.a: "We shall see what she says..."
-pf_ath_consult_oracle_tt: ""
+oracle_of_delphi_random: "Oracle of Delphi is Prophecising..."
+
+pf_ath.6.t: "The Oracle's Answer"
+pf_ath.6.d: "After some hours of deliberation, the Oracle has returned with a verdict on the [Root.Monarch.GetTitle]'s future..."
+pf_ath.6.a: "Ahhh, I am so glad!"
+pf_oracle_prosperity: "Oracle Prophecises Prosperity"
+
+pf_ath.7.t: "The Oracle's Answer"
+pf_ath.7.d: "After some hours of deliberation, the Oracle has returned with a verdict on the [Root.Monarch.GetTitle]'s future..."
+pf_ath.7.a: "Victory will be mine!"
+pf_oracle_victory: "Oracle Prophecises Victory"
+
+pf_ath.8.t: "The Oracle's Answer"
+pf_ath.8.d: "After some hours of deliberation, the Oracle has returned with a verdict on the [Root.Monarch.GetTitle]'s future..."
+pf_ath.8.a: "I get by with a little help from my friends!"
+pf_oracle_friendship: "Oracle Prophecises Friendship"
+
+pf_ath.9.t: "The Oracle's Answer"
+pf_ath.9.d: "After some hours of deliberation, the Oracle has returned with a verdict on the [Root.Monarch.GetTitle]'s future..."
+pf_ath.9.a: "Peace in our time!"
+pf_oracle_peace: "Oracle Prophecises Peace"
+
+pf_ath.10.t: "The Oracle's Answer"
+pf_ath.10.d: "After some hours of deliberation, the Oracle has returned with a verdict on the [Root.Monarch.GetTitle]'s future..."
+pf_ath.10.a: "Oh curses!"
+pf_oracle_chaos: "Oracle Prophecises Chaos"
+
+pf_ath.11.t: "The Oracle's Answer"
+pf_ath.11.d: "After some hours of deliberation, the Oracle has returned with a verdict on the [Root.Monarch.GetTitle]'s future..."
+pf_ath.11.a: "This is not a good omen!"
+pf_oracle_defeat: "Oracle Prophecises Defeat"
 
 ################
 # Missions
