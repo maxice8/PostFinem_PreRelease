@@ -39,4 +39,28 @@ country_decisions = {
 			country_event = { id = pf_ath.5 }
 		}
 	}
+	pf_found_the_lsb_republic = {
+		potential = {
+			tag = LSB
+			NOT = { has_country_flag = lsb_republic }
+		}
+		allow = {
+			tag = LSB
+			NOT = { has_reform = pf_lesbian_republic }
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { government = republic }
+				}
+				change_government = republic
+				hidden_effect = {
+					kill_ruler = yes
+				}
+				add_republican_tradition = 50
+			}
+			add_government_reform = pf_lesbian_republic
+			set_country_flag = lsb_republic
+		}
+	}
 }
