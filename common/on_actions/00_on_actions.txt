@@ -5,30 +5,6 @@
 on_startup = {
 	if = {
 		limit = {
-			NOT = { has_global_flag = punic_set_for_if_flag }
-		}
-		set_global_flag = punic_set_for_if_flag
-		set_hre_religion = punic_religion
-		# set_hre_religion_locked = yes
-		set_hre_heretic_religion = romana
-	}
-	if = {
-		limit = {
-			NOT = { has_global_flag = pagan_penalty_flag }
-		}
-		every_country = {
-			limit = {
-				technology_group = euro_pagan_tech
-			}
-			add_country_modifier = {
-				name = euro_pagan_tech_penalty_modifier
-				duration = -1
-			}
-			set_global_flag = pagan_penalty_flag
-		}
-	}
-	if = {
-		limit = {
 			current_age = age_of_discovery
 		}
 		LXA = {
