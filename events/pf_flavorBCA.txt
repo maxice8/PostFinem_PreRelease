@@ -21,7 +21,7 @@ country_event = { #re-election
 				has_ruler_flag = pf_bca_general_ruler
 			}
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 1
 			}
 			custom_tooltip = empty_line_tt
@@ -36,7 +36,7 @@ country_event = { #re-election
 				has_ruler_flag = pf_bca_admiral_ruler
 			}
 			change_ruler_stat = {
-				stat = dip
+				type = dip
 				amount = 1
 			}
 			custom_tooltip = empty_line_tt
