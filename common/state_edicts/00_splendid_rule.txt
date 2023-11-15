@@ -1,0 +1,20 @@
+edict_splendid_rule = {
+	potential = {
+		pf_belongs_to_greek_culture_group = yes
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		local_prosperity_growth = 0.5
+	}
+	
+	color = { 96 196 8 }
+	
+	
+	ai_will_do = {
+		factor = 0
+	}
+}

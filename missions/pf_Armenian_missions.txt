@@ -3,7 +3,10 @@ pf_arm_1 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = ARM } 
+	potential = {
+		#tag = ARM
+		always = no
+	} 
 
 	pf_arm_reinforce_yerevan = {
 		icon = alpine_fortifications
@@ -168,7 +171,10 @@ pf_arm_2 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = ARM } 
+	potential = {
+		#tag = ARM
+		always = no
+	} 
 
 	pf_arm_davids_revolt = {
 		icon = per_establish_the_qurchi
@@ -233,7 +239,10 @@ pf_arm_3 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = ARM } 
+	potential = {
+		#tag = ARM
+		always = no
+	} 
 
 	pf_arm_faith_in_the_throne = {
 		icon = mission_restore_faith_in_the_throne
@@ -301,7 +310,10 @@ pf_arm_4 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = ARM } 
+	potential = {
+		#tag = ARM
+		always = no
+	}  
 
 	pf_arm_loyal_vassals = {
 		icon = mission_unite_the_princes
@@ -351,7 +363,10 @@ pf_arm_5 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = ARM } 
+	potential = {
+		#tag = ARM
+		always = no
+	} 
 
 	pf_arm_support_the_vinyards = {
 		icon = mission_wine_monopolies

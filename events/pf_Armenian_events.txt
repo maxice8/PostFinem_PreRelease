@@ -12,6 +12,16 @@ country_event = {		# Armenian introduction
 
 	option = {
 		name = "pf_arm.1.a"
-		custom_tooltip = pf_arm_will_get_disaster_tt
+		add_stability = -1
+		kartli_kakheti_area = {
+			add_local_autonomy = 50
+			add_unrest = 20
+		}
+		imereti_area = {
+			add_local_autonomy = 50
+			add_unrest = 20
+		}	
+		# these are placeholders until the proper disaster is built
+		#custom_tooltip = pf_arm_will_get_disaster_tt
 	}
 }

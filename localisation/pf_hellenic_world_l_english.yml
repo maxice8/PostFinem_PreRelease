@@ -114,7 +114,7 @@ estate_burghers_pf_phoenician_merchants_desc: "The merchants of Phoenicia have a
 
 pf_order_of_dionysus: "Order of Dionysus"
 pf_order_of_dionysus_desc: "Devoted to the cult of Dionysus, the joyful followers of the Order travel from village to village spreading their message of peace and pleasure."
-pf_dionysus_wine_bonus_tooltip: "Every province in the state with the §Ywine§! trade good gets an additional §G2§! Base Production."
+pf_dionysus_wine_bonus_tooltip: "Every province in the state with the §Ywine§! trade good gets an additional §G1§! Base Production."
 pf_archonic_guard: "Archonic Guard"
 pf_archonic_guard_desc: "Originating in Naxos, the bodyguard of the Archon has establish outposts across the Hellenic world, and offered its protective services to an array of rulers."
 pf_archonic_papal_influence_bonus_tooltip: "Gain §G+1§! Athenaean Influence for every province assigned to this Order."
@@ -131,9 +131,14 @@ archonic_guard_home_modifier: "Home of the Archonic Guard"
 
 # Custom buttons
 
-hellenic_monastery_button_tt: "If you're seeing this, it freaking worked!"
+hellenic_monastery_button_tt: "Offer to use the state coffers to fund the construction and maintainence of a dedicated monastery in this province, providing thinkers and scholars a place to live in relative solitude and contemplate over the gods and the nature of the world while the rest of us go about our lives."
 pf_hellenic_monastery_prov: "Hellenic Monastery"
 desc_pf_hellenic_monastery_prov: "This province is home to a dedicated and state funded monastery, housing priests and clerics in isolation to study and worship the gods."
+
+# State edicts
+
+edict_greek_assimilation: "Hellenic Assimilation"
+edict_splendid_rule: "Splendid Rule"
 
 ###############
 # Decisions
