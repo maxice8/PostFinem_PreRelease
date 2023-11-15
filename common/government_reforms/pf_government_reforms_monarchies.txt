@@ -10,6 +10,12 @@ pf_gallic_hierarchy = {
 			culture_group = gallic 
 			tag = GAU
 		}
+		NOT = {
+			OR = {
+				has_country_flag = PF_political_one
+				has_country_flag = PF_political_two
+			}
+		}
 	}
 	government_abilities = {
 		gaul_confederation_mechanic
@@ -41,8 +47,12 @@ pf_absolute_gallic_monarchy = {
 	potential = {
 		OR = { 
 			culture_group = gallic 
+			was_tag = GAU
 			tag = GAU
-			has_country_flag = PF_political_one
+		}
+		has_country_flag = PF_political_one
+		NOT = {
+			has_country_flag = PF_political_two
 		}
 	}
 	trigger = {
@@ -73,9 +83,13 @@ pf_gallic_parliament = {
 	potential = {
 		OR = { 
 			culture_group = gallic 
+			was_tag = GAU
 			tag = GAU
-			has_country_flag = PF_political_two
 		}
+		NOT = {
+			has_country_flag = PF_political_one
+		}
+		has_country_flag = PF_political_two
 	}
 	conditional = {
 		allow = {

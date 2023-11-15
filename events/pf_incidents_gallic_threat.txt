@@ -1,0 +1,165 @@
+#Gaul wants Gaul - Nitrogue
+
+namespace = incidents_gallic_threat
+country_event = {
+	id = incidents_gallic_threat.1
+	title = "incidents_gallic_threat.1.t"
+	desc = "incidents_gallic_threat.1.desc"
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = incidents_gallic_threat.1.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				GAU = {
+					OR = {
+						NOT = {
+							army_size = EMPEROR
+						}
+						NOT = {
+							any_ally = {
+								army_size = emperor
+							}
+						}
+					}
+				}
+				emperor = {
+					army_size = GAU
+					total_development = GAU
+				}
+			}
+			modifier = {
+				factor = 1000
+				4696 = {
+					country_or_non_sovereign_subject_holds = emperor
+				}
+			}
+		}
+		provence_area = {
+			limit = {
+				NOT = { is_permanent_claim = event_targt:gallic_threat }
+				NOT = { is_core = event_target:gallic_threat }
+			}
+			add_permanent_claim = event_target:gallic_threat
+		}
+		liguria_area = {
+			limit = {
+				NOT = { is_permanent_claim = event_targt:gallic_threat }
+				NOT = { is_core = event_target:gallic_threat }
+			}
+			add_permanent_claim = event_target:gallic_threat
+		}
+		lombardy_area = {
+			limit = {
+				NOT = { is_permanent_claim = event_targt:gallic_threat }
+				NOT = { is_core = event_target:gallic_threat }
+			}
+			add_permanent_claim = event_target:gallic_threat
+		}
+		event_target:gallic_threat = {
+			add_country_modifier = {
+				name = rally_for_gaul
+				duration = 5475
+			}
+			add_historical_rival = emperor
+			hidden_effect = {
+				set_country_flag = gallic_threat_realized
+				swap_non_generic_missions = yes
+			}
+		}
+		emperor = {
+			add_country_modifier = {
+				name = defense_of_the_empire
+				duration = 5475
+			}
+			add_historical_rival = event_target:gallic_threat	
+			add_imperial_influence = 15
+		}
+	}
+
+	option = {
+		name = incidents_gallic_threat.1.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				OR = {
+					ai_attitude = {
+						who = GAU
+						attitude = attitude_friendly
+					}
+					ai_attitude = {
+						who = GAU
+						attitude = attitude_loyal
+					}
+					ai_attitude = {
+						who = GAU
+						attitude = attitude_allied
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				4696 = {
+					owner = {
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_rivalry
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				4696 = {
+					owner = {
+						OR = {
+							ai_attitude = {
+								who = ROOT
+								attitude = attitude_loyal
+							}
+							ai_attitude = {
+								who = ROOT
+								attitude = attitude_allied
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				4696 = {
+					country_or_non_sovereign_subject_holds = emperor
+				}
+			}
+		}
+		provence_area = {
+			set_in_empire = no
+			add_core = event_target:gallic_threat
+		}
+		emperor = {
+			add_ruler_modifier = {
+				name = loyalty_to_none
+				duration = -1
+			}
+			add_historical_friend = event_target:gallic_threat
+		}
+		event_target:gallic_threat = {
+			add_historical_friend = emperor
+			set_ai_attitude = {
+				attitude = attitude_friendly
+				who = ROOT
+				locked = yes
+			}
+			hidden_effect = {
+				set_country_flag = gallic_threat_pacified
+				swap_non_generic_missions = yes
+			}
+		}
+	}
+}

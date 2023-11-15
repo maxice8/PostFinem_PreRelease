@@ -127,6 +127,18 @@ temple = {
 				duration = -1
 			}
 		}
+		if = {
+			limit = {
+				FROM = { has_country_flag = sacred_spaces_flag  }
+				NOT = {
+					religion = FROM
+				}
+			}
+			add_province_modifier = {
+				name = no_more_unity_problems
+				duration = -1
+			}
+		}
 	}
 	on_destroyed = {
 		on_province_tax_building_destroyed_estate_privileges_effect = yes
@@ -147,6 +159,7 @@ temple = {
 			}
 		}
 		remove_province_modifier = gov_expanded_temple_rights_mod
+		remove_province_modifier = no_more_unity_problems
 	}
 	on_obsolete = {
 	}
@@ -866,6 +879,18 @@ cathedral = {
 				duration = -1
 			}
 		}
+		if = {
+			limit = {
+				FROM = { has_country_flag = sacred_spaces_flag  }
+				NOT = {
+					religion = FROM
+				}
+			}
+			add_province_modifier = {
+				name = no_more_unity_problems
+				duration = -1
+			}
+		}
 	}
 	on_destroyed = {
 		on_province_tax_building_destroyed_estate_privileges_effect = yes
@@ -886,6 +911,7 @@ cathedral = {
 			}
 		}
 		remove_province_modifier = gov_expanded_temple_rights_mod
+		remove_province_modifier = no_more_unity_problems
 	}
 	on_obsolete = {
 	}

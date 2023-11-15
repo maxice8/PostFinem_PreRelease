@@ -1,5 +1,6 @@
 local_autonomy_modifier_G_1 = {
-	min_local_autonomy = -25
+	local_manpower_modifier = 0.25
+	local_tax_modifier = 0.30
 }
 pf_gallic_wars_remant_1 = {
 	min_local_autonomy = 15
@@ -138,4 +139,85 @@ hub_of_dublin = {
 	local_great_project_upgrade_cost = -0.33
 	local_great_project_upgrade_time = -0.25
 	num_accepted_cultures = 1
+}
+defense_of_gaul = {
+	local_defensiveness = 0.15
+	local_garrison_size = 0.25
+}
+reclimation_of_gaul = {
+	local_years_of_nationalism = -5
+	local_culture_conversion_cost = -0.25
+	local_missionary_strength = 0.03
+}
+rally_for_gaul = {
+	land_morale = 0.1
+	province_warscore_cost = -0.10
+}
+defense_of_the_empire = {
+	manpower_recovery_speed = 0.15
+	fire_damage_received = -0.10
+}
+loyalty_to_none = {
+	diplomatic_reputation = -3
+	imperial_authority = -0.05	
+}
+celtic_whalers = {
+	local_production_efficiency = 0.05
+	trade_goods_size = 1
+	local_sailors_modifier = 0.20
+}
+defense_of_pyrenees = {
+	local_defensiveness = 0.1
+	local_garrison_size = 0.25
+}
+merchant_fleet_gau = {
+	light_ship_cost = -0.15
+	global_ship_trade_power = 0.2	
+}
+return_of_the_lusitanians = {
+	culture_conversion_time = -0.15
+	culture_conversion_cost = -0.1
+}
+defeated_the_federation = {
+	land_morale = -0.1
+	diplomatic_reputation = -3
+}
+the_emperor_and_gauls = {
+	administrative_efficiency = 0.05
+	prestige_decay = -0.01
+}
+rejection_of_the_norse = {
+	culture_conversion_cost = -0.25
+	local_years_of_nationalism = -5
+	local_missionary_strength = 0.02
+}
+explorer_until_have_one = {
+	colonists = 1
+	may_explore = yes	
+}
+explorer_born = {
+	global_colonial_growth = 10	
+	colony_development_boost = 1	
+}
+swiss_development_GAU = {
+	local_development_cost = -0.20
+}
+colonial_ventures_GAU = {
+	colony_cost_modifier = -0.15
+	reduced_liberty_desire_on_other_continent = 20
+}
+production_of_tobacco_GAU = {
+	trade_goods_size_modifier = 0.10
+	province_trade_power_modifier = 0.15
+}
+loyal_subject_gau = {
+	global_tariffs = 0.10
+	native_uprising_chance = -0.25	
+}
+production_of_sugar_GAU = {
+	trade_efficiency = 0.10
+	diplomatic_reputation = 2
+}
+no_more_unity_problems = {
+	local_religious_unity_contribution = -1
 }

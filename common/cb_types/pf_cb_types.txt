@@ -104,6 +104,13 @@ cb_germanic_campaigns = {
 	prerequisites = {
 		mission_completed = pf_gaul_mainland_8
 		FROM = {
+			OR = {
+				is_neighbor_of = ROOT
+				any_subject_country = {
+					is_subject_of = ROOT
+					is_neighbor_of = FROM
+				}
+			}
 			any_owned_province = {
 				OR = {
 					region = north_german_region

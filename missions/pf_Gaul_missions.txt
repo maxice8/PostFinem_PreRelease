@@ -378,14 +378,7 @@ PF_Gaul_1 = {
 					key = CONTROLLED_FLOW_CEL
 				}
 			}
-			1876 = {
-				add_trade_modifier = {
-					who = ROOT
-					duration = 9125
-					power = 10
-					key = CONTROLLED_FLOW_CEL
-				}
-			}
+			add_mercantilism = 3
 			custom_tooltip = own_174_TT
 			hidden_effect = {
 				if = {
@@ -402,6 +395,52 @@ PF_Gaul_1 = {
 				else = {
 					add_adm_power = 100
 				}
+			}
+		}
+	}
+	pf_gaul_south_6 = {
+		icon = mission_pf_brugges
+		position = 13
+		required_missions = {
+			pf_gaul_tall_5
+			pf_gaul_south_4
+		}
+		provinces_to_highlight = {
+			trade_company_region = trade_company_valencia
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					tooltip = valencia_province_TT
+					trade_company_region = trade_company_valencia
+				}
+				has_trade_building_trigger = yes
+				base_production = 8
+				value = 5
+			}
+			213 = {
+				has_trade_building_trigger = yes
+				base_production = 10
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_light_ship = 25
+		}
+		effect = {
+			1298 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 15
+					key = FLOW_OF_TRADE_CEL
+				}
+			}
+			add_mercantilism = 5
+			add_country_modifier = {
+				name = merchant_fleet_gau
+				duration = -1
 			}
 		}
 	}
@@ -432,7 +471,7 @@ PF_Gaul_2 = {
 			ile_de_france_area = {
 				add_province_modifier = {
 					name = local_autonomy_modifier_G_1
-					duration = -1
+					duration = 3650
 				}
 			}
 			north_brabant_area = {
@@ -797,6 +836,164 @@ PF_Gaul_2 = {
 			custom_tooltip = double_development_TT
 		}
 	}
+	pf_gaul_south_4 = {
+		icon = mission_pf_whales
+		required_missions = { pf_gaul_south_1 }
+		provinces_to_highlight = {
+			area = basque_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			basque_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			209 = {
+				religion = ROOT
+				has_trade_building_trigger = yes
+				has_production_building_trigger = yes
+			}
+		}
+		effect = {
+			aragon_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			catalonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			valencia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			209 = {
+				change_culture = ROOT
+				add_base_production = 2
+				add_province_modifier = {
+					name = celtic_whalers
+					duration = -1
+				}
+			}
+		}
+	}
+	pf_gaul_south_5 = {
+		icon = mission_sea_battles
+		position = 14
+		required_missions = { pf_gaul_south_4 }
+		provinces_to_highlight = {
+			OR = {
+				area = aragon_area
+				area = valencia_area
+				area = catalonia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			aragon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			valencia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			catalonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			iberia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = defense_of_pyrenees_TT
+			tooltip = {
+				add_province_modifier = {
+					name = defense_of_pyrenees
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				4154 = {
+					every_neighbor_province = { 
+						add_province_modifier = {
+							name = defense_of_pyrenees
+							duration = -1
+						}
+					}	
+				}
+				4965 = {
+					every_neighbor_province = { 
+						add_province_modifier = {
+							name = defense_of_pyrenees
+							duration = -1
+						}
+					}	
+				}
+			}
+		}
+	}
+	pf_gaul_south_7 = {
+		icon = pf_kemetic_metropol
+		position = 15
+		required_missions = { pf_gaul_south_5 }
+		provinces_to_highlight = {
+			region = iberia_region
+			NOT = {
+				has_courthouse_building_trigger = yes
+				has_tax_building_trigger = yes
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 10
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				has_courthouse_building_trigger = yes
+				has_tax_building_trigger = yes
+				country_or_non_sovereign_subject_holds = ROOT
+				region = iberia_region
+				value = 10
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = return_of_the_lusitanians
+				duration = -1
+			}
+			custom_tooltip = gallo_lusitanian_tt
+			add_accepted_culture = gallo_lusitanian
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_courthouse_building_trigger = yes
+						has_tax_building_trigger = yes
+						country_or_non_sovereign_subject_holds = ROOT
+						region = iberia_region
+					}
+					change_culture = gallo_lusitanian
+				}
+			}
+			
+		}
+	}
 }
 PF_Gaul_3 = {
 	slot = 3
@@ -952,6 +1149,7 @@ PF_Gaul_3 = {
 				name = rule_the_waves_GAU
 				duration = -1
 			}
+			custom_tooltip = enable_devil_dogs_doctrine
 		}
 	}
 	pf_gaul_german_2 = {
@@ -988,6 +1186,30 @@ PF_Gaul_3 = {
 				}
 			}
 			custom_tooltip = enable_mountain_development_tt
+			tooltip = {
+				add_province_modifier = {
+					name = swiss_development_GAU
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = switzerland_area
+							area = romandie_area
+						}
+						OR = {
+							terrain = mountains
+							terrain = hills
+						}
+					}
+					add_province_modifier = {
+						name = swiss_development_GAU
+						duration = -1
+					}
+				}
+			}
 		}
 	}
 	pf_gaul_german_3 = {
@@ -1163,6 +1385,292 @@ PF_Gaul_3 = {
 						duration = -1
 					}
 				}
+			}
+		}
+	}
+	pf_gaul_south_1 = {
+		icon = mission_conquer_50_development
+		position = 11
+		required_missions = {
+			
+		}
+		provinces_to_highlight = {
+			province_id = 194
+			NOT = {
+				base_manpower = 5
+				has_state_edict = edict_defensive_edict
+			}
+		}
+		trigger = {
+			194 = {
+				base_manpower = 5
+				has_state_edict = edict_defensive_edict
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			guyenne_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			pyrenees_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			basque_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			193 = {
+				add_province_modifier = {
+					name = defense_of_gaul
+					duration = -1
+				}
+			}
+		}
+	}
+	pf_gaul_south_2 = {
+		icon = confront_the_lombards
+		position = 12
+		required_missions = {
+			pf_gaul_south_1
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = guyenne_area
+				area = pyrenees_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			guyenne_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			pyrenees_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			languedoc_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			savoy_dauphine_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			guyenne_area = {
+				add_province_modifier = {
+					name = reclimation_of_gaul
+					duration = -1
+				}
+			}
+			pyrenees_area = {
+				add_province_modifier = {
+					name = reclimation_of_gaul
+					duration = -1
+				}
+			}
+		}
+	}
+	pf_gaul_south_3 = {
+		icon = the_italian_league 
+		position = 13
+		required_missions = {
+			pf_gaul_south_2
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = languedoc_area
+				area = savoy_dauphine_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			languedoc_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			savoy_dauphine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			piedmont_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hidden_effect = {
+				save_global_event_target_as = gallic_threat
+				set_imperial_incident = incident_gallic_threat
+			}
+			custom_tooltip = start_the_gallic_threat_incident
+		}
+	}
+}
+PF_Gaul_3_LOCKED = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GAU
+		NOT = {
+			OR = {
+				has_country_flag = gallic_threat_realized
+				has_country_flag = gallic_threat_pacified
+			}
+		}
+	}
+	pf_gaul_south_LOCKED = {
+		icon = mission_locked_mission
+		position = 14
+		required_missions = {
+			pf_gaul_south_3
+		}
+		provinces_to_highlight = {
+			area = piedmont_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = locked_mission_TT
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = locked_mission_TT
+		}
+	}
+}
+PF_Gaul_3_unlocked = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GAU
+		has_country_flag = gallic_threat_realized
+	}
+	pf_gaul_south_8a = {
+		icon = give_him_back_his_legions
+		position = 14
+		required_missions = {
+			pf_gaul_south_3
+		}
+		provinces_to_highlight = {
+			area = piedmont_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 12
+				is_part_of_hre = yes
+			}
+			piedmont_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			emperor = {
+				add_ruler_modifier = {
+					name = defeated_the_federation
+					duration = -1
+				}
+			}
+			custom_tooltip = remove_ae_federation_TT
+			hidden_effect = {
+				every_country = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					reverse_add_aggressive_expansion = {
+						who = ROOT
+						value = -15
+						apply_calc = no
+					}
+				}
+			}
+		}
+	}
+}
+PF_Gaul_3_unlockeda = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GAU
+		has_country_flag = gallic_threat_pacified
+	}
+	pf_gaul_south_8a = {
+		icon = a_place_among_the_great_powers
+		position = 14
+		required_missions = {
+			pf_gaul_south_3
+		}
+		provinces_to_highlight = {
+			area = piedmont_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			emperor = {
+				reverse_has_opinion = {
+					who = ROOT
+					value = 130
+				}
+				marriage_with = ROOT
+			}
+			piedmont_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			add_ruler_modifier = {
+				name = the_emperor_and_gauls
+				duration = -1
+			}
+			add_trust = {
+				who = emperor
+				value = 25
+				mutual = yes
+			}
+			add_favors = {
+				who = emperor
+				amount = 10
 			}
 		}
 	}
@@ -1709,7 +2217,7 @@ PF_Gaul_4_C = {
 
 	pf_gaul_celtica_8 = {
 		icon = pf_crow
-		position = 10
+		position = 11
 		required_missions = {
 			pf_gaul_celtica_7
 		}
@@ -1751,6 +2259,43 @@ PF_Gaul_4_C = {
 				}
 			}
 			custom_tooltip = unlock_samhain_TT
+		}
+	}
+	pf_gaul_colonialism_4 = {
+		icon = mission_iberian_conquistador
+		position = 13
+		provinces_to_highlight = {
+			colonial_region = colonial_the_carribean
+			trade_goods = sugar
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_production_building_trigger = yes
+				base_production = 5
+			}
+		}
+		required_missions = {
+			pf_gaul_colonialism_2
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				colonial_region = colonial_the_carribean
+				trade_goods = sugar
+				has_production_building_trigger = yes
+				base_production = 5
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = production_of_sugar_GAU
+				duration = -1
+			}
+			change_price = {
+				trade_goods = sugar
+				key = the_new_plantations
+				value = 0.20
+				duration = 5475
+			}
 		}
 	}
 }
@@ -1840,6 +2385,21 @@ PF_Gaul_5 = {
 				second_effect = "
 					custom_tooltip = sacred_spaces_gaul_TT
 					set_country_flag = sacred_spaces_flag
+					hidden_effect = {
+						every_owned_province = {
+							limit = {
+								has_tax_building_trigger = yes
+								NOT = {
+									religion = ROOT
+								}
+							}
+							add_province_modifier = {
+								name = no_more_unity_problems
+								duration = -1
+								hidden = yes
+							}
+						}
+					}
 				"
 			}
 		}
@@ -2017,8 +2577,10 @@ PF_Gaul_5C_branching = {
 			}
 			OR = {
 				234 = {
-					prosperity = 25
 					has_state_edict = edict_centralization_effort
+				}
+				wessex_area = {
+					prosperity = 25
 				}
 			}
 		}
@@ -2087,6 +2649,284 @@ PF_Gaul_5C_branching = {
 			add_country_modifier = {
 				name = cheap_soldiers_iron
 				duration = 9125
+			}
+		}
+	}
+	pf_gaul_celtica_9 = {
+		icon = mission_pf_norse_gods
+		position = 10
+		required_missions = {
+			pf_gaul_celtica_7
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = lowlands_area
+				area = highlands_area
+				area = kingdom_of_the_isles_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			lowlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			highlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kingdom_of_the_isles_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			248 = {
+				galleon_heavy = ROOT
+				galleon_heavy = ROOT
+				galleon_heavy = ROOT
+			}
+			custom_tooltip = all_norse_not_celtic_TT
+			tooltip = {
+				add_province_modifier = {
+					name = rejection_of_the_norse
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = lowlands_area
+							area = highlands_area
+							area = kingdom_of_the_isles_area
+						}
+						NOT = {
+							religion = ROOT
+							OR = {
+								culture_group = old_celtic
+								culture_group = ROOT
+							}
+						}
+					}
+					add_province_modifier = {
+						name = rejection_of_the_norse
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	pf_gaul_colonialism_1 = {
+		icon = mission_galleys_in_port
+		position = 11
+		required_missions = {
+
+		}
+		trigger = {
+			OR = {
+				AND = {
+					num_of_heavy_ship = 10
+					num_of_light_ship = 15
+					custom_trigger_tooltip = {
+						tooltip = obj_discover_america_tooltip
+						OR = {
+							north_america = { has_discovered = ROOT }
+							south_america = { has_discovered = ROOT }
+							new_world = { has_discovered = ROOT }
+						}
+					}
+				}
+				AND = {
+					has_idea_group = exploration_ideas
+					num_of_explorers = 1
+				}
+			}
+		}
+		effect = {
+			carribeans_region = {
+				discover_country = ROOT
+			}
+			northeast_america_region = {
+				discover_country = ROOT
+			}
+			if = {
+				limit = {
+					NOT = {
+						num_of_explorers = 1
+					}
+				}
+				custom_tooltip = explorer_until_have_one_YES_TT
+				tooltip = {
+					add_country_modifier = {
+						name = explorer_until_have_one
+						duration = 3650
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					num_of_explorers = 1
+				}
+				custom_tooltip = explorer_until_have_one_NO_TT
+				tooltip = {
+					add_country_modifier = {
+						name = explorer_until_have_one
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = {
+					num_of_explorers = 1
+				}
+				custom_tooltip = explorer_born_YES_TT
+				tooltip = {
+					add_ruler_modifier = {
+						name = explorer_born
+						duration = -1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						num_of_explorers = 1
+					}
+				}
+				custom_tooltip = explorer_born_NO_TT
+				tooltip = {
+					add_ruler_modifier = {
+						name = explorer_born
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							num_of_explorers = 1
+						}
+					}
+					add_country_modifier = {
+						name = explorer_until_have_one
+						duration = -1
+					}
+				}
+				else = {
+					add_ruler_modifier = {
+						name = explorer_born
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	pf_gaul_colonialism_2 = {
+		icon = mission_establish_high_seas_navy
+		position = 12
+		provinces_to_highlight = {
+			OR = {
+				region = northeast_america_region
+				region = carribeans_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		required_missions = {
+			pf_gaul_colonialism_1
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					region = northeast_america_region
+					region = carribeans_region
+				}
+			}
+		}
+		effect = {
+			northeast_america_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			southeast_america_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			carribeans_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = colonial_ventures_GAU
+				duration = 9125
+			}
+		}
+	}
+	pf_gaul_colonialism_3 = {
+		icon = mission_rb_the_thirteen_colonies
+		position = 14
+		provinces_to_highlight = {
+			colonial_region = colonial_eastern_america
+			trade_goods = tobacco
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_production_building_trigger = yes
+				base_production = 5
+			}
+		}
+		required_missions = {
+			pf_gaul_colonialism_2
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				colonial_region = colonial_eastern_america
+				trade_goods = tobacco
+				has_production_building_trigger = yes
+				base_production = 5
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = loyal_subject_gau 
+				duration = -1
+			}
+			custom_tooltip = every_owned_in_colonial_america_TT
+			tooltip = {
+				add_province_modifier = {
+					name = production_of_tobacco_GAU
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						country_or_non_sovereign_subject_holds = ROOT
+						trade_goods = tobacco
+						has_production_building_trigger = yes
+						base_production = 5
+						colonial_region = colonial_eastern_america
+					}
+					add_province_modifier = {
+						name = production_of_tobacco_GAU
+						duration = -1
+					}
+				}
 			}
 		}
 	}
