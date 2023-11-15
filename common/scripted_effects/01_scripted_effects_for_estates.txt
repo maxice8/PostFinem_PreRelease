@@ -2080,17 +2080,83 @@ on_province_owner_change_estate_privileges_effect = {
 	if = {
 		limit = {
 			owner = {
-				has_estate_privilege = estate_burghers_pf_per_mountain_development
+				has_estate_privilege = estate_burghers_great_works_of_iran
 			}
 		}
 		if = {
 			limit = {
-				has_terrain = mountain
+				OR = {
+					region = persia_region
+					region = khorasan_region
+				}
 			}
+			if = {
+				limit = { has_terrain = mountain }
+				add_province_modifier = { name = turkoman_privilege_mountains duration = -1 }
+			}
+			if = {
+				limit = { has_terrain = highlands }
+				add_province_modifier = { name = turkoman_privilege_highlands duration = -1 }
+			}
+			if = {
+				limit = { has_terrain = desert }
+				add_province_modifier = { name = turkoman_privilege_desert duration = -1 }
+			}
+			if = {
+				limit = { has_terrain = drylands }
+				add_province_modifier = { name = turkoman_privilege_drylands duration = -1 }
+			}
+		}
+		else = {
+			if = {
+				limit = { has_province_modifier = turkoman_privilege_mountains }
+				remove_province_modifier = turkoman_privilege_mountains
+			}
+			if = {
+				limit = { has_province_modifier = turkoman_privilege_highlands }
+				remove_province_modifier = turkoman_privilege_highlands
+			}
+			if = {
+				limit = { has_province_modifier = turkoman_privilege_desert }
+				remove_province_modifier = turkoman_privilege_desert
+			}
+			if = {
+				limit = { has_province_modifier = turkoman_privilege_drylands }
+				remove_province_modifier = turkoman_privilege_drylands
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					has_estate_privilege = estate_nobles_mamlukian_administration
+					has_estate_privilege = estate_ghulams_mamlukian_administration
+					has_estate_privilege = estate_qizilbash_mamlukian_administration
+				}
+			}
+			region = egypt_region
+		}
+		add_province_modifier = {
+			name = mamlukian_administration_modifier
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_ghulams_ensure_caucasian_sovereignty
+			}
+		}
+		if = {
+			limit = { culture_group = caucasian }
 			add_province_modifier = {
-				name = pf_per_mountain_development
+				name = estate_ghulams_ensure_caucasian_sovereignty_mod
 				duration = -1
 			}
+		}
+		else = {
+			remove_province_modifier = estate_ghulams_ensure_caucasian_sovereignty_mod
 		}
 	}
 }
