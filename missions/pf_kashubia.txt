@@ -5,14 +5,8 @@ ksb_1_slot = {
 	has_country_shield = yes
 	potential = {
 		OR = {
-			AND = {
-				was_tag = KSB
-				tag = SEV
-			}
-			AND = {
-				was_tag = KSB
-				tag = SLV
-			}
+			tag = SEV
+			tag = SLV
 			tag = KSB
 		}
 	}
@@ -71,14 +65,8 @@ ksb_2_slot = {
 	has_country_shield = yes
 	potential = {
 		OR = {
-			AND = {
-				was_tag = KSB
-				tag = SEV
-			}
-			AND = {
-				was_tag = KSB
-				tag = SLV
-			}
+			tag = SEV
+			tag = SLV
 			tag = KSB
 		}
 	}
@@ -256,14 +244,8 @@ ksb_3_slot = {
 	has_country_shield = yes
 	potential = {
 		OR = {
-			AND = {
-				was_tag = KSB
-				tag = SEV
-			}
-			AND = {
-				was_tag = KSB
-				tag = SLV
-			}
+			tag = SEV
+			tag = SLV
 			tag = KSB
 		}
 	}
@@ -407,14 +389,8 @@ ksb_4_slot = {
 	has_country_shield = yes
 	potential = {
 		OR = {
-			AND = {
-				was_tag = KSB
-				tag = SEV
-			}
-			AND = {
-				was_tag = KSB
-				tag = SLV
-			}
+			tag = SEV
+			tag = SLV
 			tag = KSB
 		}
 	}
@@ -669,14 +645,8 @@ ksb_5_slot = {
 	has_country_shield = yes
 	potential = {
 		OR = {
-			AND = {
-				was_tag = KSB
-				tag = SEV
-			}
-			AND = {
-				was_tag = KSB
-				tag = SLV
-			}
+			tag = SEV
+			tag = SLV
 			tag = KSB
 		}
 	}
@@ -1119,14 +1089,8 @@ sevksb_1_branch = {
 	has_country_shield = yes
 	potential = {
 		OR = {
-			AND = {
-				was_tag = KSB
-				tag = SEV
-			}
-			AND = {
-				was_tag = KSB
-				tag = SLV
-			}
+			tag = SEV
+			tag = SLV
 		}
 	}
 	sev_svetovids_most_faithful = {
@@ -1301,14 +1265,8 @@ sevksb_2_branch = {
 	has_country_shield = yes
 	potential = {
 		OR = {
-			AND = {
-				was_tag = KSB
-				tag = SEV
-			}
-			AND = {
-				was_tag = KSB
-				tag = SLV
-			}
+			tag = SEV
+			tag = SLV
 		}
 	}
 	sev_to_the_rhine = {
@@ -1427,14 +1385,8 @@ sevksb_3_branch = {
 	has_country_shield = yes
 	potential = {
 		OR = {
-			AND = {
-				was_tag = KSB
-				tag = SEV
-			}
-			AND = {
-				was_tag = KSB
-				tag = SLV
-			}
+			tag = SEV
+			tag = SLV
 		}
 	}
 	sev_conquer_south = {
@@ -1567,14 +1519,8 @@ sevksb_4_branch = {
 	has_country_shield = yes
 	potential = {
 		OR = {
-			AND = {
-				was_tag = KSB
-				tag = SEV
-			}
-			AND = {
-				was_tag = KSB
-				tag = SLV
-			}
+			tag = SEV
+			tag = SLV
 		}
 	}
 	sev_volhynian_conquest = {
@@ -1701,14 +1647,8 @@ sevksb_5_branch = {
 	has_country_shield = yes
 	potential = {
 		OR = {
-			AND = {
-				was_tag = KSB
-				tag = SEV
-			}
-			AND = {
-				was_tag = KSB
-				tag = SLV
-			}
+			tag = SEV
+			tag = SLV
 		}
 	}
 	sev_wild_frontier = {
@@ -1858,10 +1798,7 @@ slvksb_1_branch = {
 	ai = yes
 	has_country_shield = yes
 	potential = {
-		AND = {
-			was_tag = KSB
-			tag = SLV
-		}
+		tag = SLV
 	}
 	slv_2_seas_2_fleets = {
 		icon = crusader_fleet
@@ -1898,10 +1835,7 @@ slvksb_2_branch = {
 	ai = yes
 	has_country_shield = yes
 	potential = {
-		AND = {
-			was_tag = KSB
-			tag = SLV
-		}
+		tag = SLV
 	}
 	slv_ostgermanic_invasion = {
 		icon = invade_poland
@@ -2053,10 +1987,7 @@ slvksb_3_branch = {
 	ai = yes
 	has_country_shield = yes
 	potential = {
-		AND = {
-			was_tag = KSB
-			tag = SLV
-		}
+		tag = SLV
 	}
 	slv_pontus_conquest = {
 		icon = the_russian_campaign
@@ -2205,10 +2136,7 @@ slvksb_4_branch = {
 	ai = yes
 	has_country_shield = yes
 	potential = {
-		AND = {
-			was_tag = KSB
-			tag = SLV
-		}
+		tag = SLV
 	}
 	slv_kiev_recovered = {
 		icon = mission_develop_kiev
@@ -2333,11 +2261,11 @@ slvksb_4_branch = {
 			add_ruler_personality = great_engineer_personality
 			custom_tooltip = empty_line_tt
 			change_ruler_stat = {
-				stat = adm
+				type = adm
 				amount = 1
 			}
 			change_ruler_stat = {
-				stat = dip
+				type = dip
 				amount = 1
 			}
 			custom_tooltip = empty_line_tt
@@ -2355,10 +2283,7 @@ slvksb_5_branch = {
 	ai = yes
 	has_country_shield = yes
 	potential = {
-		AND = {
-			was_tag = KSB
-			tag = SLV
-		}
+		tag = SLV
 	}
 	slv_silesian_mining = {
 		icon = mission_jawal_silver_mine

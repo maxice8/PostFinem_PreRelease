@@ -614,7 +614,11 @@ pf_ost_5 = {
 					effect = "	
 						random_owned_province = {
 							limit = {
-							NOT = { has_country_modifier = ost_wine }		
+								NOT = { 
+									has_country_modifier = ost_wine
+								}	
+								trade_goods = wine`
+							}	
 							add_province_modifier = {
 								name = "ost_wine"
 								duration = 9125
