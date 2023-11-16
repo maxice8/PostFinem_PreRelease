@@ -17,6 +17,46 @@ country_decisions = {
 			}
 		}
 	}
+	pf_hellenic_king_by_own_right = {
+		potential = {
+			religion = hellenic
+			NOT = { has_ruler_modifier = pf_hellenic_king_by_own_right_modifier }
+		}
+		allow = {
+			religion = hellenic
+			has_regency = no
+			papal_influence = 20
+			adm = 3
+			dip = 3
+		}
+		effect = {
+			add_papal_influence = -20
+			add_ruler_modifier = {
+				name = "pf_hellenic_king_by_own_right_modifier"
+				duration = -1
+			}
+		}
+	}
+	pf_hellenic_guaranteed_freedom = {
+		potential = {
+			religion = hellenic
+			NOT = { has_ruler_modifier = pf_hellenic_enforce_freedom_modifier }
+		}
+		allow = {
+			religion = hellenic
+			has_regency = no
+			adm = 3
+			mil = 3
+			adm_power = 50
+		}
+		effect = {
+			add_adm_power = -50
+			add_ruler_modifier = {
+				name = "pf_hellenic_enforce_freedom_modifier"
+				duration = -1
+			}
+		}
+	}
 	pf_consult_the_oracle = {
 		potential = {
 			religion = hellenic

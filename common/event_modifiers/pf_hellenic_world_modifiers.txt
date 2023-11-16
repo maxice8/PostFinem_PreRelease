@@ -78,6 +78,7 @@ pf_bby_stories_of_old = {
 pf_callimachus_rule_modifier = {
 	monthly_syrian_power = 1
 	syrian_power_gain_modifier = 0.25
+	reduced_liberty_desire = 40
 }
 pf_syr_drylands_development = {
 	local_development_cost = -0.10
@@ -158,6 +159,16 @@ pf_pho_local_timber_ex = {
 pf_hellenic_philosopher_king_modifier = {
 	tolerance_own = 1
 	technology_cost = -0.05
+}
+pf_hellenic_king_by_own_right_modifier = {
+	legitimacy = 0.5
+	devotion = 0.5
+	republican_tradition = 0.10
+	papal_influence = -0.25
+}
+pf_hellenic_enforce_freedom_modifier = {
+	global_unrest = -1
+	burghers_influence_modifier = 0.05
 }
 pf_hellenic_monastery_prov = {
 	local_institution_spread = 0.33

@@ -663,9 +663,9 @@ pf_gavrasian_kingdom = {
 	custom_attributes = {
 		buffed_strong_duchies = yes
 	}
-	government_abilities = {
-		syrian_rule_mechanic
-	}
+	#government_abilities = {
+	#	syrian_rule_mechanic
+	#}
 	ai = {
 		factor = 0.5 #generic
 	}
