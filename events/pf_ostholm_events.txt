@@ -350,8 +350,14 @@ country_event = {		#ostholm reward
 			factor = 2
 		}
 		add_prestige_or_monarch_power = { amount = 10 }
+		custom_tooltip = empty_line_tt
 		134 = {
-			add_core = ROOT
+			add_base_tax = 1
+			add_base_production = 2
+			add_base_manpower = 1
+		}
+		custom_tooltip = empty_line_tt
+		134 = {
 			add_province_modifier = {
 				name = sdt_project_fast
 				duration = 9125
@@ -365,8 +371,14 @@ country_event = {		#ostholm reward
 			factor = 8
 		}
 		add_prestige_or_monarch_power = { amount = 10 }
+		custom_tooltip = empty_line_tt
 		134 = {
-			add_core = ROOT
+			add_base_tax = 2
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		custom_tooltip = empty_line_tt
+		134 = {
 			add_province_modifier = {
 				name = sdt_develop_fast
 				duration = 9125
