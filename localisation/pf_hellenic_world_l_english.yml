@@ -29,6 +29,20 @@ pf_kudurru_reform_desc: "Kudurru are great stone monoliths used to officiate lan
 pf_nepustu_tax: "Nepeshtu Tax"
 pf_nepustu_tax_desc: "The output of our nation is huge, from the most lowly farmer to most skilled craftsman. Instead of taxing raw goods, we could gain more money by focusing on the completed product, as well as encourage further industrial innovation."
 
+pf_gavrasian_kingdom: "Gavrasian Kingdom"
+pf_gavrasian_kingdom_desc: "The Gavrasian princes have been the most successful monarchs Damascus has ever seen. The prodigal son, Callimachus IV, has carved a Syrian Kingdom out of the myriad of states that occupied the area before, and consolidated his power over a vast area. With the consent and support of the powerful merchants of Phoenicia, our state is strong and stable."
+ability_syrian_rule_mechanic: "Syrian Rule"
+syrian_power: "Syrian Power"
+syrian_power_desc: "Syrial Rule represents the power contained in the crown and the loyalty and obedience of its vassals.\n\nIt is §Gincreased§! by the following:\n- Ruler Skills\n- Mercantilism\n\nIt is §Rlowered§! by:\n- Corruption\n- Bankruptcy\n- Negative Stability\n- High Average Autonomy\n- Integrating subjects\n "
+monthly_syrian_power: "Monthly Syrian Power"
+syrian_power_gain_modifier: "Syrian Power Gain Modifier"
+pf_callimachus_rule_modifier: "Rule of Callimachus"
+SYR_NEEDS_SYRIAN_POWER_TO_INTEGRATE: "§RYou need at least §Y70§! Syrian Power to annex a subject§!"
+
+pf_lesbian_republic: "Lesbian Republic"
+pf_lesbian_republic_desc: "The island of Lesbos is governed by an assembly of the most powerful people, who meet monthly to debate on policy and judicial matters. Our leader, the 'mother of the island', is elected from the women of the assembly and represents our nation on the world stage."
+mechanic_female_only_elections_yes: "Has only female rulers"
+
 # Culture
 
 mesopotamian: "Mesopotamian"
@@ -40,6 +54,16 @@ URK:0 "Uruk"
 URK_ADJ:0 "Uruk"
 BBY:0 "Babylonia"
 BBY_ADJ:0 "Babylonian"
+PTY:0 "Tyre"
+PTY_ADJ:0 "Tyrian"
+PSI:0 "Sidon"
+PSI_ADJ:0 "Sidonian"
+HMA:0 "Hamat"
+HMA_ADJ:0 "Hamathian"
+LSB:0 "Lesbos"
+LSB_ADJ:0 "Lesbian"
+LYD:0 "Lydia"
+LYD_ADJ:0 "Lydian"
 
 # Religion
 
@@ -66,6 +90,56 @@ ENUMA_ELISH_ASPECTS_SHORT: "Deity"
 ENUMA_ELISH_ASPECTS_LONG: "Deities to Patronise"
 ENUMA_ELISH_ASPECTS_POWER_NAME: "Divine Patronage"
 
+# Estate
+
+estate_burghers_pf_silk_road_merchants: "[Root.GetBurghersName] of the Silk Road"
+estate_burghers_pf_silk_road_merchants_desc: "We must strengthen our control over this portion of the Silk Road and ensure our merchants have the protections and privileges to dominate it."
+allowed_silk_road_merchants: "Allowed Merchants of the Silk Road"
+allowed_drylands_development: "Allowed Dryland Irrigation"
+
+estate_burghers_pf_syr_drylands_development: "Private Dryland Irrigation"
+estate_burghers_pf_syr_drylands_development_desc: "Extend the privileges of the [Root.GetBurghersName] to include the right to construct, own, and operate irrigation facilities in the drylands of our country, helping increase local prosperity and reduce the burden on the state."
+pf_syr_drylands_development: "Dryland Irrigation"
+estate_burghers_pf_syr_drylands_development_tt: "Every owned province with §YDrylands§! terrain gains the following effect:"
+estate_burghers_pf_syr_drylands_development_rt: "The following modifier will be removed from every §YDrylands§! terrain province:"
+
+pf_silk_road_syrian_way: "Syrian Way"
+pf_silk_road_persian_way: "Persian Way"
+pf_silk_road_african_way: "African Way"
+
+estate_burghers_pf_phoenician_merchants: "Phoenician Merchants"
+estate_burghers_pf_phoenician_merchants_desc: "The merchants of Phoenicia have always held a special place in our society. Let us protect their privileges so that their success will bring all of us prosperity."
+
+# Holy Orders
+
+pf_order_of_dionysus: "Order of Dionysus"
+pf_order_of_dionysus_desc: "Devoted to the cult of Dionysus, the joyful followers of the Order travel from village to village spreading their message of peace and pleasure."
+pf_dionysus_wine_bonus_tooltip: "Every province in the state with the §Ywine§! trade good gets an additional §G1§! Base Production."
+pf_archonic_guard: "Archonic Guard"
+pf_archonic_guard_desc: "Originating in Naxos, the bodyguard of the Archon has establish outposts across the Hellenic world, and offered its protective services to an array of rulers."
+pf_archonic_papal_influence_bonus_tooltip: "Gain §G+1§! Athenaean Influence for every province assigned to this Order."
+pf_isadorians: "Isadorian Order"
+pf_isadorians_desc: "Named after Isadora of Edessa, this Order seeks to proliferate the power of the state, enforcing the divine right of kings as custodians of the gods."
+pf_isadorian_autonomy_tooltip: "Every province in this state loses §G-25.0%§! Local Autonomy."
+# Home provinces of them
+# Dionysus: 420  Ganja
+# Isadorians: 2308 Edessa
+# Archonic Guard: 164 Naxos
+order_of_dionysus_home_modifier: "Home of the Order of Dionysus"
+isadorian_order_home_modifier: "Home of the Isadorian Order"
+archonic_guard_home_modifier: "Home of the Archonic Guard"
+
+# Custom buttons
+
+hellenic_monastery_button_tt: "Offer to use the state coffers to fund the construction and maintainence of a dedicated monastery in this province, providing thinkers and scholars a place to live in relative solitude and contemplate over the gods and the nature of the world while the rest of us go about our lives."
+pf_hellenic_monastery_prov: "Hellenic Monastery"
+desc_pf_hellenic_monastery_prov: "This province is home to a dedicated and state funded monastery, housing priests and clerics in isolation to study and worship the gods."
+
+# State edicts
+
+edict_greek_assimilation: "Hellenic Assimilation"
+edict_splendid_rule: "Splendid Rule"
+
 ###############
 # Decisions
 ###############
@@ -84,6 +158,45 @@ pf_invoke_ishtar_income_tt: "from §Y3§! years of production income in owned pr
 pf_invoke_ninhursag_tt: "§MInvoking Ninhursag will give us the following effect:§!"
 pf_invoke_ninhursag_effect_tt: "Distribute §Y5§! £mil£ development to random owned provinces."
 pf_invoke_gilgamesh_tt: "§MInvoking Gilgamesh will give us the following effect:§!"
+
+renovate_silk_road_africa_title: "¤ Renovate the Silk Road: The African Way"
+renovate_silk_road_africa_desc: "The section of the Silk Road that passes through Africa has fallen into disrepair. If we want to keep our merchants safe and the flow of exotic goods steady, we must invest in renovating the infrastructure that surrounds its major routes."
+pf_silk_road_renovated_modifier: "§MRenovated Silk Road§!"
+desc_pf_silk_road_renovated_modifier: "Through extensive investment and careful management, this section of the Silk Road has been renovated and made safe for travelling merchants."
+pf_silk_road_province_get_tt: "Every province in this section of the §YSilk Road§! gets the following effect:"
+pf_silk_road_merchant_bonus_tt: "As long as we control every province in this section of the §YSilk Road§!, we will gain the following effect:"
+pf_silk_road_merchant_bonus_africa: "Control of the African Way"
+
+renovate_silk_road_syria_title: "¤ Renovate the Silk Road: The Syrian Way"
+renovate_silk_road_syria_desc: "The section of the Silk Road that passes through Syria has fallen into disrepair. If we want to keep our merchants safe and the flow of exotic goods steady, we must invest in renovating the infrastructure that surrounds its major routes."
+pf_silk_road_merchant_bonus_syria: "Control of the Syrian Way"
+
+renovate_silk_road_persia_title: "¤ Renovate the Silk Road: The Persia Way"
+renovate_silk_road_persia_desc: "The section of the Silk Road that passes through Persia has fallen into disrepair. If we want to keep our merchants safe and the flow of exotic goods steady, we must invest in renovating the infrastructure that surrounds its major routes."
+pf_silk_road_merchant_bonus_persia: "Control of the Persian Way"
+
+pf_hellenic_philosopher_king_title: "A Philosopher [Root.Monarch.GetTitle]"
+pf_hellenic_philosopher_king_desc: "Our ruler is learned in the ancient philosophies and the arts, patronising other likeminded scholars and using their position of power to forward the interests of the field."
+pf_hellenic_philosopher_king_modifier: "Philosopher King"
+
+pf_consult_the_oracle_title: "Consult the Oracle"
+pf_consult_the_oracle_desc: "Our ruler has consult the Oracle in Delphi, seeking a fortunate prophecy from her."
+pf_oracle_cooldown_tt: "The Oracle can only be consulted once per ruler lifetime."
+pf_ath_oracle_cooldown_tt: "§RThe Oracle can only be consulted once per ruler lifetime.§!"
+
+form_lydia_title: "An Ancient Dream Reawakened"
+form_lydia_desc: "Lydia was a great empire that ruled much of modern Anatolia, before it was brutally dismembered by the archers of Cyrus the Persian. In the years since its destruction, it has become a sort of unifying symbol for all Anatolian Greeks to fall behind, a rally point from which to preserve their independence. Now we have forged a great kingdom of our own, it would be fitting to take on the name of our common inspiration."
+
+pf_found_the_lsb_republic_title: "Reinstate the Republic"
+pf_found_the_lsb_republic_desc: "When Lesbos was independent it was ruled by a republic of women, picked from the most powerful families on the island. Now that we have once again regained our autonomy, perhaps we could bring back this old venerable tradition."
+
+pf_hellenic_king_by_own_right_title: "[Root.Monarch.GetTitle] by my Own Right"
+pf_hellenic_king_by_own_right_desc: "The Archon is an effective leader, but he cannot be allowed to take control of every aspect of our religion and daily life. We kings must take charge and secure our own rights. Athens will not define us!"
+pf_hellenic_king_by_own_right_modifier: "King by my Own Right"
+
+pf_hellenic_guaranteed_freedom_title: "Enact Guaranteed Freedom"
+pf_hellenic_guaranteed_freedom_desc: "Our religious tenets have always encouraged personal exploration and the freedom of the individual, and there is no reason why our state laws should not reflect this also."
+pf_hellenic_enforce_freedom_modifier: "Enforced the Laws of Liberty"
 
 ############## 
 # Ideas
@@ -165,6 +278,146 @@ avr_hellenic_literature_desc: "REPLACE_ME"
 avr_modernising: "Reform the Administration"
 avr_modernising_desc: "REPLACE_ME"
 
+SYR_ideas: "Syrian Ideas"
+SYR_ideas_start: "Syrian Traditions"
+SYR_ideas_bonus: "Syrian Ambition"
+
+syr_gavras_conquests: "Gavrasian Conquest"
+syr_gavras_conquests_desc: "As a boy, Callimachus dreamed of something more. Raised on the stories of Alexander and his men, the young prince was determined that his minor lordship in Damascus should expand to become a proper kingdom. After he succeeded his father to the throne, he spent every effort to realise this dream, and now we live in a time where a united Syria reigns supreme over the region, where hundreds of minor kings crowd into Callimachus' palace to give tribute, and where his authority as king is no longer questioned."
+syr_trade_entrepot: "Merchants of Syria"
+syr_trade_entrepot_desc: "The men of Syria are famous across the known world for their shrewd practices and negotiation skills, making them some of the finest merchants the world has ever known. They say that you can find a Syrian merchant in every mapped entrepot. While this may not be entirely truly, it is certainly testament to our widespread dominance and mercantile ambition."
+syr_damascus_steel: "Damascus Steel"
+syr_damascus_steel_desc: "Iron imported from the far east is treated and shaped by the skilled smiths of Damascus, and forged into a unique type of steel in local workshops. This steel is much stronger than anything produced by our competitors, and as such has been used to great success in producing swords and other pieces of military equipment. As long as we keep the secret to its strength to ourselves, our monopoly over Damascus steel will provide us with unparalleled strength."
+syr_silk_road: "The Silk Road"
+syr_silk_road_desc: "The Silk Road is a prestigious trade route that stretches from Carthage to China, and along the way passes through our lands. The settlements of Damascus and Palmyra function as major stop off points for merchants travelling along the road, leading to many luxurious items being traded off there, greatly enriching our own local merchants."
+syr_decree_of_subordinance: "Decree of Subordinance"
+syr_decree_of_subordinance_desc: "The conquests that won us this kingdom also resulted in the subjugation of a number of minor kings and princes, who now operate autonomously along our frontiers. While they provide somewhat regular tribute and profess their loyalty to us when needed, it is clear that their hearts are not entirely on our side. Let us introduce a new decree to be read to all our subject kings - we will not tolerate any disobedience, and all actions taken by these kings will be done with our consent."
+syr_phoenician_trades: "Gateway to the World"
+syr_phoenician_trades_desc: "Phoenicia has been a hub for merchants and wealth for thousands of years, and although it has fallen far since its heyday, it is still a force to be reckoned with. Under our dominion, the Phoenician cities are sharing some of their vast riches with us, leading to our profits soaring and exotic goods flooding into the country."
+syr_well_watered_land: "One Syria, One Memory"
+syr_well_watered_land_desc: "Out of what was once a minor principality in Damascus, we have forged a mighty kingdom. We must never forget our roots however - our heritage is just as important as the prosperity we know enjoy. Every Syrian must keep this knowledge in their hearts, else our humility will crack and the pride we embody will fail."
+
+phoenician_ideas: "Phoenician Ideas"
+phoenician_ideas_start: "Phoenician Traditions"
+phoenician_ideas_bonus: "Phoenician Ambition"
+
+phoenician_bankers: "Invest in the Banking Sector"
+phoenician_bankers_desc: "Many of the wealthy families in Phoenicia have turned to banking as a way to perpetuate their wealth down the generations. Our shared heritage and friendship with some of the families can secure us some favourable loans and advice from these financial experts."
+phoenician_timber: "Cedar Forests"
+phoenician_timber_desc: "Since antiquity, Phoenicia has been the best source of timber in the region. While new markets have opened up across the world, their quality will never match that of the trees that grow on our slopes."
+phoenician_trades: "Phoenician Mercantile Prowess"
+phoenician_trades_desc: "Phoenicia has always been home to powerful merchants and influential city states. Goods from pass through our ports into the hands of people all across the world, and as a result, our merchants have some of the best maps and use some of the most efficient trade routes known to man."
+phoenician_cities: "Autonomous City States"
+phoenician_cities_desc: "This land has always been divided up into its cities, chiefly the three jewels of Sidon, Tyre, and Byblos. Come what may, each city will make a stand to protect their independence, ensuring that our democracies stay intact and no foreign power can dictate the will of a Phoenician merchant."
+phoenician_urbanisation: "Public Investment"
+phoenician_urbanisation_desc: "The state exists for the purpose of serving and protecting the people, and thus it is only right if we use the vast reserves of wealth we have accumulated from our successful trading enterprises to invest in our cities' public infrastructure. Our cities will be the best places to live in, and the envy of the world."
+phoenician_dye: "Tyrian Purple"
+phoenician_dye_desc: "Produced solely from the sea snails that live off the coast of Tyre, Tyrian purple is a unique luxury dye that is still produced to this day by the dilligent craftspeople of our country. Over the years, it has become associated with royalty and particularly imperial rule, bringing the cities that export it great prestige and fame."
+phoenician_goods: "The Factory System"
+phoenician_goods_desc: "As economies across the world develop into extensions of the state, we must work to ensure that the will of our private citizens is never infringed upon by this process. Industrialisation must be done by the hard working men and women of Phoenicia by their own merit, and through this freedom, prosperity will be brought to the whole land."
+
+greek_minor_ideas: "Hellenic Ideas"
+greek_minor_ideas_start: "Hellenic Traditions"
+greek_minor_ideas_bonus: "Hellenic Ambition"
+
+greek_minor_ideas_1: "Alexander's Legacy"
+greek_minor_ideas_1_desc: "Many centuries ago, Alexander the Great, a man of our own nation, swept through these lands as he created a mighty empire and an influence to stand the test of time. We should tap into his legacy to legitimise our own claims in the modern day."
+greek_minor_ideas_2: "Hellenic Renaissance"
+greek_minor_ideas_2_desc: "The era of philosophers was thought long behind us, but a recent era of prosperity and investment has led to a positive rebirth of the arts and sciences."
+greek_minor_ideas_3: "Syncretism"
+greek_minor_ideas_3_desc: "While we adhere to the Hellenic faith, there are still pockets of dissent within a sea of loyalty. Just like our ancestors did when they first came to these lands, we must learn to tolerate them and eventually absorb them into our own religion."
+greek_minor_ideas_4: "Reunite the Greek Diaspora"
+greek_minor_ideas_4_desc: "The Hellenistic Age deposited Greek minorities across the Middle East and beyond, many of whom would go on to found the dynasties that rule today. Using our shared heritage and language, we can connect with these despots more easily."
+greek_minor_ideas_5: "Modernised Companion Cavalry"
+greek_minor_ideas_5_desc: "Since antiquity the cavalry of the Hellenes has been feared the world over. Let us restore our venerable horseriding traditions, but adapt them for the increasingly competitive modern world."
+greek_minor_ideas_6: "The Eastern Trades"
+greek_minor_ideas_6_desc: "Our holdings in the east are the gateway for many exotic and luxury goods to come flooding into the Mediterranean via the Silk Road. With a few careful tariffs and investment in trade infrastructure, we will be able to squeeze the traders that pass through our lands down to their last pennies."
+greek_minor_ideas_7: "Pan-Hellenism"
+greek_minor_ideas_7_desc: "No matter our wars and arguments, we are all Hellenes, and Hellenes should stand together even in the most dire of times."
+
+kar_order_of_dionysus: "Order of Dionysus"
+kar_order_of_dionysus_desc: "REPLACE_ME"
+kar_dionysus_eleutherios: "Dionysus Eleutherios"
+kar_dionysus_eleutherios_desc: "REPLACE_ME"
+kar_wine: "Vinyards of the Taurus"
+kar_wine_desc: "REPLACE_ME"
+kar_spirited: "Delphian Courage"
+kar_spirited_desc: "REPLACE_ME"
+kar_advisor_to_the_archon: "Left Ear of the Archon"
+kar_advisor_to_the_archon_desc: "REPLACE_ME"
+kar_mountain_strongholds: "Reinforce the Strongholds"
+kar_mountain_strongholds_desc: "REPLACE_ME"
+kar_careless_and_carefree: "Careless and Carefree"
+kar_careless_and_carefree_desc: "REPLACE_ME"
+
+arm_azatavrear: "Azatavrear"
+arm_azatavrear_desc: "The Armenian cavalry have for centuries been made up of the Azatavrear, an elite body of riders drawn from the nobility, often made up of the second and third sons of powerful landowners who stand to get little inheritance. Their tactics and terror are second to none, and the sight of one of our cavalry charges down the mountainside has been enough to make many enemy armies turns and flee."
+arm_border_patrols: "Permanent Border Patrols"
+arm_border_patrols_desc: "In times of peace, we must still be vigilant. Our country is surrounded by enemies, predators who would take every chance to cripple us and finally break our hold over southern Caucasia. We must thus always be ready for war. When they are not engaged in other duties, our army should patrol the borders and frontiers of our nation, protecting us from foreign threats and keeping the peace in the most vulnerable regions."
+arm_home_of_the_reformation: "Home of the Reformation"
+arm_home_of_the_reformation_desc: "Armenia has followed the Hellenic faith for a long time now, but its tenets and doctrines have never been completely satisfactory for us. Now that calls for a return to the pastoral, more decentralised traditional version of the religion are growing, many of our countrymen have found themselves drawn towards dissent. The concept of Armenian identity and pride are quickly being linked with adherence to reformist views, which promise to unite and reform our nation like nothing before it."
+arm_memory_of_empire: "Memories of Empire"
+arm_memory_of_empire_desc: "We once commanded a great empire, stretching from Persia to Jerusalem. While our state has shrunk greatly over the years, we still remember that golden age fondly, and many of our folk tales and legends are set there. With enough courage and patience, one day we will have an empire once more."
+arm_strife: "Internal Stability"
+arm_strife_desc: "Many rebellions and wars have plagued the Armenian homeland for generations, but it is only now that we are finally reaching a place of peace. A balance between the power of the king and the power of the estates must be achieved to bring lastin stability to the nation."
+arm_nationalism: "Armenian Nationalism"
+arm_nationalism_desc: "Our people are proud and our nation is glorious. Let us never forget both the power and suffering of our ancestors, and let our hearts swell with spirit and our minds remain humble."
+arm_governors: "Establish the Governorship"
+arm_governors_desc: "The kingdom is vast and unmanageable by one central government, and always has been. To combat this, previous rulers partitioned their lands between different governors to ease the burden of administration, but oftentimes these governorships created little more than hotbeds for rebellion and unrest. Let us reform this system, and ensure only the most skilled, worthy, and loyal people are appointed as governors, subject to regular checks by the king."
+
+cpd_agapian_revolution: "The Agapian Revolution"
+cpd_agapian_revolution_desc: "The wicked republican government of Adana was overthrown in 1421 by a popular uprising, leading to a power vacuum that was easily exploited by our enemies. We lost territory in the east, the important city of Antioch, and perhaps the biggest blow of all, Cyprus. In the chaos, the young Telemachus Agapian seized power, presenting himself as the embodiment of providence and destiny, and promising to bring stability to the realm."
+cpd_witches_familiar: "Witches' Familiar"
+cpd_witches_familiar_desc: "Rumours constantly circulate about Telemachus' heritage, particularly about his relationship with his mother. The woman was a known witch, living in seclusion in a cave on Cyprus, and was often condemned for her forbidden brews and magic. It has been suggested that as a boy Telemachus was educated in these arts by her, and may retain some of that knowledge to this day."
+cpd_free_ports: "Free Ports"
+cpd_free_ports_desc: "Many consider our country unstable and potentially dangerous, and are therefore often reluctant to do any business with us. If we designate some select port towns along our coasts as 'free ports', where no tariffs or taxes can be collected, we can attempt to lure back the lucrative trade we once enjoyed."
+cpd_city_state_governance: "Governance of the City"
+cpd_city_state_governance_desc: "The old government of Adana, while corrupt and in dire need of reformation, was certainly a wealthy and impressive one. Festivals and feasts would be provided with more food than could be eaten by the city in a year, while the streets ran red with the finest Babylonian cloth, decorated with intricate patterns shaped from Indian gold. Every citizen wants to live in such luxury again - but some serious changes will have to be made to prevent the city from slipping back into its well-accustomed decadence"
+cpd_leaders_of_the_revolution: "Righteous Reconquest"
+cpd_leaders_of_the_revolution_desc: "We once controlled an expansive realm, stretching from sea to sea. But times have changed, and many new kingdoms and empires have risen and taken parts of what is rightfully ours. With a reformed military behind us, we will attract the finest generals from across the world to come and serve in our resurrection."
+cpd_temples_above_all: "Theocracy"
+cpd_temples_above_all_desc: "The gods are above all, always have been, always will be. The old government of Adana did not respect that - they saw themselves as their own gods, wealthy, powerful, and removed from the petty troubles of the mortals below them. It is time that our state restored the supremacy of the gods, and let their policies and guidance once again take the helm."
+cpd_seize_the_day: "Seize the Day"
+cpd_seize_the_day_desc: "Every moment is an opportunity, if you have the will to seize it. Let us never be idle and grow comfortable with our success - we must always push for more, expanding our horizons, scoring yet more victories. The only day we can rest is that holy one when our caskets are lowered into the ground, and at last the story of our deeds is over."
+
+CAI_ideas: "Carian Ideas"
+CAI_ideas_start: "Carian Traditions"
+CAI_ideas_bonus: "Carian Ambition"
+
+cai_hexapolis: "Hexapolis"
+cai_hexapolis_desc: "The region controlled by our country today was in antiquity the domain of the Doric hexapolis, the six powerful trading colonies the Greeks set up on our shores. These important sites are still regularly visited by traders to this day."
+cai_macedonian_yoke: "The Macedonian Yoke"
+cai_macedonian_yoke_desc: "Caria, like much of Anatolia, fell remarkably quickly to the forces of Macedon. Our lands proved too wild and unruly to properly control however, and hence our lords were granted an unprecedented amount of autonomy. No prince nor noble likes the Macedonian yoke, and our opposition to it has helped us put our differences aside and unite against our common enemy."
+cai_wild_men: "Men of Stone"
+cai_wild_men_desc: "The rugged nature of our homeland and the ferocity with which our warriors fight has earned us the somewhat praising title of 'men of stone'. We shall use this reputation to enforce our will at home and abroad!"
+cai_carian_hills: "Tribal Independence"
+cai_carian_hills_desc: "Despite the sophistication and wealth of our coastal cities, much of the interior of Caria and Anatolia as a whole is still ruled by tribal peoples. In exchange for being allowed to continue their way of life, we require they send us tribute in the form of their famous warriors."
+cai_prodonius_reforms: "Reforms of Prodonius"
+cai_prodonius_reforms_desc: "Prodonius was a prince of Caria in the 13th century, known for both his fine taste in women and in food. Under his jurisdiction, a new code was introduced to our ports, mandating a certain quality for all goods that entered. This helped ensure our reputation was high abroad, as well as appeased the prince's keen sense of smell."
+cai_anatolian_blood: "Anatolian Blood"
+cai_anatolian_blood_desc: "Many of our nobles are Greeks, our overlords are Greek, and many of our towns were founded by Greeks, but nonetheless, we are still Anatolian to our core. We will fight and die beside our wilder brothers and sisters the moment they call upon us."
+cai_working_together: "Adopting the Polis System"
+cai_working_together_desc: "The Greek city states were self-governing, managed by a collection of citizens who engaged in a remarkable form of direct democracy. Our cities are powerful and rich much like those of the ancients, and many have suggested that modelling our administration on that of our ancestors would serve us well in the future."
+
+LSB_ideas: "Lesbian Ideas"
+LSB_ideas_start: "Lesbian Traditions"
+LSB_ideas_bonus: "Lesbian Ambition"
+
+lsb_common_rule: "Common Governance"
+lsb_common_rule_desc: "Since antiquity Lesbos has been ruled by a council made up of the elites of the island, ensuring that all policies are well thought through and have the consent of all the most knowledgable islanders."
+lsb_aegean_fleet: "Aegean Dominance"
+lsb_aegean_fleet_desc: "The fleet of Lesbos has been known throughout the Aegean and beyond for a long time, and we have often used it to crush pirate strongholds and protect our traders. The time has come to strengthen it, however, in the face of the growing armadas of Macedonia and Aegyptos, to ensure we retain our power there."
+lsb_mother_of_the_island: "Mother of the Island"
+lsb_mother_of_the_island_desc: "Our leader is affectionately given the title of 'mother of the island', a position which unites us all in one common love and ensures a natural and respected hierarchy stands."
+lsb_pottery: "Lesbian Pottery"
+lsb_pottery_desc: "Lesbos has become a regional center of the pottery industry, controlling the process from extraction and shaping all the way up to the painting. Our vases and pots are used by people across the Mediterranean to store their food and drink."
+lsb_poetry: "Women of Words"
+lsb_poetry_desc: "In the spirit of our ancestors, including the famous writer Sappho, many of the women of Lesbos are educated in the classics and literature. Men from foreign lands often remark on their insecurity in the face of our learned 'women of words'."
+lsb_bishop_of_mytilene: "Bishop of Mytilene"
+lsb_bishop_of_mytilene_desc: "Ever since the Archon seized control of the Hellenic faith, our local bishops have been strong voices within the halls of Athens, advocating for the people and privileges of Lesbos. Our faith in their deeds has secured our loyalty to the Archon over the centuries."
+lsb_settlers: "Island Expansion"
+lsb_settlers_desc: "As our population grows, we are rapidly running out of fertile land off of which people can live. The time has come to invest in ambitious land reclaimation projects around our shores, and seek easy targets on other islands, and perhaps even beyond the Aegean."
+
 ################
 # Events
 ################
@@ -185,6 +438,70 @@ pf_bby.3.a: "The Archon has never failed us."
 pf_bby.3.b: "Let us revive the Old Gods!"
 pf_bby_retained_hellenic: "Loyalty to the Archon"
 pf_bby_new_religion: "Reintroducing the Works of the Ancestors"
+
+pf_pho.1.t: "The Timber Industry"
+pf_pho.1.d: "Since time immemorial, the cedar forests of the highlands of Phoenicia have served as the primary source of timber for much of the Middle East and beyond. Its quality and quantity was unparalleled elsewhere, and it was even so mythical and significant that the forest was said to be the home of the Mesopotamian gods. Now that we have seized control over this region and operate by only our own whims, we are free to do as we please with this abundance of timber."
+pf_pho.1.a: "We should keep our timber for our own constructions."
+pf_pho.1.b: "The whole world should know the quality of our timber."
+pf_pho_local_timber: "Local Timber Production"
+pf_pho_local_timber_ex: "Local Timber Exports"
+
+pf_pho.2.t: "Adoping the Royal Purple"
+pf_pho.2.d: "Tyrian purple has been made in the city for thousands of years, and all that time it has been the source of both a great pride and a great stink for us. Despite the effort that needs to be put into it, the product is well worth it, fetching extraordinarily high prices abroad. Our purple clothes the kings and emperors of the world - should it not also bless our rulers?"
+pf_pho.2.a: "We should take pride in our dyes!"
+pf_pho.2.b: "We are so much more than just our colour!"
+pf_pho_change_colour_to_purple_tt: "Our country will change its map colour to §PTyrian Purple§!."
+
+pf_arm.1.t: "The Fall of the Kingdom of Armenia"
+pf_arm.1.d: "Armenia has been home to a great kingdom for nearly two-thousand years. Throughout all that time, while our borders have certainly had their ebs and flows, no one ever thought to question whether the nation would remain intact. Recent decades have brought dark decades for Armenia however - the old incompetent king Tigranes XII still clings on desperately to both his life and his throne, squandering away the royal treasury on concubines and booze. In every province, the local governors are pushing for more and more autonomy and influence, sensing the great weakness at the heart of government and intending to exploit it fully.\n\nThe ambitions of one David, a noble by birth and originally governor of Tbilisi, have grown like a cancer within the realm, and now threaten to kill it entirely. Using his growing fame and power, he has gradually acquired territories across the north of our country, and has even begun styling himself as 'lord of the Georgians', a call back to a long-forgotten people and heritage that used to preside in that region. David's careful friendship with Tigranes has given his treason legitimacy and recognition, but all the other advisors to the court see what it really is. All we can do is buy time before he rebels fully against the crown, and even the gods cannot tell us what will happen then.\n\nThe eastern flank of Armenia defected long ago, and is now ruled by the upstart kingdom of Alarion. It may be a distant dream, but reunion with these lands would certainly go far in restoring the prestige of our kingdom. To the south, the Vanite vassals are growing increasing distant from affairs in Yerevan, and seem to be aligning themselves more and more with our rivals in Babylon than their legitimate lieges. Predators surround us from all sides, and yet the king does little but sit idly drinking away his days. These are dire times..."
+pf_arm.1.a: "Perhaps this is the end of days?"
+pf_arm_will_get_disaster_tt: "The disaster §YThe Fall of Armenia§! will start progressing."
+
+pf_ath.4.t: "Kicking the Archon up the Arse"
+pf_ath.4.d: "How it started is quite ridiculous - what began as a friendly game of darts in a tavern between the Bishop of [bishop_province.GetName] and a local priest has become a challenge of almighty proportions. After losing a series of matches, the Bishop has been forced by his own integrity to accept the forfeit - he was to kick the Archon up the arse. Fortunately for him, the Archon was visiting [Root.GetName] that very week, providing ample time for the deed to be done. After a lengthy discussion about the gods, the Bishop took his shot as the Archon bent over to tie his shoe. Word has reached the [Root.Monarch.GetTitle] quickly, and now it seems it is up to us to take charge of the situation."
+pf_ath.4.a: "Try to convince the Archon the Bishop couldn't have done it."
+pf_ath.4.b: "Force the Bishop to apologise for this impious act."
+pf_ath.4.c: "Execute this Bishop for his crime!"
+pf_ath.4.e: "I would quite like to boot him up the arse as well..."
+opinion_kicked_up_arse: "Kicked the Archon up the Arse"
+opinion_kicked_up_arse_apologised: "Apologised for kicking the Archon up the Arse"
+opinion_insult_avenged: "Avenged an insult to the Archon"
+pf_ath_4_archon_dip_challenge_tt: "The results of this challenge will depend on the §YArchon's§! £dip£ skill."
+
+pf_ath.5.t: "Consulting the Oracle"
+pf_ath.5.d: "Seeking answers about our often tumultuous future, the [Root.Monarch.GetTitle] has today arrived at Delphi to inquire the Oracle there for the answers. The Oracle has been a respected bastion of the truth for thousands of years now, and many from peasants to kings still seek her advice routinely. Once you walk past the gift shops and menacing Archonic Guard members standing outside the gates, the shrine of the Oracle is quite something to behold, arousing a feeling unlike anything else one could experience on earth in the viewer. But the [Root.Monarch.GetTitle] is not here to feel good - [Root.Monarch.GetSheHe] is here to know what will come..."
+pf_ath.5.a: "We shall see what she says..."
+oracle_of_delphi_random: "Oracle of Delphi is Prophecising..."
+
+pf_ath.6.t: "The Oracle's Answer"
+pf_ath.6.d: "After some hours of deliberation, the Oracle has returned with a verdict on the [Root.Monarch.GetTitle]'s future..."
+pf_ath.6.a: "Ahhh, I am so glad!"
+pf_oracle_prosperity: "Oracle Prophecises Prosperity"
+
+pf_ath.7.t: "The Oracle's Answer"
+pf_ath.7.d: "After some hours of deliberation, the Oracle has returned with a verdict on the [Root.Monarch.GetTitle]'s future..."
+pf_ath.7.a: "Victory will be mine!"
+pf_oracle_victory: "Oracle Prophecises Victory"
+
+pf_ath.8.t: "The Oracle's Answer"
+pf_ath.8.d: "After some hours of deliberation, the Oracle has returned with a verdict on the [Root.Monarch.GetTitle]'s future..."
+pf_ath.8.a: "I get by with a little help from my friends!"
+pf_oracle_friendship: "Oracle Prophecises Friendship"
+
+pf_ath.9.t: "The Oracle's Answer"
+pf_ath.9.d: "After some hours of deliberation, the Oracle has returned with a verdict on the [Root.Monarch.GetTitle]'s future..."
+pf_ath.9.a: "Peace in our time!"
+pf_oracle_peace: "Oracle Prophecises Peace"
+
+pf_ath.10.t: "The Oracle's Answer"
+pf_ath.10.d: "After some hours of deliberation, the Oracle has returned with a verdict on the [Root.Monarch.GetTitle]'s future..."
+pf_ath.10.a: "Oh curses!"
+pf_oracle_chaos: "Oracle Prophecises Chaos"
+
+pf_ath.11.t: "The Oracle's Answer"
+pf_ath.11.d: "After some hours of deliberation, the Oracle has returned with a verdict on the [Root.Monarch.GetTitle]'s future..."
+pf_ath.11.a: "This is not a good omen!"
+pf_oracle_defeat: "Oracle Prophecises Defeat"
 
 ################
 # Missions
@@ -292,3 +609,17 @@ pf_bby_constructions_has_architect_no_tt: "£no£ If we have a hired §YArchitec
 pf_bby_survey_the_fields_title: "Survey the Fields"
 pf_bby_survey_the_fields_desc: "Agricultural is the lifeblood of our people and economy. We must ensure that no field or farm is hidden from our administrative record, so that all production can be effectively taxed and distributed."
 pf_bby_devving_production_bonus_tt: "Developing provinces for §YBase Production§! £dip£ will yield twice the benefit for §Y20 years§!."
+
+
+########### Caria
+
+pf_cai_get_independence_title: "Secure our Independence"
+pf_cai_get_independence_desc: "We have suffered under the rule of Macedonia for too long. If we can secure enough powerful allies and build up our native forces, we just might be able to throw off their yoke and once again restore our independence."
+pf_cai_independent_modifier: "Independence at Last"
+
+pf_cai_conquer_ionia_title: "Conquest of Ionia"
+pf_cai_conquer_ionia_desc: "Ionia is a region with a long, storied history. Populated by powerful Greek cities, it is wealthy in both gold and prestige, and would make a fine piece in our collection of territories."
+
+pf_cai_assuwa_league_title: "A Kingdom of Fire"
+pf_cai_assuwa_league_desc: "We have struggled against the powers that seek to oppress us and remarkably come out on top. Let us celebrate this victory by proclaiming a new union of the peoples of western Anatolia, rekindling our heritage and looking back on the ancient polities that ruled here before us, among them the Assuwa League and the great Lydian empire."
+pf_cai_reunited_assuwa: "United Western Anatolia"

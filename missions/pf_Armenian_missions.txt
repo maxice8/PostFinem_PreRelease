@@ -1,0 +1,416 @@
+pf_arm_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		#tag = ARM
+		always = no
+	} 
+
+	pf_arm_reinforce_yerevan = {
+		icon = alpine_fortifications
+		position = 2
+		provinces_to_highlight = {
+			province_id = 419	# Yerevan
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_fort_building_trigger = yes }
+				NOT = { development = 18 }
+			}
+		} 
+
+		trigger = {
+			owns_core_province = 419
+			419 = {
+				has_fort_building_trigger = yes
+				development = 18
+			}
+			OR = {
+				fortification_expert = 1
+				has_mil_advisor_2 = yes
+			}
+		} 
+
+		effect = {
+			add_army_tradition_or_mil_power = {
+				amount = 15
+			}
+			custom_tooltip = empty_line_tt
+			419 = {
+				add_or_upgrade_manpower_building = yes
+				add_province_modifier = {
+					name = "pf_arm_walls_of_yerevan"
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	pf_arm_caspian_renaissance = {
+		icon = mission_patronize_sufi_scholars
+		position = 4
+		required_missions = {
+			pf_arm_reinforce_yerevan
+			pf_arm_defeat_alarion
+		}
+		provinces_to_highlight = {
+			province_id = 421
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_tax_building_trigger = yes }
+			}
+		} 
+
+		trigger = {
+			owns_core_province = 421
+			421 = {
+				has_tax_building_trigger = yes
+			}
+			prestige = 30
+		} 
+
+		effect = {
+			define_advisor = {
+				type = artist
+				skill = 1
+				discount = yes
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_arm_caspian_renaissance_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					NOT = { has_institution = renaissance }
+				}
+				custom_tooltip = pf_arm_if_renaissance_yes_tt
+				capital_scope = {
+					add_institution_embracement = {
+						which = renaissance
+						value = 50
+					}
+				}
+			}
+			else = {
+				custom_tooltip = pf_arm_if_renaissance_no_tt
+				tooltip = {
+					capital_scope = {
+						add_institution_embracement = {
+							which = renaissance
+							value = 50
+						}
+					}
+				}
+			}
+		} 
+	}
+
+	pf_arm_artaxiad_power = {
+		icon = arm_artaxiad_legacy
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			legitimacy = 100
+			ruler_total_stats = {
+				amount = 15
+			}
+			has_heir = yes
+			heir_claim = 100
+			power_projection = 75
+		} 
+
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 30
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_arm_artaxiad_power_modifier"
+				duration = 10950
+			}
+		} 
+	}
+
+	pf_arm_hegemony = {
+		icon = a_place_among_the_great_powers
+		position = 7
+		required_missions = { pf_arm_artaxiad_power } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				has_mil_advisor_3 = yes
+				has_commanding_three_star = yes
+			}
+			OR = {
+				num_of_cities = 200
+				army_size = 400
+				navy_size = 300
+			}
+		} 
+
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			custom_tooltip = empty_line_tt
+			add_ruler_personality = iron_crowned_personality
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_arm_perma_mil"
+				duration = -1
+			}
+		} 
+	}
+}
+pf_arm_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		#tag = ARM
+		always = no
+	} 
+
+	pf_arm_davids_revolt = {
+		icon = per_establish_the_qurchi
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				area = imereti_area
+				area = kartli_kakheti_area
+			}
+			NOT = { owned_by = ROOT }
+		} 
+
+		trigger = {
+			imereti_area = {
+				type = all
+				owned_by = ROOT
+			}
+			kartli_kakheti_area = {
+				type = all
+				owned_by = ROOT
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	pf_arm_defeat_alarion = {
+		icon = per_establish_eastern_defenses
+		position = 3
+		required_missions = { pf_arm_eagle_takes_flight } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_arm_heart_of_persia = {
+		icon = mam_persia
+		position = 5
+		required_missions = { pf_arm_heirs_of_cyrus } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_arm_personal_rule = {
+		icon = carolingian_empire
+		position = 7
+		required_missions = { pf_arm_artaxiad_power } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_arm_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		#tag = ARM
+		always = no
+	} 
+
+	pf_arm_faith_in_the_throne = {
+		icon = mission_restore_faith_in_the_throne
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_arm_eagle_takes_flight = {
+		icon = mission_plc_purple_phoenix
+		position = 2
+		required_missions = {
+			pf_arm_davids_revolt
+			pf_arm_faith_in_the_throne
+			pf_arm_loyal_vassals
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_arm_heirs_of_cyrus = {
+		icon = per_tim_legacy_of_timur
+		position = 4
+		required_missions = { pf_arm_defeat_alarion } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_arm_invade_mesopotamia = {
+		icon = mission_pf_blue_gates
+		position = 5
+		required_missions = { pf_arm_heirs_of_cyrus } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_arm_great_armenia = {
+		icon = arm_proclaim_great_armenia
+		position = 7
+		required_missions = {
+			pf_arm_invade_mesopotamia
+			pf_arm_claim_cilicia
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_arm_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		#tag = ARM
+		always = no
+	}  
+
+	pf_arm_loyal_vassals = {
+		icon = mission_unite_the_princes
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_arm_control_van = {
+		icon = mission_advance_to_the_dnieper
+		position = 3
+		required_missions = { pf_arm_eagle_takes_flight } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_arm_conquer_pontus = {
+		icon = byz_pontic_empire
+		position = 5
+		required_missions = { pf_arm_control_van } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_arm_claim_cilicia = {
+		icon = arm_restore_armenian_cilicia
+		position = 6
+		required_missions = { pf_arm_conquer_pontus } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+pf_arm_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		#tag = ARM
+		always = no
+	} 
+
+	pf_arm_support_the_vinyards = {
+		icon = mission_wine_monopolies
+		position = 2
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_arm_noble_estates = {
+		icon = balance_the_estates
+		position = 3
+		required_missions = { pf_arm_support_the_vinyards } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_arm_frontier_fortifications = {
+		icon = mission_fortify_mandu
+		position = 4
+		required_missions = {
+			pf_arm_control_van
+			pf_arm_noble_estates
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	pf_arm_conquer_anatolia = {
+		icon = anatolian_frontier
+		position = 6
+		required_missions = { pf_arm_conquer_pontus } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}

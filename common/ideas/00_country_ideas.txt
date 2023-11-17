@@ -5946,48 +5946,6 @@ KAZ_ideas = {
 	}
 }
 
-ARM_ideas = {
-	start = {
-		war_exhaustion = -0.02
-		recover_army_morale_speed = 0.10
-	}
-
-	bonus = {
-		hostile_attrition = 1
-	}
-	
-	trigger = {
-		OR = {
-			tag = ARM
-			tag = MLK
-		}
-	}
-	free = yes		#will be added at load.
-	
-	apostolic_church = {
-		global_missionary_strength = 0.02
-	}
-	land_reclamation = {
-		development_cost = -0.1
-	}
-	border_nation = {
-		diplomatic_reputation = 1
-	}
-	melikdom_organization = {
-		global_tax_modifier = 0.1
-	}
-	sygnakhs = {
-		global_regiment_cost = -0.1
-	}
-	nakharar_titles = {
-		army_tradition = 0.5
-	}
-	end_of_armenian_diaspora = {
-		production_efficiency = 0.1
-	}
-}
-
-
 WLS_ideas = {
 	start = {
 		hostile_attrition = 1

@@ -1,0 +1,20 @@
+edict_greek_assimilation = {
+	potential = {
+		pf_belongs_to_greek_culture_group = yes
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		local_culture_conversion_cost = -0.15
+	}
+	
+	color = { 178 46 113 }
+	
+	
+	ai_will_do = {
+		factor = 0
+	}
+}

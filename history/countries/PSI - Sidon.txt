@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = merchants_reform
+primary_culture = heliodori
+religion = hellenic
+technology_group = eastern
+capital = 1855	# Sidon
+government_rank = 1
+
+1444.11.11 = {
+	monarch = {
+		name = "Antoninos"
+		dynasty = "Zellanthras"
+		adm = 2
+		dip = 4
+		mil = 1
+		birth_date = 1400.05.30
+		death_date = 1445.01.01
+	}
+	set_estate_privilege = estate_burghers_pf_phoenician_merchants
+}

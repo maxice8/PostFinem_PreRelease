@@ -1,0 +1,113 @@
+pf_cai_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = CAI
+	}
+
+	pf_cai_get_independence = {
+		icon = mam_arabia
+		position = 1
+		required_missions = { } 
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+		}
+		trigger = {
+			is_subject = no
+			OR = {
+				army_size_percentage = 1
+				num_of_allies = 2
+			}
+			num_of_generals = 1
+		}
+		effect = {
+			add_yearly_manpower = 2
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_cai_independent_modifier"
+				duration = 9125
+			}
+			add_area_perma_claim = {
+				area = aydin_area
+			}
+			add_area_perma_claim = {
+				area = germiyan_area
+			}
+		}
+	}
+	pf_cai_conquer_ionia = {
+		icon = arb_riyadh
+		position = 2
+		required_missions = { pf_cai_get_independence } 
+		provinces_to_highlight = {
+			area = aydin_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			aydin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_army_tradition_or_mil_power = {
+				amount = 20
+			}
+			custom_tooltip = empty_line_tt
+			add_adm_power = 100
+			custom_tooltip = empty_line_tt
+			add_area_perma_claim = {
+				area = hudavendigar_area
+			}
+			add_area_perma_claim = {
+				area = ankara_area
+			}
+		}
+	}
+	pf_cai_assuwa_league = {
+		icon = per_reborn_in_fire
+		position = 3
+		required_missions = { pf_cai_conquer_ionia } 
+		provinces_to_highlight = {
+			OR = {
+				area = aydin_area
+				area = hudavendigar_area
+				area = ankara_area
+				area = germiyan_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 12
+				OR = {
+					area = aydin_area
+					area = hudavendigar_area
+					area = ankara_area
+					area = germiyan_area
+				}
+			}
+		}
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_cai_reunited_assuwa"
+				duration = 10950
+			}
+			add_area_perma_claim = {
+				area = anatolia_region
+			}
+			add_area_perma_claim = {
+				area = aegean_archipelago_area
+			}
+			add_area_perma_claim = {
+				area = thrace_area
+			}
+		}
+	}
+}
