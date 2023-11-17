@@ -9,7 +9,7 @@ ost_diplomatic_pressure_2 = {
 }
 
 ost_lords_of_ostgermania = {
-	development_cost_in_primary_culture = 0.1
+	development_cost_in_primary_culture = -0.1
 	manpower_in_culture_group_provinces = 0.1
 }
 
@@ -92,7 +92,7 @@ slo_homeofgold = {
 
 slo_defense_in_depth = {
 	local_garrison_size = 0.25
-	hostile_attrition = 1
+	local_hostile_attrition = 1
 }
 
 slo_the_grand_fort = {
@@ -135,6 +135,11 @@ mva_local_new_hope = {
 mva_local_sudeten = {
 	local_development_cost = -0.10
 	local_culture_conversion_cost = -0.25
+}
+
+sdt_united_peoples_modifier = {
+	manpower_in_own_culture_provinces = 0.2
+	same_culture_advisor_cost = -0.1
 }
 
 mva_local_not_hope = {

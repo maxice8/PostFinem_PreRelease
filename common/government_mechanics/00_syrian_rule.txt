@@ -1,0 +1,33 @@
+syrian_rule_mechanic = {
+	available = {
+		always = yes
+	}
+
+	powers = {
+		syrian_power = {
+			gui = syrian_rule_gov_mech
+			max = 100
+			min = 0
+			reset_on_new_ruler = no
+			base_monthly_growth = 0
+			is_good = yes
+			default = 30
+			scaled_modifier = {
+				modifier = {
+					reduced_liberty_desire = 50
+					global_autonomy = -0.10
+					diplomatic_annexation_cost = -0.15
+					all_estate_influence_modifier = -0.10
+				}
+			}
+			#on_min_reached = {
+			#	custom_tooltip = blackcoat_zeal_end_tt
+			#	hidden_effect = {
+			#		country_event = {
+			#			id = pf_trn.25	# The Counter Revolution
+			#		}
+			#	}
+			#}
+		}
+	}
+}

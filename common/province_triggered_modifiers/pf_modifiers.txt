@@ -146,6 +146,48 @@ oracle_of_delphi = {
 	}
 	
 }
+oracle_of_delphi_random = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		always = yes
+	}
+	local_autonomy = -0.01
+	#Province scope
+	on_activation = {
+		hidden_effect = {
+			random_list = {		# one day delay
+				# good
+				15 = {
+					owner = { country_event = { id = pf_ath.6 days = 6 } }
+				}
+				15 = {
+					owner = { country_event = { id = pf_ath.7 days = 6 } }
+				}
+				15 = {
+					owner = { country_event = { id = pf_ath.8 days = 6 } }
+				}
+				15 = {
+					owner = { country_event = { id = pf_ath.9 days = 6 } }
+				}
+				# bad
+				15 = {
+					owner = { country_event = { id = pf_ath.10 days = 6 } }
+				}
+				15 = {
+					owner = { country_event = { id = pf_ath.11 days = 6 } }
+				}
+			}
+			remove_province_triggered_modifier = oracle_of_delphi_random
+		}
+	}
+	
+	on_deactivation = {
+	
+	}
+	
+}
 
 pf_ksb_early_coal = {
 	potential = {
@@ -155,4 +197,55 @@ pf_ksb_early_coal = {
 		enlightenment = 100
 	}
 	trade_goods_size_modifier = -0.5
+}
+
+# Hellenic orders
+
+order_of_dionysus_home_modifier = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		religion = hellenic
+		owner = { religion = hellenic }
+	}
+	tolerance_own = 0.5
+	production_efficiency = 0.05
+
+	local_unrest = -3
+	local_autonomy = 0.10
+	
+	picture = "order_dionysus_icon"
+}
+archonic_guard_home_modifier = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		religion = hellenic
+		owner = { religion = hellenic }
+	}
+	tolerance_own = 0.5
+	mercenary_discipline = 0.05
+
+	local_manpower_modifier = 0.25
+	local_autonomy = 0.10
+	
+	picture = "order_archonic_icon"
+}
+isadorian_order_home_modifier = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		religion = hellenic
+		owner = { religion = hellenic }
+	}
+	tolerance_own = 0.5
+	build_cost = -0.05
+	
+	local_prosperity_growth = 0.5
+	local_autonomy = 0.10
+	
+	picture = "order_isadorian_icon"
 }

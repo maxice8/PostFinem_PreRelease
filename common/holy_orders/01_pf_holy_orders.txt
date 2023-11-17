@@ -1,0 +1,115 @@
+pf_isadorians = {
+    icon = GFX_holy_order_isadorians
+    trigger = {
+    	religion = hellenic
+    }
+    color = { 36 185 58 }
+    cost = 50
+    cost_type = adm_power
+    per_province_effect = {
+        add_base_tax = 1
+        tooltip = {
+            custom_tooltip = pf_isadorian_autonomy_tooltip
+        }
+        hidden_effect = {
+            add_local_autonomy = -25
+        }
+    }
+    per_province_abandon_effect = {
+        add_base_tax  = -1
+        hidden_effect = {
+            if = {
+                limit = { NOT = { base_tax  = 1 } }
+                set_base_tax  = 1
+            }
+        }
+    }
+    modifier = {
+        local_autonomy = -0.05
+        local_development_cost = -0.05
+        local_tax_modifier = 0.15
+    }
+    ai_priority = {
+        factor = 2
+    }
+    localization = holy_order
+}
+pf_order_of_dionysus = {
+    icon = GFX_holy_order_dionysus
+    trigger = {
+    	religion = hellenic
+    }
+    color = { 144 10 207 }
+    cost = 50
+    cost_type = dip_power
+    per_province_effect = {
+        add_base_production = 1
+        tooltip = {
+            custom_tooltip = pf_dionysus_wine_bonus_tooltip
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    trade_goods = wine
+                }
+                add_base_production = 1
+            }
+        }
+    }
+    per_province_abandon_effect = {
+        add_base_production = -1
+        hidden_effect = {
+            if = {
+                limit = { NOT = { base_production = 1 } }
+                set_base_production = 1
+            }
+        }
+    }
+    modifier = {
+        local_unrest = -2
+        local_production_efficiency = 0.20
+        trade_goods_size_modifier = 0.10
+    }
+    ai_priority = {
+        factor = 2
+    }
+    localization = holy_order
+}
+pf_archonic_guard = {
+    icon = GFX_holy_order_archonic
+    trigger = {
+    	religion = hellenic
+    }
+    color = { 207 36 10 }
+    cost = 50
+    cost_type = mil_power
+    per_province_effect = {
+        add_base_manpower = 1
+        tooltip = {
+            custom_tooltip = pf_archonic_papal_influence_bonus_tooltip
+        }
+        hidden_effect = {
+            owner = {
+                add_papal_influence = 1
+            }
+        }
+    }
+    per_province_abandon_effect = {
+        add_base_manpower = -1
+        hidden_effect = {
+            if = {
+                limit = { NOT = { base_manpower = 1 } }
+                set_base_manpower = 1
+            }
+        }
+    }
+    modifier = {
+        local_defensiveness = 0.10
+        local_hostile_attrition = 1
+        local_hostile_movement_speed = -0.10
+    }
+    ai_priority = {
+        factor = 2
+    }
+    localization = holy_order
+}

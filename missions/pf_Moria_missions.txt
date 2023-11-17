@@ -202,7 +202,7 @@ pf_mva_3 = {
 				limit = {
 					ai = no
 				}
-				prestige = 25
+				prestige = 20
 			}
 			else = { prestige = 10 }
 		}
@@ -242,7 +242,7 @@ pf_mva_3 = {
 			}
 			erzgebirge_area = {
 				type = all
-				NOT = { num_of_times_improved_by_owner = 3 }
+				num_of_times_improved_by_owner = 3
 			}
 			bohemia_area = {
 				type = all

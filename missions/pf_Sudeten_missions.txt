@@ -137,10 +137,12 @@ pf_sdt_2 = {
 					}
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
-				province_id = 134
-				OR = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
+				AND = {
+					province_id = 134
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
 				}
 			}
 		}
@@ -368,7 +370,7 @@ pf_sdt_5 = {
 	sdt_friends = {
 		icon = the_alpine_wall
 		position = 2
-		required_missions = { sdt_Markland } 
+		required_missions = { sdt_markland } 
 		provinces_to_highlight = { 
 			province_id = 64 
 			OR = {

@@ -83,6 +83,7 @@ pf_slo_1 = {
 				every_owned_province = {
 					limit = {
 						fort_level = 1
+						base_manpower = 5
 					}
 					add_province_modifier = {
 						name = "slo_defense_in_depth"
@@ -264,7 +265,7 @@ pf_slo_3 = {
 			OR = {
 				inquisitor = 1
 				slovakia_area = {
-					has_state_edict = edict_religion_enforced
+					has_state_edict = edict_religious_unity	
 				}
 			}
 		}
@@ -527,7 +528,7 @@ pf_slo_5 = {
 			}
 		}
 		effect = {
-			add_years_of_income = 4
+			add_years_of_income = 3
 		}
 	}
 	slo_metal_2 = {

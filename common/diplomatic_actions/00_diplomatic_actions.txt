@@ -392,6 +392,27 @@ annexationaction = {
 			}
 		}
 	}
+	# Annexing vassals as Syria
+	condition = {
+		tooltip = SYR_NEEDS_SYRIAN_POWER_TO_INTEGRATE
+		potential = {
+			has_government_mechanic = syrian_rule_mechanic
+			NOT = {
+				has_government_power = {
+					mechanic_type = syrian_rule_mechanic
+					power_type = syrian_power
+					value = 70
+				}
+			}
+		}
+		allow = {
+			has_government_power = {
+				mechanic_type = syrian_rule_mechanic
+				power_type = syrian_power
+				value = 70
+			}
+		}
+	}
 	# Annexing Satrapies
 	condition = {
 		tooltip = pf_per_cannot_annex_with_annexation_ban_tt
@@ -410,6 +431,18 @@ annexationaction = {
 			subtract_variable = {
 				which = can_annex_appanages_points
 				value = 1
+			}
+		}
+		if = {
+			limit = {
+				ROOT = { has_government_mechanic = syrian_rule_mechanic }
+			}
+			ROOT = {
+				add_government_power = {
+					mechanic_type = syrian_rule_mechanic
+					power_type = syrian_power
+					value = -40
+				}
 			}
 		}
 	}

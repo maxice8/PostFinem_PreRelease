@@ -1,0 +1,24 @@
+chivalry_mechanic = {
+	available = {
+		always = yes
+	}
+
+	powers = {
+		chivalry = {
+			gui = chivalry_gov_mech
+			max = 100
+			min = 0
+			reset_on_new_ruler = yes
+			base_monthly_growth = 0
+			is_good = yes
+			default = 15
+			scaled_modifier = {
+				modifier = {
+					heir_chance = 0.50
+					diplomatic_reputation = 2
+					monthly_splendor = 3
+				}
+			}
+		}
+	}
+}

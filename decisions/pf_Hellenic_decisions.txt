@@ -1,0 +1,106 @@
+country_decisions = {
+	pf_hellenic_philosopher_king = {
+		potential = {
+			religion = hellenic
+			NOT = { has_ruler_modifier = pf_hellenic_philosopher_king_modifier }
+		}
+		allow = {
+			religion = hellenic
+			has_regency = no
+			adm = 5
+		}
+		effect = {
+			add_papal_influence = 10
+			add_ruler_modifier = {
+				name = "pf_hellenic_philosopher_king_modifier"
+				duration = -1
+			}
+		}
+	}
+	pf_hellenic_king_by_own_right = {
+		potential = {
+			religion = hellenic
+			NOT = { has_ruler_modifier = pf_hellenic_king_by_own_right_modifier }
+		}
+		allow = {
+			religion = hellenic
+			has_regency = no
+			papal_influence = 20
+			adm = 3
+			dip = 3
+		}
+		effect = {
+			add_papal_influence = -20
+			add_ruler_modifier = {
+				name = "pf_hellenic_king_by_own_right_modifier"
+				duration = -1
+			}
+		}
+	}
+	pf_hellenic_guaranteed_freedom = {
+		potential = {
+			religion = hellenic
+			NOT = { has_ruler_modifier = pf_hellenic_enforce_freedom_modifier }
+		}
+		allow = {
+			religion = hellenic
+			has_regency = no
+			adm = 3
+			mil = 3
+			adm_power = 50
+		}
+		effect = {
+			add_adm_power = -50
+			add_ruler_modifier = {
+				name = "pf_hellenic_enforce_freedom_modifier"
+				duration = -1
+			}
+		}
+	}
+	pf_consult_the_oracle = {
+		potential = {
+			religion = hellenic
+		}
+		allow = {
+			religion = hellenic
+			146 = {
+				religion = hellenic
+				owner = { religion = hellenic }
+			}
+			papal_influence = 25
+			custom_trigger_tooltip = {
+				tooltip = pf_oracle_cooldown_tt
+				NOT = { has_ruler_flag = used_oracle }
+			}
+		}
+		effect = {
+			add_papal_influence = -25
+			set_ruler_flag = used_oracle
+			country_event = { id = pf_ath.5 }
+		}
+	}
+	pf_found_the_lsb_republic = {
+		potential = {
+			tag = LSB
+			NOT = { has_country_flag = lsb_republic }
+		}
+		allow = {
+			tag = LSB
+			NOT = { has_reform = pf_lesbian_republic }
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { government = republic }
+				}
+				change_government = republic
+				hidden_effect = {
+					kill_ruler = yes
+				}
+				add_republican_tradition = 50
+			}
+			add_government_reform = pf_lesbian_republic
+			set_country_flag = lsb_republic
+		}
+	}
+}
