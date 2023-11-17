@@ -495,7 +495,7 @@ pf_illyria_3 = {
 			prestige = 80
 			OR = {
 				ruler_total_stats = {
-					stats = 12
+					amount = 12
 				}
 				num_of_generals_with_traits = 3
 				has_leader_with = {
@@ -987,7 +987,7 @@ pf_illyria_5 = {
 				has_country_modifier = crown_authority_5
 			}
 			ruler_total_stats = {
-				stats = 12
+				amount = 12
 			}
 			legitimacy_equivalent = 100
 			OR = {
