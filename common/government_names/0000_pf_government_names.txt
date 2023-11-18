@@ -206,6 +206,59 @@ blackcoat_dictatorship_names = {
 		has_reform = pf_blackcoat_dictatorship
 	}
 }
+gallic_heirarchy_names = {
+	rank = {
+		1 = TOUTA           # Touta (Tribe or People)
+		2 = CANTON         # Canton (Group of Tribes)
+		3 = BRIGANTIA      # Brigantia (Great Tribal Kingdom)
+	}
+
+	ruler_male = {
+		1 = VERGOTRIX      # Vergotrix (Chief of the Tribe)
+		2 = RIX       # Rix (Leader of the Group of Tribes)
+		3 = USALRIX            # Usalrix (King)
+	}
+
+	ruler_female = {
+		1 = VERGOTRIGA     # Vergotriga (Female Chief of the Tribe)
+		2 = RIGA      # Riga (Leader of the Group of Tribes, Female)
+		3 = USALRIGA           # Usaliga (Queen)
+	}
+
+	consort_female = {
+		1 = VERGOTRIGA_BANNA # Vergotriga Banna (Lady of the Chief)
+		2 = RIGA_BANNA  # Riga Banna (Lady of the Group Leader)
+		3 = RIGA_BANNA       # Riga Banna (Lady of the King)
+	}
+
+	consort_male = {
+		1 = VERGOTRIX_BANNOS # Vergotrix Bannos (Lord of the Chief)
+		2 = RIX_BANNOS  # Bannos (Lord of the Group Leader)
+		3 = RIX_BANNOS       # Rix Bannos (Lord of the King)
+	}
+
+	heir_male = {
+		1 = MAPONOS_VOZD    # Maponos Vozd (Son of the Chief)
+		2 = MAPONOS_RIX # Maponos Rix (Son of the Group Leader)
+		3 = MAPONOS_RIX     # Maponos Rix (Son of the King)
+	}
+	heir_female = {
+		1 = MAPONA_VOZDA    # Mapona Vozda (Daughter of the Chief)
+		2 = MAPONA_RIGA # Mapona Riga (Daughter of the Group Leader)
+		3 = MAPONA_RIGA     # Mapona Riga (Daughter of the Queen)
+	}
+	
+	trigger = {
+		OR = {
+			has_reform = pf_gallic_hierarchy
+			AND = {
+				culture_group = gallic
+				government = monarchy
+			}
+		}
+	}
+}
+
 pf_hierophant = {
 	rank = {
 		1 = HIEROPHANTATE
