@@ -1398,15 +1398,27 @@ PF_Gaul_3 = {
 			province_id = 194
 			NOT = {
 				base_manpower = 5
-				has_state_edict = edict_defensive_edict
+				province_has_current_tech_fort_trigger = yes
 			}
 		}
 		trigger = {
-			194 = {
-				base_manpower = 5
-				has_state_edict = edict_defensive_edict
-				owned_by = ROOT
+			if = {
+				limit = {
+					ai = no
+				}		
+				194 = {
+					base_manpower = 5
+					province_has_current_tech_fort_trigger = yes
+					owned_by = ROOT
+				}
 			}
+			else = {
+				OR = { #so stupid AI can complete claims missions
+					194 = { base_manpower = 5 }
+					is_year = 1450
+				}
+			}
+			
 		}
 		effect = {
 			guyenne_area = {
