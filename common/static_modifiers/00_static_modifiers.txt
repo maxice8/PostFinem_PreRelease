@@ -640,6 +640,7 @@ positive_stability = {
 	yearly_harmony = 0.25
 	monthly_trn_cohesion = 0.20
 	monthly_mac_war_cabinet_organization = 0.02
+	monthly_gaul_confederation = 0.05
 }
 
 privateering = {
@@ -656,6 +657,7 @@ negative_stability = {
 	yearly_harmony = 0.25
 	monthly_trn_cohesion = 0.5
 	monthly_mac_war_cabinet_organization = 0.03
+	monthly_gaul_confederation = 0.05
 	monthly_pf_sneakiness = 0.25
 	monthly_pf_svetovid_dedication = 0.25
 	monthly_syrian_power = 0.25
@@ -747,6 +749,7 @@ bankruptcy = {
 	great_project_upgrade_cost = 0.5
 	monthly_mac_war_cabinet_organization = -0.5
 	monthly_syrian_power = -2
+	monthly_gaul_confederation = 2
 }
 
 
@@ -794,6 +797,7 @@ war_exhaustion = {
 	monthly_militarized_society = -0.05
 	monthly_trn_cohesion = -0.05
 	monthly_mac_war_cabinet_organization = -0.02
+	monthly_gaul_confederation = -0.01
 }
 
 doom = {
@@ -1202,6 +1206,7 @@ curia_controller = {
 
 bought_indulgence = {
 	papal_influence = 1
+	relation_with_same_religion = 10
 }
 
 religious_unity = {
@@ -2261,6 +2266,7 @@ over_governing_capacity_modifier = {
 	monthly_trn_cohesion = -5
 	monthly_pf_sneakiness = -5
 	monthly_syrian_power = -1
+	monthly_gaul_confederation = -2
 }
 
 #Scales with used capacity, being at full capacity means 100% of the modifier
@@ -2268,6 +2274,7 @@ under_governing_capacity_modifier = {
 }
 #Scales with unused capacity, eing at full capacity means 0% of the modifier
 reverse_under_governing_capacity_modifier = {
+	monthly_gaul_confederation = 0.2
 }
 
 lost_hegemony = {

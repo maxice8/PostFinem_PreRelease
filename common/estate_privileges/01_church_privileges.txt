@@ -24,17 +24,9 @@ estate_church_land_rights = {
 		governing_capacity = 100
 	}
 	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	conditional_modifier = {
 		trigger = { has_government_mechanic = gaul_confederation_mechanic }
 		modifier = { monthly_gaul_confederation = -0.05 }
 	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
 	ai_will_do = {
 		factor = 5
 		modifier = {
@@ -48,6 +40,16 @@ estate_church_land_rights = {
 		modifier = {
 			factor = 1.5
 			num_of_territories = 15
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				has_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 50
+				}
+			}
 		}
 		modifier = {
 			factor = 0
@@ -230,14 +232,6 @@ estate_church_religious_state = {
 		trigger = { has_government_mechanic = gaul_confederation_mechanic }
 		modifier = { monthly_gaul_confederation = -0.10 }
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
 	ai_will_do = {
 		factor = 100
 		modifier = {
@@ -267,6 +261,16 @@ estate_church_religious_state = {
 			is_absolutism_active = yes
 		}
 		modifier = {
+			factor = 0
+			NOT = {
+				has_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 50
+				}
+			}
+		}
+		modifier = {
 			factor = 1.25
 			NOT = { adm = 2 }
 		}
@@ -284,10 +288,6 @@ estate_church_independent_inquisition = {
 	}
 	benefits = {
 		adm_advisor_cost = -0.15
-	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
 	}
 	#conditional_modifier = {
 	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
@@ -364,14 +364,6 @@ estate_church_new_world_mission = {
 			}
 		}
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
 	ai_will_do = {
 		factor = 0
 	}
@@ -400,14 +392,6 @@ estate_church_papal_emissary = {
 	benefits = {
 		papal_influence = 1
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
 	ai_will_do = {
 		factor = 10
 		modifier = {
@@ -459,22 +443,9 @@ estate_church_clerical_ministers = {
 				limit = {
 					has_dlc = "Common Sense"
 				}
-				NOT = { religion = protestant }
 				NOT = { religion = buddhism }
 				NOT = { religion = vajrayana }
 				NOT = { religion = mahayana }
-			}
-			if = {
-				limit = {
-					has_dlc = "Emperor"
-				}
-				NOT = { religion = hussite }
-			}
-			if = {
-				limit = {
-					has_dlc = "Wealth of Nations"
-				}
-				NOT = { religion = reformed }
 			}
 			if = {
 				limit = {
@@ -490,17 +461,10 @@ estate_church_clerical_ministers = {
 			}
 			if = {
 				limit = {
-					has_dlc = "Third Rome"
-				}
-				NOT = { religion = orthodox }
-			}
-			if = {
-				limit = {
 					has_dlc = "Origins"
 				}
 				NOT = { religion = jewish }
 			}
-			NOT = { religion = anglican }
 		}
 		modifier = {
 			missionary_maintenance_cost = -0.2
@@ -521,38 +485,11 @@ estate_church_clerical_ministers = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_dlc = "Common Sense"
-			religion = protestant
-		}
-		modifier = {
-			church_power_modifier = 0.1
-		}
-	}
-	conditional_modifier = {
-		trigger = {
-			has_dlc = "Emperor"
-			religion = hussite
-		}
-		modifier = {
-			church_power_modifier = 0.1
-		}
-	}
-	conditional_modifier = {
-		trigger = {
 			has_dlc = "Origins"
 			religion = jewish
 		}
 		modifier = {
 			church_power_modifier = 0.1
-		}
-	}
-	conditional_modifier = {
-		trigger = {
-			has_dlc = "Wealth of Nations"
-			religion = reformed
-		}
-		modifier = {
-			monthly_fervor_increase = 0.5
 		}
 	}
 	conditional_modifier = {
@@ -575,23 +512,6 @@ estate_church_clerical_ministers = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_dlc = "Third Rome"
-			religion = orthodox
-		}
-		modifier = {
-			yearly_patriarch_authority = 0.005
-		}
-	}
-	conditional_modifier = {
-		trigger = {
-			religion = anglican
-		}
-		modifier = {
-			church_power_modifier = 0.1
-		}
-	}
-	conditional_modifier = {
-		trigger = {
 			has_government_attribute = clerical_ministers_tech_buff
 		}
 		modifier = {
@@ -602,33 +522,11 @@ estate_church_clerical_ministers = {
 	}
 	benefits = {
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
 	ai_will_do = {
 		factor = 10
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
-		}
-		modifier = {
-			factor = 0.5
-			OR = {
-				religion = protestant
-				religion = anglican
-			}
-			religion = protestant
-			num_of_aspects = 3
-		}
-		modifier = {
-			factor = 10
-			religion = orthodox
-			has_dlc = "Third Rome"
 		}
 	}
 }
@@ -691,14 +589,6 @@ estate_church_clerical_oversight = {
 	}
 	benefits = {
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
 	ai_will_do = {
 		factor = 10
 		modifier = {
@@ -762,14 +652,6 @@ estate_church_inwards_perfection = {
 		}
 	}
 	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
-	conditional_modifier = {
 		trigger = { ai = yes }	#I know, this one is cheating. It would be better to teach the AI to not dow, but whatev
 		modifier = {
 			can_not_declare_war = yes
@@ -815,14 +697,6 @@ estate_church_enforced_one_faith = {
 	on_cooldown_expires = {
 		remove_estate_privilege = estate_church_enforced_one_faith
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
 	ai_will_do = {
 		factor = 0
 	}
