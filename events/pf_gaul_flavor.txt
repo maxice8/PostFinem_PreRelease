@@ -78,3 +78,40 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = pf_gaul_events.2
+	title = pf_gaul_events.2.t
+	desc = pf_gaul_events.2.d
+	picture = TRADE_GOODS_eventPicture
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = pf_gaul_events.2.a	
+		97 = {
+			change_trade_goods = slaves
+			add_base_production = 3
+		}
+		custom_tooltip = empty_line_tt
+		holland_area = {
+			add_province_modifier = {
+				name = end_the_raids_GAU
+				duration = -1
+			}
+		}
+		frisia_area = {
+			add_province_modifier = {
+				name = end_the_raids_GAU
+				duration = -1
+			}
+		}
+	}
+	# option = {
+	# 	name = pf_gaul_events.2.b
+	# }
+}

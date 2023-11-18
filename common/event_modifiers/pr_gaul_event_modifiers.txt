@@ -1,6 +1,6 @@
 local_autonomy_modifier_G_1 = {
 	local_manpower_modifier = 0.25
-	local_tax_modifier = 0.30
+	local_tax_modifier = 0.25
 }
 pf_gallic_wars_remant_1 = {
 	min_local_autonomy = 15
@@ -14,30 +14,31 @@ nervian_submission = {
 }
 end_the_raids_GAU = {
 	block_slave_raid = yes
-	hostile_disembark_speed = 0.33
+	hostile_disembark_speed = 0.5
 }
 dispell_the_germanics = {
 	local_culture_conversion_cost = -0.25 
-	local_culture_conversion_time = -0.50
+	local_missionary_strength = 0.05
 }
 start_german_campaigns = {
 	land_attrition = -0.10 
 	recover_army_morale_speed = 0.10 
 }
 fortify_germany = {
-	defensiveness = 0.33
+	build_cost = -0.1
+	build_time = -0.25
 }
 the_natural_borders_gau = {
 	leader_land_fire = 1 
-	morale_damage_received = -0.025 
+	land_morale = 0.05 
 }
 SUB_the_conuerors_of_germany_GAU = {
 	vassal_forcelimit_bonus = 0.5
 	vassal_income = 0.15
 }
 the_conuerors_of_germany_GAU = {
-	ae_impact = -0.10
-	diplomatic_reputation = 1 
+	prestige = 0.5
+	years_of_nationalism = -5
 }
 construct_alpine_fort_GAU = {
 	local_fort_maintenance_modifier = -0.50
@@ -60,7 +61,7 @@ gallic_challenger = {
 	monthly_gaul_confederation = 0.15
 }
 restriction_of_nobles_GAU = {
-	yearly_corruption = -0.02
+	global_prosperity_growth = 0.5
 	monthly_support_heir_gain = 0.05	
 }
 centralization_gaul = {
@@ -89,7 +90,7 @@ claimed_by_GAU = {
 	local_warscore_cost_modifier = -0.25
 }
 staging_grounds = {
-	local_defensiveness = 0.25
+	supply_limit_modifier = 0.25
 	local_defender_dice_roll_bonus = 1
 }
 rule_the_waves_GAU = {

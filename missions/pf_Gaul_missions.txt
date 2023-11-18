@@ -12,15 +12,43 @@ PF_Gaul_1 = {
 		required_missions = {
 			pf_gaul_mainland_2
 		}
-		trigger = {
-			num_of_owned_provinces_with = {
-				culture = nervian
+		provinces_to_highlight = {
+			owned_by = ROOT
+			culture = nervian
+			NOT = {
 				base_tax = 5
 				has_tax_building_trigger = yes
-				value = 5
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					ai = no
+				}
+				num_of_owned_provinces_with = {
+					culture = nervian
+					base_tax = 5
+					has_tax_building_trigger = yes
+					value = 5
+				}
+			}
+			else = {
+				num_of_owned_provinces_with = {
+					culture = nervian
+					base_tax = 3
+					has_tax_building_trigger = yes
+					value = 3
+				}
 			}
 		}
 		effect = {
+			custom_tooltip = nervian_submission_tt
+			tooltip = {
+				add_province_modifier = {
+					name = nervian_submission
+					duration = 10950
+				}
+			}
 			if = {
 				limit = {
 					NOT = { accepted_culture = nervian }
@@ -33,13 +61,6 @@ PF_Gaul_1 = {
 				}
 				custom_tooltip = if_not_has_accepted_culture_NERV
 			}
-			custom_tooltip = nervian_submission_tt
-			tooltip = {
-				add_province_modifier = {
-					name = nervian_submission
-					duration = 5475
-				}
-			}
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
@@ -47,7 +68,7 @@ PF_Gaul_1 = {
 					}
 					add_province_modifier = {
 						name = nervian_submission
-						duration = 5475
+						duration = 10950
 					}
 				}
 			}
@@ -73,34 +94,22 @@ PF_Gaul_1 = {
 		trigger = {
 			holland_area = {
 				type = all
-				NOT = { culture = norvegr }
+				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
 			frisia_area = {
 				type = all
-				NOT = { culture = norvegr }
+				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
 		}
 		effect = {
-			custom_tooltip = maybe_an_event_tt
-			holland_area = {
-				add_province_modifier = {
-					name = end_the_raids_GAU
-					duration = -1
-				}
+			add_army_tradition_or_mil_power = { amount = 10 }
+			custom_tooltip = empty_line_tt
+			country_event = {
+				id = pf_gaul_events.2
 			}
-			frisia_area = {
-				add_province_modifier = {
-					name = end_the_raids_GAU
-					duration = -1
-				}
-			}
-			97 = {
-				change_trade_goods = slaves
-				add_base_production = 3
-				add_devastation = 25
-			}
+			custom_tooltip = empty_line_tt
 			custom_tooltip = return_of_the_frisii
 			hidden_effect = {
 				every_owned_province = {
@@ -141,27 +150,38 @@ PF_Gaul_1 = {
 			}
 		}
 		trigger = { 
-			OR = {
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 5
-					trade_goods = salt
-					OR = {
-						region = north_german_region
-						region = south_german_region
-					}
-					has_production_building_trigger = yes
-					base_production = 10
+			if = {
+				limit = {
+					ai = no
 				}
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 5
-					trade_goods = iron
+					OR = {
+						trade_goods = salt
+						trade_goods = iron
+					}
 					OR = {
 						region = north_german_region
 						region = south_german_region
 					}
 					has_production_building_trigger = yes
-					base_production = 10
-				}		
+					base_production = 8
+				}	
+			}
+			else = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					OR = {
+						trade_goods = salt
+						trade_goods = iron
+					}
+					OR = {
+						region = north_german_region
+						region = south_german_region
+					}
+					has_production_building_trigger = yes
+					base_production = 5
+				}	
 			}
 			
 		}
@@ -169,68 +189,23 @@ PF_Gaul_1 = {
 			define_advisor = {
 				type = natural_scientist
 				skill = 3
-				discount = yes
-				culture = saxon
+				cost_multiplier = 0.25
+				culture = old_saxon
+				name = "Fridurik Krupp"
 			}
-			custom_tooltip = salt_mines_TT
-			tooltip = {
-				change_price = {
-					trade_goods = salt
-					key = germanic_salt_trade
-					value = 0.20
-					duration = 7300
-				}
+			custom_tooltip = empty_line_tt
+			change_price = {
+				trade_goods = salt
+				key = germanic_salt_trade
+				value = 0.25
+				duration = 18250
 			}
-			custom_tooltip = iron_mines_TT
-			tooltip = {
-				change_price = {
-					trade_goods = iron
-					key = germanic_salt_trade
-					value = 0.20
-					duration = 7300
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-							value = 5
-							trade_goods = salt
-							OR = {
-								region = north_german_region
-								region = south_german_region
-							}
-							has_production_building_trigger = yes
-							base_production = 8
-						}
-					}
-					change_price = {
-						trade_goods = salt
-						key = germanic_salt_trade
-						value = 0.20
-						duration = 7300
-					}
-				}
-				if = {
-					limit = {
-						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-							value = 5
-							trade_goods = iron
-							OR = {
-								region = north_german_region
-								region = south_german_region
-							}
-							has_production_building_trigger = yes
-							base_production = 8
-						}
-					}
-					change_price = {
-						trade_goods = iron
-						key = germanic_iron_trade
-						value = 0.2
-						duration = 7300
-					}
-				}
+			custom_tooltip = empty_line_tt
+			change_price = {
+				trade_goods = iron
+				key = germanic_salt_trade
+				value = 0.25
+				duration = 18250
 			}
 		}
 	}
@@ -459,8 +434,16 @@ PF_Gaul_2 = {
 		required_missions = { }
 		provinces_to_highlight = { }
 		trigger = {	
-			manpower_percentage = 0.75
-			employed_advisor = { category = MIL }
+			if = {
+				limit = {
+					ai = no
+				}
+				manpower_percentage = 0.75
+				employed_advisor = { category = MIL }
+			}
+			else = {
+				manpower_percentage = 0.5
+			}
 		}
 		effect = {
 			add_government_power = {
@@ -468,10 +451,11 @@ PF_Gaul_2 = {
 				power_type = gaul_confederation
 				value = 10
 			}
+			custom_tooltip = empty_line_tt
 			ile_de_france_area = {
 				add_province_modifier = {
 					name = local_autonomy_modifier_G_1
-					duration = 3650
+					duration = 5475
 				}
 			}
 			north_brabant_area = {
@@ -559,14 +543,19 @@ PF_Gaul_2 = {
 			holland_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
-			add_patriarch_authority = 0.025
+			add_patriarch_authority = 0.1
+			custom_tooltip = empty_line_tt
 			define_advisor = {
 				type = inquisitor
 				skill = 2
 				discount = yes 
 				culture = ROOT
 			}
-			change_mil = 1
+			custom_tooltip = empty_line_tt
+			change_ruler_stat = {
+				type = mil
+				amount = 1
+			}
 		}
 	}
 	pf_gaul_mainland_8 = {
@@ -601,11 +590,12 @@ PF_Gaul_2 = {
 			}
 		}
 		effect = {
+			custom_tooltip = enable_the_germanic_wars
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = the_natural_borders_gau
 				duration = -1
 			}
-			custom_tooltip = enable_the_germanic_wars
 		}
 	}
 	pf_gaul_german_1 = {
@@ -625,7 +615,7 @@ PF_Gaul_2 = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 55
+				value = 45
 				OR = {
 					region = south_german_region
 					region = north_german_region
@@ -633,69 +623,18 @@ PF_Gaul_2 = {
 			}
 		}
 		effect = {
-			custom_tooltip = own_germany_yourself_TT
-			tooltip = {
-				add_country_modifier = {
-					name = the_conuerors_of_germany_GAU
-					duration = 9125
-				}
-			}
-			custom_tooltip = own_germany_SUB_TT
-			tooltip = {
-				add_country_modifier = {
-					name = SUB_the_conuerors_of_germany_GAU
-					duration = 9125
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-							value = 28
-							OR = {
-								region = south_german_region
-								region = north_german_region
-							}
-							owned_by = ROOT
-						}
-					}
-					add_country_modifier = {
-						name = the_conuerors_of_germany_GAU
-						duration = 9125
-					}
-				}
-				else_if = {
-					limit = {
-						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-							value = 28
-							OR = {
-								region = south_german_region
-								region = north_german_region
-							}
-							NOT = { owned_by = ROOT }
-						}
-					}
-					every_subject_country = {
-						limit = {
-							capital_scope = {
-								OR = {
-									region = south_german_region
-									region = north_german_region
-								}
-							}
-						}
-						add_country_modifier = {
-							name = SUB_the_conuerors_of_germany_GAU
-							duration = 10950
-						}
-					}
-				}
+			add_country_modifier = {
+				name = the_conuerors_of_germany_GAU
+				duration = -1
 			}
 			custom_tooltip = all_germanic_claim_TT
 			hidden_effect = {
 				every_province = {
 					limit = {
-						culture_group = old_germanic
+						OR = {
+							culture_group = old_germanic
+							culture_group = germanic_carpathian
+						}
 						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 						NOT = { is_permanent_claim = root }
 					}
@@ -1032,6 +971,14 @@ PF_Gaul_3 = {
 				power_type = gaul_confederation
 				value = -25
 			}
+			custom_tooltip = empty_line_tt
+			define_advisor = {
+				type = drill_sergeant
+				skill = 1
+				discount = yes
+				name = "Iovannos Burios"
+			}
+			custom_tooltip = empty_line_tt
 			remove_estate_privilege = estate_nobles_pf_gallic_wars_remnant
 		}
 	}
@@ -1052,11 +999,12 @@ PF_Gaul_3 = {
 			add_government_power = {
 				mechanic_type = gaul_confederation_mechanic
 				power_type = gaul_confederation
-				value = 5
+				value = 10
 			}
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = start_german_campaigns
-				duration = 7300
+				duration = 10950
 			}
 			upper_rhineland_area = {
 				limit = {
@@ -1101,11 +1049,12 @@ PF_Gaul_3 = {
 			lower_rhineland_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
+			custom_tooltip = allemania_mercenary_TT
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = fortify_germany
 				duration = 3650
 			}
-			custom_tooltip = allemania_mercenary_TT
 			north_rhine_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -1143,19 +1092,27 @@ PF_Gaul_3 = {
 					value = 25
 				}
 			}
-			naval_reformer = 2
-			OR = {
-				full_idea_group = naval_ideas
-				navy_tradition = 50
-				num_of_heavy_ship = 35
+			if = {
+				limit = {
+					ai = no
+				}			
+				naval_reformer = 2
+				OR = {
+					full_idea_group = naval_ideas
+					navy_tradition = 50
+					num_of_heavy_ship = 20
+				}
 			}
+			else = { num_of_heavy_ship = 20 }
+			
 		}
 		effect = { 
+			custom_tooltip = enable_devil_dogs_doctrine
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = rule_the_waves_GAU
 				duration = -1
 			}
-			custom_tooltip = enable_devil_dogs_doctrine
 		}
 	}
 	pf_gaul_german_2 = {
@@ -1757,6 +1714,7 @@ PF_Gaul_4 = {
 				estate = estate_nobles
 				share = -5
 			}
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = restriction_of_nobles_GAU
 				duration = 5475
@@ -1778,10 +1736,10 @@ PF_Gaul_4 = {
 						tooltip = carantus_counting_TT
 						check_variable = {
 							which = counting_carantus
-							value = 3
+							value = 2
 						}
 					}
-					crown_land_share = 50
+					crown_land_share = 40
 				}
 				AND = {
 					NOT = {
@@ -1790,7 +1748,7 @@ PF_Gaul_4 = {
 					has_government_power = {
 						mechanic_type = gaul_confederation_mechanic
 						power_type = gaul_confederation
-						value = 60
+						value = 50
 					}
 				}
 			}	
@@ -1806,7 +1764,7 @@ PF_Gaul_4 = {
 							tooltip = carantus_counting_TT
 							check_variable = {
 								which = counting_carantus
-								value = 3
+								value = 2
 							}
 						}
 					}
@@ -1821,6 +1779,7 @@ PF_Gaul_4 = {
 					set_country_flag = pf_gaul_politics_2
 				}
 			}
+			custom_tooltip = empty_line_tt
 			swap_non_generic_missions = yes	
 		}
 	}
@@ -2093,28 +2052,32 @@ PF_Gaul_4_C = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			wessex_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			home_counties_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			east_anglia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				OR = {
+					area = wessex_area
+					area = home_counties_area
+					area = east_anglia_area
+				}
 			}
 		}
 		effect = {
+			define_advisor = {
+				type = trader
+				discount = yes
+				skill = 2
+				name = "Tomos Piceitos"
+			}
+			custom_tooltip = empty_line_tt
 			1285 = {
 				add_trade_modifier = {
 					who = ROOT
 					duration = -1
-					power = 10
+					power = 50
 					key = CONTROLLED_CHANNEL_CEL
 				}
 			}
+			custom_tooltip = empty_line_tt
 			west_midlands_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -2354,6 +2317,14 @@ PF_Gaul_5 = {
 				power_type = gaul_confederation
 				value = -25
 			}
+			custom_tooltip = empty_line_tt
+			define_advisor = {
+				type = artist
+				skill = 1
+				discount = yes
+				name = "Eadgaer Dagos"
+			}
+			custom_tooltip = empty_line_tt
 			remove_estate_privilege = estate_clergy_pf_gallic_wars_remnant
 		}
 	}
@@ -2370,7 +2341,7 @@ PF_Gaul_5 = {
 						tooltip = obj_convert_20_provinces_tooltip
 						check_variable = { which = num_converted_religion value = 20 }
 					}
-					inquisitor = 3
+					inquisitor = 2
 				}
 				AND = {	
 					custom_trigger_tooltip = {
@@ -2380,7 +2351,7 @@ PF_Gaul_5 = {
 							value = 3
 						}
 					}
-					theologian = 3
+					theologian = 2
 				}
 			}
 		}
