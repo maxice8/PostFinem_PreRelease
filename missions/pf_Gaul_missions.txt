@@ -711,7 +711,13 @@ PF_Gaul_2 = {
 		}
 		trigger = {
 			current_income_balance = 1
-			has_adm_advisor_2 = yes
+			if = {
+				limit = {
+					ai = no
+				}			
+				has_adm_advisor_2 = yes
+			}
+			
 		}
 		effect = {
 			add_government_power = {
@@ -2331,10 +2337,16 @@ PF_Gaul_5 = {
 				power_type = gaul_confederation
 				value = 25
 			}
-			capital_scope = {
-				has_state_patriach = yes
+			if = {
+				limit = {
+					ai = no
+				}
+				capital_scope = {
+					has_state_patriach = yes
+				}
+				patriarch_authority = 0.15
 			}
-			patriarch_authority = 0.15
+			
 		}
 		effect = {
 			add_government_power = {
