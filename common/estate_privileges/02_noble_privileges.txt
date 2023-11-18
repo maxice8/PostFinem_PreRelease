@@ -49,6 +49,16 @@ estate_nobles_land_rights = {
 			}
 		}
 		modifier = {
+			factor = 0.5
+			NOT = {
+				has_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 75
+				}
+			}
+		}
+		modifier = {
 			factor = 0
 			OR = {
 				NOT = { crown_land_share = 25 }
@@ -242,6 +252,16 @@ estate_nobles_nobility_primacy = {
 			}
 		}
 		modifier = {
+			factor = 0.5
+			NOT = {
+				has_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 75
+				}
+			}
+		}
+		modifier = {
 			factor = 0
 			OR = {
 				NOT = { crown_land_share = 30 }
@@ -375,6 +395,16 @@ estate_nobles_levies = {
 			}
 		}
 		modifier = {
+			factor = 0.5
+			NOT = {
+				has_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 75
+				}
+			}
+		}
+		modifier = {
 			factor = 1.5
 			any_rival_country = {
 				army_strength = {
@@ -493,6 +523,16 @@ estate_nobles_right_of_counsel = {
 					mechanic_type = gaul_confederation_mechanic
 					power_type = gaul_confederation
 					value = 50
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				has_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 75
 				}
 			}
 		}
@@ -658,6 +698,16 @@ estate_nobles_supremacy_over_crown = {
 					mechanic_type = gaul_confederation_mechanic
 					power_type = gaul_confederation
 					value = 50
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				has_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 75
 				}
 			}
 		}
@@ -1115,6 +1165,16 @@ estate_nobles_strong_duchies = {
 			}
 		}
 		modifier = {
+			factor = 0.5
+			NOT = {
+				has_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 75
+				}
+			}
+		}
+		modifier = {
 			factor = 3
 			calc_true_if = {
 				amount = 1
@@ -1315,6 +1375,16 @@ estate_nobles_veto_heir_apparent = {
 					mechanic_type = gaul_confederation_mechanic
 					power_type = gaul_confederation
 					value = 50
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				has_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 75
 				}
 			}
 		}

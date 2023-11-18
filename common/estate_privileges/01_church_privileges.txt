@@ -52,6 +52,16 @@ estate_church_land_rights = {
 			}
 		}
 		modifier = {
+			factor = 0.5
+			NOT = {
+				has_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 75
+				}
+			}
+		}
+		modifier = {
 			factor = 0
 			OR = {
 				NOT = { crown_land_share = 25 }
@@ -267,6 +277,16 @@ estate_church_religious_state = {
 					mechanic_type = gaul_confederation_mechanic
 					power_type = gaul_confederation
 					value = 50
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				has_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 75
 				}
 			}
 		}
