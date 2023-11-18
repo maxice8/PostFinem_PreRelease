@@ -144,11 +144,11 @@ MAC_ideas = {
 GAU_ideas = {
 	start = {
 		diplomats = 1
-		global_tax_modifier = 0.15
+		global_tax_modifier = 0.1
 	}
 	
 	bonus = {
-		global_prosperity_growth = 0.5
+		merchants = 1
 	}	
 
 	trigger = {
@@ -157,7 +157,8 @@ GAU_ideas = {
 	free = yes
 	#Gallic Legacy
 	GAU_ideas_1 = {
-		war_exhaustion_cost = -0.15
+		war_exhaustion = -0.03
+		prestige_decay = -0.01
 	}
 	#Loyaly to the Crown
 	GAU_ideas_2 = {
@@ -165,24 +166,24 @@ GAU_ideas = {
 	}
 	#Unification by the Riga
 	GAU_ideas_3 = {
-		province_warscore_cost = -0.1
+		ae_impact = -0.1
 	}
 	#Druidism Spreads
 	GAU_ideas_4 = {
 		global_missionary_strength = 0.02
 		tolerance_own = 1
 	}
-	#The Druidic Warriors
+	#Gallic Warriors
 	GAU_ideas_5 = {
 		shock_damage = 0.1
 	}
-	#Tame the Forests
+	#Taming the Forests
 	GAU_ideas_6 = {
 		development_cost = -0.1
 	}
-	#Intelligent Investors
+	#Iron Rule
 	GAU_ideas_7 = {
-		merchants = 1
+		global_autonomy = -0.05
 	}
 }
 LUG_ideas = {
@@ -202,6 +203,7 @@ LUG_ideas = {
 	#Unity of the Parliament
 	LUG_ideas_1 = {
 		parliament_backing_chance = 0.15
+		prestige = 1
 
 	}
 	#Galatai Raiders
@@ -224,11 +226,12 @@ LUG_ideas = {
 	}
 	#Expansion of the Heartland
 	LUG_ideas_6 = {
-		development_cost = -0.15
+		development_cost = -0.1
 	}
 	#College of Generals
 	LUG_ideas_7 = {
-		army_tradition = 1	
+		army_tradition = 1
+		leader_land_fire = 1	
 	}
 }
 DCL_ideas = {
@@ -247,7 +250,7 @@ DCL_ideas = {
 	free = yes
 	#The Twin Crowns
 	DCL_ideas_1 = {
-		improve_relation_modifier = 0.1
+		improve_relation_modifier = 0.25
 		ae_impact = -0.1
 	}
 	#Building the New World
@@ -266,11 +269,11 @@ DCL_ideas = {
 	#Atlantic Fleet
 	DCL_ideas_5 = {
 		heavy_ship_power = 0.1
-		heavy_ship_cost = -0.05
+		heavy_ship_cost = -0.1
 	}
 	#Expansion of the Heartland
 	DCL_ideas_6 = {
-		development_cost = -0.15
+		development_cost = -0.10
 	}
 	#The Galatai Corps
 	DCL_ideas_7 = {
