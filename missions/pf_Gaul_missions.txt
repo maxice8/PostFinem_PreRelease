@@ -396,17 +396,19 @@ PF_Gaul_1 = {
 					trade_company_region = trade_company_valencia
 				}
 				has_trade_building_trigger = yes
-				base_production = 8
+				base_production = 6
 				value = 5
 			}
 			213 = {
 				has_trade_building_trigger = yes
-				base_production = 10
+				base_production = 8
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			num_of_light_ship = 25
 		}
 		effect = {
+			add_mercantilism = 5
+			custom_tooltip = empty_line_tt
 			1298 = {
 				add_trade_modifier = {
 					who = ROOT
@@ -415,7 +417,7 @@ PF_Gaul_1 = {
 					key = FLOW_OF_TRADE_CEL
 				}
 			}
-			add_mercantilism = 5
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = merchant_fleet_gau
 				duration = -1
@@ -763,26 +765,26 @@ PF_Gaul_2 = {
 		provinces_to_highlight = {
 			region = france_region
 			NOT = {
-				development = 20
+				development = 15
 				num_of_buildings_in_province = 2
 			}
 		}
 		trigger = {
-			france_region = {
-				type = all
+			num_of_owned_provinces_with = {
+				value = 20
 				country_or_non_sovereign_subject_holds = ROOT
-				development = 20
+				development = 15
 				num_of_buildings_in_province = 2
 			}
 		}
 		effect = {
+			custom_tooltip = double_development_TT
 			france_region = {
 				add_province_modifier = {
 					name = radical_industrialism
-					duration = 12775
+					duration = 18250
 				}
 			}
-			custom_tooltip = double_development_TT
 		}
 	}
 	pf_gaul_south_4 = {
@@ -806,6 +808,24 @@ PF_Gaul_2 = {
 			}
 		}
 		effect = {
+			209 = {
+				change_culture = ROOT
+			}
+			custom_tooltip = empty_line_tt
+			209 = {				
+				add_base_production = 2
+			}
+			custom_tooltip = empty_line_tt
+			209 = {				
+				add_manufactory = yes
+			}
+			custom_tooltip = empty_line_tt
+			209 = {	
+				add_province_modifier = {
+					name = celtic_whalers
+					duration = -1
+				}
+			}
 			aragon_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -826,14 +846,6 @@ PF_Gaul_2 = {
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}
-			209 = {
-				change_culture = ROOT
-				add_base_production = 2
-				add_province_modifier = {
-					name = celtic_whalers
-					duration = -1
-				}
 			}
 		}
 	}
@@ -852,27 +864,16 @@ PF_Gaul_2 = {
 			}
 		}
 		trigger = {
-			aragon_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			valencia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			catalonia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					area = aragon_area
+					area = valencia_area
+					area = catalonia_area
+				}
 			}
 		}
 		effect = {
-			iberia_region = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			custom_tooltip = defense_of_pyrenees_TT
 			tooltip = {
 				add_province_modifier = {
@@ -898,6 +899,13 @@ PF_Gaul_2 = {
 					}	
 				}
 			}
+			iberia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	pf_gaul_south_7 = {
@@ -919,16 +927,13 @@ PF_Gaul_2 = {
 				has_tax_building_trigger = yes
 				country_or_non_sovereign_subject_holds = ROOT
 				region = iberia_region
-				value = 10
+				value = 20
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = return_of_the_lusitanians
-				duration = -1
-			}
 			custom_tooltip = gallo_lusitanian_tt
 			add_accepted_culture = gallo_lusitanian
+			custom_tooltip = empty_line_tt
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
@@ -939,6 +944,10 @@ PF_Gaul_2 = {
 					}
 					change_culture = gallo_lusitanian
 				}
+			}
+			add_country_modifier = {
+				name = return_of_the_lusitanians
+				duration = -1
 			}
 			
 		}
@@ -1407,6 +1416,7 @@ PF_Gaul_3 = {
 		provinces_to_highlight = {
 			province_id = 194
 			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
 				base_manpower = 5
 				province_has_current_tech_fort_trigger = yes
 			}
@@ -1431,6 +1441,12 @@ PF_Gaul_3 = {
 			
 		}
 		effect = {
+			193 = {
+				add_province_modifier = {
+					name = defense_of_gaul
+					duration = -1
+				}
+			}
 			guyenne_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -1451,12 +1467,6 @@ PF_Gaul_3 = {
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}
-			193 = {
-				add_province_modifier = {
-					name = defense_of_gaul
-					duration = -1
-				}
 			}
 		}
 	}
@@ -1486,6 +1496,18 @@ PF_Gaul_3 = {
 			}
 		}
 		effect = {
+			guyenne_area = {
+				add_province_modifier = {
+					name = reclimation_of_gaul
+					duration = -1
+				}
+			}
+			pyrenees_area = {
+				add_province_modifier = {
+					name = reclimation_of_gaul
+					duration = -1
+				}
+			}
 			languedoc_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -1499,18 +1521,6 @@ PF_Gaul_3 = {
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}
-			guyenne_area = {
-				add_province_modifier = {
-					name = reclimation_of_gaul
-					duration = -1
-				}
-			}
-			pyrenees_area = {
-				add_province_modifier = {
-					name = reclimation_of_gaul
-					duration = -1
-				}
 			}
 		}
 	}
@@ -1540,18 +1550,19 @@ PF_Gaul_3 = {
 			}
 		}
 		effect = {
-			piedmont_area = {
+			hidden_effect = {
+				save_global_event_target_as = gallic_threat
+				set_imperial_incident = incident_gallic_threat
+			}
+			custom_tooltip = start_the_gallic_threat_incident
+			custom_tooltip = empty_line_tt
+			north_italy_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			hidden_effect = {
-				save_global_event_target_as = gallic_threat
-				set_imperial_incident = incident_gallic_threat
-			}
-			custom_tooltip = start_the_gallic_threat_incident
 		}
 	}
 }
@@ -1671,7 +1682,7 @@ PF_Gaul_3_unlockeda = {
 			emperor = {
 				reverse_has_opinion = {
 					who = ROOT
-					value = 130
+					value = 150
 				}
 				marriage_with = ROOT
 			}
@@ -1690,6 +1701,7 @@ PF_Gaul_3_unlockeda = {
 				value = 25
 				mutual = yes
 			}
+			custom_tooltip = empty_line_tt
 			add_favors = {
 				who = emperor
 				amount = 10
@@ -2230,16 +2242,28 @@ PF_Gaul_4_C = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				area = ulster_area
-				area = leinster_area
-				area = munster_area
-				area = connacht_area
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				AND = {
+					OR = {
+						area = ulster_area
+						area = leinster_area
+						area = munster_area
+						area = connacht_area
+					}
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				AND = {
+					province_id = 373
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+				}
 			}
 		}
 		trigger = {
+			owns_core_province = 373
 			ulster_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -2259,7 +2283,16 @@ PF_Gaul_4_C = {
 		}
 		effect = {
 			373 = {
+				add_base_tax = 1
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+			custom_tooltip = empty_line_tt
+			373 = {
 				change_trade_goods = slaves
+			}
+			custom_tooltip = empty_line_tt
+			373 = {
 				add_province_modifier = {
 					name = hub_of_dublin
 					duration = -1
@@ -2300,8 +2333,8 @@ PF_Gaul_4_C = {
 			change_price = {
 				trade_goods = sugar
 				key = the_new_plantations
-				value = 0.20
-				duration = 5475
+				value = 0.25
+				duration = -1
 			}
 		}
 	}
@@ -2769,7 +2802,7 @@ PF_Gaul_5C_branching = {
 					num_of_heavy_ship = 10
 					num_of_light_ship = 15
 					custom_trigger_tooltip = {
-						tooltip = obj_discover_america_tooltip
+						tooltip = discover_new_world_tt
 						OR = {
 							north_america = { has_discovered = ROOT }
 							south_america = { has_discovered = ROOT }
@@ -2777,19 +2810,16 @@ PF_Gaul_5C_branching = {
 						}
 					}
 				}
-				AND = {
-					has_idea_group = exploration_ideas
-					num_of_explorers = 1
-				}
 			}
 		}
 		effect = {
-			carribeans_region = {
-				discover_country = ROOT
+			define_advisor = {
+				type = colonial_minister
+				skill = 3
+				cost_multiplier = 0.25
+				name = "Lugus Frontenacos"
 			}
-			northeast_america_region = {
-				discover_country = ROOT
-			}
+			custom_tooltip = empty_line_tt
 			if = {
 				limit = {
 					NOT = {
@@ -2800,7 +2830,7 @@ PF_Gaul_5C_branching = {
 				tooltip = {
 					add_country_modifier = {
 						name = explorer_until_have_one
-						duration = 3650
+						duration = 7300
 					}
 				}
 			}
@@ -2888,6 +2918,10 @@ PF_Gaul_5C_branching = {
 			}
 		}
 		effect = {
+			add_country_modifier = {
+				name = colonial_ventures_GAU
+				duration = 18250
+			}
 			northeast_america_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -2908,10 +2942,6 @@ PF_Gaul_5C_branching = {
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}
-			add_country_modifier = {
-				name = colonial_ventures_GAU
-				duration = 9125
 			}
 		}
 	}
@@ -2936,7 +2966,7 @@ PF_Gaul_5C_branching = {
 				colonial_region = colonial_eastern_america
 				trade_goods = tobacco
 				has_production_building_trigger = yes
-				base_production = 5
+				base_production = 6
 			}
 		}
 		effect = {
@@ -2946,7 +2976,7 @@ PF_Gaul_5C_branching = {
 			}
 			custom_tooltip = every_owned_in_colonial_america_TT
 			tooltip = {
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 					name = production_of_tobacco_GAU
 					duration = -1
 				}
@@ -2957,10 +2987,10 @@ PF_Gaul_5C_branching = {
 						country_or_non_sovereign_subject_holds = ROOT
 						trade_goods = tobacco
 						has_production_building_trigger = yes
-						base_production = 5
+						base_production = 6
 						colonial_region = colonial_eastern_america
 					}
-					add_province_modifier = {
+					add_permanent_province_modifier = {
 						name = production_of_tobacco_GAU
 						duration = -1
 					}
