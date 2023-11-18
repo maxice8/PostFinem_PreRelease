@@ -109,7 +109,6 @@ PF_Gaul_1 = {
 			country_event = {
 				id = pf_gaul_events.2
 			}
-			custom_tooltip = empty_line_tt
 			custom_tooltip = return_of_the_frisii
 			hidden_effect = {
 				every_owned_province = {
@@ -187,7 +186,7 @@ PF_Gaul_1 = {
 		}
 		effect = {
 			define_advisor = {
-				type = natural_scientist
+				type = logistician
 				skill = 3
 				cost_multiplier = 0.25
 				culture = old_saxon
@@ -292,18 +291,15 @@ PF_Gaul_1 = {
 			pf_gaul_tall_1
 		}
 		provinces_to_highlight = {
-			area = champagne_area
+			province_id = 186
 			NOT = {
 				has_trade_building_trigger = yes
-				AND = {
-					province_id = 186
-					base_production = 8
-				}
+				base_production = 8
 			}
 		}
 		trigger = {
-			champagne_area = {
-				type = all
+			owns_core_province = 186
+			186 = {
 				has_trade_building_trigger = yes
 			}
 			186 = {
@@ -312,7 +308,8 @@ PF_Gaul_1 = {
 		}
 		effect = {
 			186 = {
-				center_of_trade = 2
+				upgrade_center_of_trade = yes
+				custom_tooltip = empty_line_tt
 				add_prosperity = 100
 			}
 		}
@@ -324,52 +321,58 @@ PF_Gaul_1 = {
 			pf_gaul_tall_4
 		}
 		provinces_to_highlight = {
-			trade_company_region = trade_company_bordeaux
-			NOT = {
-				has_trade_building_trigger = yes
+			OR = {
+				AND = {
+					trade_company_region = trade_company_bordeaux
+					NOT = {
+						has_trade_building_trigger = yes
+						has_shipyard_building_trigger = yes
+					}
+				}
+				AND = {
+					province_id = 174
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+						NOT = { province_has_center_of_trade_of_level = 2 }
+					}
+				}
 			}
 		}
 		trigger = {
+			owns_core_province = 174
+			174 = {
+				province_has_center_of_trade_of_level = 2
+			}
 			num_of_owned_provinces_with = {
 				custom_trigger_tooltip = {
 					tooltip = pictonia_province_TT
 					trade_company_region = trade_company_bordeaux
 				}
 				has_trade_building_trigger = yes
-				base_production = 8
-				value = 10
+				has_shipyard_building_trigger = yes
+				value = 5
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = trade_steering_for_GAUL
-				duration = 9125
+			add_mercantilism = 3
+			custom_tooltip = empty_line_tt
+			174 = {
+				upgrade_center_of_trade = yes
 			}
+			custom_tooltip = empty_line_tt
 			1276 = {
 				add_trade_modifier = {
 					who = ROOT
 					duration = 9125
-					power = 10
+					power = 50
 					key = CONTROLLED_FLOW_CEL
 				}
 			}
-			add_mercantilism = 3
-			custom_tooltip = own_174_TT
-			hidden_effect = {
-				if = {
-					limit = {
-						174 = {
-							owned_by = ROOT
-							NOT = { center_of_trade = 3 }
-						}
-					}
-					174 = {
-						add_center_of_trade_level = 1
-					}
-				}
-				else = {
-					add_adm_power = 100
-				}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = trade_steering_for_GAUL
+				duration = 9125
 			}
 		}
 	}
@@ -664,9 +667,10 @@ PF_Gaul_2 = {
 				power_type = gaul_confederation
 				value = 15
 			}
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = tax_growth_GAU
-				duration = 3650
+				duration = 7300
 			}
 		}
 	}
@@ -693,12 +697,12 @@ PF_Gaul_2 = {
 			}
 		}
 		effect = {
-			custom_tooltip = enable_woodland_edict
 			define_advisor = {
 				type = logistician
 				skill = 2
 				discount = yes
 			}
+			custom_tooltip = enable_woodland_edict
 		}
 	}
 	pf_gaul_tall_3 = {
@@ -1123,14 +1127,26 @@ PF_Gaul_3 = {
 		position = 7
 		provinces_to_highlight = {
 			OR = {
-				area = switzerland_area
-				area = romandie_area
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				AND = {
+					OR = {
+						area = switzerland_area
+						area = romandie_area
+					}
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				AND = {
+					province_id = 166
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+				}
 			}
 		}
 		trigger = { 
+			owns_core_province = 166
 			switzerland_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1142,7 +1158,10 @@ PF_Gaul_3 = {
 		}
 		effect = { 
 			166 = {
-				add_latest_building = { builder = ROOT fort = yes }
+				add_or_upgrade_fort_building = yes
+			}
+			custom_tooltip = empty_line_tt
+			166 = {
 				add_province_modifier = {
 					name = construct_alpine_fort_GAU
 					duration = -1
@@ -1181,16 +1200,29 @@ PF_Gaul_3 = {
 			pf_gaul_german_2
 		}
 		position = 8
-		trigger = {
-			switzerland_area = {
-				type = all
+		provinces_to_highlight = {
+			OR = {
+				area = switzerland_area
+				area = romandie_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT		
 				religion = ROOT
 				development = 10
 			}
+		}
+		trigger = {
+			switzerland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 10
+				religion = ROOT
+			}
 			romandie_area = {
 				type = all
-				religion = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 				development = 10
+				religion = ROOT
 			}
 		}
 		effect = {
@@ -1234,20 +1266,35 @@ PF_Gaul_3 = {
 			trade_goods = wine
 			region = france_region
 			NOT = {
-				base_tax = 5
-				base_manpower = 5
+				base_tax = 4
+				base_production = 6
 				has_manufactory_trigger = yes
 			}
 		}
 		trigger = {
-			num_of_owned_provinces_with = {
-				base_tax = 5
-				base_manpower = 5
-				trade_goods = wine
-				has_manufactory_trigger = yes
-				region = france_region
-				value = 7
+			if = {
+				limit = {
+					ai = no
+				}			
+				num_of_owned_provinces_with = {
+					trade_goods = wine
+					base_tax = 4
+					base_production = 6
+					has_manufactory_trigger = yes
+					region = france_region
+					value = 5
+				}
 			}
+			else = {					
+				num_of_owned_provinces_with = {
+					trade_goods = wine
+					base_tax = 4
+					base_production = 4
+					region = france_region
+					value = 4
+				}
+			}
+			
 		}
 		effect = {
 			if = {
@@ -1258,6 +1305,8 @@ PF_Gaul_3 = {
 				}
 				184 = {
 					change_trade_goods = wine
+				}
+				184 = {				
 					add_province_modifier = {
 						name = growth_of_vineyard_culture
 						duration = -1
@@ -1280,8 +1329,7 @@ PF_Gaul_3 = {
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
-						base_tax = 5
-						base_manpower = 5
+						base_production = 10
 						trade_goods = wine
 						has_manufactory_trigger = yes
 					}
@@ -1317,18 +1365,17 @@ PF_Gaul_3 = {
 			}
 		}
 		effect = {
-			custom_tooltip = wool_to_cloth_TT
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						region = france_region
-						trade_goods = wool
-						has_manufactory_trigger = yes
-						base_production = 12
-					}
-					change_trade_goods = cloth
-				}
+			swap_trade_good_for_max_provinces = {
+				max = 5
+				original = wool
+				new = cloth
+				tooltip = wool_to_cloth_TT
+				trigger = "
+					has_manufactory_trigger = yes
+					base_production = 12
+				"
 			}
+			custom_tooltip = empty_line_tt
 			custom_tooltip = producer_of_silk_TT
 			tooltip = {
 				add_ruler_modifier = {
@@ -1677,7 +1724,8 @@ PF_Gaul_4 = {
 			}
 		}
 		effect = {
-			add_heir_support = 5
+			add_heir_support = 10
+			custom_tooltip = empty_line_tt
 			add_ruler_modifier = {
 				name = gaul_confederative_leader
 				duration = -1
@@ -1934,38 +1982,14 @@ PF_Gaul_4_C = {
 		}
 
 		trigger = {
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = claim_in_region_GAU
-					calc_true_if = {
-						all_province = {
-							OR = {
-								area = wessex_area
-								area = home_counties_area
-								area = east_anglia_area
-							}
-							is_claim = ROOT
-						}
-						amount = 3
-					}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1
+				OR = {
+					area = wessex_area
+					area = home_counties_area
+					area = east_anglia_area
 				}
-				custom_trigger_tooltip = {
-					tooltip = province_in_region_GAU
-					calc_true_if = {
-						all_province = {
-							OR = {
-								area = wessex_area
-								area = home_counties_area
-								area = east_anglia_area
-							}
-							country_or_non_sovereign_subject_holds =  ROOT
-						}
-						amount = 1
-					}
-				}
-				
 			}
-
 		}
 
 		effect = {
@@ -2132,6 +2156,13 @@ PF_Gaul_4_C = {
 			}
 		}
 		effect = {
+			custom_tooltip = the_druidic_support_TT
+			tooltip = {
+				add_province_modifier = {
+					name = druidic_traditions
+					duration = -1 
+				}
+			}
 			wales_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -2145,13 +2176,6 @@ PF_Gaul_4_C = {
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}
-			custom_tooltip = the_druidic_support_TT
-			tooltip = {
-				add_province_modifier = {
-					name = druidic_traditions
-					duration = -1 
-				}
 			}
 		}
 	}
@@ -2181,6 +2205,13 @@ PF_Gaul_4_C = {
 			}
 		}
 		effect = {
+			add_power_projection = {
+				type = 10_permanent_power_projection
+				amount = 10
+			}
+			custom_tooltip = zim_amongst_the_great_powers_tt
+			custom_tooltip = will_enable_culture_shifts
+			custom_tooltip = empty_line_tt
 			british_isles_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -2188,11 +2219,6 @@ PF_Gaul_4_C = {
 				}
 				add_permanent_claim = ROOT
 			}
-			add_power_projection = {
-				type = 25_permanent_power_projection
-				amount = 25
-			}
-			custom_tooltip = will_enable_culture_shifts
 		}
 	}
 
@@ -2547,46 +2573,62 @@ PF_Gaul_5C_branching = {
 				OR = {
 					AND = {
 						has_tax_building_trigger = yes
-						base_tax = 10
+						base_tax = 8
 					}
 					AND = {
-						fort_level = 2
+						province_has_current_tech_fort_trigger = yes
 						base_manpower = 5
 					}
 				}
 			}
 		}
 		trigger = {
-			234 = {
-				OR = {
-					AND = {
-						has_tax_building_trigger = yes
-						base_tax = 10
-					}
-					AND = {
-						fort_level = 2
-						base_manpower = 5
-					}
+			if = {
+				limit = {
+					ai = no
 				}
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			OR = {
 				234 = {
-					has_state_edict = edict_centralization_effort
+					OR = {
+						AND = {
+							has_tax_building_trigger = yes
+							base_tax = 8
+						}
+						AND = {
+							province_has_current_tech_fort_trigger = yes
+							base_manpower = 5
+						}
+					}
+					country_or_non_sovereign_subject_holds = ROOT
 				}
-				wessex_area = {
-					prosperity = 25
+			}
+			else = {
+				234 = {
+					OR = {
+						AND = {
+							has_tax_building_trigger = yes
+							base_tax = 5
+						}
+						AND = {
+							province_has_current_tech_fort_trigger = yes
+							base_manpower = 3
+						}
+					}
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
 		}
 		effect = {
 			234 = {
 				change_culture = ROOT
+				custom_tooltip = empty_line_tt
 				change_province_name = "Meinia"
+			}		
+			234 = {
 				add_great_project_tier = {
 					type = stonehenge
 					tier = 1
 				}
+				custom_tooltip = empty_line_tt
 				add_province_modifier = {
 					name = rulers_in_prydain
 					duration = -1
@@ -2641,9 +2683,10 @@ PF_Gaul_5C_branching = {
 				}
 				custom_tooltip = pf_gaul_celtica_6_tt
 			}
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = cheap_soldiers_iron
-				duration = 9125
+				duration = -1
 			}
 		}
 	}

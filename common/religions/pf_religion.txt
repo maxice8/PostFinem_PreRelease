@@ -1691,7 +1691,7 @@ druidic_group = {
 				}
 
 				visible = {
-					always = yes
+					has_country_flag = lugus_icon
 				}
 
 				ai_will_do = {
@@ -1711,7 +1711,7 @@ druidic_group = {
 				}
 
 				visible = {
-					always = yes
+					mission_completed = pf_gaul_celtica_8
 				}
 
 				ai_will_do = {

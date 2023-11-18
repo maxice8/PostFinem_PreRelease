@@ -105,7 +105,7 @@ rulers_in_prydain = {
 	local_production_efficiency = 0.05
 }
 cheap_soldiers_iron = {
-	infantry_cost = -0.25
+	land_forcelimit_modifier = 0.1
 	land_maintenance_modifier = -0.05
 }
 tax_growth_GAU = {
@@ -115,20 +115,20 @@ urbanizing_gaul_forest = {
 	allowed_num_of_buildings = 1	
 }
 trade_steering_for_GAUL = {
-	trade_steering = 0.10
-	caravan_power = 0.15
+	trade_efficiency = 0.1
+	province_trade_power_modifier = 0.1
 }
 growth_of_vineyard_culture = {
-	build_cost = -0.15
+	local_production_efficiency = 0.25
 	trade_goods_size = 1
 }
 vinyard_legitimacy = {
-	province_trade_power_modifier = 0.15
-	local_production_efficiency = 0.1	
+	trade_goods_size = 0.5
+	local_development_cost = -0.1	
 }
 golden_age_of_gaul = {
-	global_prosperity_growth = 0.25
-	global_unrest = -1
+	global_unrest = -2
+	global_prosperity_growth = 1
 }
 radical_industrialism = {
 	local_production_efficiency = 0.05
@@ -189,8 +189,7 @@ the_emperor_and_gauls = {
 }
 rejection_of_the_norse = {
 	culture_conversion_cost = -0.25
-	local_years_of_nationalism = -5
-	local_missionary_strength = 0.02
+	local_missionary_strength = 0.03
 }
 explorer_until_have_one = {
 	colonists = 1
