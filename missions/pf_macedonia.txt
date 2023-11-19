@@ -402,7 +402,7 @@ mac_2 = {
 			}
 			if = {
 				limit = { ai = no }
-				army_size_percentage = 1
+				army_size_percentage = 0.9
 				army_professionalism = 0.05
 			}
 			else = {
@@ -1240,8 +1240,14 @@ mac_archon_friend_5 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {  
-			is_defender_of_faith = yes
-			is_papal_controller = yes
+			if = {
+				limit = {
+					ai = no
+				}
+				is_defender_of_faith = yes
+				is_papal_controller = yes
+			}
+			
 			papal_influence = 100
 		} 
 

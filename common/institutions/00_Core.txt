@@ -409,7 +409,10 @@ renaissance = {
 		}
 		OR = {
 			development = 20
-			is_capital = yes
+			AND = {
+				is_capital = yes
+				development = 15
+			}
 			normal_or_historical_nations = no
 			is_year = 1475
 		}
