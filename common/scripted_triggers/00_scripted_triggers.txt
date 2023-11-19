@@ -4446,55 +4446,56 @@ has_unified_islam = {
 }
 
 has_completed_all_persian_missions = {
-	custom_trigger_tooltip = {
-		tooltip = has_completed_all_persian_missions_tt
-		mission_completed = per_reform_our_defenses
-		mission_completed = per_master_of_india
-		mission_completed = per_create_the_tupchi
-		OR = {
-			AND = {
-				mission_completed = per_a_new_eranshahr
-				mission_completed = per_an_asha_empire
-			}
-			AND = {
-				OR = {
-					mission_completed = per_unify_islam
-					mission_completed = per_great_shia_empire
-				}
-				mission_completed = per_indomitable_lion
-				mission_completed = per_language_of_poetry
-			}
-		}
-		OR = {
-			AND = {
-				has_mission = per_tab_legacy_of_eranshahr
-				mission_completed = per_tab_legacy_of_eranshahr
-			}
-			AND = {
-				has_mission = per_qqq_legacy_of_the_seljuk
-				mission_completed = per_qqq_legacy_of_the_seljuk
-			}
-			AND = {
-				has_mission = per_tim_legacy_of_timur
-				mission_completed = per_tim_legacy_of_timur
-			}
-			AND = {
-				has_mission = per_arl_legacy_of_the_safavid
-				mission_completed = per_arl_legacy_of_the_safavid
-			}
-			AND = {
-				NOT = { has_mission = per_tab_legacy_of_eranshahr }
-				NOT = { has_mission = per_qqq_legacy_of_the_seljuk }
-				NOT = { has_mission = per_tim_legacy_of_timur }
-				NOT = { has_mission = per_arl_legacy_of_the_safavid }
-			}
-		}
-		mission_completed = per_riches_of_asia
-		mission_completed = per_enlightened_rule
-		mission_completed = per_the_tofangchi
-		mission_completed = per_balance_of_power
-		mission_completed = per_establish_the_qurchi
-	}
+	always = no
+	# custom_trigger_tooltip = {
+	# 	tooltip = has_completed_all_persian_missions_tt
+	# 	mission_completed = per_reform_our_defenses
+	# 	mission_completed = per_master_of_india
+	# 	mission_completed = per_create_the_tupchi
+	# 	OR = {
+	# 		AND = {
+	# 			mission_completed = per_a_new_eranshahr
+	# 			mission_completed = per_an_asha_empire
+	# 		}
+	# 		AND = {
+	# 			OR = {
+	# 				mission_completed = per_unify_islam
+	# 				mission_completed = per_great_shia_empire
+	# 			}
+	# 			mission_completed = per_indomitable_lion
+	# 			mission_completed = per_language_of_poetry
+	# 		}
+	# 	}
+	# 	OR = {
+	# 		AND = {
+	# 			has_mission = per_tab_legacy_of_eranshahr
+	# 			mission_completed = per_tab_legacy_of_eranshahr
+	# 		}
+	# 		AND = {
+	# 			has_mission = per_qqq_legacy_of_the_seljuk
+	# 			mission_completed = per_qqq_legacy_of_the_seljuk
+	# 		}
+	# 		AND = {
+	# 			has_mission = per_tim_legacy_of_timur
+	# 			mission_completed = per_tim_legacy_of_timur
+	# 		}
+	# 		AND = {
+	# 			has_mission = per_arl_legacy_of_the_safavid
+	# 			mission_completed = per_arl_legacy_of_the_safavid
+	# 		}
+	# 		AND = {
+	# 			NOT = { has_mission = per_tab_legacy_of_eranshahr }
+	# 			NOT = { has_mission = per_qqq_legacy_of_the_seljuk }
+	# 			NOT = { has_mission = per_tim_legacy_of_timur }
+	# 			NOT = { has_mission = per_arl_legacy_of_the_safavid }
+	# 		}
+	# 	}
+	# 	mission_completed = per_riches_of_asia
+	# 	mission_completed = per_enlightened_rule
+	# 	mission_completed = per_the_tofangchi
+	# 	mission_completed = per_balance_of_power
+	# 	mission_completed = per_establish_the_qurchi
+	# }
 }
 
 has_any_ongoing_construction = {
