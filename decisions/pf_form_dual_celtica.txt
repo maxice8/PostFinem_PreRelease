@@ -1,0 +1,88 @@
+country_decisions = {
+
+	form_dual_celtica = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_dual_celtica_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			tag = GAU
+			mission_completed = pf_gaul_court_9
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = british_isles_region
+				province_id = 373
+				province_id = 236
+				province_id = 249
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no			
+			NOT = { exists = DCL }
+			owns_core_province = 373
+			owns_core_province = 236
+			owns_core_province = 249
+			if = {
+				limit = {
+					tag = GAU
+				}
+				num_of_owned_provinces_with = {
+					value = 20
+					region = british_isles_region
+					is_core = root
+				}
+
+			}
+			else = {
+				num_of_owned_provinces_with = {
+					value = 40
+					region = british_isles_region
+					is_core = root
+				}
+			}
+		}
+		effect = {
+			change_tag = DCL
+			custom_tooltip = empty_line_tt
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			custom_tooltip = empty_line_tt
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+				custom_tooltip = empty_line_tt
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_dual_celtica_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+	

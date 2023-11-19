@@ -1,0 +1,48 @@
+namespace = pf_tribal
+
+country_event = { 	# Settle down and choose new government type
+	id = pf_tribal.1
+	title = pf_tribal.1.t
+	desc = pf_tribal.1.d
+	picture = east_slavic_CITY_DEVELOPMENT_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "pf_tribal.1.a"
+		ai_chance = {
+			factor = 100 #Most will take Monarchy
+		}
+		add_stability_or_adm_power = yes
+		custom_tooltip = empty_line_tt	
+		add_prestige_or_monarch_power = { amount = 25 }
+		custom_tooltip = empty_line_tt
+		change_government = monarchy	
+		on_government_change_effect = yes
+
+	}
+	option = {
+		ai_chance = {
+			factor = 10 #Republics >10%
+		}
+		name = "pf_tribal.1.b"
+		add_stability_or_adm_power = yes
+		custom_tooltip = empty_line_tt	
+		add_prestige_or_monarch_power = { amount = 25 }
+		custom_tooltip = empty_line_tt
+		change_government = republic
+		on_government_change_effect = yes
+	}
+	option = {
+		ai_chance = {
+			factor = 5 #The rare theocracy
+		}
+		name = "pf_tribal.1.c"
+		add_stability_or_adm_power = yes
+		custom_tooltip = empty_line_tt	
+		add_prestige_or_monarch_power = { amount = 25 }
+		custom_tooltip = empty_line_tt
+		change_government = theocracy
+		on_government_change_effect = yes
+	}
+}

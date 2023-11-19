@@ -145,3 +145,18 @@ pf_romuva_tribes = {
 		factor = 1
 	}
 }
+
+pf_germanic_vassal = {
+	icon = "crown"
+	allow_normal_conversion = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	lock_level_when_selected = yes
+	potential = {
+		has_country_flag = pf_germanic_vassal_flag
+	}
+	modifiers = {
+		liberty_desire = -35
+		land_forcelimit_modifier = 0.10
+	}
+}

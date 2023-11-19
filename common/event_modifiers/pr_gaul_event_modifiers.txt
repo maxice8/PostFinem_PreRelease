@@ -1,0 +1,219 @@
+local_autonomy_modifier_G_1 = {
+	local_manpower_modifier = 0.25
+	local_tax_modifier = 0.25
+}
+pf_gallic_wars_remant_1 = {
+	min_local_autonomy = 15
+}
+unifier_of_gauls = {
+	manpower_in_culture_group_provinces = 0.10
+}
+nervian_submission = {
+	local_tax_modifier = 0.15
+	local_unrest = -1
+}
+end_the_raids_GAU = {
+	block_slave_raid = yes
+	hostile_disembark_speed = 0.5
+}
+dispell_the_germanics = {
+	local_culture_conversion_cost = -0.25 
+	local_missionary_strength = 0.05
+}
+start_german_campaigns = {
+	land_attrition = -0.10 
+	recover_army_morale_speed = 0.10 
+}
+fortify_germany = {
+	build_cost = -0.1
+	build_time = -0.25
+}
+the_natural_borders_gau = {
+	leader_land_fire = 1 
+	land_morale = 0.05 
+}
+SUB_the_conuerors_of_germany_GAU = {
+	vassal_forcelimit_bonus = 0.5
+	vassal_income = 0.15
+}
+the_conuerors_of_germany_GAU = {
+	prestige = 0.5
+	years_of_nationalism = -5
+}
+construct_alpine_fort_GAU = {
+	local_fort_maintenance_modifier = -0.50
+	local_defender_dice_roll_bonus = 1
+}
+rebuilding_helvetica = {
+	local_development_cost = -0.05
+	trade_goods_size_modifier = 0.10
+}
+gaul_confederative_leader = {
+	monthly_gaul_confederation = 0.10
+}
+reclaimer_of_gaul = {
+	land_morale = 0.10
+	development_cost = -0.05	
+	national_focus_years = -5
+}
+gallic_challenger = {
+	nobles_loyalty_modifier = 0.2
+	monthly_gaul_confederation = 0.15
+}
+restriction_of_nobles_GAU = {
+	global_prosperity_growth = 0.5
+	monthly_support_heir_gain = 0.05	
+}
+centralization_gaul = {
+	state_governing_cost = -0.10
+	expand_administration_cost = -0.15
+}
+absolutism_spreads_GAU = {
+	max_absolutism_effect = 0.25
+}
+noble_absolutism_GAU = {
+	max_absolutism = 25
+}
+buffed_muskets_1 = {
+	manpower_recovery_speed = 0.10
+	land_maintenance_modifier = -0.15
+	reinforce_speed = 0.20
+	is_musketeer_modifier = yes	
+}
+buffed_muskets_2 = {
+	infantry_power = 0.10
+	movement_speed = 0.05
+	land_morale = 0.075	
+	is_musketeer_modifier = yes	
+}
+claimed_by_GAU = {
+	local_warscore_cost_modifier = -0.25
+}
+staging_grounds = {
+	supply_limit_modifier = 0.25
+	local_defender_dice_roll_bonus = 1
+}
+rule_the_waves_GAU = {
+	max_flagships = 1	
+	flagship_cost = -0.25
+}
+druidic_traditions = {
+	local_manpower_modifier = 0.05
+}
+rulers_in_prydain = {
+	num_accepted_cultures = 1	
+	local_production_efficiency = 0.05
+}
+cheap_soldiers_iron = {
+	land_forcelimit_modifier = 0.1
+	land_maintenance_modifier = -0.05
+}
+tax_growth_GAU = {
+	global_tax_modifier = 0.15
+}
+urbanizing_gaul_forest = {
+	allowed_num_of_buildings = 1	
+}
+trade_steering_for_GAUL = {
+	trade_efficiency = 0.1
+	province_trade_power_modifier = 0.1
+}
+growth_of_vineyard_culture = {
+	local_production_efficiency = 0.25
+	trade_goods_size = 1
+}
+vinyard_legitimacy = {
+	trade_goods_size = 0.5
+	local_development_cost = -0.1	
+}
+golden_age_of_gaul = {
+	global_unrest = -2
+	global_prosperity_growth = 1
+}
+radical_industrialism = {
+	local_production_efficiency = 0.1
+	local_tax_modifier = 0.1
+	local_unrest = -1	
+}
+hub_of_dublin = {
+	prestige = 0.5
+	num_accepted_cultures = 1
+}
+defense_of_gaul = {
+	local_defensiveness = 0.25
+	local_garrison_size = 0.25
+}
+reclimation_of_gaul = {
+	local_culture_conversion_cost = -0.25
+	local_missionary_strength = 0.03
+}
+rally_for_gaul = {
+	land_morale = 0.1
+	province_warscore_cost = -0.10
+}
+defense_of_the_empire = {
+	manpower_recovery_speed = 0.15
+	fire_damage_received = -0.10
+}
+loyalty_to_none = {
+	diplomatic_reputation = -3
+	imperial_authority = -0.05	
+}
+celtic_whalers = {
+	trade_goods_size = 2
+	local_sailors_modifier = 0.25
+}
+defense_of_pyrenees = {
+	local_defensiveness = 0.25
+	local_garrison_size = 0.25
+}
+merchant_fleet_gau = {
+	light_ship_cost = -0.1
+	global_ship_trade_power = 0.25	
+}
+return_of_the_lusitanians = {
+	num_accepted_cultures = 2
+	manpower_in_accepted_culture_provinces = 0.1
+}
+defeated_the_federation = {
+	land_morale = -0.1
+	diplomatic_reputation = -3
+}
+the_emperor_and_gauls = {
+	administrative_efficiency = 0.05
+	prestige_decay = -0.01
+}
+rejection_of_the_norse = {
+	culture_conversion_cost = -0.25
+	local_missionary_strength = 0.03
+}
+explorer_until_have_one = {
+	colonists = 1
+	may_explore = yes	
+}
+explorer_born = {
+	global_colonial_growth = 10	
+	colony_development_boost = 1	
+}
+swiss_development_GAU = {
+	local_development_cost = -0.20
+}
+colonial_ventures_GAU = {
+	global_tariffs = 0.1
+	reduced_liberty_desire_on_other_continent = 20
+}
+production_of_tobacco_GAU = {
+	trade_goods_size_modifier = 0.10
+	province_trade_power_modifier = 0.15
+}
+loyal_subject_gau = {
+	global_tariffs = 0.10
+	native_uprising_chance = -0.25	
+}
+production_of_sugar_GAU = {
+	trade_efficiency = 0.10
+	trade_steering = 0.1
+}
+no_more_unity_problems = {
+	local_religious_unity_contribution = -1
+}

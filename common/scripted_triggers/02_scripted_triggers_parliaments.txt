@@ -175,6 +175,14 @@ halved_parliament_bribes = {
 
 has_expensive_debate = {
 	always = no
+	#OR = {
+	#	current_debate = acts_of_impressment
+	#	current_debate = acts_of_high_admiralty
+	#	current_debate = acts_of_maritime_courage
+	#	current_debate = acts_of_naval_professionalism
+	#	current_debate = acts_of_maritime_professionalism
+	#	current_debate = colonial_venture_act
+	#}
 }
 
 has_issue_unlocked = {

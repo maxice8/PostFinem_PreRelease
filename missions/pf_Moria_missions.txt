@@ -1,0 +1,483 @@
+pf_mva_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MVA } 
+
+	mva_bavaria = {
+		icon = deal_with_the_illuminati
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			if = {
+				limit = {
+					ai = no
+				}
+				num_of_generals = 1
+				army_size_percentage = 0.9
+				manpower_percentage = 0.5
+			}
+			else = {
+				num_of_generals = 1
+				army_size_percentage = 0.75
+			}
+		} 
+
+		effect = {
+			add_army_tradition_or_mil_power = { amount = 10 }
+			custom_tooltip = empty_line_tt
+			lower_bavaria_area = { add_permanent_claim = ROOT } 
+			east_bavaria_area = { add_permanent_claim = ROOT } 
+		}
+	}
+
+	mva_markland = {
+		icon = bavarian_cultural_dominance
+		position = 2
+		required_missions = { mva_bavaria } 
+		provinces_to_highlight = {
+			OR = {
+				area = lower_bavaria_area
+				area = east_bavaria_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+
+		trigger = {
+			lower_bavaria_area = {
+				type = all
+				owned_by = ROOT
+			}
+			east_bavaria_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+
+		effect = {
+			add_yearly_manpower = 3
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "mva_markmann"
+				duration = 9125
+			}
+		}
+	}
+
+	mva_marcomanni = {
+		icon = bohemian_crystal
+		position = 4
+		required_missions = {
+			mva_markland
+			mva_moria
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = lower_bavaria_area
+				area = east_bavaria_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { religion = ROOT }
+				NOT = { base_production = 4 }
+			}
+		}
+
+		trigger = {
+			lower_bavaria_area = {
+				type = all
+				owned_by = ROOT
+				religion = ROOT
+			}
+			lower_bavaria_area = {
+				type = all
+				base_production = 4
+			}
+			east_bavaria_area = {
+				type = all
+				owned_by = ROOT
+				religion = ROOT
+			}
+			east_bavaria_area = {
+				type = all
+				base_production = 4
+			}
+		}
+
+		effect = { 
+			64 = { center_of_trade = 2 }  
+			64 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}  
+		} 
+	}
+}
+pf_mva_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MVA } 
+
+	mva_saxony = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		required_missions = { mva_bavaria } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			has_mil_advisor_2 = yes 
+			army_size = 20
+			land_forcelimit = 20
+		} 
+
+		effect = {
+			add_mil_power = 50
+			custom_tooltip = empty_line_tt
+			thuringia_area = { add_permanent_claim = ROOT } 
+			upper_franconia_area = { add_permanent_claim = ROOT } 
+		}
+	}
+
+	mva_choice_m = {
+		icon = a_show_of_strength
+		position = 5
+		required_missions = { mva_marcomanni } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			is_at_war = no
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 60
+		   }
+			primary_culture = marcomanni
+			stability = 2
+		}
+
+		effect = {
+			change_tag = MKM
+			swap_non_generic_missions = yes
+			on_change_tag_effect = yes
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}			
+				set_government_rank = 2
+				custom_tooltip = empty_line_tt
+			}
+			add_prestige_or_monarch_power = { amount = 25 }
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+		}
+	}
+}
+pf_mva_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MVA } 
+
+	mva_religion = {
+		icon = mission_high_income
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			has_adm_advisor = yes
+			if = {
+				limit = {
+					ai = no
+				}
+				prestige = 20
+			}
+			else = { prestige = 10 }
+		}
+
+		effect = {
+			create_general = {
+				tradition = 40
+				add_shock = 1
+			}
+			custom_tooltip = empty_line_tt
+			bohemia_area = { add_permanent_claim = ROOT } 
+			moravia_area = { add_permanent_claim = ROOT } 
+		}
+	}
+
+	mva_moria = {
+		icon = mission_monarch_in_throne_room
+		position = 3
+		required_missions = { mva_religion } 
+		provinces_to_highlight = {
+			OR = {
+				area = erzgebirge_area
+				area = bohemia_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { religion = ROOT }
+				NOT = { num_of_times_improved_by_owner = 3 }
+			}
+		}
+
+		trigger = {
+			erzgebirge_area = {
+				type = all
+				owned_by = ROOT
+				religion = ROOT
+			}
+			erzgebirge_area = {
+				type = all
+				num_of_times_improved_by_owner = 3
+			}
+			bohemia_area = {
+				type = all
+				owned_by = ROOT
+				religion = ROOT
+			}
+			bohemia_area = {
+				type = all
+				NOT = { num_of_times_improved_by_owner = 3 }
+			}
+		}
+
+		effect = { 
+			country_event = { id = pf_ost.7 }  
+			if = {
+				limit = {ai = yes}
+				erzgebirge_area = {
+					change_culture = sudeten
+				}
+				bohemia_area = {
+					change_culture = sudeten
+				}
+			}
+		} 
+	}
+}
+pf_mva_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MVA } 
+
+	mva_moravia = {
+		icon = mission_luther_theses
+		position = 2
+		required_missions = { mva_religion } 
+		provinces_to_highlight = { 
+			area = moravia_area 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			moravia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			add_prestige_or_monarch_power = { amount = 10 }
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = mva_into_eldrun_modifier
+				duration = 7300
+			}
+			slovakia_area = { add_permanent_claim = ROOT } 
+		}
+	}
+
+	mva_choice_s = {
+		icon = mission_english_absolutism
+		position = 5
+		required_missions = { mva_sudeti } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			is_at_war = no
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 60
+		   }
+			primary_culture = sudeten
+			stability = 2
+		}
+
+		effect = {
+			change_tag = SDT
+			swap_non_generic_missions = yes
+			on_change_tag_effect = yes
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}			
+				set_government_rank = 2
+				custom_tooltip = empty_line_tt
+			}
+			add_prestige_or_monarch_power = { amount = 25 }
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+		}
+	}
+}
+pf_mva_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MVA } 
+
+	mva_developing = {
+		icon = mission_dominate_home_trade_node
+		position = 1
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+			NOT = { num_of_times_improved_by_owner = 5 }
+		} 
+
+		trigger = {
+			capital_scope = {
+				num_of_times_improved_by_owner = 5
+			}
+		} 
+
+		effect = {
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			custom_tooltip = empty_line_tt
+			capital_scope = {
+				add_or_upgrade_production_building = yes
+			}
+		}
+	}
+
+	mva_higher = {
+		icon = mission_war_chest
+		position = 2
+		required_missions = {
+			mva_developing
+			mva_religion
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = bohemia_area
+				area = erzgebirge_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { development = 9 }
+			}
+		}
+
+		trigger = {
+			erzgebirge_area = {
+				type = all
+				owned_by = ROOT
+				development = 9
+			}
+			bohemia_area = {
+				type = all
+				owned_by = ROOT
+				development = 9
+			}
+		}
+
+		effect = {
+			define_advisor = {
+				type = city_planner
+				skill = 1
+				discount = yes
+			}
+			custom_tooltip = empty_line_tt
+			erzgebirge_area = {
+				add_province_modifier = {
+					name = "mva_local_new_hope"
+					duration = 9125
+				}
+			}
+			bohemia_area = {
+				add_province_modifier = {
+					name = "mva_local_new_hope"
+					duration = 9125
+				}
+			}
+		}
+	}
+
+	mva_sudeti = {
+		icon = a.e.i.o.u.
+		position = 4
+		required_missions = {
+			mva_higher
+			mva_moria
+		}
+		provinces_to_highlight = { 
+			area = bohemia_area 
+			NOT = { owned_by = ROOT }
+		} 
+
+		trigger = {
+			bohemia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			266 = { development = 20 }
+			266 = { province_has_center_of_trade_of_level = 2 } 
+		}
+
+		effect = {
+			custom_tooltip = CT_MVA_1
+			custom_tooltip = empty_line_tt
+			267 = {
+				add_base_manpower = 2
+			}
+			custom_tooltip = empty_line_tt
+			hidden_effect = {
+				267 = {
+					if = {
+						limit = { owner = { culture = sudeten }  } 
+						change_culture = sudeten
+					}
+				}
+			}
+			2968 = {
+				add_base_manpower = 2
+			}
+			hidden_effect = {
+				2968 = {
+					if = {
+						limit = { owner = { culture = sudeten }  } 
+						change_culture = sudeten
+					}
+				}
+			}
+		}
+	}
+}

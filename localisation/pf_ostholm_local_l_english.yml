@@ -1,0 +1,137 @@
+﻿l_english:
+#####NAT_IDEAS
+
+ OST: "Ostholm"
+ OST_ADJ: "Osthomer"
+ OST_ideas: "Osthomer Ideas"
+ OST_ideas_start: "Osthomer Traditions"
+ OST_ideas_bonus: "Osthomer Ambition"
+ OST_ideas_1: "Alpine Warfare"
+ OST_ideas_2: "Goods of Mountains and Plains"
+ OST_ideas_3: "The Eastern Kingdom"
+ OST_ideas_4: "Ostgermanic Truth"
+ OST_ideas_5: "It's all Punic to Me"
+ OST_ideas_6: "The Growth of Ostgermania"
+ OST_ideas_7: "Ostholm, the first"
+
+ OST_ideas_1_desc: "The conflicts against the Italians and the Lombards has lead us to learn how to use the land we inhabit more efficiently."
+ OST_ideas_2_desc: "From the Alps to the Donova, the quantity of our goods challenges the claims of quality of our neighbors."
+ OST_ideas_3_desc: "Old Ostholm held the entire region from Italia to Slavia.\nWe will surpass those heights and grow ever higher."
+ OST_ideas_4_desc: "As Otto Ostholm built the Riesger Turm, he dreamed an unite people under an unique faith; we will bring that dream to reality."
+ OST_ideas_5_desc: "The lands outside german hands are plentiful of ideas to plunder and use against those who thought themself betters."
+ OST_ideas_6_desc: "Like a well kept garden, Ostgermania will grow as beautiful as the people who govern it."
+ OST_ideas_7_desc: "He who brought our ancestors to these lands, he who we honor by name with our conquest.\nA legacy and history that we will never forget."
+
+#####CUSTOM
+ ost_vld_rivalry:0 "Old Ostholm Rivalry"
+ OST_CT_1:0 "If  @VLD§YVildheim §Wis a subject, they will be inherited.\n"
+ OST_CT_2:0 "Up to §Y5§! owned provinces with a §YBarracks§! will have it upgraded to a §YTraining Field§W, if a §YTraining Field§! is present, add §G1 §YBase Manpower§W."
+ OST_CT_3:0 "Up to §Y5§! random owned Wine producing provinces will receive the following modifier:"
+#####MODIFIER
+ ost_diplomatic_pressure:0 "Royal Envoys"
+ ost_diplomatic_pressure_2:0 "Effortless Diplomacy"
+ ost_realm_of_og:0 "One Faithful Land"
+ ost_lords_of_ostgermania:0 "Lords of Osterreich"
+ ost_fire_of_war:0 "Fires of War"
+ ost_cannons_of_wien:0 "Cannons of Wien"
+ ost_army_grand:0 "Grand Army of Ostholm"
+ ost_powerhouse:0 "Army of Ostgermania"
+ ost_wine:0 "Divine Beverages"
+#####GOVERNMENT
+ pf_ostholm_crown:0 "Crown of Old Ostholm"
+ pf_ostholm_crown_desc:0 "The Old Ostholm realm contained the current border of Ostholm, Vildheim and Waldhart with Bergaland as a tributary tribe.\nAs such the Ostholm dynasty holds the title of Kings for their role in creating the nation."
+
+#####EVENTS
+
+ pf_ost.1.t:0 "A Tale of Two Boars"
+ pf_ost.1.d:0 "It has been over 90 years since the great Odor Ostholm divided the realm between himself and his younger brother Edric. Ostholm proper remained in the hands of Theodoric's father who consolidate his homeland into a more united tribe with written laws and united in new faith. Biegenfluss and the land beyond the river was given to Edric, who named it Vildheim, for its vast unkept lands. But young Edric, the Runt, would not see the next century - rich nobles plotted against him with the help of the Illyrians, and the Ostholm dynasty lost a throne. While many years have passed, some nobles have come to our court to discuss a possible coup - a moment for revenge for the runt of the family."
+ pf_ost.1.a:0 "Send them help, my ancestors smile upon me."
+ pf_ost.1.b:0 "I will not strike from the shadows."
+
+ pf_ost.2.t:0 "The Boar's Feast"
+ pf_ost.2.d:0 "The foolish Vildheimer Royalty have been brought down and our rule is finally restored in the chiefdom. Our loyal nobles are more autonomous than we would have preferred, but they will not rebel if they know better."
+ pf_ost.2.a:0 "A Feast for All."
+
+ pf_ost.3.t:0 "The Hog's Rebellion"
+ pf_ost.3.d:0 "The cowardly Ostholm have tried all they could to regain control over Vildheim, but time and time again should have thought them that we will not be subjugated. A couple of rebellious minor nobles are marching on the capital to restore their rule, but they will only find death."
+ pf_ost.3.a:0 "I will hunt them myself."
+ pf_ost.3.b:0 "Dinner will be served."
+
+ pf_ost.4.t:0 "Markets of the East"
+ pf_ost.4.d:0 "All the goods that pass through our lands will now have to pass through one of our market towns. The law will ensure the proper tariffs and taxes are respected and the wealth will ensure that the town which hosts the biggest market will become a grand metropolis. There is but one question outstanding - which town will it be, my liege?"
+ pf_ost.4.a:0 "Graz, where Ostholm started."
+ pf_ost.4.b:0 "Ostola, where wine flows like river."
+ pf_ost.4.c:0 "Klagenfurt, for iron and blood."
+ pf_ost.4.e:0 "I know this one place..."
+
+ pf_ost.5.t:0 "Illyrian Settlers"
+ pf_ost.5.d:0 "The people on the opposite sides of the river Sava, the Illyrians, have been at odds with our people since we enstablished ourselves here. Many conflicts and small wars have been waged between the Sava and the Drava, where the Illyrians have lost most of them, but managed to crop some town regardless. To the local chiefs, these town cause great headaches as they refuse to pay any tribute or actively attack our envoies. They petition to remove them but maybe there is a better compromise."
+ pf_ost.5.a:0 "Allow limited self rule."
+ pf_ost.5.b:0 "Get out of my land!"
+
+ pf_ost.6.t:0 "The Man of God"
+ pf_ost.6.d:0 "The scholar from Nekharot has taken residence in $CAPITAL_CITY$, lending help and words of advice to our nobles and wisemen. The man spoke of his intention to write about the people and religions north of his homeland. While many are interested in this cultured men, his religious teachings fall on deaf ears, but many symphatize with the stories of his persecuted people."
+ pf_ost.6.a:0 "You can stay as long as you want."
+
+#####MONUMENTS
+
+#####MISSIONS
+ ost_warrior_manpower_title:0 "To Make a Man"
+ ost_warrior_manpower_desc:0 "REPLACE_ME"
+
+ ost_eastern_push_title:0 "Piece by Piece"
+ ost_eastern_push_desc:0 "REPLACE_ME"
+
+ ost_ost_ostgermania_title:0 "Donovan Dominance"
+ ost_ost_ostgermania_desc:0 "REPLACE_ME"
+
+ ost_warrior_weapons_title:0 "The Sounds of War"
+ ost_warrior_weapons_desc:0 "REPLACE_ME"
+ ost_estate_nobles_officer_corp_fire_damage_tt: "The §YAethelric§! privilege §YAethelric in Officer Corps§! will now provide a §YFire Damage§! bonus (up to §G15%§!) scaled with estate loyalty\n"
+
+ ost_old_expanse_title:0 "Restore the Old Borders"
+ ost_old_expanse_desc:0 "REPLACE_ME"
+
+ ost_ostgermania_title:0 "The Germans of the East"
+ ost_ostgermania_desc:0 "REPLACE_ME"
+
+ ost_regional_power_title:0 "Worthy Ambitions"
+ ost_regional_power_desc:0 "REPLACE_ME"
+
+ ost_warrior_valors_title:0 "Fiery Tactics"
+ ost_warrior_valors_desc:0 "REPLACE_ME"
+
+ ost_northern_push_title:0 "Advice And Advantage"
+ ost_northern_push_desc:0 "REPLACE_ME"
+
+ ost_germanic_faith_title:0 "The Eastern Faith"
+ ost_germanic_faith_desc:0 "REPLACE_ME"
+
+ ost_warrior_sleep_title:0 "Home of a Soldier"
+ ost_warrior_sleep_desc:0 "REPLACE_ME"
+
+ ost_warrior_power_title:0 "The Army of Ostgermania"
+ ost_warrior_power_desc:0 "REPLACE_ME"
+
+ ost_diplomacy_title:0 "The King's Court"
+ ost_diplomacy_desc:0 "REPLACE_ME"
+
+ ost_big_boys_title:0 "A True Kingdom"
+ ost_big_boys_desc:0 "REPLACE_ME"
+
+ ost_trade_empire_title:0 "The Alpine Toll"
+ ost_trade_empire_desc:0 "REPLACE_ME"
+
+ ost_warrior_ideas_title:0 "Learned Leadership"
+ ost_warrior_ideas_desc:0 "REPLACE_ME"
+
+ ost_good_harvest_title:0 "Prepare for the Harvest"
+ ost_good_harvest_desc:0 "REPLACE_ME"
+ ost_adm_advisor_tt: "If employing an §YAdministrative§! advisor"
+ ost_dip_advisor_tt: "If employing a §YDiplomatic§! advisor"
+
+ ost_good_wine_title:0 "Of Wine And Mead"
+ ost_good_wine_desc:0 "REPLACE_ME"
+
+ ost_grand_army_title:0 "The Fighting Flock"
+ ost_grand_army_desc:0 "REPLACE_ME"

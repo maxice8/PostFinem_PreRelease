@@ -22,6 +22,7 @@ feudalism = {
 
 	trade_company_efficiency = 0.2
 
+	#effect = { } # When a country embraces it
 
 	history = {
 		is_year = 1000
@@ -408,7 +409,10 @@ renaissance = {
 		}
 		OR = {
 			development = 20
-			is_capital = yes
+			AND = {
+				is_capital = yes
+				development = 15
+			}
 			normal_or_historical_nations = no
 			is_year = 1475
 		}

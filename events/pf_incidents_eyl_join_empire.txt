@@ -16,10 +16,9 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		tag = EYL
+		has_reform = pirate_republic_reform
 		is_year = 1446
-		EYL = {
-			has_reform = pirate_republic_reform
-		}
 	}
 
 	mean_time_to_happen = {

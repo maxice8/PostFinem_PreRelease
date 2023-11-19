@@ -1,0 +1,450 @@
+pf_sdt_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SDT } 
+
+	sdt_sudeti_people = {
+		icon = establish_oktoberfest
+		position = 2
+		required_missions = { sdt_moria } 
+		provinces_to_highlight = {
+			OR = {
+				area = bohemia_area
+				area = erzgebirge_area
+			}
+			NOT = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				culture = sudeten
+			}
+		}
+
+		trigger = {
+			erzgebirge_area = {
+				type = all
+				owned_by = ROOT
+				culture = sudeten
+			}
+			bohemia_area = {
+				type = all
+				owned_by = ROOT
+				culture = sudeten
+			}
+		}
+
+		effect = {
+			add_dip_power = 100
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "sdt_our_people"
+				duration = 9125
+			}
+		}
+	}
+
+	sdt_sudeti_power = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = { sdt_sudeti_people } 
+		provinces_to_highlight = {
+		}
+
+		trigger = {
+			development_in_provinces = {
+				value = 200
+				culture = sudeten
+			}
+		}
+
+		effect = {
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
+			define_general = {
+				shock = 5
+				fire = 4
+				manuever = 3
+				siege = 5
+				trait = siege_specialist_personality
+			}
+		}
+	}
+}
+pf_sdt_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SDT } 
+
+	sdt_moria = {
+		icon = a.e.i.o.u.
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				area = bohemia_area
+				area = erzgebirge_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			erzgebirge_area = {
+				type = all
+				owned_by = ROOT
+				development = 10
+			}
+			bohemia_area = {
+				type = all
+				owned_by = ROOT
+				development = 12
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					NOT = { capital = 266 }
+				}
+				266 = { move_capital_effect = yes }
+			}
+			
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = bohemia_area
+						area = erzgebirge_area
+					}
+				}
+				add_province_modifier = {
+					name = "mva_local_sudeten"
+					duration = 9125
+				}
+			}
+		}
+	}
+
+	sdt_ostholm = {
+		icon = protect_against_austria
+		position = 3
+		required_missions = { sdt_expansion } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = austria_proper_area
+						area = inner_austria_area
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 134
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+				}
+			}
+		}
+
+		trigger = {
+			owns_core_province = 134
+			austria_proper_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			inner_austria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = { 
+			change_ruler_stat = { type = dip amount = 1 }
+			country_event = { id = pf_ost.8 }  
+		} 
+	}
+}
+pf_sdt_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SDT } 
+
+	sdt_expansion = {
+		icon = mission_golden_century
+		position = 2
+		required_missions = { sdt_moria } 
+		provinces_to_highlight = {
+			OR = {
+				area = bohemia_area
+				area = erzgebirge_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			stability = 1
+			land_forcelimit = 30
+			army_size = 30
+			development_in_provinces = {
+				value = 100
+				OR = {
+					area = bohemia_area
+					area = erzgebirge_area
+				}
+			}
+		}
+
+		effect = {
+			add_prestige_or_monarch_power = { amount = 25 }
+			custom_tooltip = empty_line_tt
+			carpathia_region = { add_permanent_claim = ROOT } 
+		}
+	}
+
+	sdt_vindheim = {
+		icon = mission_rb_unite_the_clans
+		position = 3
+		required_missions = { sdt_expansion } 
+		provinces_to_highlight = {
+			OR = {
+				area = transdanubia_area
+				area = alfold_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			transdanubia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			alfold_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = { country_event = { id = pf_ost.10 }  } 
+	}
+
+	sdt_donovan_glory = {
+		icon = encroach_on_the_germans
+		position = 4
+		required_missions = {
+			sdt_ostholm
+			sdt_berganland
+			sdt_vindheim
+		}
+		provinces_to_highlight = { 
+			region = carpathia_region 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			carpathia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = { country_event = { id = pf_ost.11 }  } 
+	}
+
+	sdt_donovan_nation = {
+		icon = carolingian_empire
+		position = 5
+		required_missions = { sdt_donovan_glory } 
+		provinces_to_highlight = { region = carpathia_region } 
+
+		trigger = {
+			development_in_provinces = {
+				value = 400
+				region = carpathia_region
+			}
+		}
+
+		effect = {
+			change_tag = DNV
+			swap_non_generic_missions = yes
+			on_change_tag_effect = yes
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			custom_tooltip = empty_line_tt
+			set_country_flag = formed_donova_flag 
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}			
+				set_government_rank = 2
+				custom_tooltip = empty_line_tt
+			}
+			add_prestige_or_monarch_power = { amount = 25 }
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+		}
+	}
+}
+pf_sdt_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SDT } 
+
+	sdt_berganland = {
+		icon = claim_the_borderlands
+		position = 3
+		required_missions = { sdt_expansion } 
+		provinces_to_highlight = {
+			OR = {
+				area = moravia_area
+				area = slovakia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			moravia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			slovakia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = { country_event = { id = pf_ost.9 }  } 
+	}
+}
+pf_sdt_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SDT } 
+
+	sdt_markland = {
+		icon = bavarian_cultural_dominance
+		position = 1
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			NOT = {				
+				OR = {
+					culture = sudeten
+					culture = marcomanni
+				}
+				development = 10
+			}
+		} 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 15
+				OR = {
+					culture = sudeten
+					culture = marcomanni
+				}
+				development = 10
+			}
+		}
+
+		effect = {
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = sdt_united_peoples_modifier
+				duration = 7300
+			}
+		}
+	}
+
+	sdt_friends = {
+		icon = the_alpine_wall
+		position = 2
+		required_missions = { sdt_markland } 
+		provinces_to_highlight = { 
+			province_id = 64 
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = { development = 20 }
+			}
+		} 
+
+		trigger = {
+			64 = {
+				owned_by = ROOT
+				development = 20
+			}
+		}
+
+		effect = {
+			64 = { upgrade_center_of_trade = yes }
+			custom_tooltip = empty_line_tt
+			64 = { 
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
+	}
+
+	sdt_trade = {
+		icon = academy_of_the_bran
+		position = 4
+		required_missions = { sdt_friends } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 64
+				province_id = 134
+				province_id = 266
+			}
+			NOT = { development = 25 }
+		}
+
+		trigger = {
+			64 = {
+				owned_by = ROOT
+				development = 25
+			}
+			134 = {
+				owned_by = ROOT
+				development = 25
+			}
+			266 = {
+				owned_by = ROOT
+				development = 25
+			}
+		}
+
+		effect = {
+			64 = {
+				add_province_modifier = {
+					name = "sdt_triple_city"
+					duration = 18250
+				}
+			}
+			134 = {
+				add_province_modifier = {
+					name = "sdt_triple_city"
+					duration = 18250
+				}
+			}
+			266 = {
+				add_province_modifier = {
+					name = "sdt_triple_city"
+					duration = 18250
+				}
+			}
+		}
+	}
+}

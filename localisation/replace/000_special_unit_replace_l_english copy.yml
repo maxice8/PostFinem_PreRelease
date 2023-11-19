@@ -36,6 +36,21 @@
  MODIFIER_AMOUNT_OF_MAN_OF_WAR:0 "Quinquereme Force Limit"
  man_of_war_ship: "Bonus from Quinquereme"
 
+ MUSKETEER_NAME:0 "$HOME$'s $NUM$$ORDER$ Gaisatai Regiment"
+ MODIFIER_ALLOWED_MUSKETEER_FRACTION:0 "Gaisatai Force Limit"
+ MODIFIER_LOCAL_HAS_MUSKETEER:0 "Province Allows Gaisatai Infantry"
+ MUSKETEER_FORCELIMIT:0 "We can recruit up to $LIMIT|Y$ §GGaisatai§! owing to:\n$FLAMOUNT|Y$ from $PERC|%Y$ of our force-limit of $FL$:\n"
+ MUSKETEER_LIMIT_CULTURE:0 "$PROVINCE$ is a $CULTURE$ province, so can not recruit Gaisatai Infantry here."
+ ADD_MUSKETEER_SUB_UNIT_EFFECT:0 "Get '§GGaisatai§!' $UNIT$ in $WHERE|Y$."
+ MUSKETEER_DESC:0 "The Gaisatai were ancient warriors, feared across all of Gaul for their might and power. They wore nothing, decorated their faces with paint and symbols, and attacked with spears and javelins. In the age following the fall of Carthage, many local Touta took up these soldiers and dressed them in heavy armor or gave them great shields, but now, as the age of gunpowder dawns, these men discard their heavy armor for lighter clothes, as they carry their mighty arquebuses into battle. These new Gaisatai are as the ancient warriors were - light infantry that strike fear into the hearts of the enemies of Gaul."
+ REGCAT_musketeer:0 "Gaisatai"
+ MUSKETEER_REGIMENT:0 "Gaisatai Regiment\n$EFFECT$"
+ HAVE_LESS_MUSKETEER_THAN:0 "Have less Gaisatai than §Y$VALUE$§!.\n"
+ HAVE_AT_LEAST_MUSKETEER_THAN:0 "Have at least §Y$VALUE$§! Gaisatai.\n"
+ MODIFIER_AMOUNT_OF_MUSKETEER:0 "Gaisatai Force Limit"
+ musketeers_modifier:0 "Gaisatai Hired"
+ONLY_MUSKETEER_MODIFIER:0 "§YAffects only Gaisatai Regiments§!"
+
 # War Elephants
 
  REGCAT_cossacks:0 "War Elephants"

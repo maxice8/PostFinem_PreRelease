@@ -1138,7 +1138,7 @@ pf_per_2 = {
 			}
 
 			change_ruler_stat = {
-				stat = adm
+				type = adm
 				amount = 1
 			}
 		}
@@ -1505,7 +1505,7 @@ pf_per_3 = {
 			custom_tooltip = pf_per_satrapy_demand_consequences_2_tt
 
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 1
 			}
 
@@ -2024,7 +2024,7 @@ pf_per_4 = {
 			custom_tooltip = empty
 			tooltip = {
 				change_ruler_stat = {
-					stat = dip
+					type = dip
 					amount = 1
 				}
 			}
@@ -2054,7 +2054,7 @@ pf_per_4 = {
 					}
 					pf_per_release_satrapies_scripted_effect = yes
 					change_ruler_stat = {
-						stat = dip
+						type = dip
 						amount = 1
 					}
 				}

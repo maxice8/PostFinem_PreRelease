@@ -457,14 +457,14 @@ feudal_tribe = {
 		global_tax_modifier = 0.1
 	}
 
-	conditional = {
-		allow = { 
-			has_dlc = "Mandate of Heaven"
-		}
-		custom_attributes = {
-			has_tributaries = yes
-		}
-	}
+	# conditional = {
+		# allow = { 
+		# 	has_dlc = "Mandate of Heaven"
+		# }
+		# custom_attributes = {
+		# 	has_tributaries = yes
+		# }
+	# }
 
 	ai = {
 		factor = 0
@@ -617,6 +617,12 @@ tribe_becomes_monarchy_reform = {
 		NOT = { 
 			has_reform = stateless_society
 		}
+		NOT = {
+			OR = {
+				technology_group = ottoman
+				pf_eastern_tech_group = yes
+			}
+		}
 	}
 	trigger = {
 		NOT = { has_government_attribute_short_desc = locked_government_type }
@@ -720,6 +726,12 @@ tribe_becomes_republic_reform = {
 	trigger = {
 		NOT = { is_lesser_in_union = yes }
 		NOT = { has_government_attribute_short_desc = locked_government_type }
+		NOT = {
+			OR = {
+				technology_group = ottoman
+				pf_eastern_tech_group = yes
+			}
+		}
 	}
 	effect = {
 		set_country_flag = populists_in_government
@@ -850,6 +862,12 @@ tribe_becomes_theocracy_reform = {
 		NOT = { 
 			has_reform = stateless_society
 		}
+		NOT = {
+			OR = {
+				technology_group = ottoman
+				pf_eastern_tech_group = yes
+			}
+		}
 	}
 	trigger = {
 		NOT = { is_lesser_in_union = yes }
@@ -962,6 +980,12 @@ tribe_becomes_horde_reform = {
 	potential = {
 		NOT = { 
 			has_reform = stateless_society
+		}
+		NOT = {
+			OR = {
+				technology_group = ottoman
+				pf_eastern_tech_group = yes
+			}
 		}
 	}
 	effect = {

@@ -4,21 +4,48 @@ country_decisions = {
 			religion = druidic
 		}
 		allow = {
-			religion = druidic
-			NOT = {
-				has_country_modifier = performed_druidic_ritual
+			if = {
+				limit = {
+					NOT = { 
+						has_country_flag = reduced_cost_druidic
+					}
+				}
+				religion = druidic
+				NOT = {
+					has_country_modifier = performed_druidic_ritual
+				}
+				years_of_income = 0.1
+				adm_power = 50
 			}
-			years_of_income = 0.1
-			adm_power = 50
+			else = {
+				years_of_income = 0.05
+				adm_power = 25
+			}
 		}
 		effect = {
-			add_years_of_income = -0.10
-			add_adm_power = -50
-			add_country_modifier = {
-				name = "performed_druidic_ritual"
-				duration = 1825
-			}
 			set_country_flag = done_druidic_ritual
+			if = {
+				limit = {
+					NOT = { 
+						has_country_flag = reduced_cost_druidic
+					}
+				}
+				add_years_of_income = -0.10
+				add_adm_power = -50
+				add_country_modifier = {
+					name = "performed_druidic_ritual"
+					duration = 1825
+				}
+			}
+			else = {
+				add_years_of_income = -0.05
+				add_adm_power = -25
+				add_country_modifier = {
+					name = "performed_druidic_ritual"
+					duration = 1825
+				}
+				clr_country_flag = reduced_cost_druidic
+			}
 		}
 	}
 	pf_druidic_wicker_man = {

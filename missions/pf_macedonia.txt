@@ -402,7 +402,7 @@ mac_2 = {
 			}
 			if = {
 				limit = { ai = no }
-				army_size_percentage = 1
+				army_size_percentage = 0.9
 				army_professionalism = 0.05
 			}
 			else = {
@@ -556,14 +556,16 @@ mac_2 = {
 		} 
 
 		effect = {  
-			swap_trade_good_for_max_provinces = {
-				max = 2
-				original = cloth 
-				new = silk
-				tooltip = mac_macedonian_silk_tt
-				trigger = "
-					base_production = 6
-				"
+			tooltip = {
+				swap_trade_good_for_max_provinces = {
+					max = 2
+					original = cloth 
+					new = silk
+					tooltip = mac_macedonian_silk_tt
+					trigger = "
+						base_production = 6
+					"
+				}
 			}
 			hidden_effect = {
 				random_owned_province = {
@@ -571,6 +573,18 @@ mac_2 = {
 						trade_goods = cloth
 						base_production = 6
 					}		
+					change_trade_goods = silk
+					add_province_modifier = {
+						name = mac_macedonian_silk_modifier
+						duration = -1
+					}
+				}
+				random_owned_province = {
+					limit = {
+						trade_goods = cloth
+						base_production = 6
+					}		
+					change_trade_goods = silk
 					add_province_modifier = {
 						name = mac_macedonian_silk_modifier
 						duration = -1
@@ -1080,6 +1094,7 @@ mac_5 = {
 			}
 			else = {
 				OR = {
+					is_year = 1500
 					calc_true_if = {
 						amount = 1
 						all_ally = {
@@ -1100,8 +1115,8 @@ mac_5 = {
 					}
 				}	
 				OR = {
+					is_year = 1500
 					AND = {
-						papal_influence = 50
 						alliance_with = ATH
 						ATH = {
 							has_opinion = {
@@ -1113,7 +1128,11 @@ mac_5 = {
 					any_subject_country = {
 						tag = ATH
 						owns_core_province = 143
-					}
+					}											
+					AND = {
+						ATH = { exists = no }									
+						owns_core_province = 146	
+					}	
 				}
 			}
 		} 
@@ -1149,14 +1168,22 @@ mac_5 = {
 				"
 				second_custom_tooltip = mac_why_go_alone_ARCHON_SUBJECT_tt
 				second_limit = "
-					ATH = {
-						is_subject_of = ROOT
-						owns_core_province = 146
-					}							
-					AND = {
-						ATH = { exists = no }									
-						owns_core_province = 146	
-					}	
+					OR = {
+						AND = {
+							ATH = {
+								is_subject_of = ROOT
+								owns_core_province = 146
+							}							
+							AND = {
+								ATH = { exists = no }									
+								owns_core_province = 146	
+							}	
+						}
+						AND = {
+							ai = yes
+							is_year = 1500
+						}
+					}
 				"
 				second_effect = "
 					set_country_flag = mac_subjugated_archon_flag
@@ -1227,8 +1254,14 @@ mac_archon_friend_5 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {  
-			is_defender_of_faith = yes
-			is_papal_controller = yes
+			if = {
+				limit = {
+					ai = no
+				}
+				is_defender_of_faith = yes
+				is_papal_controller = yes
+			}
+			
 			papal_influence = 100
 		} 
 
@@ -1446,7 +1479,7 @@ mac_cabinet_5 = {
 			if = { 
 				limit = { ai = no }
 				land_forcelimit = 60
-				army_size_percentage = 1
+				army_size_percentage = 0.9
 			}
 			else = {
 				land_forcelimit = 50
@@ -1537,10 +1570,6 @@ mac_eco_1 = {
 		required_missions = { pf_mac_regional_trade_hub } 
 		provinces_to_highlight = {  
 			OR = {
-				AND = {		
-					province_id = 1319
-					NOT = { highest_value_trade_node = yes }
-				}
 				AND = {
 					OR = {
 						province_id = 1319
@@ -1556,7 +1585,6 @@ mac_eco_1 = {
 		} 
 
 		trigger = {  
-			1319 = { highest_value_trade_node = yes }
 			1319 = { has_most_province_trade_power = ROOT }
 			358 = { has_most_province_trade_power = ROOT }
 			377 = { has_most_province_trade_power = ROOT }
@@ -1605,7 +1633,7 @@ mac_eco_2 = {
 			custom_trigger_tooltip = {
 				tooltip = mac_regional_trade_hub_trigger
 				num_of_owned_provinces_with = {
-					value = 5
+					value = 4
 					OR = {
 						province_id = 1319
 						any_trade_node_member_province = {

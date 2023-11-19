@@ -549,3 +549,210 @@ estate_burghers_pf_per_mountain_development = {
 		factor = 100
 	}
 }
+estate_burghers_gaul_forest_expansion = {
+	icon = privilege_dev_cost_forest
+	max_absolutism = -10
+	conditional_modifier = {
+		trigger = { has_government_mechanic = gaul_confederation_mechanic }
+		modifier = { monthly_gaul_confederation = 0.05 }
+	}
+	conditional_modifier = {
+		trigger = { mission_completed = pf_gaul_tall_3 }
+		modifier = { global_trade_goods_size_modifier = 0.05 }
+	}
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		mission_completed = pf_gaul_tall_2
+	}
+	can_select = {
+		mission_completed = pf_gaul_tall_2
+	}
+	can_select = {
+		any_owned_province = {
+			OR = {
+				has_terrain = forest
+				has_terrain = woods
+			}
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_forest_expansion_gt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_terrain = forest
+				}
+				add_province_modifier = {
+					name = estate_burghers_forest_expansion_forest
+					duration = -1
+				}
+			}
+			every_owned_province = {
+				limit = {
+					has_terrain = woods
+				}
+				add_province_modifier = {
+					name = estate_burghers_forest_expansion_woods
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_forest_expansion_rt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_province_modifier = estate_burghers_forest_expansion_forest
+						has_province_modifier = estate_burghers_forest_expansion_woods
+					}
+				}
+				remove_province_modifier = estate_burghers_forest_expansion_forest
+				remove_province_modifier = estate_burghers_forest_expansion_woods
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				OR = {
+					has_terrain = woods
+					has_terrain = forest
+				}
+				value = 8
+			}
+		}
+	}
+}estate_burghers_pf_silk_road_merchants = {
+	icon = privilege_comission_merchant_ships_for_war
+	max_absolutism = 0
+	loyalty = 0.10
+	influence = 0.10
+	is_valid = {
+		technology_group = eastern
+	}
+	can_select = {
+		has_country_flag = allowed_silk_road_merchants
+	}
+	on_granted = {
+	}
+	can_revoke = {
+	}
+	on_revoked = {
+	}
+	benefits = {
+		caravan_power = 0.20
+		trade_steering = 0.20
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+estate_burghers_pf_syr_drylands_development = {
+	icon = privilege_dev_cost_desert
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		tag = SYR
+	}
+	can_select = {
+		has_country_flag = allowed_drylands_development
+		any_owned_province = {
+			has_terrain = drylands
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_pf_syr_drylands_development_tt
+		tooltip = {
+			add_province_modifier = {
+				name = pf_syr_drylands_development
+				duration = -1
+				desc = UNTIL_REVOKED
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_terrain = drylands
+				}
+				add_province_modifier = {
+					name = pf_pf_syr_drylands_development
+					duration = -1
+				}
+			}		
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_pf_syr_drylands_development_rt
+		tooltip = {
+			remove_province_modifier = pf_syr_drylands_development
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = pf_syr_drylands_development
+				}
+				remove_province_modifier = pf_syr_drylands_development
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+estate_burghers_pf_phoenician_merchants = {
+	icon = privilege_comission_merchant_ships_for_war
+	max_absolutism = -25
+	loyalty = 0.10
+	influence = 0.10
+	is_valid = {
+		OR = {
+			tag = PSI
+			tag = PTY
+		}
+	}
+	can_select = {
+		OR = {
+			tag = PSI
+			tag = PTY
+		}
+	}
+	on_granted = {
+	}
+	can_revoke = {
+	}
+	on_revoked = {
+	}
+	benefits = {
+		trade_range_modifier = 0.50
+	}
+	penalties = {
+		manpower_recovery_speed = -0.10
+	}
+	loyalty_scaled_conditional_modifier = {
+		trigger = {
+			always = yes
+		}
+		modifier = {
+			global_own_trade_power = 0.20
+			placed_merchant_power = 5
+		}
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}

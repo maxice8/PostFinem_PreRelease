@@ -1,0 +1,117 @@
+namespace = pf_gaul_events
+
+country_event = {
+	id = pf_gaul_events.1
+	title = pf_gaul_events.1.t
+	desc = pf_gaul_events.1.d
+	picture = LAND_MILITARY_eventPicture
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_core = ROOT
+					NOT = {
+						province_id = 182
+					}
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 2
+					should_take_capital = yes
+					win = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_core = ROOT
+				}
+				spawn_rebels = {
+					type = noble_rebels
+					size = 2
+					win = yes
+				}
+			}
+			set_country_flag = DUB_DEAD
+		}
+	}
+
+	option = {
+		name = pf_gaul_events.1.a
+		add_government_power = {
+			mechanic_type = gaul_confederation_mechanic
+			power_type = gaul_confederation
+			value = -15
+		}
+		add_ruler_modifier = {
+			name = reclaimer_of_gaul
+			duration = -1
+		}
+	}
+	option = {
+		name = pf_gaul_events.1.b
+		kill_ruler = yes
+		define_ruler = {
+			adm = 2
+   			dip = 2
+   			mil = 2
+			max_random_adm = 5
+			max_random_dip = 5
+			max_random_mil = 5
+			culture = ROOT
+			religion = ROOT
+			dynasty = "Dosso"
+		}
+		kill_heir = { allow_new_heir = no }
+		add_government_power = {
+			mechanic_type = gaul_confederation_mechanic
+			power_type = gaul_confederation
+			value = 14
+		}
+		add_ruler_modifier = {
+			name = gallic_challenger
+			duration = -1
+		}
+	}
+}
+country_event = {
+	id = pf_gaul_events.2
+	title = pf_gaul_events.2.t
+	desc = pf_gaul_events.2.d
+	picture = TRADE_GOODS_eventPicture
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = pf_gaul_events.2.a	
+		97 = {
+			change_trade_goods = slaves
+			add_base_production = 3
+		}
+		custom_tooltip = empty_line_tt
+		holland_area = {
+			add_province_modifier = {
+				name = end_the_raids_GAU
+				duration = -1
+			}
+		}
+		frisia_area = {
+			add_province_modifier = {
+				name = end_the_raids_GAU
+				duration = -1
+			}
+		}
+	}
+	# option = {
+	# 	name = pf_gaul_events.2.b
+	# }
+}

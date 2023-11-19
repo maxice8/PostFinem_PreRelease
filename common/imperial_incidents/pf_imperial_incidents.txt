@@ -243,3 +243,105 @@ incident_emperor_demands_corfu = {
 		}
 	}
 }
+incident_gallic_threat = {
+	event = incidents_gallic_threat.1
+	default_option = 0
+
+	can_stop = {
+		OR = {
+			NOT = {
+				any_country = {
+					OR = {
+						was_tag = GAU
+						tag = GAU
+					}
+					
+				}
+			}
+		}
+	}
+
+	0 = { # Deny any Deal 
+		factor = 1
+		modifier = {
+			factor = 3
+			GAU = {
+				OR = {
+					NOT = {
+						army_size = EMPEROR
+					}
+					NOT = {
+						any_ally = {
+							army_size = emperor
+						}
+					}
+				}
+			}
+			emperor = {
+				army_size = GAU
+				total_development = GAU
+			}
+		}
+		modifier = {
+			factor = 1000
+			4696 = {
+				country_or_non_sovereign_subject_holds = emperor
+			}
+		}
+	}
+
+	1 = { # Accept their Offer
+		factor = 1
+		modifier = {
+			factor = 5
+			OR = {
+				ai_attitude = {
+					who = GAU
+					attitude = attitude_friendly
+				}
+				ai_attitude = {
+					who = GAU
+					attitude = attitude_loyal
+				}
+				ai_attitude = {
+					who = GAU
+					attitude = attitude_allied
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			4696 = {
+				owner = {
+					ai_attitude = {
+						who = ROOT
+						attitude = attitude_rivalry
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			4696 = {
+				owner = {
+					OR = {
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_loyal
+						}
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_allied
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			4696 = {
+				country_or_non_sovereign_subject_holds = emperor
+			}
+		}
+	}
+}

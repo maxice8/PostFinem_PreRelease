@@ -1,0 +1,210 @@
+on_startup = {
+	if = {
+		limit = {
+			tag = GAU
+			has_ruler_flag = IS_DUBNORIX_FLAG
+			NOT = {
+				has_country_flag = begin_counting_carantus
+			}
+		}
+		set_variable = {
+			which = counting_carantus
+			value = 0
+		}
+		set_country_flag = begin_counting_carantus
+	}
+	if = {
+		limit = {
+			tag = GAU
+			NOT = {
+				mission_completed = pf_gaul_celtica_2
+			}
+			NOT = {
+				has_country_flag = begin_counting_naval_GAU
+			}
+		}
+		set_variable = {
+			which = gau_naval_battle_won
+			value = 0
+		}
+		set_country_flag = begin_counting_naval_GAU
+	}
+}
+on_siege_lost_country = {
+	if = {
+		limit = {
+			has_government_mechanic = gaul_confederation_mechanic
+			FROM = {
+				controller = {
+					tag = REB
+				}
+			}
+		}
+		add_government_power = {
+			mechanic_type = gaul_confederation_mechanic
+			power_type = gaul_confederation
+			value = -2
+		}
+	}
+}
+on_adm_development = {
+	if = {
+		limit = {
+			owner = { has_government_mechanic = gaul_confederation_mechanic }
+			OR = {
+				has_owner_accepted_culture = yes 
+				has_owner_culture = yes 
+			}
+		}
+		export_to_variable = {
+			which = base_dev_var_GAU
+			value = trigger_value:development
+		}
+		while = {
+			limit = {
+				#While their total tax development is more than 1, add 1.2 Gaulic confed power
+				check_variable = {
+					which = base_dev_var_GAU
+					value = 1
+				}
+			}
+			owner = {
+				add_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 0.5
+				}
+			}
+			subtract_variable = {
+				which = base_dev_var_GAU
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = { has_province_modifier = radical_industrialism }
+		random_list = {
+			1 = { add_base_tax = 1 }
+			3 = { }
+		}
+	}
+}
+on_dip_development = {
+	if = {
+		limit = {
+			owner = { has_government_mechanic = gaul_confederation_mechanic }
+			OR = {
+				has_owner_accepted_culture = yes 
+				has_owner_culture = yes 
+			}
+		}
+		export_to_variable = {
+			which = base_dev_var_GAU
+			value = trigger_value:development
+		}
+		while = {
+			limit = {
+				#While their total tax development is more than 1, add 1.2 Gaulic confed power
+				check_variable = {
+					which = base_dev_var_GAU
+					value = 1
+				}
+			}
+			owner = {
+				add_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 0.5
+				}
+			}
+			subtract_variable = {
+				which = base_dev_var_GAU
+				value = 1
+			}
+		}
+	}	
+	if = {
+		limit = { has_province_modifier = radical_industrialism }
+		random_list = {
+			1 = { add_base_production = 1 }
+			3 = { }
+		}
+	}
+}
+on_mil_development = {
+	if = {
+		limit = {
+			owner = { has_government_mechanic = gaul_confederation_mechanic }
+			OR = {
+				has_owner_accepted_culture = yes 
+				has_owner_culture = yes 
+			}
+		}
+		export_to_variable = {
+			which = base_dev_var_GAU
+			value = trigger_value:development
+		}
+		while = {
+			limit = {
+				#While their total tax development is more than 1, add 1.2 Gaulic confed power
+				check_variable = {
+					which = base_dev_var_GAU
+					value = 1
+				}
+			}
+			owner = {
+				add_government_power = {
+					mechanic_type = gaul_confederation_mechanic
+					power_type = gaul_confederation
+					value = 0.5
+				}
+			}
+			subtract_variable = {
+				which = base_dev_var_GAU
+				value = 1
+			}
+		}
+	}	
+	if = {
+		limit = { has_province_modifier = radical_industrialism }
+		random_list = {
+			1 = { add_base_manpower = 1 }
+			3 = { }
+		}
+	}
+}
+on_battle_won_country = {
+	if = {
+		limit = {	
+			ROOT = { has_government_mechanic = gaul_confederation_mechanic } 
+		}
+		add_government_power = {
+			mechanic_type = gaul_confederation_mechanic
+			power_type = gaul_confederation
+			value = 0.5
+		}
+	}	
+}
+on_battle_won_unit = {
+	if = {
+		limit = {
+			unit_owner = {
+				OR = {
+					tag = GAU
+					tag = LUG
+					tag = DLC
+				}
+				NOT = { mission_completed = pf_gaul_celtica_2 }	
+			}
+			location = {
+				is_sea = yes
+			}	
+		}
+		unit_owner = {
+			change_variable = {
+				which = gau_naval_battle_won
+				value = 1
+			}
+		}
+	}
+}

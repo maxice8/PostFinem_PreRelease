@@ -157,6 +157,32 @@ declarewar = {
 	}
 	effect = {
 		on_war_declaration_effect = yes
+		#pf
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = MaxRaidLoot
+						value = 1
+					}
+				}
+				is_in_war = {
+					attacker_leader = ROOT
+					casus_belli = cb_raid
+				}
+			}
+			# Set up the maximum loot of the raid, we can check for modifiers
+			# and anything else (like Government Reforms) that increase
+			# the Maximum Loot of a Raid and increase it here with
+			# change_variable
+			set_variable = {
+				which = MaxRaidLoot
+				value = 200
+			}
+			set_variable = {
+				which = RaidLoot
+				value = 0
+			}
 	}
 }
 
@@ -366,6 +392,27 @@ annexationaction = {
 			}
 		}
 	}
+	# Annexing vassals as Syria
+	condition = {
+		tooltip = SYR_NEEDS_SYRIAN_POWER_TO_INTEGRATE
+		potential = {
+			has_government_mechanic = syrian_rule_mechanic
+			NOT = {
+				has_government_power = {
+					mechanic_type = syrian_rule_mechanic
+					power_type = syrian_power
+					value = 70
+				}
+			}
+		}
+		allow = {
+			has_government_power = {
+				mechanic_type = syrian_rule_mechanic
+				power_type = syrian_power
+				value = 70
+			}
+		}
+	}
 	# Annexing Satrapies
 	condition = {
 		tooltip = pf_per_cannot_annex_with_annexation_ban_tt
@@ -384,6 +431,18 @@ annexationaction = {
 			subtract_variable = {
 				which = can_annex_appanages_points
 				value = 1
+			}
+		}
+		if = {
+			limit = {
+				ROOT = { has_government_mechanic = syrian_rule_mechanic }
+			}
+			ROOT = {
+				add_government_power = {
+					mechanic_type = syrian_rule_mechanic
+					power_type = syrian_power
+					value = -40
+				}
 			}
 		}
 	}

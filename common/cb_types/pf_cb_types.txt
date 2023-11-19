@@ -87,7 +87,6 @@ cb_gallic_wars = {
 		is_revolutionary = no
 		has_country_flag = unlock_gallic_wars_cb_flag
 	}
-
 	prerequisites = {
 		FROM = {
 			any_owned_province = {			
@@ -97,4 +96,38 @@ cb_gallic_wars = {
 	}
 
 	war_goal = superiority_gallic_wars
+}
+
+cb_germanic_campaigns = {
+	valid_for_subject = no
+	
+	prerequisites = {
+		mission_completed = pf_gaul_mainland_8
+		FROM = {
+			OR = {
+				is_neighbor_of = ROOT
+				any_subject_country = {
+					is_subject_of = ROOT
+					is_neighbor_of = FROM
+				}
+			}
+			any_owned_province = {
+				OR = {
+					region = north_german_region
+					region = south_german_region
+				}
+			}
+		}
+	}
+
+	attacker_disabled_po = {
+		po_become_vassal
+		po_subjugate_vassal
+		po_form_personal_union
+		po_become_tributary_state
+		po_subjugate_tributary_state
+		po_transfer_vassals
+	}
+	
+	war_goal = take_province_german
 }

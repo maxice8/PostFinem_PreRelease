@@ -569,12 +569,12 @@ pf_sar_3 = {
 				loyalty = 60
 			}
 			OR = {
-				mercantilism = 40
-				trade_efficiency = 1
+				mercantilism = 25
+				trade_efficiency = 0.8
 				full_idea_group = trade_ideas
 			}
 			num_of_owned_provinces_with = {
-				value = 2
+				value = 3
 				has_trade_building_trigger = yes
 			}
 		} 

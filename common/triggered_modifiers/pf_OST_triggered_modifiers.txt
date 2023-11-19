@@ -1,0 +1,13 @@
+# Triggered modifiers are here.
+
+markmann_sudeten_union = {
+	potential = {
+		has_country_flag = markmann_union_flag
+	}
+
+	trigger = {
+		accepted_culture = marcomanni
+	}
+
+	num_accepted_cultures = 1
+}

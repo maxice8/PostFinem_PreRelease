@@ -314,7 +314,7 @@ pf_punic_festivals_reform = {
 		same_religion_advisor_cost = -0.10
 	}
 	custom_attributes = {
-		# ending_wars_gives_stability = yes
+		ending_wars_gives_stability = yes
 	}
 	ai = {
 		factor = 1
@@ -333,13 +333,14 @@ astartean_adventurer_reform = {
 		tag = CLN
 	}
 	modifiers = {
-		years_of_nationalism = -5
-		loot_amount = 0.20
-		max_absolutism = -30
+		manpower_recovery_speed = 0.10
+		core_creation = -0.05
+		leader_land_fire = 1
+		max_absolutism = -20
 	}
-	#government_abilities = {
-	#	trinovantes_cohesion_mechanic
-	#}
+	government_abilities = {
+		chivalry_mechanic
+	}
 	ai = {
 		factor = 5
 	}
@@ -565,5 +566,130 @@ pf_vinland_althing = {
 			has_dlc = "Common Sense"
 		}
 		has_parliament = yes
+	}
+}
+pf_babylonian_kingdom = {
+	icon = "babylonian_kingdom"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		culture_group = mesopotamian
+	}
+	modifiers = {
+		state_maintenance_modifier = -0.10
+		global_prosperity_growth = 0.5
+		all_estate_influence_modifier = 0.05
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+pf_babylonian_empire = {
+	icon = "babylonian_empire"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		tag = BBY
+	}
+	modifiers = {
+		state_maintenance_modifier = -0.25
+		culture_conversion_cost = -0.10
+		culture_conversion_time = -0.10
+		governing_capacity = 100
+		max_absolutism = 10
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+pf_warriors_of_shamash = {
+	icon = "king_mountains"
+	allow_normal_conversion = yes
+	potential = {
+		religion = enuma_elish
+	}
+	modifiers = {
+		land_morale = 0.10
+		recover_army_morale_speed = 0.05
+		war_exhaustion_cost = -0.20
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+pf_kudurru_reform = {
+	icon = "kudurru"
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = pf_unlocked_kudurru
+	}
+	modifiers = {
+		production_efficiency = 0.10
+		diplomatic_annexation_cost = -0.10
+		nobles_loyalty_modifier = 0.05
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+pf_nepustu_tax = { 	# Nēpeštu tax
+	icon = "pf_merchant_virtues"
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = pf_unlocked_nepustu_tax
+	}
+	modifiers = {
+		global_trade_goods_size_modifier = 0.10
+		build_time = -0.20
+		expand_infrastructure_cost_modifier = -0.50
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+pf_gavrasian_kingdom = {
+	icon = "king_mountains"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		tag = SYR
+	}
+	modifiers = {
+		stability_cost_modifier = -0.10
+		burghers_loyalty_modifier = 0.10
+		burghers_privilege_slots = 1
+		max_absolutism = -25
+	}
+	custom_attributes = {
+		buffed_strong_duchies = yes
+	}
+	#government_abilities = {
+	#	syrian_rule_mechanic
+	#}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+pf_lesbian_republic = {
+	icon = "sappho"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		tag = LSB
+	}
+	modifiers = {
+		female_advisor_chance = 1
+		may_recruit_female_generals = yes
+		prestige_decay = -0.01
+		candidate_random_bonus = 1
+	}
+	custom_attributes = {
+		female_only_elections = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	duration = 5
+	ai = {
+		factor = 0.5 #generic
 	}
 }

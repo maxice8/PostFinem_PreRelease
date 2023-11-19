@@ -1,0 +1,17 @@
+merc_alemannian_war_slaves = {
+    regiments_per_development = 0.05
+    cost_modifier = 0.50
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+    cavalry_weight = 0.2
+	cavalry_cap = 2
+    home_province = 74	# Baden
+	sprites = { dlc103_swi_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		mission_completed = pf_gaul_mainland_7
+	}
+    modifier = {
+        infantry_power = 0.10
+		garrison_damage = 0.5  
+    }
+}

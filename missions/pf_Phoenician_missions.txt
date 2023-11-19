@@ -1,0 +1,753 @@
+pf_pho_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = PTY
+			tag = PSI
+		}
+	}
+
+	pf_pho_strengthen_the_guilds = {
+		icon = mission_guilds_of_barcelona
+		position = 1
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+			NOT = { has_trade_building_trigger = yes }
+		} 
+
+		trigger = {
+			capital_scope = {
+				has_trade_building_trigger = yes
+			}
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 65
+			}
+			OR = {
+				num_of_estate_agendas_completed = {
+					estate = estate_burghers
+					value = 2
+				}
+				num_of_estate_privileges = {
+					estate = estate_burghers
+					value = 6
+				}
+			}
+		} 
+
+		effect = {
+			add_mercantilism = 2
+			custom_tooltip = empty_line_tt
+			define_advisor = {
+				type = city_planner
+				skill = 1
+				discount = yes
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_pho_guild_power"
+				duration = 5475
+			}
+		} 
+	}
+
+	pf_pho_dominate_trade = {
+		icon = the_shape_of_trades_to_come
+		position = 3
+		required_missions = {
+			pf_pho_strengthen_the_guilds
+			pf_pho_revive_the_shipyards
+		}
+		provinces_to_highlight = {
+			province_id = 377
+		} 
+
+		trigger = {
+			377 = {
+				trade_share = {
+					country = ROOT
+					share = 33
+				}
+			}
+		} 
+
+		effect = {
+			define_advisor = {
+				type = trader
+				skill = 3
+				cost_multiplier = 0.25
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_pho_revived_phoenician_power"
+				duration = 9125
+			}
+			custom_tooltip = empty_line_tt
+			set_country_flag = allowed_silk_road_merchants
+			custom_tooltip = pf_pho_allows_silk_road_merchants_tt
+		} 
+	}
+
+	pf_pho_fortify_the_cities = {
+		icon = mission_expand_great_wall
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 378
+				province_id = 1855
+			}
+			OR = {
+				has_fort_building_trigger = yes
+				has_building = ramparts
+			}
+		} 
+
+		trigger = {
+			owns_core_province = 378
+			owns_core_province = 1855
+			378 = {
+				OR = {
+					has_fort_building_trigger = yes
+					has_building = ramparts
+				}
+			}
+			1855 = {
+				OR = {
+					has_fort_building_trigger = yes
+					has_building = ramparts
+				}
+			}
+			fortification_expert = 2
+		} 
+
+		effect = {
+			378 = {
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = "pf_pho_city_walls"
+					duration = -1
+				}
+			}
+			1855 = {
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = "pf_pho_city_walls"
+					duration = -1
+				}
+			}
+			custom_tooltip = empty_line_tt
+			add_area_perma_claim = {
+				area = syria_area
+			}
+			add_area_perma_claim = {
+				area = palestine_area
+			}
+			add_area_perma_claim = {
+				area = aleppo_area
+			}
+		} 
+	}
+
+	pf_pho_inland_expedition = {
+		icon = mission_lit_march_west
+		position = 5
+		required_missions = { pf_pho_fortify_the_cities } 
+		provinces_to_highlight = {
+			OR = {
+				area = syria_area
+				area = palestine_area
+				area = aleppo_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				OR = {
+					area = syria_area
+					area = palestine_area
+					area = aleppo_area
+				}
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "pf_pho_ruling_inland"
+				duration = 7300
+			}
+			custom_tooltip = empty_line_tt
+			add_area_perma_claim = {
+				area = mashriq_region
+			}
+		} 
+	}
+}
+pf_pho_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = PTY
+			tag = PSI
+		}
+	}
+
+	pf_pho_revive_the_shipyards = {
+		icon = mission_shipyards_of_gujarat
+		position = 2
+		required_missions = { pf_pho_get_independence } 
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+			NOT = { development = 20 }
+		} 
+
+		trigger = {
+			capital_scope = {
+				development = 20
+			}
+			num_ships_protecting_trade = 10
+			navy_size_percentage = 0.85
+		} 
+
+		effect = {
+			377 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 9125
+					power = 30
+					key = PHOENICIAN_SHIPS_POWER
+				}
+			}
+			custom_tooltip = empty_line_tt
+			capital_scope = {
+				add_or_upgrade_shipyard_building = yes
+			}
+		} 
+	}
+
+	pf_pho_dominate_the_nile = {
+		icon = pf_nile_dams
+		position = 4
+		required_missions = { pf_pho_seize_cyprus } 
+		provinces_to_highlight = {
+			province_id = 358	# Alexandria
+		} 
+
+		trigger = {
+			358 = {
+				trade_share = {
+					country = root
+					share = 25
+				}
+			}
+			has_dip_advisor_2 = yes
+		} 
+
+		effect = {
+			add_adm_power = 100
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_pho_egypt_trades"
+				duration = -1
+			}
+			custom_tooltip = empty_line_tt
+			add_area_perma_claim = {
+				area = delta_area
+			}
+			add_area_perma_claim = {
+				area = bahari_area
+			}
+		} 
+	}
+
+	pf_pho_purple_soldiers = {
+		icon = mission_plc_purple_phoenix
+		position = 5
+		required_missions = { pf_pho_fortify_the_cities } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			prestige = 90
+			army_tradition = 50
+			has_global_modifier_value = {
+				which = land_morale
+				value = 0.5
+			}
+		} 
+
+		effect = {
+			add_splendor = 200
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_pho_glorious_soldiers"
+				duration = -1
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					army_reformer = 1
+				}
+				custom_tooltip = pf_pho_army_reformer_yes_tt
+				add_army_professionalism = 0.05
+			}
+			else = {
+				custom_tooltip = pf_pho_army_reformer_no_tt
+				tooltip = {
+					add_army_professionalism = 0.05
+				}
+			}
+		} 
+	}
+}
+pf_pho_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = PTY
+			tag = PSI
+		}
+	}
+
+	pf_pho_get_independence = {
+		icon = mission_plc_golden_liberty
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			is_subject = no
+			is_at_war = no
+		} 
+
+		effect = {
+			add_stability_or_adm_power = yes
+			custom_tooltip = empty_line_tt
+			add_yearly_manpower = 2
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_pho_independent_phoenicia"
+				duration = 9125
+			}
+			custom_tooltip = empty_line_tt
+			378 = {
+				add_permanent_claim = ROOT
+			}
+			1855 = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_pho_unite_the_cities = {
+		icon = mission_hanseatic_city
+		position = 2
+		required_missions = { pf_pho_get_independence } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 378
+				province_id = 1855
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			is_subject = no
+			378 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1855 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {
+			country_event = {
+				id = pf_pho.1
+			}
+			custom_tooltip = empty_line_tt
+			378 = {
+				add_base_tax = 1
+				add_base_production = 1
+			}
+			1855 = {
+				add_base_tax = 1
+				add_base_production = 1
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					OR = {
+						PTY = { is_subject_of = ROOT }
+						PSI = { is_subject_of = ROOT }
+					}
+				}
+				custom_tooltip = pf_pho_free_integrate_city_yes_tt
+				hidden_effect = {
+					if = {
+						limit = {
+							PTY = { is_subject_of = ROOT }
+						}
+						inherit = PTY
+					}
+					if = {
+						limit = {
+							PSI = { is_subject_of = ROOT }
+						}
+						inherit = PSI
+					}
+				}
+			}
+			else = {
+				custom_tooltip = pf_pho_free_integrate_city_no_tt
+			}
+			custom_tooltip = empty_line_tt
+			321 = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	pf_pho_seize_cyprus = {
+		icon = kingdom_of_cyprus
+		position = 3
+		required_missions = { pf_pho_unite_the_cities } 
+		provinces_to_highlight = {
+			province_id = 321
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			321 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {
+			add_dip_power = 100
+			custom_tooltip = empty_line_tt
+			321 = {
+				add_or_upgrade_trade_building = yes
+				change_trade_goods = copper
+			}
+			custom_tooltip = empty_line_tt
+			add_area_perma_claim = {
+				area = tunisia_area
+			}
+		} 
+	}
+
+	pf_pho_claim_iberia = {
+		icon = a_question_of_spain
+		position = 5
+		required_missions = { pf_pho_reclaim_carthage } 
+		provinces_to_highlight = {
+			region = iberia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = iberia_region
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				has_trade_building_trigger = yes
+				development = 15
+				region = iberia_region
+			}
+		} 
+
+		effect = {
+			add_years_of_trade_income = {
+				years = 2
+				custom_tooltip = pf_2_years_of_trade_income_tt
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_pho_far_colonies"
+				duration = -1
+			}
+		} 
+	}
+}
+pf_pho_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = PTY
+			tag = PSI
+		}
+	}
+
+	pf_pho_prestigious_goods = {
+		icon = mission_silk_road
+		position = 3
+		required_missions = {
+			pf_pho_unite_the_cities
+			pf_pho_dye_hard
+		}
+		provinces_to_highlight = {
+			province_group = pf_silk_road_syrian_way
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			OR = {
+				full_idea_group = trade_ideas
+				mercantilism = 40
+				trade_efficiency = 0.80
+			}
+			pf_silk_road_syrian_way = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			custom_trigger_tooltip = {
+				tooltip = pf_has_renovated_syrian_silk_road_tt
+				has_global_flag = renovated_syrian_way
+			}
+		} 
+
+		effect = {
+			add_years_of_owned_provinces_production_income = {
+				years = 2
+				custom_tooltip = pf_general_years_of_production_income_tt
+			}
+			custom_tooltip = empty_line_tt
+			377 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 50
+					key = PHOENICIAN_SILK_ROAD
+				}
+			}
+			1335 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 50
+					key = PHOENICIAN_SILK_ROAD
+				}
+			}
+			4341 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 50
+					key = PHOENICIAN_SILK_ROAD
+				}
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = pf_pho_unlock_naval_doctrine_tt
+		} 
+	}
+	pf_pho_reclaim_carthage = {
+		icon = pf_hannibal
+		position = 4
+		required_missions = { pf_pho_seize_cyprus } 
+		provinces_to_highlight = {
+			area = tunisia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			tunisia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {
+			341 = {
+				add_or_upgrade_production_building = yes
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_pho_carthage_reconquered"
+				duration = -1
+			}
+			custom_tooltip = empty_line_tt
+			add_area_perma_claim = {
+				area = maghreb_region
+			}
+			add_area_perma_claim = {
+				area = valencia_area
+			}
+			add_area_perma_claim = {
+				area = toledo_area
+			}
+			add_area_perma_claim = {
+				area = upper_andalucia_area
+			}
+			add_area_perma_claim = {
+				area = lower_andalucia_area
+			}
+			add_area_perma_claim = {
+				area = alentejo_area
+			}
+			add_area_perma_claim = {
+				area = corsica_sardinia_area
+			}
+			add_area_perma_claim = {
+				area = baleares_area
+			}
+			add_area_perma_claim = {
+				area = western_sicily_area
+			}
+			add_area_perma_claim = {
+				area = sicily_area
+			}
+		} 
+	}
+}
+pf_pho_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = PTY
+			tag = PSI
+		}
+	}
+
+	pf_pho_promote_dye_merchants = {
+		icon = mission_secure_the_malabar_coast
+		position = 1
+		provinces_to_highlight = {
+			province_id = 378	# Tyre
+		} 
+
+		trigger = {
+			owns_core_province = 378
+			378 = {
+				base_production = 8
+			}
+			378 = {
+				has_production_building_trigger = yes
+			}
+		} 
+
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			custom_tooltip = empty_line_tt
+			378 = {
+				add_province_modifier = {
+					name = "pf_pho_revived_dye_industry"
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	pf_pho_dye_hard = {
+		icon = mission_dominate_trade_in_bengal
+		position = 2
+		required_missions = { pf_pho_promote_dye_merchants } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_merchants = 5
+			trade_goods_produced_amount = {
+				trade_goods = dyes
+				amount = 5
+			}
+			OR = {
+				natural_scientist = 2
+				logistician = 2
+			}
+		} 
+
+		effect = {
+			country_event = {
+				id = pf_pho.2
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "pf_pho_dye_dominance"
+				duration = 9125
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					trading_bonus = {
+						trade_goods = dyes
+						value = yes
+					}
+				}
+				custom_tooltip = pf_pho_trading_in_dyes_yes_tt
+				add_years_of_trade_income = {
+					years = 2
+					custom_tooltip = pf_2_years_of_trade_income_tt
+				}
+			}
+			else = {
+				custom_tooltip = pf_pho_trading_in_dyes_no_tt
+				tooltip = {
+					add_years_of_trade_income = {
+						years = 2
+						custom_tooltip = pf_2_years_of_trade_income_tt
+					}
+				}
+			}
+		} 
+	}
+
+	pf_pho_island_adventures = {
+		icon = mission_mediterranean_islands
+		position = 5
+		required_missions = { pf_pho_reclaim_carthage } 
+		provinces_to_highlight = {
+			OR = {
+				area = baleares_area
+				area = corsica_sardinia_area
+				area = western_sicily_area
+				area = sicily_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			owns = 2986
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				OR = {
+					area = baleares_area
+					area = corsica_sardinia_area
+					area = western_sicily_area
+					area = sicily_area
+				}
+			}
+		} 
+
+		effect = {
+			add_yearly_sailors = 5
+			custom_tooltip = empty_line_tt
+			2986 = {
+				add_or_upgrade_shipyard_building = yes
+				add_unit_construction = {
+					type = galley
+					amount = 10
+					speed = 0.1
+					cost = 0
+				}
+			}
+		} 
+	}
+}

@@ -38,4 +38,7 @@ add_historical_rival = CEL
 		power_type = gaul_confederation
 		value = 50
 	} #adds government power
+	set_estate_privilege = estate_nobles_pf_gallic_wars_remnant
+	set_estate_privilege = estate_clergy_pf_gallic_wars_remnant
+	set_ruler_flag = IS_DUBNORIX_FLAG
 }

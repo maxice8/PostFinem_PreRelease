@@ -15,6 +15,10 @@
 ######################################################
 philosopher = {
 	monarch_power = ADM
+	skill_scaled_modifier = {
+		trigger = { owner = {  has_country_modifier = mam_adm_advisors_generate_idea_cost_modifier  } }
+		modifier = { idea_cost = -0.01 }
+	}
 	
 	# Bonus
 	prestige = 1
@@ -95,6 +99,12 @@ philosopher = {
 	}
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { has_reform = icelandic_althingi_reform }
 		}
 		modifier = {
@@ -114,12 +124,26 @@ philosopher = {
 ######################################################
 natural_scientist = {
 	monarch_power = ADM
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	production_efficiency = 0.10
 	skill_scaled_modifier = {
 		trigger = { owner = {  has_government_attribute = reform_progress_from_advisors  } }
 		modifier = { reform_progress_growth = 0.03 }
+	}
+	skill_scaled_modifier = {
+		trigger = { owner = {  mission_completed = pf_gaul_german_5  } }
+		modifier = { technology_cost = -0.02 }
 	}
 	skill_scaled_modifier = {
 		trigger = { 
@@ -186,6 +210,12 @@ natural_scientist = {
 	}
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { has_reform = icelandic_althingi_reform }
 		}
 		modifier = {
@@ -205,6 +235,16 @@ natural_scientist = {
 ######################################################
 artist = {
 	monarch_power = ADM
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	stability_cost_modifier = -0.10
@@ -293,6 +333,12 @@ artist = {
 	}
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { has_reform = icelandic_althingi_reform }
 		}
 		modifier = {
@@ -320,6 +366,16 @@ artist = {
 ######################################################
 treasurer = {
 	monarch_power = ADM
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	global_tax_modifier = 0.1
@@ -392,6 +448,12 @@ treasurer = {
 	}
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { has_reform = icelandic_althingi_reform }
 		}
 		modifier = {
@@ -411,6 +473,16 @@ treasurer = {
 ######################################################
 theologian = {
 	monarch_power = ADM
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	global_unrest = -2
@@ -483,6 +555,12 @@ theologian = {
 	}
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { has_reform = icelandic_althingi_reform }
 		}
 		modifier = {
@@ -511,6 +589,16 @@ theologian = {
 ######################################################
 master_of_mint = {
 	monarch_power = ADM
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	inflation_reduction = 0.10
@@ -526,6 +614,16 @@ master_of_mint = {
 		}
 		modifier = {
 			governing_capacity_modifier = 0.05
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				mission_completed = YEM_eastern_hub
+			}
+		}
+		modifier = {
+			global_foreign_trade_power = 0.05
 		}
 	}
 
@@ -583,6 +681,12 @@ master_of_mint = {
 	}
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { has_reform = icelandic_althingi_reform }
 		}
 		modifier = {
@@ -607,6 +711,16 @@ master_of_mint = {
 inquisitor = {
 	monarch_power = ADM
 	allow_only_owner_religion = yes
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	global_missionary_strength = 0.02
@@ -690,6 +804,12 @@ inquisitor = {
 	}
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { has_reform = icelandic_althingi_reform }
 		}
 		modifier = {
@@ -726,6 +846,16 @@ inquisitor = {
 ######################################################
 statesman = {
 	monarch_power = DIP
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	diplomatic_reputation = 1
@@ -767,6 +897,12 @@ statesman = {
 		modifier = {
 			trade_efficiency = 0.02
 		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
 	}
 	skill_scaled_modifier = {
 		trigger = {
@@ -833,6 +969,12 @@ naval_reformer = {
 	}
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { has_reform = icelandic_althingi_reform }
 		}
 		modifier = {
@@ -860,6 +1002,16 @@ naval_reformer = {
 ######################################################
 trader = {
 	monarch_power = DIP
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	trade_efficiency = 0.10
@@ -925,6 +1077,12 @@ trader = {
 	}
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { has_reform = icelandic_althingi_reform }
 		}
 		modifier = {
@@ -948,6 +1106,16 @@ trader = {
 ######################################################
 spymaster = {
 	monarch_power = DIP
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	spy_offence = 0.25
@@ -992,6 +1160,12 @@ spymaster = {
 	}
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { has_reform = icelandic_althingi_reform }
 		}
 		modifier = {
@@ -1011,6 +1185,16 @@ spymaster = {
 ######################################################
 colonial_governor = {
 	monarch_power = DIP
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	global_tariffs = 0.10
@@ -1061,6 +1245,12 @@ colonial_governor = {
 			global_colonial_growth = 5
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
 	
 	chance = {
 		factor = 1
@@ -1082,6 +1272,16 @@ colonial_governor = {
 ######################################################
 diplomat = {
 	monarch_power = DIP
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	improve_relation_modifier = 0.2
@@ -1126,6 +1326,12 @@ diplomat = {
 	}
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { has_reform = icelandic_althingi_reform }
 		}
 		modifier = {
@@ -1151,10 +1357,12 @@ navigator = {
 	
 	skill_scaled_modifier = {
 		trigger = {
-			owner = { has_country_flag = pf_lag_extra_settlers }
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
 		}
-		modifier = { 
-			global_colonial_growth = 5
+		modifier = {
+			yearly_innovativeness = 0.02 
 		}
 	}
 	skill_scaled_modifier = {
@@ -1202,6 +1410,12 @@ navigator = {
 		modifier = { 
 			global_colonial_growth = 5
 		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
 	}
 
 	chance = {
@@ -1253,14 +1467,6 @@ army_reformer = {
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
-				is_emperor_of_china = yes 
-			}
-		}
-		modifier = { meritocracy = 0.25 }
-	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
 				has_government_mechanic = mac_war_cabinet_mechanic
 			}
 		}
@@ -1268,10 +1474,26 @@ army_reformer = {
 	}
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { has_reform = icelandic_althingi_reform }
 		}
 		modifier = {
 			monthly_althingi_mil_power = 0.25
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
 		}
 	}
 
@@ -1310,6 +1532,13 @@ army_organiser = {
 		}
 		modifier = { meritocracy = 0.25 }
 	}
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.8
+	}
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -1320,10 +1549,26 @@ army_organiser = {
 	}
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { has_reform = icelandic_althingi_reform }
 		}
 		modifier = {
 			monthly_althingi_mil_power = 0.25
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
 		}
 	}
 
@@ -1339,6 +1584,16 @@ army_organiser = {
 ######################################################
 commandant = {
 	monarch_power = MIL
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	discipline = 0.05
@@ -1380,6 +1635,12 @@ commandant = {
 	}
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { has_reform = icelandic_althingi_reform }
 		}
 		modifier = {
@@ -1399,6 +1660,16 @@ commandant = {
 ######################################################
 quartermaster = {
 	monarch_power = MIL
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	reinforce_speed = 0.33
@@ -1432,6 +1703,12 @@ quartermaster = {
 	}
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { has_reform = icelandic_althingi_reform }
 		}
 		modifier = {
@@ -1455,6 +1732,16 @@ quartermaster = {
 ######################################################
 recruitmaster = {
 	monarch_power = MIL
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	global_manpower_modifier = 0.10
@@ -1488,6 +1775,12 @@ recruitmaster = {
 	}
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { has_reform = icelandic_althingi_reform }
 		}
 		modifier = {
@@ -1511,6 +1804,16 @@ recruitmaster = {
 ######################################################
 fortification_expert = {
 	monarch_power = MIL
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	defensiveness = 0.2
@@ -1544,6 +1847,12 @@ fortification_expert = {
 	}
 	skill_scaled_modifier = {
 		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
 			owner = { has_reform = icelandic_althingi_reform }
 		}
 		modifier = {
@@ -1564,6 +1873,16 @@ fortification_expert = {
 ######################################################
 grand_captain = {
 	monarch_power = MIL
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 	
 	# Bonus
 	land_maintenance_modifier = -0.10
@@ -1594,6 +1913,12 @@ grand_captain = {
 			}
 		}
 		modifier = { monthly_mac_war_cabinet_organization = 0.02 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_reform = pf_absolute_gallic_monarchy }
+		}
+		modifier = { monthly_gaul_confederation = 0.02 }
 	}
 	skill_scaled_modifier = {
 		trigger = {

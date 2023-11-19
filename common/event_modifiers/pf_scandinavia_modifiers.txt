@@ -448,3 +448,21 @@ pf_vin_exporter = {
 pf_vin_ai_help_maintenance = {
 	land_maintenance_modifier = -1
 }
+
+# Nordheim bonuses
+
+pf_ndh_swedish = {
+	administrative_efficiency = 0.025
+}
+pf_ndh_danish = {
+	siege_ability = 0.10
+}
+pf_ndh_angle = {
+	global_manpower_modifier = 0.10
+}
+pf_ndh_norwegian = {
+	ship_durability = 0.10
+}
+pf_ndh_fallback = {
+	country_military_power = 1
+}

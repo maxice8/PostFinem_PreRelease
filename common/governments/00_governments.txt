@@ -25,6 +25,15 @@ monarchy = {
 				astartean_adventurer_reform
 				illyrian_kingdom_reform
 				nordic_monarchy_reform
+				pf_ostholm_crown_monarchy
+				pf_donova_crown
+				pf_donova_crown_vld
+				pf_babylonian_kingdom
+				pf_babylonian_empire
+				pf_gavrasian_kingdom
+				pf_spartan_stratokratoria
+				pf_absolute_gallic_monarchy
+				pf_gallic_parliament
 				# ]]]
 
 				#Vanilla
@@ -168,6 +177,7 @@ monarchy = {
 				# pf [[[
 				pf_guidance_of_the_elders_reform
 				pf_regional_tribal_nobility_reform
+				pf_kudurru_reform
 				# ]]]
 			}
 		}
@@ -243,11 +253,13 @@ monarchy = {
 		military_doctrines = {
 			reforms = {
 				# pf [[[
+				pf_vild_hunters
 				pf_integrated_phalanx
 				pf_catephract_focus
 				pf_militarised_druids_reform
 				pf_citizen_volunteers_reform
 				nordic_huskarl_recruitment_reform
+				pf_warriors_of_shamash
 				# ]]]
 				organized_military_staff_reform
 				military_engineering_reform
@@ -376,6 +388,9 @@ monarchy = {
 				thalassocracy_reform
 				royal_charters_reform
 				commercial_trade_empire_reform
+				# pf [[[
+				pf_nepustu_tax
+				# ]]]
 			}
 		}
 		legitimation_of_power = {
@@ -556,6 +571,11 @@ monarchy = {
 		decentralize_reform
 	}
 
+	exclusive_reforms = {
+		states_general_reform
+		land_christian_sun_reform
+	}
+
 	color = { 179 25 25 }
 }
 
@@ -603,6 +623,9 @@ republic = {
 				pf_rabim_qahal
 				icelandic_althingi_reform
 				stratocratic_republic
+				pf_donova_republic
+				pf_donova_republic_mark
+				pf_lesbian_republic
 				# ]]]
 				oligarchy_reform
 				signoria_reform
@@ -644,7 +667,6 @@ republic = {
 				parliamentary_republic_reform
 				absolute_shogunate_reform
 				japanese_divine_empire
-				land_christian_sun_reform
 			}
 		}
 		republican_virtues = {
@@ -1019,12 +1041,15 @@ tribal = {
 			reforms = {
 				# pf [[[
 				pf_norse_warlord
+				pf_ostholm_crown
+				pf_donova_horde
 				pf_semi_feudal_tribe
 				pf_drakovan_tribes
 				pf_lechite_kingdom
 				pf_norse_jarldom
 				pf_vinland_colony
 				pf_vinland_althing
+				pf_germanic_vassal
 				# ]]]
 				steppe_horde
 				tribal_federation
@@ -1077,9 +1102,7 @@ tribal = {
 				cavalry_warfare_reform
 				mercenary_leadership_reform
 				#Visible but locked
-				amphibious_specialization_reform
 				royal_marines_reform
-				maritime_military_reform
 				professional_navy_reform
 				doppelsoldner_reform
 				#Invisible until unlocked
@@ -1234,6 +1257,7 @@ theocracy = {
 				# Vanilla
 				leading_clergy_reform
 				monastic_order_reform
+				feudal_theocracy
 				crusading_kingdom_reform
 				papacy_reform
 				holy_state_reform
@@ -1258,7 +1282,6 @@ theocracy = {
 				absolute_shogunate_reform
 				japanese_divine_empire
 				sisterhood_of_jeanne_darc_reform
-				land_christian_sun_reform
 			}
 		}
 		internal_vs_external_mission = {

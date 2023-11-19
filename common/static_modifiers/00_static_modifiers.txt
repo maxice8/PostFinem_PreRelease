@@ -118,6 +118,7 @@ in_capital_state = {
 	local_institution_spread = 0.05
 	local_state_maintenance_modifier = -0.5
 	local_governing_cost = -1.0
+	local_has_qizilbash = yes
 }
 
 coastal = {
@@ -179,6 +180,7 @@ land_province = {
 	local_manpower_modifier = 0.25			#25% of manpower.
 	local_has_musketeers = yes
 	local_has_streltsy = yes
+	local_has_mamluks = yes
 }
 
 mild_winter = {
@@ -291,13 +293,13 @@ capital_city = {
 
 
 patriarch_state = {
-	local_friendly_movement_speed = 0.1
+	local_state_maintenance_modifier = 0.1
 	local_monthly_devastation = -0.05
 }
 
 # Multiplied in provinces of same religion.
 patriarch_authority_local = {
-	local_tax_modifier = 0.2
+	local_unrest = -3
 	local_manpower_modifier = 0.33
 }
 
@@ -600,6 +602,7 @@ base_values = {
 	tolerance_of_heathens_capacity = 3
 	max_flagships = 1
 	num_of_parliament_issues = 10
+	has_marines = yes
 }
 
 # AI 'cheats' that compensate for flaws in its long-term decision making, removing these may severely cripple the AI
@@ -637,6 +640,7 @@ positive_stability = {
 	yearly_harmony = 0.25
 	monthly_trn_cohesion = 0.20
 	monthly_mac_war_cabinet_organization = 0.02
+	monthly_gaul_confederation = 0.05
 }
 
 privateering = {
@@ -653,8 +657,10 @@ negative_stability = {
 	yearly_harmony = 0.25
 	monthly_trn_cohesion = 0.5
 	monthly_mac_war_cabinet_organization = 0.03
+	monthly_gaul_confederation = 0.05
 	monthly_pf_sneakiness = 0.25
 	monthly_pf_svetovid_dedication = 0.25
+	monthly_syrian_power = 0.25
 }
 
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
@@ -742,6 +748,8 @@ bankruptcy = {
 	imperial_mandate = -0.1
 	great_project_upgrade_cost = 0.5
 	monthly_mac_war_cabinet_organization = -0.5
+	monthly_syrian_power = -2
+	monthly_gaul_confederation = -2
 }
 
 
@@ -789,6 +797,7 @@ war_exhaustion = {
 	monthly_militarized_society = -0.05
 	monthly_trn_cohesion = -0.05
 	monthly_mac_war_cabinet_organization = -0.02
+	monthly_gaul_confederation = -0.01
 }
 
 doom = {
@@ -824,6 +833,7 @@ mercantilism = {
 	embargo_efficiency = 1
 	burghers_loyalty_modifier = 0.1
 	vaisyas_loyalty_modifier = 0.1
+	monthly_syrian_power = 1
 }
 
 army_tradition = {
@@ -839,6 +849,8 @@ army_tradition = {
 	maratha_loyalty_modifier = 0.05
 	rajput_loyalty_modifier = 0.05
 	janissaries_loyalty_modifier = 0.05
+	qizilbash_loyalty_modifier = 0.05
+	ghulams_loyalty_modifier = 0.05
 	allowed_tercio_fraction = 0.1
 	allowed_samurai_fraction = 0.1
 	monthly_blackcoat_zeal = 0.5
@@ -1051,12 +1063,16 @@ corruption = {
 	dhimmi_loyalty_modifier = 0.1
 	jains_loyalty_modifier = 0.1
 	rajput_loyalty_modifier = 0.1
-	janissaries_loyalty_modifier = 0.1
 	eunuchs_loyalty_modifier = 0.1
+	janissaries_loyalty_modifier = 0.1
+	qizilbash_loyalty_modifier = 0.1
+	ghulams_loyalty_modifier = 0.1
 	monthly_heir_claim_increase = 0.025
 	monthly_trn_cohesion = -50
 	monthly_mac_war_cabinet_organization = -0.03
 	monthly_pf_sneakiness = -50
+	monthly_syrian_power = -10
+	monthly_chivalry = -10
 }
 
 root_out_corruption = {
@@ -1131,6 +1147,7 @@ prestige = {
 	ae_impact = -0.10
 	embracement_cost = -0.1
 	monthly_heir_claim_increase = 0.05
+	monthly_chivalry = 0.10
 
 	brahmins_hindu_loyalty_modifier = 0.05
 	brahmins_muslim_loyalty_modifier = 0.05
@@ -1147,6 +1164,8 @@ prestige = {
 	rajput_loyalty_modifier = 0.05
 	janissaries_loyalty_modifier = 0.05
 	eunuchs_loyalty_modifier = 0.05
+	qizilbash_loyalty_modifier = 0.05
+	ghulams_loyalty_modifier = 0.05
 }
 
 no_debate_in_parliament = {
@@ -1187,6 +1206,7 @@ curia_controller = {
 
 bought_indulgence = {
 	papal_influence = 1
+	relation_with_same_religion = 10
 }
 
 religious_unity = {
@@ -1222,6 +1242,7 @@ uncontested_cores = {
 
 num_objectives_fullfilled = {
 	monthly_splendor = 2
+	monthly_chivalry = 0.02
 }
 
 production_leader = {
@@ -1251,6 +1272,39 @@ federation_leader = {
 	land_morale = 0.1
 }
 
+pronoia_base_overlord_modifiers = {
+	# land_forcelimit = -5
+	pronoia_amount_check_influence = 1 #used for exporting, invisible by default
+}
+
+pronoia_base_modifiers = {
+	core_creation = 1
+	overextension_impact_modifier = 1
+	administrative_efficiency = -0.2
+	global_manpower = 5
+	global_manpower_modifier = 0.5 
+	global_regiment_cost = -0.5
+}
+
+BYZ_pronoia_buff_army_tradition_modifier = {
+	army_tradition = 0.2
+}
+
+BYZ_pronoia_land_forcelimit_penalty = {
+	land_forcelimit = -5
+}
+
+BYZ_extra_forcelimit_for_pronoiars = {
+	land_forcelimit = 5
+}
+
+BYZ_army_trad = {
+	army_tradition = 3
+}
+
+BYZ_discipline = {
+	discipline = 0.05
+}
 
 tributary_state_behind_overlord_tech_adm = {
 	adm_tech_cost_modifier = -0.05
@@ -1335,6 +1389,12 @@ musketeers_modifier = {
 samurai_modifier = {
 }
 
+qizilbash_modifier = {
+}
+
+mamluks_modifier = {
+}
+
 geobukseon_modifier = {
 }
 
@@ -1364,6 +1424,7 @@ power_projection = {
 	horde_unity = 0.5
 	republican_tradition = 0.2
 	monthly_trn_cohesion = 0.5
+	monthly_chivalry = 0.2
 }
 
 power_projection_25 = {
@@ -1373,6 +1434,7 @@ power_projection_25 = {
 #100 Land Forcelimit = 1
 land_forcelimit = {
     free_land_leader_pool = 1.25 #80 Army forcelimit -> +1 free leader
+	num_of_pronoiars = 1
 }
 
 #100 Naval Forcelimit = 1
@@ -2086,6 +2148,17 @@ samurai_regiment = {
 	reinforce_cost_modifier = 0.5
 }
 
+qizilbash_regiment = {
+	fire_damage_received = -0.05
+	land_maintenance_modifier = -0.25
+}
+
+mamluks_regiment = {
+	drill_gain_modifier = 1
+	morale_damage = 0.1
+	reinforce_speed = 0.33 
+}
+
 geobukseon_ship = {
 	ship_durability = 0.1
 	galley_power = 0.1
@@ -2192,12 +2265,17 @@ over_governing_capacity_modifier = {
 	administrative_efficiency = -0.5
 	monthly_trn_cohesion = -5
 	monthly_pf_sneakiness = -5
+	monthly_syrian_power = -1
+	monthly_gaul_confederation = -2
 }
 
-# At 1000% below capacity, this modifier will be fully used
+#Scales with used capacity, being at full capacity means 100% of the modifier
 under_governing_capacity_modifier = {
 }
-
+#Scales with unused capacity, eing at full capacity means 0% of the modifier
+reverse_under_governing_capacity_modifier = {
+	monthly_gaul_confederation = 0.2
+}
 
 lost_hegemony = {
 	all_power_cost	= 0.10
@@ -2260,15 +2338,21 @@ num_accepted_cultures = {
 
 ruler_adm = {
 		monthly_trn_cohesion = 0.10
+		monthly_syrian_power = 0.05
+		monthly_chivalry = 0.01
 }
 
 ruler_dip = {
 		monthly_trn_cohesion = 0.10
 		monthly_pf_sneakiness = 0.10
+		monthly_syrian_power = 0.05
+		monthly_chivalry = 0.01
 }
 
 ruler_mil = {
 		monthly_trn_cohesion = 0.10
+		monthly_syrian_power = 0.05
+		monthly_chivalry = 0.01
 }
 
 heir_adm = {
@@ -2281,12 +2365,15 @@ heir_mil = {
 }
 
 consort_adm = {
+	monthly_chivalry = 0.01
 }
 
 consort_dip = {
+	monthly_chivalry = 0.01
 }
 
 consort_mil = {
+	monthly_chivalry = 0.01
 }
 
 mandate = {
@@ -2319,7 +2406,7 @@ negative_imperial_authority_member = {
 
 slackening_modifier = {
     yearly_army_professionalism = -0.05
-    manpower_recovery_speed = 1
+    manpower_recovery_speed = 2
 }
 
 royal_council_meeting_mod = {
@@ -2350,7 +2437,59 @@ reverse_average_subject_liberty_desire = { #100% LD => 0% modifier
 
 average_global_autonomy = { #100% autonomy => 100% modifier
 	monthly_trn_cohesion = -5
+	monthly_syrian_power = -1.5
 }
 
 reverse_average_global_autonomy = { #100% autonomy => 0% modifier
+}
+
+adur_burzhen_mihr_mod = {
+	country_diplomatic_power = 1
+	development_cost = -0.1
+	monthly_asha_vahishta = -0.5
+	religion = yes
+}
+
+adur_farnbag_mod = {
+	country_admin_power = 1
+	reform_progress_growth = 0.1
+	monthly_asha_vahishta = -0.5
+	religion = yes
+}
+
+adur_gushnasp_mod = {
+	country_military_power = 1
+	own_territory_dice_roll_bonus = 1
+	monthly_asha_vahishta = -0.5
+	religion = yes
+}
+
+culturally_influencing_countries = {
+	influence_to_vassal_elevation_cost = 20
+	monthly_persian_influence = -0.2
+}
+
+culturally_influencing_countries_same_culture = {
+	influence_to_vassal_elevation_cost = 20
+}
+
+culturally_influenced_country = {
+	relation_with_same_religion = 10
+	reverse_relation_with_same_religion = 10
+}
+
+manpower_percentage = {
+
+}
+
+reverse_manpower_percentage = {
+
+}
+
+sailors_percentage = {
+
+}
+
+reverse_sailors_percentage = {
+
 }

@@ -3,92 +3,35 @@ add_government_reform = autocracy_reform
 primary_culture = erythrian
 religion = hellenic
 technology_group = eastern
-capital = 419# Yerevan
+capital = 419 	# Yerevan
 add_accepted_culture = vanite
+government_rank = 2
 
 1444.11.11 = {
 	monarch = {
-		name = "Ararat"
-		dynasty = "Artashesian"
+		name = "Tigranes XII"
+		dynasty = "Artaxiad"
 		adm = 3
 		dip = 1
-		mil = 3
+		mil = 2
 		birth_date = 1373.01.06
 		death_date = 1445.01.01
 	}
+	add_ruler_personality = cruel_personality
+	add_ruler_personality = drunkard_personality 
 }
-1745.1.1 = { 
-	monarch = { 
-		name = "Mehdi"
-		dynasty = "Qasemlu"
+1444.11.11 = {
+	heir = {
+		name = "Adrine"
+		monarch_name = "Adrine II"
+		dynasty = "Artaxiad"
+		claim = 80
+		birth_date = 1425.7.18
+		death_date = 1498.5.11
 		adm = 3
-		dip = 2
-		mil = 1
+		dip = 3
+		mil = 3
+		female = yes
 	}
-	religion = sunni
-	religious_school = hanafi_school
+	add_heir_personality = righteous_personality
 }
-1748.1.1 = { 
-	monarch = { 
-		name = "Hasan"
-		dynasty = "Aliid"
-		adm = 3
-		dip = 4
-		mil = 2
-	}
-}
-1750.1.1 = { 
-	monarch = { 
-		name = "Huseyn"
-		dynasty = "Aliid"
-		adm = 4
-		dip = 1
-		mil = 1
-	}
-}
-1755.1.1 = { 
-	monarch = { 
-		name = "Hasan"
-		dynasty = "Qajar"
-		adm = 1
-		dip = 1
-		mil = 2
-	}
-}
-1762.1.1 = { 
-	monarch = { 
-		name = "Huseyn"
-		dynasty = "Aliid"
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-}
-1784.1.1 = { 
-	monarch = { 
-		name = "Qulam"
-		dynasty = "Aliid"
-		adm = 4
-		dip = 2
-		mil = 2
-	}
-}
-1804.1.1 = { 
-	monarch = { 
-		name = "Mehdi"
-		dynasty = "Qoli"
-		adm = 1
-		dip = 1
-		mil = 2
-	}
-}
-1806.1.1 = { 
-	monarch = { 
-		name = "Muhammed"
-		dynasty = "Maragai"
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-}
-government_rank = 2

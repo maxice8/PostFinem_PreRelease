@@ -350,11 +350,11 @@ pf_egypt_granary_med = {
 }
 
 pf_egypt_greek_investment = {
-	local_development_cost_modifier = -0.05
+	local_development_cost = -0.05
 }
 
 pf_egypt_religion_pagan_temple = {
-	local_development_cost_modifier = -0.05
+	local_development_cost = -0.05
 	local_unrest = -3
 }
 
@@ -403,7 +403,7 @@ pf_egypt_sandstorm_aftermath = {
 
 pf_egypt_temple_complex_funded = {
 	local_build_cost = -0.1
-	local_development_cost_modifier = -0.05
+	local_development_cost = -0.05
 }
 
 pf_egypt_temple_complex_disrepair = {
@@ -416,7 +416,7 @@ pf_temple_complex = {
 	local_tax_modifier = -0.1
 	local_missionary_strength = -0.04
 	allowed_num_of_buildings = 1
-	local_development_cost_modifier = -0.10
+	local_development_cost = -0.10
 }
 
 pf_temple_complex_construction = {

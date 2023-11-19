@@ -734,9 +734,7 @@ lingonian_war_camp = { # lwc
         province_modifiers = {}
         area_modifier = {}
         country_modifiers = {
-            army_tradition_from_battle = 0.1
-            prestige_from_land = 0.25
-            land_forcelimit_modifier = 0.5
+            army_tradition_from_battle = 0.25
             monthly_gaul_confederation = 0.05
         }
     }
@@ -746,8 +744,7 @@ lingonian_war_camp = { # lwc
         province_modifiers = {}
         area_modifier = {}
         country_modifiers = {
-            army_tradition_from_battle = 0.25
-            prestige_from_land = 0.5
+            army_tradition_from_battle = 0.5
             land_forcelimit_modifier = 0.1
             monthly_gaul_confederation = 0.1
         }
@@ -758,9 +755,8 @@ lingonian_war_camp = { # lwc
         province_modifiers = {}
         area_modifier = {}
         country_modifiers = {
-            army_tradition_from_battle = 0.5
-            prestige_from_land = 0.75
-            land_forcelimit_modifier = 0.15
+            army_tradition_from_battle = 1
+            land_forcelimit_modifier = 0.25
             monthly_gaul_confederation = 0.15
         }
     }
