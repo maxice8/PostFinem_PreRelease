@@ -1465,7 +1465,7 @@ mac_cabinet_5 = {
 			if = { 
 				limit = { ai = no }
 				land_forcelimit = 60
-				army_size_percentage = 1
+				army_size_percentage = 0.9
 			}
 			else = {
 				land_forcelimit = 50
