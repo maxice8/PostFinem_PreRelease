@@ -556,14 +556,16 @@ mac_2 = {
 		} 
 
 		effect = {  
-			swap_trade_good_for_max_provinces = {
-				max = 2
-				original = cloth 
-				new = silk
-				tooltip = mac_macedonian_silk_tt
-				trigger = "
-					base_production = 6
-				"
+			tooltip = {
+				swap_trade_good_for_max_provinces = {
+					max = 2
+					original = cloth 
+					new = silk
+					tooltip = mac_macedonian_silk_tt
+					trigger = "
+						base_production = 6
+					"
+				}
 			}
 			hidden_effect = {
 				random_owned_province = {
@@ -571,6 +573,18 @@ mac_2 = {
 						trade_goods = cloth
 						base_production = 6
 					}		
+					change_trade_goods = silk
+					add_province_modifier = {
+						name = mac_macedonian_silk_modifier
+						duration = -1
+					}
+				}
+				random_owned_province = {
+					limit = {
+						trade_goods = cloth
+						base_production = 6
+					}		
+					change_trade_goods = silk
 					add_province_modifier = {
 						name = mac_macedonian_silk_modifier
 						duration = -1
@@ -1556,10 +1570,6 @@ mac_eco_1 = {
 		required_missions = { pf_mac_regional_trade_hub } 
 		provinces_to_highlight = {  
 			OR = {
-				AND = {		
-					province_id = 1319
-					NOT = { highest_value_trade_node = yes }
-				}
 				AND = {
 					OR = {
 						province_id = 1319
@@ -1575,7 +1585,6 @@ mac_eco_1 = {
 		} 
 
 		trigger = {  
-			1319 = { highest_value_trade_node = yes }
 			1319 = { has_most_province_trade_power = ROOT }
 			358 = { has_most_province_trade_power = ROOT }
 			377 = { has_most_province_trade_power = ROOT }
@@ -1624,7 +1633,7 @@ mac_eco_2 = {
 			custom_trigger_tooltip = {
 				tooltip = mac_regional_trade_hub_trigger
 				num_of_owned_provinces_with = {
-					value = 5
+					value = 4
 					OR = {
 						province_id = 1319
 						any_trade_node_member_province = {
