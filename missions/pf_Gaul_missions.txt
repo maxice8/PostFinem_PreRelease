@@ -1191,8 +1191,8 @@ PF_Gaul_3 = {
 							area = romandie_area
 						}
 						OR = {
-							terrain = mountains
-							terrain = hills
+							has_terrain = mountains
+							has_terrain = hills
 						}
 					}
 					add_province_modifier = {
