@@ -2639,9 +2639,9 @@ first_3 = {
 				effect = "
 				random_owned_province = {
 					limit = {
-						owned_by = ROOT
-						 
+						is_colony = yes
 					}
+					add_colonysize = 200
 				}
 				"
 			}
