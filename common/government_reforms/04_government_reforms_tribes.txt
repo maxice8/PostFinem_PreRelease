@@ -648,7 +648,7 @@ tribe_becomes_monarchy_reform = {
 				technology_group = nomad_group
 				religion_group = christian
 			}
-			pf_eastern_tech_group = yes
+			change_technology_group = eastern
 			change_unit_type = eastern
 		}
 		if = {
