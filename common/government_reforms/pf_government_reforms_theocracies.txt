@@ -73,9 +73,9 @@ zoroastrian_theocracy_reform = {
 	modifiers = {
 		church_privilege_slots = 2
 		church_influence_modifier = 0.1
-		manpower_in_accepted_culture_provinces = 0.15
+		manpower_in_accepted_culture_provinces = 0.20
 		vassal_income = -0.1
-		governing_capacity = 100
+		governing_capacity = 50
 	}
 	fixed_rank = 2
 	government_abilities = { pf_per_centralization_mechanic }

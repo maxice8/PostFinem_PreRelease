@@ -8,7 +8,7 @@
  NO_PF_LAG_ARTILLERY_DURATION_DOUBLED:0 "£no£ If we have completed §YOffensive§! or §YFirepower§! ideas, the duration of the modifier will be §Gdoubled§!."
 
  pf_lag_quarters_title:0 "Build Soldier Quarters"
- pf_lag_quarters_desc:0 "We have our Grey Army but the soldiers need more than just weapons, they need recruitment centres to replenish their numbers, quarters to rest and provide supplies while on a campaign."
+ pf_lag_quarters_desc:0 "We have our Gray Army but the soldiers need more than just weapons, they need recruitment centers to replenish their numbers, quarters to rest and provide supplies while on a campaign."
 
  pf_lag_doctrine_title:0 "Adopt Moden Doctrine"
  pf_lag_doctrine_desc:0 "In the evolving landscape of 18th-century warfare, modern armies are becoming increasingly specialised. To remain at the forefront of military doctrine, the Lagrlonder army must adapt to the changing times. Our forces will embrace new strategies, tactics, and technologies, ensuring our readiness and relevance in this era of specialisation and innovation."
@@ -32,7 +32,7 @@
  pf_lag_secure_desc:0 "Belgica is a shadow of its former self, losing most of its land to Gaulish invaders left it a fraction of its former size, we should conquer them before the Gauls eventually do so."
 
  pf_lag_break_title:0 "Break The Gauls"
- pf_lag_break_desc:0 "The Gauls are the most immediate danger to us, a large group of loosely united tribes, disorganised and frequently infighting, but enough in numbers to overwhelm any smaller foe. To survive we must end any hopes of unity they have, crush their armies, and split their lands among loyal [Root.GetNobilityOrFallbackName]. There is no other path, Gaul must be broken or we will be."
+ pf_lag_break_desc:0 "The Gauls are the most immediate danger to us, a large group of loosely united tribes, disorganized and frequently infighting, but enough in numbers to overwhelm any smaller foe. To survive we must end any hopes of unity they have, crush their armies, and split their lands among loyal [Root.GetNobilityOrFallbackName]. There is no other path, Gaul must be broken or we will be."
  YES_PF_LAG_GAUL_BROKEN_PERMANENT:0 "£yes£ If we complete this mission while §Y[GAU.GetName]§! does not exist, the modifier duration will be §Gtripled§!"
  NO_PF_LAG_GAUL_BROKEN_PERMANENT:0 "£no£ If we complete this mission while §Y[GAU.GetName]§! does not exist, the modifier duration will be §Gtripled§!"
 
@@ -65,7 +65,7 @@
  pf_lag_longboats_desc:0 "When our Host came to the Lowlands the Longboat was the design of choice. It was nimble, versatile, and stronger, but these longboats now lay in disrepair as we have focused on managing our newly conquered lands; they must be brought back to their lost glory and used again."
 
  pf_lag_encroach_title:0 "Encroach Into Germania"
- pf_lag_encroach_desc:0 "The Germans to our east are an uneasy neighbour, led by the Saxons we stand weary of each other, it is time to break this implied truce and expand our domain into the important areas that control the Rínar's trade into our realm"
+ pf_lag_encroach_desc:0 "The Germans to our east are an uneasy neighbor, led by the Saxons we stand weary of each other, it is time to break this implied truce and expand our domain into the important areas that control the Rínar's trade into our realm"
 
  pf_lag_london_title:0 "Expand Lundún"
  pf_lag_london_desc:0 "Lundún is a small Briton settlement along the Thames River, it has a prime position, allowing easy access to trade with the rest of our realm, we must heavily expand this settlement into a proper city and port to control the flow of trade into wider Celtica."
@@ -118,14 +118,14 @@
  PF_LAG_GLOBAL_TRADE_LOCK_UNTIL_1605:0 "If @LAG §Y[Root.GetName]§! has completed the mission §YEmbrace Global Trade§!, one of the following must be true:\n  The province owner is §Y[Root.GetName]§!\n  The year is at least §Y1605§!"
 
  pf_lag_warehouse_title:0 "Warehouse of The World"
- pf_lag_warehouse_desc:0 "In this age of globalisation, we have a unique opportunity to position Lagrlond as the "Warehouse of the World." Recent trade trends emphasise centralised hubs. By becoming the global epicentre for storage and distribution, we gain economic prominence, connectivity, and a coveted role in the international marketplace."
+ pf_lag_warehouse_desc:0 "In this age of globalisation, we have a unique opportunity to position Lagrlond as the "Warehouse of the World." Recent trade trends emphasise centralised hubs. By becoming the global epicenter for storage and distribution, we gain economic prominence, connectivity, and a coveted role in the international marketplace."
  pf_lag_warehouse_modifier:0 "Warehouse of the World"
 
  pf_lag_secure_trade_title:0 "Secure Home Trade"
  pf_lag_secure_trade_desc:0 "In the bustling trade of the Rínar region, securing the trade node is paramount. Historically, these vital waterways have been a lifeline of commerce, connecting distant regions. By controlling this trade artery, we ensure not only our economic prosperity but also our central role in facilitating the exchange of goods and ideas throughout the land."
 
  pf_lag_theology_title:0 "Control The Clergy"
- pf_lag_theology_desc:0 "In Lagrlond, a delicate balance exists between our ruling dynasty, the Lagrlondi, and the Norse pagan clergy, the Godár. While the Godár wields some influence, it's essential to keep them in check, especially concerning our relations with the Frisians, who practise Germanic paganism. Maintaining this balance is crucial to ensure the Frisians are not threatened with forced conversion, preserving both our nation's stability and the loyalty of our Frisian neighbours."
+ pf_lag_theology_desc:0 "In Lagrlond, a delicate balance exists between our ruling dynasty, the Lagrlondi, and the Norse pagan clergy, the Godár. While the Godár wields some influence, it's essential to keep them in check, especially concerning our relations with the Frisians, who practise Germanic paganism. Maintaining this balance is crucial to ensure the Frisians are not threatened with forced conversion, preserving both our nation's stability and the loyalty of our Frisian neighbors."
  PF_LAG_BASE_TAX_GAIN_3:0 "3 random owned provinces with the §Y[Root.Religion.GetName]§! faith will gain §G1§! Base Tax ¤"
 
  pf_lag_religion_locked_1_title:0 "Locked Mission"
@@ -231,7 +231,7 @@
  pf_lag_into_beyond_desc:0 "The sagas of Leif Erikson and Vinland have long captivated the imagination, recounting tales of Norse exploration and the mysterious lands they purportedly discovered. However, as these sagas endure, doubt begins to cast shadows on the veracity of the Vinland saga. Questions arise about the mysterious silence that shrouds the communication between the Norse of Europe and the settlers who ventured to Vinland. What happened to these settlers, and does the Vinland Saga depict a true account or a concoction of myths?\n\nWhether legend or fact, the saga is more than just an account or legend, it is a shared memory across the Norse that makes men dream of what is behind the Great Blue, and and it inspires the daring, the adventurous, and the desperate to follow in the path of Leif Erikson and step Into the Beyond."
 
  pf_lag_carib_title:0 "Control The Caribbean"
- pf_lag_carib_desc:0 "The discovery of new lands in India has unveiled a promising horizon for Lagrlond. The favourable climate in these distant territories offers ideal conditions for the cultivation of crops not commonly found in Europe, sugar being a prime example. This allure of fertile lands and the potential for sugar plantations have already drawn Lagrlond settlers."
+ pf_lag_carib_desc:0 "The discovery of new lands in India has unveiled a promising horizon for Lagrlond. The favorable climate in these distant territories offers ideal conditions for the cultivation of crops not commonly found in Europe, sugar being a prime example. This allure of fertile lands and the potential for sugar plantations have already drawn Lagrlond settlers."
  PF_LAG_CLAIMS_COTS:0 "§Y[Root.GetName]§! gets a permanent claim on all §YCenters of Trade§! in §YThe Caribbean§! region."
 
  pf_lag_austrlia_title:0 "Colonize New Frisia"
@@ -242,7 +242,7 @@
  PF_LAG_COASTAL_GUINEA:0 "§Y[Root.GetName]§! gets a permanent claim on all §Ycoastal§! provinces of the §YGuinea§! region."
 
  pf_lag_triangle_trade_title:0 "The Triangle Trade"
- pf_lag_triangle_trade_desc:0 "In the intricate Triangle Trade, European ships are laden with manufactured goods, destined to buy slaves from West Africa to fulfil the demand in Caribbean colonies. Once procured, these slaves are transported to the Caribbean, where they labour in the sugar and tobacco plantations. The sugar and tobacco are then shipped to Europe, where they are highly sought after.."
+ pf_lag_triangle_trade_desc:0 "In the intricate Triangle Trade, European ships are laden with manufactured goods, destined to buy slaves from West Africa to fulfil the demand in Caribbean colonies. Once procured, these slaves are transported to the Caribbean, where they labor in the sugar and tobacco plantations. The sugar and tobacco are then shipped to Europe, where they are highly sought after.."
  pf_lag_triangle_trade_price:0 "Lagrlonder Slave Trade"
 
  pf_lag_indonesia_title:0 "Lagrlonder East Indies"
@@ -272,8 +272,8 @@
  # Modifiers
  # Reference to the Black Army of Hungary, created
  # by Matthias Corvinus
- pf_lag_permanent_army:0 "The Grey Army of Lagrlond"
- desc_pf_lag_permanent_army:0 "The Grey Army of Lagrlond is one of the first professional armies of Europe, composed of a Hird, a loyal personal retinue of the Thinghâlder, and paid full-time mercenary companies."
+ pf_lag_permanent_army:0 "The Gray Army of Lagrlond"
+ desc_pf_lag_permanent_army:0 "The Gray Army of Lagrlond is one of the first professional armies of Europe, composed of a Hird, a loyal personal retinue of the Thinghâlder, and paid full-time mercenary companies."
  # Reference to Menno van Coehoorn, the namesake of the
  # Coehorn Mortar is present in the game.
  pf_lag_artillery:0 "Guns of Menni van Kohern"
@@ -436,7 +436,7 @@
  pf_lag_trinovantian_rebels.7.a:0 "Better than losing our foothold"
 
  pf_lagrlond_events.2.t:0 "The Religious Reforms of [Root.Monarch.GetName]"
- pf_lagrlond_events.2.desc:0 "With the [Root.GetChurchOrFallbackName] under control, [Root.Monarch.GetTitle] [Root.Monarch.GetName] can finally push through reforms to the Church of [Root.GetName], on his desk, there are two proposals, the Norvegr [Root.GetNobilityOrFallbackName] wishes to strengthen the Norse rites and expand the power of the [Root.GetChurchOrFallbackName] to help counterbalance the overwhelming strength of the [Root.GetBurghersOrFallbackName], while the [Root.GetBurghersOrFallbackName] wishes to expand religious toleration to our Druidic and Germanic subjects to smooth relations with our neighbours."
+ pf_lagrlond_events.2.desc:0 "With the [Root.GetChurchOrFallbackName] under control, [Root.Monarch.GetTitle] [Root.Monarch.GetName] can finally push through reforms to the Church of [Root.GetName], on his desk, there are two proposals, the Norvegr [Root.GetNobilityOrFallbackName] wishes to strengthen the Norse rites and expand the power of the [Root.GetChurchOrFallbackName] to help counterbalance the overwhelming strength of the [Root.GetBurghersOrFallbackName], while the [Root.GetBurghersOrFallbackName] wishes to expand religious toleration to our Druidic and Germanic subjects to smooth relations with our neighbors."
  pf_lagrlond_events.2.a:0 "The [Root.GetNobilityOrFallbackName] Proposal"
  PF_LAG_RELIGIOUS_PATH_TT:0 "We will unlock the §YReligious Path§! with the following missions:\n§YCrush The Heretics§!\n§YLand of Churches§!"
  pf_lagrlond_events.2.b:0 "The [Root.GetBurghersOrFallbackName] Proposal"
