@@ -616,16 +616,16 @@ master_of_mint = {
 			governing_capacity_modifier = 0.05
 		}
 	}
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				mission_completed = YEM_eastern_hub
-			}
-		}
-		modifier = {
-			global_foreign_trade_power = 0.05
-		}
-	}
+	#skill_scaled_modifier = {
+	#	trigger = { 
+	#		owner = { 
+	#			mission_completed = YEM_eastern_hub
+	#		}
+	#	}
+	#	modifier = {
+	#		global_foreign_trade_power = 0.05
+	#	}
+	#}
 
 	skill_scaled_modifier = {
 		trigger = { 
